@@ -1,0 +1,249 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "katex/dist/katex.min.css";
+
+@layer base {
+  /* Global smooth theme transitions */
+  * {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+  }
+
+  /* Base Body Styles for Themes */
+  body {
+    background-color: #F8FAFC;
+    color: #0F172A;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Theme 1: Cyber Dark (Default Dark) */
+  .dark.theme-cyber-dark body,
+  .dark body {
+    background-color: #0B0F19;
+    color: #F8FAFC;
+  }
+
+  /* Theme 2: Forest Emerald */
+  .dark.theme-forest-emerald body {
+    background-color: #061A14;
+    color: #F0FDF4;
+  }
+
+  /* Theme 3: Midnight Amethyst */
+  .dark.theme-midnight-amethyst body {
+    background-color: #0F0C1B;
+    color: #F5F3FF;
+  }
+
+  /* Theme 4: Clean Slate Light */
+  .theme-slate-light body {
+    background-color: #F8FAFC;
+    color: #0F172A;
+  }
+}
+
+/* Hide raw MathML to prevent KaTeX double printing */
+.katex-mathml {
+  display: none !important;
+}
+
+/* Mobile KaTeX Math Overflow Protection */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+  padding: 6px 0;
+}
+
+.katex {
+  max-width: 100%;
+}
+
+/* Touch-Optimized Calculator Button */
+.calc-btn {
+  min-h: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  transition: all 0.15s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+@media (min-width: 640px) {
+  .calc-btn {
+    min-h: 36px;
+  }
+}
+
+/* Minimalist & Enthusiastic 3D Elevated Cards */
+.card-3d {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02), inset 0 1px 0 0 rgba(255, 255, 255, 0.9);
+}
+
+/* Cyber Dark Cards */
+.dark.theme-cyber-dark .card-3d,
+.dark .card-3d {
+  background: #111827;
+  border: 1px solid #1F2937;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Forest Emerald Cards */
+.dark.theme-forest-emerald .card-3d {
+  background: #09261E;
+  border: 1px solid #124335;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(16, 185, 129, 0.1);
+}
+
+/* Midnight Amethyst Cards */
+.dark.theme-midnight-amethyst .card-3d {
+  background: #15102A;
+  border: 1px solid #271C4B;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(139, 92, 246, 0.1);
+}
+
+.card-3d:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+}
+
+.dark .card-3d:hover {
+  box-shadow: 0 16px 28px -8px rgba(0, 0, 0, 0.6), 0 8px 10px -4px rgba(0, 0, 0, 0.4);
+}
+
+.card-3d:active {
+  transform: translateY(0);
+}
+
+/* Glassmorphism Panels */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.dark .glass-panel {
+  background: rgba(17, 24, 39, 0.88);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(31, 41, 55, 0.8);
+}
+
+/* Enthusiastic 3D Primary Action Buttons */
+.btn-3d-primary {
+  background: linear-gradient(180deg, #3B82F6 0%, #1D4ED8 100%);
+  border: 1px solid #1E40AF;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+.btn-3d-primary:hover {
+  transform: translateY(-1.5px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+.btn-3d-primary:active {
+  transform: translateY(0);
+}
+
+.btn-3d-emerald {
+  background: linear-gradient(180deg, #10B981 0%, #059669 100%);
+  border: 1px solid #047857;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+.btn-3d-emerald:hover {
+  transform: translateY(-1.5px);
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+}
+.btn-3d-emerald:active {
+  transform: translateY(0);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+/* GATE Palette Status Colors (Academic CBT Style) */
+.gate-status-not-visited {
+  background-color: #F1F5F9;
+  color: #475569;
+  border-color: #CBD5E1;
+}
+
+.dark .gate-status-not-visited {
+  background-color: #1E293B;
+  color: #94A3B8;
+  border-color: #334155;
+}
+
+.gate-status-not-answered {
+  background-color: #EF4444;
+  color: #FFFFFF;
+  border-color: #DC2626;
+}
+
+.gate-status-answered {
+  background-color: #10B981;
+  color: #FFFFFF;
+  border-color: #059669;
+}
+
+.gate-status-marked {
+  background-color: #8B5CF6;
+  color: #FFFFFF;
+  border-color: #7C3AED;
+}
+
+.gate-status-marked-ans {
+  background-color: #8B5CF6;
+  color: #FFFFFF;
+  border-color: #7C3AED;
+  position: relative;
+}
+
+/* Print Optimization Styles */
+@media print {
+  aside, 
+  nav, 
+  button, 
+  footer, 
+  .no-print,
+  [title="Open GATE Calculator"],
+  .scientific-calculator-container {
+    display: none !important;
+  }
+
+  body, main, div {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+
+  .card-3d {
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+}

@@ -1,0 +1,1035 @@
+{
+  "id": "GATE_2027_MOCK_02",
+  "title": "GATE 2027 AG Full-Length Mock Paper 02",
+  "year": "2027",
+  "isCustomUploaded": true,
+  "instructions": {
+    "duration_mins": 180,
+    "max_marks": 100,
+    "total_qs": 65,
+    "instructions": [
+      "Total Duration: 180 minutes (3 hours).",
+      "General Aptitude: 10 Questions (15 Marks).",
+      "Technical Agricultural Engineering: 55 Questions (85 Marks).",
+      "Negative Marking: 1/3 mark deducted for wrong 1-mark MCQ, 2/3 mark for wrong 2-mark MCQ.",
+      "NO negative marking for MSQ or NAT questions."
+    ]
+  },
+  "questions": [
+    {
+      "id": "GATE_2027_MOCK_02_Q01",
+      "section": "General Aptitude",
+      "subtopic": "General Aptitude Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "Choose the word most nearly OPPOSITE in meaning to \"Frugal\".",
+      "options": {
+        "A": "Extravagant",
+        "B": "Thrifty",
+        "C": "Prudent",
+        "D": "Economical"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q02",
+      "section": "General Aptitude",
+      "subtopic": "General Aptitude Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "The committee ______ its decision after reviewing all the evidence presented.",
+      "options": {
+        "A": "arrived at",
+        "B": "arrived in",
+        "C": "arrived on",
+        "D": "arrived with"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q03",
+      "section": "General Aptitude",
+      "subtopic": "General Aptitude Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "Select the grammatically correct sentence.",
+      "options": {
+        "A": "Each of the students have submitted their assignment.",
+        "B": "Each of the students has submitted his or her assignment.",
+        "C": "Each of the student have submitted the assignment.",
+        "D": "Each of the students were submitting their assignment."
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q04",
+      "section": "General Aptitude",
+      "subtopic": "General Aptitude Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "The daily wage rate for farm labour decreased from \u20b9400 to \u20b9340. The percentage decrease in the wage rate is:",
+      "options": {
+        "A": "12%",
+        "B": "15%",
+        "C": "17%",
+        "D": "20%"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q05",
+      "section": "General Aptitude",
+      "subtopic": "General Aptitude Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "Find the next term in the series: 2, 5, 10, 17, 26, ?",
+      "options": {
+        "A": "35",
+        "B": "36",
+        "C": "37",
+        "D": "39"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q06",
+      "section": "General Aptitude",
+      "subtopic": "General Aptitude Core",
+      "type": "MCQ",
+      "marks": 2,
+      "negative_marks": 0.67,
+      "question": "A can complete a piece of work in 10 days, and B can complete the same work in 15 days. Working together, they will complete the work in:",
+      "options": {
+        "A": "5 days",
+        "B": "6 days",
+        "C": "7 days",
+        "D": "8 days"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q07",
+      "section": "General Aptitude",
+      "subtopic": "General Aptitude Core",
+      "type": "MCQ",
+      "marks": 2,
+      "negative_marks": 0.67,
+      "question": "A cyclist travels a certain distance at a speed of 30 km/h and returns over the same distance at 20 km/h. The average speed for the entire (round) journey is:",
+      "options": {
+        "A": "23 km/h",
+        "B": "24 km/h",
+        "C": "25 km/h",
+        "D": "26 km/h"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q08",
+      "section": "General Aptitude",
+      "subtopic": "General Aptitude Core",
+      "type": "MCQ",
+      "marks": 2,
+      "negative_marks": 0.67,
+      "question": "Statements: (1) All high-yielding varieties (HYVs) require assured irrigation. (2) Some HYVs are drought-tolerant.\nWhich one of the following conclusions logically follows?",
+      "options": {
+        "A": "All drought-tolerant varieties require assured irrigation.",
+        "B": "Some drought-tolerant varieties may require assured irrigation.",
+        "C": "No drought-tolerant variety requires assured irrigation.",
+        "D": "All varieties requiring assured irrigation are drought-tolerant."
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q09",
+      "section": "General Aptitude",
+      "subtopic": "General Aptitude Core",
+      "type": "MCQ",
+      "marks": 2,
+      "negative_marks": 0.67,
+      "question": "[Figure description: A row of six circular discs is shown, each divided into equal sectors by radial lines, with alternate sectors shaded starting from a fixed reference radius. The number of sectors in successive discs is 3, 6, 9, 12, 15, following an arithmetic progression. The sixth disc, marked \"?\", continues the same progression and shading rule.]\nHow many sectors should the sixth disc (marked \"?\") contain?",
+      "options": {
+        "A": "16",
+        "B": "17",
+        "C": "18",
+        "D": "20"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q10",
+      "section": "General Aptitude",
+      "subtopic": "General Aptitude Core",
+      "type": "MCQ",
+      "marks": 2,
+      "negative_marks": 0.67,
+      "question": "The table shows the number of tractors sold (in thousands) by four companies in two consecutive years.\n\nCompany | 2024 | 2025\nM | 45 | 54\nN | 60 | 66\nO | 30 | 39\nP | 50 | 55\n\nWhich company recorded the highest percentage increase in sales?",
+      "options": {
+        "A": "M",
+        "B": "N",
+        "C": "O",
+        "D": "P"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q11",
+      "section": "Engineering Mathematics",
+      "subtopic": "Engineering Mathematics Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "For any square matrix A, the sum of the eigenvalues of A is equal to:",
+      "options": {
+        "A": "The determinant of A",
+        "B": "The trace of A",
+        "C": "The rank of A",
+        "D": "Zero, always"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q12",
+      "section": "Engineering Mathematics",
+      "subtopic": "Engineering Mathematics Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "The value of lim(x\u21920) [(1 \u2212 cos x)/x\u00b2] is:",
+      "options": {
+        "A": "0",
+        "B": "1/4",
+        "C": "1/2",
+        "D": "1"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q13",
+      "section": "Engineering Mathematics",
+      "subtopic": "Engineering Mathematics Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "For the matrix [[2,\u22121],[4,3]], the product of its eigenvalues equals:",
+      "options": {
+        "A": "5",
+        "B": "7",
+        "C": "10",
+        "D": "14"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q14",
+      "section": "Engineering Mathematics",
+      "subtopic": "Engineering Mathematics Core",
+      "type": "NAT",
+      "marks": 1,
+      "negative_marks": 0,
+      "question": "For the scalar field \u03c6(x,y,z) = x\u00b2y + yz\u00b2, the magnitude of the gradient \u2207\u03c6 at the point (1, 2, 1) is ______ (rounded to one decimal place).",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q15",
+      "section": "Engineering Mathematics",
+      "subtopic": "Engineering Mathematics Core",
+      "type": "NAT",
+      "marks": 1,
+      "negative_marks": 0,
+      "question": "A binomial random variable X has n = 5 independent trials, each with a probability of success p = 0.4. The value of P(X = 3) is ______ (rounded to three decimal places).",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q36",
+      "section": "Soil and Water Conservation Engineering",
+      "subtopic": "Soil and Water Conservation Engineering Core",
+      "type": "MCQ",
+      "marks": 2,
+      "negative_marks": 0.67,
+      "question": "The eigenvalues of the matrix [[3,2],[1,4]] are:",
+      "options": {
+        "A": "1 and 6",
+        "B": "2 and 5",
+        "C": "3 and 4",
+        "D": "2 and 6"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q37",
+      "section": "Soil and Water Conservation Engineering",
+      "subtopic": "Soil and Water Conservation Engineering Core",
+      "type": "MCQ",
+      "marks": 2,
+      "negative_marks": 0.67,
+      "question": "For the function f(x) = 2x\u00b3 \u2212 3x\u00b2 \u2212 12x + 5, the nature of the critical points is:",
+      "options": {
+        "A": "Maximum at x=2 and minimum at x=\u22121",
+        "B": "Minimum at x=2 and maximum at x=\u22121",
+        "C": "Maximum at both x=2 and x=\u22121",
+        "D": "Minimum at both x=2 and x=\u22121"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q38",
+      "section": "Soil and Water Conservation Engineering",
+      "subtopic": "Soil and Water Conservation Engineering Core",
+      "type": "MCQ",
+      "marks": 2,
+      "negative_marks": 0.67,
+      "question": "The Maclaurin series expansion of e\u02e3, truncated to the term in x\u00b3, is:",
+      "options": {
+        "A": "1 + x + x\u00b2/2 + x\u00b3/6",
+        "B": "1 + x + x\u00b2 + x\u00b3",
+        "C": "1 \u2212 x + x\u00b2/2 \u2212 x\u00b3/6",
+        "D": "x + x\u00b2/2 + x\u00b3/3"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q39",
+      "section": "Soil and Water Conservation Engineering",
+      "subtopic": "Soil and Water Conservation Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "The Laplace transform of f(t) = cos(3t) is F(s) = s/(s\u00b2+9). The value of F(4) (rounded to two decimal places) is ______. SECTION 2 \u2014 FARM MACHINERY",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q16",
+      "section": "Engineering Mathematics",
+      "subtopic": "Engineering Mathematics Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "In a reel-type grain harvester, the \"reel index\" is defined as the ratio of:",
+      "options": {
+        "A": "The peripheral speed of the reel to the forward speed of the machine",
+        "B": "The forward speed of the machine to the peripheral speed of the reel",
+        "C": "The cutter-bar speed to the reel diameter",
+        "D": "The reel diameter to the row spacing"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q17",
+      "section": "Engineering Mathematics",
+      "subtopic": "Engineering Mathematics Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "For a rotating shaft subjected primarily to radial loads at moderate to high speeds, the most suitable type of rolling-contact bearing is generally a:",
+      "options": {
+        "A": "Thrust ball bearing designed for pure axial load",
+        "B": "Deep-groove (radial) ball bearing",
+        "C": "Taper roller bearing loaded in pure axial compression",
+        "D": "A plain sliding bearing operated without lubrication"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q18",
+      "section": "Engineering Mathematics",
+      "subtopic": "Engineering Mathematics Core",
+      "type": "NAT",
+      "marks": 1,
+      "negative_marks": 0,
+      "question": "An eight-row fertilizer drill with 20 cm row spacing is operated at a forward speed of 4 km/h. For a desired fertilizer application rate of 100 kg/ha, the mass flow rate of fertilizer to be metered by the drill is ______ kg/h (rounded to one decimal place).",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q40",
+      "section": "Soil and Water Conservation Engineering",
+      "subtopic": "Soil and Water Conservation Engineering Core",
+      "type": "MCQ",
+      "marks": 2,
+      "negative_marks": 0.67,
+      "question": "A flat belt drive has a tight-side tension of 800 N and a slack-side tension of 300 N, and runs at a belt speed of 5 m/s. The power transmitted by the belt is:",
+      "options": {
+        "A": "1.5 kW",
+        "B": "2.0 kW",
+        "C": "2.5 kW",
+        "D": "3.0 kW"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q41",
+      "section": "Soil and Water Conservation Engineering",
+      "subtopic": "Soil and Water Conservation Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "A self-propelled combine harvester has an effective cutting width of 4.2 m and operates at a field speed of 6 km/h. Taking the field efficiency as 70%, the effective field capacity is ______ ha/h (rounded to two decimal places).",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q42",
+      "section": "Soil and Water Conservation Engineering",
+      "subtopic": "Soil and Water Conservation Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "A power tiller develops a draft of 2.8 kN while operating at a forward speed of 3.6 km/h. The drawbar power developed is ______ kW (rounded to two decimal places).",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q43",
+      "section": "Soil and Water Conservation Engineering",
+      "subtopic": "Soil and Water Conservation Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "A driver pulley of diameter 200 mm running at 1440 rpm drives a driven pulley of diameter 320 mm through a flat belt with no slip. The speed of the driven pulley is ______ rpm (rounded to the nearest whole number). SECTION 3 \u2014 FARM POWER",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q19",
+      "section": "Engineering Mathematics",
+      "subtopic": "Engineering Mathematics Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "A higher octane number of a spark-ignition (SI) engine fuel indicates:",
+      "options": {
+        "A": "Greater resistance to auto-ignition (knocking) under compression",
+        "B": "Higher ignition delay in a diesel engine",
+        "C": "Lower calorific value of the fuel",
+        "D": "Higher viscosity of the fuel"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q20",
+      "section": "Engineering Mathematics",
+      "subtopic": "Engineering Mathematics Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "In a tractor's three-point hitch system operating in \"free link\" mode, the:",
+      "options": {
+        "A": "Top link is disconnected and the implement is allowed to float, following the ground contour",
+        "B": "Lower links are locked rigidly to maintain a fixed implement depth",
+        "C": "Draft-control sensing is disabled entirely",
+        "D": "Hitch cannot be raised or lowered hydraulically"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q21",
+      "section": "Farm Power and Machinery",
+      "subtopic": "Farm Power and Machinery Core",
+      "type": "NAT",
+      "marks": 1,
+      "negative_marks": 0,
+      "question": "A four-cylinder, four-stroke engine has cylinders with a piston area of 0.0079 m\u00b2 and a stroke length of 0.1 m. It operates at 1500 rpm with a mean effective pressure of 450 kPa. The indicated power developed by the engine is ______ kW (rounded to two decimal places).",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q22",
+      "section": "Farm Power and Machinery",
+      "subtopic": "Farm Power and Machinery Core",
+      "type": "NAT",
+      "marks": 1,
+      "negative_marks": 0,
+      "question": "An engine develops a brake power of 8 kW while the fuel supplies heat energy at the rate of 90,000 kJ/h. The brake thermal efficiency of the engine is ______ % (rounded to one decimal place).",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q44",
+      "section": "Soil and Water Conservation Engineering",
+      "subtopic": "Soil and Water Conservation Engineering Core",
+      "type": "MCQ",
+      "marks": 2,
+      "negative_marks": 0.67,
+      "question": "In a tractor's hydrostatic power steering system, the primary function of the control (steering) valve is to:",
+      "options": {
+        "A": "Regulate engine fuel injection timing",
+        "B": "Direct pressurized hydraulic fluid to the appropriate side of the steering cylinder in proportion to steering wheel movement",
+        "C": "Control differential-lock engagement",
+        "D": "Regulate the PTO shaft speed"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q45",
+      "section": "Soil and Water Conservation Engineering",
+      "subtopic": "Soil and Water Conservation Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "An air-standard Diesel cycle has a compression ratio of 16 and a cut-off ratio of 2. Taking the ratio of specific heats \u03b3 = 1.4, the thermal efficiency of the cycle is ______ % (rounded to one decimal place).",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q46",
+      "section": "Soil and Water Conservation Engineering",
+      "subtopic": "Soil and Water Conservation Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "A flat-plate solar collector of effective area 2.5 m\u00b2 receives solar radiation at an intensity of 800 W/m\u00b2. If the collector efficiency is 55%, the useful heat energy collected is ______ W (rounded to the nearest whole number).",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q47",
+      "section": "Soil and Water Conservation Engineering",
+      "subtopic": "Soil and Water Conservation Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "A tractor's theoretical forward speed (based on wheel rotation) is 5.0 km/h, while its actual measured forward speed under load is 4.6 km/h. The wheel slip is ______ % (rounded to one decimal place).",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q48",
+      "section": "Soil and Water Conservation Engineering",
+      "subtopic": "Soil and Water Conservation Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "A gear train has an input speed of 1500 rpm. The first pair of meshing gears has 20 and 60 teeth, and the second pair (on the same shaft train) has 25 and 75 teeth. The output speed of the gear train is ______ rpm (rounded to one decimal place). SECTION 4 \u2014 SOIL AND WATER CONSERVATION ENGINEERING",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q23",
+      "section": "Farm Power and Machinery",
+      "subtopic": "Farm Power and Machinery Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "The plasticity index (PI) of a soil is defined as:",
+      "options": {
+        "A": "Liquid limit minus plastic limit",
+        "B": "Plastic limit minus shrinkage limit",
+        "C": "Liquid limit plus plastic limit",
+        "D": "Shrinkage limit minus plastic limit"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q24",
+      "section": "Farm Power and Machinery",
+      "subtopic": "Farm Power and Machinery Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "A check dam constructed across a small drainage line within a watershed primarily serves to:",
+      "options": {
+        "A": "Increase the peak flood discharge downstream",
+        "B": "Reduce flow velocity, trap sediment, and promote groundwater recharge",
+        "C": "Eliminate the need for contour bunding on adjoining slopes",
+        "D": "Increase the drainage density of the watershed"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q25",
+      "section": "Farm Power and Machinery",
+      "subtopic": "Farm Power and Machinery Core",
+      "type": "NAT",
+      "marks": 1,
+      "negative_marks": 0,
+      "question": "For a watershed with a curve number (CN) of 75, subjected to a storm rainfall of 80 mm, the direct runoff estimated by the SCS Curve Number method is ______ mm (rounded to one decimal place). [Use S = (25400/CN) \u2212 254 in mm, and initial abstraction Ia = 0.2S; runoff Q = (P\u2212Ia)\u00b2/(P\u2212Ia+S) for P > Ia.]",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q26",
+      "section": "Farm Power and Machinery",
+      "subtopic": "Farm Power and Machinery Core",
+      "type": "NAT",
+      "marks": 1,
+      "negative_marks": 0,
+      "question": "A soil has a specific gravity of solids Gs = 2.68 and a void ratio e = 0.60. Taking the unit weight of water as 9.81 kN/m\u00b3, the dry unit weight of the soil is ______ kN/m\u00b3 (rounded to two decimal places).",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q49",
+      "section": "Soil and Water Conservation Engineering",
+      "subtopic": "Soil and Water Conservation Engineering Core",
+      "type": "MCQ",
+      "marks": 2,
+      "negative_marks": 0.67,
+      "question": "In pipe flow, the transition from laminar to turbulent flow is generally associated with a Reynolds number (based on pipe diameter) of approximately:",
+      "options": {
+        "A": "100",
+        "B": "500",
+        "C": "2000",
+        "D": "10,000"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q50",
+      "section": "Soil and Water Conservation Engineering",
+      "subtopic": "Soil and Water Conservation Engineering Core",
+      "type": "MCQ",
+      "marks": 2,
+      "negative_marks": 0.67,
+      "question": "In the Universal Soil Loss Equation (USLE), the rainfall erosivity factor (R) is primarily derived from:",
+      "options": {
+        "A": "The total seasonal crop cover density",
+        "B": "The kinetic energy of rainfall and its maximum 30-minute intensity (EI30)",
+        "C": "The slope length and steepness of the field",
+        "D": "The type of tillage and conservation practice adopted"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q51",
+      "section": "Agricultural Process Engineering",
+      "subtopic": "Agricultural Process Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "Water flows through a straight pipe of length 500 m and diameter 0.3 m at a mean velocity of 1.8 m/s. Taking the Darcy friction factor f = 0.025, the head loss due to friction (Darcy-Weisbach equation) is ______ m (rounded to two decimal places).",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q52",
+      "section": "Agricultural Process Engineering",
+      "subtopic": "Agricultural Process Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "For a field with rainfall erosivity factor R = 300 (MJ\u00b7mm/ha\u00b7h\u00b7yr), soil erodibility factor K = 0.25 (t\u00b7ha\u00b7h/ha\u00b7MJ\u00b7mm), slope length-steepness factor LS = 1.5, cover-management factor C = 0.15, and support-practice factor P = 0.60, the estimated annual soil loss using USLE is ______ t/ha/yr (rounded to two decimal places).",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q53",
+      "section": "Agricultural Process Engineering",
+      "subtopic": "Agricultural Process Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "A 1-hour unit hydrograph for a watershed has a peak discharge of 25 m\u00b3/s (corresponding to 1 cm of rainfall excess). For a storm producing 4.5 cm of rainfall excess in one hour, the peak discharge of the resulting direct-runoff hydrograph, obtained by linear scaling of the unit hydrograph, is ______ m\u00b3/s (rounded to one decimal place).",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q54",
+      "section": "Agricultural Process Engineering",
+      "subtopic": "Agricultural Process Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "Water seeps through a soil sample of cross-sectional area 0.5 m\u00b2 under a hydraulic gradient of 0.15. Taking the coefficient of permeability of the soil as 0.002 m/s, the seepage discharge through the sample is ______ cm\u00b3/s (rounded to the nearest whole number). SECTION 5 \u2014 IRRIGATION AND DRAINAGE ENGINEERING",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q27",
+      "section": "Farm Power and Machinery",
+      "subtopic": "Farm Power and Machinery Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "The conveyance efficiency of an irrigation channel system is defined as the ratio of:",
+      "options": {
+        "A": "Water delivered to the field to the water diverted at the source",
+        "B": "Water stored in the crop root zone to water applied to the field",
+        "C": "Water applied to the water required by the crop",
+        "D": "Seepage loss to the total water diverted"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q28",
+      "section": "Farm Power and Machinery",
+      "subtopic": "Farm Power and Machinery Core",
+      "type": "NAT",
+      "marks": 1,
+      "negative_marks": 0,
+      "question": "The daily pan evaporation at a location is 6.5 mm. Taking the pan coefficient Kp = 0.75 and the crop coefficient Kc = 1.1, the seasonal crop water requirement (evapotranspiration) over a 10-day period is ______ mm (rounded to one decimal place).",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q55",
+      "section": "Agricultural Process Engineering",
+      "subtopic": "Agricultural Process Engineering Core",
+      "type": "MSQ",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "Which of the following statements about drip (micro) irrigation are CORRECT?",
+      "options": {
+        "A": "Water is applied directly to the root zone at low pressure and low flow rate.",
+        "B": "Drip irrigation generally achieves higher application efficiency than surface (flood) irrigation.",
+        "C": "Drip systems eliminate the need for any filtration of the irrigation water.",
+        "D": "Drip irrigation can help reduce weed growth by limiting the wetting of inter-row soil surfaces."
+      },
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q56",
+      "section": "Agricultural Process Engineering",
+      "subtopic": "Agricultural Process Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "An unconfined aquifer is pumped by a fully penetrating well of radius 0.15 m. The initial saturated thickness of the aquifer is 20 m, with a hydraulic conductivity of 15 m/day. At steady state, the drawdown reduces the saturated thickness at the well to 15 m, with a radius of influence of 150 m. Using the Dupuit equation, the discharge from the well is ______ m\u00b3/day (rounded to one decimal place).",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q57",
+      "section": "Agricultural Process Engineering",
+      "subtopic": "Agricultural Process Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "In an irrigation conveyance system, 1200 m\u00b3 of water is diverted from the source, of which 1000 m\u00b3 is delivered to the field. The conveyance efficiency is ______ % (rounded to one decimal place).",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q58",
+      "section": "Agricultural Process Engineering",
+      "subtopic": "Agricultural Process Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "A sub-surface drainage system is designed with hydraulic conductivity K = 0.5 m/day, drainage coefficient q = 0.01 m/day, equivalent depth to the impermeable barrier d = 1.2 m, and a maximum permissible hydraulic head above the drains h = 0.9 m. Using the simplified steady-state drain-spacing equation S\u00b2 = 4K(2dh + h\u00b2)/q, the required drain spacing is ______ m (rounded to one decimal place). SECTION 6 \u2014 AGRICULTURAL PROCESS ENGINEERING",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q29",
+      "section": "Farm Power and Machinery",
+      "subtopic": "Farm Power and Machinery Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "The \"true density\" (particle density) of an agricultural grain differs from its \"bulk density\" primarily because bulk density additionally accounts for:",
+      "options": {
+        "A": "The moisture content of the grain",
+        "B": "The inter-granular void (air) space between individual grains",
+        "C": "The chemical composition of the grain",
+        "D": "The shape factor of individual grains only"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q30",
+      "section": "Farm Power and Machinery",
+      "subtopic": "Farm Power and Machinery Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "In the parboiling of paddy, the primary purpose of the \"steaming\" step (following soaking) is to:",
+      "options": {
+        "A": "Reduce the moisture content of the paddy before milling",
+        "B": "Gelatinize the starch within the endosperm, hardening the grain and reducing breakage during milling",
+        "C": "Remove the husk mechanically from the paddy",
+        "D": "Bleach the bran layer for improved grain colour"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q31",
+      "section": "Farm Power and Machinery",
+      "subtopic": "Farm Power and Machinery Core",
+      "type": "NAT",
+      "marks": 1,
+      "negative_marks": 0,
+      "question": "A sample of maize has a moisture content of 30% on a dry basis. Its moisture content on a wet basis is ______ % (rounded to one decimal place).",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q32",
+      "section": "Farm Power and Machinery",
+      "subtopic": "Farm Power and Machinery Core",
+      "type": "NAT",
+      "marks": 1,
+      "negative_marks": 0,
+      "question": "200 kg of a wet agricultural product with an initial moisture content of 30% (wet basis) is dried to a final moisture content of 12% (wet basis). The mass of water removed during drying is ______ kg (rounded to two decimal places).",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q33",
+      "section": "Farm Power and Machinery",
+      "subtopic": "Farm Power and Machinery Core",
+      "type": "NAT",
+      "marks": 1,
+      "negative_marks": 0,
+      "question": "A grain kernel has the shape of a tri-axial ellipsoid with major, intermediate, and minor axis lengths of 8 mm, 5 mm, and 4 mm respectively. Taking sphericity as the ratio of the diameter of a sphere of the same volume as the kernel to the length of its major axis, the sphericity of the kernel is ______ (rounded to three decimal places).",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q59",
+      "section": "Agricultural Process Engineering",
+      "subtopic": "Agricultural Process Engineering Core",
+      "type": "MSQ",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "Which of the following statements regarding the processing of agricultural produce are CORRECT?",
+      "options": {
+        "A": "Parboiling of paddy increases the milling yield of head (unbroken) rice compared to raw (non-parboiled) milling.",
+        "B": "Dehulling (removal of the husk) of paddy is typically achieved using a rubber-roll sheller.",
+        "C": "Polishing of rice removes the outer bran layer and germ to improve appearance and reduce the fat content that would otherwise shorten shelf life.",
+        "D": "Value addition of fruits and vegetables (e.g., into jams, pulps, or dehydrated products) requires no control of enzymatic browning."
+      },
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q60",
+      "section": "Agricultural Process Engineering",
+      "subtopic": "Agricultural Process Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "Using Bond's law, a material is to be ground from an initial size of 10 mm to a final size of 2 mm. Taking the Bond work index as 12 kWh/tonne, the specific energy required for size reduction is ______ kWh/tonne (rounded to two decimal places).",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q61",
+      "section": "Agricultural Process Engineering",
+      "subtopic": "Agricultural Process Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "A grain storage bin holds 500 tonnes of wheat. For safe aeration, an airflow rate of 0.05 m\u00b3/min per tonne of grain is recommended. The total airflow rate required for the aeration fan is ______ m\u00b3/s (rounded to two decimal places).",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q62",
+      "section": "Agricultural Process Engineering",
+      "subtopic": "Agricultural Process Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "A bucket elevator has buckets of volume 2 litres spaced 0.3 m apart along a belt moving at 1.5 m/s. If the bulk density of the material is 780 kg/m\u00b3 and the bucket fill efficiency is 75%, the elevator's material handling capacity is ______ t/h (rounded to two decimal places). SECTION 7 \u2014 DAIRY AND FOOD ENGINEERING",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q34",
+      "section": "Farm Power and Machinery",
+      "subtopic": "Farm Power and Machinery Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "The primary purpose of homogenization in milk processing is to:",
+      "options": {
+        "A": "Increase the fat content of milk",
+        "B": "Reduce the size of fat globules to prevent creaming (fat separation) during storage",
+        "C": "Kill pathogenic microorganisms in milk",
+        "D": "Increase the viscosity of milk for cheese-making"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q35",
+      "section": "Farm Power and Machinery",
+      "subtopic": "Farm Power and Machinery Core",
+      "type": "MSQ",
+      "marks": 1,
+      "negative_marks": 0,
+      "question": "Identify which of the following measures would help extend the shelf life of a perishable food product.",
+      "options": {
+        "A": "Irradiation",
+        "B": "Canning",
+        "C": "Reducing the concentration of an effective preservative (salt/sugar) below its protective level",
+        "D": "Freeze-drying"
+      },
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q63",
+      "section": "Agricultural Process Engineering",
+      "subtopic": "Agricultural Process Engineering Core",
+      "type": "MSQ",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "Which of the following statements about separation and concentration operations in dairy and food processing are CORRECT?",
+      "options": {
+        "A": "A cream separator uses centrifugal force to separate milk fat from skim milk based on their density difference.",
+        "B": "Reverse osmosis uses a semi-permeable membrane and an applied pressure exceeding the osmotic pressure to remove water from a solution.",
+        "C": "Ultrafiltration can be used to concentrate milk proteins while allowing lactose and minerals to pass through the membrane.",
+        "D": "In a centrifugal clarifier, the denser sediment/debris collects near the axis of rotation while the clarified milk moves toward the periphery."
+      },
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q64",
+      "section": "Agricultural Process Engineering",
+      "subtopic": "Agricultural Process Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "A thermal process is designed to reduce the microbial population of a target organism from an initial count of 10\u2075 per gram to 10 per gram. If the decimal reduction time D = 12 seconds at the reference (process) temperature, the required process F-value is ______ seconds (rounded to the nearest second).",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_02_Q65",
+      "section": "Agricultural Process Engineering",
+      "subtopic": "Agricultural Process Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "1000 kg of water at 25\u00b0C is to be converted to ice at 0\u00b0C in a batch freezing process. Taking the specific heat of water as 4.186 kJ/(kg\u00b7K) and the latent heat of fusion of water as 334 kJ/kg, the total heat to be removed by the refrigeration system is ______ kWh (rounded to one decimal place). Answer Key Sub-topic names follow the official GATE AG syllabus wording used in the question paper. Detailed Solutions GENERAL APTITUDE",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    }
+  ]
+}

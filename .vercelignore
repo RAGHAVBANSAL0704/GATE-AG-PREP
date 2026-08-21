@@ -1,0 +1,9 @@
+node_modules
+dist
+QUESTIONS
+SYLLABUS
+public/question_snippets
+*.py
+*.jpg
+.DS_Store
+.vercel

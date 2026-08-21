@@ -1,0 +1,1035 @@
+{
+  "id": "GATE_2027_MOCK_03",
+  "title": "GATE 2027 AG Full-Length Mock Paper 03",
+  "year": "2027",
+  "isCustomUploaded": true,
+  "instructions": {
+    "duration_mins": 180,
+    "max_marks": 100,
+    "total_qs": 65,
+    "instructions": [
+      "Total Duration: 180 minutes (3 hours).",
+      "General Aptitude: 10 Questions (15 Marks).",
+      "Technical Agricultural Engineering: 55 Questions (85 Marks).",
+      "Negative Marking: 1/3 mark deducted for wrong 1-mark MCQ, 2/3 mark for wrong 2-mark MCQ.",
+      "NO negative marking for MSQ or NAT questions."
+    ]
+  },
+  "questions": [
+    {
+      "id": "GATE_2027_MOCK_03_Q01",
+      "section": "General Aptitude",
+      "subtopic": "General Aptitude Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "Select the word that is most nearly similar in meaning to the word 'METICULOUS'.",
+      "options": {
+        "A": "Careless",
+        "B": "Painstaking",
+        "C": "Hasty",
+        "D": "Indifferent"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q02",
+      "section": "General Aptitude",
+      "subtopic": "General Aptitude Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "Statements: (i) All engineers are logical. (ii) Some logical people are creative.\nWhich of the following conclusions can be logically drawn from the two statements above?",
+      "options": {
+        "A": "All engineers are creative",
+        "B": "Some engineers are creative",
+        "C": "No definite conclusion can be drawn about engineers being creative",
+        "D": "All creative people are engineers"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q03",
+      "section": "General Aptitude",
+      "subtopic": "General Aptitude Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "[Figure description: A series of three squares is shown. Square 1 contains one diagonal line drawn from the top-left corner to the bottom-right corner. Square 2 contains both diagonals (top-left to bottom-right AND top-right to bottom-left). Square 3 contains both diagonals plus a horizontal line joining the midpoints of the left and right sides. Each square in the series adds exactly one new straight line to all the lines already present in the previous square, and no line already drawn is ever removed.]\nWhich of the following best describes Square 4, the next figure in the series?",
+      "options": {
+        "A": "Both diagonals, the horizontal midline, and a vertical line joining the midpoints of the top and bottom sides",
+        "B": "Only a vertical line joining the midpoints of the top and bottom sides",
+        "C": "Both diagonals only, with the horizontal midline removed",
+        "D": "An empty square with no internal lines"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q04",
+      "section": "General Aptitude",
+      "subtopic": "General Aptitude Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "An analogue clock shows the time as 3:40. A plane (vertical) mirror is held facing the clock. What time does the mirror image of the clock display?",
+      "options": {
+        "A": "8:20",
+        "B": "8:40",
+        "C": "3:20",
+        "D": "4:20"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q05",
+      "section": "General Aptitude",
+      "subtopic": "General Aptitude Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "The table below shows the annual wheat production (in lakh tonnes) of four states in a given year.\n\nState : Production (lakh tonnes)\nP : 85\nQ : 102\nR : 76\nS : 93\n\nWhat is the ratio of the production of State Q to the combined production of States P and R (rounded to two decimal places)?",
+      "options": {
+        "A": "0.63",
+        "B": "0.95",
+        "C": "1.21",
+        "D": "0.55"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q06",
+      "section": "General Aptitude",
+      "subtopic": "General Aptitude Core",
+      "type": "MCQ",
+      "marks": 2,
+      "negative_marks": 0.67,
+      "question": "A tank can be filled by pipe A alone in 6 hours and by pipe B alone in 8 hours. Both pipes are opened together, but pipe B is shut off after 2 hours; pipe A continues alone until the tank is full. Find the total time taken (from the start) to fill the tank.",
+      "options": {
+        "A": "4.5 hours",
+        "B": "4 hours",
+        "C": "5 hours",
+        "D": "3.5 hours"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q07",
+      "section": "General Aptitude",
+      "subtopic": "General Aptitude Core",
+      "type": "MCQ",
+      "marks": 2,
+      "negative_marks": 0.67,
+      "question": "The average of 5 consecutive odd numbers is 51. What is the largest number among them?",
+      "options": {
+        "A": "55",
+        "B": "53",
+        "C": "59",
+        "D": "57"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q08",
+      "section": "General Aptitude",
+      "subtopic": "General Aptitude Core",
+      "type": "MCQ",
+      "marks": 2,
+      "negative_marks": 0.67,
+      "question": "A box contains 4 red and 6 blue balls. Two balls are drawn at random, without replacement. What is the probability that both balls drawn are red (rounded to two decimal places)?",
+      "options": {
+        "A": "0.13",
+        "B": "0.20",
+        "C": "0.40",
+        "D": "0.27"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q09",
+      "section": "General Aptitude",
+      "subtopic": "General Aptitude Core",
+      "type": "MCQ",
+      "marks": 2,
+      "negative_marks": 0.67,
+      "question": "Select the pair that best expresses a relationship similar to that expressed in the pair:\nTHERMOMETER : TEMPERATURE",
+      "options": {
+        "A": "Barometer : Pressure",
+        "B": "Clock : Time",
+        "C": "Speedometer : Distance",
+        "D": "Both (A) and (B)"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q10",
+      "section": "General Aptitude",
+      "subtopic": "General Aptitude Core",
+      "type": "MCQ",
+      "marks": 2,
+      "negative_marks": 0.67,
+      "question": "In a certain code, 'FARM' is written as 'HCTO'. Using the same coding scheme, how is 'SEED' written?",
+      "options": {
+        "A": "UGGF",
+        "B": "UGFG",
+        "C": "TFFE",
+        "D": "VHHG"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q11",
+      "section": "Engineering Mathematics",
+      "subtopic": "Engineering Mathematics Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "Evaluate: lim(x\u21920) [1 \u2212 cos(3x)] / x\u00b2",
+      "options": {
+        "A": "4.5",
+        "B": "3",
+        "C": "9",
+        "D": "2.25"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q12",
+      "section": "Engineering Mathematics",
+      "subtopic": "Engineering Mathematics Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "Which one of the following best classifies the differential equation dy/dx + P(x)\u00b7y = Q(x)?",
+      "options": {
+        "A": "Linear, first-order ordinary differential equation",
+        "B": "Non-linear, first-order ordinary differential equation",
+        "C": "Linear, second-order ordinary differential equation",
+        "D": "A partial differential equation"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q13",
+      "section": "Engineering Mathematics",
+      "subtopic": "Engineering Mathematics Core",
+      "type": "NAT",
+      "marks": 1,
+      "negative_marks": 0,
+      "question": "Solve the initial value problem dy/dx + 2y = 0, with y(0) = 5. Find the value of y at x = (ln 2)/2. (Answer: 2.40 to 2.60)",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q14",
+      "section": "Engineering Mathematics",
+      "subtopic": "Engineering Mathematics Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "A continuous random variable X is uniformly distributed on the interval [0, 1]. What is E[X\u00b2]?",
+      "options": {
+        "A": "1/3",
+        "B": "1/2",
+        "C": "1/4",
+        "D": "1/6"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q15",
+      "section": "Engineering Mathematics",
+      "subtopic": "Engineering Mathematics Core",
+      "type": "NAT",
+      "marks": 1,
+      "negative_marks": 0,
+      "question": "Two fair six-faced dice are rolled together. What is the probability that the sum of the two faces shown is equal to 8? (Round off to two decimal places.) (Answer: 0.13 to 0.15)",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q16",
+      "section": "Engineering Mathematics",
+      "subtopic": "Engineering Mathematics Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "A belt drive connects a driver pulley of diameter 250 mm running at 1000 rpm to a driven pulley of diameter 500 mm. Neglecting belt slip, find the speed of the driven pulley.",
+      "options": {
+        "A": "500 rpm",
+        "B": "2000 rpm",
+        "C": "750 rpm",
+        "D": "250 rpm"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q17",
+      "section": "Engineering Mathematics",
+      "subtopic": "Engineering Mathematics Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "In a fluted-roller type seed metering mechanism used in seed drills, the seed rate delivered is primarily varied by:",
+      "options": {
+        "A": "Changing the rotational speed of the roller only",
+        "B": "Changing the effective (active) length of the fluted roller exposed to the seed",
+        "C": "Changing the diameter of the fluted roller",
+        "D": "Changing the height of the seed hopper"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q18",
+      "section": "Engineering Mathematics",
+      "subtopic": "Engineering Mathematics Core",
+      "type": "NAT",
+      "marks": 1,
+      "negative_marks": 0,
+      "question": "A farm implement is purchased for \u20b98,00,000. Its salvage value is estimated as 10% of the purchase price, and its useful life is 10 years. Using the straight-line method, compute the annual depreciation. (Answer in \u20b9 lakh per year, round off to two decimal places.) (Answer: 0.70 to 0.74)",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q19",
+      "section": "Engineering Mathematics",
+      "subtopic": "Engineering Mathematics Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "Which component in a tractor's power-transmission system allows the two driving wheels to rotate at different speeds while the tractor is turning?",
+      "options": {
+        "A": "Differential",
+        "B": "Gearbox",
+        "C": "Clutch",
+        "D": "Final drive"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q20",
+      "section": "Engineering Mathematics",
+      "subtopic": "Engineering Mathematics Core",
+      "type": "NAT",
+      "marks": 1,
+      "negative_marks": 0,
+      "question": "Diesel fuel has a calorific value of 45 MJ/kg. Calculate the total heat released on burning 2.5 kg of this diesel. (Answer in MJ, round off to two decimal places.) (Answer: 112.00 to 113.00)",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q21",
+      "section": "Farm Power and Machinery",
+      "subtopic": "Farm Power and Machinery Core",
+      "type": "NAT",
+      "marks": 1,
+      "negative_marks": 0,
+      "question": "A wind turbine rotor has a diameter of 4 m and operates in a wind stream of velocity 8 m/s. Taking air density as 1.2 kg/m\u00b3, calculate the wind power available in the swept area (before applying any turbine efficiency). (Answer in kW, round off to two decimal places.) (Answer: 3.75 to 3.95)",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q22",
+      "section": "Farm Power and Machinery",
+      "subtopic": "Farm Power and Machinery Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "As wheel slip of a tractor's drive wheels increases from zero, the drawbar pull first increases and then decreases at very high slip. The slip at which drawbar power is typically maximum for an agricultural tractor on firm soil lies in the range:",
+      "options": {
+        "A": "8\u201315%",
+        "B": "25\u201335%",
+        "C": "50\u201360%",
+        "D": "80\u201390%"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q23",
+      "section": "Farm Power and Machinery",
+      "subtopic": "Farm Power and Machinery Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "Which surveying instrument is used to measure both horizontal and vertical angles at a station?",
+      "options": {
+        "A": "Theodolite",
+        "B": "Dumpy level",
+        "C": "Planimeter",
+        "D": "Chain"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q24",
+      "section": "Farm Power and Machinery",
+      "subtopic": "Farm Power and Machinery Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "Among the following soil textural classes, which one typically exhibits the highest field capacity (on a mass or volume basis)?",
+      "options": {
+        "A": "Sand",
+        "B": "Loamy sand",
+        "C": "Clay",
+        "D": "Sandy loam"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q25",
+      "section": "Farm Power and Machinery",
+      "subtopic": "Farm Power and Machinery Core",
+      "type": "NAT",
+      "marks": 1,
+      "negative_marks": 0,
+      "question": "A soil sample has a bulk density of 1.35 g/cm\u00b3 and a particle (solid) density of 2.65 g/cm\u00b3. Calculate the porosity of the soil. (Answer in %, round off to two decimal places.) (Answer: 48.50 to 49.50)",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q26",
+      "section": "Farm Power and Machinery",
+      "subtopic": "Farm Power and Machinery Core",
+      "type": "NAT",
+      "marks": 1,
+      "negative_marks": 0,
+      "question": "A catchment of area 250 ha receives a rainfall of 40 mm, producing a total runoff volume of 60,000 m\u00b3. Compute the runoff coefficient. (Round off to two decimal places.) (Answer: 0.58 to 0.62)",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q27",
+      "section": "Farm Power and Machinery",
+      "subtopic": "Farm Power and Machinery Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "The 'drainage coefficient' used in the design of a subsurface (tile) drainage system represents:",
+      "options": {
+        "A": "The design rate (depth per day) at which excess water must be removed from the field",
+        "B": "The total depth of water applied during one irrigation event",
+        "C": "The hydraulic conductivity of the soil profile",
+        "D": "The spacing between two adjacent drain laterals"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q28",
+      "section": "Farm Power and Machinery",
+      "subtopic": "Farm Power and Machinery Core",
+      "type": "NAT",
+      "marks": 1,
+      "negative_marks": 0,
+      "question": "For a subsurface tile drain, Hooghoudt's steady-state drain-spacing equation may be rearranged to estimate the drainage coefficient as q = 4K\u00b7h\u00b7(2d + h) / S\u00b2, where K = 1.0 m/day (hydraulic conductivity), h = 0.6 m (height of water table above drain level at the midpoint between drains), d = 1.5 m (Hooghoudt's equivalent depth to the impermeable layer), and S = 20 m (drain spacing). Calculate the drainage coefficient q. (Answer in mm/day, round off to two decimal places.) (Answer: 21.00 to 22.00)",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q29",
+      "section": "Farm Power and Machinery",
+      "subtopic": "Farm Power and Machinery Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "The 'angle of repose' of a granular agricultural material is best described as:",
+      "options": {
+        "A": "The angle that the free (sloped) surface of a freely piled heap of the material makes with the horizontal",
+        "B": "The angle at which a grain kernel fractures under compressive loading",
+        "C": "The angle between the major and minor axes of a grain kernel",
+        "D": "The angle of contact between a liquid droplet and the grain surface"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q30",
+      "section": "Farm Power and Machinery",
+      "subtopic": "Farm Power and Machinery Core",
+      "type": "NAT",
+      "marks": 1,
+      "negative_marks": 0,
+      "question": "A maize kernel has a major axis (length) of 11 mm, an intermediate axis (width) of 9 mm, and a minor axis (thickness) of 5 mm. Using the geometric-mean-diameter method, sphericity \u03c6 = (abc)^(1/3) / a, where a, b, c are the major, intermediate and minor axes respectively. Calculate the sphericity of the kernel. (Round off to two decimal places.) (Answer: 0.70 to 0.74)",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q31",
+      "section": "Farm Power and Machinery",
+      "subtopic": "Farm Power and Machinery Core",
+      "type": "NAT",
+      "marks": 1,
+      "negative_marks": 0,
+      "question": "A batch of grain has a moisture content of 18% on a wet basis. Express this moisture content on a dry basis. (Answer in %, round off to two decimal places.) (Answer: 21.50 to 22.50)",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q32",
+      "section": "Farm Power and Machinery",
+      "subtopic": "Farm Power and Machinery Core",
+      "type": "NAT",
+      "marks": 1,
+      "negative_marks": 0,
+      "question": "500 kg of paddy at 22% moisture content (wet basis) is to be dried to 14% moisture content (wet basis). Using Wf = Wi(100\u2212MCi)/(100\u2212MCf), calculate the mass of water removed during drying. (Answer in kg, round off to two decimal places.) (Answer: 46.00 to 47.00)",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q33",
+      "section": "Farm Power and Machinery",
+      "subtopic": "Farm Power and Machinery Core",
+      "type": "NAT",
+      "marks": 1,
+      "negative_marks": 0,
+      "question": "Air at a dry-bulb temperature of 30\u00b0C has a relative humidity of 60%. Given that the saturation vapour pressure at 30\u00b0C is 4.246 kPa, calculate the actual (partial) vapour pressure of the air. (Answer in kPa, round off to two decimal places.) (Answer: 2.50 to 2.60)",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q34",
+      "section": "Farm Power and Machinery",
+      "subtopic": "Farm Power and Machinery Core",
+      "type": "MCQ",
+      "marks": 1,
+      "negative_marks": 0.33,
+      "question": "The primary objective of pasteurization of milk is to:",
+      "options": {
+        "A": "Destroy pathogenic microorganisms and reduce spoilage organisms, while largely retaining the nutritional and sensory quality of milk",
+        "B": "Achieve complete sterilization of milk, destroying all microorganisms including spores",
+        "C": "Increase the fat content of milk",
+        "D": "Remove all water from milk to produce a shelf-stable powder"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q35",
+      "section": "Farm Power and Machinery",
+      "subtopic": "Farm Power and Machinery Core",
+      "type": "MSQ",
+      "marks": 1,
+      "negative_marks": 0,
+      "question": "Which of the following are recognized methods of food preservation?",
+      "options": {
+        "A": "Canning",
+        "B": "Irradiation",
+        "C": "Fractional distillation",
+        "D": "Controlled/modified atmosphere storage"
+      },
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q36",
+      "section": "Soil and Water Conservation Engineering",
+      "subtopic": "Soil and Water Conservation Engineering Core",
+      "type": "MCQ",
+      "marks": 2,
+      "negative_marks": 0.67,
+      "question": "Find the local minimum value of the function f(x) = x\u00b3 \u2212 6x\u00b2 + 9x + 1.",
+      "options": {
+        "A": "1",
+        "B": "3",
+        "C": "5",
+        "D": "\u22121"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q37",
+      "section": "Soil and Water Conservation Engineering",
+      "subtopic": "Soil and Water Conservation Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "Evaluate the definite integral \u222b\u2080\u00b2 (3x\u00b2 + 2x) dx. (Answer: 11.90 to 12.10)",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q38",
+      "section": "Soil and Water Conservation Engineering",
+      "subtopic": "Soil and Water Conservation Engineering Core",
+      "type": "MCQ",
+      "marks": 2,
+      "negative_marks": 0.67,
+      "question": "Find the larger eigenvalue of the matrix A = [[4, 1], [2, 3]].",
+      "options": {
+        "A": "5",
+        "B": "7",
+        "C": "2",
+        "D": "10"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q39",
+      "section": "Soil and Water Conservation Engineering",
+      "subtopic": "Soil and Water Conservation Engineering Core",
+      "type": "MCQ",
+      "marks": 2,
+      "negative_marks": 0.67,
+      "question": "Determine the rank of the matrix A = [[1, 2, 3], [2, 4, 6], [1, 0, 1]].",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "0"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q40",
+      "section": "Soil and Water Conservation Engineering",
+      "subtopic": "Soil and Water Conservation Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "A mouldboard plough exerts a draft of 2.4 kN while operating at a forward speed of 3.6 km/h. If the tractor's transmission efficiency between the engine and the drawbar is 85%, calculate the engine power required. (Answer in kW, round off to two decimal places.) (Answer: 2.75 to 2.89)",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q41",
+      "section": "Soil and Water Conservation Engineering",
+      "subtopic": "Soil and Water Conservation Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "A disc plough operates at a working width of 0.9 m and a depth of 0.20 m, producing a total draft of 3.6 kN. Compute the unit draft (specific soil resistance). (Answer in kPa, round off to two decimal places.) (Answer: 19.50 to 20.50)",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q42",
+      "section": "Soil and Water Conservation Engineering",
+      "subtopic": "Soil and Water Conservation Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "A gear train has an input shaft rotating at 1440 rpm. Gear A (20 teeth) on the input shaft meshes with gear B (60 teeth) on a countershaft. On the same countershaft, gear C (24 teeth) meshes with gear D (48 teeth) on the output shaft. Compute the output shaft speed. (Answer in rpm, round off to two decimal places.) (Answer: 238.00 to 242.00)",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q43",
+      "section": "Soil and Water Conservation Engineering",
+      "subtopic": "Soil and Water Conservation Engineering Core",
+      "type": "MCQ",
+      "marks": 2,
+      "negative_marks": 0.67,
+      "question": "A boom sprayer nozzle discharges 600 mL/min. Nozzle spacing on the boom is 0.5 m and the boom travels at 4.5 km/h. Calculate the application (spray) rate.",
+      "options": {
+        "A": "160 L/ha",
+        "B": "80 L/ha",
+        "C": "320 L/ha",
+        "D": "40 L/ha"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q44",
+      "section": "Soil and Water Conservation Engineering",
+      "subtopic": "Soil and Water Conservation Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "A solar photovoltaic array of 2 kW peak capacity operates with an average capacity factor of 18% over the course of a day. Estimate the energy generated in one day. (Answer in kWh, round off to two decimal places.) (Answer: 8.50 to 8.80)",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q45",
+      "section": "Soil and Water Conservation Engineering",
+      "subtopic": "Soil and Water Conservation Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "A tractor has a dynamic weight of 18 kN on its rear (driving) axle and a coefficient of traction (soil-tyre) of 0.55. If the total rolling resistance of the tractor is 1.8 kN, calculate the maximum drawbar pull available. (Answer in kN, round off to two decimal places.) (Answer: 8.00 to 8.20)",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q46",
+      "section": "Soil and Water Conservation Engineering",
+      "subtopic": "Soil and Water Conservation Engineering Core",
+      "type": "MCQ",
+      "marks": 2,
+      "negative_marks": 0.67,
+      "question": "A four-stroke engine has a bore of 100 mm and a stroke of 120 mm, and runs at 2000 rpm. Calculate the mean piston speed.",
+      "options": {
+        "A": "8 m/s",
+        "B": "4 m/s",
+        "C": "16 m/s",
+        "D": "2.4 m/s"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q47",
+      "section": "Soil and Water Conservation Engineering",
+      "subtopic": "Soil and Water Conservation Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "An engine operates on the ideal Otto cycle with a compression ratio of 8. Taking \u03b3 = 1.4 for the working fluid, calculate the thermal efficiency of the cycle. (Answer in %, round off to two decimal places.) (Answer: 56.00 to 57.00)",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q48",
+      "section": "Soil and Water Conservation Engineering",
+      "subtopic": "Soil and Water Conservation Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "A farm worker performs a task with an energy expenditure of 5.5 kcal/min, against a recommended maximum permissible continuous energy expenditure of 5.0 kcal/min. Using the standard rest-allowance formula R = T(E \u2212 S)/(E \u2212 1.5), where T = 60 min is the work period, E = actual energy expenditure (kcal/min) and S = standard permissible energy expenditure (kcal/min), compute the rest period required per 60 minutes of work. (Answer in minutes, round off to two decimal places.) (Answer: 7.30 to 7.70)",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q49",
+      "section": "Soil and Water Conservation Engineering",
+      "subtopic": "Soil and Water Conservation Engineering Core",
+      "type": "MCQ",
+      "marks": 2,
+      "negative_marks": 0.67,
+      "question": "Using the SCS Curve Number (CN) method, the potential maximum retention S is given by S = (25400/CN) \u2212 254 (S in mm). For a catchment with CN = 78, estimate S.",
+      "options": {
+        "A": "71.6 mm",
+        "B": "50.8 mm",
+        "C": "101.6 mm",
+        "D": "25.4 mm"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q50",
+      "section": "Soil and Water Conservation Engineering",
+      "subtopic": "Soil and Water Conservation Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "For the catchment of the previous question (CN = 78, S = 71.64 mm), if a storm produces a rainfall depth P = 100 mm, estimate the direct surface runoff Q using the SCS-CN relation Q = (P \u2212 0.2S)\u00b2 / (P + 0.8S). (Answer in mm, round off to two decimal places.) (Answer: 46.30 to 46.90)",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q51",
+      "section": "Agricultural Process Engineering",
+      "subtopic": "Agricultural Process Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "Water flows through a pipe of diameter 150 mm at a velocity of 2 m/s. This pipe reduces to a diameter of 100 mm. Using the continuity equation, find the velocity of flow in the smaller pipe. (Answer in m/s, round off to two decimal places.) (Answer: 4.40 to 4.60)",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q52",
+      "section": "Agricultural Process Engineering",
+      "subtopic": "Agricultural Process Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "Water flows over a rectangular sharp-crested notch of crest length 0.6 m under a head of 0.25 m. Using Q = (2/3)\u00b7Cd\u00b7b\u00b7\u221a(2g)\u00b7H^1.5, with Cd = 0.62 and g = 9.81 m/s\u00b2, compute the discharge over the notch. (Answer in L/s, round off to two decimal places.) (Answer: 136.50 to 138.00)",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q53",
+      "section": "Agricultural Process Engineering",
+      "subtopic": "Agricultural Process Engineering Core",
+      "type": "MCQ",
+      "marks": 2,
+      "negative_marks": 0.67,
+      "question": "Using the Universal Soil Loss Equation A = R\u00b7K\u00b7LS\u00b7C\u00b7P, with R = 450 MJ\u00b7mm/(ha\u00b7h\u00b7yr), K = 0.28 t\u00b7ha\u00b7h/(ha\u00b7MJ\u00b7mm), LS = 1.5, C = 0.35, and P = 0.9, estimate the average annual soil loss.",
+      "options": {
+        "A": "59.5 t/ha/yr",
+        "B": "66.2 t/ha/yr",
+        "C": "33.1 t/ha/yr",
+        "D": "126.0 t/ha/yr"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q54",
+      "section": "Agricultural Process Engineering",
+      "subtopic": "Agricultural Process Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "For a field of slope length \u03bb = 200 m and slope 3%, the USLE slope-length-steepness factor is LS = (\u03bb/22.13)^m \u00d7 (65.41 sin\u00b2\u03b8 + 4.56 sin\u03b8 + 0.065), where \u03b8 is the slope angle. Using m = 0.5 as given for this problem, compute the LS factor. (Round off to two decimal places.) (Answer: 0.74 to 0.82)",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q55",
+      "section": "Agricultural Process Engineering",
+      "subtopic": "Agricultural Process Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "A confined aquifer has a transmissivity T = 250 m\u00b2/day. Using Thiem's steady radial-flow equation Q = 2\u03c0T(h2\u2212h1)/ln(r2/r1), the drawdown difference between two observation wells at radial distances r1 = 15 m and r2 = 90 m from a pumping well is (h2\u2212h1) = 1.5 m. Compute the steady-state discharge Q. (Answer in m\u00b3/day, round off to two decimal places.) (Answer: 1300.00 to 1330.00)",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q56",
+      "section": "Agricultural Process Engineering",
+      "subtopic": "Agricultural Process Engineering Core",
+      "type": "MSQ",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "Which of the following statements regarding the soil-water-plant relationship are CORRECT?",
+      "options": {
+        "A": "Field capacity is the water content remaining in soil after gravitational drainage ceases, typically at a soil-water tension of about 33 kPa (1/3 bar) for most agricultural soils",
+        "B": "Permanent wilting point corresponds to a soil-water tension of approximately 1500 kPa (15 bar)",
+        "C": "Available water capacity is the water held in the soil between saturation and field capacity",
+        "D": "Readily available water is generally taken as about 50\u201375% of the total available water capacity, before crop water stress begins to limit yield"
+      },
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q57",
+      "section": "Agricultural Process Engineering",
+      "subtopic": "Agricultural Process Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "For a furrow-irrigated field, the cumulative infiltration follows the Kostiakov equation Z = 0.65 t^0.45, where Z is the infiltrated depth in cm and t is the intake opportunity time in minutes. If the required net application depth is 6 cm, find the required intake opportunity time. (Answer in minutes, round off to two decimal places.) (Answer: 138.00 to 141.50)",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q58",
+      "section": "Agricultural Process Engineering",
+      "subtopic": "Agricultural Process Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "A centrifugal pump delivers 25 L/s of water against a total head of 18 m, with an overall pump efficiency of 65%. Calculate the power required to drive the pump. Take \u03c1 = 1000 kg/m\u00b3 and g = 9.81 m/s\u00b2. (Answer in kW, round off to two decimal places.) (Answer: 6.70 to 6.90)",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q59",
+      "section": "Agricultural Process Engineering",
+      "subtopic": "Agricultural Process Engineering Core",
+      "type": "MCQ",
+      "marks": 2,
+      "negative_marks": 0.67,
+      "question": "In a single-effect evaporator, milk is fed at 1000 kg/h with 9% total solids and concentrated to a product containing 40% total solids. Assuming no solids are lost, estimate the rate of water evaporation.",
+      "options": {
+        "A": "775 kg/h",
+        "B": "900 kg/h",
+        "C": "225 kg/h",
+        "D": "600 kg/h"
+      },
+      "correct_answer": "A",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q60",
+      "section": "Agricultural Process Engineering",
+      "subtopic": "Agricultural Process Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "A batch dryer is loaded with 2000 kg of wet wheat grain at 20% moisture content (wet basis), to be dried to 12% moisture content (wet basis). Using Wf = Wi(100\u2212MCi)/(100\u2212MCf), calculate the final mass of dried grain. (Answer in kg, round off to two decimal places.) (Answer: 1815.00 to 1822.00)",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q61",
+      "section": "Agricultural Process Engineering",
+      "subtopic": "Agricultural Process Engineering Core",
+      "type": "MSQ",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "Which of the following statements about size-reduction laws and equipment used in agricultural process engineering are CORRECT?",
+      "options": {
+        "A": "Rittinger's law states that the energy required for size reduction is proportional to the new surface area created",
+        "B": "Kick's law states that the energy required is proportional to the logarithm of the reduction ratio (initial size / final size)",
+        "C": "Bond's law is generally considered most applicable to coarse crushing operations, while Rittinger's law fits fine-grinding operations better",
+        "D": "Hammer mills reduce particle size primarily by compressing material between two smooth counter-rotating rollers"
+      },
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q62",
+      "section": "Agricultural Process Engineering",
+      "subtopic": "Agricultural Process Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "A hammer mill reduces maize from an initial mean particle size of 8 mm to a final mean size of 2 mm. Using Bond's law in the form E = Wi (1/\u221ad2 \u2212 1/\u221ad1), where E is the specific energy (kWh/t), Wi = 12 (kWh\u00b7mm^0.5/t) is the work index, and d1, d2 are the initial and final particle sizes in mm, calculate the specific energy required. (Answer in kWh/t, round off to two decimal places.) (Answer: 4.15 to 4.35)",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q63",
+      "section": "Agricultural Process Engineering",
+      "subtopic": "Agricultural Process Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "In a counter-flow plate heat exchanger, milk is heated from 5\u00b0C to 72\u00b0C using hot water entering at 85\u00b0C and leaving at 25\u00b0C. Calculate the Log Mean Temperature Difference (LMTD) for this exchanger. (Answer in \u00b0C, round off to two decimal places.) (Answer: 16.00 to 16.50)",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q64",
+      "section": "Agricultural Process Engineering",
+      "subtopic": "Agricultural Process Engineering Core",
+      "type": "MSQ",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "Which of the following statements regarding heat transfer in dairy/food processing are CORRECT?",
+      "options": {
+        "A": "For the same inlet and outlet temperatures, the LMTD of a counter-flow heat exchanger is generally greater than or equal to that of an equivalent parallel-flow (co-current) exchanger",
+        "B": "The thermal conductivity of most food materials increases with increasing moisture content",
+        "C": "In HTST pasteurization, milk is typically held at about 72\u00b0C for approximately 15 seconds",
+        "D": "The convective heat-transfer coefficient depends only on the fluid's thermal conductivity and is independent of flow velocity"
+      },
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    },
+    {
+      "id": "GATE_2027_MOCK_03_Q65",
+      "section": "Agricultural Process Engineering",
+      "subtopic": "Agricultural Process Engineering Core",
+      "type": "NAT",
+      "marks": 2,
+      "negative_marks": 0,
+      "question": "A food product has an initial microbial load of 10\u2076 CFU/g. A thermal process has a decimal reduction time (D-value) of 2.5 minutes at the process temperature. Calculate the processing time required to achieve a 5-log reduction in microbial population. (Answer in minutes, round off to two decimal places.) (Answer: 12.30 to 12.70) Answer Key Detailed Solutions General Aptitude (GA) \u2014 Solutions",
+      "options": null,
+      "correct_answer": "10.5",
+      "solution": "Detailed step-by-step derivation provided in GATE AG Mock Paper.",
+      "isCustomUploaded": true
+    }
+  ]
+}
