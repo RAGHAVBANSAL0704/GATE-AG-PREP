@@ -17,11 +17,13 @@ import {
 import MathRenderer from './MathRenderer';
 
 export default function RevisionBank({ 
-  questions, 
+  questions = [],
+  customMockPapers = [], 
   userStats, 
   bookmarks, 
   onToggleBookmark,
-  onOpenCalc 
+  onOpenCalc,
+  onEditQuestion 
 }) {
   const [activeTab, setActiveTab] = useState('missteps'); // 'missteps' | 'bookmarks'
   const [selectedSection, setSelectedSection] = useState('All');
@@ -29,6 +31,10 @@ export default function RevisionBank({
   const [expandedSolutions, setExpandedSolutions] = useState({});
   const [userAnswers, setUserAnswers] = useState({});
   const [submittedAnswers, setSubmittedAnswers] = useState({});
+
+  // Combine PYQ and Custom Mock questions
+  const customQuestions = customMockPapers.flatMap(p => p.questions || []);
+  const allPool = [...questions, ...customQuestions];
 
   // Collect misstep question IDs (questions attempted but not marked correct in userStats)
   const wrongQuestionIds = (userStats?.attempted || []).filter(
@@ -38,9 +44,9 @@ export default function RevisionBank({
   const targetIds = activeTab === 'missteps' ? wrongQuestionIds : bookmarks;
   
   // Filter questions matching target IDs
-  const targetQuestions = questions.filter(q => targetIds.includes(q.id));
+  const targetQuestions = allPool.filter(q => targetIds.includes(q.id));
 
-  const sections = ['All', ...new Set(questions.map(q => q.section).filter(Boolean))];
+  const sections = ['All', ...new Set(allPool.map(q => q.section).filter(Boolean))];
 
   const filteredQuestions = targetQuestions.filter(q => {
     const matchesSection = selectedSection === 'All' || q.section === selectedSection;

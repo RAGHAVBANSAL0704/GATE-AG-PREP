@@ -18,7 +18,8 @@ import {
   Clock,
   Play,
   ArrowLeft,
-  Shuffle
+  Shuffle,
+  Edit3
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import ConceptStudyModal from './ConceptStudyModal';
@@ -57,7 +58,8 @@ export default function CustomPracticePool({
   customMockPapers = [], 
   bookmarks = [], 
   onToggleBookmark, 
-  onOpenCalc 
+  onOpenCalc,
+  onEditQuestion
 }) {
   // Aggregate all custom questions from custom mock papers
   const customQuestions = customMockPapers.flatMap(paper => 
@@ -75,7 +77,7 @@ export default function CustomPracticePool({
   const [selectedType, setSelectedType] = useState('All');
   const [selectedMarks, setSelectedMarks] = useState('All');
   const [selectedStatusFilter, setSelectedStatusFilter] = useState('All');
-  const [activeSolutionTab, setActiveSolutionTab] = useState('solution'); // 'solution' | 'notes'
+  const [activeSolutionTab, setActiveSolutionTab] = useState('solution');
 
   // Personal question notes
   const [questionNotes, setQuestionNotes] = useState(() => {
@@ -232,8 +234,8 @@ export default function CustomPracticePool({
         <div className="card-3d rounded-3xl p-6 sm:p-8 space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div className="space-y-1">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-purple-600 dark:text-purple-400 text-xs font-bold">
-                <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 text-xs font-bold">
+                <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
                 <span>Dedicated Custom Mock Questions Practice Pool</span>
               </div>
               <h1 className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
@@ -249,7 +251,7 @@ export default function CustomPracticePool({
                 <Sparkles className="w-3.5 h-3.5 text-emerald-500" />
                 <span>Elapsed: {formatSec(sessionElapsedSec)}</span>
               </div>
-              <div className="px-3.5 py-1.5 rounded-xl bg-purple-50 dark:bg-purple-950 text-purple-600 dark:text-purple-400 border border-purple-200 dark:border-purple-800 flex items-center gap-2 font-extrabold text-xs">
+              <div className="px-3.5 py-1.5 rounded-xl bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-800 flex items-center gap-2 font-extrabold text-xs">
                 <BookOpen className="w-3.5 h-3.5" />
                 <span>{customQuestions.length} Custom Qs Loaded</span>
               </div>
@@ -265,7 +267,7 @@ export default function CustomPracticePool({
             </h2>
             <button
               onClick={() => launchPracticeForSection('All')}
-              className="text-xs font-bold text-purple-600 dark:text-purple-400 hover:underline flex items-center gap-1"
+              className="text-xs font-bold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1"
             >
               <span>Practice All {customQuestions.length} Custom Questions</span>
               <ChevronRight className="w-4 h-4" />
@@ -282,22 +284,22 @@ export default function CustomPracticePool({
               return (
                 <div 
                   key={sec.id}
-                  className="card-3d rounded-2xl p-6 flex flex-col justify-between space-y-4 group cursor-pointer hover:border-purple-500/50 transition"
+                  className="card-3d rounded-2xl p-6 flex flex-col justify-between space-y-4 group cursor-pointer hover:border-blue-500/50 transition"
                   onClick={() => launchPracticeForSection(secNameMap)}
                 >
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
-                      <span className="text-[10px] font-extrabold uppercase tracking-wider bg-purple-50 dark:bg-purple-950 text-purple-700 dark:text-purple-300 px-2.5 py-0.5 rounded-md border border-purple-200 dark:border-purple-800">
+                      <span className="text-[10px] font-extrabold uppercase tracking-wider bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 px-2.5 py-0.5 rounded-md border border-blue-200 dark:border-blue-800">
                         {sec.code}
                       </span>
-                      <span className="text-xs font-bold text-amber-600 dark:text-amber-400">{sec.weightage}</span>
+                      <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400">{sec.weightage}</span>
                     </div>
 
                     <h3 className="font-bold text-slate-900 dark:text-white text-base leading-snug">
                       {normTitle}
                     </h3>
 
-                    <p className="text-xs font-mono font-bold text-purple-600 dark:text-purple-400">
+                    <p className="text-xs font-mono font-bold text-blue-600 dark:text-blue-400">
                       {count} Custom Questions
                     </p>
                   </div>
@@ -307,7 +309,7 @@ export default function CustomPracticePool({
                       e.stopPropagation();
                       launchPracticeForSection(secNameMap);
                     }}
-                    className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-purple-600 group-hover:bg-purple-500 text-white text-xs font-extrabold transition shadow-md"
+                    className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-blue-600 group-hover:bg-blue-500 text-white text-xs font-extrabold transition shadow-md"
                   >
                     <Play className="w-3.5 h-3.5 fill-white" />
                     <span>Practice Section ({count} Qs)</span>
@@ -318,17 +320,17 @@ export default function CustomPracticePool({
 
             {/* Launch All Custom Pool Card */}
             <div 
-              className="card-3d rounded-2xl p-6 flex flex-col justify-between space-y-4 border-2 border-dashed border-purple-400/40 bg-purple-50/30 dark:bg-purple-950/20 cursor-pointer"
+              className="card-3d rounded-2xl p-6 flex flex-col justify-between space-y-4 border-2 border-dashed border-blue-400/40 bg-blue-50/30 dark:bg-blue-950/20 cursor-pointer"
               onClick={() => launchPracticeForSection('All')}
             >
               <div className="space-y-2">
-                <span className="text-[10px] font-extrabold uppercase tracking-wider bg-purple-100 dark:bg-purple-900/60 text-purple-700 dark:text-purple-300 px-2.5 py-0.5 rounded-md">
+                <span className="text-[10px] font-extrabold uppercase tracking-wider bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-300 px-2.5 py-0.5 rounded-md">
                   ALL CUSTOM MOCKS
                 </span>
                 <h3 className="font-bold text-slate-900 dark:text-white text-base">
                   Full Custom Mixed Question Pool
                 </h3>
-                <p className="text-xs font-mono font-bold text-purple-600 dark:text-purple-400">
+                <p className="text-xs font-mono font-bold text-blue-600 dark:text-blue-400">
                   {customQuestions.length} Questions across {customMockPapers.length} Custom Mock Papers
                 </p>
               </div>
@@ -338,7 +340,7 @@ export default function CustomPracticePool({
                   e.stopPropagation();
                   launchPracticeForSection('All');
                 }}
-                className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-purple-900 text-white dark:bg-purple-100 dark:text-purple-900 text-xs font-extrabold shadow-md hover:bg-purple-800 transition"
+                className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-blue-600 text-white text-xs font-extrabold shadow-md hover:bg-blue-500 transition"
               >
                 <Shuffle className="w-3.5 h-3.5" />
                 <span>Practice All Custom Qs</span>
@@ -361,7 +363,7 @@ export default function CustomPracticePool({
           onClick={() => setIsHubActive(true)}
           className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 text-xs font-bold transition border border-slate-200 dark:border-slate-700"
         >
-          <ArrowLeft className="w-4 h-4 text-purple-600" />
+          <ArrowLeft className="w-4 h-4 text-blue-600" />
           <span>Back to Custom Pool Launchpad</span>
         </button>
 
@@ -372,14 +374,14 @@ export default function CustomPracticePool({
           </div>
 
           <div className="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center gap-1.5">
-            <Sparkles className="w-3.5 h-3.5 text-purple-500" />
+            <Sparkles className="w-3.5 h-3.5 text-blue-500" />
             <span>Session: {formatSec(sessionElapsedSec)}</span>
           </div>
         </div>
 
         <button
           onClick={onOpenCalc}
-          className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-purple-50 dark:bg-purple-950 text-purple-600 dark:text-purple-400 text-xs font-bold border border-purple-200 dark:border-purple-900 hover:bg-purple-600 hover:text-white transition"
+          className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 text-xs font-bold border border-blue-200 dark:border-blue-900 hover:bg-blue-600 hover:text-white transition"
         >
           <Calculator className="w-4 h-4" />
           <span>Scientific Calc</span>
@@ -390,12 +392,12 @@ export default function CustomPracticePool({
       <div className="card-3d rounded-2xl p-4 sm:p-5 space-y-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Filter className="w-4 h-4 text-purple-600" />
+            <Filter className="w-4 h-4 text-blue-600" />
             <h2 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider">
               Custom Mock Pool Filters
             </h2>
           </div>
-          <span className="text-xs font-semibold px-3 py-1 rounded-lg bg-purple-50 dark:bg-purple-950 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800 font-mono">
+          <span className="text-xs font-semibold px-3 py-1 rounded-lg bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 font-mono">
             {filteredQuestions.length} Custom Questions Found
           </span>
         </div>
@@ -406,7 +408,7 @@ export default function CustomPracticePool({
             <select
               value={selectedSection}
               onChange={(e) => setSelectedSection(e.target.value)}
-              className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-2.5 py-2 text-slate-900 dark:text-slate-100 font-medium outline-none focus:ring-1 focus:ring-purple-500"
+              className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-2.5 py-2 text-slate-900 dark:text-slate-100 font-medium outline-none focus:ring-1 focus:ring-blue-500"
             >
               {sections.map(s => <option key={s} value={s}>{s}</option>)}
             </select>
@@ -417,7 +419,7 @@ export default function CustomPracticePool({
             <select
               value={selectedPaper}
               onChange={(e) => setSelectedPaper(e.target.value)}
-              className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-2.5 py-2 text-slate-900 dark:text-slate-100 font-medium outline-none focus:ring-1 focus:ring-purple-500"
+              className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-2.5 py-2 text-slate-900 dark:text-slate-100 font-medium outline-none focus:ring-1 focus:ring-blue-500"
             >
               {paperTitles.map(p => <option key={p} value={p}>{p}</option>)}
             </select>
@@ -428,7 +430,7 @@ export default function CustomPracticePool({
             <select
               value={selectedType}
               onChange={(e) => setSelectedType(e.target.value)}
-              className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-2.5 py-2 text-slate-900 dark:text-slate-100 font-medium outline-none focus:ring-1 focus:ring-purple-500"
+              className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-2.5 py-2 text-slate-900 dark:text-slate-100 font-medium outline-none focus:ring-1 focus:ring-blue-500"
             >
               <option value="All">All Types (MCQ/MSQ/NAT)</option>
               <option value="MCQ">MCQ (Multiple Choice)</option>
@@ -442,7 +444,7 @@ export default function CustomPracticePool({
             <select
               value={selectedMarks}
               onChange={(e) => setSelectedMarks(e.target.value)}
-              className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-2.5 py-2 text-slate-900 dark:text-slate-100 font-medium outline-none focus:ring-1 focus:ring-purple-500"
+              className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-2.5 py-2 text-slate-900 dark:text-slate-100 font-medium outline-none focus:ring-1 focus:ring-blue-500"
             >
               <option value="All">All Marks</option>
               <option value="1">1 Mark</option>
@@ -466,7 +468,7 @@ export default function CustomPracticePool({
               onClick={() => setSelectedStatusFilter(st.id)}
               className={`px-3 py-1 rounded-full text-xs font-bold transition border ${
                 selectedStatusFilter === st.id
-                  ? 'bg-purple-600 text-white border-purple-600 shadow-xs'
+                  ? 'bg-blue-600 text-white border-blue-600 shadow-xs'
                   : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700'
               }`}
             >
@@ -486,13 +488,13 @@ export default function CustomPracticePool({
       ) : (
         <div className="card-3d rounded-2xl overflow-hidden">
           
-          <div className="bg-purple-950/40 border-b border-purple-900/60 px-6 py-3.5 flex flex-wrap items-center justify-between gap-3">
+          <div className="bg-slate-900/40 border-b border-slate-800/60 px-6 py-3.5 flex flex-wrap items-center justify-between gap-3">
             <div className="flex items-center gap-2">
               <span className="text-xs font-bold text-slate-900 dark:text-white">
                 Question {currentIndex + 1} of {filteredQuestions.length}
               </span>
-              <span className="text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-md bg-purple-600 text-white flex items-center gap-1">
-                <Sparkles className="w-3 h-3 text-amber-400 shrink-0" />
+              <span className="text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-md bg-blue-600 text-white flex items-center gap-1">
+                <Sparkles className="w-3 h-3 text-emerald-400 shrink-0" />
                 <span>{currentQ.paperTitle || currentQ.year}</span>
               </span>
               <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300">
@@ -504,12 +506,23 @@ export default function CustomPracticePool({
             </div>
 
             <div className="flex items-center gap-2">
+              {onEditQuestion && (
+                <button
+                  onClick={() => onEditQuestion(currentQ)}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 font-bold text-xs border border-blue-200 dark:border-blue-800 hover:bg-blue-600 hover:text-white transition"
+                  title="Manually edit question text, options, key, or solution"
+                >
+                  <Edit3 className="w-3.5 h-3.5" />
+                  <span>Edit Question</span>
+                </button>
+              )}
+
               <button
                 onClick={() => onToggleBookmark(currentQ.id)}
                 className={`p-1.5 rounded-lg border transition ${
                   bookmarks.includes(currentQ.id)
-                    ? 'bg-amber-500 text-white border-amber-500'
-                    : 'bg-slate-100 dark:bg-slate-800 text-slate-500 border-slate-200 dark:border-slate-700 hover:text-amber-500'
+                    ? 'bg-blue-600 text-white border-blue-600'
+                    : 'bg-slate-100 dark:bg-slate-800 text-slate-500 border-slate-200 dark:border-slate-700 hover:text-blue-500'
                 }`}
                 title={bookmarks.includes(currentQ.id) ? "Remove Bookmark" : "Bookmark Question"}
               >
@@ -518,7 +531,7 @@ export default function CustomPracticePool({
 
               <button
                 onClick={() => setActiveConceptQuestion(currentQ)}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-purple-50 dark:bg-purple-950 text-purple-600 dark:text-purple-400 font-bold text-xs border border-purple-200 dark:border-purple-800 hover:bg-purple-600 hover:text-white transition"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 font-bold text-xs border border-blue-200 dark:border-blue-800 hover:bg-blue-600 hover:text-white transition"
               >
                 <GraduationCap className="w-4 h-4" />
                 <span>Concept Study</span>
@@ -527,12 +540,12 @@ export default function CustomPracticePool({
           </div>
 
           <div className="p-6 sm:p-8 space-y-6">
-            <div className="text-xs font-bold text-purple-600 dark:text-purple-400 uppercase tracking-wider">
+            <div className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
               {currentQ.section} {currentQ.subtopic ? `• ${currentQ.subtopic}` : ''}
             </div>
 
             {/* Question Text */}
-            <div className="text-sm sm:text-base font-semibold text-slate-900 dark:text-slate-100 leading-relaxed space-y-3">
+            <div className="text-base sm:text-lg font-semibold text-slate-900 dark:text-slate-100 leading-relaxed space-y-3">
               <MathRenderer content={currentQ.question} />
             </div>
 
@@ -544,9 +557,9 @@ export default function CustomPracticePool({
                   const isSubmitted = submittedState[currentQ.id]?.isSubmitted;
                   const isCorrectOpt = currentQ.correct_answer?.toUpperCase().includes(key.toUpperCase());
 
-                  let btnStyle = "border-slate-200 dark:border-slate-700 hover:border-purple-400 bg-slate-50 dark:bg-slate-800/60";
+                  let btnStyle = "border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/50 text-slate-900 dark:text-slate-100 hover:border-blue-400 dark:hover:border-blue-600";
                   if (isSelected) {
-                    btnStyle = "border-purple-600 bg-purple-50/60 dark:bg-purple-950/40 text-purple-900 dark:text-purple-100 font-bold";
+                    btnStyle = "border-blue-600 bg-blue-50/80 dark:bg-blue-950/60 text-blue-900 dark:text-blue-100 font-bold shadow-xs";
                   }
 
                   if (isSubmitted) {
@@ -562,9 +575,13 @@ export default function CustomPracticePool({
                       key={key}
                       onClick={() => handleSelectMcq(currentQ.id, key)}
                       disabled={isSubmitted}
-                      className={`w-full p-4 rounded-xl border text-left text-xs sm:text-sm transition flex items-start gap-3 ${btnStyle}`}
+                      className={`w-full text-left p-4 rounded-xl border text-sm sm:text-base font-medium transition flex items-start gap-3.5 ${btnStyle}`}
                     >
-                      <span className="w-6 h-6 rounded-lg bg-slate-200 dark:bg-slate-700 flex items-center justify-center font-bold text-xs shrink-0">
+                      <span className={`w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs shrink-0 border ${
+                        isSelected 
+                          ? 'bg-blue-600 text-white border-blue-600'
+                          : 'bg-slate-200 text-slate-700 dark:bg-slate-700 dark:text-slate-200 border-slate-300 dark:border-slate-600'
+                      }`}>
                         {key}
                       </span>
                       <div className="pt-0.5 flex-1">
@@ -584,9 +601,9 @@ export default function CustomPracticePool({
                   const isSelected = selectedList.includes(key);
                   const isSubmitted = submittedState[currentQ.id]?.isSubmitted;
 
-                  let btnStyle = "border-slate-200 dark:border-slate-700 hover:border-purple-400 bg-slate-50 dark:bg-slate-800/60";
+                  let btnStyle = "border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/50 text-slate-900 dark:text-slate-100 hover:border-blue-400 dark:hover:border-blue-600";
                   if (isSelected) {
-                    btnStyle = "border-purple-600 bg-purple-50/60 dark:bg-purple-950/40 text-purple-900 dark:text-purple-100 font-bold";
+                    btnStyle = "border-blue-600 bg-blue-50/80 dark:bg-blue-950/60 text-blue-900 dark:text-blue-100 font-bold shadow-xs";
                   }
 
                   return (
@@ -594,10 +611,14 @@ export default function CustomPracticePool({
                       key={key}
                       onClick={() => handleToggleMsq(currentQ.id, key)}
                       disabled={isSubmitted}
-                      className={`w-full p-4 rounded-xl border text-left text-xs sm:text-sm transition flex items-start gap-3 ${btnStyle}`}
+                      className={`w-full text-left p-4 rounded-xl border text-sm sm:text-base font-medium transition flex items-start gap-3.5 ${btnStyle}`}
                     >
-                      <span className="w-6 h-6 rounded-md border border-slate-400 flex items-center justify-center font-bold text-xs shrink-0">
-                        {isSelected ? '✓' : key}
+                      <span className={`w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs shrink-0 border ${
+                        isSelected 
+                          ? 'bg-blue-600 text-white border-blue-600'
+                          : 'bg-slate-200 text-slate-700 dark:bg-slate-700 dark:text-slate-200 border-slate-300 dark:border-slate-600'
+                      }`}>
+                        {key}
                       </span>
                       <div className="pt-0.5 flex-1">
                         <MathRenderer content={val} />
@@ -620,7 +641,7 @@ export default function CustomPracticePool({
                   value={userAnswers[currentQ.id] || ''}
                   onChange={(e) => handleNatInput(currentQ.id, e.target.value)}
                   disabled={submittedState[currentQ.id]?.isSubmitted}
-                  className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-2.5 text-sm font-mono text-slate-900 dark:text-slate-100 outline-none focus:ring-2 focus:ring-purple-500"
+                  className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-2.5 text-sm font-mono text-slate-900 dark:text-slate-100 outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
             )}
@@ -632,7 +653,7 @@ export default function CustomPracticePool({
                   <button
                     onClick={() => handleSubmitAnswer(currentQ.id)}
                     disabled={!userAnswers[currentQ.id]}
-                    className="px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 disabled:opacity-40 text-white font-bold text-xs transition shadow-xs flex items-center gap-2"
+                    className="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 disabled:opacity-40 text-white font-bold text-xs transition shadow-xs flex items-center gap-2"
                   >
                     <CheckCircle2 className="w-4 h-4" />
                     <span>Submit Answer</span>
@@ -672,14 +693,14 @@ export default function CustomPracticePool({
 
             {/* Solution & Explanation Box */}
             {showSolution[currentQ.id] && (
-              <div className="p-6 rounded-2xl bg-purple-50/70 dark:bg-purple-950/40 border border-purple-200 dark:border-purple-900 space-y-4 animate-in fade-in">
-                <div className="flex items-center justify-between border-b border-purple-200 dark:border-purple-900/60 pb-3">
-                  <div className="flex items-center gap-2 font-extrabold text-xs text-purple-900 dark:text-purple-200 uppercase tracking-wider">
+              <div className="p-6 rounded-2xl bg-blue-50/70 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-900 space-y-4 animate-in fade-in">
+                <div className="flex items-center justify-between border-b border-blue-200 dark:border-blue-900/60 pb-3">
+                  <div className="flex items-center gap-2 font-extrabold text-xs text-blue-900 dark:text-blue-200 uppercase tracking-wider">
                     <CheckCircle2 className="w-4 h-4 text-emerald-500" />
                     <span>Verified Answer & Detailed Solution</span>
                   </div>
 
-                  <span className="text-xs font-mono font-bold px-2.5 py-0.5 rounded bg-purple-200 dark:bg-purple-900 text-purple-900 dark:text-purple-100">
+                  <span className="text-xs font-mono font-bold px-2.5 py-0.5 rounded bg-blue-200 dark:bg-blue-900 text-blue-900 dark:text-blue-100">
                     Key: {currentQ.correct_answer}
                   </span>
                 </div>

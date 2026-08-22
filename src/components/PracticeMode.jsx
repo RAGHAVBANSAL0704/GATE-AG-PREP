@@ -19,7 +19,8 @@ import {
   Clock,
   Play,
   ArrowLeft,
-  Shuffle
+  Shuffle,
+  Edit3
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import ConceptStudyModal from './ConceptStudyModal';
@@ -54,7 +55,7 @@ const formatSec = (secs) => {
   return `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
 };
 
-export default function PracticeMode({ questions, customMockPapers = [], bookmarks, onToggleBookmark, initialSection, onOpenCalc }) {
+export default function PracticeMode({ questions, customMockPapers = [], bookmarks, onToggleBookmark, initialSection, onOpenCalc, onEditQuestion }) {
   const [isHubActive, setIsHubActive] = useState(() => !initialSection || initialSection === 'All');
   const [sourceFilter, setSourceFilter] = useState('All'); // 'All' | 'Official GATE PYQs' | 'Custom Mock Questions'
   const [selectedSection, setSelectedSection] = useState(() => normSec(initialSection) || 'All');
@@ -601,6 +602,17 @@ export default function PracticeMode({ questions, customMockPapers = [], bookmar
             </div>
 
             <div className="flex items-center gap-2">
+              {onEditQuestion && (
+                <button
+                  onClick={() => onEditQuestion(currentQ)}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-purple-50 dark:bg-purple-950 text-purple-600 dark:text-purple-400 font-bold text-xs border border-purple-200 dark:border-purple-800 hover:bg-purple-600 hover:text-white transition"
+                  title="Manually edit question text, options, key, or solution"
+                >
+                  <Edit3 className="w-3.5 h-3.5" />
+                  <span>Edit Question</span>
+                </button>
+              )}
+
               <button
                 onClick={() => onToggleBookmark(currentQ.id)}
                 className={`p-1.5 rounded-lg border transition ${
@@ -622,7 +634,7 @@ export default function PracticeMode({ questions, customMockPapers = [], bookmar
               <span className="text-[10px] font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
                 {currentQ.section} • {currentQ.topic} {currentQ.subtopic ? `— ${currentQ.subtopic}` : ''}
               </span>
-              <div className="text-base sm:text-lg leading-relaxed text-slate-900 dark:text-slate-100 font-medium pt-1">
+              <div className="text-base sm:text-lg font-semibold leading-relaxed text-slate-900 dark:text-slate-100 pt-1">
                 <MathRenderer content={currentQ.question} inline={false} />
               </div>
             </div>
@@ -649,9 +661,9 @@ export default function PracticeMode({ questions, customMockPapers = [], bookmar
                   const isSelected = userAnswers[currentQ.id] === optKey;
                   const isSubmitted = submittedState[currentQ.id]?.isSubmitted;
 
-                  let optStyle = "border-slate-200 dark:border-slate-800 hover:border-blue-400 dark:hover:border-blue-700";
+                  let optStyle = "border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/50 text-slate-900 dark:text-slate-100 hover:border-blue-500 dark:hover:border-blue-600";
                   if (isSelected) {
-                    optStyle = "border-blue-600 bg-blue-50/60 dark:bg-blue-950/40 font-bold shadow-xs";
+                    optStyle = "border-blue-600 bg-blue-50/80 dark:bg-blue-950/60 font-bold text-blue-900 dark:text-blue-100 shadow-xs";
                   }
                   if (isSubmitted && optKey.trim().toUpperCase() === currentQ.correct_answer.trim().toUpperCase()) {
                     optStyle = "border-emerald-600 bg-emerald-50/80 dark:bg-emerald-950/60 font-bold text-emerald-900 dark:text-emerald-100";
@@ -664,16 +676,16 @@ export default function PracticeMode({ questions, customMockPapers = [], bookmar
                       key={optKey}
                       onClick={() => handleSelectMcq(currentQ.id, optKey)}
                       disabled={isSubmitted}
-                      className={`w-full text-left p-4 rounded-xl border transition flex items-start gap-3.5 text-xs sm:text-sm ${optStyle}`}
+                      className={`w-full text-left p-4 rounded-xl border transition flex items-start gap-3.5 text-sm sm:text-base font-medium ${optStyle}`}
                     >
-                      <span className={`w-6 h-6 rounded-full flex items-center justify-center font-bold text-xs shrink-0 border ${
+                      <span className={`w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs shrink-0 border ${
                         isSelected 
                           ? 'bg-blue-600 text-white border-blue-600'
-                          : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-300 dark:border-slate-700'
+                          : 'bg-slate-200 text-slate-700 dark:bg-slate-700 dark:text-slate-200 border-slate-300 dark:border-slate-600'
                       }`}>
                         {optKey}
                       </span>
-                      <div className="mt-0.5 flex-1">
+                      <div className="pt-0.5 flex-1">
                         <MathRenderer content={optVal} />
                       </div>
                     </button>
@@ -696,15 +708,20 @@ export default function PracticeMode({ questions, customMockPapers = [], bookmar
                       key={optKey}
                       onClick={() => handleToggleMsq(currentQ.id, optKey)}
                       disabled={isSubmitted}
-                      className={`w-full text-left p-4 rounded-xl border transition flex items-start gap-3.5 text-xs sm:text-sm ${
+                      className={`w-full text-left p-4 rounded-xl border transition flex items-start gap-3.5 text-sm sm:text-base font-medium ${
                         isChecked 
-                          ? 'border-blue-600 bg-blue-50/60 dark:bg-blue-950/40 font-bold' 
-                          : 'border-slate-200 dark:border-slate-800'
+                          ? 'border-blue-600 bg-blue-50/80 dark:bg-blue-950/60 text-blue-900 dark:text-blue-100 font-bold shadow-xs' 
+                          : 'border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/50 text-slate-900 dark:text-slate-100 hover:border-blue-500 dark:hover:border-blue-600'
                       }`}
                     >
-                      <input type="checkbox" checked={isChecked} readOnly className="mt-1 accent-blue-600" />
-                      <span className="font-bold text-xs uppercase">{optKey}.</span>
-                      <div className="flex-1">
+                      <span className={`w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs shrink-0 border ${
+                        isChecked 
+                          ? 'bg-blue-600 text-white border-blue-600'
+                          : 'bg-slate-200 text-slate-700 dark:bg-slate-700 dark:text-slate-200 border-slate-300 dark:border-slate-600'
+                      }`}>
+                        {optKey}
+                      </span>
+                      <div className="pt-0.5 flex-1">
                         <MathRenderer content={optVal} />
                       </div>
                     </button>

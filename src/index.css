@@ -3,168 +3,124 @@
 @import "tailwindcss/utilities";
 @import "katex/dist/katex.min.css";
 
+/* ==========================================================================
+   UNIFORM THEME ENGINE & SMOOTH TRANSITIONS
+   ========================================================================== */
+
 @layer base {
-  /* Global smooth theme transitions */
-  * {
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 200ms;
+  /* Global smooth 300ms theme transition across all elements */
+  *, ::before, ::after {
+    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 300ms cubic-bezier(0.4, 0, 0.2, 1),
+                color 300ms cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1),
+                fill 300ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  /* Base Body Styles for Themes */
-  body {
+  /* ------------------------------------------------------------------------
+     THEME 1: CLEAN SLATE LIGHT (Light Mode Default)
+     ------------------------------------------------------------------------ */
+  body, .theme-slate-light body {
     background-color: #F8FAFC;
     color: #0F172A;
-    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 
-  /* Theme 1: Cyber Dark (Default Dark) */
-  .dark.theme-cyber-dark body,
-  .dark body {
+  /* ------------------------------------------------------------------------
+     THEME 2: CYBER DARK (Dark Mode Default - Executive Sapphire & Emerald)
+     ------------------------------------------------------------------------ */
+  .dark body,
+  .dark.theme-cyber-dark body {
     background-color: #0B0F19;
     color: #F8FAFC;
   }
-
-  /* Theme 2: Forest Emerald */
-  .dark.theme-forest-emerald body {
-    background-color: #061A14;
-    color: #F0FDF4;
-  }
-
-  /* Theme 3: Midnight Amethyst */
-  .dark.theme-midnight-amethyst body {
-    background-color: #0F0C1B;
-    color: #F5F3FF;
-  }
-
-  /* Theme 4: Clean Slate Light */
-  .theme-slate-light body {
-    background-color: #F8FAFC;
-    color: #0F172A;
-  }
 }
 
-/* Hide raw MathML to prevent KaTeX double printing */
-.katex-mathml {
-  display: none !important;
+/* ==========================================================================
+   UNIFORM INPUTS & PLACEHOLDERS
+   ========================================================================== */
+
+input, select, textarea {
+  font-family: inherit;
 }
 
-/* Mobile KaTeX Math Overflow Protection */
-.katex-display {
-  overflow-x: auto;
-  overflow-y: hidden;
-  max-width: 100%;
-  -webkit-overflow-scrolling: touch;
-  padding: 6px 0;
+/* Light Theme Placeholders */
+input::placeholder, textarea::placeholder {
+  color: #94A3B8;
 }
 
-.katex {
-  max-width: 100%;
+/* Cyber Dark Inputs & Placeholders */
+.dark input, .dark select, .dark textarea {
+  background-color: #0F172A;
+  border-color: #1E293B;
+  color: #F8FAFC;
+}
+.dark input::placeholder, .dark textarea::placeholder {
+  color: #64748B;
 }
 
-/* Touch-Optimized Calculator Button */
-.calc-btn {
-  min-h: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.5rem;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 0.75rem;
-  font-weight: 700;
-  transition: all 0.15s ease;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-}
-@media (min-width: 640px) {
-  .calc-btn {
-    min-h: 36px;
-  }
-}
+/* ==========================================================================
+   UNIFORM CARDS & PANELS
+   ========================================================================== */
 
-/* Minimalist & Enthusiastic 3D Elevated Cards */
+/* Slate Light Cards */
 .card-3d {
-  background: #FFFFFF;
+  background-color: #FFFFFF;
   border: 1px solid #E2E8F0;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02), inset 0 1px 0 0 rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
 }
 
 /* Cyber Dark Cards */
-.dark.theme-cyber-dark .card-3d,
 .dark .card-3d {
-  background: #111827;
+  background-color: #111827;
   border: 1px solid #1F2937;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
 }
-
-/* Forest Emerald Cards */
-.dark.theme-forest-emerald .card-3d {
-  background: #09261E;
-  border: 1px solid #124335;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(16, 185, 129, 0.1);
-}
-
-/* Midnight Amethyst Cards */
-.dark.theme-midnight-amethyst .card-3d {
-  background: #15102A;
-  border: 1px solid #271C4B;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(139, 92, 246, 0.1);
-}
-
-.card-3d:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
-}
-
 .dark .card-3d:hover {
-  box-shadow: 0 16px 28px -8px rgba(0, 0, 0, 0.6), 0 8px 10px -4px rgba(0, 0, 0, 0.4);
-}
-
-.card-3d:active {
-  transform: translateY(0);
+  border-color: #374151;
+  box-shadow: 0 14px 30px -5px rgba(37, 99, 235, 0.15);
 }
 
 /* Glassmorphism Panels */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(16px);
   border: 1px solid rgba(226, 232, 240, 0.8);
 }
-
 .dark .glass-panel {
-  background: rgba(17, 24, 39, 0.88);
+  background: rgba(17, 24, 39, 0.9);
   backdrop-filter: blur(16px);
   border: 1px solid rgba(31, 41, 55, 0.8);
 }
 
-/* Enthusiastic 3D Primary Action Buttons */
+/* ==========================================================================
+   UNIFORM BUTTON STYLES & ACCENTS
+   ========================================================================== */
+
 .btn-3d-primary {
-  background: linear-gradient(180deg, #3B82F6 0%, #1D4ED8 100%);
-  border: 1px solid #1E40AF;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  background: linear-gradient(180deg, #2563EB 0%, #1D4ED8 100%);
+  border: 1px solid #1D4ED8;
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 .btn-3d-primary:hover {
-  transform: translateY(-1.5px);
-  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.4);
-}
-.btn-3d-primary:active {
-  transform: translateY(0);
+  background: linear-gradient(180deg, #3B82F6 0%, #2563EB 100%);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+  transform: translateY(-1px);
 }
 
 .btn-3d-emerald {
   background: linear-gradient(180deg, #10B981 0%, #059669 100%);
-  border: 1px solid #047857;
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  border: 1px solid #059669;
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
 }
 .btn-3d-emerald:hover {
-  transform: translateY(-1.5px);
+  background: linear-gradient(180deg, #34D399 0%, #10B981 100%);
   box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
-}
-.btn-3d-emerald:active {
-  transform: translateY(0);
+  transform: translateY(-1px);
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbars */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -180,13 +136,15 @@
   background: #334155;
 }
 
-/* GATE Palette Status Colors (Academic CBT Style) */
+/* ==========================================================================
+   GATE CBT STATUS PALETTE
+   ========================================================================== */
+
 .gate-status-not-visited {
   background-color: #F1F5F9;
   color: #475569;
   border-color: #CBD5E1;
 }
-
 .dark .gate-status-not-visited {
   background-color: #1E293B;
   color: #94A3B8;
@@ -211,39 +169,18 @@
   border-color: #7C3AED;
 }
 
-.gate-status-marked-ans {
-  background-color: #8B5CF6;
-  color: #FFFFFF;
-  border-color: #7C3AED;
-  position: relative;
+/* KaTeX Overrides */
+.katex-mathml {
+  display: none !important;
 }
-
-/* Print Optimization Styles */
-@media print {
-  aside, 
-  nav, 
-  button, 
-  footer, 
-  .no-print,
-  [title="Open GATE Calculator"],
-  .scientific-calculator-container {
-    display: none !important;
-  }
-
-  body, main, div {
-    background: white !important;
-    color: black !important;
-    box-shadow: none !important;
-  }
-
-  .card-3d {
-    border: 1px solid #ccc !important;
-    box-shadow: none !important;
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
-
-  .print-only {
-    display: block !important;
-  }
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+  padding: 6px 0;
+  margin: 0.5em 0 !important;
+}
+.katex, .katex * {
+  color: inherit !important;
+  fill: currentColor !important;
 }

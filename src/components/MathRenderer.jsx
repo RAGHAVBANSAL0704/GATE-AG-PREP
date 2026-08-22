@@ -10,7 +10,13 @@ export default function MathRenderer({ content, inline = false, className = "" }
 
     let str = text;
 
-    // 1. Pre-process common engineering units and sub/superscripts
+    // 1. Automatic Spacing Sanitization for Word & Math Boundaries
+    str = str.replace(/([a-zA-Z0-9\)])(\$|\\\(|\\\[)/g, '$1 $2')
+             .replace(/(\$|\\\)|\\\])([a-zA-Z0-9\(/])/g, '$1 $2')
+             .replace(/\]([a-zA-Z])/g, '] $1')
+             .replace(/([a-z])\(([a-z]+)\)/gi, '$1 ($2)');
+
+    // 2. Pre-process common engineering units and sub/superscripts
     str = str.replace(/\bdeg C\b/gi, '°C')
              .replace(/\bo C\b/gi, '°C')
              .replace(/\boC\b/g, '°C')
@@ -24,19 +30,19 @@ export default function MathRenderer({ content, inline = false, className = "" }
              .replace(/N m -2/gi, 'N/m²')
              .replace(/kN m -2/gi, 'kN/m²');
 
-    // 2. Convert markdown bold **text** and inline code `code`
+    // 3. Convert markdown bold **text** and inline code `code`
     str = str.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
     str = str.replace(/`([^`]+)`/g, '<code class="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-blue-600 dark:text-blue-400 font-mono text-xs border border-slate-200 dark:border-slate-700">$1</code>');
 
     let hasRenderedMath = false;
 
-    // 3. Render KaTeX display math \[ ... \] or $$ ... $$
+    // 4. Render KaTeX display math \[ ... \] or $$ ... $$
     str = str.replace(/\\\[([\s\S]*?)\\\]/g, (match, mathStr) => {
       hasRenderedMath = true;
       try {
         return katex.renderToString(mathStr.trim(), { displayMode: true, throwOnError: false });
       } catch (e) {
-        return `<span class="text-amber-500 font-mono">${mathStr}</span>`;
+        return `<span class="text-inherit font-sans">${mathStr}</span>`;
       }
     });
 
@@ -45,17 +51,17 @@ export default function MathRenderer({ content, inline = false, className = "" }
       try {
         return katex.renderToString(mathStr.trim(), { displayMode: true, throwOnError: false });
       } catch (e) {
-        return `<span class="text-amber-500 font-mono">${mathStr}</span>`;
+        return `<span class="text-inherit font-sans">${mathStr}</span>`;
       }
     });
 
-    // 4. Render KaTeX inline math \( ... \) or $ ... $
+    // 5. Render KaTeX inline math \( ... \) or $ ... $
     str = str.replace(/\\\(([\s\S]*?)\\\)/g, (match, mathStr) => {
       hasRenderedMath = true;
       try {
         return katex.renderToString(mathStr.trim(), { displayMode: false, throwOnError: false });
       } catch (e) {
-        return `<span class="text-amber-500 font-mono">${mathStr}</span>`;
+        return `<span class="text-inherit font-sans">${mathStr}</span>`;
       }
     });
 
@@ -64,11 +70,11 @@ export default function MathRenderer({ content, inline = false, className = "" }
       try {
         return katex.renderToString(mathStr.trim(), { displayMode: false, throwOnError: false });
       } catch (e) {
-        return `<span class="text-amber-500 font-mono">${mathStr}</span>`;
+        return `<span class="text-inherit font-sans">${mathStr}</span>`;
       }
     });
 
-    // 5. Fallback: If no delimiter was found but string contains LaTeX commands (like \frac, \lambda, \partial, =, ^, _), render directly
+    // 6. Fallback: If no delimiter was found but string contains LaTeX commands (like \frac, \lambda, \partial, =, ^, _), render directly
     if (!hasRenderedMath && (str.includes('\\') || str.includes('^') || str.includes('_') || str.includes('='))) {
       try {
         return katex.renderToString(str.trim(), { displayMode: !inline, throwOnError: false });
@@ -110,7 +116,7 @@ export default function MathRenderer({ content, inline = false, className = "" }
             {nonTableBefore.length > 0 && (
               <div className="space-y-2">
                 {nonTableBefore.map((line, idx) => line.trim() && (
-                  <div key={idx} className="leading-relaxed" dangerouslySetInnerHTML={{ __html: processMath(line) }} />
+                  <div key={idx} className="leading-relaxed text-inherit" dangerouslySetInnerHTML={{ __html: processMath(line) }} />
                 ))}
               </div>
             )}
@@ -143,7 +149,7 @@ export default function MathRenderer({ content, inline = false, className = "" }
             {nonTableAfter.length > 0 && (
               <div className="space-y-2">
                 {nonTableAfter.map((line, idx) => line.trim() && (
-                  <div key={idx} className="leading-relaxed" dangerouslySetInnerHTML={{ __html: processMath(line) }} />
+                  <div key={idx} className="leading-relaxed text-inherit" dangerouslySetInnerHTML={{ __html: processMath(line) }} />
                 ))}
               </div>
             )}
@@ -162,11 +168,11 @@ export default function MathRenderer({ content, inline = false, className = "" }
           if (!trimmed) return <div key={idx} className="h-1" />;
           
           // Style key lines or step headers cleanly
-          let blockStyle = "leading-relaxed";
+          let blockStyle = "leading-relaxed text-inherit";
           if (trimmed.startsWith('<b>Official GATE') || trimmed.startsWith('Official GATE')) {
             blockStyle = "p-2.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 text-emerald-900 dark:text-emerald-200 font-medium text-xs sm:text-sm";
           } else if (trimmed.startsWith('<b>Section:') || trimmed.startsWith('Section:')) {
-            blockStyle = "text-xs font-semibold text-slate-500 uppercase tracking-wider";
+            blockStyle = "text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider";
           } else if (trimmed.startsWith('1.') || trimmed.startsWith('2.') || trimmed.startsWith('3.')) {
             blockStyle = "pl-2 border-l-2 border-blue-500 text-slate-800 dark:text-slate-200 my-1 py-0.5";
           }

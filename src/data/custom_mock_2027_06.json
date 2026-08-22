@@ -1,6 +1,6 @@
 {
-  "id": "GATE_2027_MOCK_03",
-  "title": "GATE 2027 AG Full-Length Mock Paper 03",
+  "id": "GATE_2027_MOCK_06",
+  "title": "GATE 2027 AG Full-Length Mock Paper 06",
   "year": "2027",
   "isCustomUploaded": true,
   "instructions": {
@@ -17,7 +17,7 @@
   },
   "questions": [
     {
-      "id": "GATE_2027_MOCK_03_Q01",
+      "id": "GATE_2027_MOCK_06_Q01",
       "year": "2027",
       "qnum": 1,
       "section": "General Aptitude",
@@ -38,7 +38,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q02",
+      "id": "GATE_2027_MOCK_06_Q02",
       "year": "2027",
       "qnum": 2,
       "section": "General Aptitude",
@@ -59,7 +59,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q03",
+      "id": "GATE_2027_MOCK_06_Q03",
       "year": "2027",
       "qnum": 3,
       "section": "General Aptitude",
@@ -76,11 +76,11 @@
         "D": "top-right to bottom-left"
       },
       "correct_answer": "A",
-      "solution": "Q.3 Solution:• Correct Answer: A• Section: General Aptitude | Sub-topic: Spatial Aptitude | Type: MCQ | Marks: 1Q.3Section: General Aptitude   |   Topic: Spatial Aptitude   |   Type: MCQ   |   Marks: 1Question: [Figure description: A series of three squares is shown. Square 1 contains one diagonal line drawn from the top-left corner to the bottom-right corner. Square 2 contains both diagonals (top-left to bottom-right AND top-right to bottom-left). Square 3 contains both diagonals plus a horizontal line joining the midpoints of the left and right sides. Each square in the series adds exactly one new straight line to all the lines already present in the previous square, and no line already drawn is ever removed.]Which of the following best describes Square 4, the next figure in the series?(A)  Both diagonals, the horizontal midline, and a vertical line joining the midpoints of the top and bottom sides(B)  Only a vertical line joining the midpoints of the top and bottom sides(C)  Both diagonals only, with the horizontal midline removed(D)  An empty square with no internal linesAnswer: (A) Both diagonals, the horizontal midline, and a vertical line joining the midpoints of the top and bottom sidesDetailed Explanation:Governing concept: figural/spatial series completion.The rule is 'add exactly one new line each time, keep all previous lines.' Square 3 already has both diagonals and the horizontal midline (3 lines). Square 4 must retain all three of these and add exactly one further line — the only internal straight line not yet drawn is the vertical midline.(B) drops previously drawn lines, violating the rule.(C) removes an existing line, violating the rule.(D) removes all lines.Final Answer: (A).\n──────────────────────────────────────────────────",
+      "solution": "Q.3 Solution:• Correct Answer: A• Section: General Aptitude | Sub-topic: Spatial Aptitude | Type: MCQ | Marks: 1Q.3Section: General Aptitude   |   Topic: Spatial Aptitude   |   Type: MCQ   |   Marks: 1Question: [Figure description: A series of three squares is shown. Square 1 contains one diagonal line drawn from the top-left corner to the bottom-right corner. Square 2 contains both diagonals (top-left to bottom-right AND top-right to bottom-left). Square 3 contains both diagonals plus a horizontal line joining the midpoints of the left and right sides. Each square in the series adds exactly one new straight line to all the lines already present in the previous square, and no line already drawn is ever removed.]Which of the following best describes Square 4, the next figure in the series?Figure Q.3 — spatial figure series (squares with increasing internal lines)(A)  Both diagonals, the horizontal midline, and a vertical line joining the midpoints of the top and bottom sides(B)  Only a vertical line joining the midpoints of the top and bottom sides(C)  Both diagonals only, with the horizontal midline removed(D)  An empty square with no internal linesAnswer: (A) Both diagonals, the horizontal midline, and a vertical line joining the midpoints of the top and bottom sidesDetailed Explanation:Governing concept: figural/spatial series completion.The rule is 'add exactly one new line each time, keep all previous lines.' Square 3 already has both diagonals and the horizontal midline (3 lines). Square 4 must retain all three of these and add exactly one further line — the only internal straight line not yet drawn is the vertical midline.(B) drops previously drawn lines, violating the rule.(C) removes an existing line, violating the rule.(D) removes all lines.Final Answer: (A).\n──────────────────────────────────────────────────",
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q04",
+      "id": "GATE_2027_MOCK_06_Q04",
       "year": "2027",
       "qnum": 4,
       "section": "General Aptitude",
@@ -101,7 +101,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q05",
+      "id": "GATE_2027_MOCK_06_Q05",
       "year": "2027",
       "qnum": 5,
       "section": "General Aptitude",
@@ -122,7 +122,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q06",
+      "id": "GATE_2027_MOCK_06_Q06",
       "year": "2027",
       "qnum": 6,
       "section": "General Aptitude",
@@ -143,7 +143,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q07",
+      "id": "GATE_2027_MOCK_06_Q07",
       "year": "2027",
       "qnum": 7,
       "section": "General Aptitude",
@@ -164,7 +164,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q08",
+      "id": "GATE_2027_MOCK_06_Q08",
       "year": "2027",
       "qnum": 8,
       "section": "General Aptitude",
@@ -185,7 +185,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q09",
+      "id": "GATE_2027_MOCK_06_Q09",
       "year": "2027",
       "qnum": 9,
       "section": "General Aptitude",
@@ -206,7 +206,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q10",
+      "id": "GATE_2027_MOCK_06_Q10",
       "year": "2027",
       "qnum": 10,
       "section": "General Aptitude",
@@ -227,7 +227,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q11",
+      "id": "GATE_2027_MOCK_06_Q11",
       "year": "2027",
       "qnum": 11,
       "section": "Engineering Mathematics",
@@ -248,7 +248,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q12",
+      "id": "GATE_2027_MOCK_06_Q12",
       "year": "2027",
       "qnum": 12,
       "section": "Engineering Mathematics",
@@ -269,7 +269,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q13",
+      "id": "GATE_2027_MOCK_06_Q13",
       "year": "2027",
       "qnum": 13,
       "section": "Engineering Mathematics",
@@ -285,7 +285,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q14",
+      "id": "GATE_2027_MOCK_06_Q14",
       "year": "2027",
       "qnum": 14,
       "section": "Engineering Mathematics",
@@ -306,7 +306,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q15",
+      "id": "GATE_2027_MOCK_06_Q15",
       "year": "2027",
       "qnum": 15,
       "section": "Engineering Mathematics",
@@ -322,7 +322,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q16",
+      "id": "GATE_2027_MOCK_06_Q16",
       "year": "2027",
       "qnum": 16,
       "section": "Agricultural Engineering",
@@ -343,7 +343,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q17",
+      "id": "GATE_2027_MOCK_06_Q17",
       "year": "2027",
       "qnum": 17,
       "section": "Agricultural Engineering",
@@ -364,7 +364,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q18",
+      "id": "GATE_2027_MOCK_06_Q18",
       "year": "2027",
       "qnum": 18,
       "section": "Agricultural Engineering",
@@ -380,7 +380,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q19",
+      "id": "GATE_2027_MOCK_06_Q19",
       "year": "2027",
       "qnum": 19,
       "section": "Farm Power and Machinery",
@@ -401,7 +401,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q20",
+      "id": "GATE_2027_MOCK_06_Q20",
       "year": "2027",
       "qnum": 20,
       "section": "Farm Power and Machinery",
@@ -417,7 +417,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q21",
+      "id": "GATE_2027_MOCK_06_Q21",
       "year": "2027",
       "qnum": 21,
       "section": "Farm Power and Machinery",
@@ -433,7 +433,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q22",
+      "id": "GATE_2027_MOCK_06_Q22",
       "year": "2027",
       "qnum": 22,
       "section": "Farm Power and Machinery",
@@ -454,7 +454,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q23",
+      "id": "GATE_2027_MOCK_06_Q23",
       "year": "2027",
       "qnum": 23,
       "section": "Soil and Water Conservation Engineering",
@@ -475,7 +475,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q24",
+      "id": "GATE_2027_MOCK_06_Q24",
       "year": "2027",
       "qnum": 24,
       "section": "Soil and Water Conservation Engineering",
@@ -496,7 +496,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q25",
+      "id": "GATE_2027_MOCK_06_Q25",
       "year": "2027",
       "qnum": 25,
       "section": "Soil and Water Conservation Engineering",
@@ -512,7 +512,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q26",
+      "id": "GATE_2027_MOCK_06_Q26",
       "year": "2027",
       "qnum": 26,
       "section": "Soil and Water Conservation Engineering",
@@ -528,7 +528,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q27",
+      "id": "GATE_2027_MOCK_06_Q27",
       "year": "2027",
       "qnum": 27,
       "section": "Agricultural Engineering",
@@ -549,7 +549,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q28",
+      "id": "GATE_2027_MOCK_06_Q28",
       "year": "2027",
       "qnum": 28,
       "section": "Agricultural Engineering",
@@ -565,7 +565,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q29",
+      "id": "GATE_2027_MOCK_06_Q29",
       "year": "2027",
       "qnum": 29,
       "section": "Agricultural Process Engineering",
@@ -586,7 +586,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q30",
+      "id": "GATE_2027_MOCK_06_Q30",
       "year": "2027",
       "qnum": 30,
       "section": "Agricultural Process Engineering",
@@ -602,7 +602,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q31",
+      "id": "GATE_2027_MOCK_06_Q31",
       "year": "2027",
       "qnum": 31,
       "section": "Agricultural Process Engineering",
@@ -618,7 +618,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q32",
+      "id": "GATE_2027_MOCK_06_Q32",
       "year": "2027",
       "qnum": 32,
       "section": "Agricultural Process Engineering",
@@ -634,7 +634,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q33",
+      "id": "GATE_2027_MOCK_06_Q33",
       "year": "2027",
       "qnum": 33,
       "section": "Agricultural Process Engineering",
@@ -650,7 +650,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q34",
+      "id": "GATE_2027_MOCK_06_Q34",
       "year": "2027",
       "qnum": 34,
       "section": "Agricultural Engineering",
@@ -671,7 +671,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q35",
+      "id": "GATE_2027_MOCK_06_Q35",
       "year": "2027",
       "qnum": 35,
       "section": "Agricultural Engineering",
@@ -692,7 +692,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q36",
+      "id": "GATE_2027_MOCK_06_Q36",
       "year": "2027",
       "qnum": 36,
       "section": "Engineering Mathematics",
@@ -713,7 +713,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q37",
+      "id": "GATE_2027_MOCK_06_Q37",
       "year": "2027",
       "qnum": 37,
       "section": "Engineering Mathematics",
@@ -729,7 +729,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q38",
+      "id": "GATE_2027_MOCK_06_Q38",
       "year": "2027",
       "qnum": 38,
       "section": "Engineering Mathematics",
@@ -750,7 +750,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q39",
+      "id": "GATE_2027_MOCK_06_Q39",
       "year": "2027",
       "qnum": 39,
       "section": "Engineering Mathematics",
@@ -771,7 +771,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q40",
+      "id": "GATE_2027_MOCK_06_Q40",
       "year": "2027",
       "qnum": 40,
       "section": "Agricultural Engineering",
@@ -787,7 +787,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q41",
+      "id": "GATE_2027_MOCK_06_Q41",
       "year": "2027",
       "qnum": 41,
       "section": "Agricultural Engineering",
@@ -799,11 +799,11 @@
       "question": "disc plough operates at a working width of 0.9 m and a depth of 0.20 m, producing a total draft of 3.6 kN. Compute the unit draft (specific soil resistance). (Answer in kPa, round off to two decimal places.) (Answer: 19.50 to 20.50)",
       "options": null,
       "correct_answer": "19.50 to 20.50",
-      "solution": "Q.41 Solution:• Correct Answer: 19.50 to 20.50• Section: Agricultural Engineering | Sub-topic: Farm Machinery: soil tillage & forces on a tillage tool | Type: NAT | Marks: 2Q.41Section: Farm Machinery   |   Topic: Farm Machinery: soil tillage & forces on a tillage tool   |   Type: NAT   |   Marks: 2Question: A disc plough operates at a working width of 0.9 m and a depth of 0.20 m, producing a total draft of 3.6 kN. Compute the unit draft (specific soil resistance). (Answer in kPa, round off to two decimal places.) (Answer: 19.50 to 20.50)Answer: 19.50 to 20.50Detailed Explanation:Governing concept: unit draft = total draft / (cross-sectional area of cut).Cross-sectional area = width × depth = 0.9 m × 0.20 m = 0.18 m².Unit draft = 3600 N / 0.18 m² = 20,000 Pa = 20.00 kPa.Final Answer: 20.00 kPa.\n──────────────────────────────────────────────────",
+      "solution": "Q.41 Solution:• Correct Answer: 19.50 to 20.50• Section: Agricultural Engineering | Sub-topic: Farm Machinery: soil tillage & forces on a tillage tool | Type: NAT | Marks: 2Q.41Section: Farm Machinery   |   Topic: Farm Machinery: soil tillage & forces on a tillage tool   |   Type: NAT   |   Marks: 2Question: A disc plough operates at a working width of 0.9 m and a depth of 0.20 m, producing a total draft of 3.6 kN. Compute the unit draft (specific soil resistance). (Answer in kPa, round off to two decimal places.) (Answer: 19.50 to 20.50)Figure Q.41 — cross-section of cut showing tillage-tool draft force, width and depthAnswer: 19.50 to 20.50Detailed Explanation:Governing concept: unit draft = total draft / (cross-sectional area of cut).Cross-sectional area = width × depth = 0.9 m × 0.20 m = 0.18 m².Unit draft = 3600 N / 0.18 m² = 20,000 Pa = 20.00 kPa.Final Answer: 20.00 kPa.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q42",
+      "id": "GATE_2027_MOCK_06_Q42",
       "year": "2027",
       "qnum": 42,
       "section": "Agricultural Engineering",
@@ -815,11 +815,11 @@
       "question": "gear train has an input shaft rotating at 1440 rpm. Gear A (20 teeth) on the input shaft meshes with gear B (60 teeth) on a countershaft. On the same countershaft, gear C (24 teeth) meshes with gear D (48 teeth) on the output shaft. Compute the output shaft speed. (Answer in rpm, round off to two decimal places.) (Answer: 238.00 to 242.00)",
       "options": null,
       "correct_answer": "238.00 to 242.00",
-      "solution": "Q.42 Solution:• Correct Answer: 238.00 to 242.00• Section: Agricultural Engineering | Sub-topic: Machine Design: machine elements | Type: NAT | Marks: 2Q.42Section: Farm Machinery   |   Topic: Machine Design: machine elements   |   Type: NAT   |   Marks: 2Question: A gear train has an input shaft rotating at 1440 rpm. Gear A (20 teeth) on the input shaft meshes with gear B (60 teeth) on a countershaft. On the same countershaft, gear C (24 teeth) meshes with gear D (48 teeth) on the output shaft. Compute the output shaft speed. (Answer in rpm, round off to two decimal places.) (Answer: 238.00 to 242.00)Answer: 238.00 to 242.00Detailed Explanation:Governing concept: compound gear train speed ratio = product of individual stage ratios.N_out = N_in × (T_A/T_B) × (T_C/T_D) = 1440 × (20/60) × (24/48)= 1440 × 0.3333 × 0.5 = 240.00 rpm.Final Answer: 240.00 rpm.\n──────────────────────────────────────────────────",
+      "solution": "Q.42 Solution:• Correct Answer: 238.00 to 242.00• Section: Agricultural Engineering | Sub-topic: Machine Design: machine elements | Type: NAT | Marks: 2Q.42Section: Farm Machinery   |   Topic: Machine Design: machine elements   |   Type: NAT   |   Marks: 2Question: A gear train has an input shaft rotating at 1440 rpm. Gear A (20 teeth) on the input shaft meshes with gear B (60 teeth) on a countershaft. On the same countershaft, gear C (24 teeth) meshes with gear D (48 teeth) on the output shaft. Compute the output shaft speed. (Answer in rpm, round off to two decimal places.) (Answer: 238.00 to 242.00)Figure Q.42 — compound gear train (gears A–B on countershaft, C–D to output shaft)Answer: 238.00 to 242.00Detailed Explanation:Governing concept: compound gear train speed ratio = product of individual stage ratios.N_out = N_in × (T_A/T_B) × (T_C/T_D) = 1440 × (20/60) × (24/48)= 1440 × 0.3333 × 0.5 = 240.00 rpm.Final Answer: 240.00 rpm.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q43",
+      "id": "GATE_2027_MOCK_06_Q43",
       "year": "2027",
       "qnum": 43,
       "section": "Agricultural Engineering",
@@ -840,7 +840,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q44",
+      "id": "GATE_2027_MOCK_06_Q44",
       "year": "2027",
       "qnum": 44,
       "section": "Farm Power and Machinery",
@@ -856,7 +856,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q45",
+      "id": "GATE_2027_MOCK_06_Q45",
       "year": "2027",
       "qnum": 45,
       "section": "Farm Power and Machinery",
@@ -872,7 +872,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q46",
+      "id": "GATE_2027_MOCK_06_Q46",
       "year": "2027",
       "qnum": 46,
       "section": "Farm Power and Machinery",
@@ -889,11 +889,11 @@
         "D": "2.4 m/s"
       },
       "correct_answer": "A",
-      "solution": "Q.46 Solution:• Correct Answer: A• Section: Farm Power and Machinery | Sub-topic: Farm Power: engine components & I.C. engine systems | Type: MCQ | Marks: 2Q.46Section: Farm Power   |   Topic: Farm Power: engine components & I.C. engine systems   |   Type: MCQ   |   Marks: 2Question: A four-stroke engine has a bore of 100 mm and a stroke of 120 mm, and runs at 2000 rpm. Calculate the mean piston speed.(A)  8 m/s(B)  4 m/s(C)  16 m/s(D)  2.4 m/sAnswer: (A) 8 m/sDetailed Explanation:Governing concept: mean piston speed, Vp = 2LN/60, where L is stroke length in metres and N is speed in rpm.Vp = 2 × 0.12 m × 2000 / 60 = 480/60 = 8.0 m/s.(B) 4 m/s results from omitting the factor of 2 (forgetting the piston travels the stroke twice per revolution).(C) 16 m/s results from doubling the correct answer (using 4L instead of 2L).(D) 2.4 m/s results from confusing bore with stroke in the formula.Final Answer: (A) 8 m/s.\n──────────────────────────────────────────────────",
+      "solution": "Q.46 Solution:• Correct Answer: A• Section: Farm Power and Machinery | Sub-topic: Farm Power: engine components & I.C. engine systems | Type: MCQ | Marks: 2Q.46Section: Farm Power   |   Topic: Farm Power: engine components & I.C. engine systems   |   Type: MCQ   |   Marks: 2Question: A four-stroke engine has a bore of 100 mm and a stroke of 120 mm, and runs at 2000 rpm. Calculate the mean piston speed.Figure Q.46 — piston-cylinder arrangement showing bore and stroke(A)  8 m/s(B)  4 m/s(C)  16 m/s(D)  2.4 m/sAnswer: (A) 8 m/sDetailed Explanation:Governing concept: mean piston speed, Vp = 2LN/60, where L is stroke length in metres and N is speed in rpm.Vp = 2 × 0.12 m × 2000 / 60 = 480/60 = 8.0 m/s.(B) 4 m/s results from omitting the factor of 2 (forgetting the piston travels the stroke twice per revolution).(C) 16 m/s results from doubling the correct answer (using 4L instead of 2L).(D) 2.4 m/s results from confusing bore with stroke in the formula.Final Answer: (A) 8 m/s.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q47",
+      "id": "GATE_2027_MOCK_06_Q47",
       "year": "2027",
       "qnum": 47,
       "section": "Farm Power and Machinery",
@@ -909,7 +909,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q48",
+      "id": "GATE_2027_MOCK_06_Q48",
       "year": "2027",
       "qnum": 48,
       "section": "Farm Power and Machinery",
@@ -925,7 +925,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q49",
+      "id": "GATE_2027_MOCK_06_Q49",
       "year": "2027",
       "qnum": 49,
       "section": "Soil and Water Conservation Engineering",
@@ -946,7 +946,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q50",
+      "id": "GATE_2027_MOCK_06_Q50",
       "year": "2027",
       "qnum": 50,
       "section": "Soil and Water Conservation Engineering",
@@ -962,7 +962,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q51",
+      "id": "GATE_2027_MOCK_06_Q51",
       "year": "2027",
       "qnum": 51,
       "section": "Soil and Water Conservation Engineering",
@@ -978,7 +978,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q52",
+      "id": "GATE_2027_MOCK_06_Q52",
       "year": "2027",
       "qnum": 52,
       "section": "Soil and Water Conservation Engineering",
@@ -987,14 +987,14 @@
       "type": "NAT",
       "marks": 2,
       "negative_marks": 0.0,
-      "question": "Water flows over a rectangular sharp-crested notch of crest length 0.6 m under a head of 0.25 m. Using Q = (2/3)·Cd·b·√(2 g)·H^1.5, with Cd = 0.62 and g = 9.81 m/s², compute the discharge over the notch. (Answer in L/s, round off to two decimal places.) (Answer: 136.50 to 138.00)",
+      "question": "Water flows over a rectangular sharp-crested notch of crest length 0.6 m under a head of 0.25 m. Using Q = (2/3)·Cd·b·√(2 g)·H^1.5, with Cd = 0.62 and g = 9.81 m/s², compute the discharge over the notch. (Answer in L/s, round off to two decimal places.) (Answer: 136.50 to 138.00) Figure Q.52 — rectangular sharp-crested notch (elevation view)",
       "options": null,
       "correct_answer": "136.50 to 138.00",
-      "solution": "Q.52 Solution:• Correct Answer: 136.50 to 138.00• Section: Soil and Water Conservation Engineering | Sub-topic: Fluid Mechanics | Type: NAT | Marks: 2Q.52Section: Soil & Water Conservation Engineering   |   Topic: Fluid Mechanics   |   Type: NAT   |   Marks: 2Question: Water flows over a rectangular sharp-crested notch of crest length 0.6 m under a head of 0.25 m. Using Q = (2/3)·Cd·b·√(2g)·H^1.5, with Cd = 0.62 and g = 9.81 m/s², compute the discharge over the notch. (Answer in L/s, round off to two decimal places.) (Answer: 136.50 to 138.00)Answer: 136.50 to 138.00Detailed Explanation:Governing concept: discharge over a rectangular notch/weir.Q = (2/3) × 0.62 × 0.6 × √(2×9.81) × 0.25^1.5√(19.62) = 4.429; 0.25^1.5 = 0.125.Q = 0.6667 × 0.62 × 0.6 × 4.429 × 0.125 = 0.1373 m³/s = 137.31 L/s.Final Answer: 137.31 L/s.\n──────────────────────────────────────────────────",
+      "solution": "Q.52 Solution:• Correct Answer: 136.50 to 138.00• Section: Soil and Water Conservation Engineering | Sub-topic: Fluid Mechanics | Type: NAT | Marks: 2Q.52Section: Soil & Water Conservation Engineering   |   Topic: Fluid Mechanics   |   Type: NAT   |   Marks: 2Question: Water flows over a rectangular sharp-crested notch of crest length 0.6 m under a head of 0.25 m. Using Q = (2/3)·Cd·b·√(2g)·H^1.5, with Cd = 0.62 and g = 9.81 m/s², compute the discharge over the notch. (Answer in L/s, round off to two decimal places.) (Answer: 136.50 to 138.00)Figure Q.52 — rectangular sharp-crested notch (elevation view)Answer: 136.50 to 138.00Detailed Explanation:Governing concept: discharge over a rectangular notch/weir.Q = (2/3) × 0.62 × 0.6 × √(2×9.81) × 0.25^1.5√(19.62) = 4.429; 0.25^1.5 = 0.125.Q = 0.6667 × 0.62 × 0.6 × 4.429 × 0.125 = 0.1373 m³/s = 137.31 L/s.Final Answer: 137.31 L/s.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q53",
+      "id": "GATE_2027_MOCK_06_Q53",
       "year": "2027",
       "qnum": 53,
       "section": "Soil and Water Conservation Engineering",
@@ -1015,7 +1015,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q54",
+      "id": "GATE_2027_MOCK_06_Q54",
       "year": "2027",
       "qnum": 54,
       "section": "Soil and Water Conservation Engineering",
@@ -1024,14 +1024,14 @@
       "type": "NAT",
       "marks": 2,
       "negative_marks": 0.0,
-      "question": "For a field of slope length λ = 200 m and slope 3%, the USLE slope-length-steepness factor is LS = (λ/22.13)^m × (65.41 sin²θ + 4.56 sinθ + 0.065), where θ is the slope angle. Using m = 0.5 as given for this problem, compute the LS factor. (Round off to two decimal places.) (Answer: 0.74 to 0.82)",
+      "question": "For a field of slope length λ = 200 m and slope 3%, the USLE slope-length-steepness factor is LS = (λ/22.13)^m × (65.41 sin²θ + 4.56 sinθ + 0.065), where θ is the slope angle. Using m = 0.5 as given for this problem, compute the LS factor. (Round off to two decimal places.) (Answer: 0.74 to 0.82) Figure Q.54 — field slope-length profile for USLE LS-factor calculation",
       "options": null,
       "correct_answer": "0.74 to 0.82",
-      "solution": "Q.54 Solution:• Correct Answer: 0.74 to 0.82• Section: Soil and Water Conservation Engineering | Sub-topic: Soil and Water Erosion | Type: NAT | Marks: 2Q.54Section: Soil & Water Conservation Engineering   |   Topic: Soil and Water Erosion   |   Type: NAT   |   Marks: 2Question: For a field of slope length λ = 200 m and slope 3%, the USLE slope-length-steepness factor is LS = (λ/22.13)^m × (65.41 sin²θ + 4.56 sinθ + 0.065), where θ is the slope angle. Using m = 0.5 as given for this problem, compute the LS factor. (Round off to two decimal places.) (Answer: 0.74 to 0.82)Answer: 0.74 to 0.82Detailed Explanation:Governing concept: USLE topographic (LS) factor.Slope 3% ⇒ tanθ = 0.03 ⇒ θ = 1.7188°, sinθ = 0.02999.(λ/22.13)^0.5 = (200/22.13)^0.5 = (9.037)^0.5 = 3.0062.65.41 sin²θ = 65.41 × 0.0008994 = 0.0588; 4.56 sinθ = 4.56 × 0.02999 = 0.1368.Sum = 0.0588 + 0.1368 + 0.065 = 0.2607.LS = 3.0062 × 0.2607 = 0.7838 ≈ 0.78.Final Answer: 0.78.\n──────────────────────────────────────────────────",
+      "solution": "Q.54 Solution:• Correct Answer: 0.74 to 0.82• Section: Soil and Water Conservation Engineering | Sub-topic: Soil and Water Erosion | Type: NAT | Marks: 2Q.54Section: Soil & Water Conservation Engineering   |   Topic: Soil and Water Erosion   |   Type: NAT   |   Marks: 2Question: For a field of slope length λ = 200 m and slope 3%, the USLE slope-length-steepness factor is LS = (λ/22.13)^m × (65.41 sin²θ + 4.56 sinθ + 0.065), where θ is the slope angle. Using m = 0.5 as given for this problem, compute the LS factor. (Round off to two decimal places.) (Answer: 0.74 to 0.82)Figure Q.54 — field slope-length profile for USLE LS-factor calculationAnswer: 0.74 to 0.82Detailed Explanation:Governing concept: USLE topographic (LS) factor.Slope 3% ⇒ tanθ = 0.03 ⇒ θ = 1.7188°, sinθ = 0.02999.(λ/22.13)^0.5 = (200/22.13)^0.5 = (9.037)^0.5 = 3.0062.65.41 sin²θ = 65.41 × 0.0008994 = 0.0588; 4.56 sinθ = 4.56 × 0.02999 = 0.1368.Sum = 0.0588 + 0.1368 + 0.065 = 0.2607.LS = 3.0062 × 0.2607 = 0.7838 ≈ 0.78.Final Answer: 0.78.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q55",
+      "id": "GATE_2027_MOCK_06_Q55",
       "year": "2027",
       "qnum": 55,
       "section": "Agricultural Engineering",
@@ -1047,7 +1047,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q56",
+      "id": "GATE_2027_MOCK_06_Q56",
       "year": "2027",
       "qnum": 56,
       "section": "Agricultural Engineering",
@@ -1068,7 +1068,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q57",
+      "id": "GATE_2027_MOCK_06_Q57",
       "year": "2027",
       "qnum": 57,
       "section": "Agricultural Engineering",
@@ -1084,7 +1084,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q58",
+      "id": "GATE_2027_MOCK_06_Q58",
       "year": "2027",
       "qnum": 58,
       "section": "Agricultural Engineering",
@@ -1100,7 +1100,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q59",
+      "id": "GATE_2027_MOCK_06_Q59",
       "year": "2027",
       "qnum": 59,
       "section": "Agricultural Process Engineering",
@@ -1121,7 +1121,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q60",
+      "id": "GATE_2027_MOCK_06_Q60",
       "year": "2027",
       "qnum": 60,
       "section": "Agricultural Process Engineering",
@@ -1137,7 +1137,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q61",
+      "id": "GATE_2027_MOCK_06_Q61",
       "year": "2027",
       "qnum": 61,
       "section": "Agricultural Process Engineering",
@@ -1158,7 +1158,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q62",
+      "id": "GATE_2027_MOCK_06_Q62",
       "year": "2027",
       "qnum": 62,
       "section": "Agricultural Process Engineering",
@@ -1174,7 +1174,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q63",
+      "id": "GATE_2027_MOCK_06_Q63",
       "year": "2027",
       "qnum": 63,
       "section": "Agricultural Engineering",
@@ -1193,7 +1193,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q64",
+      "id": "GATE_2027_MOCK_06_Q64",
       "year": "2027",
       "qnum": 64,
       "section": "Agricultural Engineering",
@@ -1214,7 +1214,7 @@
       "isCustomUploaded": true
     },
     {
-      "id": "GATE_2027_MOCK_03_Q65",
+      "id": "GATE_2027_MOCK_06_Q65",
       "year": "2027",
       "qnum": 65,
       "section": "Agricultural Engineering",

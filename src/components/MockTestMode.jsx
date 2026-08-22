@@ -17,11 +17,12 @@ import {
   Info,
   Sparkles,
   Layers,
-  Image as ImageIcon
+  Image as ImageIcon,
+  Edit3
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 
-export default function MockTestMode({ mockPapers, customMockPapers = [], customPaper, directLaunchPaper, onOpenCalc, onFinishTest }) {
+export default function MockTestMode({ mockPapers, customMockPapers = [], customPaper, directLaunchPaper, onOpenCalc, onFinishTest, onEditQuestion }) {
   const [selectedPaper, setSelectedPaper] = useState(null);
   const [testStarted, setTestStarted] = useState(false);
 
@@ -103,46 +104,50 @@ export default function MockTestMode({ mockPapers, customMockPapers = [], custom
 
   if (!testStarted || !selectedPaper) {
     return (
-      <div className="max-w-6xl mx-auto space-y-6 animate-in fade-in duration-200">
-        <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 sm:p-8 space-y-6 shadow-sm">
+      <div className="max-w-6xl mx-auto space-y-5 animate-in fade-in duration-200">
+        <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 sm:p-6 space-y-5 shadow-xs">
           
-          <div className="text-center space-y-3">
-            <div className="w-14 h-14 rounded-2xl bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 flex items-center justify-center mx-auto border border-blue-200 dark:border-blue-800">
-              <Clock className="w-7 h-7" />
+          {/* Minimal Header */}
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-100 dark:border-slate-800">
+            <div>
+              <h1 className="text-xl font-extrabold text-slate-900 dark:text-white flex items-center gap-2">
+                <Clock className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                <span>PYQ & Mocks</span>
+              </h1>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                Official 180-minute GATE Agricultural Engineering papers (2007–2026) & custom mock tests in full CBT format.
+              </p>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
-              GATE Agricultural Engineering (AG) PYQ & Custom Mock Tests
-            </h1>
-            <p className="text-xs sm:text-sm text-slate-500 max-w-2xl mx-auto leading-relaxed">
-              Full official GATE AG papers from <span className="font-bold text-slate-700 dark:text-slate-300">2007 to 2026 (20 Papers)</span> plus pre-loaded and uploaded Custom Mock Papers. Practice in full official CBT interface.
-            </p>
+            <div className="text-xs font-mono font-bold px-3 py-1.5 rounded-lg bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 shrink-0">
+              20 Official Papers
+            </div>
           </div>
 
           {/* Custom & Pre-Loaded Mock Papers Section */}
           {customMockPapers.length > 0 && (
-            <div className="space-y-3 pt-2 border-t border-slate-100 dark:border-slate-800">
-              <h2 className="text-xs font-extrabold uppercase tracking-wider text-purple-600 dark:text-purple-400 flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-amber-400" />
-                <span>Pre-Loaded & Custom Uploaded Mock Papers ({customMockPapers.length})</span>
+            <div className="space-y-3">
+              <h2 className="text-xs font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400 flex items-center gap-1.5">
+                <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+                <span>Custom & Pre-Loaded Mocks ({customMockPapers.length})</span>
               </h2>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 {customMockPapers.map((paper) => (
                   <div
                     key={paper.id}
-                    className="bg-purple-50/50 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-900/60 rounded-xl p-5 flex flex-col justify-between space-y-4 hover:border-purple-500 transition group cursor-pointer"
                     onClick={() => startMockTest(paper)}
+                    className="bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 hover:border-purple-500 rounded-xl p-4 flex flex-col justify-between space-y-3 transition group cursor-pointer"
                   >
-                    <div className="space-y-2">
+                    <div className="space-y-1">
                       <div className="flex items-center justify-between">
-                        <span className="text-xs font-bold px-2.5 py-0.5 rounded bg-purple-600 text-white font-mono">
+                        <span className="text-[10px] font-extrabold px-2 py-0.5 rounded bg-purple-600 text-white font-mono">
                           {paper.year}
                         </span>
-                        <span className="text-[11px] font-mono text-purple-600 dark:text-purple-300 font-bold">
+                        <span className="text-[10px] font-mono text-slate-400">
                           {paper.questions?.length} Qs • {paper.instructions?.duration_mins || 180}m
                         </span>
                       </div>
-                      <h3 className="text-sm font-bold text-slate-900 dark:text-white leading-snug">
+                      <h3 className="text-xs font-extrabold text-slate-900 dark:text-white leading-snug">
                         {paper.title}
                       </h3>
                     </div>
@@ -152,10 +157,10 @@ export default function MockTestMode({ mockPapers, customMockPapers = [], custom
                         e.stopPropagation();
                         startMockTest(paper);
                       }}
-                      className="w-full flex items-center justify-center gap-2 py-2 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-bold transition shadow-2xs"
+                      className="w-full flex items-center justify-center gap-1.5 py-2 rounded-lg bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold transition shadow-xs"
                     >
-                      <Play className="w-3.5 h-3.5 fill-white" />
-                      <span>Start Custom CBT Test</span>
+                      <Play className="w-3 h-3 fill-white" />
+                      <span>Start Custom CBT</span>
                     </button>
                   </div>
                 ))}
@@ -163,72 +168,67 @@ export default function MockTestMode({ mockPapers, customMockPapers = [], custom
             </div>
           )}
 
-          <div className="space-y-3 pt-4 border-t border-slate-100 dark:border-slate-800">
-            <h2 className="text-xs font-extrabold uppercase tracking-wider text-slate-900 dark:text-white">
+          {/* Official GATE Papers Grid */}
+          <div className="space-y-3">
+            <h2 className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
               Official GATE AG Past Papers (2007–2026)
             </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {mockPapers.map((paper) => {
-              const inst = paper.instructions;
-              const isAvail = paper.has_solved_docx === true || (paper.questions && paper.questions.length > 0);
-              return (
-                <div 
-                  key={paper.year} 
-                  className="bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 rounded-xl p-5 flex flex-col justify-between space-y-4 hover:border-blue-400 dark:hover:border-blue-500 transition group"
-                >
-                  <div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs font-bold px-2.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300">
-                        GATE {paper.year}
-                      </span>
-                      {isAvail ? (
-                        <span className="text-[11px] font-mono text-slate-500">{inst.duration_mins} Mins</span>
-                      ) : (
-                        <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300">
-                          Adding Soon!!!
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+              {mockPapers.map((paper) => {
+                const inst = paper.instructions;
+                const isAvail = paper.has_solved_docx === true || (paper.questions && paper.questions.length > 0);
+                return (
+                  <div 
+                    key={paper.year} 
+                    className={`rounded-xl p-4 border flex flex-col justify-between space-y-3 transition ${
+                      isAvail
+                        ? 'bg-slate-50 dark:bg-slate-950 border-slate-200 dark:border-slate-800 hover:border-blue-500 cursor-pointer'
+                        : 'bg-slate-50/50 dark:bg-slate-950/40 border-slate-200/40 dark:border-slate-900 opacity-60'
+                    }`}
+                  >
+                    <div className="space-y-1.5">
+                      <div className="flex items-center justify-between">
+                        <span className="text-[11px] font-mono font-extrabold text-blue-600 dark:text-blue-400">
+                          GATE {paper.year}
                         </span>
-                      )}
+                        <span className="text-[10px] font-mono text-slate-400">
+                          {isAvail ? `${inst.duration_mins}m` : 'Adding Soon'}
+                        </span>
+                      </div>
+
+                      <h3 className="font-extrabold text-slate-900 dark:text-white text-xs">
+                        Official GATE {paper.year} Paper
+                      </h3>
+                      
+                      <div className="text-[10px] text-slate-500 font-mono flex justify-between">
+                        <span>{inst.max_marks} Marks</span>
+                        <span>{isAvail ? `${inst.total_qs} Qs` : 'Pending'}</span>
+                      </div>
                     </div>
 
-                    <h3 className="font-bold text-slate-900 dark:text-white text-base mt-2">
-                      GATE {paper.year} Paper
-                    </h3>
-                    
-                    <div className="text-xs text-slate-500 space-y-1 mt-2 font-mono">
-                      <div className="flex justify-between">
-                        <span>Max Marks:</span>
-                        <span className="font-bold text-slate-700 dark:text-slate-300">{inst.max_marks} Marks</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Questions:</span>
-                        <span className="font-bold text-slate-700 dark:text-slate-300">{isAvail ? `${inst.total_qs} Qs` : 'Pending DOCX'}</span>
-                      </div>
-                    </div>
+                    {isAvail ? (
+                      <button
+                        onClick={() => startMockTest(paper)}
+                        className="w-full flex items-center justify-center gap-1.5 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs transition shadow-xs"
+                      >
+                        <Play className="w-3 h-3 fill-white" />
+                        <span>Start CBT ({paper.year})</span>
+                      </button>
+                    ) : (
+                      <button
+                        onClick={() => alert(`Detailed Solved .docx Paper for GATE ${paper.year} is currently being verified.`)}
+                        className="w-full flex items-center justify-center gap-1.5 py-2 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-400 text-xs font-bold transition cursor-not-allowed"
+                      >
+                        <Clock className="w-3 h-3" />
+                        <span>Adding Soon</span>
+                      </button>
+                    )}
                   </div>
-
-                  {isAvail ? (
-                    <button
-                      onClick={() => startMockTest(paper)}
-                      className="w-full flex items-center justify-center gap-2 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs transition shadow-xs"
-                    >
-                      <Play className="w-3.5 h-3.5 fill-white" />
-                      <span>Start GATE {paper.year} CBT</span>
-                    </button>
-                  ) : (
-                    <button
-                      onClick={() => alert(`Detailed Solved .docx Paper for GATE ${paper.year} is currently being verified. Upload or place ${paper.year}-FULL-SOLVED.docx inside QUESTIONS/PAST YEAR/COMPLETE SOLVED to enable CBT.`)}
-                      className="w-full flex items-center justify-center gap-2 py-2.5 rounded-lg bg-amber-500/10 hover:bg-amber-500/20 text-amber-600 dark:text-amber-400 border border-amber-500/30 text-xs font-bold transition"
-                    >
-                      <Clock className="w-3.5 h-3.5" />
-                      <span>Adding Soon!!!</span>
-                    </button>
-                  )}
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
-        </div>
 
         </div>
       </div>
@@ -548,6 +548,16 @@ export default function MockTestMode({ mockPapers, customMockPapers = [], custom
                   Question No. {currentQ.qnum}
                 </span>
                 <div className="flex items-center gap-2">
+                  {onEditQuestion && (
+                    <button
+                      onClick={() => onEditQuestion(currentQ)}
+                      className="flex items-center gap-1 px-2.5 py-0.5 rounded bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 font-bold hover:bg-purple-600 hover:text-white transition"
+                      title="Edit Question Statement or Answer Key"
+                    >
+                      <Edit3 className="w-3 h-3" />
+                      <span>Edit</span>
+                    </button>
+                  )}
                   <span className="bg-slate-200 dark:bg-slate-700 px-2.5 py-0.5 rounded font-mono">
                     {currentQ.type}
                   </span>
@@ -567,7 +577,7 @@ export default function MockTestMode({ mockPapers, customMockPapers = [], custom
                   {currentQ.section} • {currentQ.topic}
                 </div>
 
-                <div className="text-sm sm:text-base leading-relaxed text-slate-900 dark:text-slate-100 font-medium">
+                <div className="text-base sm:text-lg font-semibold text-slate-900 dark:text-slate-100 leading-relaxed">
                   <MathRenderer content={currentQ.question} inline={false} />
                 </div>
 
@@ -594,20 +604,20 @@ export default function MockTestMode({ mockPapers, customMockPapers = [], custom
                         <button
                           key={optKey}
                           onClick={() => handleSelectOption(optKey)}
-                          className={`w-full text-left p-4 rounded-xl border transition flex items-start gap-3.5 text-xs sm:text-sm ${
+                          className={`w-full text-left p-4 rounded-xl border transition flex items-start gap-3.5 text-sm sm:text-base font-medium ${
                             isSelected
-                              ? 'border-blue-600 bg-blue-50/60 dark:bg-blue-950/40 text-blue-900 dark:text-blue-100 font-bold shadow-xs'
-                              : 'border-slate-200 dark:border-slate-800 hover:border-slate-400 dark:hover:border-slate-700'
+                              ? 'border-blue-600 bg-blue-50/80 dark:bg-blue-950/60 text-blue-900 dark:text-blue-100 font-bold shadow-xs'
+                              : 'border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/50 text-slate-900 dark:text-slate-100 hover:border-blue-500 dark:hover:border-blue-600'
                           }`}
                         >
-                          <span className={`w-6 h-6 rounded-full flex items-center justify-center font-bold text-xs shrink-0 border ${
+                          <span className={`w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs shrink-0 border ${
                             isSelected 
                               ? 'bg-blue-600 text-white border-blue-600'
-                              : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-300 dark:border-slate-700'
+                              : 'bg-slate-200 text-slate-700 dark:bg-slate-700 dark:text-slate-200 border-slate-300 dark:border-slate-600'
                           }`}>
                             {optKey}
                           </span>
-                          <div className="mt-0.5">
+                          <div className="pt-0.5 flex-1">
                             <MathRenderer content={optVal} />
                           </div>
                         </button>
@@ -618,7 +628,7 @@ export default function MockTestMode({ mockPapers, customMockPapers = [], custom
 
                 {currentQ.type === 'MSQ' && currentQ.options && (
                   <div className="space-y-3 pt-2">
-                    <p className="text-xs text-slate-500 italic">Select all correct options.</p>
+                    <p className="text-xs text-slate-500 italic">Select all correct options (one or more).</p>
                     {Object.entries(currentQ.options).map(([optKey, optVal]) => {
                       const selectedList = userAnswers[currentQ.id] ? userAnswers[currentQ.id].split(',') : [];
                       const isChecked = selectedList.includes(optKey);
@@ -626,15 +636,20 @@ export default function MockTestMode({ mockPapers, customMockPapers = [], custom
                         <button
                           key={optKey}
                           onClick={() => handleSelectOption(optKey)}
-                          className={`w-full text-left p-4 rounded-xl border transition flex items-start gap-3.5 text-xs sm:text-sm ${
+                          className={`w-full text-left p-4 rounded-xl border transition flex items-start gap-3.5 text-sm sm:text-base font-medium ${
                             isChecked
-                              ? 'border-blue-600 bg-blue-50/60 dark:bg-blue-950/40 font-bold'
-                              : 'border-slate-200 dark:border-slate-800'
+                              ? 'border-blue-600 bg-blue-50/80 dark:bg-blue-950/60 text-blue-900 dark:text-blue-100 font-bold shadow-xs'
+                              : 'border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/50 text-slate-900 dark:text-slate-100 hover:border-blue-500 dark:hover:border-blue-600'
                           }`}
                         >
-                          <input type="checkbox" checked={isChecked} readOnly className="mt-1 accent-blue-600" />
-                          <span className="font-bold text-xs uppercase">{optKey}.</span>
-                          <div>
+                          <span className={`w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs shrink-0 border ${
+                            isChecked 
+                              ? 'bg-blue-600 text-white border-blue-600'
+                              : 'bg-slate-200 text-slate-700 dark:bg-slate-700 dark:text-slate-200 border-slate-300 dark:border-slate-600'
+                          }`}>
+                            {optKey}
+                          </span>
+                          <div className="pt-0.5 flex-1">
                             <MathRenderer content={optVal} />
                           </div>
                         </button>

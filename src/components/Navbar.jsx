@@ -8,7 +8,12 @@ import {
   Sun, 
   Moon, 
   Compass, 
-  Sliders
+  Sliders,
+  UserCheck,
+  LogOut,
+  Gamepad2,
+  Target,
+  GraduationCap
 } from 'lucide-react';
 
 export default function Navbar({ 
@@ -16,15 +21,18 @@ export default function Navbar({
   setActiveTab, 
   darkMode, 
   setDarkMode, 
-  onOpenCalc 
+  onOpenCalc,
+  currentStudent,
+  onLogout,
+  onOpenProfile
 }) {
   const navItems = [
     { id: 'dashboard', label: 'Dashboard', icon: Compass },
-    { id: 'practice', label: 'Practice Pool', icon: Layers },
-    { id: 'mocktest', label: 'PYQ Mock Tests', icon: Clock, badge: '2007-2026' },
-    { id: 'customtest', label: 'Custom Test', icon: Sliders, badge: 'Speed Run' },
-    { id: 'syllabus', label: 'Syllabus & Tracker', icon: BookOpen },
-    { id: 'formulas', label: 'Formula Sheet', icon: FileText },
+    { id: 'practicehub', label: 'Practice Hub', icon: Target, badge: '3-in-1', matches: ['practicehub', 'practice', 'custompractice', 'customtest'] },
+    { id: 'learninghub', label: 'Learning Hub', icon: GraduationCap, badge: '3-in-1', matches: ['learninghub', 'concepts', 'revision', 'formulas'] },
+    { id: 'mocktest', label: 'PYQ & Mocks', icon: Clock, badge: '07-26' },
+    { id: 'games', label: 'Break Zone', icon: Gamepad2, badge: 'Games' },
+    { id: 'syllabus', label: 'Syllabus', icon: BookOpen },
   ];
 
   return (
@@ -52,7 +60,7 @@ export default function Navbar({
           <nav className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => {
               const Icon = item.icon;
-              const isActive = activeTab === item.id;
+              const isActive = item.matches ? item.matches.includes(activeTab) : activeTab === item.id;
               return (
                 <button
                   key={item.id}
@@ -98,6 +106,41 @@ export default function Navbar({
             >
               {darkMode ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-slate-600" />}
             </button>
+
+            {currentStudent && (
+              <div className="flex items-center gap-2 pl-2 border-l border-slate-200 dark:border-slate-800">
+                <button
+                  onClick={onOpenProfile}
+                  className="flex items-center gap-2 text-left p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+                  title="Open My Profile"
+                >
+                  <div className="w-7 h-7 rounded-full bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center overflow-hidden">
+                    {currentStudent.profile_photo_url ? (
+                      <img src={currentStudent.profile_photo_url} alt="Profile" className="w-full h-full object-cover" />
+                    ) : (
+                      <UserCheck className="w-4 h-4 text-emerald-500" />
+                    )}
+                  </div>
+                  <div className="hidden md:flex flex-col text-right">
+                    <span className="text-xs font-bold text-slate-900 dark:text-white leading-tight">
+                      {currentStudent.full_name}
+                    </span>
+                    <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-mono">
+                      {currentStudent.student_type === 'hau' ? (currentStudent.admission_no || 'COAET HAU') : 'External'}
+                    </span>
+                  </div>
+                </button>
+
+                <button
+                  onClick={onLogout}
+                  className="p-2 rounded-lg text-rose-500 hover:bg-rose-500/10 transition flex items-center gap-1 text-xs font-semibold"
+                  title="Log Out of Portal"
+                >
+                  <LogOut className="w-4 h-4" />
+                  <span className="hidden sm:inline">Logout</span>
+                </button>
+              </div>
+            )}
 
           </div>
 

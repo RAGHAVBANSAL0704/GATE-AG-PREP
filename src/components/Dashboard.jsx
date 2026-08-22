@@ -10,12 +10,9 @@ import {
   Zap,
   BookOpen,
   HelpCircle,
-  BarChart3,
-  Award,
   Sparkles,
-  History,
-  Check,
-  AlertTriangle
+  GraduationCap,
+  Gamepad2
 } from 'lucide-react';
 import { GATE_AG_SYLLABUS } from '../data/syllabus';
 
@@ -31,9 +28,8 @@ const normalizeSectionName = (secName) => {
 };
 
 export default function Dashboard({ questions, mockPapers = [], userStats, onStartMock, onStartSectionPractice, setActiveTab }) {
-  const [paperEraFilter, setPaperEraFilter] = useState('all'); // 'all' | 'recent' | 'classic'
+  const [paperEraFilter, setPaperEraFilter] = useState('all');
 
-  // Map mock paper objects by year for quick lookup
   const paperMap = useMemo(() => {
     const map = {};
     (mockPapers || []).forEach(p => {
@@ -42,7 +38,6 @@ export default function Dashboard({ questions, mockPapers = [], userStats, onSta
     return map;
   }, [mockPapers]);
 
-  // Real-time dynamic calculation of section counts
   const sectionCounts = useMemo(() => {
     const counts = {};
     questions.forEach(q => {
@@ -69,7 +64,6 @@ export default function Dashboard({ questions, mockPapers = [], userStats, onSta
     return true;
   });
 
-  // Map user score history per paper year
   const paperHistoryMap = useMemo(() => {
     const history = {};
     (userStats?.testHistory || []).forEach(item => {
@@ -81,208 +75,190 @@ export default function Dashboard({ questions, mockPapers = [], userStats, onSta
   }, [userStats]);
 
   return (
-    <div className="space-y-8 animate-in fade-in duration-200">
+    <div className="space-y-6 animate-in fade-in duration-200">
       
-      {/* Active Testing & Review Disclaimer Banner */}
-      <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-700 dark:text-amber-300 flex items-start gap-3 text-xs sm:text-sm font-medium shadow-xs">
-        <AlertTriangle className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
-        <div className="space-y-0.5">
-          <div className="font-extrabold text-amber-800 dark:text-amber-200 uppercase tracking-wide text-[11px] flex items-center gap-1.5">
-            <span>Notice: Portal Under Active Testing & Review</span>
-          </div>
-          <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-xs">
-            This portal is currently under active development, testing, and content review. Solved papers, CBT mock tests, and concept notes are continuously being updated and verified.
-          </p>
-        </div>
-      </div>
-      
-      {/* 3D Hero Welcome Banner */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-950 text-white rounded-3xl p-6 sm:p-10 border border-slate-800 shadow-2xl">
-        <div className="absolute -right-16 -top-16 w-80 h-80 bg-blue-500/15 rounded-full blur-3xl pointer-events-none"></div>
-        <div className="absolute right-28 -bottom-16 w-64 h-64 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none"></div>
-
-        <div className="relative z-10 max-w-3xl space-y-5">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/20 text-xs font-bold text-blue-300 backdrop-blur-md shadow-xs">
-            <Sparkles className="w-3.5 h-3.5 text-blue-400" />
-            <span>Complete 2007–2026 GATE AG Preparation Portal</span>
+      {/* Sleek Hero Banner */}
+      <div className="relative overflow-hidden bg-gradient-to-r from-blue-700 via-indigo-700 to-slate-900 text-white rounded-2xl p-6 sm:p-8 shadow-md">
+        <div className="relative z-10 max-w-2xl space-y-3">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 text-xs font-bold text-blue-200 backdrop-blur-md">
+            <Sparkles className="w-3.5 h-3.5 text-yellow-300" />
+            <span>GATE Agricultural Engineering Portal 2026</span>
           </div>
 
-          <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
-            20 Years of GATE AG Papers & Real-Time Section Practice
+          <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-white leading-tight">
+            Master 20 Years of GATE AG Papers
           </h1>
 
-          <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-2xl">
-            Master {totalQuestions} verified practice questions segregated by topic, or attempt all 20 official papers (2007–2026) in realistic CBT exam format.
+          <p className="text-xs sm:text-sm text-blue-100 leading-relaxed max-w-xl">
+            Access {totalQuestions} topic-wise solved questions, 20 official CBT mock tests (2007–2026), and formula cheat sheets.
           </p>
 
-          <div className="flex flex-wrap items-center gap-3.5 pt-2">
+          <div className="flex flex-wrap items-center gap-3 pt-1">
+            <button
+              onClick={() => setActiveTab('practicehub')}
+              className="px-5 py-2.5 rounded-xl bg-white text-blue-900 font-extrabold text-xs shadow-md hover:bg-blue-50 transition flex items-center gap-2"
+            >
+              <Target className="w-4 h-4 text-blue-600" />
+              <span>Practice Hub</span>
+            </button>
             <button
               onClick={() => setActiveTab('mocktest')}
-              className="btn-3d-primary flex items-center gap-2.5 px-6 py-3 rounded-2xl text-white font-extrabold text-xs sm:text-sm"
+              className="px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold text-xs transition flex items-center gap-2"
             >
-              <Play className="w-4 h-4 fill-white" />
-              <span>Explore All 20 PYQ Mock Tests</span>
-            </button>
-            <button
-              onClick={() => setActiveTab('practice')}
-              className="flex items-center gap-2.5 px-6 py-3 rounded-2xl bg-white/10 hover:bg-white/15 backdrop-blur-md text-white border border-white/15 font-bold text-xs sm:text-sm transition shadow-sm"
-            >
-              <Layers className="w-4 h-4 text-emerald-400" />
-              <span>Practice Pool ({totalQuestions} Qs)</span>
+              <Play className="w-4 h-4 text-emerald-400" />
+              <span>Attempt PYQ Mocks</span>
             </button>
           </div>
         </div>
       </div>
 
-      {/* Quick Access Feature Hubs */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div 
-          onClick={() => setActiveTab('revision')}
-          className="card-3d rounded-2xl p-5 cursor-pointer group flex items-center justify-between hover:border-amber-500/50 transition"
-        >
-          <div className="flex items-center gap-3.5">
-            <div className="w-10 h-10 rounded-xl bg-amber-50 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 flex items-center justify-center border border-amber-200 dark:border-amber-900 group-hover:scale-110 transition">
-              <Zap className="w-5 h-5" />
-            </div>
-            <div>
-              <h3 className="font-extrabold text-sm text-slate-900 dark:text-white flex items-center gap-1.5">
-                <span>Misstep Tracker & Revision Vault</span>
-                <span className="text-[10px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 dark:bg-amber-900/60 dark:text-amber-300 font-mono font-bold">
-                  {(userStats?.attempted?.length || 0) - (userStats?.correct?.length || 0)} Missteps
-                </span>
-              </h3>
-              <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">Re-attempt wrong questions & saved bookmarks</p>
-            </div>
-          </div>
-          <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-amber-500 group-hover:translate-x-1 transition shrink-0" />
-        </div>
-
-        <div 
-          onClick={() => setActiveTab('formulas')}
-          className="card-3d rounded-2xl p-5 cursor-pointer group flex items-center justify-between hover:border-blue-500/50 transition"
-        >
-          <div className="flex items-center gap-3.5">
-            <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 flex items-center justify-center border border-blue-200 dark:border-blue-900 group-hover:scale-110 transition">
-              <BookOpen className="w-5 h-5" />
-            </div>
-            <div>
-              <h3 className="font-extrabold text-sm text-slate-900 dark:text-white flex items-center gap-1.5">
-                <span>Formula Sheet & Printable Cheatsheet</span>
-                <span className="text-[10px] px-2 py-0.5 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/60 dark:text-blue-300 font-mono font-bold">
-                  KaTeX
-                </span>
-              </h3>
-              <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">Section-wise equations, variables & PDF export</p>
-            </div>
-          </div>
-          <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-blue-500 group-hover:translate-x-1 transition shrink-0" />
-        </div>
-      </div>
-
-      {/* 3D Elevated Metrics Cards */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      {/* Key Metrics Grid */}
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5">
         
-        <div className="card-3d rounded-2xl p-5 space-y-2">
-          <div className="flex items-center justify-between text-slate-500 dark:text-slate-400">
-            <span className="text-[10px] font-extrabold uppercase tracking-wider">Practice Pool</span>
-            <div className="w-8 h-8 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 flex items-center justify-center border border-blue-200 dark:border-blue-900">
-              <HelpCircle className="w-4 h-4" />
-            </div>
+        <div className="bg-white dark:bg-slate-900 rounded-xl p-4 border border-slate-200 dark:border-slate-800 space-y-1 shadow-xs">
+          <div className="flex items-center justify-between text-slate-400">
+            <span className="text-[10px] font-bold uppercase tracking-wider">Practice Pool</span>
+            <HelpCircle className="w-4 h-4 text-blue-500" />
           </div>
-          <div className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-            {totalQuestions} Qs
+          <div className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white font-mono">
+            {totalQuestions}
           </div>
-          <p className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">2016–2026 Solved Pool</p>
+          <p className="text-[10px] text-slate-400 font-medium">Solved Questions</p>
         </div>
 
-        <div className="card-3d rounded-2xl p-5 space-y-2">
-          <div className="flex items-center justify-between text-slate-500 dark:text-slate-400">
-            <span className="text-[10px] font-extrabold uppercase tracking-wider">Mock Papers</span>
-            <div className="w-8 h-8 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center border border-emerald-200 dark:border-emerald-900">
-              <CheckCircle2 className="w-4 h-4" />
-            </div>
+        <div className="bg-white dark:bg-slate-900 rounded-xl p-4 border border-slate-200 dark:border-slate-800 space-y-1 shadow-xs">
+          <div className="flex items-center justify-between text-slate-400">
+            <span className="text-[10px] font-bold uppercase tracking-wider">Mock Papers</span>
+            <CheckCircle2 className="w-4 h-4 text-emerald-500" />
           </div>
-          <div className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-            20 Papers
+          <div className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white font-mono">
+            20
           </div>
-          <p className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Years 2007 to 2026</p>
+          <p className="text-[10px] text-slate-400 font-medium">2007–2026 PYQs</p>
         </div>
 
-        <div className="card-3d rounded-2xl p-5 space-y-2">
-          <div className="flex items-center justify-between text-slate-500 dark:text-slate-400">
-            <span className="text-[10px] font-extrabold uppercase tracking-wider">Questions Solved</span>
-            <div className="w-8 h-8 rounded-xl bg-purple-50 dark:bg-purple-950/60 text-purple-600 dark:text-purple-400 flex items-center justify-center border border-purple-200 dark:border-purple-900">
-              <Target className="w-4 h-4" />
-            </div>
+        <div className="bg-white dark:bg-slate-900 rounded-xl p-4 border border-slate-200 dark:border-slate-800 space-y-1 shadow-xs">
+          <div className="flex items-center justify-between text-slate-400">
+            <span className="text-[10px] font-bold uppercase tracking-wider">Questions Solved</span>
+            <Target className="w-4 h-4 text-purple-500" />
           </div>
-          <div className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          <div className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white font-mono">
             {attemptedCount}
           </div>
-          <p className="text-[11px] font-bold text-emerald-600 dark:text-emerald-400">Accuracy: {accuracy}%</p>
+          <p className="text-[10px] font-bold text-emerald-500">Accuracy: {accuracy}%</p>
         </div>
 
-        <div className="card-3d rounded-2xl p-5 space-y-2">
-          <div className="flex items-center justify-between text-slate-500 dark:text-slate-400">
-            <span className="text-[10px] font-extrabold uppercase tracking-wider">Tests Completed</span>
-            <div className="w-8 h-8 rounded-xl bg-amber-50 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 flex items-center justify-center border border-amber-200 dark:border-amber-900">
-              <Trophy className="w-4 h-4" />
-            </div>
+        <div className="bg-white dark:bg-slate-900 rounded-xl p-4 border border-slate-200 dark:border-slate-800 space-y-1 shadow-xs">
+          <div className="flex items-center justify-between text-slate-400">
+            <span className="text-[10px] font-bold uppercase tracking-wider">Mocks Taken</span>
+            <Trophy className="w-4 h-4 text-amber-500" />
           </div>
-          <div className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          <div className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white font-mono">
             {userStats?.testHistory?.length || 0}
           </div>
-          <p className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Full CBT Exam Mocks</p>
+          <p className="text-[10px] text-slate-400 font-medium">Full CBT Attempts</p>
         </div>
 
       </div>
 
-      {/* Featured Mock Papers with 3D Era Tab Filters */}
-      <div className="space-y-4">
-        <div className="flex flex-wrap items-center justify-between gap-4">
+      {/* Hub Shortcuts */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+        <div 
+          onClick={() => setActiveTab('practicehub')}
+          className="bg-white dark:bg-slate-900 rounded-xl p-4 border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 cursor-pointer transition flex items-center justify-between group shadow-xs"
+        >
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 rounded-lg bg-blue-50 dark:bg-blue-950 text-blue-600 flex items-center justify-center shrink-0">
+              <Target className="w-4 h-4" />
+            </div>
+            <div>
+              <h3 className="font-bold text-xs text-slate-900 dark:text-white">Practice Hub</h3>
+              <p className="text-[10px] text-slate-400">Pools & Speed Tests</p>
+            </div>
+          </div>
+          <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-blue-500 group-hover:translate-x-0.5 transition" />
+        </div>
+
+        <div 
+          onClick={() => setActiveTab('learninghub')}
+          className="bg-white dark:bg-slate-900 rounded-xl p-4 border border-slate-200 dark:border-slate-800 hover:border-purple-500/50 cursor-pointer transition flex items-center justify-between group shadow-xs"
+        >
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 rounded-lg bg-purple-50 dark:bg-purple-950 text-purple-600 flex items-center justify-center shrink-0">
+              <GraduationCap className="w-4 h-4" />
+            </div>
+            <div>
+              <h3 className="font-bold text-xs text-slate-900 dark:text-white">Learning Hub</h3>
+              <p className="text-[10px] text-slate-400">Concepts, Vault & Formulas</p>
+            </div>
+          </div>
+          <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-purple-500 group-hover:translate-x-0.5 transition" />
+        </div>
+
+        <div 
+          onClick={() => setActiveTab('games')}
+          className="bg-white dark:bg-slate-900 rounded-xl p-4 border border-slate-200 dark:border-slate-800 hover:border-amber-500/50 cursor-pointer transition flex items-center justify-between group shadow-xs"
+        >
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 rounded-lg bg-amber-50 dark:bg-amber-950 text-amber-600 flex items-center justify-center shrink-0">
+              <Gamepad2 className="w-4 h-4" />
+            </div>
+            <div>
+              <h3 className="font-bold text-xs text-slate-900 dark:text-white">Break Zone</h3>
+              <p className="text-[10px] text-slate-400">2048 & Refresh Games</p>
+            </div>
+          </div>
+          <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-amber-500 group-hover:translate-x-0.5 transition" />
+        </div>
+      </div>
+
+      {/* Official GATE PYQ Papers */}
+      <div className="bg-white dark:bg-slate-900 rounded-2xl p-5 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
+        <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
-            <h2 className="text-base sm:text-lg font-extrabold text-slate-900 dark:text-white flex items-center gap-2">
-              <Clock className="w-5 h-5 text-blue-600" />
-              <span>Official GATE PYQ Mock Papers (2007–2026)</span>
+            <h2 className="text-base font-extrabold text-slate-900 dark:text-white flex items-center gap-2">
+              <Clock className="w-4 h-4 text-blue-600" />
+              <span>Official GATE PYQ & Mocks (2007–2026)</span>
             </h2>
-            <p className="text-xs text-slate-500 dark:text-slate-400">All 20 papers with exact instructions, duration, and marking rules read directly from paper.</p>
+            <p className="text-xs text-slate-400 mt-0.5">Attempt official 180-minute CBT papers with negative marking.</p>
           </div>
 
-          {/* Era Filter Tabs */}
-          <div className="flex items-center p-1 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-bold">
+          {/* Era Filter */}
+          <div className="flex items-center gap-1 bg-slate-100 dark:bg-slate-950 p-1 rounded-xl border border-slate-200 dark:border-slate-800 text-xs font-bold">
             <button
               onClick={() => setPaperEraFilter('all')}
-              className={`px-3 py-1.5 rounded-lg transition ${
+              className={`px-3 py-1 rounded-lg transition ${
                 paperEraFilter === 'all'
-                  ? 'bg-blue-600 text-white shadow-2xs font-extrabold'
-                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                  ? 'bg-blue-600 text-white shadow-xs font-extrabold'
+                  : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
-              All (20 Papers)
+              All (20)
             </button>
             <button
               onClick={() => setPaperEraFilter('recent')}
-              className={`px-3 py-1.5 rounded-lg transition ${
+              className={`px-3 py-1 rounded-lg transition ${
                 paperEraFilter === 'recent'
-                  ? 'bg-blue-600 text-white shadow-2xs font-extrabold'
-                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                  ? 'bg-blue-600 text-white shadow-xs font-extrabold'
+                  : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
-              Recent (2016–2026)
+              2016–2026
             </button>
             <button
               onClick={() => setPaperEraFilter('classic')}
-              className={`px-3 py-1.5 rounded-lg transition ${
+              className={`px-3 py-1 rounded-lg transition ${
                 paperEraFilter === 'classic'
-                  ? 'bg-blue-600 text-white shadow-2xs font-extrabold'
-                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                  ? 'bg-blue-600 text-white shadow-xs font-extrabold'
+                  : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
-              Classic (2007–2015)
+              2007–2015
             </button>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5">
           {filteredYears.map((year) => {
             const historyItem = paperHistoryMap[year];
             const paperObj = paperMap[year];
@@ -291,68 +267,58 @@ export default function Dashboard({ questions, mockPapers = [], userStats, onSta
             return (
               <div 
                 key={year}
-                className="card-3d rounded-2xl p-5 flex flex-col justify-between space-y-4 group"
+                onClick={() => isAvail && onStartMock(year)}
+                className={`p-3 rounded-xl border text-center transition flex flex-col justify-between space-y-2 select-none cursor-pointer ${
+                  isAvail
+                    ? 'bg-slate-50 hover:bg-blue-50 dark:bg-slate-950 dark:hover:bg-blue-950/40 border-slate-200 dark:border-slate-800 hover:border-blue-400'
+                    : 'bg-slate-50/50 dark:bg-slate-950/40 border-slate-200/50 dark:border-slate-900 opacity-60'
+                }`}
               >
-                <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs font-extrabold px-2.5 py-0.5 rounded-lg bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800">
-                      GATE {year}
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-mono font-extrabold text-blue-600 dark:text-blue-400">
+                    GATE {year}
+                  </span>
+                  {historyItem ? (
+                    <span className="text-[9px] font-mono font-bold text-emerald-500">
+                      {historyItem.score} pts
                     </span>
-                    {historyItem ? (
-                      <span className="text-[10px] font-mono font-extrabold px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-900">
-                        Score: {historyItem.score}
-                      </span>
-                    ) : isAvail ? (
-                      <span className="text-xs font-mono font-bold text-slate-500">180 Mins</span>
-                    ) : (
-                      <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-950/80 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-900">
-                        Adding Soon!!!
-                      </span>
-                    )}
-                  </div>
-
-                  <h3 className="font-bold text-slate-900 dark:text-white text-base">
-                    GATE {year} Paper
-                  </h3>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-                    {parseInt(year) >= 2016 ? '65 Questions • 100 Marks' : '85 Questions • 150 Marks'}
-                  </p>
+                  ) : (
+                    <span className="text-[9px] text-slate-400">180m</span>
+                  )}
                 </div>
 
-                {isAvail ? (
-                  <button
-                    onClick={() => onStartMock(year)}
-                    className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 group-hover:bg-blue-600 group-hover:text-white dark:group-hover:bg-blue-600 dark:group-hover:text-white text-slate-900 dark:text-white text-xs font-extrabold transition shadow-2xs"
-                  >
-                    <Play className="w-3.5 h-3.5" />
-                    <span>Launch CBT ({year})</span>
-                  </button>
-                ) : (
-                  <button
-                    onClick={() => alert(`Detailed Solved .docx Paper for GATE ${year} is currently being verified. Place ${year}-FULL-SOLVED.docx inside QUESTIONS/PAST YEAR/COMPLETE SOLVED to enable CBT.`)}
-                    className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 text-amber-600 dark:text-amber-400 border border-amber-500/30 text-xs font-extrabold transition"
-                  >
-                    <Clock className="w-3.5 h-3.5" />
-                    <span>Adding Soon!!!</span>
-                  </button>
-                )}
+                <div className="text-[10px] font-bold text-slate-700 dark:text-slate-300">
+                  {parseInt(year) >= 2016 ? '65 Qs • 100 M' : '85 Qs • 150 M'}
+                </div>
+
+                <button
+                  disabled={!isAvail}
+                  className={`w-full py-1.5 rounded-lg text-[10px] font-extrabold transition flex items-center justify-center gap-1 ${
+                    isAvail
+                      ? 'bg-blue-600 text-white shadow-xs hover:bg-blue-700'
+                      : 'bg-slate-200 dark:bg-slate-800 text-slate-400'
+                  }`}
+                >
+                  <Play className="w-3 h-3" />
+                  <span>Launch</span>
+                </button>
               </div>
             );
           })}
         </div>
       </div>
 
-      {/* Section-Wise Practice Cards */}
-      <div className="space-y-4">
+      {/* Section Practice Grid */}
+      <div className="bg-white dark:bg-slate-900 rounded-2xl p-5 border border-slate-200 dark:border-slate-800 shadow-xs space-y-4">
         <div>
-          <h2 className="text-base sm:text-lg font-extrabold text-slate-900 dark:text-white flex items-center gap-2">
-            <Layers className="w-5 h-5 text-emerald-600" />
-            <span>Section-Wise Solved Practice Pool</span>
+          <h2 className="text-base font-extrabold text-slate-900 dark:text-white flex items-center gap-2">
+            <Layers className="w-4 h-4 text-emerald-500" />
+            <span>Section-Wise Practice</span>
           </h2>
-          <p className="text-xs text-slate-500 dark:text-slate-400">Questions extracted from solved papers sorted strictly by syllabus sections and topics.</p>
+          <p className="text-xs text-slate-400 mt-0.5">Solve questions sorted by official syllabus sections.</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           {GATE_AG_SYLLABUS.map((sec) => {
             const rawTitle = sec.title.replace(/^Section \d+:\s*/, '').trim();
             const normTitle = rawTitle.replace(' and ', ' & ').trim();
@@ -362,29 +328,29 @@ export default function Dashboard({ questions, mockPapers = [], userStats, onSta
             return (
               <div 
                 key={sec.id}
-                className="card-3d rounded-2xl p-5 flex flex-col justify-between space-y-4"
+                className="p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 flex flex-col justify-between space-y-3"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-[10px] font-extrabold uppercase tracking-wider bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-2.5 py-0.5 rounded-md border border-slate-200 dark:border-slate-700">
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="text-[10px] font-mono font-bold text-blue-600 dark:text-blue-400">
                       {sec.code}
                     </span>
-                    <span className="text-xs font-bold text-amber-600 dark:text-amber-400">{sec.weightage}</span>
+                    <span className="text-[10px] font-bold text-amber-500">{sec.weightage}</span>
                   </div>
-                  <h3 className="font-bold text-slate-900 dark:text-white text-base">
+                  <h3 className="font-extrabold text-slate-900 dark:text-white text-xs leading-tight">
                     {normTitle}
                   </h3>
-                  <p className="text-xs font-mono font-bold text-blue-600 dark:text-blue-400 mt-2">
-                    {count} Solved Questions
+                  <p className="text-[11px] font-mono text-slate-400 mt-1">
+                    {count} Questions Solved
                   </p>
                 </div>
 
                 <button
                   onClick={() => onStartSectionPractice(canonSecName)}
-                  className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-900 text-xs font-extrabold hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 dark:hover:text-white transition shadow-2xs"
+                  className="w-full py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition shadow-xs flex items-center justify-center gap-1.5"
                 >
                   <Layers className="w-3.5 h-3.5" />
-                  <span>Practice Section ({count} Qs)</span>
+                  <span>Practice ({count} Qs)</span>
                 </button>
               </div>
             );

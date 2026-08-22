@@ -252,9 +252,9 @@ export default function ConceptStudyModal({ question, onClose, onOpenCalc }) {
                   </p>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-purple-50/60 dark:bg-purple-950/40 border border-purple-200/60 dark:border-purple-900/60 space-y-2">
-                  <h4 className="font-bold text-xs text-purple-900 dark:text-purple-300 flex items-center gap-2">
-                    <Sparkles className="w-4 h-4 text-purple-500" />
+                <div className="p-4 rounded-2xl bg-blue-50/60 dark:bg-blue-950/40 border border-blue-200/60 dark:border-blue-900/60 space-y-2">
+                  <h4 className="font-bold text-xs text-blue-900 dark:text-blue-300 flex items-center gap-2">
+                    <Sparkles className="w-4 h-4 text-blue-500" />
                     <span>Process & Drying Moisture Basis Caution</span>
                   </h4>
                   <p className="text-xs text-slate-700 dark:text-slate-300 leading-relaxed font-medium">

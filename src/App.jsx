@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
+import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Dashboard from './components/Dashboard';
 import PracticeMode from './components/PracticeMode';
@@ -14,18 +15,35 @@ import ImportantConcepts from './components/ImportantConcepts';
 import CreatorPage from './components/CreatorPage';
 import ScientificCalculator from './components/ScientificCalculator';
 import TestResultModal from './components/TestResultModal';
+import QuestionEditorModal from './components/QuestionEditorModal';
+import AdminQuestionManager from './components/AdminQuestionManager';
+import AuthModal from './components/AuthModal';
+import UserProfileModal from './components/UserProfileModal';
+import SupportPage from './components/SupportPage';
+import GamesZone from './components/GamesZone';
+import PracticeHub from './components/PracticeHub';
+import LearningHub from './components/LearningHub';
+
+import { checkCurrentSession, logoutStudent } from './services/authService';
 
 import initialQuestions from './data/questions.json';
 import initialMockPapers from './data/mock_papers.json';
 import preloadedCustomMock01 from './data/custom_mock_2027_01.json';
 import preloadedCustomMock02 from './data/custom_mock_2027_02.json';
 import preloadedCustomMock03 from './data/custom_mock_2027_03.json';
+import preloadedCustomMock04 from './data/custom_mock_2027_04.json';
+import preloadedCustomMock05 from './data/custom_mock_2027_05.json';
+import preloadedCustomMock06 from './data/custom_mock_2027_06.json';
+import preloadedCustomMock07 from './data/custom_mock_2027_07.json';
+import preloadedCustomMock08 from './data/custom_mock_2027_08.json';
+import preloadedCustomMock09 from './data/custom_mock_2027_09.json';
+import preloadedCustomMock10 from './data/custom_mock_2027_10.json';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState(() => {
     try {
       const hash = window.location.hash.replace(/^#\/?/, '');
-      const validTabs = ['dashboard', 'practice', 'custompractice', 'mocktest', 'feedback', 'concepts', 'downloads', 'customtest', 'syllabus', 'formulas', 'revision', 'creator'];
+      const validTabs = ['dashboard', 'practicehub', 'practice', 'custompractice', 'customtest', 'learninghub', 'concepts', 'revision', 'formulas', 'mocktest', 'games', 'admin', 'feedback', 'downloads', 'syllabus', 'creator', 'support'];
       if (validTabs.includes(hash)) {
         return hash;
       }
@@ -38,7 +56,7 @@ export default function App() {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace(/^#\/?/, '');
-      const validTabs = ['dashboard', 'practice', 'custompractice', 'mocktest', 'feedback', 'concepts', 'downloads', 'customtest', 'syllabus', 'formulas', 'revision', 'creator'];
+      const validTabs = ['dashboard', 'practicehub', 'practice', 'custompractice', 'customtest', 'learninghub', 'concepts', 'revision', 'formulas', 'mocktest', 'games', 'admin', 'feedback', 'downloads', 'syllabus', 'creator', 'support'];
       if (validTabs.includes(hash)) {
         setActiveTab(hash);
       }
@@ -47,6 +65,15 @@ export default function App() {
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
+  const [currentStudent, setCurrentStudent] = useState(() => checkCurrentSession());
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
+
+  const handleLogout = () => {
+    logoutStudent();
+    setCurrentStudent(null);
+    setIsProfileOpen(false);
+  };
+
   const [currentTheme, setCurrentTheme] = useState(() => {
     try {
       return localStorage.getItem('gate_ag_theme') || 'cyber-dark';
@@ -54,6 +81,19 @@ export default function App() {
       return 'cyber-dark';
     }
   });
+
+  useEffect(() => {
+    localStorage.setItem('gate_ag_theme', currentTheme);
+    const root = document.documentElement;
+    root.classList.remove('dark', 'theme-cyber-dark', 'theme-slate-light');
+
+    if (currentTheme === 'cyber-dark') {
+      root.classList.add('dark', 'theme-cyber-dark');
+    } else {
+      root.classList.add('theme-slate-light');
+    }
+  }, [currentTheme]);
+
   const [isCalcOpen, setIsCalcOpen] = useState(false);
   
   const [practiceSection, setPracticeSection] = useState('All');
@@ -78,8 +118,62 @@ export default function App() {
     preloadedCustomMock01,
     preloadedCustomMock02,
     preloadedCustomMock03,
+    preloadedCustomMock04,
+    preloadedCustomMock05,
+    preloadedCustomMock06,
+    preloadedCustomMock07,
+    preloadedCustomMock08,
+    preloadedCustomMock09,
+    preloadedCustomMock10,
     ...userUploadedMocks
   ];
+
+  const [editedQuestionsMap, setEditedQuestionsMap] = useState(() => {
+    try {
+      const saved = localStorage.getItem('gate_ag_edited_questions_map');
+      return saved ? JSON.parse(saved) : {};
+    } catch (e) {
+      return {};
+    }
+  });
+
+  const [editingQuestion, setEditingQuestion] = useState(null);
+
+  useEffect(() => {
+    localStorage.setItem('gate_ag_edited_questions_map', JSON.stringify(editedQuestionsMap));
+  }, [editedQuestionsMap]);
+
+  const handleSaveEditedQuestion = (updatedQ) => {
+    setEditedQuestionsMap(prev => ({
+      ...prev,
+      [updatedQ.id]: updatedQ
+    }));
+  };
+
+  // Dynamically apply manual question edits across all question pools
+  const questions = useMemo(() => {
+    const existingIds = new Set(initialQuestions.map(q => q.id));
+    const baseQuestions = initialQuestions.map(q => editedQuestionsMap[q.id] || q);
+    
+    // Include newly created questions saved in editedQuestionsMap
+    const newlyAddedQuestions = Object.values(editedQuestionsMap).filter(q => q && q.id && !existingIds.has(q.id));
+    
+    return [...baseQuestions, ...newlyAddedQuestions];
+  }, [editedQuestionsMap]);
+
+  const mockPapers = useMemo(() => {
+    return initialMockPapers.map(paper => ({
+      ...paper,
+      questions: (paper.questions || []).map(q => editedQuestionsMap[q.id] || q)
+    }));
+  }, [editedQuestionsMap]);
+
+  const customMockPapers = useMemo(() => {
+    return allCustomMockPapers.map(paper => ({
+      ...paper,
+      questions: (paper.questions || []).map(q => editedQuestionsMap[q.id] || q)
+    }));
+  }, [allCustomMockPapers, editedQuestionsMap]);
 
   useEffect(() => {
     localStorage.setItem('gate_ag_custom_uploaded_mocks', JSON.stringify(userUploadedMocks));
@@ -90,7 +184,7 @@ export default function App() {
   };
 
   const handleDeleteCustomMock = (paperId) => {
-    if (['GATE_2027_MOCK_01', 'GATE_2027_MOCK_02', 'GATE_2027_MOCK_03'].includes(paperId)) return; // Pre-loaded cannot be deleted
+    if (paperId && paperId.startsWith('GATE_2027_MOCK_')) return; // Pre-loaded cannot be deleted
     setUserUploadedMocks(prev => prev.filter(p => p.id !== paperId));
   };
 
@@ -221,24 +315,32 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex bg-slate-50 dark:bg-[#0B0F19] text-slate-900 dark:text-slate-100 transition-colors font-sans">
+    <div className="min-h-screen flex text-slate-900 dark:text-slate-100 transition-colors font-sans">
       
-      {/* Minimalist Slim Left Sidebar */}
+      {/* Strict Access Modal: Rendered if not logged in */}
+      {!currentStudent && (
+        <AuthModal onLoginSuccess={(student) => setCurrentStudent(student)} />
+      )}
+
+      {/* Single Unified Left Sidebar */}
       <Sidebar
         activeTab={activeTab}
         setActiveTab={setActiveTab}
         currentTheme={currentTheme}
         setCurrentTheme={setCurrentTheme}
         onOpenCalc={() => setIsCalcOpen(true)}
+        currentStudent={currentStudent}
+        onOpenProfile={() => setIsProfileOpen(true)}
+        onLogout={handleLogout}
       />
 
       {/* Main Wide Canvas */}
       <div className="flex-1 flex flex-col min-w-0 overflow-y-auto">
-        <main className="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-8 pt-20 sm:pt-8 pb-8">
+        <main className="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-8 pt-6 pb-8">
           {activeTab === 'dashboard' && (
             <Dashboard
-              questions={initialQuestions}
-              mockPapers={initialMockPapers}
+              questions={questions}
+              mockPapers={mockPapers}
               userStats={userStats}
               onStartMock={handleStartMock}
               onStartSectionPractice={handleStartSectionPractice}
@@ -246,33 +348,55 @@ export default function App() {
             />
           )}
 
-          {activeTab === 'practice' && (
-            <PracticeMode
-              questions={initialQuestions}
-              customMockPapers={allCustomMockPapers}
+          {['practicehub', 'practice', 'custompractice', 'customtest'].includes(activeTab) && (
+            <PracticeHub
+              activeSubTab={activeTab === 'practicehub' ? 'practice' : activeTab}
+              onSubTabChange={(subTab) => setActiveTab(subTab)}
+              questions={questions}
+              customMockPapers={customMockPapers}
+              mockPapers={mockPapers}
               bookmarks={bookmarks}
               onToggleBookmark={handleToggleBookmark}
-              initialSection={practiceSection}
+              practiceSection={practiceSection}
               onOpenCalc={() => setIsCalcOpen(true)}
+              onEditQuestion={(q) => setEditingQuestion(q)}
+              onStartCustomTest={handleStartCustomTest}
+            />
+          )}
+
+          {['learninghub', 'concepts', 'revision', 'formulas'].includes(activeTab) && (
+            <LearningHub
+              activeSubTab={activeTab === 'learninghub' ? 'concepts' : activeTab}
+              onSubTabChange={(subTab) => setActiveTab(subTab)}
+              questions={questions}
+              customMockPapers={customMockPapers}
+              userStats={userStats}
+              bookmarks={bookmarks}
+              onToggleBookmark={handleToggleBookmark}
+              onOpenCalc={() => setIsCalcOpen(true)}
+              onEditQuestion={(q) => setEditingQuestion(q)}
             />
           )}
 
           {activeTab === 'mocktest' && (
             <MockTestMode
-              mockPapers={initialMockPapers}
-              customMockPapers={allCustomMockPapers}
+              mockPapers={mockPapers}
+              customMockPapers={customMockPapers}
               customPaper={customTestPaper}
               directLaunchPaper={directLaunchPaper}
               onOpenCalc={() => setIsCalcOpen(true)}
               onFinishTest={handleFinishTest}
+              onEditQuestion={(q) => setEditingQuestion(q)}
             />
           )}
 
-          {activeTab === 'custompractice' && (
-            <CustomPracticePool
-              customMockPapers={allCustomMockPapers}
-              bookmarks={bookmarks}
-              onToggleBookmark={handleToggleBookmark}
+          {activeTab === 'admin' && (
+            <AdminQuestionManager
+              questions={questions}
+              mockPapers={mockPapers}
+              customMockPapers={customMockPapers}
+              editedQuestionsMap={editedQuestionsMap}
+              onSaveEditedQuestion={handleSaveEditedQuestion}
               onOpenCalc={() => setIsCalcOpen(true)}
             />
           )}
@@ -281,24 +405,11 @@ export default function App() {
             <FeedbackForum />
           )}
 
-          {activeTab === 'concepts' && (
-            <ImportantConcepts />
-          )}
-
           {activeTab === 'downloads' && (
             <DownloadsHub
-              customMockPapers={allCustomMockPapers}
+              customMockPapers={customMockPapers}
               onStartMock={handleStartMock}
               onDeleteMock={handleDeleteCustomMock}
-            />
-          )}
-
-          {activeTab === 'customtest' && (
-            <CustomTestCreator
-              questions={initialQuestions}
-              mockPapers={initialMockPapers}
-              onStartCustomTest={handleStartCustomTest}
-              onOpenCalc={() => setIsCalcOpen(true)}
             />
           )}
 
@@ -310,59 +421,18 @@ export default function App() {
             />
           )}
 
-          {activeTab === 'revision' && (
-            <RevisionBank
-              questions={initialQuestions}
-              userStats={userStats}
-              bookmarks={bookmarks}
-              onToggleBookmark={handleToggleBookmark}
-              onOpenCalc={() => setIsCalcOpen(true)}
-            />
+          {activeTab === 'support' && (
+            <SupportPage currentStudent={currentStudent} />
           )}
 
-          {activeTab === 'formulas' && (
-            <FormulaSheet
-              onOpenCalc={() => setIsCalcOpen(true)}
-            />
+          {activeTab === 'games' && (
+            <GamesZone />
           )}
 
           {activeTab === 'creator' && (
             <CreatorPage />
           )}
         </main>
-
-        <footer className="border-t border-[#E7E2D9] dark:border-[#2A2723] bg-white dark:bg-[#1A1917] py-6 px-6 text-center text-xs text-[#78716C] dark:text-[#A8A29E] space-y-3">
-          <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 font-sans">
-            <div className="text-left space-y-1">
-              <div className="font-bold text-slate-900 dark:text-slate-200">
-                GATE Agricultural Engineering Practice Portal
-              </div>
-              <p className="text-[11px] text-slate-500 dark:text-slate-400">
-                Grateful acknowledgement to the official GATE Organising Institutes (IITs & IISc) for official Question Papers & Answer Keys (2007–2026).
-              </p>
-            </div>
-
-            <div className="flex flex-col md:items-end gap-1.5 font-mono text-[11px]">
-              <div className="flex items-center flex-wrap gap-3 md:justify-end">
-                <button 
-                  onClick={() => setActiveTab('feedback')} 
-                  className="px-3 py-1 rounded-lg bg-emerald-50 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800 font-extrabold hover:bg-emerald-600 hover:text-white transition"
-                >
-                  💬 Report Issue on WhatsApp
-                </button>
-                <button 
-                  onClick={() => setActiveTab('creator')} 
-                  className="font-extrabold text-amber-600 dark:text-amber-400 hover:underline transition"
-                >
-                  Crafted by Raghav Bansal • Made for his dear juniors
-                </button>
-              </div>
-              <span className="text-slate-400">
-                © {new Date().getFullYear()} GATE AG Prep • All Rights Reserved
-              </span>
-            </div>
-          </div>
-        </footer>
       </div>
 
       <ScientificCalculator
@@ -378,6 +448,22 @@ export default function App() {
             setTestResult(null);
             setActiveTab('mocktest');
           }}
+        />
+      )}
+
+      {editingQuestion && (
+        <QuestionEditorModal
+          question={editingQuestion}
+          onSave={handleSaveEditedQuestion}
+          onClose={() => setEditingQuestion(null)}
+        />
+      )}
+
+      {isProfileOpen && currentStudent && (
+        <UserProfileModal
+          student={currentStudent}
+          onClose={() => setIsProfileOpen(false)}
+          onProfileUpdated={(updatedStudent) => setCurrentStudent(updatedStudent)}
         />
       )}
 
