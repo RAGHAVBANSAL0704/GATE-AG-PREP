@@ -354,7 +354,7 @@ export default function App() {
                   onClick={() => setActiveTab('creator')} 
                   className="font-extrabold text-amber-600 dark:text-amber-400 hover:underline transition"
                 >
-                  Crafted by Raghav Bansal • Made for his dear juniors • Run in browser
+                  Crafted by Raghav Bansal • Made for his dear juniors
                 </button>
               </div>
               <span className="text-slate-400">
