@@ -343,7 +343,7 @@ export default function App() {
             </div>
 
             <div className="flex flex-col md:items-end gap-1.5 font-mono text-[11px]">
-              <div className="flex items-center gap-3">
+              <div className="flex items-center flex-wrap gap-3 md:justify-end">
                 <button 
                   onClick={() => setActiveTab('feedback')} 
                   className="px-3 py-1 rounded-lg bg-emerald-50 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800 font-extrabold hover:bg-emerald-600 hover:text-white transition"
@@ -354,7 +354,7 @@ export default function App() {
                   onClick={() => setActiveTab('creator')} 
                   className="font-extrabold text-amber-600 dark:text-amber-400 hover:underline transition"
                 >
-                  Crafted by Raghav Bansal
+                  Crafted by Raghav Bansal • Made for his dear juniors • Run in browser
                 </button>
               </div>
               <span className="text-slate-400">
