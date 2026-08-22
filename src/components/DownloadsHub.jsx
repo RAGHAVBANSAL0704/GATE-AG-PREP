@@ -8,13 +8,22 @@ import {
   Sparkles,
   Play,
   Trash2,
-  Package
+  Package,
+  Eye,
+  Archive,
+  X,
+  Loader2,
+  BookOpen
 } from 'lucide-react';
+import MathRenderer from './MathRenderer';
+import { downloadBulkZip } from '../utils/zipDownloader';
 
 export default function DownloadsHub({ customMockPapers = [], onStartMock, onDeleteMock }) {
   const [vaultTab, setVaultTab] = useState('official'); // 'official' | 'custom'
   const [searchTerm, setSearchTerm] = useState('');
   const [eraFilter, setEraFilter] = useState('all'); // 'all' | 'recent' | 'classic'
+  const [isZipping, setIsZipping] = useState(false);
+  const [previewPaper, setPreviewPaper] = useState(null);
 
   const yearsData = [
     { year: '2026', paperPdf: '/downloads/question_papers/AG2026.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2026-FULL-SOLVED.docx' },
@@ -47,6 +56,67 @@ export default function DownloadsHub({ customMockPapers = [], onStartMock, onDel
     return true;
   });
 
+  const getPaperDocxUrl = (paper, idx) => {
+    if (paper.docxUrl) return paper.docxUrl;
+    if (paper.file_url && paper.file_url.endsWith('.docx')) return paper.file_url;
+    const match = (paper.id || paper.title || '').match(/(\d+)/);
+    const num = match ? String(parseInt(match[1])).padStart(2, '0') : String(idx + 1).padStart(2, '0');
+    return `/downloads/mock_tests/MOCK ${num} GATE AG.docx`;
+  };
+
+  // Bulk ZIP Handlers
+  const handleDownloadAllSolvedDocx = async () => {
+    setIsZipping(true);
+    try {
+      const filesToZip = yearsData
+        .filter(item => item.solvedDocx)
+        .map(item => ({
+          name: `${item.year}-FULL-SOLVED.docx`,
+          url: item.solvedDocx
+        }));
+      await downloadBulkZip(filesToZip, 'GATE_AG_All_Solved_Papers_2007_2026.zip');
+    } catch (err) {
+      console.error("Bulk zip failed", err);
+      alert("Could not build ZIP file. Try downloading files individually.");
+    } finally {
+      setIsZipping(false);
+    }
+  };
+
+  const handleDownloadAllPdfs = async () => {
+    setIsZipping(true);
+    try {
+      const filesToZip = yearsData
+        .filter(item => item.paperPdf)
+        .map(item => ({
+          name: `GATE_AG_${item.year}_Question_Paper.pdf`,
+          url: item.paperPdf
+        }));
+      await downloadBulkZip(filesToZip, 'GATE_AG_Official_Question_Papers_2007_2026.zip');
+    } catch (err) {
+      console.error("Bulk zip failed", err);
+      alert("Could not build ZIP file. Try downloading files individually.");
+    } finally {
+      setIsZipping(false);
+    }
+  };
+
+  const handleDownloadAllCustomMocksZip = async () => {
+    setIsZipping(true);
+    try {
+      const filesToZip = customMockPapers.map((paper, idx) => ({
+        name: `${(paper.title || `Mock_${idx + 1}`).replace(/\s+/g, '_')}.docx`,
+        url: getPaperDocxUrl(paper, idx)
+      }));
+      await downloadBulkZip(filesToZip, 'GATE_2027_AG_Custom_Mock_Papers_01_18.zip');
+    } catch (err) {
+      console.error("Bulk zip failed", err);
+      alert("Could not build ZIP file. Try downloading files individually.");
+    } finally {
+      setIsZipping(false);
+    }
+  };
+
   return (
     <div className="space-y-5 animate-in fade-in duration-200">
       
@@ -58,13 +128,13 @@ export default function DownloadsHub({ customMockPapers = [], onStartMock, onDel
               <Package className="w-5 h-5 text-blue-600 dark:text-blue-400" />
               <span>PYQ Vault</span>
             </h1>
-            <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-              Download official GATE AG question PDFs, answer keys & solved papers (2007–2026).
+            <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5 font-medium">
+              Download official GATE AG papers, answer keys, solved DOCX papers & custom mock DOCX files.
             </p>
           </div>
 
           {/* Tab Switcher */}
-          <div className="flex items-center gap-1 bg-slate-100 dark:bg-slate-950 p-1 rounded-xl border border-slate-200 dark:border-slate-800 shrink-0">
+          <div className="flex items-center gap-1 bg-slate-100 dark:bg-slate-950 p-1 rounded-xl border border-slate-200 dark:border-slate-800 shrink-0 w-full sm:w-auto">
             <button
               onClick={() => setVaultTab('official')}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition ${
@@ -91,54 +161,96 @@ export default function DownloadsHub({ customMockPapers = [], onStartMock, onDel
           </div>
         </div>
 
-        {/* Filter Toolbar for Official Papers */}
-        {vaultTab === 'official' && (
-          <div className="flex flex-col sm:flex-row items-center gap-2.5 pt-3 mt-3 border-t border-slate-100 dark:border-slate-800">
-            <div className="relative flex-1 w-full">
-              <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-2.5" />
-              <input
-                type="text"
-                placeholder="Search year (e.g. 2026, 2024)..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg pl-9 pr-3 py-1.5 text-xs text-slate-900 dark:text-slate-100 outline-none focus:ring-1 focus:ring-blue-500 font-medium"
-              />
-            </div>
+        {/* Filter Toolbar for Official Papers & Bulk ZIP Downloads */}
+        <div className="flex flex-wrap items-center justify-between gap-3 pt-3 mt-3 border-t border-slate-100 dark:border-slate-800">
+          {vaultTab === 'official' ? (
+            <>
+              <div className="flex items-center gap-2 flex-1 min-w-[200px]">
+                <div className="relative flex-1">
+                  <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-2.5" />
+                  <input
+                    type="text"
+                    placeholder="Search year (e.g. 2026, 2024)..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg pl-9 pr-3 py-1.5 text-xs text-slate-900 dark:text-slate-100 outline-none focus:ring-1 focus:ring-blue-500 font-medium"
+                  />
+                </div>
 
-            <div className="flex items-center gap-1 bg-slate-100 dark:bg-slate-950 p-1 rounded-lg border border-slate-200 dark:border-slate-800 text-xs font-bold w-full sm:w-auto">
+                <div className="flex items-center gap-1 bg-slate-100 dark:bg-slate-950 p-1 rounded-lg border border-slate-200 dark:border-slate-800 text-xs font-bold shrink-0">
+                  <button
+                    onClick={() => setEraFilter('all')}
+                    className={`px-2.5 py-1 rounded-md transition ${
+                      eraFilter === 'all'
+                        ? 'bg-blue-600 text-white shadow-xs font-bold'
+                        : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                    }`}
+                  >
+                    All
+                  </button>
+                  <button
+                    onClick={() => setEraFilter('recent')}
+                    className={`px-2.5 py-1 rounded-md transition ${
+                      eraFilter === 'recent'
+                        ? 'bg-blue-600 text-white shadow-xs font-bold'
+                        : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                    }`}
+                  >
+                    2016–2026
+                  </button>
+                  <button
+                    onClick={() => setEraFilter('classic')}
+                    className={`px-2.5 py-1 rounded-md transition ${
+                      eraFilter === 'classic'
+                        ? 'bg-blue-600 text-white shadow-xs font-bold'
+                        : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                    }`}
+                  >
+                    2007–2015
+                  </button>
+                </div>
+              </div>
+
+              {/* Category Bulk Action Buttons */}
+              <div className="flex items-center gap-2">
+                <button
+                  disabled={isZipping}
+                  onClick={handleDownloadAllSolvedDocx}
+                  className="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-700 disabled:opacity-50 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-xs"
+                  title="Package and download all solved DOCX papers in one ZIP"
+                >
+                  {isZipping ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Archive className="w-3.5 h-3.5" />}
+                  <span>Download All Solved DOCX (ZIP)</span>
+                </button>
+
+                <button
+                  disabled={isZipping}
+                  onClick={handleDownloadAllPdfs}
+                  className="px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-xs"
+                  title="Package and download all official question PDFs in one ZIP"
+                >
+                  {isZipping ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Archive className="w-3.5 h-3.5" />}
+                  <span>Download All Official PDFs (ZIP)</span>
+                </button>
+              </div>
+            </>
+          ) : (
+            <div className="flex items-center justify-between w-full">
+              <span className="text-xs text-slate-500 font-medium">
+                Showing all {customMockPapers.length} custom mock test papers.
+              </span>
               <button
-                onClick={() => setEraFilter('all')}
-                className={`px-3 py-1 rounded-md transition ${
-                  eraFilter === 'all'
-                    ? 'bg-blue-600 text-white shadow-xs font-bold'
-                    : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
-                }`}
+                disabled={isZipping}
+                onClick={handleDownloadAllCustomMocksZip}
+                className="px-3 py-1.5 rounded-lg bg-purple-600 hover:bg-purple-700 disabled:opacity-50 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-xs"
+                title="Package and download all 18 custom mock DOCX papers in one ZIP"
               >
-                All
-              </button>
-              <button
-                onClick={() => setEraFilter('recent')}
-                className={`px-3 py-1 rounded-md transition ${
-                  eraFilter === 'recent'
-                    ? 'bg-blue-600 text-white shadow-xs font-bold'
-                    : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
-                }`}
-              >
-                2016–2026
-              </button>
-              <button
-                onClick={() => setEraFilter('classic')}
-                className={`px-3 py-1 rounded-md transition ${
-                  eraFilter === 'classic'
-                    ? 'bg-blue-600 text-white shadow-xs font-bold'
-                    : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
-                }`}
-              >
-                2007–2015
+                {isZipping ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Archive className="w-3.5 h-3.5" />}
+                <span>Download All 18 Custom Mocks (ZIP)</span>
               </button>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
 
       {/* Main Content Table / Grid */}
@@ -152,6 +264,7 @@ export default function DownloadsHub({ customMockPapers = [], onStartMock, onDel
                   <th className="py-3 px-4">Official Question Paper (PDF)</th>
                   <th className="py-3 px-4">Official Answer Key (PDF)</th>
                   <th className="py-3 px-4">Full Solved Paper (DOCX)</th>
+                  <th className="py-3 px-4 text-right">Actions</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100 dark:divide-slate-800/60 text-slate-900 dark:text-slate-100 font-medium">
@@ -220,6 +333,24 @@ export default function DownloadsHub({ customMockPapers = [], onStartMock, onDel
                       )}
                     </td>
 
+                    {/* Preview Action */}
+                    <td className="py-3 px-4 text-right">
+                      <button
+                        onClick={() => setPreviewPaper({
+                          title: `GATE ${item.year} Solved Paper`,
+                          year: item.year,
+                          docxUrl: item.solvedDocx,
+                          pdfUrl: item.paperPdf,
+                          summaryText: `Official GATE ${item.year} Agricultural Engineering Paper containing full questions, answer keys, and step-by-step solved derivations.`
+                        })}
+                        className="px-2.5 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-purple-600 hover:text-white transition font-bold text-xs inline-flex items-center gap-1 border border-slate-200 dark:border-slate-700"
+                        title="Preview Paper Summary & Derivations"
+                      >
+                        <Eye className="w-3.5 h-3.5" />
+                        <span>Preview</span>
+                      </button>
+                    </td>
+
                   </tr>
                 ))}
               </tbody>
@@ -227,26 +358,26 @@ export default function DownloadsHub({ customMockPapers = [], onStartMock, onDel
           </div>
         </div>
       ) : (
-        /* Custom Uploaded Mocks Vault Grid */
+        /* Custom Uploaded Mocks Download Vault Grid */
         <div className="space-y-3">
           {customMockPapers.length === 0 ? (
             <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-8 text-center text-slate-400 text-xs">
-              No custom uploaded papers found.
+              No custom mock papers found.
             </div>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-              {customMockPapers.map((paper) => (
+              {customMockPapers.map((paper, idx) => (
                 <div
-                  key={paper.id}
+                  key={paper.id || idx}
                   className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 flex flex-col justify-between space-y-3 shadow-xs hover:border-purple-500 transition"
                 >
                   <div className="space-y-1">
                     <div className="flex items-center justify-between">
                       <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-purple-600 text-white">
-                        {paper.year}
+                        {paper.year || '2027'}
                       </span>
                       <span className="text-[10px] font-mono text-slate-400">
-                        {paper.questions?.length} Qs • {paper.instructions?.duration_mins || 180}m
+                        {paper.questions?.length || 65} Qs • 100 M
                       </span>
                     </div>
 
@@ -257,14 +388,34 @@ export default function DownloadsHub({ customMockPapers = [], onStartMock, onDel
 
                   <div className="flex items-center gap-2 pt-2 border-t border-slate-100 dark:border-slate-800">
                     <button
-                      onClick={() => onStartMock && onStartMock(paper.year)}
-                      className="flex-1 py-1.5 rounded-lg bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold transition flex items-center justify-center gap-1 shadow-xs"
+                      onClick={() => setPreviewPaper({
+                        title: paper.title,
+                        year: paper.year || '2027',
+                        docxUrl: getPaperDocxUrl(paper, idx),
+                        questions: paper.questions || [],
+                        summaryText: `Custom Full-Length Mock Paper containing 65 questions (10 GA + 55 AG) with detailed solutions.`
+                      })}
+                      className="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-purple-600 hover:text-white transition font-bold text-xs inline-flex items-center gap-1 border border-slate-200 dark:border-slate-700"
+                      title="Preview Mock Paper Questions"
                     >
-                      <Play className="w-3 h-3 fill-white" />
-                      <span>Start CBT</span>
+                      <Eye className="w-3.5 h-3.5" />
+                      <span>Preview</span>
                     </button>
 
-                    {onDeleteMock && (
+                    <a
+                      href={getPaperDocxUrl(paper, idx)}
+                      download={`${(paper.title || 'MOCK_PAPER').replace(/\s+/g, '_')}.docx`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 py-1.5 rounded-lg bg-amber-50 dark:bg-amber-950/40 hover:bg-amber-600 hover:text-white text-amber-900 dark:text-amber-300 border border-amber-200 dark:border-amber-900 text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-xs"
+                      title="Download Original Custom Mock Paper (.docx)"
+                    >
+                      <FileCode className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                      <span>Download (.docx)</span>
+                      <Download className="w-3 h-3 opacity-60 ml-0.5" />
+                    </a>
+
+                    {onDeleteMock && !paper.id?.startsWith('GATE_2027_MOCK_') && (
                       <button
                         onClick={() => onDeleteMock(paper.id)}
                         className="p-1.5 rounded-lg text-rose-500 hover:bg-rose-500/10 border border-rose-200 dark:border-rose-950 transition"
@@ -278,6 +429,87 @@ export default function DownloadsHub({ customMockPapers = [], onStartMock, onDel
               ))}
             </div>
           )}
+        </div>
+      )}
+
+      {/* In-App Reader Preview Modal */}
+      {previewPaper && (
+        <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-3 sm:p-6 no-print">
+          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl w-full max-w-3xl max-h-[85vh] flex flex-col overflow-hidden animate-in fade-in zoom-in duration-150">
+            
+            {/* Modal Title Bar */}
+            <div className="bg-slate-50 dark:bg-slate-800/90 px-5 py-3.5 flex items-center justify-between border-b border-slate-200 dark:border-slate-700">
+              <div className="flex items-center gap-2.5">
+                <Eye className="w-4 h-4 text-purple-600 dark:text-purple-400" />
+                <h3 className="font-extrabold text-sm text-slate-900 dark:text-white">
+                  {previewPaper.title}
+                </h3>
+              </div>
+
+              <div className="flex items-center gap-2">
+                {previewPaper.docxUrl && (
+                  <a
+                    href={previewPaper.docxUrl}
+                    download
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold transition shadow-xs"
+                  >
+                    <Download className="w-3.5 h-3.5" />
+                    <span>Download Original (.docx)</span>
+                  </a>
+                )}
+
+                <button
+                  onClick={() => setPreviewPaper(null)}
+                  className="p-1 rounded-lg text-slate-400 hover:text-slate-900 dark:hover:text-white transition"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+            </div>
+
+            {/* Modal Content */}
+            <div className="p-5 sm:p-6 overflow-y-auto space-y-4">
+              <div className="p-4 rounded-xl bg-purple-50/50 dark:bg-purple-950/20 border border-purple-200 dark:border-purple-900 space-y-1 text-xs">
+                <span className="font-bold text-purple-700 dark:text-purple-300 uppercase tracking-wider text-[10px]">
+                  Document Preview
+                </span>
+                <p className="text-slate-700 dark:text-slate-300 font-medium">
+                  {previewPaper.summaryText}
+                </p>
+              </div>
+
+              {previewPaper.questions && previewPaper.questions.length > 0 ? (
+                <div className="space-y-4 pt-2">
+                  <h4 className="text-xs font-extrabold text-slate-900 dark:text-white uppercase tracking-wider">
+                    Sample Paper Questions ({previewPaper.questions.length} Total)
+                  </h4>
+
+                  {previewPaper.questions.slice(0, 10).map((q, idx) => (
+                    <div key={q.id || idx} className="p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 space-y-2 text-xs">
+                      <div className="flex items-center justify-between text-[10px] font-bold text-slate-500">
+                        <span>Q{idx + 1} • {q.type || 'MCQ'} ({q.marks || 1} M)</span>
+                        <span className="text-blue-600 dark:text-blue-400">{q.section}</span>
+                      </div>
+                      <div className="font-semibold text-slate-900 dark:text-slate-100 overflow-x-auto">
+                        <MathRenderer content={q.question} inline={false} />
+                      </div>
+                    </div>
+                  ))}
+
+                  {previewPaper.questions.length > 10 && (
+                    <p className="text-center text-xs text-slate-400 font-medium italic pt-2">
+                      + {previewPaper.questions.length - 10} more questions in full document download.
+                    </p>
+                  )}
+                </div>
+              ) : (
+                <div className="p-8 text-center text-slate-400 text-xs">
+                  Download the file above to view complete solved derivations.
+                </div>
+              )}
+            </div>
+
+          </div>
         </div>
       )}
 

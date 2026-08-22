@@ -60,10 +60,10 @@ export default function FormulaSheet({ onOpenCalc }) {
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 text-xs font-bold">
               <FileText className="w-3.5 h-3.5" />
-              <span>GATE Agricultural Engineering Formula Cheat Sheet</span>
+              <span>57 High-Yield GATE AG Formulas</span>
             </div>
-            <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white mt-1">
-              Section & Topic-Wise Formula Reference
+            <h2 className="text-xl font-extrabold text-slate-900 dark:text-white mt-1">
+              Formula Cheat Sheet
             </h2>
           </div>
 

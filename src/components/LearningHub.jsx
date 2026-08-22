@@ -31,9 +31,9 @@ export default function LearningHub({
   };
 
   const subTabs = [
-    { id: 'concepts', label: 'Important Concepts', icon: Lightbulb },
-    { id: 'revision', label: 'Revision Bank', icon: Bookmark },
-    { id: 'formulas', label: 'Formula Sheet', icon: FileText },
+    { id: 'concepts', label: 'Core Concepts (Theory)', icon: Lightbulb },
+    { id: 'revision', label: 'Revision Bank (Saved Qs)', icon: Bookmark },
+    { id: 'formulas', label: 'Formula Sheet (57 Formulas)', icon: FileText },
   ];
 
   return (
@@ -47,13 +47,13 @@ export default function LearningHub({
               <GraduationCap className="w-5 h-5 text-purple-600 dark:text-purple-400" />
               <span>Learning Hub</span>
             </h1>
-            <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-              High-yield core concepts, bookmarked revision vault, and LaTeX formula cheat-sheets.
+            <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5 font-medium">
+              <strong className="text-blue-600 dark:text-blue-400">Core Concepts</strong>: Theory & Derivations • <strong className="text-amber-500">Revision Bank</strong>: Bookmarks & Missteps • <strong className="text-emerald-500">Formula Sheet</strong>: 57 LaTeX Formulas
             </p>
           </div>
 
           {/* Minimal Segment Switcher */}
-          <div className="flex items-center gap-1 bg-slate-100 dark:bg-slate-950 p-1 rounded-xl border border-slate-200 dark:border-slate-800 overflow-x-auto shrink-0">
+          <div className="flex items-center gap-1 bg-slate-100 dark:bg-slate-950 p-1 rounded-xl border border-slate-200 dark:border-slate-800 overflow-x-auto shrink-0 w-full sm:w-auto">
             {subTabs.map((tab) => {
               const Icon = tab.icon;
               const isActive = currentSubTab === tab.id;

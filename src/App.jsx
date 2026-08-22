@@ -38,6 +38,14 @@ import preloadedCustomMock07 from './data/custom_mock_2027_07.json';
 import preloadedCustomMock08 from './data/custom_mock_2027_08.json';
 import preloadedCustomMock09 from './data/custom_mock_2027_09.json';
 import preloadedCustomMock10 from './data/custom_mock_2027_10.json';
+import preloadedCustomMock11 from './data/custom_mock_2027_11.json';
+import preloadedCustomMock12 from './data/custom_mock_2027_12.json';
+import preloadedCustomMock13 from './data/custom_mock_2027_13.json';
+import preloadedCustomMock14 from './data/custom_mock_2027_14.json';
+import preloadedCustomMock15 from './data/custom_mock_2027_15.json';
+import preloadedCustomMock16 from './data/custom_mock_2027_16.json';
+import preloadedCustomMock17 from './data/custom_mock_2027_17.json';
+import preloadedCustomMock18 from './data/custom_mock_2027_18.json';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState(() => {
@@ -125,6 +133,14 @@ export default function App() {
     preloadedCustomMock08,
     preloadedCustomMock09,
     preloadedCustomMock10,
+    preloadedCustomMock11,
+    preloadedCustomMock12,
+    preloadedCustomMock13,
+    preloadedCustomMock14,
+    preloadedCustomMock15,
+    preloadedCustomMock16,
+    preloadedCustomMock17,
+    preloadedCustomMock18,
     ...userUploadedMocks
   ];
 
@@ -336,11 +352,12 @@ export default function App() {
 
       {/* Main Wide Canvas */}
       <div className="flex-1 flex flex-col min-w-0 overflow-y-auto">
-        <main className="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-8 pt-6 pb-8">
+        <main className="flex-1 max-w-7xl 2xl:max-w-[1500px] w-full mx-auto px-3 sm:px-6 lg:px-8 pt-16 sm:pt-6 pb-8">
           {activeTab === 'dashboard' && (
             <Dashboard
               questions={questions}
               mockPapers={mockPapers}
+              customMockPapers={customMockPapers}
               userStats={userStats}
               onStartMock={handleStartMock}
               onStartSectionPractice={handleStartSectionPractice}

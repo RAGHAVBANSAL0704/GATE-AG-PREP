@@ -33,9 +33,9 @@ export default function PracticeHub({
   };
 
   const subTabs = [
-    { id: 'practice', label: 'Practice Pool', icon: Layers },
-    { id: 'custompractice', label: 'Custom Pool 2027', icon: Sparkles },
-    { id: 'customtest', label: 'Custom Test', icon: Sliders },
+    { id: 'practice', label: 'PYQ Pool (Past Papers)', icon: Layers },
+    { id: 'custompractice', label: 'Custom Pool (Mock Papers)', icon: Sparkles },
+    { id: 'customtest', label: 'Custom Speed Test', icon: Sliders },
   ];
 
   return (
@@ -49,13 +49,13 @@ export default function PracticeHub({
               <Target className="w-5 h-5 text-blue-600 dark:text-blue-400" />
               <span>Practice Hub</span>
             </h1>
-            <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-              Topic-wise PYQs, custom practice pools, and speed test creators.
+            <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5 font-medium">
+              <strong className="text-blue-600 dark:text-blue-400">PYQ Pool</strong>: Solved Official GATE AG Past Year Questions • <strong className="text-purple-600 dark:text-purple-400">Custom Pool</strong>: Questions from Custom Mock Papers
             </p>
           </div>
 
           {/* Minimal Segment Switcher */}
-          <div className="flex items-center gap-1 bg-slate-100 dark:bg-slate-950 p-1 rounded-xl border border-slate-200 dark:border-slate-800 overflow-x-auto shrink-0">
+          <div className="flex items-center gap-1 bg-slate-100 dark:bg-slate-950 p-1 rounded-xl border border-slate-200 dark:border-slate-800 overflow-x-auto shrink-0 w-full sm:w-auto">
             {subTabs.map((tab) => {
               const Icon = tab.icon;
               const isActive = currentSubTab === tab.id;

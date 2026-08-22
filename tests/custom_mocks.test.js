@@ -4,11 +4,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 
 describe('Custom Mock Test Subsystem Tests', () => {
-  const mockFiles = [
-    'custom_mock_2027_01.json',
-    'custom_mock_2027_02.json',
-    'custom_mock_2027_03.json'
-  ];
+  const mockFiles = Array.from({ length: 18 }, (_, i) => `custom_mock_2027_${String(i + 1).padStart(2, '0')}.json`);
 
   mockFiles.forEach((filename, idx) => {
     const mockPath = join(process.cwd(), 'src', 'data', filename);

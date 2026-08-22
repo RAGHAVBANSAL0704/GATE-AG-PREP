@@ -428,29 +428,29 @@ export default function MockTestMode({ mockPapers, customMockPapers = [], custom
   return (
     <div className="space-y-4 animate-in fade-in duration-150">
       
-      <div className="bg-slate-900 text-white rounded-xl p-4 border border-slate-800 flex flex-wrap items-center justify-between gap-4 shadow-md">
+      <div className="bg-slate-900 text-white rounded-xl p-3 sm:p-4 border border-slate-800 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-4 shadow-md">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center font-bold text-base">
+          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-blue-600 flex items-center justify-center font-bold text-sm sm:text-base shrink-0">
             AG
           </div>
-          <div>
-            <h2 className="font-bold text-sm sm:text-base tracking-tight">{selectedPaper?.title || `GATE ${selectedPaper?.year || ''} Test`}</h2>
-            <p className="text-[11px] text-slate-400 font-medium">Max Marks: {paperInstructions?.max_marks} • Total Qs: {paperInstructions?.total_qs}</p>
+          <div className="min-w-0 flex-1">
+            <h2 className="font-bold text-xs sm:text-base tracking-tight truncate">{selectedPaper?.title || `GATE ${selectedPaper?.year || ''} Test`}</h2>
+            <p className="text-[10px] sm:text-[11px] text-slate-400 font-medium">Max Marks: {paperInstructions?.max_marks} • Total Qs: {paperInstructions?.total_qs}</p>
           </div>
         </div>
 
-        <div className="flex flex-wrap items-center gap-3 font-mono text-xs">
-          <div className="flex items-center gap-1.5 bg-slate-950 px-3 py-1.5 rounded-lg border border-slate-800 text-slate-300">
-            <Clock className="w-3.5 h-3.5 text-blue-400" />
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3 font-mono text-[11px] sm:text-xs">
+          <div className="flex items-center gap-1.5 bg-slate-950 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg border border-slate-800 text-slate-300">
+            <Clock className="w-3.5 h-3.5 text-blue-400 shrink-0" />
             <span>Clock: {realTimeStr}</span>
           </div>
 
-          <div className="flex items-center gap-1.5 bg-slate-950 px-3 py-1.5 rounded-lg border border-slate-800 text-slate-300">
-            <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
+          <div className="flex items-center gap-1.5 bg-slate-950 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg border border-slate-800 text-slate-300">
+            <Sparkles className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
             <span>Elapsed: {formatTime(((paperInstructions?.duration_mins || 180) * 60) - timeLeft)}</span>
           </div>
 
-          <div className="flex items-center gap-1.5 bg-slate-950 px-3.5 py-1.5 rounded-lg border border-slate-800">
+          <div className="flex items-center gap-1.5 bg-slate-950 px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-lg border border-slate-800">
             <span className="text-slate-400 font-semibold">Remaining:</span>
             <span className={`font-bold ${
               !paperInstructions?.is_untimed && timeLeft < 900 ? 'text-red-400 animate-pulse' : 'text-emerald-400'
@@ -460,7 +460,7 @@ export default function MockTestMode({ mockPapers, customMockPapers = [], custom
           </div>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
           <button
             onClick={() => {
               if (window.confirm("Are you sure you want to exit this active CBT exam? Your progress will be reset.")) {
@@ -468,40 +468,40 @@ export default function MockTestMode({ mockPapers, customMockPapers = [], custom
                 setSelectedPaper(null);
               }
             }}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-rose-900/60 text-xs font-semibold text-rose-300 border border-slate-700 hover:border-rose-700 transition"
+            className="flex items-center gap-1 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg bg-slate-800 hover:bg-rose-900/60 text-xs font-semibold text-rose-300 border border-slate-700 hover:border-rose-700 transition"
             title="Exit CBT & Return to Papers List"
           >
             <ChevronLeft className="w-3.5 h-3.5" />
-            <span>Exit CBT</span>
+            <span>Exit</span>
           </button>
 
           <button
             onClick={() => setShowInstructionsModal(true)}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-300 border border-slate-700 transition"
+            className="flex items-center gap-1 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-300 border border-slate-700 transition"
           >
             <Info className="w-3.5 h-3.5 text-amber-400" />
-            <span>Instructions</span>
+            <span className="hidden xs:inline">Instructions</span>
           </button>
 
           <button
             onClick={onOpenCalc}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-blue-300 border border-slate-700 transition"
+            className="flex items-center gap-1 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-blue-300 border border-slate-700 transition"
           >
             <Calculator className="w-3.5 h-3.5" />
-            <span>Scientific Calc</span>
+            <span>Calc</span>
           </button>
 
           <button
             onClick={() => setShowQuestionPaperModal(true)}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-300 border border-slate-700 transition"
+            className="flex items-center gap-1 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-300 border border-slate-700 transition"
           >
             <FileText className="w-3.5 h-3.5" />
-            <span>Question Paper</span>
+            <span className="hidden xs:inline">Paper</span>
           </button>
 
           <button
             onClick={() => setShowSubmitModal(true)}
-            className="px-4 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition shadow-xs"
+            className="px-3 sm:px-4 py-1 sm:py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition shadow-xs"
           >
             Submit Test
           </button>
@@ -542,12 +542,12 @@ export default function MockTestMode({ mockPapers, customMockPapers = [], custom
           </div>
 
           {currentQ && (
-            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-xs overflow-hidden flex flex-col min-h-[500px]">
-              <div className="bg-slate-50 dark:bg-slate-800/80 px-6 py-3 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs font-semibold">
+            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-xs overflow-hidden flex flex-col min-h-[450px] sm:min-h-[500px]">
+              <div className="bg-slate-50 dark:bg-slate-800/80 px-4 sm:px-6 py-3 border-b border-slate-200 dark:border-slate-800 flex flex-wrap items-center justify-between gap-2 text-xs font-semibold">
                 <span className="text-slate-900 dark:text-white font-bold">
                   Question No. {currentQ.qnum}
                 </span>
-                <div className="flex items-center gap-2">
+                <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
                   {onEditQuestion && (
                     <button
                       onClick={() => onEditQuestion(currentQ)}
@@ -558,32 +558,32 @@ export default function MockTestMode({ mockPapers, customMockPapers = [], custom
                       <span>Edit</span>
                     </button>
                   )}
-                  <span className="bg-slate-200 dark:bg-slate-700 px-2.5 py-0.5 rounded font-mono">
+                  <span className="bg-slate-200 dark:bg-slate-700 px-2 py-0.5 rounded font-mono">
                     {currentQ.type}
                   </span>
-                  <span className="bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 px-2.5 py-0.5 rounded font-bold">
+                  <span className="bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 px-2 py-0.5 rounded font-bold">
                     Marks: {currentQ.marks}
                   </span>
                   {currentQ.type === 'MCQ' && (
                     <span className="text-slate-400">
-                      Negative: -{currentQ.negative_marks}
+                      Neg: -{Number(currentQ.negative_marks).toFixed(2)}
                     </span>
                   )}
                 </div>
               </div>
 
-              <div className="p-6 sm:p-8 space-y-6 flex-1">
-                <div className="text-xs font-medium text-slate-400 uppercase tracking-wider">
+              <div className="p-4 sm:p-6 md:p-8 space-y-4 sm:space-y-6 flex-1 overflow-x-auto">
+                <div className="text-[11px] sm:text-xs font-medium text-slate-400 uppercase tracking-wider">
                   {currentQ.section} • {currentQ.topic}
                 </div>
 
-                <div className="text-base sm:text-lg font-semibold text-slate-900 dark:text-slate-100 leading-relaxed">
+                <div className="text-sm sm:text-base md:text-lg font-semibold text-slate-900 dark:text-slate-100 leading-relaxed overflow-x-auto">
                   <MathRenderer content={currentQ.question} inline={false} />
                 </div>
 
                 {/* Official Diagram / Figure Display */}
                 {currentQ.image_url && (
-                  <div className="my-4 p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-center overflow-hidden space-y-2">
+                  <div className="my-4 p-3 sm:p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-center overflow-hidden space-y-2">
                     <div className="text-[10px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 flex items-center justify-center gap-1.5">
                       <ImageIcon className="w-3.5 h-3.5" />
                       <span>Official Question Diagram / Figure / Chart</span>
@@ -591,7 +591,7 @@ export default function MockTestMode({ mockPapers, customMockPapers = [], custom
                     <img
                       src={currentQ.image_url}
                       alt={`Diagram for ${currentQ.id}`}
-                      className="max-h-[420px] w-auto mx-auto rounded-lg border border-slate-200 dark:border-slate-800 object-contain shadow-xs"
+                      className="max-h-[300px] sm:max-h-[420px] w-auto mx-auto rounded-lg border border-slate-200 dark:border-slate-800 object-contain shadow-xs max-w-full"
                     />
                   </div>
                 )}
@@ -604,20 +604,20 @@ export default function MockTestMode({ mockPapers, customMockPapers = [], custom
                         <button
                           key={optKey}
                           onClick={() => handleSelectOption(optKey)}
-                          className={`w-full text-left p-4 rounded-xl border transition flex items-start gap-3.5 text-sm sm:text-base font-medium ${
+                          className={`w-full text-left p-3 sm:p-4 rounded-xl border transition flex items-start gap-3 text-xs sm:text-base font-medium ${
                             isSelected
                               ? 'border-blue-600 bg-blue-50/80 dark:bg-blue-950/60 text-blue-900 dark:text-blue-100 font-bold shadow-xs'
                               : 'border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/50 text-slate-900 dark:text-slate-100 hover:border-blue-500 dark:hover:border-blue-600'
                           }`}
                         >
-                          <span className={`w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs shrink-0 border ${
+                          <span className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center font-bold text-xs shrink-0 border ${
                             isSelected 
                               ? 'bg-blue-600 text-white border-blue-600'
                               : 'bg-slate-200 text-slate-700 dark:bg-slate-700 dark:text-slate-200 border-slate-300 dark:border-slate-600'
                           }`}>
                             {optKey}
                           </span>
-                          <div className="pt-0.5 flex-1">
+                          <div className="pt-0.5 flex-1 min-w-0 overflow-x-auto">
                             <MathRenderer content={optVal} />
                           </div>
                         </button>
@@ -636,20 +636,20 @@ export default function MockTestMode({ mockPapers, customMockPapers = [], custom
                         <button
                           key={optKey}
                           onClick={() => handleSelectOption(optKey)}
-                          className={`w-full text-left p-4 rounded-xl border transition flex items-start gap-3.5 text-sm sm:text-base font-medium ${
+                          className={`w-full text-left p-3 sm:p-4 rounded-xl border transition flex items-start gap-3 text-xs sm:text-base font-medium ${
                             isChecked
                               ? 'border-blue-600 bg-blue-50/80 dark:bg-blue-950/60 text-blue-900 dark:text-blue-100 font-bold shadow-xs'
                               : 'border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/50 text-slate-900 dark:text-slate-100 hover:border-blue-500 dark:hover:border-blue-600'
                           }`}
                         >
-                          <span className={`w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs shrink-0 border ${
+                          <span className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center font-bold text-xs shrink-0 border ${
                             isChecked 
                               ? 'bg-blue-600 text-white border-blue-600'
                               : 'bg-slate-200 text-slate-700 dark:bg-slate-700 dark:text-slate-200 border-slate-300 dark:border-slate-600'
                           }`}>
                             {optKey}
                           </span>
-                          <div className="pt-0.5 flex-1">
+                          <div className="pt-0.5 flex-1 min-w-0 overflow-x-auto">
                             <MathRenderer content={optVal} />
                           </div>
                         </button>
@@ -669,32 +669,32 @@ export default function MockTestMode({ mockPapers, customMockPapers = [], custom
                       placeholder="Enter value..."
                       value={userAnswers[currentQ.id] || ''}
                       onChange={(e) => handleNatInput(e.target.value)}
-                      className="max-w-xs bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-xl px-4 py-3 text-sm font-mono text-slate-900 dark:text-slate-100 outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full sm:max-w-xs bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-xl px-4 py-3 text-sm font-mono text-slate-900 dark:text-slate-100 outline-none focus:ring-2 focus:ring-blue-500"
                     />
                   </div>
                 )}
               </div>
 
-              <div className="bg-slate-50 dark:bg-slate-800/60 px-6 py-4 border-t border-slate-200 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3">
-                <div className="flex items-center gap-2">
+              <div className="bg-slate-50 dark:bg-slate-800/60 px-3 sm:px-6 py-3 sm:py-4 border-t border-slate-200 dark:border-slate-800 flex flex-wrap items-center justify-between gap-2.5">
+                <div className="flex flex-wrap items-center gap-2 w-full sm:w-auto">
                   <button
                     onClick={handleMarkForReviewAndNext}
-                    className="px-4 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-xs transition shadow-xs"
+                    className="flex-1 sm:flex-initial px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold text-xs transition shadow-xs text-center"
                   >
-                    Mark for Review & Next
+                    Mark for Review
                   </button>
                   <button
                     onClick={handleClearResponse}
-                    className="px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-semibold text-xs hover:bg-slate-200 dark:hover:bg-slate-700 transition"
+                    className="flex-1 sm:flex-initial px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-semibold text-xs hover:bg-slate-200 dark:hover:bg-slate-700 transition text-center"
                   >
-                    Clear Response
+                    Clear
                   </button>
                 </div>
 
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 w-full sm:w-auto justify-end">
                   <button
                     onClick={handleSaveAndNext}
-                    className="px-6 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition shadow-xs"
+                    className="w-full sm:w-auto px-6 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition shadow-xs text-center"
                   >
                     Save & Next
                   </button>

@@ -93,13 +93,13 @@ export default function ImportantConcepts() {
         <div className="space-y-1">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-950/80 text-amber-600 dark:text-amber-400 border border-amber-200 dark:border-amber-800 text-xs font-bold">
             <Lightbulb className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
-            <span>GATE AG Authentic Concepts & DOCX Reader Vault</span>
+            <span>Core Syllabus Theory Notes</span>
           </div>
-          <h1 className="text-xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
-            Important Topic Concepts & Online DOCX Reader
+          <h1 className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
+            Core Concepts & Reader Vault
           </h1>
-          <p className="text-xs sm:text-sm text-slate-500 max-w-2xl">
-            Read authentic <code className="bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded text-blue-600 dark:text-blue-400 font-mono text-[11px]">.docx</code> concept notes online in distraction-free <strong>Reader Mode</strong> or download original files.
+          <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">
+            High-yield GATE AG syllabus theory and formula derivations in distraction-free <strong>Reader Mode</strong>.
           </p>
         </div>
 

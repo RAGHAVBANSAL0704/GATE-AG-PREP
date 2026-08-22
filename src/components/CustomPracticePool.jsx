@@ -234,15 +234,15 @@ export default function CustomPracticePool({
         <div className="card-3d rounded-3xl p-6 sm:p-8 space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div className="space-y-1">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 text-xs font-bold">
-                <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
-                <span>Dedicated Custom Mock Questions Practice Pool</span>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-purple-600 dark:text-purple-400 text-xs font-bold">
+                <Sparkles className="w-3.5 h-3.5 text-purple-500" />
+                <span>Custom Mock Questions Pool</span>
               </div>
               <h1 className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
-                Practice Custom Mock Questions
+                Custom Mock Questions Practice Pool
               </h1>
-              <p className="text-xs text-slate-500 max-w-2xl">
-                Dedicated practice environment for questions extracted from folder mock papers (e.g. GATE 2027 Mock 01). Practice topic-wise with step-by-step solution derivations.
+              <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">
+                Questions extracted from uploaded and pre-loaded custom mock papers (e.g. GATE 2027 Mock 01 to 18).
               </p>
             </div>
 

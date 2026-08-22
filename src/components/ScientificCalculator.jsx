@@ -216,7 +216,7 @@ export default function ScientificCalculator({ isOpen, onClose }) {
         </div>
 
         {/* Keypad Grid */}
-        <div className="p-3 grid grid-cols-5 gap-1.5 bg-slate-900 text-xs">
+        <div className="p-2.5 sm:p-3 grid grid-cols-5 gap-1 sm:gap-1.5 bg-slate-900 text-xs overflow-y-auto max-h-[65vh]">
           {/* Row 1 */}
           <button onClick={() => handleOp('MC')} className="calc-btn bg-slate-800 hover:bg-slate-700 text-slate-300">MC</button>
           <button onClick={() => handleOp('MR')} className="calc-btn bg-slate-800 hover:bg-slate-700 text-slate-300">MR</button>

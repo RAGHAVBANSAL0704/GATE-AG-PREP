@@ -80,15 +80,15 @@ export default function RevisionBank({
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 text-xs font-bold border border-amber-200 dark:border-amber-800">
               <BrainCircuit className="w-3.5 h-3.5" />
-              <span>Smart Revision Hub & Misstep Tracker</span>
+              <span>Revision Bank & Misstep Vault</span>
             </div>
-            <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white mt-1">
-              {activeTab === 'missteps' ? 'Misstep Tracker (Incorrect Questions)' : 'Saved & Bookmarked Vault'}
+            <h2 className="text-xl font-extrabold text-slate-900 dark:text-white mt-1">
+              {activeTab === 'missteps' ? 'Misstep Tracker (Incorrect Qs)' : 'Bookmarked Questions Vault'}
             </h2>
             <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">
               {activeTab === 'missteps'
-                ? 'Review, retry, and eliminate errors from past practice and test attempts.'
-                : 'Your customized repository of high-priority questions and tricky concepts.'}
+                ? 'Retry and eliminate errors from previous test attempts.'
+                : 'Your saved repository of bookmarked questions for rapid revision.'}
             </p>
           </div>
 

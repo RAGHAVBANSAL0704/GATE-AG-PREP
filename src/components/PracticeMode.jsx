@@ -270,13 +270,13 @@ export default function PracticeMode({ questions, customMockPapers = [], bookmar
             <div className="space-y-1">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 text-xs font-bold">
                 <Layers className="w-3.5 h-3.5" />
-                <span>GATE AG Solved Question Practice Hub</span>
+                <span>Official GATE AG PYQ Practice Pool</span>
               </div>
-              <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-                Select a Section to Begin Practice
+              <h1 className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                Practice Solved PYQs by Syllabus Section
               </h1>
-              <p className="text-xs text-slate-500 max-w-2xl">
-                Choose a syllabus section below or launch the full practice pool with custom topic filters and step-by-step KaTeX solutions.
+              <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">
+                Solved questions extracted from official GATE AG papers (2007–2026) with detailed step-by-step solutions.
               </p>
             </div>
 
@@ -441,21 +441,21 @@ export default function PracticeMode({ questions, customMockPapers = [], bookmar
           <div className="flex items-center gap-2">
             <Filter className="w-4 h-4 text-blue-600" />
             <h2 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider">
-              Segregated Practice Pool Filters
+              Question Filters
             </h2>
           </div>
           <span className="text-xs font-semibold px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 font-mono">
-            {filteredQuestions.length} Questions Found
+            {filteredQuestions.length} Questions
           </span>
         </div>
 
         {/* Question Source Selector Column Filter */}
         <div className="flex flex-wrap items-center gap-2 pb-1 border-b border-slate-100 dark:border-slate-800 text-xs">
-          <span className="text-[10px] font-bold text-slate-400 uppercase mr-1">Question Source:</span>
+          <span className="text-[10px] font-bold text-slate-400 uppercase mr-1">Source:</span>
           {[
-            { id: 'All', label: 'All Questions' },
-            { id: 'Official GATE PYQs', label: 'Official GATE PYQs' },
-            { id: 'Custom Mock Questions', label: `Custom Mock Questions (${customQuestionsPool.length})` }
+            { id: 'All', label: 'All Pool Questions' },
+            { id: 'Official GATE PYQs', label: 'Official PYQs (2007–2026)' },
+            { id: 'Custom Mock Questions', label: `Custom Mocks (${customQuestionsPool.length})` }
           ].map((src) => (
             <button
               key={src.id}
@@ -628,13 +628,13 @@ export default function PracticeMode({ questions, customMockPapers = [], bookmar
           </div>
 
           {/* Question Body */}
-          <div className="p-6 sm:p-8 space-y-6">
+          <div className="p-4 sm:p-6 md:p-8 space-y-4 sm:space-y-6 overflow-x-auto">
             
             <div className="space-y-1">
               <span className="text-[10px] font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
                 {currentQ.section} • {currentQ.topic} {currentQ.subtopic ? `— ${currentQ.subtopic}` : ''}
               </span>
-              <div className="text-base sm:text-lg font-semibold leading-relaxed text-slate-900 dark:text-slate-100 pt-1">
+              <div className="text-sm sm:text-base md:text-lg font-semibold leading-relaxed text-slate-900 dark:text-slate-100 pt-1 overflow-x-auto">
                 <MathRenderer content={currentQ.question} inline={false} />
               </div>
             </div>
