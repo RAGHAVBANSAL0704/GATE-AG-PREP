@@ -4,4 +4,5 @@ dist
 .vercel
 .env*
 __pycache__/
+public/question_snippets/
 

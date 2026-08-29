@@ -1,0 +1,7 @@
+RETURN CODE: 0
+STDOUT:
+
+STDERR:
+To https://github.com/RAGHAVBANSAL0704/GATE-AG-PREP.git
+ * [new branch]      main -> main
+
