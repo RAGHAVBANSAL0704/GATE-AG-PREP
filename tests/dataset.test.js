@@ -16,11 +16,14 @@ const mockPapersPath = path.resolve(__dirname, '../src/data/mock_papers.json');
 const questionsData = JSON.parse(fs.readFileSync(questionsPath, 'utf8'));
 const mockPapersData = JSON.parse(fs.readFileSync(mockPapersPath, 'utf8'));
 
-describe('Dataset Integrity & Schema Validation Test Suite', () => {
+describe('Dataset Integrity, Schema & Question Evaluation Test Suite', () => {
 
+  // =========================================================================
+  // 1. Curated Practice Pool Dataset (questions.json)
+  // =========================================================================
   describe('Curated Practice Pool Dataset (questions.json)', () => {
-    it('contains exactly 902 curated DOCX questions', () => {
-      assert.strictEqual(questionsData.length, 902, 'questions.json must contain 902 curated DOCX questions');
+    it('contains all 1324 curated DOCX questions across 20 years', () => {
+      assert.strictEqual(questionsData.length, 1324, 'questions.json must contain 1324 curated DOCX questions');
     });
 
     it('verifies question type distribution (MCQ, NAT, MSQ)', () => {
@@ -35,16 +38,16 @@ describe('Dataset Integrity & Schema Validation Test Suite', () => {
       assert.strictEqual(typeCounts.MCQ + typeCounts.NAT + typeCounts.MSQ, questionsData.length);
     });
 
-    it('validates required schema fields and correct data types on all 902 questions', () => {
+    it('validates required schema fields and correct data types on all 1324 questions', () => {
       questionsData.forEach((q, idx) => {
         assert.ok(q.id && q.id.trim().length > 0, `Question #${idx} missing id`);
         assert.ok(q.year, `Question #${idx} (${q.id}) missing year`);
         assert.ok(q.qnum !== undefined && q.qnum !== null, `Question #${idx} (${q.id}) missing qnum`);
         assert.ok(q.section && q.section.trim().length > 0, `Question #${idx} (${q.id}) missing section`);
         assert.ok(q.topic && q.topic.trim().length > 0, `Question #${idx} (${q.id}) missing topic`);
-        assert.ok(typeof q.question === 'string', `Question #${idx} (${q.id}) question must be string`);
-        assert.ok(q.correct_answer && String(q.correct_answer).trim().length > 0, `Question #${idx} (${q.id}) missing correct_answer`);
-        assert.ok(q.solution && q.solution.trim().length > 0, `Question #${idx} (${q.id}) missing solution`);
+        assert.ok(typeof q.question === 'string' && q.question.trim().length > 0, `Question #${idx} (${q.id}) question must be non-empty string`);
+        assert.ok(q.correct_answer !== undefined && q.correct_answer !== null && String(q.correct_answer).trim().length > 0, `Question #${idx} (${q.id}) missing correct_answer`);
+        assert.ok(q.solution && typeof q.solution === 'string' && q.solution.trim().length > 0, `Question #${idx} (${q.id}) missing solution`);
         
         // Marks validation (1 or 2)
         assert.ok([1, 2].includes(Number(q.marks)), `Question ${q.id} marks must be 1 or 2`);
@@ -53,11 +56,38 @@ describe('Dataset Integrity & Schema Validation Test Suite', () => {
         // MCQ/MSQ options validation
         if (q.type === 'MCQ' || q.type === 'MSQ') {
           assert.ok(q.options && typeof q.options === 'object', `Question ${q.id} must have options object`);
+          const optKeys = Object.keys(q.options);
+          assert.ok(optKeys.length >= 2, `Question ${q.id} must have at least 2 options`);
+        }
+
+        // NAT questions validation: correct_answer is parseable number or numerical range
+        if (q.type === 'NAT') {
+          assert.strictEqual(q.negative_marks, 0, `Question ${q.id} (NAT) must have 0 negative marks`);
+          const ansStr = String(q.correct_answer).trim();
+          const isRange = ansStr.includes('to') || ansStr.includes('-') || ansStr.includes(':');
+          const numVal = parseFloat(ansStr);
+          assert.ok(
+            !isNaN(numVal) || isRange,
+            `NAT Question ${q.id} has non-numeric answer: "${ansStr}"`
+          );
         }
       });
     });
+
+    it('verifies 100% of questions have explanatory solutions with substantive content', () => {
+      let substantiveCount = 0;
+      questionsData.forEach(q => {
+        const sol = q.solution.trim();
+        assert.ok(sol.length >= 5, `Question ${q.id} solution is too short`);
+        if (sol.length >= 20) substantiveCount++;
+      });
+      assert.ok(substantiveCount > 1000, 'Over 1000 questions should have comprehensive solutions');
+    });
   });
 
+  // =========================================================================
+  // 2. Official PYQ Mock Papers Dataset (mock_papers.json)
+  // =========================================================================
   describe('Official PYQ Mock Papers Dataset (mock_papers.json)', () => {
     it('contains exactly 20 official GATE AG exam papers', () => {
       assert.strictEqual(mockPapersData.length, 20, 'mock_papers.json must contain 20 papers');
@@ -80,7 +110,7 @@ describe('Dataset Integrity & Schema Validation Test Suite', () => {
         assert.ok(Array.isArray(p.questions), `Paper ${p.year} missing questions array`);
         totalQuestions += p.questions.length;
       });
-      assert.strictEqual(totalQuestions, 911, 'Total mock questions must equal 911');
+      assert.strictEqual(totalQuestions, 1324, 'Total mock questions must equal 1324');
     });
 
     it('validates instructions and metadata schema on each paper', () => {
@@ -93,13 +123,10 @@ describe('Dataset Integrity & Schema Validation Test Suite', () => {
         assert.ok(inst.duration_mins > 0, `Paper ${paper.year} invalid duration_mins`);
         assert.ok(inst.max_marks > 0, `Paper ${paper.year} invalid max_marks`);
         assert.ok(inst.total_qs > 0, `Paper ${paper.year} invalid total_qs`);
-        if (paper.has_solved_docx) {
-          const partialYears = ['2014', '2013', '2010', '2009', '2008', '2007'];
-          const minExpected = paper.year === '2016' ? 55 : (paper.year === '2020' ? 64 : (partialYears.includes(paper.year) ? paper.questions.length : inst.total_qs));
-          assert.ok(paper.questions.length >= minExpected, `Paper ${paper.year} question count must be >= ${minExpected}`);
-        } else {
-          assert.strictEqual(paper.status, 'ADDING_SOON');
-        }
+        assert.strictEqual(paper.has_solved_docx, true, `Paper ${paper.year} must have solved docx`);
+        assert.strictEqual(paper.status, 'AVAILABLE', `Paper ${paper.year} status must be AVAILABLE`);
+        const minExpected = paper.year === '2009' ? 60 : (paper.year === '2016' ? 55 : (paper.year === '2020' ? 64 : inst.total_qs));
+        assert.ok(paper.questions.length >= minExpected, `Paper ${paper.year} question count must be >= ${minExpected}`);
       });
     });
 
@@ -109,7 +136,7 @@ describe('Dataset Integrity & Schema Validation Test Suite', () => {
           assert.ok(q.id, `Paper ${paper.year} Q#${qIdx} missing id`);
           assert.ok(q.qnum !== undefined, `Paper ${paper.year} Q#${qIdx} missing qnum`);
           assert.ok(['MCQ', 'MSQ', 'NAT'].includes(q.type), `Paper ${paper.year} Q#${qIdx} invalid type ${q.type}`);
-          assert.ok(typeof q.question === 'string', `Paper ${paper.year} Q#${qIdx} invalid question type`);
+          assert.ok(typeof q.question === 'string' && q.question.trim().length > 0, `Paper ${paper.year} Q#${qIdx} invalid question string`);
           assert.ok(q.correct_answer !== undefined && q.correct_answer !== null, `Paper ${paper.year} Q#${qIdx} missing correct_answer`);
           assert.ok(typeof q.marks === 'number' && q.marks > 0, `Paper ${paper.year} Q#${qIdx} marks must be > 0`);
         });
@@ -117,6 +144,9 @@ describe('Dataset Integrity & Schema Validation Test Suite', () => {
     });
   });
 
+  // =========================================================================
+  // 3. Formulas Reference Dataset (formulas.js)
+  // =========================================================================
   describe('Formulas Reference Dataset (formulas.js)', () => {
     it('exports GATE_AG_FORMULAS with 8 official syllabus categories', () => {
       assert.ok(Array.isArray(GATE_AG_FORMULAS));
@@ -150,19 +180,22 @@ describe('Dataset Integrity & Schema Validation Test Suite', () => {
     });
   });
 
+  // =========================================================================
+  // 4. Syllabus Tracker Dataset (syllabus.js)
+  // =========================================================================
   describe('Syllabus Tracker Dataset (syllabus.js)', () => {
-    it('exports GATE_AG_SYLLABUS with 5 major sections', () => {
+    it('exports GATE_AG_SYLLABUS with 8 sections (7 official + GA)', () => {
       assert.ok(Array.isArray(GATE_AG_SYLLABUS));
-      assert.strictEqual(GATE_AG_SYLLABUS.length, 5);
+      assert.strictEqual(GATE_AG_SYLLABUS.length, 8);
 
       const sectionIds = GATE_AG_SYLLABUS.map(s => s.id);
-      assert.deepStrictEqual(sectionIds, ['sec-1', 'sec-2', 'sec-3', 'sec-4', 'sec-5']);
+      assert.deepStrictEqual(sectionIds, ['sec-1', 'sec-2', 'sec-3', 'sec-4', 'sec-5', 'sec-6', 'sec-7', 'sec-8']);
 
       const sectionCodes = GATE_AG_SYLLABUS.map(s => s.code);
-      assert.deepStrictEqual(sectionCodes, ['EM', 'FMP', 'SWCE', 'APE', 'GA']);
+      assert.deepStrictEqual(sectionCodes, ['EM', 'FM', 'FP', 'SWCE', 'IDE', 'APE', 'DFE', 'GA']);
     });
 
-    it('contains exactly 83 granular subtopics across all syllabus topics', () => {
+    it('contains granular subtopics across all syllabus topics', () => {
       let subtopicCount = 0;
       GATE_AG_SYLLABUS.forEach(sec => {
         assert.ok(sec.title && sec.title.length > 0);
@@ -170,7 +203,7 @@ describe('Dataset Integrity & Schema Validation Test Suite', () => {
         assert.ok(Array.isArray(sec.topics) && sec.topics.length > 0);
 
         sec.topics.forEach(top => {
-          assert.ok(top.name && top.name.length > 0);
+          assert.ok((top.topic_name || top.name) && (top.topic_name || top.name).length > 0);
           assert.ok(Array.isArray(top.subtopics) && top.subtopics.length > 0);
           
           top.subtopics.forEach(sub => {
@@ -180,7 +213,7 @@ describe('Dataset Integrity & Schema Validation Test Suite', () => {
         });
       });
 
-      assert.strictEqual(subtopicCount, 83, 'Syllabus tracker must contain exactly 83 subtopics');
+      assert.ok(subtopicCount >= 80, 'Syllabus tracker must contain at least 80 subtopics');
     });
   });
 

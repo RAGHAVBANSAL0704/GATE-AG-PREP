@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import { downloadBulkZip } from '../utils/zipDownloader';
+import { exportFullDataJSON, importFullDataJSON } from '../utils/indexedDB';
 
 export default function DownloadsHub({ customMockPapers = [], onStartMock, onDeleteMock }) {
   const [vaultTab, setVaultTab] = useState('official'); // 'official' | 'custom'
@@ -38,14 +39,14 @@ export default function DownloadsHub({ customMockPapers = [], onStartMock, onDel
     { year: '2017', paperPdf: '/downloads/question_papers/AG2017.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2017-FULL-SOLVED.docx' },
     { year: '2016', paperPdf: '/downloads/question_papers/AG2016.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2016-FULL-SOLVED.docx' },
     { year: '2015', paperPdf: '/downloads/question_papers/AG2015.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2015-FULL-SOLVED.docx' },
-    { year: '2014', paperPdf: '/downloads/question_papers/AG2014.pdf', keyPdf: null, solvedDocx: null },
-    { year: '2013', paperPdf: '/downloads/question_papers/AG2013.pdf', keyPdf: null, solvedDocx: null },
+    { year: '2014', paperPdf: '/downloads/question_papers/AG2014.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2014-FULL-SOLVED.docx' },
+    { year: '2013', paperPdf: '/downloads/question_papers/AG2013.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2013-FULL-SOLVED.docx' },
     { year: '2012', paperPdf: '/downloads/question_papers/AG2012.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2012-FULL-SOLVED.docx' },
     { year: '2011', paperPdf: '/downloads/question_papers/AG2011.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2011-FULL-SOLVED.docx' },
-    { year: '2010', paperPdf: '/downloads/question_papers/AG2010.pdf', keyPdf: null, solvedDocx: null },
-    { year: '2009', paperPdf: '/downloads/question_papers/AG2009.pdf', keyPdf: null, solvedDocx: null },
-    { year: '2008', paperPdf: '/downloads/question_papers/AG2008.pdf', keyPdf: null, solvedDocx: null },
-    { year: '2007', paperPdf: '/downloads/question_papers/AG2007.pdf', keyPdf: null, solvedDocx: null },
+    { year: '2010', paperPdf: '/downloads/question_papers/AG2010.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2010-FULL-SOLVED.docx' },
+    { year: '2009', paperPdf: '/downloads/question_papers/AG2009.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2009-FULL-SOLVED.docx' },
+    { year: '2008', paperPdf: '/downloads/question_papers/AG2008.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2008-FULL-SOLVED.docx' },
+    { year: '2007', paperPdf: '/downloads/question_papers/AG2007.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2007-FULL-SOLVED.docx' },
   ];
 
   const filteredYears = yearsData.filter(item => {
@@ -101,20 +102,35 @@ export default function DownloadsHub({ customMockPapers = [], onStartMock, onDel
     }
   };
 
-  const handleDownloadAllCustomMocksZip = async () => {
-    setIsZipping(true);
+  const handleExportBackup = async () => {
     try {
-      const filesToZip = customMockPapers.map((paper, idx) => ({
-        name: `${(paper.title || `Mock_${idx + 1}`).replace(/\s+/g, '_')}.docx`,
-        url: getPaperDocxUrl(paper, idx)
-      }));
-      await downloadBulkZip(filesToZip, 'GATE_2027_AG_Custom_Mock_Papers_01_18.zip');
-    } catch (err) {
-      console.error("Bulk zip failed", err);
-      alert("Could not build ZIP file. Try downloading files individually.");
-    } finally {
-      setIsZipping(false);
+      const jsonStr = await exportFullDataJSON();
+      const blob = new Blob([jsonStr], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `GATE_AG_Prep_Backup_${new Date().toISOString().slice(0, 10)}.json`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    } catch (e) {
+      alert("Export failed: " + e.message);
     }
+  };
+
+  const handleImportBackup = (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = async (event) => {
+      const res = await importFullDataJSON(event.target.result);
+      alert(res.message);
+      if (res.success) {
+        window.location.reload();
+      }
+    };
+    reader.readAsText(file);
   };
 
   return (
@@ -131,6 +147,24 @@ export default function DownloadsHub({ customMockPapers = [], onStartMock, onDel
             <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5 font-medium">
               Download official GATE AG papers, answer keys, solved DOCX papers & custom mock DOCX files.
             </p>
+          </div>
+
+          {/* Backup & Restore Data Bar */}
+          <div className="flex items-center gap-2 mt-2 sm:mt-0">
+            <button
+              onClick={handleExportBackup}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white transition shadow-xs"
+              title="Export complete test attempts, bookmarks, & syllabus progress to JSON file"
+            >
+              <Archive className="w-3.5 h-3.5" />
+              <span>Export Backup (.json)</span>
+            </button>
+
+            <label className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-900 dark:text-white transition cursor-pointer shadow-xs">
+              <Download className="w-3.5 h-3.5" />
+              <span>Restore Backup</span>
+              <input type="file" accept=".json" onChange={handleImportBackup} className="hidden" />
+            </label>
           </div>
 
           {/* Tab Switcher */}

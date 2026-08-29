@@ -160,7 +160,9 @@ def parse_docx_file(docx_path, year):
                 if len(txt) < 45 or ('[' in txt and 'mark' in txt) or ('(' in txt and 'mark' in txt):
                     is_header = True
         if txt.startswith('Section:'):
-            if len(curr_block) > 3 or len(curr_block) == 0:
+            curr_txt = ' '.join([lo['text'] for lo in curr_block])
+            has_exp = re.search(r'(Detailed\s*Explanation|Explanation|Solution)', curr_txt, re.IGNORECASE) is not None
+            if len(curr_block) == 0 or has_exp:
                 is_header = True
 
         if is_header:
@@ -170,21 +172,26 @@ def parse_docx_file(docx_path, year):
         else:
             if curr_block:
                 curr_block.append(line_obj)
-            else:
-                curr_block = [line_obj]
     if curr_block:
         q_blocks.append(curr_block)
 
     valid_q_blocks = []
+    has_ans_line_re = re.compile(r'^(Official\s*(Answer|Key)|Answer\s*(Key|Key/Solution|\(.*?\)|:)|Accepted\s*Range|Correct\s*(option|answer)|Independently\s*(Derived|Computed)\s*Answer|Computed\s*Answer|Verified\s*Answer)', re.IGNORECASE)
+    has_ans_block_re = re.compile(r'(Official\s*(Answer|Key)|Answer\s*(Key|Key/Solution|\(.*?\)|:)|Accepted\s*Range|Correct\s*(option|answer)|Independently\s*(Derived|Computed)\s*Answer|Computed\s*Answer|Verified\s*Answer|\([A-D]\))', re.IGNORECASE)
+
     for b in q_blocks:
+        if not b:
+            continue
         first_txt = b[0]['text'] if b else ''
+        if not (q_header_re.match(first_txt) or first_txt.startswith('Section:')):
+            continue
         if any(kw in first_txt for kw in ['Appendix', 'APPENDIX', 'Document contents', 'Fully Solved', 'Question Paper:', 'GATE 20', 'Prepared for:']):
             continue
         b_text = " ".join([lo['text'] for lo in b])
         if 'APPENDIX' in b_text[:40] or 'Appendix' in b_text[:40] or 'Document contents' in b_text[:40]:
             continue
         has_opts = re.search(r'\([A-D]\)', b_text) is not None or 'Options:' in b_text
-        has_ans = re.search(r'(Official\s*(Answer|Key)|Answer\s*Key|Accepted\s*Range|Correct\s*option)', b_text, re.IGNORECASE) is not None
+        has_ans = has_ans_block_re.search(b_text) is not None
         has_exp = re.search(r'(Detailed\s*Explanation|Explanation|Solution)', b_text, re.IGNORECASE) is not None
         if (has_opts or has_ans) and has_exp:
             valid_q_blocks.append(b)
@@ -199,7 +206,10 @@ def parse_docx_file(docx_path, year):
             txt = lo['text']
             m = q_header_re.match(txt)
             if m and not re.match(r'^(Question Statement|Question statement|Question Paper|Question Analysis|Question:)', txt, re.IGNORECASE):
-                qnum = int(m.group(1))
+                num = int(m.group(1))
+                if ('AG' in txt or 'QAG' in txt) and int(year) >= 2010 and num <= 55:
+                    num += 10
+                qnum = num
                 break
             m2 = re.search(r'\(GA-(\d+)\)', txt, re.IGNORECASE)
             if m2:
@@ -207,7 +217,10 @@ def parse_docx_file(docx_path, year):
                 break
             m3 = re.search(r'\(AG-(\d+)\)', txt, re.IGNORECASE)
             if m3:
-                qnum = int(m3.group(1))
+                num = int(m3.group(1))
+                if int(year) >= 2010 and num <= 55:
+                    num += 10
+                qnum = num
                 break
 
         section = "General Aptitude"
@@ -239,19 +252,31 @@ def parse_docx_file(docx_path, year):
                 sec_val = re.sub(r'Topic.*', '', sec_val).strip()
                 section = clean_section(sec_val)
                 
-            if 'Topic' in line:
+            if 'Topic' in line and (line.startswith('Topic') or 'Topic (' in line or 'Topic:' in line):
                 top_val = re.sub(r'.*Topic(?:\s*\(.*?\))?\s*:\s*', '', line, flags=re.IGNORECASE).strip()
                 top_val = re.sub(r'\[Note:.*\]', '', top_val).strip()
-                if '—' in top_val:
-                    t_parts = top_val.split('—', 1)
-                    topic = t_parts[0].strip()
-                    subtopic = t_parts[1].strip()
-                elif '-' in top_val:
-                    t_parts = top_val.split('-', 1)
-                    topic = t_parts[0].strip()
-                    subtopic = t_parts[1].strip()
-                else:
-                    topic = top_val
+                if not top_val:
+                    # check next line in block
+                    l_idx = block.index(line_obj)
+                    if l_idx + 1 < len(block):
+                        next_l = block[l_idx + 1]['text'].strip()
+                        if next_l and not re.match(r'^(Type|Question|Section|\[MCQ|\[MSQ|\[NAT)\b', next_l, re.IGNORECASE):
+                            top_val = next_l
+                if top_val:
+                    if '—' in top_val:
+                        t_parts = top_val.split('—', 1)
+                        topic = t_parts[0].strip()
+                        subtopic = t_parts[1].strip()
+                    elif ':' in top_val and not top_val.startswith('http'):
+                        t_parts = top_val.split(':', 1)
+                        topic = t_parts[0].strip()
+                        subtopic = t_parts[1].strip()
+                    elif '-' in top_val:
+                        t_parts = top_val.split('-', 1)
+                        topic = t_parts[0].strip()
+                        subtopic = t_parts[1].strip()
+                    else:
+                        topic = top_val
 
             if line.startswith('Type:') or line.startswith('Type / Marks:') or 'Type of question:' in line:
                 if 'MSQ' in line: type_str = 'MSQ'
@@ -274,13 +299,21 @@ def parse_docx_file(docx_path, year):
                     q_lines.append(rest)
                 continue
 
-            if re.match(r'^(Official\s*(Key|Answer)|Answer Key|Correct option)', line, re.IGNORECASE):
+            if has_ans_line_re.match(line):
                 mode = 'answer'
                 ans_lines.append(line)
                 continue
 
             if re.match(r'^(Detailed\s*Explanation|Explanation|Solution)', line, re.IGNORECASE):
                 mode = 'solution'
+                continue
+
+            if mode == 'answer':
+                ans_lines.append(line)
+                continue
+
+            if mode == 'solution':
+                exp_lines.append(line)
                 continue
 
             opt_matches = list(re.finditer(r'\(([A-D])\)\s*([^(\n]+)', line))
@@ -296,15 +329,14 @@ def parse_docx_file(docx_path, year):
             if mode in ['meta', 'question']:
                 if not re.match(r'^(Section|Topic|Type|Type / Marks|Type of question|Question Statement|Statement|Figure \(reconstruction\)|Note|Q\s*\.?\s*\d+|GA-\d+|AG-\d+)\b', line, re.IGNORECASE):
                     q_lines.append(line)
-            elif mode == 'answer':
-                ans_lines.append(line)
-            elif mode == 'solution':
-                exp_lines.append(line)
 
         if qnum <= 10 and year != 2021:
             section = "General Aptitude"
         elif section == "General Aptitude" and qnum > 10:
             section = "Farm Power and Machinery"
+
+        if not topic or not str(topic).strip():
+            topic = f"{section} Core Concepts"
 
         question_text = "\n".join(q_lines).strip()
         question_text = re.sub(r'^(Question|Question Statement|Statement)\s*:?\s*', '', question_text, flags=re.IGNORECASE).strip()

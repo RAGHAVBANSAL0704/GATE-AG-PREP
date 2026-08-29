@@ -1,118 +1,449 @@
 export const GATE_AG_SYLLABUS = [
   {
-    id: "sec-1",
-    title: "Section 1: Engineering Mathematics",
-    code: "EM",
-    icon: "Calculator",
-    weightage: "13-15 Marks",
-    topics: [
+    "id": "sec-1",
+    "title": "Section 1: Engineering Mathematics",
+    "code": "EM",
+    "icon": "Calculator",
+    "weightage": "13-15 Marks",
+    "topics": [
       {
-        name: "Linear Algebra",
-        subtopics: ["Matrices and Determinants", "Linear Systems of Equations", "Eigenvalues and Eigenvectors", "Cayley-Hamilton Theorem"]
+        "topic_id": "linear_algebra",
+        "topic_name": "Linear Algebra",
+        "subtopics": [
+          "Matrices and determinants",
+          "Linear and orthogonal transformations",
+          "Cayley\u2013Hamilton theorem",
+          "Eigen values and Eigen vectors",
+          "Solutions of linear equations"
+        ]
       },
       {
-        name: "Calculus",
-        subtopics: ["Functions of Single Variable", "Limit, Continuity and Differentiability", "Mean Value Theorems", "Evaluation of Definite and Improper Integrals", "Partial Derivatives", "Total Derivative", "Maxima and Minima", "Fourier Series", "Vector Calculus (Gradient, Divergence, Curl, Gauss and Stokes Theorems)"]
+        "topic_id": "calculus",
+        "topic_name": "Calculus",
+        "subtopics": [
+          "Limit, continuity and differentiability",
+          "Partial derivatives",
+          "Homogeneous function \u2013 Euler's theorem on homogeneous functions",
+          "Total differentiation",
+          "Maxima and minima of function with several independent variables",
+          "Sequences and series \u2013 infinite series, tests for convergence",
+          "Fourier, Taylor and MacLaurin series"
+        ]
       },
       {
-        name: "Differential Equations",
-        subtopics: ["First Order Linear & Non-Linear Equations", "Higher Order Linear Differential Equations with Constant Coefficients", "Cauchy's and Euler's Equations", "Initial and Boundary Value Problems", "Laplace Transforms"]
+        "topic_id": "vector_calculus",
+        "topic_name": "Vector Calculus",
+        "subtopics": [
+          "Vector differentiation",
+          "Scalar and vector point functions",
+          "Vector differential operators \u2013 del, gradient",
+          "Divergence and curl",
+          "Physical interpretations \u2013 line, surface and volume integrals",
+          "Stokes, Gauss and Green's theorems"
+        ]
       },
       {
-        name: "Probability & Statistics",
-        subtopics: ["Definitions of Probability and Sampling Theorems", "Conditional Probability", "Mean, Median, Mode and Standard Deviation", "Random Variables", "Poisson, Normal and Binomial Distributions"]
+        "topic_id": "differential_equations",
+        "topic_name": "Differential Equations",
+        "subtopics": [
+          "Linear and non-linear first order Ordinary Differential Equations (ODE)",
+          "Homogeneous differential equations",
+          "Higher order linear ODEs with constant coefficients",
+          "Laplace transforms and their inverse",
+          "Partial Differential Equations \u2013 Laplace, heat and wave equations"
+        ]
       },
       {
-        name: "Numerical Methods",
-        subtopics: ["Numerical Solutions of Linear and Non-Linear Algebraic Equations", "Newton-Raphson & Secant Methods", "Integration by Trapezoidal and Simpson's Rules", "Single and Multi-step Methods for Differential Equations"]
+        "topic_id": "probability_and_statistics",
+        "topic_name": "Probability and Statistics",
+        "subtopics": [
+          "Mean, median, mode and standard deviation",
+          "Random variables",
+          "Poisson, normal and binomial distributions",
+          "Correlation and regression analysis"
+        ]
+      },
+      {
+        "topic_id": "numerical_methods",
+        "topic_name": "Numerical Methods",
+        "subtopics": [
+          "Solutions of linear and non-linear algebraic equations",
+          "Numerical integration \u2013 trapezoidal and Simpson's rule",
+          "Numerical solutions of ODEs"
+        ]
       }
     ]
   },
   {
-    id: "sec-2",
-    title: "Section 2: Farm Machinery & Power",
-    code: "FMP",
-    icon: "Tractor",
-    weightage: "25-30 Marks",
-    topics: [
+    "id": "sec-2",
+    "title": "Section 2: Farm Machinery",
+    "code": "FM",
+    "icon": "Wrench",
+    "weightage": "12-15 Marks",
+    "topics": [
       {
-        name: "Sources of Farm Power",
-        subtopics: ["Human, Animal, Mechanical & Electrical Power Sources", "IC Engines: Principles, Two-Stroke & Four-Stroke Cycles", "Engine Components, Valve Timing, Fuel Injection & Cooling Systems", "Air Cleaners, Lubrication & Governing Systems", "Brake Power, Indicated Power, Thermal Efficiency & Specific Fuel Consumption"]
+        "topic_id": "machine_design",
+        "topic_name": "Machine Design",
+        "subtopics": [
+          "Design and selection of machine elements \u2013 gears, pulleys, chains and sprockets and belts",
+          "Overload safety devices used in farm machinery",
+          "Measurement of force, stress, torque, speed, displacement and acceleration on machine elements \u2013 shafts, couplings, keys, bearings and knuckle joints"
+        ]
       },
       {
-        name: "Tractor Chassis & Systems",
-        subtopics: ["Power Transmission System: Clutch, Gear Box, Differential & Final Drive", "Power Take-Off (PTO), Belt Pulley & Hydraulic System", "Mechanics of Tractor Chassis, Center of Gravity, Weight Transfer", "Tractor Traction, Slip, Rolling Resistance & Tractive Efficiency", "Tractor Steering, Brakes & Front Axle", "Human Factors in Tractor-Implement System & Ergonomics"]
-      },
-      {
-        name: "Farm Machinery & Implements",
-        subtopics: ["Primary & Secondary Tillage Implements: Mouldboard Plough, Disc Plough, Disc Harrow, Rotavator", "Mechanics of Tillage Tools, Forces Acting on Mouldboard & Disc Implements", "Sowing & Planting Equipment: Seed Drills, Planters, Calibration of Seed Drills", "Plant Protection Equipment: Sprayers (Hydraulic, Pneumatic, Electrostatic), Dusters, Nozzle Types & Calibration", "Harvesting & Threshing Machinery: Reapers, Mowers, Combine Harvesters, Threshers, Cylinder Types & Losses"]
+        "topic_id": "farm_machinery",
+        "topic_name": "Farm Machinery",
+        "subtopics": [
+          "Soil tillage",
+          "Forces acting on a tillage tool",
+          "Hitch systems and hitching of tillage implements",
+          "Functional requirements, principles of working, construction and operation of manual, animal, tractor and renewable energy operated equipment for tillage, sowing, planting, fertilizer application, inter-cultivation, spraying, mowing, chaff cutting, harvesting and threshing",
+          "Calculation of performance parameters \u2013 field capacity, efficiency, performance index, application rate and losses",
+          "Cost analysis of implements and tractors",
+          "Equipment for precision agriculture"
+        ]
       }
     ]
   },
   {
-    id: "sec-3",
-    title: "Section 3: Soil & Water Conservation Engineering",
-    code: "SWCE",
-    icon: "Waves",
-    weightage: "25-30 Marks",
-    topics: [
+    "id": "sec-3",
+    "title": "Section 3: Farm Power",
+    "code": "FP",
+    "icon": "Tractor",
+    "weightage": "12-15 Marks",
+    "topics": [
       {
-        name: "Fluid Mechanics & Open Channel Flow",
-        subtopics: ["Fluid Properties, Hydrostatic Pressure, Manometry", "Bernoulli's Theorem & Continuity Equation", "Flow Measurement: Orifices, Venturimeter, Weirs & Flumes", "Open Channel Hydraulics: Uniform Flow, Chezy & Manning Equations, Specific Energy, Hydraulic Jump"]
+        "topic_id": "sources_of_power",
+        "topic_name": "Sources of Power",
+        "subtopics": [
+          "Sources of power on the farm \u2013 human, animal, mechanical, electrical, wind, solar and biomass",
+          "Bio-fuels and their use in farm mechanization"
+        ]
       },
       {
-        name: "Hydrology & Water Harvesting",
-        subtopics: ["Hydrological Cycle, Precipitation Measurement & Analysis (Thiessen, Isohyetal)", "Evapotranspiration & Infiltration Models (Horton, Green-Ampt)", "Runoff Estimation: Rational Method, SCS-CN Method", "Hydrograph Analysis: Unit Hydrograph, Synthetic Hydrograph, Flood Routing", "Groundwater Hydraulics: Aquifer Types, Darcy's Law, Steady State Well Hydraulics (Dupuit-Forchheimer)"]
+        "topic_id": "farm_power",
+        "topic_name": "Farm Power",
+        "subtopics": [
+          "Thermodynamic principles of I.C. engines",
+          "I.C. engine cycles",
+          "Engine components",
+          "Fuels and combustion",
+          "Lubricants and their properties",
+          "I.C. engine systems \u2013 fuel, cooling, lubrication, ignition, electrical, intake and exhaust",
+          "Selection, operation, maintenance and repair of I.C. engines",
+          "Power efficiencies and measurement, engine performance curves",
+          "Calculation of power, torque, fuel consumption, heat load and power losses"
+        ]
       },
       {
-        name: "Soil Erosion & Conservation Engineering",
-        subtopics: ["Mechanics of Water & Wind Erosion", "Universal Soil Loss Equation (USLE) & Revised USLE (RUSLE)", "Agronomic & Engineering Measures: Contour Bunding, Graded Bunding, Terracing", "Gully Control Structures: Drop Spillway, Chute Spillway, Drop Inlet Spillway Hydraulics", "Earthen Dams: Components, Seepage, Phreatic Line, Slope Stability"]
-      },
-      {
-        name: "Irrigation & Drainage Engineering",
-        subtopics: ["Soil-Water-Plant Relationships: Field Capacity, Wilting Point, Available Water", "Irrigation Scheduling & Duty-Delta Relationships", "Design of Irrigation Channels: Kennedy & Lacey Theories, Lined Channels", "Pressurized Irrigation: Drip & Sprinkler Systems Design, Uniformity Coefficient", "Drainage Engineering: Subsurface Drainage, Hooghoudt's Equation, Drainage Coefficient, Leaching Requirement"]
+        "topic_id": "tractors_and_power_tillers",
+        "topic_name": "Tractors and Power Tillers",
+        "subtopics": [
+          "Type, selection, maintenance and repair of tractors and power tillers",
+          "Tractor clutches and brakes",
+          "Power transmission systems \u2013 gear trains, differential, final drives and power take-off",
+          "Mechanics of tractor chassis",
+          "Traction theory",
+          "Three point hitches \u2013 free link and restrained link operations",
+          "Steering and hydraulic control systems used in tractors",
+          "Tractor tests and performance",
+          "Human engineering and safety considerations in design of tractor and agricultural implements"
+        ]
       }
     ]
   },
   {
-    id: "sec-4",
-    title: "Section 4: Agricultural Process Engineering",
-    code: "APE",
-    icon: "Factory",
-    weightage: "25-30 Marks",
-    topics: [
+    "id": "sec-4",
+    "title": "Section 4: Soil and Water Conservation Engineering",
+    "code": "SWCE",
+    "icon": "Waves",
+    "weightage": "15-20 Marks",
+    "topics": [
       {
-        name: "Engineering Properties of Biological Materials",
-        subtopics: ["Physical Properties: Size, Shape, Density, Porosity, Angle of Repose", "Thermal Properties: Specific Heat, Thermal Conductivity, Thermal Diffusivity", "Rheological Properties: Stress-Strain Behavior, Viscoelasticity, Non-Newtonian Fluids", "Psychrometrics: Wet Bulb, Dry Bulb, Dew Point, Relative Humidity, Psychrometric Chart"]
+        "topic_id": "fluid_mechanics",
+        "topic_name": "Fluid Mechanics",
+        "subtopics": [
+          "Ideal and real fluids, properties of fluids",
+          "Hydrostatic pressure and its measurement",
+          "Continuity equation, kinematics and dynamics of flow",
+          "Bernoulli's theorem",
+          "Laminar and turbulent flow in pipes, Darcy\u2013Weisbach and Hazen\u2013Williams equations",
+          "Flow through orifices, weirs and notches",
+          "Flow in open channels",
+          "Dimensional analysis \u2013 concepts of geometric dimensionless numbers"
+        ]
       },
       {
-        name: "Processing Operations & Heat/Mass Transfer",
-        subtopics: ["Drying Engineering: Thin Layer & Deep Bed Drying, Drying Rates, Equilibrium Moisture Content (EMC)", "Size Reduction & Separation: Rittinger, Bond, Kick Laws, Screen Analysis, Cyclone Separators", "Mixing, Emulsification, Extrusion & Homogenization", "Heat Exchangers: LMTD, NTU Method, Pasteurization & Sterilization (F0, D, Z values)", "Evaporation & Distillation: Single & Multiple Effect Evaporators, Boiling Point Elevation"]
+        "topic_id": "soil_mechanics",
+        "topic_name": "Soil Mechanics",
+        "subtopics": [
+          "Engineering properties of soils",
+          "Fundamental definitions and relationships",
+          "Index properties of soils",
+          "Permeability and seepage analysis",
+          "Shear strength",
+          "Soil compaction and Proctor test",
+          "Mohr's circle of stress",
+          "Active and passive earth pressures",
+          "Stability of slopes",
+          "Terzaghi's one dimensional soil consolidation theory"
+        ]
       },
       {
-        name: "Storage & Material Handling",
-        subtopics: ["Grain Storage Structures: Silos, Godowns, Janssen's & Airy's Bin Theories", "Controlled & Modified Atmosphere Storage", "Material Handling Equipment: Belt Conveyors, Bucket Elevators, Screw Conveyors, Pneumatic Conveyors", "Refrigeration & Cold Storage: Vapor Compression Refrigeration Cycle, Cooling Load Calculations"]
+        "topic_id": "hydrology",
+        "topic_name": "Hydrology",
+        "subtopics": [
+          "Hydrological cycle and measurement of its components",
+          "Meteorological parameters and their measurement",
+          "Analysis of precipitation data",
+          "Runoff estimation",
+          "Hydrograph analysis, unit hydrograph theory and application",
+          "Stream flow measurement",
+          "Flood routing, hydrological reservoir and channel routing",
+          "Infiltration \u2013 indices and equations",
+          "Drought and its classification"
+        ]
+      },
+      {
+        "topic_id": "surveying_and_levelling",
+        "topic_name": "Surveying and Levelling",
+        "subtopics": [
+          "Measurement of distance and area",
+          "Instruments for surveying and levelling",
+          "Chain surveying, methods of traversing",
+          "Measurement of angles and bearings",
+          "Plane table surveying",
+          "Types of levelling",
+          "The Theodolite traversing",
+          "Contouring",
+          "Total station, introduction to GPS survey",
+          "Computation of areas and volume"
+        ]
+      },
+      {
+        "topic_id": "soil_and_water_erosion",
+        "topic_name": "Soil and Water Erosion",
+        "subtopics": [
+          "Mechanics of soil erosion \u2013 wind and water erosion",
+          "Soil erosion types, factors affecting erosion",
+          "Soil loss estimation",
+          "Biological and engineering measures to control erosion",
+          "Terraces and bunds",
+          "Vegetative waterways",
+          "Gully control structures \u2013 drop, drop inlet and chute spillways",
+          "Earthen dams"
+        ]
+      },
+      {
+        "topic_id": "watershed_management",
+        "topic_name": "Watershed Management",
+        "subtopics": [
+          "Watershed characterization and land use capability classification",
+          "Water budgeting in watershed",
+          "Rainwater harvesting",
+          "Check dams and farm ponds"
+        ]
       }
     ]
   },
   {
-    id: "sec-5",
-    title: "Section 5: General Aptitude",
-    code: "GA",
-    icon: "Brain",
-    weightage: "15 Marks",
-    topics: [
+    "id": "sec-5",
+    "title": "Section 5: Irrigation and Drainage Engineering",
+    "code": "IDE",
+    "icon": "Droplets",
+    "weightage": "12-15 Marks",
+    "topics": [
       {
-        name: "Verbal Aptitude",
-        subtopics: ["Basic English Grammar & Vocabulary", "Reading Comprehension & Narrative Sequencing", "Critical Reasoning & Sentence Completion"]
+        "topic_id": "soil-water-plant_relationship",
+        "topic_name": "Soil-Water-Plant Relationship",
+        "subtopics": [
+          "Water requirement of crops",
+          "Consumptive use and evapotranspiration",
+          "Measurement of infiltration, soil moisture and irrigation water infiltration"
+        ]
       },
       {
-        name: "Quantitative Aptitude",
-        subtopics: ["Data Interpretation (Charts, Tables, Graphs)", "Numerical Computation & Estimation", "Ratios, Percentages, Mensuration, Permutations & Combinations"]
+        "topic_id": "irrigation_water_conveyance_and_application_methods",
+        "topic_name": "Irrigation Water Conveyance and Application Methods",
+        "subtopics": [
+          "Design of irrigation channels and underground pipelines",
+          "Irrigation scheduling",
+          "Surface, sprinkler and micro irrigation methods",
+          "Design and evaluation of irrigation methods",
+          "Irrigation efficiencies"
+        ]
       },
       {
-        name: "Analytical & Spatial Aptitude",
-        subtopics: ["Logic Deduction, Pattern Recognition & Venn Diagrams", "Spatial Reasoning: Paper Folding, Cutouts, 2D & 3D Representations"]
+        "topic_id": "agricultural_drainage",
+        "topic_name": "Agricultural Drainage",
+        "subtopics": [
+          "Drainage coefficient",
+          "Planning, design and layout of surface and sub-surface drainage systems",
+          "Leaching requirement and salinity control",
+          "Irrigation and drainage water quality and reuse",
+          "Non-conventional drainage system"
+        ]
+      },
+      {
+        "topic_id": "groundwater_hydrology",
+        "topic_name": "Groundwater Hydrology",
+        "subtopics": [
+          "Groundwater occurrence",
+          "Groundwater movement; Darcy's Law",
+          "Steady and unsteady flow in confined and unconfined aquifers",
+          "Groundwater exploration techniques",
+          "Overview of groundwater recharge estimation and artificial recharge techniques"
+        ]
+      },
+      {
+        "topic_id": "wells_and_pumps",
+        "topic_name": "Wells and Pumps",
+        "subtopics": [
+          "Types of wells",
+          "Steady flow through wells",
+          "Design and construction of water wells",
+          "Classification of pumps",
+          "Pump characteristics",
+          "Pump selection and installation"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sec-6",
+    "title": "Section 6: Agricultural Process Engineering",
+    "code": "APE",
+    "icon": "Factory",
+    "weightage": "12-15 Marks",
+    "topics": [
+      {
+        "topic_id": "engineering_properties_of_agriculture_produce",
+        "topic_name": "Engineering Properties of Agriculture Produce",
+        "subtopics": [
+          "Physical properties",
+          "Thermal properties",
+          "Frictional properties",
+          "Rheological properties",
+          "Electrical properties"
+        ]
+      },
+      {
+        "topic_id": "evaporation_and_drying",
+        "topic_name": "Evaporation and Drying",
+        "subtopics": [
+          "Concentration and drying of liquid foods \u2013 evaporators, tray, drum and spray dryers",
+          "Osmotic dehydration and freeze drying",
+          "Hydrothermal treatments",
+          "Drying and milling of cereals, pulses and oilseeds",
+          "Drying kinetics",
+          "Psychrometry \u2013 properties of air-water vapour mixture"
+        ]
+      },
+      {
+        "topic_id": "size_reduction_and_material_handling",
+        "topic_name": "Size Reduction and Material Handling",
+        "subtopics": [
+          "Mechanics and energy requirement in size reduction of agriculture produce",
+          "Particle size analysis for comminuted solids",
+          "Size separation by screening",
+          "Fluidization of granular solids \u2013 pneumatic, bucket, screw and belt conveying",
+          "Cleaning and grading",
+          "Effectiveness of separation",
+          "Centrifugal separation of solids, liquids and gases",
+          "Homogenization",
+          "Filtration and membrane separation"
+        ]
+      },
+      {
+        "topic_id": "processing_of_agriculture_produce",
+        "topic_name": "Processing of Agriculture Produce",
+        "subtopics": [
+          "Processing of seeds, spices, fruits and vegetables",
+          "Value addition of agriculture produce"
+        ]
+      },
+      {
+        "topic_id": "storage_systems",
+        "topic_name": "Storage Systems",
+        "subtopics": [
+          "Controlled and modified atmosphere storage",
+          "Perishable food storage",
+          "Godowns, bins and grain silos",
+          "Packaging material and machines"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sec-7",
+    "title": "Section 7: Dairy and Food Engineering",
+    "code": "DFE",
+    "icon": "Utensils",
+    "weightage": "8-12 Marks",
+    "topics": [
+      {
+        "topic_id": "heat_and_mass_transfer",
+        "topic_name": "Heat and Mass Transfer",
+        "subtopics": [
+          "Steady state heat transfer in conduction, convection and radiation",
+          "Transient heat transfer in simple geometry",
+          "Working principles of heat exchangers",
+          "Diffusive and convective mass transfer",
+          "Simultaneous heat and mass transfer in agricultural processing operations",
+          "Material and energy balances in food processing systems",
+          "Water activity, sorption and desorption isotherms"
+        ]
+      },
+      {
+        "topic_id": "unit_operations_in_dairy_and_food_engineering",
+        "topic_name": "Unit Operations in Dairy and Food Engineering",
+        "subtopics": [
+          "Blanching",
+          "Homogenization",
+          "Pasteurization",
+          "Sterilization"
+        ]
+      },
+      {
+        "topic_id": "preservation_of_food",
+        "topic_name": "Preservation of Food",
+        "subtopics": [
+          "Kinetics of microbial death \u2013 pasteurization and sterilization of milk and other liquid foods",
+          "Preservation of food by cooling and freezing",
+          "Refrigeration and cold storage basics and applications"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sec-8",
+    "title": "Section 8: General Aptitude",
+    "code": "GA",
+    "icon": "Brain",
+    "weightage": "15 Marks",
+    "topics": [
+      {
+        "topic_name": "Verbal Aptitude",
+        "subtopics": [
+          "Basic English Grammar & Vocabulary",
+          "Reading Comprehension",
+          "Critical Reasoning"
+        ]
+      },
+      {
+        "topic_name": "Quantitative Aptitude",
+        "subtopics": [
+          "Data Interpretation",
+          "Numerical Computation",
+          "Ratios & Percentages"
+        ]
+      },
+      {
+        "topic_name": "Analytical & Spatial Aptitude",
+        "subtopics": [
+          "Logic Deduction & Pattern Recognition",
+          "Spatial Reasoning & 3D Representations"
+        ]
       }
     ]
   }

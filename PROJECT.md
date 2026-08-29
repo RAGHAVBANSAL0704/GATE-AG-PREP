@@ -1,5 +1,7 @@
 # Project: GATE AG Prep Web Portal - Offline PWA & Automated E2E Test Suite
 
+> **Consolidated Context Reference**: See [`PROJECT_CONTEXT.md`](file:///Users/raghav/Desktop/GATE%20AG%20PREP%20WEB/PROJECT_CONTEXT.md) and [`AGENTS.md`](file:///Users/raghav/Desktop/GATE%20AG%20PREP%20WEB/AGENTS.md) for the master context, token-efficient system architecture summary, data schemas, and test suite details.
+
 ## Architecture
 The application is a client-side Single Page Application (SPA) built with React 19, Vite 6, and Tailwind CSS.
 - **Frontend Core**: `src/App.jsx`, `src/main.jsx`, `src/index.css`.
@@ -31,7 +33,7 @@ The application is a client-side Single Page Application (SPA) built with React 
 | 10 | Practice Mode Workflow Test | Test section normalization, cascading filters (Topic, Subtopic, Type, Year, Marks, Status) | M2 | survey |
 | 11 | CBT Mock State & Timer Test | Test 5 question states (`NOT_VISITED`, `NOT_ANSWERED`, `ANSWERED`, `MARKED`, `ANSWERED_MARKED`), 180m timer | M2 | survey |
 | 12 | Formula Sheet Workflow Test | Test formula categorization across 5 sections, LaTeX rendering string validity, live search | M2 | survey |
-| 13 | PWA & Dataset Integrity Tests | Test manifest schema, icon existence, SW syntax, 20 mock papers (1421 Qs), 260 practice Qs | M2 | survey |
+| 13 | PWA & Dataset Integrity Tests | Test manifest schema, icon existence, SW syntax, 20 mock papers (1324 Qs), 1324 practice Qs | M2 | survey |
 | 14 | 100% Pass Single Command Verification | Verify `npm test` runs all test suites and exits 0 | M3 | survey |
 | 15 | Adversarial Coverage & Forensic Audit | Stress testing edge cases and forensic integrity verification | M3 | survey |
 

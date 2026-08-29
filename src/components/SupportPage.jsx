@@ -8,7 +8,9 @@ import {
   Send,
   Sparkles,
   ShieldCheck,
-  Zap
+  Zap,
+  ExternalLink,
+  CreditCard
 } from 'lucide-react';
 
 export default function SupportPage({ currentStudent }) {
@@ -20,6 +22,26 @@ export default function SupportPage({ currentStudent }) {
   const whatsappNumber = "919466810704"; // Raghav Bansal WhatsApp contact
 
   const handleCopyUpi = () => {
+    navigator.clipboard.writeText(upiId);
+    setCopiedUpi(true);
+    setTimeout(() => setCopiedUpi(false), 2500);
+  };
+
+  const handleDirectUpiPay = (amount = null) => {
+    let url = `upi://pay?pa=${upiId}&pn=${encodeURIComponent('GATE AG Prep Mission')}&cu=INR`;
+    if (amount) {
+      url += `&am=${amount}`;
+    }
+
+    try {
+      const link = document.createElement('a');
+      link.href = url;
+      link.click();
+    } catch (err) {
+      console.warn("UPI protocol launch note:", err);
+    }
+
+    // Auto-copy UPI ID to clipboard as instant fallback
     navigator.clipboard.writeText(upiId);
     setCopiedUpi(true);
     setTimeout(() => setCopiedUpi(false), 2500);
@@ -92,25 +114,46 @@ export default function SupportPage({ currentStudent }) {
                 </button>
               </div>
 
-              {/* Preset Contribution Chips */}
+              {/* Direct UPI App Launch Button */}
+              <button
+                onClick={() => handleDirectUpiPay()}
+                className="w-full py-2.5 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-xs shadow-md transition flex items-center justify-center gap-2"
+              >
+                <CreditCard className="w-4 h-4 text-white" />
+                <span>Pay via UPI App (GPay / PhonePe / Paytm)</span>
+                <ExternalLink className="w-3.5 h-3.5 text-blue-200" />
+              </button>
+
+              {/* Preset 1-Click Contribution Pay Chips */}
               <div className="grid grid-cols-3 gap-2 text-center text-xs font-bold pt-1">
-                <div className="p-2 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                <button
+                  onClick={() => handleDirectUpiPay(50)}
+                  className="p-2 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 transition text-left sm:text-center"
+                >
                   <div className="text-emerald-600 dark:text-emerald-400 font-extrabold text-xs">₹50</div>
-                  <div className="text-[9px] text-slate-400 font-normal mt-0.5">Server Hour</div>
-                </div>
-                <div className="p-2 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                  <div className="text-[9px] text-slate-400 font-normal mt-0.5">Pay ₹50</div>
+                </button>
+
+                <button
+                  onClick={() => handleDirectUpiPay(100)}
+                  className="p-2 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-500 transition text-left sm:text-center"
+                >
                   <div className="text-blue-600 dark:text-blue-400 font-extrabold text-xs">₹100</div>
-                  <div className="text-[9px] text-slate-400 font-normal mt-0.5">5 Mocks</div>
-                </div>
-                <div className="p-2 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                  <div className="text-[9px] text-slate-400 font-normal mt-0.5">Pay ₹100</div>
+                </button>
+
+                <button
+                  onClick={() => handleDirectUpiPay(250)}
+                  className="p-2 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-purple-500 transition text-left sm:text-center"
+                >
                   <div className="text-purple-600 dark:text-purple-400 font-extrabold text-xs">₹250</div>
-                  <div className="text-[9px] text-slate-400 font-normal mt-0.5">Open Access</div>
-                </div>
+                  <div className="text-[9px] text-slate-400 font-normal mt-0.5">Pay ₹250</div>
+                </button>
               </div>
             </div>
           </div>
 
-          <div className="p-3 rounded-xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-900 text-[11px] space-y-1 text-slate-600 dark:text-slate-300">
+          <div className="p-3 rounded-xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-900 text-[11px] space-y-1 text-slate-600 dark:text-slate-300 mt-3">
             <div className="font-bold text-blue-900 dark:text-blue-200 flex items-center gap-1">
               <ShieldCheck className="w-3.5 h-3.5 text-blue-500" />
               <span>100% Free Guarantee</span>

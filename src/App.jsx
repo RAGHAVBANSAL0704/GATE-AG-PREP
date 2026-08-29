@@ -23,8 +23,13 @@ import SupportPage from './components/SupportPage';
 import GamesZone from './components/GamesZone';
 import PracticeHub from './components/PracticeHub';
 import LearningHub from './components/LearningHub';
+import PerformanceAnalytics from './components/PerformanceAnalytics';
+import Leaderboard from './components/Leaderboard';
+import Footer from './components/Footer';
 
 import { checkCurrentSession, logoutStudent } from './services/authService';
+import { initAutoSyncOnReconnect } from './services/testAttemptService';
+import { saveToIDB } from './utils/indexedDB';
 
 import initialQuestions from './data/questions.json';
 import initialMockPapers from './data/mock_papers.json';
@@ -51,7 +56,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState(() => {
     try {
       const hash = window.location.hash.replace(/^#\/?/, '');
-      const validTabs = ['dashboard', 'practicehub', 'practice', 'custompractice', 'customtest', 'learninghub', 'concepts', 'revision', 'formulas', 'mocktest', 'games', 'admin', 'feedback', 'downloads', 'syllabus', 'creator', 'support'];
+      const validTabs = ['dashboard', 'practicehub', 'practice', 'custompractice', 'customtest', 'learninghub', 'concepts', 'simulators', 'flashcards', 'chat', 'qa', 'revision', 'formulas', 'mocktest', 'games', 'admin', 'feedback', 'downloads', 'syllabus', 'creator', 'support'];
       if (validTabs.includes(hash)) {
         return hash;
       }
@@ -64,13 +69,20 @@ export default function App() {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace(/^#\/?/, '');
-      const validTabs = ['dashboard', 'practicehub', 'practice', 'custompractice', 'customtest', 'learninghub', 'concepts', 'revision', 'formulas', 'mocktest', 'games', 'admin', 'feedback', 'downloads', 'syllabus', 'creator', 'support'];
+      const validTabs = ['dashboard', 'practicehub', 'practice', 'custompractice', 'customtest', 'learninghub', 'concepts', 'simulators', 'flashcards', 'chat', 'qa', 'revision', 'formulas', 'mocktest', 'games', 'admin', 'feedback', 'downloads', 'syllabus', 'creator', 'support'];
       if (validTabs.includes(hash)) {
         setActiveTab(hash);
       }
     };
     window.addEventListener('hashchange', handleHashChange);
     return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  useEffect(() => {
+    const cleanup = initAutoSyncOnReconnect();
+    return () => {
+      if (typeof cleanup === 'function') cleanup();
+    };
   }, []);
 
   const [currentStudent, setCurrentStudent] = useState(() => checkCurrentSession());
@@ -160,10 +172,14 @@ export default function App() {
   }, [editedQuestionsMap]);
 
   const handleSaveEditedQuestion = (updatedQ) => {
-    setEditedQuestionsMap(prev => ({
-      ...prev,
-      [updatedQ.id]: updatedQ
-    }));
+    setEditedQuestionsMap(prev => {
+      const nextMap = { ...prev, [updatedQ.id]: updatedQ };
+      try {
+        localStorage.setItem('gate_ag_edited_questions_map', JSON.stringify(nextMap));
+      } catch (e) {}
+      return nextMap;
+    });
+    saveToIDB('edited_questions', updatedQ);
   };
 
   // Dynamically apply manual question edits across all question pools
@@ -381,7 +397,7 @@ export default function App() {
             />
           )}
 
-          {['learninghub', 'concepts', 'revision', 'formulas'].includes(activeTab) && (
+          {['learninghub', 'concepts', 'simulators', 'flashcards', 'chat', 'qa', 'revision', 'formulas'].includes(activeTab) && (
             <LearningHub
               activeSubTab={activeTab === 'learninghub' ? 'concepts' : activeTab}
               onSubTabChange={(subTab) => setActiveTab(subTab)}
@@ -392,6 +408,7 @@ export default function App() {
               onToggleBookmark={handleToggleBookmark}
               onOpenCalc={() => setIsCalcOpen(true)}
               onEditQuestion={(q) => setEditingQuestion(q)}
+              currentStudent={currentStudent}
             />
           )}
 
@@ -404,6 +421,20 @@ export default function App() {
               onOpenCalc={() => setIsCalcOpen(true)}
               onFinishTest={handleFinishTest}
               onEditQuestion={(q) => setEditingQuestion(q)}
+              currentStudent={currentStudent}
+            />
+          )}
+
+          {activeTab === 'analytics' && (
+            <PerformanceAnalytics 
+              currentStudent={currentStudent} 
+              questions={questions} 
+            />
+          )}
+
+          {activeTab === 'leaderboard' && (
+            <Leaderboard 
+              currentStudent={currentStudent} 
             />
           )}
 
@@ -450,6 +481,7 @@ export default function App() {
             <CreatorPage />
           )}
         </main>
+        <Footer setActiveTab={setActiveTab} />
       </div>
 
       <ScientificCalculator

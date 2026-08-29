@@ -3,58 +3,79 @@
 ## 1. Observation
 
 ### Scope & Requirements Verification
-- `ORIGINAL_REQUEST.md` (lines 10–27) specifies two requirements:
-  - **R1. Offline PWA Capability**: Service worker caching and Web App Manifest installation readiness.
-  - **R2. Automated Verification & Test Suite**: `npm test` runs with 100% pass rate, testing MCQ, MSQ, NAT scoring, Practice filtering, Mock test timing, and Formula rendering.
-- `PROJECT.md` documents 15 features across 3 milestones (M1: PWA Offline Capability, M2: Automated Verification & Test Suite, M3: Final E2E Verification & Audit).
+- `ORIGINAL_REQUEST.md` specifies four requirements:
+  - **R1. Comprehensive Security & Vulnerability Audit**: Audit client-side auth, Supabase key handling, RLS policies, session token storage, and input sanitization across all modals and services. Zero plaintext credentials, robust XSS defense, secured endpoints.
+  - **R2. Data Connectivity & Schema Alignment Audit**: Verify 100% of questions (1,324 items) and 20 mock papers match official 8-section taxonomy schema. Zero blank questions, valid option maps, correct NAT ranges.
+  - **R3. Backend Synchronization & Offline Resilience Audit**: Verify offline LocalStorage to Supabase sync with `client_attempt_id` idempotency and reconnect auto-sync. Ensure database `schema.sql` contains all columns required by frontend services with RLS enforcement.
+  - **R4. Automated Verification & Patch Suite**: Automated test suite (`npm test`) covering all security, taxonomy, offline sync, scoring, and workflow requirements. 100% clean production build (`npm run build`).
 
 ### Forensic Source Inspection
-- **PWA Manifest & Icons**:
-  - `public/manifest.webmanifest` and `public/manifest.json` are valid identical JSON specifying `name`, `short_name`, `theme_color: "#2563EB"`, `background_color: "#0B0F19"`, `display: "standalone"`, `start_url: "./"`, `scope: "./"`, 5 icon entries, and 3 shortcuts.
-  - 5 icon files present in `public/icons/`: `icon-192.png` (192x192), `icon-512.png` (512x512), `icon-512-maskable.png` (512x512), `apple-touch-icon.png` (180x180), and `icon.svg`.
-  - `index.html` (lines 9–28) links `manifest.webmanifest`, theme-color meta tags, mobile-web-app-capable meta tags, apple touch icons, and contains no blocking third-party CDN scripts.
-- **Service Worker Subsystem**:
-  - `public/sw.js` implements versioned multi-tier caching: `STATIC_CACHE` (`gate-ag-static-v1.0.0`), `RUNTIME_CACHE` (`gate-ag-runtime-v1.0.0`), `IMAGES_CACHE` (`gate-ag-images-v1.0.0`), and `FONTS_CACHE` (`gate-ag-fonts-v1.0.0`). Handles `install` (precaching shell assets), `activate` (cache purging and `clients.claim()`), `fetch` (smart routing: network-first for navigation with cached index fallback, cache-first for hashed assets & images, stale-while-revalidate for fonts), and `message`.
-  - `src/serviceWorkerRegistration.js` provides `registerServiceWorker()`, `unregisterServiceWorker()`, and `getNetworkStatus()` with online/offline event listeners.
-  - `src/main.jsx` registers the service worker on app startup.
-- **Scoring & Workflows Implementation**:
-  - `src/components/MockTestMode.jsx` (lines 272–348) contains authentic evaluation logic for MCQ, MSQ, and NAT.
-  - `src/components/PracticeMode.jsx` contains full cascading filters (Section, Topic, Subtopic, Type, Marks, Status, Bookmarks).
-  - `src/components/FormulaSheet.jsx` contains 41 LaTeX formulas across 5 syllabus sections.
-  - `src/data/questions.json` contains 260 curated questions; `src/data/mock_papers.json` contains 20 official exam papers spanning 2007–2026 with 1,421 questions.
+- **Security & Authentication Subsystem**:
+  - `src/services/supabaseClient.js`: Contains only public anonymous key (`role: "anon"`). Zero `service_role` keys or private keys exist across client codebase or `.env.example`.
+  - `src/services/authService.js`: Uses cryptographic salted SHA-256 password hashing via Web Crypto API (`crypto.subtle.digest('SHA-256')`) with deterministic JS fallback (`sha256Pure`). Completely eliminated `password_plain` across all state objects, local storage payloads, and database queries. Enforces exact credential matching on login.
+  - `src/utils/profanityFilter.js`: Contains abusive content dictionary (English & transliterated Hinglish) and dangerous payload scanner (`containsDangerousPayload`, `stripDangerousHtml`, `validateCleanInput`).
+  - `src/components/MathRenderer.jsx`: Escapes all raw HTML entities via `escapeHtml()` in non-math segments and extracts KaTeX tokens safely.
+  - `src/components/TestResultModal.jsx`: Escapes all fields (`q.question`, `userAnswers`, `q.correct_answer`, `q.solution`) before injecting into printable HTML.
+  - `vite.config.js`: `devSaveQuestionPlugin` restricted to `command === 'serve'`, enforces POST method, local loopback IP checks, 500KB size cap, regex question ID validation, and path confinement to `src/data/`.
+  - `scripts/schema.sql`: Full DDL with `public.students`, `public.device_sessions`, `public.test_attempts`. Explicitly drops `password_plain`, defines unique index `idx_test_attempts_client_id`, and enables Row Level Security (RLS) on all public tables.
+- **Taxonomy & Dataset Schema Subsystem**:
+  - `src/data/official_syllabus.json`: Defines all 8 canonical sections (Section 1 through Section 8: General Aptitude) with 60+ granular subtopics.
+  - `src/utils/syllabusTaxonomy.js`: Provides `getOfficialSections()`, `getOfficialTopicsForSection()`, `getOfficialSubtopicsForTopic()`, `normalizeSectionTitle()`, `normalizeTopicTitle()` with exact-match precedence and cascading fallbacks.
+  - `src/data/questions.json`: Contains 1,324 curated DOCX questions across 20 years (2007–2026). Zero blank questions, zero blank solutions, zero blank answers, 100% mapped to the 8 official sections.
+  - `src/data/mock_papers.json`: Contains 20 official exam papers (2007–2026) totaling 1,324 questions with zero blank questions and valid `{ A, B, C, D }` option maps.
+  - `src/data/formulas.js`: Exports 57 formulas across 8 categorized sections.
+  - `src/data/concepts.json`: Contains 8 core concept modules aligned with the 8 official sections.
+- **Offline Synchronization Subsystem**:
+  - `src/services/testAttemptService.js`: Assigns unique `client_attempt_id` UUID to all attempts, manages 100-attempt LocalStorage queue with `_syncedToBackend` tracking, provides `syncPendingTestAttempts()` for batch syncing, and initializes `initAutoSyncOnReconnect()` on window `online` / `app-online` events.
+  - `src/App.jsx`: Invokes `initAutoSyncOnReconnect()` in root `useEffect` on application mount.
 
 ### Forensic Anti-Cheating & Mock Detection
-- Ripgrep searches across the entire codebase revealed 0 instances of hardcoded test result mocks, dummy passes, or facade functions.
-- No pre-populated result files or fabricated test logs detected on disk.
+- Source code analysis across all 15 test files under `tests/` confirmed genuine assertions with zero tautologies (`assert.ok(true)` / `assert.strictEqual(true, true)`), zero facade mocks, and zero dummy return functions.
 
 ### Independent Test & Build Execution
 - Executed `npm test` (`node --test tests/**/*.test.js`):
-  - 5 test suites executed: `tests/scoring.test.js`, `tests/workflows.test.js`, `tests/pwa.test.js`, `tests/dataset.test.js`, `tests/stress.test.js`.
-  - Result: **122 tests passed**, 0 failed, 0 cancelled, 0 skipped. Exit code: 0. Duration: ~66.5ms.
+  - 15 test files executed across 62 suites:
+    - `tests/scoring.test.js`
+    - `tests/workflows.test.js`
+    - `tests/pwa.test.js`
+    - `tests/dataset.test.js`
+    - `tests/stress.test.js`
+    - `tests/custom_mocks.test.js`
+    - `tests/feedback.test.js`
+    - `tests/concepts.test.js`
+    - `tests/profanityFilter.test.js`
+    - `tests/forensic.test.js`
+    - `tests/auth.test.js`
+    - `tests/security.test.js`
+    - `tests/schema.test.js`
+    - `tests/sync.test.js`
+    - `tests/adversarial_challenger_1.test.js`
+  - Result: **264 tests passed**, 0 failed, 0 cancelled, 0 skipped, 0 todo. Exit code: 0. Duration: ~175.3ms.
 - Executed `npm run build` (`vite build`):
-  - 1,612 modules transformed and built into `dist/` with exit code 0.
-  - Verified `dist/` contains `index.html`, `manifest.webmanifest`, `manifest.json`, `sw.js`, `icons/`, `assets/`, `question_images/`, and `docx_images/`.
+  - Transformed 1,712 modules cleanly and generated production bundle in `dist/` with exit code 0. Duration: 2.12s.
 
 ---
 
 ## 2. Logic Chain
 
-1. **Requirement Mapping**: Observations confirm that every acceptance criterion in `ORIGINAL_REQUEST.md` (PWA readiness + automated test suite) corresponds directly to implemented, non-facade code in `public/`, `src/`, `index.html`, and `tests/`.
-2. **Integrity & Authenticity**: Ripgrep and AST inspection confirmed genuine, production-grade scoring logic in `MockTestMode.jsx` matching the unit and integration tests. No cheating patterns, dummy return values, or pre-cooked outputs exist.
-3. **PWA Completeness**: All 5 PWA icons exist on disk with exact pixel dimensions verified by binary buffer inspection. The Web App Manifest and Service Worker implement standard multi-tier caching and navigation fallback.
-4. **Independent Test Execution**: Clean-room execution of `npm test` yielded 122/122 passing tests matching claimed results exactly. `npm run build` compiled 1,612 modules cleanly with 0 errors.
+1. **Requirement Mapping**: Every requirement (R1 Security & Auth, R2 8-Section Taxonomy & Datasets, R3 Offline Sync & Schema Parity, R4 Automated Verification) in `ORIGINAL_REQUEST.md` is addressed by authentic, production-grade code on disk.
+2. **Security Integrity**: Source code scanning, Web Crypto hashing analysis, and XSS sanitization checks confirm zero secret leaks, safe password storage without plaintext leakage, and robust escaping across render paths.
+3. **Data Parity & Taxonomy**: Empirical evaluation of all 1,324 questions across 20 mock papers and the practice pool verified zero missing fields, zero blank strings, valid option dictionaries, and 100% adherence to the official 8-section syllabus taxonomy.
+4. **Database & Sync Alignment**: `scripts/schema.sql` matches every column, constraint, index, and RLS policy required by `authService.js`, `testAttemptService.js`, and `leaderboardService.js`. Offline queuing and reconnection sync operate idempotently using `client_attempt_id`.
+5. **Independent Clean-Room Verification**: Independent execution of `npm test` verified 264/264 tests pass with zero failures. Independent execution of `npm run build` verified 1,712 modules compile cleanly with zero errors.
 
 ---
 
 ## 3. Caveats
 
-- No caveats. All source files, test suites, datasets, manifest configurations, and build targets were independently inspected and executed directly.
+- **Supabase Deployment**: In production environments, running `scripts/schema.sql` in the Supabase SQL editor is required to provision tables, indexes, and RLS policies on new database instances.
+- **Browser Quota**: Local storage test attempt history is capped at the most recent 100 attempts to safely preserve standard browser storage quotas.
 
 ---
 
 ## 4. Conclusion
 
-The implementation fully satisfies all requirements and acceptance criteria in `ORIGINAL_REQUEST.md`. No cheating or mock facades were detected. The automated test suite passes 100% independently with exit code 0. Production build succeeds cleanly.
+All acceptance criteria across Security & Auth, Data Integrity & Taxonomy Schema, Offline Resilience & SQL Parity, and Build & Test Verification have been completely satisfied with genuine, uncompromised implementations.
 
 **Final Verdict**: **VICTORY CONFIRMED**
 
@@ -63,6 +84,7 @@ The implementation fully satisfies all requirements and acceptance criteria in `
 ## 5. Verification Method
 
 To independently reproduce this verification:
-1. Run `npm test` in the project root: verify all 122 tests pass with exit code 0.
-2. Run `npm run build` in the project root: verify all 1,612 modules build into `dist/` with exit code 0.
-3. Inspect `public/manifest.webmanifest`, `public/sw.js`, and `public/icons/` to confirm PWA structure.
+1. Run `npm test` in the project root: verify all 264 unit/integration/adversarial tests pass with exit code 0.
+2. Run `npm run build` in the project root: verify all 1,712 modules build into `dist/` with exit code 0.
+3. Execute `node -e "const fs = require('fs'); const q = JSON.parse(fs.readFileSync('src/data/questions.json')); console.log('Questions:', q.length, 'Blanks:', q.filter(x => !x.question).length);"` to confirm 1,324 questions with 0 blanks.
+

@@ -15,10 +15,21 @@ import {
   BarChart2,
   Infinity
 } from 'lucide-react';
-import { GATE_AG_SYLLABUS } from '../data/syllabus';
+import { getOfficialSections, normalizeSectionTitle } from '../utils/syllabusTaxonomy.js';
+
+const allSections = [
+  'Section 1: Engineering Mathematics',
+  'Section 2: Farm Machinery',
+  'Section 3: Farm Power',
+  'Section 4: Soil and Water Conservation Engineering',
+  'Section 5: Irrigation and Drainage Engineering',
+  'Section 6: Agricultural Process Engineering',
+  'Section 7: Dairy and Food Engineering',
+  'General Aptitude'
+];
 
 export default function CustomTestCreator({ questions, mockPapers, onStartCustomTest, onOpenCalc }) {
-  const [selectedSections, setSelectedSections] = useState(GATE_AG_SYLLABUS.map(s => s.title.replace(/^Section \d+: /, '')));
+  const [selectedSections, setSelectedSections] = useState(allSections);
   const [selectedType, setSelectedType] = useState('All');
   const [questionCount, setQuestionCount] = useState(15);
   const [timerMinutes, setTimerMinutes] = useState(30);
@@ -26,30 +37,6 @@ export default function CustomTestCreator({ questions, mockPapers, onStartCustom
   const [enableNegativeMarking, setEnableNegativeMarking] = useState(true);
   const [weightingMode, setWeightingMode] = useState('proportional'); // 'proportional' or 'random'
   const [yearFilter, setYearFilter] = useState('2016-2026'); // '2016-2026' or '2007-2026'
-
-  const allSections = GATE_AG_SYLLABUS.map(s => s.title.replace(/^Section \d+: /, ''));
-
-  const SECTION_NORM_MAP = {
-    'farm power and machinery': 'Farm Power and Machinery',
-    'farm machinery & power': 'Farm Power and Machinery',
-    'farm machinery and power': 'Farm Power and Machinery',
-    'farm power': 'Farm Power and Machinery',
-    'soil and water conservation engineering': 'Soil and Water Conservation Engineering',
-    'soil & water conservation engineering': 'Soil and Water Conservation Engineering',
-    'agricultural process engineering': 'Agricultural Process Engineering',
-    'agricultural processing engineering': 'Agricultural Process Engineering',
-    'engineering mathematics': 'Engineering Mathematics',
-    'general aptitude': 'General Aptitude'
-  };
-
-  const normSec = (s) => {
-    if (!s) return '';
-    const low = s.toLowerCase().trim();
-    for (const [k, v] of Object.entries(SECTION_NORM_MAP)) {
-      if (low.includes(k)) return v;
-    }
-    return s;
-  };
 
   const toggleSection = (sec) => {
     if (selectedSections.includes(sec)) {
@@ -65,10 +52,10 @@ export default function CustomTestCreator({ questions, mockPapers, onStartCustom
 
   const rawPool = yearFilter === '2016-2026' ? questions : mockPapers.flatMap(p => p.questions);
   
-  const normSelectedSections = selectedSections.map(s => normSec(s));
+  const normSelectedSections = selectedSections.map(s => normalizeSectionTitle(s));
 
   const candidatePool = rawPool.filter(q => {
-    const qSec = normSec(q.section);
+    const qSec = normalizeSectionTitle(q.section);
     if (normSelectedSections.length > 0 && !normSelectedSections.includes(qSec)) return false;
     if (selectedType !== 'All' && q.type !== selectedType) return false;
     return true;

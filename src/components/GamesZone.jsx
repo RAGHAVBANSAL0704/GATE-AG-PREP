@@ -45,6 +45,9 @@ import {
   getActiveStudentSession 
 } from '../services/breakLeaderboardService';
 import AgriFarmGarage from './AgriFarmGarage';
+import CyberBulletHellBoss from './CyberBulletHellBoss';
+import Realtime1v1Duel from './Realtime1v1Duel';
+import CyberGarageCrafting from './CyberGarageCrafting';
 
 // ==========================================
 // 1. GAME CATALOGUE METADATA (51 GAMES)
@@ -110,6 +113,10 @@ const GAME_CATALOGUE = [
 ];
 
 export default function GamesZone() {
+  const [mainTab, setMainTab] = useState('boss'); // 'boss', 'duel', 'cybergarage', 'classic'
+  const [activeVehicle, setActiveVehicle] = useState('Cyber Tractor Mk-IV');
+  const [unlockedVehicles, setUnlockedVehicles] = useState(['tractor']);
+  const [activeMutators, setActiveMutators] = useState(['quad']);
   const [activeGame, setActiveGame] = useState(null);
   const [showLeaderboard, setShowLeaderboard] = useState(false);
   const [showGarage, setShowGarage] = useState(false);
@@ -220,6 +227,41 @@ export default function GamesZone() {
           </div>
         </div>
       </div>
+
+      {/* CRAZY BREAK ZONE MAIN MODE TAB NAVIGATION */}
+      <div className="flex flex-wrap gap-3 bg-slate-900/90 p-3 rounded-2xl border border-cyan-500/30 shadow-xl">
+        {[
+          { id: 'boss', label: '🕹️ Cyber Bullet-Hell Arena', desc: 'Boss Battles & NAT Overdrive' },
+          { id: 'duel', label: '⚔️ 1v1 Real-Time Duel', desc: 'All-India Speed Math Battle' },
+          { id: 'cybergarage', label: '🚜 Cyber-Garage & Crafting', desc: 'Skill Tree & Rogue Mutators' },
+          { id: 'classic', label: '🎯 Classic 51 Mini-Games', desc: 'Arcade Vault & Simulators' }
+        ].map(tab => (
+          <button
+            key={tab.id}
+            onClick={() => {
+              soundFX.playClick();
+              setMainTab(tab.id);
+              if (tab.id !== 'classic') setActiveGame(null);
+            }}
+            className={`flex-1 min-w-[200px] p-3 rounded-xl text-left transition-all border ${
+              mainTab === tab.id
+                ? 'bg-gradient-to-r from-cyan-950 to-blue-950 border-cyan-400 text-white shadow-lg shadow-cyan-500/20'
+                : 'bg-slate-950 border-slate-800 text-slate-400 hover:bg-slate-900 hover:border-slate-700'
+            }`}
+          >
+            <div className="font-extrabold text-sm text-cyan-300 flex items-center gap-1.5">
+              <span>{tab.label}</span>
+            </div>
+            <div className="text-[11px] text-slate-400 font-mono mt-0.5">{tab.desc}</div>
+          </button>
+        ))}
+      </div>
+
+{mainTab === "boss" && <CyberBulletHellBoss breakXP={breakXP} onAddXP={handleRewardXP} activeVehicle={activeVehicle} mutators={activeMutators} />}
+{mainTab === "duel" && <Realtime1v1Duel breakXP={breakXP} onAddXP={handleRewardXP} />}
+{mainTab === "cybergarage" && <CyberGarageCrafting breakXP={breakXP} onAddXP={handleRewardXP} activeVehicle={activeVehicle} onSelectVehicle={setActiveVehicle} unlockedVehicles={unlockedVehicles} onUnlockVehicle={(id) => setUnlockedVehicles(prev => [...prev, id])} activeMutators={activeMutators} onToggleMutator={(id) => setActiveMutators(prev => prev.includes(id) ? prev.filter(m => m !== id) : [...prev, id])} />}
+{mainTab === "classic" && (
+  <div className="space-y-6">
 
       {/* REAL-TIME ALL-INDIA BREAK XP LEADERBOARD PANEL */}
       {showLeaderboard && (
@@ -475,9 +517,10 @@ export default function GamesZone() {
             {activeGame === 'probablityblitz' && <GenericSimGame title="GATE AG Probability Sprint 🎲" desc="Solve Binomial, Poisson & Bayes theorem probability NATs." target="P = 0.84" unit="Probability" xp={20} onRewardXP={handleRewardXP} />}
             {activeGame === 'matrixeigen' && <GenericSimGame title="Matrix Eigenvalue Flash Blitz 📐" desc="Calculate det(A - λI) = 0 eigenvalues & trace sums." target="λ = 4, 1" unit="Eigenvalues" xp={25} onRewardXP={handleRewardXP} />}
           </div>
-        </div>
-      )}
-
+    </div>
+  )}
+  </div>
+)}
     </div>
   );
 }

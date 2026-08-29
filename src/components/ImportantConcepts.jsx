@@ -22,6 +22,7 @@ import {
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import initialConcepts from '../data/concepts.json';
+import { normalizeSectionTitle } from '../utils/syllabusTaxonomy.js';
 
 export default function ImportantConcepts() {
   const [concepts] = useState(initialConcepts);
@@ -36,25 +37,21 @@ export default function ImportantConcepts() {
 
   const sections = [
     'All',
-    'Farm Power and Machinery',
-    'Soil and Water Conservation Engineering',
-    'Agricultural Process Engineering',
-    'Engineering Mathematics',
+    'Section 1: Engineering Mathematics',
+    'Section 2: Farm Machinery',
+    'Section 3: Farm Power',
+    'Section 4: Soil and Water Conservation Engineering',
+    'Section 5: Irrigation and Drainage Engineering',
+    'Section 6: Agricultural Process Engineering',
+    'Section 7: Dairy and Food Engineering',
     'General Aptitude'
   ];
 
   const filteredConcepts = useMemo(() => {
     return concepts.filter(item => {
       if (selectedSection !== 'All') {
-        const secLower = (item.section || '').toLowerCase();
-        const selLower = selectedSection.toLowerCase();
-        if (!secLower.includes(selLower) && !selLower.includes(secLower)) {
-          if (selectedSection.includes('Farm') && !secLower.includes('farm')) return false;
-          if (selectedSection.includes('Soil') && !secLower.includes('soil')) return false;
-          if (selectedSection.includes('Process') && !secLower.includes('process')) return false;
-          if (selectedSection.includes('Math') && !secLower.includes('math')) return false;
-          if (selectedSection.includes('Aptitude') && !secLower.includes('aptitude')) return false;
-        }
+        const normItemSec = normalizeSectionTitle(item.section);
+        if (normItemSec !== normalizeSectionTitle(selectedSection)) return false;
       }
 
       if (searchTerm) {

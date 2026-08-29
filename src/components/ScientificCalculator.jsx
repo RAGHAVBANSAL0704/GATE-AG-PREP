@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { X, RotateCcw } from 'lucide-react';
+import { X, RotateCcw, Zap } from 'lucide-react';
+import CalculatorDrillsModal from './CalculatorDrillsModal';
 
 export default function ScientificCalculator({ isOpen, onClose }) {
   const [display, setDisplay] = useState('0');
@@ -7,6 +8,7 @@ export default function ScientificCalculator({ isOpen, onClose }) {
   const [isRad, setIsRad] = useState(false);
   const [newNumber, setNewNumber] = useState(true);
   const [history, setHistory] = useState('');
+  const [isDrillOpen, setIsDrillOpen] = useState(false);
 
   if (!isOpen) return null;
 
@@ -163,18 +165,30 @@ export default function ScientificCalculator({ isOpen, onClose }) {
     <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-end sm:items-center justify-center p-2 sm:p-4 no-print">
       <div className="bg-slate-900 border border-slate-700 text-slate-100 rounded-t-2xl sm:rounded-xl shadow-2xl w-full max-w-sm max-h-[92vh] flex flex-col overflow-hidden animate-in fade-in zoom-in duration-150">
         
-        {/* Titlebar */}
-        <div className="bg-slate-800/90 px-4 py-2.5 flex items-center justify-between border-b border-slate-700">
+        {/* Header */}
+        <div className="bg-slate-900 px-4 py-2.5 flex items-center justify-between border-b border-slate-800">
           <div className="flex items-center gap-2">
-            <div className="w-2.5 h-2.5 rounded-full bg-blue-500"></div>
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
             <span className="font-semibold text-xs text-slate-200 uppercase tracking-wider">GATE Virtual Calculator</span>
           </div>
-          <button 
-            onClick={onClose}
-            className="text-slate-400 hover:text-white p-1 rounded-md hover:bg-slate-700 transition"
-          >
-            <X className="w-4 h-4" />
-          </button>
+
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setIsDrillOpen(true)}
+              className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 text-amber-400 font-extrabold text-[11px] border border-amber-500/40 transition"
+              title="Launch TCS Virtual Calculator Speed & Finger-Memory Drills"
+            >
+              <Zap className="w-3 h-3 fill-amber-400" />
+              <span>Speed Drills</span>
+            </button>
+
+            <button 
+              onClick={onClose}
+              className="text-slate-400 hover:text-white p-1 rounded-md hover:bg-slate-700 transition"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </div>
         </div>
 
         {/* Display */}
@@ -278,6 +292,11 @@ export default function ScientificCalculator({ isOpen, onClose }) {
           <button onClick={() => handleNum('.')} className="calc-btn bg-slate-950 hover:bg-slate-800 font-medium">.</button>
         </div>
       </div>
+
+      <CalculatorDrillsModal
+        isOpen={isDrillOpen}
+        onClose={() => setIsDrillOpen(false)}
+      />
     </div>
   );
 }

@@ -16,7 +16,9 @@ import {
   Heart,
   Gamepad2,
   Target,
-  GraduationCap
+  GraduationCap,
+  BarChart3,
+  Trophy
 } from 'lucide-react';
 
 export default function Sidebar({ 
@@ -48,13 +50,25 @@ export default function Sidebar({
       id: 'learninghub', 
       label: 'Learning Hub', 
       icon: GraduationCap, 
-      matches: ['learninghub', 'concepts', 'revision', 'formulas'] 
+      matches: ['learninghub', 'concepts', 'revision', 'formulas', 'simulators', 'flashcards', 'chat', 'qa'] 
     },
     { 
       id: 'mocktest', 
       label: 'PYQ & Mocks', 
       icon: Clock, 
       matches: ['mocktest'] 
+    },
+    { 
+      id: 'analytics', 
+      label: 'Performance', 
+      icon: BarChart3, 
+      matches: ['analytics'] 
+    },
+    { 
+      id: 'leaderboard', 
+      label: 'Leaderboard', 
+      icon: Trophy, 
+      matches: ['leaderboard'] 
     },
     { 
       id: 'games', 
@@ -93,6 +107,17 @@ export default function Sidebar({
       matches: ['creator'] 
     },
   ];
+
+  const isAdmin = Boolean(
+    currentStudent?.student_type === 'admin' ||
+    currentStudent?.is_admin ||
+    (typeof import.meta !== 'undefined' && import.meta.env?.DEV)
+  );
+
+  const visibleNavItems = navItems.filter(item => {
+    if (item.id === 'admin') return isAdmin;
+    return true;
+  });
 
   const handleNavClick = (id) => {
     setActiveTab(id);
@@ -179,7 +204,7 @@ export default function Sidebar({
 
             {/* Navigation Links */}
             <nav className="space-y-1 pt-1">
-              {navItems.map((item) => {
+              {visibleNavItems.map((item) => {
                 const Icon = item.icon;
                 const isActive = item.matches.includes(activeTab);
 

@@ -32,9 +32,10 @@ export default function SyllabusTracker({ userProgress, onUpdateProgress, onStar
 
   GATE_AG_SYLLABUS.forEach(sec => {
     sec.topics.forEach(t => {
+      const topTitle = t.topic_name || t.name;
       t.subtopics.forEach(st => {
         totalSubtopics++;
-        const status = getStatus(`${t.name}_${st}`);
+        const status = getStatus(`${topTitle}_${st}`);
         if (status === 'MASTERED') masteredCount++;
         else if (status === 'STUDIED') studiedCount++;
       });
@@ -58,7 +59,7 @@ export default function SyllabusTracker({ userProgress, onUpdateProgress, onStar
               Syllabus Coverage & Mastery Tracker
             </h2>
             <p className="text-xs text-slate-500 max-w-xl">
-              Track your preparation across all 5 sections. Click subtopics to cycle status: <span className="font-semibold text-slate-700 dark:text-slate-300">Not Started → Studied → Mastered</span>.
+              Track your preparation across all 8 sections (7 official + General Aptitude). Click subtopics to cycle status: <span className="font-semibold text-slate-700 dark:text-slate-300">Not Started → Studied → Mastered</span>.
             </p>
           </div>
 
@@ -81,9 +82,10 @@ export default function SyllabusTracker({ userProgress, onUpdateProgress, onStar
           let secTotal = 0;
           let secMastered = 0;
           sec.topics.forEach(t => {
+            const topTitle = t.topic_name || t.name;
             t.subtopics.forEach(st => {
               secTotal++;
-              if (getStatus(`${t.name}_${st}`) === 'MASTERED') secMastered++;
+              if (getStatus(`${topTitle}_${st}`) === 'MASTERED') secMastered++;
             });
           });
           const secPct = secTotal > 0 ? Math.round((secMastered / secTotal) * 100) : 0;
@@ -138,7 +140,7 @@ export default function SyllabusTracker({ userProgress, onUpdateProgress, onStar
                   {sec.topics.map((top, tIdx) => (
                     <div key={tIdx} className="space-y-3">
                       <h4 className="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
-                        {top.name}
+                        {top.topic_name || top.name}
                       </h4>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs">
                         {top.subtopics.map((sub, sIdx) => {

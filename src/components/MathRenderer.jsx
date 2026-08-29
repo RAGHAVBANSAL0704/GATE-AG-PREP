@@ -1,22 +1,85 @@
 import React from 'react';
 import katex from 'katex';
 
-export default function MathRenderer({ content, inline = false, className = "" }) {
-  if (!content) return null;
+// Helper: Escape raw HTML entities to prevent XSS
+export function escapeHtml(unsafe) {
+  if (typeof unsafe !== 'string') {
+    return unsafe === null || unsafe === undefined ? '' : String(unsafe);
+  }
+  return unsafe
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
 
-  // Process markdown bold (**text**), code (`text`), unit formatting, and KaTeX math
+export default function MathRenderer({ content, math, inline = false, className = "" }) {
+  const textContent = content || math;
+  if (!textContent) return null;
+
+  // Process markdown bold (**text**), code (`text`), unit formatting, and KaTeX math safely
   const processMath = (text) => {
-    if (typeof text !== 'string') return text;
+    if (typeof text !== 'string') return '';
+
+    const mathTokens = [];
+    const pushToken = (mathStr, displayMode) => {
+      const token = `___KATEX_MATH_TOKEN_${mathTokens.length}___`;
+      let rendered = '';
+      try {
+        rendered = katex.renderToString(mathStr.trim(), { displayMode, throwOnError: false });
+      } catch (e) {
+        rendered = `<span class="text-inherit font-sans">${escapeHtml(mathStr)}</span>`;
+      }
+      mathTokens.push({ token, rendered });
+      return token;
+    };
 
     let str = text;
 
-    // 1. Automatic Spacing Sanitization for Word & Math Boundaries
+    // 1. Extract display math \[ ... \]
+    str = str.replace(/\\\[([\s\S]*?)\\\]/g, (match, mathStr) => {
+      return pushToken(mathStr, true);
+    });
+
+    // 2. Extract display math $$ ... $$
+    str = str.replace(/\$\$([\s\S]*?)\$\$/g, (match, mathStr) => {
+      return pushToken(mathStr, true);
+    });
+
+    // 3. Extract inline math \( ... \)
+    str = str.replace(/\\\(([\s\S]*?)\\\)/g, (match, mathStr) => {
+      return pushToken(mathStr, false);
+    });
+
+    // 4. Extract inline math $ ... $ (single-line)
+    str = str.replace(/\$([^$\n]+)\$/g, (match, mathStr) => {
+      return pushToken(mathStr, false);
+    });
+
+    // 5. Fallback: If no delimiter was found but string contains LaTeX commands (like \frac, \lambda, \partial)
+    if (mathTokens.length === 0 && (str.includes('\\') || str.includes('^') || str.includes('_') || str.includes('='))) {
+      // Check if string contains dangerous HTML tags first
+      if (!/<[a-zA-Z\/]/.test(str)) {
+        try {
+          const rendered = katex.renderToString(str.trim(), { displayMode: !inline, throwOnError: false });
+          if (rendered) return rendered;
+        } catch (e) {
+          // Fall through to safe escaping
+        }
+      }
+    }
+
+    // 6. Escape all raw HTML entities in non-math segments
+    str = escapeHtml(str);
+
+    // 7. Automatic Spacing Sanitization for Word & Math Boundaries
     str = str.replace(/([a-zA-Z0-9\)])(\$|\\\(|\\\[)/g, '$1 $2')
              .replace(/(\$|\\\)|\\\])([a-zA-Z0-9\(/])/g, '$1 $2')
              .replace(/\]([a-zA-Z])/g, '] $1')
              .replace(/([a-z])\(([a-z]+)\)/gi, '$1 ($2)');
 
-    // 2. Pre-process common engineering units and sub/superscripts
+    // 8. Pre-process common engineering units and sub/superscripts
     str = str.replace(/\bdeg C\b/gi, '°C')
              .replace(/\bo C\b/gi, '°C')
              .replace(/\boC\b/g, '°C')
@@ -30,57 +93,13 @@ export default function MathRenderer({ content, inline = false, className = "" }
              .replace(/N m -2/gi, 'N/m²')
              .replace(/kN m -2/gi, 'kN/m²');
 
-    // 3. Convert markdown bold **text** and inline code `code`
+    // 9. Convert markdown bold **text** and inline code `code` (on escaped safe text)
     str = str.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
     str = str.replace(/`([^`]+)`/g, '<code class="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-blue-600 dark:text-blue-400 font-mono text-xs border border-slate-200 dark:border-slate-700">$1</code>');
 
-    let hasRenderedMath = false;
-
-    // 4. Render KaTeX display math \[ ... \] or $$ ... $$
-    str = str.replace(/\\\[([\s\S]*?)\\\]/g, (match, mathStr) => {
-      hasRenderedMath = true;
-      try {
-        return katex.renderToString(mathStr.trim(), { displayMode: true, throwOnError: false });
-      } catch (e) {
-        return `<span class="text-inherit font-sans">${mathStr}</span>`;
-      }
-    });
-
-    str = str.replace(/\$\$([\s\S]*?)\$\$/g, (match, mathStr) => {
-      hasRenderedMath = true;
-      try {
-        return katex.renderToString(mathStr.trim(), { displayMode: true, throwOnError: false });
-      } catch (e) {
-        return `<span class="text-inherit font-sans">${mathStr}</span>`;
-      }
-    });
-
-    // 5. Render KaTeX inline math \( ... \) or $ ... $
-    str = str.replace(/\\\(([\s\S]*?)\\\)/g, (match, mathStr) => {
-      hasRenderedMath = true;
-      try {
-        return katex.renderToString(mathStr.trim(), { displayMode: false, throwOnError: false });
-      } catch (e) {
-        return `<span class="text-inherit font-sans">${mathStr}</span>`;
-      }
-    });
-
-    str = str.replace(/\$([^$\n]+)\$/g, (match, mathStr) => {
-      hasRenderedMath = true;
-      try {
-        return katex.renderToString(mathStr.trim(), { displayMode: false, throwOnError: false });
-      } catch (e) {
-        return `<span class="text-inherit font-sans">${mathStr}</span>`;
-      }
-    });
-
-    // 6. Fallback: If no delimiter was found but string contains LaTeX commands (like \frac, \lambda, \partial, =, ^, _), render directly
-    if (!hasRenderedMath && (str.includes('\\') || str.includes('^') || str.includes('_') || str.includes('='))) {
-      try {
-        return katex.renderToString(str.trim(), { displayMode: !inline, throwOnError: false });
-      } catch (e) {
-        return str;
-      }
+    // 10. Re-inject safe KaTeX rendered tokens
+    for (const { token, rendered } of mathTokens) {
+      str = str.replace(token, rendered);
     }
 
     return str;
@@ -189,5 +208,5 @@ export default function MathRenderer({ content, inline = false, className = "" }
     );
   };
 
-  return renderContent(content);
+  return renderContent(textContent);
 }

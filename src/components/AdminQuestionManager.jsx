@@ -30,6 +30,7 @@ import {
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import { GATE_AG_SYLLABUS } from '../data/syllabus';
+import { getOfficialSections, getOfficialTopicsForSection, getOfficialSubtopicsForTopic, normalizeSectionTitle } from '../utils/syllabusTaxonomy.js';
 
 const QUICK_LATEX_HELPERS = [
   { label: 'Fraction', latex: '\\frac{a}{b}' },
@@ -65,9 +66,9 @@ export default function AdminQuestionManager({
     id: '',
     year: 2026,
     paperTitle: '',
-    section: 'Section 2: Farm Machinery & Power',
-    topic: 'Farm Machinery & Implements',
-    subtopic: 'Primary & Secondary Tillage Implements',
+    section: 'Section 2: Farm Machinery',
+    topic: 'Farm Machinery',
+    subtopic: 'Soil tillage',
     type: 'MCQ',
     marks: 1,
     question: '',
@@ -79,30 +80,15 @@ export default function AdminQuestionManager({
   const customPapersList = customMockPapers || [];
   const officialPYQYears = [2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007];
 
-  // Helper: Find current syllabus section object
-  const currentSectionObj = useMemo(() => {
-    return GATE_AG_SYLLABUS.find(s => 
-      s.title === formData.section || 
-      s.title.toLowerCase().includes(formData.section.toLowerCase()) ||
-      formData.section.toLowerCase().includes(s.code.toLowerCase())
-    ) || GATE_AG_SYLLABUS[1];
-  }, [formData.section]);
-
   // Helper: Available topics for selected section
   const availableTopics = useMemo(() => {
-    return currentSectionObj.topics || [];
-  }, [currentSectionObj]);
+    return getOfficialTopicsForSection(formData.section);
+  }, [formData.section]);
 
-  // Helper: Find current topic object
-  const currentTopicObj = useMemo(() => {
-    if (!formData.topic) return availableTopics[0] || null;
-    return availableTopics.find(t => t.name === formData.topic) || availableTopics[0] || null;
-  }, [availableTopics, formData.topic]);
-
-  // Helper: Available subtopics for selected topic
+  // Helper: Available subtopics for selected section & topic
   const availableSubtopics = useMemo(() => {
-    return currentTopicObj?.subtopics || [];
-  }, [currentTopicObj]);
+    return getOfficialSubtopicsForTopic(formData.section, formData.topic);
+  }, [formData.section, formData.topic]);
 
   useEffect(() => {
     if (studioMode === 'custom-mocks' && customPapersList.length > 0) {
@@ -140,7 +126,7 @@ export default function AdminQuestionManager({
       });
     } else {
       return questions.filter(q => {
-        if (selectedSectionFilter !== 'All' && q.section !== selectedSectionFilter) return false;
+        if (selectedSectionFilter !== 'All' && normalizeSectionTitle(q.section) !== normalizeSectionTitle(selectedSectionFilter)) return false;
         if (searchQuery.trim() && !q.question.toLowerCase().includes(searchQuery.toLowerCase()) && !q.id.toLowerCase().includes(searchQuery.toLowerCase())) return false;
         return true;
       });
@@ -153,13 +139,19 @@ export default function AdminQuestionManager({
       const safeIndex = Math.min(paperQIndex, activeQuestionsList.length - 1);
       const q = activeQuestionsList[safeIndex];
       if (q) {
+        const canonSec = normalizeSectionTitle(q.section);
+        const canonTopics = getOfficialTopicsForSection(canonSec);
+        const canonTopic = canonTopics.find(t => t.topic_name.toLowerCase() === (q.topic || '').toLowerCase())?.topic_name || canonTopics[0]?.topic_name || '';
+        const canonSubs = getOfficialSubtopicsForTopic(canonSec, canonTopic);
+        const canonSub = canonSubs.find(s => s.toLowerCase() === (q.subtopic || '').toLowerCase()) || canonSubs[0] || q.subtopic || '';
+
         setFormData({
           id: q.id || '',
           year: q.year || 2026,
           paperTitle: q.paperTitle || selectedPaperTitle,
-          section: q.section || 'Section 2: Farm Machinery & Power',
-          topic: q.topic || 'Farm Machinery & Implements',
-          subtopic: q.subtopic || 'Primary & Secondary Tillage Implements',
+          section: canonSec,
+          topic: canonTopic,
+          subtopic: canonSub,
           type: q.type || 'MCQ',
           marks: q.marks || 1,
           question: q.question || '',
@@ -172,9 +164,9 @@ export default function AdminQuestionManager({
   }, [paperQIndex, activeQuestionsList, selectedPaperTitle]);
 
   const handleSectionChange = (newSectionTitle) => {
-    const secObj = GATE_AG_SYLLABUS.find(s => s.title === newSectionTitle) || GATE_AG_SYLLABUS[0];
-    const firstTopic = secObj.topics[0]?.name || '';
-    const firstSubtopic = secObj.topics[0]?.subtopics[0] || '';
+    const topics = getOfficialTopicsForSection(newSectionTitle);
+    const firstTopic = topics[0]?.topic_name || '';
+    const firstSubtopic = getOfficialSubtopicsForTopic(newSectionTitle, firstTopic)[0] || '';
 
     setFormData(prev => ({
       ...prev,
@@ -185,8 +177,8 @@ export default function AdminQuestionManager({
   };
 
   const handleTopicChange = (newTopicName) => {
-    const topObj = availableTopics.find(t => t.name === newTopicName);
-    const firstSub = topObj?.subtopics[0] || '';
+    const subs = getOfficialSubtopicsForTopic(formData.section, newTopicName);
+    const firstSub = subs[0] || '';
     setFormData(prev => ({
       ...prev,
       topic: newTopicName,
@@ -236,10 +228,13 @@ export default function AdminQuestionManager({
       return;
     }
 
-    onSaveEditedQuestion({
+    const payload = {
       ...formData,
+      section: normalizeSectionTitle(formData.section),
       paperTitle: selectedPaperTitle
-    });
+    };
+
+    onSaveEditedQuestion(payload);
 
     setSyncStatusMsg(`✅ Saved answer & question #${formData.id} in ${selectedPaperTitle}!`);
     setTimeout(() => setSyncStatusMsg(''), 3000);
@@ -581,7 +576,7 @@ export default function AdminQuestionManager({
                       className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-2.5 py-2 text-slate-900 dark:text-slate-100 font-medium"
                     >
                       {availableTopics.map((t, idx) => (
-                        <option key={idx} value={t.name}>{t.name}</option>
+                        <option key={idx} value={t.topic_name}>{t.topic_name}</option>
                       ))}
                     </select>
                   </div>
@@ -596,7 +591,6 @@ export default function AdminQuestionManager({
                       {availableSubtopics.map((sub, idx) => (
                         <option key={idx} value={sub}>{sub}</option>
                       ))}
-                      <option value="Custom Subtopic">Custom Subtopic...</option>
                     </select>
                   </div>
                 </div>

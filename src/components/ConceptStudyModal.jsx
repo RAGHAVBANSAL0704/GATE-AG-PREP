@@ -22,6 +22,7 @@ export default function ConceptStudyModal({ question, onClose, onOpenCalc }) {
 
   const sectionName = question.section || 'General Aptitude';
   const topicName = question.topic || 'General Topic';
+  const subtopicName = question.subtopic || '';
   const solutionText = question.solution || question.explanation;
 
   const handleCopyExplanation = () => {

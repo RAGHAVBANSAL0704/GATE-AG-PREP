@@ -1,0 +1,134 @@
+import React from 'react';
+import { 
+  Heart, 
+  HelpCircle, 
+  MessageSquare, 
+  BookOpen, 
+  Award, 
+  FileText, 
+  Mail, 
+  Linkedin, 
+  Send,
+  ArrowUp,
+  ShieldCheck
+} from 'lucide-react';
+
+export default function Footer({ setActiveTab }) {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return (
+    <footer className="w-full bg-slate-900/60 dark:bg-slate-950/80 border-t border-slate-800/60 backdrop-blur-md mt-10 py-5 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl 2xl:max-w-[1500px] mx-auto space-y-4">
+        
+        {/* Main Sleek Bar */}
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
+          
+          {/* Dedication Pill */}
+          <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-800/70 border border-slate-700/60 text-slate-300 text-xs font-medium">
+            <span>Crafted with</span>
+            <Heart className="w-3.5 h-3.5 fill-rose-500 text-rose-500 animate-pulse" />
+            <span>by <strong className="text-emerald-400 font-semibold">Raghav Bansal</strong> for his dear juniors</span>
+          </div>
+
+          {/* Essential Quick Links */}
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs font-medium text-slate-400">
+            <button 
+              onClick={() => setActiveTab('practicehub')} 
+              className="hover:text-emerald-400 transition-colors"
+            >
+              Practice
+            </button>
+            <span>•</span>
+            <button 
+              onClick={() => setActiveTab('mocktest')} 
+              className="hover:text-cyan-400 transition-colors"
+            >
+              CBT Mocks
+            </button>
+            <span>•</span>
+            <button 
+              onClick={() => setActiveTab('syllabus')} 
+              className="hover:text-blue-400 transition-colors"
+            >
+              Syllabus
+            </button>
+            <span>•</span>
+            <button 
+              onClick={() => setActiveTab('support')} 
+              className="hover:text-rose-400 transition-colors"
+            >
+              Support & Contact
+            </button>
+            <span>•</span>
+            <button 
+              onClick={() => setActiveTab('feedback')} 
+              className="hover:text-indigo-400 transition-colors"
+            >
+              Feedback
+            </button>
+          </div>
+
+          {/* Social Icons & Back-to-Top */}
+          <div className="flex items-center gap-3">
+            {/* Email */}
+            <a 
+              href="mailto:raghavbansal0704@gmail.com" 
+              className="p-1.5 rounded-lg bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-emerald-400 transition"
+              title="Email: raghavbansal0704@gmail.com"
+            >
+              <Mail className="w-4 h-4" />
+            </a>
+
+            {/* LinkedIn */}
+            <a 
+              href="https://linkedin.com/in/raghavbansal0704" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="p-1.5 rounded-lg bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-blue-400 transition"
+              title="LinkedIn Profile"
+            >
+              <Linkedin className="w-4 h-4" />
+            </a>
+
+            {/* Telegram Community */}
+            <a 
+              href="https://t.me/gate_ag_prep" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="p-1.5 rounded-lg bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-cyan-400 transition"
+              title="Telegram Community"
+            >
+              <Send className="w-4 h-4" />
+            </a>
+
+            {/* Divider */}
+            <div className="h-4 w-px bg-slate-800" />
+
+            {/* Back to top */}
+            <button 
+              onClick={scrollToTop}
+              className="p-1.5 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/20 transition flex items-center gap-1 text-xs font-bold"
+              title="Scroll to Top"
+            >
+              <ArrowUp className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">Top</span>
+            </button>
+          </div>
+
+        </div>
+
+        {/* Bottom Line */}
+        <div className="pt-3 border-t border-slate-800/40 flex items-center justify-between text-[11px] text-slate-500 font-mono">
+          <div className="flex items-center gap-1.5">
+            <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" />
+            <span>© {new Date().getFullYear()} GATE AG Prep Portal</span>
+          </div>
+          <div>COAET CCS HAU Hisar</div>
+        </div>
+
+      </div>
+    </footer>
+  );
+}

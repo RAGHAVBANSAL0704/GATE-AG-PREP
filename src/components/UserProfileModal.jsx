@@ -15,12 +15,16 @@ import {
   ShieldAlert,
   Save,
   Upload,
-  User
+  User,
+  Eye,
+  EyeOff,
+  AtSign
 } from 'lucide-react';
 import { updateStudentProfile } from '../services/authService';
 
 export default function UserProfileModal({ student, onClose, onProfileUpdated }) {
   const [fullName, setFullName] = useState(student?.full_name || '');
+  const [username, setUsername] = useState(student?.username ? `@${student.username.replace(/^@/, '')}` : '');
   const [gender, setGender] = useState(student?.gender || 'Male');
   const [mobileNumber, setMobileNumber] = useState(student?.mobile_number || '');
   const [dob, setDob] = useState(student?.dob || '');
@@ -30,6 +34,7 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
   const [address, setAddress] = useState(student?.address || '');
   const [photoUrl, setPhotoUrl] = useState(student?.profile_photo_url || '');
   const [newPassword, setNewPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
 
   const [isLoading, setIsLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
@@ -71,11 +76,17 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
       return;
     }
 
+    if (newPassword && newPassword.trim().length > 0 && newPassword.trim().length < 6) {
+      setErrorMsg('New password must be at least 6 characters long.');
+      return;
+    }
+
     setIsLoading(true);
 
     try {
       const res = await updateStudentProfile(student.id, {
         full_name: fullName,
+        username,
         gender,
         mobile_number: mobileNumber,
         dob,
@@ -87,7 +98,15 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
         newPassword
       });
 
-      if (res.success) {
+      if (res.success && res.student) {
+        if (res.student.full_name) setFullName(res.student.full_name);
+        if (res.student.username) setUsername(`@${res.student.username.replace(/^@/, '')}`);
+        if (res.student.mobile_number) setMobileNumber(res.student.mobile_number);
+        if (res.student.dob) setDob(res.student.dob);
+        if (res.student.college_name) setCollegeName(res.student.college_name);
+        if (res.student.address) setAddress(res.student.address);
+        if (res.student.profile_photo_url) setPhotoUrl(res.student.profile_photo_url);
+
         setSuccessMsg(`✅ Profile updated successfully! (${res.updatesRemaining} updates left this week)`);
         onProfileUpdated(res.student);
         setTimeout(() => {
@@ -195,6 +214,25 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
                 onChange={(e) => setFullName(e.target.value)}
                 className="w-full px-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 placeholder-slate-500 focus:outline-none focus:border-emerald-500"
               />
+            </div>
+
+            {/* Unique Username (@username) */}
+            <div className="space-y-1 sm:col-span-2">
+              <label className="font-medium text-slate-300 flex items-center gap-1.5">
+                <AtSign className="w-3.5 h-3.5 text-emerald-400" />
+                Unique Username (@username)
+              </label>
+              <div className="relative">
+                <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-emerald-400 font-mono font-bold">@</span>
+                <input
+                  type="text"
+                  placeholder="aman_kumar"
+                  value={username.replace(/^@/, '')}
+                  onChange={(e) => setUsername(e.target.value.toLowerCase().replace(/[^a-z0-9_]/g, ''))}
+                  className="w-full pl-8 pr-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 placeholder-slate-500 focus:outline-none focus:border-emerald-500 font-mono"
+                />
+              </div>
+              <p className="text-[10px] text-slate-400">Can be used to log in instead of Admission No or Email. Must be unique.</p>
             </div>
 
             {/* Direct Device Image File Picker Button */}
@@ -342,17 +380,29 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
 
             {/* Change Password */}
             <div className="space-y-1 sm:col-span-2 pt-2 border-t border-slate-800">
-              <label className="font-medium text-slate-300 flex items-center gap-1.5">
-                <Lock className="w-3.5 h-3.5 text-emerald-400" />
-                Change Password (Optional)
+              <label className="font-medium text-slate-300 flex items-center justify-between">
+                <span className="flex items-center gap-1.5">
+                  <Lock className="w-3.5 h-3.5 text-emerald-400" />
+                  Change Password (Optional)
+                </span>
               </label>
-              <input
-                type="password"
-                placeholder="Enter new custom password (min 6 chars)"
-                value={newPassword}
-                onChange={(e) => setNewPassword(e.target.value)}
-                className="w-full px-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 focus:outline-none focus:border-emerald-500"
-              />
+              <div className="relative">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Enter new custom password (min 6 chars)"
+                  value={newPassword}
+                  onChange={(e) => setNewPassword(e.target.value)}
+                  className="w-full px-3.5 py-2.5 pr-10 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 focus:outline-none focus:border-emerald-500"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-emerald-400 p-1"
+                  title={showPassword ? "Hide password" : "Show password"}
+                >
+                  {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                </button>
+              </div>
             </div>
 
           </div>

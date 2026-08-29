@@ -13,6 +13,8 @@ import {
   PhoneCall
 } from 'lucide-react';
 
+import { validateCleanInput } from '../utils/profanityFilter';
+
 export default function FeedbackForum() {
   const WHATSAPP_NUMBER = "917206283166";
   const DISPLAY_PHONE = "+91 7206283166";
@@ -22,6 +24,7 @@ export default function FeedbackForum() {
   const [description, setDescription] = useState('');
   const [name, setName] = useState('');
   const [sentStatus, setSentStatus] = useState(false);
+  const [moderationError, setModerationError] = useState('');
 
   const generateWhatsAppUrl = () => {
     const formattedMsg = `*GATE AG Prep — Issue Report*
@@ -40,7 +43,22 @@ _Sent from GATE AG Prep Web Portal_`;
 
   const handleSendWhatsApp = (e) => {
     e.preventDefault();
+    setModerationError('');
     if (!description.trim()) return;
+
+    if (name.trim()) {
+      const nameCheck = validateCleanInput(name, 'Name');
+      if (!nameCheck.isValid) {
+        setModerationError(nameCheck.message);
+        return;
+      }
+    }
+
+    const descCheck = validateCleanInput(description, 'Description');
+    if (!descCheck.isValid) {
+      setModerationError(descCheck.message);
+      return;
+    }
 
     const url = generateWhatsAppUrl();
     window.open(url, '_blank', 'noopener,noreferrer');
@@ -172,6 +190,13 @@ _Sent from GATE AG Prep Web Portal_`;
           </div>
 
         </form>
+
+        {moderationError && (
+          <div className="p-4 rounded-2xl bg-rose-50 dark:bg-rose-950/50 border border-rose-200 dark:border-rose-800 text-rose-900 dark:text-rose-200 text-xs flex items-center gap-3 animate-in fade-in">
+            <AlertCircle className="w-5 h-5 text-rose-600 shrink-0" />
+            <div className="font-bold">{moderationError}</div>
+          </div>
+        )}
 
         {sentStatus && (
           <div className="p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 text-emerald-900 dark:text-emerald-200 text-xs flex items-center gap-3 animate-in fade-in">

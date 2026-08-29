@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Edit3, X, Save, Eye, Sparkles, Check } from 'lucide-react';
 import MathRenderer from './MathRenderer';
+import { getOfficialSections, getOfficialTopicsForSection, getOfficialSubtopicsForTopic, normalizeSectionTitle } from '../utils/syllabusTaxonomy.js';
 
 export default function QuestionEditorModal({ question, onSave, onClose }) {
   if (!question) return null;
@@ -18,7 +19,11 @@ export default function QuestionEditorModal({ question, onSave, onClose }) {
     question: question.question || '',
     options: question.options ? { ...question.options } : { A: '', B: '', C: '', D: '' },
     correct_answer: question.correct_answer || 'A',
-    solution: question.solution || question.explanation || ''
+    solution: question.solution || question.explanation || '',
+    disable_hints: Boolean(question.disable_hints),
+    hint_level_1: (question.hints && question.hints[0]) || '',
+    hint_level_2: (question.hints && question.hints[1]) || '',
+    hint_level_3: (question.hints && question.hints[2]) || ''
   });
 
   const [showLivePreview, setShowLivePreview] = useState(true);
@@ -40,10 +45,16 @@ export default function QuestionEditorModal({ question, onSave, onClose }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const hintsArr = [formData.hint_level_1, formData.hint_level_2, formData.hint_level_3]
+      .map(h => String(h || '').trim())
+      .filter(Boolean);
+
     const updated = {
       ...question,
       ...formData,
-      options: formData.type === 'NAT' ? null : formData.options
+      options: formData.type === 'NAT' ? null : formData.options,
+      disable_hints: Boolean(formData.disable_hints),
+      hints: hintsArr.length > 0 ? hintsArr : null
     };
     onSave(updated);
     setSaveSuccess(true);
@@ -107,14 +118,27 @@ export default function QuestionEditorModal({ question, onSave, onClose }) {
             <div>
               <label className="block font-bold text-slate-400 uppercase tracking-wider mb-1">Section</label>
               <select
-                value={formData.section}
-                onChange={(e) => handleTextChange('section', e.target.value)}
-                className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-3 py-2 text-slate-900 dark:text-slate-100 font-semibold outline-none"
+                value={normalizeSectionTitle(formData.section)}
+                onChange={(e) => {
+                  const sec = e.target.value;
+                  const firstTopic = getOfficialTopicsForSection(sec)[0]?.topic_name || '';
+                  const firstSub = getOfficialSubtopicsForTopic(sec, firstTopic)[0] || '';
+                  setFormData(prev => ({
+                    ...prev,
+                    section: sec,
+                    topic: firstTopic,
+                    subtopic: firstSub
+                  }));
+                }}
+                className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-3 py-2 text-slate-900 dark:text-slate-100 font-semibold outline-none text-xs"
               >
-                <option value="Engineering Mathematics">Engineering Mathematics</option>
-                <option value="Farm Power and Machinery">Farm Power and Machinery</option>
-                <option value="Soil and Water Conservation Engineering">Soil and Water Conservation Engineering</option>
-                <option value="Agricultural Process Engineering">Agricultural Process Engineering</option>
+                <option value="Section 1: Engineering Mathematics">Section 1: Engineering Mathematics</option>
+                <option value="Section 2: Farm Machinery">Section 2: Farm Machinery</option>
+                <option value="Section 3: Farm Power">Section 3: Farm Power</option>
+                <option value="Section 4: Soil and Water Conservation Engineering">Section 4: Soil and Water Conservation Engineering</option>
+                <option value="Section 5: Irrigation and Drainage Engineering">Section 5: Irrigation and Drainage Engineering</option>
+                <option value="Section 6: Agricultural Process Engineering">Section 6: Agricultural Process Engineering</option>
+                <option value="Section 7: Dairy and Food Engineering">Section 7: Dairy and Food Engineering</option>
                 <option value="General Aptitude">General Aptitude</option>
               </select>
             </div>
@@ -160,21 +184,48 @@ export default function QuestionEditorModal({ question, onSave, onClose }) {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
             <div>
               <label className="block font-bold text-slate-400 uppercase tracking-wider mb-1">Topic Name</label>
-              <input
-                type="text"
-                value={formData.topic}
-                onChange={(e) => handleTextChange('topic', e.target.value)}
-                className="w-full bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-xl px-3.5 py-2.5 text-slate-900 dark:text-slate-100 font-medium outline-none"
-              />
+              {(() => {
+                const availTopics = getOfficialTopicsForSection(formData.section);
+                return (
+                  <select
+                    value={formData.topic}
+                    onChange={(e) => {
+                      const top = e.target.value;
+                      const firstSub = getOfficialSubtopicsForTopic(formData.section, top)[0] || '';
+                      setFormData(prev => ({ ...prev, topic: top, subtopic: firstSub }));
+                    }}
+                    className="w-full bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-xl px-3.5 py-2.5 text-slate-900 dark:text-slate-100 font-medium outline-none"
+                  >
+                    {availTopics.length > 0 ? (
+                      availTopics.map(t => <option key={t.topic_name} value={t.topic_name}>{t.topic_name}</option>)
+                    ) : (
+                      <option value={formData.topic}>{formData.topic || 'General'}</option>
+                    )}
+                  </select>
+                );
+              })()}
             </div>
             <div>
-              <label className="block font-bold text-slate-400 uppercase tracking-wider mb-1">Sub-Topic / Keyword</label>
-              <input
-                type="text"
-                value={formData.subtopic}
-                onChange={(e) => handleTextChange('subtopic', e.target.value)}
-                className="w-full bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-xl px-3.5 py-2.5 text-slate-900 dark:text-slate-100 font-medium outline-none"
-              />
+              <label className="block font-bold text-slate-400 uppercase tracking-wider mb-1">Sub-Topic / Detail</label>
+              {(() => {
+                const availSubs = getOfficialSubtopicsForTopic(formData.section, formData.topic);
+                return availSubs.length > 0 ? (
+                  <select
+                    value={formData.subtopic}
+                    onChange={(e) => handleTextChange('subtopic', e.target.value)}
+                    className="w-full bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-xl px-3.5 py-2.5 text-slate-900 dark:text-slate-100 font-medium outline-none"
+                  >
+                    {availSubs.map(st => <option key={st} value={st}>{st}</option>)}
+                  </select>
+                ) : (
+                  <input
+                    type="text"
+                    value={formData.subtopic}
+                    onChange={(e) => handleTextChange('subtopic', e.target.value)}
+                    className="w-full bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-xl px-3.5 py-2.5 text-slate-900 dark:text-slate-100 font-medium outline-none"
+                  />
+                );
+              })()}
             </div>
           </div>
 
@@ -258,6 +309,65 @@ export default function QuestionEditorModal({ question, onSave, onClose }) {
                 </span>
                 <div className="text-xs text-slate-800 dark:text-slate-200 leading-relaxed pt-1">
                   <MathRenderer content={formData.solution} />
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Progressive Hints Configuration (Admin Controlled) */}
+          <div className="space-y-3 pt-2 bg-amber-500/5 dark:bg-amber-950/20 p-4 rounded-2xl border border-amber-500/20">
+            <div className="flex items-center justify-between">
+              <label className="text-xs font-bold text-slate-800 dark:text-amber-300 uppercase tracking-wider flex items-center gap-1.5">
+                <Sparkles className="w-4 h-4 text-amber-500" />
+                <span>Admin Progressive Hints Configuration</span>
+              </label>
+
+              <label className="flex items-center gap-2 cursor-pointer text-xs font-bold text-slate-700 dark:text-slate-300">
+                <input
+                  type="checkbox"
+                  checked={formData.disable_hints}
+                  onChange={(e) => setFormData(prev => ({ ...prev, disable_hints: e.target.checked }))}
+                  className="accent-rose-500 w-4 h-4 rounded"
+                />
+                <span className={formData.disable_hints ? 'text-rose-500 font-extrabold' : ''}>
+                  {formData.disable_hints ? '🚫 Hints Disabled for Question' : 'Enable Progressive Hints'}
+                </span>
+              </label>
+            </div>
+
+            {!formData.disable_hints && (
+              <div className="space-y-3 pt-1">
+                <div>
+                  <label className="block text-[11px] font-bold text-slate-400 mb-1">Level 1 Hint (Core Formula / Concept)</label>
+                  <input
+                    type="text"
+                    value={formData.hint_level_1}
+                    onChange={(e) => handleTextChange('hint_level_1', e.target.value)}
+                    placeholder="e.g. Formula: Power (kW) = (Draft Force × Speed) / 3.6"
+                    className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-3 py-2 text-xs text-slate-900 dark:text-slate-100 outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[11px] font-bold text-slate-400 mb-1">Level 2 Hint (Unit Conversions / SI Guide)</label>
+                  <input
+                    type="text"
+                    value={formData.hint_level_2}
+                    onChange={(e) => handleTextChange('hint_level_2', e.target.value)}
+                    placeholder="e.g. Check SI units: 1 ha = 10,000 m², 1 m/s = 3.6 km/h"
+                    className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-3 py-2 text-xs text-slate-900 dark:text-slate-100 outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[11px] font-bold text-slate-400 mb-1">Level 3 Hint (Algebraic Step Lead-in)</label>
+                  <input
+                    type="text"
+                    value={formData.hint_level_3}
+                    onChange={(e) => handleTextChange('hint_level_3', e.target.value)}
+                    placeholder="e.g. Substitute Q = 45 m³/s into Q = (C*I*A)/360 to isolate C"
+                    className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-3 py-2 text-xs text-slate-900 dark:text-slate-100 outline-none"
+                  />
                 </div>
               </div>
             )}

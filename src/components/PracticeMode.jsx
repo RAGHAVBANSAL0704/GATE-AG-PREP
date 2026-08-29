@@ -25,6 +25,8 @@ import {
 import MathRenderer from './MathRenderer';
 import ConceptStudyModal from './ConceptStudyModal';
 import { GATE_AG_SYLLABUS } from '../data/syllabus';
+import { getProgressiveHints, detectNATUnitMismatch } from '../utils/hintGenerator';
+import { getOfficialSections, getOfficialTopicsForSection, getOfficialSubtopicsForTopic, normalizeSectionTitle } from '../utils/syllabusTaxonomy.js';
 
 const SECTION_NORM_MAP = {
   'farm power and machinery': 'Farm Power and Machinery',
@@ -92,6 +94,8 @@ export default function PracticeMode({ questions, customMockPapers = [], bookmar
   const [submittedState, setSubmittedState] = useState({});
   const [showSolution, setShowSolution] = useState({});
   const [activeConceptQuestion, setActiveConceptQuestion] = useState(null);
+  const [activeHintLevel, setActiveHintLevel] = useState(0);
+  const [natUnitWarning, setNatUnitWarning] = useState(null);
 
   // Real-time clock and session elapsed timer
   const [realTimeStr, setRealTimeStr] = useState(() => new Date().toLocaleTimeString());
@@ -129,34 +133,33 @@ export default function PracticeMode({ questions, customMockPapers = [], bookmar
 
   const sections = [
     'All',
-    'Farm Power and Machinery',
-    'Soil and Water Conservation Engineering',
-    'Agricultural Process Engineering',
-    'Engineering Mathematics',
+    'Section 1: Engineering Mathematics',
+    'Section 2: Farm Machinery',
+    'Section 3: Farm Power',
+    'Section 4: Soil and Water Conservation Engineering',
+    'Section 5: Irrigation and Drainage Engineering',
+    'Section 6: Agricultural Process Engineering',
+    'Section 7: Dairy and Food Engineering',
     'General Aptitude'
   ];
   
   const yearsInPool = ['All', ...new Set(combinedPool.map(q => q.year))].sort().reverse();
 
-  const topics = ['All', ...new Set(
-    combinedPool
-      .filter(q => selectedSection === 'All' || normSec(q.section) === normSec(selectedSection))
-      .map(q => q.topic)
-      .filter(Boolean)
-  )].sort();
+  const topics = [
+    'All',
+    ...getOfficialTopicsForSection(selectedSection).map(t => t.topic_name)
+  ];
 
-  const subtopics = ['All', ...new Set(
-    combinedPool
-      .filter(q => (selectedSection === 'All' || normSec(q.section) === normSec(selectedSection)) && (selectedTopic === 'All' || q.topic === selectedTopic))
-      .map(q => q.subtopic)
-      .filter(Boolean)
-  )].sort();
+  const subtopics = [
+    'All',
+    ...getOfficialSubtopicsForTopic(selectedSection, selectedTopic)
+  ];
 
   const filteredQuestions = combinedPool.filter(q => {
     if (sourceFilter === 'Official GATE PYQs' && q.isCustomUploaded) return false;
     if (sourceFilter === 'Custom Mock Questions' && !q.isCustomUploaded) return false;
 
-    if (selectedSection !== 'All' && normSec(q.section) !== normSec(selectedSection)) return false;
+    if (selectedSection !== 'All' && normalizeSectionTitle(q.section) !== normalizeSectionTitle(selectedSection)) return false;
     if (selectedTopic !== 'All' && q.topic !== selectedTopic) return false;
     if (selectedSubtopic !== 'All' && q.subtopic !== selectedSubtopic) return false;
     if (selectedType !== 'All' && q.type !== selectedType) return false;
@@ -238,6 +241,13 @@ export default function PracticeMode({ questions, customMockPapers = [], bookmar
           isCorrect = !isNaN(target) && Math.abs(numVal - target) <= 0.05;
         }
       }
+    }
+
+    if (!isCorrect && currentQ.type === 'NAT') {
+      const warn = detectNATUnitMismatch(userVal, currentQ);
+      setNatUnitWarning(warn);
+    } else {
+      setNatUnitWarning(null);
     }
 
     setSubmittedState({ ...submittedState, [qId]: { isSubmitted: true, isCorrect } });
@@ -323,16 +333,14 @@ export default function PracticeMode({ questions, customMockPapers = [], bookmar
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {GATE_AG_SYLLABUS.map((sec) => {
-              const rawTitle = sec.title.replace(/^Section \d+:\s*/, '').trim();
-              const normTitle = rawTitle.replace(' and ', ' & ').trim();
-              const secNameMap = normSec(normTitle);
-              const count = questions.filter(q => normSec(q.section) === secNameMap).length;
+              const canonSecName = normalizeSectionTitle(sec.title);
+              const count = questions.filter(q => normalizeSectionTitle(q.section) === canonSecName).length;
 
               return (
                 <div 
                   key={sec.id}
                   className="card-3d rounded-2xl p-6 flex flex-col justify-between space-y-4 group cursor-pointer"
-                  onClick={() => launchPracticeForSection(secNameMap)}
+                  onClick={() => launchPracticeForSection(canonSecName)}
                 >
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
@@ -343,7 +351,7 @@ export default function PracticeMode({ questions, customMockPapers = [], bookmar
                     </div>
 
                     <h3 className="font-bold text-slate-900 dark:text-white text-base leading-snug">
-                      {normTitle}
+                      {sec.title}
                     </h3>
 
                     <p className="text-xs font-mono font-bold text-blue-600 dark:text-blue-400">
@@ -354,7 +362,7 @@ export default function PracticeMode({ questions, customMockPapers = [], bookmar
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
-                      launchPracticeForSection(secNameMap);
+                      launchPracticeForSection(canonSecName);
                     }}
                     className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-blue-600 group-hover:bg-blue-500 text-white text-xs font-extrabold transition shadow-md"
                   >
@@ -602,17 +610,6 @@ export default function PracticeMode({ questions, customMockPapers = [], bookmar
             </div>
 
             <div className="flex items-center gap-2">
-              {onEditQuestion && (
-                <button
-                  onClick={() => onEditQuestion(currentQ)}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-purple-50 dark:bg-purple-950 text-purple-600 dark:text-purple-400 font-bold text-xs border border-purple-200 dark:border-purple-800 hover:bg-purple-600 hover:text-white transition"
-                  title="Manually edit question text, options, key, or solution"
-                >
-                  <Edit3 className="w-3.5 h-3.5" />
-                  <span>Edit Question</span>
-                </button>
-              )}
-
               <button
                 onClick={() => onToggleBookmark(currentQ.id)}
                 className={`p-1.5 rounded-lg border transition ${
@@ -785,6 +782,14 @@ export default function PracticeMode({ questions, customMockPapers = [], bookmar
                 </button>
 
                 <button
+                  onClick={() => setActiveHintLevel(prev => (prev < 3 ? prev + 1 : 0))}
+                  className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-amber-50 dark:bg-amber-950 text-amber-700 dark:text-amber-300 font-bold text-xs border border-amber-200 dark:border-amber-900 transition"
+                >
+                  <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+                  <span>{activeHintLevel === 0 ? '💡 Progressive Hint' : `Hint Level ${activeHintLevel}/3 (Next →)`}</span>
+                </button>
+
+                <button
                   onClick={() => setActiveConceptQuestion(currentQ)}
                   className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-purple-50 dark:bg-purple-950 text-purple-700 dark:text-purple-300 font-bold text-xs border border-purple-200 dark:border-purple-900 transition"
                 >
@@ -813,6 +818,34 @@ export default function PracticeMode({ questions, customMockPapers = [], bookmar
                 </button>
               </div>
             </div>
+
+            {/* NAT Unit Mismatch Alert Box */}
+            {natUnitWarning && (
+              <div className="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/60 border border-amber-300 dark:border-amber-800 text-amber-900 dark:text-amber-200 text-xs font-bold flex items-center gap-3 animate-in fade-in">
+                <Sparkles className="w-5 h-5 text-amber-500 shrink-0" />
+                <div>{natUnitWarning}</div>
+              </div>
+            )}
+
+            {/* Progressive Hint Drawer */}
+            {activeHintLevel > 0 && (() => {
+              const hints = getProgressiveHints(currentQ);
+              const hintObj = hints[activeHintLevel - 1] || hints[0];
+              return (
+                <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-slate-900 dark:text-amber-200 text-xs space-y-2 animate-in fade-in">
+                  <div className="flex items-center justify-between font-extrabold text-amber-600 dark:text-amber-400">
+                    <span className="flex items-center gap-1.5">
+                      <Sparkles className="w-4 h-4 text-amber-500" />
+                      <span>{hintObj.title} (Level {activeHintLevel}/3)</span>
+                    </span>
+                    <button onClick={() => setActiveHintLevel(0)} className="text-slate-400 hover:text-white">✕</button>
+                  </div>
+                  <div className="font-medium text-slate-800 dark:text-slate-200 leading-relaxed">
+                    {hintObj.content}
+                  </div>
+                </div>
+              );
+            })()}
 
             {/* Solution & Personal Notes Display Drawer */}
             {showSolution[currentQ.id] && (

@@ -21,8 +21,10 @@ import {
   Edit3
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
+import { saveTestAttempt } from '../services/testAttemptService';
+import { calculateAttemptXP, awardStudentXP } from '../services/leaderboardService';
 
-export default function MockTestMode({ mockPapers, customMockPapers = [], customPaper, directLaunchPaper, onOpenCalc, onFinishTest, onEditQuestion }) {
+export default function MockTestMode({ mockPapers, customMockPapers = [], customPaper, directLaunchPaper, onOpenCalc, onFinishTest, onEditQuestion, currentStudent }) {
   const [selectedPaper, setSelectedPaper] = useState(null);
   const [testStarted, setTestStarted] = useState(false);
 
@@ -404,9 +406,50 @@ export default function MockTestMode({ mockPapers, customMockPapers = [], custom
       }
     });
 
+    const totalQs = paperQuestions.length || 65;
+    const totalMarks = paperInstructions?.max_marks || 100;
+    const attemptedCount = correctCount + incorrectCount;
+    const accuracy = attemptedCount > 0 ? (correctCount / attemptedCount) * 100 : 0;
+    const finalScore = parseFloat(score.toFixed(2));
+
+    saveTestAttempt({
+      student_id: currentStudent?.id || null,
+      student_name: currentStudent?.full_name || currentStudent?.name || 'Aspirant',
+      admission_no: currentStudent?.admission_no || null,
+      email: currentStudent?.email || null,
+      mobile_number: currentStudent?.mobile_number || null,
+      paper_title: selectedPaper?.title || `GATE ${selectedPaper?.year || 'CBT'} Paper`,
+      paper_year: selectedPaper?.year || '2026',
+      test_type: selectedPaper?.isCustom ? 'custom_mock' : 'cbt_mock',
+      score: finalScore,
+      total_marks: totalMarks,
+      percentage: parseFloat(((finalScore / totalMarks) * 100).toFixed(2)),
+      accuracy_percentage: parseFloat(accuracy.toFixed(2)),
+      correct_count: correctCount,
+      incorrect_count: incorrectCount,
+      unattempted_count: unattemptedCount,
+      total_questions: totalQs,
+      time_spent_seconds: ((paperInstructions?.duration_mins || 180) * 60) - timeLeft,
+      question_responses: Object.keys(userAnswers).map(qid => ({
+        qId: qid,
+        user_answer: userAnswers[qid],
+        status: questionStates[qid]
+      }))
+    });
+
+    // Award XP based on exact rules
+    const xpStats = calculateAttemptXP({
+      correctCount,
+      incorrectCount,
+      totalQuestions: totalQs,
+      isFullMock: totalQs >= 65
+    });
+
+    awardStudentXP(currentStudent?.id, xpStats.totalEarnedXP);
+
     onFinishTest({
       year: selectedPaper?.year || '2026',
-      score: parseFloat(score.toFixed(2)),
+      score: finalScore,
       correctCount,
       incorrectCount,
       unattemptedCount,
@@ -548,16 +591,6 @@ export default function MockTestMode({ mockPapers, customMockPapers = [], custom
                   Question No. {currentQ.qnum}
                 </span>
                 <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
-                  {onEditQuestion && (
-                    <button
-                      onClick={() => onEditQuestion(currentQ)}
-                      className="flex items-center gap-1 px-2.5 py-0.5 rounded bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 font-bold hover:bg-purple-600 hover:text-white transition"
-                      title="Edit Question Statement or Answer Key"
-                    >
-                      <Edit3 className="w-3 h-3" />
-                      <span>Edit</span>
-                    </button>
-                  )}
                   <span className="bg-slate-200 dark:bg-slate-700 px-2 py-0.5 rounded font-mono">
                     {currentQ.type}
                   </span>

@@ -15,16 +15,11 @@ import {
   Gamepad2
 } from 'lucide-react';
 import { GATE_AG_SYLLABUS } from '../data/syllabus';
+import { normalizeSectionTitle } from '../utils/syllabusTaxonomy.js';
 
 const normalizeSectionName = (secName) => {
   if (!secName) return '';
-  const cleaned = secName.replace(/^Section \d+:\s*/i, '').trim().toLowerCase();
-  if (cleaned.includes('farm')) return 'Farm Power and Machinery';
-  if (cleaned.includes('soil') || cleaned.includes('water')) return 'Soil and Water Conservation Engineering';
-  if (cleaned.includes('process') || cleaned.includes('food') || cleaned.includes('agri')) return 'Agricultural Process Engineering';
-  if (cleaned.includes('math')) return 'Engineering Mathematics';
-  if (cleaned.includes('aptitude') || cleaned.includes('general') || cleaned.includes('ga')) return 'General Aptitude';
-  return secName;
+  return normalizeSectionTitle(secName);
 };
 
 export default function Dashboard({ questions, mockPapers = [], customMockPapers = [], userStats, onStartMock, onStartSectionPractice, setActiveTab }) {
@@ -375,11 +370,9 @@ export default function Dashboard({ questions, mockPapers = [], customMockPapers
           <p className="text-xs text-slate-400 mt-0.5">Solve questions sorted by official syllabus sections (Includes PYQs & Custom Mock questions).</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
           {GATE_AG_SYLLABUS.map((sec) => {
-            const rawTitle = sec.title.replace(/^Section \d+:\s*/, '').trim();
-            const normTitle = rawTitle.replace(' and ', ' & ').trim();
-            const canonSecName = normalizeSectionName(sec.title);
+            const canonSecName = normalizeSectionTitle(sec.title);
             const count = sectionCounts[canonSecName] || 0;
 
             return (
@@ -395,10 +388,10 @@ export default function Dashboard({ questions, mockPapers = [], customMockPapers
                     <span className="text-[10px] font-bold text-amber-500">{sec.weightage}</span>
                   </div>
                   <h3 className="font-extrabold text-slate-900 dark:text-white text-xs leading-tight">
-                    {normTitle}
+                    {sec.title}
                   </h3>
                   <p className="text-[11px] font-mono text-slate-400 mt-1">
-                    {count} Solved Qs (PYQs + Custom)
+                    {count} Solved Qs
                   </p>
                 </div>
 

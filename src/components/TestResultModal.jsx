@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import confetti from 'canvas-confetti';
+import { analyzeTestResultForensics } from '../utils/forensicAnalyzer';
 
 export default function TestResultModal({ result, onClose, onRetake }) {
   const [filterType, setFilterType] = useState('ALL'); // 'ALL', 'CORRECT', 'INCORRECT', 'UNATTEMPTED'
@@ -65,18 +66,34 @@ export default function TestResultModal({ result, onClose, onRetake }) {
     const printWindow = window.open('', '_blank', 'width=900,height=1100');
     if (!printWindow) return;
 
+    const escapeHtml = (str) => {
+      if (str === null || str === undefined) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    };
+
     const itemsHtml = paperQuestions.map(q => {
-      const userAns = userAnswers[q.id] || 'Not Answered';
-      const key = q.correct_answer;
+      const rawUserAns = userAnswers[q.id];
+      const userAns = rawUserAns !== undefined && rawUserAns !== '' ? rawUserAns : 'Not Answered';
+      const key = q.correct_answer || q.answer || '';
+      const solution = q.solution || 'Official key confirmed.';
+      const qnum = q.qnum || '';
+      const qtype = q.type || '';
+      const qmarks = q.marks !== undefined ? q.marks : '';
+
       return `
         <div style="margin-bottom: 12px; padding: 10px; border: 1px solid #e2e8f0; border-radius: 8px; font-family: sans-serif; font-size: 12px;">
-          <div style="font-weight: bold; margin-bottom: 4px; color: #0f172a;">Q.${q.qnum} (${q.type} • ${q.marks} Mark)</div>
-          <div style="margin-bottom: 6px; color: #334155;">${q.question}</div>
+          <div style="font-weight: bold; margin-bottom: 4px; color: #0f172a;">Q.${escapeHtml(qnum)} (${escapeHtml(qtype)} • ${escapeHtml(qmarks)} Mark)</div>
+          <div style="margin-bottom: 6px; color: #334155;">${escapeHtml(q.question)}</div>
           <div style="font-family: monospace; font-size: 11px; margin-bottom: 4px; background: #f8fafc; padding: 6px; border-radius: 4px;">
-            <strong>Your Answer:</strong> ${userAns} | <strong>Official Key:</strong> ${key}
+            <strong>Your Answer:</strong> ${escapeHtml(userAns)} | <strong>Official Key:</strong> ${escapeHtml(key)}
           </div>
           <div style="color: #475569; font-size: 11px;">
-            <strong>Solution Note:</strong> ${q.solution || 'Official key confirmed.'}
+            <strong>Solution Note:</strong> ${escapeHtml(solution)}
           </div>
         </div>
       `;
@@ -86,7 +103,7 @@ export default function TestResultModal({ result, onClose, onRetake }) {
       <!DOCTYPE html>
       <html>
         <head>
-          <title>GATE ${year} AG Exam Scorecard Report</title>
+          <title>GATE ${escapeHtml(year)} AG Exam Scorecard Report</title>
           <style>
             body { font-family: system-ui, -apple-system, sans-serif; padding: 24px; color: #0f172a; }
             h1 { font-size: 20px; color: #1e293b; margin-bottom: 4px; }
@@ -98,25 +115,25 @@ export default function TestResultModal({ result, onClose, onRetake }) {
         </head>
         <body>
           <div class="badge">GATE AG PREP PORTAL — OFFICIAL CBT REPORT</div>
-          <h1>GATE ${year} Paper Performance Scorecard</h1>
-          <p style="font-size: 12px; color: #64748b; margin-bottom: 16px;">Test Date: ${new Date().toLocaleDateString()} | Candidate ID: AG-GATE-${year}</p>
+          <h1>GATE ${escapeHtml(year)} Paper Performance Scorecard</h1>
+          <p style="font-size: 12px; color: #64748b; margin-bottom: 16px;">Test Date: ${escapeHtml(new Date().toLocaleDateString())} | Candidate ID: AG-GATE-${escapeHtml(year)}</p>
           
           <div class="grid">
             <div class="card">
               <div>Total Marks</div>
-              <div class="val" style="color: #059669;">${score} / 100</div>
+              <div class="val" style="color: #059669;">${escapeHtml(score)} / 100</div>
             </div>
             <div class="card">
               <div>Correct Answers</div>
-              <div class="val" style="color: #059669;">${correctCount} / ${totalQuestions}</div>
+              <div class="val" style="color: #059669;">${escapeHtml(correctCount)} / ${escapeHtml(totalQuestions)}</div>
             </div>
             <div class="card">
               <div>Incorrect Answers</div>
-              <div class="val" style="color: #dc2626;">${incorrectCount}</div>
+              <div class="val" style="color: #dc2626;">${escapeHtml(incorrectCount)}</div>
             </div>
             <div class="card">
               <div>Accuracy</div>
-              <div class="val" style="color: #7c3aed;">${accuracy}%</div>
+              <div class="val" style="color: #7c3aed;">${escapeHtml(accuracy)}%</div>
             </div>
           </div>
 
@@ -243,6 +260,57 @@ export default function TestResultModal({ result, onClose, onRetake }) {
           </div>
 
         </div>
+
+        {/* Forensic Diagnostics Card */}
+        {(() => {
+          const forensic = analyzeTestResultForensics({
+            questions: paperQuestions,
+            userAnswers: paperQuestions.map(q => ({
+              state: userAnswers[q.id] !== undefined ? 'ANSWERED' : 'NOT_VISITED',
+              answer: userAnswers[q.id]
+            }))
+          });
+
+          return (
+            <div className="p-6 bg-slate-900 text-white border-b border-slate-800 space-y-4">
+              <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-3">
+                <div className="flex items-center gap-2">
+                  <BarChart3 className="w-5 h-5 text-amber-400" />
+                  <span className="font-extrabold text-sm tracking-wide uppercase">Forensic Marks Loss & Diagnostics</span>
+                </div>
+                <div className="text-xs text-rose-400 font-mono font-bold">
+                  Total Lost Marks: -{forensic.totalLostMarks} pts
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+                <div className="bg-slate-800/80 p-3 rounded-xl border border-slate-700 space-y-1">
+                  <div className="text-slate-400 text-[10px] uppercase font-bold">Negative Deductions</div>
+                  <div className="text-rose-400 font-extrabold text-base font-mono">-{forensic.negativeDeductionMarks} pts</div>
+                  <div className="text-[10px] text-slate-400">Strict MCQ wrong answers</div>
+                </div>
+
+                <div className="bg-slate-800/80 p-3 rounded-xl border border-slate-700 space-y-1">
+                  <div className="text-slate-400 text-[10px] uppercase font-bold">Unattempted Missed</div>
+                  <div className="text-amber-400 font-extrabold text-base font-mono">-{forensic.unattemptedLostMarks} pts</div>
+                  <div className="text-[10px] text-slate-400">{unattemptedCount} unattempted questions</div>
+                </div>
+
+                <div className="bg-slate-800/80 p-3 rounded-xl border border-slate-700 space-y-1">
+                  <div className="text-slate-400 text-[10px] uppercase font-bold">NAT Scale / Unit Errors</div>
+                  <div className="text-purple-400 font-extrabold text-base font-mono">{forensic.natUnitScaleErrors} Qs</div>
+                  <div className="text-[10px] text-slate-400">Off by unit/scale factors</div>
+                </div>
+
+                <div className="bg-slate-800/80 p-3 rounded-xl border border-slate-700 space-y-1">
+                  <div className="text-slate-400 text-[10px] uppercase font-bold">NAT Borderline Misses</div>
+                  <div className="text-blue-400 font-extrabold text-base font-mono">{forensic.natBorderlineMisses} Qs</div>
+                  <div className="text-[10px] text-slate-400">Within 20% margin</div>
+                </div>
+              </div>
+            </div>
+          );
+        })()}
 
         {/* Detailed Question Review List */}
         <div className="p-6 space-y-4 max-h-[50vh] overflow-y-auto">

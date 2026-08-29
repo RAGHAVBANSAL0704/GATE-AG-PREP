@@ -24,6 +24,7 @@ import {
 import MathRenderer from './MathRenderer';
 import ConceptStudyModal from './ConceptStudyModal';
 import { GATE_AG_SYLLABUS } from '../data/syllabus';
+import { getOfficialSections, normalizeSectionTitle } from '../utils/syllabusTaxonomy.js';
 
 const SECTION_NORM_MAP = {
   'farm power and machinery': 'Farm Power and Machinery',
@@ -119,17 +120,20 @@ export default function CustomPracticePool({
 
   const sections = [
     'All',
-    'Farm Power and Machinery',
-    'Soil and Water Conservation Engineering',
-    'Agricultural Process Engineering',
-    'Engineering Mathematics',
+    'Section 1: Engineering Mathematics',
+    'Section 2: Farm Machinery',
+    'Section 3: Farm Power',
+    'Section 4: Soil and Water Conservation Engineering',
+    'Section 5: Irrigation and Drainage Engineering',
+    'Section 6: Agricultural Process Engineering',
+    'Section 7: Dairy and Food Engineering',
     'General Aptitude'
   ];
 
   const paperTitles = ['All', ...new Set(customMockPapers.map(p => p.title))];
 
   const filteredQuestions = customQuestions.filter(q => {
-    if (selectedSection !== 'All' && normSec(q.section) !== normSec(selectedSection)) return false;
+    if (selectedSection !== 'All' && normalizeSectionTitle(q.section) !== normalizeSectionTitle(selectedSection)) return false;
     if (selectedPaper !== 'All' && q.paperTitle !== selectedPaper) return false;
     if (selectedType !== 'All' && q.type !== selectedType) return false;
     if (selectedMarks !== 'All' && String(q.marks) !== selectedMarks) return false;
