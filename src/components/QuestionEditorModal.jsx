@@ -237,20 +237,24 @@ export default function QuestionEditorModal({ question, onSave, onClose }) {
               </label>
             </div>
             <textarea
-              rows={4}
+              rows={7}
               value={formData.question}
               onChange={(e) => handleTextChange('question', e.target.value)}
-              className="w-full bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-2xl p-4 text-sm font-sans text-slate-900 dark:text-slate-100 outline-none focus:ring-2 focus:ring-purple-500 leading-relaxed"
+              placeholder="Enter complete question statement here... Supports LaTeX equations (e.g. \( E = mc^2 \) or $$ \int_0^1 f(x)dx $$)."
+              className="w-full min-h-[160px] bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-2xl p-4 text-sm font-sans text-slate-900 dark:text-slate-100 outline-none focus:ring-2 focus:ring-purple-500 leading-relaxed placeholder:text-slate-400 placeholder:text-xs sm:placeholder:text-sm resize-y"
             />
 
-            {showLivePreview && formData.question && (
-              <div className="p-4 rounded-2xl bg-purple-50/50 dark:bg-purple-950/20 border border-purple-200 dark:border-purple-900/50 space-y-1">
-                <span className="text-[10px] font-extrabold uppercase tracking-wider text-purple-600 dark:text-purple-400 flex items-center gap-1">
-                  <Sparkles className="w-3 h-3" />
-                  <span>Live Rendered Question Statement Preview</span>
-                </span>
+            {showLivePreview && (
+              <div className="p-4 rounded-2xl bg-purple-50/50 dark:bg-purple-950/20 border border-purple-200 dark:border-purple-900/50 space-y-1 shadow-xs">
+                <div className="flex items-center justify-between text-[10px] font-extrabold uppercase tracking-wider text-purple-600 dark:text-purple-400">
+                  <span className="flex items-center gap-1">
+                    <Sparkles className="w-3 h-3" />
+                    <span>Live Rendered Question Statement Preview</span>
+                  </span>
+                  <span className="text-slate-400 font-mono">KaTeX Live</span>
+                </div>
                 <div className="text-base font-semibold text-slate-900 dark:text-slate-100 leading-relaxed pt-1">
-                  <MathRenderer content={formData.question} />
+                  <MathRenderer content={formData.question || 'Type question statement above to see live KaTeX rendering...'} />
                 </div>
               </div>
             )}
@@ -276,6 +280,7 @@ export default function QuestionEditorModal({ question, onSave, onClose }) {
                       rows={2}
                       value={formData.options?.[key] || ''}
                       onChange={(e) => handleOptionChange(key, e.target.value)}
+                      placeholder={`Enter statement for Option ${key}...`}
                       className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl p-2.5 text-xs text-slate-900 dark:text-slate-100 outline-none"
                     />
                     {showLivePreview && formData.options?.[key] && (
@@ -295,20 +300,24 @@ export default function QuestionEditorModal({ question, onSave, onClose }) {
               Detailed Step-by-Step Solution & Derivation
             </label>
             <textarea
-              rows={5}
+              rows={10}
               value={formData.solution}
               onChange={(e) => handleTextChange('solution', e.target.value)}
-              className="w-full bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-2xl p-4 text-xs font-sans text-slate-900 dark:text-slate-100 outline-none focus:ring-2 focus:ring-purple-500 leading-relaxed"
+              placeholder="Enter comprehensive step-by-step mathematical derivation, governing formulas, numerical substitution, intermediate values, and final units..."
+              className="w-full min-h-[220px] bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-2xl p-4 text-sm font-sans text-slate-900 dark:text-slate-100 outline-none focus:ring-2 focus:ring-purple-500 leading-relaxed placeholder:text-slate-400 placeholder:text-xs sm:placeholder:text-sm resize-y"
             />
 
-            {showLivePreview && formData.solution && (
-              <div className="p-4 rounded-2xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900/50 space-y-1">
-                <span className="text-[10px] font-extrabold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 flex items-center gap-1">
-                  <Sparkles className="w-3 h-3" />
-                  <span>Live Rendered Solution Preview</span>
-                </span>
+            {showLivePreview && (
+              <div className="p-4 rounded-2xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900/50 space-y-1 shadow-xs">
+                <div className="flex items-center justify-between text-[10px] font-extrabold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
+                  <span className="flex items-center gap-1">
+                    <Sparkles className="w-3 h-3" />
+                    <span>Live Rendered Solution Preview</span>
+                  </span>
+                  <span className="text-slate-400 font-mono">KaTeX Live</span>
+                </div>
                 <div className="text-xs text-slate-800 dark:text-slate-200 leading-relaxed pt-1">
-                  <MathRenderer content={formData.solution} />
+                  <MathRenderer content={formData.solution || 'Type step-by-step derivation above to see live KaTeX rendering...'} />
                 </div>
               </div>
             )}

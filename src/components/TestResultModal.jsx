@@ -11,14 +11,17 @@ import {
   Award,
   BarChart3,
   Download,
-  Printer
+  Printer,
+  Sparkles
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
+import AITutorModal from './AITutorModal';
 import confetti from 'canvas-confetti';
 import { analyzeTestResultForensics } from '../utils/forensicAnalyzer';
 
 export default function TestResultModal({ result, onClose, onRetake }) {
   const [filterType, setFilterType] = useState('ALL'); // 'ALL', 'CORRECT', 'INCORRECT', 'UNATTEMPTED'
+  const [activeAIQuestion, setActiveAIQuestion] = useState(null);
 
   useEffect(() => {
     if (result && result.score > 30) {
@@ -429,9 +432,19 @@ export default function TestResultModal({ result, onClose, onRetake }) {
                     </div>
                   </div>
 
-                  <div className="pt-2 text-xs text-slate-600 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800">
-                    <span className="font-bold text-slate-900 dark:text-white">Solution Note: </span>
-                    {q.solution}
+                  <div className="pt-2 text-xs text-slate-600 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <div>
+                      <span className="font-bold text-slate-900 dark:text-white">Solution Note: </span>
+                      {q.solution}
+                    </div>
+
+                    <button
+                      onClick={() => setActiveAIQuestion({ question: q, userAns, isCorrect })}
+                      className="px-3 py-1.5 rounded-lg bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold text-xs shadow-xs flex items-center gap-1.5 shrink-0 self-start sm:self-auto cursor-pointer"
+                    >
+                      <Sparkles className="w-3.5 h-3.5" />
+                      <span>✨ Ask AI Tutor</span>
+                    </button>
                   </div>
                 </div>
               );
@@ -441,6 +454,18 @@ export default function TestResultModal({ result, onClose, onRetake }) {
         </div>
 
       </div>
+
+      {/* Gemini AI Tutor Modal */}
+      {activeAIQuestion && (
+        <AITutorModal
+          isOpen={Boolean(activeAIQuestion)}
+          onClose={() => setActiveAIQuestion(null)}
+          question={activeAIQuestion.question}
+          studentAnswer={activeAIQuestion.userAns}
+          isCorrect={activeAIQuestion.isCorrect}
+        />
+      )}
+
     </div>
   );
 }

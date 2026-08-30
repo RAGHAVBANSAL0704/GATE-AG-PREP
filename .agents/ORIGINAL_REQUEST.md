@@ -1,26 +1,43 @@
 # Original User Request
 
-## Initial Request — 2026-08-20T20:49:25+05:30
+## 2026-08-30T09:26:07Z
 
-Build an offline Progressive Web App (PWA) capability and automated end-to-end testing suite for the GATE AG Prep Web Portal.
+Full comprehensive codebase audit, security assessment, and architectural review of the GATE Agricultural Engineering (GATE AG) Prep Web Portal.
 
-Working directory: /Users/raghav/Desktop/GATE AG PREP WEB
+Working directory: `/Users/raghav/Desktop/GATE AG PREP WEB`
 Integrity mode: development
 
 ## Requirements
 
-### R1. Offline PWA Capability
-Enable offline availability for the portal so students can attempt practice questions and review formula sheets without an active internet connection.
+### R1. Comprehensive Architecture & Code Quality Audit
+Conduct an adversarial review across all primary application subsystems:
+1. **Scoring & Evaluation Subsystem** (`tests/scoring.test.js`, `src/utils/scoring.js` or mock test evaluators).
+2. **AI Academic Suite & Vision OCR** (`src/components/AIDoubtSolverHub.jsx`, `src/services/geminiService.js`).
+3. **Live Multi-Device Sync & Admin Security** (`src/services/questionSyncService.js`, `src/components/CreatorAdminHQ.jsx`).
+4. **Offline Persistence Engine** (`src/utils/indexedDB.js`, `src/services/testAttemptService.js`).
 
-### R2. Automated Verification & Test Suite
-Implement an automated end-to-end test suite that objectively verifies core student workflows: Practice Mode filtering, CBT Mock Test timing & score calculation, and Formula Sheet rendering.
+### R2. Verification of Test Suite & Mathematical Robustness
+Execute the test suite (`npm test`) and inspect edge-case handling for:
+- Floating-point epsilon tolerances in Numerical Answer Type (NAT) intervals (±0.05).
+- Multiple Select Question (MSQ) case-insensitivity, delimiter variations, and strict zero-partial-credit rules.
+- Negative marking toggle flags (1/3 and 2/3 deductions vs disabled penalties).
+- Offline test queue synchronization and idempotent deduplication.
+
+### R3. Performance, Bundle Size & Memory Audit
+Inspect bundle splitting configuration (`vite.config.js`), asynchronous dataset chunking, and `React.lazy()` / `Suspense` implementations in `src/App.jsx` to confirm optimal Core Web Vitals (LCP, INP, FID) and minimal memory footprints.
+
+### R4. Security & Vulnerability Check
+Audit for client-side vulnerability surfaces:
+- Validate that admin passcode comparisons use SHA-256 hash digests rather than plaintext strings.
+- Verify API key obfuscation mechanisms in `localStorage`.
+- Check input sanitization across discussion forums, math renderers, and chat channels.
 
 ## Acceptance Criteria
 
-### PWA Readiness
-- [ ] Service worker registers successfully and caches application assets for offline usage.
-- [ ] Web App Manifest is correctly linked and valid for PWA installation.
+### Execution & Test Verification
+- [ ] Programmatic execution of `npm test` completes with exit code 0 across all 274 unit tests.
+- [ ] Production build (`npm run build`) compiles cleanly without broken chunk dependencies or rollup cycle errors.
 
-### Automated Testing
-- [ ] Automated test suite runs via a single CLI command (`npm test`) and exits cleanly with 100% passing tests.
-- [ ] Tests verify MCQ, MSQ, and NAT score calculations and result output.
+### Review Deliverables
+- [ ] Complete itemized review report categorized by severity (Critical, High, Medium, Low, Informational).
+- [ ] Concrete, actionable code diffs or recommendations for any identified vulnerabilities or anti-patterns.

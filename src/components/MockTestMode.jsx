@@ -21,6 +21,7 @@ import {
   Edit3
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
+import { evaluateQuestion } from '../utils/scoring.js';
 import { saveTestAttempt } from '../services/testAttemptService';
 import { calculateAttemptXP, awardStudentXP } from '../services/leaderboardService';
 
@@ -350,56 +351,25 @@ export default function MockTestMode({ mockPapers, customMockPapers = [], custom
     let incorrectCount = 0;
     let unattemptedCount = 0;
 
+    const enableNeg = paperInstructions?.enable_negative_marking !== false;
+
     paperQuestions.forEach(q => {
       const state = questionStates[q.id];
       const ans = userAnswers[q.id];
 
-      if ((state === 'ANSWERED' || state === 'ANSWERED_MARKED') && ans !== undefined && ans !== '') {
-        const correctKey = q.correct_answer;
-        let isCorrect = false;
+      const evalRes = evaluateQuestion({
+        question: q,
+        userAnswer: ans,
+        state,
+        enableNegativeMarking: enableNeg
+      });
 
-        const enableNeg = paperInstructions?.enable_negative_marking !== false;
-
-        if (q.type === 'MCQ') {
-          isCorrect = ans.trim().toUpperCase() === correctKey.trim().toUpperCase();
-          if (isCorrect) {
-            score += q.marks;
-            correctCount++;
-          } else {
-            if (enableNeg) {
-              score -= q.negative_marks;
-            }
-            incorrectCount++;
-          }
-        } else if (q.type === 'MSQ') {
-          const userSorted = ans.split(',').map(s => s.trim().toUpperCase()).sort().join(';');
-          const keySorted = correctKey.replace(/,/g, ';').split(';').map(s => s.trim().toUpperCase()).sort().join(';');
-          isCorrect = userSorted === keySorted;
-          if (isCorrect) {
-            score += q.marks;
-            correctCount++;
-          } else {
-            incorrectCount++;
-          }
-        } else if (q.type === 'NAT') {
-          const numVal = parseFloat(ans);
-          if (!isNaN(numVal)) {
-            if (correctKey.includes(' to ')) {
-              const [minStr, maxStr] = correctKey.split(' to ');
-              const min = parseFloat(minStr);
-              const max = parseFloat(maxStr);
-              isCorrect = numVal >= min && numVal <= max;
-            } else {
-              const target = parseFloat(correctKey);
-              isCorrect = Math.abs(numVal - target) < 0.05;
-            }
-          }
-          if (isCorrect) {
-            score += q.marks;
-            correctCount++;
-          } else {
-            incorrectCount++;
-          }
+      if (evalRes.isAttempted) {
+        score += evalRes.marksAwarded;
+        if (evalRes.isCorrect) {
+          correctCount++;
+        } else {
+          incorrectCount++;
         }
       } else {
         unattemptedCount++;

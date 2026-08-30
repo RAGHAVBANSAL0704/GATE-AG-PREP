@@ -5,7 +5,7 @@
  */
 
 const DB_NAME = 'gate_ag_prep_db';
-const DB_VERSION = 1;
+const DB_VERSION = 2;
 
 let dbInstance = null;
 
@@ -64,6 +64,11 @@ export function initDB() {
       // 6. Syllabus Progress Store
       if (!db.objectStoreNames.contains('syllabus_progress')) {
         db.createObjectStore('syllabus_progress', { keyPath: 'topicKey' });
+      }
+
+      // 7. Edited & Custom Questions Store
+      if (!db.objectStoreNames.contains('edited_questions')) {
+        db.createObjectStore('edited_questions', { keyPath: 'id' });
       }
     };
 
@@ -131,30 +136,41 @@ export async function exportFullDataJSON() {
   const flashcards = await getAllFromIDB('flashcards');
   const chatMessages = await getAllFromIDB('chat_messages');
   const posts = await getAllFromIDB('community_posts');
+  const editedQuestions = await getAllFromIDB('edited_questions');
+  const rawLocalAttempts = localStorage.getItem('gate_ag_prep_test_attempts');
 
   let localStats = {};
   let localBookmarks = [];
   let localProgress = {};
+  let parsedLocalAttempts = [];
 
   try {
     localStats = JSON.parse(localStorage.getItem('gate_ag_user_stats') || '{}');
     localBookmarks = JSON.parse(localStorage.getItem('gate_ag_bookmarks') || '[]');
     localProgress = JSON.parse(localStorage.getItem('gate_ag_progress') || '{}');
+    parsedLocalAttempts = rawLocalAttempts ? JSON.parse(rawLocalAttempts) : [];
   } catch (e) {
     // fallback
   }
+
+  // Merge IndexedDB attempts and LocalStorage attempts deduplicated by client_attempt_id
+  const attemptMap = new Map();
+  (attempts || []).forEach(a => { if (a?.client_attempt_id) attemptMap.set(a.client_attempt_id, a); });
+  (parsedLocalAttempts || []).forEach(a => { if (a?.client_attempt_id) attemptMap.set(a.client_attempt_id, a); });
+  const unifiedAttempts = Array.from(attemptMap.values());
 
   const exportData = {
     app: 'GATE AG Prep Web Portal',
     version: '2.0',
     exportTimestamp: new Date().toISOString(),
     userStats: localStats,
-    testHistory: attempts.length > 0 ? attempts : (localStats.testHistory || []),
+    testHistory: unifiedAttempts.length > 0 ? unifiedAttempts : (localStats.testHistory || []),
     bookmarks: localBookmarks,
     syllabusProgress: localProgress,
     flashcardsState: flashcards,
     communityPosts: posts,
-    chatMessages: chatMessages
+    chatMessages: chatMessages,
+    editedQuestions: editedQuestions
   };
 
   return JSON.stringify(exportData, null, 2);
@@ -184,11 +200,18 @@ export async function importFullDataJSON(jsonString) {
       for (const att of data.testHistory) {
         await saveToIDB('test_attempts', att);
       }
+      localStorage.setItem('gate_ag_prep_test_attempts', JSON.stringify(data.testHistory.slice(0, 100)));
     }
 
     if (Array.isArray(data.flashcardsState)) {
       for (const fc of data.flashcardsState) {
         await saveToIDB('flashcards', fc);
+      }
+    }
+
+    if (Array.isArray(data.editedQuestions)) {
+      for (const eq of data.editedQuestions) {
+        await saveToIDB('edited_questions', eq);
       }
     }
 

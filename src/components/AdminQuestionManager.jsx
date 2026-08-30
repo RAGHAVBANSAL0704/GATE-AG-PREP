@@ -521,334 +521,310 @@ export default function AdminQuestionManager({
           </button>
         </div>
       ) : (
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <div className="w-full card-3d rounded-2xl p-6 sm:p-8 space-y-6">
           
-          {/* Left Column: Editor Form */}
-          <div className="lg:col-span-7 card-3d rounded-2xl p-6 space-y-4">
-            <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
-              <span className="text-xs font-extrabold text-blue-600 dark:text-blue-400 uppercase tracking-wider flex items-center gap-1.5">
-                <Edit3 className="w-4 h-4" />
-                <span>Editing {selectedPaperTitle} — Question #{formData.id}</span>
-              </span>
+          {/* Header */}
+          <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4">
+            <span className="text-sm font-extrabold text-blue-600 dark:text-blue-400 uppercase tracking-wider flex items-center gap-2">
+              <Edit3 className="w-4 h-4" />
+              <span>Editing {selectedPaperTitle} — Question #{formData.id}</span>
+            </span>
 
-              <div className="flex items-center gap-2">
-                <button
-                  type="button"
-                  onClick={handleDuplicateQuestion}
-                  className="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-700 dark:text-slate-300 text-xs font-bold transition flex items-center gap-1"
-                  title="Duplicate question"
-                >
-                  <Copy className="w-3.5 h-3.5 text-blue-500" />
-                  <span>Duplicate</span>
-                </button>
-                <span className="text-xs font-mono font-bold px-2.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300">
-                  {formData.type} ({formData.marks}M)
-                </span>
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={handleDuplicateQuestion}
+                className="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-bold transition flex items-center gap-1.5"
+                title="Duplicate question"
+              >
+                <Copy className="w-3.5 h-3.5 text-blue-500" />
+                <span>Duplicate</span>
+              </button>
+              <span className="text-xs font-mono font-bold px-3 py-1 rounded-lg bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300">
+                {formData.type} ({formData.marks}M)
+              </span>
+            </div>
+          </div>
+
+          <form onSubmit={handleSaveCurrentQuestion} className="space-y-5 text-xs">
+            
+            {/* Syllabus Categorization */}
+            <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 space-y-3">
+              <div className="flex items-center gap-1.5 text-xs font-extrabold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
+                <ListFilter className="w-4 h-4" />
+                <span>Syllabus Categorization</span>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div>
+                  <label className="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Section</label>
+                  <select
+                    value={formData.section}
+                    onChange={(e) => handleSectionChange(e.target.value)}
+                    className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-2.5 py-2 text-slate-900 dark:text-slate-100 font-medium"
+                  >
+                    {GATE_AG_SYLLABUS.map(s => <option key={s.id} value={s.title}>{s.title}</option>)}
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Topic</label>
+                  <select
+                    value={formData.topic}
+                    onChange={(e) => handleTopicChange(e.target.value)}
+                    className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-2.5 py-2 text-slate-900 dark:text-slate-100 font-medium"
+                  >
+                    {availableTopics.map((t, idx) => (
+                      <option key={idx} value={t.topic_name}>{t.topic_name}</option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Subtopic</label>
+                  <select
+                    value={formData.subtopic}
+                    onChange={(e) => setFormData({ ...formData, subtopic: e.target.value })}
+                    className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-2.5 py-2 text-slate-900 dark:text-slate-100 font-medium"
+                  >
+                    {availableSubtopics.map((sub, idx) => (
+                      <option key={idx} value={sub}>{sub}</option>
+                    ))}
+                  </select>
+                </div>
               </div>
             </div>
 
-            <form onSubmit={handleSaveCurrentQuestion} className="space-y-4 text-xs">
-              
-              {/* Syllabus Categorization */}
-              <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 space-y-3">
-                <div className="flex items-center gap-1.5 text-xs font-extrabold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
-                  <ListFilter className="w-4 h-4" />
-                  <span>Syllabus Categorization</span>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                  <div>
-                    <label className="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Section</label>
-                    <select
-                      value={formData.section}
-                      onChange={(e) => handleSectionChange(e.target.value)}
-                      className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-2.5 py-2 text-slate-900 dark:text-slate-100 font-medium"
-                    >
-                      {GATE_AG_SYLLABUS.map(s => <option key={s.id} value={s.title}>{s.title}</option>)}
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Topic</label>
-                    <select
-                      value={formData.topic}
-                      onChange={(e) => handleTopicChange(e.target.value)}
-                      className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-2.5 py-2 text-slate-900 dark:text-slate-100 font-medium"
-                    >
-                      {availableTopics.map((t, idx) => (
-                        <option key={idx} value={t.topic_name}>{t.topic_name}</option>
-                      ))}
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Subtopic</label>
-                    <select
-                      value={formData.subtopic}
-                      onChange={(e) => setFormData({ ...formData, subtopic: e.target.value })}
-                      className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-2.5 py-2 text-slate-900 dark:text-slate-100 font-medium"
-                    >
-                      {availableSubtopics.map((sub, idx) => (
-                        <option key={idx} value={sub}>{sub}</option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
+            {/* Type & Marks */}
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Question Type</label>
+                <select
+                  value={formData.type}
+                  onChange={(e) => setFormData({ ...formData, type: e.target.value })}
+                  className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-slate-900 dark:text-slate-100 font-medium"
+                >
+                  <option value="MCQ">MCQ (Multiple Choice)</option>
+                  <option value="MSQ">MSQ (Multiple Select)</option>
+                  <option value="NAT">NAT (Numerical Answer)</option>
+                </select>
               </div>
 
-              {/* Type & Marks */}
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Question Type</label>
-                  <select
-                    value={formData.type}
-                    onChange={(e) => setFormData({ ...formData, type: e.target.value })}
-                    className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-slate-900 dark:text-slate-100 font-medium"
+              <div>
+                <label className="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Marks Weightage</label>
+                <select
+                  value={formData.marks}
+                  onChange={(e) => setFormData({ ...formData, marks: parseInt(e.target.value, 10) })}
+                  className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-slate-900 dark:text-slate-100 font-medium"
+                >
+                  <option value={1}>1 Mark Question</option>
+                  <option value={2}>2 Marks Question</option>
+                </select>
+              </div>
+            </div>
+
+            {/* Quick Agricultural Engineering LaTeX Toolbar */}
+            <div className="space-y-1.5 p-3 rounded-xl bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
+              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1">
+                <Zap className="w-3 h-3 text-amber-500" /> Quick LaTeX Math Toolbar:
+              </span>
+              <div className="flex flex-wrap gap-1">
+                {QUICK_LATEX_HELPERS.map((helper, idx) => (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => insertLatexToField('question', helper.latex)}
+                    className="px-2 py-1 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-[11px] font-mono text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white transition font-bold"
+                    title={`Insert ${helper.latex} into Question`}
                   >
-                    <option value="MCQ">MCQ (Multiple Choice)</option>
-                    <option value="MSQ">MSQ (Multiple Select)</option>
-                    <option value="NAT">NAT (Numerical Answer)</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Marks Weightage</label>
-                  <select
-                    value={formData.marks}
-                    onChange={(e) => setFormData({ ...formData, marks: parseInt(e.target.value, 10) })}
-                    className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-slate-900 dark:text-slate-100 font-medium"
-                  >
-                    <option value={1}>1 Mark Question</option>
-                    <option value={2}>2 Marks Question</option>
-                  </select>
-                </div>
+                    {helper.label}
+                  </button>
+                ))}
               </div>
+            </div>
 
-              {/* Quick Agricultural Engineering LaTeX Toolbar */}
-              <div className="space-y-1.5 p-3 rounded-xl bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
-                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1">
-                  <Zap className="w-3 h-3 text-amber-500" /> Quick LaTeX Math Toolbar:
-                </span>
-                <div className="flex flex-wrap gap-1">
-                  {QUICK_LATEX_HELPERS.map((helper, idx) => (
-                    <button
-                      key={idx}
-                      type="button"
-                      onClick={() => insertLatexToField('question', helper.latex)}
-                      className="px-2 py-1 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-[11px] font-mono text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white transition font-bold"
-                      title={`Insert ${helper.latex} into Question`}
-                    >
-                      {helper.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Question Text */}
-              <div className="space-y-1">
+            {/* Question Text & Real-Time Live Preview Along Editing */}
+            <div className="space-y-2">
+              <div className="flex items-center justify-between">
                 <label className="block font-semibold text-slate-700 dark:text-slate-300">
                   Question Content (Supports LaTeX Math e.g. \( E = mc^2 \))
                 </label>
-                <textarea
-                  rows={4}
-                  required
-                  value={formData.question}
-                  onChange={(e) => setFormData({ ...formData, question: e.target.value })}
-                  className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl p-3 text-slate-900 dark:text-slate-100 font-mono text-xs focus:outline-none focus:border-blue-500"
-                />
+                <span className="text-[10px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 flex items-center gap-1">
+                  <Sparkles className="w-3 h-3" />
+                  <span>Live Question Preview</span>
+                </span>
               </div>
+              
+              <textarea
+                rows={7}
+                required
+                value={formData.question}
+                onChange={(e) => setFormData({ ...formData, question: e.target.value })}
+                placeholder="Enter complete question text here... Supports LaTeX equations (e.g. \( E = mc^2 \) or $$ \int_0^1 f(x)dx $$)."
+                className="w-full min-h-[160px] bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl p-4 text-slate-900 dark:text-slate-100 font-mono text-sm leading-relaxed focus:outline-none focus:ring-2 focus:ring-blue-500/40 focus:border-blue-500 placeholder:text-slate-400 placeholder:text-xs sm:placeholder:text-sm resize-y"
+              />
 
-              {/* MCQ/MSQ Options */}
-              {(formData.type === 'MCQ' || formData.type === 'MSQ') && formData.options && (
-                <div className="space-y-2.5 pt-1">
-                  <label className="block font-semibold text-slate-700 dark:text-slate-300">Options (A, B, C, D)</label>
-                  {['A', 'B', 'C', 'D'].map((key) => (
-                    <div key={key} className="flex items-center gap-2">
-                      <button
-                        type="button"
-                        onClick={() => handleToggleAnswerKeyPill(key)}
-                        className={`w-6 h-6 rounded-full text-[10px] font-bold flex items-center justify-center shrink-0 transition ${
-                          (formData.correct_answer || '').includes(key)
-                            ? 'bg-emerald-600 text-white shadow-md ring-2 ring-emerald-400'
-                            : 'bg-blue-600 text-white opacity-60 hover:opacity-100'
-                        }`}
-                        title={`Click to set ${key} as Correct Answer Key`}
-                      >
-                        {key}
-                      </button>
-                      <input
-                        type="text"
-                        value={formData.options[key] || ''}
-                        onChange={(e) => handleFormOptionChange(key, e.target.value)}
-                        placeholder={`Option ${key} text`}
-                        className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-slate-900 dark:text-slate-100 font-mono text-xs focus:outline-none focus:border-blue-500"
-                      />
-                    </div>
-                  ))}
-                </div>
-              )}
-
-              {/* 1-Click Interactive Answer Key Picker Section */}
-              <div className="p-4 rounded-xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-900/60 space-y-3">
-                <div className="flex items-center justify-between">
-                  <label className="font-extrabold text-xs text-blue-900 dark:text-blue-200 flex items-center gap-1.5">
-                    <CheckSquare className="w-4 h-4 text-emerald-500" />
-                    <span>1-Click Answer Key Picker ({formData.type})</span>
-                  </label>
-                  <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300">
-                    Active Key: {formData.correct_answer || 'None'}
+              {/* Inline Live Question KaTeX Preview */}
+              <div className="p-4 rounded-xl bg-blue-50/70 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-900/60 space-y-2 shadow-xs">
+                <div className="flex items-center justify-between text-[11px] font-extrabold uppercase tracking-wider text-blue-700 dark:text-blue-300">
+                  <span className="flex items-center gap-1.5">
+                    <Sparkles className="w-3.5 h-3.5 text-blue-500" />
+                    <span>Live Question Preview (KaTeX Math)</span>
                   </span>
+                  <span className="text-[10px] font-mono text-slate-500 dark:text-slate-400">Updates live as you type</span>
                 </div>
+                <div className="text-sm font-semibold text-slate-900 dark:text-slate-100 leading-relaxed bg-white dark:bg-slate-900 p-3.5 rounded-lg border border-blue-100 dark:border-blue-950 min-h-[52px]">
+                  <MathRenderer content={formData.question || 'Type question text above to see live KaTeX preview...'} />
+                </div>
+              </div>
+            </div>
 
-                {(formData.type === 'MCQ' || formData.type === 'MSQ') ? (
-                  <div className="flex items-center gap-2 pt-1">
-                    {['A', 'B', 'C', 'D'].map((key) => {
-                      const isSelected = (formData.correct_answer || '').includes(key);
-                      return (
-                        <button
-                          key={key}
-                          type="button"
-                          onClick={() => handleToggleAnswerKeyPill(key)}
-                          className={`flex-1 py-2.5 px-3 rounded-xl font-bold text-xs font-mono transition flex items-center justify-center gap-1.5 ${
-                            isSelected
-                              ? 'bg-emerald-600 text-white shadow-md ring-2 ring-emerald-400 font-extrabold'
-                              : 'bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-emerald-500'
-                          }`}
-                        >
-                          {isSelected && <Check className="w-3.5 h-3.5 text-white" />}
-                          <span>Option {key}</span>
-                        </button>
-                      );
-                    })}
-                  </div>
-                ) : (
-                  /* NAT Numerical freeform input */
-                  <div className="space-y-2">
+            {/* MCQ/MSQ Options */}
+            {(formData.type === 'MCQ' || formData.type === 'MSQ') && formData.options && (
+              <div className="space-y-2.5 pt-1">
+                <label className="block font-semibold text-slate-700 dark:text-slate-300">Options (A, B, C, D)</label>
+                {['A', 'B', 'C', 'D'].map((key) => (
+                  <div key={key} className="flex items-center gap-2">
+                    <button
+                      type="button"
+                      onClick={() => handleToggleAnswerKeyPill(key)}
+                      className={`w-6 h-6 rounded-full text-[10px] font-bold flex items-center justify-center shrink-0 transition ${
+                        (formData.correct_answer || '').includes(key)
+                          ? 'bg-emerald-600 text-white shadow-md ring-2 ring-emerald-400'
+                          : 'bg-blue-600 text-white opacity-60 hover:opacity-100'
+                      }`}
+                      title={`Click to set ${key} as Correct Answer Key`}
+                    >
+                      {key}
+                    </button>
                     <input
                       type="text"
-                      required
-                      value={formData.correct_answer}
-                      onChange={(e) => setFormData({ ...formData, correct_answer: e.target.value })}
-                      placeholder="Numerical answer (e.g. 12.5 or 0.12 to 0.15)"
-                      className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-slate-900 dark:text-slate-100 font-mono text-xs focus:outline-none focus:border-blue-500"
+                      value={formData.options[key] || ''}
+                      onChange={(e) => handleFormOptionChange(key, e.target.value)}
+                      placeholder={`Option ${key} text`}
+                      className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-slate-900 dark:text-slate-100 font-mono text-xs focus:outline-none focus:border-blue-500"
                     />
                   </div>
-                )}
+                ))}
+              </div>
+            )}
+
+            {/* 1-Click Interactive Answer Key Picker Section */}
+            <div className="p-4 rounded-xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-900/60 space-y-3">
+              <div className="flex items-center justify-between">
+                <label className="font-extrabold text-xs text-blue-900 dark:text-blue-200 flex items-center gap-1.5">
+                  <CheckSquare className="w-4 h-4 text-emerald-500" />
+                  <span>1-Click Answer Key Picker ({formData.type})</span>
+                </label>
+                <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300">
+                  Active Key: {formData.correct_answer || 'None'}
+                </span>
               </div>
 
-              {/* Solution */}
-              <div className="space-y-1">
-                <div className="flex items-center justify-between">
-                  <label className="block font-semibold text-slate-700 dark:text-slate-300">
-                    Step-by-Step Solution / Derivation
-                  </label>
-                  <div className="flex items-center gap-1">
+              {(formData.type === 'MCQ' || formData.type === 'MSQ') ? (
+                <div className="flex items-center gap-2 pt-1">
+                  {['A', 'B', 'C', 'D'].map((key) => {
+                    const isSelected = (formData.correct_answer || '').includes(key);
+                    return (
+                      <button
+                        key={key}
+                        type="button"
+                        onClick={() => handleToggleAnswerKeyPill(key)}
+                        className={`flex-1 py-2.5 px-3 rounded-xl font-bold text-xs font-mono transition flex items-center justify-center gap-1.5 ${
+                          isSelected
+                            ? 'bg-emerald-600 text-white shadow-md ring-2 ring-emerald-400 font-extrabold'
+                            : 'bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-emerald-500'
+                        }`}
+                      >
+                        {isSelected && <Check className="w-3.5 h-3.5 text-white" />}
+                        <span>Option {key}</span>
+                      </button>
+                    );
+                  })}
+                </div>
+              ) : (
+                /* NAT Numerical freeform input */
+                <div className="space-y-2">
+                  <input
+                    type="text"
+                    required
+                    value={formData.correct_answer}
+                    onChange={(e) => setFormData({ ...formData, correct_answer: e.target.value })}
+                    placeholder="Numerical answer (e.g. 12.5 or 0.12 to 0.15)"
+                    className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-slate-900 dark:text-slate-100 font-mono text-xs focus:outline-none focus:border-blue-500"
+                  />
+                </div>
+              )}
+            </div>
+
+            {/* Solution & Real-Time Live Preview Along Editing */}
+            <div className="space-y-2">
+              <div className="flex items-center justify-between">
+                <label className="block font-semibold text-slate-700 dark:text-slate-300">
+                  Step-by-Step Solution / Derivation
+                </label>
+                <div className="flex items-center gap-2">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 flex items-center gap-1">
+                    <CheckCircle2 className="w-3 h-3" />
+                    <span>Live Answer Preview</span>
+                  </span>
+                  <div className="flex items-center gap-1 pl-2 border-l border-slate-200 dark:border-slate-800">
                     {QUICK_LATEX_HELPERS.slice(0, 3).map((helper, idx) => (
                       <button
                         key={idx}
                         type="button"
                         onClick={() => insertLatexToField('solution', helper.latex)}
-                        className="text-[10px] text-blue-600 dark:text-blue-400 hover:underline font-mono"
+                        className="text-[10px] text-blue-600 dark:text-blue-400 hover:underline font-mono font-semibold"
                       >
                         +{helper.label}
                       </button>
                     ))}
                   </div>
                 </div>
-                <textarea
-                  rows={4}
-                  value={formData.solution}
-                  onChange={(e) => setFormData({ ...formData, solution: e.target.value })}
-                  placeholder="Detailed solution derivation..."
-                  className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl p-3 text-slate-900 dark:text-slate-100 font-mono text-xs focus:outline-none focus:border-blue-500"
-                />
               </div>
+              
+              <textarea
+                rows={10}
+                value={formData.solution}
+                onChange={(e) => setFormData({ ...formData, solution: e.target.value })}
+                placeholder="Enter comprehensive step-by-step mathematical derivation, governing formulas, numerical substitution, intermediate values, and final units (e.g. \( \eta = \frac{W}{Q_H} \))..."
+                className="w-full min-h-[220px] bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl p-4 text-slate-900 dark:text-slate-100 font-mono text-sm leading-relaxed focus:outline-none focus:ring-2 focus:ring-emerald-500/40 focus:border-emerald-500 placeholder:text-slate-400 placeholder:text-xs sm:placeholder:text-sm resize-y"
+              />
 
-              <div className="pt-2 flex items-center justify-between">
-                <button
-                  type="button"
-                  onClick={onOpenCalc}
-                  className="px-4 py-2.5 rounded-xl border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 font-bold text-xs hover:bg-blue-600 hover:text-white transition"
-                >
-                  Scientific Calc
-                </button>
-
-                <button
-                  type="submit"
-                  className="flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-xs shadow-md transition"
-                >
-                  <Save className="w-4 h-4" />
-                  <span>Save Answer Key & Question</span>
-                </button>
-              </div>
-
-            </form>
-          </div>
-
-          {/* Right Column: Live Student View Preview */}
-          <div className="lg:col-span-5 card-3d rounded-2xl p-6 space-y-4 bg-slate-50/50 dark:bg-slate-900/50">
-            <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
-              <span className="text-xs font-extrabold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider flex items-center gap-1.5">
-                <Eye className="w-4 h-4" />
-                <span>Live Student View Preview</span>
-              </span>
-              <span className="text-[10px] font-bold text-blue-600 dark:text-blue-400 uppercase tracking-wider">
-                Real-Time KaTeX
-              </span>
-            </div>
-
-            <div className="space-y-4">
-              <div className="space-y-1">
-                <div className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase">
-                  {formData.section}
+              {/* Inline Live Step-by-Step Solution KaTeX Preview */}
+              <div className="p-4 rounded-xl bg-emerald-50/70 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-900/60 space-y-2 shadow-xs">
+                <div className="flex items-center justify-between text-[11px] font-extrabold uppercase tracking-wider text-emerald-700 dark:text-emerald-300">
+                  <span className="flex items-center gap-1.5">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+                    <span>Live Step-by-Step Solution Preview (KaTeX Math)</span>
+                  </span>
+                  <span className="text-[10px] font-mono text-slate-500 dark:text-slate-400">Updates live as you type</span>
                 </div>
-                <div className="text-[11px] font-mono text-emerald-600 dark:text-emerald-400 font-bold">
-                  {formData.topic} • {formData.subtopic}
-                </div>
-              </div>
-
-              <div className="text-sm font-semibold text-slate-900 dark:text-slate-100 leading-relaxed bg-white dark:bg-slate-950 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-xs">
-                <MathRenderer content={formData.question || 'Question preview will appear here...'} />
-              </div>
-
-              {(formData.type === 'MCQ' || formData.type === 'MSQ') && formData.options && (
-                <div className="space-y-2">
-                  {Object.entries(formData.options).map(([k, v]) => (
-                    <div 
-                      key={k} 
-                      className={`p-3 rounded-xl text-xs flex items-start gap-2.5 border transition ${
-                        (formData.correct_answer || '').includes(k)
-                          ? 'bg-emerald-50 dark:bg-emerald-950/60 border-emerald-300 dark:border-emerald-700'
-                          : 'bg-white dark:bg-slate-950 border-slate-200 dark:border-slate-800'
-                      }`}
-                    >
-                      <span className={`w-5 h-5 rounded-full text-[10px] font-bold flex items-center justify-center shrink-0 ${
-                        (formData.correct_answer || '').includes(k)
-                          ? 'bg-emerald-600 text-white'
-                          : 'bg-blue-600 text-white'
-                      }`}>
-                        {k}
-                      </span>
-                      <div className="pt-0.5">
-                        <MathRenderer content={v || 'Option text'} />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-
-              <div className="p-4 rounded-xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800 space-y-2 text-xs">
-                <div className="font-extrabold text-blue-700 dark:text-blue-300 flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-                  <span>Correct Answer Key: {formData.correct_answer || 'Not set'}</span>
-                </div>
-                <div className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                  <MathRenderer content={formData.solution || 'Solution derivation preview...'} />
+                <div className="text-sm text-slate-800 dark:text-slate-200 leading-relaxed bg-white dark:bg-slate-900 p-3.5 rounded-lg border border-emerald-100 dark:border-emerald-950 min-h-[52px]">
+                  <MathRenderer content={formData.solution || 'Type step-by-step solution derivation above to see live KaTeX preview...'} />
                 </div>
               </div>
             </div>
-          </div>
 
+            <div className="pt-3 flex items-center justify-between">
+              <button
+                type="button"
+                onClick={onOpenCalc}
+                className="px-4 py-2.5 rounded-xl border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 font-bold text-xs hover:bg-blue-600 hover:text-white transition"
+              >
+                Scientific Calc
+              </button>
+
+              <button
+                type="submit"
+                className="flex items-center gap-1.5 px-6 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-xs shadow-md transition"
+              >
+                <Save className="w-4 h-4" />
+                <span>Save Answer Key & Question</span>
+              </button>
+            </div>
+
+          </form>
         </div>
       )}
 

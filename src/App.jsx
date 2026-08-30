@@ -1,34 +1,44 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, Suspense, lazy } from 'react';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Dashboard from './components/Dashboard';
-import PracticeMode from './components/PracticeMode';
-import MockTestMode from './components/MockTestMode';
-import DownloadsHub from './components/DownloadsHub';
-import CustomTestCreator from './components/CustomTestCreator';
-import CustomPracticePool from './components/CustomPracticePool';
-import FeedbackForum from './components/FeedbackForum';
-import SyllabusTracker from './components/SyllabusTracker';
-import FormulaSheet from './components/FormulaSheet';
-import RevisionBank from './components/RevisionBank';
-import ImportantConcepts from './components/ImportantConcepts';
-import CreatorPage from './components/CreatorPage';
-import ScientificCalculator from './components/ScientificCalculator';
-import TestResultModal from './components/TestResultModal';
-import QuestionEditorModal from './components/QuestionEditorModal';
-import AdminQuestionManager from './components/AdminQuestionManager';
-import AuthModal from './components/AuthModal';
-import UserProfileModal from './components/UserProfileModal';
-import SupportPage from './components/SupportPage';
-import GamesZone from './components/GamesZone';
 import PracticeHub from './components/PracticeHub';
-import LearningHub from './components/LearningHub';
-import PerformanceAnalytics from './components/PerformanceAnalytics';
-import Leaderboard from './components/Leaderboard';
 import Footer from './components/Footer';
+
+// Code-split heavy sub-tabs for ultra-fast initial page load (< 200ms)
+const MockTestMode = lazy(() => import('./components/MockTestMode'));
+const LearningHub = lazy(() => import('./components/LearningHub'));
+const CommunityHub = lazy(() => import('./components/CommunityHub'));
+const CreatorAdminHQ = lazy(() => import('./components/CreatorAdminHQ'));
+const PerformanceAnalytics = lazy(() => import('./components/PerformanceAnalytics'));
+const Leaderboard = lazy(() => import('./components/Leaderboard'));
+const FeedbackForum = lazy(() => import('./components/FeedbackForum'));
+const DownloadsHub = lazy(() => import('./components/DownloadsHub'));
+const SyllabusTracker = lazy(() => import('./components/SyllabusTracker'));
+const GamesZone = lazy(() => import('./components/GamesZone'));
+const ScientificCalculator = lazy(() => import('./components/ScientificCalculator'));
+const TestResultModal = lazy(() => import('./components/TestResultModal'));
+const QuestionEditorModal = lazy(() => import('./components/QuestionEditorModal'));
+const AuthModal = lazy(() => import('./components/AuthModal'));
+const UserProfileModal = lazy(() => import('./components/UserProfileModal'));
+
+function TabLoadingSkeleton() {
+  return (
+    <div className="p-8 space-y-4 max-w-4xl mx-auto animate-pulse">
+      <div className="h-8 bg-slate-200 dark:bg-slate-800 rounded-2xl w-1/3"></div>
+      <div className="h-32 bg-slate-100 dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800"></div>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className="h-24 bg-slate-100 dark:bg-slate-900 rounded-2xl"></div>
+        <div className="h-24 bg-slate-100 dark:bg-slate-900 rounded-2xl"></div>
+        <div className="h-24 bg-slate-100 dark:bg-slate-900 rounded-2xl"></div>
+      </div>
+    </div>
+  );
+}
 
 import { checkCurrentSession, logoutStudent } from './services/authService';
 import { initAutoSyncOnReconnect } from './services/testAttemptService';
+import { saveAndBroadcastQuestion, subscribeToLiveQuestionSync } from './services/questionSyncService';
 import { saveToIDB } from './utils/indexedDB';
 
 import initialQuestions from './data/questions.json';
@@ -56,7 +66,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState(() => {
     try {
       const hash = window.location.hash.replace(/^#\/?/, '');
-      const validTabs = ['dashboard', 'practicehub', 'practice', 'custompractice', 'customtest', 'learninghub', 'concepts', 'simulators', 'flashcards', 'chat', 'qa', 'revision', 'formulas', 'mocktest', 'games', 'admin', 'feedback', 'downloads', 'syllabus', 'creator', 'support'];
+      const validTabs = ['dashboard', 'practicehub', 'practice', 'custompractice', 'customtest', 'learninghub', 'concepts', 'simulators', 'flashcards', 'community', 'chat', 'qa', 'discussions', 'ai_tutor', 'aisolver', 'aitutor', 'revision', 'formulas', 'mocktest', 'games', 'admin', 'feedback', 'downloads', 'syllabus', 'creator', 'support', 'hq'];
       if (validTabs.includes(hash)) {
         return hash;
       }
@@ -69,7 +79,7 @@ export default function App() {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace(/^#\/?/, '');
-      const validTabs = ['dashboard', 'practicehub', 'practice', 'custompractice', 'customtest', 'learninghub', 'concepts', 'simulators', 'flashcards', 'chat', 'qa', 'revision', 'formulas', 'mocktest', 'games', 'admin', 'feedback', 'downloads', 'syllabus', 'creator', 'support'];
+      const validTabs = ['dashboard', 'practicehub', 'practice', 'custompractice', 'customtest', 'learninghub', 'concepts', 'simulators', 'flashcards', 'community', 'chat', 'qa', 'discussions', 'ai_tutor', 'aisolver', 'aitutor', 'revision', 'formulas', 'mocktest', 'games', 'admin', 'feedback', 'downloads', 'syllabus', 'creator', 'support', 'hq'];
       if (validTabs.includes(hash)) {
         setActiveTab(hash);
       }
@@ -77,6 +87,10 @@ export default function App() {
     window.addEventListener('hashchange', handleHashChange);
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [activeTab]);
 
   useEffect(() => {
     const cleanup = initAutoSyncOnReconnect();
@@ -171,6 +185,19 @@ export default function App() {
     localStorage.setItem('gate_ag_edited_questions_map', JSON.stringify(editedQuestionsMap));
   }, [editedQuestionsMap]);
 
+  // Live Multi-Device Sync: subscribe to realtime question updates
+  useEffect(() => {
+    const unsubscribe = subscribeToLiveQuestionSync((remoteUpdatedQ) => {
+      if (remoteUpdatedQ && remoteUpdatedQ.id) {
+        setEditedQuestionsMap(prev => ({
+          ...prev,
+          [remoteUpdatedQ.id]: remoteUpdatedQ
+        }));
+      }
+    });
+    return unsubscribe;
+  }, []);
+
   const handleSaveEditedQuestion = (updatedQ) => {
     setEditedQuestionsMap(prev => {
       const nextMap = { ...prev, [updatedQ.id]: updatedQ };
@@ -180,6 +207,7 @@ export default function App() {
       return nextMap;
     });
     saveToIDB('edited_questions', updatedQ);
+    saveAndBroadcastQuestion(updatedQ);
   };
 
   // Dynamically apply manual question edits across all question pools
@@ -369,152 +397,164 @@ export default function App() {
       {/* Main Wide Canvas */}
       <div className="flex-1 flex flex-col min-w-0 overflow-y-auto">
         <main className="flex-1 max-w-7xl 2xl:max-w-[1500px] w-full mx-auto px-3 sm:px-6 lg:px-8 pt-16 sm:pt-6 pb-8">
-          {activeTab === 'dashboard' && (
-            <Dashboard
-              questions={questions}
-              mockPapers={mockPapers}
-              customMockPapers={customMockPapers}
-              userStats={userStats}
-              onStartMock={handleStartMock}
-              onStartSectionPractice={handleStartSectionPractice}
-              setActiveTab={setActiveTab}
-            />
-          )}
+          <Suspense fallback={<TabLoadingSkeleton />}>
+            {activeTab === 'dashboard' && (
+              <Dashboard
+                questions={questions}
+                mockPapers={mockPapers}
+                customMockPapers={customMockPapers}
+                userStats={userStats}
+                onStartMock={handleStartMock}
+                onStartSectionPractice={handleStartSectionPractice}
+                setActiveTab={setActiveTab}
+              />
+            )}
 
-          {['practicehub', 'practice', 'custompractice', 'customtest'].includes(activeTab) && (
-            <PracticeHub
-              activeSubTab={activeTab === 'practicehub' ? 'practice' : activeTab}
-              onSubTabChange={(subTab) => setActiveTab(subTab)}
-              questions={questions}
-              customMockPapers={customMockPapers}
-              mockPapers={mockPapers}
-              bookmarks={bookmarks}
-              onToggleBookmark={handleToggleBookmark}
-              practiceSection={practiceSection}
-              onOpenCalc={() => setIsCalcOpen(true)}
-              onEditQuestion={(q) => setEditingQuestion(q)}
-              onStartCustomTest={handleStartCustomTest}
-            />
-          )}
+            {['practicehub', 'practice', 'custompractice', 'customtest'].includes(activeTab) && (
+              <PracticeHub
+                activeSubTab={activeTab === 'practicehub' ? 'practice' : activeTab}
+                onSubTabChange={(subTab) => setActiveTab(subTab)}
+                questions={questions}
+                customMockPapers={customMockPapers}
+                mockPapers={mockPapers}
+                bookmarks={bookmarks}
+                onToggleBookmark={handleToggleBookmark}
+                practiceSection={practiceSection}
+                onOpenCalc={() => setIsCalcOpen(true)}
+                onEditQuestion={(q) => setEditingQuestion(q)}
+                onStartCustomTest={handleStartCustomTest}
+              />
+            )}
 
-          {['learninghub', 'concepts', 'simulators', 'flashcards', 'chat', 'qa', 'revision', 'formulas'].includes(activeTab) && (
-            <LearningHub
-              activeSubTab={activeTab === 'learninghub' ? 'concepts' : activeTab}
-              onSubTabChange={(subTab) => setActiveTab(subTab)}
-              questions={questions}
-              customMockPapers={customMockPapers}
-              userStats={userStats}
-              bookmarks={bookmarks}
-              onToggleBookmark={handleToggleBookmark}
-              onOpenCalc={() => setIsCalcOpen(true)}
-              onEditQuestion={(q) => setEditingQuestion(q)}
-              currentStudent={currentStudent}
-            />
-          )}
+            {['learninghub', 'concepts', 'simulators', 'flashcards', 'revision', 'formulas'].includes(activeTab) && (
+              <LearningHub
+                activeSubTab={activeTab === 'learninghub' ? 'concepts' : activeTab}
+                onSubTabChange={(subTab) => setActiveTab(subTab)}
+                questions={questions}
+                customMockPapers={customMockPapers}
+                userStats={userStats}
+                bookmarks={bookmarks}
+                onToggleBookmark={handleToggleBookmark}
+                onOpenCalc={() => setIsCalcOpen(true)}
+                onEditQuestion={(q) => setEditingQuestion(q)}
+                currentStudent={currentStudent}
+              />
+            )}
 
-          {activeTab === 'mocktest' && (
-            <MockTestMode
-              mockPapers={mockPapers}
-              customMockPapers={customMockPapers}
-              customPaper={customTestPaper}
-              directLaunchPaper={directLaunchPaper}
-              onOpenCalc={() => setIsCalcOpen(true)}
-              onFinishTest={handleFinishTest}
-              onEditQuestion={(q) => setEditingQuestion(q)}
-              currentStudent={currentStudent}
-            />
-          )}
+            {['community', 'chat', 'qa', 'discussions', 'ai_tutor', 'aisolver', 'aitutor'].includes(activeTab) && (
+              <CommunityHub
+                activeSubTab={['qa', 'discussions'].includes(activeTab) ? 'qa' : ['ai_tutor', 'aisolver', 'aitutor'].includes(activeTab) ? 'ai_tutor' : 'chat'}
+                onSubTabChange={(subTab) => setActiveTab(subTab)}
+                currentStudent={currentStudent}
+                questions={questions}
+                mockPapers={mockPapers}
+                onOpenCalc={() => setIsCalcOpen(true)}
+                onToggleBookmark={handleToggleBookmark}
+              />
+            )}
 
-          {activeTab === 'analytics' && (
-            <PerformanceAnalytics 
-              currentStudent={currentStudent} 
-              questions={questions} 
-            />
-          )}
+            {activeTab === 'mocktest' && (
+              <MockTestMode
+                mockPapers={mockPapers}
+                customMockPapers={customMockPapers}
+                customPaper={customTestPaper}
+                directLaunchPaper={directLaunchPaper}
+                onOpenCalc={() => setIsCalcOpen(true)}
+                onFinishTest={handleFinishTest}
+                onEditQuestion={(q) => setEditingQuestion(q)}
+                currentStudent={currentStudent}
+              />
+            )}
 
-          {activeTab === 'leaderboard' && (
-            <Leaderboard 
-              currentStudent={currentStudent} 
-            />
-          )}
+            {activeTab === 'analytics' && (
+              <PerformanceAnalytics 
+                currentStudent={currentStudent} 
+                questions={questions} 
+              />
+            )}
 
-          {activeTab === 'admin' && (
-            <AdminQuestionManager
-              questions={questions}
-              mockPapers={mockPapers}
-              customMockPapers={customMockPapers}
-              editedQuestionsMap={editedQuestionsMap}
-              onSaveEditedQuestion={handleSaveEditedQuestion}
-              onOpenCalc={() => setIsCalcOpen(true)}
-            />
-          )}
+            {activeTab === 'leaderboard' && (
+              <Leaderboard 
+                currentStudent={currentStudent} 
+              />
+            )}
 
-          {activeTab === 'feedback' && (
-            <FeedbackForum />
-          )}
+            {activeTab === 'feedback' && (
+              <FeedbackForum />
+            )}
 
-          {activeTab === 'downloads' && (
-            <DownloadsHub
-              customMockPapers={customMockPapers}
-              onStartMock={handleStartMock}
-              onDeleteMock={handleDeleteCustomMock}
-            />
-          )}
+            {activeTab === 'downloads' && (
+              <DownloadsHub
+                questions={questions}
+                mockPapers={mockPapers}
+                customMockPapers={customMockPapers}
+                onStartMock={handleStartMock}
+                onDeleteMock={handleDeleteCustomMock}
+              />
+            )}
 
-          {activeTab === 'syllabus' && (
-            <SyllabusTracker
-              userProgress={syllabusProgress}
-              onUpdateProgress={handleUpdateSyllabusProgress}
-              onStartSectionPractice={handleStartSectionPractice}
-            />
-          )}
+            {activeTab === 'syllabus' && (
+              <SyllabusTracker
+                userProgress={syllabusProgress}
+                onUpdateProgress={handleUpdateSyllabusProgress}
+                onStartSectionPractice={handleStartSectionPractice}
+              />
+            )}
 
-          {activeTab === 'support' && (
-            <SupportPage currentStudent={currentStudent} />
-          )}
+            {activeTab === 'games' && (
+              <GamesZone />
+            )}
 
-          {activeTab === 'games' && (
-            <GamesZone />
-          )}
-
-          {activeTab === 'creator' && (
-            <CreatorPage />
-          )}
+            {(activeTab === 'creator' || activeTab === 'support' || activeTab === 'admin' || activeTab === 'hq') && (
+              <CreatorAdminHQ
+                initialSubTab={activeTab === 'admin' ? 'admin' : activeTab === 'support' ? 'support' : 'creator'}
+                questions={questions}
+                mockPapers={mockPapers}
+                customMockPapers={customMockPapers}
+                editedQuestionsMap={editedQuestionsMap}
+                onSaveEditedQuestion={handleSaveEditedQuestion}
+                onOpenCalc={() => setIsCalcOpen(true)}
+                currentStudent={currentStudent}
+              />
+            )}
+          </Suspense>
         </main>
         <Footer setActiveTab={setActiveTab} />
       </div>
 
-      <ScientificCalculator
-        isOpen={isCalcOpen}
-        onClose={() => setIsCalcOpen(false)}
-      />
-
-      {testResult && (
-        <TestResultModal
-          result={testResult}
-          onClose={() => setTestResult(null)}
-          onRetake={() => {
-            setTestResult(null);
-            setActiveTab('mocktest');
-          }}
+      <Suspense fallback={null}>
+        <ScientificCalculator
+          isOpen={isCalcOpen}
+          onClose={() => setIsCalcOpen(false)}
         />
-      )}
 
-      {editingQuestion && (
-        <QuestionEditorModal
-          question={editingQuestion}
-          onSave={handleSaveEditedQuestion}
-          onClose={() => setEditingQuestion(null)}
-        />
-      )}
+        {testResult && (
+          <TestResultModal
+            result={testResult}
+            onClose={() => setTestResult(null)}
+            onRetake={() => {
+              setTestResult(null);
+              setActiveTab('mocktest');
+            }}
+          />
+        )}
 
-      {isProfileOpen && currentStudent && (
-        <UserProfileModal
-          student={currentStudent}
-          onClose={() => setIsProfileOpen(false)}
-          onProfileUpdated={(updatedStudent) => setCurrentStudent(updatedStudent)}
-        />
-      )}
+        {editingQuestion && (
+          <QuestionEditorModal
+            question={editingQuestion}
+            onSave={handleSaveEditedQuestion}
+            onClose={() => setEditingQuestion(null)}
+          />
+        )}
+
+        {isProfileOpen && currentStudent && (
+          <UserProfileModal
+            student={currentStudent}
+            onClose={() => setIsProfileOpen(false)}
+            onProfileUpdated={(updatedStudent) => setCurrentStudent(updatedStudent)}
+          />
+        )}
+      </Suspense>
 
     </div>
   );

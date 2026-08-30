@@ -3,82 +3,60 @@ import { Play, RotateCcw, Zap, Shield, Trophy, Flame, Volume2, Sparkles, Crossha
 import confetti from 'canvas-confetti';
 import { playCyberSound } from '../utils/cyberBreakSound';
 
-// BOSS DATASET FOR GATE AG CONCEPTS
+// EPIC CYBER ARCADE BOSSES - PURE JOY & ACTION
 const BOSSES = [
   {
     id: 'kraken',
-    name: 'Hydraulic Head-Loss Kraken',
-    concept: 'Fluid Mechanics & Pipe Hydraulics',
-    formula: 'h_f = f \\cdot \\frac{L}{D} \\cdot \\frac{v^2}{2g}',
+    name: 'Cybernetic Neon Kraken',
+    title: 'Abyssal Pulse Destroyer',
     maxHp: 2000,
     color: '#06b6d4',
     secondaryColor: '#3b82f6',
     icon: '🐙',
-    quote: 'Feel the pressure drop in your mainlines!',
-    natQuestions: [
-      { q: 'For friction factor f=0.02, L=100m, D=0.1m, v=2m/s, g=9.81m/s², calculate Head Loss h_f (m) rounded to 1 decimal.', ans: 4.1 },
-      { q: 'Reynolds number Re = (ρ·v·D)/μ. If Re = 1500, flow is: (1=Laminar, 2=Turbulent)', ans: 1 }
-    ]
+    quote: 'Dodge my radial neon plasma spirals!',
   },
   {
     id: 'colossus',
-    name: 'Tillage Hardpan Colossus',
-    concept: 'Farm Power & Machinery Draft Force',
-    formula: 'D = C \\cdot w \\cdot d',
+    name: 'Mecha Cyber Titan',
+    title: 'Armored Siege Colossus',
     maxHp: 2500,
     color: '#f59e0b',
     secondaryColor: '#d97706',
-    icon: '🚜',
-    quote: 'Your shank depth is inadequate to shatter my soil!',
-    natQuestions: [
-      { q: 'Specific resistance C = 0.5 kg/cm², width w = 30 cm, depth d = 15 cm. Calculate Draft D in kg.', ans: 225 },
-      { q: 'Tractor PTO power P = (2π T N)/60000. If T=400 Nm & N=540 rpm, calculate kW rounded to 1 decimal.', ans: 22.6 }
-    ]
+    icon: '🤖',
+    quote: 'My armor core can withstand any frontal barrage!',
   },
   {
     id: 'atomizer',
-    name: 'Rotary Atomizer Overlord',
-    concept: 'Dairy & Food Engineering Spray Drying',
-    formula: 'd_{v50} \\propto (N \\cdot D_{disc})^{-0.6}',
+    name: 'Plasma Overlord Mech',
+    title: 'Quantum Velocity Ruler',
     maxHp: 3000,
     color: '#a855f7',
     secondaryColor: '#ec4899',
-    icon: '🥛',
-    quote: 'Atomizing your effort into micro-particulates!',
-    natQuestions: [
-      { q: 'Milk pasteurization HTST standard temperature (°C) for 15 seconds hold time:', ans: 72 },
-      { q: 'Thermal conductivity k of ice is ~2.2 W/mK while water is 0.6 W/mK. Ratio k_ice / k_water rounded to 1 decimal:', ans: 3.7 }
-    ]
+    icon: '🛸',
+    quote: 'Prepare for high-density particle swarms!',
   },
   {
     id: 'monster',
-    name: 'Psychrometric Heat Monster',
-    concept: 'Post Harvest Grain Drying & Moisture',
-    formula: 'RH = \\frac{p_v}{p_{sat}} \\cdot 100',
+    name: 'Inferno Cosmic Dragon',
+    title: 'Solar Flare Sovereign',
     maxHp: 3500,
     color: '#ef4444',
     secondaryColor: '#f97316',
-    icon: '🌾',
-    quote: 'Can you handle my wet-bulb depression shockwave?',
-    natQuestions: [
-      { q: 'Moisture content wet basis (M_w) = 20%. Moisture content dry basis (M_d) in % rounded to 1 decimal:', ans: 25.0 },
-      { q: 'Air with 100% Relative Humidity has Wet Bulb Temp equal to: (1=Dry Bulb, 2=Dew Point, 3=Both)', ans: 3 }
-    ]
+    icon: '🐲',
+    quote: 'Can you survive the hyper nova bullet hell?',
   }
 ];
 
 export default function CyberBulletHellBoss({ breakXP, onAddXP, activeVehicle = 'Cyber Tractor Mk-IV', mutators = [] }) {
   const [currentBossIndex, setCurrentBossIndex] = useState(0);
-  const [gameState, setGameState] = useState('menu'); // menu, playing, prompt, victory, defeat
+  const [gameState, setGameState] = useState('menu'); // menu, playing, overdrive, victory, defeat
   const [playerHp, setPlayerHp] = useState(100);
   const [maxPlayerHp, setMaxPlayerHp] = useState(100);
   const [bossHp, setBossHp] = useState(BOSSES[0].maxHp);
   const [streak, setStreak] = useState(0);
   const [score, setScore] = useState(0);
   const [superLaserActive, setSuperLaserActive] = useState(false);
-  const [activeQuestion, setActiveQuestion] = useState(null);
-  const [userAnswer, setUserAnswer] = useState('');
-  const [feedback, setFeedback] = useState('');
+  const [overdriveEnergy, setOverdriveEnergy] = useState(0); // 0 to 100%
 
   const canvasRef = useRef(null);
   const animFrameRef = useRef(null);
@@ -127,73 +105,57 @@ export default function CyberBulletHellBoss({ breakXP, onAddXP, activeVehicle = 
 
     setBossHp(b.maxHp);
     setPlayerHp(maxPlayerHp);
+    setOverdriveEnergy(0);
     setGameState('playing');
     playCyberSound('powerup');
   };
 
-  // Trigger GATE AG NAT Prompt during combat
-  const triggerNATPrompt = useCallback(() => {
-    const qList = activeBoss.natQuestions;
-    const selectedQ = qList[Math.floor(Math.random() * qList.length)];
-    setActiveQuestion(selectedQ);
-    setUserAnswer('');
-    setFeedback('');
-    setGameState('prompt');
-    playCyberSound('shield');
-  }, [activeBoss]);
+  // Trigger Overdrive Super Laser Blast
+  const triggerOverdrive = useCallback(() => {
+    if (superLaserActive) return;
+    setSuperLaserActive(true);
+    setOverdriveEnergy(0);
+    setStreak(prev => prev + 1);
+    playCyberSound('powerup');
+    onAddXP(50);
 
-  // Submit Prompt Answer
-  const handleAnswerSubmit = (e) => {
-    e.preventDefault();
-    if (!activeQuestion) return;
+    // Deal massive burst damage to boss
+    engineRef.current.boss.hp -= 450;
+    engineRef.current.shakeTime = 25;
 
-    const numVal = parseFloat(userAnswer);
-    const isCorrect = Math.abs(numVal - activeQuestion.ans) < 0.2;
+    // Clear nearby boss bullets for safety
+    engineRef.current.bossBullets = [];
 
-    if (isCorrect) {
-      setFeedback('✅ CRITICAL NAT OVERDRIVE UNLOCKED! (+100 XP)');
-      onAddXP(100);
-      setStreak(prev => prev + 1);
-      setSuperLaserActive(true);
-      playCyberSound('powerup');
-
-      // Deal huge damage to boss
-      engineRef.current.boss.hp -= 400;
-      engineRef.current.shakeTime = 20;
-
-      // Spawn explosion debris
-      for (let i = 0; i < 30; i++) {
-        engineRef.current.particles.push({
-          x: engineRef.current.boss.x,
-          y: engineRef.current.boss.y,
-          vx: (Math.random() - 0.5) * 12,
-          vy: (Math.random() - 0.5) * 12,
-          life: 40,
-          maxLife: 40,
-          color: activeBoss.color,
-          radius: Math.random() * 6 + 2
-        });
-      }
-
-      setTimeout(() => {
-        setSuperLaserActive(false);
-        setGameState('playing');
-      }, 2000);
-    } else {
-      setFeedback(`❌ INCORRECT! Correct answer was ${activeQuestion.ans}. Shield depleted!`);
-      setPlayerHp(prev => Math.max(1, prev - 25));
-      playCyberSound('bossHit');
-      setTimeout(() => {
-        setGameState('playing');
-      }, 1800);
+    // Spawn huge explosion debris
+    for (let i = 0; i < 40; i++) {
+      engineRef.current.particles.push({
+        x: engineRef.current.boss.x,
+        y: engineRef.current.boss.y,
+        vx: (Math.random() - 0.5) * 16,
+        vy: (Math.random() - 0.5) * 16,
+        life: 45,
+        maxLife: 45,
+        color: '#38bdf8',
+        radius: Math.random() * 8 + 3
+      });
     }
-  };
+
+    setTimeout(() => {
+      setSuperLaserActive(false);
+    }, 2800);
+  }, [superLaserActive, onAddXP]);
 
   // Keyboard Handlers
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (gameState !== 'playing') return;
       engineRef.current.keys[e.key.toLowerCase()] = true;
+
+      // Spacebar triggers Overdrive
+      if (e.code === 'Space') {
+        e.preventDefault();
+        triggerOverdrive();
+      }
     };
 
     const handleKeyUp = (e) => {
@@ -206,7 +168,7 @@ export default function CyberBulletHellBoss({ breakXP, onAddXP, activeVehicle = 
       window.removeEventListener('keydown', handleKeyDown);
       window.removeEventListener('keyup', handleKeyUp);
     };
-  }, [gameState]);
+  }, [gameState, triggerOverdrive]);
 
   // Main 60 FPS Canvas Game Loop
   useEffect(() => {
@@ -222,7 +184,7 @@ export default function CyberBulletHellBoss({ breakXP, onAddXP, activeVehicle = 
       const state = engineRef.current;
       const { player, boss } = state;
 
-      // Handle Shake
+      // Handle Screen Shake
       if (state.shakeTime > 0) {
         state.shakeTime--;
       }
@@ -231,8 +193,8 @@ export default function CyberBulletHellBoss({ breakXP, onAddXP, activeVehicle = 
       ctx.fillStyle = '#090d16';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      // Draw Grid Background lines
-      ctx.strokeStyle = 'rgba(30, 58, 138, 0.2)';
+      // Draw Animated Grid Background lines
+      ctx.strokeStyle = 'rgba(30, 58, 138, 0.25)';
       ctx.lineWidth = 1;
       const gridStep = 40;
       for (let x = 0; x < canvas.width; x += gridStep) {
@@ -271,33 +233,33 @@ export default function CyberBulletHellBoss({ breakXP, onAddXP, activeVehicle = 
 
       // Auto Fire Player Lasers
       const now = Date.now();
-      const fireInterval = superLaserActive ? 80 : 180;
+      const fireInterval = superLaserActive ? 70 : 160;
       if (now - state.lastShootTime > fireInterval) {
         state.lastShootTime = now;
         playCyberSound('laser');
 
         if (superLaserActive) {
-          // Spread Super Barrage
-          [-0.3, -0.15, 0, 0.15, 0.3].forEach(angle => {
+          // Hyper Spread Super Barrage
+          [-0.35, -0.18, 0, 0.18, 0.35].forEach(angle => {
             state.playerBullets.push({
               x: player.x,
               y: player.y - player.radius,
-              vx: Math.sin(angle) * 14,
-              vy: -Math.cos(angle) * 14,
-              damage: 35,
+              vx: Math.sin(angle) * 15,
+              vy: -Math.cos(angle) * 15,
+              damage: 40,
               color: '#38bdf8'
             });
           });
         } else {
-          // Standard Dual Lasers
+          // Standard Dual / Triple Lasers
           const isMulti = mutators.includes('quad');
           if (isMulti) {
             [-0.15, 0, 0.15].forEach(angle => {
               state.playerBullets.push({
                 x: player.x,
                 y: player.y - player.radius,
-                vx: Math.sin(angle) * 11,
-                vy: -Math.cos(angle) * 11,
+                vx: Math.sin(angle) * 12,
+                vy: -Math.cos(angle) * 12,
                 damage: 25,
                 color: '#22c55e'
               });
@@ -307,16 +269,16 @@ export default function CyberBulletHellBoss({ breakXP, onAddXP, activeVehicle = 
               x: player.x - 8,
               y: player.y - player.radius,
               vx: 0,
-              vy: -11,
-              damage: 20,
+              vy: -12,
+              damage: 22,
               color: '#38bdf8'
             });
             state.playerBullets.push({
               x: player.x + 8,
               y: player.y - player.radius,
               vx: 0,
-              vy: -11,
-              damage: 20,
+              vy: -12,
+              damage: 22,
               color: '#38bdf8'
             });
           }
@@ -324,7 +286,7 @@ export default function CyberBulletHellBoss({ breakXP, onAddXP, activeVehicle = 
       }
 
       // --- 2. BOSS MOVEMENT & BULLET PATTERNS ---
-      boss.phaseTime += 0.03;
+      boss.phaseTime += 0.035;
       boss.x += boss.vx;
       if (boss.x < boss.radius + 20 || boss.x > canvas.width - boss.radius - 20) {
         boss.vx *= -1;
@@ -341,8 +303,8 @@ export default function CyberBulletHellBoss({ breakXP, onAddXP, activeVehicle = 
             state.bossBullets.push({
               x: boss.x,
               y: boss.y,
-              vx: Math.cos(angle) * 4,
-              vy: Math.sin(angle) * 4,
+              vx: Math.cos(angle) * 4.2,
+              vy: Math.sin(angle) * 4.2,
               color: activeBoss.color,
               radius: 5
             });
@@ -361,10 +323,8 @@ export default function CyberBulletHellBoss({ breakXP, onAddXP, activeVehicle = 
         }
       }
 
-      // Random chance to trigger NAT prompt during boss fight
-      if (Math.random() < 0.0008 && gameState === 'playing') {
-        triggerNATPrompt();
-      }
+      // Charge Overdrive gradually over time
+      setOverdriveEnergy(prev => Math.min(100, prev + 0.15));
 
       // --- 3. UPDATE PLAYER BULLETS & HIT DETECTION ---
       for (let i = state.playerBullets.length - 1; i >= 0; i--) {
@@ -532,7 +492,7 @@ export default function CyberBulletHellBoss({ breakXP, onAddXP, activeVehicle = 
 
     animationFrameId = requestAnimationFrame(updateAndRender);
     return () => cancelAnimationFrame(animationFrameId);
-  }, [gameState, activeBoss, mutators, superLaserActive, triggerNATPrompt, onAddXP]);
+  }, [gameState, activeBoss, mutators, superLaserActive, onAddXP]);
 
   return (
     <div className="relative w-full bg-slate-950 border border-cyan-500/30 rounded-2xl p-4 shadow-2xl overflow-hidden text-white font-sans">
@@ -545,7 +505,7 @@ export default function CyberBulletHellBoss({ breakXP, onAddXP, activeVehicle = 
             <h2 className="font-extrabold text-lg text-cyan-400 flex items-center gap-2">
               {activeBoss.name}
               <span className="text-xs px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-500/40">
-                {activeBoss.concept}
+                {activeBoss.title}
               </span>
             </h2>
             <p className="text-xs text-slate-400 font-mono italic">{activeBoss.quote}</p>
@@ -584,10 +544,10 @@ export default function CyberBulletHellBoss({ breakXP, onAddXP, activeVehicle = 
             <Crosshair className="w-8 h-8 animate-pulse" />
           </div>
           <h3 className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-amber-300">
-            GATE AG CONCEPT BOSS ARENA
+            CYBER BULLET-HELL ARENA 🕹️
           </h3>
           <p className="text-sm text-slate-300 mt-2 mb-6">
-            Dodge high-frequency bullet patterns, answer rapid formula NAT prompts, and unleash nitro super-lasers!
+            Dodge neon plasma spirals, unleash hyper super-lasers, and conquer high-octane cyber bosses!
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
@@ -604,7 +564,7 @@ export default function CyberBulletHellBoss({ breakXP, onAddXP, activeVehicle = 
                 <span className="text-2xl">{b.icon}</span>
                 <div>
                   <h4 className="font-bold text-sm text-white">{b.name}</h4>
-                  <span className="text-xs text-cyan-400 font-mono">{b.concept}</span>
+                  <span className="text-xs text-cyan-400 font-mono">{b.title}</span>
                 </div>
               </button>
             ))}
@@ -620,8 +580,8 @@ export default function CyberBulletHellBoss({ breakXP, onAddXP, activeVehicle = 
       )}
 
       {/* GAMEPLAY CANVAS */}
-      {(gameState === 'playing' || gameState === 'prompt') && (
-        <div className="relative flex justify-center">
+      {gameState === 'playing' && (
+        <div className="relative flex flex-col items-center">
           <canvas
             ref={canvasRef}
             width={600}
@@ -629,9 +589,30 @@ export default function CyberBulletHellBoss({ breakXP, onAddXP, activeVehicle = 
             className="border border-cyan-500/40 rounded-xl shadow-inner bg-slate-950 touch-none max-w-full"
           />
 
+          {/* OVERDRIVE BUTTON & CONTROLS HUD */}
+          <div className="w-full max-w-[600px] flex items-center justify-between gap-3 mt-3 px-2">
+            <div className="flex items-center gap-2 text-xs font-mono text-slate-400">
+              <span>WASD / Arrow Keys to Move</span>
+              <span>•</span>
+              <span>Spacebar to Fire Overdrive</span>
+            </div>
+
+            <button
+              onClick={triggerOverdrive}
+              className={`px-4 py-2 rounded-xl font-black text-xs transition flex items-center gap-1.5 shadow-lg ${
+                overdriveEnergy >= 100 || superLaserActive
+                  ? 'bg-amber-400 text-slate-950 animate-pulse hover:bg-amber-300'
+                  : 'bg-slate-800 text-slate-400 hover:bg-slate-700'
+              }`}
+            >
+              <Zap className="w-4 h-4 fill-current" />
+              <span>{superLaserActive ? '🔥 SUPER LASER ACTIVE!' : '⚡ HYPER OVERDRIVE'}</span>
+            </button>
+          </div>
+
           {/* TOUCH CONTROL OVERLAY FOR MOBILE */}
-          <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center opacity-60 hover:opacity-100 sm:hidden">
-            <div className="grid grid-cols-3 gap-2 w-32">
+          <div className="w-full max-w-[600px] mt-4 flex justify-between items-center opacity-80 sm:hidden">
+            <div className="grid grid-cols-3 gap-2 w-36">
               <div />
               <button
                 onTouchStart={() => (engineRef.current.keys['w'] = true)}
@@ -664,49 +645,11 @@ export default function CyberBulletHellBoss({ breakXP, onAddXP, activeVehicle = 
               </button>
             </div>
             <button
-              onClick={triggerNATPrompt}
-              className="bg-amber-500 text-slate-950 font-black px-4 py-3 rounded-xl shadow-lg border border-amber-300"
+              onClick={triggerOverdrive}
+              className="bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-black px-4 py-3 rounded-xl shadow-lg border border-amber-300"
             >
-              ⚡ OVERDRIVE NAT
+              ⚡ OVERDRIVE
             </button>
-          </div>
-        </div>
-      )}
-
-      {/* MODAL: RAPID GATE AG NAT PROMPT */}
-      {gameState === 'prompt' && activeQuestion && (
-        <div className="absolute inset-0 bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4 z-50">
-          <div className="bg-slate-900 border-2 border-amber-400 rounded-2xl p-6 max-w-lg w-full shadow-2xl animate-bounce-short">
-            <div className="flex items-center gap-2 text-amber-400 font-extrabold text-sm mb-2">
-              <Zap className="w-5 h-5 animate-pulse" />
-              <span>RAPID NAT OVERDRIVE CHALLENGE</span>
-            </div>
-            <h4 className="text-white font-bold text-base mb-4 leading-relaxed">
-              {activeQuestion.q}
-            </h4>
-
-            <form onSubmit={handleAnswerSubmit} className="space-y-4">
-              <input
-                type="number"
-                step="any"
-                autoFocus
-                placeholder="Enter numerical answer..."
-                value={userAnswer}
-                onChange={(e) => setUserAnswer(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-amber-400/60 text-amber-300 font-mono font-extrabold text-lg focus:outline-none focus:ring-2 focus:ring-amber-400"
-              />
-              {feedback && (
-                <div className={`p-3 rounded-xl text-xs font-bold ${feedback.startsWith('✅') ? 'bg-emerald-950 text-emerald-300 border border-emerald-500' : 'bg-rose-950 text-rose-300 border border-rose-500'}`}>
-                  {feedback}
-                </div>
-              )}
-              <button
-                type="submit"
-                className="w-full py-3 bg-gradient-to-r from-amber-500 to-orange-600 font-black text-slate-950 rounded-xl shadow-lg hover:from-amber-400 hover:to-orange-500"
-              >
-                UNLEASH SUPER LASER BARRAGE
-              </button>
-            </form>
           </div>
         </div>
       )}
@@ -715,8 +658,8 @@ export default function CyberBulletHellBoss({ breakXP, onAddXP, activeVehicle = 
       {gameState === 'victory' && (
         <div className="bg-slate-900/90 border border-emerald-500/60 rounded-xl p-6 text-center max-w-md mx-auto my-8">
           <Trophy className="w-16 h-16 text-yellow-400 mx-auto mb-3 animate-bounce" />
-          <h3 className="text-2xl font-black text-emerald-400">BOSS DEFEATED!</h3>
-          <p className="text-sm text-slate-300 my-2">You shattered {activeBoss.name} with tactical formula precision!</p>
+          <h3 className="text-2xl font-black text-emerald-400">BOSS DEFEATED! 🏆</h3>
+          <p className="text-sm text-slate-300 my-2">You shattered {activeBoss.name} with flawless arcade dodging!</p>
           <div className="text-lg font-mono font-bold text-yellow-300 mb-6">+300 BREAK XP EARNED!</div>
           <div className="flex gap-3">
             <button

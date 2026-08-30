@@ -18,7 +18,9 @@ import {
   Target,
   GraduationCap,
   BarChart3,
-  Trophy
+  Trophy,
+  MessageSquare,
+  Award
 } from 'lucide-react';
 
 export default function Sidebar({ 
@@ -50,7 +52,13 @@ export default function Sidebar({
       id: 'learninghub', 
       label: 'Learning Hub', 
       icon: GraduationCap, 
-      matches: ['learninghub', 'concepts', 'revision', 'formulas', 'simulators', 'flashcards', 'chat', 'qa'] 
+      matches: ['learninghub', 'concepts', 'revision', 'formulas', 'simulators', 'flashcards'] 
+    },
+    { 
+      id: 'community', 
+      label: 'Community & Chat', 
+      icon: MessageSquare, 
+      matches: ['community', 'chat', 'qa', 'discussions', 'ai_tutor', 'aisolver', 'aitutor'] 
     },
     { 
       id: 'mocktest', 
@@ -89,35 +97,15 @@ export default function Sidebar({
       matches: ['syllabus'] 
     },
     { 
-      id: 'admin', 
-      label: 'Question Admin', 
-      icon: ShieldCheck, 
-      matches: ['admin'] 
-    },
-    { 
-      id: 'support', 
-      label: 'Support', 
-      icon: Heart, 
-      matches: ['support'] 
-    },
-    { 
       id: 'creator', 
-      label: 'Creator', 
-      icon: User, 
-      matches: ['creator'] 
+      label: 'Creator & HQ', 
+      icon: Award, 
+      badge: 'Admin/Support',
+      matches: ['creator', 'support', 'admin', 'hq'] 
     },
   ];
 
-  const isAdmin = Boolean(
-    currentStudent?.student_type === 'admin' ||
-    currentStudent?.is_admin ||
-    (typeof import.meta !== 'undefined' && import.meta.env?.DEV)
-  );
-
-  const visibleNavItems = navItems.filter(item => {
-    if (item.id === 'admin') return isAdmin;
-    return true;
-  });
+  const visibleNavItems = navItems;
 
   const handleNavClick = (id) => {
     setActiveTab(id);

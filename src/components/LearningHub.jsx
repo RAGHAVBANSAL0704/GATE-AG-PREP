@@ -4,9 +4,7 @@ import RevisionBank from './RevisionBank';
 import FormulaSheet from './FormulaSheet';
 import AgriSimulators from './AgriSimulators';
 import SpacedRepetitionFlashcards from './SpacedRepetitionFlashcards';
-import CommunityChatHub from './CommunityChatHub';
-import CommunityDiscussions from './CommunityDiscussions';
-import { Lightbulb, Bookmark, FileText, GraduationCap, Cpu, Brain, MessageSquare, Sparkles } from 'lucide-react';
+import { Lightbulb, Bookmark, FileText, GraduationCap, Cpu, Brain, FlaskConical } from 'lucide-react';
 
 export default function LearningHub({
   activeSubTab = 'concepts',
@@ -39,8 +37,6 @@ export default function LearningHub({
     { id: 'concepts', label: 'Core Concepts', icon: Lightbulb, color: 'text-blue-500 bg-blue-500/10 border-blue-500/20' },
     { id: 'simulators', label: 'Physics Simulators', icon: Cpu, color: 'text-purple-500 bg-purple-500/10 border-purple-500/20' },
     { id: 'flashcards', label: 'SM-2 Flashcards', icon: Brain, color: 'text-amber-500 bg-amber-500/10 border-amber-500/20' },
-    { id: 'chat', label: 'Community Chat', icon: MessageSquare, color: 'text-emerald-500 bg-emerald-500/10 border-emerald-500/20' },
-    { id: 'qa', label: 'Community Q&A', icon: Sparkles, color: 'text-pink-500 bg-pink-500/10 border-pink-500/20' },
     { id: 'revision', label: 'Revision Bank', icon: Bookmark, color: 'text-indigo-500 bg-indigo-500/10 border-indigo-500/20' },
     { id: 'formulas', label: 'Formula Sheet', icon: FileText, color: 'text-cyan-500 bg-cyan-500/10 border-cyan-500/20' },
   ];
@@ -48,6 +44,28 @@ export default function LearningHub({
   return (
     <div className="space-y-6 animate-in fade-in duration-200 min-w-0 max-w-full overflow-hidden">
       
+      {/* Notice Banner: Under Testing & Improvements */}
+      <div className="bg-gradient-to-r from-amber-500/10 via-purple-500/10 to-blue-500/10 border border-amber-500/30 dark:border-amber-500/20 rounded-2xl p-4 sm:p-4.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-slate-800 dark:text-slate-200 shadow-xs">
+        <div className="flex items-start sm:items-center gap-3">
+          <div className="p-2 rounded-xl bg-amber-500/20 text-amber-600 dark:text-amber-400 shrink-0">
+            <FlaskConical className="w-5 h-5" />
+          </div>
+          <div>
+            <div className="flex items-center gap-2">
+              <span className="text-xs font-extrabold text-amber-700 dark:text-amber-300 uppercase tracking-wider bg-amber-500/20 px-2 py-0.5 rounded-md">
+                Active Beta / Testing
+              </span>
+              <span className="text-xs font-bold text-slate-900 dark:text-white">
+                Learning Hub is under active testing & continuous improvement
+              </span>
+            </div>
+            <p className="text-[11px] sm:text-xs text-slate-600 dark:text-slate-400 mt-1">
+              We are constantly refining concept guides, physics simulations, and formula sheets. Your valuable suggestions and feedback are warmly welcomed!
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Responsive Header & Navigation Hub Bar */}
       <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-5 sm:p-6 shadow-xs space-y-4">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
@@ -71,7 +89,7 @@ export default function LearningHub({
               <button
                 key={tab.id}
                 onClick={() => handleTabClick(tab.id)}
-                className={`flex-1 min-w-[130px] sm:min-w-[150px] flex items-center justify-center sm:justify-start gap-2 px-3.5 py-2.5 rounded-2xl text-[11px] sm:text-xs font-extrabold transition border ${
+                className={`flex-1 min-w-[140px] sm:min-w-[160px] flex items-center justify-center sm:justify-start gap-2 px-3.5 py-2.5 rounded-2xl text-[11px] sm:text-xs font-extrabold transition border cursor-pointer ${
                   isActive
                     ? 'bg-purple-600 text-white border-purple-600 shadow-md transform scale-[1.02]'
                     : 'bg-slate-50 dark:bg-slate-800/60 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700/60 hover:bg-slate-100 dark:hover:bg-slate-800'
@@ -97,14 +115,6 @@ export default function LearningHub({
 
         {currentSubTab === 'flashcards' && (
           <SpacedRepetitionFlashcards />
-        )}
-
-        {currentSubTab === 'chat' && (
-          <CommunityChatHub currentStudent={currentStudent} />
-        )}
-
-        {currentSubTab === 'qa' && (
-          <CommunityDiscussions currentStudent={currentStudent} />
         )}
 
         {currentSubTab === 'revision' && (

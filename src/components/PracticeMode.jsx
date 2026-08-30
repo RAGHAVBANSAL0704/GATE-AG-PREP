@@ -23,9 +23,10 @@ import {
   Edit3
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
-import ConceptStudyModal from './ConceptStudyModal';
+import { evaluateQuestion } from '../utils/scoring.js';
+import AITutorModal from './AITutorModal';
 import { GATE_AG_SYLLABUS } from '../data/syllabus';
-import { getProgressiveHints, detectNATUnitMismatch } from '../utils/hintGenerator';
+import { detectNATUnitMismatch } from '../utils/hintGenerator';
 import { getOfficialSections, getOfficialTopicsForSection, getOfficialSubtopicsForTopic, normalizeSectionTitle } from '../utils/syllabusTaxonomy.js';
 
 const SECTION_NORM_MAP = {
@@ -93,8 +94,7 @@ export default function PracticeMode({ questions, customMockPapers = [], bookmar
   const [userAnswers, setUserAnswers] = useState({});
   const [submittedState, setSubmittedState] = useState({});
   const [showSolution, setShowSolution] = useState({});
-  const [activeConceptQuestion, setActiveConceptQuestion] = useState(null);
-  const [activeHintLevel, setActiveHintLevel] = useState(0);
+  const [activeAITutorQuestion, setActiveAITutorQuestion] = useState(null);
   const [natUnitWarning, setNatUnitWarning] = useState(null);
 
   // Real-time clock and session elapsed timer
@@ -219,29 +219,12 @@ export default function PracticeMode({ questions, customMockPapers = [], bookmar
     const userVal = userAnswers[qId];
     if (userVal === undefined || userVal === '') return;
 
-    const correctKey = currentQ.correct_answer;
-    let isCorrect = false;
-
-    if (currentQ.type === 'MCQ') {
-      isCorrect = userVal.trim().toUpperCase() === correctKey.trim().toUpperCase() || correctKey.toUpperCase().includes(userVal.trim().toUpperCase());
-    } else if (currentQ.type === 'MSQ') {
-      const userSorted = userVal.split(',').map(s => s.trim().toUpperCase()).sort().join(';');
-      const keySorted = correctKey.replace(/,/g, ';').replace(/and/g, ';').split(/[,;\s]+/).filter(Boolean).map(s => s.trim().toUpperCase()).sort().join(';');
-      isCorrect = userSorted === keySorted;
-    } else if (currentQ.type === 'NAT') {
-      const numVal = parseFloat(userVal);
-      if (!isNaN(numVal)) {
-        if (correctKey.includes(' to ')) {
-          const [minStr, maxStr] = correctKey.split(' to ');
-          const min = parseFloat(minStr);
-          const max = parseFloat(maxStr);
-          isCorrect = numVal >= (min - 0.001) && numVal <= (max + 0.001);
-        } else {
-          const target = parseFloat(correctKey);
-          isCorrect = !isNaN(target) && Math.abs(numVal - target) <= 0.05;
-        }
-      }
-    }
+    const evalResult = evaluateQuestion({
+      question: currentQ,
+      userAnswer: userVal,
+      state: 'ANSWERED'
+    });
+    const isCorrect = evalResult.isCorrect;
 
     if (!isCorrect && currentQ.type === 'NAT') {
       const warn = detectNATUnitMismatch(userVal, currentQ);
@@ -775,26 +758,18 @@ export default function PracticeMode({ questions, customMockPapers = [], bookmar
 
                 <button
                   onClick={() => setShowSolution({ ...showSolution, [currentQ.id]: !showSolution[currentQ.id] })}
-                  className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 font-bold text-xs border border-emerald-200 dark:border-emerald-900 transition"
+                  className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 font-bold text-xs border border-emerald-200 dark:border-emerald-900 transition cursor-pointer"
                 >
                   <Eye className="w-3.5 h-3.5" />
                   <span>{showSolution[currentQ.id] ? 'Hide Solution' : 'View Solved Solution'}</span>
                 </button>
 
                 <button
-                  onClick={() => setActiveHintLevel(prev => (prev < 3 ? prev + 1 : 0))}
-                  className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-amber-50 dark:bg-amber-950 text-amber-700 dark:text-amber-300 font-bold text-xs border border-amber-200 dark:border-amber-900 transition"
-                >
-                  <Sparkles className="w-3.5 h-3.5 text-amber-500" />
-                  <span>{activeHintLevel === 0 ? '💡 Progressive Hint' : `Hint Level ${activeHintLevel}/3 (Next →)`}</span>
-                </button>
-
-                <button
-                  onClick={() => setActiveConceptQuestion(currentQ)}
-                  className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-purple-50 dark:bg-purple-950 text-purple-700 dark:text-purple-300 font-bold text-xs border border-purple-200 dark:border-purple-900 transition"
+                  onClick={() => setActiveAITutorQuestion(currentQ)}
+                  className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold text-xs shadow-sm transition cursor-pointer"
                 >
                   <Sparkles className="w-3.5 h-3.5" />
-                  <span>Study Concept</span>
+                  <span>✨ Ask Gemini AI</span>
                 </button>
               </div>
 
@@ -802,7 +777,7 @@ export default function PracticeMode({ questions, customMockPapers = [], bookmar
                 <button
                   onClick={() => setCurrentIndex(prev => Math.max(0, prev - 1))}
                   disabled={currentIndex === 0}
-                  className="flex items-center gap-1 px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 disabled:opacity-40 text-slate-700 dark:text-slate-300 text-xs font-bold transition border border-slate-200 dark:border-slate-700"
+                  className="flex items-center gap-1 px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 disabled:opacity-40 text-slate-700 dark:text-slate-300 text-xs font-bold transition border border-slate-200 dark:border-slate-700 cursor-pointer"
                 >
                   <ChevronLeft className="w-4 h-4" />
                   <span>Previous</span>
@@ -811,7 +786,7 @@ export default function PracticeMode({ questions, customMockPapers = [], bookmar
                 <button
                   onClick={() => setCurrentIndex(prev => Math.min(filteredQuestions.length - 1, prev + 1))}
                   disabled={currentIndex === filteredQuestions.length - 1}
-                  className="flex items-center gap-1 px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 disabled:opacity-40 text-white text-xs font-bold transition shadow-md"
+                  className="flex items-center gap-1 px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 disabled:opacity-40 text-white text-xs font-bold transition shadow-md cursor-pointer"
                 >
                   <span>Next</span>
                   <ChevronRight className="w-4 h-4" />
@@ -826,26 +801,6 @@ export default function PracticeMode({ questions, customMockPapers = [], bookmar
                 <div>{natUnitWarning}</div>
               </div>
             )}
-
-            {/* Progressive Hint Drawer */}
-            {activeHintLevel > 0 && (() => {
-              const hints = getProgressiveHints(currentQ);
-              const hintObj = hints[activeHintLevel - 1] || hints[0];
-              return (
-                <div className="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-slate-900 dark:text-amber-200 text-xs space-y-2 animate-in fade-in">
-                  <div className="flex items-center justify-between font-extrabold text-amber-600 dark:text-amber-400">
-                    <span className="flex items-center gap-1.5">
-                      <Sparkles className="w-4 h-4 text-amber-500" />
-                      <span>{hintObj.title} (Level {activeHintLevel}/3)</span>
-                    </span>
-                    <button onClick={() => setActiveHintLevel(0)} className="text-slate-400 hover:text-white">✕</button>
-                  </div>
-                  <div className="font-medium text-slate-800 dark:text-slate-200 leading-relaxed">
-                    {hintObj.content}
-                  </div>
-                </div>
-              );
-            })()}
 
             {/* Solution & Personal Notes Display Drawer */}
             {showSolution[currentQ.id] && (
@@ -914,11 +869,14 @@ export default function PracticeMode({ questions, customMockPapers = [], bookmar
         </div>
       )}
 
-      {/* Concept Study Modal */}
-      {activeConceptQuestion && (
-        <ConceptStudyModal
-          question={activeConceptQuestion}
-          onClose={() => setActiveConceptQuestion(null)}
+      {/* Gemini AI Tutor Modal */}
+      {activeAITutorQuestion && (
+        <AITutorModal
+          isOpen={Boolean(activeAITutorQuestion)}
+          onClose={() => setActiveAITutorQuestion(null)}
+          question={activeAITutorQuestion}
+          studentAnswer={userAnswers[activeAITutorQuestion.id] || null}
+          isCorrect={submittedState[activeAITutorQuestion.id]?.isCorrect || null}
         />
       )}
 

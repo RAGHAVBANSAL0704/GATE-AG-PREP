@@ -1,89 +1,12 @@
 import { describe, it } from 'node:test';
 import assert from 'node:assert/strict';
 
+import { evaluateQuestion as canonicalEvaluateQuestion, EPSILON, NAT_DEFAULT_TOLERANCE } from '../src/utils/scoring.js';
+
 /**
- * Pure evaluation functions replicating the core scoring engine from MockTestMode.jsx & TestResultModal.jsx
+ * Re-export canonical evaluateQuestion for all test suites
  */
-
-export function evaluateQuestion({ question, userAnswer, state, enableNegativeMarking = true }) {
-  const isSubmitted = (state === 'ANSWERED' || state === 'ANSWERED_MARKED') && 
-                      userAnswer !== undefined && 
-                      userAnswer !== null && 
-                      String(userAnswer).trim() !== '';
-
-  if (!isSubmitted) {
-    return {
-      isAttempted: false,
-      isCorrect: false,
-      marksAwarded: 0,
-      status: 'UNATTEMPTED'
-    };
-  }
-
-  const correctKey = String(question.correct_answer || '');
-  const userAnsStr = String(userAnswer).trim();
-  let isCorrect = false;
-
-  if (question.type === 'MCQ') {
-    isCorrect = userAnsStr.toUpperCase() === correctKey.trim().toUpperCase();
-    if (isCorrect) {
-      return {
-        isAttempted: true,
-        isCorrect: true,
-        marksAwarded: question.marks,
-        status: 'CORRECT'
-      };
-    } else {
-      const deduction = enableNegativeMarking ? (question.negative_marks || (question.marks === 1 ? 1/3 : 2/3)) : 0;
-      return {
-        isAttempted: true,
-        isCorrect: false,
-        marksAwarded: deduction === 0 ? 0 : -deduction,
-        status: 'INCORRECT'
-      };
-    }
-  }
-
-  if (question.type === 'MSQ') {
-    const userSorted = userAnsStr.split(',').map(s => s.trim().toUpperCase()).filter(Boolean).sort().join(';');
-    const keySorted = correctKey.replace(/,/g, ';').split(';').map(s => s.trim().toUpperCase()).filter(Boolean).sort().join(';');
-    isCorrect = userSorted === keySorted && userSorted.length > 0;
-    return {
-      isAttempted: true,
-      isCorrect,
-      marksAwarded: isCorrect ? question.marks : 0, // MSQ has NO negative marking
-      status: isCorrect ? 'CORRECT' : 'INCORRECT'
-    };
-  }
-
-  if (question.type === 'NAT') {
-    const numVal = parseFloat(userAnsStr);
-    if (!isNaN(numVal)) {
-      if (correctKey.includes(' to ')) {
-        const [minStr, maxStr] = correctKey.split(' to ');
-        const min = parseFloat(minStr);
-        const max = parseFloat(maxStr);
-        isCorrect = numVal >= min && numVal <= max;
-      } else {
-        const target = parseFloat(correctKey);
-        isCorrect = Math.abs(numVal - target) < 0.05;
-      }
-    }
-    return {
-      isAttempted: true,
-      isCorrect,
-      marksAwarded: isCorrect ? question.marks : 0, // NAT has NO negative marking
-      status: isCorrect ? 'CORRECT' : 'INCORRECT'
-    };
-  }
-
-  return {
-    isAttempted: false,
-    isCorrect: false,
-    marksAwarded: 0,
-    status: 'UNKNOWN'
-  };
-}
+export const evaluateQuestion = canonicalEvaluateQuestion;
 
 export function computeMockTestScore({ questions, userAnswers, questionStates, instructions = {} }) {
   let score = 0;

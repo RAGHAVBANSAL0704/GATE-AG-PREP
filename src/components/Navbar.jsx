@@ -13,7 +13,8 @@ import {
   LogOut,
   Gamepad2,
   Target,
-  GraduationCap
+  GraduationCap,
+  MessageSquare
 } from 'lucide-react';
 
 export default function Navbar({ 
@@ -29,7 +30,8 @@ export default function Navbar({
   const navItems = [
     { id: 'dashboard', label: 'Dashboard', icon: Compass },
     { id: 'practicehub', label: 'Practice Hub', icon: Target, badge: '3-in-1', matches: ['practicehub', 'practice', 'custompractice', 'customtest'] },
-    { id: 'learninghub', label: 'Learning Hub', icon: GraduationCap, badge: '3-in-1', matches: ['learninghub', 'concepts', 'revision', 'formulas'] },
+    { id: 'learninghub', label: 'Learning Hub', icon: GraduationCap, badge: '5-in-1', matches: ['learninghub', 'concepts', 'revision', 'formulas', 'simulators', 'flashcards'] },
+    { id: 'community', label: 'Community', icon: MessageSquare, badge: 'Live', matches: ['community', 'chat', 'qa', 'discussions', 'ai_tutor', 'aisolver', 'aitutor'] },
     { id: 'mocktest', label: 'PYQ & Mocks', icon: Clock, badge: '07-26' },
     { id: 'games', label: 'Break Zone', icon: Gamepad2, badge: 'Games' },
     { id: 'syllabus', label: 'Syllabus', icon: BookOpen },

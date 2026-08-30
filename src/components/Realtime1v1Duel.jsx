@@ -4,17 +4,29 @@ import confetti from 'canvas-confetti';
 import { playCyberSound } from '../utils/cyberBreakSound';
 
 const RIVALS = [
-  { name: 'AIR-1 Aspirant (IIT KGP)', rank: 'Rank #1', avatar: '🥇', skill: 'Ultra Rapid Math' },
-  { name: 'Hydraulic Specialist (TNAU)', rank: 'Rank #4', avatar: '💧', skill: 'Cavitation Barrage' },
-  { name: 'Tractor Mechanist (PAU)', rank: 'Rank #9', avatar: '🚜', skill: 'Draft Shockwave' },
-  { name: 'Dairy Tech Prodigy (NDRI)', rank: 'Rank #12', avatar: '🥛', skill: 'Spray Atomizer' }
+  { name: 'Speed Runner Turbo', rank: 'Master Tier', avatar: '⚡', skill: 'Lightning Reflexes' },
+  { name: 'Neon Samurai', rank: 'Diamond Tier', avatar: '⚔️', skill: 'Blade Flash' },
+  { name: 'Cyber Phantom', rank: 'Grandmaster', avatar: '👾', skill: 'Hypersonic Tap' },
+  { name: 'Pixel Champion', rank: 'Arcade Legend', avatar: '👑', skill: 'Combo Burst' }
 ];
 
+// FAST, JOYFUL MENTAL REFRESH QUESTIONS (Simple, Punchy, Fun)
 const DUEL_QUESTIONS = [
-  { q: 'Plow draft D = 0.4 kg/cm² × 25 cm × 12 cm. Draft D (kg):', ans: 120 },
-  { q: 'Wheel slip S = (N_0 - N_L)/N_0 × 100. If N_0=100 & N_L=85, Slip (%):', ans: 15 },
-  { q: 'Pump power P = (ρ g Q H)/1000. If Q=0.01 m³/s, H=20m, g=9.81, kW (1 dec):', ans: 2.0 },
-  { q: 'USLE soil loss A = R K LS C P. If K=0.3, R=100, LS=2, C=0.5, P=1, A (t/ha/yr):', ans: 30 }
+  { q: '7 × 8 = ?', ans: 56 },
+  { q: '25 + 38 = ?', ans: 63 },
+  { q: '100 - 37 = ?', ans: 63 },
+  { q: '9 × 6 = ?', ans: 54 },
+  { q: '45 + 55 = ?', ans: 100 },
+  { q: '12 × 4 = ?', ans: 48 },
+  { q: '80 - 24 = ?', ans: 56 },
+  { q: '63 ÷ 7 = ?', ans: 9 },
+  { q: '15 + 29 = ?', ans: 44 },
+  { q: '8 × 8 = ?', ans: 64 },
+  { q: '120 - 45 = ?', ans: 75 },
+  { q: '72 ÷ 8 = ?', ans: 9 },
+  { q: '16 × 3 = ?', ans: 48 },
+  { q: '33 + 47 = ?', ans: 80 },
+  { q: '9 × 9 = ?', ans: 81 }
 ];
 
 export default function Realtime1v1Duel({ breakXP, onAddXP }) {
@@ -25,7 +37,8 @@ export default function Realtime1v1Duel({ breakXP, onAddXP }) {
   const [currentQIdx, setCurrentQIdx] = useState(0);
   const [userAns, setUserAns] = useState('');
   const [feedback, setFeedback] = useState('');
-  const [roundTime, setRoundTime] = useState(15);
+  const [roundTime, setRoundTime] = useState(10);
+  const [streak, setStreak] = useState(0);
 
   const timerRef = useRef(null);
 
@@ -33,10 +46,11 @@ export default function Realtime1v1Duel({ breakXP, onAddXP }) {
     setRival(selectedRival);
     setPlayerHp(100);
     setRivalHp(100);
-    setCurrentQIdx(0);
+    setCurrentQIdx(Math.floor(Math.random() * DUEL_QUESTIONS.length));
     setUserAns('');
     setFeedback('');
-    setRoundTime(15);
+    setRoundTime(10);
+    setStreak(0);
     setGameState('dueling');
     playCyberSound('powerup');
   };
@@ -50,15 +64,16 @@ export default function Realtime1v1Duel({ breakXP, onAddXP }) {
         if (prev <= 1) {
           // Time expired - rival hits player!
           setPlayerHp(h => {
-            const nextH = h - 15;
+            const nextH = h - 18;
             if (nextH <= 0) setGameState('defeat');
             return Math.max(0, nextH);
           });
           playCyberSound('bossHit');
-          setFeedback('⏳ TIME EXPIRED! Rival launched counter-attack!');
+          setFeedback('⏳ TIME EXPIRED! Rival landed a quick counter-strike!');
+          setStreak(0);
           // Move to next question
           setCurrentQIdx(idx => (idx + 1) % DUEL_QUESTIONS.length);
-          return 15;
+          return 10;
         }
         return prev - 1;
       });
@@ -71,16 +86,16 @@ export default function Realtime1v1Duel({ breakXP, onAddXP }) {
   useEffect(() => {
     if (gameState !== 'dueling') return;
     const aiInterval = setInterval(() => {
-      // 30% chance rival answers correctly on their side
-      if (Math.random() < 0.3) {
+      // 25% chance rival attacks on timer tick
+      if (Math.random() < 0.25) {
         playCyberSound('bossHit');
         setPlayerHp(h => {
-          const nextH = h - 12;
+          const nextH = h - 10;
           if (nextH <= 0) setGameState('defeat');
           return Math.max(0, nextH);
         });
       }
-    }, 4500);
+    }, 4000);
 
     return () => clearInterval(aiInterval);
   }, [gameState]);
@@ -90,26 +105,28 @@ export default function Realtime1v1Duel({ breakXP, onAddXP }) {
     const q = DUEL_QUESTIONS[currentQIdx];
     const val = parseFloat(userAns);
 
-    if (Math.abs(val - q.ans) < 0.2) {
+    if (val === q.ans) {
       playCyberSound('laser');
+      setStreak(s => s + 1);
       setRivalHp(h => {
-        const nextH = h - 30;
+        const nextH = h - 35;
         if (nextH <= 0) {
           setGameState('victory');
-          confetti({ particleCount: 80 });
+          confetti({ particleCount: 80, spread: 60, origin: { y: 0.6 } });
           onAddXP(200);
         }
         return Math.max(0, nextH);
       });
-      setFeedback('💥 PERFECT HIT! Counter-attack wave launched at Rival!');
-      onAddXP(50);
+      setFeedback('💥 PERFECT CRITICAL HIT! Rival took heavy damage!');
+      onAddXP(30);
       setUserAns('');
-      setRoundTime(15);
+      setRoundTime(10);
       setCurrentQIdx(idx => (idx + 1) % DUEL_QUESTIONS.length);
     } else {
       playCyberSound('explosion');
+      setStreak(0);
       setPlayerHp(h => {
-        const nextH = h - 10;
+        const nextH = h - 12;
         if (nextH <= 0) setGameState('defeat');
         return Math.max(0, nextH);
       });
@@ -128,10 +145,10 @@ export default function Realtime1v1Duel({ breakXP, onAddXP }) {
             <Swords className="w-8 h-8 animate-pulse" />
           </div>
           <h3 className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-pink-400">
-            REAL-TIME 1v1 GATE AG DUEL ARENA
+            1v1 RAPID REFLEX SPEED CLASH ⚔️
           </h3>
           <p className="text-sm text-slate-300 mt-2 mb-6">
-            Face off against top All-India aspirants in rapid math NAT speed battles. Answering correctly launches attack waves at your rival!
+            Challenge arcade speed rivals in lightning-fast reflex battles! Rapid correct hits launch laser counter-attacks!
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
@@ -150,7 +167,7 @@ export default function Realtime1v1Duel({ breakXP, onAddXP }) {
                   <div>
                     <h4 className="font-bold text-sm text-white">{r.name}</h4>
                     <span className="text-xs text-indigo-400 font-mono block">{r.rank}</span>
-                    <span className="text-xs text-slate-400 font-mono">Specialty: {r.skill}</span>
+                    <span className="text-xs text-slate-400 font-mono">Style: {r.skill}</span>
                   </div>
                 </div>
               </div>
@@ -176,7 +193,7 @@ export default function Realtime1v1Duel({ breakXP, onAddXP }) {
             <div className="p-3 bg-slate-950 rounded-lg border border-emerald-500/40">
               <div className="flex justify-between items-center mb-1">
                 <span className="font-bold text-sm text-emerald-400 flex items-center gap-2">
-                  🚜 YOU (GATE Aspirant)
+                  🚜 YOU {streak > 1 && <span className="text-xs bg-emerald-950 text-emerald-300 px-2 py-0.5 rounded-full font-mono font-bold">Combo x{streak}</span>}
                 </span>
                 <span className="text-xs font-mono text-emerald-300 font-bold">{playerHp} HP</span>
               </div>
@@ -208,26 +225,26 @@ export default function Realtime1v1Duel({ breakXP, onAddXP }) {
           {/* QUESTION ARENA */}
           <div className="bg-slate-900 border border-indigo-500/40 rounded-xl p-6 text-center shadow-inner relative">
             <div className="absolute top-4 right-4 bg-indigo-950 border border-indigo-400 px-3 py-1 rounded-full font-mono text-xs text-indigo-300 font-bold">
-              ⏳ {roundTime}s REMAINING
+              ⏳ {roundTime}s
             </div>
 
             <span className="text-xs uppercase font-mono text-indigo-400 font-bold tracking-widest block mb-2">
-              SPEED NAT ROUND {currentQIdx + 1}
+              SPEED REFLEX ROUND
             </span>
 
-            <h4 className="text-xl font-bold text-white mb-6">
+            <h4 className="text-3xl font-black text-white mb-6 tracking-wide">
               {DUEL_QUESTIONS[currentQIdx].q}
             </h4>
 
             <form onSubmit={handleAnswerSubmit} className="max-w-md mx-auto space-y-4">
               <input
                 type="number"
-                step="any"
+                step="1"
                 autoFocus
-                placeholder="Type NAT Answer & Press Enter..."
+                placeholder="Answer & Enter..."
                 value={userAns}
                 onChange={(e) => setUserAns(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-indigo-500/60 text-indigo-300 font-mono font-extrabold text-xl text-center focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-indigo-500/60 text-indigo-300 font-mono font-extrabold text-2xl text-center focus:outline-none focus:ring-2 focus:ring-indigo-400"
               />
 
               {feedback && (
@@ -252,8 +269,8 @@ export default function Realtime1v1Duel({ breakXP, onAddXP }) {
       {gameState === 'victory' && (
         <div className="text-center my-8 p-6 bg-slate-900 border border-emerald-500/60 rounded-xl max-w-md mx-auto">
           <Trophy className="w-16 h-16 text-yellow-400 mx-auto mb-3 animate-bounce" />
-          <h3 className="text-2xl font-black text-emerald-400">DUEL VICTORY!</h3>
-          <p className="text-sm text-slate-300 my-2">You defeated {rival.name} in All-India 1v1 Speed Duel!</p>
+          <h3 className="text-2xl font-black text-emerald-400">DUEL VICTORY! 🏆</h3>
+          <p className="text-sm text-slate-300 my-2">You defeated {rival.name} in lightning reflex speed!</p>
           <div className="text-lg font-mono font-bold text-yellow-300 mb-6">+200 BREAK XP EARNED!</div>
           <button
             onClick={() => setGameState('lobby')}
@@ -269,7 +286,7 @@ export default function Realtime1v1Duel({ breakXP, onAddXP }) {
         <div className="text-center my-8 p-6 bg-slate-900 border border-rose-500/60 rounded-xl max-w-md mx-auto">
           <div className="text-4xl mb-2">💔</div>
           <h3 className="text-2xl font-black text-rose-400">DUEL DEFEATED!</h3>
-          <p className="text-sm text-slate-300 my-2">{rival.name} hit faster calculation responses.</p>
+          <p className="text-sm text-slate-300 my-2">{rival.name} had faster reflex speed this round.</p>
           <button
             onClick={() => setGameState('lobby')}
             className="w-full py-3 mt-4 bg-rose-600 hover:bg-rose-500 font-bold rounded-xl text-white shadow-lg"

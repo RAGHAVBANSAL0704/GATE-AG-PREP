@@ -14,8 +14,8 @@ export function escapeHtml(unsafe) {
     .replace(/'/g, '&#039;');
 }
 
-export default function MathRenderer({ content, math, inline = false, className = "" }) {
-  const textContent = content || math;
+export default function MathRenderer({ content, math, text, inline = false, className = "" }) {
+  const textContent = content || math || text;
   if (!textContent) return null;
 
   // Process markdown bold (**text**), code (`text`), unit formatting, and KaTeX math safely
@@ -99,7 +99,7 @@ export default function MathRenderer({ content, math, inline = false, className 
 
     // 10. Re-inject safe KaTeX rendered tokens
     for (const { token, rendered } of mathTokens) {
-      str = str.replace(token, rendered);
+      str = str.replaceAll(token, () => rendered);
     }
 
     return str;

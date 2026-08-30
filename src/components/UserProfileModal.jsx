@@ -18,9 +18,12 @@ import {
   User,
   Eye,
   EyeOff,
-  AtSign
+  AtSign,
+  Sparkles,
+  Key
 } from 'lucide-react';
 import { updateStudentProfile } from '../services/authService';
+import { getStoredApiKey, setStoredApiKey } from '../services/geminiService';
 
 export default function UserProfileModal({ student, onClose, onProfileUpdated }) {
   const [fullName, setFullName] = useState(student?.full_name || '');
@@ -35,6 +38,8 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
   const [photoUrl, setPhotoUrl] = useState(student?.profile_photo_url || '');
   const [newPassword, setNewPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+  const [geminiApiKey, setGeminiApiKey] = useState(() => getStoredApiKey());
+  const [showGeminiKey, setShowGeminiKey] = useState(false);
 
   const [isLoading, setIsLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
@@ -106,6 +111,8 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
         if (res.student.college_name) setCollegeName(res.student.college_name);
         if (res.student.address) setAddress(res.student.address);
         if (res.student.profile_photo_url) setPhotoUrl(res.student.profile_photo_url);
+
+        setStoredApiKey(geminiApiKey);
 
         setSuccessMsg(`✅ Profile updated successfully! (${res.updatesRemaining} updates left this week)`);
         onProfileUpdated(res.student);
@@ -210,6 +217,7 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
               </label>
               <input
                 type="text"
+                placeholder={student?.student_type === 'hau' ? 'e.g. Ananya Sharma' : 'e.g. Gayatri Aggarwal'}
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
                 className="w-full px-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 placeholder-slate-500 focus:outline-none focus:border-emerald-500"
@@ -226,7 +234,7 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
                 <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-emerald-400 font-mono font-bold">@</span>
                 <input
                   type="text"
-                  placeholder="aman_kumar"
+                  placeholder={student?.student_type === 'hau' ? 'ananya_sharma' : 'gayatri_aggarwal'}
                   value={username.replace(/^@/, '')}
                   onChange={(e) => setUsername(e.target.value.toLowerCase().replace(/[^a-z0-9_]/g, ''))}
                   className="w-full pl-8 pr-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 placeholder-slate-500 focus:outline-none focus:border-emerald-500 font-mono"
@@ -401,6 +409,40 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
                   title={showPassword ? "Hide password" : "Show password"}
                 >
                   {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                </button>
+              </div>
+            </div>
+
+            {/* Google Gemini AI Key Setting */}
+            <div className="space-y-1 sm:col-span-2 pt-2 border-t border-slate-800">
+              <label className="font-medium text-slate-300 flex items-center justify-between">
+                <span className="flex items-center gap-1.5">
+                  <Sparkles className="w-3.5 h-3.5 text-purple-400" />
+                  Google Gemini AI API Key (Optional for Unlimited AI Queries)
+                </span>
+                <a 
+                  href="https://aistudio.google.com/app/apikey" 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="text-[10px] text-purple-400 hover:underline"
+                >
+                  Get Free Key ↗
+                </a>
+              </label>
+              <div className="relative">
+                <input
+                  type={showGeminiKey ? "text" : "password"}
+                  placeholder="AIzaSy..."
+                  value={geminiApiKey}
+                  onChange={(e) => setGeminiApiKey(e.target.value)}
+                  className="w-full px-3.5 py-2.5 pr-10 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 font-mono text-xs focus:outline-none focus:border-purple-500"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowGeminiKey(!showGeminiKey)}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-purple-400 p-1"
+                >
+                  {showGeminiKey ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                 </button>
               </div>
             </div>

@@ -22,6 +22,7 @@ import {
   Edit3
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
+import { evaluateQuestion } from '../utils/scoring.js';
 import ConceptStudyModal from './ConceptStudyModal';
 import { GATE_AG_SYLLABUS } from '../data/syllabus';
 import { getOfficialSections, normalizeSectionTitle } from '../utils/syllabusTaxonomy.js';
@@ -185,29 +186,12 @@ export default function CustomPracticePool({
     const userVal = userAnswers[qId];
     if (userVal === undefined || userVal === '') return;
 
-    const correctKey = currentQ.correct_answer || '';
-    let isCorrect = false;
-
-    if (currentQ.type === 'MCQ') {
-      isCorrect = userVal.trim().toUpperCase() === correctKey.trim().toUpperCase() || correctKey.toUpperCase().includes(userVal.trim().toUpperCase());
-    } else if (currentQ.type === 'MSQ') {
-      const userSorted = userVal.split(',').map(s => s.trim().toUpperCase()).sort().join(';');
-      const keySorted = correctKey.replace(/,/g, ';').replace(/and/g, ';').split(/[,;\s]+/).filter(Boolean).map(s => s.trim().toUpperCase()).sort().join(';');
-      isCorrect = userSorted === keySorted;
-    } else if (currentQ.type === 'NAT') {
-      const numVal = parseFloat(userVal);
-      if (!isNaN(numVal)) {
-        if (correctKey.includes(' to ')) {
-          const [minStr, maxStr] = correctKey.split(' to ');
-          const min = parseFloat(minStr);
-          const max = parseFloat(maxStr);
-          isCorrect = numVal >= (min - 0.001) && numVal <= (max + 0.001);
-        } else {
-          const target = parseFloat(correctKey);
-          isCorrect = !isNaN(target) && Math.abs(numVal - target) <= 0.05;
-        }
-      }
-    }
+    const evalResult = evaluateQuestion({
+      question: currentQ,
+      userAnswer: userVal,
+      state: 'ANSWERED'
+    });
+    const isCorrect = evalResult.isCorrect;
 
     setSubmittedState({
       ...submittedState,

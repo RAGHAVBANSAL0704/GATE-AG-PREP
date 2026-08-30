@@ -133,6 +133,25 @@ export default defineConfig(({ command }) => ({
   server: {
     port: 3000,
     host: true
+  },
+  build: {
+    chunkSizeWarningLimit: 1500,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('/data/custom_mock_')) return 'dataset-custom-mocks';
+          if (id.includes('/data/mock_papers.json')) return 'dataset-pyq-mocks';
+          if (id.includes('/data/questions.json')) return 'dataset-questions-archive';
+          if (id.includes('node_modules')) {
+            if (id.includes('katex')) return 'vendor-katex';
+            if (id.includes('lucide-react')) return 'vendor-icons';
+            if (id.includes('@supabase')) return 'vendor-supabase';
+            if (id.includes('react') || id.includes('react-dom')) return 'vendor-react';
+            return 'vendor-libs';
+          }
+        }
+      }
+    }
   }
 }))
 

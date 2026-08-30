@@ -1,5 +1,6 @@
 import { supabase, isSupabaseConfigured } from './supabaseClient.js';
 import { validateCleanInput } from '../utils/profanityFilter.js';
+import { syncPendingTestAttempts } from './testAttemptService.js';
 
 const LOCAL_STORAGE_SESSION_KEY = 'gate_ag_prep_session_token';
 const LOCAL_STORAGE_USERS_KEY = 'gate_ag_prep_mock_users';
@@ -55,24 +56,8 @@ export async function syncAllUserDataToBackend() {
       }
     }
 
-    // 3. Sync local offline test attempts to Supabase test_attempts table
-    const rawAttempts = localStorage.getItem('gate_ag_prep_test_attempts');
-    if (rawAttempts) {
-      const attempts = JSON.parse(rawAttempts);
-      if (Array.isArray(attempts) && attempts.length > 0) {
-        for (const att of attempts.slice(0, 20)) {
-          if (!att._syncedToBackend) {
-            const cleanAtt = { ...att };
-            delete cleanAtt._syncedToBackend;
-            const { error } = await supabase.from('test_attempts').insert([cleanAtt]);
-            if (!error) {
-              att._syncedToBackend = true;
-            }
-          }
-        }
-        localStorage.setItem('gate_ag_prep_test_attempts', JSON.stringify(attempts));
-      }
-    }
+    // 3. Sync local offline test attempts safely via idempotent upsert
+    await syncPendingTestAttempts();
   } catch (e) {
     console.warn("Backend user data sync warning:", e);
   }

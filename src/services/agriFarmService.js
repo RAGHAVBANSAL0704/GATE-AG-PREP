@@ -7,23 +7,28 @@ export const INITIAL_FARM_STATE = {
     { id: 'm3', name: 'Self-Propelled Combine Harvester', icon: '🌾', level: 0, maxLevel: 5, cost: 600, spec: 'Multi-crop harvesting & threshing', unlocked: false },
     { id: 'm4', name: 'Pneumatic Precision Seed Drill', icon: '🛠️', level: 0, maxLevel: 5, cost: 1000, spec: 'Zero-till precision metering', unlocked: false },
     { id: 'm5', name: 'Laser-Guided Precision Land Leveler', icon: '📐', level: 0, maxLevel: 5, cost: 1500, spec: 'Sub-centimeter field grade leveling', unlocked: false },
-    { id: 'm6', name: 'AI Autonomous Electric Tractor (150 HP)', icon: '🤖', level: 0, maxLevel: 5, cost: 2000, spec: 'GPS-guided zero-emission tillage', unlocked: false }
+    { id: 'm6', name: 'AI Autonomous Electric Tractor (150 HP)', icon: '🤖', level: 0, maxLevel: 5, cost: 2000, spec: 'GPS-guided zero-emission tillage', unlocked: false },
+    { id: 'm7', name: 'Heavy Armored Tillage Behemoth (250 HP)', icon: '🛡️', level: 0, maxLevel: 5, cost: 2600, spec: 'High-torque hardpan shatterer with dual hydraulic draft', unlocked: false },
+    { id: 'm8', name: 'Cyber Hydro-Excavator Titan', icon: '🦾', level: 0, maxLevel: 5, cost: 3200, spec: 'Autonomous drainage trenching & earthmoving beast', unlocked: false },
+    { id: 'm9', name: 'Orbital Precision Harvester Mech', icon: '👑', level: 0, maxLevel: 5, cost: 4000, spec: 'Multi-spectral satellite synced mega harvester', unlocked: false }
   ],
   irrigation: [
     { id: 'i1', name: 'Surface Furrow Irrigation', icon: '💧', level: 1, maxLevel: 5, cost: 100, spec: 'Gravity water distribution', unlocked: true },
-    { id: 'i2', name: 'Sub-surface Drip Drip Net', icon: '🪴', level: 0, maxLevel: 5, cost: 250, spec: '95% water application efficiency', unlocked: false },
+    { id: 'i2', name: 'Sub-surface Drip Net Array', icon: '🪴', level: 0, maxLevel: 5, cost: 250, spec: '95% water application efficiency', unlocked: false },
     { id: 'i3', name: 'Solar PV Drip Pump (2 HP)', icon: '☀️', level: 0, maxLevel: 5, cost: 500, spec: 'Renewable drip automation', unlocked: false },
     { id: 'i4', name: 'Automated Center Pivot Sprinkler', icon: '🎯', level: 0, maxLevel: 5, cost: 900, spec: 'Large acreage uniform spray', unlocked: false },
     { id: 'i5', name: 'UAV Quadcopter Precision Sprayer', icon: '🚁', level: 0, maxLevel: 5, cost: 1600, spec: 'Variable rate ultra-low volume spray', unlocked: false },
-    { id: 'i6', name: 'Solar Microgrid & Smart Fertigation', icon: '⚡', level: 0, maxLevel: 5, cost: 1800, spec: 'Automated IoT nutrient injection', unlocked: false }
+    { id: 'i6', name: 'Solar Microgrid & Smart Fertigation', icon: '⚡', level: 0, maxLevel: 5, cost: 2200, spec: 'Automated IoT nutrient injection', unlocked: false },
+    { id: 'i7', name: 'Geothermal Sub-Surface Hydro-Array', icon: '🌊', level: 0, maxLevel: 5, cost: 3000, spec: 'Pressurized aquifer geo-pump network', unlocked: false }
   ],
   processing: [
     { id: 'p1', name: 'Natural Sun Drying Floor', icon: '☀️', level: 1, maxLevel: 5, cost: 100, spec: 'Open yard grain drying', unlocked: true },
     { id: 'p2', name: 'Recirculating Batch Grain Dryer', icon: '🌾', level: 0, maxLevel: 5, cost: 350, spec: 'Heated air psychrometric drying', unlocked: false },
     { id: 'p3', name: 'Milk HTST Heat Exchanger', icon: '🥛', level: 0, maxLevel: 5, cost: 700, spec: '72°C pasteurization plates', unlocked: false },
     { id: 'p4', name: 'Rotary Atomizer Spray Dryer', icon: '🏭', level: 0, maxLevel: 5, cost: 1200, spec: 'High speed dairy powder tower', unlocked: false },
-    { id: 'p5', name: 'Continuous Freeze Dryer Unit', icon: '❄️', level: 0, maxLevel: 5, cost: 1700, spec: 'Lyophilization for premium produce', unlocked: false },
-    { id: 'p6', name: 'Supercritical CO2 Fluid Extractor', icon: '⚗️', level: 0, maxLevel: 5, cost: 2200, spec: 'Solventless essential oil extraction', unlocked: false }
+    { id: 'p5', name: 'Continuous Freeze Dryer Unit', icon: '❄️', level: 0, maxLevel: 5, cost: 1800, spec: 'Lyophilization for premium produce', unlocked: false },
+    { id: 'p6', name: 'Supercritical CO2 Fluid Extractor', icon: '⚗️', level: 0, maxLevel: 5, cost: 2500, spec: 'Solventless essential oil extraction', unlocked: false },
+    { id: 'p7', name: 'Quantum Cryo-Vacuum Processing Reactor', icon: '🔬', level: 0, maxLevel: 5, cost: 3400, spec: 'Zero-loss cryogenic food encapsulation', unlocked: false }
   ]
 };
 

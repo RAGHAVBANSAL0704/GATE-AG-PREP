@@ -12,7 +12,8 @@ import {
   HelpCircle,
   Sparkles,
   GraduationCap,
-  Gamepad2
+  Gamepad2,
+  MessageSquare
 } from 'lucide-react';
 import { GATE_AG_SYLLABUS } from '../data/syllabus';
 import { normalizeSectionTitle } from '../utils/syllabusTaxonomy.js';
@@ -162,7 +163,7 @@ export default function Dashboard({ questions, mockPapers = [], customMockPapers
       </div>
 
       {/* Hub Shortcuts */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
         <div 
           onClick={() => setActiveTab('practicehub')}
           className="bg-white dark:bg-slate-900 rounded-xl p-4 border border-slate-200 dark:border-slate-800 hover:border-blue-500/50 cursor-pointer transition flex items-center justify-between group shadow-xs"
@@ -193,6 +194,22 @@ export default function Dashboard({ questions, mockPapers = [], customMockPapers
             </div>
           </div>
           <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-purple-500 group-hover:translate-x-0.5 transition" />
+        </div>
+
+        <div 
+          onClick={() => setActiveTab('community')}
+          className="bg-white dark:bg-slate-900 rounded-xl p-4 border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 cursor-pointer transition flex items-center justify-between group shadow-xs"
+        >
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 rounded-lg bg-emerald-50 dark:bg-emerald-950 text-emerald-600 flex items-center justify-center shrink-0">
+              <MessageSquare className="w-4 h-4" />
+            </div>
+            <div>
+              <h3 className="font-bold text-xs text-slate-900 dark:text-white">Community</h3>
+              <p className="text-[10px] text-slate-400">Live Chat & Discussions</p>
+            </div>
+          </div>
+          <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-emerald-500 group-hover:translate-x-0.5 transition" />
         </div>
 
         <div 

@@ -38,7 +38,7 @@ export default function CommunityChatHub({ currentStudent }) {
   const [messages, setMessages] = useState(DEFAULT_MESSAGES);
   const [inputText, setInputText] = useState('');
   const [moderationError, setModerationError] = useState('');
-  const chatEndRef = useRef(null);
+  const messagesContainerRef = useRef(null);
 
   useEffect(() => {
     async function loadChat() {
@@ -51,7 +51,9 @@ export default function CommunityChatHub({ currentStudent }) {
   }, []);
 
   useEffect(() => {
-    chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (messagesContainerRef.current) {
+      messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+    }
   }, [messages, activeChannel]);
 
   const handleSendMessage = async (e) => {
@@ -140,7 +142,7 @@ export default function CommunityChatHub({ currentStudent }) {
         </div>
 
         {/* Message Feed Container */}
-        <div className="flex-1 p-4 space-y-4 overflow-y-auto">
+        <div ref={messagesContainerRef} className="flex-1 p-4 space-y-4 overflow-y-auto">
           {channelMessages.length === 0 ? (
             <div className="h-full flex flex-col items-center justify-center text-center text-slate-400 text-xs space-y-2">
               <MessageSquare className="w-8 h-8 opacity-40" />
@@ -180,7 +182,6 @@ export default function CommunityChatHub({ currentStudent }) {
               </div>
             ))
           )}
-          <div ref={chatEndRef} />
         </div>
 
         {/* Input Form & Profanity Error Display */}
