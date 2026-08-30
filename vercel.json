@@ -5,7 +5,7 @@
   "outputDirectory": "dist",
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!images/|assets/|downloads/|icons/|docx_images/|question_images/|sw.js|favicon.ico|manifest.webmanifest|manifest.json).*)",
       "destination": "/index.html"
     }
   ],

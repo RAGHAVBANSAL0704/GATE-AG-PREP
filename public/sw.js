@@ -4,13 +4,13 @@
  * Architecture: Offline PWA with Versioned Multi-Tier Caching
  */
 
-const CACHE_VERSION = 'v1.0.19';
+const CACHE_VERSION = 'v1.0.20';
 const CACHE_PREFIX = 'gate-ag-';
 
-const STATIC_CACHE = 'gate-ag-static-v1.0.19';
-const RUNTIME_CACHE = 'gate-ag-runtime-v1.0.19';
-const IMAGES_CACHE = 'gate-ag-images-v1.0.19';
-const FONTS_CACHE = 'gate-ag-fonts-v1.0.19';
+const STATIC_CACHE = 'gate-ag-static-v1.0.20';
+const RUNTIME_CACHE = 'gate-ag-runtime-v1.0.20';
+const IMAGES_CACHE = 'gate-ag-images-v1.0.20';
+const FONTS_CACHE = 'gate-ag-fonts-v1.0.20';
 
 const CURRENT_CACHES = [
   STATIC_CACHE,
@@ -28,8 +28,8 @@ const PRECACHE_ASSETS = [
   './icons/icon.svg',
   './icons/icon-192.png',
   './icons/icon-512.png',
-  './images/akhand_bharat_backdrop.jpg',
-  './images/swami_vivekananda_real_portrait.jpg',
+  './icons/akhand_bharat_backdrop.jpg',
+  './icons/swami_vivekananda_real_portrait.jpg',
 ];
 
 /**

@@ -29,8 +29,8 @@ import {
 import { GATE_AG_SYLLABUS } from '../data/syllabus';
 import { normalizeSectionTitle } from '../utils/syllabusTaxonomy.js';
 
-const akhandBharatBackdrop = '/images/akhand_bharat_backdrop.jpg';
-const swamiVivekanandaPortrait = '/images/swami_vivekananda_real_portrait.jpg';
+const akhandBharatBackdrop = '/icons/akhand_bharat_backdrop.jpg';
+const swamiVivekanandaPortrait = '/icons/swami_vivekananda_real_portrait.jpg';
 
 const normalizeSectionName = (secName) => {
   if (!secName) return '';
