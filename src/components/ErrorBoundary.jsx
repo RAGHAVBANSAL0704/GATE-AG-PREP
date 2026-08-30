@@ -13,6 +13,21 @@ export default class ErrorBoundary extends React.Component {
 
   componentDidCatch(error, errorInfo) {
     console.error("GATE AG Portal Error Boundary caught an error:", error, errorInfo);
+    
+    // Check if error is due to a new build deployment mismatch
+    const isChunkError = error && (
+      error.message?.includes('Importing a module script failed') ||
+      error.message?.includes('Failed to fetch dynamically imported module') ||
+      error.name === 'ChunkLoadError'
+    );
+
+    if (isChunkError) {
+      const alreadyRefreshed = sessionStorage.getItem('gate_ag_chunk_refreshed');
+      if (!alreadyRefreshed) {
+        sessionStorage.setItem('gate_ag_chunk_refreshed', 'true');
+        window.location.reload();
+      }
+    }
   }
 
   handleReset = () => {
@@ -20,6 +35,7 @@ export default class ErrorBoundary extends React.Component {
       localStorage.removeItem('gate_ag_user_stats');
       localStorage.removeItem('gate_ag_bookmarks');
       localStorage.removeItem('gate_ag_progress');
+      sessionStorage.clear();
     } catch (e) {}
     window.location.reload();
   };

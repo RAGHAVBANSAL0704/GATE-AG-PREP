@@ -5,22 +5,44 @@ import Dashboard from './components/Dashboard';
 import PracticeHub from './components/PracticeHub';
 import Footer from './components/Footer';
 
-// Code-split heavy sub-tabs for ultra-fast initial page load (< 200ms)
-const MockTestMode = lazy(() => import('./components/MockTestMode'));
-const LearningHub = lazy(() => import('./components/LearningHub'));
-const CommunityHub = lazy(() => import('./components/CommunityHub'));
-const CreatorAdminHQ = lazy(() => import('./components/CreatorAdminHQ'));
-const PerformanceAnalytics = lazy(() => import('./components/PerformanceAnalytics'));
-const Leaderboard = lazy(() => import('./components/Leaderboard'));
-const FeedbackForum = lazy(() => import('./components/FeedbackForum'));
-const DownloadsHub = lazy(() => import('./components/DownloadsHub'));
-const SyllabusTracker = lazy(() => import('./components/SyllabusTracker'));
-const GamesZone = lazy(() => import('./components/GamesZone'));
-const ScientificCalculator = lazy(() => import('./components/ScientificCalculator'));
-const TestResultModal = lazy(() => import('./components/TestResultModal'));
-const QuestionEditorModal = lazy(() => import('./components/QuestionEditorModal'));
-const AuthModal = lazy(() => import('./components/AuthModal'));
-const UserProfileModal = lazy(() => import('./components/UserProfileModal'));
+// Robust lazy loading wrapper that auto-reloads the page if a chunk is missing due to a new deployment
+function lazyWithRetry(componentImport) {
+  return lazy(async () => {
+    const pageHasBeenRefreshed = JSON.parse(
+      window.sessionStorage?.getItem('gate_ag_chunk_refreshed') || 'false'
+    );
+
+    try {
+      const component = await componentImport();
+      window.sessionStorage?.setItem('gate_ag_chunk_refreshed', 'false');
+      return component;
+    } catch (error) {
+      if (!pageHasBeenRefreshed) {
+        window.sessionStorage?.setItem('gate_ag_chunk_refreshed', 'true');
+        window.location.reload();
+        return { default: () => null };
+      }
+      throw error;
+    }
+  });
+}
+
+// Code-split heavy sub-tabs for ultra-fast initial page load (< 200ms) with deployment resilience
+const MockTestMode = lazyWithRetry(() => import('./components/MockTestMode'));
+const LearningHub = lazyWithRetry(() => import('./components/LearningHub'));
+const CommunityHub = lazyWithRetry(() => import('./components/CommunityHub'));
+const CreatorAdminHQ = lazyWithRetry(() => import('./components/CreatorAdminHQ'));
+const PerformanceAnalytics = lazyWithRetry(() => import('./components/PerformanceAnalytics'));
+const Leaderboard = lazyWithRetry(() => import('./components/Leaderboard'));
+const FeedbackForum = lazyWithRetry(() => import('./components/FeedbackForum'));
+const DownloadsHub = lazyWithRetry(() => import('./components/DownloadsHub'));
+const SyllabusTracker = lazyWithRetry(() => import('./components/SyllabusTracker'));
+const GamesZone = lazyWithRetry(() => import('./components/GamesZone'));
+const ScientificCalculator = lazyWithRetry(() => import('./components/ScientificCalculator'));
+const TestResultModal = lazyWithRetry(() => import('./components/TestResultModal'));
+const QuestionEditorModal = lazyWithRetry(() => import('./components/QuestionEditorModal'));
+const AuthModal = lazyWithRetry(() => import('./components/AuthModal'));
+const UserProfileModal = lazyWithRetry(() => import('./components/UserProfileModal'));
 
 function TabLoadingSkeleton() {
   return (
