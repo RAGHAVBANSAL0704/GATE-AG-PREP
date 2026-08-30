@@ -5,7 +5,7 @@
   "outputDirectory": "dist",
   "rewrites": [
     {
-      "source": "/((?!assets/|downloads/|icons/|docx_images/|question_images/|sw.js|favicon.ico|manifest.webmanifest|manifest.json).*)",
+      "source": "/((?!assets/|images/|downloads/|icons/|docx_images/|question_images/|sw.js|favicon.ico|manifest.webmanifest|manifest.json).*)",
       "destination": "/index.html"
     }
   ],
@@ -38,6 +38,15 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
         }
       ]
     },
