@@ -188,19 +188,20 @@ export default function QuestionEditorModal({ question, onSave, onClose }) {
                 const availTopics = getOfficialTopicsForSection(formData.section);
                 return (
                   <select
-                    value={formData.topic}
+                    value={formData.topic || 'None'}
                     onChange={(e) => {
                       const top = e.target.value;
-                      const firstSub = getOfficialSubtopicsForTopic(formData.section, top)[0] || '';
-                      setFormData(prev => ({ ...prev, topic: top, subtopic: firstSub }));
+                      if (!top || top === 'None') {
+                        setFormData(prev => ({ ...prev, topic: 'None', subtopic: 'None' }));
+                      } else {
+                        const firstSub = getOfficialSubtopicsForTopic(formData.section, top)[0] || 'None';
+                        setFormData(prev => ({ ...prev, topic: top, subtopic: firstSub }));
+                      }
                     }}
                     className="w-full bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-xl px-3.5 py-2.5 text-slate-900 dark:text-slate-100 font-medium outline-none"
                   >
-                    {availTopics.length > 0 ? (
-                      availTopics.map(t => <option key={t.topic_name} value={t.topic_name}>{t.topic_name}</option>)
-                    ) : (
-                      <option value={formData.topic}>{formData.topic || 'General'}</option>
-                    )}
+                    <option value="None">None / Miscellaneous</option>
+                    {availTopics.map(t => <option key={t.topic_name} value={t.topic_name}>{t.topic_name}</option>)}
                   </select>
                 );
               })()}
@@ -209,21 +210,15 @@ export default function QuestionEditorModal({ question, onSave, onClose }) {
               <label className="block font-bold text-slate-400 uppercase tracking-wider mb-1">Sub-Topic / Detail</label>
               {(() => {
                 const availSubs = getOfficialSubtopicsForTopic(formData.section, formData.topic);
-                return availSubs.length > 0 ? (
+                return (
                   <select
-                    value={formData.subtopic}
+                    value={formData.subtopic || 'None'}
                     onChange={(e) => handleTextChange('subtopic', e.target.value)}
                     className="w-full bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-xl px-3.5 py-2.5 text-slate-900 dark:text-slate-100 font-medium outline-none"
                   >
+                    <option value="None">None / General</option>
                     {availSubs.map(st => <option key={st} value={st}>{st}</option>)}
                   </select>
-                ) : (
-                  <input
-                    type="text"
-                    value={formData.subtopic}
-                    onChange={(e) => handleTextChange('subtopic', e.target.value)}
-                    className="w-full bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-xl px-3.5 py-2.5 text-slate-900 dark:text-slate-100 font-medium outline-none"
-                  />
                 );
               })()}
             </div>

@@ -151,9 +151,15 @@ export default function AdminQuestionManager({
       if (q) {
         const canonSec = normalizeSectionTitle(q.section);
         const canonTopics = getOfficialTopicsForSection(canonSec);
-        const canonTopic = canonTopics.find(t => t.topic_name.toLowerCase() === (q.topic || '').toLowerCase())?.topic_name || canonTopics[0]?.topic_name || '';
+        let canonTopic = 'None';
+        if (q.topic && q.topic !== 'None') {
+          canonTopic = canonTopics.find(t => t.topic_name.toLowerCase() === q.topic.toLowerCase())?.topic_name || q.topic;
+        }
         const canonSubs = getOfficialSubtopicsForTopic(canonSec, canonTopic);
-        const canonSub = canonSubs.find(s => s.toLowerCase() === (q.subtopic || '').toLowerCase()) || canonSubs[0] || q.subtopic || '';
+        let canonSub = 'None';
+        if (q.subtopic && q.subtopic !== 'None') {
+          canonSub = canonSubs.find(s => s.toLowerCase() === q.subtopic.toLowerCase()) || q.subtopic;
+        }
 
         setFormData({
           id: q.id || '',
@@ -176,8 +182,8 @@ export default function AdminQuestionManager({
 
   const handleSectionChange = (newSectionTitle) => {
     const topics = getOfficialTopicsForSection(newSectionTitle);
-    const firstTopic = topics[0]?.topic_name || '';
-    const firstSubtopic = getOfficialSubtopicsForTopic(newSectionTitle, firstTopic)[0] || '';
+    const firstTopic = topics[0]?.topic_name || 'None';
+    const firstSubtopic = getOfficialSubtopicsForTopic(newSectionTitle, firstTopic)[0] || 'None';
 
     setFormData(prev => ({
       ...prev,
@@ -188,8 +194,16 @@ export default function AdminQuestionManager({
   };
 
   const handleTopicChange = (newTopicName) => {
+    if (!newTopicName || newTopicName === 'None') {
+      setFormData(prev => ({
+        ...prev,
+        topic: 'None',
+        subtopic: 'None'
+      }));
+      return;
+    }
     const subs = getOfficialSubtopicsForTopic(formData.section, newTopicName);
-    const firstSub = subs[0] || '';
+    const firstSub = subs[0] || 'None';
     setFormData(prev => ({
       ...prev,
       topic: newTopicName,
@@ -582,10 +596,11 @@ export default function AdminQuestionManager({
                 <div>
                   <label className="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Topic</label>
                   <select
-                    value={formData.topic}
+                    value={formData.topic || 'None'}
                     onChange={(e) => handleTopicChange(e.target.value)}
                     className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-2.5 py-2 text-slate-900 dark:text-slate-100 font-medium"
                   >
+                    <option value="None">None / Miscellaneous</option>
                     {availableTopics.map((t, idx) => (
                       <option key={idx} value={t.topic_name}>{t.topic_name}</option>
                     ))}
@@ -595,10 +610,11 @@ export default function AdminQuestionManager({
                 <div>
                   <label className="block font-semibold text-slate-700 dark:text-slate-300 mb-1">Subtopic</label>
                   <select
-                    value={formData.subtopic}
+                    value={formData.subtopic || 'None'}
                     onChange={(e) => setFormData({ ...formData, subtopic: e.target.value })}
                     className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-2.5 py-2 text-slate-900 dark:text-slate-100 font-medium"
                   >
+                    <option value="None">None / General</option>
                     {availableSubtopics.map((sub, idx) => (
                       <option key={idx} value={sub}>{sub}</option>
                     ))}
