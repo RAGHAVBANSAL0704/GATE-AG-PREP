@@ -39,23 +39,27 @@ export default function PracticeHub({
   ];
 
   return (
-    <div className="space-y-5 animate-in fade-in duration-200">
+    <div className="space-y-6 animate-in fade-in duration-200">
       
-      {/* Minimalist Header & Segment Switcher */}
-      <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-4 shadow-xs">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-          <div>
-            <h1 className="text-xl font-extrabold text-slate-900 dark:text-white flex items-center gap-2">
-              <Target className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-              <span>Practice Hub</span>
-            </h1>
-            <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5 font-medium">
-              <strong className="text-blue-600 dark:text-blue-400">PYQ Pool</strong>: Solved Official GATE AG Past Year Questions • <strong className="text-purple-600 dark:text-purple-400">Custom Pool</strong>: Questions from Custom Mock Papers
-            </p>
+      {/* Sleek Header & Segment Switcher */}
+      <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-5 sm:p-6 shadow-sm">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="flex items-center gap-3.5">
+            <div className="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0 shadow-xs">
+              <Target className="w-6 h-6" />
+            </div>
+            <div>
+              <h1 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
+                Practice Hub
+              </h1>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5 font-medium">
+                <strong className="text-blue-600 dark:text-blue-400">PYQ Pool</strong>: Solved Official GATE AG Past Questions • <strong className="text-purple-600 dark:text-purple-400">Custom Pool</strong>: Curated Mock Questions
+              </p>
+            </div>
           </div>
 
-          {/* Minimal Segment Switcher */}
-          <div className="flex items-center gap-1 bg-slate-100 dark:bg-slate-950 p-1 rounded-xl border border-slate-200 dark:border-slate-800 overflow-x-auto shrink-0 w-full sm:w-auto">
+          {/* Segment Switcher */}
+          <div className="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-950 p-1.5 rounded-2xl border border-slate-200 dark:border-slate-800 overflow-x-auto shrink-0 w-full sm:w-auto">
             {subTabs.map((tab) => {
               const Icon = tab.icon;
               const isActive = currentSubTab === tab.id;
@@ -63,13 +67,13 @@ export default function PracticeHub({
                 <button
                   key={tab.id}
                   onClick={() => handleTabClick(tab.id)}
-                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition whitespace-nowrap ${
+                  className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold transition whitespace-nowrap ${
                     isActive
-                      ? 'bg-blue-600 text-white shadow-xs font-bold'
+                      ? 'bg-blue-600 text-white shadow-xs font-extrabold'
                       : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
                   }`}
                 >
-                  <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-white' : ''}`} />
+                  <Icon className={`w-4 h-4 ${isActive ? 'text-white' : 'text-slate-400'}`} />
                   <span>{tab.label}</span>
                 </button>
               );
