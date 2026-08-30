@@ -157,29 +157,29 @@ export default function Dashboard({ questions, mockPapers = [], customMockPapers
             </div>
           </div>
 
-          {/* Right / Image Column */}
+          {/* Right / Image Column - Authentic Historical Portrait */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="relative group max-w-sm sm:max-w-md w-full">
-              <div className="absolute -inset-1.5 bg-gradient-to-r from-amber-500/40 via-orange-500/30 to-blue-600/40 rounded-3xl blur-md opacity-70 group-hover:opacity-100 transition duration-500"></div>
+            <div className="relative group max-w-[260px] sm:max-w-[280px] w-full">
+              <div className="absolute -inset-1.5 bg-gradient-to-r from-amber-500/50 via-orange-500/40 to-amber-600/50 rounded-3xl blur-md opacity-75 group-hover:opacity-100 transition duration-500"></div>
               
-              <div className="relative rounded-3xl overflow-hidden border-2 border-amber-500/40 shadow-2xl bg-slate-950 aspect-[16/10] sm:aspect-[16/9]">
+              <div className="relative rounded-3xl overflow-hidden border-2 border-amber-400/50 shadow-2xl bg-slate-950 aspect-[3/4]">
                 <img 
-                  src="/images/swami_vivekananda_akhand_bharat.jpg" 
-                  alt="Swami Vivekananda with Akhand Bharat in background" 
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition duration-700 ease-out"
+                  src="/images/swami_vivekananda_real_portrait.jpg" 
+                  alt="Swami Vivekananda authentic historical portrait 1893" 
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-700 ease-out"
                   loading="eager"
                 />
                 
-                {/* Subtle Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none"></div>
+                {/* Subtle Vignette Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent pointer-events-none"></div>
 
                 {/* Corner Tag */}
-                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] font-mono font-bold text-amber-200 bg-slate-950/80 backdrop-blur-md px-3 py-1.5 rounded-xl border border-amber-500/20">
+                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] font-mono font-bold text-amber-200 bg-slate-950/85 backdrop-blur-md px-3 py-1.5 rounded-xl border border-amber-500/30 shadow-md">
                   <span className="flex items-center gap-1.5 text-amber-300">
                     <Sparkles className="w-3.5 h-3.5" />
-                    <span>Swami Vivekananda</span>
+                    <span>Chicago 1893</span>
                   </span>
-                  <span className="text-amber-400/80 text-[10px]">Akhand Bharat</span>
+                  <span className="text-amber-400 text-[10px]">Akhand Bharat</span>
                 </div>
               </div>
             </div>
