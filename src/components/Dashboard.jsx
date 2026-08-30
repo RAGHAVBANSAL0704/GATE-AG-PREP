@@ -28,6 +28,8 @@ import {
 } from 'lucide-react';
 import { GATE_AG_SYLLABUS } from '../data/syllabus';
 import { normalizeSectionTitle } from '../utils/syllabusTaxonomy.js';
+import akhandBharatBackdrop from '../assets/images/akhand_bharat_backdrop.jpg';
+import swamiVivekanandaPortrait from '../assets/images/swami_vivekananda_real_portrait.jpg';
 
 const normalizeSectionName = (secName) => {
   if (!secName) return '';
@@ -109,7 +111,7 @@ export default function Dashboard({ questions, mockPapers = [], customMockPapers
         {/* Photorealistic Akhand Bharat Satellite Relief Backdrop - Fully Zoomed Out & Centered */}
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-95 pointer-events-none transition duration-1000 filter brightness-105 contrast-110"
-          style={{ backgroundImage: "url('/images/akhand_bharat_backdrop.jpg')" }}
+          style={{ backgroundImage: `url(${akhandBharatBackdrop})` }}
         ></div>
 
         {/* Ultra-subtle Gradient to enhance text legibility while keeping map crystal clear */}
@@ -152,7 +154,7 @@ export default function Dashboard({ questions, mockPapers = [], customMockPapers
               
               <div className="relative rounded-3xl overflow-hidden border-2 border-amber-400/60 shadow-2xl bg-slate-950 aspect-[3/4]">
                 <img 
-                  src="/images/swami_vivekananda_real_portrait.jpg" 
+                  src={swamiVivekanandaPortrait} 
                   alt="Swami Vivekananda authentic historical portrait 1893" 
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition duration-700 ease-out"
                   loading="eager"
