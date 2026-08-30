@@ -23,7 +23,8 @@ import {
   Brain,
   FileText,
   TrendingUp,
-  Award
+  Award,
+  Quote
 } from 'lucide-react';
 import { GATE_AG_SYLLABUS } from '../data/syllabus';
 import { normalizeSectionTitle } from '../utils/syllabusTaxonomy.js';
@@ -102,38 +103,88 @@ export default function Dashboard({ questions, mockPapers = [], customMockPapers
   return (
     <div className="space-y-6 animate-in fade-in duration-200">
       
-      {/* Sleek Hero Banner */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-blue-700 via-indigo-700 to-slate-900 text-white rounded-3xl p-6 sm:p-8 shadow-xl">
-        <div className="relative z-10 max-w-2xl space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-xs font-bold text-blue-200 backdrop-blur-md border border-white/10 shadow-inner">
-            <Sparkles className="w-4 h-4 text-yellow-300 animate-pulse" />
-            <span>GATE Agricultural Engineering Portal 2026</span>
+      {/* Inspiring Swami Vivekananda Hero Banner */}
+      <div className="relative overflow-hidden bg-gradient-to-br from-amber-950/90 via-slate-900 to-slate-950 text-white rounded-3xl border border-amber-500/30 shadow-2xl">
+        
+        {/* Subtle Background Glow Elements */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl pointer-events-none -ml-20 -mb-20"></div>
+
+        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 p-6 sm:p-8 items-center">
+          
+          {/* Left / Text Content Column */}
+          <div className="lg:col-span-7 space-y-4">
+            
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/15 border border-amber-500/30 text-xs font-bold text-amber-300 backdrop-blur-md shadow-xs">
+              <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" />
+              <span>Swami Vivekananda's Eternal Call to Aspirants</span>
+            </div>
+
+            <div className="space-y-2">
+              <div className="relative pl-4 sm:pl-5 border-l-4 border-amber-400 space-y-2">
+                <Quote className="w-6 h-6 text-amber-400/80 mb-1" />
+                <blockquote className="text-base sm:text-lg md:text-xl font-serif italic text-amber-100/95 leading-relaxed tracking-wide font-medium">
+                  "All power is within you; you can do anything and everything. Believe in that, do not believe that you are weak; stand up and express the divinity within you."
+                </blockquote>
+                <div className="pt-1 flex flex-wrap items-center gap-2 text-xs font-mono font-bold text-amber-400">
+                  <span>— Swami Vivekananda</span>
+                  <span className="text-white/30">•</span>
+                  <span className="text-slate-300 font-sans font-normal text-[11px]">Complete Works, Vol. 2</span>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-xl pt-1">
+              Harness your boundless potential to conquer GATE 2026. Access <strong>{totalQuestions} solved questions</strong>, <strong>20 official CBT mock tests</strong>, and comprehensive formula archives.
+            </p>
+
+            <div className="flex flex-wrap items-center gap-3 pt-2">
+              <button
+                onClick={() => setActiveTab('practicehub')}
+                className="px-5 py-3 rounded-2xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black text-xs shadow-lg shadow-amber-500/20 transition flex items-center gap-2.5 active:scale-95 cursor-pointer"
+              >
+                <Target className="w-5 h-5 text-slate-950" />
+                <span>Practice Hub ({totalQuestions} Qs)</span>
+              </button>
+              
+              <button
+                onClick={() => setActiveTab('mocktest')}
+                className="px-5 py-3 rounded-2xl bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold text-xs transition flex items-center gap-2.5 active:scale-95 backdrop-blur-md cursor-pointer"
+              >
+                <Play className="w-5 h-5 text-emerald-400 fill-emerald-400/30" />
+                <span>Attempt CBT PYQ Mocks</span>
+              </button>
+            </div>
           </div>
 
-          <h1 className="text-2xl sm:text-4xl font-black tracking-tight text-white leading-tight">
-            Master 20 Years of GATE AG Papers
-          </h1>
+          {/* Right / Image Column */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end">
+            <div className="relative group max-w-sm sm:max-w-md w-full">
+              <div className="absolute -inset-1.5 bg-gradient-to-r from-amber-500/40 via-orange-500/30 to-blue-600/40 rounded-3xl blur-md opacity-70 group-hover:opacity-100 transition duration-500"></div>
+              
+              <div className="relative rounded-3xl overflow-hidden border-2 border-amber-500/40 shadow-2xl bg-slate-950 aspect-[16/10] sm:aspect-[16/9]">
+                <img 
+                  src="/images/swami_vivekananda_akhand_bharat.jpg" 
+                  alt="Swami Vivekananda with Akhand Bharat in background" 
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition duration-700 ease-out"
+                  loading="eager"
+                />
+                
+                {/* Subtle Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none"></div>
 
-          <p className="text-xs sm:text-sm text-blue-100 leading-relaxed max-w-xl">
-            Access {totalQuestions} topic-wise solved questions, 20 official CBT mock tests (2007–2026), and comprehensive formula cheat sheets.
-          </p>
-
-          <div className="flex flex-wrap items-center gap-3 pt-2">
-            <button
-              onClick={() => setActiveTab('practicehub')}
-              className="px-5 py-3 rounded-2xl bg-white text-blue-900 font-extrabold text-xs shadow-lg hover:bg-blue-50 transition flex items-center gap-2.5 active:scale-95"
-            >
-              <Target className="w-5 h-5 text-blue-600" />
-              <span>Practice Hub</span>
-            </button>
-            <button
-              onClick={() => setActiveTab('mocktest')}
-              className="px-5 py-3 rounded-2xl bg-white/15 hover:bg-white/25 text-white border border-white/20 font-bold text-xs transition flex items-center gap-2.5 active:scale-95 backdrop-blur-md"
-            >
-              <Play className="w-5 h-5 text-emerald-400 fill-emerald-400/30" />
-              <span>Attempt PYQ Mocks</span>
-            </button>
+                {/* Corner Tag */}
+                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] font-mono font-bold text-amber-200 bg-slate-950/80 backdrop-blur-md px-3 py-1.5 rounded-xl border border-amber-500/20">
+                  <span className="flex items-center gap-1.5 text-amber-300">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    <span>Swami Vivekananda</span>
+                  </span>
+                  <span className="text-amber-400/80 text-[10px]">Akhand Bharat</span>
+                </div>
+              </div>
+            </div>
           </div>
+
         </div>
       </div>
 
