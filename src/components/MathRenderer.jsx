@@ -27,9 +27,22 @@ export default function MathRenderer({ content, math, text, inline = false, clas
       const token = `___KATEX_MATH_TOKEN_${mathTokens.length}___`;
       let rendered = '';
       try {
-        rendered = katex.renderToString(mathStr.trim(), { displayMode, throwOnError: false });
+        let cleanMath = mathStr.trim();
+        // Normalize common physics / engineering symbols
+        cleanMath = cleanMath.replace(/\\degree\b/g, '^\\circ');
+
+        rendered = katex.renderToString(cleanMath, { 
+          displayMode, 
+          throwOnError: false,
+          errorColor: 'currentColor'
+        });
+
+        // Strip any red error color inline styles from KaTeX output
+        if (rendered.includes('katex-error')) {
+          rendered = rendered.replace(/style="[^"]*color\s*:\s*#[a-fA-F0-9]+[^"]*"/gi, '');
+        }
       } catch (e) {
-        rendered = `<span class="text-inherit font-sans">${escapeHtml(mathStr)}</span>`;
+        rendered = `<span class="text-inherit font-mono">${escapeHtml(mathStr)}</span>`;
       }
       mathTokens.push({ token, rendered });
       return token;
@@ -52,32 +65,25 @@ export default function MathRenderer({ content, math, text, inline = false, clas
       return pushToken(mathStr, false);
     });
 
-    // 4. Extract inline math $ ... $ (single-line)
+    // 4. Extract inline math $ ... $ (matching mathematical formulas only)
     str = str.replace(/\$([^$\n]+)\$/g, (match, mathStr) => {
       return pushToken(mathStr, false);
     });
 
-    // 5. Fallback: If no delimiter was found but string contains LaTeX commands (like \frac, \lambda, \partial)
-    if (mathTokens.length === 0 && (str.includes('\\') || str.includes('^') || str.includes('_') || str.includes('='))) {
-      // Check if string contains dangerous HTML tags first
-      if (!/<[a-zA-Z\/]/.test(str)) {
-        try {
-          const rendered = katex.renderToString(str.trim(), { displayMode: !inline, throwOnError: false });
-          if (rendered) return rendered;
-        } catch (e) {
-          // Fall through to safe escaping
-        }
-      }
-    }
+    // 5. Targeted extraction of explicit LaTeX commands only (e.g. \frac{a}{b}, \sqrt{x}, \eta_{th}, \Delta P)
+    // NEVER pass entire sentence to math mode
+    str = str.replace(/(\\(?:frac\{[^{}]*\}\{[^{}]*\}|sqrt\{[^{}]*\}|sum(?:_\{[^{}]*\})?(?:\^\{[^{}]*\})?|int(?:_\{[^{}]*\})?(?:\^\{[^{}]*\})?|[a-zA-Z]+(?:_\{[^{}]*\}|_[a-zA-Z0-9]+|\^\{[^{}]*\}|\^[a-zA-Z0-9]+)*))/g, (match, mathStr) => {
+      if (mathStr === '\\n' || mathStr === '\\t' || mathStr === '\\r' || mathStr.length < 2) return match;
+      return pushToken(mathStr, false);
+    });
 
-    // 6. Escape all raw HTML entities in non-math segments
+    // 6. Escape raw HTML entities in text segments
     str = escapeHtml(str);
 
     // 7. Automatic Spacing Sanitization for Word & Math Boundaries
     str = str.replace(/([a-zA-Z0-9\)])(\$|\\\(|\\\[)/g, '$1 $2')
              .replace(/(\$|\\\)|\\\])([a-zA-Z0-9\(/])/g, '$1 $2')
-             .replace(/\]([a-zA-Z])/g, '] $1')
-             .replace(/([a-z])\(([a-z]+)\)/gi, '$1 ($2)');
+             .replace(/\]([a-zA-Z])/g, '] $1');
 
     // 8. Pre-process common engineering units and sub/superscripts
     str = str.replace(/\bdeg C\b/gi, '°C')
@@ -94,7 +100,7 @@ export default function MathRenderer({ content, math, text, inline = false, clas
              .replace(/kN m -2/gi, 'kN/m²');
 
     // 9. Convert markdown bold **text** and inline code `code` (on escaped safe text)
-    str = str.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    str = str.replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-inherit">$1</strong>');
     str = str.replace(/`([^`]+)`/g, '<code class="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-blue-600 dark:text-blue-400 font-mono text-xs border border-slate-200 dark:border-slate-700">$1</code>');
 
     // 10. Re-inject safe KaTeX rendered tokens

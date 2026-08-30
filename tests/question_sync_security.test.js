@@ -98,4 +98,36 @@ describe('Question Live Multi-Device Sync & Admin Passcode Security Tests', () =
     unsub();
   });
 
+  test('verifies getQuestionNumber correctly parses numeric and formatted IDs', async () => {
+    const { getQuestionNumber } = await import('../src/utils/questionUtils.js');
+
+    assert.equal(getQuestionNumber({ qnum: 65 }), 65);
+    assert.equal(getQuestionNumber({ qnum: '45' }), 45);
+    assert.equal(getQuestionNumber({ id: 'GATE_2022_Q65' }), 65);
+    assert.equal(getQuestionNumber({ id: 'GATE_2027_MOCK_01_Q45' }), 45);
+    assert.equal(getQuestionNumber({ id: 'custom_mock_99' }), 99);
+    assert.equal(getQuestionNumber({}, 5), 6);
+  });
+
+  test('sorts question palette deterministically so Q65 opens question 65', async () => {
+    const { getQuestionNumber, sortQuestionsByNumber } = await import('../src/utils/questionUtils.js');
+
+    const rawUnsortedList = [
+      { id: 'GATE_2022_Q4', qnum: 4 },
+      { id: 'GATE_2022_Q65', qnum: 65 },
+      { id: 'GATE_2022_Q45', qnum: 45 },
+      { id: 'GATE_2022_Q1', qnum: 1 }
+    ];
+
+    const sortedList = sortQuestionsByNumber(rawUnsortedList);
+
+    assert.equal(sortedList[0].qnum, 1);
+    assert.equal(sortedList[1].qnum, 4);
+    assert.equal(sortedList[2].qnum, 45);
+    assert.equal(sortedList[3].qnum, 65);
+
+    // Clicking tile 4 (index 3) opens Q65
+    assert.equal(sortedList[3].id, 'GATE_2022_Q65');
+  });
+
 });

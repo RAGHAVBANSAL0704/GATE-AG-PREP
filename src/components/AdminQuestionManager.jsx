@@ -31,6 +31,7 @@ import {
 import MathRenderer from './MathRenderer';
 import { GATE_AG_SYLLABUS } from '../data/syllabus';
 import { getOfficialSections, getOfficialTopicsForSection, getOfficialSubtopicsForTopic, normalizeSectionTitle } from '../utils/syllabusTaxonomy.js';
+import { getQuestionNumber, sortQuestionsByNumber } from '../utils/questionUtils.js';
 
 const QUICK_LATEX_HELPERS = [
   { label: 'Fraction', latex: '\\frac{a}{b}' },
@@ -64,6 +65,7 @@ export default function AdminQuestionManager({
   // Active question edit form state
   const [formData, setFormData] = useState({
     id: '',
+    qnum: 1,
     year: 2026,
     paperTitle: '',
     section: 'Section 2: Farm Machinery',
@@ -102,11 +104,12 @@ export default function AdminQuestionManager({
     }
   }, [studioMode, customPapersList]);
 
-  // Gather active questions list
+  // Gather active questions list and sort deterministically by Question Number (Q1 to Q65)
   const activeQuestionsList = useMemo(() => {
+    let list = [];
     if (studioMode === 'custom-mocks') {
       const paper = customPapersList.find(p => p.title === selectedPaperTitle);
-      return paper ? (paper.questions || []) : [];
+      list = paper ? (paper.questions || []) : [];
     } else if (studioMode === 'official-pyqs') {
       const yearNum = parseInt(selectedPaperTitle.replace(/\D/g, ''), 10);
 
@@ -117,20 +120,27 @@ export default function AdminQuestionManager({
       });
 
       if (officialPaper && officialPaper.questions && officialPaper.questions.length > 0) {
-        return officialPaper.questions;
+        list = officialPaper.questions;
+      } else {
+        list = questions.filter(q => {
+          const qYear = parseInt(q.year, 10);
+          return qYear === yearNum || (q.paperTitle && q.paperTitle.includes(String(yearNum))) || (q.id && q.id.includes(`GATE_${yearNum}`));
+        });
       }
-
-      return questions.filter(q => {
-        const qYear = parseInt(q.year, 10);
-        return qYear === yearNum || (q.paperTitle && q.paperTitle.includes(String(yearNum))) || (q.id && q.id.includes(`GATE_${yearNum}`));
-      });
     } else {
-      return questions.filter(q => {
+      list = questions.filter(q => {
         if (selectedSectionFilter !== 'All' && normalizeSectionTitle(q.section) !== normalizeSectionTitle(selectedSectionFilter)) return false;
         if (searchQuery.trim() && !q.question.toLowerCase().includes(searchQuery.toLowerCase()) && !q.id.toLowerCase().includes(searchQuery.toLowerCase())) return false;
         return true;
       });
     }
+
+    // Sort questions strictly by ascending Question Number so Palette Q65 opens actual Q65
+    return [...list].sort((a, b) => {
+      const numA = getQuestionNumber(a, 0);
+      const numB = getQuestionNumber(b, 0);
+      return numA - numB;
+    });
   }, [studioMode, selectedPaperTitle, selectedSectionFilter, searchQuery, customPapersList, mockPapers, questions]);
 
   // Load selected question into form
@@ -147,6 +157,7 @@ export default function AdminQuestionManager({
 
         setFormData({
           id: q.id || '',
+          qnum: getQuestionNumber(q, safeIndex),
           year: q.year || 2026,
           paperTitle: q.paperTitle || selectedPaperTitle,
           section: canonSec,
@@ -432,7 +443,7 @@ export default function AdminQuestionManager({
                 <ChevronLeft className="w-4 h-4" />
               </button>
               <span className="text-xs font-mono font-bold text-slate-900 dark:text-slate-100 px-1">
-                Q {paperQIndex + 1} of {activeQuestionsList.length}
+                Q.{activeQuestionsList[paperQIndex] ? getQuestionNumber(activeQuestionsList[paperQIndex], paperQIndex) : (paperQIndex + 1)} ({paperQIndex + 1} of {activeQuestionsList.length})
               </span>
               <button
                 onClick={() => setPaperQIndex(Math.min(activeQuestionsList.length - 1, paperQIndex + 1))}
@@ -449,10 +460,11 @@ export default function AdminQuestionManager({
             <div className="card-3d rounded-2xl p-4 space-y-2 bg-slate-50/50 dark:bg-slate-950/40">
               <div className="flex items-center justify-between text-[11px] font-bold text-slate-400 uppercase tracking-wider">
                 <span>Interactive Question Map for {selectedPaperTitle}</span>
-                <span>Click tile to jump directly</span>
+                <span>Click tile to jump directly to question number</span>
               </div>
               <div className="flex flex-wrap gap-1.5 max-h-36 overflow-y-auto pt-1">
                 {activeQuestionsList.map((q, idx) => {
+                  const qNum = getQuestionNumber(q, idx);
                   const isSelected = idx === paperQIndex;
                   const hasSolution = Boolean(q.solution && q.solution.trim());
                   return (
@@ -466,9 +478,9 @@ export default function AdminQuestionManager({
                             ? 'bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800'
                             : 'bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-800'
                       }`}
-                      title={`Q${idx + 1}: Key: ${q.correct_answer} | ${q.type} (${q.marks}M)`}
+                      title={`Q${qNum} (${q.id || 'Custom'}): Key: ${q.correct_answer || 'N/A'} | ${q.type || 'MCQ'} (${q.marks || 1}M)`}
                     >
-                      {idx + 1}
+                      {qNum}
                     </button>
                   );
                 })}
@@ -527,7 +539,7 @@ export default function AdminQuestionManager({
           <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4">
             <span className="text-sm font-extrabold text-blue-600 dark:text-blue-400 uppercase tracking-wider flex items-center gap-2">
               <Edit3 className="w-4 h-4" />
-              <span>Editing {selectedPaperTitle} — Question #{formData.id}</span>
+              <span>Editing {selectedPaperTitle} — Q.{getQuestionNumber(formData, paperQIndex)} ({formData.id})</span>
             </span>
 
             <div className="flex items-center gap-2">
