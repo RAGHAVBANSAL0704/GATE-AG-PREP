@@ -103,10 +103,17 @@ export default function Dashboard({ questions, mockPapers = [], customMockPapers
   return (
     <div className="space-y-6 animate-in fade-in duration-200">
       
-      {/* Inspiring Swami Vivekananda Hero Banner */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-amber-950/90 via-slate-900 to-slate-950 text-white rounded-3xl border border-amber-500/30 shadow-2xl">
+      {/* Inspiring Swami Vivekananda Hero Banner with Akhand Bharat Satellite Relief */}
+      <div className="relative overflow-hidden bg-slate-950 text-white rounded-3xl border border-amber-500/30 shadow-2xl">
         
-        {/* Subtle Background Glow Elements */}
+        {/* Photorealistic Akhand Bharat Satellite Relief Backdrop */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-45 pointer-events-none transition duration-1000 scale-105"
+          style={{ backgroundImage: "url('/images/akhand_bharat_backdrop.jpg')" }}
+        ></div>
+
+        {/* Ambient Dark & Saffron Gradient Overlays for Enhanced Readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/80 to-slate-950/40 pointer-events-none"></div>
         <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"></div>
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl pointer-events-none -ml-20 -mb-20"></div>
 
