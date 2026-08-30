@@ -129,7 +129,7 @@ export default defineConfig(({ command }) => ({
     react(),
     ...(command === 'serve' ? [devSaveQuestionPlugin()] : [])
   ],
-  base: './',
+  base: '/',
   server: {
     port: 3000,
     host: true
