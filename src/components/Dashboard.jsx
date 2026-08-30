@@ -103,73 +103,54 @@ export default function Dashboard({ questions, mockPapers = [], customMockPapers
   return (
     <div className="space-y-6 animate-in fade-in duration-200">
       
-      {/* Inspiring Swami Vivekananda Hero Banner with Akhand Bharat Satellite Relief */}
-      <div className="relative overflow-hidden bg-slate-950 text-white rounded-3xl border border-amber-500/30 shadow-2xl">
+      {/* Inspiring Swami Vivekananda Hero Banner with Full Akhand Bharat Satellite Relief */}
+      <div className="relative overflow-hidden bg-slate-950 text-white rounded-3xl border border-amber-500/40 shadow-2xl min-h-[340px]">
         
-        {/* Photorealistic Akhand Bharat Satellite Relief Backdrop */}
+        {/* Photorealistic Akhand Bharat Satellite Relief Backdrop - 100% Full Visibility */}
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-45 pointer-events-none transition duration-1000 scale-105"
+          className="absolute inset-0 bg-cover bg-center sm:bg-right opacity-95 pointer-events-none transition duration-1000 scale-100 filter brightness-105 contrast-110"
           style={{ backgroundImage: "url('/images/akhand_bharat_backdrop.jpg')" }}
         ></div>
 
-        {/* Ambient Dark & Saffron Gradient Overlays for Enhanced Readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/80 to-slate-950/40 pointer-events-none"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl pointer-events-none -ml-20 -mb-20"></div>
+        {/* Ultra-subtle Gradient to enhance text legibility while keeping map crystal clear */}
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-950/70 via-slate-950/30 to-transparent pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-transparent to-slate-950/20 pointer-events-none"></div>
 
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 p-6 sm:p-8 items-center">
           
-          {/* Left / Text Content Column */}
-          <div className="lg:col-span-7 space-y-4">
+          {/* Left / Transparent Text Content Column */}
+          <div className="lg:col-span-8 space-y-4">
             
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/15 border border-amber-500/30 text-xs font-bold text-amber-300 backdrop-blur-md shadow-xs">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-950/60 border border-amber-400/40 text-xs font-bold text-amber-300 backdrop-blur-md shadow-lg">
               <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" />
               <span>Swami Vivekananda's Eternal Call to Aspirants</span>
             </div>
 
-            <div className="space-y-2">
+            <div className="space-y-3">
               <div className="relative pl-4 sm:pl-5 border-l-4 border-amber-400 space-y-2">
-                <Quote className="w-6 h-6 text-amber-400/80 mb-1" />
-                <blockquote className="text-base sm:text-lg md:text-xl font-serif italic text-amber-100/95 leading-relaxed tracking-wide font-medium">
+                <Quote className="w-7 h-7 text-amber-400/90 mb-1 drop-shadow-md" />
+                <blockquote className="text-base sm:text-xl md:text-2xl font-serif italic text-amber-100 leading-relaxed tracking-wide font-medium [text-shadow:_0_2px_14px_rgba(0,0,0,0.95)]">
                   "All power is within you; you can do anything and everything. Believe in that, do not believe that you are weak; stand up and express the divinity within you."
                 </blockquote>
-                <div className="pt-1 flex flex-wrap items-center gap-2 text-xs font-mono font-bold text-amber-400">
+                <div className="pt-1 flex flex-wrap items-center gap-2 text-xs sm:text-sm font-mono font-bold text-amber-400 [text-shadow:_0_1px_8px_rgba(0,0,0,0.9)]">
                   <span>— Swami Vivekananda</span>
-                  <span className="text-white/30">•</span>
-                  <span className="text-slate-300 font-sans font-normal text-[11px]">Complete Works, Vol. 2</span>
+                  <span className="text-white/50">•</span>
+                  <span className="text-slate-200 font-sans font-normal text-xs">Complete Works, Vol. 2</span>
                 </div>
               </div>
             </div>
 
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-xl pt-1">
+            <p className="text-xs sm:text-sm text-slate-100 font-medium leading-relaxed max-w-2xl [text-shadow:_0_1px_8px_rgba(0,0,0,0.9)] pt-1">
               Harness your boundless potential to conquer GATE 2026. Access <strong>{totalQuestions} solved questions</strong>, <strong>20 official CBT mock tests</strong>, and comprehensive formula archives.
             </p>
-
-            <div className="flex flex-wrap items-center gap-3 pt-2">
-              <button
-                onClick={() => setActiveTab('practicehub')}
-                className="px-5 py-3 rounded-2xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black text-xs shadow-lg shadow-amber-500/20 transition flex items-center gap-2.5 active:scale-95 cursor-pointer"
-              >
-                <Target className="w-5 h-5 text-slate-950" />
-                <span>Practice Hub ({totalQuestions} Qs)</span>
-              </button>
-              
-              <button
-                onClick={() => setActiveTab('mocktest')}
-                className="px-5 py-3 rounded-2xl bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold text-xs transition flex items-center gap-2.5 active:scale-95 backdrop-blur-md cursor-pointer"
-              >
-                <Play className="w-5 h-5 text-emerald-400 fill-emerald-400/30" />
-                <span>Attempt CBT PYQ Mocks</span>
-              </button>
-            </div>
           </div>
 
           {/* Right / Image Column - Authentic Historical Portrait */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end">
-            <div className="relative group max-w-[260px] sm:max-w-[280px] w-full">
-              <div className="absolute -inset-1.5 bg-gradient-to-r from-amber-500/50 via-orange-500/40 to-amber-600/50 rounded-3xl blur-md opacity-75 group-hover:opacity-100 transition duration-500"></div>
+          <div className="lg:col-span-4 flex justify-center lg:justify-end">
+            <div className="relative group max-w-[220px] sm:max-w-[250px] w-full">
+              <div className="absolute -inset-1.5 bg-gradient-to-r from-amber-500/60 via-orange-500/50 to-amber-600/60 rounded-3xl blur-md opacity-85 group-hover:opacity-100 transition duration-500"></div>
               
-              <div className="relative rounded-3xl overflow-hidden border-2 border-amber-400/50 shadow-2xl bg-slate-950 aspect-[3/4]">
+              <div className="relative rounded-3xl overflow-hidden border-2 border-amber-400/60 shadow-2xl bg-slate-950 aspect-[3/4]">
                 <img 
                   src="/images/swami_vivekananda_real_portrait.jpg" 
                   alt="Swami Vivekananda authentic historical portrait 1893" 
@@ -181,7 +162,7 @@ export default function Dashboard({ questions, mockPapers = [], customMockPapers
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent pointer-events-none"></div>
 
                 {/* Corner Tag */}
-                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] font-mono font-bold text-amber-200 bg-slate-950/85 backdrop-blur-md px-3 py-1.5 rounded-xl border border-amber-500/30 shadow-md">
+                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] font-mono font-bold text-amber-200 bg-slate-950/90 backdrop-blur-md px-3 py-1.5 rounded-xl border border-amber-500/40 shadow-md">
                   <span className="flex items-center gap-1.5 text-amber-300">
                     <Sparkles className="w-3.5 h-3.5" />
                     <span>Chicago 1893</span>
