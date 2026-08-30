@@ -94,8 +94,19 @@ export default function App() {
 
   useEffect(() => {
     const cleanup = initAutoSyncOnReconnect();
+    const handleSwUpdate = (e) => {
+      const registration = e?.detail;
+      if (registration && registration.waiting) {
+        registration.waiting.postMessage({ type: 'SKIP_WAITING' });
+      }
+      setTimeout(() => {
+        window.location.reload();
+      }, 200);
+    };
+    window.addEventListener('sw-updated', handleSwUpdate);
     return () => {
       if (typeof cleanup === 'function') cleanup();
+      window.removeEventListener('sw-updated', handleSwUpdate);
     };
   }, []);
 
