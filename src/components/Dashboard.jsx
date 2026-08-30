@@ -28,8 +28,9 @@ import {
 } from 'lucide-react';
 import { GATE_AG_SYLLABUS } from '../data/syllabus';
 import { normalizeSectionTitle } from '../utils/syllabusTaxonomy.js';
-import akhandBharatBackdrop from '../assets/images/akhand_bharat_backdrop.jpg';
-import swamiVivekanandaPortrait from '../assets/images/swami_vivekananda_real_portrait.jpg';
+
+const akhandBharatBackdrop = '/images/akhand_bharat_backdrop.jpg';
+const swamiVivekanandaPortrait = '/images/swami_vivekananda_real_portrait.jpg';
 
 const normalizeSectionName = (secName) => {
   if (!secName) return '';
