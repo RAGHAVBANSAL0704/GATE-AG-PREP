@@ -106,9 +106,9 @@ export default function Dashboard({ questions, mockPapers = [], customMockPapers
       {/* Inspiring Swami Vivekananda Hero Banner with Full Akhand Bharat Satellite Relief */}
       <div className="relative overflow-hidden bg-slate-950 text-white rounded-3xl border border-amber-500/40 shadow-2xl min-h-[340px]">
         
-        {/* Photorealistic Akhand Bharat Satellite Relief Backdrop - 100% Full Visibility */}
+        {/* Photorealistic Akhand Bharat Satellite Relief Backdrop - Fully Zoomed Out & Centered */}
         <div 
-          className="absolute inset-0 bg-cover bg-center sm:bg-right opacity-95 pointer-events-none transition duration-1000 scale-100 filter brightness-105 contrast-110"
+          className="absolute inset-0 bg-cover bg-center opacity-95 pointer-events-none transition duration-1000 filter brightness-105 contrast-110"
           style={{ backgroundImage: "url('/images/akhand_bharat_backdrop.jpg')" }}
         ></div>
 
