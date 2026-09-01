@@ -29,6 +29,26 @@ export function formatDOBPassword(dobString) {
   return dobString;
 }
 
+export const FACULTY_SALUTATIONS = [
+  'Dr.',
+  'Er.',
+  'Prof.',
+  'Dr. (Prof.)',
+  'Mr.',
+  'Ms.'
+];
+
+export const AGRI_ENGG_DEPARTMENTS = [
+  'Farm Machinery & Power Engineering (FMPE)',
+  'Soil & Water Conservation Engineering (SWCE)',
+  'Processing & Food Engineering (PFE)',
+  'Renewable Energy Engineering (REE)',
+  'Irrigation & Drainage Engineering',
+  'Basic Engineering & Applied Sciences',
+  'Agronomy, Soil Science & Plant Sciences',
+  'Other / Allied Department'
+];
+
 // Automatic sync for all user data (Profile, Password, XP, Question attempts) to Supabase backend
 export async function syncAllUserDataToBackend() {
   if (!isSupabaseConfigured || !supabase) return;
@@ -542,6 +562,215 @@ export async function registerStudent(formData) {
   return { success: true, student: mockUser };
 }
 
+export async function registerFaculty(formData) {
+  const titlePrefix = formData.titlePrefix || 'Dr.';
+  const cleanFullName = (formData.fullName || '').trim();
+
+  // Profanity Validation
+  const nameVal = validateCleanInput(cleanFullName, 'Full Name');
+  if (!nameVal.isValid) return { success: false, message: nameVal.message };
+
+  if (formData.username) {
+    const userVal = validateCleanInput(formData.username, 'Username');
+    if (!userVal.isValid) return { success: false, message: userVal.message };
+  }
+
+  if (formData.department) {
+    const deptVal = validateCleanInput(formData.department, 'Department');
+    if (!deptVal.isValid) return { success: false, message: deptVal.message };
+  }
+
+  if (formData.institute) {
+    const instVal = validateCleanInput(formData.institute, 'Institute');
+    if (!instVal.isValid) return { success: false, message: instVal.message };
+  }
+
+  const cleanMobile = sanitizeMobileNumber(formData.mobileNumber);
+  const cleanEmail = formData.email && formData.email.trim() ? formData.email.trim().toLowerCase() : null;
+
+  if (!cleanEmail) {
+    return { success: false, message: 'Email address is required for faculty registration.' };
+  }
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(cleanEmail)) {
+    return { success: false, message: 'Please enter a valid email address (e.g. faculty@university.edu or gmail.com).' };
+  }
+
+  if (!cleanMobile || cleanMobile.length < 10) {
+    return { success: false, message: 'Valid 10-digit mobile number is required for faculty registration.' };
+  }
+
+  const department = formData.department ? formData.department.trim() : 'Agricultural Engineering';
+  const institute = formData.institute ? formData.institute.trim() : 'COAET CCS HAU Hisar';
+
+  // Auto-generate clean username if omitted or format given one
+  let cleanUsername = formData.username 
+    ? formData.username.trim().replace(/^@/, '').toLowerCase().replace(/[^a-z0-9_]/g, '') 
+    : '';
+  if (!cleanUsername || cleanUsername.length < 3) {
+    const prefixKey = titlePrefix.toLowerCase().replace(/[^a-z]/g, '');
+    const nameKey = cleanFullName.toLowerCase().replace(/[^a-z0-9]/g, '_').substring(0, 15);
+    cleanUsername = `${prefixKey}_${nameKey}_${cleanMobile.slice(-4)}`;
+  }
+
+  const plainPassword = formData.password && formData.password.trim().length >= 6
+    ? formData.password.trim()
+    : (formData.customPassword && formData.customPassword.trim().length >= 6 ? formData.customPassword.trim() : `Faculty@${cleanMobile.slice(-4)}`);
+
+  const passwordHash = await hashPassword(plainPassword);
+
+  const facultyPayload = {
+    role: 'faculty',
+    is_faculty: true,
+    title_prefix: titlePrefix,
+    student_type: 'faculty',
+    full_name: cleanFullName,
+    display_name: `${titlePrefix} ${cleanFullName}`,
+    username: cleanUsername,
+    gender: formData.gender || 'Male',
+    department: department,
+    college_name: institute,
+    institute: institute,
+    dob: formData.dob || '1990-01-01',
+    current_year_sem: `Faculty • ${department}`,
+    mobile_number: cleanMobile,
+    email: cleanEmail,
+    email_verified: true,
+    admission_no: `FAC-${cleanMobile.slice(-4)}`,
+    password_hash: passwordHash,
+    has_custom_password: true,
+    profile_updates_count: 0,
+    last_update_timestamp: new Date().toISOString()
+  };
+
+  if (isSupabaseConfigured && supabase) {
+    // Check duplicates by email, mobile, or username
+    const conditions = [];
+    if (cleanEmail) conditions.push(`email.eq.${cleanEmail}`);
+    if (cleanMobile) conditions.push(`mobile_number.eq.${cleanMobile}`);
+    if (cleanUsername) conditions.push(`username.eq.${cleanUsername}`);
+
+    if (conditions.length > 0) {
+      let { data: existing, error: checkErr } = await supabase
+        .from('students')
+        .select('id, mobile_number, email, username')
+        .or(conditions.join(','));
+
+      if (checkErr && checkErr.message && checkErr.message.includes('username')) {
+        const fallbackConditions = conditions.filter(c => !c.startsWith('username.eq.'));
+        if (fallbackConditions.length > 0) {
+          const res = await supabase
+            .from('students')
+            .select('id, mobile_number, email')
+            .or(fallbackConditions.join(','));
+          existing = res.data;
+        }
+      }
+
+      if (existing && existing.length > 0) {
+        const isUserDup = existing.some(e => e.username && e.username.toLowerCase() === cleanUsername);
+        return { 
+          success: false, 
+          isDuplicate: true, 
+          message: isUserDup 
+            ? `The username "@${cleanUsername}" is already in use. Please choose a different username.`
+            : 'An account with this Email or Mobile number already exists.',
+          prefillIdentifier: cleanUsername || cleanEmail || cleanMobile
+        };
+      }
+    }
+
+    let { data: newFaculty, error } = await supabase
+      .from('students')
+      .insert([facultyPayload])
+      .select()
+      .single();
+
+    if (error && error.message && error.message.includes('username')) {
+      const payloadNoUser = { ...facultyPayload };
+      delete payloadNoUser.username;
+      const retryRes = await supabase
+        .from('students')
+        .insert([payloadNoUser])
+        .select()
+        .single();
+      newFaculty = retryRes.data;
+      error = retryRes.error;
+    }
+
+    if (error) {
+      // Fallback to local user registration if table schema restricts faculty columns
+      console.warn("Supabase faculty insert fallback to local user:", error.message);
+    } else if (newFaculty) {
+      delete newFaculty.password_plain;
+      const deviceToken = 'dt_' + (typeof crypto !== 'undefined' && crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).substring(2));
+      
+      try {
+        await supabase.from('device_sessions').insert([{
+          student_id: newFaculty.id,
+          device_token: deviceToken,
+          device_info: typeof navigator !== 'undefined' ? navigator.userAgent : 'Unknown'
+        }]);
+      } catch (e) {
+        // Safe ignore
+      }
+
+      localStorage.setItem(LOCAL_STORAGE_SESSION_KEY, JSON.stringify({
+        token: deviceToken,
+        student: newFaculty,
+        savedAt: Date.now()
+      }));
+
+      return { success: true, student: newFaculty };
+    }
+  }
+
+  // Local fallback storage
+  const savedUsersRaw = localStorage.getItem(LOCAL_STORAGE_USERS_KEY);
+  const localUsers = savedUsersRaw ? JSON.parse(savedUsersRaw) : [];
+
+  const duplicate = localUsers.find(u => 
+    (cleanEmail && u.email === cleanEmail) || 
+    (cleanMobile && u.mobile_number === cleanMobile) ||
+    (cleanUsername && u.username && u.username.toLowerCase() === cleanUsername)
+  );
+
+  if (duplicate) {
+    const isUserDup = duplicate.username && duplicate.username.toLowerCase() === cleanUsername;
+    return {
+      success: false,
+      isDuplicate: true,
+      message: isUserDup 
+        ? `The username "@${cleanUsername}" is already in use.`
+        : 'An account with this Email or Mobile number already exists.',
+      prefillIdentifier: cleanUsername || cleanEmail || cleanMobile
+    };
+  }
+
+  const mockFaculty = {
+    id: 'fac_' + Date.now(),
+    ...facultyPayload,
+    created_at: new Date().toISOString()
+  };
+  delete mockFaculty.password_plain;
+
+  localUsers.push(mockFaculty);
+  localStorage.setItem(LOCAL_STORAGE_USERS_KEY, JSON.stringify(localUsers));
+
+  const deviceToken = 'dt_' + (typeof crypto !== 'undefined' && crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).substring(2));
+  localStorage.setItem(LOCAL_STORAGE_SESSION_KEY, JSON.stringify({
+    token: deviceToken,
+    student: mockFaculty,
+    savedAt: Date.now()
+  }));
+
+  return { success: true, student: mockFaculty };
+}
+
+export async function loginFaculty(identifierInput, passwordInput, rememberMe = true) {
+  return loginStudent(identifierInput, passwordInput, rememberMe);
+}
+
 export async function loginStudent(identifierInput, passwordInput, rememberMe = true) {
   const cleanId = (identifierInput || '').trim();
   const cleanMobile = sanitizeMobileNumber(cleanId);
@@ -734,6 +963,14 @@ export async function updateStudentProfile(studentId, updatedFields) {
     college_name: updatedFields.college_name,
     address: updatedFields.address || null,
     profile_photo_url: updatedFields.profile_photo_url || null,
+    title_prefix: updatedFields.title_prefix || currentStudent.title_prefix || null,
+    department: updatedFields.department || currentStudent.department || null,
+    institute: updatedFields.institute || updatedFields.college_name || currentStudent.institute || null,
+    is_faculty: Boolean(updatedFields.is_faculty || currentStudent.is_faculty),
+    role: updatedFields.role || currentStudent.role || (currentStudent.is_faculty ? 'faculty' : 'student'),
+    display_name: updatedFields.title_prefix && updatedFields.full_name 
+      ? `${updatedFields.title_prefix} ${updatedFields.full_name}` 
+      : (currentStudent.display_name || updatedFields.full_name),
     profile_updates_count: newCount,
     last_update_timestamp: newTimestamp
   };

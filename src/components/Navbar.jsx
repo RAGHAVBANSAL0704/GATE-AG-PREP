@@ -14,7 +14,9 @@ import {
   Gamepad2,
   Target,
   GraduationCap,
-  MessageSquare
+  MessageSquare,
+  Award,
+  ShieldCheck
 } from 'lucide-react';
 
 export default function Navbar({ 
@@ -116,19 +118,36 @@ export default function Navbar({
                   className="flex items-center gap-2 text-left p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition"
                   title="Open My Profile"
                 >
-                  <div className="w-7 h-7 rounded-full bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center overflow-hidden">
+                  <div className={`w-7 h-7 rounded-full border flex items-center justify-center overflow-hidden ${
+                    currentStudent.role === 'faculty' || currentStudent.is_faculty
+                      ? 'bg-indigo-500/20 border-indigo-500/50 text-indigo-400 ring-2 ring-indigo-500/20'
+                      : 'bg-emerald-500/20 border-emerald-500/40 text-emerald-500'
+                  }`}>
                     {currentStudent.profile_photo_url ? (
                       <img src={currentStudent.profile_photo_url} alt="Profile" className="w-full h-full object-cover" />
                     ) : (
-                      <UserCheck className="w-4 h-4 text-emerald-500" />
+                      currentStudent.role === 'faculty' || currentStudent.is_faculty ? (
+                        <Award className="w-4 h-4 text-indigo-500 dark:text-indigo-400" />
+                      ) : (
+                        <UserCheck className="w-4 h-4 text-emerald-500" />
+                      )
                     )}
                   </div>
                   <div className="hidden md:flex flex-col text-right">
-                    <span className="text-xs font-bold text-slate-900 dark:text-white leading-tight">
-                      {currentStudent.full_name}
+                    <span className="text-xs font-bold text-slate-900 dark:text-white leading-tight flex items-center gap-1 justify-end">
+                      {currentStudent.display_name || currentStudent.full_name}
+                      {(currentStudent.role === 'faculty' || currentStudent.is_faculty) && (
+                        <span className="inline-block w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
+                      )}
                     </span>
-                    <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-mono">
-                      {currentStudent.student_type === 'hau' ? (currentStudent.admission_no || 'COAET HAU') : 'External'}
+                    <span className={`text-[10px] font-mono font-medium ${
+                      currentStudent.role === 'faculty' || currentStudent.is_faculty
+                        ? 'text-indigo-600 dark:text-indigo-400 font-semibold'
+                        : 'text-emerald-600 dark:text-emerald-400'
+                    }`}>
+                      {currentStudent.role === 'faculty' || currentStudent.is_faculty
+                        ? `Faculty • ${currentStudent.department ? currentStudent.department.replace(/ \(.+\)/, '').substring(0, 18) : 'Academic'}`
+                        : (currentStudent.student_type === 'hau' ? (currentStudent.admission_no || 'COAET HAU') : 'External')}
                     </span>
                   </div>
                 </button>

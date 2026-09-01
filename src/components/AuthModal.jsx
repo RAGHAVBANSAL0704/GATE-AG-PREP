@@ -12,13 +12,22 @@ import {
   Mail,
   Phone,
   Calendar,
-  Loader2
+  Loader2,
+  Award,
+  BookOpen,
+  Briefcase,
+  ShieldCheck,
+  Sparkles
 } from 'lucide-react';
 import { 
   registerStudent, 
   loginStudent, 
+  registerFaculty,
+  loginFaculty,
   getRememberedIdentifier, 
-  validateHAUAdmissionNo
+  validateHAUAdmissionNo,
+  FACULTY_SALUTATIONS,
+  AGRI_ENGG_DEPARTMENTS
 } from '../services/authService';
 
 const HARYANA_AND_INDIA_COLLEGES = [
@@ -45,10 +54,14 @@ const HARYANA_AND_INDIA_COLLEGES = [
 ];
 
 export default function AuthModal({ onLoginSuccess }) {
+  // Top-level portal switcher: 'student' | 'faculty'
+  const [portalRole, setPortalRole] = useState('student');
+
+  // Sub-tabs: 'login' | 'signup'
   const [primaryTab, setPrimaryTab] = useState('login'); // 'login' | 'signup'
   const [activeMode, setActiveMode] = useState('signup_hau'); // 'signup_hau' | 'signup_external' | 'signup_visitor'
 
-  // Form Fields State
+  // Student Form Fields State
   const [fullName, setFullName] = useState('');
   const [username, setUsername] = useState('');
   const [gender, setGender] = useState('Male');
@@ -62,7 +75,19 @@ export default function AuthModal({ onLoginSuccess }) {
   const [customPassword, setCustomPassword] = useState('');
   const [showCustomPassword, setShowCustomPassword] = useState(false);
 
-  // Login State
+  // Faculty Form Fields State
+  const [facultyTitle, setFacultyTitle] = useState('Dr.');
+  const [facultyFullName, setFacultyFullName] = useState('');
+  const [facultyDepartment, setFacultyDepartment] = useState(AGRI_ENGG_DEPARTMENTS[0]);
+  const [customDepartment, setCustomDepartment] = useState('');
+  const [facultyInstitute, setFacultyInstitute] = useState('COAET CCS HAU Hisar (Campus Student)');
+  const [customFacultyInstitute, setCustomFacultyInstitute] = useState('');
+  const [facultyMobile, setFacultyMobile] = useState('');
+  const [facultyEmail, setFacultyEmail] = useState('');
+  const [facultyPassword, setFacultyPassword] = useState('');
+  const [showFacultyPassword, setShowFacultyPassword] = useState(false);
+
+  // Common Login State
   const [loginIdentifier, setLoginIdentifier] = useState('');
   const [loginPassword, setLoginPassword] = useState('');
   const [showLoginPassword, setShowLoginPassword] = useState(false);
@@ -85,8 +110,14 @@ export default function AuthModal({ onLoginSuccess }) {
     setSuccessMsg('');
   };
 
-  // Sign Up Handler
-  const handleSignUp = async (e) => {
+  const switchPortal = (role) => {
+    setPortalRole(role);
+    setErrorMsg('');
+    setSuccessMsg('');
+  };
+
+  // Student Sign Up Handler
+  const handleStudentSignUp = async (e) => {
     e.preventDefault();
     setErrorMsg('');
     setSuccessMsg('');
@@ -184,14 +215,93 @@ export default function AuthModal({ onLoginSuccess }) {
     }
   };
 
-  // Login Handler
+  // Faculty Sign Up Handler
+  const handleFacultySignUp = async (e) => {
+    e.preventDefault();
+    setErrorMsg('');
+    setSuccessMsg('');
+
+    if (!facultyFullName.trim()) {
+      setErrorMsg('Please enter your full name.');
+      return;
+    }
+
+    if (!facultyEmail.trim()) {
+      setErrorMsg('Please enter your official/academic email address.');
+      return;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(facultyEmail.trim())) {
+      setErrorMsg('Please enter a valid email address (e.g. prof.name@university.ac.in).');
+      return;
+    }
+
+    if (!facultyMobile.trim()) {
+      setErrorMsg('Please enter your 10-digit mobile number.');
+      return;
+    }
+    const cleanMobileNum = facultyMobile.replace(/\D/g, '');
+    if (cleanMobileNum.length < 10) {
+      setErrorMsg('Please enter a valid 10-digit mobile number.');
+      return;
+    }
+
+    const effectiveDept = facultyDepartment === 'Other / Allied Department'
+      ? (customDepartment.trim() || 'Agricultural Engineering')
+      : facultyDepartment;
+
+    const effectiveInst = facultyInstitute === "Other Institute / Enter Manually"
+      ? (customFacultyInstitute.trim() || 'Agricultural University')
+      : (facultyInstitute === "COAET CCS HAU Hisar (Campus Student)" ? "COAET CCS HAU Hisar" : facultyInstitute);
+
+    if (facultyPassword && facultyPassword.trim().length > 0 && facultyPassword.trim().length < 6) {
+      setErrorMsg('Password must be at least 6 characters long.');
+      return;
+    }
+
+    setIsLoading(true);
+
+    try {
+      const res = await registerFaculty({
+        titlePrefix: facultyTitle,
+        fullName: facultyFullName,
+        department: effectiveDept,
+        institute: effectiveInst,
+        mobileNumber: facultyMobile,
+        email: facultyEmail,
+        password: facultyPassword
+      });
+
+      if (res.success) {
+        setSuccessMsg(`Welcome, ${res.student.display_name || res.student.full_name}! Faculty access granted.`);
+        setTimeout(() => {
+          onLoginSuccess(res.student);
+        }, 500);
+      } else if (res.isDuplicate) {
+        setErrorMsg(res.message);
+        setTimeout(() => {
+          setLoginIdentifier(res.prefillIdentifier || facultyEmail || facultyMobile);
+          switchTab('login');
+          setErrorMsg('An existing faculty account was found. Please sign in.');
+        }, 1200);
+      } else {
+        setErrorMsg(res.message || 'Faculty registration failed. Please try again.');
+      }
+    } catch (err) {
+      setErrorMsg('An error occurred during faculty registration.');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  // Common Login Handler (Works for both Student and Faculty)
   const handleLogin = async (e) => {
     e.preventDefault();
     setErrorMsg('');
     setSuccessMsg('');
 
     if (!loginIdentifier.trim()) {
-      setErrorMsg('Please enter your Username, Admission No, Mobile, or Email.');
+      setErrorMsg('Please enter your Email, Mobile, Username, or Admission No.');
       return;
     }
     if (!loginPassword.trim()) {
@@ -204,7 +314,11 @@ export default function AuthModal({ onLoginSuccess }) {
     try {
       const res = await loginStudent(loginIdentifier, loginPassword, rememberMe);
       if (res.success) {
-        setSuccessMsg('Welcome back! Loading your dashboard...');
+        const isFac = res.student.role === 'faculty' || res.student.is_faculty;
+        setSuccessMsg(isFac 
+          ? `Welcome ${res.student.display_name || res.student.full_name}! Loading Faculty HQ...` 
+          : 'Welcome back! Loading your dashboard...'
+        );
         setTimeout(() => {
           onLoginSuccess(res.student);
         }, 400);
@@ -219,85 +333,140 @@ export default function AuthModal({ onLoginSuccess }) {
   };
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-md overflow-y-auto">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-950/75 backdrop-blur-md overflow-y-auto">
       <div className={`relative w-full ${primaryTab === 'signup' ? 'max-w-xl' : 'max-w-md'} bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl overflow-hidden transition-all my-auto`}>
         
         {/* Top Minimal Header & Logo */}
-        <div className="pt-8 pb-4 px-6 text-center border-b border-slate-100 dark:border-slate-800/80 bg-gradient-to-b from-slate-50/80 to-transparent dark:from-slate-800/30">
-          <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 mb-3 ring-1 ring-emerald-500/20">
-            <GraduationCap className="w-6 h-6" />
+        <div className={`pt-7 pb-4 px-6 text-center border-b border-slate-100 dark:border-slate-800/80 transition-colors ${
+          portalRole === 'faculty' 
+            ? 'bg-gradient-to-b from-indigo-500/10 via-purple-500/5 to-transparent dark:from-indigo-950/30' 
+            : 'bg-gradient-to-b from-emerald-500/10 via-teal-500/5 to-transparent dark:from-emerald-950/30'
+        }`}>
+          <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl mb-3 ring-1 transition-all ${
+            portalRole === 'faculty'
+              ? 'bg-indigo-500/10 dark:bg-indigo-500/20 text-indigo-600 dark:text-indigo-400 ring-indigo-500/20'
+              : 'bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 ring-emerald-500/20'
+          }`}>
+            {portalRole === 'faculty' ? (
+              <Building2 className="w-6 h-6" />
+            ) : (
+              <GraduationCap className="w-6 h-6" />
+            )}
           </div>
+
           <h1 className="text-xl font-bold text-slate-900 dark:text-white tracking-tight">
-            GATE <span className="text-emerald-600 dark:text-emerald-400">AG PREP</span>
+            GATE <span className={portalRole === 'faculty' ? 'text-indigo-600 dark:text-indigo-400' : 'text-emerald-600 dark:text-emerald-400'}>
+              {portalRole === 'faculty' ? 'FACULTY PORTAL' : 'AG PREP'}
+            </span>
           </h1>
           <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-            Agricultural Engineering CBT Preparation Platform
+            {portalRole === 'faculty'
+              ? 'Academic Contributor & Professor Studio'
+              : 'Agricultural Engineering CBT Preparation Platform'
+            }
           </p>
+
+          {/* Primary Portal Switcher: Student vs Faculty */}
+          <div className="flex items-center justify-center mt-4">
+            <div className="inline-flex p-1 bg-slate-200/80 dark:bg-slate-800 rounded-xl border border-slate-300/60 dark:border-slate-700/60 shadow-inner">
+              <button
+                type="button"
+                onClick={() => switchPortal('student')}
+                className={`flex items-center gap-1.5 px-4 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                  portalRole === 'student'
+                    ? 'bg-white dark:bg-slate-900 text-emerald-600 dark:text-emerald-400 shadow-sm'
+                    : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                }`}
+              >
+                <GraduationCap className="w-3.5 h-3.5" />
+                <span>Student Portal</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => switchPortal('faculty')}
+                className={`flex items-center gap-1.5 px-4 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                  portalRole === 'faculty'
+                    ? 'bg-indigo-600 text-white shadow-md'
+                    : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                }`}
+              >
+                <Award className="w-3.5 h-3.5" />
+                <span>Faculty / Professor</span>
+              </button>
+            </div>
+          </div>
         </div>
 
         <div className="p-6 sm:p-8">
-          {/* Segmented Control Tabs */}
+          {/* Sign In vs Create Account Tabs */}
           <div className="grid grid-cols-2 p-1 bg-slate-100 dark:bg-slate-800/80 rounded-xl mb-6">
             <button
               type="button"
               onClick={() => switchTab('login')}
               className={`py-2 text-xs font-semibold rounded-lg transition-all ${
                 primaryTab === 'login'
-                  ? 'bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-sm'
+                  ? (portalRole === 'faculty'
+                      ? 'bg-indigo-600 text-white shadow-sm font-bold'
+                      : 'bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-sm'
+                    )
                   : 'text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200'
               }`}
             >
-              Sign In
+              {portalRole === 'faculty' ? 'Faculty Sign In' : 'Sign In'}
             </button>
             <button
               type="button"
               onClick={() => switchTab('signup')}
               className={`py-2 text-xs font-semibold rounded-lg transition-all ${
                 primaryTab === 'signup'
-                  ? 'bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-sm'
+                  ? (portalRole === 'faculty'
+                      ? 'bg-indigo-600 text-white shadow-sm font-bold'
+                      : 'bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-sm'
+                    )
                   : 'text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200'
               }`}
             >
-              Create Account
+              {portalRole === 'faculty' ? 'Register as Faculty' : 'Create Account'}
             </button>
           </div>
 
           {/* Feedback Alerts */}
           {errorMsg && (
-            <div className="mb-5 p-3 rounded-xl bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800/50 text-rose-700 dark:text-rose-300 text-xs flex items-start gap-2.5">
+            <div className="mb-5 p-3 rounded-xl bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800/50 text-rose-700 dark:text-rose-300 text-xs flex items-start gap-2.5 animate-fadeIn">
               <AlertCircle className="w-4 h-4 text-rose-500 shrink-0 mt-0.5" />
               <span>{errorMsg}</span>
             </div>
           )}
 
           {successMsg && (
-            <div className="mb-5 p-3 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/50 text-emerald-700 dark:text-emerald-300 text-xs flex items-start gap-2.5">
+            <div className="mb-5 p-3 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/50 text-emerald-700 dark:text-emerald-300 text-xs flex items-start gap-2.5 animate-fadeIn">
               <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
               <span>{successMsg}</span>
             </div>
           )}
 
           {/* ======================================================== */}
-          {/* LOGIN FORM                                               */}
+          {/* LOGIN FORM (COMMON FOR BOTH STUDENT AND FACULTY)         */}
           {/* ======================================================== */}
           {primaryTab === 'login' && (
             <form onSubmit={handleLogin} className="space-y-4">
               <div>
                 <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
-                  Account Identifier
+                  {portalRole === 'faculty' ? 'Faculty Email, Mobile, or Username' : 'Account Identifier'}
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
-                    <User className="w-4 h-4" />
+                    {portalRole === 'faculty' ? <Mail className="w-4 h-4" /> : <User className="w-4 h-4" />}
                   </div>
                   <input
                     type="text"
                     required
                     autoComplete="username"
-                    placeholder="Username, Admission No, Email, or Mobile"
+                    placeholder={portalRole === 'faculty' ? 'e.g. prof.name@university.edu or 9876543210' : 'Username, Admission No, Email, or Mobile'}
                     value={loginIdentifier}
                     onChange={(e) => setLoginIdentifier(e.target.value)}
-                    className="w-full pl-9 pr-3.5 py-2.5 text-xs bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all"
+                    className="w-full pl-9 pr-3.5 py-2.5 text-xs bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
                   />
                 </div>
               </div>
@@ -307,9 +476,11 @@ export default function AuthModal({ onLoginSuccess }) {
                   <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">
                     Password
                   </label>
-                  <span className="text-[11px] text-slate-400">
-                    (Default: DOB DD/MM/YYYY)
-                  </span>
+                  {portalRole === 'student' && (
+                    <span className="text-[11px] text-slate-400">
+                      (Default: DOB DD/MM/YYYY)
+                    </span>
+                  )}
                 </div>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
@@ -319,10 +490,10 @@ export default function AuthModal({ onLoginSuccess }) {
                     type={showLoginPassword ? "text" : "password"}
                     required
                     autoComplete="current-password"
-                    placeholder="Enter your password or DOB"
+                    placeholder="Enter your password"
                     value={loginPassword}
                     onChange={(e) => setLoginPassword(e.target.value)}
-                    className="w-full pl-9 pr-10 py-2.5 text-xs bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all"
+                    className="w-full pl-9 pr-10 py-2.5 text-xs bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
                   />
                   <button
                     type="button"
@@ -341,7 +512,7 @@ export default function AuthModal({ onLoginSuccess }) {
                     type="checkbox"
                     checked={rememberMe}
                     onChange={(e) => setRememberMe(e.target.checked)}
-                    className="w-4 h-4 rounded border-slate-300 dark:border-slate-700 text-emerald-600 focus:ring-0 cursor-pointer"
+                    className="w-4 h-4 rounded border-slate-300 dark:border-slate-700 text-indigo-600 focus:ring-0 cursor-pointer"
                   />
                   <span>Remember me on this device</span>
                 </label>
@@ -350,7 +521,11 @@ export default function AuthModal({ onLoginSuccess }) {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full py-2.5 px-4 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-semibold text-xs rounded-xl shadow-sm transition-all flex items-center justify-center gap-2 disabled:opacity-50 mt-4 cursor-pointer"
+                className={`w-full py-2.5 px-4 font-semibold text-xs rounded-xl shadow-sm transition-all flex items-center justify-center gap-2 disabled:opacity-50 mt-4 cursor-pointer text-white ${
+                  portalRole === 'faculty'
+                    ? 'bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 shadow-indigo-500/20'
+                    : 'bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 shadow-emerald-500/20'
+                }`}
               >
                 {isLoading ? (
                   <>
@@ -359,30 +534,234 @@ export default function AuthModal({ onLoginSuccess }) {
                   </>
                 ) : (
                   <>
-                    <span>Sign In</span>
+                    <span>{portalRole === 'faculty' ? 'Sign In to Faculty Portal' : 'Sign In'}</span>
                     <ArrowRight className="w-4 h-4" />
                   </>
                 )}
               </button>
 
               <div className="text-center pt-3 text-xs text-slate-500 dark:text-slate-400">
-                Don't have an account yet?{' '}
+                {portalRole === 'faculty' ? 'New faculty member? ' : "Don't have an account yet? "}
                 <button
                   type="button"
                   onClick={() => switchTab('signup')}
-                  className="text-emerald-600 dark:text-emerald-400 font-semibold hover:underline cursor-pointer"
+                  className={`font-semibold hover:underline cursor-pointer ${
+                    portalRole === 'faculty' ? 'text-indigo-600 dark:text-indigo-400' : 'text-emerald-600 dark:text-emerald-400'
+                  }`}
                 >
-                  Create one now
+                  {portalRole === 'faculty' ? 'Register Faculty Profile' : 'Create one now'}
                 </button>
               </div>
             </form>
           )}
 
           {/* ======================================================== */}
-          {/* SIGN-UP FORM                                             */}
+          {/* FACULTY REGISTRATION FORM                                */}
           {/* ======================================================== */}
-          {primaryTab === 'signup' && (
-            <form onSubmit={handleSignUp} className="space-y-4">
+          {primaryTab === 'signup' && portalRole === 'faculty' && (
+            <form onSubmit={handleFacultySignUp} className="space-y-4">
+              
+              {/* Faculty Welcome Notice Banner */}
+              <div className="p-3 bg-indigo-50 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-800/50 rounded-xl text-indigo-900 dark:text-indigo-200 text-xs flex items-center gap-2.5">
+                <ShieldCheck className="w-5 h-5 text-indigo-600 dark:text-indigo-400 shrink-0" />
+                <span>
+                  <strong>Academic Contributor Registration</strong>: Verified Faculty receive official contributor tags and professor tools.
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-12 gap-3 text-xs">
+                
+                {/* Salutation / Title Prefix */}
+                <div className="sm:col-span-4">
+                  <label className="block font-semibold text-slate-700 dark:text-slate-300 mb-1">
+                    Title / Prefix *
+                  </label>
+                  <select
+                    value={facultyTitle}
+                    onChange={(e) => setFacultyTitle(e.target.value)}
+                    className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 font-semibold focus:outline-none focus:border-indigo-500"
+                  >
+                    {FACULTY_SALUTATIONS.map((sal) => (
+                      <option key={sal} value={sal}>{sal}</option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* Full Name */}
+                <div className="sm:col-span-8">
+                  <label className="block font-semibold text-slate-700 dark:text-slate-300 mb-1">
+                    Full Name *
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="e.g. Rajesh Kumar"
+                    value={facultyFullName}
+                    onChange={(e) => setFacultyFullName(e.target.value)}
+                    className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:border-indigo-500"
+                  />
+                </div>
+
+                {/* Department Selection */}
+                <div className="sm:col-span-12 space-y-1.5">
+                  <label className="block font-semibold text-slate-700 dark:text-slate-300">
+                    Department *
+                  </label>
+                  <select
+                    value={facultyDepartment}
+                    onChange={(e) => setFacultyDepartment(e.target.value)}
+                    className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 focus:outline-none focus:border-indigo-500"
+                  >
+                    {AGRI_ENGG_DEPARTMENTS.map((dept, i) => (
+                      <option key={i} value={dept}>{dept}</option>
+                    ))}
+                  </select>
+                  {facultyDepartment === 'Other / Allied Department' && (
+                    <input
+                      type="text"
+                      required
+                      placeholder="Enter your Department name"
+                      value={customDepartment}
+                      onChange={(e) => setCustomDepartment(e.target.value)}
+                      className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 focus:outline-none focus:border-indigo-500 mt-1"
+                    />
+                  )}
+                </div>
+
+                {/* Institute / University Selection */}
+                <div className="sm:col-span-12 space-y-1.5">
+                  <label className="block font-semibold text-slate-700 dark:text-slate-300">
+                    Institute / University *
+                  </label>
+                  <select
+                    value={facultyInstitute}
+                    onChange={(e) => setFacultyInstitute(e.target.value)}
+                    className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 focus:outline-none focus:border-indigo-500"
+                  >
+                    {HARYANA_AND_INDIA_COLLEGES.map((inst, i) => (
+                      <option key={i} value={inst}>{inst}</option>
+                    ))}
+                  </select>
+                  {facultyInstitute === "Other Institute / Enter Manually" && (
+                    <input
+                      type="text"
+                      required
+                      placeholder="Enter your Institute / University name"
+                      value={customFacultyInstitute}
+                      onChange={(e) => setCustomFacultyInstitute(e.target.value)}
+                      className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 focus:outline-none focus:border-indigo-500 mt-1"
+                    />
+                  )}
+                </div>
+
+                {/* Email Address */}
+                <div className="sm:col-span-6">
+                  <label className="block font-semibold text-slate-700 dark:text-slate-300 mb-1">
+                    E-mail Address *
+                  </label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+                      <Mail className="w-3.5 h-3.5" />
+                    </div>
+                    <input
+                      type="email"
+                      required
+                      placeholder="e.g. prof.name@university.edu"
+                      value={facultyEmail}
+                      onChange={(e) => setFacultyEmail(e.target.value)}
+                      className="w-full pl-8 pr-3 py-2 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:border-indigo-500"
+                    />
+                  </div>
+                </div>
+
+                {/* Mobile Number */}
+                <div className="sm:col-span-6">
+                  <label className="block font-semibold text-slate-700 dark:text-slate-300 mb-1">
+                    Mobile Number *
+                  </label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+                      <Phone className="w-3.5 h-3.5" />
+                    </div>
+                    <input
+                      type="tel"
+                      required
+                      placeholder="10-digit mobile number"
+                      value={facultyMobile}
+                      onChange={(e) => setFacultyMobile(e.target.value)}
+                      className="w-full pl-8 pr-3 py-2 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:border-indigo-500"
+                    />
+                  </div>
+                </div>
+
+                {/* Password */}
+                <div className="sm:col-span-12">
+                  <div className="flex items-center justify-between mb-1">
+                    <label className="font-semibold text-slate-700 dark:text-slate-300">
+                      Faculty Account Password (Optional)
+                    </label>
+                    <span className="text-[10px] text-slate-400">
+                      Default: Faculty@Last4Digits
+                    </span>
+                  </div>
+                  <div className="relative">
+                    <input
+                      type={showFacultyPassword ? "text" : "password"}
+                      placeholder="Enter minimum 6 character password"
+                      value={facultyPassword}
+                      onChange={(e) => setFacultyPassword(e.target.value)}
+                      className="w-full pl-3 pr-10 py-2 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:border-indigo-500"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setShowFacultyPassword(!showFacultyPassword)}
+                      className="absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
+                      title={showFacultyPassword ? "Hide password" : "Show password"}
+                    >
+                      {showFacultyPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+
+              <button
+                type="submit"
+                disabled={isLoading}
+                className="w-full py-2.5 px-4 bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 text-white font-semibold text-xs rounded-xl shadow-md shadow-indigo-500/20 transition-all flex items-center justify-center gap-2 mt-4 disabled:opacity-50 cursor-pointer"
+              >
+                {isLoading ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                    <span>Registering Faculty Profile...</span>
+                  </>
+                ) : (
+                  <>
+                    <Award className="w-4 h-4" />
+                    <span>Register as Verified Faculty</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </>
+                )}
+              </button>
+
+              <div className="text-center pt-2 text-xs text-slate-500 dark:text-slate-400">
+                Already registered as Faculty?{' '}
+                <button
+                  type="button"
+                  onClick={() => switchTab('login')}
+                  className="text-indigo-600 dark:text-indigo-400 font-semibold hover:underline cursor-pointer"
+                >
+                  Sign in here
+                </button>
+              </div>
+            </form>
+          )}
+
+          {/* ======================================================== */}
+          {/* STUDENT REGISTRATION FORM                                */}
+          {/* ======================================================== */}
+          {primaryTab === 'signup' && portalRole === 'student' && (
+            <form onSubmit={handleStudentSignUp} className="space-y-4">
               {/* Category Mode Pills */}
               <div className="flex rounded-xl bg-slate-100 dark:bg-slate-950/60 p-1 border border-slate-200 dark:border-slate-800 gap-1">
                 <button
@@ -667,4 +1046,3 @@ export default function AuthModal({ onLoginSuccess }) {
     </div>
   );
 }
-

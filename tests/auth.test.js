@@ -19,7 +19,15 @@ try {
   // Ignore if navigator is non-configurable
 }
 
-import { registerStudent, loginStudent, updateStudentProfile } from '../src/services/authService.js';
+import { 
+  registerStudent, 
+  loginStudent, 
+  registerFaculty, 
+  loginFaculty, 
+  updateStudentProfile,
+  FACULTY_SALUTATIONS,
+  AGRI_ENGG_DEPARTMENTS
+} from '../src/services/authService.js';
 
 describe('Username Sign-Up & Authentication Unit Tests', () => {
 
@@ -137,6 +145,131 @@ describe('Username Sign-Up & Authentication Unit Tests', () => {
 
     assert.equal(updateRes.success, true);
     assert.equal(updateRes.student.username, 'vikram_singh_2026');
+  });
+
+});
+
+describe('Faculty Authentication & Registration Unit Tests', () => {
+
+  beforeEach(() => {
+    localStorage.clear();
+  });
+
+  test('validates faculty salutations and department constants', () => {
+    assert.ok(FACULTY_SALUTATIONS.includes('Dr.'));
+    assert.ok(FACULTY_SALUTATIONS.includes('Er.'));
+    assert.ok(FACULTY_SALUTATIONS.includes('Prof.'));
+    assert.ok(AGRI_ENGG_DEPARTMENTS.length >= 5);
+  });
+
+  test('successfully registers faculty with title Dr., department, and institute', async () => {
+    const res = await registerFaculty({
+      titlePrefix: 'Dr.',
+      fullName: 'Rajesh Kumar',
+      department: 'Farm Machinery & Power Engineering (FMPE)',
+      institute: 'COAET CCS HAU Hisar',
+      mobileNumber: '9876543210',
+      email: 'dr.rajesh@hau.ac.in',
+      password: 'SecureFacultyPassword123'
+    });
+
+    assert.equal(res.success, true);
+    assert.equal(res.student.is_faculty, true);
+    assert.equal(res.student.role, 'faculty');
+    assert.equal(res.student.title_prefix, 'Dr.');
+    assert.equal(res.student.full_name, 'Rajesh Kumar');
+    assert.equal(res.student.display_name, 'Dr. Rajesh Kumar');
+    assert.equal(res.student.department, 'Farm Machinery & Power Engineering (FMPE)');
+    assert.equal(res.student.college_name, 'COAET CCS HAU Hisar');
+    assert.equal(res.student.email, 'dr.rajesh@hau.ac.in');
+  });
+
+  test('successfully registers faculty with title Prof. or Er.', async () => {
+    const resProf = await registerFaculty({
+      titlePrefix: 'Prof.',
+      fullName: 'Sunil Sharma',
+      department: 'Soil & Water Conservation Engineering (SWCE)',
+      institute: 'IIT Kharagpur',
+      mobileNumber: '9812345678',
+      email: 'prof.sunil@iitkgp.ac.in',
+      password: 'ProfPassword456'
+    });
+
+    assert.equal(resProf.success, true);
+    assert.equal(resProf.student.title_prefix, 'Prof.');
+    assert.equal(resProf.student.display_name, 'Prof. Sunil Sharma');
+    assert.equal(resProf.student.is_faculty, true);
+
+    const resEr = await registerFaculty({
+      titlePrefix: 'Er.',
+      fullName: 'Manish Verma',
+      department: 'Processing & Food Engineering (PFE)',
+      institute: 'PAU Ludhiana',
+      mobileNumber: '9765432109',
+      email: 'er.manish@pau.edu',
+      password: 'ErPassword789'
+    });
+
+    assert.equal(resEr.success, true);
+    assert.equal(resEr.student.title_prefix, 'Er.');
+    assert.equal(resEr.student.display_name, 'Er. Manish Verma');
+    assert.equal(resEr.student.is_faculty, true);
+  });
+
+  test('allows faculty login via email, mobile, or username', async () => {
+    const reg = await registerFaculty({
+      titlePrefix: 'Dr.',
+      fullName: 'Anita Malik',
+      username: 'dr_anita',
+      department: 'Renewable Energy Engineering (REE)',
+      institute: 'GBPUAT Pantnagar',
+      mobileNumber: '9871122334',
+      email: 'anita.malik@gbpuat.ac.in',
+      password: 'MalikPassword@2026'
+    });
+
+    assert.equal(reg.success, true);
+
+    // Login via email
+    const loginEmail = await loginFaculty('anita.malik@gbpuat.ac.in', 'MalikPassword@2026');
+    assert.equal(loginEmail.success, true);
+    assert.equal(loginEmail.student.display_name, 'Dr. Anita Malik');
+    assert.equal(loginEmail.student.is_faculty, true);
+
+    // Login via mobile
+    const loginMobile = await loginFaculty('9871122334', 'MalikPassword@2026');
+    assert.equal(loginMobile.success, true);
+    assert.equal(loginMobile.student.full_name, 'Anita Malik');
+
+    // Login via username
+    const loginUser = await loginFaculty('@dr_anita', 'MalikPassword@2026');
+    assert.equal(loginUser.success, true);
+    assert.equal(loginUser.student.username, 'dr_anita');
+  });
+
+  test('rejects faculty registration with duplicate email or mobile', async () => {
+    await registerFaculty({
+      titlePrefix: 'Dr.',
+      fullName: 'Ramesh Chander',
+      department: 'Farm Machinery & Power Engineering (FMPE)',
+      institute: 'COAET CCS HAU Hisar',
+      mobileNumber: '9998887776',
+      email: 'dr.ramesh@hau.ac.in',
+      password: 'Password123'
+    });
+
+    const dupEmail = await registerFaculty({
+      titlePrefix: 'Prof.',
+      fullName: 'Ramesh Dup',
+      department: 'Soil & Water Conservation Engineering (SWCE)',
+      institute: 'PAU Ludhiana',
+      mobileNumber: '9112223334',
+      email: 'dr.ramesh@hau.ac.in',
+      password: 'Password456'
+    });
+
+    assert.equal(dupEmail.success, false);
+    assert.equal(dupEmail.isDuplicate, true);
   });
 
 });
