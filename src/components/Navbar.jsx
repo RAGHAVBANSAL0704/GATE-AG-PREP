@@ -18,6 +18,7 @@ import {
   Award,
   ShieldCheck
 } from 'lucide-react';
+import NotificationDropdown from './NotificationDropdown';
 
 export default function Navbar({ 
   activeTab, 
@@ -110,6 +111,13 @@ export default function Navbar({
             >
               {darkMode ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-slate-600" />}
             </button>
+
+            {currentStudent && (
+              <NotificationDropdown 
+                currentStudent={currentStudent} 
+                onNavigateTab={setActiveTab} 
+              />
+            )}
 
             {currentStudent && (
               <div className="flex items-center gap-2 pl-2 border-l border-slate-200 dark:border-slate-800">

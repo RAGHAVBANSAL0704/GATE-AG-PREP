@@ -20,6 +20,7 @@ import MathRenderer from './MathRenderer';
 import { validateCleanInput, sanitizeText } from '../utils/profanityFilter';
 import { saveToIDB, getAllFromIDB } from '../utils/indexedDB';
 import { canModerate, isUserBanned, banUser } from '../services/userRoleService';
+import { addPriorityNotification } from '../services/notificationService';
 
 const INITIAL_POSTS = [
   {
@@ -175,6 +176,26 @@ export default function CommunityDiscussions({ currentStudent }) {
       text: sanitizeText(draft.trim()),
       date: new Date().toISOString()
     };
+
+    const targetPost = posts.find(p => p.id === postId);
+
+    // If replier is Faculty, Mentor, or Solver, notify the question author!
+    const isFaculty = userRole === 'faculty' || userRole === 'mentor' || (authorName && (authorName.startsWith('Dr.') || authorName.startsWith('Prof.') || authorName.startsWith('Er.')));
+    const isSolver = userRole === 'solver';
+
+    if (targetPost && (isFaculty || isSolver)) {
+      addPriorityNotification({
+        recipientId: targetPost.authorId || null,
+        recipientName: targetPost.author,
+        senderName: authorName,
+        senderRole: isFaculty ? 'faculty' : 'solver',
+        senderDepartment: currentStudent?.department || null,
+        senderPhoto: currentStudent?.profile_photo_url || null,
+        postId: targetPost.id,
+        postTitle: targetPost.questionTitle,
+        replySnippet: draft.trim()
+      });
+    }
 
     const updated = posts.map(p => {
       if (p.id === postId) {
