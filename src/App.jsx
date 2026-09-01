@@ -4,6 +4,8 @@ import Sidebar from './components/Sidebar';
 import Dashboard from './components/Dashboard';
 import PracticeHub from './components/PracticeHub';
 import Footer from './components/Footer';
+import CommandPaletteModal from './components/CommandPaletteModal';
+import ThemeSelectorModal from './components/ThemeSelectorModal';
 
 // Robust lazy loading wrapper that auto-reloads the page if a chunk is missing due to a new deployment
 function lazyWithRetry(componentImport) {
@@ -61,6 +63,7 @@ function TabLoadingSkeleton() {
 import { checkCurrentSession, logoutStudent } from './services/authService';
 import { initAutoSyncOnReconnect } from './services/testAttemptService';
 import { saveAndBroadcastQuestion, subscribeToLiveQuestionSync } from './services/questionSyncService';
+import { subscribeToLiveRoleSync } from './services/userRoleService';
 import { saveToIDB } from './utils/indexedDB';
 
 import initialQuestions from './data/questions.json';
@@ -135,6 +138,31 @@ export default function App() {
   const [currentStudent, setCurrentStudent] = useState(() => checkCurrentSession());
   const [isProfileOpen, setIsProfileOpen] = useState(false);
 
+  useEffect(() => {
+    const unsub = subscribeToLiveRoleSync((update) => {
+      if (!update || !currentStudent) return;
+      const isTargetUser = 
+        currentStudent.id === update.userId || 
+        currentStudent.email === update.userId || 
+        currentStudent.username === update.userId;
+
+      if (isTargetUser) {
+        setCurrentStudent(prev => ({
+          ...prev,
+          role: update.role,
+          is_solver: update.role === 'solver',
+          is_mentor: update.role === 'mentor',
+          is_faculty: update.role === 'faculty' || update.role === 'mentor',
+          contributor_badge: update.contributor_badge
+        }));
+      }
+    });
+
+    return () => {
+      if (typeof unsub === 'function') unsub();
+    };
+  }, [currentStudent]);
+
   const handleLogout = () => {
     logoutStudent();
     setCurrentStudent(null);
@@ -143,25 +171,55 @@ export default function App() {
 
   const [currentTheme, setCurrentTheme] = useState(() => {
     try {
-      return localStorage.getItem('gate_ag_theme') || 'cyber-dark';
+      return localStorage.getItem('gate_ag_theme') || 'obsidian-emerald';
     } catch (e) {
-      return 'cyber-dark';
+      return 'obsidian-emerald';
     }
   });
 
   useEffect(() => {
     localStorage.setItem('gate_ag_theme', currentTheme);
     const root = document.documentElement;
-    root.classList.remove('dark', 'theme-cyber-dark', 'theme-slate-light');
+    root.classList.remove(
+      'dark', 
+      'theme-cyber-dark', 
+      'theme-slate-light', 
+      'theme-obsidian-emerald', 
+      'theme-matte-titanium', 
+      'theme-midnight-aurora', 
+      'theme-pure-monocle',
+      'theme-oxford-sage',
+      'theme-cream-parchment',
+      'theme-porcelain-studio',
+      'theme-sunrise-amber'
+    );
 
-    if (currentTheme === 'cyber-dark') {
-      root.classList.add('dark', 'theme-cyber-dark');
+    const darkThemes = ['obsidian-emerald', 'matte-titanium', 'midnight-aurora', 'pure-monocle', 'cyber-dark'];
+    const isDark = darkThemes.includes(currentTheme);
+
+    if (isDark) {
+      const themeClass = currentTheme === 'cyber-dark' ? 'theme-obsidian-emerald' : `theme-${currentTheme}`;
+      root.classList.add('dark', themeClass);
     } else {
-      root.classList.add('theme-slate-light');
+      const themeClass = currentTheme === 'slate-light' ? 'theme-oxford-sage' : `theme-${currentTheme}`;
+      root.classList.add(themeClass);
     }
   }, [currentTheme]);
 
   const [isCalcOpen, setIsCalcOpen] = useState(false);
+  const [isCommandPaletteOpen, setIsCommandPaletteOpen] = useState(false);
+  const [isThemeModalOpen, setIsThemeModalOpen] = useState(false);
+
+  useEffect(() => {
+    const handleGlobalKeyDown = (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        setIsCommandPaletteOpen(prev => !prev);
+      }
+    };
+    window.addEventListener('keydown', handleGlobalKeyDown);
+    return () => window.removeEventListener('keydown', handleGlobalKeyDown);
+  }, []);
   
   const [practiceSection, setPracticeSection] = useState('All');
   const [customTestPaper, setCustomTestPaper] = useState(null);
@@ -422,6 +480,8 @@ export default function App() {
         currentTheme={currentTheme}
         setCurrentTheme={setCurrentTheme}
         onOpenCalc={() => setIsCalcOpen(true)}
+        onOpenCommandPalette={() => setIsCommandPaletteOpen(true)}
+        onOpenThemeModal={() => setIsThemeModalOpen(true)}
         currentStudent={currentStudent}
         onOpenProfile={() => setIsProfileOpen(true)}
         onLogout={handleLogout}
@@ -587,6 +647,42 @@ export default function App() {
             onProfileUpdated={(updatedStudent) => setCurrentStudent(updatedStudent)}
           />
         )}
+
+        <CommandPaletteModal
+          isOpen={isCommandPaletteOpen}
+          onClose={() => setIsCommandPaletteOpen(false)}
+          onNavigate={(tab) => {
+            setActiveTab(tab);
+            setIsCommandPaletteOpen(false);
+          }}
+          onStartMock={(paper) => {
+            handleStartMock(paper);
+            setIsCommandPaletteOpen(false);
+          }}
+          onOpenCalc={() => {
+            setIsCalcOpen(true);
+            setIsCommandPaletteOpen(false);
+          }}
+          darkMode={currentTheme !== 'slate-light'}
+          setDarkMode={(isDark) => setCurrentTheme(isDark ? 'obsidian-emerald' : 'slate-light')}
+          onSelectTheme={(t) => {
+            setCurrentTheme(t);
+            setIsCommandPaletteOpen(false);
+          }}
+          onOpenThemeModal={() => {
+            setIsCommandPaletteOpen(false);
+            setIsThemeModalOpen(true);
+          }}
+          mockPapers={mockPapers}
+          customMockPapers={customMockPapers}
+        />
+
+        <ThemeSelectorModal
+          isOpen={isThemeModalOpen}
+          onClose={() => setIsThemeModalOpen(false)}
+          currentTheme={currentTheme}
+          onSelectTheme={(t) => setCurrentTheme(t)}
+        />
       </Suspense>
 
     </div>

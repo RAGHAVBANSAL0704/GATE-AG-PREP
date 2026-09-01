@@ -210,6 +210,87 @@ export default function PerformanceAnalytics({ currentStudent, questions = [] })
 
       </div>
 
+      {/* Interactive Syllabus Mastery Heatmap */}
+      <div className="card-3d rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-5 space-y-4">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 dark:border-slate-800 pb-3">
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
+              <Layers className="w-4 h-4" />
+            </div>
+            <div>
+              <h2 className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-slate-900 dark:text-white">
+                Interactive Syllabus Mastery Heatmap
+              </h2>
+              <p className="text-[11px] text-slate-400 font-medium">Topic-by-topic accuracy tiers (Emerald: &ge;75% • Amber: 50–74% • Rose: &lt;50% Critical Focus)</p>
+            </div>
+          </div>
+
+          {weakSections.length > 0 && (
+            <button
+              onClick={() => {
+                window.location.hash = '#practicehub';
+              }}
+              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-rose-600 hover:bg-rose-500 text-white text-xs font-extrabold shadow-sm transition cursor-pointer"
+            >
+              <Zap className="w-3.5 h-3.5" />
+              <span>Practice {weakSections.length} Weak Areas</span>
+            </button>
+          )}
+        </div>
+
+        {/* 8-Section Heatmap Matrix */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          {sectionStats.map((sec, idx) => {
+            const acc = sec.accuracy;
+            const isHigh = acc >= 75;
+            const isMid = acc >= 50 && acc < 75;
+            const isLow = acc < 50;
+
+            return (
+              <div 
+                key={idx}
+                className={`p-3.5 rounded-2xl border transition space-y-2.5 ${
+                  isHigh 
+                    ? 'bg-emerald-50/50 dark:bg-emerald-950/20 border-emerald-300/60 dark:border-emerald-900/60' 
+                    : (isMid 
+                        ? 'bg-amber-50/50 dark:bg-amber-950/20 border-amber-300/60 dark:border-amber-900/60' 
+                        : 'bg-rose-50/50 dark:bg-rose-950/20 border-rose-300/60 dark:border-rose-900/60')
+                }`}
+              >
+                <div className="flex items-start justify-between gap-2">
+                  <span className="font-extrabold text-xs text-slate-900 dark:text-slate-100 line-clamp-2">
+                    {sec.section.replace(/Section \d+: /, '')}
+                  </span>
+                  <span className={`text-[10px] font-mono font-extrabold px-2 py-0.5 rounded-full shrink-0 ${
+                    isHigh 
+                      ? 'bg-emerald-500 text-white' 
+                      : (isMid ? 'bg-amber-500 text-white' : 'bg-rose-500 text-white')
+                  }`}>
+                    {acc}%
+                  </span>
+                </div>
+
+                <div className="w-full h-1.5 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                  <div 
+                    className={`h-full transition-all duration-500 ${
+                      isHigh ? 'bg-emerald-500' : (isMid ? 'bg-amber-500' : 'bg-rose-500')
+                    }`}
+                    style={{ width: `${Math.min(acc, 100)}%` }}
+                  />
+                </div>
+
+                <div className="flex items-center justify-between text-[10px] font-mono text-slate-500 dark:text-slate-400">
+                  <span>{sec.attempted} Qs Attempted</span>
+                  <span className={isHigh ? 'text-emerald-600 dark:text-emerald-400 font-bold' : (isMid ? 'text-amber-600 dark:text-amber-400 font-bold' : 'text-rose-600 dark:text-rose-400 font-bold')}>
+                    {isHigh ? 'Strong' : isMid ? 'Moderate' : 'Needs Practice'}
+                  </span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
       {/* Grid: Section-Wise Metrics & Strength/Weakness Analysis */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         
@@ -217,7 +298,7 @@ export default function PerformanceAnalytics({ currentStudent, questions = [] })
         <div className="lg:col-span-7 card-3d rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-5 space-y-4">
           <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
             <div className="flex items-center gap-2">
-              <Layers className="w-4 h-4 text-blue-600" />
+              <Layers className="w-4 h-4 text-emerald-600" />
               <h2 className="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white">
                 Syllabus Section Performance Breakdown
               </h2>

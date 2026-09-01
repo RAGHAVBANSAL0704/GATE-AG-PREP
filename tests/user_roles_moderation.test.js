@@ -18,6 +18,17 @@ import {
   unbanUser, 
   isUserBanned, 
   getBannedUsers,
+  muteUser,
+  unmuteUser,
+  isUserMuted,
+  getMutedUsers,
+  flagMessage,
+  getFlaggedMessages,
+  resolveFlaggedMessage,
+  logModerationAction,
+  getModerationAuditLog,
+  markVerifiedSolution,
+  getTopSolversLeaderboard,
   USER_ROLES
 } from '../src/services/userRoleService.js';
 
@@ -32,7 +43,7 @@ describe('User Roles & Moderation Unit Tests', () => {
     assert.equal(canModerate({ role: 'student', is_faculty: false }), false);
     assert.equal(canModerate(null), false);
 
-    // Promoted Solver => has mod perks (delete, ban)
+    // Promoted Solver => has mod perks (delete, ban, mute)
     assert.equal(canModerate({ role: 'solver' }), true);
     assert.equal(canModerate({ is_solver: true }), true);
 
@@ -113,6 +124,84 @@ describe('User Roles & Moderation Unit Tests', () => {
     unbanUser('stud_bad_1');
     assert.equal(isUserBanned(abusiveStudent), false);
     assert.equal(getBannedUsers().length, 0);
+  });
+
+  test('handles timed mutes (muteUser, isUserMuted, unmuteUser)', () => {
+    const spammer = {
+      id: 'stud_spam_1',
+      username: 'spam_bot',
+      full_name: 'Spam Bot'
+    };
+
+    assert.equal(isUserMuted(spammer).isMuted, false);
+
+    // Mute user for 24 hours
+    const muteRes = muteUser(spammer, 24, 'Spamming links');
+    assert.equal(muteRes.success, true);
+
+    const checkMute = isUserMuted(spammer);
+    assert.equal(checkMute.isMuted, true);
+    assert.ok(checkMute.remainingMinutes > 0);
+    assert.equal(checkMute.reason, 'Spamming links');
+
+    // Unmute user
+    unmuteUser('stud_spam_1');
+    assert.equal(isUserMuted(spammer).isMuted, false);
+  });
+
+  test('handles message reporting and moderation queue', () => {
+    assert.equal(getFlaggedMessages().length, 0);
+
+    // Flag message
+    flagMessage({
+      messageId: 'msg_999',
+      messageText: 'Check out this spam link',
+      authorName: 'Spam Author',
+      flaggedBy: 'Alert Student',
+      reason: 'Spam / Promotion'
+    });
+
+    const queue = getFlaggedMessages();
+    assert.equal(queue.length, 1);
+    assert.equal(queue[0].messageId, 'msg_999');
+    assert.equal(queue[0].status, 'PENDING');
+
+    // Resolve flag
+    resolveFlaggedMessage('msg_999', 'RESOLVED_DELETED');
+    assert.equal(getFlaggedMessages().length, 0);
+  });
+
+  test('records and retrieves moderation audit log', () => {
+    logModerationAction({
+      actorName: 'Ankit_Solver',
+      actorRole: 'solver',
+      action: 'DELETE_MESSAGE',
+      targetUser: 'Toxic_User',
+      targetMessage: 'Abusive text',
+      reason: 'Language violation'
+    });
+
+    const logs = getModerationAuditLog();
+    assert.equal(logs.length, 1);
+    assert.equal(logs[0].actorName, 'Ankit_Solver');
+    assert.equal(logs[0].action, 'DELETE_MESSAGE');
+    assert.equal(logs[0].targetUser, 'Toxic_User');
+  });
+
+  test('tracks verified solutions and updates top solvers leaderboard', () => {
+    const res1 = markVerifiedSolution('solver_ankit', 'Ankit Sharma', 'solver');
+    assert.equal(res1.success, true);
+    assert.equal(res1.newSolvedCount, 1);
+    assert.equal(res1.bonusXP, 25);
+
+    // Second verified solution
+    markVerifiedSolution('solver_ankit', 'Ankit Sharma', 'solver');
+
+    const leaderboard = getTopSolversLeaderboard();
+    assert.equal(leaderboard.length, 1);
+    assert.equal(leaderboard[0].name, 'Ankit Sharma');
+    assert.equal(leaderboard[0].solvedCount, 2);
+    assert.equal(leaderboard[0].contributorXP, 50);
   });
 
 });

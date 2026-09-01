@@ -102,7 +102,7 @@ export default function NotificationDropdown({ currentStudent, onNavigateTab }) 
       >
         <Bell className="w-4 h-4" />
         {unreadCount > 0 && (
-          <span className="absolute top-1 right-1 min-w-[16px] h-4 px-1 rounded-full bg-indigo-600 text-white text-[9px] font-extrabold flex items-center justify-center animate-pulse shadow-sm">
+          <span className="absolute top-1 right-1 min-w-[16px] h-4 px-1 rounded-full bg-emerald-600 text-white text-[9px] font-extrabold flex items-center justify-center animate-pulse shadow-sm">
             {unreadCount > 9 ? '9+' : unreadCount}
           </span>
         )}
@@ -115,12 +115,12 @@ export default function NotificationDropdown({ currentStudent, onNavigateTab }) 
           {/* Header */}
           <div className="p-3.5 bg-slate-50 dark:bg-slate-950 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Bell className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
+              <Bell className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
               <span className="font-extrabold text-xs text-slate-900 dark:text-white">
                 Priority Doubt Alerts
               </span>
               {unreadCount > 0 && (
-                <span className="text-[10px] font-bold px-1.5 py-0.2 rounded-full bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800">
+                <span className="text-[10px] font-bold px-1.5 py-0.2 rounded-full bg-emerald-50 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800">
                   {unreadCount} new
                 </span>
               )}
@@ -129,7 +129,7 @@ export default function NotificationDropdown({ currentStudent, onNavigateTab }) 
             {unreadCount > 0 && (
               <button
                 onClick={handleMarkAllRead}
-                className="text-[11px] font-bold text-indigo-600 dark:text-indigo-400 hover:underline flex items-center gap-1 cursor-pointer"
+                className="text-[11px] font-bold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1 cursor-pointer"
               >
                 <CheckCheck className="w-3 h-3" />
                 <span>Mark all read</span>

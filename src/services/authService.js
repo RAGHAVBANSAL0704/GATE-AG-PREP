@@ -850,6 +850,20 @@ export async function loginStudent(identifierInput, passwordInput, rememberMe = 
       device_info: typeof navigator !== 'undefined' ? navigator.userAgent : 'Unknown'
     }]);
 
+    // Restore accumulated XP points to local cache so points are never lost across devices
+    if (safeStudent.xp_points !== undefined && safeStudent.xp_points !== null) {
+      const existingLocalXP = Number(localStorage.getItem('gate_ag_student_xp_data') || 0);
+      const mergedXP = Math.max(existingLocalXP, Number(safeStudent.xp_points));
+      localStorage.setItem('gate_ag_student_xp_data', String(mergedXP));
+      safeStudent.xp_points = mergedXP;
+    }
+    if (safeStudent.break_xp !== undefined && safeStudent.break_xp !== null) {
+      const existingLocalBreakXP = Number(localStorage.getItem('gate_ag_break_xp') || 0);
+      const mergedBreakXP = Math.max(existingLocalBreakXP, Number(safeStudent.break_xp));
+      localStorage.setItem('gate_ag_break_xp', String(mergedBreakXP));
+      safeStudent.break_xp = mergedBreakXP;
+    }
+
     localStorage.setItem(LOCAL_STORAGE_SESSION_KEY, JSON.stringify({
       token: deviceToken,
       student: safeStudent,

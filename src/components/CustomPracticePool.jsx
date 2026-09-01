@@ -287,7 +287,7 @@ export default function CustomPracticePool({
                       {normTitle}
                     </h3>
 
-                    <p className="text-xs font-mono font-bold text-blue-600 dark:text-blue-400">
+                    <p className="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400">
                       {count} Custom Questions
                     </p>
                   </div>
@@ -297,7 +297,7 @@ export default function CustomPracticePool({
                       e.stopPropagation();
                       launchPracticeForSection(secNameMap);
                     }}
-                    className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-blue-600 group-hover:bg-blue-500 text-white text-xs font-extrabold transition shadow-md"
+                    className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-emerald-600 group-hover:bg-emerald-500 text-white text-xs font-extrabold transition shadow-md cursor-pointer"
                   >
                     <Play className="w-3.5 h-3.5 fill-white" />
                     <span>Practice Section ({count} Qs)</span>
@@ -308,17 +308,17 @@ export default function CustomPracticePool({
 
             {/* Launch All Custom Pool Card */}
             <div 
-              className="card-3d rounded-2xl p-6 flex flex-col justify-between space-y-4 border-2 border-dashed border-blue-400/40 bg-blue-50/30 dark:bg-blue-950/20 cursor-pointer"
+              className="card-3d rounded-2xl p-6 flex flex-col justify-between space-y-4 border-2 border-dashed border-emerald-400/40 bg-emerald-50/30 dark:bg-emerald-950/20 cursor-pointer"
               onClick={() => launchPracticeForSection('All')}
             >
               <div className="space-y-2">
-                <span className="text-[10px] font-extrabold uppercase tracking-wider bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-300 px-2.5 py-0.5 rounded-md">
+                <span className="text-[10px] font-extrabold uppercase tracking-wider bg-emerald-100 dark:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300 px-2.5 py-0.5 rounded-md">
                   ALL CUSTOM MOCKS
                 </span>
                 <h3 className="font-bold text-slate-900 dark:text-white text-base">
                   Full Custom Mixed Question Pool
                 </h3>
-                <p className="text-xs font-mono font-bold text-blue-600 dark:text-blue-400">
+                <p className="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400">
                   {customQuestions.length} Questions across {customMockPapers.length} Custom Mock Papers
                 </p>
               </div>
@@ -328,7 +328,7 @@ export default function CustomPracticePool({
                   e.stopPropagation();
                   launchPracticeForSection('All');
                 }}
-                className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-blue-600 text-white text-xs font-extrabold shadow-md hover:bg-blue-500 transition"
+                className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-emerald-600 text-white text-xs font-extrabold shadow-md hover:bg-emerald-500 transition cursor-pointer"
               >
                 <Shuffle className="w-3.5 h-3.5" />
                 <span>Practice All Custom Qs</span>

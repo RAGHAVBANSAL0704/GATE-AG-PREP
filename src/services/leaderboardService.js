@@ -1,12 +1,22 @@
-import { supabase, isSupabaseConfigured } from './supabaseClient';
+import { supabase, isSupabaseConfigured } from './supabaseClient.js';
 
 const LOCAL_STORAGE_XP_KEY = 'gate_ag_student_xp_data';
 const LOCAL_STORAGE_USERS_KEY = 'gate_ag_prep_mock_users';
 
+// Local Cross-Tab Broadcast Channel
+let localXPBroadcast = null;
+try {
+  if (typeof window !== 'undefined' && 'BroadcastChannel' in window) {
+    localXPBroadcast = new BroadcastChannel('gate_ag_xp_channel');
+  }
+} catch (e) {}
+
+// Supabase Realtime Channel
+let supabaseXPChannel = null;
+
 /**
  * Get active student info from session
  */
-
 function getActiveStudentSession() {
   try {
     const raw = localStorage.getItem('gate_ag_prep_session_token');
@@ -24,11 +34,18 @@ function getActiveStudentSession() {
 
 /**
  * Get local Academic Test XP (Question attempts, mock tests, accuracy bonuses)
+ * Ensures points are cumulative and never reset
  */
 export function getLocalAcademicXP() {
   try {
     const saved = localStorage.getItem(LOCAL_STORAGE_XP_KEY);
-    return saved ? parseFloat(saved) : 0;
+    const sessionStudent = getActiveStudentSession();
+    const sessionXP = Number(sessionStudent?.xp_points || 0);
+    const localVal = saved ? parseFloat(saved) : 0;
+    
+    // Always preserve highest non-reset accumulated value
+    const bestXP = Math.max(localVal, sessionXP);
+    return isNaN(bestXP) ? 0 : Number(bestXP.toFixed(1));
   } catch (e) {
     return 0;
   }
@@ -67,15 +84,41 @@ export function calculateAttemptXP({ correctCount = 0, incorrectCount = 0, total
 export async function awardStudentXP(studentId, xpEarned) {
   if (!xpEarned || xpEarned <= 0) return;
 
+  let newTotalXP = 0;
+
   // Local storage update for Academic Test XP
   try {
     const currentLocalXP = getLocalAcademicXP();
-    localStorage.setItem(LOCAL_STORAGE_XP_KEY, String((currentLocalXP + xpEarned).toFixed(1)));
+    newTotalXP = Number((currentLocalXP + xpEarned).toFixed(1));
+    localStorage.setItem(LOCAL_STORAGE_XP_KEY, String(newTotalXP));
+
+    // Update active session student object
+    const rawSession = localStorage.getItem('gate_ag_prep_session_token');
+    if (rawSession) {
+      const session = JSON.parse(rawSession);
+      if (session?.student) {
+        session.student.xp_points = newTotalXP;
+        localStorage.setItem('gate_ag_prep_session_token', JSON.stringify(session));
+      }
+    }
   } catch (e) {
     console.warn("Could not save local Academic XP:", e);
   }
 
-  // Supabase update for Academic Test XP
+  // Cross-Tab BroadcastChannel dispatch
+  if (localXPBroadcast) {
+    try {
+      localXPBroadcast.postMessage({
+        type: 'ACADEMIC_XP_AWARDED',
+        studentId,
+        xpEarned,
+        newTotalXP,
+        timestamp: Date.now()
+      });
+    } catch (e) {}
+  }
+
+  // Supabase update for Academic Test XP & Live Broadcast
   if (isSupabaseConfigured && supabase && studentId) {
     try {
       const { data: student } = await supabase
@@ -85,16 +128,65 @@ export async function awardStudentXP(studentId, xpEarned) {
         .single();
 
       const currentXP = Number(student?.xp_points || 0);
-      const newXP = Number((currentXP + xpEarned).toFixed(1));
+      const updatedDBXP = Number((Math.max(currentXP, newTotalXP)).toFixed(1));
 
       await supabase
         .from('students')
-        .update({ xp_points: newXP })
+        .update({ xp_points: updatedDBXP })
         .eq('id', studentId);
+
+      // Broadcast over Supabase Realtime channel across devices
+      const channel = supabase.channel('gate_ag_xp_live');
+      channel.send({
+        type: 'broadcast',
+        event: 'xp_updated',
+        payload: { studentId, type: 'academic', xp_points: updatedDBXP }
+      });
     } catch (err) {
       console.warn("Supabase Academic XP update warning:", err);
     }
   }
+}
+
+/**
+ * Subscribe to live Academic XP updates across tabs and devices
+ */
+export function subscribeToLiveAcademicXP(onXPUpdate) {
+  if (typeof window === 'undefined') return () => {};
+
+  // 1. Cross-Tab Listener
+  const handleLocalMessage = (event) => {
+    if (event.data?.type === 'ACADEMIC_XP_AWARDED' && typeof onXPUpdate === 'function') {
+      onXPUpdate(event.data);
+    }
+  };
+
+  if (localXPBroadcast) {
+    localXPBroadcast.addEventListener('message', handleLocalMessage);
+  }
+
+  // 2. Supabase Realtime Multi-Device Listener
+  if (isSupabaseConfigured && supabase) {
+    try {
+      supabaseXPChannel = supabase
+        .channel('gate_ag_xp_live')
+        .on('broadcast', { event: 'xp_updated' }, (payload) => {
+          if (payload.payload && typeof onXPUpdate === 'function') {
+            onXPUpdate(payload.payload);
+          }
+        })
+        .subscribe();
+    } catch (e) {}
+  }
+
+  return () => {
+    if (localXPBroadcast) {
+      localXPBroadcast.removeEventListener('message', handleLocalMessage);
+    }
+    if (supabaseXPChannel && supabase) {
+      supabase.removeChannel(supabaseXPChannel);
+    }
+  };
 }
 
 /**

@@ -197,7 +197,7 @@ export default function CreatorAdminHQ({
           onClick={() => setActiveSubTab('admin')}
           className={`flex-1 min-w-[140px] py-2.5 px-4 rounded-xl text-xs font-extrabold transition flex items-center justify-center gap-2 cursor-pointer ${
             activeSubTab === 'admin'
-              ? 'bg-blue-600 text-white shadow-md'
+              ? 'bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 shadow-md'
               : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800'
           }`}
         >
@@ -209,7 +209,7 @@ export default function CreatorAdminHQ({
           onClick={() => setActiveSubTab('roles')}
           className={`flex-1 min-w-[140px] py-2.5 px-4 rounded-xl text-xs font-extrabold transition flex items-center justify-center gap-2 cursor-pointer ${
             activeSubTab === 'roles'
-              ? 'bg-indigo-600 text-white shadow-md'
+              ? 'bg-emerald-600 text-white shadow-md'
               : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800'
           }`}
         >
@@ -223,15 +223,15 @@ export default function CreatorAdminHQ({
         <div className="space-y-8 animate-in fade-in duration-150">
           
           {/* Header Banner */}
-          <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-950 text-white rounded-3xl p-8 sm:p-10 border border-slate-800 shadow-2xl">
-            <div className="absolute -right-16 -top-16 w-80 h-80 bg-blue-500/15 rounded-full blur-3xl pointer-events-none"></div>
-            <div className="absolute -left-16 -bottom-16 w-80 h-80 bg-amber-500/15 rounded-full blur-3xl pointer-events-none"></div>
+          <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-950 to-emerald-950 text-white rounded-3xl p-8 sm:p-10 border border-slate-800 shadow-2xl">
+            <div className="absolute -right-16 -top-16 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div className="absolute -left-16 -bottom-16 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
             <div className="relative z-10 flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8">
               
               {/* 3D Developer Avatar */}
               <div className="relative shrink-0">
-                <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-amber-500 text-white font-extrabold flex items-center justify-center text-2xl sm:text-3xl shadow-2xl border-2 border-white/20">
+                <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-gradient-to-tr from-slate-800 via-emerald-800 to-teal-700 text-white font-extrabold flex items-center justify-center text-2xl sm:text-3xl shadow-2xl border-2 border-white/20">
                   RB
                 </div>
 
@@ -242,7 +242,7 @@ export default function CreatorAdminHQ({
 
               {/* Bio Text */}
               <div className="text-center sm:text-left space-y-3">
-                <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-blue-500/10 border border-blue-400/20 text-xs font-bold text-blue-300">
+                <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-400/20 text-xs font-bold text-emerald-300">
                   <Sparkles className="w-3.5 h-3.5 text-amber-400" />
                   <span>Platform Creator & Lead Developer</span>
                 </div>

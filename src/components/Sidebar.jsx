@@ -20,7 +20,9 @@ import {
   BarChart3,
   Trophy,
   MessageSquare,
-  Award
+  Award,
+  Search,
+  Palette
 } from 'lucide-react';
 
 export default function Sidebar({ 
@@ -29,6 +31,8 @@ export default function Sidebar({
   currentTheme, 
   setCurrentTheme, 
   onOpenCalc,
+  onOpenCommandPalette,
+  onOpenThemeModal,
   currentStudent,
   onOpenProfile,
   onLogout
@@ -115,12 +119,12 @@ export default function Sidebar({
   return (
     <>
       {/* Mobile Top Bar */}
-      <div className="sm:hidden fixed top-0 left-0 right-0 h-14 bg-white/90 dark:bg-[#111827]/90 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 z-40 px-4 flex items-center justify-between no-print">
+      <div className="sm:hidden fixed top-0 left-0 right-0 h-14 bg-white dark:bg-slate-900 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 z-40 px-4 flex items-center justify-between no-print">
         <div 
           onClick={() => handleNavClick('dashboard')}
           className="flex items-center gap-2 cursor-pointer"
         >
-          <div className="w-8 h-8 rounded-lg bg-blue-600 text-white font-extrabold flex items-center justify-center text-xs shadow-sm">
+          <div className="w-8 h-8 rounded-lg bg-emerald-600 text-white font-extrabold flex items-center justify-center text-xs shadow-sm">
             AG
           </div>
           <span className="font-extrabold text-xs text-slate-900 dark:text-white">
@@ -134,7 +138,7 @@ export default function Sidebar({
             className="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 text-xs font-bold"
             title="Calculator"
           >
-            <Calculator className="w-4 h-4" />
+            <Calculator className="w-4 h-4 text-emerald-500" />
           </button>
 
           <button
@@ -156,7 +160,7 @@ export default function Sidebar({
 
       {/* Minimalist Left Sidebar */}
       <aside className={`
-        fixed sm:sticky top-0 left-0 h-screen shrink-0 bg-white dark:bg-[#0f172a] border-r border-slate-200/80 dark:border-slate-800/80 overflow-y-auto z-50
+        fixed sm:sticky top-0 left-0 h-screen shrink-0 bg-white dark:bg-slate-900 border-r border-slate-200/80 dark:border-slate-800/80 overflow-y-auto z-50
         w-60 sm:w-16 md:w-60 transition-all duration-200
         ${isMobileOpen ? 'translate-x-0' : '-translate-x-full sm:translate-x-0'}
       `}>
@@ -171,7 +175,7 @@ export default function Sidebar({
                 onClick={() => handleNavClick('dashboard')}
                 className="flex items-center gap-2.5 cursor-pointer group"
               >
-                <div className="w-8 h-8 rounded-xl bg-blue-600 text-white font-black flex items-center justify-center text-xs shadow-xs group-hover:scale-105 transition-transform">
+                <div className="w-8 h-8 rounded-xl bg-emerald-600 text-white font-black flex items-center justify-center text-xs shadow-xs group-hover:scale-105 transition-transform">
                   AG
                 </div>
                 <div className="block sm:hidden md:block">
@@ -192,6 +196,22 @@ export default function Sidebar({
 
             {/* Navigation Links */}
             <nav className="space-y-1 pt-1">
+              
+              {/* Quick Spotlight Search Button */}
+              <button
+                onClick={onOpenCommandPalette}
+                className="w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white border border-slate-200/80 dark:border-slate-700/60 transition cursor-pointer mb-2 group"
+                title="Search (Cmd+K / Ctrl+K)"
+              >
+                <div className="flex items-center gap-2.5">
+                  <Search className="w-4 h-4 text-emerald-500 group-hover:scale-110 transition" />
+                  <span className="block sm:hidden md:block">Search...</span>
+                </div>
+                <kbd className="hidden md:inline-block px-1.5 py-0.2 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 font-mono text-[9px] text-slate-400">
+                  ⌘K
+                </kbd>
+              </button>
+
               {visibleNavItems.map((item) => {
                 const Icon = item.icon;
                 const isActive = item.matches.includes(activeTab);
@@ -201,9 +221,9 @@ export default function Sidebar({
                     key={item.id}
                     onClick={() => handleNavClick(item.id)}
                     title={item.label}
-                    className={`w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition-all ${
+                    className={`w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
                       isActive
-                        ? 'bg-blue-600 text-white shadow-xs font-bold'
+                        ? 'bg-emerald-600 text-white shadow-xs font-bold'
                         : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60'
                     }`}
                   >
@@ -234,7 +254,7 @@ export default function Sidebar({
                   )}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <div className="text-[11px] font-bold text-slate-900 dark:text-white truncate group-hover:text-blue-500 transition">
+                  <div className="text-[11px] font-bold text-slate-900 dark:text-white truncate group-hover:text-emerald-500 transition">
                     {currentStudent.full_name}
                   </div>
                   <div className="text-[9px] text-slate-400 font-mono truncate">
@@ -248,19 +268,19 @@ export default function Sidebar({
             <div className="flex items-center justify-between gap-1 px-1">
               <button
                 onClick={onOpenCalc}
-                className="flex-1 py-1.5 px-2 rounded-lg bg-slate-100 dark:bg-slate-800/80 hover:bg-blue-50 dark:hover:bg-blue-950 text-slate-600 dark:text-slate-300 hover:text-blue-600 transition text-[11px] font-bold flex items-center justify-center gap-1"
+                className="flex-1 py-1.5 px-2 rounded-lg bg-slate-100 dark:bg-slate-800/80 hover:bg-emerald-50 dark:hover:bg-emerald-950 text-slate-600 dark:text-slate-300 hover:text-emerald-600 transition text-[11px] font-bold flex items-center justify-center gap-1 cursor-pointer"
                 title="GATE Calculator"
               >
-                <Calculator className="w-3.5 h-3.5 text-blue-500" />
+                <Calculator className="w-3.5 h-3.5 text-emerald-500" />
                 <span className="block sm:hidden md:block">Calc</span>
               </button>
 
               <button
-                onClick={() => setCurrentTheme(currentTheme === 'cyber-dark' ? 'slate-light' : 'cyber-dark')}
-                className="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition"
-                title="Toggle Theme"
+                onClick={onOpenThemeModal || (() => setCurrentTheme(currentTheme === 'slate-light' ? 'obsidian-emerald' : 'slate-light'))}
+                className="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition cursor-pointer"
+                title="Appearance & Theme Studio"
               >
-                {currentTheme === 'cyber-dark' ? <Sun className="w-3.5 h-3.5 text-amber-400" /> : <Moon className="w-3.5 h-3.5 text-slate-600" />}
+                <Palette className="w-3.5 h-3.5 text-emerald-500" />
               </button>
 
               {currentStudent && (

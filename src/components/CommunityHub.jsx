@@ -85,7 +85,7 @@ export default function CommunityHub({
                 onClick={() => handleTabClick(tab.id)}
                 className={`flex-1 min-w-[160px] flex items-center justify-center sm:justify-start gap-2.5 px-4 py-3 rounded-2xl text-xs font-bold transition border cursor-pointer ${
                   isActive
-                    ? 'bg-indigo-600 text-white border-indigo-600 shadow-md transform scale-[1.01]'
+                    ? 'bg-emerald-600 text-white border-emerald-600 shadow-md transform scale-[1.01]'
                     : 'bg-slate-50 dark:bg-slate-800/60 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700/60 hover:bg-slate-100 dark:hover:bg-slate-800'
                 }`}
               >

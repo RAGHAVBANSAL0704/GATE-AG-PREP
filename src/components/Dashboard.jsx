@@ -251,10 +251,10 @@ export default function Dashboard({ questions, mockPapers = [], customMockPapers
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <div 
           onClick={() => setActiveTab('practicehub')}
-          className="bg-white dark:bg-slate-900 rounded-2xl p-5 border border-slate-200 dark:border-slate-800 hover:border-blue-500 cursor-pointer transition flex items-center justify-between group shadow-sm hover:shadow-md"
+          className="bg-white dark:bg-slate-900 rounded-2xl p-5 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 cursor-pointer transition flex items-center justify-between group shadow-sm hover:shadow-md"
         >
           <div className="flex items-center gap-3.5">
-            <div className="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition">
+            <div className="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition">
               <Target className="w-6 h-6" />
             </div>
             <div>
@@ -262,15 +262,15 @@ export default function Dashboard({ questions, mockPapers = [], customMockPapers
               <p className="text-xs text-slate-400 mt-0.5">Pools & Speed Tests</p>
             </div>
           </div>
-          <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-blue-500 group-hover:translate-x-1 transition" />
+          <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-emerald-500 group-hover:translate-x-1 transition" />
         </div>
 
         <div 
           onClick={() => setActiveTab('learninghub')}
-          className="bg-white dark:bg-slate-900 rounded-2xl p-5 border border-slate-200 dark:border-slate-800 hover:border-purple-500 cursor-pointer transition flex items-center justify-between group shadow-sm hover:shadow-md"
+          className="bg-white dark:bg-slate-900 rounded-2xl p-5 border border-slate-200 dark:border-slate-800 hover:border-teal-500 cursor-pointer transition flex items-center justify-between group shadow-sm hover:shadow-md"
         >
           <div className="flex items-center gap-3.5">
-            <div className="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 text-purple-600 dark:text-purple-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition">
+            <div className="w-12 h-12 rounded-2xl bg-teal-500/10 border border-teal-500/20 text-teal-600 dark:text-teal-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition">
               <GraduationCap className="w-6 h-6" />
             </div>
             <div>
@@ -278,7 +278,7 @@ export default function Dashboard({ questions, mockPapers = [], customMockPapers
               <p className="text-xs text-slate-400 mt-0.5">Concepts & Vault</p>
             </div>
           </div>
-          <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-purple-500 group-hover:translate-x-1 transition" />
+          <ArrowRight className="w-5 h-5 text-slate-400 group-hover:text-teal-500 group-hover:translate-x-1 transition" />
         </div>
 
         <div 
@@ -318,7 +318,7 @@ export default function Dashboard({ questions, mockPapers = [], customMockPapers
       <div className="bg-white dark:bg-slate-900 rounded-3xl p-5 sm:p-6 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0">
+            <div className="w-10 h-10 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
               <Clock className="w-5 h-5" />
             </div>
             <div>
@@ -333,9 +333,9 @@ export default function Dashboard({ questions, mockPapers = [], customMockPapers
           <div className="flex items-center gap-1 bg-slate-100 dark:bg-slate-950 p-1 rounded-xl border border-slate-200 dark:border-slate-800 text-xs font-bold">
             <button
               onClick={() => setPaperEraFilter('all')}
-              className={`px-3 py-1.5 rounded-lg transition ${
+              className={`px-3 py-1.5 rounded-lg transition cursor-pointer ${
                 paperEraFilter === 'all'
-                  ? 'bg-blue-600 text-white shadow-xs font-extrabold'
+                  ? 'bg-emerald-600 text-white shadow-xs font-extrabold'
                   : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
@@ -343,9 +343,9 @@ export default function Dashboard({ questions, mockPapers = [], customMockPapers
             </button>
             <button
               onClick={() => setPaperEraFilter('recent')}
-              className={`px-3 py-1.5 rounded-lg transition ${
+              className={`px-3 py-1.5 rounded-lg transition cursor-pointer ${
                 paperEraFilter === 'recent'
-                  ? 'bg-blue-600 text-white shadow-xs font-extrabold'
+                  ? 'bg-emerald-600 text-white shadow-xs font-extrabold'
                   : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
@@ -353,9 +353,9 @@ export default function Dashboard({ questions, mockPapers = [], customMockPapers
             </button>
             <button
               onClick={() => setPaperEraFilter('classic')}
-              className={`px-3 py-1.5 rounded-lg transition ${
+              className={`px-3 py-1.5 rounded-lg transition cursor-pointer ${
                 paperEraFilter === 'classic'
-                  ? 'bg-blue-600 text-white shadow-xs font-extrabold'
+                  ? 'bg-emerald-600 text-white shadow-xs font-extrabold'
                   : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
@@ -378,12 +378,12 @@ export default function Dashboard({ questions, mockPapers = [], customMockPapers
                   onClick={() => isAvail && onStartMock(year)}
                   className={`p-3 rounded-2xl border text-center transition flex flex-col justify-between space-y-2 select-none cursor-pointer group ${
                     isAvail
-                      ? 'bg-slate-50 hover:bg-blue-50 dark:bg-slate-950 dark:hover:bg-blue-950/40 border-slate-200 dark:border-slate-800 hover:border-blue-500 shadow-2xs hover:shadow-sm'
+                      ? 'bg-slate-50 hover:bg-emerald-50 dark:bg-slate-950 dark:hover:bg-emerald-950/30 border-slate-200 dark:border-slate-800 hover:border-emerald-500 shadow-2xs hover:shadow-sm'
                       : 'bg-slate-50/50 dark:bg-slate-950/40 border-slate-200/50 dark:border-slate-900 opacity-60'
                   }`}
                 >
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-mono font-extrabold text-blue-600 dark:text-blue-400">
+                    <span className="text-xs font-mono font-extrabold text-emerald-600 dark:text-emerald-400">
                       GATE {year}
                     </span>
                     {historyItem ? (
@@ -402,9 +402,9 @@ export default function Dashboard({ questions, mockPapers = [], customMockPapers
 
                   <button
                     disabled={!isAvail}
-                    className={`w-full py-1.5 rounded-xl text-xs font-extrabold transition flex items-center justify-center gap-1.5 ${
+                    className={`w-full py-1.5 rounded-xl text-xs font-extrabold transition flex items-center justify-center gap-1.5 cursor-pointer ${
                       isAvail
-                        ? 'bg-blue-600 text-white shadow-xs group-hover:bg-blue-700'
+                        ? 'bg-emerald-600 text-white shadow-xs group-hover:bg-emerald-500'
                         : 'bg-slate-200 dark:bg-slate-800 text-slate-400'
                     }`}
                   >

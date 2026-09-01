@@ -8,76 +8,516 @@
    ========================================================================== */
 
 @layer base {
-  /* Global smooth 300ms theme transition across all elements */
+  /* Global smooth 200ms theme transition across all elements */
   *, ::before, ::after {
-    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1),
-                border-color 300ms cubic-bezier(0.4, 0, 0.2, 1),
-                color 300ms cubic-bezier(0.4, 0, 0.2, 1),
-                box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1),
-                fill 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 200ms cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 200ms cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   /* ------------------------------------------------------------------------
-     THEME 1: CLEAN SLATE LIGHT (Light Mode Default)
+     LIGHT THEME 1: OXFORD SAGE & IVORY (Nordic Botanical & Academic Focus)
      ------------------------------------------------------------------------ */
-  body, .theme-slate-light body {
-    background-color: #F8FAFC;
-    color: #0F172A;
+  html.theme-oxford-sage,
+  html.theme-oxford-sage body,
+  html.theme-oxford-sage #root,
+  html.theme-oxford-sage .min-h-screen {
+    background-color: #F7F9F6 !important;
+    background-image: none !important;
+    color: #112217 !important;
   }
 
   /* ------------------------------------------------------------------------
-     THEME 2: CYBER DARK (Dark Mode Default - Executive Sapphire & Emerald)
+     LIGHT THEME 2: CREAM PARCHMENT & COFFEE (Kindle / Analog Paper)
      ------------------------------------------------------------------------ */
-  .dark body,
-  .dark.theme-cyber-dark body {
-    background-color: #0B0F19;
-    color: #F8FAFC;
+  html.theme-cream-parchment,
+  html.theme-cream-parchment body,
+  html.theme-cream-parchment #root,
+  html.theme-cream-parchment .min-h-screen {
+    background-color: #F5F1E8 !important;
+    background-image: none !important;
+    color: #1A1613 !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     LIGHT THEME 3: PORCELAIN STUDIO (Linear Swiss Minimalist Slate)
+     ------------------------------------------------------------------------ */
+  html.theme-porcelain-studio,
+  html.theme-porcelain-studio body,
+  html.theme-porcelain-studio #root,
+  html.theme-porcelain-studio .min-h-screen {
+    background-color: #F3F4F7 !important;
+    background-image: none !important;
+    color: #0A0E1A !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     LIGHT THEME 4: SUNRISE SAND & AMBER (Morning Sunlight Energy)
+     ------------------------------------------------------------------------ */
+  html.theme-sunrise-amber,
+  html.theme-sunrise-amber body,
+  html.theme-sunrise-amber #root,
+  html.theme-sunrise-amber .min-h-screen {
+    background-color: #FAF6EE !important;
+    background-image: none !important;
+    color: #1A1610 !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     LIGHT THEME 5: SLATE LIGHT (Executive Academic Light)
+     ------------------------------------------------------------------------ */
+  html.theme-slate-light,
+  html.theme-slate-light body,
+  html.theme-slate-light #root,
+  html.theme-slate-light .min-h-screen,
+  html:not(.dark) body {
+    background-color: #F8FAFC !important;
+    background-image: none !important;
+    color: #0F172A !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     DARK THEME 1: OBSIDIAN EMERALD (Deep Obsidian with Emerald Ambient Glow)
+     ------------------------------------------------------------------------ */
+  html.theme-obsidian-emerald,
+  html.theme-obsidian-emerald body,
+  html.theme-obsidian-emerald #root,
+  html.theme-obsidian-emerald .min-h-screen,
+  html.dark:not(.theme-matte-titanium):not(.theme-midnight-aurora):not(.theme-pure-monocle):not(.theme-oxford-sage):not(.theme-cream-parchment):not(.theme-porcelain-studio):not(.theme-sunrise-amber):not(.theme-slate-light),
+  html.dark:not(.theme-matte-titanium):not(.theme-midnight-aurora):not(.theme-pure-monocle):not(.theme-oxford-sage):not(.theme-cream-parchment):not(.theme-porcelain-studio):not(.theme-sunrise-amber):not(.theme-slate-light) body {
+    background-color: #050811 !important;
+    background-image: radial-gradient(circle at 50% -15%, rgba(16, 185, 129, 0.12) 0%, transparent 60%) !important;
+    background-attachment: fixed !important;
+    color: #F8FAFC !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     DARK THEME 2: MATTE TITANIUM (Linear / Raycast Matte Charcoal)
+     ------------------------------------------------------------------------ */
+  html.theme-matte-titanium,
+  html.theme-matte-titanium body,
+  html.theme-matte-titanium #root,
+  html.theme-matte-titanium .min-h-screen {
+    background-color: #111215 !important;
+    background-image: linear-gradient(180deg, #16171c 0%, #111215 100%) !important;
+    background-attachment: fixed !important;
+    color: #F3F4F6 !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     DARK THEME 3: MIDNIGHT AURORA (Nordic Midnight Academic Navy & Sapphire)
+     ------------------------------------------------------------------------ */
+  html.theme-midnight-aurora,
+  html.theme-midnight-aurora body,
+  html.theme-midnight-aurora #root,
+  html.theme-midnight-aurora .min-h-screen {
+    background-color: #060A17 !important;
+    background-image: radial-gradient(circle at 85% 0%, rgba(99, 102, 241, 0.16) 0%, transparent 55%),
+                      radial-gradient(circle at 15% 45%, rgba(56, 189, 248, 0.10) 0%, transparent 50%) !important;
+    background-attachment: fixed !important;
+    color: #F1F5F9 !important;
+  }
+
+  /* ------------------------------------------------------------------------
+     DARK THEME 4: PURE MONOCLE DARK (Pure AMOLED Pitch Black & High Contrast)
+     ------------------------------------------------------------------------ */
+  html.theme-pure-monocle,
+  html.theme-pure-monocle body,
+  html.theme-pure-monocle #root,
+  html.theme-pure-monocle .min-h-screen {
+    background-color: #000000 !important;
+    background-image: none !important;
+    color: #FAFAFA !important;
   }
 }
 
 /* ==========================================================================
-   UNIFORM INPUTS & PLACEHOLDERS
+   SOLID HIGH-CONTRAST LIGHT THEME SPECIFIC ARCHITECTURE
    ========================================================================== */
 
-input, select, textarea {
-  font-family: inherit;
+/* Universal Light Theme High-Contrast Text Enforcement */
+html:not(.dark) h1, html:not(.dark) h2, html:not(.dark) h3, html:not(.dark) h4, html:not(.dark) h5, html:not(.dark) h6 {
+  color: #0F172A;
+  font-weight: 800;
+}
+html:not(.dark) .text-slate-900, html:not(.dark) .text-slate-800 {
+  color: #0F172A !important;
+}
+html:not(.dark) .text-slate-700, html:not(.dark) .text-slate-600 {
+  color: #334155 !important;
+}
+html:not(.dark) .text-slate-500 {
+  color: #475569 !important;
+}
+html:not(.dark) .text-slate-400 {
+  color: #64748B !important;
 }
 
-/* Light Theme Placeholders */
-input::placeholder, textarea::placeholder {
-  color: #94A3B8;
+/* Ensure solid opaque cards in all light themes (NO transparency wash-out) */
+html:not(.dark) .card-3d,
+html:not(.dark) .bg-white,
+html:not(.dark) aside,
+html:not(.dark) .glass-panel {
+  background-color: #FFFFFF !important;
+  opacity: 1 !important;
 }
 
-/* Cyber Dark Inputs & Placeholders */
-.dark input, .dark select, .dark textarea {
-  background-color: #0F172A;
-  border-color: #1E293B;
-  color: #F8FAFC;
+/* Button & Badge Text Contrast Protection (White text stays white on colored backgrounds) */
+html:not(.dark) button.text-white,
+html:not(.dark) .bg-emerald-600,
+html:not(.dark) .bg-blue-600,
+html:not(.dark) .bg-indigo-600,
+html:not(.dark) .bg-rose-600,
+html:not(.dark) .bg-amber-600,
+html:not(.dark) .btn-3d-primary,
+html:not(.dark) .btn-3d-emerald {
+  color: #FFFFFF !important;
 }
-.dark input::placeholder, .dark textarea::placeholder {
-  color: #64748B;
+html:not(.dark) .bg-emerald-600 *,
+html:not(.dark) .bg-blue-600 *,
+html:not(.dark) .bg-indigo-600 *,
+html:not(.dark) .bg-rose-600 *,
+html:not(.dark) .btn-3d-primary *,
+html:not(.dark) .btn-3d-emerald * {
+  color: #FFFFFF !important;
 }
 
 /* ==========================================================================
-   UNIFORM CARDS & PANELS
+   THEME SPECIFIC OVERRIDES (LIGHT THEMES)
    ========================================================================== */
 
-/* Slate Light Cards */
-.card-3d {
-  background-color: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+/* --- 1. OXFORD SAGE & IVORY (Botanical Ivory & Forest Sage) --- */
+html.theme-oxford-sage .bg-white,
+html.theme-oxford-sage .card-3d,
+html.theme-oxford-sage aside,
+html.theme-oxford-sage .glass-panel {
+  background-color: #FFFFFF !important;
+  border-color: #DFE5DC !important;
+  box-shadow: 0 4px 16px -2px rgba(27, 77, 62, 0.05) !important;
+}
+html.theme-oxford-sage .bg-slate-50,
+html.theme-oxford-sage .bg-slate-100 {
+  background-color: #EFF3ED !important;
+}
+html.theme-oxford-sage .border-slate-200,
+html.theme-oxford-sage .border-slate-100 {
+  border-color: #DFE5DC !important;
+}
+html.theme-oxford-sage h1, html.theme-oxford-sage h2, html.theme-oxford-sage h3,
+html.theme-oxford-sage .text-slate-900, html.theme-oxford-sage .text-slate-800 {
+  color: #112217 !important;
+}
+html.theme-oxford-sage .text-slate-700, html.theme-oxford-sage .text-slate-600 {
+  color: #1F3325 !important;
+}
+html.theme-oxford-sage .text-slate-500, html.theme-oxford-sage .text-slate-400 {
+  color: #4A6052 !important;
+}
+html.theme-oxford-sage .bg-emerald-600 {
+  background-color: #1B4D3E !important;
+}
+html.theme-oxford-sage .text-emerald-600,
+html.theme-oxford-sage .text-emerald-500 {
+  color: #1B4D3E !important;
 }
 
-/* Cyber Dark Cards */
-.dark .card-3d {
-  background-color: #111827;
-  border: 1px solid #1F2937;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+/* --- 2. CREAM PARCHMENT & COFFEE (Kindle Paper & Terracotta) --- */
+html.theme-cream-parchment .bg-white,
+html.theme-cream-parchment .card-3d,
+html.theme-cream-parchment aside,
+html.theme-cream-parchment .glass-panel {
+  background-color: #FAF8F3 !important;
+  border-color: #E5DCD0 !important;
+  box-shadow: 0 4px 16px -2px rgba(42, 36, 33, 0.05) !important;
 }
-.dark .card-3d:hover {
-  border-color: #374151;
-  box-shadow: 0 14px 30px -5px rgba(37, 99, 235, 0.15);
+html.theme-cream-parchment .bg-slate-50,
+html.theme-cream-parchment .bg-slate-100 {
+  background-color: #ECE5D8 !important;
+}
+html.theme-cream-parchment .border-slate-200,
+html.theme-cream-parchment .border-slate-100 {
+  border-color: #E5DCD0 !important;
+}
+html.theme-cream-parchment h1, html.theme-cream-parchment h2, html.theme-cream-parchment h3,
+html.theme-cream-parchment .text-slate-900, html.theme-cream-parchment .text-slate-800 {
+  color: #1A1613 !important;
+}
+html.theme-cream-parchment .text-slate-700, html.theme-cream-parchment .text-slate-600 {
+  color: #2E2823 !important;
+}
+html.theme-cream-parchment .text-slate-500, html.theme-cream-parchment .text-slate-400 {
+  color: #5E534A !important;
+}
+html.theme-cream-parchment .bg-emerald-600 {
+  background-color: #C2410C !important;
+}
+html.theme-cream-parchment .text-emerald-600,
+html.theme-cream-parchment .text-emerald-500 {
+  color: #C2410C !important;
+}
+
+/* --- 3. PORCELAIN STUDIO (Linear Swiss Minimalist Slate) --- */
+html.theme-porcelain-studio .bg-white,
+html.theme-porcelain-studio .card-3d,
+html.theme-porcelain-studio aside,
+html.theme-porcelain-studio .glass-panel {
+  background-color: #FFFFFF !important;
+  border-color: #DFE2EC !important;
+  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.06) !important;
+}
+html.theme-porcelain-studio .bg-slate-50,
+html.theme-porcelain-studio .bg-slate-100 {
+  background-color: #EAECEF !important;
+}
+html.theme-porcelain-studio .border-slate-200,
+html.theme-porcelain-studio .border-slate-100 {
+  border-color: #DFE2EC !important;
+}
+html.theme-porcelain-studio h1, html.theme-porcelain-studio h2, html.theme-porcelain-studio h3,
+html.theme-porcelain-studio .text-slate-900, html.theme-porcelain-studio .text-slate-800 {
+  color: #0A0E1A !important;
+}
+html.theme-porcelain-studio .text-slate-700, html.theme-porcelain-studio .text-slate-600 {
+  color: #1E2638 !important;
+}
+html.theme-porcelain-studio .text-slate-500, html.theme-porcelain-studio .text-slate-400 {
+  color: #4B576D !important;
+}
+html.theme-porcelain-studio .bg-emerald-600 {
+  background-color: #4F46E5 !important;
+}
+html.theme-porcelain-studio .text-emerald-600,
+html.theme-porcelain-studio .text-emerald-500 {
+  color: #4F46E5 !important;
+}
+
+/* --- 4. SUNRISE SAND & AMBER (Morning Sunlight Energy) --- */
+html.theme-sunrise-amber .bg-white,
+html.theme-sunrise-amber .card-3d,
+html.theme-sunrise-amber aside,
+html.theme-sunrise-amber .glass-panel {
+  background-color: #FFFFFF !important;
+  border-color: #EBE2CE !important;
+  box-shadow: 0 4px 16px -2px rgba(217, 119, 6, 0.06) !important;
+}
+html.theme-sunrise-amber .bg-slate-50,
+html.theme-sunrise-amber .bg-slate-100 {
+  background-color: #F3ECE0 !important;
+}
+html.theme-sunrise-amber .border-slate-200,
+html.theme-sunrise-amber .border-slate-100 {
+  border-color: #EBE2CE !important;
+}
+html.theme-sunrise-amber h1, html.theme-sunrise-amber h2, html.theme-sunrise-amber h3,
+html.theme-sunrise-amber .text-slate-900, html.theme-sunrise-amber .text-slate-800 {
+  color: #1A1610 !important;
+}
+html.theme-sunrise-amber .text-slate-700, html.theme-sunrise-amber .text-slate-600 {
+  color: #2E271E !important;
+}
+html.theme-sunrise-amber .text-slate-500, html.theme-sunrise-amber .text-slate-400 {
+  color: #615545 !important;
+}
+html.theme-sunrise-amber .bg-emerald-600 {
+  background-color: #D97706 !important;
+}
+html.theme-sunrise-amber .text-emerald-600,
+html.theme-sunrise-amber .text-emerald-500 {
+  color: #D97706 !important;
+}
+
+/* ==========================================================================
+   SOLID HIGH-CONTRAST DARK THEME SPECIFIC ARCHITECTURE
+   ========================================================================== */
+
+/* Universal Dark Theme High-Contrast Text Enforcement */
+html.dark h1, html.dark h2, html.dark h3, html.dark h4, html.dark h5, html.dark h6 {
+  color: #F8FAFC !important;
+  font-weight: 800;
+}
+html.dark .text-slate-900, html.dark .text-slate-800 {
+  color: #F8FAFC !important;
+}
+html.dark .text-slate-700, html.dark .text-slate-600, html.dark .text-slate-300 {
+  color: #CBD5E1 !important;
+}
+html.dark .text-slate-500, html.dark .text-slate-400 {
+  color: #94A3B8 !important;
+}
+
+/* Ensure solid opaque cards in all dark themes (NO transparency wash-out) */
+html.dark .card-3d,
+html.dark aside,
+html.dark .glass-panel {
+  opacity: 1 !important;
+}
+
+/* ==========================================================================
+   THEME SPECIFIC OVERRIDES (DARK THEMES)
+   ========================================================================== */
+
+/* --- 1. OBSIDIAN EMERALD (Deep Obsidian & Emerald Glow) --- */
+html.theme-obsidian-emerald .dark\:bg-slate-900,
+html.theme-obsidian-emerald .dark\:bg-slate-950,
+html.theme-obsidian-emerald .dark\:bg-slate-900\/60,
+html.theme-obsidian-emerald .dark\:bg-slate-950\/60,
+html.theme-obsidian-emerald .card-3d,
+html.theme-obsidian-emerald aside,
+html.theme-obsidian-emerald .glass-panel {
+  background-color: #0B1120 !important;
+  border-color: #172645 !important;
+}
+html.theme-obsidian-emerald .dark\:bg-slate-800,
+html.theme-obsidian-emerald .dark\:bg-slate-800\/80 {
+  background-color: #111C33 !important;
+}
+html.theme-obsidian-emerald .dark\:border-slate-800,
+html.theme-obsidian-emerald .dark\:border-slate-700,
+html.theme-obsidian-emerald .dark\:border-slate-800\/80 {
+  border-color: #172645 !important;
+}
+html.theme-obsidian-emerald .card-3d:hover {
+  border-color: #10B981 !important;
+  box-shadow: 0 12px 30px -5px rgba(16, 185, 129, 0.18) !important;
+}
+html.theme-obsidian-emerald input,
+html.theme-obsidian-emerald select,
+html.theme-obsidian-emerald textarea {
+  background-color: #0B1120 !important;
+  border-color: #172645 !important;
+  color: #F8FAFC !important;
+}
+
+/* --- 2. MATTE TITANIUM (Linear / Raycast Matte Charcoal) --- */
+html.theme-matte-titanium .dark\:bg-slate-900,
+html.theme-matte-titanium .dark\:bg-slate-950,
+html.theme-matte-titanium .dark\:bg-slate-900\/60,
+html.theme-matte-titanium .dark\:bg-slate-950\/60,
+html.theme-matte-titanium .card-3d,
+html.theme-matte-titanium aside,
+html.theme-matte-titanium .glass-panel {
+  background-color: #17181C !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+html.theme-matte-titanium .dark\:bg-slate-800,
+html.theme-matte-titanium .dark\:bg-slate-800\/80 {
+  background-color: #212228 !important;
+}
+html.theme-matte-titanium .dark\:border-slate-800,
+html.theme-matte-titanium .dark\:border-slate-700,
+html.theme-matte-titanium .dark\:border-slate-800\/80 {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+html.theme-matte-titanium .card-3d:hover {
+  border-color: #22D3EE !important;
+  box-shadow: 0 12px 28px -4px rgba(34, 211, 238, 0.18) !important;
+}
+html.theme-matte-titanium .bg-emerald-600 {
+  background-color: #0891b2 !important;
+}
+html.theme-matte-titanium .text-emerald-500,
+html.theme-matte-titanium .text-emerald-600,
+html.theme-matte-titanium .dark\:text-emerald-400 {
+  color: #22d3ee !important;
+}
+html.theme-matte-titanium input,
+html.theme-matte-titanium select,
+html.theme-matte-titanium textarea {
+  background-color: #17181C !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  color: #F3F4F6 !important;
+}
+
+/* --- 3. MIDNIGHT AURORA (Cosmic Academic Navy & Sapphire) --- */
+html.theme-midnight-aurora .dark\:bg-slate-900,
+html.theme-midnight-aurora .dark\:bg-slate-950,
+html.theme-midnight-aurora .dark\:bg-slate-900\/60,
+html.theme-midnight-aurora .dark\:bg-slate-950\/60,
+html.theme-midnight-aurora .card-3d,
+html.theme-midnight-aurora aside,
+html.theme-midnight-aurora .glass-panel {
+  background-color: #0C1530 !important;
+  border-color: #1E3060 !important;
+}
+html.theme-midnight-aurora .dark\:bg-slate-800,
+html.theme-midnight-aurora .dark\:bg-slate-800\/80 {
+  background-color: #16244C !important;
+}
+html.theme-midnight-aurora .dark\:border-slate-800,
+html.theme-midnight-aurora .dark\:border-slate-700,
+html.theme-midnight-aurora .dark\:border-slate-800\/80 {
+  border-color: #1E3060 !important;
+}
+html.theme-midnight-aurora .card-3d:hover {
+  border-color: #38BDF8 !important;
+  box-shadow: 0 12px 30px -5px rgba(56, 189, 248, 0.22) !important;
+}
+html.theme-midnight-aurora .bg-emerald-600 {
+  background-color: #2563eb !important;
+}
+html.theme-midnight-aurora .text-emerald-500,
+html.theme-midnight-aurora .text-emerald-600,
+html.theme-midnight-aurora .dark\:text-emerald-400 {
+  color: #38bdf8 !important;
+}
+html.theme-midnight-aurora input,
+html.theme-midnight-aurora select,
+html.theme-midnight-aurora textarea {
+  background-color: #0C1530 !important;
+  border-color: #1E3060 !important;
+  color: #F1F5F9 !important;
+}
+
+/* --- 4. PURE MONOCLE DARK (Pure AMOLED Minimalist) --- */
+html.theme-pure-monocle .dark\:bg-slate-900,
+html.theme-pure-monocle .dark\:bg-slate-950,
+html.theme-pure-monocle .dark\:bg-slate-900\/60,
+html.theme-pure-monocle .dark\:bg-slate-950\/60,
+html.theme-pure-monocle .card-3d,
+html.theme-pure-monocle aside,
+html.theme-pure-monocle .glass-panel {
+  background-color: #0D0D0D !important;
+  border-color: #262626 !important;
+}
+html.theme-pure-monocle .dark\:bg-slate-800,
+html.theme-pure-monocle .dark\:bg-slate-800\/80 {
+  background-color: #191919 !important;
+}
+html.theme-pure-monocle .dark\:border-slate-800,
+html.theme-pure-monocle .dark\:border-slate-700,
+html.theme-pure-monocle .dark\:border-slate-800\/80 {
+  border-color: #262626 !important;
+}
+html.theme-pure-monocle .card-3d:hover {
+  border-color: #52525b !important;
+  box-shadow: 0 4px 20px -2px rgba(255, 255, 255, 0.05) !important;
+}
+html.theme-pure-monocle .bg-emerald-600 {
+  background-color: #27272a !important;
+  color: #ffffff !important;
+  border: 1px solid #3f3f46 !important;
+}
+html.theme-pure-monocle .text-emerald-500,
+html.theme-pure-monocle .text-emerald-600,
+html.theme-pure-monocle .dark\:text-emerald-400 {
+  color: #e4e4e7 !important;
+}
+html.theme-pure-monocle input,
+html.theme-pure-monocle select,
+html.theme-pure-monocle textarea {
+  background-color: #0D0D0D !important;
+  border-color: #262626 !important;
+  color: #FAFAFA !important;
+}
+
+/* Pure Monocle Cards */
+.dark.theme-pure-monocle .card-3d {
+  background-color: #0D0D0D;
+  border: 1px solid #262626;
+  box-shadow: none;
+}
+.dark.theme-pure-monocle .card-3d:hover {
+  border-color: #52525b;
 }
 
 /* Glassmorphism Panels */
@@ -87,9 +527,14 @@ input::placeholder, textarea::placeholder {
   border: 1px solid rgba(226, 232, 240, 0.8);
 }
 .dark .glass-panel {
-  background: rgba(17, 24, 39, 0.9);
+  background: rgba(14, 20, 36, 0.85);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(31, 41, 55, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.dark.theme-matte-titanium .glass-panel {
+  background: rgba(24, 25, 30, 0.88);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* ==========================================================================
@@ -169,24 +614,130 @@ input::placeholder, textarea::placeholder {
   border-color: #7C3AED;
 }
 
-/* KaTeX Overrides */
+/* ==========================================================================
+   ENHANCED QUESTION & KATEX TYPOGRAPHY (HIGH-CONTRAST & MAXIMUM READABILITY)
+   ========================================================================== */
+
 .katex-mathml {
   display: none !important;
 }
+
+.katex {
+  font-size: 1.06em !important;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .katex-display {
   overflow-x: auto;
   overflow-y: hidden;
   max-width: 100%;
-  padding: 6px 0;
-  margin: 0.5em 0 !important;
+  padding: 8px 0;
+  margin: 0.6em 0 !important;
 }
+
+/* Ensure strong high contrast on question stems and formulas in all themes */
 .katex, .katex * {
   color: inherit !important;
   fill: currentColor !important;
 }
+
 .katex-error {
   color: inherit !important;
   background: transparent !important;
   font-family: inherit !important;
   border: none !important;
+}
+
+/* Light mode high-contrast questions & formulas */
+html:not(.dark) .katex,
+html:not(.dark) .katex * {
+  color: #0F172A !important;
+  fill: #0F172A !important;
+}
+
+/* Dark mode radiant high-contrast questions & formulas */
+html.dark .katex,
+html.dark .katex * {
+  color: #F8FAFC !important;
+  fill: #F8FAFC !important;
+}
+
+/* ==========================================================================
+   TCS iON CBT SIMULATOR - BULLETPROOF ISOLATED LIGHT THEME ENFORCEMENT
+   ========================================================================== */
+
+.tcs-cbt-container {
+  background-color: #F4F7F9 !important;
+  color: #111827 !important;
+}
+
+/* Force dark, crisp typography inside CBT simulator across all themes */
+html.dark .tcs-cbt-container,
+html.dark .tcs-cbt-container h1,
+html.dark .tcs-cbt-container h2,
+html.dark .tcs-cbt-container h3,
+html.dark .tcs-cbt-container h4,
+html.dark .tcs-cbt-container h5,
+html.dark .tcs-cbt-container h6,
+html.dark .tcs-cbt-container p,
+html.dark .tcs-cbt-container span,
+html.dark .tcs-cbt-container label,
+html.dark .tcs-cbt-container div,
+html.dark .tcs-cbt-container strong,
+html.dark .tcs-cbt-container li,
+html.dark .tcs-cbt-container td,
+html.dark .tcs-cbt-container th {
+  color: #111827;
+}
+
+/* Specific high-contrast blue titles & headers */
+.tcs-cbt-container .cbt-blue-header,
+html.dark .tcs-cbt-container .cbt-blue-header {
+  color: #0B4A8F !important;
+  font-weight: 800 !important;
+}
+
+/* Top bar text & header buttons remain white */
+.tcs-cbt-container .cbt-top-bar,
+.tcs-cbt-container .cbt-top-bar *,
+html.dark .tcs-cbt-container .cbt-top-bar,
+html.dark .tcs-cbt-container .cbt-top-bar * {
+  color: #FFFFFF !important;
+}
+
+.tcs-cbt-container .cbt-timer,
+html.dark .tcs-cbt-container .cbt-timer {
+  color: #FCD34D !important;
+}
+
+/* Specifically force KaTeX formulas inside CBT simulator to be deep pitch black */
+.tcs-cbt-container .katex,
+.tcs-cbt-container .katex *,
+html.dark .tcs-cbt-container .katex,
+html.dark .tcs-cbt-container .katex * {
+  color: #111827 !important;
+  fill: #111827 !important;
+}
+
+/* Palette status legend colors */
+.tcs-cbt-container .status-legend-text,
+html.dark .tcs-cbt-container .status-legend-text {
+  color: #374151 !important;
+  font-weight: 600 !important;
+}
+
+/* White cards & panels inside CBT container */
+.tcs-cbt-container .cbt-card,
+html.dark .tcs-cbt-container .cbt-card {
+  background-color: #FFFFFF !important;
+  border-color: #CBD5E1 !important;
+}
+
+.tcs-cbt-container input[type="number"],
+html.dark .tcs-cbt-container input[type="number"] {
+  background-color: #F8FAFC !important;
+  color: #111827 !important;
+  border-color: #94A3B8 !important;
 }

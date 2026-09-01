@@ -1,8 +1,19 @@
-import { supabase, isSupabaseConfigured } from './supabaseClient';
+import { supabase, isSupabaseConfigured } from './supabaseClient.js';
 
 const LOCAL_STORAGE_BREAK_XP_KEY = 'gate_ag_break_xp';
 const LOCAL_STORAGE_USERS_KEY = 'gate_ag_prep_mock_users';
 const LOCAL_STORAGE_LEADERBOARD_KEY = 'gate_ag_break_leaderboard';
+
+// Local Cross-Tab Broadcast Channel
+let localBreakXPBroadcast = null;
+try {
+  if (typeof window !== 'undefined' && 'BroadcastChannel' in window) {
+    localBreakXPBroadcast = new BroadcastChannel('gate_ag_break_xp_channel');
+  }
+} catch (e) {}
+
+// Supabase Realtime Channel
+let supabaseBreakXPChannel = null;
 
 // Helper: Get active student info from session
 export function getActiveStudentSession() {
@@ -20,11 +31,15 @@ export function getActiveStudentSession() {
   };
 }
 
-// Helper: Get user's current Break XP
+// Helper: Get user's current Break XP (cumulative, never resets)
 export function getLocalBreakXP() {
   try {
     const saved = localStorage.getItem(LOCAL_STORAGE_BREAK_XP_KEY);
-    return saved ? parseInt(saved, 10) : 0;
+    const sessionStudent = getActiveStudentSession();
+    const sessionXP = Number(sessionStudent?.break_xp || 0);
+    const localVal = saved ? parseInt(saved, 10) : 0;
+    const bestXP = Math.max(localVal, sessionXP);
+    return isNaN(bestXP) ? 0 : bestXP;
   } catch (e) {
     return 0;
   }
@@ -36,9 +51,29 @@ export function addBreakXP(amount = 10) {
   const newXP = currentXP + amount;
   try {
     localStorage.setItem(LOCAL_STORAGE_BREAK_XP_KEY, newXP.toString());
+    const rawSession = localStorage.getItem('gate_ag_prep_session_token');
+    if (rawSession) {
+      const session = JSON.parse(rawSession);
+      if (session?.student) {
+        session.student.break_xp = newXP;
+        localStorage.setItem('gate_ag_prep_session_token', JSON.stringify(session));
+      }
+    }
   } catch (e) {}
 
-  // Sync with Supabase if configured
+  // Cross-Tab BroadcastChannel dispatch
+  if (localBreakXPBroadcast) {
+    try {
+      localBreakXPBroadcast.postMessage({
+        type: 'BREAK_XP_AWARDED',
+        newXP,
+        amount,
+        timestamp: Date.now()
+      });
+    } catch (e) {}
+  }
+
+  // Sync with Supabase & Live Multi-Device Broadcast
   syncUserXPToBackend(newXP);
 
   return newXP;
@@ -54,6 +89,14 @@ async function syncUserXPToBackend(newXP) {
         .from('students')
         .update({ break_xp: newXP })
         .eq('id', student.id);
+
+      // Broadcast over Supabase Realtime channel across devices
+      const channel = supabase.channel('gate_ag_break_xp_live');
+      channel.send({
+        type: 'broadcast',
+        event: 'break_xp_updated',
+        payload: { studentId: student.id, break_xp: newXP }
+      });
     } catch (e) {}
   }
 
@@ -69,6 +112,47 @@ async function syncUserXPToBackend(newXP) {
       }
     }
   } catch (e) {}
+}
+
+/**
+ * Subscribe to live Break Zone XP updates across tabs and devices
+ */
+export function subscribeToLiveBreakXP(onXPUpdate) {
+  if (typeof window === 'undefined') return () => {};
+
+  // 1. Cross-Tab Listener
+  const handleLocalMessage = (event) => {
+    if (event.data?.type === 'BREAK_XP_AWARDED' && typeof onXPUpdate === 'function') {
+      onXPUpdate(event.data);
+    }
+  };
+
+  if (localBreakXPBroadcast) {
+    localBreakXPBroadcast.addEventListener('message', handleLocalMessage);
+  }
+
+  // 2. Supabase Realtime Multi-Device Listener
+  if (isSupabaseConfigured && supabase) {
+    try {
+      supabaseBreakXPChannel = supabase
+        .channel('gate_ag_break_xp_live')
+        .on('broadcast', { event: 'break_xp_updated' }, (payload) => {
+          if (payload.payload && typeof onXPUpdate === 'function') {
+            onXPUpdate(payload.payload);
+          }
+        })
+        .subscribe();
+    } catch (e) {}
+  }
+
+  return () => {
+    if (localBreakXPBroadcast) {
+      localBreakXPBroadcast.removeEventListener('message', handleLocalMessage);
+    }
+    if (supabaseBreakXPChannel && supabase) {
+      supabase.removeChannel(supabaseBreakXPChannel);
+    }
+  };
 }
 
 // Get full leaderboard data (REAL USERS ONLY - NO FAKE ENTRIES)
