@@ -30,6 +30,7 @@ import {
 } from 'lucide-react';
 import SupportPage from './SupportPage';
 import AdminQuestionManager from './AdminQuestionManager';
+import AdminUserRoleManager from './AdminUserRoleManager';
 import { isAdminUnlocked, setAdminUnlocked, verifyAdminPasscode } from '../services/questionSyncService.js';
 
 export default function CreatorAdminHQ({ 
@@ -202,6 +203,18 @@ export default function CreatorAdminHQ({
         >
           <ShieldCheck className="w-4 h-4" />
           <span>Question Admin Studio</span>
+        </button>
+
+        <button
+          onClick={() => setActiveSubTab('roles')}
+          className={`flex-1 min-w-[140px] py-2.5 px-4 rounded-xl text-xs font-extrabold transition flex items-center justify-center gap-2 cursor-pointer ${
+            activeSubTab === 'roles'
+              ? 'bg-indigo-600 text-white shadow-md'
+              : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800'
+          }`}
+        >
+          <Award className="w-4 h-4" />
+          <span>Roles & Contributors</span>
         </button>
       </div>
 
@@ -593,6 +606,80 @@ export default function CreatorAdminHQ({
               onSaveEditedQuestion={onSaveEditedQuestion}
               onOpenCalc={onOpenCalc}
             />
+          </div>
+        )
+      )}
+
+      {/* TAB 4: USER ROLES & CONTRIBUTOR CONTROL */}
+      {activeSubTab === 'roles' && (
+        !isAdminAuth ? (
+          <div className="max-w-md mx-auto my-12 p-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-xl space-y-6 text-center animate-in zoom-in-95">
+            <div className="w-16 h-16 rounded-2xl bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-900 flex items-center justify-center mx-auto text-indigo-600 dark:text-indigo-400 shadow-inner">
+              <Lock className="w-8 h-8" />
+            </div>
+
+            <div className="space-y-1">
+              <h3 className="text-lg font-extrabold text-slate-900 dark:text-white">
+                Admin Role Control Locked
+              </h3>
+              <p className="text-xs text-slate-500 dark:text-slate-400">
+                Enter your administrative security passcode to manage user roles, promote solvers, and assign faculty contributor badges.
+              </p>
+            </div>
+
+            <form onSubmit={handleUnlockAdmin} className="space-y-4">
+              <div className="relative">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Enter Admin Passcode"
+                  value={adminPasscode}
+                  onChange={(e) => setAdminPasscode(e.target.value)}
+                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-2xl text-xs font-mono text-center tracking-widest text-slate-900 dark:text-white placeholder-slate-400 outline-none focus:ring-2 focus:ring-indigo-500"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"
+                >
+                  {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                </button>
+              </div>
+
+              {passcodeError && (
+                <div className="p-2.5 rounded-xl bg-rose-50 dark:bg-rose-950/60 border border-rose-200 dark:border-rose-900 text-rose-600 dark:text-rose-400 text-xs font-bold animate-in fade-in">
+                  {passcodeError}
+                </div>
+              )}
+
+              <button
+                type="submit"
+                className="w-full py-3 px-4 bg-indigo-600 hover:bg-indigo-500 text-white font-extrabold text-xs rounded-2xl shadow-md transition flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <KeyRound className="w-4 h-4" />
+                <span>Unlock Role Management</span>
+              </button>
+            </form>
+          </div>
+        ) : (
+          <div className="space-y-4 animate-in fade-in">
+            {/* Admin Live Sync & Lock Banner */}
+            <div className="bg-indigo-50 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-900 rounded-2xl p-3 sm:p-4 flex items-center justify-between gap-3 text-xs">
+              <div className="flex items-center gap-2 font-bold text-indigo-800 dark:text-indigo-300">
+                <span className="w-2.5 h-2.5 rounded-full bg-indigo-500 animate-pulse" />
+                <span>Admin Contributor Studio Unlocked — Changes persist immediately.</span>
+              </div>
+
+              <button
+                onClick={handleLockAdmin}
+                className="px-3 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-rose-50 hover:text-rose-600 text-slate-700 dark:text-slate-300 font-extrabold text-xs transition flex items-center gap-1.5 cursor-pointer shadow-xs"
+                title="Lock Studio"
+              >
+                <Lock className="w-3.5 h-3.5" />
+                <span>Lock Studio</span>
+              </button>
+            </div>
+
+            <AdminUserRoleManager currentStudent={currentStudent} />
           </div>
         )
       )}
