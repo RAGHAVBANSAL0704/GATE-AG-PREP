@@ -22,95 +22,42 @@ import {
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import { exportQuestionsToPdf } from '../services/questionPdfExportService';
-import { GATE_AG_SYLLABUS } from '../data/syllabus';
+import { getOfficialSections, normalizeSectionTitle } from '../utils/syllabusTaxonomy.js';
 
-const SYLLABUS_SECTIONS = [
-  "Section 1: Engineering Mathematics",
-  "Section 2: Farm Power",
-  "Section 3: Farm Machinery",
-  "Section 4: Soil and Water Conservation Engineering",
-  "Section 5: Irrigation and Drainage Engineering",
-  "Section 6: Agricultural Processing Engineering",
-  "Section 7: Dairy and Food Engineering",
-  "Section 8: General Aptitude"
-];
+const SYLLABUS_SECTIONS = getOfficialSections().map(s => s.fullTitle);
 
-// Helper to normalize section names from questions
-function normalizeSectionName(rawSec) {
-  if (!rawSec) return 'Section 4: Soil and Water Conservation Engineering';
-  const s = String(rawSec).toLowerCase();
-  if (s.includes('math')) return 'Section 1: Engineering Mathematics';
-  if (s.includes('power') || s.includes('tractor') || s.includes('engine')) return 'Section 2: Farm Power';
-  if (s.includes('machinery') || s.includes('implement')) return 'Section 3: Farm Machinery';
-  if (s.includes('soil') || s.includes('conservation') || s.includes('watershed') || s.includes('erosion')) return 'Section 4: Soil and Water Conservation Engineering';
-  if (s.includes('irrigation') || s.includes('drainage') || s.includes('well') || s.includes('hydrology')) return 'Section 5: Irrigation and Drainage Engineering';
-  if (s.includes('dairy') || s.includes('food')) return 'Section 7: Dairy and Food Engineering';
-  if (s.includes('processing') || s.includes('storage') || s.includes('drying')) return 'Section 6: Agricultural Processing Engineering';
-  if (s.includes('aptitude') || s.includes('english') || s.includes('reasoning')) return 'Section 8: General Aptitude';
-  return rawSec;
-}
+const normalizeSectionName = (sec) => {
+  return normalizeSectionTitle(sec);
+};
 
 export default function CustomPdfQuestionGenerator({ questions = [], mockPapers = [], customMockPapers = [] }) {
-  // All pool questions combined across Official PYQs, Mock Tests, and Practice Pools
+  // Synchronized combined pool with Dashboard (questions + customMockPapers = exactly 2,494 questions)
   const allPoolQuestions = useMemo(() => {
-    const combined = [];
-    const seenIds = new Set();
-    const seenTexts = new Set();
+    const list = [];
 
-    // 1. Add Official GATE PYQs from mockPapers (2007–2026)
-    (mockPapers || []).forEach(p => {
-      (p.questions || []).forEach((q, qIdx) => {
-        const key = q.id || `GATE_${p.year}_Q${q.qnum || qIdx + 1}`;
-        const textKey = (q.question || q.text || '').trim().toLowerCase().slice(0, 80);
-        if (!seenIds.has(key) && (!textKey || !seenTexts.has(textKey))) {
-          seenIds.add(key);
-          if (textKey) seenTexts.add(textKey);
-          combined.push({
-            ...q,
-            id: key,
-            source_origin: 'Official PYQ',
-            source_label: q.year ? `GATE ${q.year}` : (p.title || 'Official Paper')
-          });
-        }
+    // 1. Practice & Official PYQs
+    (questions || []).forEach(q => {
+      list.push({
+        ...q,
+        source_origin: q.year ? 'Official PYQ' : 'Practice Bank',
+        source_label: q.year ? `GATE ${q.year}` : 'Practice Bank'
       });
     });
 
-    // 2. Add Full-Length Custom Mock Papers (Mock 01 to 18)
-    (customMockPapers || []).forEach(p => {
+    // 2. Full-Length Custom Mock Papers (Mock 01 to 18)
+    (customMockPapers || []).forEach((p, pIdx) => {
       (p.questions || []).forEach((q, qIdx) => {
-        const key = q.id || `${p.id || 'MOCK'}_Q${q.qnum || qIdx + 1}`;
-        const textKey = (q.question || q.text || '').trim().toLowerCase().slice(0, 80);
-        if (!seenIds.has(key) && (!textKey || !seenTexts.has(textKey))) {
-          seenIds.add(key);
-          if (textKey) seenTexts.add(textKey);
-          combined.push({
-            ...q,
-            id: key,
-            source_origin: 'Mock Test',
-            source_label: p.title || `Custom Mock ${p.id || ''}`
-          });
-        }
-      });
-    });
-
-    // 3. Add Practice Bank Questions
-    (questions || []).forEach((q, qIdx) => {
-      const key = q.id || `PRACTICE_Q${qIdx + 1}`;
-      const textKey = (q.question || q.text || '').trim().toLowerCase().slice(0, 80);
-      if (!seenIds.has(key) && (!textKey || !seenTexts.has(textKey))) {
-        seenIds.add(key);
-        if (textKey) seenTexts.add(textKey);
-        combined.push({
+        list.push({
           ...q,
-          id: key,
-          source_origin: q.year ? 'Official PYQ' : 'Practice Bank',
-          source_label: q.year ? `GATE ${q.year}` : 'Practice Bank'
+          id: q.id || `${p.id || `MOCK_${pIdx + 1}`}_Q${q.qnum || qIdx + 1}`,
+          source_origin: 'Mock Test',
+          source_label: p.title || `Custom Mock ${pIdx + 1}`
         });
-      }
+      });
     });
 
-    return combined;
-  }, [questions, mockPapers, customMockPapers]);
+    return list;
+  }, [questions, customMockPapers]);
 
   // Section Filter: Multi-select array
   const [selectedSections, setSelectedSections] = useState(SYLLABUS_SECTIONS);
