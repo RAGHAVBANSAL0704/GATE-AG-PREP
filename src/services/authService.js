@@ -1192,3 +1192,35 @@ export function getRememberedIdentifier() {
   return localStorage.getItem(LOCAL_STORAGE_REMEMBER_KEY) || '';
 }
 
+// Preserved Quick Demo / Preview Profiles (Retained for future feature flags or testing)
+export const PRESET_DEMO_PROFILES = {
+  student: {
+    id: 'demo_student_aspirant_01',
+    full_name: 'Aditya Sharma (Demo Aspirant)',
+    username: 'aditya_gate_air1',
+    student_type: 'hau',
+    admission_no: '2022AE01BIV',
+    college_name: 'COAET CCS HAU Hisar',
+    current_year_sem: '4th Year / 7th-8th Sem',
+    email: 'demo.student@gateagprep.in',
+    mobile_number: '9876543210',
+    user_role: 'aspirant',
+    xp_points: 450,
+    break_xp: 120
+  },
+  faculty: {
+    id: 'demo_faculty_mentor_01',
+    full_name: 'Dr. Rajeshwar Singh (Faculty Mentor)',
+    username: 'dr_rajeshwar_fmpe',
+    faculty_title: 'Dr. (Prof.)',
+    department: 'Farm Machinery & Power Engineering (FMPE)',
+    college_name: 'COAET CCS HAU Hisar',
+    email: 'prof.rajeshwar@hau.ac.in',
+    mobile_number: '9812345678',
+    user_role: 'faculty_mentor',
+    is_faculty: true,
+    can_moderate: true,
+    xp_points: 1200
+  }
+};
+

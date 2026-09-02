@@ -28,9 +28,13 @@ import {
   getRememberedIdentifier, 
   validateHAUAdmissionNo,
   FACULTY_SALUTATIONS,
-  AGRI_ENGG_DEPARTMENTS
+  AGRI_ENGG_DEPARTMENTS,
+  PRESET_DEMO_PROFILES
 } from '../services/authService';
 import { parseAdmissionRollNumber } from '../utils/rollNumberParser.js';
+
+// Feature Flag: Preserved for future testing / preview environments
+const SHOW_QUICK_DEMO_PROFILES = false;
 
 export const CATEGORIZED_UNIVERSITIES = [
   {
@@ -230,39 +234,13 @@ export default function AuthModal({
     }
   };
 
-  // 1-Click Demo Profiles
+  // 1-Click Demo Profiles (Preserved for future feature-flagged invocation)
   const handleQuickDemoStudent = () => {
-    onLoginSuccess({
-      id: 'demo_student_aspirant_01',
-      full_name: 'Aditya Sharma (Demo Aspirant)',
-      username: 'aditya_gate_air1',
-      student_type: 'hau',
-      admission_no: '2022AE01BIV',
-      college_name: 'COAET CCS HAU Hisar',
-      current_year_sem: '4th Year / 7th-8th Sem',
-      email: 'demo.student@gateagprep.in',
-      mobile_number: '9876543210',
-      user_role: 'aspirant',
-      xp_points: 450,
-      break_xp: 120
-    });
+    onLoginSuccess(PRESET_DEMO_PROFILES.student);
   };
 
   const handleQuickDemoFaculty = () => {
-    onLoginSuccess({
-      id: 'demo_faculty_mentor_01',
-      full_name: 'Dr. Rajeshwar Singh (Faculty Mentor)',
-      username: 'dr_rajeshwar_fmpe',
-      faculty_title: 'Dr. (Prof.)',
-      department: 'Farm Machinery & Power Engineering (FMPE)',
-      college_name: 'COAET CCS HAU Hisar',
-      email: 'prof.rajeshwar@hau.ac.in',
-      mobile_number: '9812345678',
-      user_role: 'faculty_mentor',
-      is_faculty: true,
-      can_moderate: true,
-      xp_points: 1200
-    });
+    onLoginSuccess(PRESET_DEMO_PROFILES.faculty);
   };
 
   const switchTab = (tab) => {
@@ -738,35 +716,37 @@ export default function AuthModal({
                 )}
               </button>
 
-              {/* 1-Click Quick Demo Profiles */}
-              <div className="pt-3 border-t border-slate-200 dark:border-slate-800 space-y-2">
-                <div className="flex items-center justify-between text-[11px]">
-                  <span className="font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider text-[10px]">
-                    Quick Test Profiles
-                  </span>
-                  <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-extrabold">
-                    ⚡ 1-Click Access
-                  </span>
+              {/* 1-Click Quick Demo Profiles (Hidden by default; retained in codebase for future invocation) */}
+              {SHOW_QUICK_DEMO_PROFILES && (
+                <div className="pt-3 border-t border-slate-200 dark:border-slate-800 space-y-2">
+                  <div className="flex items-center justify-between text-[11px]">
+                    <span className="font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider text-[10px]">
+                      Quick Test Profiles
+                    </span>
+                    <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-extrabold">
+                      ⚡ 1-Click Access
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2">
+                    <button
+                      type="button"
+                      onClick={handleQuickDemoStudent}
+                      className="py-2 px-2.5 rounded-xl bg-gradient-to-r from-emerald-500/10 to-teal-500/10 border border-emerald-500/20 hover:border-emerald-500/40 text-emerald-700 dark:text-emerald-300 font-bold text-[11px] transition flex items-center justify-center gap-1.5 cursor-pointer shadow-xs hover:shadow-sm"
+                    >
+                      <Sparkles className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+                      <span className="truncate">Demo Aspirant</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={handleQuickDemoFaculty}
+                      className="py-2 px-2.5 rounded-xl bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 hover:border-indigo-500/40 text-indigo-700 dark:text-indigo-300 font-bold text-[11px] transition flex items-center justify-center gap-1.5 cursor-pointer shadow-xs hover:shadow-sm"
+                    >
+                      <Award className="w-3.5 h-3.5 text-indigo-500 shrink-0" />
+                      <span className="truncate">Demo Faculty</span>
+                    </button>
+                  </div>
                 </div>
-                <div className="grid grid-cols-2 gap-2">
-                  <button
-                    type="button"
-                    onClick={handleQuickDemoStudent}
-                    className="py-2 px-2.5 rounded-xl bg-gradient-to-r from-emerald-500/10 to-teal-500/10 border border-emerald-500/20 hover:border-emerald-500/40 text-emerald-700 dark:text-emerald-300 font-bold text-[11px] transition flex items-center justify-center gap-1.5 cursor-pointer shadow-xs hover:shadow-sm"
-                  >
-                    <Sparkles className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
-                    <span className="truncate">Demo Aspirant</span>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={handleQuickDemoFaculty}
-                    className="py-2 px-2.5 rounded-xl bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 hover:border-indigo-500/40 text-indigo-700 dark:text-indigo-300 font-bold text-[11px] transition flex items-center justify-center gap-1.5 cursor-pointer shadow-xs hover:shadow-sm"
-                  >
-                    <Award className="w-3.5 h-3.5 text-indigo-500 shrink-0" />
-                    <span className="truncate">Demo Faculty</span>
-                  </button>
-                </div>
-              </div>
+              )}
 
               <div className="text-center pt-2 text-xs text-slate-500 dark:text-slate-400">
                 {portalRole === 'faculty' ? 'New faculty member? ' : "Don't have an account yet? "}
