@@ -20,10 +20,12 @@ import {
   Play,
   ArrowLeft,
   Shuffle,
-  Edit3
+  Edit3,
+  Printer
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import { evaluateQuestion } from '../utils/scoring.js';
+import { exportQuestionsToPdf } from '../services/questionPdfExportService.js';
 import AITutorModal from './AITutorModal';
 import { GATE_AG_SYLLABUS } from '../data/syllabus';
 import { detectNATUnitMismatch } from '../utils/hintGenerator';
@@ -571,6 +573,25 @@ export default function PracticeMode({
               {st.label}
             </button>
           ))}
+
+          <button
+            onClick={() => {
+              if (filteredQuestions.length === 0) return;
+              exportQuestionsToPdf(filteredQuestions, {
+                title: `GATE AG Practice - ${selectedSection !== 'All' ? selectedSection : 'Mixed'}`,
+                subtitle: `${selectedTopic !== 'All' ? selectedTopic : 'All Topics'} • ${filteredQuestions.length} Questions`,
+                sections: selectedSection !== 'All' ? [selectedSection] : ['Mixed Syllabus Sections'],
+                includeAnswerKey: true,
+                includeSolutions: true
+              });
+            }}
+            disabled={filteredQuestions.length === 0}
+            className="ml-auto px-3.5 py-1 rounded-full text-xs font-bold bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-white shadow-xs transition flex items-center gap-1.5 cursor-pointer"
+            title="Download currently filtered questions as printable PDF"
+          >
+            <Printer className="w-3.5 h-3.5" />
+            <span>Download Filtered PDF ({filteredQuestions.length})</span>
+          </button>
         </div>
       </div>
 

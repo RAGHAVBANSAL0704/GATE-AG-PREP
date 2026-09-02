@@ -19,9 +19,10 @@ import {
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import { downloadBulkZip } from '../utils/zipDownloader';
+import CustomPdfQuestionGenerator from './CustomPdfQuestionGenerator';
 
 export default function DownloadsHub({ questions = [], mockPapers = [], customMockPapers = [], onStartMock, onDeleteMock }) {
-  const [vaultTab, setVaultTab] = useState('official'); // 'official' | 'custom'
+  const [vaultTab, setVaultTab] = useState('generator'); // 'generator' | 'official' | 'custom'
   const [searchTerm, setSearchTerm] = useState('');
   const [eraFilter, setEraFilter] = useState('all'); // 'all' | 'recent' | 'classic'
   const [isZipping, setIsZipping] = useState(false);
@@ -154,8 +155,20 @@ export default function DownloadsHub({ questions = [], mockPapers = [], customMo
           {/* Tab Switcher */}
           <div className="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-950 p-1.5 rounded-2xl border border-slate-200 dark:border-slate-800 shrink-0 w-full sm:w-auto">
             <button
+              onClick={() => setVaultTab('generator')}
+              className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold transition cursor-pointer ${
+                vaultTab === 'generator'
+                  ? 'bg-emerald-600 text-white shadow-xs font-extrabold'
+                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+              }`}
+            >
+              <FileDown className="w-4 h-4" />
+              <span>Custom PDF Generator</span>
+            </button>
+
+            <button
               onClick={() => setVaultTab('official')}
-              className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold transition ${
+              className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold transition cursor-pointer ${
                 vaultTab === 'official'
                   ? 'bg-blue-600 text-white shadow-xs font-extrabold'
                   : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
@@ -167,7 +180,7 @@ export default function DownloadsHub({ questions = [], mockPapers = [], customMo
 
             <button
               onClick={() => setVaultTab('custom')}
-              className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold transition ${
+              className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold transition cursor-pointer ${
                 vaultTab === 'custom'
                   ? 'bg-purple-600 text-white shadow-xs font-extrabold'
                   : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
@@ -180,99 +193,104 @@ export default function DownloadsHub({ questions = [], mockPapers = [], customMo
         </div>
 
         {/* Filter Toolbar for Official Papers & Bulk ZIP Downloads */}
-        <div className="flex flex-wrap items-center justify-between gap-3 pt-4 mt-4 border-t border-slate-100 dark:border-slate-800">
-          {vaultTab === 'official' ? (
-            <>
-              <div className="flex items-center gap-2.5 flex-1 min-w-[220px]">
-                <div className="relative flex-1">
-                  <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-2.5" />
-                  <input
-                    type="text"
-                    placeholder="Search year (e.g. 2026, 2024)..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl pl-10 pr-3.5 py-2 text-xs text-slate-900 dark:text-slate-100 outline-none focus:ring-1 focus:ring-blue-500 font-medium"
-                  />
+        {vaultTab !== 'generator' && (
+          <div className="flex flex-wrap items-center justify-between gap-3 pt-4 mt-4 border-t border-slate-100 dark:border-slate-800">
+            {vaultTab === 'official' ? (
+              <>
+                <div className="flex items-center gap-2.5 flex-1 min-w-[220px]">
+                  <div className="relative flex-1">
+                    <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-2.5" />
+                    <input
+                      type="text"
+                      placeholder="Search year (e.g. 2026, 2024)..."
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                      className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl pl-10 pr-3.5 py-2 text-xs text-slate-900 dark:text-slate-100 outline-none focus:ring-1 focus:ring-blue-500 font-medium"
+                    />
+                  </div>
+
+                  <div className="flex items-center gap-1 bg-slate-100 dark:bg-slate-950 p-1 rounded-xl border border-slate-200 dark:border-slate-800 text-xs font-bold shrink-0">
+                    <button
+                      onClick={() => setEraFilter('all')}
+                      className={`px-3 py-1 rounded-lg transition ${
+                        eraFilter === 'all'
+                          ? 'bg-blue-600 text-white shadow-xs font-extrabold'
+                          : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                      }`}
+                    >
+                      All
+                    </button>
+                    <button
+                      onClick={() => setEraFilter('recent')}
+                      className={`px-3 py-1 rounded-lg transition ${
+                        eraFilter === 'recent'
+                          ? 'bg-blue-600 text-white shadow-xs font-extrabold'
+                          : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                      }`}
+                    >
+                      2016–2026
+                    </button>
+                    <button
+                      onClick={() => setEraFilter('classic')}
+                      className={`px-3 py-1 rounded-lg transition ${
+                        eraFilter === 'classic'
+                          ? 'bg-blue-600 text-white shadow-xs font-extrabold'
+                          : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                      }`}
+                    >
+                      2007–2015
+                    </button>
+                  </div>
                 </div>
 
-                <div className="flex items-center gap-1 bg-slate-100 dark:bg-slate-950 p-1 rounded-xl border border-slate-200 dark:border-slate-800 text-xs font-bold shrink-0">
+                <div className="flex items-center gap-2 flex-wrap">
                   <button
-                    onClick={() => setEraFilter('all')}
-                    className={`px-3 py-1 rounded-lg transition ${
-                      eraFilter === 'all'
-                        ? 'bg-blue-600 text-white shadow-xs font-extrabold'
-                        : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
-                    }`}
+                    disabled={isZipping}
+                    onClick={handleDownloadAllSolvedDocx}
+                    className="px-3.5 py-2 rounded-xl bg-amber-600 hover:bg-amber-700 disabled:opacity-50 text-white text-xs font-bold transition flex items-center gap-2 shadow-xs active:scale-95 cursor-pointer"
+                    title="Package and download all solved DOCX papers in one ZIP"
                   >
-                    All
+                    {isZipping ? <Loader2 className="w-4 h-4 animate-spin" /> : <Archive className="w-4 h-4" />}
+                    <span>Download Solved DOCX (ZIP)</span>
                   </button>
+
                   <button
-                    onClick={() => setEraFilter('recent')}
-                    className={`px-3 py-1 rounded-lg transition ${
-                      eraFilter === 'recent'
-                        ? 'bg-blue-600 text-white shadow-xs font-extrabold'
-                        : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
-                    }`}
+                    disabled={isZipping}
+                    onClick={handleDownloadAllPdfs}
+                    className="px-3.5 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white text-xs font-bold transition flex items-center gap-2 shadow-xs active:scale-95 cursor-pointer"
+                    title="Package and download all official question PDFs in one ZIP"
                   >
-                    2016–2026
-                  </button>
-                  <button
-                    onClick={() => setEraFilter('classic')}
-                    className={`px-3 py-1 rounded-lg transition ${
-                      eraFilter === 'classic'
-                        ? 'bg-blue-600 text-white shadow-xs font-extrabold'
-                        : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
-                    }`}
-                  >
-                    2007–2015
+                    {isZipping ? <Loader2 className="w-4 h-4 animate-spin" /> : <Archive className="w-4 h-4" />}
+                    <span>Download PDFs (ZIP)</span>
                   </button>
                 </div>
-              </div>
-
-              {/* Category Bulk Action Buttons */}
-              <div className="flex items-center gap-2">
+              </>
+            ) : (
+              <div className="flex items-center justify-between w-full">
+                <span className="text-xs text-slate-500 font-medium">
+                  Showing all {customMockPapers.length} custom mock test papers.
+                </span>
                 <button
                   disabled={isZipping}
-                  onClick={handleDownloadAllSolvedDocx}
-                  className="px-3.5 py-2 rounded-xl bg-amber-600 hover:bg-amber-700 disabled:opacity-50 text-white text-xs font-bold transition flex items-center gap-2 shadow-xs active:scale-95"
-                  title="Package and download all solved DOCX papers in one ZIP"
+                  onClick={handleDownloadAllCustomMocksZip}
+                  className="px-3.5 py-2 rounded-xl bg-purple-600 hover:bg-purple-700 disabled:opacity-50 text-white text-xs font-bold transition flex items-center gap-2 shadow-xs active:scale-95 cursor-pointer"
+                  title="Package and download all 18 custom mock DOCX papers in one ZIP"
                 >
                   {isZipping ? <Loader2 className="w-4 h-4 animate-spin" /> : <Archive className="w-4 h-4" />}
-                  <span>Download Solved DOCX (ZIP)</span>
-                </button>
-
-                <button
-                  disabled={isZipping}
-                  onClick={handleDownloadAllPdfs}
-                  className="px-3.5 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white text-xs font-bold transition flex items-center gap-2 shadow-xs active:scale-95"
-                  title="Package and download all official question PDFs in one ZIP"
-                >
-                  {isZipping ? <Loader2 className="w-4 h-4 animate-spin" /> : <Archive className="w-4 h-4" />}
-                  <span>Download PDFs (ZIP)</span>
+                  <span>Download All Custom Mocks (ZIP)</span>
                 </button>
               </div>
-            </>
-          ) : (
-            <div className="flex items-center justify-between w-full">
-              <span className="text-xs text-slate-500 font-medium">
-                Showing all {customMockPapers.length} custom mock test papers.
-              </span>
-              <button
-                disabled={isZipping}
-                onClick={handleDownloadAllCustomMocksZip}
-                className="px-3.5 py-2 rounded-xl bg-purple-600 hover:bg-purple-700 disabled:opacity-50 text-white text-xs font-bold transition flex items-center gap-2 shadow-xs active:scale-95"
-                title="Package and download all 18 custom mock DOCX papers in one ZIP"
-              >
-                {isZipping ? <Loader2 className="w-4 h-4 animate-spin" /> : <Archive className="w-4 h-4" />}
-                <span>Download All Custom Mocks (ZIP)</span>
-              </button>
-            </div>
-          )}
-        </div>
+            )}
+          </div>
+        )}
       </div>
 
-      {/* Main Content Table / Grid */}
-      {vaultTab === 'official' ? (
+      {/* Main Content Render */}
+      {vaultTab === 'generator' && (
+        <CustomPdfQuestionGenerator questions={questions} mockPapers={mockPapers} />
+      )}
+
+      {vaultTab === 'official' && (
         <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse text-xs">
@@ -380,7 +398,9 @@ export default function DownloadsHub({ questions = [], mockPapers = [], customMo
             </table>
           </div>
         </div>
-      ) : (
+      )}
+
+      {vaultTab === 'custom' && (
         /* Custom Uploaded Mocks Download Vault Grid */
         <div className="space-y-4">
           {customMockPapers.length === 0 ? (

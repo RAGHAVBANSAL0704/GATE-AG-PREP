@@ -19,10 +19,13 @@ import {
   Play,
   ArrowLeft,
   Shuffle,
-  Edit3
+  Edit3,
+  FileDown,
+  Printer
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import { evaluateQuestion } from '../utils/scoring.js';
+import { exportQuestionsToPdf } from '../services/questionPdfExportService.js';
 import ConceptStudyModal from './ConceptStudyModal';
 import { GATE_AG_SYLLABUS } from '../data/syllabus';
 import { getOfficialSections, normalizeSectionTitle } from '../utils/syllabusTaxonomy.js';
@@ -469,6 +472,25 @@ export default function CustomPracticePool({
               {st.label}
             </button>
           ))}
+
+          <button
+            onClick={() => {
+              if (filteredQuestions.length === 0) return;
+              exportQuestionsToPdf(filteredQuestions, {
+                title: `GATE AG Custom Practice - ${selectedSection !== 'All' ? selectedSection : 'Mixed'}`,
+                subtitle: `${selectedPaper} • ${filteredQuestions.length} Questions`,
+                sections: selectedSection !== 'All' ? [selectedSection] : ['Mixed Custom Questions'],
+                includeAnswerKey: true,
+                includeSolutions: true
+              });
+            }}
+            disabled={filteredQuestions.length === 0}
+            className="ml-auto px-3.5 py-1 rounded-full text-xs font-bold bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-white shadow-xs transition flex items-center gap-1.5 cursor-pointer"
+            title="Download currently filtered questions as printable PDF"
+          >
+            <Printer className="w-3.5 h-3.5" />
+            <span>Download Filtered PDF ({filteredQuestions.length})</span>
+          </button>
         </div>
       </div>
 
