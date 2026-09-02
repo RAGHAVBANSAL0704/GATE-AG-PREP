@@ -41,10 +41,15 @@ export const FACULTY_SALUTATIONS = [
 export const AGRI_ENGG_DEPARTMENTS = [
   'Farm Machinery & Power Engineering (FMPE)',
   'Soil & Water Conservation Engineering (SWCE)',
-  'Processing & Food Engineering (PFE)',
+  'Processing & Food Engineering (PFE / APFE)',
   'Renewable Energy Engineering (REE)',
-  'Irrigation & Drainage Engineering',
-  'Basic Engineering & Applied Sciences',
+  'Irrigation & Drainage Engineering (IDE)',
+  'Dairy & Food Process Engineering',
+  'Post-Harvest Engineering & Technology',
+  'Hydrology & Water Resources Engineering',
+  'Aquacultural & Environmental Engineering',
+  'Agricultural Automation, Precision Farming & AI',
+  'Basic Engineering & Applied Mathematics / Physics',
   'Agronomy, Soil Science & Plant Sciences',
   'Other / Allied Department'
 ];

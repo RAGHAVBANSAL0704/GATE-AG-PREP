@@ -61,7 +61,9 @@ export default function CustomPracticePool({
   bookmarks = [], 
   onToggleBookmark, 
   onOpenCalc,
-  onEditQuestion
+  onEditQuestion,
+  currentStudent,
+  onRequireAuth
 }) {
   // Aggregate all custom questions from custom mock papers
   const customQuestions = customMockPapers.flatMap(paper => 
@@ -183,6 +185,10 @@ export default function CustomPracticePool({
   };
 
   const handleSubmitAnswer = (qId) => {
+    if (!currentStudent && onRequireAuth) {
+      onRequireAuth("Sign In or Register free to submit practice answers and view step-by-step solutions!");
+      return;
+    }
     const userVal = userAnswers[qId];
     if (userVal === undefined || userVal === '') return;
 
@@ -506,7 +512,13 @@ export default function CustomPracticePool({
               )}
 
               <button
-                onClick={() => onToggleBookmark(currentQ.id)}
+                onClick={() => {
+                  if (!currentStudent && onRequireAuth) {
+                    onRequireAuth("Sign In or Register free to bookmark questions and build your revision list!");
+                    return;
+                  }
+                  onToggleBookmark(currentQ.id);
+                }}
                 className={`p-1.5 rounded-lg border transition ${
                   bookmarks.includes(currentQ.id)
                     ? 'bg-blue-600 text-white border-blue-600'

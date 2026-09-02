@@ -201,8 +201,9 @@ export default function CreatorAdminHQ({
               : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800'
           }`}
         >
-          <ShieldCheck className="w-4 h-4" />
+          {isAdminAuth ? <ShieldCheck className="w-4 h-4 text-emerald-500" /> : <Lock className="w-4 h-4 text-amber-500" />}
           <span>Question Admin Studio</span>
+          {!isAdminAuth && <span className="text-[9px] px-1.5 py-0.2 rounded bg-amber-500/20 text-amber-600 dark:text-amber-400 font-mono">LOCKED</span>}
         </button>
 
         <button
@@ -213,8 +214,9 @@ export default function CreatorAdminHQ({
               : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800'
           }`}
         >
-          <Award className="w-4 h-4" />
+          {isAdminAuth ? <Award className="w-4 h-4 text-white" /> : <Lock className="w-4 h-4 text-amber-500" />}
           <span>Roles & Contributors</span>
+          {!isAdminAuth && <span className="text-[9px] px-1.5 py-0.2 rounded bg-amber-500/20 text-amber-600 dark:text-amber-400 font-mono">LOCKED</span>}
         </button>
       </div>
 

@@ -6,6 +6,7 @@ import PracticeHub from './components/PracticeHub';
 import Footer from './components/Footer';
 import CommandPaletteModal from './components/CommandPaletteModal';
 import ThemeSelectorModal from './components/ThemeSelectorModal';
+import { Sparkles } from 'lucide-react';
 
 // Robust lazy loading wrapper that auto-reloads the page if a chunk is missing due to a new deployment
 function lazyWithRetry(componentImport) {
@@ -137,6 +138,39 @@ export default function App() {
 
   const [currentStudent, setCurrentStudent] = useState(() => checkCurrentSession());
   const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(() => {
+    const session = checkCurrentSession();
+    if (session) return false;
+    try {
+      if (localStorage.getItem('gate_ag_guest_mode') === 'true') {
+        return false;
+      }
+    } catch (e) {}
+    return true;
+  });
+  const [authModalReason, setAuthModalReason] = useState('');
+
+  const handleContinueAsGuest = () => {
+    try {
+      localStorage.setItem('gate_ag_guest_mode', 'true');
+    } catch (e) {}
+    setIsAuthModalOpen(false);
+    setAuthModalReason('');
+  };
+
+  const handleOpenAuth = (reason = '') => {
+    setAuthModalReason(reason);
+    setIsAuthModalOpen(true);
+  };
+
+  const handleLoginSuccess = (student) => {
+    setCurrentStudent(student);
+    setIsAuthModalOpen(false);
+    setAuthModalReason('');
+    try {
+      localStorage.removeItem('gate_ag_guest_mode');
+    } catch (e) {}
+  };
 
   useEffect(() => {
     const unsub = subscribeToLiveRoleSync((update) => {
@@ -167,6 +201,10 @@ export default function App() {
     logoutStudent();
     setCurrentStudent(null);
     setIsProfileOpen(false);
+    try {
+      localStorage.removeItem('gate_ag_guest_mode');
+    } catch (e) {}
+    setIsAuthModalOpen(false);
   };
 
   const [currentTheme, setCurrentTheme] = useState(() => {
@@ -424,6 +462,10 @@ export default function App() {
   };
 
   const handleStartMock = (target) => {
+    if (!currentStudent) {
+      handleOpenAuth("Sign In or Register free to attempt full 180-minute official CBT Mock Tests and calculate your All-India Rank (AIR) Tier!");
+      return;
+    }
     if (target && typeof target === 'object') {
       handleStartCustomTest(target);
       return;
@@ -439,6 +481,10 @@ export default function App() {
   };
 
   const handleStartCustomTest = (customPaperObj) => {
+    if (!currentStudent) {
+      handleOpenAuth("Sign In or Register free to create custom speed tests, submit answers, and save performance records!");
+      return;
+    }
     setDirectLaunchPaper(null);
     setCustomTestPaper({ ...customPaperObj, _launchId: Date.now() });
     setActiveTab('mocktest');
@@ -468,9 +514,14 @@ export default function App() {
   return (
     <div className="min-h-screen flex text-slate-900 dark:text-slate-100 transition-colors font-sans">
       
-      {/* Strict Access Modal: Rendered if not logged in */}
-      {!currentStudent && (
-        <AuthModal onLoginSuccess={(student) => setCurrentStudent(student)} />
+      {/* Login / Registration / Guest Modal */}
+      {isAuthModalOpen && (
+        <AuthModal 
+          onLoginSuccess={handleLoginSuccess}
+          onClose={() => setIsAuthModalOpen(false)}
+          onContinueAsGuest={handleContinueAsGuest}
+          customPromptReason={authModalReason}
+        />
       )}
 
       {/* Single Unified Left Sidebar */}
@@ -483,13 +534,51 @@ export default function App() {
         onOpenCommandPalette={() => setIsCommandPaletteOpen(true)}
         onOpenThemeModal={() => setIsThemeModalOpen(true)}
         currentStudent={currentStudent}
-        onOpenProfile={() => setIsProfileOpen(true)}
+        onOpenProfile={() => {
+          if (currentStudent) {
+            setIsProfileOpen(true);
+          } else {
+            handleOpenAuth();
+          }
+        }}
         onLogout={handleLogout}
       />
 
       {/* Main Wide Canvas */}
       <div className="flex-1 flex flex-col min-w-0 overflow-y-auto">
         <main className="flex-1 max-w-7xl 2xl:max-w-[1500px] w-full mx-auto px-3 sm:px-6 lg:px-8 pt-16 sm:pt-6 pb-8">
+          
+          {/* Guest Visitor Mode Top Banner */}
+          {!currentStudent && (
+            <div className="mb-6 p-4 rounded-2xl bg-gradient-to-r from-emerald-500/10 via-teal-500/5 to-transparent border border-emerald-500/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-xs animate-fadeIn">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
+                  <Sparkles className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="flex items-center gap-2">
+                    <h3 className="text-xs font-bold text-slate-900 dark:text-white">
+                      Guest Visitor Mode
+                    </h3>
+                    <span className="text-[9px] uppercase tracking-wider font-extrabold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">
+                      Preview
+                    </span>
+                  </div>
+                  <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">
+                    You are exploring formulas, syllabus & questions freely. Sign in to attempt timed CBT mock tests & track your AIR rank!
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => handleOpenAuth('Sign In or Register free to unlock full CBT mock tests, practice answer checks, and AIR tier calculation!')}
+                className="shrink-0 px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-bold text-xs shadow-xs transition-all cursor-pointer flex items-center gap-1.5"
+              >
+                <span>Sign In / Register Free</span>
+              </button>
+            </div>
+          )}
+
           <Suspense fallback={<TabLoadingSkeleton />}>
             {activeTab === 'dashboard' && (
               <Dashboard
@@ -516,6 +605,8 @@ export default function App() {
                 onOpenCalc={() => setIsCalcOpen(true)}
                 onEditQuestion={(q) => setEditingQuestion(q)}
                 onStartCustomTest={handleStartCustomTest}
+                currentStudent={currentStudent}
+                onRequireAuth={handleOpenAuth}
               />
             )}
 
@@ -531,6 +622,7 @@ export default function App() {
                 onOpenCalc={() => setIsCalcOpen(true)}
                 onEditQuestion={(q) => setEditingQuestion(q)}
                 currentStudent={currentStudent}
+                onRequireAuth={handleOpenAuth}
               />
             )}
 
@@ -543,6 +635,7 @@ export default function App() {
                 mockPapers={mockPapers}
                 onOpenCalc={() => setIsCalcOpen(true)}
                 onToggleBookmark={handleToggleBookmark}
+                onRequireAuth={handleOpenAuth}
               />
             )}
 
@@ -556,6 +649,7 @@ export default function App() {
                 onFinishTest={handleFinishTest}
                 onEditQuestion={(q) => setEditingQuestion(q)}
                 currentStudent={currentStudent}
+                onRequireAuth={handleOpenAuth}
               />
             )}
 

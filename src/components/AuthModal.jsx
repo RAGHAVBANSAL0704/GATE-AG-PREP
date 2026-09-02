@@ -17,7 +17,8 @@ import {
   BookOpen,
   Briefcase,
   ShieldCheck,
-  Sparkles
+  Sparkles,
+  X
 } from 'lucide-react';
 import { 
   registerStudent, 
@@ -30,30 +31,129 @@ import {
   AGRI_ENGG_DEPARTMENTS
 } from '../services/authService';
 
-const HARYANA_AND_INDIA_COLLEGES = [
-  "COAET CCS HAU Hisar (Campus Student)",
-  "GJUS&T Hisar (Guru Jambheshwar University)",
-  "DCRUST Murthal (Deenbandhu Chhotu Ram Univ.)",
-  "YMCA UST Faridabad (J.C. Bose Univ.)",
-  "Kurukshetra University (UIET / Campus)",
-  "MDU Rohtak (UIET / Campus)",
-  "PAU Ludhiana (Punjab Agricultural University)",
-  "NDRI Karnal (National Dairy Research Institute)",
-  "IARI New Delhi (Pusa Institute / ICAR)",
-  "IIT Kharagpur (Agri & Food Engg. Dept.)",
-  "TNAU Coimbatore (Tamil Nadu Agri Univ.)",
-  "MPUAT Udaipur (Maharana Pratap Univ.)",
-  "GBPUAT Pantnagar (Govind Ballabh Pant Univ.)",
-  "JAU Junagadh (Junagadh Agricultural Univ.)",
-  "CAET Anand Agricultural University",
-  "Dr. PDKV Akola (Panjabrao Deshmukh Krishi)",
-  "IGKV Raipur (Indira Gandhi Krishi Vishwavidyalaya)",
-  "UBKV Cooch Behar (Uttar Banga Krishi Viswavidyalaya)",
-  "Central Agricultural University (Imphal / Sikkim)",
-  "Other Institute / Enter Manually"
+export const CATEGORIZED_UNIVERSITIES = [
+  {
+    category: "🏛️ ICAR & Premier National Deemed Institutes",
+    items: [
+      "COAET CCS HAU Hisar (Campus Institute)",
+      "IARI New Delhi (ICAR - Indian Agricultural Research Institute)",
+      "NDRI Karnal (ICAR - National Dairy Research Institute)",
+      "CIAE Bhopal (ICAR - Central Institute of Agricultural Engineering)",
+      "CIPHET Ludhiana (ICAR - Central Institute of Post-Harvest Engg & Tech)",
+      "IVRI Izatnagar (ICAR - Indian Veterinary Research Institute)",
+      "CISH Lucknow / CPRI Shimla / IIHR Bangalore (ICAR Institutes)"
+    ]
+  },
+  {
+    category: "🎓 IITs, NITs & Premier Technology Institutes",
+    items: [
+      "IIT Kharagpur (Dept. of Agricultural & Food Engineering)",
+      "IIT Roorkee (Dept. of WRD&M / Water Resources & Civil)",
+      "IIT Guwahati (Dept. of Biosciences & Bioengineering)",
+      "IIT Delhi (Centre for Rural Development & Tech)",
+      "NIT Rourkela (Dept. of Food Process Engineering)",
+      "NIFTEM Kundli / NIFTEM Thanjavur (Food Technology Institutes)"
+    ]
+  },
+  {
+    category: "🌾 Major State Agricultural Universities (SAUs)",
+    items: [
+      "PAU Ludhiana (Punjab Agricultural University - COAET)",
+      "GBPUAT Pantnagar (G.B. Pant Univ. of Agriculture & Tech - COT)",
+      "TNAU Coimbatore (AEC&RI Tamil Nadu Agricultural University)",
+      "MPUAT Udaipur (CTAE Maharana Pratap Univ. of Agri & Tech)",
+      "CAET Anand Agricultural University (AAU Gujarat)",
+      "JAU Junagadh (Junagadh Agricultural University - CAET)",
+      "NAU Navsari / SDAU Dantiwada (Gujarat Agricultural Universities)",
+      "UAS Bangalore (GKVK University of Agricultural Sciences)",
+      "UAS Dharwad (University of Agricultural Sciences Dharwad)",
+      "UAS Raichur / UHS Bagalkot (Karnataka Agri & Horti Universities)",
+      "Dr. PDKV Akola (Panjabrao Deshmukh Krishi Vidyapeeth)",
+      "MPKV Rahuri (Mahatma Phule Krishi Vidyapeeth)",
+      "Dr. BSKKV Dapoli (Dr. Balasaheb Sawant Konkan Krishi)",
+      "VNMKV Parbhani (Vasantrao Naik Marathwada Krishi)",
+      "OUAT Bhubaneswar (Orissa University of Agriculture & Tech)",
+      "BCKV Mohanpur (Bidhan Chandra Krishi Viswavidyalaya)",
+      "UBKV Cooch Behar (Uttar Banga Krishi Viswavidyalaya)",
+      "IGKV Raipur (Indira Gandhi Krishi Vishwavidyalaya)",
+      "JNKVV Jabalpur (Jawaharlal Nehru Krishi Vishwavidyalaya)",
+      "RVSKVV Gwalior (Rajmata Vijayaraje Scindia Krishi)",
+      "BAU Ranchi (Birsa Agricultural University)",
+      "BAU Sabour (Bihar Agricultural University)",
+      "Dr. RPCAU Pusa, Samastipur (Central Agricultural University)",
+      "Central Agricultural University (Imphal / Sikkim / Pasighat)",
+      "RLBCAU Jhansi (Rani Lakshmi Bai Central Agricultural Univ.)",
+      "SKUAST Kashmir / SKUAST Jammu (Sher-e-Kashmir Univ. of Agri.)",
+      "ANGRAU Guntur (Acharya N.G. Ranga Agricultural University)",
+      "PJTSAU Hyderabad (Prof. Jayashankar Telangana State Agri Univ.)",
+      "KAU Thrissur (Kerala Agricultural University - KCAET Tavanur)",
+      "YSPUHF Solan (Dr. Y.S. Parmar Univ. of Horticulture & Forestry)",
+      "CSK HPKV Palampur (Chaudhary Sarwan Kumar HP Krishi)",
+      "SVPUAT Meerut (Sardar Vallabhbhai Patel University)",
+      "CSAUAT Kanpur (Chandra Shekhar Azad Univ. of Agri & Tech)",
+      "NDUAT Ayodhya (Acharya Narendra Deva Univ. of Agri & Tech)",
+      "BUAT Banda (Banda University of Agriculture & Technology)",
+      "SHUATS Prayagraj (Sam Higginbottom Univ. of Agri, Tech & Sciences)",
+      "SKNAU Jobner / AU Jodhpur / AU Kota (Rajasthan Agri Universities)"
+    ]
+  },
+  {
+    category: "🏫 State Technical & Regional Universities",
+    items: [
+      "GJUS&T Hisar (Guru Jambheshwar Univ. of Science & Tech)",
+      "DCRUST Murthal (Deenbandhu Chhotu Ram Univ. of Science & Tech)",
+      "YMCA UST Faridabad (J.C. Bose Univ. of Science & Tech)",
+      "Kurukshetra University (UIET / Campus)",
+      "MDU Rohtak (UIET / Campus)"
+    ]
+  },
+  {
+    category: "🌐 Other / Manual Entry",
+    items: [
+      "Other Institute / Enter Manually"
+    ]
+  }
 ];
 
-export default function AuthModal({ onLoginSuccess }) {
+export const CATEGORIZED_FACULTY_DEPARTMENTS = [
+  {
+    group: "🚜 Core Agricultural Engineering Disciplines",
+    items: [
+      "Farm Machinery & Power Engineering (FMPE)",
+      "Soil & Water Conservation Engineering (SWCE)",
+      "Processing & Food Engineering (PFE / APFE)",
+      "Renewable Energy Engineering (REE)",
+      "Irrigation & Drainage Engineering (IDE)"
+    ]
+  },
+  {
+    group: "🌾 Specialized Food, Bio-Systems & Allied Engg",
+    items: [
+      "Dairy & Food Process Engineering",
+      "Post-Harvest Engineering & Technology",
+      "Hydrology & Water Resources Engineering",
+      "Aquacultural & Environmental Engineering",
+      "Agricultural Automation, Precision Farming & AI"
+    ]
+  },
+  {
+    group: "📐 Applied Sciences & Allied Disciplines",
+    items: [
+      "Basic Engineering & Applied Mathematics / Physics",
+      "Agronomy, Soil Science & Plant Sciences",
+      "Other / Allied Department"
+    ]
+  }
+];
+
+const HARYANA_AND_INDIA_COLLEGES = CATEGORIZED_UNIVERSITIES.flatMap(cat => cat.items);
+
+export default function AuthModal({ 
+  onLoginSuccess, 
+  onClose, 
+  onContinueAsGuest, 
+  customPromptReason 
+}) {
   // Top-level portal switcher: 'student' | 'faculty'
   const [portalRole, setPortalRole] = useState('student');
 
@@ -336,6 +436,18 @@ export default function AuthModal({ onLoginSuccess }) {
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-950/75 backdrop-blur-md overflow-y-auto">
       <div className={`relative w-full ${primaryTab === 'signup' ? 'max-w-xl' : 'max-w-md'} bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl overflow-hidden transition-all my-auto`}>
         
+        {/* Close / Dismiss Button if Guest Mode is supported */}
+        {(onClose || onContinueAsGuest) && (
+          <button
+            type="button"
+            onClick={onClose || onContinueAsGuest}
+            className="absolute top-4 right-4 p-2 rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer z-10"
+            title="Close / Continue as Guest"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        )}
+
         {/* Top Minimal Header & Logo */}
         <div className={`pt-7 pb-4 px-6 text-center border-b border-slate-100 dark:border-slate-800/80 transition-colors ${
           portalRole === 'faculty' 
@@ -399,6 +511,19 @@ export default function AuthModal({ onLoginSuccess }) {
         </div>
 
         <div className="p-6 sm:p-8">
+          {/* Contextual Action Gate Notice (if triggered by a gated feature) */}
+          {customPromptReason && (
+            <div className="mb-5 p-3.5 rounded-2xl bg-gradient-to-r from-amber-500/15 via-amber-500/5 to-transparent border border-amber-500/30 text-amber-900 dark:text-amber-200 text-xs flex items-start gap-3 animate-fadeIn">
+              <div className="p-2 rounded-xl bg-amber-500/20 text-amber-600 dark:text-amber-400 shrink-0">
+                <Sparkles className="w-4 h-4" />
+              </div>
+              <div className="min-w-0 flex-1">
+                <h4 className="font-bold text-slate-900 dark:text-slate-100 text-xs">Unlock Full Preparation Engine</h4>
+                <p className="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5 leading-relaxed">{customPromptReason}</p>
+              </div>
+            </div>
+          )}
+
           {/* Sign In vs Create Account Tabs */}
           <div className="grid grid-cols-2 p-1 bg-slate-100 dark:bg-slate-800/80 rounded-xl mb-6">
             <button
@@ -476,9 +601,13 @@ export default function AuthModal({ onLoginSuccess }) {
                   <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">
                     Password
                   </label>
-                  {portalRole === 'student' && (
+                  {portalRole === 'student' ? (
                     <span className="text-[11px] text-slate-400">
                       (Default: DOB DD/MM/YYYY)
+                    </span>
+                  ) : (
+                    <span className="text-[11px] text-indigo-500 dark:text-indigo-400 font-mono text-[10px]">
+                      Default: Faculty@Last4Digits
                     </span>
                   )}
                 </div>
@@ -604,52 +733,70 @@ export default function AuthModal({ onLoginSuccess }) {
 
                 {/* Department Selection */}
                 <div className="sm:col-span-12 space-y-1.5">
-                  <label className="block font-semibold text-slate-700 dark:text-slate-300">
-                    Department *
-                  </label>
+                  <div className="flex items-center justify-between">
+                    <label className="block font-semibold text-slate-700 dark:text-slate-300">
+                      Academic Department / Discipline *
+                    </label>
+                    <span className="text-[10px] text-slate-400 font-medium">Categorized by Specialization</span>
+                  </div>
                   <select
                     value={facultyDepartment}
                     onChange={(e) => setFacultyDepartment(e.target.value)}
-                    className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 focus:outline-none focus:border-indigo-500"
+                    className="w-full px-3 py-2.5 bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500/30 focus:border-indigo-500 cursor-pointer text-xs"
                   >
-                    {AGRI_ENGG_DEPARTMENTS.map((dept, i) => (
-                      <option key={i} value={dept}>{dept}</option>
+                    {CATEGORIZED_FACULTY_DEPARTMENTS.map((deptGroup, gIdx) => (
+                      <optgroup key={gIdx} label={deptGroup.group} className="font-bold text-slate-900 dark:text-slate-200 bg-white dark:bg-slate-900">
+                        {deptGroup.items.map((dept, i) => (
+                          <option key={i} value={dept} className="font-normal text-slate-800 dark:text-slate-300 py-1">
+                            {dept}
+                          </option>
+                        ))}
+                      </optgroup>
                     ))}
                   </select>
                   {facultyDepartment === 'Other / Allied Department' && (
                     <input
                       type="text"
                       required
-                      placeholder="Enter your Department name"
+                      placeholder="Specify your Department name (e.g. Bio-Energy & Agricultural Systems)"
                       value={customDepartment}
                       onChange={(e) => setCustomDepartment(e.target.value)}
-                      className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 focus:outline-none focus:border-indigo-500 mt-1"
+                      className="w-full px-3 py-2.5 bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 focus:border-indigo-500 text-xs mt-1.5 animate-fadeIn"
                     />
                   )}
                 </div>
 
                 {/* Institute / University Selection */}
                 <div className="sm:col-span-12 space-y-1.5">
-                  <label className="block font-semibold text-slate-700 dark:text-slate-300">
-                    Institute / University *
-                  </label>
+                  <div className="flex items-center justify-between">
+                    <label className="block font-semibold text-slate-700 dark:text-slate-300">
+                      Institute / Agricultural University *
+                    </label>
+                    <span className="text-[10px] text-slate-400 font-medium">All-India ICAR, IIT & SAU Network</span>
+                  </div>
                   <select
                     value={facultyInstitute}
                     onChange={(e) => setFacultyInstitute(e.target.value)}
-                    className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 focus:outline-none focus:border-indigo-500"
+                    className="w-full px-3 py-2.5 bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500/30 focus:border-indigo-500 cursor-pointer text-xs"
                   >
-                    {HARYANA_AND_INDIA_COLLEGES.map((inst, i) => (
-                      <option key={i} value={inst}>{inst}</option>
+                    {CATEGORIZED_UNIVERSITIES.map((catGroup, cIdx) => (
+                      <optgroup key={cIdx} label={catGroup.category} className="font-bold text-slate-900 dark:text-slate-200 bg-white dark:bg-slate-900">
+                        {catGroup.items.map((inst, i) => (
+                          <option key={i} value={inst} className="font-normal text-slate-800 dark:text-slate-300 py-1">
+                            {inst}
+                          </option>
+                        ))}
+                      </optgroup>
                     ))}
                   </select>
                   {facultyInstitute === "Other Institute / Enter Manually" && (
                     <input
                       type="text"
                       required
-                      placeholder="Enter your Institute / University name"
+                      placeholder="Enter full name of your University / College / Institute"
                       value={customFacultyInstitute}
                       onChange={(e) => setCustomFacultyInstitute(e.target.value)}
-                      className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 focus:outline-none focus:border-indigo-500 mt-1"
+                      className="w-full px-3 py-2.5 bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/30 focus:border-indigo-500 text-xs mt-1.5 animate-fadeIn"
                     />
                   )}
                 </div>
@@ -935,27 +1082,36 @@ export default function AuthModal({ onLoginSuccess }) {
 
                 {/* Other College Selector */}
                 {activeMode === 'signup_external' && (
-                  <div className="sm:col-span-2 space-y-2">
-                    <label className="block font-semibold text-slate-700 dark:text-slate-300">
-                      College / University *
-                    </label>
+                  <div className="sm:col-span-2 space-y-1.5">
+                    <div className="flex items-center justify-between">
+                      <label className="block font-semibold text-slate-700 dark:text-slate-300">
+                        College / Agricultural University *
+                      </label>
+                      <span className="text-[10px] text-slate-400 font-medium">All-India ICAR, IIT & SAU Network</span>
+                    </div>
                     <select
                       value={collegeName}
                       onChange={(e) => setCollegeName(e.target.value)}
-                      className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 focus:outline-none focus:border-emerald-500"
+                      className="w-full px-3 py-2.5 bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 font-medium focus:outline-none focus:ring-2 focus:ring-emerald-500/30 focus:border-emerald-500 cursor-pointer text-xs"
                     >
-                      {HARYANA_AND_INDIA_COLLEGES.map((c, i) => (
-                        <option key={i} value={c}>{c}</option>
+                      {CATEGORIZED_UNIVERSITIES.map((catGroup, cIdx) => (
+                        <optgroup key={cIdx} label={catGroup.category} className="font-bold text-slate-900 dark:text-slate-200 bg-white dark:bg-slate-900">
+                          {catGroup.items.map((c, i) => (
+                            <option key={i} value={c} className="font-normal text-slate-800 dark:text-slate-300 py-1">
+                              {c}
+                            </option>
+                          ))}
+                        </optgroup>
                       ))}
                     </select>
                     {collegeName === "Other Institute / Enter Manually" && (
                       <input
                         type="text"
                         required
-                        placeholder="Enter your college / university name"
+                        placeholder="Enter full name of your college / university"
                         value={customCollege}
                         onChange={(e) => setCustomCollege(e.target.value)}
-                        className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 focus:outline-none focus:border-emerald-500"
+                        className="w-full px-3 py-2.5 bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/30 focus:border-emerald-500 text-xs mt-1.5 animate-fadeIn"
                       />
                     )}
                   </div>
@@ -1040,6 +1196,23 @@ export default function AuthModal({ onLoginSuccess }) {
                 </button>
               </div>
             </form>
+          )}
+
+          {/* Explore Portal as Guest / Visitor */}
+          {onContinueAsGuest && (
+            <div className="mt-5 pt-4 border-t border-slate-200 dark:border-slate-800 text-center">
+              <button
+                type="button"
+                onClick={onContinueAsGuest}
+                className="w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800/80 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-bold transition flex items-center justify-center gap-2 cursor-pointer border border-slate-200/80 dark:border-slate-700/60 group shadow-xs"
+              >
+                <Sparkles className="w-4 h-4 text-emerald-500 group-hover:scale-110 transition" />
+                <span>Continue as Guest / Explore Preview</span>
+              </button>
+              <p className="text-[10.5px] text-slate-400 dark:text-slate-500 mt-2 font-medium">
+                Browse syllabus, formulas, simulators & question papers freely
+              </p>
+            </div>
           )}
         </div>
       </div>

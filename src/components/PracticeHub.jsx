@@ -15,7 +15,9 @@ export default function PracticeHub({
   practiceSection,
   onOpenCalc,
   onEditQuestion,
-  onStartCustomTest
+  onStartCustomTest,
+  currentStudent,
+  onRequireAuth
 }) {
   const [currentSubTab, setCurrentSubTab] = useState(activeSubTab);
 
@@ -93,6 +95,8 @@ export default function PracticeHub({
             initialSection={practiceSection}
             onOpenCalc={onOpenCalc}
             onEditQuestion={onEditQuestion}
+            currentStudent={currentStudent}
+            onRequireAuth={onRequireAuth}
           />
         )}
 
@@ -103,6 +107,8 @@ export default function PracticeHub({
             onToggleBookmark={onToggleBookmark}
             onOpenCalc={onOpenCalc}
             onEditQuestion={onEditQuestion}
+            currentStudent={currentStudent}
+            onRequireAuth={onRequireAuth}
           />
         )}
 

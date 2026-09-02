@@ -58,7 +58,17 @@ const formatSec = (secs) => {
   return `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
 };
 
-export default function PracticeMode({ questions, customMockPapers = [], bookmarks, onToggleBookmark, initialSection, onOpenCalc, onEditQuestion }) {
+export default function PracticeMode({ 
+  questions, 
+  customMockPapers = [], 
+  bookmarks, 
+  onToggleBookmark, 
+  initialSection, 
+  onOpenCalc, 
+  onEditQuestion,
+  currentStudent,
+  onRequireAuth
+}) {
   const [isHubActive, setIsHubActive] = useState(() => !initialSection || initialSection === 'All');
   const [sourceFilter, setSourceFilter] = useState('All'); // 'All' | 'Official GATE PYQs' | 'Custom Mock Questions'
   const [selectedSection, setSelectedSection] = useState(() => normSec(initialSection) || 'All');
@@ -216,6 +226,10 @@ export default function PracticeMode({ questions, customMockPapers = [], bookmar
   };
 
   const handleSubmitAnswer = (qId) => {
+    if (!currentStudent && onRequireAuth) {
+      onRequireAuth("Sign In or Register free to submit practice answers, view step-by-step solutions, and record accuracy stats!");
+      return;
+    }
     const userVal = userAnswers[qId];
     if (userVal === undefined || userVal === '') return;
 
@@ -594,7 +608,13 @@ export default function PracticeMode({ questions, customMockPapers = [], bookmar
 
             <div className="flex items-center gap-2">
               <button
-                onClick={() => onToggleBookmark(currentQ.id)}
+                onClick={() => {
+                  if (!currentStudent && onRequireAuth) {
+                    onRequireAuth("Sign In or Register free to bookmark questions and build your revision list!");
+                    return;
+                  }
+                  onToggleBookmark(currentQ.id);
+                }}
                 className={`p-1.5 rounded-lg border transition ${
                   bookmarks.includes(currentQ.id)
                     ? 'bg-amber-100 border-amber-300 text-amber-700 dark:bg-amber-950/80 dark:border-amber-800 dark:text-amber-300'
@@ -765,7 +785,13 @@ export default function PracticeMode({ questions, customMockPapers = [], bookmar
                 </button>
 
                 <button
-                  onClick={() => setActiveAITutorQuestion(currentQ)}
+                  onClick={() => {
+                    if (!currentStudent && onRequireAuth) {
+                      onRequireAuth("Sign In or Register free to ask questions to AI Doubt Assistant!");
+                      return;
+                    }
+                    setActiveAITutorQuestion(currentQ);
+                  }}
                   className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold text-xs shadow-sm transition cursor-pointer"
                 >
                   <Sparkles className="w-3.5 h-3.5" />

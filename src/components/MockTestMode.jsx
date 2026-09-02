@@ -37,7 +37,8 @@ export default function MockTestMode({
   onOpenCalc, 
   onFinishTest, 
   onEditQuestion, 
-  currentStudent 
+  currentStudent,
+  onRequireAuth
 }) {
   const [selectedPaper, setSelectedPaper] = useState(null);
   const [showingPreExamInstructions, setShowingPreExamInstructions] = useState(false);
@@ -84,6 +85,10 @@ export default function MockTestMode({
 
   // Step 1: User selects a paper -> Show Official GATE / TCS iON Pre-Exam Instructions Screen
   const handleSelectPaperForInstructions = (paper) => {
+    if (!currentStudent && onRequireAuth) {
+      onRequireAuth("Sign In or Register free to attempt 180-minute official CBT Mock Tests, record scores, and track your AIR Rank!");
+      return;
+    }
     setSelectedPaper(paper);
     setPaperInstructions(paper.instructions);
     const paperQs = [...(paper?.questions || [])].sort((a, b) => (a.qnum || 0) - (b.qnum || 0));
@@ -94,6 +99,10 @@ export default function MockTestMode({
 
   // Step 2: User confirms declaration and clicks "I am ready to begin" -> Start Active Exam
   const handleStartExam = () => {
+    if (!currentStudent && onRequireAuth) {
+      onRequireAuth("Sign In or Register free to start timed CBT Mock Tests!");
+      return;
+    }
     if (!hasAgreedDeclaration) return;
     setShowingPreExamInstructions(false);
 

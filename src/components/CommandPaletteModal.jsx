@@ -239,7 +239,10 @@ export default function CommandPaletteModal({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[150] flex items-start justify-center pt-16 sm:pt-24 px-4 bg-slate-950/80 backdrop-blur-md animate-in fade-in duration-150">
+    <div 
+      className="fixed inset-0 z-[150] flex items-start justify-center pt-16 sm:pt-24 px-4 bg-slate-950/80 backdrop-blur-md animate-in fade-in duration-150"
+      onClick={onClose}
+    >
       
       {/* Search Palette Container */}
       <div 
@@ -260,17 +263,27 @@ export default function CommandPaletteModal({
             }}
             className="flex-1 bg-transparent border-none outline-none text-slate-900 dark:text-white placeholder-slate-400 text-sm sm:text-base font-medium"
           />
-          {query && (
+          {query ? (
             <button
+              type="button"
               onClick={() => setQuery('')}
-              className="p-1 rounded-lg text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 cursor-pointer"
+              className="p-1.5 rounded-lg text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 cursor-pointer"
+              title="Clear Search Query"
             >
               <X className="w-4 h-4" />
             </button>
-          )}
-          <kbd className="hidden sm:inline-block px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-mono text-[10px] font-bold">
-            ESC
-          </kbd>
+          ) : null}
+
+          {/* Dedicated Close Button */}
+          <button
+            type="button"
+            onClick={onClose}
+            className="p-1.5 sm:px-2.5 sm:py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition cursor-pointer flex items-center gap-1.5 shrink-0"
+            title="Close Search (ESC)"
+          >
+            <X className="w-4 h-4" />
+            <span className="hidden sm:inline-block font-mono text-[10px] font-bold text-slate-400 dark:text-slate-400">ESC</span>
+          </button>
         </div>
 
         {/* Results List */}

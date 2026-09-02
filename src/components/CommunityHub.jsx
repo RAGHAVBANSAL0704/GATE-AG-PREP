@@ -11,7 +11,8 @@ export default function CommunityHub({
   questions = [],
   mockPapers = [],
   onOpenCalc,
-  onToggleBookmark
+  onToggleBookmark,
+  onRequireAuth
 }) {
   const [currentSubTab, setCurrentSubTab] = useState(activeSubTab);
 
@@ -102,11 +103,17 @@ export default function CommunityHub({
       {/* View Content */}
       <div className="w-full min-w-0">
         {currentSubTab === 'chat' && (
-          <CommunityChatHub currentStudent={currentStudent} />
+          <CommunityChatHub 
+            currentStudent={currentStudent} 
+            onRequireAuth={onRequireAuth} 
+          />
         )}
 
         {(currentSubTab === 'qa' || currentSubTab === 'discussions') && (
-          <CommunityDiscussions currentStudent={currentStudent} />
+          <CommunityDiscussions 
+            currentStudent={currentStudent} 
+            onRequireAuth={onRequireAuth} 
+          />
         )}
 
         {(currentSubTab === 'ai_tutor' || currentSubTab === 'aisolver' || currentSubTab === 'aitutor') && (
@@ -116,6 +123,7 @@ export default function CommunityHub({
             mockPapers={mockPapers}
             onOpenCalc={onOpenCalc}
             onToggleBookmark={onToggleBookmark}
+            onRequireAuth={onRequireAuth}
           />
         )}
       </div>

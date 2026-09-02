@@ -91,7 +91,7 @@ const INITIAL_POSTS = [
   }
 ];
 
-export default function CommunityDiscussions({ currentStudent }) {
+export default function CommunityDiscussions({ currentStudent, onRequireAuth }) {
   const [posts, setPosts] = useState(INITIAL_POSTS);
   const [selectedTopic, setSelectedTopic] = useState('All');
   const [newTitle, setNewTitle] = useState('');
@@ -150,6 +150,10 @@ export default function CommunityDiscussions({ currentStudent }) {
 
   const handleCreatePost = async (e) => {
     e.preventDefault();
+    if (!currentStudent && onRequireAuth) {
+      onRequireAuth("Sign In or Register free to ask questions & post discussions in the community!");
+      return;
+    }
     setErrorMsg('');
     setActionNotice('');
 
@@ -203,6 +207,10 @@ export default function CommunityDiscussions({ currentStudent }) {
   };
 
   const handleAddComment = (postId) => {
+    if (!currentStudent && onRequireAuth) {
+      onRequireAuth("Sign In or Register free to reply to community discussions!");
+      return;
+    }
     const draft = commentDrafts[postId];
     const attachedImg = commentImageAttachments[postId];
     if ((!draft || !draft.trim()) && !attachedImg) return;
@@ -307,6 +315,10 @@ export default function CommunityDiscussions({ currentStudent }) {
   };
 
   const handleUpvote = (postId) => {
+    if (!currentStudent && onRequireAuth) {
+      onRequireAuth("Sign In or Register free to upvote community discussions!");
+      return;
+    }
     setPosts(posts.map(p => p.id === postId ? { ...p, upvotes: p.upvotes + 1 } : p));
   };
 
@@ -430,7 +442,20 @@ export default function CommunityDiscussions({ currentStudent }) {
           <span>Ask a Question or Post a Shortcut Solution</span>
         </h3>
 
-        {isBanned ? (
+        {!currentStudent ? (
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 p-4 rounded-2xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 text-xs">
+            <span className="text-slate-500 dark:text-slate-400">
+              👋 You are in <strong>Guest Preview Mode</strong>. Sign in to ask questions, share shortcuts, and reply to peers.
+            </span>
+            <button
+              type="button"
+              onClick={() => onRequireAuth?.("Sign In or Register free to ask questions and post formula shortcuts in the community!")}
+              className="px-4 py-2 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs shrink-0 cursor-pointer shadow-xs transition"
+            >
+              Sign In to Post
+            </button>
+          </div>
+        ) : isBanned ? (
           <div className="p-3 rounded-2xl bg-rose-500/10 border border-rose-500/30 text-rose-300 text-xs font-bold flex items-center gap-2">
             <Ban className="w-4 h-4 text-rose-400 shrink-0" />
             <span>Your account is restricted from posting due to community moderation.</span>

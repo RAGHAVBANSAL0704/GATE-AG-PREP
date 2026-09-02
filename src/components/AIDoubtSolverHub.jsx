@@ -151,7 +151,8 @@ export default function AIDoubtSolverHub({
   questions = [],
   mockPapers = [],
   onOpenCalc,
-  onToggleBookmark
+  onToggleBookmark,
+  onRequireAuth
 }) {
   const [solverMode, setSolverMode] = useState('rigorous');
   const [query, setQuery] = useState('');
@@ -278,6 +279,10 @@ Choose your solver mode and ask any numerical problem or doubt below!`
   };
 
   const handleSolve = async (promptToUse = null) => {
+    if (!currentStudent && onRequireAuth) {
+      onRequireAuth("Sign In or Register free to ask questions and generate AI mathematical derivations!");
+      return;
+    }
     const textToQuery = (promptToUse || query).trim();
     if ((!textToQuery && !imagePreview) || isLoading) return;
 
@@ -318,6 +323,7 @@ Choose your solver mode and ask any numerical problem or doubt below!`
         sender: 'ai',
         text: res.text || 'Unable to derive solution. Please retry or rephrase your question.',
         isOffline: Boolean(res.isOffline),
+        sources: res.sources || [],
         solverMode: res.solverMode || solverMode,
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
       };
@@ -329,7 +335,7 @@ Choose your solver mode and ask any numerical problem or doubt below!`
         {
           id: `err_${Date.now()}`,
           sender: 'ai',
-          text: `⚠️ **Error Processing Query:** ${e.message}\nPlease retry or verify your prompt syntax.`,
+          text: `⚠️ **Error generating response**: ${e.message || 'Please check your connection and API key.'}`,
           timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
         }
       ]);
@@ -340,7 +346,7 @@ Choose your solver mode and ask any numerical problem or doubt below!`
 
   const handleSaveKey = () => {
     setStoredApiKey(apiKey);
-    setHasKey(Boolean(apiKey.trim()));
+    setHasKey(hasApiKey());
     setIsEditingKey(false);
   };
 
@@ -351,6 +357,10 @@ Choose your solver mode and ask any numerical problem or doubt below!`
   };
 
   const handleBookmarkSolution = (id, text) => {
+    if (!currentStudent && onRequireAuth) {
+      onRequireAuth("Sign In or Register free to bookmark AI derivations!");
+      return;
+    }
     if (onToggleBookmark) {
       onToggleBookmark({
         id: `ai_doubt_${Date.now()}`,

@@ -239,8 +239,8 @@ export default function Sidebar({
           {/* Bottom Controls: Minimal Student Profile & Quick Action Bar */}
           <div className="pt-3 border-t border-slate-200 dark:border-slate-800 space-y-2">
             
-            {/* Student Profile Strip */}
-            {currentStudent && (
+            {/* Student Profile Strip or Guest Mode Pill */}
+            {currentStudent ? (
               <div 
                 onClick={onOpenProfile}
                 className="block sm:hidden md:flex items-center gap-2.5 p-2 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800/80 cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800/80 transition group"
@@ -261,6 +261,29 @@ export default function Sidebar({
                     {currentStudent.student_type === 'hau' ? (currentStudent.admission_no || 'CCS HAU') : 'External'}
                   </div>
                 </div>
+              </div>
+            ) : (
+              <div 
+                onClick={() => onOpenProfile?.()}
+                className="block sm:hidden md:flex items-center justify-between gap-2 p-2 rounded-xl bg-emerald-500/10 border border-emerald-500/25 cursor-pointer hover:bg-emerald-500/20 transition group"
+                title="Sign In or Register"
+              >
+                <div className="flex items-center gap-2 min-w-0">
+                  <div className="w-7 h-7 rounded-full bg-emerald-500 text-white flex items-center justify-center overflow-hidden shrink-0 shadow-xs">
+                    <User className="w-3.5 h-3.5" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="text-[11px] font-bold text-emerald-600 dark:text-emerald-400 truncate">
+                      Guest Visitor
+                    </div>
+                    <div className="text-[9px] text-slate-400 font-medium truncate">
+                      Click to Sign In
+                    </div>
+                  </div>
+                </div>
+                <span className="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 bg-white dark:bg-slate-900 px-1.5 py-0.5 rounded-lg border border-emerald-500/20 shrink-0">
+                  Sign In
+                </span>
               </div>
             )}
 
