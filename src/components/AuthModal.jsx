@@ -30,6 +30,7 @@ import {
   FACULTY_SALUTATIONS,
   AGRI_ENGG_DEPARTMENTS
 } from '../services/authService';
+import { parseAdmissionRollNumber } from '../utils/rollNumberParser.js';
 
 export const CATEGORIZED_UNIVERSITIES = [
   {
@@ -192,17 +193,77 @@ export default function AuthModal({
   const [loginPassword, setLoginPassword] = useState('');
   const [showLoginPassword, setShowLoginPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(true);
+  const [isCapsLockOn, setIsCapsLockOn] = useState(false);
 
   // UI Feedback State
   const [errorMsg, setErrorMsg] = useState('');
   const [successMsg, setSuccessMsg] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
+  // Smart Roll Number / Admission Number Live Parser
+  const parsedRollInfo = useMemo(() => {
+    return parseAdmissionRollNumber(admissionNo, collegeName);
+  }, [admissionNo, collegeName]);
+
+  // Auto-sync academic year when valid roll number is detected
+  useEffect(() => {
+    if (parsedRollInfo.isValid && parsedRollInfo.academicYear) {
+      const yr = parsedRollInfo.academicYear;
+      if (yr.includes('1st Year')) setCurrentYearSem('1st Year / 1st-2nd Sem');
+      else if (yr.includes('2nd Year')) setCurrentYearSem('2nd Year / 3rd-4th Sem');
+      else if (yr.includes('3rd Year')) setCurrentYearSem('3rd Year / 5th-6th Sem');
+      else if (yr.includes('4th Year') || yr.includes('Final Year')) setCurrentYearSem('4th Year / 7th-8th Sem');
+      else if (yr.includes('Graduate') || yr.includes('Alum')) setCurrentYearSem('Graduated / Alum');
+    }
+  }, [parsedRollInfo]);
+
   // Load remembered login identifier on mount
   useEffect(() => {
     const remembered = getRememberedIdentifier();
     if (remembered) setLoginIdentifier(remembered);
   }, []);
+
+  // Handle Key CapsLock Detection
+  const handleKeyModifierCheck = (e) => {
+    if (e && typeof e.getModifierState === 'function') {
+      setIsCapsLockOn(e.getModifierState('CapsLock'));
+    }
+  };
+
+  // 1-Click Demo Profiles
+  const handleQuickDemoStudent = () => {
+    onLoginSuccess({
+      id: 'demo_student_aspirant_01',
+      full_name: 'Aditya Sharma (Demo Aspirant)',
+      username: 'aditya_gate_air1',
+      student_type: 'hau',
+      admission_no: '2022AE01BIV',
+      college_name: 'COAET CCS HAU Hisar',
+      current_year_sem: '4th Year / 7th-8th Sem',
+      email: 'demo.student@gateagprep.in',
+      mobile_number: '9876543210',
+      user_role: 'aspirant',
+      xp_points: 450,
+      break_xp: 120
+    });
+  };
+
+  const handleQuickDemoFaculty = () => {
+    onLoginSuccess({
+      id: 'demo_faculty_mentor_01',
+      full_name: 'Dr. Rajeshwar Singh (Faculty Mentor)',
+      username: 'dr_rajeshwar_fmpe',
+      faculty_title: 'Dr. (Prof.)',
+      department: 'Farm Machinery & Power Engineering (FMPE)',
+      college_name: 'COAET CCS HAU Hisar',
+      email: 'prof.rajeshwar@hau.ac.in',
+      mobile_number: '9812345678',
+      user_role: 'faculty_mentor',
+      is_faculty: true,
+      can_moderate: true,
+      xp_points: 1200
+    });
+  };
 
   const switchTab = (tab) => {
     setPrimaryTab(tab);
@@ -622,6 +683,8 @@ export default function AuthModal({
                     placeholder="Enter your password"
                     value={loginPassword}
                     onChange={(e) => setLoginPassword(e.target.value)}
+                    onKeyDown={handleKeyModifierCheck}
+                    onKeyUp={handleKeyModifierCheck}
                     className="w-full pl-9 pr-10 py-2.5 text-xs bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
                   />
                   <button
@@ -633,6 +696,12 @@ export default function AuthModal({
                     {showLoginPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                   </button>
                 </div>
+                {isCapsLockOn && (
+                  <div className="mt-1.5 px-2.5 py-1 rounded-lg bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 text-amber-700 dark:text-amber-300 text-[10px] font-bold flex items-center gap-1.5 animate-fadeIn">
+                    <AlertCircle className="w-3 h-3 text-amber-500" />
+                    <span>Caps Lock is ON</span>
+                  </div>
+                )}
               </div>
 
               <div className="flex items-center justify-between text-xs pt-1 pb-1">
@@ -669,7 +738,37 @@ export default function AuthModal({
                 )}
               </button>
 
-              <div className="text-center pt-3 text-xs text-slate-500 dark:text-slate-400">
+              {/* 1-Click Quick Demo Profiles */}
+              <div className="pt-3 border-t border-slate-200 dark:border-slate-800 space-y-2">
+                <div className="flex items-center justify-between text-[11px]">
+                  <span className="font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider text-[10px]">
+                    Quick Test Profiles
+                  </span>
+                  <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-extrabold">
+                    ⚡ 1-Click Access
+                  </span>
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  <button
+                    type="button"
+                    onClick={handleQuickDemoStudent}
+                    className="py-2 px-2.5 rounded-xl bg-gradient-to-r from-emerald-500/10 to-teal-500/10 border border-emerald-500/20 hover:border-emerald-500/40 text-emerald-700 dark:text-emerald-300 font-bold text-[11px] transition flex items-center justify-center gap-1.5 cursor-pointer shadow-xs hover:shadow-sm"
+                  >
+                    <Sparkles className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+                    <span className="truncate">Demo Aspirant</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={handleQuickDemoFaculty}
+                    className="py-2 px-2.5 rounded-xl bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 hover:border-indigo-500/40 text-indigo-700 dark:text-indigo-300 font-bold text-[11px] transition flex items-center justify-center gap-1.5 cursor-pointer shadow-xs hover:shadow-sm"
+                  >
+                    <Award className="w-3.5 h-3.5 text-indigo-500 shrink-0" />
+                    <span className="truncate">Demo Faculty</span>
+                  </button>
+                </div>
+              </div>
+
+              <div className="text-center pt-2 text-xs text-slate-500 dark:text-slate-400">
                 {portalRole === 'faculty' ? 'New faculty member? ' : "Don't have an account yet? "}
                 <button
                   type="button"
@@ -1065,55 +1164,110 @@ export default function AuthModal({
 
                 {/* HAU Admission No */}
                 {activeMode === 'signup_hau' && (
-                  <div className="sm:col-span-2">
-                    <label className="block font-semibold text-slate-700 dark:text-slate-300 mb-1">
-                      Admission No. (COAET HAU) *
-                    </label>
+                  <div className="sm:col-span-2 space-y-1.5">
+                    <div className="flex items-center justify-between">
+                      <label className="block font-semibold text-slate-700 dark:text-slate-300">
+                        Admission No. (COAET CCS HAU) *
+                      </label>
+                      <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold">
+                        Smart Auto-Detection
+                      </span>
+                    </div>
                     <input
                       type="text"
                       required
-                      placeholder="e.g. 2022AE01BIV or 2024AE32BIV"
+                      placeholder="e.g. 2022AE01BIV, 2023AE05BLII, or 2024AE32BIV"
                       value={admissionNo}
                       onChange={(e) => setAdmissionNo(e.target.value)}
                       className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 uppercase font-mono placeholder-slate-400 focus:outline-none focus:border-emerald-500"
                     />
+
+                    {/* Live Smart Detection Badge */}
+                    {parsedRollInfo.isValid && (
+                      <div className="p-2.5 rounded-xl bg-gradient-to-r from-emerald-500/15 via-teal-500/10 to-transparent border border-emerald-500/30 text-emerald-900 dark:text-emerald-200 text-xs flex items-center gap-2 animate-fadeIn">
+                        <Sparkles className="w-4 h-4 text-emerald-500 shrink-0" />
+                        <div className="min-w-0">
+                          <span className="font-extrabold text-[11px] block">
+                            ✨ Auto-Detected Profile:
+                          </span>
+                          <span className="text-[10px] text-slate-600 dark:text-slate-300">
+                            {parsedRollInfo.summaryBadge}
+                          </span>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 )}
 
                 {/* Other College Selector */}
                 {activeMode === 'signup_external' && (
-                  <div className="sm:col-span-2 space-y-1.5">
-                    <div className="flex items-center justify-between">
-                      <label className="block font-semibold text-slate-700 dark:text-slate-300">
-                        College / Agricultural University *
-                      </label>
-                      <span className="text-[10px] text-slate-400 font-medium">All-India ICAR, IIT & SAU Network</span>
+                  <div className="sm:col-span-2 space-y-3">
+                    <div className="space-y-1.5">
+                      <div className="flex items-center justify-between">
+                        <label className="block font-semibold text-slate-700 dark:text-slate-300">
+                          College / Agricultural University *
+                        </label>
+                        <span className="text-[10px] text-slate-400 font-medium">All-India ICAR, IIT & SAU Network</span>
+                      </div>
+                      <select
+                        value={collegeName}
+                        onChange={(e) => setCollegeName(e.target.value)}
+                        className="w-full px-3 py-2.5 bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 font-medium focus:outline-none focus:ring-2 focus:ring-emerald-500/30 focus:border-emerald-500 cursor-pointer text-xs"
+                      >
+                        {CATEGORIZED_UNIVERSITIES.map((catGroup, cIdx) => (
+                          <optgroup key={cIdx} label={catGroup.category} className="font-bold text-slate-900 dark:text-slate-200 bg-white dark:bg-slate-900">
+                            {catGroup.items.map((c, i) => (
+                              <option key={i} value={c} className="font-normal text-slate-800 dark:text-slate-300 py-1">
+                                {c}
+                              </option>
+                            ))}
+                          </optgroup>
+                        ))}
+                      </select>
+                      {collegeName === "Other Institute / Enter Manually" && (
+                        <input
+                          type="text"
+                          required
+                          placeholder="Enter full name of your college / university"
+                          value={customCollege}
+                          onChange={(e) => setCustomCollege(e.target.value)}
+                          className="w-full px-3 py-2.5 bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/30 focus:border-emerald-500 text-xs mt-1.5 animate-fadeIn"
+                        />
+                      )}
                     </div>
-                    <select
-                      value={collegeName}
-                      onChange={(e) => setCollegeName(e.target.value)}
-                      className="w-full px-3 py-2.5 bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 font-medium focus:outline-none focus:ring-2 focus:ring-emerald-500/30 focus:border-emerald-500 cursor-pointer text-xs"
-                    >
-                      {CATEGORIZED_UNIVERSITIES.map((catGroup, cIdx) => (
-                        <optgroup key={cIdx} label={catGroup.category} className="font-bold text-slate-900 dark:text-slate-200 bg-white dark:bg-slate-900">
-                          {catGroup.items.map((c, i) => (
-                            <option key={i} value={c} className="font-normal text-slate-800 dark:text-slate-300 py-1">
-                              {c}
-                            </option>
-                          ))}
-                        </optgroup>
-                      ))}
-                    </select>
-                    {collegeName === "Other Institute / Enter Manually" && (
+
+                    {/* Optional University Roll Number with Smart Detection */}
+                    <div className="space-y-1.5">
+                      <div className="flex items-center justify-between">
+                        <label className="block font-semibold text-slate-700 dark:text-slate-300">
+                          Roll No. / Student ID (Optional)
+                        </label>
+                        <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold">
+                          Auto-Detects Batch
+                        </span>
+                      </div>
                       <input
                         type="text"
-                        required
-                        placeholder="Enter full name of your college / university"
-                        value={customCollege}
-                        onChange={(e) => setCustomCollege(e.target.value)}
-                        className="w-full px-3 py-2.5 bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/30 focus:border-emerald-500 text-xs mt-1.5 animate-fadeIn"
+                        placeholder="e.g. 22AG10015 (IIT), 2022-AG-45 (PAU), or CTAE-2023-019"
+                        value={admissionNo}
+                        onChange={(e) => setAdmissionNo(e.target.value)}
+                        className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 uppercase font-mono placeholder-slate-400 focus:outline-none focus:border-emerald-500"
                       />
-                    )}
+
+                      {parsedRollInfo.isValid && (
+                        <div className="p-2.5 rounded-xl bg-gradient-to-r from-emerald-500/15 via-teal-500/10 to-transparent border border-emerald-500/30 text-emerald-900 dark:text-emerald-200 text-xs flex items-center gap-2 animate-fadeIn">
+                          <Sparkles className="w-4 h-4 text-emerald-500 shrink-0" />
+                          <div className="min-w-0">
+                            <span className="font-extrabold text-[11px] block">
+                              ✨ Auto-Detected Profile:
+                            </span>
+                            <span className="text-[10px] text-slate-600 dark:text-slate-300">
+                              {parsedRollInfo.summaryBadge}
+                            </span>
+                          </div>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 )}
 
