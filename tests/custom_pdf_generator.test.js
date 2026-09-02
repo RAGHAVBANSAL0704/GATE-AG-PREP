@@ -123,4 +123,33 @@ test('Custom Question Paper & PDF Generator Test Suite', async (t) => {
     assert.equal(html.includes('ANSWER KEY APPENDIX'), false, 'Should not render Answer Key when disabled');
     assert.equal(html.includes('DETAILED STEP-BY-STEP EXPLANATIONS'), false, 'Should not render Solutions when disabled');
   });
+
+  await t.test('correctly parses questions.json schema (correct_answer and solution properties)', () => {
+    const questionsJsonSample = [
+      {
+        id: 'GATE_2026_Q1',
+        question: 'Suresh said, “I did it yesterday.” Which one of the following options is the correct form of this sentence in indirect speech?',
+        options: {
+          A: 'Suresh said that I did it yesterday.',
+          B: 'Suresh says I did it yesterday.',
+          C: 'Suresh says that he did it the day before.',
+          D: 'Suresh said that he had done it the day before.'
+        },
+        correct_answer: 'D',
+        solution: 'Converting direct to indirect speech requires three simultaneous shifts: pronoun shift, tense back-shift, and adverbial shift.'
+      }
+    ];
+
+    const html = generateQuestionPaperHtml(questionsJsonSample, {
+      includeAnswerKey: true,
+      includeSolutions: true
+    });
+
+    // Check Answer Key
+    assert.ok(html.includes('<strong>D</strong>'), 'Answer key must extract correct_answer: D');
+
+    // Check Solution derivation
+    assert.ok(html.includes('tense back-shift'), 'Solution must extract solution text from questions.json format');
+    assert.equal(html.includes('Detailed solution will be added shortly'), false, 'Must not fallback to placeholder when solution exists');
+  });
 });
