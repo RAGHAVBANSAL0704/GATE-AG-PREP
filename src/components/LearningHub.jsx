@@ -4,7 +4,8 @@ import RevisionBank from './RevisionBank';
 import FormulaSheet from './FormulaSheet';
 import AgriSimulators from './AgriSimulators';
 import SpacedRepetitionFlashcards from './SpacedRepetitionFlashcards';
-import { Lightbulb, Bookmark, FileText, GraduationCap, Cpu, Brain, FlaskConical } from 'lucide-react';
+import AIDiagnosticRadarHub from './AIDiagnosticRadarHub';
+import { Lightbulb, Bookmark, FileText, GraduationCap, Cpu, Brain, FlaskConical, Sparkles } from 'lucide-react';
 
 export default function LearningHub({
   activeSubTab = 'concepts',
@@ -16,6 +17,7 @@ export default function LearningHub({
   onToggleBookmark,
   onOpenCalc,
   onEditQuestion,
+  onStartCustomTest,
   currentStudent
 }) {
   const [currentSubTab, setCurrentSubTab] = useState(activeSubTab);
@@ -35,7 +37,8 @@ export default function LearningHub({
 
   const subTabs = [
     { id: 'concepts', label: 'Core Concepts', icon: Lightbulb, color: 'text-blue-500 bg-blue-500/10 border-blue-500/20' },
-    { id: 'simulators', label: 'Physics Simulators', icon: Cpu, color: 'text-purple-500 bg-purple-500/10 border-purple-500/20' },
+    { id: 'radar', label: 'AI Weak-Area Radar', icon: Sparkles, color: 'text-purple-500 bg-purple-500/10 border-purple-500/20' },
+    { id: 'simulators', label: 'Physics Simulators', icon: Cpu, color: 'text-emerald-500 bg-emerald-500/10 border-emerald-500/20' },
     { id: 'flashcards', label: 'SM-2 Flashcards', icon: Brain, color: 'text-amber-500 bg-amber-500/10 border-amber-500/20' },
     { id: 'revision', label: 'Revision Bank', icon: Bookmark, color: 'text-indigo-500 bg-indigo-500/10 border-indigo-500/20' },
     { id: 'formulas', label: 'Formula Sheet', icon: FileText, color: 'text-cyan-500 bg-cyan-500/10 border-cyan-500/20' },
@@ -107,6 +110,16 @@ export default function LearningHub({
       <div className="w-full min-w-0">
         {currentSubTab === 'concepts' && (
           <ImportantConcepts />
+        )}
+
+        {currentSubTab === 'radar' && (
+          <AIDiagnosticRadarHub 
+            questions={questions}
+            customMockPapers={customMockPapers}
+            testAttempts={userStats?.testHistory || []}
+            onStartCustomTest={onStartCustomTest}
+            onOpenCalc={onOpenCalc}
+          />
         )}
 
         {currentSubTab === 'simulators' && (

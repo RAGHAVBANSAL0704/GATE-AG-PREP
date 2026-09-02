@@ -610,7 +610,7 @@ export default function App() {
               />
             )}
 
-            {['learninghub', 'concepts', 'simulators', 'flashcards', 'revision', 'formulas'].includes(activeTab) && (
+            {['learninghub', 'concepts', 'radar', 'simulators', 'flashcards', 'revision', 'formulas'].includes(activeTab) && (
               <LearningHub
                 activeSubTab={activeTab === 'learninghub' ? 'concepts' : activeTab}
                 onSubTabChange={(subTab) => setActiveTab(subTab)}
@@ -621,6 +621,7 @@ export default function App() {
                 onToggleBookmark={handleToggleBookmark}
                 onOpenCalc={() => setIsCalcOpen(true)}
                 onEditQuestion={(q) => setEditingQuestion(q)}
+                onStartCustomTest={handleStartCustomTest}
                 currentStudent={currentStudent}
                 onRequireAuth={handleOpenAuth}
               />
@@ -657,6 +658,9 @@ export default function App() {
               <PerformanceAnalytics 
                 currentStudent={currentStudent} 
                 questions={questions} 
+                customMockPapers={customMockPapers}
+                onStartCustomTest={handleStartCustomTest}
+                onOpenCalc={() => setIsCalcOpen(true)}
               />
             )}
 

@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import { getStudentTestAttempts } from '../services/testAttemptService';
 import { getOfficialSections, normalizeSectionTitle } from '../utils/syllabusTaxonomy.js';
+import AIDiagnosticRadarHub from './AIDiagnosticRadarHub.jsx';
 
 const SYLLABUS_SECTIONS = [
   'Section 1: Engineering Mathematics',
@@ -30,7 +31,14 @@ const SYLLABUS_SECTIONS = [
   'General Aptitude'
 ];
 
-export default function PerformanceAnalytics({ currentStudent, questions = [] }) {
+export default function PerformanceAnalytics({ 
+  currentStudent, 
+  questions = [], 
+  customMockPapers = [],
+  onStartCustomTest,
+  onOpenCalc
+}) {
+  const [activeSubTab, setActiveSubTab] = useState('overview'); // 'overview' | 'radar'
   const [attempts, setAttempts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedFilter, setSelectedFilter] = useState('all'); // 'all' | 'pyq' | 'custom_mock'
@@ -121,8 +129,8 @@ export default function PerformanceAnalytics({ currentStudent, questions = [] })
   return (
     <div className="max-w-6xl mx-auto space-y-6 animate-in fade-in duration-200">
       
-      {/* Header Banner */}
-      <div className="card-3d rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-5 shadow-xs">
+      {/* Header Banner & Subtab Switcher */}
+      <div className="card-3d rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-5 shadow-xs space-y-4">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
             <div className="flex items-center gap-2">
@@ -138,36 +146,82 @@ export default function PerformanceAnalytics({ currentStudent, questions = [] })
             </p>
           </div>
 
-          {/* Filters */}
-          <div className="flex flex-wrap items-center gap-2">
-            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-300">
-              <Filter className="w-3.5 h-3.5 text-blue-500" />
-              <select
-                value={selectedFilter}
-                onChange={(e) => setSelectedFilter(e.target.value)}
-                className="bg-transparent outline-none cursor-pointer"
-              >
-                <option value="all">All Tests & PYQs</option>
-                <option value="pyq">Official PYQs Only</option>
-                <option value="custom_mock">Custom CBT Mocks</option>
-              </select>
-            </div>
+          {/* Subtab Toggle Buttons */}
+          <div className="flex items-center gap-1.5 p-1 rounded-2xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+            <button
+              type="button"
+              onClick={() => setActiveSubTab('overview')}
+              className={`flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer ${
+                activeSubTab === 'overview'
+                  ? 'bg-white dark:bg-slate-900 text-blue-600 dark:text-blue-400 shadow-xs'
+                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+              }`}
+            >
+              <BarChart3 className="w-3.5 h-3.5" />
+              <span>Overview & Trends</span>
+            </button>
 
-            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-300">
-              <Calendar className="w-3.5 h-3.5 text-emerald-500" />
-              <select
-                value={dateRange}
-                onChange={(e) => setDateRange(e.target.value)}
-                className="bg-transparent outline-none cursor-pointer"
-              >
-                <option value="all">All Time</option>
-                <option value="7days">Last 7 Days</option>
-                <option value="30days">Last 30 Days</option>
-              </select>
-            </div>
+            <button
+              type="button"
+              onClick={() => setActiveSubTab('radar')}
+              className={`flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer ${
+                activeSubTab === 'radar'
+                  ? 'bg-purple-600 text-white shadow-md'
+                  : 'text-purple-600 dark:text-purple-400 hover:bg-purple-500/10'
+              }`}
+            >
+              <Sparkles className="w-3.5 h-3.5 animate-pulse" />
+              <span>AI Weak-Area Radar</span>
+            </button>
           </div>
         </div>
       </div>
+
+      {/* Render AI Diagnostic Radar Subtab */}
+      {activeSubTab === 'radar' && (
+        <AIDiagnosticRadarHub 
+          questions={questions}
+          customMockPapers={customMockPapers}
+          testAttempts={attempts}
+          onStartCustomTest={onStartCustomTest}
+          onOpenCalc={onOpenCalc}
+        />
+      )}
+
+      {/* Render Overview & Trends Subtab */}
+      {activeSubTab === 'overview' && (
+        <>
+          {/* Filters */}
+          <div className="flex flex-wrap items-center justify-between gap-3 bg-white dark:bg-slate-900 p-3.5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-xs">
+            <span className="text-xs font-bold text-slate-500">Filter History:</span>
+            <div className="flex flex-wrap items-center gap-2">
+              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-300">
+                <Filter className="w-3.5 h-3.5 text-blue-500" />
+                <select
+                  value={selectedFilter}
+                  onChange={(e) => setSelectedFilter(e.target.value)}
+                  className="bg-transparent outline-none cursor-pointer"
+                >
+                  <option value="all">All Tests & PYQs</option>
+                  <option value="pyq">Official PYQs Only</option>
+                  <option value="custom_mock">Custom CBT Mocks</option>
+                </select>
+              </div>
+
+              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-xs font-bold text-slate-700 dark:text-slate-300">
+                <Calendar className="w-3.5 h-3.5 text-emerald-500" />
+                <select
+                  value={dateRange}
+                  onChange={(e) => setDateRange(e.target.value)}
+                  className="bg-transparent outline-none cursor-pointer"
+                >
+                  <option value="all">All Time</option>
+                  <option value="7days">Last 7 Days</option>
+                  <option value="30days">Last 30 Days</option>
+                </select>
+              </div>
+            </div>
+          </div>
 
       {/* Top 4 KPI Metrics */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
@@ -467,10 +521,11 @@ export default function PerformanceAnalytics({ currentStudent, questions = [] })
                 })}
               </tbody>
             </table>
-          </div>
-        )}
-      </div>
-
+            </div>
+          )}
+        </div>
+      </>
+      )}
     </div>
   );
 }
