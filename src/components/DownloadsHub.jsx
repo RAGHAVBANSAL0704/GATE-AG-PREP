@@ -15,7 +15,8 @@ import {
   Loader2,
   BookOpen,
   CheckCircle2,
-  Check
+  Check,
+  FileDown
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import { downloadBulkZip } from '../utils/zipDownloader';
