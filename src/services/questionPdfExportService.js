@@ -74,7 +74,7 @@ export function generateQuestionPaperHtml(questions = [], options = {}) {
     const qType = (q.type || 'MCQ').toUpperCase();
     const qMarks = q.marks || 1;
     const qTextHtml = renderMathToHtmlString(q.question || q.text || '');
-    const qYear = q.year ? `GATE ${q.year}` : '';
+    const qSource = q.source_label || (q.year ? `GATE ${q.year}` : (q.mock_title || q.paper_title || ''));
     const qSection = q.section || '';
     const qTopic = q.topic || '';
 
@@ -121,9 +121,9 @@ export function generateQuestionPaperHtml(questions = [], options = {}) {
         <div class="question-header">
           <div class="q-num-badge">Q.${qNum}</div>
           <div class="q-meta">
+            ${qSource ? `<span class="tag tag-year">${escapeHtml(qSource)}</span>` : ''}
             ${qSection ? `<span class="tag tag-section">${escapeHtml(qSection)}</span>` : ''}
             ${qTopic ? `<span class="tag tag-topic">${escapeHtml(qTopic)}</span>` : ''}
-            ${qYear ? `<span class="tag tag-year">${escapeHtml(qYear)}</span>` : ''}
             <span class="tag tag-type">${qType}</span>
           </div>
           <div class="q-marks">[ ${qMarks} Mark${qMarks > 1 ? 's' : ''} ]</div>

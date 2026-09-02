@@ -288,7 +288,11 @@ export default function DownloadsHub({ questions = [], mockPapers = [], customMo
 
       {/* Main Content Render */}
       {vaultTab === 'generator' && (
-        <CustomPdfQuestionGenerator questions={questions} mockPapers={mockPapers} />
+        <CustomPdfQuestionGenerator 
+          questions={questions} 
+          mockPapers={mockPapers} 
+          customMockPapers={customMockPapers} 
+        />
       )}
 
       {vaultTab === 'official' && (

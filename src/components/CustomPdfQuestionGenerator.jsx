@@ -50,19 +50,67 @@ function normalizeSectionName(rawSec) {
   return rawSec;
 }
 
-export default function CustomPdfQuestionGenerator({ questions = [], mockPapers = [] }) {
-  // All pool questions combined
+export default function CustomPdfQuestionGenerator({ questions = [], mockPapers = [], customMockPapers = [] }) {
+  // All pool questions combined across Official PYQs, Mock Tests, and Practice Pools
   const allPoolQuestions = useMemo(() => {
-    const list = [...questions];
+    const combined = [];
+    const seenIds = new Set();
+    const seenTexts = new Set();
+
+    // 1. Add Official GATE PYQs from mockPapers (2007–2026)
     (mockPapers || []).forEach(p => {
-      (p.questions || []).forEach(q => {
-        if (!list.some(existing => existing.id === q.id)) {
-          list.push(q);
+      (p.questions || []).forEach((q, qIdx) => {
+        const key = q.id || `GATE_${p.year}_Q${q.qnum || qIdx + 1}`;
+        const textKey = (q.question || q.text || '').trim().toLowerCase().slice(0, 80);
+        if (!seenIds.has(key) && (!textKey || !seenTexts.has(textKey))) {
+          seenIds.add(key);
+          if (textKey) seenTexts.add(textKey);
+          combined.push({
+            ...q,
+            id: key,
+            source_origin: 'Official PYQ',
+            source_label: q.year ? `GATE ${q.year}` : (p.title || 'Official Paper')
+          });
         }
       });
     });
-    return list;
-  }, [questions, mockPapers]);
+
+    // 2. Add Full-Length Custom Mock Papers (Mock 01 to 18)
+    (customMockPapers || []).forEach(p => {
+      (p.questions || []).forEach((q, qIdx) => {
+        const key = q.id || `${p.id || 'MOCK'}_Q${q.qnum || qIdx + 1}`;
+        const textKey = (q.question || q.text || '').trim().toLowerCase().slice(0, 80);
+        if (!seenIds.has(key) && (!textKey || !seenTexts.has(textKey))) {
+          seenIds.add(key);
+          if (textKey) seenTexts.add(textKey);
+          combined.push({
+            ...q,
+            id: key,
+            source_origin: 'Mock Test',
+            source_label: p.title || `Custom Mock ${p.id || ''}`
+          });
+        }
+      });
+    });
+
+    // 3. Add Practice Bank Questions
+    (questions || []).forEach((q, qIdx) => {
+      const key = q.id || `PRACTICE_Q${qIdx + 1}`;
+      const textKey = (q.question || q.text || '').trim().toLowerCase().slice(0, 80);
+      if (!seenIds.has(key) && (!textKey || !seenTexts.has(textKey))) {
+        seenIds.add(key);
+        if (textKey) seenTexts.add(textKey);
+        combined.push({
+          ...q,
+          id: key,
+          source_origin: q.year ? 'Official PYQ' : 'Practice Bank',
+          source_label: q.year ? `GATE ${q.year}` : 'Practice Bank'
+        });
+      }
+    });
+
+    return combined;
+  }, [questions, mockPapers, customMockPapers]);
 
   // Section Filter: Multi-select array
   const [selectedSections, setSelectedSections] = useState(SYLLABUS_SECTIONS);
@@ -74,7 +122,8 @@ export default function CustomPdfQuestionGenerator({ questions = [], mockPapers 
   // Subtopic Filter: Multi-select array
   const [selectedSubtopics, setSelectedSubtopics] = useState([]);
 
-  // Attributes Filters
+  // Attributes & Source Filters
+  const [sourceFilter, setSourceFilter] = useState('all'); // 'all' | 'pyq' | 'mock' | 'practice'
   const [questionType, setQuestionType] = useState('all'); // 'all' | 'MCQ' | 'MSQ' | 'NAT'
   const [marksFilter, setMarksFilter] = useState('all'); // 'all' | '1' | '2'
   const [eraFilter, setEraFilter] = useState('all'); // 'all' | 'recent' (2020-2026) | 'mid' (2015-2019) | 'classic' (2007-2014)
@@ -148,6 +197,11 @@ export default function CustomPdfQuestionGenerator({ questions = [], mockPapers 
   // Filter Matching Questions
   const matchingQuestions = useMemo(() => {
     return allPoolQuestions.filter(q => {
+      // 0. Source Filter (PYQs, Mock Tests, Practice Bank)
+      if (sourceFilter === 'pyq' && q.source_origin !== 'Official PYQ') return false;
+      if (sourceFilter === 'mock' && q.source_origin !== 'Mock Test') return false;
+      if (sourceFilter === 'practice' && q.source_origin !== 'Practice Bank') return false;
+
       // 1. Section Filter
       const normSec = normalizeSectionName(q.section);
       if (!selectedSections.includes(normSec)) return false;
@@ -180,7 +234,7 @@ export default function CustomPdfQuestionGenerator({ questions = [], mockPapers 
 
       return true;
     });
-  }, [allPoolQuestions, selectedSections, selectedTopics, selectedSubtopics, questionType, marksFilter, eraFilter]);
+  }, [allPoolQuestions, sourceFilter, selectedSections, selectedTopics, selectedSubtopics, questionType, marksFilter, eraFilter]);
 
   // Slice and sort questions for final export
   const finalExportQuestions = useMemo(() => {
@@ -417,17 +471,34 @@ export default function CustomPdfQuestionGenerator({ questions = [], mockPapers 
             </div>
           </div>
 
-          {/* 3. QUESTION TYPES, MARKS & YEAR FILTERS */}
+          {/* 3. QUESTION SOURCE, TYPES, MARKS & YEAR FILTERS */}
           <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-5 sm:p-6 shadow-xs space-y-4">
             <div className="flex items-center gap-2">
               <Sliders className="w-4 h-4 text-purple-600 dark:text-purple-400" />
               <h3 className="text-sm font-extrabold text-slate-900 dark:text-white uppercase tracking-wider">
-                3. Question Attributes & Era
+                3. Question Source, Attributes & Era
               </h3>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
               
+              {/* Question Source Filter (PYQs + Full Mocks + Practice Pool) */}
+              <div className="space-y-1.5">
+                <label className="text-xs font-bold text-slate-700 dark:text-slate-300 flex items-center gap-1">
+                  <span>Question Source</span>
+                </label>
+                <select
+                  value={sourceFilter}
+                  onChange={(e) => setSourceFilter(e.target.value)}
+                  className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-medium text-slate-900 dark:text-slate-100 outline-none focus:border-purple-500 font-semibold"
+                >
+                  <option value="all">All Sources (PYQs + Mocks + Bank)</option>
+                  <option value="pyq">Official GATE PYQs (2007–2026)</option>
+                  <option value="mock">Full Custom Mocks (Mock 01–18)</option>
+                  <option value="practice">Curated Practice Bank</option>
+                </select>
+              </div>
+
               {/* Question Type */}
               <div className="space-y-1.5">
                 <label className="text-xs font-bold text-slate-700 dark:text-slate-300">
@@ -702,7 +773,10 @@ export default function CustomPdfQuestionGenerator({ questions = [], mockPapers 
                     <span className="font-extrabold text-emerald-600 dark:text-emerald-400">
                       Q.{idx + 1}
                     </span>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <span className="px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 font-mono text-[10px] font-bold border border-emerald-200 dark:border-emerald-800">
+                        {q.source_label || q.source_origin || (q.year ? `GATE ${q.year}` : 'Question')}
+                      </span>
                       <span className="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-mono text-[10px] font-bold">
                         {q.section || 'General'}
                       </span>
