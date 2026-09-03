@@ -259,6 +259,11 @@ html:not(.dark) .border-slate-100 {
   border-color: #E2E8F0 !important;
 }
 
+/* Ensure option buttons, nav pills, and non-solid interactive buttons maintain high-contrast dark ink */
+html:not(.dark) button:not([class*="bg-emerald-"]):not([class*="bg-blue-"]):not([class*="bg-indigo-"]):not([class*="bg-purple-"]):not([class*="bg-rose-"]):not([class*="bg-amber-600"]):not([class*="bg-slate-9"]):not([class*="bg-black"]):not(.btn-3d-primary):not(.btn-3d-emerald):not(.cbt-top-bar):not(.text-white) {
+  color: #0F172A;
+}
+
 /* Button & Badge Text Contrast Protection (White text stays pure white on solid colored backgrounds) */
 html:not(.dark) .bg-emerald-600,
 html:not(.dark) .bg-emerald-700,
