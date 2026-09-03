@@ -272,4 +272,38 @@ describe('Faculty Authentication & Registration Unit Tests', () => {
     assert.equal(dupEmail.isDuplicate, true);
   });
 
+  test('successfully registers student without mobile number and allows updating mobile later in profile', async () => {
+    // 1. Register with NO mobile number provided
+    const regNoMobile = await registerStudent({
+      studentType: 'external',
+      fullName: 'Meera Patel',
+      username: 'meera_patel',
+      gender: 'Female',
+      email: 'meera.patel@agri.edu',
+      dob: '2003-04-12',
+      collegeName: 'PAU Ludhiana'
+    });
+
+    assert.equal(regNoMobile.success, true);
+    assert.equal(regNoMobile.student.mobile_number, null);
+    assert.equal(regNoMobile.student.email, 'meera.patel@agri.edu');
+
+    // 2. Login using email and default DOB password
+    const loginRes = await loginStudent('meera.patel@agri.edu', '12/04/2003');
+    assert.equal(loginRes.success, true);
+    assert.equal(loginRes.student.username, 'meera_patel');
+
+    // 3. User updates mobile number later in Profile Section
+    const profileUpdate = await updateStudentProfile(regNoMobile.student.id, {
+      mobile_number: '9876501234'
+    });
+    assert.equal(profileUpdate.success, true);
+    assert.equal(profileUpdate.student.mobile_number, '9876501234');
+
+    // 4. Now user can even log in using the newly updated mobile number
+    const loginMobile = await loginStudent('9876501234', '12/04/2003');
+    assert.equal(loginMobile.success, true);
+    assert.equal(loginMobile.student.id, regNoMobile.student.id);
+  });
+
 });

@@ -164,13 +164,12 @@ export default function AuthModal({
 
   // Sub-tabs: 'login' | 'signup'
   const [primaryTab, setPrimaryTab] = useState('login'); // 'login' | 'signup'
-  const [activeMode, setActiveMode] = useState('signup_hau'); // 'signup_hau' | 'signup_external' | 'signup_visitor'
+  const [activeMode, setActiveMode] = useState('signup_hau'); // 'signup_hau' | 'signup_external'
 
   // Student Form Fields State
   const [fullName, setFullName] = useState('');
   const [username, setUsername] = useState('');
   const [gender, setGender] = useState('Male');
-  const [mobileNumber, setMobileNumber] = useState('');
   const [email, setEmail] = useState('');
   const [dob, setDob] = useState('');
   const [currentYearSem, setCurrentYearSem] = useState('3rd Year / 6th Sem');
@@ -289,15 +288,6 @@ export default function AuthModal({
       setErrorMsg('Please enter a valid Email Address (e.g. student@gmail.com).');
       return;
     }
-    if (!mobileNumber.trim()) {
-      setErrorMsg('Please enter your 10-digit Mobile Number.');
-      return;
-    }
-    const cleanMobileNum = mobileNumber.replace(/\D/g, '');
-    if (cleanMobileNum.length < 10) {
-      setErrorMsg('Please enter a valid 10-digit Mobile Number.');
-      return;
-    }
 
     if (activeMode === 'signup_hau') {
       const validation = validateHAUAdmissionNo(admissionNo);
@@ -307,8 +297,8 @@ export default function AuthModal({
       }
     }
 
-    const selectedCollege = activeMode === 'signup_visitor' 
-      ? 'Guest Visitor / GATE AG Aspirant'
+    const selectedCollege = activeMode === 'signup_hau'
+      ? 'COAET CCS HAU Hisar'
       : (collegeName === "Other Institute / Enter Manually" 
           ? (customCollege.trim() || "External Agricultural Institute")
           : collegeName);
@@ -316,18 +306,17 @@ export default function AuthModal({
     setIsLoading(true);
 
     try {
-      const studentType = activeMode === 'signup_hau' ? 'hau' : (activeMode === 'signup_visitor' ? 'visitor' : 'external');
+      const studentType = activeMode === 'signup_hau' ? 'hau' : 'external';
 
       const res = await registerStudent({
         studentType,
         fullName,
         username: cleanUsername,
         gender,
-        mobileNumber,
         email,
         dob,
-        currentYearSem: activeMode === 'signup_visitor' ? 'Guest Visitor' : currentYearSem,
-        admissionNo: activeMode === 'signup_hau' ? admissionNo.trim().toUpperCase() : '',
+        currentYearSem,
+        admissionNo: activeMode === 'signup_hau' ? admissionNo.trim().toUpperCase() : (admissionNo ? admissionNo.trim().toUpperCase() : ''),
         collegeName: selectedCollege,
         customPassword
       });
@@ -627,7 +616,7 @@ export default function AuthModal({
                     type="text"
                     required
                     autoComplete="username"
-                    placeholder={portalRole === 'faculty' ? 'e.g. prof.name@university.edu or 9876543210' : 'Username, Admission No, Email, or Mobile'}
+                    placeholder={portalRole === 'faculty' ? 'e.g. prof.name@university.edu or 9876543210' : 'Username, Admission No, or Email'}
                     value={loginIdentifier}
                     onChange={(e) => setLoginIdentifier(e.target.value)}
                     className="w-full pl-9 pr-3.5 py-2.5 text-xs bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
@@ -989,11 +978,11 @@ export default function AuthModal({
           {primaryTab === 'signup' && portalRole === 'student' && (
             <form onSubmit={handleStudentSignUp} className="space-y-4">
               {/* Category Mode Pills */}
-              <div className="flex rounded-xl bg-slate-100 dark:bg-slate-950/60 p-1 border border-slate-200 dark:border-slate-800 gap-1">
+              <div className="grid grid-cols-2 rounded-xl bg-slate-100 dark:bg-slate-950/60 p-1 border border-slate-200 dark:border-slate-800 gap-1">
                 <button
                   type="button"
                   onClick={() => { setActiveMode('signup_hau'); setErrorMsg(''); }}
-                  className={`flex-1 py-1.5 px-2 text-[11px] font-semibold rounded-lg transition-all flex items-center justify-center gap-1.5 ${
+                  className={`py-1.5 px-2 text-[11px] font-semibold rounded-lg transition-all flex items-center justify-center gap-1.5 ${
                     activeMode === 'signup_hau'
                       ? 'bg-white dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 font-bold shadow-sm'
                       : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
@@ -1006,7 +995,7 @@ export default function AuthModal({
                 <button
                   type="button"
                   onClick={() => { setActiveMode('signup_external'); setErrorMsg(''); }}
-                  className={`flex-1 py-1.5 px-2 text-[11px] font-semibold rounded-lg transition-all flex items-center justify-center gap-1.5 ${
+                  className={`py-1.5 px-2 text-[11px] font-semibold rounded-lg transition-all flex items-center justify-center gap-1.5 ${
                     activeMode === 'signup_external'
                       ? 'bg-white dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 font-bold shadow-sm'
                       : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
@@ -1014,19 +1003,6 @@ export default function AuthModal({
                 >
                   <Building2 className="w-3.5 h-3.5" />
                   <span>Other College</span>
-                </button>
-
-                <button
-                  type="button"
-                  onClick={() => { setActiveMode('signup_visitor'); setErrorMsg(''); }}
-                  className={`flex-1 py-1.5 px-2 text-[11px] font-semibold rounded-lg transition-all flex items-center justify-center gap-1.5 ${
-                    activeMode === 'signup_visitor'
-                      ? 'bg-white dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 font-bold shadow-sm'
-                      : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
-                  }`}
-                >
-                  <User className="w-3.5 h-3.5" />
-                  <span>Visitor Aspirant</span>
                 </button>
               </div>
 
@@ -1068,7 +1044,7 @@ export default function AuthModal({
                 </div>
 
                 {/* Email Address */}
-                <div>
+                <div className="sm:col-span-2">
                   <label className="block font-semibold text-slate-700 dark:text-slate-300 mb-1">
                     Email Address *
                   </label>
@@ -1082,26 +1058,6 @@ export default function AuthModal({
                       placeholder="student@example.com"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full pl-8 pr-3 py-2 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:border-emerald-500"
-                    />
-                  </div>
-                </div>
-
-                {/* Mobile Number */}
-                <div>
-                  <label className="block font-semibold text-slate-700 dark:text-slate-300 mb-1">
-                    Mobile Number *
-                  </label>
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
-                      <Phone className="w-3.5 h-3.5" />
-                    </div>
-                    <input
-                      type="tel"
-                      required
-                      placeholder="10-digit mobile number"
-                      value={mobileNumber}
-                      onChange={(e) => setMobileNumber(e.target.value)}
                       className="w-full pl-8 pr-3 py-2 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:border-emerald-500"
                     />
                   </div>
@@ -1251,25 +1207,23 @@ export default function AuthModal({
                   </div>
                 )}
 
-                {/* Year / Semester (Only for HAU & External) */}
-                {activeMode !== 'signup_visitor' && (
-                  <div className="sm:col-span-2">
-                    <label className="block font-semibold text-slate-700 dark:text-slate-300 mb-1">
-                      Current Year / Semester
-                    </label>
-                    <select
-                      value={currentYearSem}
-                      onChange={(e) => setCurrentYearSem(e.target.value)}
-                      className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 focus:outline-none focus:border-emerald-500"
-                    >
-                      <option value="1st Year / 1st-2nd Sem">1st Year / 1st-2nd Sem</option>
-                      <option value="2nd Year / 3rd-4th Sem">2nd Year / 3rd-4th Sem</option>
-                      <option value="3rd Year / 5th-6th Sem">3rd Year / 5th-6th Sem</option>
-                      <option value="4th Year / 7th-8th Sem">4th Year / 7th-8th Sem</option>
-                      <option value="Graduated / Alum">Graduated / Alum</option>
-                    </select>
-                  </div>
-                )}
+                {/* Year / Semester */}
+                <div className="sm:col-span-2">
+                  <label className="block font-semibold text-slate-700 dark:text-slate-300 mb-1">
+                    Current Year / Semester
+                  </label>
+                  <select
+                    value={currentYearSem}
+                    onChange={(e) => setCurrentYearSem(e.target.value)}
+                    className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 focus:outline-none focus:border-emerald-500"
+                  >
+                    <option value="1st Year / 1st-2nd Sem">1st Year / 1st-2nd Sem</option>
+                    <option value="2nd Year / 3rd-4th Sem">2nd Year / 3rd-4th Sem</option>
+                    <option value="3rd Year / 5th-6th Sem">3rd Year / 5th-6th Sem</option>
+                    <option value="4th Year / 7th-8th Sem">4th Year / 7th-8th Sem</option>
+                    <option value="Graduated / Alum">Graduated / Alum</option>
+                  </select>
+                </div>
 
                 {/* Custom Password */}
                 <div className="sm:col-span-2">

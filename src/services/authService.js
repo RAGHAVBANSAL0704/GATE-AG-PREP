@@ -401,14 +401,15 @@ export async function registerStudent(formData) {
     if (!collegeVal.isValid) return { success: false, message: collegeVal.message };
   }
 
-  const cleanMobile = sanitizeMobileNumber(formData.mobileNumber);
+  const cleanMobile = formData.mobileNumber ? sanitizeMobileNumber(formData.mobileNumber) : null;
   const cleanEmail = formData.email && formData.email.trim() ? formData.email.trim().toLowerCase() : null;
 
   if (!cleanEmail) {
     return { success: false, message: 'Email address is required for registration.' };
   }
-  if (!cleanMobile || cleanMobile.length < 10) {
-    return { success: false, message: 'Valid 10-digit mobile number is required for registration.' };
+  // Mobile number is optional during signup; users can update it later in their profile
+  if (cleanMobile && cleanMobile.length < 10) {
+    return { success: false, message: 'If provided, mobile number must be at least 10 digits.' };
   }
 
   const defaultPassword = formatDOBPassword(formData.dob);
@@ -417,7 +418,7 @@ export async function registerStudent(formData) {
     : defaultPassword;
   
   const passwordHash = await hashPassword(passwordToUse);
-  const studentType = formData.studentType;
+  const studentType = formData.studentType || 'hau';
 
   const cleanUsername = formData.username ? formData.username.trim().replace(/^@/, '').toLowerCase().replace(/[^a-z0-9_]/g, '') : null;
   if (!cleanUsername || cleanUsername.length < 3) {
@@ -429,15 +430,15 @@ export async function registerStudent(formData) {
     full_name: formData.fullName.trim(),
     username: cleanUsername,
     gender: formData.gender || 'Male',
-    mobile_number: cleanMobile,
+    mobile_number: cleanMobile || null,
     email: cleanEmail,
     email_verified: false,
     dob: formData.dob,
-    current_year_sem: formData.currentYearSem || (studentType === 'visitor' ? 'Visitor Guest' : '3rd Year / 6th Sem'),
-    admission_no: studentType === 'hau' && formData.admissionNo ? formData.admissionNo.trim().toUpperCase() : null,
-    college_name: studentType === 'visitor'
-      ? 'Guest Visitor / GATE AG Aspirant'
-      : (studentType === 'external' ? formData.collegeName : 'COAET CCS HAU Hisar'),
+    current_year_sem: formData.currentYearSem || '3rd Year / 6th Sem',
+    admission_no: studentType === 'hau' && formData.admissionNo ? formData.admissionNo.trim().toUpperCase() : (formData.admissionNo ? formData.admissionNo.trim().toUpperCase() : null),
+    college_name: studentType === 'hau' 
+      ? 'COAET CCS HAU Hisar' 
+      : (formData.collegeName || 'External Agricultural Institute'),
     password_hash: passwordHash,
     has_custom_password: Boolean(formData.customPassword && formData.customPassword.trim()),
     profile_updates_count: 0,
