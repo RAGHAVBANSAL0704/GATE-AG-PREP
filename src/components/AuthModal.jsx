@@ -186,7 +186,6 @@ export default function AuthModal({
   const [customDepartment, setCustomDepartment] = useState('');
   const [facultyInstitute, setFacultyInstitute] = useState('COAET CCS HAU Hisar (Campus Student)');
   const [customFacultyInstitute, setCustomFacultyInstitute] = useState('');
-  const [facultyMobile, setFacultyMobile] = useState('');
   const [facultyEmail, setFacultyEmail] = useState('');
   const [facultyPassword, setFacultyPassword] = useState('');
   const [showFacultyPassword, setShowFacultyPassword] = useState(false);
@@ -364,16 +363,6 @@ export default function AuthModal({
       return;
     }
 
-    if (!facultyMobile.trim()) {
-      setErrorMsg('Please enter your 10-digit mobile number.');
-      return;
-    }
-    const cleanMobileNum = facultyMobile.replace(/\D/g, '');
-    if (cleanMobileNum.length < 10) {
-      setErrorMsg('Please enter a valid 10-digit mobile number.');
-      return;
-    }
-
     const effectiveDept = facultyDepartment === 'Other / Allied Department'
       ? (customDepartment.trim() || 'Agricultural Engineering')
       : facultyDepartment;
@@ -395,7 +384,6 @@ export default function AuthModal({
         fullName: facultyFullName,
         department: effectiveDept,
         institute: effectiveInst,
-        mobileNumber: facultyMobile,
         email: facultyEmail,
         password: facultyPassword
       });
@@ -408,7 +396,7 @@ export default function AuthModal({
       } else if (res.isDuplicate) {
         setErrorMsg(res.message);
         setTimeout(() => {
-          setLoginIdentifier(res.prefillIdentifier || facultyEmail || facultyMobile);
+          setLoginIdentifier(res.prefillIdentifier || facultyEmail);
           switchTab('login');
           setErrorMsg('An existing faculty account was found. Please sign in.');
         }, 1200);
@@ -606,7 +594,7 @@ export default function AuthModal({
             <form onSubmit={handleLogin} className="space-y-4">
               <div>
                 <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
-                  {portalRole === 'faculty' ? 'Faculty Email, Mobile, or Username' : 'Account Identifier'}
+                  {portalRole === 'faculty' ? 'Faculty Email or Username' : 'Account Identifier'}
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
@@ -616,7 +604,7 @@ export default function AuthModal({
                     type="text"
                     required
                     autoComplete="username"
-                    placeholder={portalRole === 'faculty' ? 'e.g. prof.name@university.edu or 9876543210' : 'Username, Admission No, or Email'}
+                    placeholder={portalRole === 'faculty' ? 'e.g. prof.name@university.edu or @prof_username' : 'Username, Admission No, or Email'}
                     value={loginIdentifier}
                     onChange={(e) => setLoginIdentifier(e.target.value)}
                     className="w-full pl-9 pr-3.5 py-2.5 text-xs bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
@@ -635,7 +623,7 @@ export default function AuthModal({
                     </span>
                   ) : (
                     <span className="text-[11px] text-indigo-500 dark:text-indigo-400 font-mono text-[10px]">
-                      Default: Faculty@Last4Digits
+                      Default: Faculty@2026
                     </span>
                   )}
                 </div>
@@ -870,9 +858,9 @@ export default function AuthModal({
                 </div>
 
                 {/* Email Address */}
-                <div className="sm:col-span-6">
+                <div className="sm:col-span-12">
                   <label className="block font-semibold text-slate-700 dark:text-slate-300 mb-1">
-                    E-mail Address *
+                    Official / Academic E-mail Address *
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
@@ -889,26 +877,6 @@ export default function AuthModal({
                   </div>
                 </div>
 
-                {/* Mobile Number */}
-                <div className="sm:col-span-6">
-                  <label className="block font-semibold text-slate-700 dark:text-slate-300 mb-1">
-                    Mobile Number *
-                  </label>
-                  <div className="relative">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
-                      <Phone className="w-3.5 h-3.5" />
-                    </div>
-                    <input
-                      type="tel"
-                      required
-                      placeholder="10-digit mobile number"
-                      value={facultyMobile}
-                      onChange={(e) => setFacultyMobile(e.target.value)}
-                      className="w-full pl-8 pr-3 py-2 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:border-indigo-500"
-                    />
-                  </div>
-                </div>
-
                 {/* Password */}
                 <div className="sm:col-span-12">
                   <div className="flex items-center justify-between mb-1">
@@ -916,7 +884,7 @@ export default function AuthModal({
                       Faculty Account Password (Optional)
                     </label>
                     <span className="text-[10px] text-slate-400">
-                      Default: Faculty@Last4Digits
+                      Default: Faculty@2026
                     </span>
                   </div>
                   <div className="relative">

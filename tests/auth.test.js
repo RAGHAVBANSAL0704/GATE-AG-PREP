@@ -272,6 +272,38 @@ describe('Faculty Authentication & Registration Unit Tests', () => {
     assert.equal(dupEmail.isDuplicate, true);
   });
 
+  test('successfully registers faculty without mobile number and verifies login', async () => {
+    const regFaculty = await registerFaculty({
+      titlePrefix: 'Prof.',
+      fullName: 'Sunil Kumar Rao',
+      department: 'Processing & Food Engineering (PFE / APFE)',
+      institute: 'IIT Kharagpur',
+      email: 'prof.sunil@iitkgp.ac.in',
+      password: 'FacultySecret@2026'
+    });
+
+    assert.equal(regFaculty.success, true);
+    assert.equal(regFaculty.student.mobile_number, null);
+    assert.equal(regFaculty.student.is_faculty, true);
+    assert.equal(regFaculty.student.display_name, 'Prof. Sunil Kumar Rao');
+
+    // Login using official email
+    const loginRes = await loginFaculty('prof.sunil@iitkgp.ac.in', 'FacultySecret@2026');
+    assert.equal(loginRes.success, true);
+    assert.equal(loginRes.student.id, regFaculty.student.id);
+
+    // Profile update with mobile number
+    const updateRes = await updateStudentProfile(regFaculty.student.id, {
+      mobile_number: '9811122233'
+    });
+    assert.equal(updateRes.success, true);
+    assert.equal(updateRes.student.mobile_number, '9811122233');
+
+    // Login via newly added mobile
+    const loginMobile = await loginFaculty('9811122233', 'FacultySecret@2026');
+    assert.equal(loginMobile.success, true);
+  });
+
   test('successfully registers student without mobile number and allows updating mobile later in profile', async () => {
     // 1. Register with NO mobile number provided
     const regNoMobile = await registerStudent({

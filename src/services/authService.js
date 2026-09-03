@@ -591,7 +591,7 @@ export async function registerFaculty(formData) {
     if (!instVal.isValid) return { success: false, message: instVal.message };
   }
 
-  const cleanMobile = sanitizeMobileNumber(formData.mobileNumber);
+  const cleanMobile = formData.mobileNumber ? sanitizeMobileNumber(formData.mobileNumber) : null;
   const cleanEmail = formData.email && formData.email.trim() ? formData.email.trim().toLowerCase() : null;
 
   if (!cleanEmail) {
@@ -602,8 +602,9 @@ export async function registerFaculty(formData) {
     return { success: false, message: 'Please enter a valid email address (e.g. faculty@university.edu or gmail.com).' };
   }
 
-  if (!cleanMobile || cleanMobile.length < 10) {
-    return { success: false, message: 'Valid 10-digit mobile number is required for faculty registration.' };
+  // Mobile number is optional during signup; faculty can update it later in their profile
+  if (cleanMobile && cleanMobile.length < 10) {
+    return { success: false, message: 'If provided, mobile number must be at least 10 digits.' };
   }
 
   const department = formData.department ? formData.department.trim() : 'Agricultural Engineering';
@@ -616,14 +617,18 @@ export async function registerFaculty(formData) {
   if (!cleanUsername || cleanUsername.length < 3) {
     const prefixKey = titlePrefix.toLowerCase().replace(/[^a-z]/g, '');
     const nameKey = cleanFullName.toLowerCase().replace(/[^a-z0-9]/g, '_').substring(0, 15);
-    cleanUsername = `${prefixKey}_${nameKey}_${cleanMobile.slice(-4)}`;
+    const idSuffix = cleanMobile ? cleanMobile.slice(-4) : (cleanEmail ? cleanEmail.split('@')[0].slice(-4).toLowerCase() : Math.floor(1000 + Math.random() * 9000));
+    cleanUsername = `${prefixKey}_${nameKey}_${idSuffix}`;
   }
 
+  const defaultFacultyPassword = cleanMobile ? `Faculty@${cleanMobile.slice(-4)}` : 'Faculty@2026';
   const plainPassword = formData.password && formData.password.trim().length >= 6
     ? formData.password.trim()
-    : (formData.customPassword && formData.customPassword.trim().length >= 6 ? formData.customPassword.trim() : `Faculty@${cleanMobile.slice(-4)}`);
+    : (formData.customPassword && formData.customPassword.trim().length >= 6 ? formData.customPassword.trim() : defaultFacultyPassword);
 
   const passwordHash = await hashPassword(plainPassword);
+
+  const admSuffix = cleanMobile ? cleanMobile.slice(-4) : (cleanEmail ? cleanEmail.split('@')[0].slice(-4).toUpperCase() : Math.floor(1000 + Math.random() * 9000));
 
   const facultyPayload = {
     role: 'faculty',
@@ -639,10 +644,10 @@ export async function registerFaculty(formData) {
     institute: institute,
     dob: formData.dob || '1990-01-01',
     current_year_sem: `Faculty • ${department}`,
-    mobile_number: cleanMobile,
+    mobile_number: cleanMobile || null,
     email: cleanEmail,
     email_verified: true,
-    admission_no: `FAC-${cleanMobile.slice(-4)}`,
+    admission_no: formData.admissionNo || `FAC-${admSuffix}`,
     password_hash: passwordHash,
     has_custom_password: true,
     profile_updates_count: 0,
