@@ -22,12 +22,15 @@ import {
   CheckSquare,
   Shield,
   User,
-  AlertCircle
+  AlertCircle,
+  Maximize,
+  Minimize
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import { evaluateQuestion } from '../utils/scoring.js';
 import { saveTestAttempt } from '../services/testAttemptService';
 import { calculateAttemptXP, awardStudentXP } from '../services/leaderboardService';
+import { GATE_AG_FORMULAS } from '../data/formulas';
 
 export default function MockTestMode({ 
   mockPapers = [], 
@@ -65,6 +68,34 @@ export default function MockTestMode({
   const [showInstructionsModal, setShowInstructionsModal] = useState(false);
   const [showSubmitModal, setShowSubmitModal] = useState(false);
   const [showMobilePalette, setShowMobilePalette] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [paletteFilter, setPaletteFilter] = useState('ALL'); // 'ALL' | 'MARKED' | 'UNANSWERED' | 'ANSWERED'
+  const [showFormulaSheetModal, setShowFormulaSheetModal] = useState(false);
+  const [selectedFormulaCat, setSelectedFormulaCat] = useState('All');
+
+  useEffect(() => {
+    const onFsChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
+    document.addEventListener('fullscreenchange', onFsChange);
+    return () => document.removeEventListener('fullscreenchange', onFsChange);
+  }, []);
+
+  const toggleFullscreen = async () => {
+    try {
+      if (!document.fullscreenElement) {
+        if (document.documentElement.requestFullscreen) {
+          await document.documentElement.requestFullscreen();
+        }
+      } else {
+        if (document.exitFullscreen) {
+          await document.exitFullscreen();
+        }
+      }
+    } catch (err) {
+      console.warn("Fullscreen toggle error:", err);
+    }
+  };
 
   const [realTimeStr, setRealTimeStr] = useState(() => new Date().toLocaleTimeString());
 
@@ -723,12 +754,30 @@ export default function MockTestMode({
           </div>
 
           <button
+            onClick={toggleFullscreen}
+            className="px-3 py-1.5 rounded-lg bg-[#ffffff]/10 hover:bg-[#ffffff]/20 border border-white/30 text-white font-bold text-xs flex items-center gap-1.5 transition cursor-pointer"
+            title={isFullscreen ? "Exit Fullscreen" : "Enter Exam Fullscreen Mode"}
+          >
+            {isFullscreen ? <Minimize className="w-4 h-4 text-emerald-300" /> : <Maximize className="w-4 h-4 text-emerald-300" />}
+            <span className="hidden md:inline">{isFullscreen ? 'Exit Full' : 'Fullscreen'}</span>
+          </button>
+
+          <button
             onClick={onOpenCalc}
             className="px-3 py-1.5 rounded-lg bg-[#ffffff]/10 hover:bg-[#ffffff]/20 border border-white/30 text-white font-bold text-xs flex items-center gap-1.5 transition cursor-pointer"
             title="Open Scientific Virtual Calculator"
           >
             <Calculator className="w-4 h-4 text-blue-200" />
-            <span>Calculator</span>
+            <span className="hidden sm:inline">Calculator</span>
+          </button>
+
+          <button
+            onClick={() => setShowFormulaSheetModal(true)}
+            className="px-3 py-1.5 rounded-lg bg-[#ffffff]/10 hover:bg-[#ffffff]/20 border border-white/30 text-white font-bold text-xs flex items-center gap-1.5 transition cursor-pointer"
+            title="Open Quick Formula Sheet Reference"
+          >
+            <BookOpen className="w-4 h-4 text-teal-300" />
+            <span className="hidden md:inline">Formulas</span>
           </button>
 
           <button
@@ -1064,34 +1113,78 @@ export default function MockTestMode({
               </span>
             </div>
 
-            <div className="grid grid-cols-5 sm:grid-cols-6 gap-2 max-h-64 overflow-y-auto pr-1">
-              {sectionQuestions.map((q) => {
-                const targetIdx = paperQuestions.findIndex(pQ => pQ.id === q.id);
-                const st = questionStates[q.id] || 'NOT_VISITED';
-                const isCur = targetIdx === currentQIndex;
-
-                let btnBg = "bg-slate-100 text-slate-800 border-slate-300";
-                if (st === 'ANSWERED') btnBg = "bg-[#2E7D32] text-white border-[#2E7D32]";
-                else if (st === 'NOT_ANSWERED') btnBg = "bg-[#E53935] text-white border-[#E53935]";
-                else if (st === 'MARKED') btnBg = "bg-[#7B1FA2] text-white border-[#7B1FA2]";
-                else if (st === 'ANSWERED_MARKED') btnBg = "bg-[#7B1FA2] text-white border-[#7B1FA2] ring-2 ring-emerald-500";
-
-                return (
-                  <button
-                    key={q.id}
-                    onClick={() => handleJumpToQuestion(targetIdx)}
-                    className={`h-9 rounded-lg font-bold text-xs flex items-center justify-center transition border shadow-2xs cursor-pointer relative ${btnBg} ${
-                      isCur ? 'ring-3 ring-[#0B4A8F] scale-105 font-black' : ''
-                    }`}
-                  >
-                    <span>{q.qnum}</span>
-                    {st === 'ANSWERED_MARKED' && (
-                      <span className="w-2 h-2 rounded-full bg-emerald-400 absolute top-0.5 right-0.5"></span>
-                    )}
-                  </button>
-                );
-              })}
+            {/* Question Palette Filter Pills */}
+            <div className="flex items-center gap-1 overflow-x-auto pb-1">
+              {[
+                { id: 'ALL', label: `All (${sectionQuestions.length})` },
+                { id: 'MARKED', label: `Review (${sectionQuestions.filter(q => (questionStates[q.id] || '').includes('MARKED')).length})` },
+                { id: 'UNANSWERED', label: `Unattempted (${sectionQuestions.filter(q => questionStates[q.id] === 'NOT_ANSWERED' || !questionStates[q.id] || questionStates[q.id] === 'NOT_VISITED').length})` },
+                { id: 'ANSWERED', label: `Done (${sectionQuestions.filter(q => questionStates[q.id] === 'ANSWERED' || questionStates[q.id] === 'ANSWERED_MARKED').length})` },
+              ].map(f => (
+                <button
+                  key={f.id}
+                  type="button"
+                  onClick={() => setPaletteFilter(f.id)}
+                  className={`px-2 py-1 rounded-md text-[10px] font-bold whitespace-nowrap transition cursor-pointer ${
+                    paletteFilter === f.id
+                      ? 'bg-[#0B4A8F] text-white shadow-2xs font-extrabold'
+                      : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
+                  }`}
+                >
+                  {f.label}
+                </button>
+              ))}
             </div>
+
+            {(() => {
+              const displayedQuestions = sectionQuestions.filter(q => {
+                if (paletteFilter === 'ALL') return true;
+                const st = questionStates[q.id] || 'NOT_VISITED';
+                if (paletteFilter === 'MARKED') return st === 'MARKED' || st === 'ANSWERED_MARKED';
+                if (paletteFilter === 'UNANSWERED') return st === 'NOT_ANSWERED' || st === 'NOT_VISITED';
+                if (paletteFilter === 'ANSWERED') return st === 'ANSWERED' || st === 'ANSWERED_MARKED';
+                return true;
+              });
+
+              if (displayedQuestions.length === 0) {
+                return (
+                  <div className="p-4 text-center text-slate-400 text-xs">
+                    No questions matching this filter.
+                  </div>
+                );
+              }
+
+              return (
+                <div className="grid grid-cols-5 sm:grid-cols-6 gap-2 max-h-64 overflow-y-auto pr-1">
+                  {displayedQuestions.map((q) => {
+                    const targetIdx = paperQuestions.findIndex(pQ => pQ.id === q.id);
+                    const st = questionStates[q.id] || 'NOT_VISITED';
+                    const isCur = targetIdx === currentQIndex;
+
+                    let btnBg = "bg-slate-100 text-slate-800 border-slate-300";
+                    if (st === 'ANSWERED') btnBg = "bg-[#2E7D32] text-white border-[#2E7D32]";
+                    else if (st === 'NOT_ANSWERED') btnBg = "bg-[#E53935] text-white border-[#E53935]";
+                    else if (st === 'MARKED') btnBg = "bg-[#7B1FA2] text-white border-[#7B1FA2]";
+                    else if (st === 'ANSWERED_MARKED') btnBg = "bg-[#7B1FA2] text-white border-[#7B1FA2] ring-2 ring-emerald-500";
+
+                    return (
+                      <button
+                        key={q.id}
+                        onClick={() => handleJumpToQuestion(targetIdx)}
+                        className={`h-9 rounded-lg font-bold text-xs flex items-center justify-center transition border shadow-2xs cursor-pointer relative ${btnBg} ${
+                          isCur ? 'ring-3 ring-[#0B4A8F] scale-105 font-black' : ''
+                        }`}
+                      >
+                        <span>{q.qnum}</span>
+                        {st === 'ANSWERED_MARKED' && (
+                          <span className="w-2 h-2 rounded-full bg-emerald-400 absolute top-0.5 right-0.5"></span>
+                        )}
+                      </button>
+                    );
+                  })}
+                </div>
+              );
+            })()}
           </div>
 
         </div>
@@ -1172,6 +1265,66 @@ export default function MockTestMode({
               >
                 Yes, Submit Final
               </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* MODAL 4: FORMULA QUICK-SHEET REFERENCE */}
+      {showFormulaSheetModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-md animate-in fade-in">
+          <div className="w-full max-w-4xl max-h-[85vh] bg-white border border-slate-300 rounded-2xl shadow-2xl overflow-hidden flex flex-col">
+            <div className="bg-[#0B4A8F] text-white p-4 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <BookOpen className="w-5 h-5 text-teal-300" />
+                <h3 className="font-extrabold text-sm uppercase text-white">GATE AG Formula Reference Sheet</h3>
+              </div>
+              <button onClick={() => setShowFormulaSheetModal(false)} className="text-white hover:text-blue-200 cursor-pointer">
+                <X className="w-5 h-5 text-white" />
+              </button>
+            </div>
+
+            {/* Category Pills */}
+            <div className="p-3 bg-slate-50 border-b border-slate-200 flex items-center gap-1.5 overflow-x-auto text-xs scrollbar-none">
+              {['All', ...GATE_AG_FORMULAS.map(c => c.category)].map(cat => (
+                <button
+                  key={cat}
+                  onClick={() => setSelectedFormulaCat(cat)}
+                  className={`px-3 py-1.5 rounded-lg font-bold whitespace-nowrap transition cursor-pointer ${
+                    selectedFormulaCat === cat
+                      ? 'bg-[#0B4A8F] text-white'
+                      : 'bg-white border border-slate-300 text-slate-700 hover:bg-slate-100'
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+
+            {/* Formulas List */}
+            <div className="p-6 overflow-y-auto space-y-4 divide-y divide-slate-200 bg-white">
+              {GATE_AG_FORMULAS
+                .filter(cat => selectedFormulaCat === 'All' || cat.category === selectedFormulaCat)
+                .map((catGroup, cIdx) => (
+                  <div key={cIdx} className="pt-4 first:pt-0 space-y-3">
+                    <h4 className="text-xs font-black text-[#0B4A8F] uppercase tracking-wider">
+                      {catGroup.category}
+                    </h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                      {catGroup.formulas.map((f, fIdx) => (
+                        <div key={fIdx} className="p-3 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5 text-xs">
+                          <div className="font-bold text-slate-900">{f.title}</div>
+                          <div className="p-2 rounded bg-white border border-slate-200 overflow-x-auto">
+                            <MathRenderer content={`$$${f.formula}$$`} />
+                          </div>
+                          {f.explanation && (
+                            <p className="text-[11px] text-slate-600 leading-snug">{f.explanation}</p>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
             </div>
           </div>
         </div>

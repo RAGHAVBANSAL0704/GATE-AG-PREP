@@ -35,7 +35,7 @@
         "D": "imaginary"
       },
       "correct_answer": "B",
-      "solution": "Answer: B\nExplanation:\n\u2022 \"Despite\" signals a contrast: strong opposition, yet a unanimous pass. \"Vehement\" (forceful, intense) supplies the necessary contrast; the weaker options do not.\nWhy the other options are wrong:\n(A) \"Tacit\" means unspoken/implied \u2014 too weak to justify \"despite\" against a unanimous outcome.\n(B) Correct \u2014 supplies the necessary contrast with \"unanimously\".\n(C) Negligible opposition would not need \"despite\" to explain a unanimous pass.\n(D) Imaginary opposition is not real opposition at all, making \"despite\" nonsensical.",
+      "solution": "Answer: B\nExplanation:\n• \"Despite\" signals a contrast: strong opposition, yet a unanimous pass. \"Vehement\" (forceful, intense) supplies the necessary contrast; the weaker options do not.\nWhy the other options are wrong:\n(A) \"Tacit\" means unspoken/implied — too weak to justify \"despite\" against a unanimous outcome.\n(B) Correct — supplies the necessary contrast with \"unanimously\".\n(C) Negligible opposition would not need \"despite\" to explain a unanimous pass.\n(D) Imaginary opposition is not real opposition at all, making \"despite\" nonsensical.",
       "isCustomUploaded": true
     },
     {
@@ -57,7 +57,7 @@
         "D": "Maintanance"
       },
       "correct_answer": "C",
-      "solution": "Answer: C\nExplanation:\n\u2022 The correct spelling is \"Maintenance\" \u2014 note the \"e\" after \"Maint\" and before \"nance\".\nWhy the other options are wrong:\n(A) Incorrectly inserts \"ai\" in the second syllable.\n(B) Incorrectly uses \"e\" where \"a\" is needed in the final syllable.\n(C) Correct.\n(D) Incorrectly uses \"a\" instead of \"e\" in the second syllable.",
+      "solution": "Answer: C\nExplanation:\n• The correct spelling is \"Maintenance\" — note the \"e\" after \"Maint\" and before \"nance\".\nWhy the other options are wrong:\n(A) Incorrectly inserts \"ai\" in the second syllable.\n(B) Incorrectly uses \"e\" where \"a\" is needed in the final syllable.\n(C) Correct.\n(D) Incorrectly uses \"a\" instead of \"e\" in the second syllable.",
       "isCustomUploaded": true
     },
     {
@@ -79,7 +79,7 @@
         "D": "Momentary"
       },
       "correct_answer": "B",
-      "solution": "Answer: B\nExplanation:\n\u2022 \"Transient\" means lasting only a short time. Its direct opposite is \"permanent\" (lasting indefinitely).\nWhy the other options are wrong:\n(A) A near-synonym of transient, not an antonym.\n(B) Correct.\n(C) Describes rapid change, not duration \u2014 a different axis of meaning.\n(D) A near-synonym of transient, not an antonym.",
+      "solution": "Answer: B\nExplanation:\n• \"Transient\" means lasting only a short time. Its direct opposite is \"permanent\" (lasting indefinitely).\nWhy the other options are wrong:\n(A) A near-synonym of transient, not an antonym.\n(B) Correct.\n(C) Describes rapid change, not duration — a different axis of meaning.\n(D) A near-synonym of transient, not an antonym.",
       "isCustomUploaded": true
     },
     {
@@ -101,7 +101,7 @@
         "D": "44 q/ha"
       },
       "correct_answer": "B",
-      "solution": "Answer: B\nExplanation:\n\u2022 Sorted: 38, 40, 42, 45, 50. The middle (3rd of 5) value is 42 q/ha.\nWhy the other options are wrong:\n(A) This is the second-lowest value, not the median.\n(B) Correct \u2014 the middle value of the sorted list.\n(C) This is the second-highest value, not the median.\n(D) This equals the mean, not the median, of the data set.",
+      "solution": "Answer: B\nExplanation:\n• Sorted: 38, 40, 42, 45, 50. The middle (3rd of 5) value is 42 q/ha.\nWhy the other options are wrong:\n(A) This is the second-lowest value, not the median.\n(B) Correct — the middle value of the sorted list.\n(C) This is the second-highest value, not the median.\n(D) This equals the mean, not the median, of the data set.",
       "isCustomUploaded": true
     },
     {
@@ -123,7 +123,7 @@
         "D": "None of the above conclusions necessarily follows"
       },
       "correct_answer": "D",
-      "solution": "Answer: D\nExplanation:\n\u2022 The \"self-propelled machines\" that are tractors need not be the same subset as combine harvesters \u2014 this is the classic undistributed-middle-term case. No valid conclusion about combine harvesters and tractors can be drawn from these two premises alone.\nWhy the other options are wrong:\n(A) Overreaches \u2014 not supported by the premises.\n(B) Not guaranteed \u2014 the \"some\" self-propelled machines that are tractors may be entirely disjoint from combine harvesters.\n(C) Not guaranteed either \u2014 the premises do not rule out overlap.\n(D) Correct \u2014 the syllogism has an undistributed middle term, so no conclusion follows validly.",
+      "solution": "Answer: D\nExplanation:\n• The \"self-propelled machines\" that are tractors need not be the same subset as combine harvesters — this is the classic undistributed-middle-term case. No valid conclusion about combine harvesters and tractors can be drawn from these two premises alone.\nWhy the other options are wrong:\n(A) Overreaches — not supported by the premises.\n(B) Not guaranteed — the \"some\" self-propelled machines that are tractors may be entirely disjoint from combine harvesters.\n(C) Not guaranteed either — the premises do not rule out overlap.\n(D) Correct — the syllogism has an undistributed middle term, so no conclusion follows validly.",
       "isCustomUploaded": true
     },
     {
@@ -137,15 +137,15 @@
       "type": "MCQ",
       "marks": 2,
       "negative_marks": 0.6666666666666666,
-      "question": "A cooperative loan of \u20b95,00,000 is taken at 10% p.a., compounded annually. Find the total amount payable after 2 years.",
+      "question": "A cooperative loan of ₹5,00,000 is taken at 10% p.a., compounded annually. Find the total amount payable after 2 years.",
       "options": {
-        "A": "\u20b95,50,000",
-        "B": "\u20b96,00,000",
-        "C": "\u20b96,05,000",
-        "D": "\u20b96,10,000"
+        "A": "₹5,50,000",
+        "B": "₹6,00,000",
+        "C": "₹6,05,000",
+        "D": "₹6,10,000"
       },
       "correct_answer": "C",
-      "solution": "Answer: C\nExplanation:\n\u2022 Amount = P(1+r)\u207f = 5,00,000 \u00d7 (1.10)\u00b2 = 5,00,000 \u00d7 1.21 = \u20b96,05,000.\nWhy the other options are wrong:\n(A) Results from using simple interest (10%\u00d72yr = 20%) instead of compounding.\n(B) An intermediate rounding, not the compounded value.\n(C) Correct.\n(D) Overestimates the compounded value.",
+      "solution": "Answer: C\nExplanation:\n• Amount = P(1+r)ⁿ = 5,00,000 × (1.10)² = 5,00,000 × 1.21 = ₹6,05,000.\nWhy the other options are wrong:\n(A) Results from using simple interest (10%×2yr = 20%) instead of compounding.\n(B) An intermediate rounding, not the compounded value.\n(C) Correct.\n(D) Overestimates the compounded value.",
       "isCustomUploaded": true
     },
     {
@@ -167,7 +167,7 @@
         "D": "9.0 h"
       },
       "correct_answer": "C",
-      "solution": "Answer: C\nExplanation:\n\u2022 Let total time = T hours. A works (T\u22123) h, B works T h.\n\u2022 Work done: (T\u22123)/10 + T/15 = 1. Multiplying by 30: 3(T\u22123) + 2T = 30 \u27f9 5T = 39 \u27f9 T = 7.8 h.\nWhy the other options are wrong:\n(A) Not consistent with correctly setting up the work-equation with the 3 h early departure.\n(B) Does not satisfy the work equation when substituted back.\n(C) Correct.\n(D) Overestimates \u2014 inconsistent with the combined-rate equation.",
+      "solution": "Answer: C\nExplanation:\n• Let total time = T hours. A works (T−3) h, B works T h.\n• Work done: (T−3)/10 + T/15 = 1. Multiplying by 30: 3(T−3) + 2T = 30 ⟹ 5T = 39 ⟹ T = 7.8 h.\nWhy the other options are wrong:\n(A) Not consistent with correctly setting up the work-equation with the 3 h early departure.\n(B) Does not satisfy the work equation when substituted back.\n(C) Correct.\n(D) Overestimates — inconsistent with the combined-rate equation.",
       "isCustomUploaded": true
     },
     {
@@ -181,7 +181,7 @@
       "type": "MCQ",
       "marks": 2,
       "negative_marks": 0.6666666666666666,
-      "question": "A field requires 120 kg N/ha and 60 kg K\u2082O/ha, to be supplied using only urea (46% N) and MOP (60% K\u2082O) \u2014 MOP first to meet all the K\u2082O, and urea to supply all the N. Find the total mass of fertilizer applied (kg/ha), to the nearest kg.",
+      "question": "A field requires 120 kg N/ha and 60 kg K₂O/ha, to be supplied using only urea (46% N) and MOP (60% K₂O) — MOP first to meet all the K₂O, and urea to supply all the N. Find the total mass of fertilizer applied (kg/ha), to the nearest kg.",
       "options": {
         "A": "320 kg/ha",
         "B": "340 kg/ha",
@@ -189,7 +189,7 @@
         "D": "380 kg/ha"
       },
       "correct_answer": "C",
-      "solution": "Answer: C\nExplanation:\n\u2022 MOP needed for K\u2082O: 60 \u00f7 0.60 = 100 kg/ha (contributes no N).\n\u2022 Urea needed for N: 120 \u00f7 0.46 = 260.9 kg/ha.\n\u2022 Total fertilizer = 100 + 260.9 \u2248 361 kg/ha.\nWhy the other options are wrong:\n(A) Underestimates the urea requirement.\n(B) Still an underestimate of the correctly computed total.\n(C) Correct.\n(D) Overestimates the total.",
+      "solution": "Answer: C\nExplanation:\n• MOP needed for K₂O: 60 ÷ 0.60 = 100 kg/ha (contributes no N).\n• Urea needed for N: 120 ÷ 0.46 = 260.9 kg/ha.\n• Total fertilizer = 100 + 260.9 ≈ 361 kg/ha.\nWhy the other options are wrong:\n(A) Underestimates the urea requirement.\n(B) Still an underestimate of the correctly computed total.\n(C) Correct.\n(D) Overestimates the total.",
       "isCustomUploaded": true
     },
     {
@@ -211,7 +211,7 @@
         "D": "8"
       },
       "correct_answer": "C",
-      "solution": "Answer: C\nExplanation:\n\u2022 Each fold doubles the number of paper layers; two folds give 4 layers. A cut through all 4 layers at a corner away from the fold lines reproduces the cut at that corresponding corner in each of the 4 unfolded quadrants, giving 4 holes.\nWhy the other options are wrong:\n(A) Correct only for an unfolded (single-layer) sheet \u2014 not the case here.\n(B) Would correspond to only one fold, not two.\n(C) Correct \u2014 2 folds \u27f9 4 layers \u27f9 4 holes.\n(D) Would require 3 folds (8 layers), not 2.",
+      "solution": "Answer: C\nExplanation:\n• Each fold doubles the number of paper layers; two folds give 4 layers. A cut through all 4 layers at a corner away from the fold lines reproduces the cut at that corresponding corner in each of the 4 unfolded quadrants, giving 4 holes.\nWhy the other options are wrong:\n(A) Correct only for an unfolded (single-layer) sheet — not the case here.\n(B) Would correspond to only one fold, not two.\n(C) Correct — 2 folds ⟹ 4 layers ⟹ 4 holes.\n(D) Would require 3 folds (8 layers), not 2.",
       "isCustomUploaded": true
     },
     {
@@ -233,7 +233,7 @@
         "D": "40"
       },
       "correct_answer": "C",
-      "solution": "Answer: C\nExplanation:\n\u2022 Using certified seed or bio-fertilizer = 80 + 65 \u2212 30 = 115.\n\u2022 Using neither = 150 \u2212 115 = 35.\nWhy the other options are wrong:\n(A) Results from an arithmetic slip in the union total.\n(B) Coincides with the \"both\" count, not the correct \"neither\" figure.\n(C) Correct.\n(D) Results from omitting the overlap term when computing the union.",
+      "solution": "Answer: C\nExplanation:\n• Using certified seed or bio-fertilizer = 80 + 65 − 30 = 115.\n• Using neither = 150 − 115 = 35.\nWhy the other options are wrong:\n(A) Results from an arithmetic slip in the union total.\n(B) Coincides with the \"both\" count, not the correct \"neither\" figure.\n(C) Correct.\n(D) Results from omitting the overlap term when computing the union.",
       "isCustomUploaded": true
     },
     {
@@ -247,7 +247,7 @@
       "type": "MCQ",
       "marks": 1,
       "negative_marks": 0.3333333333333333,
-      "question": "Evaluate: lim(x\u21920) [ (1 \u2212 cos 2x) / x\u00b2 ]",
+      "question": "Evaluate: lim(x→0) [ (1 − cos 2x) / x² ]",
       "options": {
         "A": "1",
         "B": "2",
@@ -255,7 +255,7 @@
         "D": "0"
       },
       "correct_answer": "B",
-      "solution": "Answer: B\nExplanation:\n\u2022 Using 1 \u2212 cos \u03b8 \u2248 \u03b8\u00b2/2 for small \u03b8, with \u03b8 = 2x: 1 \u2212 cos 2x \u2248 (2x)\u00b2/2 = 2x\u00b2.\n\u2022 Limit of (2x\u00b2)/x\u00b2 = 2.\nWhy the other options are wrong:\n(A) Results from omitting the factor of 4 from (2x)\u00b2 before halving.\n(B) Correct.\n(C) Results from omitting the 1/2 factor in the small-angle approximation.\n(D) Results from wrongly assuming the limit is trivially zero.",
+      "solution": "Answer: B\nExplanation:\n• Using 1 − cos θ ≈ θ²/2 for small θ, with θ = 2x: 1 − cos 2x ≈ (2x)²/2 = 2x².\n• Limit of (2x²)/x² = 2.\nWhy the other options are wrong:\n(A) Results from omitting the factor of 4 from (2x)² before halving.\n(B) Correct.\n(C) Results from omitting the 1/2 factor in the small-angle approximation.\n(D) Results from wrongly assuming the limit is trivially zero.",
       "isCustomUploaded": true
     },
     {
@@ -274,10 +274,10 @@
         "A": "8",
         "B": "15",
         "C": "2",
-        "D": "\u22122"
+        "D": "−2"
       },
       "correct_answer": "A",
-      "solution": "Answer: A\nExplanation:\n\u2022 For a diagonal matrix, the eigenvalues are the diagonal entries themselves: 3 and 5. Their sum (trace) = 3+5 = 8.\nWhy the other options are wrong:\n(A) Correct answer is the sum (trace), not the product (which is 15).\n(B) This is the product (det), not the sum, of the eigenvalues.\n(C) Not obtained from any correct combination of the eigenvalues.\n(D) Not obtained from any correct combination of the eigenvalues.",
+      "solution": "Answer: A\nExplanation:\n• For a diagonal matrix, the eigenvalues are the diagonal entries themselves: 3 and 5. Their sum (trace) = 3+5 = 8.\nWhy the other options are wrong:\n(A) Correct answer is the sum (trace), not the product (which is 15).\n(B) This is the product (det), not the sum, of the eigenvalues.\n(C) Not obtained from any correct combination of the eigenvalues.\n(D) Not obtained from any correct combination of the eigenvalues.",
       "isCustomUploaded": true
     },
     {
@@ -291,7 +291,7 @@
       "type": "MCQ",
       "marks": 1,
       "negative_marks": 0.3333333333333333,
-      "question": "The differential equation d\u00b2y/dx\u00b2 + 4y = 0 is classified as:",
+      "question": "The differential equation d²y/dx² + 4y = 0 is classified as:",
       "options": {
         "A": "First-order linear",
         "B": "Second-order linear, homogeneous",
@@ -299,7 +299,7 @@
         "D": "First-order nonlinear"
       },
       "correct_answer": "B",
-      "solution": "Answer: B\nExplanation:\n\u2022 The highest derivative present is d\u00b2y/dx\u00b2 (second order); y and its derivatives appear only to the first power with constant coefficients (linear); and the right-hand side is zero (homogeneous).\nWhy the other options are wrong:\n(A) Incorrect order \u2014 the equation involves a second derivative.\n(B) Correct.\n(C) The equation is linear, not nonlinear (y and y'' appear only to first power).\n(D) Incorrect on both order and linearity classification.",
+      "solution": "Answer: B\nExplanation:\n• The highest derivative present is d²y/dx² (second order); y and its derivatives appear only to the first power with constant coefficients (linear); and the right-hand side is zero (homogeneous).\nWhy the other options are wrong:\n(A) Incorrect order — the equation involves a second derivative.\n(B) Correct.\n(C) The equation is linear, not nonlinear (y and y'' appear only to first power).\n(D) Incorrect on both order and linearity classification.",
       "isCustomUploaded": true
     },
     {
@@ -321,7 +321,7 @@
         "D": "4.00"
       },
       "correct_answer": "B",
-      "solution": "Answer: B\nExplanation:\n\u2022 Mean = (2+4+6)/3 = 4.\n\u2022 Variance = [(2\u22124)\u00b2+(4\u22124)\u00b2+(6\u22124)\u00b2]/3 = (4+0+4)/3 = 8/3 = 2.67.\nWhy the other options are wrong:\n(A) Not obtained from the correct sum of squared deviations.\n(B) Correct.\n(C) Not obtained from the correct sum of squared deviations divided by 3.\n(D) Equals the mean, not the variance \u2014 a common confusion.",
+      "solution": "Answer: B\nExplanation:\n• Mean = (2+4+6)/3 = 4.\n• Variance = [(2−4)²+(4−4)²+(6−4)²]/3 = (4+0+4)/3 = 8/3 = 2.67.\nWhy the other options are wrong:\n(A) Not obtained from the correct sum of squared deviations.\n(B) Correct.\n(C) Not obtained from the correct sum of squared deviations divided by 3.\n(D) Equals the mean, not the variance — a common confusion.",
       "isCustomUploaded": true
     },
     {
@@ -334,11 +334,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 1,
-      "negative_marks": 0.0,
-      "question": "Evaluate \u222b\u2080\u00b2 (2x + 1) dx.",
+      "negative_marks": 0,
+      "question": "Evaluate ∫₀² (2x + 1) dx.",
       "options": {},
       "correct_answer": "5.90 to 6.10",
-      "solution": "Answer: 5.90 to 6.10\nExplanation:\n\u2022 \u222b(2x+1)dx = x\u00b2 + x, evaluated from 0 to 2 = (4+2) \u2212 0 = 6.",
+      "solution": "Answer: 5.90 to 6.10\nExplanation:\n• ∫(2x+1)dx = x² + x, evaluated from 0 to 2 = (4+2) − 0 = 6.",
       "isCustomUploaded": true
     },
     {
@@ -360,7 +360,7 @@
         "D": "Convey threshed grain to the grain tank"
       },
       "correct_answer": "B",
-      "solution": "Answer: B\nExplanation:\n\u2022 The concave works together with the threshing cylinder: grain heads are rubbed and impacted between the rotating cylinder and the stationary concave, separating grain from the head.\nWhy the other options are wrong:\n(A) This is the function of the straw walkers, not the concave.\n(B) Correct.\n(C) This is the function of the cleaning shoe/fan, not the concave.\n(D) This is the function of the grain auger/elevator, not the concave.",
+      "solution": "Answer: B\nExplanation:\n• The concave works together with the threshing cylinder: grain heads are rubbed and impacted between the rotating cylinder and the stationary concave, separating grain from the head.\nWhy the other options are wrong:\n(A) This is the function of the straw walkers, not the concave.\n(B) Correct.\n(C) This is the function of the cleaning shoe/fan, not the concave.\n(D) This is the function of the grain auger/elevator, not the concave.",
       "isCustomUploaded": true
     },
     {
@@ -382,7 +382,7 @@
         "D": "720 rpm"
       },
       "correct_answer": "C",
-      "solution": "Answer: C\nExplanation:\n\u2022 N\u2081T\u2081 = N\u2082T\u2082 \u27f9 N\u2082 = N\u2081T\u2081/T\u2082 = (300\u00d720)/12 = 500 rpm.\nWhy the other options are wrong:\n(A) Results from inverting the teeth ratio.\n(B) This is the driving sprocket speed itself, not the driven speed.\n(C) Correct.\n(D) Not consistent with the correct teeth ratio.",
+      "solution": "Answer: C\nExplanation:\n• N₁T₁ = N₂T₂ ⟹ N₂ = N₁T₁/T₂ = (300×20)/12 = 500 rpm.\nWhy the other options are wrong:\n(A) Results from inverting the teeth ratio.\n(B) This is the driving sprocket speed itself, not the driven speed.\n(C) Correct.\n(D) Not consistent with the correct teeth ratio.",
       "isCustomUploaded": true
     },
     {
@@ -395,11 +395,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 1,
-      "negative_marks": 0.0,
+      "negative_marks": 0,
       "question": "A thresher processes paddy at 800 kg/h total input, with a straw-to-grain mass ratio of 1.5:1. Compute the grain output rate.",
       "options": {},
       "correct_answer": "315.00 to 325.00 kg/h",
-      "solution": "Answer: 315.00 to 325.00 kg/h\nExplanation:\n\u2022 Total input = straw + grain = 1.5\u00d7grain + grain = 2.5\u00d7grain.\n\u2022 Grain = 800/2.5 = 320 kg/h.",
+      "solution": "Answer: 315.00 to 325.00 kg/h\nExplanation:\n• Total input = straw + grain = 1.5×grain + grain = 2.5×grain.\n• Grain = 800/2.5 = 320 kg/h.",
       "isCustomUploaded": true
     },
     {
@@ -421,7 +421,7 @@
         "D": "Resale value of the tractor"
       },
       "correct_answer": "B",
-      "solution": "Answer: B\nExplanation:\n\u2022 Standardized tractor tests measure engineering performance \u2014 PTO/engine power, specific fuel consumption, and drawbar pull-vs-speed characteristics \u2014 under controlled, repeatable conditions.\nWhy the other options are wrong:\n(A) Not the purpose of a standardized performance test.\n(B) Correct.\n(C) Not the purpose of a standardized performance test.\n(D) Resale value is a market outcome, not a tested engineering parameter.",
+      "solution": "Answer: B\nExplanation:\n• Standardized tractor tests measure engineering performance — PTO/engine power, specific fuel consumption, and drawbar pull-vs-speed characteristics — under controlled, repeatable conditions.\nWhy the other options are wrong:\n(A) Not the purpose of a standardized performance test.\n(B) Correct.\n(C) Not the purpose of a standardized performance test.\n(D) Resale value is a market outcome, not a tested engineering parameter.",
       "isCustomUploaded": true
     },
     {
@@ -437,13 +437,13 @@
       "negative_marks": 0.3333333333333333,
       "question": "Wheel slip of a tractor drive wheel is defined as:",
       "options": {
-        "A": "(Theoretical distance \u2212 Actual distance) / Theoretical distance \u00d7 100",
-        "B": "Actual distance / Theoretical distance \u00d7 100",
-        "C": "(Actual distance \u2212 Theoretical distance) / Actual distance \u00d7 100",
-        "D": "Theoretical distance / Actual distance \u00d7 100"
+        "A": "(Theoretical distance − Actual distance) / Theoretical distance × 100",
+        "B": "Actual distance / Theoretical distance × 100",
+        "C": "(Actual distance − Theoretical distance) / Actual distance × 100",
+        "D": "Theoretical distance / Actual distance × 100"
       },
       "correct_answer": "A",
-      "solution": "Answer: A\nExplanation:\n\u2022 Slip is the fractional shortfall of actual travel distance relative to the theoretical (no-slip) distance computed from wheel revolutions, expressed as a percentage.\nWhy the other options are wrong:\n(A) Correct.\n(B) This gives (1\u2212slip fraction)\u00d7100, not slip itself.\n(C) Uses the wrong reference (actual) denominator and wrong sign convention.\n(D) Not a standard definition of slip.",
+      "solution": "Answer: A\nExplanation:\n• Slip is the fractional shortfall of actual travel distance relative to the theoretical (no-slip) distance computed from wheel revolutions, expressed as a percentage.\nWhy the other options are wrong:\n(A) Correct.\n(B) This gives (1−slip fraction)×100, not slip itself.\n(C) Uses the wrong reference (actual) denominator and wrong sign convention.\n(D) Not a standard definition of slip.",
       "isCustomUploaded": true
     },
     {
@@ -456,11 +456,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 1,
-      "negative_marks": 0.0,
-      "question": "A 4-cylinder, 4-stroke engine has a total swept volume of 2400 cm\u00b3 (equal among cylinders) and a clearance volume of 50 cm\u00b3 per cylinder. Compute the compression ratio.",
+      "negative_marks": 0,
+      "question": "A 4-cylinder, 4-stroke engine has a total swept volume of 2400 cm³ (equal among cylinders) and a clearance volume of 50 cm³ per cylinder. Compute the compression ratio.",
       "options": {},
       "correct_answer": "12.80 to 13.20",
-      "solution": "Answer: 12.80 to 13.20\nExplanation:\n\u2022 Swept volume per cylinder = 2400/4 = 600 cm\u00b3.\n\u2022 Compression ratio = (Vs+Vc)/Vc = (600+50)/50 = 650/50 = 13.0.",
+      "solution": "Answer: 12.80 to 13.20\nExplanation:\n• Swept volume per cylinder = 2400/4 = 600 cm³.\n• Compression ratio = (Vs+Vc)/Vc = (600+50)/50 = 650/50 = 13.0.",
       "isCustomUploaded": true
     },
     {
@@ -473,11 +473,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 1,
-      "negative_marks": 0.0,
+      "negative_marks": 0,
       "question": "In a PTO performance test, a tractor delivers 45 kW at the PTO shaft against a rated engine power of 52 kW. Compute the PTO transmission efficiency.",
       "options": {},
       "correct_answer": "86.00 to 87.00 %",
-      "solution": "Answer: 86.00 to 87.00 %\nExplanation:\n\u2022 Transmission efficiency = (PTO power/Engine power) \u00d7 100 = (45/52) \u00d7 100 = 86.5%.",
+      "solution": "Answer: 86.00 to 87.00 %\nExplanation:\n• Transmission efficiency = (PTO power/Engine power) × 100 = (45/52) × 100 = 86.5%.",
       "isCustomUploaded": true
     },
     {
@@ -499,7 +499,7 @@
         "D": "Measure streamflow discharge"
       },
       "correct_answer": "B",
-      "solution": "Answer: B\nExplanation:\n\u2022 A gully plug is a low-cost temporary structure placed across small gullies to slow flow velocity, promote sediment deposition, and arrest gully head-cutting/widening.\nWhy the other options are wrong:\n(A) Contradicts the intended function \u2014 gully plugs reduce, not increase, effective peak velocity/discharge locally.\n(B) Correct.\n(C) Diversion for irrigation is not the function of a gully plug.\n(D) Streamflow measurement is done by gauging structures (e.g. weirs), not gully plugs.",
+      "solution": "Answer: B\nExplanation:\n• A gully plug is a low-cost temporary structure placed across small gullies to slow flow velocity, promote sediment deposition, and arrest gully head-cutting/widening.\nWhy the other options are wrong:\n(A) Contradicts the intended function — gully plugs reduce, not increase, effective peak velocity/discharge locally.\n(B) Correct.\n(C) Diversion for irrigation is not the function of a gully plug.\n(D) Streamflow measurement is done by gauging structures (e.g. weirs), not gully plugs.",
       "isCustomUploaded": true
     },
     {
@@ -521,7 +521,7 @@
         "D": "0.079/Re^0.25"
       },
       "correct_answer": "A",
-      "solution": "Answer: A\nExplanation:\n\u2022 For laminar flow (Re < 2000), the Darcy friction factor follows the exact analytical result f = 64/Re, derived from the Hagen\u2013Poiseuille solution.\nWhy the other options are wrong:\n(A) Correct.\n(B) This is the Blasius correlation for turbulent flow, not laminar flow.\n(C) This is the Fanning (not Darcy) friction factor expression for laminar flow.\n(D) This is a turbulent-flow correlation (related to Blasius), not applicable to laminar flow.",
+      "solution": "Answer: A\nExplanation:\n• For laminar flow (Re < 2000), the Darcy friction factor follows the exact analytical result f = 64/Re, derived from the Hagen–Poiseuille solution.\nWhy the other options are wrong:\n(A) Correct.\n(B) This is the Blasius correlation for turbulent flow, not laminar flow.\n(C) This is the Fanning (not Darcy) friction factor expression for laminar flow.\n(D) This is a turbulent-flow correlation (related to Blasius), not applicable to laminar flow.",
       "isCustomUploaded": true
     },
     {
@@ -534,11 +534,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 1,
-      "negative_marks": 0.0,
-      "question": "Using USLE with R = 420 MJ\u00b7mm/(ha\u00b7h\u00b7yr), K = 0.28, LS = 2.1, C = 0.20, and P = 0.6, compute the annual soil loss A.",
+      "negative_marks": 0,
+      "question": "Using USLE with R = 420 MJ·mm/(ha·h·yr), K = 0.28, LS = 2.1, C = 0.20, and P = 0.6, compute the annual soil loss A.",
       "options": {},
       "correct_answer": "29.30 to 29.90 t/ha/yr",
-      "solution": "Answer: 29.30 to 29.90 t/ha/yr\nExplanation:\n\u2022 A = R\u00d7K\u00d7LS\u00d7C\u00d7P = 420\u00d70.28\u00d72.1\u00d70.20\u00d70.6.\n\u2022 420\u00d70.28=117.6; \u00d72.1=246.96; \u00d70.20=49.39; \u00d70.6=29.64 t/ha/yr.",
+      "solution": "Answer: 29.30 to 29.90 t/ha/yr\nExplanation:\n• A = R×K×LS×C×P = 420×0.28×2.1×0.20×0.6.\n• 420×0.28=117.6; ×2.1=246.96; ×0.20=49.39; ×0.6=29.64 t/ha/yr.",
       "isCustomUploaded": true
     },
     {
@@ -551,11 +551,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 1,
-      "negative_marks": 0.0,
+      "negative_marks": 0,
       "question": "In a levelling survey, a back sight of 1.865 m is taken on a benchmark of RL 250.000 m, followed by a fore sight of 2.340 m on the next point. Find the RL of that point.",
       "options": {},
       "correct_answer": "249.45 to 249.60 m",
-      "solution": "Answer: 249.45 to 249.60 m\nExplanation:\n\u2022 Height of instrument = 250.000 + 1.865 = 251.865 m.\n\u2022 RL of next point = 251.865 \u2212 2.340 = 249.525 m.",
+      "solution": "Answer: 249.45 to 249.60 m\nExplanation:\n• Height of instrument = 250.000 + 1.865 = 251.865 m.\n• RL of next point = 251.865 − 2.340 = 249.525 m.",
       "isCustomUploaded": true
     },
     {
@@ -572,12 +572,12 @@
       "question": "\"Field capacity\" is defined as the soil moisture content:",
       "options": {
         "A": "At which plants permanently wilt and cannot recover",
-        "B": "Retained by the soil after gravitational drainage has essentially ceased, roughly 1\u20133 days after saturation",
+        "B": "Retained by the soil after gravitational drainage has essentially ceased, roughly 1–3 days after saturation",
         "C": "At oven-dry condition",
         "D": "At full saturation, with all pore space filled with water"
       },
       "correct_answer": "B",
-      "solution": "Answer: B\nExplanation:\n\u2022 Field capacity is the water content held against gravity in the soil profile after free drainage has largely stopped \u2014 the upper limit of plant-available water.\nWhy the other options are wrong:\n(A) This describes permanent wilting point, not field capacity.\n(B) Correct.\n(C) This describes oven-dry (0% moisture) condition, not field capacity.\n(D) This describes saturation, a wetter condition than field capacity.",
+      "solution": "Answer: B\nExplanation:\n• Field capacity is the water content held against gravity in the soil profile after free drainage has largely stopped — the upper limit of plant-available water.\nWhy the other options are wrong:\n(A) This describes permanent wilting point, not field capacity.\n(B) Correct.\n(C) This describes oven-dry (0% moisture) condition, not field capacity.\n(D) This describes saturation, a wetter condition than field capacity.",
       "isCustomUploaded": true
     },
     {
@@ -590,11 +590,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 1,
-      "negative_marks": 0.0,
-      "question": "An unconfined aquifer has average transmissivity T = 380 m\u00b2/day and hydraulic conductivity K = 19 m/day. Find the average saturated thickness.",
+      "negative_marks": 0,
+      "question": "An unconfined aquifer has average transmissivity T = 380 m²/day and hydraulic conductivity K = 19 m/day. Find the average saturated thickness.",
       "options": {},
       "correct_answer": "19.50 to 20.50 m",
-      "solution": "Answer: 19.50 to 20.50 m\nExplanation:\n\u2022 T = K\u00d7b \u27f9 b = T/K = 380/19 = 20 m.",
+      "solution": "Answer: 19.50 to 20.50 m\nExplanation:\n• T = K×b ⟹ b = T/K = 380/19 = 20 m.",
       "isCustomUploaded": true
     },
     {
@@ -616,7 +616,7 @@
         "D": "Grading"
       },
       "correct_answer": "B",
-      "solution": "Answer: B\nExplanation:\n\u2022 Dehusking (shelling) separates the outer husk from paddy to yield brown rice, leaving the bran layer intact; whitening/polishing are later steps that remove the bran.\nWhy the other options are wrong:\n(A) Polishing removes bran/germ residue after whitening \u2014 a later step, not husk removal.\n(B) Correct.\n(C) Whitening removes the bran layer \u2014 it comes after dehusking, not instead of it.\n(D) Grading sorts milled rice by size, unrelated to husk removal.",
+      "solution": "Answer: B\nExplanation:\n• Dehusking (shelling) separates the outer husk from paddy to yield brown rice, leaving the bran layer intact; whitening/polishing are later steps that remove the bran.\nWhy the other options are wrong:\n(A) Polishing removes bran/germ residue after whitening — a later step, not husk removal.\n(B) Correct.\n(C) Whitening removes the bran layer — it comes after dehusking, not instead of it.\n(D) Grading sorts milled rice by size, unrelated to husk removal.",
       "isCustomUploaded": true
     },
     {
@@ -638,7 +638,7 @@
         "D": "Drying chamber floor slope"
       },
       "correct_answer": "B",
-      "solution": "Answer: B\nExplanation:\n\u2022 Terminal velocity governs the air velocity needed to convey grain pneumatically or to separate lighter chaff/dust from heavier grain in an aspirator \u2014 both aerodynamic separation/conveying applications.\nWhy the other options are wrong:\n(A) Bin wall slope is set from angle of repose, not terminal velocity.\n(B) Correct.\n(C) Roller gap is set from kernel size/hardness, not terminal velocity.\n(D) Floor slope is a structural/handling detail, not set by terminal velocity.",
+      "solution": "Answer: B\nExplanation:\n• Terminal velocity governs the air velocity needed to convey grain pneumatically or to separate lighter chaff/dust from heavier grain in an aspirator — both aerodynamic separation/conveying applications.\nWhy the other options are wrong:\n(A) Bin wall slope is set from angle of repose, not terminal velocity.\n(B) Correct.\n(C) Roller gap is set from kernel size/hardness, not terminal velocity.\n(D) Floor slope is a structural/handling detail, not set by terminal velocity.",
       "isCustomUploaded": true
     },
     {
@@ -651,11 +651,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 1,
-      "negative_marks": 0.0,
+      "negative_marks": 0,
       "question": "Using Rittinger's law, reducing a material from 10 mm to 4 mm requires 8 kJ/kg. Find the energy required to further reduce it from 4 mm to 2 mm.",
       "options": {},
       "correct_answer": "13.10 to 13.60 kJ/kg",
-      "solution": "Answer: 13.10 to 13.60 kJ/kg\nExplanation:\n\u2022 Rittinger's law: E = K(1/Dp2 \u2212 1/Dp1).\n\u2022 Step 1 (10\u21924 mm): 8 = K(1/4 \u2212 1/10) = K\u00d70.15 \u27f9 K = 53.33.\n\u2022 Step 2 (4\u21922 mm): E = 53.33\u00d7(1/2 \u2212 1/4) = 53.33\u00d70.25 = 13.33 kJ/kg.",
+      "solution": "Answer: 13.10 to 13.60 kJ/kg\nExplanation:\n• Rittinger's law: E = K(1/Dp2 − 1/Dp1).\n• Step 1 (10→4 mm): 8 = K(1/4 − 1/10) = K×0.15 ⟹ K = 53.33.\n• Step 2 (4→2 mm): E = 53.33×(1/2 − 1/4) = 53.33×0.25 = 13.33 kJ/kg.",
       "isCustomUploaded": true
     },
     {
@@ -668,11 +668,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 1,
-      "negative_marks": 0.0,
+      "negative_marks": 0,
       "question": "1500 kg of grain at 20% moisture content (wb) is dried to 14% (wb). Compute the mass of water removed.",
       "options": {},
       "correct_answer": "103.00 to 107.00 kg",
-      "solution": "Answer: 103.00 to 107.00 kg\nExplanation:\n\u2022 Dry matter (constant) = 1500\u00d7(1\u22120.20) = 1200 kg.\n\u2022 Final wet mass = 1200/(1\u22120.14) = 1200/0.86 = 1395.3 kg.\n\u2022 Water removed = 1500 \u2212 1395.3 = 104.7 kg.",
+      "solution": "Answer: 103.00 to 107.00 kg\nExplanation:\n• Dry matter (constant) = 1500×(1−0.20) = 1200 kg.\n• Final wet mass = 1200/(1−0.14) = 1200/0.86 = 1395.3 kg.\n• Water removed = 1500 − 1395.3 = 104.7 kg.",
       "isCustomUploaded": true
     },
     {
@@ -685,11 +685,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 1,
-      "negative_marks": 0.0,
+      "negative_marks": 0,
       "question": "Tomato juice is concentrated from 5% total solids (TS) to 28% TS in a single-effect evaporator. For a feed rate of 3000 kg/h, compute the water evaporated per hour.",
       "options": {},
       "correct_answer": "2440.00 to 2490.00 kg/h",
-      "solution": "Answer: 2440.00 to 2490.00 kg/h\nExplanation:\n\u2022 Solids in feed (constant) = 3000\u00d70.05 = 150 kg/h.\n\u2022 Concentrated product mass = 150/0.28 = 535.7 kg/h.\n\u2022 Water evaporated = 3000 \u2212 535.7 = 2464.3 kg/h.",
+      "solution": "Answer: 2440.00 to 2490.00 kg/h\nExplanation:\n• Solids in feed (constant) = 3000×0.05 = 150 kg/h.\n• Concentrated product mass = 150/0.28 = 535.7 kg/h.\n• Water evaporated = 3000 − 535.7 = 2464.3 kg/h.",
       "isCustomUploaded": true
     },
     {
@@ -711,7 +711,7 @@
         "D": "Crystallization of lactose"
       },
       "correct_answer": "B",
-      "solution": "Answer: B\nExplanation:\n\u2022 Homogenization mechanically breaks down fat globules to a small, uniform size so they remain dispersed rather than rising to form a cream layer.\nWhy the other options are wrong:\n(A) This is the function of pasteurization, not homogenization.\n(B) This describes evaporation/concentration, not homogenization.\n(C) Unrelated to homogenization; relevant to certain dairy crystallization processes instead.\n(D) Correct.",
+      "solution": "Answer: B\nExplanation:\n• Homogenization mechanically breaks down fat globules to a small, uniform size so they remain dispersed rather than rising to form a cream layer.\nWhy the other options are wrong:\n(A) This is the function of pasteurization, not homogenization.\n(B) This describes evaporation/concentration, not homogenization.\n(C) Unrelated to homogenization; relevant to certain dairy crystallization processes instead.\n(D) Correct.",
       "isCustomUploaded": true
     },
     {
@@ -724,11 +724,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 1,
-      "negative_marks": 0.0,
-      "question": "A plate heat exchanger has overall heat transfer coefficient U = 2200 W/m\u00b2K, area 4.0 m\u00b2, and LMTD 10\u00b0C. Compute the heat transfer rate.",
+      "negative_marks": 0,
+      "question": "A plate heat exchanger has overall heat transfer coefficient U = 2200 W/m²K, area 4.0 m², and LMTD 10°C. Compute the heat transfer rate.",
       "options": {},
       "correct_answer": "87.00 to 89.00 kW",
-      "solution": "Answer: 87.00 to 89.00 kW\nExplanation:\n\u2022 Q = U\u00d7A\u00d7LMTD = 2200\u00d74.0\u00d710 = 88,000 W = 88 kW.",
+      "solution": "Answer: 87.00 to 89.00 kW\nExplanation:\n• Q = U×A×LMTD = 2200×4.0×10 = 88,000 W = 88 kW.",
       "isCustomUploaded": true
     },
     {
@@ -750,7 +750,7 @@
         "D": "14"
       },
       "correct_answer": "B",
-      "solution": "Answer: B\nExplanation:\n\u2022 det(A) = (4\u00d73) \u2212 (2\u00d71) = 12 \u2212 2 = 10.\nWhy the other options are wrong:\n(A) Results from omitting the subtraction of the off-diagonal product.\n(B) Correct.\n(C) This is the product of the diagonal entries only (before subtracting).\n(D) Not obtained from a correct 2\u00d72 determinant calculation.",
+      "solution": "Answer: B\nExplanation:\n• det(A) = (4×3) − (2×1) = 12 − 2 = 10.\nWhy the other options are wrong:\n(A) Results from omitting the subtraction of the off-diagonal product.\n(B) Correct.\n(C) This is the product of the diagonal entries only (before subtracting).\n(D) Not obtained from a correct 2×2 determinant calculation.",
       "isCustomUploaded": true
     },
     {
@@ -764,7 +764,7 @@
       "type": "MCQ",
       "marks": 2,
       "negative_marks": 0.6666666666666666,
-      "question": "Using the Newton\u2013Raphson method to find a root of f(x) = x\u00b2 \u2212 5, starting from x\u2080 = 2, compute x\u2081 after one iteration.",
+      "question": "Using the Newton–Raphson method to find a root of f(x) = x² − 5, starting from x₀ = 2, compute x₁ after one iteration.",
       "options": {
         "A": "2.00",
         "B": "2.10",
@@ -772,7 +772,7 @@
         "D": "2.50"
       },
       "correct_answer": "C",
-      "solution": "Answer: C\nExplanation:\n\u2022 Newton\u2013Raphson: x\u2081 = x\u2080 \u2212 f(x\u2080)/f'(x\u2080), with f(x)=x\u00b2\u22125, f'(x)=2x.\n\u2022 f(2) = 4\u22125 = \u22121; f'(2) = 4.\n\u2022 x\u2081 = 2 \u2212 (\u22121/4) = 2 + 0.25 = 2.25.\nWhy the other options are wrong:\n(A) This is x\u2080 itself, before any iteration.\n(B) Not obtained from the correct Newton\u2013Raphson update.\n(C) Correct.\n(D) Overshoots \u2014 not consistent with the correct update formula.",
+      "solution": "Answer: C\nExplanation:\n• Newton–Raphson: x₁ = x₀ − f(x₀)/f'(x₀), with f(x)=x²−5, f'(x)=2x.\n• f(2) = 4−5 = −1; f'(2) = 4.\n• x₁ = 2 − (−1/4) = 2 + 0.25 = 2.25.\nWhy the other options are wrong:\n(A) This is x₀ itself, before any iteration.\n(B) Not obtained from the correct Newton–Raphson update.\n(C) Correct.\n(D) Overshoots — not consistent with the correct update formula.",
       "isCustomUploaded": true
     },
     {
@@ -785,11 +785,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 2,
-      "negative_marks": 0.0,
-      "question": "Solve dy/dx = 3x\u00b2, with y(1) = 2. Find y(2).",
+      "negative_marks": 0,
+      "question": "Solve dy/dx = 3x², with y(1) = 2. Find y(2).",
       "options": {},
       "correct_answer": "8.90 to 9.10",
-      "solution": "Answer: 8.90 to 9.10\nExplanation:\n\u2022 Integrating: y = x\u00b3 + C.\n\u2022 At x=1, y=2 \u27f9 C = 2\u22121 = 1, so y = x\u00b3+1.\n\u2022 At x=2: y(2) = 8+1 = 9.",
+      "solution": "Answer: 8.90 to 9.10\nExplanation:\n• Integrating: y = x³ + C.\n• At x=1, y=2 ⟹ C = 2−1 = 1, so y = x³+1.\n• At x=2: y(2) = 8+1 = 9.",
       "isCustomUploaded": true
     },
     {
@@ -802,11 +802,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 2,
-      "negative_marks": 0.0,
-      "question": "Using the trapezoidal rule with 2 equal intervals, estimate \u222b\u2080\u00b2 x\u00b2 dx.",
+      "negative_marks": 0,
+      "question": "Using the trapezoidal rule with 2 equal intervals, estimate ∫₀² x² dx.",
       "options": {},
       "correct_answer": "2.90 to 3.10",
-      "solution": "Answer: 2.90 to 3.10\nExplanation:\n\u2022 h = 1; nodes x\u2080=0, x\u2081=1, x\u2082=2; f(x)=x\u00b2 gives f\u2080=0, f\u2081=1, f\u2082=4.\n\u2022 Trapezoidal estimate = (h/2)[f\u2080 + 2f\u2081 + f\u2082] = (1/2)[0+2+4] = 3.0.\n\u2022 (The exact value is 8/3 \u2248 2.667; the trapezoidal rule overestimates for a convex function.)",
+      "solution": "Answer: 2.90 to 3.10\nExplanation:\n• h = 1; nodes x₀=0, x₁=1, x₂=2; f(x)=x² gives f₀=0, f₁=1, f₂=4.\n• Trapezoidal estimate = (h/2)[f₀ + 2f₁ + f₂] = (1/2)[0+2+4] = 3.0.\n• (The exact value is 8/3 ≈ 2.667; the trapezoidal rule overestimates for a convex function.)",
       "isCustomUploaded": true
     },
     {
@@ -820,15 +820,15 @@
       "type": "MCQ",
       "marks": 2,
       "negative_marks": 0.6666666666666666,
-      "question": "A combine harvester threshing cylinder has a diameter of 600 mm and rotates at 700 rpm. Recommended rasp-bar peripheral speed for paddy threshing is 20\u201325 m/s. Compute the peripheral speed and state whether it falls within the recommended range.",
+      "question": "A combine harvester threshing cylinder has a diameter of 600 mm and rotates at 700 rpm. Recommended rasp-bar peripheral speed for paddy threshing is 20–25 m/s. Compute the peripheral speed and state whether it falls within the recommended range.",
       "options": {
-        "A": "15.4 m/s \u2014 below the recommended range",
-        "B": "22.0 m/s \u2014 within the recommended range",
-        "C": "26.8 m/s \u2014 above the recommended range",
-        "D": "30.5 m/s \u2014 above the recommended range"
+        "A": "15.4 m/s — below the recommended range",
+        "B": "22.0 m/s — within the recommended range",
+        "C": "26.8 m/s — above the recommended range",
+        "D": "30.5 m/s — above the recommended range"
       },
       "correct_answer": "B",
-      "solution": "Answer: B\nExplanation:\n\u2022 Peripheral speed v = \u03c0DN/60 = \u03c0\u00d70.6\u00d7700/60 = \u03c0\u00d77 = 22.0 m/s.\n\u2022 22.0 m/s lies within the recommended 20\u201325 m/s band for paddy.\nWhy the other options are wrong:\n(A) Not obtained from the correct \u03c0DN/60 calculation.\n(B) Correct.\n(C) Not obtained from the correct calculation at the given D and N.\n(D) Not obtained from the correct calculation at the given D and N.",
+      "solution": "Answer: B\nExplanation:\n• Peripheral speed v = πDN/60 = π×0.6×700/60 = π×7 = 22.0 m/s.\n• 22.0 m/s lies within the recommended 20–25 m/s band for paddy.\nWhy the other options are wrong:\n(A) Not obtained from the correct πDN/60 calculation.\n(B) Correct.\n(C) Not obtained from the correct calculation at the given D and N.\n(D) Not obtained from the correct calculation at the given D and N.",
       "isCustomUploaded": true
     },
     {
@@ -841,11 +841,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 2,
-      "negative_marks": 0.0,
+      "negative_marks": 0,
       "question": "A shaft transmits 25 kW at 400 rpm. Compute the torque transmitted.",
       "options": {},
-      "correct_answer": "590.00 to 605.00 N\u00b7m",
-      "solution": "Answer: 590.00 to 605.00 N\u00b7m\nExplanation:\n\u2022 T = P\u00d760/(2\u03c0N) = (25,000\u00d760)/(2\u03c0\u00d7400) = 15,00,000/2513.3 = 596.8 N\u00b7m.",
+      "correct_answer": "590.00 to 605.00 N·m",
+      "solution": "Answer: 590.00 to 605.00 N·m\nExplanation:\n• T = P×60/(2πN) = (25,000×60)/(2π×400) = 15,00,000/2513.3 = 596.8 N·m.",
       "isCustomUploaded": true
     },
     {
@@ -858,11 +858,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 2,
-      "negative_marks": 0.0,
-      "question": "A combine harvester costs \u20b925,00,000, has a life of 8 years, and a salvage value of 12% of the purchase price. Using straight-line depreciation, and given an annual repair-and-maintenance cost of 5% of the purchase price, compute the total annual fixed-plus-repair cost (excluding fuel and labour).",
+      "negative_marks": 0,
+      "question": "A combine harvester costs ₹25,00,000, has a life of 8 years, and a salvage value of 12% of the purchase price. Using straight-line depreciation, and given an annual repair-and-maintenance cost of 5% of the purchase price, compute the total annual fixed-plus-repair cost (excluding fuel and labour).",
       "options": {},
-      "correct_answer": "395000.00 to 405000.00 \u20b9/year",
-      "solution": "Answer: 395000.00 to 405000.00 \u20b9/year\nExplanation:\n\u2022 Depreciation = (25,00,000 \u2212 3,00,000)/8 = 22,00,000/8 = 2,75,000 \u20b9/yr.\n\u2022 Repair & maintenance = 0.05 \u00d7 25,00,000 = 1,25,000 \u20b9/yr.\n\u2022 Total = 2,75,000 + 1,25,000 = 4,00,000 \u20b9/yr.",
+      "correct_answer": "395000.00 to 405000.00 ₹/year",
+      "solution": "Answer: 395000.00 to 405000.00 ₹/year\nExplanation:\n• Depreciation = (25,00,000 − 3,00,000)/8 = 22,00,000/8 = 2,75,000 ₹/yr.\n• Repair & maintenance = 0.05 × 25,00,000 = 1,25,000 ₹/yr.\n• Total = 2,75,000 + 1,25,000 = 4,00,000 ₹/yr.",
       "isCustomUploaded": true
     },
     {
@@ -875,11 +875,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 2,
-      "negative_marks": 0.0,
-      "question": "A chisel plough with 7 shanks operates at 250 mm depth; each shank has an effective working width of 300 mm, and the soil's specific draft resistance is 45 kN/m\u00b2. Compute the total draft force.",
+      "negative_marks": 0,
+      "question": "A chisel plough with 7 shanks operates at 250 mm depth; each shank has an effective working width of 300 mm, and the soil's specific draft resistance is 45 kN/m². Compute the total draft force.",
       "options": {},
       "correct_answer": "23.30 to 23.90 kN",
-      "solution": "Answer: 23.30 to 23.90 kN\nExplanation:\n\u2022 Cross-section per shank = 0.25\u00d70.30 = 0.075 m\u00b2.\n\u2022 Total cross-section (7 shanks) = 7\u00d70.075 = 0.525 m\u00b2.\n\u2022 Draft = 0.525\u00d745 = 23.625 kN.",
+      "solution": "Answer: 23.30 to 23.90 kN\nExplanation:\n• Cross-section per shank = 0.25×0.30 = 0.075 m².\n• Total cross-section (7 shanks) = 7×0.075 = 0.525 m².\n• Draft = 0.525×45 = 23.625 kN.",
       "isCustomUploaded": true
     },
     {
@@ -893,7 +893,7 @@
       "type": "MCQ",
       "marks": 2,
       "negative_marks": 0.6666666666666666,
-      "question": "An air-standard Diesel cycle has a compression ratio of 16 and a cut-off ratio of 2.0. Taking \u03b3 = 1.4, compute the thermal efficiency.",
+      "question": "An air-standard Diesel cycle has a compression ratio of 16 and a cut-off ratio of 2.0. Taking γ = 1.4, compute the thermal efficiency.",
       "options": {
         "A": "56.0%",
         "B": "58.7%",
@@ -901,7 +901,7 @@
         "D": "65.2%"
       },
       "correct_answer": "C",
-      "solution": "Answer: C\nExplanation:\n\u2022 \u03b7 = 1 \u2212 [1/r^(\u03b3\u22121)] \u00d7 [(\u03c1^\u03b3 \u2212 1)/(\u03b3(\u03c1\u22121))], r=16, \u03c1=2.0, \u03b3=1.4.\n\u2022 r^(\u03b3\u22121) = 16^0.4 = 3.032.\n\u2022 \u03c1^\u03b3 = 2^1.4 = 2.639; (\u03c1^\u03b3\u22121) = 1.639; \u03b3(\u03c1\u22121) = 1.4\u00d71 = 1.4; bracket = 1.639/1.4 = 1.171.\n\u2022 \u03b7 = 1 \u2212 (1/3.032)\u00d71.171 = 1 \u2212 0.386 = 0.614 = 61.4%.\nWhy the other options are wrong:\n(A) Not consistent with the correct Diesel-cycle efficiency formula at r=16, \u03c1=2.0.\n(B) Not consistent with the correct calculation.\n(C) Correct.\n(D) Overestimates \u2014 exceeds what these values yield.",
+      "solution": "Answer: C\nExplanation:\n• η = 1 − [1/r^(γ−1)] × [(ρ^γ − 1)/(γ(ρ−1))], r=16, ρ=2.0, γ=1.4.\n• r^(γ−1) = 16^0.4 = 3.032.\n• ρ^γ = 2^1.4 = 2.639; (ρ^γ−1) = 1.639; γ(ρ−1) = 1.4×1 = 1.4; bracket = 1.639/1.4 = 1.171.\n• η = 1 − (1/3.032)×1.171 = 1 − 0.386 = 0.614 = 61.4%.\nWhy the other options are wrong:\n(A) Not consistent with the correct Diesel-cycle efficiency formula at r=16, ρ=2.0.\n(B) Not consistent with the correct calculation.\n(C) Correct.\n(D) Overestimates — exceeds what these values yield.",
       "isCustomUploaded": true
     },
     {
@@ -914,11 +914,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 2,
-      "negative_marks": 0.0,
+      "negative_marks": 0,
       "question": "A 4WD tractor weighs 22 kN, with static weight distribution 55% front / 45% rear. During pulling, weight transfer shifts 2 kN from the front axle to the rear axle. The effective coefficient of traction (all-wheel-drive, based on total dynamic weight) is 0.6, and the overall rolling resistance coefficient is 0.07. Compute the maximum drawbar pull.",
       "options": {},
       "correct_answer": "11.50 to 11.90 kN",
-      "solution": "Answer: 11.50 to 11.90 kN\nExplanation:\n\u2022 Since all wheels are driven, maximum tractive force is governed by total weight: F_t(max) = 0.6 \u00d7 22 = 13.2 kN.\n\u2022 Total rolling resistance = 0.07 \u00d7 22 = 1.54 kN.\n\u2022 Maximum drawbar pull = 13.2 \u2212 1.54 = 11.66 kN.",
+      "solution": "Answer: 11.50 to 11.90 kN\nExplanation:\n• Since all wheels are driven, maximum tractive force is governed by total weight: F_t(max) = 0.6 × 22 = 13.2 kN.\n• Total rolling resistance = 0.07 × 22 = 1.54 kN.\n• Maximum drawbar pull = 13.2 − 1.54 = 11.66 kN.",
       "isCustomUploaded": true
     },
     {
@@ -931,11 +931,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 2,
-      "negative_marks": 0.0,
+      "negative_marks": 0,
       "question": "A tractor diesel engine has a brake specific fuel consumption of 210 g/kWh; the calorific value of the diesel used is 42.5 MJ/kg. Compute the brake thermal efficiency.",
       "options": {},
       "correct_answer": "40.00 to 40.70 %",
-      "solution": "Answer: 40.00 to 40.70 %\nExplanation:\n\u2022 bsfc = 0.210 kg/kWh; CV = 42,500 kJ/kg.\n\u2022 BTE = 3600/(bsfc\u00d7CV) = 3600/(0.210\u00d742,500) = 3600/8925 = 0.4034 = 40.34%.",
+      "solution": "Answer: 40.00 to 40.70 %\nExplanation:\n• bsfc = 0.210 kg/kWh; CV = 42,500 kJ/kg.\n• BTE = 3600/(bsfc×CV) = 3600/(0.210×42,500) = 3600/8925 = 0.4034 = 40.34%.",
       "isCustomUploaded": true
     },
     {
@@ -948,11 +948,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 2,
-      "negative_marks": 0.0,
+      "negative_marks": 0,
       "question": "A tractor gearbox output shaft runs at 900 rpm and delivers 35 kW into a final-drive-plus-differential assembly with an overall reduction ratio of 18:1 and combined mechanical efficiency of 94%. Compute the torque delivered at the wheel axle.",
       "options": {},
-      "correct_answer": "6200.00 to 6380.00 N\u00b7m",
-      "solution": "Answer: 6200.00 to 6380.00 N\u00b7m\nExplanation:\n\u2022 Wheel axle speed = 900/18 = 50 rpm = 50\u00d72\u03c0/60 = 5.236 rad/s.\n\u2022 Power delivered at the axle = 35 \u00d7 0.94 = 32.9 kW.\n\u2022 Torque = Power/\u03c9 = 32,900/5.236 = 6284 N\u00b7m.",
+      "correct_answer": "6200.00 to 6380.00 N·m",
+      "solution": "Answer: 6200.00 to 6380.00 N·m\nExplanation:\n• Wheel axle speed = 900/18 = 50 rpm = 50×2π/60 = 5.236 rad/s.\n• Power delivered at the axle = 35 × 0.94 = 32.9 kW.\n• Torque = Power/ω = 32,900/5.236 = 6284 N·m.",
       "isCustomUploaded": true
     },
     {
@@ -965,11 +965,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 2,
-      "negative_marks": 0.0,
-      "question": "A wind-powered water pump has a rotor swept area of 4 m\u00b2, operates at a wind speed of 6 m/s, and has an overall wind-to-water power conversion efficiency of 25%. Taking air density = 1.2 kg/m\u00b3, compute the power delivered to the water.",
+      "negative_marks": 0,
+      "question": "A wind-powered water pump has a rotor swept area of 4 m², operates at a wind speed of 6 m/s, and has an overall wind-to-water power conversion efficiency of 25%. Taking air density = 1.2 kg/m³, compute the power delivered to the water.",
       "options": {},
       "correct_answer": "126.00 to 134.00 W",
-      "solution": "Answer: 126.00 to 134.00 W\nExplanation:\n\u2022 Available wind power = 0.5\u00d7\u03c1\u00d7A\u00d7v\u00b3 = 0.5\u00d71.2\u00d74\u00d76\u00b3 = 0.5\u00d71.2\u00d74\u00d7216 = 518.4 W.\n\u2022 Delivered power = 518.4 \u00d7 0.25 = 129.6 W.",
+      "solution": "Answer: 126.00 to 134.00 W\nExplanation:\n• Available wind power = 0.5×ρ×A×v³ = 0.5×1.2×4×6³ = 0.5×1.2×4×216 = 518.4 W.\n• Delivered power = 518.4 × 0.25 = 129.6 W.",
       "isCustomUploaded": true
     },
     {
@@ -983,15 +983,15 @@
       "type": "MCQ",
       "marks": 2,
       "negative_marks": 0.6666666666666666,
-      "question": "A small watershed of area 8 km\u00b2 has a runoff coefficient of 0.35 for a design rainfall intensity of 40 mm/h. Using the Rational Method, Q = CiA/360 (Q in m\u00b3/s, i in mm/h, A in hectares), compute the peak discharge.",
+      "question": "A small watershed of area 8 km² has a runoff coefficient of 0.35 for a design rainfall intensity of 40 mm/h. Using the Rational Method, Q = CiA/360 (Q in m³/s, i in mm/h, A in hectares), compute the peak discharge.",
       "options": {
-        "A": "11.2 m\u00b3/s",
-        "B": "22.4 m\u00b3/s",
-        "C": "31.1 m\u00b3/s",
-        "D": "44.8 m\u00b3/s"
+        "A": "11.2 m³/s",
+        "B": "22.4 m³/s",
+        "C": "31.1 m³/s",
+        "D": "44.8 m³/s"
       },
       "correct_answer": "C",
-      "solution": "Answer: C\nExplanation:\n\u2022 A = 8 km\u00b2 = 800 ha.\n\u2022 Q = (0.35\u00d740\u00d7800)/360 = 11,200/360 = 31.1 m\u00b3/s.\nWhy the other options are wrong:\n(A) Not consistent with the correct substitution into the Rational formula.\n(B) Not consistent with the correct substitution.\n(C) Correct.\n(D) Overestimates \u2014 does not match the correct Rational-method calculation.",
+      "solution": "Answer: C\nExplanation:\n• A = 8 km² = 800 ha.\n• Q = (0.35×40×800)/360 = 11,200/360 = 31.1 m³/s.\nWhy the other options are wrong:\n(A) Not consistent with the correct substitution into the Rational formula.\n(B) Not consistent with the correct substitution.\n(C) Correct.\n(D) Overestimates — does not match the correct Rational-method calculation.",
       "isCustomUploaded": true
     },
     {
@@ -1005,15 +1005,15 @@
       "type": "MCQ",
       "marks": 2,
       "negative_marks": 0.6666666666666666,
-      "question": "A 6-hour unit hydrograph (1 cm rainfall excess) has a peak discharge of 60 m\u00b3/s. For a storm producing a uniform rainfall excess of 2.5 cm in 6 hours, neglecting baseflow, compute the peak of the direct-runoff hydrograph.",
+      "question": "A 6-hour unit hydrograph (1 cm rainfall excess) has a peak discharge of 60 m³/s. For a storm producing a uniform rainfall excess of 2.5 cm in 6 hours, neglecting baseflow, compute the peak of the direct-runoff hydrograph.",
       "options": {
-        "A": "120 m\u00b3/s",
-        "B": "150 m\u00b3/s",
-        "C": "180 m\u00b3/s",
-        "D": "24 m\u00b3/s"
+        "A": "120 m³/s",
+        "B": "150 m³/s",
+        "C": "180 m³/s",
+        "D": "24 m³/s"
       },
       "correct_answer": "B",
-      "solution": "Answer: B\nExplanation:\n\u2022 Unit hydrograph ordinates scale linearly with rainfall excess depth: Peak of DRH = 60 \u00d7 2.5 = 150 m\u00b3/s.\nWhy the other options are wrong:\n(A) Not consistent with correct linear scaling by 2.5.\n(B) Correct.\n(C) Not consistent with correct linear scaling.\n(D) Results from dividing instead of multiplying by 2.5.",
+      "solution": "Answer: B\nExplanation:\n• Unit hydrograph ordinates scale linearly with rainfall excess depth: Peak of DRH = 60 × 2.5 = 150 m³/s.\nWhy the other options are wrong:\n(A) Not consistent with correct linear scaling by 2.5.\n(B) Correct.\n(C) Not consistent with correct linear scaling.\n(D) Results from dividing instead of multiplying by 2.5.",
       "isCustomUploaded": true
     },
     {
@@ -1026,11 +1026,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 2,
-      "negative_marks": 0.0,
-      "question": "A trapezoidal (Cipolletti) check-dam spillway must pass a peak discharge of 3.5 m\u00b3/s. Using Q = 1.71 L H^1.5 (SI units), with an available head H = 0.5 m, find the minimum crest length L.",
+      "negative_marks": 0,
+      "question": "A trapezoidal (Cipolletti) check-dam spillway must pass a peak discharge of 3.5 m³/s. Using Q = 1.71 L H^1.5 (SI units), with an available head H = 0.5 m, find the minimum crest length L.",
       "options": {},
       "correct_answer": "5.65 to 5.95 m",
-      "solution": "Answer: 5.65 to 5.95 m\nExplanation:\n\u2022 H^1.5 = 0.5\u00d7\u221a0.5 = 0.5\u00d70.7071 = 0.3536.\n\u2022 L = Q/(1.71\u00d7H^1.5) = 3.5/(1.71\u00d70.3536) = 3.5/0.6047 = 5.79 m.",
+      "solution": "Answer: 5.65 to 5.95 m\nExplanation:\n• H^1.5 = 0.5×√0.5 = 0.5×0.7071 = 0.3536.\n• L = Q/(1.71×H^1.5) = 3.5/(1.71×0.3536) = 3.5/0.6047 = 5.79 m.",
       "isCustomUploaded": true
     },
     {
@@ -1043,11 +1043,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 2,
-      "negative_marks": 0.0,
+      "negative_marks": 0,
       "question": "Water flows through a 200 mm diameter pipe at a mean velocity of 1.8 m/s and discharges into a trapezoidal open channel with bed width 1.0 m, side slopes 1:1, flowing at a depth of 0.6 m. Using continuity, compute the mean velocity in the channel.",
       "options": {},
       "correct_answer": "0.06 to 0.06 m/s",
-      "solution": "Answer: 0.06 to 0.06 m/s\nExplanation:\n\u2022 Pipe discharge Q = (\u03c0/4)\u00d70.2\u00b2\u00d71.8 = 0.03142\u00d71.8 = 0.0566 m\u00b3/s.\n\u2022 Channel area = (1.0+0.6)\u00d70.6 = 0.96 m\u00b2.\n\u2022 Channel velocity = 0.0566/0.96 = 0.0589 m/s.",
+      "solution": "Answer: 0.06 to 0.06 m/s\nExplanation:\n• Pipe discharge Q = (π/4)×0.2²×1.8 = 0.03142×1.8 = 0.0566 m³/s.\n• Channel area = (1.0+0.6)×0.6 = 0.96 m².\n• Channel velocity = 0.0566/0.96 = 0.0589 m/s.",
       "isCustomUploaded": true
     },
     {
@@ -1060,11 +1060,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 2,
-      "negative_marks": 0.0,
-      "question": "A watershed has curve number CN = 78. For a rainfall event of 75 mm, using the SCS-CN method (S = 25400/CN \u2212 254, Ia = 0.2S), compute the direct runoff depth Q.",
+      "negative_marks": 0,
+      "question": "A watershed has curve number CN = 78. For a rainfall event of 75 mm, using the SCS-CN method (S = 25400/CN − 254, Ia = 0.2S), compute the direct runoff depth Q.",
       "options": {},
       "correct_answer": "27.40 to 28.20 mm",
-      "solution": "Answer: 27.40 to 28.20 mm\nExplanation:\n\u2022 S = 25400/78 \u2212 254 = 325.6 \u2212 254 = 71.6 mm.\n\u2022 Ia = 0.2\u00d771.6 = 14.32 mm.\n\u2022 Q = (P\u2212Ia)\u00b2/(P\u2212Ia+S) = (75\u221214.32)\u00b2/(75\u221214.32+71.6) = 60.68\u00b2/132.28 = 3682.1/132.28 = 27.8 mm.",
+      "solution": "Answer: 27.40 to 28.20 mm\nExplanation:\n• S = 25400/78 − 254 = 325.6 − 254 = 71.6 mm.\n• Ia = 0.2×71.6 = 14.32 mm.\n• Q = (P−Ia)²/(P−Ia+S) = (75−14.32)²/(75−14.32+71.6) = 60.68²/132.28 = 3682.1/132.28 = 27.8 mm.",
       "isCustomUploaded": true
     },
     {
@@ -1077,11 +1077,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 2,
-      "negative_marks": 0.0,
-      "question": "A soil has field capacity 30% and permanent wilting point 14% (both by dry weight), and bulk density 1.35 g/cm\u00b3. Compute the total available water in a 45 cm effective root-zone depth.",
+      "negative_marks": 0,
+      "question": "A soil has field capacity 30% and permanent wilting point 14% (both by dry weight), and bulk density 1.35 g/cm³. Compute the total available water in a 45 cm effective root-zone depth.",
       "options": {},
       "correct_answer": "96.00 to 98.50 mm",
-      "solution": "Answer: 96.00 to 98.50 mm\nExplanation:\n\u2022 Available water fraction = 0.30 \u2212 0.14 = 0.16.\n\u2022 Depth of available water = 0.16 \u00d7 1.35 \u00d7 450 mm = 97.2 mm.",
+      "solution": "Answer: 96.00 to 98.50 mm\nExplanation:\n• Available water fraction = 0.30 − 0.14 = 0.16.\n• Depth of available water = 0.16 × 1.35 × 450 mm = 97.2 mm.",
       "isCustomUploaded": true
     },
     {
@@ -1094,8 +1094,8 @@
       "gate_section": "AG",
       "type": "MSQ",
       "marks": 2,
-      "negative_marks": 0.0,
-      "question": "Which of the following statements about specific speed (N\u209b) and centrifugal-pump selection are CORRECT?",
+      "negative_marks": 0,
+      "question": "Which of the following statements about specific speed (Nₛ) and centrifugal-pump selection are CORRECT?",
       "options": {
         "A": "Low specific speed corresponds to radial-flow (centrifugal) pumps, suited to high head and low discharge",
         "B": "High specific speed corresponds to axial-flow (propeller) pumps, suited to low head and high discharge",
@@ -1103,7 +1103,7 @@
         "D": "Mixed-flow pumps have specific speed values intermediate between radial- and axial-flow types"
       },
       "correct_answer": "A, B, D",
-      "solution": "Answer: A, B, D\nExplanation:\n\u2022 A, B and D correctly describe how specific speed classifies pump geometry.\n\u2022 C is false \u2014 specific speed is a function of rotational speed N, discharge Q, AND head H (N\u209b = N\u221aQ/H^0.75), not discharge alone.\nOption-wise justification:\n(A) Correct \u2014 the standard low-Ns/radial-flow association.\n(B) Correct \u2014 the standard high-Ns/axial-flow association.\n(C) Incorrect \u2014 specific speed depends on N, Q and H together, not Q alone.\n(D) Correct \u2014 mixed-flow pumps occupy the intermediate Ns range.",
+      "solution": "Answer: A, B, D\nExplanation:\n• A, B and D correctly describe how specific speed classifies pump geometry.\n• C is false — specific speed is a function of rotational speed N, discharge Q, AND head H (Nₛ = N√Q/H^0.75), not discharge alone.\nOption-wise justification:\n(A) Correct — the standard low-Ns/radial-flow association.\n(B) Correct — the standard high-Ns/axial-flow association.\n(C) Incorrect — specific speed depends on N, Q and H together, not Q alone.\n(D) Correct — mixed-flow pumps occupy the intermediate Ns range.",
       "isCustomUploaded": true
     },
     {
@@ -1116,11 +1116,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 2,
-      "negative_marks": 0.0,
+      "negative_marks": 0,
       "question": "A lined trapezoidal channel has bed width 1.5 m, side slopes 1.5:1 (H:V), depth of flow 1.0 m, bed slope 1 in 2500, and Manning's n = 0.016. Compute the discharge.",
       "options": {},
-      "correct_answer": "2.50 to 2.75 m\u00b3/s",
-      "solution": "Answer: 2.50 to 2.75 m\u00b3/s\nExplanation:\n\u2022 Area A = (b+zy)y = (1.5+1.5\u00d71)\u00d71 = 3.0 m\u00b2.\n\u2022 Wetted perimeter P = b+2y\u221a(1+z\u00b2) = 1.5+2\u00d71\u00d7\u221a(1+2.25) = 1.5+3.606 = 5.106 m.\n\u2022 R = A/P = 3.0/5.106 = 0.588 m.\n\u2022 V = (1/n)R^(2/3)S^0.5 = (1/0.016)\u00d70.588^0.667\u00d7(1/2500)^0.5 = 62.5\u00d70.701\u00d70.02 = 0.877 m/s.\n\u2022 Q = A\u00d7V = 3.0\u00d70.877 = 2.63 m\u00b3/s.",
+      "correct_answer": "2.50 to 2.75 m³/s",
+      "solution": "Answer: 2.50 to 2.75 m³/s\nExplanation:\n• Area A = (b+zy)y = (1.5+1.5×1)×1 = 3.0 m².\n• Wetted perimeter P = b+2y√(1+z²) = 1.5+2×1×√(1+2.25) = 1.5+3.606 = 5.106 m.\n• R = A/P = 3.0/5.106 = 0.588 m.\n• V = (1/n)R^(2/3)S^0.5 = (1/0.016)×0.588^0.667×(1/2500)^0.5 = 62.5×0.701×0.02 = 0.877 m/s.\n• Q = A×V = 3.0×0.877 = 2.63 m³/s.",
       "isCustomUploaded": true
     },
     {
@@ -1133,11 +1133,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 2,
-      "negative_marks": 0.0,
-      "question": "Design a subsurface drain spacing using the steady-state Hooghoudt equation q\u00b7S\u00b2 = 4K\u00b7h\u00b7(2d+h), with K = 0.6 m/day, h = 1.0 m, d = 1.5 m, and q = 0.012 m/day. Compute the drain spacing S.",
+      "negative_marks": 0,
+      "question": "Design a subsurface drain spacing using the steady-state Hooghoudt equation q·S² = 4K·h·(2d+h), with K = 0.6 m/day, h = 1.0 m, d = 1.5 m, and q = 0.012 m/day. Compute the drain spacing S.",
       "options": {},
       "correct_answer": "27.80 to 28.80 m",
-      "solution": "Answer: 27.80 to 28.80 m\nExplanation:\n\u2022 S\u00b2 = 4Kh(2d+h)/q = [4\u00d70.6\u00d71\u00d7(2\u00d71.5+1)]/0.012.\n\u2022 Numerator = 4\u00d70.6\u00d71\u00d74 = 9.6.\n\u2022 S\u00b2 = 9.6/0.012 = 800; S = \u221a800 = 28.28 m.",
+      "solution": "Answer: 27.80 to 28.80 m\nExplanation:\n• S² = 4Kh(2d+h)/q = [4×0.6×1×(2×1.5+1)]/0.012.\n• Numerator = 4×0.6×1×4 = 9.6.\n• S² = 9.6/0.012 = 800; S = √800 = 28.28 m.",
       "isCustomUploaded": true
     },
     {
@@ -1150,11 +1150,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 2,
-      "negative_marks": 0.0,
-      "question": "A steady-state pumping test on a confined aquifer (Q = 1500 m\u00b3/day) records drawdown of 1.8 m at radial distance 15 m and 0.7 m at radial distance 90 m. Using the Thiem equation, compute the transmissivity T.",
+      "negative_marks": 0,
+      "question": "A steady-state pumping test on a confined aquifer (Q = 1500 m³/day) records drawdown of 1.8 m at radial distance 15 m and 0.7 m at radial distance 90 m. Using the Thiem equation, compute the transmissivity T.",
       "options": {},
-      "correct_answer": "385.00 to 393.00 m\u00b2/day",
-      "solution": "Answer: 385.00 to 393.00 m\u00b2/day\nExplanation:\n\u2022 Thiem: T = Q\u00b7ln(r2/r1)/[2\u03c0(s1\u2212s2)].\n\u2022 ln(90/15) = ln 6 = 1.792.\n\u2022 T = 1500\u00d71.792/(2\u03c0\u00d71.1) = 2687.7/6.912 = 388.8 m\u00b2/day.",
+      "correct_answer": "385.00 to 393.00 m²/day",
+      "solution": "Answer: 385.00 to 393.00 m²/day\nExplanation:\n• Thiem: T = Q·ln(r2/r1)/[2π(s1−s2)].\n• ln(90/15) = ln 6 = 1.792.\n• T = 1500×1.792/(2π×1.1) = 2687.7/6.912 = 388.8 m²/day.",
       "isCustomUploaded": true
     },
     {
@@ -1167,16 +1167,16 @@
       "gate_section": "AG",
       "type": "MSQ",
       "marks": 2,
-      "negative_marks": 0.0,
+      "negative_marks": 0,
       "question": "Which of the following statements about controlled-atmosphere (CA) storage of fresh produce are CORRECT?",
       "options": {
-        "A": "CA storage typically maintains reduced O\u2082 and elevated CO\u2082 levels compared to normal air",
+        "A": "CA storage typically maintains reduced O₂ and elevated CO₂ levels compared to normal air",
         "B": "CA storage slows the respiration rate and senescence of produce, extending storage life",
         "C": "CA storage increases ethylene production, accelerating ripening",
-        "D": "Optimal O\u2082/CO\u2082 levels for CA storage are commodity-specific"
+        "D": "Optimal O₂/CO₂ levels for CA storage are commodity-specific"
       },
       "correct_answer": "A, B, D",
-      "solution": "Answer: A, B, D\nExplanation:\n\u2022 A, B and D correctly describe CA storage principles and practice.\n\u2022 C is false \u2014 CA storage is used to SUPPRESS ethylene-driven ripening/senescence, not accelerate it.\nOption-wise justification:\n(A) Correct \u2014 the defining feature of CA storage.\n(B) Correct \u2014 the central benefit of CA storage.\n(C) Incorrect \u2014 CA storage reduces, not increases, ethylene-driven ripening.\n(D) Correct \u2014 optimal gas composition varies by commodity and cultivar.",
+      "solution": "Answer: A, B, D\nExplanation:\n• A, B and D correctly describe CA storage principles and practice.\n• C is false — CA storage is used to SUPPRESS ethylene-driven ripening/senescence, not accelerate it.\nOption-wise justification:\n(A) Correct — the defining feature of CA storage.\n(B) Correct — the central benefit of CA storage.\n(C) Incorrect — CA storage reduces, not increases, ethylene-driven ripening.\n(D) Correct — optimal gas composition varies by commodity and cultivar.",
       "isCustomUploaded": true
     },
     {
@@ -1189,11 +1189,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 2,
-      "negative_marks": 0.0,
+      "negative_marks": 0,
       "question": "Maize at 24% moisture content (wb) is dried at a constant rate Rc = 0.035 kg water/kg dry matter/h until the critical moisture content of 15% (wb) is reached. Compute the time taken during the constant-rate period.",
       "options": {},
       "correct_answer": "3.85 to 4.10 h",
-      "solution": "Answer: 3.85 to 4.10 h\nExplanation:\n\u2022 Convert wb to db: M(db) = M(wb)/(1\u2212M(wb)).\n\u2022 Initial: 0.24/0.76 = 0.3158 kg water/kg dry matter.\n\u2022 Critical: 0.15/0.85 = 0.1765 kg water/kg dry matter.\n\u2022 Moisture removed (db) = 0.3158 \u2212 0.1765 = 0.1393 kg water/kg dry matter.\n\u2022 Time = 0.1393/0.035 = 3.98 h.",
+      "solution": "Answer: 3.85 to 4.10 h\nExplanation:\n• Convert wb to db: M(db) = M(wb)/(1−M(wb)).\n• Initial: 0.24/0.76 = 0.3158 kg water/kg dry matter.\n• Critical: 0.15/0.85 = 0.1765 kg water/kg dry matter.\n• Moisture removed (db) = 0.3158 − 0.1765 = 0.1393 kg water/kg dry matter.\n• Time = 0.1393/0.035 = 3.98 h.",
       "isCustomUploaded": true
     },
     {
@@ -1206,11 +1206,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 2,
-      "negative_marks": 0.0,
-      "question": "A roller mill grinds wheat at 800 kg/h from a feed size of 6 mm to a product size of 1.5 mm. Using Bond's law, E(kWh/tonne) = Wi(1/\u221aDp2 \u2212 1/\u221aDp1) with Bond work index Wi = 10.2 kWh/tonne and Dp in mm, compute the power required.",
+      "negative_marks": 0,
+      "question": "A roller mill grinds wheat at 800 kg/h from a feed size of 6 mm to a product size of 1.5 mm. Using Bond's law, E(kWh/tonne) = Wi(1/√Dp2 − 1/√Dp1) with Bond work index Wi = 10.2 kWh/tonne and Dp in mm, compute the power required.",
       "options": {},
       "correct_answer": "3.20 to 3.50 kW",
-      "solution": "Answer: 3.20 to 3.50 kW\nExplanation:\n\u2022 E = 10.2\u00d7(1/\u221a1.5 \u2212 1/\u221a6) = 10.2\u00d7(0.8165 \u2212 0.4082) = 10.2\u00d70.4083 = 4.165 kWh/tonne.\n\u2022 Power = E \u00d7 throughput = 4.165 \u00d7 0.8 t/h = 3.33 kW.",
+      "solution": "Answer: 3.20 to 3.50 kW\nExplanation:\n• E = 10.2×(1/√1.5 − 1/√6) = 10.2×(0.8165 − 0.4082) = 10.2×0.4083 = 4.165 kWh/tonne.\n• Power = E × throughput = 4.165 × 0.8 t/h = 3.33 kW.",
       "isCustomUploaded": true
     },
     {
@@ -1223,11 +1223,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 2,
-      "negative_marks": 0.0,
+      "negative_marks": 0,
       "question": "A silo holds 400 tonnes of maize at 16% moisture content (wb) and must be dried to 13% (wb) for safe long-term storage. Using a dry-matter balance, compute the mass of water to be removed.",
       "options": {},
       "correct_answer": "13.40 to 14.20 tonnes",
-      "solution": "Answer: 13.40 to 14.20 tonnes\nExplanation:\n\u2022 Dry matter (constant) = 400\u00d7(1\u22120.16) = 336 t.\n\u2022 Final wet mass = 336/(1\u22120.13) = 336/0.87 = 386.2 t.\n\u2022 Water removed = 400 \u2212 386.2 = 13.8 t.",
+      "solution": "Answer: 13.40 to 14.20 tonnes\nExplanation:\n• Dry matter (constant) = 400×(1−0.16) = 336 t.\n• Final wet mass = 336/(1−0.13) = 336/0.87 = 386.2 t.\n• Water removed = 400 − 386.2 = 13.8 t.",
       "isCustomUploaded": true
     },
     {
@@ -1240,16 +1240,16 @@
       "gate_section": "AG",
       "type": "MSQ",
       "marks": 2,
-      "negative_marks": 0.0,
-      "question": "Which of the following statements about the F\u2080 value (thermal process lethality) used in canned-food sterilization are CORRECT?",
+      "negative_marks": 0,
+      "question": "Which of the following statements about the F₀ value (thermal process lethality) used in canned-food sterilization are CORRECT?",
       "options": {
-        "A": "F\u2080 is the equivalent time at a reference temperature (usually 121.1\u00b0C) that delivers the same microbial lethality as the actual, varying time-temperature process",
-        "B": "A higher F\u2080 indicates a more severe (more lethal) thermal process",
-        "C": "F\u2080 depends on the Z-value of the target organism",
-        "D": "F\u2080 is independent of the retort's come-up and cool-down time"
+        "A": "F₀ is the equivalent time at a reference temperature (usually 121.1°C) that delivers the same microbial lethality as the actual, varying time-temperature process",
+        "B": "A higher F₀ indicates a more severe (more lethal) thermal process",
+        "C": "F₀ depends on the Z-value of the target organism",
+        "D": "F₀ is independent of the retort's come-up and cool-down time"
       },
       "correct_answer": "A, B, C",
-      "solution": "Answer: A, B, C\nExplanation:\n\u2022 A, B and C correctly describe F\u2080 and its dependence on the organism's Z-value.\n\u2022 D is false \u2014 accumulated lethality during the heating (come-up) and cooling phases of the retort cycle contributes to F\u2080 and must be included, not ignored.\nOption-wise justification:\n(A) Correct \u2014 the standard definition of F\u2080.\n(B) Correct \u2014 F\u2080 scales with process severity.\n(C) Correct \u2014 F\u2080 is organism-specific through the Z-value.\n(D) Incorrect \u2014 come-up and cool-down lethality contribute to F\u2080 and cannot be neglected.",
+      "solution": "Answer: A, B, C\nExplanation:\n• A, B and C correctly describe F₀ and its dependence on the organism's Z-value.\n• D is false — accumulated lethality during the heating (come-up) and cooling phases of the retort cycle contributes to F₀ and must be included, not ignored.\nOption-wise justification:\n(A) Correct — the standard definition of F₀.\n(B) Correct — F₀ scales with process severity.\n(C) Correct — F₀ is organism-specific through the Z-value.\n(D) Incorrect — come-up and cool-down lethality contribute to F₀ and cannot be neglected.",
       "isCustomUploaded": true
     },
     {
@@ -1262,7 +1262,7 @@
       "gate_section": "AG",
       "type": "MSQ",
       "marks": 2,
-      "negative_marks": 0.0,
+      "negative_marks": 0,
       "question": "Which of the following statements about membrane processing (ultrafiltration/reverse osmosis) in dairy processing are CORRECT?",
       "options": {
         "A": "Ultrafiltration separates components primarily based on molecular size using a semi-permeable membrane",
@@ -1271,7 +1271,7 @@
         "D": "Membrane fouling has no effect on permeate flux over the course of operation"
       },
       "correct_answer": "A, B, C",
-      "solution": "Answer: A, B, C\nExplanation:\n\u2022 A, B and C correctly describe UF/RO membrane separation principles applied to milk.\n\u2022 D is false \u2014 fouling progressively reduces permeate flux over time and is a major practical limitation of membrane processing.\nOption-wise justification:\n(A) Correct \u2014 the defining separation mechanism of UF.\n(B) Correct \u2014 RO membranes have smaller pore size and need higher driving pressure than UF.\n(C) Correct \u2014 this is the basis of milk protein concentration by UF.\n(D) Incorrect \u2014 fouling reduces flux progressively; it is not negligible.",
+      "solution": "Answer: A, B, C\nExplanation:\n• A, B and C correctly describe UF/RO membrane separation principles applied to milk.\n• D is false — fouling progressively reduces permeate flux over time and is a major practical limitation of membrane processing.\nOption-wise justification:\n(A) Correct — the defining separation mechanism of UF.\n(B) Correct — RO membranes have smaller pore size and need higher driving pressure than UF.\n(C) Correct — this is the basis of milk protein concentration by UF.\n(D) Incorrect — fouling reduces flux progressively; it is not negligible.",
       "isCustomUploaded": true
     },
     {
@@ -1284,11 +1284,11 @@
       "gate_section": "AG",
       "type": "NAT",
       "marks": 2,
-      "negative_marks": 0.0,
-      "question": "Milk is cooled from 32\u00b0C to 5\u00b0C in a counter-flow plate cooler using chilled water entering at 3\u00b0C and leaving at 9\u00b0C. Milk flow rate is 1800 kg/h with specific heat 3.93 kJ/kg\u00b7K; water specific heat is 4.18 kJ/kg\u00b7K. Assuming no heat losses, compute the required chilled water flow rate.",
+      "negative_marks": 0,
+      "question": "Milk is cooled from 32°C to 5°C in a counter-flow plate cooler using chilled water entering at 3°C and leaving at 9°C. Milk flow rate is 1800 kg/h with specific heat 3.93 kJ/kg·K; water specific heat is 4.18 kJ/kg·K. Assuming no heat losses, compute the required chilled water flow rate.",
       "options": {},
       "correct_answer": "7550.00 to 7700.00 kg/h",
-      "solution": "Answer: 7550.00 to 7700.00 kg/h\nExplanation:\n\u2022 Heat lost by milk = 1800\u00d73.93\u00d7(32\u22125) = 1800\u00d73.93\u00d727 = 1,90,998 kJ/h.\n\u2022 Heat gained by water = mw\u00d74.18\u00d7(9\u22123) = mw\u00d725.08.\n\u2022 mw = 1,90,998/25.08 = 7615.9 kg/h.\nBLUEPRINT VERIFICATION TABLE\nSection\nQuestions\nMarks\nMCQ\nMSQ\nNAT\nGA \u2014 General Aptitude\n10\n15\n10\n0\n0\nS1 \u2014 Engineering Mathematics\n9\n13\n6\n0\n3\nS2 \u2014 Farm Machinery\n7\n11\n3\n0\n4\nS3 \u2014 Farm Power\n9\n14\n3\n0\n6\nS4 \u2014 Soil & Water Conservation Engineering\n10\n16\n4\n0\n6\nS5 \u2014 Irrigation & Drainage Engineering\n6\n10\n1\n1\n4\nS6 \u2014 Agricultural Process Engineering\n9\n13\n2\n1\n6\nS7 \u2014 Dairy & Food Engineering\n5\n8\n1\n2\n2\nTOTAL\n65\n100\n30\n4\n31\nSelf-Check Confirmation\n\u2611 Exactly 65 questions, exactly 100 marks. \u2714 (verified above: 65 / 100)\n\u2611 Q.1\u2013Q.5 and Q.11\u2013Q.35 are 1 mark; Q.6\u2013Q.10 and Q.36\u2013Q.65 are 2 marks. \u2714\n\u2611 Section marks match the mandatory blueprint exactly (GA 15, S1 13, S2 11, S3 14, S4 16, S5 10, S6 13, S7 8). \u2714\n\u2611 Type counts match the mandatory blueprint exactly (30 MCQ, 4 MSQ, 31 NAT). \u2714\n\u2611 Sub-topic marks follow the prescribed weightage within each section, WITH rotation-pool swaps applied per \u00a74/\u00a710: Numerical Methods (S1), Harvesting/Threshing (S2), Tractor Tests & Performance (S3), Watershed Management (S4), Processing of Agriculture Produce (S6), and Unit Operations in Dairy & Food Engineering (S7). \u2714\n\u2611 Every NAT question states its unit (where applicable) and rounding/tolerance; the key gives a tolerance range for each. \u2714\n\u2611 Every numerical answer has been independently re-derived and matches the key. \u2714\n\u2611 No question duplicates any past GATE AG question \u2014 all scenarios, numbers, and asked quantities are original constructions calibrated to the syllabus. \u2714\n\u2611 Every question is solvable from the data supplied within it; no external data book is required. \u2714\n\u2611 Difficulty calibration: two-step NAT problems, mandatory unit conversions, error-based MCQ distractors, and assertion-style MSQ items are used throughout per the HARD difficulty setting. \u2714",
+      "solution": "Answer: 7550.00 to 7700.00 kg/h\nExplanation:\n• Heat lost by milk = 1800×3.93×(32−5) = 1800×3.93×27 = 1,90,998 kJ/h.\n• Heat gained by water = mw×4.18×(9−3) = mw×25.08.\n• mw = 1,90,998/25.08 = 7615.9 kg/h.",
       "isCustomUploaded": true
     }
   ]

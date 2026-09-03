@@ -139,7 +139,16 @@ export default defineConfig(({ command }) => ({
     rollupOptions: {
       output: {
         manualChunks(id) {
-          if (id.includes('/data/custom_mock_')) return 'dataset-custom-mocks';
+          if (id.includes('/data/custom_mock_')) {
+            const match = id.match(/custom_mock_2027_(\d+)/);
+            if (match) {
+              const num = parseInt(match[1], 10);
+              if (num <= 6) return 'dataset-custom-mocks-1-6';
+              if (num <= 12) return 'dataset-custom-mocks-7-12';
+              return 'dataset-custom-mocks-13-18';
+            }
+            return 'dataset-custom-mocks-1-6';
+          }
           if (id.includes('/data/mock_papers.json')) return 'dataset-pyq-mocks';
           if (id.includes('/data/questions.json')) return 'dataset-questions-archive';
           if (id.includes('node_modules')) {

@@ -61,6 +61,7 @@ export function generateQuestionPaperHtml(questions = [], options = {}) {
     includeSolutions = true,
     includeRoughWork = false,
     paperCode = 'GATE-AG-CUSTOM',
+    layoutMode = 'worksheet', // 'worksheet' | 'study_guide'
     date = new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })
   } = options;
 
@@ -116,6 +117,24 @@ export function generateQuestionPaperHtml(questions = [], options = {}) {
       </div>
     ` : '';
 
+    let inlineSolutionHtml = '';
+    if (layoutMode === 'study_guide' && includeSolutions) {
+      const rawSol = getQuestionSolution(q);
+      const expHtml = renderMathToHtmlString(rawSol);
+      const ans = getQuestionAnswer(q);
+      inlineSolutionHtml = `
+        <div class="inline-solution-card">
+          <div class="inline-solution-header">
+            <span class="inline-sol-badge">Verified Answer & Detailed Solution</span>
+            <span class="inline-sol-key">Correct Key: <strong>${escapeHtml(ans)}</strong></span>
+          </div>
+          <div class="inline-solution-body">
+            ${expHtml}
+          </div>
+        </div>
+      `;
+    }
+
     return `
       <div class="question-card">
         <div class="question-header">
@@ -136,6 +155,7 @@ export function generateQuestionPaperHtml(questions = [], options = {}) {
         ${imageHtml}
         ${optionsHtml}
         ${roughWorkHtml}
+        ${inlineSolutionHtml}
       </div>
     `;
   }).join('');
@@ -183,9 +203,9 @@ export function generateQuestionPaperHtml(questions = [], options = {}) {
     `;
   }
 
-  // Render Step-by-Step Solutions
+  // Render Step-by-Step Solutions (for worksheet mode where solutions are placed at the end)
   let solutionsHtml = '';
-  if (includeSolutions && questions.length > 0) {
+  if (layoutMode !== 'study_guide' && includeSolutions && questions.length > 0) {
     solutionsHtml = `
       <div class="page-break-before">
         <div class="section-divider">
@@ -531,6 +551,31 @@ export function generateQuestionPaperHtml(questions = [], options = {}) {
           line-height: 1.5;
           color: #334155;
         }
+
+        .inline-solution-card {
+          margin-top: 10px;
+          border: 1px solid #a7f3d0;
+          border-left: 3px solid #059669;
+          border-radius: 6px;
+          padding: 8px 12px;
+          background: #f0fdf4;
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+
+        .inline-solution-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-bottom: 1px solid #d1fae5;
+          padding-bottom: 4px;
+          margin-bottom: 6px;
+          font-size: 9pt;
+        }
+
+        .inline-sol-badge { font-weight: 800; color: #047857; text-transform: uppercase; font-size: 8pt; letter-spacing: 0.5px; }
+        .inline-sol-key { font-size: 9pt; color: #065f46; font-weight: 700; }
+        .inline-solution-body { font-size: 9.5pt; line-height: 1.5; color: #1e293b; }
 
         .footer {
           margin-top: 24px;

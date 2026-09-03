@@ -85,6 +85,7 @@ export default function CustomPdfQuestionGenerator({ questions = [], mockPapers 
   const [includeAnswerKey, setIncludeAnswerKey] = useState(true);
   const [includeSolutions, setIncludeSolutions] = useState(true);
   const [includeRoughWork, setIncludeRoughWork] = useState(false);
+  const [layoutMode, setLayoutMode] = useState('worksheet'); // 'worksheet' | 'study_guide'
 
   // Preview Drawer State
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
@@ -218,6 +219,7 @@ export default function CustomPdfQuestionGenerator({ questions = [], mockPapers 
         subtitle: `${activeSectionNames.slice(0, 3).join(', ')}${activeSectionNames.length > 3 ? ` + ${activeSectionNames.length - 3} more` : ''}`,
         sections: activeSectionNames,
         studentName: studentName.trim(),
+        layoutMode,
         includeAnswerKey,
         includeSolutions,
         includeRoughWork,
@@ -591,7 +593,46 @@ export default function CustomPdfQuestionGenerator({ questions = [], mockPapers 
               </h3>
             </div>
 
-            <div className="space-y-3 text-xs">
+            <div className="space-y-3.5 text-xs">
+              {/* Layout Mode Segmented Toggle */}
+              <div>
+                <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1.5">
+                  PDF Layout Format
+                </label>
+                <div className="grid grid-cols-2 p-1 rounded-xl bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 gap-1">
+                  <button
+                    type="button"
+                    onClick={() => setLayoutMode('worksheet')}
+                    className={`py-2 px-2.5 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer ${
+                      layoutMode === 'worksheet'
+                        ? 'bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-xs'
+                        : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                    }`}
+                  >
+                    <FileText className="w-3.5 h-3.5" />
+                    <span>Exam Worksheet</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => setLayoutMode('study_guide')}
+                    className={`py-2 px-2.5 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer ${
+                      layoutMode === 'study_guide'
+                        ? 'bg-white dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 shadow-xs'
+                        : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                    }`}
+                  >
+                    <Sparkles className="w-3.5 h-3.5" />
+                    <span>Study Guide</span>
+                  </button>
+                </div>
+                <p className="text-[10px] text-slate-400 mt-1 font-medium">
+                  {layoutMode === 'worksheet' 
+                    ? 'Exam mode: clean questions up front, Answer Key & Solved Derivations at the end.' 
+                    : 'Study mode: verified answer and detailed derivation printed immediately after each question.'}
+                </p>
+              </div>
+
               <div>
                 <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
                   Worksheet Title

@@ -18,6 +18,8 @@ import {
   Briefcase,
   ShieldCheck,
   Sparkles,
+  Copy,
+  HelpCircle,
   X
 } from 'lucide-react';
 import { 
@@ -196,6 +198,8 @@ export default function AuthModal({
   const [showLoginPassword, setShowLoginPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(true);
   const [isCapsLockOn, setIsCapsLockOn] = useState(false);
+  const [showForgotPasswordModal, setShowForgotPasswordModal] = useState(false);
+  const [copiedResetText, setCopiedResetText] = useState(false);
 
   // UI Feedback State
   const [errorMsg, setErrorMsg] = useState('');
@@ -667,8 +671,16 @@ export default function AuthModal({
                     onChange={(e) => setRememberMe(e.target.checked)}
                     className="w-4 h-4 rounded border-slate-300 dark:border-slate-700 text-indigo-600 focus:ring-0 cursor-pointer"
                   />
-                  <span>Remember me on this device</span>
+                  <span>Remember me</span>
                 </label>
+
+                <button
+                  type="button"
+                  onClick={() => setShowForgotPasswordModal(true)}
+                  className="text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 hover:underline cursor-pointer"
+                >
+                  Forgot Password?
+                </button>
               </div>
 
               <button
@@ -1272,6 +1284,82 @@ export default function AuthModal({
           )}
         </div>
       </div>
+
+      {/* ======================================================== */}
+      {/* FORGOT PASSWORD / ADMIN RECOVERY MODAL                   */}
+      {/* ======================================================== */}
+      {showForgotPasswordModal && (
+        <div className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-in fade-in">
+          <div className="relative w-full max-w-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 shadow-2xl space-y-4">
+            <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">
+              <div className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400">
+                <HelpCircle className="w-5 h-5" />
+                <h3 className="font-extrabold text-sm text-slate-900 dark:text-white">
+                  Account Recovery & Password Help
+                </h3>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShowForgotPasswordModal(false)}
+                className="p-1.5 rounded-xl text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 cursor-pointer"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+
+            <div className="space-y-3 text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
+              <div className="p-3.5 rounded-2xl bg-indigo-50/70 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-900/60 space-y-1.5">
+                <span className="font-extrabold text-indigo-900 dark:text-indigo-200 block text-[11px] uppercase tracking-wider">
+                  💡 Default Password Rules
+                </span>
+                <p className="text-slate-700 dark:text-slate-300">
+                  <strong>Student Accounts:</strong> Your default password is your <strong>Date of Birth</strong> in <code>DD/MM/YYYY</code> format (e.g. <code>15/08/2002</code>).
+                </p>
+                <p className="text-slate-700 dark:text-slate-300">
+                  <strong>Faculty Accounts:</strong> Your default password is <code>Faculty@2026</code>.
+                </p>
+              </div>
+
+              <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 space-y-2">
+                <span className="font-extrabold text-slate-900 dark:text-white block">
+                  Forgot your custom password?
+                </span>
+                <p className="text-slate-600 dark:text-slate-400">
+                  Contact the portal administrator or your faculty mentor to reset your credentials. Send an email to:
+                </p>
+                <div className="font-mono text-xs font-bold text-indigo-600 dark:text-indigo-400 bg-white dark:bg-slate-900 p-2 rounded-xl border border-slate-200 dark:border-slate-800 text-center select-all">
+                  admin@gateagprep.in
+                </div>
+              </div>
+            </div>
+
+            {/* Quick Copy Support Request */}
+            <div className="pt-2 flex items-center gap-2">
+              <button
+                type="button"
+                onClick={() => {
+                  const reqText = `Subject: GATE AG Prep - Password Reset Request\n\nHello Admin,\nPlease reset my password for the GATE AG Prep Portal.\nAccount Identifier: ${loginIdentifier || '[Enter Email/Username/Roll No]'}`;
+                  navigator.clipboard.writeText(reqText);
+                  setCopiedResetText(true);
+                  setTimeout(() => setCopiedResetText(false), 2500);
+                }}
+                className="flex-1 py-2.5 px-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-sm cursor-pointer"
+              >
+                <Copy className="w-4 h-4" />
+                <span>{copiedResetText ? 'Copied Request Template!' : 'Copy Support Request'}</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setShowForgotPasswordModal(false)}
+                className="py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold text-xs cursor-pointer"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

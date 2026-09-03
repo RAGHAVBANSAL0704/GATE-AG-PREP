@@ -152,4 +152,33 @@ test('Custom Question Paper & PDF Generator Test Suite', async (t) => {
     assert.ok(html.includes('tense back-shift'), 'Solution must extract solution text from questions.json format');
     assert.equal(html.includes('Detailed solution will be added shortly'), false, 'Must not fallback to placeholder when solution exists');
   });
+
+  await t.test('renders inline solution cards when layoutMode is study_guide', () => {
+    const html = generateQuestionPaperHtml(sampleQuestions, {
+      layoutMode: 'study_guide',
+      includeSolutions: true,
+      includeAnswerKey: true
+    });
+
+    assert.ok(html.includes('inline-solution-card'), 'Must render inline-solution-card in study_guide mode');
+    assert.ok(html.includes('Verified Answer & Detailed Solution'), 'Must include inline solution header');
+    assert.ok(html.includes('11.11'), 'Must include question derivation inline');
+    // In study_guide mode, the bottom duplicate solutions block should be omitted
+    assert.equal(html.includes('DETAILED STEP-BY-STEP EXPLANATIONS & DERIVATIONS'), false, 'Should omit bottom duplicate solutions in study_guide mode');
+  });
+
+  await t.test('verifies all 18 custom mock papers have 100% clean solutions without prompt artifacts', async () => {
+    const fs = await import('fs');
+    for (let i = 1; i <= 18; i++) {
+      const pad = String(i).padStart(2, '0');
+      const data = JSON.parse(fs.readFileSync(`./src/data/custom_mock_2027_${pad}.json`, 'utf8'));
+      assert.equal(data.questions.length, 65, `Mock ${pad} must contain exactly 65 questions`);
+      data.questions.forEach((q, qIdx) => {
+        const sol = (q.solution || '').toLowerCase();
+        assert.equal(sol.includes('blueprint verification table'), false, `Mock ${pad} Q${qIdx+1} must not contain blueprint verification table`);
+        assert.equal(sol.includes('self-check confirmation'), false, `Mock ${pad} Q${qIdx+1} must not contain self-check confirmation`);
+      });
+    }
+  });
 });
+
