@@ -40,4 +40,29 @@ test('Appearance & Theme Engine Test Suite', async (t) => {
       assert.match(t.accent, /^#[0-9A-Fa-f]{6}$/, `Theme accent ${t.accent} must be valid hex`);
     });
   });
+
+  await t.test('CSS validates high-contrast dark typography across all light themes', async () => {
+    const fs = await import('node:fs');
+    const css = fs.readFileSync(new URL('../src/index.css', import.meta.url), 'utf8');
+
+    // 1. Universal light theme high-contrast rules exist
+    assert.ok(css.includes('html:not(.dark)'), 'Must define universal html:not(.dark) typography rules');
+    assert.ok(css.includes('html:not(.dark) .text-slate-100'), 'Must remap .text-slate-100 to dark ink in light theme');
+    assert.ok(css.includes('html:not(.dark) .text-slate-200'), 'Must remap .text-slate-200 to dark ink in light theme');
+    assert.ok(css.includes('html:not(.dark) .text-slate-300'), 'Must remap .text-slate-300 to dark ink in light theme');
+
+    // 2. Form controls must have high-contrast background and text in light mode
+    assert.ok(css.includes('html:not(.dark) input,'), 'Must define light mode input styles');
+    assert.ok(css.includes('html:not(.dark) select,'), 'Must define light mode select dropdown styles');
+
+    // 3. Each of the 4 specific light themes must have dedicated typography contrast rules
+    const lightThemeIds = ['theme-oxford-sage', 'theme-cream-parchment', 'theme-porcelain-studio', 'theme-sunrise-amber'];
+    lightThemeIds.forEach(themeId => {
+      assert.ok(css.includes(`html.${themeId}`), `Must define base rules for ${themeId}`);
+      assert.ok(css.includes(`html.${themeId} h1`), `Must define heading typography for ${themeId}`);
+      assert.ok(css.includes(`html.${themeId} p`), `Must define body text typography for ${themeId}`);
+      assert.ok(css.includes(`html.${themeId} .bg-white`), `Must define card styling for ${themeId}`);
+      assert.ok(css.includes(`html.${themeId} .katex`), `Must define high-contrast KaTeX formula colors for ${themeId}`);
+    });
+  });
 });

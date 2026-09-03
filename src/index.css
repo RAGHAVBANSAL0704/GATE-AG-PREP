@@ -70,7 +70,7 @@
   html.theme-slate-light body,
   html.theme-slate-light #root,
   html.theme-slate-light .min-h-screen,
-  html:not(.dark) body {
+  html:not(.dark):not(.theme-oxford-sage):not(.theme-cream-parchment):not(.theme-porcelain-studio):not(.theme-sunrise-amber) body {
     background-color: #F8FAFC !important;
     background-image: none !important;
     color: #0F172A !important;
@@ -135,64 +135,223 @@
    SOLID HIGH-CONTRAST LIGHT THEME SPECIFIC ARCHITECTURE
    ========================================================================== */
 
-/* Universal Light Theme High-Contrast Text Enforcement */
-html:not(.dark) h1, html:not(.dark) h2, html:not(.dark) h3, html:not(.dark) h4, html:not(.dark) h5, html:not(.dark) h6 {
-  color: #0F172A;
-  font-weight: 800;
-}
-html:not(.dark) .text-slate-900, html:not(.dark) .text-slate-800 {
+/* Universal Light Theme High-Contrast Typography Enforcement */
+html:not(.dark),
+html:not(.dark) body,
+html:not(.dark) #root,
+html:not(.dark) .min-h-screen {
   color: #0F172A !important;
 }
-html:not(.dark) .text-slate-700, html:not(.dark) .text-slate-600 {
-  color: #334155 !important;
-}
-html:not(.dark) .text-slate-500 {
-  color: #475569 !important;
-}
-html:not(.dark) .text-slate-400 {
-  color: #64748B !important;
+
+html:not(.dark) h1, html:not(.dark) h2, html:not(.dark) h3, 
+html:not(.dark) h4, html:not(.dark) h5, html:not(.dark) h6 {
+  color: #0F172A !important;
+  font-weight: 800;
 }
 
-/* Ensure solid opaque cards in all light themes (NO transparency wash-out) */
-html:not(.dark) .card-3d,
-html:not(.dark) .bg-white,
-html:not(.dark) aside,
-html:not(.dark) .glass-panel {
+html:not(.dark) p,
+html:not(.dark) label,
+html:not(.dark) li,
+html:not(.dark) td,
+html:not(.dark) th,
+html:not(.dark) strong,
+html:not(.dark) b {
+  color: #1E293B !important;
+}
+
+/* Force high readability across all Tailwind text color classes */
+html:not(.dark) .text-slate-900, 
+html:not(.dark) .text-slate-800 {
+  color: #0F172A !important;
+}
+
+html:not(.dark) .text-slate-700, 
+html:not(.dark) .text-slate-600 {
+  color: #1E293B !important;
+}
+
+html:not(.dark) .text-slate-500 {
+  color: #334155 !important;
+}
+
+html:not(.dark) .text-slate-400 {
+  color: #475569 !important; /* Never wash out, WCAG compliant */
+}
+
+html:not(.dark) .text-slate-300 {
+  color: #334155 !important; /* Was #cbd5e1 (washed out), now high-contrast slate */
+}
+
+html:not(.dark) .text-slate-200 {
+  color: #1E293B !important; /* Was #e2e8f0 (invisible on white), now deep dark slate */
+}
+
+html:not(.dark) .text-slate-100 {
+  color: #0F172A !important; /* Was #f1f5f9 (invisible on white), now deep ink */
+}
+
+html:not(.dark) .text-zinc-100,
+html:not(.dark) .text-zinc-200,
+html:not(.dark) .text-zinc-300,
+html:not(.dark) .text-gray-100,
+html:not(.dark) .text-gray-200,
+html:not(.dark) .text-gray-300 {
+  color: #1E293B !important;
+}
+
+html:not(.dark) .text-zinc-400,
+html:not(.dark) .text-gray-400 {
+  color: #475569 !important;
+}
+
+/* Crystal-clear form inputs and dropdowns across all light themes */
+html:not(.dark) input,
+html:not(.dark) select,
+html:not(.dark) textarea {
+  color: #0F172A !important;
   background-color: #FFFFFF !important;
+  border-color: #CBD5E1 !important;
+}
+
+html:not(.dark) input::placeholder,
+html:not(.dark) textarea::placeholder {
+  color: #64748B !important;
   opacity: 1 !important;
 }
 
-/* Button & Badge Text Contrast Protection (White text stays white on colored backgrounds) */
-html:not(.dark) button.text-white,
+html:not(.dark) select option,
+html:not(.dark) select optgroup {
+  color: #0F172A !important;
+  background-color: #FFFFFF !important;
+}
+
+/* Ensure solid opaque cards with crisp borders in all light themes */
+html:not(.dark) .card-3d,
+html:not(.dark) .bg-white,
+html:not(.dark) aside,
+html:not(.dark) .glass-panel,
+html:not(.dark) [role="dialog"] {
+  background-color: #FFFFFF !important;
+  color: #0F172A !important;
+  border-color: #E2E8F0 !important;
+  opacity: 1 !important;
+}
+
+/* Fix any naked text-white inside light cards so it doesn't disappear */
+html:not(.dark) .bg-white .text-white:not([class*="bg-"]):not(button):not(.btn-3d-primary):not(.btn-3d-emerald),
+html:not(.dark) .bg-slate-50 .text-white:not([class*="bg-"]):not(button):not(.btn-3d-primary):not(.btn-3d-emerald),
+html:not(.dark) .bg-slate-100 .text-white:not([class*="bg-"]):not(button):not(.btn-3d-primary):not(.btn-3d-emerald),
+html:not(.dark) .card-3d .text-white:not([class*="bg-"]):not(button):not(.btn-3d-primary):not(.btn-3d-emerald),
+html:not(.dark) aside .text-white:not([class*="bg-"]):not(button):not(.btn-3d-primary):not(.btn-3d-emerald) {
+  color: #0F172A !important;
+}
+
+html:not(.dark) .bg-slate-50 {
+  background-color: #F8FAFC !important;
+}
+
+html:not(.dark) .bg-slate-100 {
+  background-color: #F1F5F9 !important;
+}
+
+html:not(.dark) .border-slate-200,
+html:not(.dark) .border-slate-100 {
+  border-color: #E2E8F0 !important;
+}
+
+/* Button & Badge Text Contrast Protection (White text stays pure white on solid colored backgrounds) */
 html:not(.dark) .bg-emerald-600,
+html:not(.dark) .bg-emerald-700,
 html:not(.dark) .bg-blue-600,
+html:not(.dark) .bg-blue-700,
 html:not(.dark) .bg-indigo-600,
+html:not(.dark) .bg-indigo-700,
+html:not(.dark) .bg-purple-600,
+html:not(.dark) .bg-purple-700,
 html:not(.dark) .bg-rose-600,
+html:not(.dark) .bg-rose-700,
 html:not(.dark) .bg-amber-600,
+html:not(.dark) .bg-slate-900,
+html:not(.dark) .bg-slate-950,
+html:not(.dark) .bg-black,
 html:not(.dark) .btn-3d-primary,
-html:not(.dark) .btn-3d-emerald {
+html:not(.dark) .btn-3d-emerald,
+html:not(.dark) .cbt-top-bar {
   color: #FFFFFF !important;
 }
+
 html:not(.dark) .bg-emerald-600 *,
+html:not(.dark) .bg-emerald-700 *,
 html:not(.dark) .bg-blue-600 *,
+html:not(.dark) .bg-blue-700 *,
 html:not(.dark) .bg-indigo-600 *,
+html:not(.dark) .bg-indigo-700 *,
+html:not(.dark) .bg-purple-600 *,
+html:not(.dark) .bg-purple-700 *,
 html:not(.dark) .bg-rose-600 *,
+html:not(.dark) .bg-rose-700 *,
+html:not(.dark) .bg-amber-600 *,
 html:not(.dark) .btn-3d-primary *,
-html:not(.dark) .btn-3d-emerald * {
+html:not(.dark) .btn-3d-emerald *,
+html:not(.dark) .cbt-top-bar * {
   color: #FFFFFF !important;
 }
+
+/* Allow nested white cards/badges inside colored wrappers to retain dark ink */
+html:not(.dark) .bg-emerald-600 .bg-white,
+html:not(.dark) .bg-emerald-600 .bg-white *,
+html:not(.dark) .bg-blue-600 .bg-white,
+html:not(.dark) .bg-blue-600 .bg-white * {
+  color: #0F172A !important;
+}
+
+/* Swami Vivekananda Dark Hero Banner Protection */
+html:not(.dark) .bg-slate-950,
+html:not(.dark) .bg-slate-950 * {
+  color: #FFFFFF;
+}
+html:not(.dark) .bg-slate-950 .text-amber-100 { color: #FEF3C7 !important; }
+html:not(.dark) .bg-slate-950 .text-amber-300 { color: #FCD34D !important; }
+html:not(.dark) .bg-slate-950 .text-amber-400 { color: #FBBF24 !important; }
+html:not(.dark) .bg-slate-950 .text-slate-100 { color: #F1F5F9 !important; }
+html:not(.dark) .bg-slate-950 .text-slate-200 { color: #E2E8F0 !important; }
 
 /* ==========================================================================
    THEME SPECIFIC OVERRIDES (LIGHT THEMES)
    ========================================================================== */
 
 /* --- 1. OXFORD SAGE & IVORY (Botanical Ivory & Forest Sage) --- */
+html.theme-oxford-sage,
+html.theme-oxford-sage body,
+html.theme-oxford-sage #root,
+html.theme-oxford-sage .min-h-screen {
+  background-color: #F5F7F3 !important;
+  background-image: none !important;
+  color: #112217 !important;
+}
+html.theme-oxford-sage h1, html.theme-oxford-sage h2, html.theme-oxford-sage h3,
+html.theme-oxford-sage h4, html.theme-oxford-sage h5, html.theme-oxford-sage h6,
+html.theme-oxford-sage .text-slate-900, html.theme-oxford-sage .text-slate-800,
+html.theme-oxford-sage .text-slate-100 {
+  color: #112217 !important;
+}
+html.theme-oxford-sage p, html.theme-oxford-sage label, html.theme-oxford-sage li,
+html.theme-oxford-sage td, html.theme-oxford-sage th, html.theme-oxford-sage strong,
+html.theme-oxford-sage .text-slate-700, html.theme-oxford-sage .text-slate-600,
+html.theme-oxford-sage .text-slate-200 {
+  color: #1F3325 !important;
+}
+html.theme-oxford-sage .text-slate-500, html.theme-oxford-sage .text-slate-400,
+html.theme-oxford-sage .text-slate-300 {
+  color: #37503F !important;
+}
 html.theme-oxford-sage .bg-white,
 html.theme-oxford-sage .card-3d,
 html.theme-oxford-sage aside,
 html.theme-oxford-sage .glass-panel {
   background-color: #FFFFFF !important;
   border-color: #DFE5DC !important;
+  color: #112217 !important;
   box-shadow: 0 4px 16px -2px rgba(27, 77, 62, 0.05) !important;
 }
 html.theme-oxford-sage .bg-slate-50,
@@ -203,127 +362,214 @@ html.theme-oxford-sage .border-slate-200,
 html.theme-oxford-sage .border-slate-100 {
   border-color: #DFE5DC !important;
 }
-html.theme-oxford-sage h1, html.theme-oxford-sage h2, html.theme-oxford-sage h3,
-html.theme-oxford-sage .text-slate-900, html.theme-oxford-sage .text-slate-800 {
+html.theme-oxford-sage input,
+html.theme-oxford-sage select,
+html.theme-oxford-sage textarea {
   color: #112217 !important;
-}
-html.theme-oxford-sage .text-slate-700, html.theme-oxford-sage .text-slate-600 {
-  color: #1F3325 !important;
-}
-html.theme-oxford-sage .text-slate-500, html.theme-oxford-sage .text-slate-400 {
-  color: #4A6052 !important;
+  background-color: #FFFFFF !important;
+  border-color: #DFE5DC !important;
 }
 html.theme-oxford-sage .bg-emerald-600 {
   background-color: #1B4D3E !important;
+  color: #FFFFFF !important;
 }
 html.theme-oxford-sage .text-emerald-600,
 html.theme-oxford-sage .text-emerald-500 {
   color: #1B4D3E !important;
 }
+html.theme-oxford-sage .katex,
+html.theme-oxford-sage .katex * {
+  color: #112217 !important;
+  fill: #112217 !important;
+}
 
 /* --- 2. CREAM PARCHMENT & COFFEE (Kindle Paper & Terracotta) --- */
+html.theme-cream-parchment,
+html.theme-cream-parchment body,
+html.theme-cream-parchment #root,
+html.theme-cream-parchment .min-h-screen {
+  background-color: #F7F4EC !important;
+  background-image: none !important;
+  color: #1A1613 !important;
+}
+html.theme-cream-parchment h1, html.theme-cream-parchment h2, html.theme-cream-parchment h3,
+html.theme-cream-parchment h4, html.theme-cream-parchment h5, html.theme-cream-parchment h6,
+html.theme-cream-parchment .text-slate-900, html.theme-cream-parchment .text-slate-800,
+html.theme-cream-parchment .text-slate-100 {
+  color: #1A1613 !important;
+}
+html.theme-cream-parchment p, html.theme-cream-parchment label, html.theme-cream-parchment li,
+html.theme-cream-parchment td, html.theme-cream-parchment th, html.theme-cream-parchment strong,
+html.theme-cream-parchment .text-slate-700, html.theme-cream-parchment .text-slate-600,
+html.theme-cream-parchment .text-slate-200 {
+  color: #2E2823 !important;
+}
+html.theme-cream-parchment .text-slate-500, html.theme-cream-parchment .text-slate-400,
+html.theme-cream-parchment .text-slate-300 {
+  color: #54483F !important;
+}
 html.theme-cream-parchment .bg-white,
 html.theme-cream-parchment .card-3d,
 html.theme-cream-parchment aside,
 html.theme-cream-parchment .glass-panel {
   background-color: #FAF8F3 !important;
   border-color: #E5DCD0 !important;
+  color: #1A1613 !important;
   box-shadow: 0 4px 16px -2px rgba(42, 36, 33, 0.05) !important;
 }
 html.theme-cream-parchment .bg-slate-50,
 html.theme-cream-parchment .bg-slate-100 {
-  background-color: #ECE5D8 !important;
+  background-color: #EDE7DB !important;
 }
 html.theme-cream-parchment .border-slate-200,
 html.theme-cream-parchment .border-slate-100 {
   border-color: #E5DCD0 !important;
 }
-html.theme-cream-parchment h1, html.theme-cream-parchment h2, html.theme-cream-parchment h3,
-html.theme-cream-parchment .text-slate-900, html.theme-cream-parchment .text-slate-800 {
+html.theme-cream-parchment input,
+html.theme-cream-parchment select,
+html.theme-cream-parchment textarea {
   color: #1A1613 !important;
-}
-html.theme-cream-parchment .text-slate-700, html.theme-cream-parchment .text-slate-600 {
-  color: #2E2823 !important;
-}
-html.theme-cream-parchment .text-slate-500, html.theme-cream-parchment .text-slate-400 {
-  color: #5E534A !important;
+  background-color: #FFFFFF !important;
+  border-color: #E5DCD0 !important;
 }
 html.theme-cream-parchment .bg-emerald-600 {
   background-color: #C2410C !important;
+  color: #FFFFFF !important;
 }
 html.theme-cream-parchment .text-emerald-600,
 html.theme-cream-parchment .text-emerald-500 {
   color: #C2410C !important;
 }
+html.theme-cream-parchment .katex,
+html.theme-cream-parchment .katex * {
+  color: #1A1613 !important;
+  fill: #1A1613 !important;
+}
 
 /* --- 3. PORCELAIN STUDIO (Linear Swiss Minimalist Slate) --- */
+html.theme-porcelain-studio,
+html.theme-porcelain-studio body,
+html.theme-porcelain-studio #root,
+html.theme-porcelain-studio .min-h-screen {
+  background-color: #F4F5F8 !important;
+  background-image: none !important;
+  color: #0A0E1A !important;
+}
+html.theme-porcelain-studio h1, html.theme-porcelain-studio h2, html.theme-porcelain-studio h3,
+html.theme-porcelain-studio h4, html.theme-porcelain-studio h5, html.theme-porcelain-studio h6,
+html.theme-porcelain-studio .text-slate-900, html.theme-porcelain-studio .text-slate-800,
+html.theme-porcelain-studio .text-slate-100 {
+  color: #0A0E1A !important;
+}
+html.theme-porcelain-studio p, html.theme-porcelain-studio label, html.theme-porcelain-studio li,
+html.theme-porcelain-studio td, html.theme-porcelain-studio th, html.theme-porcelain-studio strong,
+html.theme-porcelain-studio .text-slate-700, html.theme-porcelain-studio .text-slate-600,
+html.theme-porcelain-studio .text-slate-200 {
+  color: #1E2638 !important;
+}
+html.theme-porcelain-studio .text-slate-500, html.theme-porcelain-studio .text-slate-400,
+html.theme-porcelain-studio .text-slate-300 {
+  color: #434F64 !important;
+}
 html.theme-porcelain-studio .bg-white,
 html.theme-porcelain-studio .card-3d,
 html.theme-porcelain-studio aside,
 html.theme-porcelain-studio .glass-panel {
   background-color: #FFFFFF !important;
   border-color: #DFE2EC !important;
+  color: #0A0E1A !important;
   box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.06) !important;
 }
 html.theme-porcelain-studio .bg-slate-50,
 html.theme-porcelain-studio .bg-slate-100 {
-  background-color: #EAECEF !important;
+  background-color: #EAEDF3 !important;
 }
 html.theme-porcelain-studio .border-slate-200,
 html.theme-porcelain-studio .border-slate-100 {
   border-color: #DFE2EC !important;
 }
-html.theme-porcelain-studio h1, html.theme-porcelain-studio h2, html.theme-porcelain-studio h3,
-html.theme-porcelain-studio .text-slate-900, html.theme-porcelain-studio .text-slate-800 {
+html.theme-porcelain-studio input,
+html.theme-porcelain-studio select,
+html.theme-porcelain-studio textarea {
   color: #0A0E1A !important;
-}
-html.theme-porcelain-studio .text-slate-700, html.theme-porcelain-studio .text-slate-600 {
-  color: #1E2638 !important;
-}
-html.theme-porcelain-studio .text-slate-500, html.theme-porcelain-studio .text-slate-400 {
-  color: #4B576D !important;
+  background-color: #FFFFFF !important;
+  border-color: #DFE2EC !important;
 }
 html.theme-porcelain-studio .bg-emerald-600 {
   background-color: #4F46E5 !important;
+  color: #FFFFFF !important;
 }
 html.theme-porcelain-studio .text-emerald-600,
 html.theme-porcelain-studio .text-emerald-500 {
   color: #4F46E5 !important;
 }
+html.theme-porcelain-studio .katex,
+html.theme-porcelain-studio .katex * {
+  color: #0A0E1A !important;
+  fill: #0A0E1A !important;
+}
 
 /* --- 4. SUNRISE SAND & AMBER (Morning Sunlight Energy) --- */
+html.theme-sunrise-amber,
+html.theme-sunrise-amber body,
+html.theme-sunrise-amber #root,
+html.theme-sunrise-amber .min-h-screen {
+  background-color: #FBF8F1 !important;
+  background-image: none !important;
+  color: #1A1610 !important;
+}
+html.theme-sunrise-amber h1, html.theme-sunrise-amber h2, html.theme-sunrise-amber h3,
+html.theme-sunrise-amber h4, html.theme-sunrise-amber h5, html.theme-sunrise-amber h6,
+html.theme-sunrise-amber .text-slate-900, html.theme-sunrise-amber .text-slate-800,
+html.theme-sunrise-amber .text-slate-100 {
+  color: #1A1610 !important;
+}
+html.theme-sunrise-amber p, html.theme-sunrise-amber label, html.theme-sunrise-amber li,
+html.theme-sunrise-amber td, html.theme-sunrise-amber th, html.theme-sunrise-amber strong,
+html.theme-sunrise-amber .text-slate-700, html.theme-sunrise-amber .text-slate-600,
+html.theme-sunrise-amber .text-slate-200 {
+  color: #2E271E !important;
+}
+html.theme-sunrise-amber .text-slate-500, html.theme-sunrise-amber .text-slate-400,
+html.theme-sunrise-amber .text-slate-300 {
+  color: #524738 !important;
+}
 html.theme-sunrise-amber .bg-white,
 html.theme-sunrise-amber .card-3d,
 html.theme-sunrise-amber aside,
 html.theme-sunrise-amber .glass-panel {
   background-color: #FFFFFF !important;
   border-color: #EBE2CE !important;
+  color: #1A1610 !important;
   box-shadow: 0 4px 16px -2px rgba(217, 119, 6, 0.06) !important;
 }
 html.theme-sunrise-amber .bg-slate-50,
 html.theme-sunrise-amber .bg-slate-100 {
-  background-color: #F3ECE0 !important;
+  background-color: #F4ECE0 !important;
 }
 html.theme-sunrise-amber .border-slate-200,
 html.theme-sunrise-amber .border-slate-100 {
   border-color: #EBE2CE !important;
 }
-html.theme-sunrise-amber h1, html.theme-sunrise-amber h2, html.theme-sunrise-amber h3,
-html.theme-sunrise-amber .text-slate-900, html.theme-sunrise-amber .text-slate-800 {
+html.theme-sunrise-amber input,
+html.theme-sunrise-amber select,
+html.theme-sunrise-amber textarea {
   color: #1A1610 !important;
-}
-html.theme-sunrise-amber .text-slate-700, html.theme-sunrise-amber .text-slate-600 {
-  color: #2E271E !important;
-}
-html.theme-sunrise-amber .text-slate-500, html.theme-sunrise-amber .text-slate-400 {
-  color: #615545 !important;
+  background-color: #FFFFFF !important;
+  border-color: #EBE2CE !important;
 }
 html.theme-sunrise-amber .bg-emerald-600 {
   background-color: #D97706 !important;
+  color: #FFFFFF !important;
 }
 html.theme-sunrise-amber .text-emerald-600,
 html.theme-sunrise-amber .text-emerald-500 {
   color: #D97706 !important;
+}
+html.theme-sunrise-amber .katex,
+html.theme-sunrise-amber .katex * {
+  color: #1A1610 !important;
+  fill: #1A1610 !important;
 }
 
 /* ==========================================================================
