@@ -13,7 +13,23 @@ export const NAT_DEFAULT_TOLERANCE = 0.05;
 /**
  * Evaluate single question response with mathematical precision
  */
-export function evaluateQuestion({ question, userAnswer, state, enableNegativeMarking = true }) {
+export function evaluateQuestion(param1, param2, param3, param4) {
+  let question, userAnswer, state, enableNegativeMarking;
+
+  if (param1 && typeof param1 === 'object' && ('question' in param1 || 'state' in param1)) {
+    ({ question, userAnswer, state, enableNegativeMarking = true } = param1);
+  } else {
+    question = param1;
+    userAnswer = param2;
+    if (typeof param3 === 'boolean') {
+      enableNegativeMarking = param3;
+      state = (param2 !== undefined && param2 !== null && String(param2).trim() !== '') ? 'ANSWERED' : 'UNATTEMPTED';
+    } else {
+      state = param3 || ((param2 !== undefined && param2 !== null && String(param2).trim() !== '') ? 'ANSWERED' : 'UNATTEMPTED');
+      enableNegativeMarking = param4 !== undefined ? param4 : true;
+    }
+  }
+
   const isSubmitted = (state === 'ANSWERED' || state === 'ANSWERED_MARKED') &&
                       userAnswer !== undefined &&
                       userAnswer !== null &&
@@ -168,3 +184,95 @@ export function getEstimatedPercentile(score) {
   if (score >= 25) return { tier: 'Qualifying Cutoff', badge: 'Qualified', color: 'amber' };
   return { tier: 'Needs Revision', badge: 'Foundation Focus', color: 'slate' };
 }
+
+/**
+ * Helper to assess candidate pacing on a specific question relative to GATE exam benchmarks
+ * GATE AG has 65 questions in 180 mins (~166 seconds per question)
+ */
+export function getQuestionPacing(timeSpentSec = 0, isCorrect = false, isAttempted = false) {
+  const time = Number(timeSpentSec) || 0;
+
+  if (!isAttempted) {
+    if (time === 0) {
+      return {
+        label: 'Clean Skip',
+        description: 'Skipped instantly without burning exam time',
+        category: 'skip_fast',
+        color: 'slate',
+        icon: '⚪'
+      };
+    }
+    if (time > 90) {
+      return {
+        label: 'Stalled Skip',
+        description: `Spent ${Math.round(time)}s on question before leaving unattempted`,
+        category: 'skip_slow',
+        color: 'amber',
+        icon: '⏳'
+      };
+    }
+    return {
+      label: 'Considered Skip',
+      description: `Evaluated for ${Math.round(time)}s and skipped`,
+      category: 'skip_normal',
+      color: 'slate',
+      icon: '⚪'
+    };
+  }
+
+  if (isCorrect) {
+    if (time <= 60) {
+      return {
+        label: 'Rapid Fire',
+        description: `Solved in ${Math.round(time)}s (<1m) with high efficiency`,
+        category: 'fast_correct',
+        color: 'emerald',
+        icon: '⚡'
+      };
+    }
+    if (time <= 150) {
+      return {
+        label: 'Optimal Pacing',
+        description: `Solved in ${Math.round(time)}s within benchmark window`,
+        category: 'optimal_correct',
+        color: 'blue',
+        icon: '🎯'
+      };
+    }
+    return {
+      label: 'High Investment',
+      description: `Solved correctly but required ${Math.round(time)}s (>2.5m)`,
+      category: 'slow_correct',
+      color: 'purple',
+      icon: '⏱️'
+    };
+  }
+
+  // If Incorrect:
+  if (time <= 45) {
+    return {
+      label: 'Rush Trap',
+      description: `Answered wrong in only ${Math.round(time)}s — possible hasty mistake`,
+      category: 'rush_error',
+      color: 'rose',
+      icon: '🚨'
+    };
+  }
+  if (time > 180) {
+    return {
+      label: 'High Time Loss',
+      description: `Spent ${Math.round(time)}s (>3m) and incurred negative deduction`,
+      category: 'sinkhole_error',
+      color: 'red',
+      icon: '⚠️'
+    };
+  }
+  return {
+    label: 'Standard Mistake',
+    description: `Attempted in ${Math.round(time)}s — review concept and calculation`,
+    category: 'standard_error',
+    color: 'amber',
+    icon: '❌'
+  };
+}
+

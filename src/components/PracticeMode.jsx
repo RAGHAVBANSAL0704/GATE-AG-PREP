@@ -109,9 +109,10 @@ export default function PracticeMode({
   const [activeAITutorQuestion, setActiveAITutorQuestion] = useState(null);
   const [natUnitWarning, setNatUnitWarning] = useState(null);
 
-  // Real-time clock and session elapsed timer
+  // Real-time clock, session elapsed timer, and per-question timer
   const [realTimeStr, setRealTimeStr] = useState(() => new Date().toLocaleTimeString());
   const [sessionElapsedSec, setSessionElapsedSec] = useState(0);
+  const [questionElapsedSec, setQuestionElapsedSec] = useState(0);
 
   useEffect(() => {
     const clockInterval = setInterval(() => {
@@ -203,6 +204,18 @@ export default function PracticeMode({
   };
 
   const currentQ = filteredQuestions[currentIndex];
+
+  useEffect(() => {
+    setQuestionElapsedSec(0);
+  }, [currentQ?.id]);
+
+  useEffect(() => {
+    if (!currentQ?.id) return;
+    const qTimer = setInterval(() => {
+      setQuestionElapsedSec(prev => prev + 1);
+    }, 1000);
+    return () => clearInterval(qTimer);
+  }, [currentQ?.id]);
 
   const handleSelectMcq = (qId, optionKey) => {
     if (submittedState[qId]?.isSubmitted) return;
@@ -625,6 +638,13 @@ export default function PracticeMode({
               <span className="text-[10px] font-bold px-2 py-0.5 rounded-md bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-900">
                 {currentQ.marks} {currentQ.marks === 1 ? 'Mark' : 'Marks'}
               </span>
+              <div 
+                className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-amber-50 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-800 font-mono text-[11px] font-bold shadow-2xs"
+                title="Active time spent practicing this question"
+              >
+                <Clock className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400 animate-pulse" />
+                <span>Time on Q: {formatSec(questionElapsedSec)}</span>
+              </div>
             </div>
 
             <div className="flex items-center gap-2">

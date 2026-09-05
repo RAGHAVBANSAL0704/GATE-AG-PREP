@@ -72,12 +72,18 @@ graph TD
 
 ### B. CBT Mock Test Engine (`src/components/MockTestMode.jsx`)
 - **Timer Math**: 180-minute countdown with automatic submission upon expiration.
+- **Per-Question Timer**: Active countdown/countup timer per question tracking cumulative seconds spent (`questionTimes`). Restores time when revisiting questions.
 - **Question Palette (5 States)**:
   1. `NOT_VISITED` (Gray)
   2. `NOT_ANSWERED` (Red)
   3. `ANSWERED` (Green)
   4. `MARKED` (Purple)
   5. `ANSWERED_MARKED` (Purple with green dot)
+
+### C. Test Result & Performance Diagnostics (`src/components/TestResultModal.jsx`)
+- **Pacing & Speed Metrics**: Evaluates question pacing relative to GATE benchmarks (`getQuestionPacing`: Rapid Fire `<60s`, Optimal `60-150s`, High Investment `>150s`, Rush Trap `≤45s wrong`, Sinkhole `>180s wrong`, Clean Skip `0s`).
+- **Performance Breakdown Matrix**: Interactive toggle between Detailed Review Cards and Tabular Breakdown Matrix.
+- **Scorecard PDF Export**: Printable scorecard including question-by-question time spent, marks awarded, and pacing evaluation.
 
 ### C. Scoring & Evaluation Rules (`tests/scoring.test.js`)
 - **MCQ (Multiple Choice Questions)**:
@@ -113,8 +119,9 @@ Running `npm test` executes `node --test tests/**/*.test.js`:
 | `tests/stress.test.js` | 45 | Float precision epsilon ($0.1 + 0.2$), MSQ string normalizations, negative marking toggle, 0/0 accuracy division |
 | `tests/sync.test.js` | 18 | UUID generation, offline queueing in localStorage, idempotent re-sync, attempt deduplication |
 | `tests/security.test.js` | 24 | Input sanitization, profanity filtering, auth state validation |
-| *Other Suites (`adversarial`, `schema`, `auth`, `concepts`, `custom_mocks`, `feedback`, `forensic`)* | 100 | Full end-to-end subsystem validation |
-| **TOTAL** | **264 Tests** | **100% Pass (0 Fail, 0 Skip, Exit Code 0)** |
+| `tests/question_timer_performance.test.js` | 14 | Question pacing benchmarks, timer accumulation, attempt breakdown & metrics |
+| *Other Suites (`adversarial`, `schema`, `auth`, `concepts`, `custom_mocks`, `feedback`, `forensic`, `xp`)* | 172 | Full end-to-end subsystem validation |
+| **TOTAL** | **350 Tests** | **100% Pass (0 Fail, 0 Skip, Exit Code 0)** |
 
 ---
 
@@ -129,4 +136,4 @@ When working on this codebase in future sessions, follow these directives:
 5. **Keep LaTeX Valid**: Ensure all formula strings render cleanly with KaTeX and have balanced brackets.
 
 ---
-*Last Consolidated & Verified: 2026-08-28 (264 / 264 Tests Passing)*
+*Last Consolidated & Verified: 2026-09-04 (350 / 350 Tests Passing across 72 Suites)*

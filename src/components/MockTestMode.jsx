@@ -59,9 +59,10 @@ export default function MockTestMode({
   const [timeLeft, setTimeLeft] = useState(10800);
   const [isTimerRunning, setIsTimerRunning] = useState(false);
 
-  // Question Statuses
+  // Question Statuses & Time Spent
   const [userAnswers, setUserAnswers] = useState({});
   const [questionStates, setQuestionStates] = useState({});
+  const [questionTimes, setQuestionTimes] = useState({});
 
   // Modals
   const [showQuestionPaperModal, setShowQuestionPaperModal] = useState(false);
@@ -143,6 +144,7 @@ export default function MockTestMode({
     });
     setQuestionStates(initialStates);
     setUserAnswers({});
+    setQuestionTimes({});
     setCurrentQIndex(0);
     setActiveSection(paperInstructions?.ga_qs > 0 ? 'GA' : 'ALL');
 
@@ -171,6 +173,22 @@ export default function MockTestMode({
 
   // Current question data
   const currentQ = paperQuestions[currentQIndex];
+
+  // Per-Question Active Elapsed Timer: Accumulates active seconds on the currently viewed question
+  useEffect(() => {
+    let qInterval = null;
+    if (testStarted && (isTimerRunning || paperInstructions?.is_untimed) && currentQ?.id) {
+      qInterval = setInterval(() => {
+        setQuestionTimes(prev => ({
+          ...prev,
+          [currentQ.id]: (prev[currentQ.id] || 0) + 1
+        }));
+      }, 1000);
+    }
+    return () => {
+      if (qInterval) clearInterval(qInterval);
+    };
+  }, [testStarted, isTimerRunning, currentQ?.id, paperInstructions?.is_untimed]);
 
   // Auto-sync activeSection when current question changes
   useEffect(() => {
@@ -323,9 +341,22 @@ export default function MockTestMode({
     let unattemptedCount = 0;
     const questionEvaluations = [];
 
+    const totalAllowedSec = (paperInstructions?.duration_mins || 180) * 60;
+    const timeTakenSec = paperInstructions?.is_untimed
+      ? Object.values(questionTimes).reduce((sum, t) => sum + (t || 0), 0)
+      : Math.max(0, totalAllowedSec - timeLeft);
+    const durationTakenMins = Math.max(1, Math.round(timeTakenSec / 60));
+
     paperQuestions.forEach(q => {
       const userAns = userAnswers[q.id];
-      const result = evaluateQuestion(q, userAns, true);
+      const qState = questionStates[q.id] || (userAns ? 'ANSWERED' : 'NOT_VISITED');
+      const result = evaluateQuestion({
+        question: q,
+        userAnswer: userAns,
+        state: qState,
+        enableNegativeMarking: true
+      });
+
       totalMarks += result.marksAwarded;
       if (result.isAttempted) {
         if (result.isCorrect) correctCount++;
@@ -333,21 +364,26 @@ export default function MockTestMode({
       } else {
         unattemptedCount++;
       }
+
+      const timeSpentSec = questionTimes[q.id] || 0;
+
       questionEvaluations.push({
         ...q,
         userAnswer: userAns || '',
+        state: qState,
+        timeSpentSec,
         ...result
       });
     });
 
     const totalPossibleMarks = paperQuestions.reduce((sum, q) => sum + (Number(q.marks) || 1), 0);
-    const durationTakenMins = Math.max(1, Math.round(((paperInstructions?.duration_mins || 180) * 60 - timeLeft) / 60));
 
     const attemptResult = {
       id: 'attempt_' + Date.now(),
       paperId: selectedPaper.id || `gate_${selectedPaper.year}`,
       paperTitle: selectedPaper.title || `GATE ${selectedPaper.year} Official Paper`,
       paperYear: selectedPaper.year,
+      year: selectedPaper.year || selectedPaper.title || 'Official Mock',
       score: Number(totalMarks.toFixed(2)),
       totalPossibleMarks,
       correctCount,
@@ -355,13 +391,49 @@ export default function MockTestMode({
       unattemptedCount,
       totalQuestions: paperQuestions.length,
       durationTakenMins,
+      timeTakenSec,
       userAnswers,
       questionStates,
+      questionTimes,
       questionEvaluations,
+      paperQuestions,
       timestamp: new Date().toISOString()
     };
 
-    saveTestAttempt(attemptResult);
+    saveTestAttempt({
+      client_attempt_id: attemptResult.id,
+      paper_title: attemptResult.paperTitle,
+      paper_year: attemptResult.paperYear ? String(attemptResult.paperYear) : null,
+      score: attemptResult.score,
+      total_marks: totalPossibleMarks,
+      percentage: Number(((attemptResult.score / (totalPossibleMarks || 100)) * 100).toFixed(2)),
+      accuracy_percentage: (correctCount + incorrectCount) > 0 ? Number(((correctCount / (correctCount + incorrectCount)) * 100).toFixed(2)) : 0,
+      correct_count: correctCount,
+      incorrect_count: incorrectCount,
+      unattempted_count: unattemptedCount,
+      total_questions: paperQuestions.length,
+      time_spent_seconds: timeTakenSec,
+      question_responses: questionEvaluations.map(qe => ({
+        question_id: qe.id,
+        qnum: qe.qnum,
+        section: qe.section,
+        type: qe.type,
+        marks: qe.marks,
+        negative_marks: qe.negative_marks,
+        user_answer: qe.userAnswer,
+        correct_answer: qe.correct_answer || qe.answer,
+        is_correct: qe.isCorrect,
+        is_attempted: qe.isAttempted,
+        marks_awarded: qe.marksAwarded,
+        time_spent_seconds: qe.timeSpentSec || 0,
+        status: qe.status || (qe.isCorrect ? 'CORRECT' : (qe.isAttempted ? 'INCORRECT' : 'UNATTEMPTED'))
+      })),
+      student_id: currentStudent?.id || null,
+      student_name: currentStudent?.full_name || currentStudent?.username || 'Candidate',
+      admission_no: currentStudent?.admission_no || null,
+      email: currentStudent?.email || null
+    });
+
     const earnedXP = calculateAttemptXP(attemptResult);
     awardStudentXP(earnedXP);
 
@@ -865,11 +937,20 @@ export default function MockTestMode({
               
               {/* Question Meta Header Strip */}
               <div className="bg-[#f0f4f8] border-b border-slate-300 px-5 py-3 flex flex-wrap items-center justify-between gap-2 text-xs">
-                <span className="cbt-blue-header font-extrabold text-[#0B4A8F] text-sm">
-                  Question No. {currentQ.qnum}
-                </span>
-
                 <div className="flex items-center gap-3">
+                  <span className="cbt-blue-header font-extrabold text-[#0B4A8F] text-sm">
+                    Question No. {currentQ.qnum}
+                  </span>
+                  <div 
+                    className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-amber-50 text-amber-900 border border-amber-300 font-mono font-bold text-xs shadow-xs"
+                    title="Active time spent on this question"
+                  >
+                    <Clock className="w-3.5 h-3.5 text-amber-600 animate-pulse" />
+                    <span>Time on Q: {formatTimer(questionTimes[currentQ.id] || 0)}</span>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
                   <span className="px-2 py-0.5 rounded bg-slate-200 font-mono font-bold text-slate-900 border border-slate-300">
                     Type: {currentQ.type}
                   </span>
