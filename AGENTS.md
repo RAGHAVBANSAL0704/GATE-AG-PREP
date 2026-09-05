@@ -15,7 +15,7 @@ Before analyzing files or writing code, refer to [`PROJECT_CONTEXT.md`](file:///
 - **Offline Rule**: Maintain 100% offline capability and graceful `localStorage` fallback.
 
 ## Theme & Visual Design Invariants
-- **Streamlined 2-Theme System**: The portal strictly supports exactly two themes: `dark` (Dark Theme, default) and `light` (Light Mode). Do not re-introduce cluttered multi-theme pickers or unnecessary themes.
+- **Streamlined 2-Theme System**: The portal strictly supports exactly two themes: `light` (Light Mode, default) and `dark` (Dark Theme). Do not re-introduce cluttered multi-theme pickers or unnecessary themes.
 - **Dual-Theme Contrast Guardrail**:
   - Never hardcode pitch-black containers (`bg-slate-950`, `bg-slate-900`) or white text (`text-white`) without responsive light mode counterparts (`bg-white dark:bg-slate-900`, `text-slate-900 dark:text-white`).
   - All cards, spotlight banners, and podiums must adapt to light theme using subtle light gradients (`bg-gradient-to-r from-blue-50/90 via-indigo-50/80... dark:from-blue-900...`) and crisp borders (`border-slate-200 dark:border-slate-800`).

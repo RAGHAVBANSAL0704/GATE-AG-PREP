@@ -1,10 +1,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { APP_THEMES } from '../src/constants/themeConstants.js';
+import { APP_THEMES, DEFAULT_THEME_ID, DEFAULT_DARK_MODE } from '../src/constants/themeConstants.js';
 
 test('Appearance & Theme Engine Test Suite', async (t) => {
-  await t.test('defines 2 streamlined theme definitions (1 Dark + 1 Light Mode)', () => {
+  await t.test('defines 2 streamlined theme definitions with Light Mode as primary default', () => {
     assert.equal(APP_THEMES.length, 2, 'Must contain exactly 2 core themes');
+    assert.equal(DEFAULT_THEME_ID, 'oxford-sage', 'Default theme must be oxford-sage (Light Mode)');
+    assert.equal(DEFAULT_DARK_MODE, false, 'Default dark mode must be false');
+    assert.equal(APP_THEMES[0].id, 'oxford-sage', 'First theme in list must be Light Mode');
+    assert.equal(APP_THEMES[0].type, 'light', 'First theme type must be light');
 
     const expectedIds = [
       'obsidian-emerald', 

@@ -208,13 +208,21 @@ export default function App() {
 
   const [darkMode, setDarkMode] = useState(() => {
     try {
+      // One-time default migration to ensure Light Mode is default across all client sessions
+      const defaultMigrated = localStorage.getItem('gate_ag_default_light_v2');
+      if (!defaultMigrated) {
+        localStorage.setItem('gate_ag_default_light_v2', 'true');
+        localStorage.setItem('gate_ag_dark_mode', 'false');
+        localStorage.setItem('gate_ag_theme', 'oxford-sage');
+        return false; // Light Mode (oxford-sage) as default
+      }
       const savedDark = localStorage.getItem('gate_ag_dark_mode');
       if (savedDark !== null) return savedDark === 'true';
       const legacyTheme = localStorage.getItem('gate_ag_theme');
       if (legacyTheme) {
         return !['light', 'oxford-sage', 'cream-parchment', 'porcelain-studio', 'sunrise-amber', 'slate-light'].includes(legacyTheme);
       }
-      return false; // Default to COAET Student Corner Light Mode
+      return false; // Default to Light Mode
     } catch (e) {
       return false;
     }
