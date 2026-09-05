@@ -86,24 +86,24 @@ export default function CyberGarageCrafting({
   });
 
   return (
-    <div className="w-full bg-slate-950 border border-purple-500/30 rounded-2xl p-6 shadow-2xl text-white">
+    <div className="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-purple-500/30 rounded-2xl p-6 shadow-xl text-slate-900 dark:text-white">
 
       {/* HEADER & XP BAR */}
-      <div className="flex flex-wrap items-center justify-between gap-4 mb-6 bg-slate-900/80 p-4 rounded-xl border border-purple-500/20">
+      <div className="flex flex-wrap items-center justify-between gap-4 mb-6 bg-purple-50/70 dark:bg-slate-900/80 p-4 rounded-xl border border-purple-200 dark:border-purple-500/20">
         <div>
-          <h2 className="text-xl font-extrabold text-purple-400 flex items-center gap-2">
+          <h2 className="text-xl font-extrabold text-purple-700 dark:text-purple-400 flex items-center gap-2">
             <Wrench className="w-6 h-6" /> CYBER-GARAGE & WAR MACHINE HANGAR
           </h2>
-          <p className="text-xs text-slate-400 font-mono">Unlock 11 heavy battle mechs & starships, upgrade skill matrix, craft weapons & activate mutators.</p>
+          <p className="text-xs text-slate-600 dark:text-slate-400 font-mono">Unlock 11 heavy battle mechs & starships, upgrade skill matrix, craft weapons & activate mutators.</p>
         </div>
-        <div className="px-4 py-2 bg-purple-950/80 border border-purple-400/40 rounded-xl">
-          <span className="text-xs text-slate-400 uppercase font-mono block">Available Break XP</span>
-          <span className="text-lg font-mono font-extrabold text-yellow-300">{breakXP} XP</span>
+        <div className="px-4 py-2 bg-purple-100/70 dark:bg-purple-950/80 border border-purple-200 dark:border-purple-400/40 rounded-xl">
+          <span className="text-xs text-slate-600 dark:text-slate-400 uppercase font-mono block">Available Break XP</span>
+          <span className="text-lg font-mono font-extrabold text-amber-600 dark:text-yellow-300">{breakXP} XP</span>
         </div>
       </div>
 
       {/* SUB-TAB NAVIGATION */}
-      <div className="flex flex-wrap gap-2 mb-6 border-b border-slate-800 pb-3">
+      <div className="flex flex-wrap gap-2 mb-6 border-b border-slate-200 dark:border-slate-800 pb-3">
         {[
           { id: 'vehicles', label: '🚜 Hyper Vehicles & War Machines (11)' },
           { id: 'skills', label: '⚡ Skill Matrix Tree' },
@@ -116,7 +116,7 @@ export default function CyberGarageCrafting({
             className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
               activeTab === tab.id
                 ? 'bg-purple-600 text-white shadow-lg shadow-purple-500/30'
-                : 'bg-slate-900 text-slate-400 hover:bg-slate-800'
+                : 'bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800'
             }`}
           >
             {tab.label}
@@ -141,7 +141,7 @@ export default function CyberGarageCrafting({
                 className={`px-3 py-1.5 rounded-lg text-xs font-bold transition ${
                   vehicleCategoryFilter === cat.id
                     ? 'bg-purple-600 text-white'
-                    : 'bg-slate-900 text-slate-400 hover:bg-slate-800'
+                    : 'bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800'
                 }`}
               >
                 {cat.label}
@@ -160,10 +160,10 @@ export default function CyberGarageCrafting({
                   key={v.id}
                   className={`p-4 rounded-xl border transition-all flex flex-col justify-between ${
                     isSelected
-                      ? 'border-purple-400 bg-purple-950/60 shadow-lg shadow-purple-500/20'
+                      ? 'border-purple-400 bg-purple-50/80 dark:bg-purple-950/60 shadow-lg shadow-purple-500/20'
                       : isUnlocked
-                      ? 'border-slate-800 bg-slate-900'
-                      : 'border-slate-800 bg-slate-950 opacity-80'
+                      ? 'border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900'
+                      : 'border-slate-200 dark:border-slate-800 bg-slate-100/60 dark:bg-slate-950 opacity-80'
                   }`}
                 >
                   <div>
@@ -171,19 +171,19 @@ export default function CyberGarageCrafting({
                       <div className="flex items-center gap-3">
                         <span className="text-3xl">{v.icon}</span>
                         <div>
-                          <h4 className="font-bold text-sm text-white">{v.name}</h4>
-                          <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded bg-slate-800 text-purple-300 border border-purple-500/30">
+                          <h4 className="font-bold text-sm text-slate-900 dark:text-white">{v.name}</h4>
+                          <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded bg-purple-100 dark:bg-slate-800 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-500/30">
                             {v.role}
                           </span>
                         </div>
                       </div>
                     </div>
 
-                    <p className="text-xs text-slate-400 mt-2 mb-3 leading-relaxed">{v.desc}</p>
+                    <p className="text-xs text-slate-600 dark:text-slate-400 mt-2 mb-3 leading-relaxed">{v.desc}</p>
 
-                    <div className="grid grid-cols-2 gap-2 text-xs font-mono text-slate-300 mb-4 bg-slate-950 p-2.5 rounded-lg border border-slate-800">
-                      <span className="flex items-center gap-1"><Rocket className="w-3.5 h-3.5 text-cyan-400" /> Speed: {v.speed}</span>
-                      <span className="flex items-center gap-1"><Shield className="w-3.5 h-3.5 text-emerald-400" /> Max HP: {v.hp}</span>
+                    <div className="grid grid-cols-2 gap-2 text-xs font-mono text-slate-700 dark:text-slate-300 mb-4 bg-white dark:bg-slate-950 p-2.5 rounded-lg border border-slate-200 dark:border-slate-800">
+                      <span className="flex items-center gap-1"><Rocket className="w-3.5 h-3.5 text-cyan-500 dark:text-cyan-400" /> Speed: {v.speed}</span>
+                      <span className="flex items-center gap-1"><Shield className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" /> Max HP: {v.hp}</span>
                     </div>
                   </div>
 
@@ -215,7 +215,7 @@ export default function CyberGarageCrafting({
                       className={`w-full py-2.5 rounded-xl text-xs font-black transition-all flex items-center justify-center gap-1.5 ${
                         canAfford
                           ? 'bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 shadow-md'
-                          : 'bg-slate-800 text-slate-500 cursor-not-allowed'
+                          : 'bg-slate-200 dark:bg-slate-800 text-slate-400 dark:text-slate-500 cursor-not-allowed'
                       }`}
                     >
                       <Lock className="w-3.5 h-3.5" /> UNLOCK MACHINE ({v.cost} XP)
@@ -237,14 +237,14 @@ export default function CyberGarageCrafting({
             const isMax = s.level >= s.maxLevel;
 
             return (
-              <div key={s.id} className="p-4 bg-slate-900 border border-slate-800 rounded-xl flex flex-col justify-between">
+              <div key={s.id} className="p-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center gap-2 mb-2 text-purple-400">
+                  <div className="flex items-center gap-2 mb-2 text-purple-600 dark:text-purple-400">
                     <Icon className="w-5 h-5" />
-                    <h4 className="font-bold text-sm text-white">{s.name}</h4>
+                    <h4 className="font-bold text-sm text-slate-900 dark:text-white">{s.name}</h4>
                   </div>
-                  <p className="text-xs text-slate-400 mb-3">{s.bonus}</p>
-                  <div className="text-xs font-mono text-purple-300 font-bold mb-4">Level {s.level} / {s.maxLevel}</div>
+                  <p className="text-xs text-slate-600 dark:text-slate-400 mb-3">{s.bonus}</p>
+                  <div className="text-xs font-mono text-purple-700 dark:text-purple-300 font-bold mb-4">Level {s.level} / {s.maxLevel}</div>
                 </div>
 
                 <button
@@ -252,10 +252,10 @@ export default function CyberGarageCrafting({
                   disabled={isMax || !canAfford}
                   className={`w-full py-2.5 rounded-xl text-xs font-bold transition-all ${
                     isMax
-                      ? 'bg-slate-800 text-slate-500'
+                      ? 'bg-slate-200 dark:bg-slate-800 text-slate-400 dark:text-slate-500'
                       : canAfford
                       ? 'bg-purple-600 hover:bg-purple-500 text-white shadow-md'
-                      : 'bg-slate-800 text-slate-500'
+                      : 'bg-slate-200 dark:bg-slate-800 text-slate-400 dark:text-slate-500'
                   }`}
                 >
                   {isMax ? 'MAX LEVEL REACHED' : `UPGRADE MATRIX (${s.cost} XP)`}
@@ -274,13 +274,13 @@ export default function CyberGarageCrafting({
             const canAfford = breakXP >= p.cost;
 
             return (
-              <div key={p.id} className="p-4 bg-slate-900 border border-slate-800 rounded-xl flex flex-col justify-between">
+              <div key={p.id} className="p-4 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl flex flex-col justify-between">
                 <div>
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-2xl">{p.icon}</span>
-                    <h4 className="font-bold text-sm text-white">{p.name}</h4>
+                    <h4 className="font-bold text-sm text-slate-900 dark:text-white">{p.name}</h4>
                   </div>
-                  <p className="text-xs text-slate-400 mb-4">{p.desc}</p>
+                  <p className="text-xs text-slate-600 dark:text-slate-400 mb-4">{p.desc}</p>
                 </div>
 
                 <button
@@ -291,7 +291,7 @@ export default function CyberGarageCrafting({
                       ? 'bg-emerald-600 text-white'
                       : canAfford
                       ? 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-md'
-                      : 'bg-slate-800 text-slate-500'
+                      : 'bg-slate-200 dark:bg-slate-800 text-slate-400 dark:text-slate-500'
                   }`}
                 >
                   {isCrafted ? '✓ CRAFTED & EQUIPPED' : `CRAFT WEAPON (${p.cost} XP)`}
@@ -314,18 +314,18 @@ export default function CyberGarageCrafting({
                 onClick={() => onToggleMutator(m.id)}
                 className={`p-4 rounded-xl border cursor-pointer transition-all ${
                   isActive
-                    ? 'border-emerald-400 bg-emerald-950/40 shadow-lg shadow-emerald-500/20'
-                    : 'border-slate-800 bg-slate-900 hover:border-slate-700'
+                    ? 'border-emerald-400 bg-emerald-50/80 dark:bg-emerald-950/40 shadow-lg shadow-emerald-500/20'
+                    : 'border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 hover:border-slate-300 dark:hover:border-slate-700'
                 }`}
               >
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-2xl">{m.icon}</span>
-                  <span className={`text-xs font-mono font-bold px-2 py-0.5 rounded ${isActive ? 'bg-emerald-500 text-slate-950' : 'bg-slate-800 text-slate-400'}`}>
+                  <span className={`text-xs font-mono font-bold px-2 py-0.5 rounded ${isActive ? 'bg-emerald-500 text-slate-950' : 'bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400'}`}>
                     {isActive ? 'ACTIVE' : 'OFF'}
                   </span>
                 </div>
-                <h4 className="font-bold text-sm text-white mb-1">{m.name}</h4>
-                <p className="text-xs text-slate-400 leading-relaxed">{m.desc}</p>
+                <h4 className="font-bold text-sm text-slate-900 dark:text-white mb-1">{m.name}</h4>
+                <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">{m.desc}</p>
               </div>
             );
           })}

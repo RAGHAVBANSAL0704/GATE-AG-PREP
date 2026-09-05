@@ -166,27 +166,27 @@ export default function GamesZone() {
     <div className="max-w-6xl mx-auto space-y-6 pb-12">
       
       {/* Top Header Banner */}
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-800 p-6 sm:p-8 text-white shadow-xl">
-        <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 rounded-full bg-white/10 blur-3xl pointer-events-none" />
+      <div className="card-3d relative overflow-hidden rounded-2xl bg-gradient-to-r from-blue-50/90 via-indigo-50/80 to-purple-50/90 dark:from-blue-700 dark:via-indigo-700 dark:to-purple-800 p-6 sm:p-8 text-slate-900 dark:text-white border border-blue-200 dark:border-white/10 shadow-sm dark:shadow-xl">
+        <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 rounded-full bg-blue-400/10 dark:bg-white/10 blur-3xl pointer-events-none" />
         <div className="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-xs font-bold text-blue-200 border border-white/20 mb-3">
-              <Gamepad2 className="w-4 h-4 text-yellow-300" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-white/10 backdrop-blur-md text-xs font-bold text-blue-800 dark:text-blue-200 border border-blue-200 dark:border-white/20 mb-3">
+              <Gamepad2 className="w-4 h-4 text-blue-600 dark:text-yellow-300" />
               <span>Study Break & Brain Refresh Zone 🎮</span>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight flex items-center gap-2">
+            <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight flex items-center gap-2 text-slate-900 dark:text-white">
               <span>Student Relaxation Arcade 🎯</span>
             </h1>
-            <p className="text-sm text-blue-100 mt-1 max-w-xl">
+            <p className="text-sm text-slate-600 dark:text-blue-100 mt-1 max-w-xl">
               100% Fun, Zero Exam Stress! Play action games, reflex challenges, puzzle merge & earn Break XP.
             </p>
           </div>
 
           {/* Controls & XP Bar */}
           <div className="flex flex-wrap items-center gap-3 shrink-0">
-            <div className="px-3.5 py-2 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-xs font-bold flex items-center gap-2">
-              <Zap className="w-4 h-4 text-yellow-300 animate-pulse" />
-              <span>Break XP: <span className="font-mono text-yellow-300 font-extrabold">{breakXP} pts</span></span>
+            <div className="px-3.5 py-2 rounded-xl bg-amber-50 dark:bg-white/10 backdrop-blur-md border border-amber-200 dark:border-white/20 text-xs font-bold text-slate-800 dark:text-white flex items-center gap-2">
+              <Zap className="w-4 h-4 text-amber-500 dark:text-yellow-300 animate-pulse" />
+              <span>Break XP: <span className="font-mono text-amber-600 dark:text-yellow-300 font-extrabold">{breakXP} pts</span></span>
             </div>
 
             <button
@@ -195,7 +195,7 @@ export default function GamesZone() {
                 setShowGarage(!showGarage); 
                 if (showLeaderboard) setShowLeaderboard(false);
               }}
-              className="px-3.5 py-2 rounded-xl bg-emerald-400 text-slate-950 font-extrabold text-xs shadow-lg hover:bg-emerald-300 transition flex items-center gap-1.5"
+              className="px-3.5 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 dark:bg-emerald-400 dark:hover:bg-emerald-300 text-slate-950 font-extrabold text-xs shadow-md transition flex items-center gap-1.5"
             >
               <Wrench className="w-4 h-4 text-slate-950" />
               <span>{showGarage ? 'Close Garage' : '🚜 Virtual Garage'}</span>
@@ -210,7 +210,7 @@ export default function GamesZone() {
                 setShowLeaderboard(!showLeaderboard);
                 if (showGarage) setShowGarage(false); 
               }}
-              className="px-3.5 py-2 rounded-xl bg-amber-400 text-slate-900 font-extrabold text-xs shadow-lg hover:bg-amber-300 transition flex items-center gap-1.5"
+              className="px-3.5 py-2 rounded-xl bg-amber-500 hover:bg-amber-400 dark:bg-amber-400 dark:hover:bg-amber-300 text-slate-900 font-extrabold text-xs shadow-md transition flex items-center gap-1.5"
             >
               <Trophy className="w-4 h-4 fill-slate-900" />
               <span>{showLeaderboard ? 'Close Ranks' : 'Leaderboard'}</span>
@@ -220,12 +220,12 @@ export default function GamesZone() {
               onClick={handleToggleMute}
               className={`p-2.5 rounded-xl border transition flex items-center gap-1.5 text-xs font-bold ${
                 isMuted
-                  ? 'bg-rose-500/20 border-rose-400/30 text-rose-200'
-                  : 'bg-emerald-500/20 border-emerald-400/30 text-emerald-200'
+                  ? 'bg-rose-100 dark:bg-rose-500/20 border-rose-200 dark:border-rose-400/30 text-rose-700 dark:text-rose-200'
+                  : 'bg-emerald-100 dark:bg-emerald-500/20 border-emerald-200 dark:border-emerald-400/30 text-emerald-800 dark:text-emerald-200'
               }`}
               title={isMuted ? 'Unmute Sound Effects' : 'Mute Sound Effects'}
             >
-              {isMuted ? <VolumeX className="w-4 h-4 text-rose-400" /> : <Volume2 className="w-4 h-4 text-emerald-400" />}
+              {isMuted ? <VolumeX className="w-4 h-4 text-rose-500 dark:text-rose-400" /> : <Volume2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />}
               <span>{isMuted ? 'Muted' : 'Sound ON'}</span>
             </button>
           </div>
@@ -233,7 +233,7 @@ export default function GamesZone() {
       </div>
 
       {/* JOY BREAK ZONE MAIN MODE TAB NAVIGATION */}
-      <div className="flex flex-wrap gap-3 bg-slate-900/90 p-3 rounded-2xl border border-cyan-500/30 shadow-xl">
+      <div className="card-3d flex flex-wrap gap-3 bg-white dark:bg-slate-900/90 p-3 rounded-2xl border border-slate-200 dark:border-cyan-500/30 shadow-sm dark:shadow-xl">
         {[
           { id: 'cosmos', label: '🚀 Cyber Drone: Cosmos Interceptor', desc: '360° Flight, Combat & Space Harvest' },
           { id: 'boss', label: '🕹️ Cyber Bullet-Hell Arena', desc: 'Epic Boss Fights & Super Lasers' },
@@ -250,14 +250,16 @@ export default function GamesZone() {
             }}
             className={`flex-1 min-w-[200px] p-3 rounded-xl text-left transition-all border ${
               mainTab === tab.id
-                ? 'bg-gradient-to-r from-cyan-950 to-blue-950 border-cyan-400 text-white shadow-lg shadow-cyan-500/20'
-                : 'bg-slate-950 border-slate-800 text-slate-400 hover:bg-slate-900 hover:border-slate-700'
+                ? 'bg-gradient-to-r from-cyan-50 to-blue-50 dark:from-cyan-950 dark:to-blue-950 border-cyan-500 dark:border-cyan-400 text-slate-900 dark:text-white shadow-md shadow-cyan-500/10 dark:shadow-cyan-500/20 ring-1 ring-cyan-400/30'
+                : 'bg-slate-50 dark:bg-slate-950 border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 hover:border-slate-300 dark:hover:border-slate-700'
             }`}
           >
-            <div className="font-extrabold text-sm text-cyan-300 flex items-center gap-1.5">
+            <div className={`font-extrabold text-sm flex items-center gap-1.5 ${
+              mainTab === tab.id ? 'text-cyan-800 dark:text-cyan-300' : 'text-slate-800 dark:text-slate-300'
+            }`}>
               <span>{tab.label}</span>
             </div>
-            <div className="text-[11px] text-slate-400 font-mono mt-0.5">{tab.desc}</div>
+            <div className="text-[11px] text-slate-500 dark:text-slate-400 font-mono mt-0.5">{tab.desc}</div>
           </button>
         ))}
       </div>
@@ -1666,14 +1668,14 @@ function ReflexTapGame({ onRewardXP }) {
             ? 'bg-rose-600 border-rose-400 text-white'
             : gameState === 'click'
             ? 'bg-emerald-500 border-emerald-300 text-white animate-pulse'
-            : 'bg-slate-950 border-slate-800 text-slate-200'
+            : 'bg-slate-100 dark:bg-slate-950 border-slate-300 dark:border-slate-800 text-slate-800 dark:text-slate-200'
         }`}
       >
         {gameState === 'waiting' && (
           <>
             <span className="text-4xl mb-2">⚡</span>
-            <h4 className="text-lg font-black text-white">TAP TO START TEST</h4>
-            <p className="text-xs text-slate-400 mt-1">Wait for red to turn GREEN, then tap as fast as possible!</p>
+            <h4 className="text-lg font-black text-slate-900 dark:text-white">TAP TO START TEST</h4>
+            <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">Wait for red to turn GREEN, then tap as fast as possible!</p>
           </>
         )}
         {gameState === 'ready' && (

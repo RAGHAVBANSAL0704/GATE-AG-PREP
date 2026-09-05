@@ -5,7 +5,6 @@ import Dashboard from './components/Dashboard';
 import PracticeHub from './components/PracticeHub';
 import Footer from './components/Footer';
 import CommandPaletteModal from './components/CommandPaletteModal';
-import ThemeSelectorModal from './components/ThemeSelectorModal';
 import { Sparkles } from 'lucide-react';
 
 // Robust lazy loading wrapper that auto-reloads the page if a chunk is missing due to a new deployment
@@ -207,16 +206,28 @@ export default function App() {
     setIsAuthModalOpen(false);
   };
 
-  const [currentTheme, setCurrentTheme] = useState(() => {
+  const [darkMode, setDarkMode] = useState(() => {
     try {
-      return localStorage.getItem('gate_ag_theme') || 'obsidian-emerald';
+      const savedDark = localStorage.getItem('gate_ag_dark_mode');
+      if (savedDark !== null) return savedDark === 'true';
+      const legacyTheme = localStorage.getItem('gate_ag_theme');
+      if (legacyTheme) {
+        return !['light', 'oxford-sage', 'cream-parchment', 'porcelain-studio', 'sunrise-amber', 'slate-light'].includes(legacyTheme);
+      }
+      return false; // Default to COAET Student Corner Light Mode
     } catch (e) {
-      return 'obsidian-emerald';
+      return false;
     }
   });
 
+  const currentTheme = darkMode ? 'obsidian-emerald' : 'oxford-sage';
+
   useEffect(() => {
-    localStorage.setItem('gate_ag_theme', currentTheme);
+    try {
+      localStorage.setItem('gate_ag_dark_mode', darkMode.toString());
+      localStorage.setItem('gate_ag_theme', darkMode ? 'obsidian-emerald' : 'oxford-sage');
+    } catch (e) {}
+
     const root = document.documentElement;
     root.classList.remove(
       'dark', 
@@ -232,21 +243,15 @@ export default function App() {
       'theme-sunrise-amber'
     );
 
-    const darkThemes = ['obsidian-emerald', 'matte-titanium', 'midnight-aurora', 'pure-monocle', 'cyber-dark'];
-    const isDark = darkThemes.includes(currentTheme);
-
-    if (isDark) {
-      const themeClass = currentTheme === 'cyber-dark' ? 'theme-obsidian-emerald' : `theme-${currentTheme}`;
-      root.classList.add('dark', themeClass);
+    if (darkMode) {
+      root.classList.add('dark', 'theme-obsidian-emerald');
     } else {
-      const themeClass = currentTheme === 'slate-light' ? 'theme-oxford-sage' : `theme-${currentTheme}`;
-      root.classList.add(themeClass);
+      root.classList.add('theme-oxford-sage');
     }
-  }, [currentTheme]);
+  }, [darkMode]);
 
   const [isCalcOpen, setIsCalcOpen] = useState(false);
   const [isCommandPaletteOpen, setIsCommandPaletteOpen] = useState(false);
-  const [isThemeModalOpen, setIsThemeModalOpen] = useState(false);
 
   useEffect(() => {
     const handleGlobalKeyDown = (e) => {
@@ -421,18 +426,6 @@ export default function App() {
   });
 
   useEffect(() => {
-    localStorage.setItem('gate_ag_theme', currentTheme);
-    const root = document.documentElement;
-    root.classList.remove('dark', 'theme-cyber-dark', 'theme-forest-emerald', 'theme-midnight-amethyst', 'theme-slate-light');
-    
-    if (currentTheme !== 'slate-light') {
-      root.classList.add('dark', `theme-${currentTheme}`);
-    } else {
-      root.classList.add('theme-slate-light');
-    }
-  }, [currentTheme]);
-
-  useEffect(() => {
     localStorage.setItem('gate_ag_user_stats', JSON.stringify(userStats));
   }, [userStats]);
 
@@ -528,11 +521,12 @@ export default function App() {
       <Sidebar
         activeTab={activeTab}
         setActiveTab={setActiveTab}
+        darkMode={darkMode}
+        setDarkMode={setDarkMode}
         currentTheme={currentTheme}
-        setCurrentTheme={setCurrentTheme}
+        setCurrentTheme={(t) => setDarkMode(t === 'obsidian-emerald' || t === 'dark')}
         onOpenCalc={() => setIsCalcOpen(true)}
         onOpenCommandPalette={() => setIsCommandPaletteOpen(true)}
-        onOpenThemeModal={() => setIsThemeModalOpen(true)}
         currentStudent={currentStudent}
         onOpenProfile={() => {
           if (currentStudent) {
@@ -761,25 +755,14 @@ export default function App() {
             setIsCalcOpen(true);
             setIsCommandPaletteOpen(false);
           }}
-          darkMode={currentTheme !== 'slate-light'}
-          setDarkMode={(isDark) => setCurrentTheme(isDark ? 'obsidian-emerald' : 'slate-light')}
+          darkMode={darkMode}
+          setDarkMode={setDarkMode}
           onSelectTheme={(t) => {
-            setCurrentTheme(t);
+            setDarkMode(t === 'obsidian-emerald' || t === 'dark');
             setIsCommandPaletteOpen(false);
-          }}
-          onOpenThemeModal={() => {
-            setIsCommandPaletteOpen(false);
-            setIsThemeModalOpen(true);
           }}
           mockPapers={mockPapers}
           customMockPapers={customMockPapers}
-        />
-
-        <ThemeSelectorModal
-          isOpen={isThemeModalOpen}
-          onClose={() => setIsThemeModalOpen(false)}
-          currentTheme={currentTheme}
-          onSelectTheme={(t) => setCurrentTheme(t)}
         />
       </Suspense>
 

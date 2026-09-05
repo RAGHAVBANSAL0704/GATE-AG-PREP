@@ -104,38 +104,38 @@ export default function AIDiagnosticRadarHub({
     <div className="space-y-8 animate-fadeIn max-w-7xl mx-auto pb-12">
       
       {/* 1. Header Banner with Overall Diagnostic Health */}
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-950 p-6 sm:p-8 text-white shadow-xl border border-purple-500/20">
+      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-50/70 via-indigo-50/50 to-slate-50 dark:from-purple-900 dark:via-indigo-900 dark:to-slate-950 p-6 sm:p-8 text-slate-900 dark:text-white shadow-sm dark:shadow-xl border border-purple-200 dark:border-purple-500/20">
         <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="space-y-2 max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/20 border border-purple-400/30 text-purple-300 text-xs font-extrabold uppercase tracking-wider">
-              <Sparkles className="w-3.5 h-3.5 text-purple-400 animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-500/20 border border-purple-200 dark:border-purple-400/30 text-purple-800 dark:text-purple-300 text-xs font-extrabold uppercase tracking-wider">
+              <Sparkles className="w-3.5 h-3.5 text-purple-600 dark:text-purple-400 animate-pulse" />
               <span>Adaptive Performance Diagnostic Engine</span>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-white">
+            <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-slate-900 dark:text-white">
               AI Weak-Area Radar & Auto-Remediation
             </h1>
-            <p className="text-sm text-purple-200/80 leading-relaxed">
+            <p className="text-sm text-slate-600 dark:text-purple-200/80 leading-relaxed">
               Real-time multi-factor vulnerability assessment tracking error rates, negative mark leaks, and time overhead across all official GATE AG syllabus branches.
             </p>
           </div>
 
           {/* Health Stats Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full md:w-auto">
-            <div className="p-3.5 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 text-center">
-              <span className="text-[10px] uppercase font-bold text-purple-300 tracking-wider">Evaluated Qs</span>
-              <div className="text-xl font-black text-white mt-0.5">
+            <div className="p-3.5 rounded-2xl bg-white dark:bg-white/5 backdrop-blur-md border border-slate-200 dark:border-white/10 text-center shadow-2xs">
+              <span className="text-[10px] uppercase font-bold text-purple-700 dark:text-purple-300 tracking-wider">Evaluated Qs</span>
+              <div className="text-xl font-black text-slate-900 dark:text-white mt-0.5">
                 {diagnosticReport.totalQuestionsEvaluated}
               </div>
             </div>
-            <div className="p-3.5 rounded-2xl bg-rose-500/10 backdrop-blur-md border border-rose-500/20 text-center">
-              <span className="text-[10px] uppercase font-bold text-rose-300 tracking-wider">Negative Mark Leaks</span>
-              <div className="text-xl font-black text-rose-400 mt-0.5">
+            <div className="p-3.5 rounded-2xl bg-rose-50 dark:bg-rose-500/10 backdrop-blur-md border border-rose-200 dark:border-rose-500/20 text-center shadow-2xs">
+              <span className="text-[10px] uppercase font-bold text-rose-700 dark:text-rose-300 tracking-wider">Negative Mark Leaks</span>
+              <div className="text-xl font-black text-rose-600 dark:text-rose-400 mt-0.5">
                 -{diagnosticReport.totalNegativeMarksLostAll} M
               </div>
             </div>
-            <div className="col-span-2 sm:col-span-1 p-3.5 rounded-2xl bg-emerald-500/10 backdrop-blur-md border border-emerald-500/20 text-center">
-              <span className="text-[10px] uppercase font-bold text-emerald-300 tracking-wider">Critical Weak Spots</span>
-              <div className="text-xl font-black text-emerald-400 mt-0.5">
+            <div className="col-span-2 sm:col-span-1 p-3.5 rounded-2xl bg-emerald-50 dark:bg-emerald-500/10 backdrop-blur-md border border-emerald-200 dark:border-emerald-500/20 text-center shadow-2xs">
+              <span className="text-[10px] uppercase font-bold text-emerald-700 dark:text-emerald-300 tracking-wider">Critical Weak Spots</span>
+              <div className="text-xl font-black text-emerald-600 dark:text-emerald-400 mt-0.5">
                 {diagnosticReport.topCriticalWeakSpots.length}
               </div>
             </div>

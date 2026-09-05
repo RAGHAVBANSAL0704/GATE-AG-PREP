@@ -324,20 +324,20 @@ export default function AdminQuestionManager({
     <div className="max-w-6xl mx-auto space-y-6 animate-in fade-in duration-200">
       
       {/* Studio Header Banner */}
-      <div className="card-3d rounded-3xl p-6 sm:p-8 bg-gradient-to-r from-slate-900 via-blue-950 to-slate-950 text-white space-y-4 shadow-2xl border border-slate-800">
+      <div className="card-3d rounded-3xl p-6 sm:p-8 bg-gradient-to-r from-blue-50/70 via-slate-50 to-indigo-50/50 dark:from-slate-900 dark:via-blue-950 dark:to-slate-950 text-slate-900 dark:text-white space-y-4 shadow-sm dark:shadow-2xl border border-slate-200 dark:border-slate-800">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-2xl bg-blue-500/20 border border-blue-400/40 flex items-center justify-center text-blue-300 shadow-md">
-              <ShieldCheck className="w-6 h-6 text-blue-400" />
+            <div className="w-12 h-12 rounded-2xl bg-blue-100 dark:bg-blue-500/20 border border-blue-200 dark:border-blue-400/40 flex items-center justify-center text-blue-600 dark:text-blue-300 shadow-xs">
+              <ShieldCheck className="w-6 h-6 text-blue-600 dark:text-blue-400" />
             </div>
             <div>
-              <h1 className="font-extrabold text-xl sm:text-2xl text-white flex items-center gap-2">
+              <h1 className="font-extrabold text-xl sm:text-2xl text-slate-900 dark:text-white flex items-center gap-2">
                 <span>Question Refinement Studio</span>
-                <span className="text-xs px-2.5 py-0.5 rounded-full bg-blue-500/30 text-blue-200 border border-blue-400/30 font-mono">
+                <span className="text-xs px-2.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-500/30 text-blue-700 dark:text-blue-200 border border-blue-200 dark:border-blue-400/30 font-mono">
                   Answer Key & PYQ Editor
                 </span>
               </h1>
-              <p className="text-xs text-blue-200/80">
+              <p className="text-xs text-slate-600 dark:text-blue-200/80">
                 1-Click Answer Key picker for Official PYQs & Custom Mocks with instant KaTeX live preview.
               </p>
             </div>
@@ -354,7 +354,7 @@ export default function AdminQuestionManager({
 
             <button
               onClick={handleExportPaperJson}
-              className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-bold text-xs shadow-md transition"
+              className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-white font-bold text-xs shadow-xs transition"
             >
               <Download className="w-4 h-4" />
               <span>Export JSON</span>

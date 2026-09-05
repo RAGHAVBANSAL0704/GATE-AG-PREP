@@ -390,24 +390,24 @@ Choose your solver mode and ask any numerical problem or doubt below!`
     <div className="max-w-6xl mx-auto space-y-5 animate-in fade-in duration-200">
       
       {/* Top Banner & Key / Calculator Actions */}
-      <div className="bg-gradient-to-br from-indigo-950 via-slate-900 to-slate-950 border border-indigo-500/30 rounded-3xl p-5 sm:p-6 shadow-xl text-white">
+      <div className="bg-gradient-to-br from-indigo-50/70 via-slate-50 to-purple-50/50 dark:from-indigo-950 dark:via-slate-900 dark:to-slate-950 border border-indigo-200 dark:border-indigo-500/30 rounded-3xl p-5 sm:p-6 shadow-sm dark:shadow-xl text-slate-900 dark:text-white">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
           <div className="flex items-center gap-3.5">
             <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-purple-500 via-indigo-500 to-emerald-400 p-0.5 shadow-lg shrink-0">
-              <div className="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center text-purple-300">
+              <div className="w-full h-full bg-white dark:bg-slate-950 rounded-[14px] flex items-center justify-center text-purple-600 dark:text-purple-300">
                 <Sparkles className="w-6 h-6 animate-pulse" />
               </div>
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h2 className="text-lg sm:text-xl font-extrabold tracking-tight">
+                <h2 className="text-lg sm:text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">
                   GATE AG AI Academic Derivation Suite
                 </h2>
-                <span className="text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-mono">
+                <span className="text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-500/30 font-mono">
                   Vision + KaTeX
                 </span>
               </div>
-              <p className="text-xs text-slate-300 mt-0.5">
+              <p className="text-xs text-slate-600 dark:text-slate-300 mt-0.5">
                 Multi-mode mathematical solver, 20-year official PYQ indexer, and screenshot OCR assistant.
               </p>
             </div>
@@ -418,17 +418,17 @@ Choose your solver mode and ask any numerical problem or doubt below!`
             {onOpenCalc && (
               <button
                 onClick={onOpenCalc}
-                className="px-3 py-1.5 rounded-xl text-xs font-bold border border-blue-400/40 bg-blue-500/10 hover:bg-blue-500/20 text-blue-300 transition flex items-center gap-1.5 cursor-pointer shadow-xs"
+                className="px-3 py-1.5 rounded-xl text-xs font-bold border border-blue-200 dark:border-blue-400/40 bg-blue-50 dark:bg-blue-500/10 hover:bg-blue-100 dark:hover:bg-blue-500/20 text-blue-700 dark:text-blue-300 transition flex items-center gap-1.5 cursor-pointer shadow-xs"
                 title="Launch Scientific Calculator"
               >
-                <Calculator className="w-3.5 h-3.5 text-blue-400" />
+                <Calculator className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
                 <span>Scientific Calc</span>
               </button>
             )}
 
             <button
               onClick={handleClearHistory}
-              className="px-3 py-1.5 rounded-xl text-xs font-bold border border-slate-700 bg-slate-800/80 hover:bg-slate-700 text-slate-300 transition flex items-center gap-1.5 cursor-pointer"
+              className="px-3 py-1.5 rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800/80 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition flex items-center gap-1.5 cursor-pointer"
               title="Reset Chat History"
             >
               <RefreshCw className="w-3.5 h-3.5" />

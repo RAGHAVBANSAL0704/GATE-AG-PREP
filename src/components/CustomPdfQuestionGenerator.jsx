@@ -241,30 +241,30 @@ export default function CustomPdfQuestionGenerator({ questions = [], mockPapers 
     <div className="space-y-6">
       
       {/* Hero Header Card */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-indigo-950 via-slate-900 to-emerald-950 border border-indigo-500/20 rounded-3xl p-6 sm:p-8 text-white shadow-xl">
+      <div className="relative overflow-hidden bg-gradient-to-br from-indigo-50/70 via-slate-50 to-emerald-50/50 dark:from-indigo-950 dark:via-slate-900 dark:to-emerald-950 border border-indigo-200 dark:border-indigo-500/20 rounded-3xl p-6 sm:p-8 text-slate-900 dark:text-white shadow-sm dark:shadow-xl">
         <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
         <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="space-y-2 max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/20 border border-indigo-400/30 text-indigo-300 text-xs font-bold">
-              <FileDown className="w-3.5 h-3.5 text-indigo-300" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100 dark:bg-indigo-500/20 border border-indigo-200 dark:border-indigo-400/30 text-indigo-700 dark:text-indigo-300 text-xs font-bold">
+              <FileDown className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-300" />
               <span>Custom PDF & Worksheet Generator</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">
               Build & Download Custom Question Papers
             </h2>
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
               Export customized, print-ready question sheets with KaTeX mathematical formulas, question diagrams, answer key tables, and step-by-step derivations.
             </p>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-4 sm:p-5 text-center shrink-0 min-w-[200px]">
-            <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-300 block mb-1">
+          <div className="bg-white dark:bg-white/10 backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-2xl p-4 sm:p-5 text-center shrink-0 min-w-[200px] shadow-xs">
+            <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-500 dark:text-slate-300 block mb-1">
               Matching Questions
             </span>
-            <div className="text-3xl sm:text-4xl font-black text-emerald-400">
+            <div className="text-3xl sm:text-4xl font-black text-emerald-600 dark:text-emerald-400">
               {matchingQuestions.length}
             </div>
-            <span className="text-[11px] text-slate-400 mt-1 block">
+            <span className="text-[11px] text-slate-500 dark:text-slate-400 mt-1 block">
               out of {allPoolQuestions.length} in database
             </span>
           </div>

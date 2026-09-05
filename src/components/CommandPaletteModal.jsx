@@ -113,19 +113,15 @@ export default function CommandPaletteModal({
     { id: 'nav_analytics', type: 'action', title: 'View Performance Analytics & Score Radar', icon: BarChart3, action: () => onNavigate('analytics') },
     { id: 'nav_games', type: 'action', title: 'Open Break Zone & 2048 Mini Games', icon: Gamepad2, action: () => onNavigate('games') },
     { id: 'nav_downloads', type: 'action', title: 'Open Downloads & PYQ Archive', icon: Download, action: () => onNavigate('downloads') },
-    { id: 'nav_theme_studio', type: 'action', title: 'Open Appearance & Theme Studio (8 Themes: 4 Dark + 4 Light)', icon: Palette, action: () => onOpenThemeModal && onOpenThemeModal() },
-    // 4 Dark Themes
-    { id: 'nav_theme_obsidian', type: 'action', title: 'Switch Theme: 🌌 Obsidian Emerald (Luminous Dark)', icon: Sparkles, action: () => onSelectTheme && onSelectTheme('obsidian-emerald') },
-    { id: 'nav_theme_titanium', type: 'action', title: 'Switch Theme: ⚡ Matte Titanium (Linear / Raycast Dark)', icon: Zap, action: () => onSelectTheme && onSelectTheme('matte-titanium') },
-    { id: 'nav_theme_aurora', type: 'action', title: 'Switch Theme: ✨ Midnight Aurora (Nordic Academic Navy)', icon: Shield, action: () => onSelectTheme && onSelectTheme('midnight-aurora') },
-    { id: 'nav_theme_monocle', type: 'action', title: 'Switch Theme: ✒️ Pure Monocle Dark (Ultra-Minimalist Ink)', icon: Eye, action: () => onSelectTheme && onSelectTheme('pure-monocle') },
-    // 4 Light Themes
-    { id: 'nav_theme_sage', type: 'action', title: 'Switch Theme: 🌿 Oxford Sage & Ivory (Nordic Botanical Light)', icon: Leaf, action: () => onSelectTheme && onSelectTheme('oxford-sage') },
-    { id: 'nav_theme_parchment', type: 'action', title: 'Switch Theme: ☕ Cream Parchment & Coffee (Kindle Book Mode)', icon: BookOpen, action: () => onSelectTheme && onSelectTheme('cream-parchment') },
-    { id: 'nav_theme_porcelain', type: 'action', title: 'Switch Theme: ⚡ Porcelain Studio (Linear Swiss Slate Light)', icon: Sliders, action: () => onSelectTheme && onSelectTheme('porcelain-studio') },
-    { id: 'nav_theme_sunrise', type: 'action', title: 'Switch Theme: 🌅 Sunrise Sand & Amber (Morning Energy Light)', icon: Sun, action: () => onSelectTheme && onSelectTheme('sunrise-amber') },
+    { 
+      id: 'nav_toggle_theme', 
+      type: 'action', 
+      title: darkMode ? 'Switch to Light Mode (☀️ Daylight Study)' : 'Switch to Dark Mode (🌙 Night Focus)', 
+      icon: darkMode ? Sun : Moon, 
+      action: () => setDarkMode && setDarkMode(!darkMode) 
+    },
     { id: 'nav_creator', type: 'action', title: 'Open Creator & Admin HQ', icon: Award, action: () => onNavigate('creator') }
-  ], [onNavigate, onOpenCalc, onSelectTheme, onOpenThemeModal]);
+  ], [onNavigate, onOpenCalc, darkMode, setDarkMode]);
 
   // Filtered Results
   const results = useMemo(() => {

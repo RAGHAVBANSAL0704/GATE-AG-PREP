@@ -659,11 +659,12 @@ export default function CustomPracticePool({
                 </label>
                 <input
                   type="text"
+                  inputMode="decimal"
                   placeholder="e.g. 12.5 or 0.14"
                   value={userAnswers[currentQ.id] || ''}
                   onChange={(e) => handleNatInput(currentQ.id, e.target.value)}
                   disabled={submittedState[currentQ.id]?.isSubmitted}
-                  className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-2.5 text-sm font-mono text-slate-900 dark:text-slate-100 outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full h-11 bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl px-4 text-sm font-mono text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 placeholder:opacity-100 outline-none focus:border-blue-500 transition"
                 />
               </div>
             )}
@@ -675,7 +676,7 @@ export default function CustomPracticePool({
                   <button
                     onClick={() => handleSubmitAnswer(currentQ.id)}
                     disabled={!userAnswers[currentQ.id]}
-                    className="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 disabled:opacity-40 text-white font-bold text-xs transition shadow-xs flex items-center gap-2"
+                    className="h-10.5 px-5 rounded-xl bg-blue-600 hover:bg-blue-500 disabled:opacity-40 text-white font-bold text-xs transition shadow-xs inline-flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <CheckCircle2 className="w-4 h-4" />
                     <span>Submit Answer</span>
@@ -683,7 +684,7 @@ export default function CustomPracticePool({
                 ) : (
                   <button
                     onClick={() => handleResetQuestion(currentQ.id)}
-                    className="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-xs hover:bg-slate-200 transition flex items-center gap-1.5"
+                    className="h-10.5 px-4 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-xs hover:bg-slate-200 dark:hover:bg-slate-700 transition inline-flex items-center justify-center gap-1.5 border border-slate-200 dark:border-slate-700 cursor-pointer"
                   >
                     <RotateCcw className="w-3.5 h-3.5" />
                     <span>Try Again</span>
@@ -696,17 +697,19 @@ export default function CustomPracticePool({
                 <button
                   onClick={() => setCurrentIndex(Math.max(0, currentIndex - 1))}
                   disabled={currentIndex === 0}
-                  className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 disabled:opacity-40 hover:bg-slate-200 transition"
+                  className="h-10.5 px-3.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 disabled:opacity-40 hover:bg-slate-200 dark:hover:bg-slate-700 transition inline-flex items-center justify-center border border-slate-200 dark:border-slate-700 cursor-pointer"
+                  title="Previous Question"
                 >
                   <ChevronLeft className="w-4 h-4" />
                 </button>
-                <span className="text-xs font-mono font-bold px-2 text-slate-500">
+                <span className="text-xs font-mono font-bold px-2.5 text-slate-600 dark:text-slate-400">
                   {currentIndex + 1} / {filteredQuestions.length}
                 </span>
                 <button
                   onClick={() => setCurrentIndex(Math.min(filteredQuestions.length - 1, currentIndex + 1))}
                   disabled={currentIndex === filteredQuestions.length - 1}
-                  className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 disabled:opacity-40 hover:bg-slate-200 transition"
+                  className="h-10.5 px-3.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 disabled:opacity-40 hover:bg-slate-200 dark:hover:bg-slate-700 transition inline-flex items-center justify-center border border-slate-200 dark:border-slate-700 cursor-pointer"
+                  title="Next Question"
                 >
                   <ChevronRight className="w-4 h-4" />
                 </button>

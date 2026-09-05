@@ -12,7 +12,7 @@
 - **Architecture**: Client-side SPA (Single Page Application) with Offline-First PWA capabilities & Supabase Backend Sync.
 - **Frontend Stack**: React 19, Vite 6, Tailwind CSS (v3.4), Lucide React (icons), KaTeX (LaTeX math rendering), Canvas Confetti.
 - **Backend & Storage**: Supabase JS Client v2 (Auth, Test Attempts, Leaderboards), LocalStorage & IndexedDB (Offline Storage).
-- **Test Infrastructure**: Native Node.js Test Runner (`node --test tests/**/*.test.js`), `node:assert/strict`. Single command `npm test` runs **264 tests across 62 suites (100% passing, exit code 0)**.
+- **Test Infrastructure**: Native Node.js Test Runner (`node --test tests/**/*.test.js`), `node:assert/strict`. Single command `npm test` runs **359 tests across 76 suites (100% passing, exit code 0)**.
 
 ---
 
@@ -120,8 +120,9 @@ Running `npm test` executes `node --test tests/**/*.test.js`:
 | `tests/sync.test.js` | 18 | UUID generation, offline queueing in localStorage, idempotent re-sync, attempt deduplication |
 | `tests/security.test.js` | 24 | Input sanitization, profanity filtering, auth state validation |
 | `tests/question_timer_performance.test.js` | 14 | Question pacing benchmarks, timer accumulation, attempt breakdown & metrics |
-| *Other Suites (`adversarial`, `schema`, `auth`, `concepts`, `custom_mocks`, `feedback`, `forensic`, `xp`)* | 172 | Full end-to-end subsystem validation |
-| **TOTAL** | **350 Tests** | **100% Pass (0 Fail, 0 Skip, Exit Code 0)** |
+| `tests/theme_engine.test.js` | 4 | Streamlined 2-theme invariant, CSS class validation, typography contrast |
+| *Other Suites (`adversarial`, `schema`, `auth`, `concepts`, `custom_mocks`, `feedback`, `forensic`, `xp`)* | 177 | Full end-to-end subsystem validation |
+| **TOTAL** | **359 Tests** | **100% Pass (0 Fail, 0 Skip, Exit Code 0)** |
 
 ---
 
@@ -134,6 +135,7 @@ When working on this codebase in future sessions, follow these directives:
 3. **Preserve Offline-First Contract**: Any new feature or service must degrade gracefully to `localStorage` / offline mode if network or remote backend is unreachable.
 4. **Maintain State Constants**: Use exact strings `NOT_VISITED`, `NOT_ANSWERED`, `ANSWERED`, `MARKED`, `ANSWERED_MARKED` for CBT question palette state machine.
 5. **Keep LaTeX Valid**: Ensure all formula strings render cleanly with KaTeX and have balanced brackets.
+6. **Dual-Theme Fidelity**: Adhere to the streamlined 2-theme architecture (`dark` & `light`) and ensure all UI elements provide high contrast in Light Mode.
 
 ---
-*Last Consolidated & Verified: 2026-09-04 (350 / 350 Tests Passing across 72 Suites)*
+*Last Consolidated & Verified: 2026-09-05 (359 / 359 Tests Passing across 76 Suites)*

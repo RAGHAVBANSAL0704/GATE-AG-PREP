@@ -131,7 +131,7 @@ export default function Leaderboard({ currentStudent }) {
                 <CheckCircle2 className="w-3.5 h-3.5" />
                 <span>+1.0 XP / Correct</span>
               </div>
-              <p className="text-[10px] text-slate-400">Rewarded for every correct answer in test or practice.</p>
+              <p className="text-[10px] text-slate-600 dark:text-slate-400">Rewarded for every correct answer in test or practice.</p>
             </div>
 
             <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 space-y-1">
@@ -139,7 +139,7 @@ export default function Leaderboard({ currentStudent }) {
                 <Zap className="w-3.5 h-3.5" />
                 <span>+0.5 XP / Attempt</span>
               </div>
-              <p className="text-[10px] text-slate-400">Active effort bonus even if answer is incorrect.</p>
+              <p className="text-[10px] text-slate-600 dark:text-slate-400">Active effort bonus even if answer is incorrect.</p>
             </div>
 
             <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 space-y-1">
@@ -147,7 +147,7 @@ export default function Leaderboard({ currentStudent }) {
                 <Award className="w-3.5 h-3.5" />
                 <span>+15 XP Full Mock</span>
               </div>
-              <p className="text-[10px] text-slate-400">Completion bonus for finishing a full 65-Q CBT paper.</p>
+              <p className="text-[10px] text-slate-600 dark:text-slate-400">Completion bonus for finishing a full 65-Q CBT paper.</p>
             </div>
 
             <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 space-y-1">
@@ -155,42 +155,42 @@ export default function Leaderboard({ currentStudent }) {
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>+5 XP / 15 Qs</span>
               </div>
-              <p className="text-[10px] text-slate-400">Milestone bonus for every 15 questions solved.</p>
+              <p className="text-[10px] text-slate-600 dark:text-slate-400">Milestone bonus for every 15 questions solved.</p>
             </div>
           </div>
 
           {/* Logged-In Student Spotlight Rank Card */}
-          <div className="card-3d rounded-2xl bg-gradient-to-r from-blue-900 via-slate-900 to-blue-950 p-5 text-white shadow-md relative overflow-hidden">
+          <div className="card-3d rounded-2xl bg-gradient-to-r from-blue-50/90 via-indigo-50/80 to-purple-50/90 dark:from-blue-900 dark:via-slate-900 dark:to-blue-950 p-5 text-slate-900 dark:text-white border border-blue-200 dark:border-blue-900/40 shadow-sm dark:shadow-md relative overflow-hidden">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 relative z-10">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-2xl bg-amber-500/20 border border-amber-400/40 flex items-center justify-center text-amber-400 font-black text-lg shadow-inner">
+                <div className="w-12 h-12 rounded-2xl bg-amber-100 dark:bg-amber-500/20 border border-amber-300 dark:border-amber-400/40 flex items-center justify-center text-amber-700 dark:text-amber-400 font-black text-lg shadow-inner">
                   #{myAcademicRankObj.rank}
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <h2 className="text-base font-extrabold text-white">{studentName}</h2>
-                    <span className="px-2 py-0.5 rounded-md bg-amber-500/20 text-amber-300 border border-amber-400/30 text-[10px] font-extrabold">
+                    <h2 className="text-base font-extrabold text-slate-900 dark:text-white">{studentName}</h2>
+                    <span className="px-2 py-0.5 rounded-md bg-amber-100 dark:bg-amber-500/20 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-400/30 text-[10px] font-extrabold">
                       ACADEMIC RANK #{myAcademicRankObj.rank}
                     </span>
                   </div>
-                  <p className="text-xs text-blue-200/80 mt-0.5">
+                  <p className="text-xs text-slate-600 dark:text-blue-200/80 mt-0.5">
                     {currentStudent?.college_name || 'COAET CCS HAU Hisar'} &bull; {currentStudent?.admission_no || '2024AE32BIV'}
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-6 border-t sm:border-t-0 border-white/10 pt-3 sm:pt-0 font-mono text-center">
+              <div className="flex items-center gap-6 border-t sm:border-t-0 border-slate-200 dark:border-white/10 pt-3 sm:pt-0 font-mono text-center">
                 <div>
-                  <div className="text-xl font-black text-amber-400">{myAcademicRankObj.xp}</div>
-                  <div className="text-[10px] text-slate-400 font-sans">Academic XP Points</div>
+                  <div className="text-xl font-black text-amber-600 dark:text-amber-400">{myAcademicRankObj.xp}</div>
+                  <div className="text-[10px] text-slate-500 dark:text-slate-400 font-sans">Academic XP Points</div>
                 </div>
                 <div>
-                  <div className="text-xl font-black text-emerald-400">{myAcademicRankObj.accuracy}%</div>
-                  <div className="text-[10px] text-slate-400 font-sans">Accuracy</div>
+                  <div className="text-xl font-black text-emerald-600 dark:text-emerald-400">{myAcademicRankObj.accuracy}%</div>
+                  <div className="text-[10px] text-slate-500 dark:text-slate-400 font-sans">Accuracy</div>
                 </div>
                 <div>
-                  <div className="text-xl font-black text-blue-400">{myAcademicRankObj.testsTaken}</div>
-                  <div className="text-[10px] text-slate-400 font-sans">Tests Solved</div>
+                  <div className="text-xl font-black text-blue-600 dark:text-blue-400">{myAcademicRankObj.testsTaken}</div>
+                  <div className="text-[10px] text-slate-500 dark:text-slate-400 font-sans">Tests Solved</div>
                 </div>
               </div>
             </div>
@@ -305,7 +305,7 @@ export default function Leaderboard({ currentStudent }) {
                 <Crosshair className="w-3.5 h-3.5" />
                 <span>+300 XP / Boss Defeat</span>
               </div>
-              <p className="text-[10px] text-slate-400">Awarded for shattering GATE concept bosses in bullet-hell arena.</p>
+              <p className="text-[10px] text-slate-600 dark:text-slate-400">Awarded for shattering GATE concept bosses in bullet-hell arena.</p>
             </div>
 
             <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 space-y-1">
@@ -313,7 +313,7 @@ export default function Leaderboard({ currentStudent }) {
                 <Swords className="w-3.5 h-3.5" />
                 <span>+200 XP / 1v1 Duel</span>
               </div>
-              <p className="text-[10px] text-slate-400">Awarded for defeating rivals in real-time speed math duels.</p>
+              <p className="text-[10px] text-slate-600 dark:text-slate-400">Awarded for defeating rivals in real-time speed math duels.</p>
             </div>
 
             <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 space-y-1">
@@ -321,7 +321,7 @@ export default function Leaderboard({ currentStudent }) {
                 <Zap className="w-3.5 h-3.5" />
                 <span>+100 XP / NAT Overdrive</span>
               </div>
-              <p className="text-[10px] text-slate-400">Critical hit bonus for correct rapid formula calculations.</p>
+              <p className="text-[10px] text-slate-600 dark:text-slate-400">Critical hit bonus for correct rapid formula calculations.</p>
             </div>
 
             <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 space-y-1">
@@ -329,38 +329,38 @@ export default function Leaderboard({ currentStudent }) {
                 <Gamepad2 className="w-3.5 h-3.5" />
                 <span>+30 XP / Arcade Sim</span>
               </div>
-              <p className="text-[10px] text-slate-400">Rewarded for solving engineering simulators & mini-games.</p>
+              <p className="text-[10px] text-slate-600 dark:text-slate-400">Rewarded for solving engineering simulators & mini-games.</p>
             </div>
           </div>
 
           {/* Logged-In Student Spotlight Rank Card (Break Zone) */}
-          <div className="card-3d rounded-2xl bg-gradient-to-r from-cyan-950 via-slate-900 to-indigo-950 p-5 text-white shadow-md relative overflow-hidden border border-cyan-500/30">
+          <div className="card-3d rounded-2xl bg-gradient-to-r from-cyan-50/90 via-sky-50/80 to-indigo-50/90 dark:from-cyan-950 dark:via-slate-900 dark:to-indigo-950 p-5 text-slate-900 dark:text-white shadow-sm dark:shadow-md relative overflow-hidden border border-cyan-200 dark:border-cyan-500/30">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 relative z-10">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-2xl bg-cyan-500/20 border border-cyan-400/40 flex items-center justify-center text-cyan-300 font-black text-lg shadow-inner">
+                <div className="w-12 h-12 rounded-2xl bg-cyan-100 dark:bg-cyan-500/20 border border-cyan-300 dark:border-cyan-400/40 flex items-center justify-center text-cyan-800 dark:text-cyan-300 font-black text-lg shadow-inner">
                   #{myBreakRankObj.rank}
                 </div>
                 <div>
                   <div className="flex items-center gap-2">
-                    <h2 className="text-base font-extrabold text-white">{studentName}</h2>
-                    <span className="px-2 py-0.5 rounded-md bg-cyan-500/20 text-cyan-300 border border-cyan-400/30 text-[10px] font-extrabold">
+                    <h2 className="text-base font-extrabold text-slate-900 dark:text-white">{studentName}</h2>
+                    <span className="px-2 py-0.5 rounded-md bg-cyan-100 dark:bg-cyan-500/20 text-cyan-800 dark:text-cyan-300 border border-cyan-200 dark:border-cyan-400/30 text-[10px] font-extrabold">
                       ARCADE RANK #{myBreakRankObj.rank}
                     </span>
                   </div>
-                  <p className="text-xs text-cyan-200/80 mt-0.5">
+                  <p className="text-xs text-slate-600 dark:text-cyan-200/80 mt-0.5">
                     {currentStudent?.college_name || 'COAET CCS HAU Hisar'} &bull; Break Zone Arcade
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-6 border-t sm:border-t-0 border-white/10 pt-3 sm:pt-0 font-mono text-center">
+              <div className="flex items-center gap-6 border-t sm:border-t-0 border-slate-200 dark:border-white/10 pt-3 sm:pt-0 font-mono text-center">
                 <div>
-                  <div className="text-xl font-black text-yellow-300">{userBreakXP} XP</div>
-                  <div className="text-[10px] text-slate-400 font-sans">Total Break XP</div>
+                  <div className="text-xl font-black text-amber-600 dark:text-yellow-300">{userBreakXP} XP</div>
+                  <div className="text-[10px] text-slate-500 dark:text-slate-400 font-sans">Total Break XP</div>
                 </div>
                 <div>
-                  <div className="text-xl font-black text-cyan-400">Active</div>
-                  <div className="text-[10px] text-slate-400 font-sans">Cyber Garage Status</div>
+                  <div className="text-xl font-black text-cyan-600 dark:text-cyan-400">Active</div>
+                  <div className="text-[10px] text-slate-500 dark:text-slate-400 font-sans">Cyber Garage Status</div>
                 </div>
               </div>
             </div>

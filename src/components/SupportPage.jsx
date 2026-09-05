@@ -190,7 +190,7 @@ export default function SupportPage({ currentStudent }) {
                 placeholder="e.g. ICAR JRF, GATE XE, State AE/JE, NABARD, UPSC IFS..."
                 value={requestedExamName}
                 onChange={(e) => setRequestedExamName(e.target.value)}
-                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg text-slate-900 dark:text-slate-100 outline-none text-xs focus:ring-1 focus:ring-emerald-500 font-medium"
+                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 placeholder:opacity-100 outline-none text-xs focus:ring-1 focus:ring-emerald-500 font-medium"
               />
             </div>
 
@@ -203,7 +203,7 @@ export default function SupportPage({ currentStudent }) {
                 placeholder="Specific subjects, years needed, or syllabus notes..."
                 value={requestedExamNotes}
                 onChange={(e) => setRequestedExamNotes(e.target.value)}
-                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-lg text-slate-900 dark:text-slate-100 outline-none text-xs focus:ring-1 focus:ring-emerald-500 font-medium resize-none"
+                className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 placeholder:opacity-100 outline-none text-xs focus:ring-1 focus:ring-emerald-500 font-medium resize-none leading-relaxed"
               />
             </div>
 

@@ -185,26 +185,26 @@ export default function AITutorModal({
         {/* Optional Gemini API Key Drawer */}
         {showKeyInput && (
           <div className="px-5 py-3 bg-amber-500/10 border-b border-amber-500/20 text-xs flex flex-col sm:flex-row sm:items-center justify-between gap-2 animate-in fade-in">
-            <div className="flex-1">
-              <span className="font-bold text-amber-800 dark:text-amber-300">Custom Gemini API Key:</span>
+            <div className="flex-1 flex flex-col sm:flex-row sm:items-center gap-2">
+              <span className="font-bold text-amber-800 dark:text-amber-300 shrink-0">Custom Gemini API Key:</span>
               <input
                 type="password"
                 placeholder="AIzaSy..."
                 value={tempApiKey}
                 onChange={(e) => setTempApiKey(e.target.value)}
-                className="w-full mt-1 sm:mt-0 sm:ml-2 sm:w-64 px-2.5 py-1 text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-white"
+                className="w-full sm:w-64 h-8.5 px-3 text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 placeholder:opacity-100 outline-none focus:border-amber-500"
               />
             </div>
             <div className="flex items-center gap-2">
               <button
                 onClick={handleSaveApiKey}
-                className="px-3 py-1 bg-amber-600 hover:bg-amber-500 text-white font-bold rounded-lg text-xs cursor-pointer"
+                className="h-8.5 px-3 bg-amber-600 hover:bg-amber-500 text-white font-bold rounded-lg text-xs cursor-pointer inline-flex items-center justify-center transition"
               >
                 Save
               </button>
               <button
                 onClick={() => setShowKeyInput(false)}
-                className="px-2 py-1 text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 cursor-pointer"
+                className="h-8.5 px-2.5 text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 cursor-pointer inline-flex items-center justify-center transition"
               >
                 Cancel
               </button>
@@ -318,18 +318,18 @@ export default function AITutorModal({
               </div>
 
               {/* Chat Input Bar */}
-              <form onSubmit={handleSendDoubt} className="flex gap-2 pt-2 border-t border-slate-200 dark:border-slate-800">
+              <form onSubmit={handleSendDoubt} className="flex items-center gap-2 pt-2 border-t border-slate-200 dark:border-slate-800">
                 <input
                   type="text"
                   placeholder="Ask a doubt e.g., 'Why did we use this formula?'..."
                   value={inputDoubt}
                   onChange={(e) => setInputDoubt(e.target.value)}
-                  className="flex-1 px-3.5 py-2 text-xs bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:border-purple-500"
+                  className="flex-1 h-10.5 px-3.5 text-xs bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 placeholder:opacity-100 focus:outline-none focus:border-purple-500"
                 />
                 <button
                   type="submit"
                   disabled={!inputDoubt.trim() || isChatLoading}
-                  className="px-4 py-2 bg-purple-600 hover:bg-purple-500 text-white rounded-xl text-xs font-bold transition flex items-center gap-1 disabled:opacity-50 cursor-pointer"
+                  className="h-10.5 px-4 bg-purple-600 hover:bg-purple-500 text-white rounded-xl text-xs font-bold transition inline-flex items-center justify-center gap-1 disabled:opacity-50 cursor-pointer shrink-0"
                 >
                   <Send className="w-3.5 h-3.5" />
                 </button>

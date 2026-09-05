@@ -63,36 +63,36 @@ export default function CreatorPage() {
     <div className="max-w-4xl mx-auto space-y-8 animate-in fade-in duration-200">
       
       {/* Header Banner */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-950 text-white rounded-3xl p-8 sm:p-10 border border-slate-800 shadow-2xl">
-        <div className="absolute -right-16 -top-16 w-80 h-80 bg-blue-500/15 rounded-full blur-3xl pointer-events-none"></div>
-        <div className="absolute -left-16 -bottom-16 w-80 h-80 bg-amber-500/15 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="relative overflow-hidden bg-gradient-to-br from-blue-50/70 via-slate-50 to-indigo-50/50 dark:from-slate-900 dark:via-indigo-950 dark:to-slate-950 text-slate-900 dark:text-white rounded-3xl p-8 sm:p-10 border border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-2xl">
+        <div className="absolute -right-16 -top-16 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute -left-16 -bottom-16 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
         <div className="relative z-10 flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8">
           
           {/* 3D Developer Avatar */}
           <div className="relative shrink-0">
-            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-amber-500 text-white font-extrabold flex items-center justify-center text-2xl sm:text-3xl shadow-2xl border-2 border-white/20">
+            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-amber-500 text-white font-extrabold flex items-center justify-center text-2xl sm:text-3xl shadow-xl border-2 border-white dark:border-white/20">
               RB
             </div>
 
-            <div className="absolute -bottom-2 -right-2 bg-emerald-500 text-white p-1.5 rounded-full shadow-lg border-2 border-slate-900" title="Verified Creator">
+            <div className="absolute -bottom-2 -right-2 bg-emerald-500 text-white p-1.5 rounded-full shadow-lg border-2 border-white dark:border-slate-900" title="Verified Creator">
               <CheckCircle2 className="w-4 h-4" />
             </div>
           </div>
 
           {/* Bio Text */}
           <div className="text-center sm:text-left space-y-3">
-            <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-blue-500/10 border border-blue-400/20 text-xs font-bold text-blue-300">
-              <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+            <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-blue-100 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-400/20 text-xs font-bold text-blue-800 dark:text-blue-300">
+              <Sparkles className="w-3.5 h-3.5 text-amber-500 dark:text-amber-400" />
               <span>Platform Creator & Lead Developer</span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+            <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
               Raghav Bansal
             </h1>
 
-            <p className="text-xs sm:text-sm text-slate-300 max-w-2xl leading-relaxed font-medium">
-              Creator of the <strong>GATE AG Prep Portal</strong> — engineered to empower Agricultural Engineering aspirants with 20 years of PYQ mock test CBT simulations, section-wise solved practice pools, and real-time concept analytics.
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed font-medium">
+              Creator of the <strong className="text-slate-900 dark:text-white">GATE AG Prep Portal</strong> — engineered to empower Agricultural Engineering aspirants with 20 years of PYQ mock test CBT simulations, section-wise solved practice pools, and real-time concept analytics.
             </p>
           </div>
         </div>
@@ -266,17 +266,17 @@ export default function CreatorPage() {
       </div>
 
       {/* Direct Issue Reporting Box */}
-      <div className="bg-emerald-950 text-white rounded-3xl p-6 sm:p-8 space-y-4 border border-emerald-800 shadow-xl">
+      <div className="bg-emerald-50/70 dark:bg-emerald-950 text-slate-900 dark:text-white rounded-3xl p-6 sm:p-8 space-y-4 border border-emerald-200 dark:border-emerald-800 shadow-sm dark:shadow-xl">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="space-y-1">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-900/60 text-emerald-300 text-xs font-bold border border-emerald-700">
-              <MessageSquare className="w-3.5 h-3.5 fill-emerald-300" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-300 text-xs font-bold border border-emerald-200 dark:border-emerald-700">
+              <MessageSquare className="w-3.5 h-3.5 fill-emerald-700 dark:fill-emerald-300" />
               <span>Direct Student Help & Error Reporting</span>
             </div>
-            <h2 className="text-xl font-extrabold text-white">
+            <h2 className="text-xl font-extrabold text-slate-900 dark:text-white">
               Faced any Problem, Mistake, or Issue?
             </h2>
-            <p className="text-xs text-slate-300 max-w-xl leading-relaxed">
+            <p className="text-xs text-slate-600 dark:text-slate-300 max-w-xl leading-relaxed">
               If you find any question error, calculation typo, UI bug, or face any issue while practicing, message Raghav directly on WhatsApp for immediate correction!
             </p>
           </div>

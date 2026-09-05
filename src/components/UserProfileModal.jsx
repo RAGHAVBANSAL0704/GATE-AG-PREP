@@ -267,7 +267,7 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
                 placeholder="e.g. Rajesh Kumar"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
-                className="w-full px-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 placeholder-slate-500 focus:outline-none focus:border-indigo-500"
+                className="w-full px-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 placeholder-slate-400 focus:outline-none focus:border-indigo-500"
               />
             </div>
 
@@ -303,7 +303,7 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
                   placeholder="username"
                   value={username.replace(/^@/, '')}
                   onChange={(e) => setUsername(e.target.value.toLowerCase().replace(/[^a-z0-9_]/g, ''))}
-                  className="w-full pl-8 pr-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 placeholder-slate-500 focus:outline-none focus:border-indigo-500 font-mono"
+                  className="w-full pl-8 pr-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 placeholder-slate-400 focus:outline-none focus:border-indigo-500 font-mono"
                 />
               </div>
               <p className="text-[10px] text-slate-400">Can be used to log in instead of Email or Mobile. Must be unique.</p>
@@ -450,7 +450,7 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
                 placeholder="e.g. Department of FMPE, COAET"
                 value={address}
                 onChange={(e) => setAddress(e.target.value)}
-                className="w-full px-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 placeholder-slate-500 focus:outline-none focus:border-indigo-500"
+                className="w-full px-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 placeholder-slate-400 focus:outline-none focus:border-indigo-500"
               />
             </div>
 
@@ -469,7 +469,7 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
                   placeholder="Min 6 characters"
                   value={newPassword}
                   onChange={(e) => setNewPassword(e.target.value)}
-                  className="w-full pl-3.5 pr-10 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 placeholder-slate-500 focus:outline-none focus:border-indigo-500"
+                  className="w-full pl-3.5 pr-10 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 placeholder-slate-400 focus:outline-none focus:border-indigo-500"
                 />
                 <button
                   type="button"
@@ -491,7 +491,7 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
                 <a 
                   href="https://aistudio.google.com/app/apikey" 
                   target="_blank" 
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer" 
                   className="text-[10px] text-amber-400 hover:underline flex items-center gap-1"
                 >
                   <span>Get Free Key</span>
@@ -504,7 +504,7 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
                   placeholder="Paste your Gemini AI Studio API key here"
                   value={geminiApiKey}
                   onChange={(e) => setGeminiApiKey(e.target.value)}
-                  className="w-full pl-3.5 pr-10 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 placeholder-slate-500 focus:outline-none focus:border-amber-500 font-mono text-xs"
+                  className="w-full pl-3.5 pr-10 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 placeholder-slate-400 focus:outline-none focus:border-amber-500 font-mono text-xs"
                 />
                 <button
                   type="button"

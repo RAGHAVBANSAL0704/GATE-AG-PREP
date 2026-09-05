@@ -114,13 +114,13 @@ _Sent from GATE AG Prep Web Portal_`;
           {/* Category & Name */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">
+              <label className="block text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">
                 Issue Category *
               </label>
               <select
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
-                className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-3.5 py-2.5 text-slate-900 dark:text-slate-100 font-medium outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-xl px-3.5 py-2.5 text-slate-900 dark:text-slate-100 font-semibold outline-none focus:ring-2 focus:ring-emerald-500"
               >
                 <option value="Question Error">🚨 Question Error / Answer Key Mistake</option>
                 <option value="Calculation Typo">📐 Derivation / Calculation Typo</option>
@@ -130,7 +130,7 @@ _Sent from GATE AG Prep Web Portal_`;
             </div>
 
             <div>
-              <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">
+              <label className="block text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">
                 Your Name (Optional)
               </label>
               <input
@@ -138,14 +138,14 @@ _Sent from GATE AG Prep Web Portal_`;
                 placeholder="e.g. Ankit or GATE Aspirant"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-3.5 py-2.5 text-slate-900 dark:text-slate-100 font-medium outline-none focus:ring-2 focus:ring-emerald-500"
+                className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-xl px-3.5 py-2.5 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 placeholder:opacity-100 font-medium outline-none focus:ring-2 focus:ring-emerald-500"
               />
             </div>
           </div>
 
           {/* Question / Paper Ref */}
           <div>
-            <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">
+            <label className="block text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">
               Target Question ID / Paper Reference (Optional)
             </label>
             <input
@@ -153,13 +153,13 @@ _Sent from GATE AG Prep Web Portal_`;
               placeholder="e.g. GATE_2026_Q15, GATE 2027 Mock 01 Q22, or Practice Pool Q4"
               value={questionRef}
               onChange={(e) => setQuestionRef(e.target.value)}
-              className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-3.5 py-2.5 text-slate-900 dark:text-slate-100 font-medium outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-xl px-3.5 py-2.5 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 placeholder:opacity-100 font-medium outline-none focus:ring-2 focus:ring-emerald-500"
             />
           </div>
 
           {/* Description */}
           <div>
-            <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1.5">
+            <label className="block text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">
               Describe the Issue / Problem Faced *
             </label>
             <textarea
@@ -168,14 +168,14 @@ _Sent from GATE AG Prep Web Portal_`;
               placeholder="Explain the problem, mistake, typo, or glitch in detail so we can fix it immediately..."
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-3.5 text-slate-900 dark:text-slate-100 font-medium outline-none focus:ring-2 focus:ring-emerald-500 resize-none text-xs"
+              className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 rounded-xl p-3.5 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 placeholder:opacity-100 font-medium outline-none focus:ring-2 focus:ring-emerald-500 resize-none text-xs leading-relaxed"
             />
           </div>
 
           {/* Action Button */}
           <div className="pt-2 flex flex-wrap items-center justify-between gap-4">
-            <div className="text-slate-500 text-[11px]">
-              Direct WhatsApp Link: <span className="font-bold text-slate-800 dark:text-slate-200">{DISPLAY_PHONE}</span>
+            <div className="text-slate-600 dark:text-slate-400 text-xs font-medium">
+              Direct WhatsApp Link: <span className="font-bold text-slate-900 dark:text-slate-100">{DISPLAY_PHONE}</span>
             </div>
 
             <button

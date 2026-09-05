@@ -136,18 +136,18 @@ export default function Realtime1v1Duel({ breakXP, onAddXP }) {
   };
 
   return (
-    <div className="w-full bg-slate-950 border border-indigo-500/30 rounded-2xl p-6 shadow-2xl text-white">
+    <div className="w-full bg-white dark:bg-slate-950 border border-slate-200 dark:border-indigo-500/30 rounded-2xl p-6 shadow-xl text-slate-900 dark:text-white">
 
       {/* DUEL LOBBY */}
       {gameState === 'lobby' && (
         <div className="max-w-2xl mx-auto text-center my-4">
-          <div className="inline-flex p-3 bg-indigo-500/10 rounded-full border border-indigo-400/40 mb-3 text-indigo-400">
+          <div className="inline-flex p-3 bg-indigo-500/10 rounded-full border border-indigo-400/40 mb-3 text-indigo-600 dark:text-indigo-400">
             <Swords className="w-8 h-8 animate-pulse" />
           </div>
-          <h3 className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-pink-400">
+          <h3 className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-400 dark:to-pink-400">
             1v1 RAPID REFLEX SPEED CLASH ⚔️
           </h3>
-          <p className="text-sm text-slate-300 mt-2 mb-6">
+          <p className="text-sm text-slate-600 dark:text-slate-300 mt-2 mb-6">
             Challenge arcade speed rivals in lightning-fast reflex battles! Rapid correct hits launch laser counter-attacks!
           </p>
 
@@ -158,16 +158,16 @@ export default function Realtime1v1Duel({ breakXP, onAddXP }) {
                 onClick={() => setRival(r)}
                 className={`p-4 rounded-xl border text-left cursor-pointer transition-all ${
                   rival.name === r.name
-                    ? 'border-indigo-400 bg-indigo-950/60 shadow-lg shadow-indigo-500/20'
-                    : 'border-slate-800 bg-slate-900 hover:border-slate-700'
+                    ? 'border-indigo-400 bg-indigo-50/80 dark:bg-indigo-950/60 shadow-lg shadow-indigo-500/20'
+                    : 'border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 hover:border-slate-300 dark:hover:border-slate-700'
                 }`}
               >
                 <div className="flex items-center gap-3">
                   <span className="text-3xl">{r.avatar}</span>
                   <div>
-                    <h4 className="font-bold text-sm text-white">{r.name}</h4>
-                    <span className="text-xs text-indigo-400 font-mono block">{r.rank}</span>
-                    <span className="text-xs text-slate-400 font-mono">Style: {r.skill}</span>
+                    <h4 className="font-bold text-sm text-slate-900 dark:text-white">{r.name}</h4>
+                    <span className="text-xs text-indigo-700 dark:text-indigo-400 font-mono block">{r.rank}</span>
+                    <span className="text-xs text-slate-500 dark:text-slate-400 font-mono">Style: {r.skill}</span>
                   </div>
                 </div>
               </div>
@@ -176,7 +176,7 @@ export default function Realtime1v1Duel({ breakXP, onAddXP }) {
 
           <button
             onClick={() => startDuel(rival)}
-            className="w-full py-4 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:from-indigo-500 hover:to-pink-500 font-black text-base rounded-xl shadow-xl shadow-indigo-500/30 flex items-center justify-center gap-2"
+            className="w-full py-4 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:from-indigo-500 hover:to-pink-500 font-black text-base rounded-xl shadow-xl shadow-indigo-500/30 text-white flex items-center justify-center gap-2"
           >
             <Swords className="w-5 h-5" /> START 1v1 SPEED DUEL (+200 XP)
           </button>
@@ -188,16 +188,16 @@ export default function Realtime1v1Duel({ breakXP, onAddXP }) {
         <div className="space-y-6">
 
           {/* DUAL HEALTH HUD */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-slate-900/80 p-4 rounded-xl border border-indigo-500/30">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-slate-50 dark:bg-slate-900/80 p-4 rounded-xl border border-slate-200 dark:border-indigo-500/30">
             {/* PLAYER HUD */}
-            <div className="p-3 bg-slate-950 rounded-lg border border-emerald-500/40">
+            <div className="p-3 bg-white dark:bg-slate-950 rounded-lg border border-emerald-300 dark:border-emerald-500/40">
               <div className="flex justify-between items-center mb-1">
-                <span className="font-bold text-sm text-emerald-400 flex items-center gap-2">
-                  🚜 YOU {streak > 1 && <span className="text-xs bg-emerald-950 text-emerald-300 px-2 py-0.5 rounded-full font-mono font-bold">Combo x{streak}</span>}
+                <span className="font-bold text-sm text-emerald-600 dark:text-emerald-400 flex items-center gap-2">
+                  🚜 YOU {streak > 1 && <span className="text-xs bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 px-2 py-0.5 rounded-full font-mono font-bold">Combo x{streak}</span>}
                 </span>
-                <span className="text-xs font-mono text-emerald-300 font-bold">{playerHp} HP</span>
+                <span className="text-xs font-mono text-emerald-700 dark:text-emerald-300 font-bold">{playerHp} HP</span>
               </div>
-              <div className="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
+              <div className="w-full h-3 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
                 <div
                   className="h-full bg-emerald-500 transition-all duration-300"
                   style={{ width: `${playerHp}%` }}
@@ -206,14 +206,14 @@ export default function Realtime1v1Duel({ breakXP, onAddXP }) {
             </div>
 
             {/* RIVAL HUD */}
-            <div className="p-3 bg-slate-950 rounded-lg border border-pink-500/40">
+            <div className="p-3 bg-white dark:bg-slate-950 rounded-lg border border-pink-300 dark:border-pink-500/40">
               <div className="flex justify-between items-center mb-1">
-                <span className="font-bold text-sm text-pink-400 flex items-center gap-2">
+                <span className="font-bold text-sm text-pink-600 dark:text-pink-400 flex items-center gap-2">
                   {rival.avatar} {rival.name}
                 </span>
-                <span className="text-xs font-mono text-pink-300 font-bold">{rivalHp} HP</span>
+                <span className="text-xs font-mono text-pink-700 dark:text-pink-300 font-bold">{rivalHp} HP</span>
               </div>
-              <div className="w-full h-3 bg-slate-800 rounded-full overflow-hidden">
+              <div className="w-full h-3 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
                 <div
                   className="h-full bg-pink-500 transition-all duration-300"
                   style={{ width: `${rivalHp}%` }}
@@ -223,16 +223,16 @@ export default function Realtime1v1Duel({ breakXP, onAddXP }) {
           </div>
 
           {/* QUESTION ARENA */}
-          <div className="bg-slate-900 border border-indigo-500/40 rounded-xl p-6 text-center shadow-inner relative">
-            <div className="absolute top-4 right-4 bg-indigo-950 border border-indigo-400 px-3 py-1 rounded-full font-mono text-xs text-indigo-300 font-bold">
+          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-indigo-500/40 rounded-xl p-6 text-center shadow-inner relative">
+            <div className="absolute top-4 right-4 bg-indigo-50 dark:bg-indigo-950 border border-indigo-200 dark:border-indigo-400 px-3 py-1 rounded-full font-mono text-xs text-indigo-700 dark:text-indigo-300 font-bold">
               ⏳ {roundTime}s
             </div>
 
-            <span className="text-xs uppercase font-mono text-indigo-400 font-bold tracking-widest block mb-2">
+            <span className="text-xs uppercase font-mono text-indigo-600 dark:text-indigo-400 font-bold tracking-widest block mb-2">
               SPEED REFLEX ROUND
             </span>
 
-            <h4 className="text-3xl font-black text-white mb-6 tracking-wide">
+            <h4 className="text-3xl font-black text-slate-900 dark:text-white mb-6 tracking-wide">
               {DUEL_QUESTIONS[currentQIdx].q}
             </h4>
 
@@ -244,18 +244,18 @@ export default function Realtime1v1Duel({ breakXP, onAddXP }) {
                 placeholder="Answer & Enter..."
                 value={userAns}
                 onChange={(e) => setUserAns(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl bg-slate-950 border border-indigo-500/60 text-indigo-300 font-mono font-extrabold text-2xl text-center focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-indigo-500/60 text-slate-900 dark:text-indigo-300 font-mono font-extrabold text-2xl text-center focus:outline-none focus:ring-2 focus:ring-indigo-400"
               />
 
               {feedback && (
-                <div className="p-3 rounded-xl text-xs font-bold bg-slate-950 border border-indigo-500/40 text-indigo-300 animate-fade-in">
+                <div className="p-3 rounded-xl text-xs font-bold bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-indigo-500/40 text-indigo-700 dark:text-indigo-300 animate-fade-in">
                   {feedback}
                 </div>
               )}
 
               <button
                 type="submit"
-                className="w-full py-3.5 bg-gradient-to-r from-indigo-500 to-pink-600 font-black rounded-xl text-white shadow-lg hover:from-indigo-400 hover:to-pink-500"
+                className="w-full py-3.5 bg-gradient-to-r from-indigo-600 to-pink-600 hover:from-indigo-500 hover:to-pink-500 font-black rounded-xl text-white shadow-lg"
               >
                 FIRE ATTACK WAVE ⚡
               </button>
@@ -267,11 +267,11 @@ export default function Realtime1v1Duel({ breakXP, onAddXP }) {
 
       {/* VICTORY SCREEN */}
       {gameState === 'victory' && (
-        <div className="text-center my-8 p-6 bg-slate-900 border border-emerald-500/60 rounded-xl max-w-md mx-auto">
+        <div className="text-center my-8 p-6 bg-white dark:bg-slate-900 border border-emerald-300 dark:border-emerald-500/60 rounded-xl max-w-md mx-auto shadow-lg">
           <Trophy className="w-16 h-16 text-yellow-400 mx-auto mb-3 animate-bounce" />
-          <h3 className="text-2xl font-black text-emerald-400">DUEL VICTORY! 🏆</h3>
-          <p className="text-sm text-slate-300 my-2">You defeated {rival.name} in lightning reflex speed!</p>
-          <div className="text-lg font-mono font-bold text-yellow-300 mb-6">+200 BREAK XP EARNED!</div>
+          <h3 className="text-2xl font-black text-emerald-600 dark:text-emerald-400">DUEL VICTORY! 🏆</h3>
+          <p className="text-sm text-slate-600 dark:text-slate-300 my-2">You defeated {rival.name} in lightning reflex speed!</p>
+          <div className="text-lg font-mono font-bold text-amber-600 dark:text-yellow-300 mb-6">+200 BREAK XP EARNED!</div>
           <button
             onClick={() => setGameState('lobby')}
             className="w-full py-3 bg-emerald-600 hover:bg-emerald-500 font-bold rounded-xl text-white shadow-lg"
@@ -283,10 +283,10 @@ export default function Realtime1v1Duel({ breakXP, onAddXP }) {
 
       {/* DEFEAT SCREEN */}
       {gameState === 'defeat' && (
-        <div className="text-center my-8 p-6 bg-slate-900 border border-rose-500/60 rounded-xl max-w-md mx-auto">
+        <div className="text-center my-8 p-6 bg-white dark:bg-slate-900 border border-rose-300 dark:border-rose-500/60 rounded-xl max-w-md mx-auto shadow-lg">
           <div className="text-4xl mb-2">💔</div>
-          <h3 className="text-2xl font-black text-rose-400">DUEL DEFEATED!</h3>
-          <p className="text-sm text-slate-300 my-2">{rival.name} had faster reflex speed this round.</p>
+          <h3 className="text-2xl font-black text-rose-600 dark:text-rose-400">DUEL DEFEATED!</h3>
+          <p className="text-sm text-slate-600 dark:text-slate-300 my-2">{rival.name} had faster reflex speed this round.</p>
           <button
             onClick={() => setGameState('lobby')}
             className="w-full py-3 mt-4 bg-rose-600 hover:bg-rose-500 font-bold rounded-xl text-white shadow-lg"

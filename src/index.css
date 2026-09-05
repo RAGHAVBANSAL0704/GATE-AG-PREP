@@ -213,16 +213,41 @@ html:not(.dark) textarea {
   border-color: #CBD5E1 !important;
 }
 
+/* Force 100% opacity on all placeholders to eliminate browser transparency wash-out */
+input::placeholder,
+textarea::placeholder {
+  opacity: 1 !important;
+}
+
 html:not(.dark) input::placeholder,
 html:not(.dark) textarea::placeholder {
-  color: #64748B !important;
+  color: #94A3B8 !important; /* Refined Slate 400 for light theme: crisp, soft, not too dark */
   opacity: 1 !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #94A3B8 !important;
+  opacity: 1 !important;
+}
+
+html.dark input,
+html.dark select,
+html.dark textarea {
+  color: #F8FAFC !important;
+  border-color: #334155 !important;
 }
 
 html:not(.dark) select option,
 html:not(.dark) select optgroup {
   color: #0F172A !important;
   background-color: #FFFFFF !important;
+}
+
+html.dark select option,
+html.dark select optgroup {
+  color: #F8FAFC !important;
+  background-color: #0F172A !important;
 }
 
 /* Ensure solid opaque cards with crisp borders in all light themes */
@@ -388,195 +413,6 @@ html.theme-oxford-sage .katex * {
   fill: #112217 !important;
 }
 
-/* --- 2. CREAM PARCHMENT & COFFEE (Kindle Paper & Terracotta) --- */
-html.theme-cream-parchment,
-html.theme-cream-parchment body,
-html.theme-cream-parchment #root,
-html.theme-cream-parchment .min-h-screen {
-  background-color: #F7F4EC !important;
-  background-image: none !important;
-  color: #1A1613 !important;
-}
-html.theme-cream-parchment h1, html.theme-cream-parchment h2, html.theme-cream-parchment h3,
-html.theme-cream-parchment h4, html.theme-cream-parchment h5, html.theme-cream-parchment h6,
-html.theme-cream-parchment .text-slate-900, html.theme-cream-parchment .text-slate-800,
-html.theme-cream-parchment .text-slate-100 {
-  color: #1A1613 !important;
-}
-html.theme-cream-parchment p, html.theme-cream-parchment label, html.theme-cream-parchment li,
-html.theme-cream-parchment td, html.theme-cream-parchment th, html.theme-cream-parchment strong,
-html.theme-cream-parchment .text-slate-700, html.theme-cream-parchment .text-slate-600,
-html.theme-cream-parchment .text-slate-200 {
-  color: #2E2823 !important;
-}
-html.theme-cream-parchment .text-slate-500, html.theme-cream-parchment .text-slate-400,
-html.theme-cream-parchment .text-slate-300 {
-  color: #54483F !important;
-}
-html.theme-cream-parchment .bg-white,
-html.theme-cream-parchment .card-3d,
-html.theme-cream-parchment aside,
-html.theme-cream-parchment .glass-panel {
-  background-color: #FAF8F3 !important;
-  border-color: #E5DCD0 !important;
-  color: #1A1613 !important;
-  box-shadow: 0 4px 16px -2px rgba(42, 36, 33, 0.05) !important;
-}
-html.theme-cream-parchment .bg-slate-50,
-html.theme-cream-parchment .bg-slate-100 {
-  background-color: #EDE7DB !important;
-}
-html.theme-cream-parchment .border-slate-200,
-html.theme-cream-parchment .border-slate-100 {
-  border-color: #E5DCD0 !important;
-}
-html.theme-cream-parchment input,
-html.theme-cream-parchment select,
-html.theme-cream-parchment textarea {
-  color: #1A1613 !important;
-  background-color: #FFFFFF !important;
-  border-color: #E5DCD0 !important;
-}
-html.theme-cream-parchment .bg-emerald-600 {
-  background-color: #C2410C !important;
-  color: #FFFFFF !important;
-}
-html.theme-cream-parchment .text-emerald-600,
-html.theme-cream-parchment .text-emerald-500 {
-  color: #C2410C !important;
-}
-html.theme-cream-parchment .katex,
-html.theme-cream-parchment .katex * {
-  color: #1A1613 !important;
-  fill: #1A1613 !important;
-}
-
-/* --- 3. PORCELAIN STUDIO (Linear Swiss Minimalist Slate) --- */
-html.theme-porcelain-studio,
-html.theme-porcelain-studio body,
-html.theme-porcelain-studio #root,
-html.theme-porcelain-studio .min-h-screen {
-  background-color: #F4F5F8 !important;
-  background-image: none !important;
-  color: #0A0E1A !important;
-}
-html.theme-porcelain-studio h1, html.theme-porcelain-studio h2, html.theme-porcelain-studio h3,
-html.theme-porcelain-studio h4, html.theme-porcelain-studio h5, html.theme-porcelain-studio h6,
-html.theme-porcelain-studio .text-slate-900, html.theme-porcelain-studio .text-slate-800,
-html.theme-porcelain-studio .text-slate-100 {
-  color: #0A0E1A !important;
-}
-html.theme-porcelain-studio p, html.theme-porcelain-studio label, html.theme-porcelain-studio li,
-html.theme-porcelain-studio td, html.theme-porcelain-studio th, html.theme-porcelain-studio strong,
-html.theme-porcelain-studio .text-slate-700, html.theme-porcelain-studio .text-slate-600,
-html.theme-porcelain-studio .text-slate-200 {
-  color: #1E2638 !important;
-}
-html.theme-porcelain-studio .text-slate-500, html.theme-porcelain-studio .text-slate-400,
-html.theme-porcelain-studio .text-slate-300 {
-  color: #434F64 !important;
-}
-html.theme-porcelain-studio .bg-white,
-html.theme-porcelain-studio .card-3d,
-html.theme-porcelain-studio aside,
-html.theme-porcelain-studio .glass-panel {
-  background-color: #FFFFFF !important;
-  border-color: #DFE2EC !important;
-  color: #0A0E1A !important;
-  box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.06) !important;
-}
-html.theme-porcelain-studio .bg-slate-50,
-html.theme-porcelain-studio .bg-slate-100 {
-  background-color: #EAEDF3 !important;
-}
-html.theme-porcelain-studio .border-slate-200,
-html.theme-porcelain-studio .border-slate-100 {
-  border-color: #DFE2EC !important;
-}
-html.theme-porcelain-studio input,
-html.theme-porcelain-studio select,
-html.theme-porcelain-studio textarea {
-  color: #0A0E1A !important;
-  background-color: #FFFFFF !important;
-  border-color: #DFE2EC !important;
-}
-html.theme-porcelain-studio .bg-emerald-600 {
-  background-color: #4F46E5 !important;
-  color: #FFFFFF !important;
-}
-html.theme-porcelain-studio .text-emerald-600,
-html.theme-porcelain-studio .text-emerald-500 {
-  color: #4F46E5 !important;
-}
-html.theme-porcelain-studio .katex,
-html.theme-porcelain-studio .katex * {
-  color: #0A0E1A !important;
-  fill: #0A0E1A !important;
-}
-
-/* --- 4. SUNRISE SAND & AMBER (Morning Sunlight Energy) --- */
-html.theme-sunrise-amber,
-html.theme-sunrise-amber body,
-html.theme-sunrise-amber #root,
-html.theme-sunrise-amber .min-h-screen {
-  background-color: #FBF8F1 !important;
-  background-image: none !important;
-  color: #1A1610 !important;
-}
-html.theme-sunrise-amber h1, html.theme-sunrise-amber h2, html.theme-sunrise-amber h3,
-html.theme-sunrise-amber h4, html.theme-sunrise-amber h5, html.theme-sunrise-amber h6,
-html.theme-sunrise-amber .text-slate-900, html.theme-sunrise-amber .text-slate-800,
-html.theme-sunrise-amber .text-slate-100 {
-  color: #1A1610 !important;
-}
-html.theme-sunrise-amber p, html.theme-sunrise-amber label, html.theme-sunrise-amber li,
-html.theme-sunrise-amber td, html.theme-sunrise-amber th, html.theme-sunrise-amber strong,
-html.theme-sunrise-amber .text-slate-700, html.theme-sunrise-amber .text-slate-600,
-html.theme-sunrise-amber .text-slate-200 {
-  color: #2E271E !important;
-}
-html.theme-sunrise-amber .text-slate-500, html.theme-sunrise-amber .text-slate-400,
-html.theme-sunrise-amber .text-slate-300 {
-  color: #524738 !important;
-}
-html.theme-sunrise-amber .bg-white,
-html.theme-sunrise-amber .card-3d,
-html.theme-sunrise-amber aside,
-html.theme-sunrise-amber .glass-panel {
-  background-color: #FFFFFF !important;
-  border-color: #EBE2CE !important;
-  color: #1A1610 !important;
-  box-shadow: 0 4px 16px -2px rgba(217, 119, 6, 0.06) !important;
-}
-html.theme-sunrise-amber .bg-slate-50,
-html.theme-sunrise-amber .bg-slate-100 {
-  background-color: #F4ECE0 !important;
-}
-html.theme-sunrise-amber .border-slate-200,
-html.theme-sunrise-amber .border-slate-100 {
-  border-color: #EBE2CE !important;
-}
-html.theme-sunrise-amber input,
-html.theme-sunrise-amber select,
-html.theme-sunrise-amber textarea {
-  color: #1A1610 !important;
-  background-color: #FFFFFF !important;
-  border-color: #EBE2CE !important;
-}
-html.theme-sunrise-amber .bg-emerald-600 {
-  background-color: #D97706 !important;
-  color: #FFFFFF !important;
-}
-html.theme-sunrise-amber .text-emerald-600,
-html.theme-sunrise-amber .text-emerald-500 {
-  color: #D97706 !important;
-}
-html.theme-sunrise-amber .katex,
-html.theme-sunrise-amber .katex * {
-  color: #1A1610 !important;
-  fill: #1A1610 !important;
-}
-
 /* ==========================================================================
    SOLID HIGH-CONTRAST DARK THEME SPECIFIC ARCHITECTURE
    ========================================================================== */
@@ -639,138 +475,6 @@ html.theme-obsidian-emerald textarea {
   color: #F8FAFC !important;
 }
 
-/* --- 2. MATTE TITANIUM (Linear / Raycast Matte Charcoal) --- */
-html.theme-matte-titanium .dark\:bg-slate-900,
-html.theme-matte-titanium .dark\:bg-slate-950,
-html.theme-matte-titanium .dark\:bg-slate-900\/60,
-html.theme-matte-titanium .dark\:bg-slate-950\/60,
-html.theme-matte-titanium .card-3d,
-html.theme-matte-titanium aside,
-html.theme-matte-titanium .glass-panel {
-  background-color: #17181C !important;
-  border-color: rgba(255, 255, 255, 0.12) !important;
-}
-html.theme-matte-titanium .dark\:bg-slate-800,
-html.theme-matte-titanium .dark\:bg-slate-800\/80 {
-  background-color: #212228 !important;
-}
-html.theme-matte-titanium .dark\:border-slate-800,
-html.theme-matte-titanium .dark\:border-slate-700,
-html.theme-matte-titanium .dark\:border-slate-800\/80 {
-  border-color: rgba(255, 255, 255, 0.12) !important;
-}
-html.theme-matte-titanium .card-3d:hover {
-  border-color: #22D3EE !important;
-  box-shadow: 0 12px 28px -4px rgba(34, 211, 238, 0.18) !important;
-}
-html.theme-matte-titanium .bg-emerald-600 {
-  background-color: #0891b2 !important;
-}
-html.theme-matte-titanium .text-emerald-500,
-html.theme-matte-titanium .text-emerald-600,
-html.theme-matte-titanium .dark\:text-emerald-400 {
-  color: #22d3ee !important;
-}
-html.theme-matte-titanium input,
-html.theme-matte-titanium select,
-html.theme-matte-titanium textarea {
-  background-color: #17181C !important;
-  border-color: rgba(255, 255, 255, 0.14) !important;
-  color: #F3F4F6 !important;
-}
-
-/* --- 3. MIDNIGHT AURORA (Cosmic Academic Navy & Sapphire) --- */
-html.theme-midnight-aurora .dark\:bg-slate-900,
-html.theme-midnight-aurora .dark\:bg-slate-950,
-html.theme-midnight-aurora .dark\:bg-slate-900\/60,
-html.theme-midnight-aurora .dark\:bg-slate-950\/60,
-html.theme-midnight-aurora .card-3d,
-html.theme-midnight-aurora aside,
-html.theme-midnight-aurora .glass-panel {
-  background-color: #0C1530 !important;
-  border-color: #1E3060 !important;
-}
-html.theme-midnight-aurora .dark\:bg-slate-800,
-html.theme-midnight-aurora .dark\:bg-slate-800\/80 {
-  background-color: #16244C !important;
-}
-html.theme-midnight-aurora .dark\:border-slate-800,
-html.theme-midnight-aurora .dark\:border-slate-700,
-html.theme-midnight-aurora .dark\:border-slate-800\/80 {
-  border-color: #1E3060 !important;
-}
-html.theme-midnight-aurora .card-3d:hover {
-  border-color: #38BDF8 !important;
-  box-shadow: 0 12px 30px -5px rgba(56, 189, 248, 0.22) !important;
-}
-html.theme-midnight-aurora .bg-emerald-600 {
-  background-color: #2563eb !important;
-}
-html.theme-midnight-aurora .text-emerald-500,
-html.theme-midnight-aurora .text-emerald-600,
-html.theme-midnight-aurora .dark\:text-emerald-400 {
-  color: #38bdf8 !important;
-}
-html.theme-midnight-aurora input,
-html.theme-midnight-aurora select,
-html.theme-midnight-aurora textarea {
-  background-color: #0C1530 !important;
-  border-color: #1E3060 !important;
-  color: #F1F5F9 !important;
-}
-
-/* --- 4. PURE MONOCLE DARK (Pure AMOLED Minimalist) --- */
-html.theme-pure-monocle .dark\:bg-slate-900,
-html.theme-pure-monocle .dark\:bg-slate-950,
-html.theme-pure-monocle .dark\:bg-slate-900\/60,
-html.theme-pure-monocle .dark\:bg-slate-950\/60,
-html.theme-pure-monocle .card-3d,
-html.theme-pure-monocle aside,
-html.theme-pure-monocle .glass-panel {
-  background-color: #0D0D0D !important;
-  border-color: #262626 !important;
-}
-html.theme-pure-monocle .dark\:bg-slate-800,
-html.theme-pure-monocle .dark\:bg-slate-800\/80 {
-  background-color: #191919 !important;
-}
-html.theme-pure-monocle .dark\:border-slate-800,
-html.theme-pure-monocle .dark\:border-slate-700,
-html.theme-pure-monocle .dark\:border-slate-800\/80 {
-  border-color: #262626 !important;
-}
-html.theme-pure-monocle .card-3d:hover {
-  border-color: #52525b !important;
-  box-shadow: 0 4px 20px -2px rgba(255, 255, 255, 0.05) !important;
-}
-html.theme-pure-monocle .bg-emerald-600 {
-  background-color: #27272a !important;
-  color: #ffffff !important;
-  border: 1px solid #3f3f46 !important;
-}
-html.theme-pure-monocle .text-emerald-500,
-html.theme-pure-monocle .text-emerald-600,
-html.theme-pure-monocle .dark\:text-emerald-400 {
-  color: #e4e4e7 !important;
-}
-html.theme-pure-monocle input,
-html.theme-pure-monocle select,
-html.theme-pure-monocle textarea {
-  background-color: #0D0D0D !important;
-  border-color: #262626 !important;
-  color: #FAFAFA !important;
-}
-
-/* Pure Monocle Cards */
-.dark.theme-pure-monocle .card-3d {
-  background-color: #0D0D0D;
-  border: 1px solid #262626;
-  box-shadow: none;
-}
-.dark.theme-pure-monocle .card-3d:hover {
-  border-color: #52525b;
-}
-
 /* Glassmorphism Panels */
 .glass-panel {
   background: rgba(255, 255, 255, 0.9);
@@ -779,11 +483,6 @@ html.theme-pure-monocle textarea {
 }
 .dark .glass-panel {
   background: rgba(14, 20, 36, 0.85);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-.dark.theme-matte-titanium .glass-panel {
-  background: rgba(24, 25, 30, 0.88);
   backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }

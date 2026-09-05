@@ -495,28 +495,28 @@ export default function PracticeMode({
               <span className="text-[11px] font-bold text-slate-400 uppercase mr-1">Quick Presets:</span>
               <button
                 onClick={() => applyPreset('quick10')}
-                className="px-3 py-1.5 rounded-xl bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 hover:bg-blue-100 font-bold transition flex items-center gap-1.5"
+                className="h-8.5 px-3 rounded-xl bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 hover:bg-blue-100 font-bold transition inline-flex items-center justify-center gap-1.5"
               >
                 <Sparkles className="w-3 h-3 text-blue-500" />
                 <span>Quick 10 Mixed</span>
               </button>
               <button
                 onClick={() => applyPreset('sprint25')}
-                className="px-3 py-1.5 rounded-xl bg-purple-50 dark:bg-purple-950 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800 hover:bg-purple-100 font-bold transition flex items-center gap-1.5"
+                className="h-8.5 px-3 rounded-xl bg-purple-50 dark:bg-purple-950 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800 hover:bg-purple-100 font-bold transition inline-flex items-center justify-center gap-1.5"
               >
                 <Sparkles className="w-3 h-3 text-purple-500" />
                 <span>Standard 25 Sprint</span>
               </button>
               <button
                 onClick={() => applyPreset('comprehensive50')}
-                className="px-3 py-1.5 rounded-xl bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 hover:bg-emerald-100 font-bold transition flex items-center gap-1.5"
+                className="h-8.5 px-3 rounded-xl bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 hover:bg-emerald-100 font-bold transition inline-flex items-center justify-center gap-1.5"
               >
                 <Layers className="w-3 h-3 text-emerald-500" />
                 <span>Comprehensive 50</span>
               </button>
               <button
                 onClick={() => applyPreset('all')}
-                className="px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-slate-200 font-bold transition"
+                className="h-8.5 px-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-slate-200 font-bold transition inline-flex items-center justify-center"
               >
                 All Available
               </button>
@@ -675,10 +675,10 @@ export default function PracticeMode({
                     </div>
 
                     {/* Right: Allocation Controls & Expand Toggle */}
-                    <div className="flex flex-wrap items-center gap-3 shrink-0">
+                    <div className="flex flex-wrap items-center gap-2.5 shrink-0">
                       {isSelected && (
-                        <div className="flex items-center gap-2 bg-white dark:bg-slate-900 p-1.5 rounded-xl border border-slate-200 dark:border-slate-700 text-xs">
-                          <span className="text-[10px] font-bold text-slate-400 uppercase px-1">Questions:</span>
+                        <div className="h-10 inline-flex items-center gap-2 bg-white dark:bg-slate-900 px-2 rounded-xl border border-slate-200 dark:border-slate-700 text-xs shadow-2xs">
+                          <span className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase px-1">Questions:</span>
                           
                           {/* Stepper */}
                           <button
@@ -686,12 +686,13 @@ export default function PracticeMode({
                               const curr = alloc === 'ALL' ? sec.totalAvailable : Number(alloc);
                               setSectionCount(sec.canonTitle, Math.max(1, curr - 1));
                             }}
-                            className="w-6 h-6 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 flex items-center justify-center text-slate-700 dark:text-slate-300 font-bold"
+                            className="w-7 h-7 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-300 font-bold transition cursor-pointer"
+                            title="Decrease questions"
                           >
-                            <Minus className="w-3 h-3" />
+                            <Minus className="w-3.5 h-3.5" />
                           </button>
 
-                          <span className="font-mono font-black text-sm px-2 text-blue-600 dark:text-blue-400 min-w-[28px] text-center">
+                          <span className="font-mono font-black text-sm px-1.5 text-blue-600 dark:text-blue-400 min-w-[28px] text-center">
                             {alloc === 'ALL' ? 'ALL' : alloc}
                           </span>
 
@@ -700,20 +701,21 @@ export default function PracticeMode({
                               const curr = alloc === 'ALL' ? sec.totalAvailable : Number(alloc);
                               setSectionCount(sec.canonTitle, Math.min(sec.totalAvailable, curr + 1));
                             }}
-                            className="w-6 h-6 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 flex items-center justify-center text-slate-700 dark:text-slate-300 font-bold"
+                            className="w-7 h-7 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-300 font-bold transition cursor-pointer"
+                            title="Increase questions"
                           >
-                            <Plus className="w-3 h-3" />
+                            <Plus className="w-3.5 h-3.5" />
                           </button>
 
                           {/* Quick count chips */}
-                          <div className="flex items-center gap-1 pl-1 border-l border-slate-200 dark:border-slate-800">
+                          <div className="flex items-center gap-1 pl-1.5 border-l border-slate-200 dark:border-slate-800">
                             {[5, 10, 15].map(cnt => (
                               <button
                                 key={cnt}
                                 onClick={() => setSectionCount(sec.canonTitle, cnt)}
-                                className={`px-2 py-1 rounded-lg text-[10px] font-bold transition ${
+                                className={`px-2 py-1 rounded-lg text-[10px] font-extrabold transition cursor-pointer ${
                                   alloc === cnt 
-                                    ? 'bg-blue-600 text-white' 
+                                    ? 'bg-blue-600 text-white shadow-2xs' 
                                     : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800'
                                 }`}
                               >
@@ -722,9 +724,9 @@ export default function PracticeMode({
                             ))}
                             <button
                               onClick={() => setSectionCount(sec.canonTitle, 'ALL')}
-                              className={`px-2 py-1 rounded-lg text-[10px] font-bold transition ${
+                              className={`px-2 py-1 rounded-lg text-[10px] font-extrabold transition cursor-pointer ${
                                 alloc === 'ALL' 
-                                  ? 'bg-blue-600 text-white' 
+                                  ? 'bg-blue-600 text-white shadow-2xs' 
                                   : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800'
                               }`}
                             >
@@ -737,7 +739,7 @@ export default function PracticeMode({
                       {/* Expand Topics Toggle Button */}
                       <button
                         onClick={() => toggleExpandSection(sec.id)}
-                        className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-bold transition border border-slate-200 dark:border-slate-700"
+                        className="h-10 inline-flex items-center gap-1.5 px-3.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-bold transition border border-slate-200 dark:border-slate-700 cursor-pointer shadow-2xs"
                       >
                         <span>{sec.topics.length} Topics</span>
                         {activeTopicFilters > 0 && (
@@ -906,7 +908,7 @@ export default function PracticeMode({
       <div className="card-3d rounded-2xl p-4 sm:p-5 flex flex-wrap items-center justify-between gap-4">
         <button
           onClick={() => setIsHubActive(true)}
-          className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900 text-xs font-bold transition border border-blue-200 dark:border-blue-900 shadow-xs"
+          className="h-10 inline-flex items-center gap-2 px-3.5 rounded-xl bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900 text-xs font-bold transition border border-blue-200 dark:border-blue-900 shadow-xs cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>← Modify Selection / Selection Hub</span>
@@ -916,12 +918,12 @@ export default function PracticeMode({
         </button>
 
         <div className="flex items-center gap-3 text-xs font-mono font-bold text-slate-700 dark:text-slate-300">
-          <div className="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center gap-1.5">
+          <div className="h-10 px-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 inline-flex items-center gap-1.5">
             <Clock className="w-3.5 h-3.5 text-blue-500" />
             <span>Clock: {realTimeStr}</span>
           </div>
 
-          <div className="px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 flex items-center gap-1.5">
+          <div className="h-10 px-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 inline-flex items-center gap-1.5">
             <Sparkles className="w-3.5 h-3.5 text-emerald-500" />
             <span>Session: {formatSec(sessionElapsedSec)}</span>
           </div>
@@ -930,7 +932,7 @@ export default function PracticeMode({
         <div className="flex items-center gap-2">
           <button
             onClick={() => setShowPaletteDrawer(prev => !prev)}
-            className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 text-xs font-bold border border-slate-200 dark:border-slate-700 transition"
+            className="h-10 inline-flex items-center gap-1.5 px-3.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 text-xs font-bold border border-slate-200 dark:border-slate-700 transition cursor-pointer"
           >
             <Grid className="w-3.5 h-3.5 text-purple-500" />
             <span>Question Palette</span>
@@ -938,7 +940,7 @@ export default function PracticeMode({
 
           <button
             onClick={onOpenCalc}
-            className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 text-xs font-bold border border-blue-200 dark:border-blue-900 hover:bg-blue-600 hover:text-white transition"
+            className="h-10 inline-flex items-center gap-2 px-3.5 rounded-xl bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 text-xs font-bold border border-blue-200 dark:border-blue-900 hover:bg-blue-600 hover:text-white transition cursor-pointer"
           >
             <Calculator className="w-4 h-4" />
             <span>Scientific Calc</span>
@@ -1287,18 +1289,20 @@ export default function PracticeMode({
                 <div className="text-[11px] font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider">
                   Numerical Answer Type (Enter exact decimal value)
                 </div>
-                <div className="flex items-center gap-3">
-                  <input
-                    type="number"
-                    step="any"
-                    disabled={submittedState[currentQ.id]?.isSubmitted}
-                    value={userAnswers[currentQ.id] || ''}
-                    onChange={(e) => handleNatInput(currentQ.id, e.target.value)}
-                    placeholder="Enter numerical value..."
-                    className="max-w-xs bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-2.5 text-sm font-mono text-slate-900 dark:text-slate-100 outline-none focus:border-blue-500 transition"
-                  />
+                <div className="flex flex-wrap items-center gap-3">
+                  <div className="relative w-full sm:w-80">
+                    <input
+                      type="text"
+                      inputMode="decimal"
+                      disabled={submittedState[currentQ.id]?.isSubmitted}
+                      value={userAnswers[currentQ.id] || ''}
+                      onChange={(e) => handleNatInput(currentQ.id, e.target.value)}
+                      placeholder="Enter numerical value (e.g. 12.5)..."
+                      className="w-full h-11 bg-slate-50 dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-xl px-4 text-sm font-mono text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 placeholder:opacity-100 outline-none focus:border-blue-500 transition"
+                    />
+                  </div>
                   {submittedState[currentQ.id]?.isSubmitted && (
-                    <div className="flex items-center gap-2">
+                    <div className="inline-flex items-center h-11 px-3.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
                       {submittedState[currentQ.id]?.isCorrect ? (
                         <span className="flex items-center gap-1.5 text-xs font-bold text-emerald-600 dark:text-emerald-400">
                           <CheckCircle2 className="w-4 h-4" /> Correct Answer
@@ -1316,19 +1320,20 @@ export default function PracticeMode({
 
             {/* Answer Action Buttons */}
             <div className="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3">
-              <div className="flex items-center gap-2">
+              <div className="flex flex-wrap items-center gap-2">
                 {!submittedState[currentQ.id]?.isSubmitted ? (
                   <button
                     onClick={() => handleSubmitAnswer(currentQ.id)}
                     disabled={userAnswers[currentQ.id] === undefined || userAnswers[currentQ.id] === ''}
-                    className="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 disabled:opacity-40 text-white font-bold text-xs shadow-md transition cursor-pointer"
+                    className="h-10.5 px-5 rounded-xl bg-blue-600 hover:bg-blue-500 disabled:opacity-40 text-white font-bold text-xs shadow-md transition cursor-pointer inline-flex items-center justify-center gap-2"
                   >
-                    Submit Answer
+                    <CheckCircle2 className="w-4 h-4" />
+                    <span>Submit Answer</span>
                   </button>
                 ) : (
                   <button
                     onClick={() => handleResetAnswer(currentQ.id)}
-                    className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 font-bold text-xs transition cursor-pointer"
+                    className="h-10.5 px-4 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 font-bold text-xs transition cursor-pointer inline-flex items-center justify-center gap-1.5 border border-slate-200 dark:border-slate-700"
                   >
                     <RotateCcw className="w-3.5 h-3.5" />
                     <span>Try Again</span>
@@ -1337,7 +1342,7 @@ export default function PracticeMode({
 
                 <button
                   onClick={() => setShowSolution({ ...showSolution, [currentQ.id]: !showSolution[currentQ.id] })}
-                  className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 hover:bg-emerald-100 font-bold text-xs transition cursor-pointer"
+                  className="h-10.5 px-4 rounded-xl bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 hover:bg-emerald-100 dark:hover:bg-emerald-900/60 font-bold text-xs transition cursor-pointer inline-flex items-center justify-center gap-1.5"
                 >
                   <Eye className="w-3.5 h-3.5" />
                   <span>{showSolution[currentQ.id] ? 'Hide Solution' : 'View Solution & Notes'}</span>
@@ -1351,7 +1356,7 @@ export default function PracticeMode({
                     }
                     setActiveAITutorQuestion(currentQ);
                   }}
-                  className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold text-xs shadow-sm transition cursor-pointer"
+                  className="h-10.5 px-4 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold text-xs shadow-sm transition cursor-pointer inline-flex items-center justify-center gap-1.5"
                 >
                   <Sparkles className="w-3.5 h-3.5" />
                   <span>✨ Ask Gemini AI</span>
@@ -1362,7 +1367,7 @@ export default function PracticeMode({
                 <button
                   onClick={() => setCurrentIndex(prev => Math.max(0, prev - 1))}
                   disabled={currentIndex === 0}
-                  className="flex items-center gap-1 px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 disabled:opacity-40 text-slate-700 dark:text-slate-300 text-xs font-bold transition border border-slate-200 dark:border-slate-700 cursor-pointer"
+                  className="h-10.5 px-4 rounded-xl bg-slate-100 dark:bg-slate-800 disabled:opacity-40 text-slate-700 dark:text-slate-300 text-xs font-bold transition border border-slate-200 dark:border-slate-700 cursor-pointer inline-flex items-center justify-center gap-1 hover:bg-slate-200 dark:hover:bg-slate-700"
                 >
                   <ChevronLeft className="w-4 h-4" />
                   <span>Previous</span>
@@ -1371,7 +1376,7 @@ export default function PracticeMode({
                 <button
                   onClick={() => setCurrentIndex(prev => Math.min(filteredQuestions.length - 1, prev + 1))}
                   disabled={currentIndex === filteredQuestions.length - 1}
-                  className="flex items-center gap-1 px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 disabled:opacity-40 text-white text-xs font-bold transition shadow-md cursor-pointer"
+                  className="h-10.5 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 disabled:opacity-40 text-white text-xs font-bold transition shadow-md cursor-pointer inline-flex items-center justify-center gap-1"
                 >
                   <span>Next</span>
                   <ChevronRight className="w-4 h-4" />
@@ -1439,7 +1444,7 @@ export default function PracticeMode({
                       value={questionNotes[currentQ.id] || ''}
                       onChange={(e) => handleSaveNote(currentQ.id, e.target.value)}
                       placeholder="Write your custom notes, shortcuts, key formulas, or hints for this question here..."
-                      className="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded-xl p-3 text-xs sm:text-sm text-slate-900 dark:text-slate-100 outline-none focus:ring-2 focus:ring-blue-500 font-mono"
+                      className="w-full bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded-xl p-3.5 text-xs sm:text-sm text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 placeholder:opacity-100 outline-none focus:ring-2 focus:ring-blue-500 font-mono leading-relaxed transition"
                     />
                     <p className="text-[10px] text-slate-400">
                       Notes are stored locally on your device for fast revision.

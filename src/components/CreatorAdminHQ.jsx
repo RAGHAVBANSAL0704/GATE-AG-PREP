@@ -215,7 +215,7 @@ export default function CreatorAdminHQ({
         <div className="space-y-8 animate-in fade-in duration-150">
           
           {/* Header Banner */}
-          <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-950 to-emerald-950 text-white rounded-3xl p-8 sm:p-10 border border-slate-800 shadow-2xl">
+          <div className="relative overflow-hidden bg-gradient-to-br from-emerald-50/70 via-slate-50 to-teal-50/50 dark:from-slate-900 dark:via-slate-950 dark:to-emerald-950 text-slate-900 dark:text-white rounded-3xl p-8 sm:p-10 border border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-2xl">
             <div className="absolute -right-16 -top-16 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
             <div className="absolute -left-16 -bottom-16 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -223,28 +223,28 @@ export default function CreatorAdminHQ({
               
               {/* 3D Developer Avatar */}
               <div className="relative shrink-0">
-                <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-gradient-to-tr from-slate-800 via-emerald-800 to-teal-700 text-white font-extrabold flex items-center justify-center text-2xl sm:text-3xl shadow-2xl border-2 border-white/20">
+                <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-gradient-to-tr from-emerald-600 via-teal-600 to-emerald-500 text-white font-extrabold flex items-center justify-center text-2xl sm:text-3xl shadow-xl border-2 border-white dark:border-white/20">
                   RB
                 </div>
 
-                <div className="absolute -bottom-2 -right-2 bg-emerald-500 text-white p-1.5 rounded-full shadow-lg border-2 border-slate-900" title="Verified Creator">
+                <div className="absolute -bottom-2 -right-2 bg-emerald-500 text-white p-1.5 rounded-full shadow-lg border-2 border-white dark:border-slate-900" title="Verified Creator">
                   <CheckCircle2 className="w-4 h-4" />
                 </div>
               </div>
 
               {/* Bio Text */}
               <div className="text-center sm:text-left space-y-3">
-                <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-400/20 text-xs font-bold text-emerald-300">
-                  <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+                <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-100 dark:bg-emerald-500/10 border border-emerald-300 dark:border-emerald-400/20 text-xs font-bold text-emerald-800 dark:text-emerald-300">
+                  <Sparkles className="w-3.5 h-3.5 text-amber-500 dark:text-amber-400" />
                   <span>Platform Creator & Lead Developer</span>
                 </div>
 
-                <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
                   Raghav Bansal
                 </h1>
 
-                <p className="text-xs sm:text-sm text-slate-300 max-w-2xl leading-relaxed font-medium">
-                  Creator of the <strong>GATE AG Prep Portal</strong> — engineered to empower Agricultural Engineering aspirants with 20 years of PYQ mock test CBT simulations, section-wise solved practice pools, AI doubt solvers, and real-time concept analytics.
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed font-medium">
+                  Creator of the <strong className="text-slate-900 dark:text-white">GATE AG Prep Portal</strong> — engineered to empower Agricultural Engineering aspirants with 20 years of PYQ mock test CBT simulations, section-wise solved practice pools, AI doubt solvers, and real-time concept analytics.
                 </p>
               </div>
             </div>
@@ -468,17 +468,17 @@ export default function CreatorAdminHQ({
           </div>
 
           {/* Direct Issue Reporting Box */}
-          <div className="bg-emerald-950 text-white rounded-3xl p-6 sm:p-8 space-y-4 border border-emerald-800 shadow-xl">
+          <div className="bg-emerald-50/70 dark:bg-emerald-950 text-slate-900 dark:text-white rounded-3xl p-6 sm:p-8 space-y-4 border border-emerald-200 dark:border-emerald-800 shadow-sm dark:shadow-xl">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div className="space-y-1">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-900/60 text-emerald-300 text-xs font-bold border border-emerald-700">
-                  <MessageSquare className="w-3.5 h-3.5 fill-emerald-300" />
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-300 text-xs font-bold border border-emerald-200 dark:border-emerald-700">
+                  <MessageSquare className="w-3.5 h-3.5 fill-emerald-700 dark:fill-emerald-300" />
                   <span>Direct Student Help & Error Reporting</span>
                 </div>
-                <h2 className="text-xl font-extrabold text-white">
+                <h2 className="text-xl font-extrabold text-slate-900 dark:text-white">
                   Faced any Problem, Mistake, or Issue?
                 </h2>
-                <p className="text-xs text-slate-300 max-w-xl leading-relaxed">
+                <p className="text-xs text-slate-600 dark:text-slate-300 max-w-xl leading-relaxed">
                   If you find any question error, calculation typo, UI bug, or face any issue while practicing, message Raghav directly on WhatsApp for immediate correction!
                 </p>
               </div>
@@ -528,7 +528,7 @@ export default function CreatorAdminHQ({
                   placeholder="Enter Admin Passcode..."
                   value={adminPasscode}
                   onChange={(e) => { setAdminPasscode(e.target.value); setPasscodeError(''); }}
-                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-2xl text-slate-900 dark:text-slate-100 font-mono text-xs outline-none focus:ring-2 focus:ring-indigo-500/30 focus:border-indigo-500 pr-10"
+                  className="w-full px-4 py-3 bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded-2xl text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 placeholder:opacity-100 font-mono text-xs outline-none focus:ring-2 focus:ring-indigo-500/30 focus:border-indigo-500 pr-10 shadow-2xs"
                 />
                 <button
                   type="button"
@@ -614,7 +614,7 @@ export default function CreatorAdminHQ({
                   placeholder="Enter Admin Passcode"
                   value={adminPasscode}
                   onChange={(e) => setAdminPasscode(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-2xl text-xs font-mono text-center tracking-widest text-slate-900 dark:text-white placeholder-slate-400 outline-none focus:ring-2 focus:ring-indigo-500"
+                  className="w-full px-4 py-3 bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded-2xl text-xs font-mono text-center tracking-widest text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 placeholder:opacity-100 outline-none focus:ring-2 focus:ring-indigo-500 shadow-2xs"
                 />
                 <button
                   type="button"

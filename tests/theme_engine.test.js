@@ -3,18 +3,12 @@ import assert from 'node:assert/strict';
 import { APP_THEMES } from '../src/constants/themeConstants.js';
 
 test('Appearance & Theme Engine Test Suite', async (t) => {
-  await t.test('defines 8 unique and complete theme definitions (4 Dark + 4 Light)', () => {
-    assert.equal(APP_THEMES.length, 8, 'Must contain exactly 8 themes');
+  await t.test('defines 2 streamlined theme definitions (1 Dark + 1 Light Mode)', () => {
+    assert.equal(APP_THEMES.length, 2, 'Must contain exactly 2 core themes');
 
     const expectedIds = [
       'obsidian-emerald', 
-      'matte-titanium', 
-      'midnight-aurora', 
-      'pure-monocle', 
-      'oxford-sage', 
-      'cream-parchment', 
-      'porcelain-studio', 
-      'sunrise-amber'
+      'oxford-sage'
     ];
     
     expectedIds.forEach(id => {
@@ -26,12 +20,12 @@ test('Appearance & Theme Engine Test Suite', async (t) => {
     });
   });
 
-  await t.test('contains exactly 4 dark themes and 4 light themes', () => {
+  await t.test('contains exactly 1 dark mode and 1 light mode', () => {
     const darkThemes = APP_THEMES.filter(t => t.type === 'dark');
     const lightThemes = APP_THEMES.filter(t => t.type === 'light');
 
-    assert.equal(darkThemes.length, 4, 'Must have exactly 4 dark themes');
-    assert.equal(lightThemes.length, 4, 'Must have exactly 4 light themes');
+    assert.equal(darkThemes.length, 1, 'Must have exactly 1 dark theme');
+    assert.equal(lightThemes.length, 1, 'Must have exactly 1 light theme');
   });
 
   await t.test('all theme IDs map to valid CSS classes without invalid characters', () => {
@@ -41,7 +35,7 @@ test('Appearance & Theme Engine Test Suite', async (t) => {
     });
   });
 
-  await t.test('CSS validates high-contrast dark typography across all light themes', async () => {
+  await t.test('CSS validates high-contrast dark typography across light mode and dark mode', async () => {
     const fs = await import('node:fs');
     const css = fs.readFileSync(new URL('../src/index.css', import.meta.url), 'utf8');
 
@@ -55,14 +49,15 @@ test('Appearance & Theme Engine Test Suite', async (t) => {
     assert.ok(css.includes('html:not(.dark) input,'), 'Must define light mode input styles');
     assert.ok(css.includes('html:not(.dark) select,'), 'Must define light mode select dropdown styles');
 
-    // 3. Each of the 4 specific light themes must have dedicated typography contrast rules
-    const lightThemeIds = ['theme-oxford-sage', 'theme-cream-parchment', 'theme-porcelain-studio', 'theme-sunrise-amber'];
-    lightThemeIds.forEach(themeId => {
-      assert.ok(css.includes(`html.${themeId}`), `Must define base rules for ${themeId}`);
-      assert.ok(css.includes(`html.${themeId} h1`), `Must define heading typography for ${themeId}`);
-      assert.ok(css.includes(`html.${themeId} p`), `Must define body text typography for ${themeId}`);
-      assert.ok(css.includes(`html.${themeId} .bg-white`), `Must define card styling for ${themeId}`);
-      assert.ok(css.includes(`html.${themeId} .katex`), `Must define high-contrast KaTeX formula colors for ${themeId}`);
-    });
+    // 3. Oxford Sage (Light Mode) typography and card rules
+    assert.ok(css.includes('html.theme-oxford-sage'), 'Must define base rules for theme-oxford-sage');
+    assert.ok(css.includes('html.theme-oxford-sage h1'), 'Must define heading typography for theme-oxford-sage');
+    assert.ok(css.includes('html.theme-oxford-sage p'), 'Must define body text typography for theme-oxford-sage');
+    assert.ok(css.includes('html.theme-oxford-sage .bg-white'), 'Must define card styling for theme-oxford-sage');
+    assert.ok(css.includes('html.theme-oxford-sage .katex'), 'Must define high-contrast KaTeX formula colors for theme-oxford-sage');
+
+    // 4. Dark Theme Architecture & Obsidian Emerald (Dark Mode)
+    assert.ok(css.includes('html.dark h1'), 'Must define dark heading typography');
+    assert.ok(css.includes('html.theme-obsidian-emerald'), 'Must define base rules for theme-obsidian-emerald');
   });
 });
