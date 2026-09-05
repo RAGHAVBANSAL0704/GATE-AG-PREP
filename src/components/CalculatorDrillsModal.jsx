@@ -98,18 +98,18 @@ export default function CalculatorDrillsModal({ isOpen, onClose }) {
 
             {/* Expression Box */}
             <div className="p-6 rounded-2xl bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 text-center space-y-3">
-              <div className="text-xs uppercase font-bold text-slate-400 tracking-wider">Evaluate Target Expression</div>
+              <div className="text-xs uppercase font-bold text-slate-500 dark:text-slate-400 tracking-wider">Evaluate Target Expression</div>
               <div className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-amber-400">
                 <MathRenderer math={`\\mathbf{${currentQ.expr}}`} />
               </div>
-              <div className="text-[11px] text-slate-500 font-medium">
+              <div className="text-[11px] text-slate-600 dark:text-slate-400 font-medium">
                 💡 {currentQ.hint}
               </div>
             </div>
 
             {/* Answer Input */}
             <div className="space-y-2">
-              <label className="block text-xs font-bold text-slate-400">
+              <label className="block text-xs font-bold text-slate-700 dark:text-slate-400">
                 Enter Result (Round appropriately or exact decimal):
               </label>
               <input
@@ -129,13 +129,13 @@ export default function CalculatorDrillsModal({ isOpen, onClose }) {
               <button
                 disabled={currentIndex === 0}
                 onClick={() => setCurrentIndex(prev => prev - 1)}
-                className="px-4 py-2.5 rounded-xl bg-slate-200 dark:bg-slate-800 disabled:opacity-40 text-xs font-bold transition"
+                className="px-4 py-2.5 rounded-xl bg-slate-200 hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 disabled:opacity-40 text-xs font-bold transition cursor-pointer"
               >
                 Previous
               </button>
               <button
                 onClick={handleNext}
-                className="px-6 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-xs transition shadow-md"
+                className="px-6 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-xs transition shadow-md cursor-pointer"
               >
                 {currentIndex === totalQs - 1 ? 'Finish & Analyze Speed' : 'Submit & Next →'}
               </button>
@@ -147,42 +147,42 @@ export default function CalculatorDrillsModal({ isOpen, onClose }) {
           <div className="p-6 space-y-6 text-center animate-in fade-in">
             <Trophy className="w-12 h-12 text-amber-500 mx-auto fill-amber-500/20" />
             <div className="space-y-1">
-              <h3 className="text-xl font-extrabold">Drill Completed!</h3>
-              <p className="text-xs text-slate-400">TCS Scientific Calculator Speed & Accuracy Report</p>
+              <h3 className="text-xl font-extrabold text-slate-900 dark:text-white">Drill Completed!</h3>
+              <p className="text-xs text-slate-600 dark:text-slate-400">TCS Scientific Calculator Speed & Accuracy Report</p>
             </div>
 
             <div className="grid grid-cols-3 gap-3">
               <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
-                <div className="text-[10px] uppercase font-bold text-slate-400">Accuracy</div>
-                <div className="text-xl font-extrabold text-emerald-500 font-mono mt-1">
+                <div className="text-[10px] uppercase font-bold text-slate-600 dark:text-slate-400">Accuracy</div>
+                <div className="text-xl font-extrabold text-emerald-600 dark:text-emerald-400 font-mono mt-1">
                   {results.correct} / {results.total}
                 </div>
               </div>
 
               <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
-                <div className="text-[10px] uppercase font-bold text-slate-400">Speed (CPM)</div>
-                <div className="text-xl font-extrabold text-amber-500 font-mono mt-1">
+                <div className="text-[10px] uppercase font-bold text-slate-600 dark:text-slate-400">Speed (CPM)</div>
+                <div className="text-xl font-extrabold text-amber-600 dark:text-amber-400 font-mono mt-1">
                   {results.cpm}
                 </div>
               </div>
 
               <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
-                <div className="text-[10px] uppercase font-bold text-slate-400">Total Time</div>
-                <div className="text-xl font-extrabold text-purple-500 font-mono mt-1">
+                <div className="text-[10px] uppercase font-bold text-slate-600 dark:text-slate-400">Total Time</div>
+                <div className="text-xl font-extrabold text-purple-600 dark:text-purple-400 font-mono mt-1">
                   {results.elapsedSec}s
                 </div>
               </div>
             </div>
 
             <div className="space-y-2 text-left text-xs max-h-48 overflow-y-auto pr-1">
-              <div className="font-bold text-slate-400 text-[10px] uppercase">Detailed Question Breakdown</div>
+              <div className="font-bold text-slate-600 dark:text-slate-400 text-[10px] uppercase">Detailed Question Breakdown</div>
               {DRILL_QUESTIONS.map((q, idx) => {
                 const uVal = parseFloat(userInputs[q.id]);
                 const isOk = !isNaN(uVal) && Math.abs(uVal - q.answer) <= q.tolerance;
                 return (
                   <div key={q.id} className="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 flex items-center justify-between">
-                    <span className="font-mono">Q{idx + 1}. Expected: {q.answer}</span>
-                    <span className={`font-mono font-bold flex items-center gap-1 ${isOk ? 'text-emerald-500' : 'text-rose-500'}`}>
+                    <span className="font-mono text-slate-800 dark:text-slate-200">Q{idx + 1}. Expected: {q.answer}</span>
+                    <span className={`font-mono font-bold flex items-center gap-1 ${isOk ? 'text-emerald-600 dark:text-emerald-400' : 'text-rose-600 dark:text-rose-400'}`}>
                       {isOk ? <CheckCircle2 className="w-3.5 h-3.5" /> : <XCircle className="w-3.5 h-3.5" />}
                       Entered: {userInputs[q.id] || 'None'}
                     </span>
@@ -199,14 +199,14 @@ export default function CalculatorDrillsModal({ isOpen, onClose }) {
                   setCurrentIndex(0);
                   setUserInputs({});
                 }}
-                className="flex-1 py-3 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 font-extrabold text-xs transition flex items-center justify-center gap-2"
+                className="flex-1 py-3 rounded-xl bg-slate-200 hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-extrabold text-xs transition flex items-center justify-center gap-2 cursor-pointer"
               >
                 <RefreshCw className="w-4 h-4" />
                 <span>Retry Drill</span>
               </button>
               <button
                 onClick={onClose}
-                className="flex-1 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-xs transition"
+                className="flex-1 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-xs transition cursor-pointer"
               >
                 Done
               </button>

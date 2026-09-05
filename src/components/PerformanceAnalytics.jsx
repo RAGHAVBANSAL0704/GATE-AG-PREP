@@ -19,6 +19,142 @@ import {
 import { getStudentTestAttempts } from '../services/testAttemptService';
 import { getOfficialSections, normalizeSectionTitle } from '../utils/syllabusTaxonomy.js';
 import AIDiagnosticRadarHub from './AIDiagnosticRadarHub.jsx';
+import TestResultModal from './TestResultModal.jsx';
+import PracticeAnalysisView from './PracticeAnalysisView.jsx';
+
+function formatAttemptForResultModal(att, allQuestions = []) {
+  const responses = Array.isArray(att.question_responses) ? att.question_responses : [];
+  
+  const paperQuestions = responses.map((r, idx) => {
+    const matched = allQuestions.find(q => q.id === (r.question_id || r.qId)) || {};
+    return {
+      id: r.question_id || matched.id || `q_${idx + 1}`,
+      qnum: r.qnum || matched.qnum || (idx + 1),
+      section: r.section || matched.section || 'General',
+      type: r.type || matched.type || 'MCQ',
+      question: matched.question || r.question_text || r.question || `Question ${r.qnum || idx + 1}`,
+      options: matched.options || r.options || [],
+      answer: r.correct_answer || matched.answer || matched.correct_answer || '',
+      correct_answer: r.correct_answer || matched.correct_answer || matched.answer || '',
+      solution: matched.solution || r.solution || r.explanation || '',
+      explanation: matched.explanation || r.explanation || r.solution || '',
+      marks: r.marks || matched.marks || 1,
+      negative_marks: r.negative_marks !== undefined ? r.negative_marks : (matched.negative_marks || 0),
+      image: matched.image || r.image || null,
+      tolerance: matched.tolerance || r.tolerance || 0.05
+    };
+  });
+
+  const questionEvaluations = responses.map((r, idx) => ({
+    id: r.question_id || `q_${idx + 1}`,
+    qnum: r.qnum || (idx + 1),
+    section: r.section || 'General',
+    type: r.type || 'MCQ',
+    marks: r.marks || 1,
+    negative_marks: r.negative_marks || 0,
+    userAnswer: r.user_answer || '',
+    correct_answer: r.correct_answer || '',
+    isCorrect: Boolean(r.is_correct),
+    isAttempted: Boolean(r.is_attempted ?? (r.user_answer !== undefined && r.user_answer !== '')),
+    marksAwarded: Number(r.marks_awarded || (r.is_correct ? (r.marks || 1) : 0)),
+    timeSpentSec: Number(r.time_spent_seconds || 0),
+    status: r.status || (r.is_correct ? 'CORRECT' : (r.is_attempted ? 'INCORRECT' : 'UNATTEMPTED'))
+  }));
+
+  const userAnswers = {};
+  const questionTimes = {};
+  const questionStates = {};
+
+  responses.forEach((r, idx) => {
+    const qid = r.question_id || `q_${idx + 1}`;
+    userAnswers[qid] = r.user_answer || '';
+    questionTimes[qid] = Number(r.time_spent_seconds || 0);
+    questionStates[qid] = r.is_attempted ? (r.is_correct ? 'ANSWERED' : 'ANSWERED') : 'NOT_VISITED';
+  });
+
+  return {
+    id: att.client_attempt_id,
+    paperTitle: att.paper_title || 'Past Exam Attempt',
+    paperYear: att.paper_year || 'Past Paper',
+    year: att.paper_year || att.paper_title,
+    score: Number(att.score || 0),
+    totalPossibleMarks: Number(att.total_marks || 100),
+    timeTakenSec: Number(att.time_spent_seconds || 0),
+    accuracy: Number(att.accuracy_percentage || 0),
+    correctCount: Number(att.correct_count || 0),
+    incorrectCount: Number(att.incorrect_count || 0),
+    unattemptedCount: Number(att.unattempted_count || 0),
+    paperQuestions,
+    questionEvaluations,
+    userAnswers,
+    questionTimes,
+    questionStates,
+    timestamp: att.submitted_at || new Date().toISOString()
+  };
+}
+
+function formatAttemptForPracticeAnalysis(att, allQuestions = []) {
+  const responses = Array.isArray(att.question_responses) ? att.question_responses : [];
+  
+  const questionEvaluations = responses.map((r, idx) => {
+    const matched = allQuestions.find(q => q.id === (r.question_id || r.qId)) || {};
+    const qObj = {
+      id: r.question_id || matched.id || `q_${idx + 1}`,
+      qnum: r.qnum || matched.qnum || (idx + 1),
+      section: r.section || matched.section || 'General',
+      type: r.type || matched.type || 'MCQ',
+      question: matched.question || r.question_text || r.question || `Question ${r.qnum || idx + 1}`,
+      options: matched.options || r.options || [],
+      answer: r.correct_answer || matched.answer || matched.correct_answer || '',
+      correct_answer: r.correct_answer || matched.correct_answer || matched.answer || '',
+      solution: matched.solution || r.solution || r.explanation || '',
+      explanation: matched.explanation || r.explanation || r.solution || '',
+      marks: r.marks || matched.marks || 1,
+      tolerance: matched.tolerance || r.tolerance || 0.05
+    };
+
+    return {
+      question: qObj,
+      userAnswer: r.user_answer || '',
+      isAttempted: Boolean(r.is_attempted ?? (r.user_answer !== undefined && r.user_answer !== '')),
+      isCorrect: Boolean(r.is_correct),
+      marksAwarded: Number(r.marks_awarded || (r.is_correct ? (r.marks || 1) : 0)),
+      timeSpentSec: Number(r.time_spent_seconds || 0)
+    };
+  });
+
+  const secMap = {};
+  questionEvaluations.forEach(e => {
+    const sec = e.question.section || 'General';
+    if (!secMap[sec]) secMap[sec] = { section: sec, total: 0, correct: 0, attempted: 0 };
+    secMap[sec].total += 1;
+    if (e.isAttempted) secMap[sec].attempted += 1;
+    if (e.isCorrect) secMap[sec].correct += 1;
+  });
+
+  const sectionStats = Object.values(secMap).map(s => ({
+    ...s,
+    accuracy: s.attempted > 0 ? Math.round((s.correct / s.attempted) * 100) : 0
+  }));
+
+  return {
+    totalQuestions: Number(att.total_questions || questionEvaluations.length),
+    attemptedCount: (att.correct_count || 0) + (att.incorrect_count || 0),
+    unattemptedCount: Number(att.unattempted_count || 0),
+    correctCount: Number(att.correct_count || 0),
+    incorrectCount: Number(att.incorrect_count || 0),
+    score: Number(att.score || 0),
+    totalPossibleMarks: Number(att.total_marks || questionEvaluations.length),
+    accuracy: Number(att.accuracy_percentage || 0),
+    totalTimeSec: Number(att.time_spent_seconds || 0),
+    avgTimeSec: questionEvaluations.length > 0 ? Math.round((att.time_spent_seconds || 0) / questionEvaluations.length) : 0,
+    questionEvaluations,
+    sectionStats,
+    timestamp: att.submitted_at 
+      ? new Date(att.submitted_at).toLocaleTimeString() 
+      : new Date().toLocaleTimeString()
+  };
+}
 
 const SYLLABUS_SECTIONS = [
   'Section 1: Engineering Mathematics',
@@ -41,8 +177,9 @@ export default function PerformanceAnalytics({
   const [activeSubTab, setActiveSubTab] = useState('overview'); // 'overview' | 'radar'
   const [attempts, setAttempts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [selectedFilter, setSelectedFilter] = useState('all'); // 'all' | 'pyq' | 'custom_mock'
+  const [selectedFilter, setSelectedFilter] = useState('all'); // 'all' | 'cbt_mock' | 'practice_session' | 'pyq' | 'custom_mock'
   const [dateRange, setDateRange] = useState('all'); // 'all' | '7days' | '30days'
+  const [selectedAttemptForAnalysis, setSelectedAttemptForAnalysis] = useState(null);
 
   useEffect(() => {
     async function loadData() {
@@ -57,6 +194,8 @@ export default function PerformanceAnalytics({
 
   // Filter attempts
   const filteredAttempts = attempts.filter(att => {
+    if (selectedFilter === 'cbt_mock' && att.test_type !== 'cbt_mock') return false;
+    if (selectedFilter === 'practice_session' && att.test_type !== 'practice_session') return false;
     if (selectedFilter === 'pyq' && att.test_type !== 'pyq' && !att.paper_title?.includes('GATE')) return false;
     if (selectedFilter === 'custom_mock' && att.test_type !== 'custom_mock' && !att.paper_title?.includes('Mock')) return false;
 
@@ -92,12 +231,13 @@ export default function PerformanceAnalytics({
     filteredAttempts.forEach(att => {
       if (Array.isArray(att.question_responses)) {
         att.question_responses.forEach(resp => {
-          const matchQ = questions.find(q => q.id === resp.qId || q.qnum === resp.qnum);
-          if (matchQ && matchQ.section) {
-            const normQSec = normalizeSectionTitle(matchQ.section);
+          const matchQ = questions.find(q => q.id === (resp.question_id || resp.qId) || q.qnum === resp.qnum);
+          const qSec = matchQ?.section || resp.section;
+          if (qSec) {
+            const normQSec = normalizeSectionTitle(qSec);
             if (normQSec === normalizeSectionTitle(secName)) {
               attempted++;
-              if (resp.status === 'ANSWERED' || resp.is_correct) correct++;
+              if (resp.status === 'ANSWERED' || resp.status === 'CORRECT' || resp.is_correct) correct++;
             }
           }
         });
@@ -200,9 +340,11 @@ export default function PerformanceAnalytics({
                 <select
                   value={selectedFilter}
                   onChange={(e) => setSelectedFilter(e.target.value)}
-                  className="bg-transparent outline-none cursor-pointer"
+                  className="bg-transparent outline-none cursor-pointer text-slate-800 dark:text-slate-200"
                 >
-                  <option value="all">All Tests & PYQs</option>
+                  <option value="all">All Attempts (Mocks & Practice)</option>
+                  <option value="cbt_mock">Full CBT Mock Tests</option>
+                  <option value="practice_session">Practice Hub Sessions</option>
                   <option value="pyq">Official PYQs Only</option>
                   <option value="custom_mock">Custom CBT Mocks</option>
                 </select>
@@ -467,11 +609,13 @@ export default function PerformanceAnalytics({
               <thead>
                 <tr className="border-b border-slate-200 dark:border-slate-800 text-[11px] font-extrabold uppercase text-slate-400 tracking-wider">
                   <th className="py-3 px-3">Date & Time</th>
-                  <th className="py-3 px-3">Paper / Exam Title</th>
+                  <th className="py-3 px-3">Type</th>
+                  <th className="py-3 px-3">Paper / Session Title</th>
                   <th className="py-3 px-3">Score / Max</th>
                   <th className="py-3 px-3">Accuracy</th>
                   <th className="py-3 px-3">Breakdown (Q/C/I/U)</th>
-                  <th className="py-3 px-3 text-right">Time Spent</th>
+                  <th className="py-3 px-3">Time Spent</th>
+                  <th className="py-3 px-3 text-right">Action</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100 dark:divide-slate-800/60">
@@ -490,13 +634,42 @@ export default function PerformanceAnalytics({
                   const minutes = Math.floor((att.time_spent_seconds || 0) / 60);
                   const seconds = (att.time_spent_seconds || 0) % 60;
 
+                  const isPractice = att.test_type === 'practice_session';
+                  const isPYQ = att.test_type === 'pyq' || att.paper_title?.includes('GATE');
+                  const isCustom = att.test_type === 'custom_mock' || att.paper_title?.includes('Mock');
+
                   return (
-                    <tr key={idx} className="hover:bg-slate-50 dark:hover:bg-slate-950/60 transition">
+                    <tr 
+                      key={idx} 
+                      onClick={() => setSelectedAttemptForAnalysis(att)}
+                      className="hover:bg-slate-50 dark:hover:bg-slate-950/60 transition cursor-pointer group"
+                    >
                       <td className="py-3 px-3 font-mono text-[11px] text-slate-500 whitespace-nowrap">
                         {dateStr}
                       </td>
+                      <td className="py-3 px-3 whitespace-nowrap">
+                        {isPractice ? (
+                          <span className="px-2 py-0.5 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-900">
+                            Practice
+                          </span>
+                        ) : isPYQ ? (
+                          <span className="px-2 py-0.5 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-900">
+                            Official PYQ
+                          </span>
+                        ) : isCustom ? (
+                          <span className="px-2 py-0.5 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-900">
+                            Custom Mock
+                          </span>
+                        ) : (
+                          <span className="px-2 py-0.5 rounded-md text-[10px] font-extrabold uppercase tracking-wider bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900">
+                            CBT Mock
+                          </span>
+                        )}
+                      </td>
                       <td className="py-3 px-3 font-bold text-slate-900 dark:text-white">
-                        {att.paper_title}
+                        <span className="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition">
+                          {att.paper_title}
+                        </span>
                       </td>
                       <td className="py-3 px-3 font-mono font-extrabold text-blue-600 dark:text-blue-400">
                         {att.score} / {att.total_marks || 100}
@@ -513,19 +686,60 @@ export default function PerformanceAnalytics({
                       <td className="py-3 px-3 font-mono text-[11px] text-slate-600 dark:text-slate-400">
                         Total {att.total_questions || 65} &bull; <span className="text-emerald-600">{att.correct_count}C</span> / <span className="text-rose-500">{att.incorrect_count}I</span> / <span className="text-slate-400">{att.unattempted_count}U</span>
                       </td>
-                      <td className="py-3 px-3 text-right font-mono text-slate-500 whitespace-nowrap">
+                      <td className="py-3 px-3 font-mono text-slate-500 whitespace-nowrap">
                         {minutes}m {seconds}s
+                      </td>
+                      <td className="py-3 px-3 text-right whitespace-nowrap">
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setSelectedAttemptForAnalysis(att);
+                          }}
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white font-bold text-xs shadow-xs transition cursor-pointer"
+                          title="Open comprehensive scorecard & question review"
+                        >
+                          <BarChart3 className="w-3.5 h-3.5" />
+                          <span>View Analysis</span>
+                        </button>
                       </td>
                     </tr>
                   );
                 })}
               </tbody>
             </table>
-            </div>
-          )}
+          </div>
+        )}
+      </div>
+    </>
+    )}
+
+    {/* Interactive Scorecard & Review Modals for Past Attempts */}
+    {selectedAttemptForAnalysis && selectedAttemptForAnalysis.test_type === 'practice_session' && (
+      <div className="fixed inset-0 z-[120] bg-slate-950/85 backdrop-blur-md overflow-y-auto p-4 sm:p-8 animate-in fade-in duration-150">
+        <div className="max-w-6xl mx-auto my-auto py-4">
+          <PracticeAnalysisView
+            sessionResult={formatAttemptForPracticeAnalysis(selectedAttemptForAnalysis, questions)}
+            returnLabel="Close & Return to Attempt History"
+            onReturnToHub={() => setSelectedAttemptForAnalysis(null)}
+            onOpenCalc={onOpenCalc}
+            onRetakeIncorrect={() => setSelectedAttemptForAnalysis(null)}
+            onRetakeAll={() => setSelectedAttemptForAnalysis(null)}
+          />
         </div>
-      </>
-      )}
-    </div>
+      </div>
+    )}
+
+    {selectedAttemptForAnalysis && selectedAttemptForAnalysis.test_type !== 'practice_session' && (
+      <TestResultModal
+        result={formatAttemptForResultModal(selectedAttemptForAnalysis, questions)}
+        onClose={() => setSelectedAttemptForAnalysis(null)}
+        onRetake={() => {
+          setSelectedAttemptForAnalysis(null);
+          if (onStartCustomTest) onStartCustomTest();
+        }}
+      />
+    )}
+  </div>
   );
 }

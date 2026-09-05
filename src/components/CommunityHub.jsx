@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MessageSquare, Sparkles, Users, MessageCircle, Info, Bot } from 'lucide-react';
+import { MessageSquare, Sparkles, Users, MessageCircle, Info, Bot, AlertTriangle } from 'lucide-react';
 import CommunityChatHub from './CommunityChatHub';
 import CommunityDiscussions from './CommunityDiscussions';
 import AIDoubtSolverHub from './AIDoubtSolverHub';
@@ -67,9 +67,31 @@ export default function CommunityHub({
             <h1 className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight">
               Community & AI Study Assistant
             </h1>
-            <p className="text-xs text-slate-500 dark:text-slate-400">
+            <p className="text-xs text-slate-600 dark:text-slate-400">
               Connect with fellow GATE Agricultural Engineering aspirants, chat in subject lounges, and get step-by-step mathematical derivations with AI.
             </p>
+          </div>
+        </div>
+
+        {/* Notice: Under Active Testing & Review */}
+        <div className="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-amber-500/10 via-amber-500/5 to-indigo-500/10 border border-amber-300 dark:border-amber-700/60 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div className="flex items-start sm:items-center gap-3">
+            <div className="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-700 dark:text-amber-400 flex items-center justify-center shrink-0 mt-0.5 sm:mt-0 font-bold border border-amber-400/30">
+              <AlertTriangle className="w-4 h-4" />
+            </div>
+            <div className="space-y-0.5">
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="text-xs font-black uppercase tracking-wider text-amber-900 dark:text-amber-300">
+                  Notice: Under Active Testing & Review
+                </span>
+                <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-amber-200/70 dark:bg-amber-900/60 text-amber-900 dark:text-amber-200 border border-amber-300 dark:border-amber-700">
+                  Preview Stage
+                </span>
+              </div>
+              <p className="text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed">
+                The Community Live Chat and AI Study Assistant features are currently under active testing and review. Responses and peer discussions are being monitored for mathematical accuracy, syllabus alignment, and moderation standards.
+              </p>
+            </div>
           </div>
         </div>
 

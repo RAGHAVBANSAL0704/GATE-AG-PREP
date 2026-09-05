@@ -10,7 +10,11 @@ import {
   Linkedin, 
   Send,
   ArrowUp,
-  ShieldCheck
+  ShieldCheck,
+  Globe,
+  Shield,
+  GraduationCap,
+  ExternalLink
 } from 'lucide-react';
 
 export default function Footer({ setActiveTab }) {
@@ -119,8 +123,42 @@ export default function Footer({ setActiveTab }) {
 
         </div>
 
+        {/* Allied Web Portals by Raghav Bansal */}
+        <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+          <div className="flex items-center gap-2 font-bold text-slate-700 dark:text-slate-300">
+            <Globe className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+            <span>More Portals by Raghav Bansal:</span>
+          </div>
+
+          <div className="flex flex-wrap items-center justify-center gap-2.5">
+            <a
+              href="https://main-portal-ncc-01.vercel.app/#/home"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-amber-50 dark:bg-amber-950/50 hover:bg-amber-100 dark:hover:bg-amber-900/60 text-amber-900 dark:text-amber-200 border border-amber-200 dark:border-amber-800/80 font-bold transition shadow-2xs group"
+              title="NCC Preparation Portal - CBT, Notes & Certification Drills"
+            >
+              <Shield className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
+              <span>NCC Prep Portal</span>
+              <ExternalLink className="w-3 h-3 text-amber-600 dark:text-amber-400 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
+            </a>
+
+            <a
+              href="https://coaet-students-corner.vercel.app/homepage"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-blue-50 dark:bg-blue-950/50 hover:bg-blue-100 dark:hover:bg-blue-900/60 text-blue-900 dark:text-blue-200 border border-blue-200 dark:border-blue-800/80 font-bold transition shadow-2xs group"
+              title="COAET Student's Corner - CCS HAU Hisar Academic Repository"
+            >
+              <GraduationCap className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
+              <span>COAET Student's Corner (CCS HAU)</span>
+              <ExternalLink className="w-3 h-3 text-blue-600 dark:text-blue-400 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
+            </a>
+          </div>
+        </div>
+
         {/* Bottom Line */}
-        <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs text-slate-600 dark:text-slate-400 font-mono font-medium">
+        <div className="pt-2 border-t border-slate-100 dark:border-slate-800/60 flex items-center justify-between text-xs text-slate-600 dark:text-slate-400 font-mono font-medium">
           <div className="flex items-center gap-1.5">
             <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
             <span>© {new Date().getFullYear()} GATE AG Prep Portal</span>

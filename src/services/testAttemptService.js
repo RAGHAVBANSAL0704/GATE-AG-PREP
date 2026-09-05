@@ -193,14 +193,19 @@ export async function getStudentTestAttempts(studentIdentifier) {
     if (rawLocal) {
       const parsed = JSON.parse(rawLocal);
       if (Array.isArray(parsed)) {
-        const lowerCleanId = cleanId.toLowerCase();
+        const lowerId = cleanId.toLowerCase();
         localAttempts = parsed.filter(a => {
+          if (lowerId === 'guest' || lowerId === 'all') {
+            return true;
+          }
           const adm = (a.admission_no || '').trim().toLowerCase();
           const em = (a.email || '').trim().toLowerCase();
           const name = (a.student_name || '').trim().toLowerCase();
-          return (adm && adm === lowerCleanId) || 
-                 (em && em === lowerCleanId) || 
-                 (name && (name === lowerCleanId || name.includes(lowerCleanId)));
+          const sid = (a.student_id || '').trim().toLowerCase();
+          return (adm && adm === lowerId) || 
+                 (em && em === lowerId) || 
+                 (sid && sid === lowerId) ||
+                 (name && (name === lowerId || name.includes(lowerId)));
         });
       }
     }

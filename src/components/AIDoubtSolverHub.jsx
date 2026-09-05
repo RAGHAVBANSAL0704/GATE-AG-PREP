@@ -29,7 +29,8 @@ import {
   FileText,
   Clock,
   Printer,
-  ChevronDown
+  ChevronDown,
+  AlertTriangle
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import { solveGeneralDoubt, getStoredApiKey, setStoredApiKey, hasApiKey } from '../services/geminiService';
@@ -390,7 +391,7 @@ Choose your solver mode and ask any numerical problem or doubt below!`
     <div className="max-w-6xl mx-auto space-y-5 animate-in fade-in duration-200">
       
       {/* Top Banner & Key / Calculator Actions */}
-      <div className="bg-gradient-to-br from-indigo-50/70 via-slate-50 to-purple-50/50 dark:from-indigo-950 dark:via-slate-900 dark:to-slate-950 border border-indigo-200 dark:border-indigo-500/30 rounded-3xl p-5 sm:p-6 shadow-sm dark:shadow-xl text-slate-900 dark:text-white">
+      <div className="bg-gradient-to-br from-indigo-50/80 via-white to-purple-50/70 dark:from-indigo-950/70 dark:via-slate-900 dark:to-slate-950 border border-indigo-200 dark:border-indigo-500/30 rounded-3xl p-5 sm:p-6 shadow-sm dark:shadow-xl text-slate-900 dark:text-white space-y-4">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
           <div className="flex items-center gap-3.5">
             <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-purple-500 via-indigo-500 to-emerald-400 p-0.5 shadow-lg shrink-0">
@@ -399,7 +400,7 @@ Choose your solver mode and ask any numerical problem or doubt below!`
               </div>
             </div>
             <div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 flex-wrap">
                 <h2 className="text-lg sm:text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">
                   GATE AG AI Academic Derivation Suite
                 </h2>
@@ -436,13 +437,13 @@ Choose your solver mode and ask any numerical problem or doubt below!`
             </button>
 
             {isEditingKey ? (
-              <div className="flex items-center gap-2 bg-slate-950/80 p-1.5 rounded-xl border border-purple-500/30">
+              <div className="flex items-center gap-2 bg-white dark:bg-slate-950/80 p-1.5 rounded-xl border border-purple-200 dark:border-purple-500/30 shadow-xs">
                 <input
                   type="password"
                   placeholder="Paste Gemini API Key..."
                   value={apiKey}
                   onChange={(e) => setApiKey(e.target.value)}
-                  className="px-2.5 py-1 text-xs bg-transparent text-white border-none focus:outline-none w-40 font-mono"
+                  className="px-2.5 py-1 text-xs bg-transparent text-slate-900 dark:text-white border-none focus:outline-none w-40 font-mono placeholder-slate-400"
                 />
                 <button
                   onClick={handleSaveKey}
@@ -452,7 +453,7 @@ Choose your solver mode and ask any numerical problem or doubt below!`
                 </button>
                 <button
                   onClick={() => setIsEditingKey(false)}
-                  className="px-2 py-1 text-slate-400 hover:text-slate-200 text-xs cursor-pointer"
+                  className="px-2 py-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-xs cursor-pointer"
                 >
                   Cancel
                 </button>
@@ -462,8 +463,8 @@ Choose your solver mode and ask any numerical problem or doubt below!`
                 onClick={() => setIsEditingKey(true)}
                 className={`px-3 py-1.5 rounded-xl text-xs font-bold border transition flex items-center gap-1.5 cursor-pointer ${
                   hasKey
-                    ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/20'
-                    : 'bg-purple-500/10 border-purple-500/30 text-purple-300 hover:bg-purple-500/20'
+                    ? 'bg-emerald-50 dark:bg-emerald-500/10 border-emerald-200 dark:border-emerald-500/30 text-emerald-700 dark:text-emerald-400 hover:bg-emerald-100 dark:hover:bg-emerald-500/20'
+                    : 'bg-purple-50 dark:bg-purple-500/10 border-purple-200 dark:border-purple-500/30 text-purple-700 dark:text-purple-300 hover:bg-purple-100 dark:hover:bg-purple-500/20'
                 }`}
               >
                 <Key className="w-3.5 h-3.5" />
@@ -473,8 +474,28 @@ Choose your solver mode and ask any numerical problem or doubt below!`
           </div>
         </div>
 
+        {/* Notice: Under Active Testing & Review */}
+        <div className="p-3.5 sm:p-4 rounded-2xl bg-amber-50/90 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-700/60 shadow-2xs flex items-start gap-3 text-xs">
+          <div className="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-700 dark:text-amber-400 flex items-center justify-center shrink-0 mt-0.5 font-bold border border-amber-400/30">
+            <AlertTriangle className="w-4 h-4" />
+          </div>
+          <div className="space-y-0.5">
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="font-black uppercase tracking-wider text-amber-900 dark:text-amber-300 text-xs">
+                Notice: Under Active Testing & Review
+              </span>
+              <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-amber-200/80 dark:bg-amber-900/70 text-amber-900 dark:text-amber-200 border border-amber-300 dark:border-amber-700">
+                Continuous Accuracy Audit
+              </span>
+            </div>
+            <p className="text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed">
+              The AI Study Assistant numerical solver is undergoing active testing and review. Generated mathematical formulas, step-by-step derivations, and unit conversions are continuously audited against official GATE AG syllabus keys. Always verify critical exam calculations.
+            </p>
+          </div>
+        </div>
+
         {/* 4 Specialized Academic Solver Mode Segmented Bar */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 pt-4 border-t border-indigo-500/20 mt-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 pt-4 border-t border-indigo-200/60 dark:border-indigo-500/20">
           {SOLVER_MODES.map((m) => {
             const Icon = m.icon;
             const isSelected = solverMode === m.id;
@@ -485,7 +506,7 @@ Choose your solver mode and ask any numerical problem or doubt below!`
                 className={`p-3 rounded-2xl text-left transition border cursor-pointer flex flex-col justify-between space-y-1.5 ${
                   isSelected
                     ? `${m.color} border-transparent shadow-lg transform scale-[1.02]`
-                    : 'bg-slate-950/40 border-slate-800/80 text-slate-300 hover:bg-slate-800/60 hover:border-slate-700'
+                    : 'bg-white/80 dark:bg-slate-950/40 border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-850 hover:border-slate-300 dark:hover:border-slate-700'
                 }`}
               >
                 <div className="flex items-center justify-between">
@@ -493,11 +514,11 @@ Choose your solver mode and ask any numerical problem or doubt below!`
                     <Icon className="w-4 h-4" />
                     <span>{m.shortName}</span>
                   </div>
-                  <span className={`text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded ${isSelected ? 'bg-black/30 text-white' : 'bg-slate-800 text-slate-400'}`}>
+                  <span className={`text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded ${isSelected ? 'bg-black/30 text-white' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400'}`}>
                     {m.badge}
                   </span>
                 </div>
-                <p className={`text-[10px] leading-tight ${isSelected ? 'text-white/90' : 'text-slate-400'}`}>
+                <p className={`text-[10px] leading-tight ${isSelected ? 'text-white/90' : 'text-slate-500 dark:text-slate-400'}`}>
                   {m.desc}
                 </p>
               </button>

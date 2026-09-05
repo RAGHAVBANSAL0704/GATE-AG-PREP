@@ -26,7 +26,9 @@ import {
   Eye,
   EyeOff,
   KeyRound,
-  Radio
+  Radio,
+  Globe,
+  Shield
 } from 'lucide-react';
 import SupportPage from './SupportPage';
 import AdminQuestionManager from './AdminQuestionManager';
@@ -246,6 +248,107 @@ export default function CreatorAdminHQ({
                 <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed font-medium">
                   Creator of the <strong className="text-slate-900 dark:text-white">GATE AG Prep Portal</strong> — engineered to empower Agricultural Engineering aspirants with 20 years of PYQ mock test CBT simulations, section-wise solved practice pools, AI doubt solvers, and real-time concept analytics.
                 </p>
+              </div>
+            </div>
+          </div>
+
+          {/* More Portals & Allied Platforms by Raghav Bansal */}
+          <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <h2 className="text-base font-extrabold text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-2">
+                <Globe className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+                <span>More Platforms & Portals by Raghav Bansal</span>
+              </h2>
+              <span className="text-xs font-bold px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800">
+                Allied Portals
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* Card 1: NCC Prep Portal */}
+              <div className="card-3d rounded-3xl p-6 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm flex flex-col justify-between space-y-4 hover:border-amber-400 dark:hover:border-amber-600 transition-all">
+                <div className="space-y-3">
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="flex items-center gap-3">
+                      <div className="w-12 h-12 rounded-2xl bg-amber-50 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 flex items-center justify-center text-amber-600 dark:text-amber-400 shadow-xs shrink-0">
+                        <Shield className="w-6 h-6" />
+                      </div>
+                      <div>
+                        <h3 className="font-extrabold text-slate-900 dark:text-white text-base">
+                          NCC Prep Portal
+                        </h3>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">
+                          National Cadet Corps CBT & Certificate Prep
+                        </p>
+                      </div>
+                    </div>
+                    <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded border bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 border-amber-200 dark:border-amber-800 shrink-0">
+                      Cadet Exam Hub
+                    </span>
+                  </div>
+
+                  <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed font-medium pt-2 border-t border-slate-100 dark:border-slate-800">
+                    Comprehensive digital examination and training suite built for NCC Cadets across Army, Navy, and Air Wings. Featuring interactive CBT mock tests, weapon training, drill procedures, military history archives, and certificate A, B & C examination notes.
+                  </p>
+                </div>
+
+                <div className="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2">
+                  <span className="text-[11px] font-mono text-slate-500 dark:text-slate-400 truncate max-w-[190px]">
+                    main-portal-ncc-01.vercel.app
+                  </span>
+                  <a
+                    href="https://main-portal-ncc-01.vercel.app/#/home"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-bold text-xs shadow-sm transition group"
+                  >
+                    <span>Open NCC Portal</span>
+                    <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Card 2: COAET Student's Corner */}
+              <div className="card-3d rounded-3xl p-6 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm flex flex-col justify-between space-y-4 hover:border-blue-400 dark:hover:border-blue-600 transition-all">
+                <div className="space-y-3">
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="flex items-center gap-3">
+                      <div className="w-12 h-12 rounded-2xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800 flex items-center justify-center text-blue-600 dark:text-blue-400 shadow-xs shrink-0">
+                        <GraduationCap className="w-6 h-6" />
+                      </div>
+                      <div>
+                        <h3 className="font-extrabold text-slate-900 dark:text-white text-base">
+                          COAET Student's Corner
+                        </h3>
+                        <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">
+                          Repository of COAET CCS HAU Hisar
+                        </p>
+                      </div>
+                    </div>
+                    <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded border bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800 shrink-0">
+                      CCS HAU Archive
+                    </span>
+                  </div>
+
+                  <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed font-medium pt-2 border-t border-slate-100 dark:border-slate-800">
+                    The centralized academic digital repository curated specifically for students of the College of Agricultural Engineering and Technology (COAE&T), CCS HAU Hisar. Hosts semester syllabi, lecture notes, lab practical files, and previous semester exam papers.
+                  </p>
+                </div>
+
+                <div className="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2">
+                  <span className="text-[11px] font-mono text-slate-500 dark:text-slate-400 truncate max-w-[190px]">
+                    coaet-students-corner.vercel.app
+                  </span>
+                  <a
+                    href="https://coaet-students-corner.vercel.app/homepage"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs shadow-sm transition group"
+                  >
+                    <span>Explore COAET Corner</span>
+                    <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>

@@ -10,7 +10,10 @@ import {
   ShieldCheck,
   Zap,
   ExternalLink,
-  CreditCard
+  CreditCard,
+  Globe,
+  Shield,
+  GraduationCap
 } from 'lucide-react';
 
 export default function SupportPage({ currentStudent }) {
@@ -217,6 +220,65 @@ export default function SupportPage({ currentStudent }) {
           </form>
         </div>
 
+      </div>
+
+      {/* Allied Web Portals by Raghav Bansal */}
+      <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-4 sm:p-5 shadow-xs space-y-3">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2 text-xs font-bold text-slate-800 dark:text-slate-200 uppercase tracking-wider">
+            <Globe className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+            <span>More Educational Platforms by Raghav Bansal</span>
+          </div>
+          <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
+            Open Access
+          </span>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <a
+            href="https://main-portal-ncc-01.vercel.app/#/home"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3.5 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800/60 hover:border-amber-400 dark:hover:border-amber-600 transition flex items-center justify-between group shadow-2xs"
+          >
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-amber-100 dark:bg-amber-900/60 text-amber-700 dark:text-amber-300 flex items-center justify-center shrink-0">
+                <Shield className="w-5 h-5" />
+              </div>
+              <div>
+                <h3 className="font-bold text-xs text-slate-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+                  NCC Prep Portal
+                </h3>
+                <p className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">
+                  CBT Tests & Study Notes for NCC Cadets
+                </p>
+              </div>
+            </div>
+            <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition" />
+          </a>
+
+          <a
+            href="https://coaet-students-corner.vercel.app/homepage"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3.5 rounded-xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-800/60 hover:border-blue-400 dark:hover:border-blue-600 transition flex items-center justify-between group shadow-2xs"
+          >
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-300 flex items-center justify-center shrink-0">
+                <GraduationCap className="w-5 h-5" />
+              </div>
+              <div>
+                <h3 className="font-bold text-xs text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  COAET Student's Corner
+                </h3>
+                <p className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">
+                  Academic Repository of COAET CCS HAU Hisar
+                </p>
+              </div>
+            </div>
+            <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition" />
+          </a>
+        </div>
       </div>
 
     </div>

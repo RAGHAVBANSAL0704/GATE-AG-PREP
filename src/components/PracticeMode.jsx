@@ -29,16 +29,20 @@ import {
   SlidersHorizontal,
   Plus,
   Minus,
-  Grid
+  Grid,
+  BarChart3,
+  X
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import { evaluateQuestion } from '../utils/scoring.js';
 import { exportQuestionsToPdf } from '../services/questionPdfExportService.js';
 import AITutorModal from './AITutorModal';
+import PracticeAnalysisView from './PracticeAnalysisView';
 import { GATE_AG_SYLLABUS } from '../data/syllabus';
 import { detectNATUnitMismatch } from '../utils/hintGenerator';
 import { getOfficialSections, getOfficialTopicsForSection, getOfficialSubtopicsForTopic, normalizeSectionTitle } from '../utils/syllabusTaxonomy.js';
 import { getSectionHierarchyStats, buildPracticeSessionPool } from '../utils/practiceSessionBuilder.js';
+import { saveTestAttempt, generateUUID, getStudentTestAttempts } from '../services/testAttemptService.js';
 
 const SECTION_NORM_MAP = {
   'farm power and machinery': 'Section 2: Farm Machinery',
@@ -159,6 +163,95 @@ export default function PracticeMode({
   const [showSolution, setShowSolution] = useState({});
   const [activeAITutorQuestion, setActiveAITutorQuestion] = useState(null);
   const [natUnitWarning, setNatUnitWarning] = useState(null);
+  const [sessionAnalysis, setSessionAnalysis] = useState(null);
+  const [showSubmitConfirmModal, setShowSubmitConfirmModal] = useState(false);
+  const [showPastHistoryModal, setShowPastHistoryModal] = useState(false);
+  const [pastPracticeAttempts, setPastPracticeAttempts] = useState([]);
+  const [loadingPastHistory, setLoadingPastHistory] = useState(false);
+
+  const loadPastPracticeAttempts = async () => {
+    setLoadingPastHistory(true);
+    try {
+      const studentId = currentStudent?.admission_no || currentStudent?.email || currentStudent?.full_name || 'guest';
+      const allAttempts = await getStudentTestAttempts(studentId);
+      const practiceOnly = (allAttempts || []).filter(a => a.test_type === 'practice_session');
+      setPastPracticeAttempts(practiceOnly);
+    } catch (e) {
+      console.warn('Error loading past practice attempts:', e);
+    } finally {
+      setLoadingPastHistory(false);
+    }
+  };
+
+  useEffect(() => {
+    if (showPastHistoryModal) {
+      loadPastPracticeAttempts();
+    }
+  }, [showPastHistoryModal, currentStudent]);
+
+  const handleOpenPastAttemptAnalysis = (att) => {
+    const responses = Array.isArray(att.question_responses) ? att.question_responses : [];
+    const evaluations = responses.map((r, idx) => {
+      const matched = questions.find(q => q.id === r.question_id || q.id === r.qId) || {};
+      const qObj = {
+        id: r.question_id || matched.id || `q_${idx + 1}`,
+        qnum: r.qnum || matched.qnum || (idx + 1),
+        section: r.section || matched.section || 'General',
+        type: r.type || matched.type || 'MCQ',
+        question: matched.question || r.question_text || r.question || `Question ${r.qnum || idx + 1}`,
+        options: matched.options || r.options || [],
+        answer: r.correct_answer || matched.answer || matched.correct_answer || '',
+        correct_answer: r.correct_answer || matched.correct_answer || matched.answer || '',
+        solution: matched.solution || r.solution || r.explanation || '',
+        explanation: matched.explanation || r.explanation || r.solution || '',
+        marks: r.marks || matched.marks || 1,
+        tolerance: matched.tolerance || r.tolerance || 0.05
+      };
+
+      return {
+        question: qObj,
+        userAnswer: r.user_answer || '',
+        isAttempted: Boolean(r.is_attempted ?? (r.user_answer !== undefined && r.user_answer !== '')),
+        isCorrect: Boolean(r.is_correct),
+        marksAwarded: Number(r.marks_awarded || (r.is_correct ? (r.marks || 1) : 0)),
+        timeSpentSec: Number(r.time_spent_seconds || 0)
+      };
+    });
+
+    const secMap = {};
+    evaluations.forEach(e => {
+      const sec = e.question.section || 'General';
+      if (!secMap[sec]) secMap[sec] = { section: sec, total: 0, correct: 0, attempted: 0 };
+      secMap[sec].total += 1;
+      if (e.isAttempted) secMap[sec].attempted += 1;
+      if (e.isCorrect) secMap[sec].correct += 1;
+    });
+
+    const sectionStats = Object.values(secMap).map(s => ({
+      ...s,
+      accuracy: s.attempted > 0 ? Math.round((s.correct / s.attempted) * 100) : 0
+    }));
+
+    const result = {
+      totalQuestions: Number(att.total_questions || evaluations.length),
+      attemptedCount: (att.correct_count || 0) + (att.incorrect_count || 0),
+      unattemptedCount: Number(att.unattempted_count || 0),
+      correctCount: Number(att.correct_count || 0),
+      incorrectCount: Number(att.incorrect_count || 0),
+      score: Number(att.score || 0),
+      totalPossibleMarks: Number(att.total_marks || evaluations.length),
+      accuracy: Number(att.accuracy_percentage || 0),
+      totalTimeSec: Number(att.time_spent_seconds || 0),
+      avgTimeSec: evaluations.length > 0 ? Math.round((att.time_spent_seconds || 0) / evaluations.length) : 0,
+      questionEvaluations: evaluations,
+      sectionStats,
+      timestamp: att.submitted_at ? new Date(att.submitted_at).toLocaleTimeString() : new Date().toLocaleTimeString()
+    };
+
+    setSessionAnalysis(result);
+    setIsHubActive(false);
+    setShowPastHistoryModal(false);
+  };
 
   // Update real-time clock and session timer (only ticks when actively practicing)
   useEffect(() => {
@@ -255,6 +348,10 @@ export default function PracticeMode({
   }, [activePracticePool, combinedPool, selectedStatusFilter, bookmarks, submittedState]);
 
   const currentQ = filteredQuestions[currentIndex];
+
+  const answeredCount = useMemo(() => {
+    return Object.keys(userAnswers).filter(k => userAnswers[k] !== undefined && userAnswers[k] !== '').length;
+  }, [userAnswers]);
 
   // Per-Question Active Timer Effect: Preserves and increments questionTimes[currentQ.id]
   useEffect(() => {
@@ -455,6 +552,173 @@ export default function PracticeMode({
     setSubmittedState(updatedSubmitted);
   };
 
+  const handleFinalSubmit = () => {
+    const activeList = filteredQuestions.length > 0 ? filteredQuestions : activePracticePool;
+    const evaluations = activeList.map((q, idx) => {
+      const userAns = userAnswers[q.id];
+      const isAttempted = userAns !== undefined && userAns !== '';
+      let isCorrect = false;
+      let marksAwarded = 0;
+
+      if (isAttempted) {
+        const evalResult = evaluateQuestion({
+          question: q,
+          userAnswer: userAns,
+          state: 'ANSWERED'
+        });
+        isCorrect = evalResult.isCorrect;
+        marksAwarded = evalResult.marksAwarded;
+      }
+
+      return {
+        question: q,
+        userAnswer: userAns || '',
+        isAttempted,
+        isCorrect,
+        marksAwarded,
+        timeSpentSec: questionTimes[q.id] || 0
+      };
+    });
+
+    const correctCount = evaluations.filter(e => e.isCorrect).length;
+    const incorrectCount = evaluations.filter(e => e.isAttempted && !e.isCorrect).length;
+    const unattemptedCount = evaluations.filter(e => !e.isAttempted).length;
+    const attemptedCount = correctCount + incorrectCount;
+    const totalPossibleMarks = evaluations.reduce((acc, e) => acc + Number(e.question.marks || 1), 0);
+    const score = Number(evaluations.reduce((acc, e) => acc + (e.isCorrect ? Number(e.question.marks || 1) : 0), 0).toFixed(2));
+    const accuracy = attemptedCount > 0 ? Math.round((correctCount / attemptedCount) * 100) : 0;
+    const avgTimeSec = evaluations.length > 0 ? Math.round(sessionElapsedSec / evaluations.length) : 0;
+
+    // Group stats by section
+    const sectionMap = {};
+    evaluations.forEach(e => {
+      const sec = e.question.section || 'General';
+      if (!sectionMap[sec]) {
+        sectionMap[sec] = { section: sec, total: 0, correct: 0, attempted: 0 };
+      }
+      sectionMap[sec].total += 1;
+      if (e.isAttempted) sectionMap[sec].attempted += 1;
+      if (e.isCorrect) sectionMap[sec].correct += 1;
+    });
+
+    const sectionStats = Object.values(sectionMap).map(s => ({
+      ...s,
+      accuracy: s.attempted > 0 ? Math.round((s.correct / s.attempted) * 100) : 0
+    }));
+
+    const result = {
+      totalQuestions: evaluations.length,
+      attemptedCount,
+      unattemptedCount,
+      correctCount,
+      incorrectCount,
+      score,
+      totalPossibleMarks,
+      accuracy,
+      totalTimeSec: sessionElapsedSec,
+      avgTimeSec,
+      questionEvaluations: evaluations,
+      sectionStats,
+      timestamp: new Date().toLocaleTimeString()
+    };
+
+    // Persist practice attempt to LocalStorage and Supabase backend
+    const clientAttemptId = generateUUID();
+    const secSummary = sectionStats.map(s => s.section.replace(/^Section \d+:\s*/, '')).slice(0, 2).join(', ');
+    const paperTitle = `Practice: ${evaluations.length} Qs${secSummary ? ` (${secSummary}${sectionStats.length > 2 ? '...' : ''})` : ''}`;
+
+    saveTestAttempt({
+      client_attempt_id: clientAttemptId,
+      paper_title: paperTitle,
+      paper_year: 'Practice Hub',
+      test_type: 'practice_session',
+      score: result.score,
+      total_marks: result.totalPossibleMarks || evaluations.length,
+      percentage: Number(((result.score / (result.totalPossibleMarks || 1)) * 100).toFixed(2)),
+      accuracy_percentage: result.accuracy,
+      correct_count: result.correctCount,
+      incorrect_count: result.incorrectCount,
+      unattempted_count: result.unattemptedCount,
+      total_questions: result.totalQuestions,
+      time_spent_seconds: result.totalTimeSec,
+      question_responses: evaluations.map((e, idx) => ({
+        question_id: e.question.id || `q_${idx+1}`,
+        qnum: e.question.qnum || (idx + 1),
+        section: e.question.section || 'General',
+        type: e.question.type || 'MCQ',
+        marks: e.question.marks || 1,
+        user_answer: e.userAnswer,
+        correct_answer: e.question.correct_answer || e.question.answer,
+        is_correct: e.isCorrect,
+        is_attempted: e.isAttempted,
+        marks_awarded: e.marksAwarded,
+        time_spent_seconds: e.timeSpentSec || 0,
+        status: e.isCorrect ? 'CORRECT' : (e.isAttempted ? 'INCORRECT' : 'UNATTEMPTED'),
+        question_text: e.question.question,
+        options: e.question.options,
+        solution: e.question.solution || e.question.explanation,
+        explanation: e.question.explanation || e.question.solution
+      })),
+      student_id: currentStudent?.id || null,
+      student_name: currentStudent?.full_name || currentStudent?.username || 'Candidate',
+      admission_no: currentStudent?.admission_no || null,
+      email: currentStudent?.email || null
+    });
+
+    setSessionAnalysis(result);
+    setShowSubmitConfirmModal(false);
+  };
+
+  const handleRetakeIncorrect = () => {
+    if (!sessionAnalysis) return;
+    const incorrectQs = sessionAnalysis.questionEvaluations
+      .filter(e => !e.isCorrect && e.isAttempted)
+      .map(e => e.question);
+    if (incorrectQs.length > 0) {
+      setActivePracticePool(incorrectQs);
+      setCurrentIndex(0);
+      setUserAnswers({});
+      setSubmittedState({});
+      setShowSolution({});
+      setQuestionTimes({});
+      setSessionElapsedSec(0);
+      setSessionAnalysis(null);
+    }
+  };
+
+  const handleRetakeAll = () => {
+    setCurrentIndex(0);
+    setUserAnswers({});
+    setSubmittedState({});
+    setShowSolution({});
+    setQuestionTimes({});
+    setSessionElapsedSec(0);
+    setSessionAnalysis(null);
+  };
+
+  const handleReturnToHub = () => {
+    setSessionAnalysis(null);
+    setIsHubActive(true);
+  };
+
+  // =========================================================================
+  // VIEW: COMPREHENSIVE PRACTICE SESSION RESULT & ANALYSIS
+  // =========================================================================
+  if (sessionAnalysis) {
+    return (
+      <PracticeAnalysisView
+        sessionResult={sessionAnalysis}
+        onRetakeIncorrect={handleRetakeIncorrect}
+        onRetakeAll={handleRetakeAll}
+        onReturnToHub={handleReturnToHub}
+        onOpenCalc={onOpenCalc}
+        bookmarks={bookmarks}
+        onToggleBookmark={onToggleBookmark}
+        onAskAI={(q, studentAns, isCorr) => setActiveAITutorQuestion(q)}
+      />
+    );
+  }
+
   // =========================================================================
   // VIEW 1: INTERACTIVE PRACTICE HUB / QUESTION SELECTION LAUNCHPAD
   // =========================================================================
@@ -479,6 +743,15 @@ export default function PracticeMode({
             </div>
 
             <div className="flex items-center gap-3">
+              <button
+                onClick={() => setShowPastHistoryModal(true)}
+                className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-50 dark:bg-blue-950/70 border border-blue-200 dark:border-blue-900 text-blue-700 dark:text-blue-300 text-xs font-bold shadow-xs hover:bg-blue-100 dark:hover:bg-blue-900/50 transition cursor-pointer"
+                title="View past practice attempts and analyze previous performance"
+              >
+                <Clock className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+                <span>Practice History</span>
+              </button>
+
               <button
                 onClick={onOpenCalc}
                 className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 text-xs font-bold shadow-md hover:bg-slate-800 transition"
@@ -895,6 +1168,128 @@ export default function PracticeMode({
           </div>
         </div>
 
+        {/* Past Practice History Modal */}
+        {showPastHistoryModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm animate-in fade-in duration-150">
+            <div className="card-3d rounded-3xl p-6 sm:p-7 max-w-2xl w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl max-h-[85vh] flex flex-col space-y-5">
+              
+              {/* Modal Header */}
+              <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800 shrink-0">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-9 h-9 rounded-xl bg-blue-50 dark:bg-blue-950/70 border border-blue-200 dark:border-blue-900 flex items-center justify-center text-blue-600 dark:text-blue-400">
+                    <Clock className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h2 className="text-base font-black text-slate-900 dark:text-white tracking-tight">
+                      Past Practice Sessions History
+                    </h2>
+                    <p className="text-xs text-slate-500 dark:text-slate-400 font-medium">
+                      Review your question responses, section mastery, and solutions anytime.
+                    </p>
+                  </div>
+                </div>
+
+                <button
+                  onClick={() => setShowPastHistoryModal(false)}
+                  className="p-2 rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer"
+                  title="Close History Modal"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              {/* Modal Body */}
+              <div className="flex-1 overflow-y-auto space-y-3 pr-1">
+                {loadingPastHistory ? (
+                  <div className="py-12 text-center text-xs text-slate-400 font-medium">
+                    Loading practice attempts...
+                  </div>
+                ) : pastPracticeAttempts.length === 0 ? (
+                  <div className="py-12 text-center text-xs text-slate-400 space-y-2">
+                    <BookOpen className="w-8 h-8 mx-auto text-slate-300 dark:text-slate-700" />
+                    <p className="font-bold text-slate-700 dark:text-slate-300 text-sm">No Practice Sessions Saved Yet</p>
+                    <p className="text-slate-500 dark:text-slate-400 max-w-sm mx-auto">
+                      Complete a practice session and click <strong>Submit All Questions</strong> to save your results, pacing metrics, and question-by-question analysis!
+                    </p>
+                  </div>
+                ) : (
+                  <div className="space-y-3">
+                    {pastPracticeAttempts.map((att, idx) => {
+                      const dateStr = att.submitted_at 
+                        ? new Date(att.submitted_at).toLocaleString('en-IN', {
+                            day: '2-digit',
+                            month: 'short',
+                            year: 'numeric',
+                            hour: '2-digit',
+                            minute: '2-digit',
+                            hour12: true
+                          })
+                        : 'Recent Practice';
+
+                      const mins = Math.floor((att.time_spent_seconds || 0) / 60);
+                      const secs = (att.time_spent_seconds || 0) % 60;
+
+                      return (
+                        <div 
+                          key={idx}
+                          className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 hover:border-blue-300 dark:hover:border-blue-900 transition flex flex-col sm:flex-row sm:items-center justify-between gap-3"
+                        >
+                          <div className="space-y-1">
+                            <div className="flex items-center gap-2">
+                              <span className="text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-md bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900">
+                                Practice Session
+                              </span>
+                              <span className="font-mono text-[11px] text-slate-500 dark:text-slate-400">
+                                {dateStr}
+                              </span>
+                            </div>
+                            <h4 className="font-bold text-slate-900 dark:text-white text-xs sm:text-sm">
+                              {att.paper_title}
+                            </h4>
+                            <div className="flex flex-wrap items-center gap-3 text-[11px] font-mono text-slate-600 dark:text-slate-400 pt-0.5">
+                              <span>Score: <strong className="text-blue-600 dark:text-blue-400">{att.score} / {att.total_marks || att.total_questions}</strong></span>
+                              <span>•</span>
+                              <span>Accuracy: <strong className={Number(att.accuracy_percentage) >= 70 ? 'text-emerald-600 dark:text-emerald-400' : 'text-amber-600 dark:text-amber-400'}>{att.accuracy_percentage}%</strong></span>
+                              <span>•</span>
+                              <span>Time: {mins}m {secs}s</span>
+                              <span>•</span>
+                              <span>Breakdown: <span className="text-emerald-600">{att.correct_count}C</span> / <span className="text-rose-500">{att.incorrect_count}I</span> / <span className="text-slate-400">{att.unattempted_count}U</span></span>
+                            </div>
+                          </div>
+
+                          <div className="shrink-0 flex items-center gap-2 pt-2 sm:pt-0 border-t sm:border-t-0 border-slate-200 dark:border-slate-800">
+                            <button
+                              onClick={() => handleOpenPastAttemptAnalysis(att)}
+                              className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white text-xs font-bold shadow-md shadow-blue-500/20 transition cursor-pointer"
+                            >
+                              <BarChart3 className="w-3.5 h-3.5" />
+                              <span>View Analysis</span>
+                            </button>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+
+              {/* Modal Footer */}
+              <div className="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between shrink-0 text-xs">
+                <span className="text-[11px] font-mono text-slate-400">
+                  {pastPracticeAttempts.length} Recorded Practice Session{pastPracticeAttempts.length === 1 ? '' : 's'}
+                </span>
+                <button
+                  onClick={() => setShowPastHistoryModal(false)}
+                  className="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold transition cursor-pointer"
+                >
+                  Close
+                </button>
+              </div>
+
+            </div>
+          </div>
+        )}
+
       </div>
     );
   }
@@ -945,6 +1340,15 @@ export default function PracticeMode({
           >
             <Calculator className="w-4 h-4" />
             <span>Scientific Calc</span>
+          </button>
+
+          <button
+            onClick={() => setShowSubmitConfirmModal(true)}
+            className="h-10 inline-flex items-center gap-1.5 px-3.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-extrabold shadow-sm transition cursor-pointer"
+            title="Submit all attempted questions and view detailed analysis"
+          >
+            <CheckCircle2 className="w-4 h-4" />
+            <span>Submit All ({answeredCount}/{filteredQuestions.length})</span>
           </button>
         </div>
       </div>
@@ -1015,6 +1419,23 @@ export default function PracticeMode({
                 </button>
               );
             })}
+          </div>
+
+          {/* Palette Footer Submit All Button */}
+          <div className="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+            <span className="text-xs text-slate-500 dark:text-slate-400 font-medium">
+              {answeredCount} of {filteredQuestions.length} answered
+            </span>
+            <button
+              onClick={() => {
+                setShowPaletteDrawer(false);
+                setShowSubmitConfirmModal(true);
+              }}
+              className="px-4 py-2 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-extrabold text-xs shadow-xs transition cursor-pointer flex items-center gap-1.5"
+            >
+              <CheckCircle2 className="w-3.5 h-3.5" />
+              <span>Submit All & View Analysis</span>
+            </button>
           </div>
         </div>
       )}
@@ -1374,14 +1795,23 @@ export default function PracticeMode({
                   <span>Previous</span>
                 </button>
 
-                <button
-                  onClick={() => setCurrentIndex(prev => Math.min(filteredQuestions.length - 1, prev + 1))}
-                  disabled={currentIndex === filteredQuestions.length - 1}
-                  className="h-10.5 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 disabled:opacity-40 text-white text-xs font-bold transition shadow-md cursor-pointer inline-flex items-center justify-center gap-1"
-                >
-                  <span>Next</span>
-                  <ChevronRight className="w-4 h-4" />
-                </button>
+                {currentIndex === filteredQuestions.length - 1 ? (
+                  <button
+                    onClick={() => setShowSubmitConfirmModal(true)}
+                    className="h-10.5 px-5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-extrabold shadow-md shadow-emerald-500/25 transition cursor-pointer inline-flex items-center justify-center gap-1.5 animate-in zoom-in-95"
+                  >
+                    <CheckCircle2 className="w-4 h-4" />
+                    <span>Submit All Questions ({answeredCount}/{filteredQuestions.length})</span>
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => setCurrentIndex(prev => Math.min(filteredQuestions.length - 1, prev + 1))}
+                    className="h-10.5 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition shadow-md cursor-pointer inline-flex items-center justify-center gap-1"
+                  >
+                    <span>Next</span>
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
+                )}
               </div>
             </div>
 
@@ -1469,6 +1899,71 @@ export default function PracticeMode({
           studentAnswer={userAnswers[activeAITutorQuestion.id] || null}
           isCorrect={submittedState[activeAITutorQuestion.id]?.isCorrect || null}
         />
+      )}
+
+      {/* Submit All Questions Confirmation Modal */}
+      {showSubmitConfirmModal && (
+        <div className="fixed inset-0 z-50 bg-slate-950/60 dark:bg-black/75 backdrop-blur-xs flex items-center justify-center p-4 animate-in fade-in">
+          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-7 max-w-md w-full shadow-2xl space-y-5 animate-in zoom-in-95">
+            <div className="flex items-center gap-3">
+              <div className="w-11 h-11 rounded-2xl bg-emerald-50 dark:bg-emerald-950/80 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold border border-emerald-200 dark:border-emerald-800 shadow-xs">
+                <CheckCircle2 className="w-6 h-6" />
+              </div>
+              <div>
+                <h3 className="text-base font-extrabold text-slate-900 dark:text-white">
+                  Submit Practice Session?
+                </h3>
+                <p className="text-xs text-slate-500 dark:text-slate-400">
+                  Generate your accuracy scorecard & performance breakdown
+                </p>
+              </div>
+            </div>
+
+            {/* Quick Status Pill Overview */}
+            <div className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 grid grid-cols-3 gap-2 text-center">
+              <div>
+                <span className="text-[10px] font-bold text-slate-400 uppercase block">Total</span>
+                <span className="text-lg font-mono font-black text-slate-900 dark:text-white">
+                  {filteredQuestions.length}
+                </span>
+              </div>
+              <div>
+                <span className="text-[10px] font-bold text-slate-400 uppercase block">Answered</span>
+                <span className="text-lg font-mono font-black text-emerald-600 dark:text-emerald-400">
+                  {answeredCount}
+                </span>
+              </div>
+              <div>
+                <span className="text-[10px] font-bold text-slate-400 uppercase block">Unattempted</span>
+                <span className="text-lg font-mono font-black text-amber-600 dark:text-amber-400">
+                  {filteredQuestions.length - answeredCount}
+                </span>
+              </div>
+            </div>
+
+            <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+              Once submitted, you'll receive a detailed scorecard with question-by-question explanations, time analysis, and section mastery.
+            </p>
+
+            <div className="flex items-center justify-end gap-3 pt-2">
+              <button
+                type="button"
+                onClick={() => setShowSubmitConfirmModal(false)}
+                className="px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 text-xs font-bold transition cursor-pointer"
+              >
+                Keep Practicing
+              </button>
+              <button
+                type="button"
+                onClick={handleFinalSubmit}
+                className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-extrabold shadow-md shadow-emerald-500/25 transition cursor-pointer flex items-center gap-1.5"
+              >
+                <CheckCircle2 className="w-4 h-4" />
+                <span>Submit & View Analysis</span>
+              </button>
+            </div>
+          </div>
+        </div>
       )}
 
     </div>

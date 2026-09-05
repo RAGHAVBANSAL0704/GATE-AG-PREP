@@ -11,7 +11,8 @@ import {
   BookOpen, 
   Key, 
   ChevronRight, 
-  RefreshCw
+  RefreshCw,
+  AlertTriangle
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import { 
@@ -180,6 +181,19 @@ export default function AITutorModal({
               <X className="w-5 h-5" />
             </button>
           </div>
+        </div>
+
+        {/* Notice: Under Active Testing & Review */}
+        <div className="px-5 py-2.5 bg-gradient-to-r from-amber-500/10 via-amber-500/5 to-indigo-500/10 border-b border-amber-300/80 dark:border-amber-800/60 flex items-center justify-between gap-3 text-xs">
+          <div className="flex items-center gap-2 text-amber-900 dark:text-amber-300">
+            <AlertTriangle className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400 shrink-0" />
+            <span className="font-extrabold text-[11px] uppercase tracking-wider">
+              Notice: Under Active Testing & Review
+            </span>
+          </div>
+          <span className="text-[10px] text-slate-600 dark:text-slate-400 hidden sm:inline font-medium">
+            Derivations and step-by-step proofs are continuously audited for accuracy.
+          </span>
         </div>
 
         {/* Optional Gemini API Key Drawer */}
