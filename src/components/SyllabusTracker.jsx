@@ -7,11 +7,15 @@ import {
   ChevronDown, 
   ChevronUp, 
   Sparkles,
-  Trophy
+  Trophy,
+  BarChart3,
+  CheckSquare
 } from 'lucide-react';
 import { GATE_AG_SYLLABUS } from '../data/syllabus';
+import SyllabusWeightageHeatmap from './SyllabusWeightageHeatmap';
 
 export default function SyllabusTracker({ userProgress, onUpdateProgress, onStartSectionPractice }) {
+  const [activeView, setActiveView] = useState('tracker'); // 'tracker' | 'heatmap'
   const [expandedSec, setExpandedSec] = useState(GATE_AG_SYLLABUS[0].id);
 
   // Status map: { "topicName_subtopicName": "NOT_STARTED" | "STUDIED" | "MASTERED" }
@@ -47,8 +51,39 @@ export default function SyllabusTracker({ userProgress, onUpdateProgress, onStar
   return (
     <div className="space-y-6 animate-in fade-in duration-200">
       
-      {/* Header Banner */}
-      <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-2xs space-y-4">
+      {/* Sub-Tab Navigation Switcher */}
+      <div className="flex flex-wrap items-center gap-2 p-1.5 rounded-2xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 w-fit">
+        <button
+          onClick={() => setActiveView('tracker')}
+          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-extrabold transition cursor-pointer ${
+            activeView === 'tracker'
+              ? 'bg-blue-600 text-white shadow-sm'
+              : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+          }`}
+        >
+          <CheckSquare className="w-3.5 h-3.5" />
+          <span>Syllabus Checklist & Progress</span>
+        </button>
+
+        <button
+          onClick={() => setActiveView('heatmap')}
+          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-extrabold transition cursor-pointer ${
+            activeView === 'heatmap'
+              ? 'bg-indigo-600 text-white shadow-sm'
+              : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+          }`}
+        >
+          <BarChart3 className="w-3.5 h-3.5" />
+          <span>14-Year Weightage & Trend Heatmap (2012–2026)</span>
+        </button>
+      </div>
+
+      {activeView === 'heatmap' ? (
+        <SyllabusWeightageHeatmap />
+      ) : (
+        <>
+          {/* Header Banner */}
+          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-2xs space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="space-y-1">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 text-xs font-bold">
@@ -184,6 +219,8 @@ export default function SyllabusTracker({ userProgress, onUpdateProgress, onStar
           );
         })}
       </div>
+      </>
+      )}
 
     </div>
   );

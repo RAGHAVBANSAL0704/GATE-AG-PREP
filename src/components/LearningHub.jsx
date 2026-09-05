@@ -18,7 +18,8 @@ export default function LearningHub({
   onOpenCalc,
   onEditQuestion,
   onStartCustomTest,
-  currentStudent
+  currentStudent,
+  onStartPracticeMistakes
 }) {
   const [currentSubTab, setCurrentSubTab] = useState(activeSubTab);
 
@@ -139,6 +140,7 @@ export default function LearningHub({
             onToggleBookmark={onToggleBookmark}
             onOpenCalc={onOpenCalc}
             onEditQuestion={onEditQuestion}
+            onStartPracticeMistakes={onStartPracticeMistakes}
           />
         )}
 

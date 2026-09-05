@@ -19,13 +19,15 @@ import {
   Table as TableIcon,
   HelpCircle,
   TrendingUp,
-  AlertTriangle
+  AlertTriangle,
+  Share2
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import AITutorModal from './AITutorModal';
 import confetti from 'canvas-confetti';
 import { analyzeTestResultForensics } from '../utils/forensicAnalyzer';
 import { getQuestionPacing } from '../utils/scoring';
+import { downloadScorecardImage } from '../utils/scorecardGenerator';
 
 function formatSec(seconds) {
   const s = Math.max(0, Math.round(Number(seconds) || 0));
@@ -213,6 +215,30 @@ export default function TestResultModal({ result, onClose, onRetake }) {
     });
   }, [processedQuestions, filterType]);
 
+  const [isGeneratingImage, setIsGeneratingImage] = useState(false);
+
+  const handleShareScorecardImage = async () => {
+    setIsGeneratingImage(true);
+    try {
+      await downloadScorecardImage({
+        title: `GATE ${year} AG CBT Result`,
+        studentName: result.studentName || result.student_name || 'Candidate',
+        score: score,
+        totalMarks: 100,
+        accuracy: accuracy,
+        airTier: estimatedPercentile,
+        correctCount: correctCount,
+        incorrectCount: incorrectCount,
+        unattemptedCount: unattemptedCount,
+        date: new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })
+      }, `GATE_AG_${String(year).replace(/\s+/g, '_')}_Scorecard.png`);
+    } catch (err) {
+      console.error("Scorecard generation error:", err);
+    } finally {
+      setIsGeneratingImage(false);
+    }
+  };
+
   const handleDownloadPDF = () => {
     const printWindow = window.open('', '_blank', 'width=950,height=1100');
     if (!printWindow) return;
@@ -361,12 +387,22 @@ export default function TestResultModal({ result, onClose, onRetake }) {
 
             <div className="flex flex-wrap items-center gap-2">
               <button
+                onClick={handleShareScorecardImage}
+                disabled={isGeneratingImage}
+                className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs transition shadow-md cursor-pointer disabled:opacity-50"
+                title="Download Ultra-HD Shareable Scorecard Card (PNG) for WhatsApp, LinkedIn, & Telegram"
+              >
+                <Share2 className="w-3.5 h-3.5" />
+                <span>{isGeneratingImage ? 'Generating...' : 'Share Card (PNG)'}</span>
+              </button>
+
+              <button
                 onClick={handleDownloadPDF}
                 className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition shadow-md cursor-pointer"
                 title="Download Comprehensive Result Scorecard as PDF"
               >
                 <Printer className="w-3.5 h-3.5" />
-                <span>Download Scorecard PDF</span>
+                <span>Scorecard PDF</span>
               </button>
 
               <button
@@ -374,7 +410,7 @@ export default function TestResultModal({ result, onClose, onRetake }) {
                 className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs border border-slate-700 transition cursor-pointer"
               >
                 <RotateCcw className="w-3.5 h-3.5" />
-                <span>Retake Test</span>
+                <span>Retake</span>
               </button>
               <button
                 onClick={onClose}

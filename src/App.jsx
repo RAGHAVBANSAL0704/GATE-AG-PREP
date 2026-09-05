@@ -5,7 +5,14 @@ import Dashboard from './components/Dashboard';
 import PracticeHub from './components/PracticeHub';
 import Footer from './components/Footer';
 import CommandPaletteModal from './components/CommandPaletteModal';
-import { Sparkles } from 'lucide-react';
+import { 
+  Sparkles, 
+  Globe, 
+  Shield, 
+  GraduationCap, 
+  ExternalLink, 
+  Download 
+} from 'lucide-react';
 
 // Robust lazy loading wrapper that auto-reloads the page if a chunk is missing due to a new deployment
 function lazyWithRetry(componentImport) {
@@ -63,6 +70,7 @@ function TabLoadingSkeleton() {
 import { checkCurrentSession, logoutStudent } from './services/authService';
 import { initAutoSyncOnReconnect } from './services/testAttemptService';
 import { saveAndBroadcastQuestion, subscribeToLiveQuestionSync } from './services/questionSyncService';
+import { recordQuestionOutcomes } from './services/mistakeVaultService';
 import { subscribeToLiveRoleSync } from './services/userRoleService';
 import { saveToIDB } from './utils/indexedDB';
 
@@ -491,6 +499,47 @@ export default function App() {
     setActiveTab('mocktest');
   };
 
+  const [practiceMistakeFilter, setPracticeMistakeFilter] = useState(null);
+
+  // PWA Install Prompt state & event listeners
+  const [deferredPrompt, setDeferredPrompt] = useState(null);
+  const [canInstallPwa, setCanInstallPwa] = useState(false);
+
+  useEffect(() => {
+    const handleBeforeInstall = (e) => {
+      e.preventDefault();
+      setDeferredPrompt(e);
+      setCanInstallPwa(true);
+    };
+
+    window.addEventListener('beforeinstallprompt', handleBeforeInstall);
+    window.addEventListener('appinstalled', () => {
+      setCanInstallPwa(false);
+      setDeferredPrompt(null);
+    });
+
+    return () => {
+      window.removeEventListener('beforeinstallprompt', handleBeforeInstall);
+    };
+  }, []);
+
+  const handleInstallPwa = async () => {
+    if (!deferredPrompt) return;
+    deferredPrompt.prompt();
+    try {
+      const choiceResult = await deferredPrompt.userChoice;
+      if (choiceResult.outcome === 'accepted') {
+        setCanInstallPwa(false);
+      }
+    } catch (e) {}
+    setDeferredPrompt(null);
+  };
+
+  const handleStartPracticeMistakes = (mistakeIds) => {
+    setPracticeMistakeFilter(mistakeIds);
+    setActiveTab('practicehub');
+  };
+
   const handleFinishTest = (resultData) => {
     setTestResult(resultData);
 
@@ -506,10 +555,28 @@ export default function App() {
       ...(userStats?.testHistory || [])
     ];
 
-    setUserStats(prev => ({
-      ...prev,
-      testHistory: newHistory
-    }));
+    const evals = resultData.questionEvaluations || [];
+    const attemptedIds = evals.filter(e => e.isAttempted).map(e => e.id || e.qnum).filter(Boolean);
+    const correctIds = evals.filter(e => e.isAttempted && e.isCorrect).map(e => e.id || e.qnum).filter(Boolean);
+    const incorrectIds = evals.filter(e => e.isAttempted && !e.isCorrect).map(e => e.id || e.qnum).filter(Boolean);
+
+    recordQuestionOutcomes({
+      attempted: attemptedIds,
+      correct: correctIds,
+      incorrect: incorrectIds,
+      source: `Mock ${resultData.year || 'CBT'}`
+    });
+
+    setUserStats(prev => {
+      const updatedAttempted = Array.from(new Set([...(prev?.attempted || []), ...attemptedIds]));
+      const updatedCorrect = Array.from(new Set([...(prev?.correct || []), ...correctIds])).filter(id => !incorrectIds.includes(id));
+      return {
+        ...prev,
+        attempted: updatedAttempted,
+        correct: updatedCorrect,
+        testHistory: newHistory
+      };
+    });
   };
 
   return (
@@ -548,6 +615,58 @@ export default function App() {
 
       {/* Main Wide Canvas */}
       <div className="flex-1 flex flex-col min-w-0 overflow-y-auto">
+        {/* Raghav Bansal Educational Network Top Strip */}
+        <div className="w-full bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 px-4 py-1.5 sm:px-6 lg:px-8 text-[11px] font-medium z-10 shrink-0">
+          <div className="max-w-7xl 2xl:max-w-[1500px] mx-auto flex flex-wrap items-center justify-between gap-2">
+            <div className="flex items-center gap-2">
+              <Globe className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+              <span className="font-bold text-slate-800 dark:text-slate-200">Raghav Bansal Network:</span>
+              <span className="text-emerald-700 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.2 rounded border border-emerald-200 dark:border-emerald-800">
+                GATE AG Prep (Active)
+              </span>
+            </div>
+
+            <div className="flex items-center gap-3">
+              {canInstallPwa && (
+                <button
+                  onClick={handleInstallPwa}
+                  className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-[11px] shadow-xs transition cursor-pointer mr-1"
+                  title="Install GATE AG Prep on your phone or desktop for instant offline access"
+                >
+                  <Download className="w-3 h-3 text-white" />
+                  <span>Install App</span>
+                </button>
+              )}
+
+              <a
+                href="https://main-portal-ncc-01.vercel.app/#/home"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-slate-700 dark:text-slate-300 hover:text-amber-600 dark:hover:text-amber-400 font-bold transition group"
+                title="NCC Prep Portal by Raghav Bansal"
+              >
+                <Shield className="w-3 h-3 text-amber-500" />
+                <span>NCC Prep</span>
+                <ExternalLink className="w-2.5 h-2.5 text-slate-400 opacity-60 group-hover:opacity-100 transition-opacity" />
+              </a>
+
+              <span className="text-slate-300 dark:text-slate-700">•</span>
+
+              <a
+                href="https://coaet-students-corner.vercel.app/homepage"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-bold transition group"
+                title="COAET Student's Corner by Raghav Bansal"
+              >
+                <GraduationCap className="w-3 h-3 text-blue-500" />
+                <span>COAET Student's Corner</span>
+                <ExternalLink className="w-2.5 h-2.5 text-slate-400 opacity-60 group-hover:opacity-100 transition-opacity" />
+              </a>
+            </div>
+          </div>
+        </div>
+
         <main className="flex-1 max-w-7xl 2xl:max-w-[1500px] w-full mx-auto px-3 sm:px-6 lg:px-8 pt-16 sm:pt-6 pb-8">
           
           {/* Guest Visitor Mode Top Banner */}
@@ -609,6 +728,8 @@ export default function App() {
                 onStartCustomTest={handleStartCustomTest}
                 currentStudent={currentStudent}
                 onRequireAuth={handleOpenAuth}
+                mistakeFilterIds={practiceMistakeFilter}
+                onClearMistakeFilter={() => setPracticeMistakeFilter(null)}
               />
             )}
 
@@ -626,6 +747,7 @@ export default function App() {
                 onStartCustomTest={handleStartCustomTest}
                 currentStudent={currentStudent}
                 onRequireAuth={handleOpenAuth}
+                onStartPracticeMistakes={handleStartPracticeMistakes}
               />
             )}
 

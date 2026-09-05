@@ -434,6 +434,49 @@ export default function ScientificCalculator({ isOpen, onClose }) {
     setActiveTab('keypad');
   };
 
+  // Desktop Physical Keyboard & Numpad Listener
+  useEffect(() => {
+    if (!isOpen || isMinimized) return;
+
+    const handleKeyDown = (e) => {
+      // Don't intercept if user is actively typing in a form field or textarea
+      const target = e.target;
+      if (target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable)) {
+        return;
+      }
+
+      const key = e.key;
+
+      if (/^[0-9]$/.test(key)) {
+        e.preventDefault();
+        handleNum(key);
+      } else if (key === '.') {
+        e.preventDefault();
+        handleNum('.');
+      } else if (key === '+' || key === '-' || key === '*' || key === '/') {
+        e.preventDefault();
+        handleBinaryOp(key);
+      } else if (key === 'Enter' || key === '=') {
+        e.preventDefault();
+        handleMathEval();
+      } else if (key === 'Backspace') {
+        e.preventDefault();
+        handleOp('BACK');
+      } else if (key === 'Escape') {
+        e.preventDefault();
+        handleOp('C');
+      } else if (key.toLowerCase() === 'c' && !e.ctrlKey && !e.metaKey) {
+        e.preventDefault();
+        handleOp('C');
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isOpen, isMinimized, display, newNumber, pendingOp, pendingVal, isTCSMode]);
+
   return (
     <div 
       className="fixed inset-0 z-50 pointer-events-none flex items-end sm:items-center justify-center p-2 sm:p-4 no-print"

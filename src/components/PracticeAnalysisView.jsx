@@ -16,10 +16,12 @@ import {
   Filter, 
   Zap,
   Award,
-  BookOpen
+  BookOpen,
+  Share2
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import confetti from 'canvas-confetti';
+import { downloadScorecardImage } from '../utils/scorecardGenerator';
 
 function formatDuration(seconds) {
   const s = Math.max(0, Math.round(Number(seconds) || 0));
@@ -78,6 +80,30 @@ export default function PracticeAnalysisView({
     return true;
   });
 
+  const [isGeneratingImage, setIsGeneratingImage] = useState(false);
+
+  const handleShareImage = async () => {
+    setIsGeneratingImage(true);
+    try {
+      await downloadScorecardImage({
+        title: 'GATE AG Practice Session Result',
+        studentName: sessionResult?.student_name || 'Candidate',
+        score: score,
+        totalMarks: totalPossibleMarks || totalQuestions,
+        accuracy: accuracy,
+        airTier: accuracy >= 80 ? 'Mastery Tier' : (accuracy >= 60 ? 'Competitive Tier' : 'Needs Practice'),
+        correctCount: correctCount,
+        incorrectCount: incorrectCount,
+        unattemptedCount: unattemptedCount,
+        date: new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })
+      }, 'GATE_AG_Practice_Summary.png');
+    } catch (err) {
+      console.error("Scorecard generation error:", err);
+    } finally {
+      setIsGeneratingImage(false);
+    }
+  };
+
   return (
     <div className="space-y-6 animate-in fade-in duration-200 pb-16">
       
@@ -91,7 +117,17 @@ export default function PracticeAnalysisView({
           <span>{returnLabel}</span>
         </button>
 
-        <div className="flex items-center gap-3">
+        <div className="flex flex-wrap items-center gap-2.5">
+          <button
+            onClick={handleShareImage}
+            disabled={isGeneratingImage}
+            className="flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-extrabold text-xs shadow-md transition cursor-pointer disabled:opacity-50"
+            title="Download Shareable Scorecard Card (PNG)"
+          >
+            <Share2 className="w-3.5 h-3.5" />
+            <span>{isGeneratingImage ? 'Generating...' : 'Share Card (PNG)'}</span>
+          </button>
+
           {onOpenCalc && (
             <button
               onClick={onOpenCalc}

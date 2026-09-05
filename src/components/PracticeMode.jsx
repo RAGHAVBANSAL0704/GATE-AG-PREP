@@ -43,6 +43,7 @@ import { detectNATUnitMismatch } from '../utils/hintGenerator';
 import { getOfficialSections, getOfficialTopicsForSection, getOfficialSubtopicsForTopic, normalizeSectionTitle } from '../utils/syllabusTaxonomy.js';
 import { getSectionHierarchyStats, buildPracticeSessionPool } from '../utils/practiceSessionBuilder.js';
 import { saveTestAttempt, generateUUID, getStudentTestAttempts } from '../services/testAttemptService.js';
+import { recordQuestionOutcomes } from '../services/mistakeVaultService.js';
 
 const SECTION_NORM_MAP = {
   'farm power and machinery': 'Section 2: Farm Machinery',
@@ -90,10 +91,12 @@ export default function PracticeMode({
   onOpenCalc, 
   onEditQuestion,
   currentStudent,
-  onRequireAuth
+  onRequireAuth,
+  mistakeFilterIds = null,
+  onClearMistakeFilter
 }) {
   // Always default isHubActive to true so user can configure sections/topics before starting
-  const [isHubActive, setIsHubActive] = useState(true);
+  const [isHubActive, setIsHubActive] = useState(() => !(Array.isArray(mistakeFilterIds) && mistakeFilterIds.length > 0));
 
   // Global filters on launchpad & in-session
   const [sourceFilter, setSourceFilter] = useState('All'); // 'All' | 'Official GATE PYQs' | 'Custom Mock Questions'
@@ -290,6 +293,18 @@ export default function PracticeMode({
       ...customQuestionsPool
     ];
   }, [questions, customQuestionsPool]);
+
+  // Handle mistakeFilterIds if passed from Revision Bank / Mistake Vault
+  useEffect(() => {
+    if (Array.isArray(mistakeFilterIds) && mistakeFilterIds.length > 0 && combinedPool.length > 0) {
+      const mistakePool = combinedPool.filter(q => mistakeFilterIds.includes(q.id));
+      if (mistakePool.length > 0) {
+        setActivePracticePool(mistakePool);
+        setCurrentIndex(0);
+        setIsHubActive(false);
+      }
+    }
+  }, [mistakeFilterIds, combinedPool]);
 
   const yearsInPool = useMemo(() => {
     return ['All', ...new Set(combinedPool.map(q => q.year))].sort().reverse();
@@ -540,6 +555,14 @@ export default function PracticeMode({
 
     setSubmittedState({ ...submittedState, [qId]: { isSubmitted: true, isCorrect } });
     setShowSolution({ ...showSolution, [qId]: true });
+
+    // Record into persistent Mistake Vault
+    recordQuestionOutcomes({
+      attempted: [qId],
+      correct: isCorrect ? [qId] : [],
+      incorrect: !isCorrect ? [qId] : [],
+      source: 'Practice Mode'
+    });
   };
 
   const handleResetAnswer = (qId) => {
@@ -663,6 +686,17 @@ export default function PracticeMode({
       student_name: currentStudent?.full_name || currentStudent?.username || 'Candidate',
       admission_no: currentStudent?.admission_no || null,
       email: currentStudent?.email || null
+    });
+
+    const attemptedIds = evaluations.filter(e => e.isAttempted).map(e => e.question.id);
+    const correctIds = evaluations.filter(e => e.isAttempted && e.isCorrect).map(e => e.question.id);
+    const incorrectIds = evaluations.filter(e => e.isAttempted && !e.isCorrect).map(e => e.question.id);
+
+    recordQuestionOutcomes({
+      attempted: attemptedIds,
+      correct: correctIds,
+      incorrect: incorrectIds,
+      source: 'Practice Session'
     });
 
     setSessionAnalysis(result);

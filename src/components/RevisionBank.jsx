@@ -12,9 +12,12 @@ import {
   Sparkles,
   ChevronDown,
   ChevronUp,
-  BrainCircuit
+  BrainCircuit,
+  Play,
+  Trash2
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
+import { getActiveMistakeIds, clearMistakeVault, removeMistake } from '../services/mistakeVaultService.js';
 
 export default function RevisionBank({ 
   questions = [],
@@ -23,7 +26,8 @@ export default function RevisionBank({
   bookmarks, 
   onToggleBookmark,
   onOpenCalc,
-  onEditQuestion 
+  onEditQuestion,
+  onStartPracticeMistakes 
 }) {
   const [activeTab, setActiveTab] = useState('missteps'); // 'missteps' | 'bookmarks'
   const [selectedSection, setSelectedSection] = useState('All');
@@ -36,10 +40,12 @@ export default function RevisionBank({
   const customQuestions = customMockPapers.flatMap(p => p.questions || []);
   const allPool = [...questions, ...customQuestions];
 
-  // Collect misstep question IDs (questions attempted but not marked correct in userStats)
-  const wrongQuestionIds = (userStats?.attempted || []).filter(
+  // Collect misstep question IDs from both Mistake Vault and legacy userStats
+  const vaultMistakes = getActiveMistakeIds();
+  const legacyMistakes = (userStats?.attempted || []).filter(
     id => !(userStats?.correct || []).includes(id)
   );
+  const wrongQuestionIds = Array.from(new Set([...vaultMistakes, ...legacyMistakes]));
 
   const targetIds = activeTab === 'missteps' ? wrongQuestionIds : bookmarks;
   
@@ -92,10 +98,21 @@ export default function RevisionBank({
             </p>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-2.5">
+            {activeTab === 'missteps' && wrongQuestionIds.length > 0 && onStartPracticeMistakes && (
+              <button
+                onClick={() => onStartPracticeMistakes(wrongQuestionIds)}
+                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-rose-600 hover:bg-rose-500 text-white text-xs font-bold shadow-sm transition group cursor-pointer"
+                title="Launch focused practice session on all mistake questions"
+              >
+                <Play className="w-3.5 h-3.5 fill-white group-hover:scale-110 transition-transform" />
+                <span>Practice Mistakes ({wrongQuestionIds.length})</span>
+              </button>
+            )}
+
             <button
               onClick={() => window.print()}
-              className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-800 text-xs font-bold shadow-xs hover:bg-blue-100 transition no-print"
+              className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-800 text-xs font-bold shadow-xs hover:bg-blue-100 transition no-print cursor-pointer"
               title="Print Revision Worksheet"
             >
               <Printer className="w-4 h-4" />

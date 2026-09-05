@@ -17,7 +17,9 @@ export default function PracticeHub({
   onEditQuestion,
   onStartCustomTest,
   currentStudent,
-  onRequireAuth
+  onRequireAuth,
+  mistakeFilterIds,
+  onClearMistakeFilter
 }) {
   const [currentSubTab, setCurrentSubTab] = useState(activeSubTab);
 
@@ -97,6 +99,8 @@ export default function PracticeHub({
             onEditQuestion={onEditQuestion}
             currentStudent={currentStudent}
             onRequireAuth={onRequireAuth}
+            mistakeFilterIds={mistakeFilterIds}
+            onClearMistakeFilter={onClearMistakeFilter}
           />
         )}
 
