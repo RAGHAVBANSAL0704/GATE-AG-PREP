@@ -4,13 +4,13 @@
  * Architecture: Offline PWA with Versioned Multi-Tier Caching
  */
 
-const CACHE_VERSION = 'v1.0.25';
+const CACHE_VERSION = 'v1.0.26';
 const CACHE_PREFIX = 'gate-ag-';
 
-const STATIC_CACHE = 'gate-ag-static-v1.0.25';
-const RUNTIME_CACHE = 'gate-ag-runtime-v1.0.25';
-const IMAGES_CACHE = 'gate-ag-images-v1.0.25';
-const FONTS_CACHE = 'gate-ag-fonts-v1.0.25';
+const STATIC_CACHE = 'gate-ag-static-v1.0.26';
+const RUNTIME_CACHE = 'gate-ag-runtime-v1.0.26';
+const IMAGES_CACHE = 'gate-ag-images-v1.0.26';
+const FONTS_CACHE = 'gate-ag-fonts-v1.0.26';
 
 const CURRENT_CACHES = [
   STATIC_CACHE,
