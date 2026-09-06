@@ -292,7 +292,7 @@
       "marks": 1,
       "negative_marks": 0,
       "question": "Find the rank of the matrix: [[2, 1, 3], [4, 2, 6], [1, 1, 2]]. (Answer as a whole number.)",
-      "options": {},
+      "options": null,
       "correct_answer": "2 to 2",
       "solution": "Answer: 2 to 2\nExplanation:\nRow 2 = 2 x Row 1, so Row 2 is linearly dependent on Row 1. Checking Row 3 against Row 1: Row 3 - 0.5 x Row 1 = [0, 0.5, 0.5], which is not the zero vector and is not a scalar multiple of Row 1 = [2,1,3], so Row 3 is independent of Row 1. Thus exactly 2 rows are linearly independent, and the rank of the matrix is 2.",
       "isCustomUploaded": true
@@ -397,7 +397,7 @@
       "marks": 1,
       "negative_marks": 0,
       "question": "A GPS-guided auto-steer tractor system reduces pass-to-pass overlap in a field spraying operation from a conventional 8% overlap to a precision level of 2% overlap. For a field operation whose actual (target, non-overlapped) area to be covered is 50 hectares, calculate the reduction in the total area actually traversed (i.e. the area saved from redundant overlap) when switching from 8% overlap to 2% overlap. (Answer in hectares, to two decimal places.)",
-      "options": {},
+      "options": null,
       "correct_answer": "2.90 to 3.10",
       "solution": "Answer: 2.90 to 3.10\nExplanation:\nTotal area traversed (including overlap) = Target area x (1 + overlap fraction). At 8% overlap: 50 x 1.08 = 54.00 ha. At 2% overlap: 50 x 1.02 = 51.00 ha. Reduction in area traversed = 54.00 - 51.00 = 3.00 ha.\nFarm Power",
       "isCustomUploaded": true
@@ -436,7 +436,7 @@
       "marks": 1,
       "negative_marks": 0,
       "question": "A tractor weighing 25 kN develops a drawbar pull of 9 kN on a given soil surface. Calculate the coefficient of traction.",
-      "options": {},
+      "options": null,
       "correct_answer": "0.35 to 0.37",
       "solution": "Answer: 0.35 to 0.37\nExplanation:\nCoefficient of traction = Drawbar pull / Weight on drive wheels = 9 kN / 25 kN = 0.36.",
       "isCustomUploaded": true
@@ -475,7 +475,7 @@
       "marks": 1,
       "negative_marks": 0,
       "question": "A tractor's differential provides a 3:1 reduction beyond a gearbox output speed of 450 rpm, and the final drive provides a further 4:1 reduction before reaching the rear wheels. Calculate the final rear wheel speed. (Answer in rpm, to one decimal place.)",
-      "options": {},
+      "options": null,
       "correct_answer": "37.0 to 38.0",
       "solution": "Answer: 37.0 to 38.0\nExplanation:\nSpeed after differential = 450/3 = 150 rpm. Speed after final drive = 150/4 = 37.5 rpm.\nSoil and Water Conservation Engineering",
       "isCustomUploaded": true
@@ -536,7 +536,7 @@
       "marks": 1,
       "negative_marks": 0,
       "question": "A soil has a degree of saturation of 60% and a void ratio of 0.70. Calculate the volumetric water content. [Use: theta_v = (S x e)/(1+e), where S is the degree of saturation as a fraction and e is the void ratio] (Answer in %, to two decimal places.)",
-      "options": {},
+      "options": null,
       "correct_answer": "24.20 to 25.20",
       "solution": "Answer: 24.20 to 25.20\nExplanation:\ntheta_v = (S x e)/(1+e) = (0.60 x 0.70)/(1+0.70) = 0.42/1.70 = 0.2471, i.e. 24.71%.",
       "isCustomUploaded": true
@@ -553,7 +553,7 @@
       "marks": 1,
       "negative_marks": 0,
       "question": "In a levelling survey, the back sight (BS) reading taken on a benchmark of RL 250.000 m is 1.685 m, and the fore sight (FS) reading taken on the next point is 2.240 m. What is the reduced level (RL) of the next point?",
-      "options": {},
+      "options": null,
       "correct_answer": "249.435 to 249.455",
       "solution": "Answer: 249.435 to 249.455\nExplanation:\nHeight of Instrument (HI) = RL of benchmark + BS = 250.000 + 1.685 = 251.685 m. RL of next point = HI - FS = 251.685 - 2.240 = 249.445 m.\nIrrigation and Drainage Engineering",
       "isCustomUploaded": true
@@ -592,7 +592,7 @@
       "marks": 1,
       "negative_marks": 0,
       "question": "A crop has a daily consumptive use (evapotranspiration) of 5.8 mm/day. Irrigation is scheduled when 55% of the total available soil water (105 mm) has been depleted. Calculate the irrigation interval. (Answer in days, to one decimal place.)",
-      "options": {},
+      "options": null,
       "correct_answer": "9.70 to 10.30",
       "solution": "Answer: 9.70 to 10.30\nExplanation:\nAllowable soil moisture depletion = 55% of 105 mm = 57.75 mm. Irrigation interval = Allowable depletion / Daily consumptive use = 57.75 / 5.8 = 9.957 days, which rounds to 10.0 days.\nAgricultural Process Engineering",
       "isCustomUploaded": true
@@ -653,7 +653,7 @@
       "marks": 1,
       "negative_marks": 0,
       "question": "A grain kernel has average dimensions: length = 7.2 mm, width = 3.8 mm, thickness = 3.0 mm. Calculate the geometric mean diameter, Dg = (L x W x T)^(1/3). (Answer in mm, to two decimal places.)",
-      "options": {},
+      "options": null,
       "correct_answer": "4.20 to 4.50",
       "solution": "Answer: 4.20 to 4.50\nExplanation:\nDg = (7.2 x 3.8 x 3.0)^(1/3) = (82.08)^(1/3). Evaluating the cube root of 82.08 gives approximately 4.346, i.e. Dg = 4.35 mm.",
       "isCustomUploaded": true
@@ -670,7 +670,7 @@
       "marks": 1,
       "negative_marks": 0,
       "question": "Grain in storage has a moisture content of 20% (wet basis). It is to be brought down to a safe storage moisture content of 13% (wet basis) by blending with dry grain at 9% moisture content (wet basis). What fraction (by mass) of the final mixture should be the dry (9% MC) grain? (Give the answer as a decimal fraction, e.g. 0.35.)",
-      "options": {},
+      "options": null,
       "correct_answer": "0.61 to 0.66",
       "solution": "Answer: 0.61 to 0.66\nExplanation:\nLet x = mass fraction of dry (9% MC) grain in the final mixture, and (1-x) = mass fraction of wet (20% MC) grain. By moisture mass balance: 9x + 20(1-x) = 13 => 9x + 20 - 20x = 13 => -11x = -7 => x = 7/11 = 0.6364.",
       "isCustomUploaded": true
@@ -731,7 +731,7 @@
       "marks": 1,
       "negative_marks": 0,
       "question": "A cold room wall has a single layer of insulation with thermal conductivity 0.035 W/m.K and thickness 75 mm. Calculate the thermal resistance per unit area of this insulation layer, ignoring surface film resistances. (Answer in m2.K/W, to three decimal places.)",
-      "options": {},
+      "options": null,
       "correct_answer": "2.100 to 2.190",
       "solution": "Answer: 2.100 to 2.190\nExplanation:\nThermal resistance per unit area = L/k = 0.075/0.035 = 2.143 m2.K/W.\nEngineering Mathematics",
       "isCustomUploaded": true
@@ -770,7 +770,7 @@
       "marks": 2,
       "negative_marks": 0,
       "question": "Evaluate the definite integral: Integral from 0 to 1 of [x . ln(1+x)] dx. (Round to two decimal places.)",
-      "options": {},
+      "options": null,
       "correct_answer": "0.23 to 0.27",
       "solution": "Answer: 0.23 to 0.27\nExplanation:\nUsing integration by parts with u=ln(1+x), dv=x dx (so du=dx/(1+x), v=x^2/2): Integral of x.ln(1+x) dx = (x^2/2)ln(1+x) - (1/2) Integral of [x^2/(1+x)] dx. Using polynomial division, x^2/(1+x) = x-1+1/(1+x), whose integral is x^2/2 - x + ln(1+x). Combining: Integral of x.ln(1+x) dx = (x^2/2)ln(1+x) - (x^2/4) + (x/2) - (1/2)ln(1+x) + C. Evaluating from 0 to 1: at x=1, (1/2)ln2 - 1/4 + 1/2 - (1/2)ln2 = -1/4+1/2 = 1/4; at x=0, all terms vanish (ln1=0). The definite integral = 1/4 - 0 = 0.25.",
       "isCustomUploaded": true
@@ -809,7 +809,7 @@
       "marks": 2,
       "negative_marks": 0,
       "question": "Solve the differential equation dy/dx + 3y = e^(-x), with the initial condition y(0) = 1. Find y(1). (Round to two decimal places.)",
-      "options": {},
+      "options": null,
       "correct_answer": "0.19 to 0.23",
       "solution": "Answer: 0.19 to 0.23\nExplanation:\nThis is a first-order linear ODE with integrating factor e^(3x) (since the coefficient of y is 3). Multiplying through: d/dx(y.e^(3x)) = e^(-x).e^(3x) = e^(2x). Integrating: y.e^(3x) = e^(2x)/2 + C. Applying y(0)=1: 1x1 = 1/2+C, so C=0.5. Thus y.e^(3x) = e^(2x)/2 + 0.5, giving y = e^(-x)/2 + 0.5.e^(-3x). At x=1: y = e^(-1)/2 + 0.5.e^(-3) = 0.367879/2 + 0.5x0.049787 = 0.183940 + 0.024894 = 0.208834, which rounds to 0.21.\nFarm Machinery",
       "isCustomUploaded": true
@@ -848,7 +848,7 @@
       "marks": 2,
       "negative_marks": 0,
       "question": "A subsoiler has a draft of 5.5 kN when operated at a forward speed of 3.5 km/h. If the drawbar power is transmitted from the engine with a mechanical efficiency of 82%, calculate the engine power required. (Answer in kW, to two decimal places.)",
-      "options": {},
+      "options": null,
       "correct_answer": "6.40 to 6.65",
       "solution": "Answer: 6.40 to 6.65\nExplanation:\nForward speed = 3.5 km/h = 3.5x1000/3600 = 0.9722 m/s. Drawbar power = Draft x speed = 5.5 kN x 0.9722 m/s = 5.3472 kW. Engine power required = Drawbar power / mechanical efficiency = 5.3472 / 0.82 = 6.5210 kW, which rounds to 6.52 kW.",
       "isCustomUploaded": true
@@ -865,7 +865,7 @@
       "marks": 2,
       "negative_marks": 0,
       "question": "A shaft transmits 18 kW of power at 400 rpm through a pair of spur gears. The pinion has 20 teeth and module 4 mm. Calculate the tangential force acting on the gear teeth. (Answer in N, to the nearest integer.)",
-      "options": {},
+      "options": null,
       "correct_answer": "10600 to 10900",
       "solution": "Answer: 10600 to 10900\nExplanation:\nPinion pitch circle diameter = module x number of teeth = 4 mm x 20 = 80 mm = 0.08 m, so pitch circle radius r = 0.04 m. Angular speed omega = 2.pi.N/60 = 2.pi.400/60 = 41.888 rad/s. Torque T = Power/omega = 18000/41.888 = 429.76 N.m. Tangential force F = T/r = 429.76/0.04 = 10743.0 N, which rounds to 10743 N.",
       "isCustomUploaded": true
@@ -882,7 +882,7 @@
       "marks": 2,
       "negative_marks": 0,
       "question": "A boom sprayer has nozzles spaced 0.5 m apart along the boom, each delivering 1.0 L/min at the operating pressure. If the sprayer travels at a forward speed of 6 km/h, calculate the application rate. [Use: Application rate (L/ha) = 600 x q(L/min) / (v(km/h) x s(m))] (Answer in L/ha, to the nearest integer.)",
-      "options": {},
+      "options": null,
       "correct_answer": "195 to 205",
       "solution": "Answer: 195 to 205\nExplanation:\nApplication rate = 600 x q / (v x s) = 600 x 1.0 / (6 x 0.5) = 600/3 = 200 L/ha.\nFarm Power",
       "isCustomUploaded": true
@@ -899,7 +899,7 @@
       "marks": 2,
       "negative_marks": 0,
       "question": "A solar photovoltaic array of area 20 m2 receives solar insolation of 850 W/m2. If the panel conversion efficiency is 18% and the inverter (DC-to-AC conversion) efficiency is 92%, calculate the AC electrical power output. (Answer in kW, to two decimal places.)",
-      "options": {},
+      "options": null,
       "correct_answer": "2.72 to 2.90",
       "solution": "Answer: 2.72 to 2.90\nExplanation:\nDC power generated by the panels = Insolation x Area x Panel efficiency = 850 x 20 x 0.18 = 3060 W. AC power output after the inverter = 3060 x 0.92 = 2815.2 W = 2.8152 kW, which rounds to 2.82 kW.",
       "isCustomUploaded": true
@@ -938,7 +938,7 @@
       "marks": 2,
       "negative_marks": 0,
       "question": "A 4-stroke, 4-cylinder diesel engine has a bore of 95 mm and stroke of 110 mm. The engine runs at 2200 rpm and has a volumetric efficiency of 83%. Calculate the actual volume of air drawn in by the engine. (Answer in m3/min, to three decimal places.)",
-      "options": {},
+      "options": null,
       "correct_answer": "2.780 to 2.920",
       "solution": "Answer: 2.780 to 2.920\nExplanation:\nSwept volume per cylinder = (pi/4) x D^2 x L = (pi/4) x (0.095)^2 x 0.110 = 0.00077962 m3. Total swept volume for 4 cylinders = 4 x 0.00077962 = 0.0031185 m3. For a 4-stroke engine, one intake event occurs every 2 revolutions, so intake events per minute = N/2 = 2200/2 = 1100. Ideal volume drawn per minute = 0.0031185 x 1100 = 3.4304 m3/min. Actual volume drawn (with 83% volumetric efficiency) = 3.4304 x 0.83 = 2.847 m3/min.",
       "isCustomUploaded": true
@@ -955,7 +955,7 @@
       "marks": 2,
       "negative_marks": 0,
       "question": "An air-standard Otto cycle has a compression ratio of 9. Taking the ratio of specific heats (gamma) as 1.4, calculate the thermal efficiency of the cycle. (Answer in %, to two decimal places.)",
-      "options": {},
+      "options": null,
       "correct_answer": "58.00 to 59.00",
       "solution": "Answer: 58.00 to 59.00\nExplanation:\nOtto cycle thermal efficiency: eta = 1 - 1/r^(gamma-1), where r is the compression ratio. r^(gamma-1) = 9^0.4 = 2.4082. eta = 1 - 1/2.4082 = 1 - 0.41525 = 0.58475, i.e. 58.48%.",
       "isCustomUploaded": true
@@ -972,7 +972,7 @@
       "marks": 2,
       "negative_marks": 0,
       "question": "During a study of tractor operation, an operator's heart rate was recorded as: resting HR = 70 bpm, average working HR during the operation = 145 bpm. Using the workload index Relative Heart Rate, RHR = [(Working HR - Resting HR)/(Max HR - Resting HR)] x 100, and taking the operator's estimated maximum heart rate as 195 bpm, calculate the RHR. (Answer in %, to one decimal place.)",
-      "options": {},
+      "options": null,
       "correct_answer": "59.40 to 60.60",
       "solution": "Answer: 59.40 to 60.60\nExplanation:\nRHR = (145-70)/(195-70) x 100 = 75/125 x 100 = 60.0%.\nSoil and Water Conservation Engineering",
       "isCustomUploaded": true
@@ -989,7 +989,7 @@
       "marks": 2,
       "negative_marks": 0,
       "question": "A watershed of area 300 hectares receives 95 mm of rainfall during a storm event. If the runoff coefficient (Rational Method) for the watershed is 0.4, calculate the total runoff volume. (Answer in m3, to the nearest integer.)",
-      "options": {},
+      "options": null,
       "correct_answer": "113000 to 115000",
       "solution": "Answer: 113000 to 115000\nExplanation:\nWatershed area = 300 ha = 300 x 10,000 = 30,00,000 m2. Rainfall depth = 95 mm = 0.095 m. Runoff volume = C x P x A = 0.4 x 0.095 x 30,00,000 = 0.038 x 30,00,000 = 1,14,000 m3.",
       "isCustomUploaded": true
@@ -1006,7 +1006,7 @@
       "marks": 2,
       "negative_marks": 0,
       "question": "Rainfall intensity for a storm follows i = 900/(t+20), where i is in mm/h and t is the storm duration in minutes. A watershed has a time of concentration of 25 minutes, an area of 50 hectares, and a runoff coefficient (Rational Method) of 0.5. Using Q = C.i.A/360 (i in mm/h, A in hectares, Q in m3/s), calculate the peak discharge. (Answer in m3/s, to two decimal places.)",
-      "options": {},
+      "options": null,
       "correct_answer": "1.33 to 1.45",
       "solution": "Answer: 1.33 to 1.45\nExplanation:\nDesign rainfall intensity, using t = time of concentration = 25 min: i = 900/(25+20) = 900/45 = 20 mm/h. Peak discharge Q = C.i.A/360 = 0.5 x 20 x 50/360 = (0.5x20=10; 10x50=500; 500/360=1.389) = 1.39 m3/s.",
       "isCustomUploaded": true
@@ -1045,7 +1045,7 @@
       "marks": 2,
       "negative_marks": 0,
       "question": "Water flows through a venturimeter with inlet diameter 300 mm and throat diameter 150 mm. The difference in piezometric head between the inlet and throat, measured by a differential manometer, is 0.4 m of water. Taking the coefficient of discharge Cd = 0.96 and g = 9.81 m/s2, calculate the discharge. [Use: Q = Cd x (A1.A2/sqrt(A1^2 - A2^2)) x sqrt(2gh)] (Answer in m3/s, to three decimal places.)",
-      "options": {},
+      "options": null,
       "correct_answer": "0.047 to 0.051",
       "solution": "Answer: 0.047 to 0.051\nExplanation:\nA1 = (pi/4)(0.3)^2 = 0.070686 m2. A2 = (pi/4)(0.15)^2 = 0.017671 m2. A1^2 - A2^2 = 0.0049965 - 0.0003123 = 0.0046843, sqrt = 0.068442. A1.A2 = 0.070686 x 0.017671 = 0.0012492. A1.A2/sqrt(A1^2-A2^2) = 0.0012492/0.068442 = 0.018254. sqrt(2gh) = sqrt(2x9.81x0.4) = sqrt(7.848) = 2.8014. Q = 0.96 x 0.018254 x 2.8014 = 0.0491 m3/s, i.e. approximately 0.049 m3/s.",
       "isCustomUploaded": true
@@ -1084,7 +1084,7 @@
       "marks": 2,
       "negative_marks": 0,
       "question": "A field has a slope length of 150 m and a slope gradient of 10% (i.e. sin(theta) approximately equal to tan(theta) = 0.10 for this small angle). Using the slope-length-and-steepness factor formula LS = (lambda/22.13)^m x (65.41 sin^2(theta) + 4.56 sin(theta) + 0.065), with m = 0.5 for slopes of 5% or steeper, calculate the LS factor. (Round to two decimal places.)",
-      "options": {},
+      "options": null,
       "correct_answer": "2.96 to 3.16",
       "solution": "Answer: 2.96 to 3.16\nExplanation:\nlambda/22.13 = 150/22.13 = 6.7782; raised to power 0.5 (square root): sqrt(6.7782) = 2.6034. Steepness term: 65.41 x (0.10)^2 + 4.56 x 0.10 + 0.065 = 65.41 x 0.01 + 0.456 + 0.065 = 0.6541 + 0.456 + 0.065 = 1.1751. LS = 2.6034 x 1.1751 = 3.0592, which rounds to 3.06.\nIrrigation and Drainage Engineering",
       "isCustomUploaded": true
@@ -1101,7 +1101,7 @@
       "marks": 2,
       "negative_marks": 0,
       "question": "A confined aquifer has a thickness of 18 m and a hydraulic conductivity of 22 m/day. Under a hydraulic gradient of 0.006, calculate the discharge per unit width of the aquifer, using Darcy's law q = K.i.b. (Answer in m3/day per m width, to two decimal places.)",
-      "options": {},
+      "options": null,
       "correct_answer": "2.28 to 2.48",
       "solution": "Answer: 2.28 to 2.48\nExplanation:\nq = K.i.b = 22 m/day x 0.006 x 18 m = 2.376 m3/day per metre width, which rounds to 2.38.",
       "isCustomUploaded": true
@@ -1118,7 +1118,7 @@
       "marks": 2,
       "negative_marks": 0,
       "question": "A check-basin irrigation plot of area 1500 m2 is supplied at an inflow rate of 30 L/s for 40 minutes. If the depth of water required to refill the crop root zone to field capacity is 45 mm, calculate the application efficiency. (Answer in %, to two decimal places.)",
-      "options": {},
+      "options": null,
       "correct_answer": "92.90 to 94.60",
       "solution": "Answer: 92.90 to 94.60\nExplanation:\nVolume applied = Q x t = 30 L/s x (40 x 60 s) = 30 x 2400 = 72,000 L = 72 m3. Volume required to refill the root zone = 0.045 m x 1500 m2 = 67.5 m3. Application efficiency = (Volume required / Volume applied) x 100 = (67.5/72) x 100 = 93.75%.",
       "isCustomUploaded": true
@@ -1135,7 +1135,7 @@
       "marks": 2,
       "negative_marks": 0,
       "question": "A tube well penetrating a confined aquifer is pumped at a constant rate of 28 litres per second. Under steady-state conditions, drawdown at 45 m from the well is 1.3 m, and at 135 m it is 0.55 m. Using the Thiem equation, Q = 2.pi.T.(s1-s2)/ln(r2/r1), calculate the transmissivity of the aquifer. (Answer in m2/day, to one decimal place.)",
-      "options": {},
+      "options": null,
       "correct_answer": "555.0 to 573.0",
       "solution": "Answer: 555.0 to 573.0\nExplanation:\nConvert Q to consistent units: Q = 28 L/s = 28 x 86400/1000 = 2419.2 m3/day. s1-s2 = 1.3-0.55 = 0.75 m. ln(r2/r1) = ln(135/45) = ln(3) = 1.0986. Rearranging the Thiem equation: T = Q.ln(r2/r1) / [2.pi.(s1-s2)] = 2419.2 x 1.0986 / (2 x pi x 0.75) = 2658.0 / 4.7124 = 564.0 m2/day.",
       "isCustomUploaded": true
@@ -1174,7 +1174,7 @@
       "marks": 2,
       "negative_marks": 0,
       "question": "A dryer removes moisture from 600 kg of red chili from an initial moisture content of 75% (wet basis) to a final moisture content of 10% (wet basis). Calculate the mass of water removed. (Answer in kg, to one decimal place.)",
-      "options": {},
+      "options": null,
       "correct_answer": "430.00 to 436.50",
       "solution": "Answer: 430.00 to 436.50\nExplanation:\nDry matter mass (unchanged during drying) = 600 x (1-0.75) = 600 x 0.25 = 150 kg. Final total mass at 10% MC = Dry matter / (1-0.10) = 150/0.90 = 166.67 kg. Water removed = Initial mass - Final mass = 600 - 166.67 = 433.3 kg.",
       "isCustomUploaded": true
@@ -1191,7 +1191,7 @@
       "marks": 2,
       "negative_marks": 0,
       "question": "For the batch of 600 kg red chili described above (initial moisture content 75% wet basis, dry matter mass 150 kg), the dryer removes water at a constant rate of 22 kg water/hour during the constant-rate drying period, which continues until the moisture content falls from 75% to 55% (wet basis). Calculate the time required for this constant-rate drying period. (Answer in hours, to two decimal places.)",
-      "options": {},
+      "options": null,
       "correct_answer": "11.85 to 12.40",
       "solution": "Answer: 11.85 to 12.40\nExplanation:\nDry matter mass = 150 kg (unchanged throughout drying). Total mass at 55% MC = Dry matter / (1-0.55) = 150/0.45 = 333.33 kg. Water removed during this stage = 600 - 333.33 = 266.67 kg. Time required = Water removed / Drying rate = 266.67/22 = 12.12 hours.",
       "isCustomUploaded": true
@@ -1208,7 +1208,7 @@
       "marks": 2,
       "negative_marks": 0,
       "question": "A hammer mill grinds groundnut cake from a feed size of 12 mm to a product size of 0.8 mm. The work index of groundnut cake (Bond's law) is 13 kWh/tonne. Using Bond's law, E = Wi x 10 x [1/sqrt(Dp) - 1/sqrt(Df)], with Dp and Df in microns, calculate the specific energy required for grinding. (Answer in kWh/tonne, to two decimal places.)",
-      "options": {},
+      "options": null,
       "correct_answer": "3.28 to 3.55",
       "solution": "Answer: 3.28 to 3.55\nExplanation:\nDf = 12 mm = 12,000 microns; Dp = 0.8 mm = 800 microns. 1/sqrt(Dp) = 1/sqrt(800) = 0.035355. 1/sqrt(Df) = 1/sqrt(12000) = 0.009129. Difference = 0.035355 - 0.009129 = 0.026227. E = Wi x 10 x 0.026227 = 13 x 10 x 0.026227 = 3.41 kWh/tonne.",
       "isCustomUploaded": true
@@ -1225,7 +1225,7 @@
       "marks": 2,
       "negative_marks": 0,
       "question": "A belt conveyor transports grain at a rate of 45 tonnes/hour, inclined at 18 degrees to the horizontal, over a length of 28 m measured along the incline. Taking the conveyor's mechanical efficiency as 75% and g = 9.81 m/s2, calculate the power required to lift the material against gravity (considering only the efficiency factor, with no separate friction losses). (Answer in kW, to two decimal places.)",
-      "options": {},
+      "options": null,
       "correct_answer": "1.35 to 1.48",
       "solution": "Answer: 1.35 to 1.48\nExplanation:\nHeight lifted = 28 x sin(18 deg) = 28 x 0.309017 = 8.6525 m. Mass flow rate = 45 tonnes/hour = 45000/3600 = 12.5 kg/s. Ideal power to lift material = mass flow rate x g x height = 12.5 x 9.81 x 8.6525 = 1061.1 W. Actual power required, accounting for 75% mechanical efficiency = 1061.1/0.75 = 1414.8 W = 1.41 kW.\nDairy and Food Engineering",
       "isCustomUploaded": true
@@ -1286,7 +1286,7 @@
       "marks": 2,
       "negative_marks": 0,
       "question": "A food item at an initial temperature of 28C is to be frozen down to a final temperature of -20C. The freezing point of the food is -1.5C. Given: specific heat above freezing = 3.6 kJ/kg.K, latent heat of fusion = 230 kJ/kg, specific heat below freezing = 1.9 kJ/kg.K. Calculate the total heat to be removed per kg of food. (Answer in kJ/kg, to one decimal place.)",
-      "options": {},
+      "options": null,
       "correct_answer": "368.50 to 374.20",
       "solution": "Answer: 368.50 to 374.20\nExplanation:\nSensible heat removed above freezing = 3.6 x (28 - (-1.5)) = 3.6 x 29.5 = 106.2 kJ/kg. Latent heat of fusion removed = 230 kJ/kg. Sensible heat removed below freezing = 1.9 x ((-1.5) - (-20)) = 1.9 x 18.5 = 35.15 kJ/kg. Total heat removed = 106.2 + 230 + 35.15 = 371.35 kJ/kg, which rounds to 371.4 kJ/kg.",
       "isCustomUploaded": true

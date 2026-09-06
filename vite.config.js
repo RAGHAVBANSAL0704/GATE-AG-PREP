@@ -145,7 +145,9 @@ export default defineConfig(({ command }) => ({
               const num = parseInt(match[1], 10);
               if (num <= 6) return 'dataset-custom-mocks-1-6';
               if (num <= 12) return 'dataset-custom-mocks-7-12';
-              return 'dataset-custom-mocks-13-18';
+              if (num <= 18) return 'dataset-custom-mocks-13-18';
+              if (num <= 24) return 'dataset-custom-mocks-19-24';
+              return 'dataset-custom-mocks-25-29';
             }
             return 'dataset-custom-mocks-1-6';
           }

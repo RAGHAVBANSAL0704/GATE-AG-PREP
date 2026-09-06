@@ -21,7 +21,8 @@ import {
   Shuffle,
   Edit3,
   FileDown,
-  Printer
+  Printer,
+  Image as ImageIcon
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import { evaluateQuestion } from '../utils/scoring.js';
@@ -570,6 +571,22 @@ export default function CustomPracticePool({
             <div className="text-base sm:text-lg font-semibold text-slate-900 dark:text-slate-100 leading-relaxed space-y-3">
               <MathRenderer content={currentQ.question} />
             </div>
+
+            {/* Question Diagram / Image */}
+            {(currentQ.image_url || currentQ.image) && (
+              <div className="my-4 p-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl text-center inline-block max-w-full">
+                <div className="text-[10px] font-bold uppercase tracking-wider text-blue-700 dark:text-blue-400 mb-2 flex items-center justify-center gap-1.5">
+                  <ImageIcon className="w-3.5 h-3.5" />
+                  <span>Question Figure / Diagram</span>
+                </div>
+                <img
+                  src={currentQ.image_url || currentQ.image}
+                  alt="Question Diagram"
+                  className="max-h-80 max-w-full mx-auto object-contain rounded-lg bg-white shadow-xs"
+                  loading="lazy"
+                />
+              </div>
+            )}
 
             {/* MCQ Options */}
             {currentQ.type === 'MCQ' && currentQ.options && (

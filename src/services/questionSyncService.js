@@ -57,6 +57,127 @@ export function getLocalEditedQuestionsMap() {
 }
 
 /**
+ * Process and optimize an image file selected directly from local storage.
+ * Automatically downscales large images to maxDimension to prevent localStorage quota exhaustion
+ * while maintaining crisp diagram & equation clarity.
+ * 
+ * @param {File} file - Local File object from <input type="file"> or drag-and-drop
+ * @param {number} maxDimension - Max width or height in pixels (default 1280)
+ * @param {number} quality - Compression quality 0-1 (default 0.85)
+ * @returns {Promise<{ dataUrl: string, name: string, originalSize: number, optimizedSize: number, width: number, height: number }>}
+ */
+export function processAndOptimizeImageFile(file, maxDimension = 1280, quality = 0.85) {
+  return new Promise((resolve, reject) => {
+    if (!file) {
+      return reject(new Error('No file provided'));
+    }
+
+    if (!file.type.startsWith('image/')) {
+      return reject(new Error('Selected file must be an image (PNG, JPEG, WebP, SVG, GIF)'));
+    }
+
+    // SVG files can be read directly as Data URLs without rasterization
+    if (file.type === 'image/svg+xml') {
+      const reader = new FileReader();
+      reader.onload = () => {
+        resolve({
+          dataUrl: reader.result,
+          name: file.name,
+          originalSize: file.size,
+          optimizedSize: file.size,
+          width: 0,
+          height: 0
+        });
+      };
+      reader.onerror = () => reject(new Error('Failed to read SVG file'));
+      reader.readAsDataURL(file);
+      return;
+    }
+
+    // For bitmap images (PNG, JPEG, WebP, GIF)
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const img = new Image();
+      img.onload = () => {
+        let width = img.width;
+        let height = img.height;
+
+        // If image is already within acceptable dimensions and under 250KB, keep as-is
+        if (width <= maxDimension && height <= maxDimension && file.size < 250 * 1024) {
+          return resolve({
+            dataUrl: e.target.result,
+            name: file.name,
+            originalSize: file.size,
+            optimizedSize: file.size,
+            width,
+            height
+          });
+        }
+
+        // Proportional downscaling
+        if (width > height) {
+          if (width > maxDimension) {
+            height = Math.round((height * maxDimension) / width);
+            width = maxDimension;
+          }
+        } else {
+          if (height > maxDimension) {
+            width = Math.round((width * maxDimension) / height);
+            height = maxDimension;
+          }
+        }
+
+        const canvas = document.createElement('canvas');
+        canvas.width = width;
+        canvas.height = height;
+        const ctx = canvas.getContext('2d');
+        if (!ctx) {
+          return resolve({
+            dataUrl: e.target.result,
+            name: file.name,
+            originalSize: file.size,
+            optimizedSize: file.size,
+            width: img.width,
+            height: img.height
+          });
+        }
+
+        // Fill background with white for transparent images converted to jpeg/webp
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, width, height);
+        ctx.drawImage(img, 0, 0, width, height);
+
+        // Try webp first, fall back to jpeg
+        let outputMime = 'image/webp';
+        let dataUrl = canvas.toDataURL(outputMime, quality);
+        if (!dataUrl.startsWith('data:image/webp')) {
+          outputMime = 'image/jpeg';
+          dataUrl = canvas.toDataURL(outputMime, quality);
+        }
+
+        // Estimate optimized size from base64 length
+        const optimizedSize = Math.round((dataUrl.length * 3) / 4);
+
+        resolve({
+          dataUrl,
+          name: file.name,
+          originalSize: file.size,
+          optimizedSize,
+          width,
+          height
+        });
+      };
+
+      img.onerror = () => reject(new Error('Failed to decode image file'));
+      img.src = e.target.result;
+    };
+
+    reader.onerror = () => reject(new Error('Failed to read file from disk'));
+    reader.readAsDataURL(file);
+  });
+}
+
+/**
  * Save question update and broadcast to all devices in real-time
  */
 export async function saveAndBroadcastQuestion(updatedQ) {
@@ -71,7 +192,16 @@ export async function saveAndBroadcastQuestion(updatedQ) {
     console.warn('Local storage save warning:', e);
   }
 
-  // 2. Broadcast to other tabs on the same device via BroadcastChannel
+  // 2. Dispatch local CustomEvent for instantaneous single-page live updates
+  try {
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent('gate_ag_question_updated', {
+        detail: updatedQ
+      }));
+    }
+  } catch (e) {}
+
+  // 3. Broadcast to other tabs on the same device via BroadcastChannel
   try {
     if (localBroadcastChannel) {
       localBroadcastChannel.postMessage({
@@ -82,7 +212,7 @@ export async function saveAndBroadcastQuestion(updatedQ) {
     }
   } catch (e) {}
 
-  // 3. Broadcast to all other devices live via Supabase Realtime Broadcast Channel
+  // 4. Broadcast to all other devices live via Supabase Realtime Broadcast Channel
   try {
     if (isSupabaseConfigured && supabase) {
       if (!supabaseSyncChannel) {
@@ -101,6 +231,39 @@ export async function saveAndBroadcastQuestion(updatedQ) {
   } catch (e) {
     console.warn('Supabase live broadcast note:', e);
   }
+
+  return true;
+}
+
+/**
+ * Remove an edited question override (revert back to official source) and broadcast
+ */
+export async function deleteAndBroadcastQuestion(questionId) {
+  if (!questionId) return false;
+
+  try {
+    const currentMap = getLocalEditedQuestionsMap();
+    delete currentMap[questionId];
+    localStorage.setItem(LOCAL_STORAGE_QUESTIONS_MAP, JSON.stringify(currentMap));
+  } catch (e) {}
+
+  try {
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new CustomEvent('gate_ag_question_deleted', {
+        detail: { id: questionId }
+      }));
+    }
+  } catch (e) {}
+
+  try {
+    if (localBroadcastChannel) {
+      localBroadcastChannel.postMessage({
+        type: 'QUESTION_DELETED',
+        payload: { id: questionId },
+        timestamp: Date.now()
+      });
+    }
+  } catch (e) {}
 
   return true;
 }

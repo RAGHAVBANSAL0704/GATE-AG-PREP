@@ -12,11 +12,13 @@ import {
   Key, 
   ChevronRight, 
   RefreshCw,
-  AlertTriangle
+  AlertTriangle,
+  Lightbulb
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import { 
   explainQuestionWithGemini, 
+  getProgressiveHint,
   askDoubtChat, 
   hasApiKey, 
   getStoredApiKey, 
@@ -30,12 +32,17 @@ export default function AITutorModal({
   studentAnswer = null, 
   isCorrect = null 
 }) {
-  const [activeTab, setActiveTab] = useState('solution'); // 'solution' | 'chat'
+  const [activeTab, setActiveTab] = useState('solution'); // 'solution' | 'hints' | 'chat'
   
   // Solution State
   const [solutionText, setSolutionText] = useState('');
   const [isSolutionLoading, setIsSolutionLoading] = useState(false);
   const [solutionError, setSolutionError] = useState('');
+
+  // Progressive Hint State
+  const [hintLevel, setHintLevel] = useState(1);
+  const [hints, setHints] = useState({});
+  const [isHintLoading, setIsHintLoading] = useState(false);
 
   // Chat State
   const [chatMessages, setChatMessages] = useState([]);
@@ -53,6 +60,8 @@ export default function AITutorModal({
       setHasKey(hasApiKey());
       setTempApiKey(getStoredApiKey());
       setSolutionText('');
+      setHints({});
+      setHintLevel(1);
       setChatMessages([
         {
           id: 'welcome',
@@ -241,6 +250,18 @@ export default function AITutorModal({
           </button>
 
           <button
+            onClick={() => setActiveTab('hints')}
+            className={`pb-2 px-3 text-xs font-bold border-b-2 transition cursor-pointer flex items-center gap-1.5 ${
+              activeTab === 'hints'
+                ? 'border-purple-600 text-purple-600 dark:text-purple-400'
+                : 'border-transparent text-slate-500 hover:text-slate-800 dark:hover:text-slate-300'
+            }`}
+          >
+            <Lightbulb className="w-3.5 h-3.5" />
+            <span>Progressive Hints</span>
+          </button>
+
+          <button
             onClick={() => setActiveTab('chat')}
             className={`pb-2 px-3 text-xs font-bold border-b-2 transition cursor-pointer flex items-center gap-1.5 ${
               activeTab === 'chat'
@@ -300,7 +321,77 @@ export default function AITutorModal({
             </div>
           )}
 
-          {/* TAB 2: DOUBT CHAT */}
+          {/* TAB 2: PROGRESSIVE HINTS */}
+          {activeTab === 'hints' && (
+            <div className="space-y-4">
+              <div className="p-3.5 bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-2xl">
+                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-1">
+                  Question Statement:
+                </span>
+                <MathRenderer text={question.question || question.questionText} className="text-xs font-medium text-slate-800 dark:text-slate-200" />
+              </div>
+
+              <div className="p-3 bg-purple-500/10 border border-purple-500/20 rounded-2xl text-xs text-purple-900 dark:text-purple-300 flex items-center gap-2">
+                <Lightbulb className="w-4 h-4 text-purple-600 dark:text-purple-400 shrink-0" />
+                <span>Progressive hints guide your problem solving without revealing the complete numerical solution at once.</span>
+              </div>
+
+              <div className="space-y-3">
+                {[1, 2, 3].map((lvl) => {
+                  const levelTitle = lvl === 1 
+                    ? 'Level 1: Core Physical Concept' 
+                    : lvl === 2 
+                    ? 'Level 2: Governing Formula & Units' 
+                    : 'Level 3: Intermediate Step & Calculation';
+
+                  return (
+                    <div 
+                      key={lvl} 
+                      className="p-4 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 space-y-2"
+                    >
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <span className="w-6 h-6 rounded-full bg-purple-100 dark:bg-purple-950/80 text-purple-600 dark:text-purple-400 text-xs font-bold flex items-center justify-center">
+                            {lvl}
+                          </span>
+                          <span className="text-xs font-bold text-slate-800 dark:text-slate-200">
+                            {levelTitle}
+                          </span>
+                        </div>
+                        {!hints[lvl] ? (
+                          <button
+                            onClick={() => handleFetchHint(lvl)}
+                            disabled={isHintLoading}
+                            className="px-3 py-1 bg-purple-600 hover:bg-purple-500 disabled:opacity-50 text-white rounded-lg text-xs font-bold cursor-pointer transition flex items-center gap-1"
+                          >
+                            {isHintLoading && hintLevel === lvl ? (
+                              <>
+                                <Loader2 className="w-3 h-3 animate-spin" /> Unlocking...
+                              </>
+                            ) : (
+                              'Unlock Hint'
+                            )}
+                          </button>
+                        ) : (
+                          <span className="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 rounded-full">
+                            Unlocked
+                          </span>
+                        )}
+                      </div>
+
+                      {hints[lvl] && (
+                        <div className="pt-2 border-t border-slate-100 dark:border-slate-800">
+                          <MathRenderer text={hints[lvl]} className="text-xs text-slate-700 dark:text-slate-300 leading-relaxed" />
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* TAB 3: DOUBT CHAT */}
           {activeTab === 'chat' && (
             <div className="flex flex-col h-full space-y-3">
               <div className="flex-1 space-y-3 max-h-[350px] overflow-y-auto pr-1">

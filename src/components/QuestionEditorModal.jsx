@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { Edit3, X, Save, Eye, Sparkles, Check } from 'lucide-react';
+import { Edit3, X, Save, Eye, Sparkles, Check, Image as ImageIcon } from 'lucide-react';
 import MathRenderer from './MathRenderer';
+import QuestionImageUploader from './QuestionImageUploader';
+import QuestionLivePreview from './QuestionLivePreview';
 import { getOfficialSections, getOfficialTopicsForSection, getOfficialSubtopicsForTopic, normalizeSectionTitle } from '../utils/syllabusTaxonomy.js';
 
 export default function QuestionEditorModal({ question, onSave, onClose }) {
@@ -15,8 +17,10 @@ export default function QuestionEditorModal({ question, onSave, onClose }) {
     subtopic: question.subtopic || '',
     type: question.type || 'MCQ',
     marks: question.marks || 1,
+    difficulty: question.difficulty || (question.marks === 2 ? 'Moderate' : 'Easy'),
     negative_marks: question.negative_marks || (question.type === 'MCQ' ? (question.marks === 2 ? 0.67 : 0.33) : 0),
     question: question.question || '',
+    image_url: question.image_url || question.image || '',
     options: question.options ? { ...question.options } : { A: '', B: '', C: '', D: '' },
     correct_answer: question.correct_answer || 'A',
     solution: question.solution || question.explanation || '',
@@ -52,6 +56,8 @@ export default function QuestionEditorModal({ question, onSave, onClose }) {
     const updated = {
       ...question,
       ...formData,
+      difficulty: formData.difficulty || 'Moderate',
+      image_url: formData.image_url ? formData.image_url.trim() : null,
       options: formData.type === 'NAT' ? null : formData.options,
       disable_hints: Boolean(formData.disable_hints),
       hints: hintsArr.length > 0 ? hintsArr : null
@@ -114,7 +120,7 @@ export default function QuestionEditorModal({ question, onSave, onClose }) {
         <form onSubmit={handleSubmit} className="flex-1 overflow-y-auto p-6 space-y-6">
           
           {/* Metadata Row */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 bg-slate-50 dark:bg-slate-800/40 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 text-xs">
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 bg-slate-50 dark:bg-slate-800/40 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 text-xs">
             <div>
               <label className="block font-bold text-slate-400 uppercase tracking-wider mb-1">Section</label>
               <select
@@ -165,6 +171,19 @@ export default function QuestionEditorModal({ question, onSave, onClose }) {
               >
                 <option value={1}>1 Mark</option>
                 <option value={2}>2 Marks</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="block font-bold text-slate-400 uppercase tracking-wider mb-1">Difficulty</label>
+              <select
+                value={formData.difficulty || 'Moderate'}
+                onChange={(e) => handleTextChange('difficulty', e.target.value)}
+                className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-3 py-2 text-slate-900 dark:text-slate-100 font-bold outline-none"
+              >
+                <option value="Easy">Easy</option>
+                <option value="Moderate">Moderate</option>
+                <option value="Difficult">Difficult</option>
               </select>
             </div>
 
@@ -232,28 +251,21 @@ export default function QuestionEditorModal({ question, onSave, onClose }) {
               </label>
             </div>
             <textarea
-              rows={7}
+              rows={6}
               value={formData.question}
               onChange={(e) => handleTextChange('question', e.target.value)}
               placeholder="Enter complete question statement here... Supports LaTeX equations (e.g. \( E = mc^2 \) or $$ \int_0^1 f(x)dx $$)."
-              className="w-full min-h-[160px] bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-2xl p-4 text-sm font-sans text-slate-900 dark:text-slate-100 outline-none focus:ring-2 focus:ring-purple-500 leading-relaxed placeholder:text-slate-400 placeholder:text-xs sm:placeholder:text-sm resize-y"
+              className="w-full min-h-[140px] bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 rounded-2xl p-4 text-sm font-sans text-slate-900 dark:text-slate-100 outline-none focus:ring-2 focus:ring-purple-500 leading-relaxed placeholder:text-slate-400 placeholder:text-xs sm:placeholder:text-sm resize-y"
             />
-
-            {showLivePreview && (
-              <div className="p-4 rounded-2xl bg-purple-50/50 dark:bg-purple-950/20 border border-purple-200 dark:border-purple-900/50 space-y-1 shadow-xs">
-                <div className="flex items-center justify-between text-[10px] font-extrabold uppercase tracking-wider text-purple-600 dark:text-purple-400">
-                  <span className="flex items-center gap-1">
-                    <Sparkles className="w-3 h-3" />
-                    <span>Live Rendered Question Statement Preview</span>
-                  </span>
-                  <span className="text-slate-400 font-mono">KaTeX Live</span>
-                </div>
-                <div className="text-base font-semibold text-slate-900 dark:text-slate-100 leading-relaxed pt-1">
-                  <MathRenderer content={formData.question || 'Type question statement above to see live KaTeX rendering...'} />
-                </div>
-              </div>
-            )}
           </div>
+
+          {/* Question Diagram / Image Upload from Local Storage or URL */}
+          <QuestionImageUploader
+            imageUrl={formData.image_url}
+            onChange={(url) => handleTextChange('image_url', url)}
+            onClear={() => handleTextChange('image_url', '')}
+            label="Question Diagram / Figure (Device Storage or URL)"
+          />
 
           {/* MCQ / MSQ Options Editor */}
           {formData.type !== 'NAT' && (
@@ -376,6 +388,16 @@ export default function QuestionEditorModal({ question, onSave, onClose }) {
               </div>
             )}
           </div>
+
+          {/* Comprehensive Student-Grade Live Preview */}
+          {showLivePreview && (
+            <div className="pt-2">
+              <QuestionLivePreview
+                formData={formData}
+                paperTitle={`GATE ${formData.year || '2027'}`}
+              />
+            </div>
+          )}
 
           {/* Submit Footer */}
           <div className="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">

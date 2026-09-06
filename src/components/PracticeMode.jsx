@@ -31,12 +31,15 @@ import {
   Minus,
   Grid,
   BarChart3,
-  X
+  X,
+  Flag
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import { evaluateQuestion } from '../utils/scoring.js';
 import { exportQuestionsToPdf } from '../services/questionPdfExportService.js';
 import AITutorModal from './AITutorModal';
+import QuestionReportModal from './QuestionReportModal';
+import SimilarQuestionsDrawer from './SimilarQuestionsDrawer';
 import PracticeAnalysisView from './PracticeAnalysisView';
 import { GATE_AG_SYLLABUS } from '../data/syllabus';
 import { detectNATUnitMismatch } from '../utils/hintGenerator';
@@ -103,7 +106,10 @@ export default function PracticeMode({
   const [selectedType, setSelectedType] = useState('All'); // 'All' | 'MCQ' | 'MSQ' | 'NAT'
   const [selectedYear, setSelectedYear] = useState('All');
   const [selectedMarks, setSelectedMarks] = useState('All');
+  const [selectedDifficulty, setSelectedDifficulty] = useState('All'); // 'All' | 'Easy' | 'Moderate' | 'Difficult'
   const [selectedStatusFilter, setSelectedStatusFilter] = useState('All');
+  const [reportingQuestion, setReportingQuestion] = useState(null);
+  const [showSimilarDrawer, setShowSimilarDrawer] = useState(false);
   const [activeSolutionTab, setActiveSolutionTab] = useState('solution'); // 'solution' | 'notes'
   const [showPaletteDrawer, setShowPaletteDrawer] = useState(false);
 
@@ -132,6 +138,24 @@ export default function PracticeMode({
 
   // Active question pool generated for the current practice session
   const [activePracticePool, setActivePracticePool] = useState([]);
+
+  // Live sync: update activePracticePool if an admin edits a question
+  useEffect(() => {
+    const handleQuestionLiveUpdate = (e) => {
+      const updatedQ = e.detail;
+      if (!updatedQ || !updatedQ.id) return;
+      setActivePracticePool(prev => {
+        const idx = prev.findIndex(q => q.id === updatedQ.id);
+        if (idx === -1) return prev;
+        const copy = [...prev];
+        copy[idx] = { ...copy[idx], ...updatedQ };
+        return copy;
+      });
+    };
+
+    window.addEventListener('gate_ag_question_updated', handleQuestionLiveUpdate);
+    return () => window.removeEventListener('gate_ag_question_updated', handleQuestionLiveUpdate);
+  }, []);
 
   // Per-question timer accumulator { [qId]: elapsedSeconds }
   const [questionTimes, setQuestionTimes] = useState({});
@@ -195,7 +219,8 @@ export default function PracticeMode({
   const handleOpenPastAttemptAnalysis = (att) => {
     const responses = Array.isArray(att.question_responses) ? att.question_responses : [];
     const evaluations = responses.map((r, idx) => {
-      const matched = questions.find(q => q.id === r.question_id || q.id === r.qId) || {};
+      const pool = (combinedPool && combinedPool.length > 0) ? combinedPool : questions;
+      const matched = pool.find(q => q.id === r.question_id || q.id === r.qId) || {};
       const qObj = {
         id: r.question_id || matched.id || `q_${idx + 1}`,
         qnum: r.qnum || matched.qnum || (idx + 1),
@@ -208,6 +233,8 @@ export default function PracticeMode({
         solution: matched.solution || r.solution || r.explanation || '',
         explanation: matched.explanation || r.explanation || r.solution || '',
         marks: r.marks || matched.marks || 1,
+        image: matched.image_url || matched.image || r.image || null,
+        image_url: matched.image_url || matched.image || r.image || null,
         tolerance: matched.tolerance || r.tolerance || 0.05
       };
 
@@ -349,10 +376,15 @@ export default function PracticeMode({
     return selectedSummary.reduce((sum, item) => sum + item.count, 0);
   }, [selectedSummary]);
 
-  // Active question pool in practice mode (with in-session status filters applied)
+  // Active question pool in practice mode (with in-session status and difficulty filters applied)
   const filteredQuestions = useMemo(() => {
     const baseList = activePracticePool.length > 0 ? activePracticePool : combinedPool;
     return baseList.filter(q => {
+      // In-session difficulty filter
+      if (selectedDifficulty !== 'All') {
+        const qDiff = (q.difficulty || 'Moderate').toLowerCase();
+        if (qDiff !== selectedDifficulty.toLowerCase()) return false;
+      }
       // In-session status filters
       if (selectedStatusFilter === 'Bookmarked') return bookmarks.includes(q.id);
       if (selectedStatusFilter === 'Unattempted') return !submittedState[q.id]?.isSubmitted;
@@ -360,7 +392,7 @@ export default function PracticeMode({
       if (selectedStatusFilter === 'Incorrect') return submittedState[q.id]?.isSubmitted && !submittedState[q.id]?.isCorrect;
       return true;
     });
-  }, [activePracticePool, combinedPool, selectedStatusFilter, bookmarks, submittedState]);
+  }, [activePracticePool, combinedPool, selectedDifficulty, selectedStatusFilter, bookmarks, submittedState]);
 
   const currentQ = filteredQuestions[currentIndex];
 
@@ -1505,6 +1537,28 @@ export default function PracticeMode({
             </div>
           </div>
 
+          {/* Difficulty Filter */}
+          <div className="flex items-center gap-2">
+            <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+              Difficulty:
+            </span>
+            <div className="flex flex-wrap items-center gap-1.5 text-xs">
+              {['All', 'Easy', 'Moderate', 'Difficult'].map((diff) => (
+                <button
+                  key={diff}
+                  onClick={() => setSelectedDifficulty(diff)}
+                  className={`px-3 py-1 rounded-full text-xs font-bold transition border ${
+                    selectedDifficulty === diff
+                      ? 'bg-purple-600 text-white border-purple-600 shadow-xs'
+                      : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700'
+                  }`}
+                >
+                  {diff}
+                </button>
+              ))}
+            </div>
+          </div>
+
           <button
             onClick={() => {
               if (filteredQuestions.length === 0) return;
@@ -1562,6 +1616,15 @@ export default function PracticeMode({
               </span>
               <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
                 {currentQ.marks} {currentQ.marks === 1 ? 'Mark' : 'Marks'}
+              </span>
+              <span className={`text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-md border ${
+                (currentQ.difficulty || 'Moderate').toLowerCase() === 'easy'
+                  ? 'bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800'
+                  : (currentQ.difficulty || 'Moderate').toLowerCase() === 'difficult'
+                  ? 'bg-rose-100 dark:bg-rose-950 text-rose-700 dark:text-rose-300 border-rose-200 dark:border-rose-800'
+                  : 'bg-amber-100 dark:bg-amber-950 text-amber-700 dark:text-amber-300 border-amber-200 dark:border-amber-800'
+              }`}>
+                {currentQ.difficulty || 'Moderate'}
               </span>
 
               {/* Real-time Per-Question Cumulative Timer (Never resets to zero on revisit!) */}
@@ -1621,13 +1684,17 @@ export default function PracticeMode({
               <MathRenderer content={currentQ.question} />
             </div>
 
-            {/* Question Image if present */}
-            {currentQ.image && (
-              <div className="my-4 p-2 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl inline-block max-w-full">
+            {/* Question Image / Diagram if present */}
+            {(currentQ.image_url || currentQ.image) && (
+              <div className="my-4 p-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl inline-block max-w-full text-center">
+                <div className="text-[10px] font-bold uppercase tracking-wider text-blue-700 dark:text-blue-400 mb-2 flex items-center justify-center gap-1.5">
+                  <ImageIcon className="w-3.5 h-3.5" />
+                  <span>Question Figure / Diagram</span>
+                </div>
                 <img 
-                  src={currentQ.image} 
-                  alt="Question Diagram" 
-                  className="max-h-72 max-w-full object-contain rounded-lg"
+                  src={currentQ.image_url || currentQ.image} 
+                  alt={`Diagram for Q${currentQ.qnum || ''}`} 
+                  className="max-h-80 max-w-full mx-auto object-contain rounded-lg bg-white shadow-xs border border-slate-100 dark:border-slate-800"
                 />
               </div>
             )}
@@ -1817,6 +1884,24 @@ export default function PracticeMode({
                   <Sparkles className="w-3.5 h-3.5" />
                   <span>✨ Ask Gemini AI</span>
                 </button>
+
+                <button
+                  onClick={() => setShowSimilarDrawer(true)}
+                  className="h-10.5 px-3.5 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/80 hover:bg-indigo-100 dark:hover:bg-indigo-900/60 font-bold text-xs transition cursor-pointer inline-flex items-center justify-center gap-1.5"
+                  title="Practice similar GATE questions"
+                >
+                  <Layers className="w-3.5 h-3.5" />
+                  <span>Similar Qs</span>
+                </button>
+
+                <button
+                  onClick={() => setReportingQuestion(currentQ)}
+                  className="h-10.5 px-3 rounded-xl bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 hover:text-rose-600 dark:hover:text-rose-400 border border-slate-200 dark:border-slate-700 font-medium text-xs transition cursor-pointer inline-flex items-center justify-center gap-1.5"
+                  title="Report mistake or typo in this question"
+                >
+                  <Flag className="w-3.5 h-3.5" />
+                  <span className="hidden sm:inline">Report</span>
+                </button>
               </div>
 
               <div className="flex items-center gap-2">
@@ -1932,6 +2017,34 @@ export default function PracticeMode({
           question={activeAITutorQuestion}
           studentAnswer={userAnswers[activeAITutorQuestion.id] || null}
           isCorrect={submittedState[activeAITutorQuestion.id]?.isCorrect || null}
+        />
+      )}
+
+      {/* Similar Questions & Concept Variations Drawer */}
+      {showSimilarDrawer && currentQ && (
+        <SimilarQuestionsDrawer
+          isOpen={showSimilarDrawer}
+          onClose={() => setShowSimilarDrawer(false)}
+          currentQuestion={currentQ}
+          onSelectQuestion={(targetQ) => {
+            const foundIdx = filteredQuestions.findIndex(q => q.id === targetQ.id);
+            if (foundIdx !== -1) {
+              setCurrentIndex(foundIdx);
+            } else {
+              setActivePracticePool(prev => [targetQ, ...prev]);
+              setCurrentIndex(0);
+            }
+          }}
+        />
+      )}
+
+      {/* Question Error / Typo Reporting Modal */}
+      {reportingQuestion && (
+        <QuestionReportModal
+          isOpen={Boolean(reportingQuestion)}
+          onClose={() => setReportingQuestion(null)}
+          question={reportingQuestion}
+          studentId={currentStudent?.admission_no || currentStudent?.email || currentStudent?.id || 'guest'}
         />
       )}
 

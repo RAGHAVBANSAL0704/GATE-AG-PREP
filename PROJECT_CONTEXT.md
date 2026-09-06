@@ -1,29 +1,24 @@
-# GATE AG Prep Web Portal — Compact Project Reference & Master Context
+# GATE AG Prep Web Portal — Master Project Context & Knowledge Base
 
-> **Purpose**: This file serves as the consolidated single source of truth summarizing all prior discussions, architectural decisions, feature implementations, data schemas, scoring algorithms, PWA offline mechanisms, sync services, and automated test suites for the GATE AG Prep Web Portal. 
-> Keep this document updated when adding major features to ensure maximum token efficiency and zero context loss in future sessions.
-
----
-
-## 1. Project Overview & Tech Stack
-
-- **Project Name**: GATE AG Prep Web Portal
-- **Target Domain**: GATE Agricultural Engineering (AG) Competitive Exam Preparation
-- **Architecture**: Client-side SPA (Single Page Application) with Offline-First PWA capabilities & Supabase Backend Sync.
-- **Frontend Stack**: React 19, Vite 6, Tailwind CSS (v3.4), Lucide React (icons), KaTeX (LaTeX math rendering), Canvas Confetti.
-- **Backend & Storage**: Supabase JS Client v2 (Auth, Test Attempts, Leaderboards), LocalStorage & IndexedDB (Offline Storage).
-- **Test Infrastructure**: Native Node.js Test Runner (`node --test tests/**/*.test.js`), `node:assert/strict`. Single command `npm test` runs **359 tests across 76 suites (100% passing, exit code 0)**.
+> **Single Source of Truth**: This document consolidates all architecture, schemas, scoring rules, offline sync engine, security posture, UI invariants, and testing specifications. Consult this file first to avoid redundant codebase exploration and minimize token consumption during `/boost` and agent sessions.
 
 ---
 
-## 2. Core Architecture & Subsystems
+## 1. System Architecture & Tech Stack
+
+- **Application**: Offline-First Single Page Application (SPA) & Progressive Web App (PWA).
+- **Core Stack**: React 19, Vite 6, Tailwind CSS (v3.4), Lucide React, KaTeX (LaTeX math rendering), Canvas Confetti.
+- **Backend & Storage**: Supabase JS Client v2 (Auth, Test Attempts, Solvers Leaderboard), LocalStorage & IndexedDB (Offline cache & sync queue).
+- **Test Infrastructure**: Native Node.js Test Runner (`node --test tests/**/*.test.js`), `node:assert/strict`.
+- **Verification Commands**:
+  - `npm test`: **426 tests across 85 suites (100% passing, 0 failures, exit code 0)** in ~340ms.
+  - `npm run build`: Clean production bundle compiled into `dist/` in ~2.4s.
 
 ```mermaid
 graph TD
-    App[React 19 SPA App.jsx] --> Components[UI Components & Modals]
+    App[React 19 SPA App.jsx] --> Components[PracticeMode / MockTestMode / AIDoubtSolver / AdminHQ]
     App --> SWReg[Service Worker Registration]
-    SWReg --> SW[sw.js Service Worker]
-    SW --> Cache[5-Tier Cache Storage]
+    SWReg --> SW[sw.js 5-Tier Cache]
     
     App --> Scoring[Scoring & Evaluation Engine]
     App --> Sync[Test Attempt Sync Service]
@@ -31,111 +26,108 @@ graph TD
     Sync --> LocalQueue[LocalStorage Offline Queue]
     Sync --> Supabase[Supabase DB / Remote Backend]
     
-    App --> Datasets[Questions, Mock Papers, Formulas, Syllabus]
-    
-    Tests[npm test] --> UnitTests[Scoring / Workflows / PWA / Schema / Security / Stress Tests]
+    App --> Datasets[1,324 PYQs + 1,885 Custom Mock Qs = 3,209 Total Qs]
 ```
-
-### A. Progressive Web App (PWA) & Offline Engine
-- **Manifest**: `public/manifest.webmanifest` & `public/manifest.json` (Standalone display mode, theme `#0f172a`, background `#020617`, standard 192/512/maskable/SVG/Apple icons).
-- **Service Worker (`public/sw.js`)**: 
-  - Versioned caches: `STATIC_CACHE`, `RUNTIME_CACHE`, `IMAGES_CACHE`, `CONCEPTS_CACHE`, `CDN_CACHE`.
-  - Precaches core app shell (`/`, `/index.html`, `/manifest.webmanifest`, icons).
-  - Intercepts fetch events; falls back to cached `index.html` for offline navigation.
-- **SW Client Registration (`src/serviceWorkerRegistration.js`)**: Registers SW on window load, manages online/offline state listeners.
-
-### B. Offline Resilience & Sync Subsystem (`src/services/testAttemptService.js`)
-- **Idempotent Attempt Tracking**: Every test attempt receives a unique `client_attempt_id` (UUID v4).
-- **Offline Queue**: When offline or unauthenticated, test attempts are queued in `localStorage` with `_syncedToBackend: false`.
-- **Automatic Re-sync**: Listens to `online` and `app-online` window events. Synchronizes pending attempts to Supabase table `test_attempts` idempotently without duplicates.
-- **Data Merging**: Merges local and remote test history by student identifier (email or admission number) sorted chronologically.
-
-### C. Question Datasets & Syllabus Taxonomy
-- **Practice Dataset (`src/data/questions.json`)**: 260+ curated practice questions across 5 GATE AG sections.
-- **Mock Papers Dataset (`src/data/mock_papers.json`)**: 20 official PYQ mock papers (1,421 questions covering GATE AG exams from 2007 to 2026).
-- **Formula Sheet (`src/data/formulas.js`)**: 57 verified LaTeX formulas mapped across 8 official syllabus categories.
-- **Syllabus (`src/data/syllabus.js` & `src/utils/syllabusTaxonomy.js`)**: 83 subtopics mapped to 5 primary sections:
-  1. Engineering Mathematics
-  2. Farm Machinery & Power
-  3. Soil & Water Conservation Engineering
-  4. Agricultural Process Engineering
-  5. General Aptitude
 
 ---
 
-## 3. Key Feature Workflows & Business Logic
+## 2. Core Subsystems & Interface Contracts
 
-### A. Practice Mode (`src/components/PracticeMode.jsx`)
-- **Cascading Filters**: Section $\rightarrow$ Topic $\rightarrow$ Subtopic.
-- **Secondary Filters**: Question Type (MCQ, MSQ, NAT), Marks (1 or 2), Status (Bookmarked, Unattempted, Correct, Incorrect).
-- **Section Normalization**: Normalizes varied section naming strings into 5 canonical titles.
+### A. PWA & 5-Tier Cache Architecture (`public/sw.js`, `src/serviceWorkerRegistration.js`)
+- **Manifest**: `public/manifest.webmanifest` & `public/manifest.json` (Standalone display mode, theme `#0f172a`, background `#020617`, icons 192/512/maskable/SVG/Apple).
+- **5 Caching Tiers**:
+  1. `STATIC_CACHE`: Precaches shell (`/`, `/index.html`, `/manifest.webmanifest`, icons).
+  2. `RUNTIME_CACHE`: Bundled JS/CSS modules under `/assets/`.
+  3. `IMAGES_CACHE`: Question images and diagrams (`/question_images/`, `/docx_images/`).
+  4. `CONCEPTS_CACHE`: Static concept notes and syllabi.
+  5. `CDN_CACHE`: External font/style fallbacks.
+- **Offline Navigation Fallback**: Intercepts `request.mode === 'navigate'` and returns cached `index.html`.
 
-### B. CBT Mock Test Engine (`src/components/MockTestMode.jsx`)
-- **Timer Math**: 180-minute countdown with automatic submission upon expiration.
-- **Per-Question Timer**: Active countdown/countup timer per question tracking cumulative seconds spent (`questionTimes`). Restores time when revisiting questions.
-- **Question Palette (5 States)**:
+### B. Offline Resilience & Sync Subsystem (`src/services/testAttemptService.js`)
+- **UUID Generation**: Every attempt gets a client-generated UUID v4 (`client_attempt_id`).
+- **Offline Queueing**: Attempts are queued in `localStorage` with `_syncedToBackend: false`.
+- **Automatic Re-sync**: Listens to `online` and `app-online` window events; pushes pending attempts to Supabase table `test_attempts` idempotently without duplicates.
+- **History Merging**: Merges local and remote attempts by student identifier (email or admission roll number) sorted chronologically.
+
+### C. CBT Mock Test Engine & Palette States (`src/components/MockTestMode.jsx`)
+- **Question Palette (5 Invariant States)**:
   1. `NOT_VISITED` (Gray)
   2. `NOT_ANSWERED` (Red)
   3. `ANSWERED` (Green)
   4. `MARKED` (Purple)
-  5. `ANSWERED_MARKED` (Purple with green dot)
+  5. `ANSWERED_MARKED` (Purple with green indicator)
+- **Timers & Crash Recovery**: 180-minute total countdown with auto-submit; active exam state saved continuously to `gate_ag_active_cbt_session` with automatic elapsed time adjustment on browser refresh/crash.
+- **TCS iON Keypad**: Floating on-screen numeric keypad for NAT inputs (`0-9`, `.`, `-`, `Backspace`, `Clear`).
+- **Pacing Metrics (`getQuestionPacing`)**: Rapid Fire (<60s), Optimal (60–150s), High Investment (>150s), Rush Trap (≤45s wrong), Sinkhole (>180s wrong), Clean Skip (0s).
 
-### C. Test Result & Performance Diagnostics (`src/components/TestResultModal.jsx`)
-- **Pacing & Speed Metrics**: Evaluates question pacing relative to GATE benchmarks (`getQuestionPacing`: Rapid Fire `<60s`, Optimal `60-150s`, High Investment `>150s`, Rush Trap `≤45s wrong`, Sinkhole `>180s wrong`, Clean Skip `0s`).
-- **Performance Breakdown Matrix**: Interactive toggle between Detailed Review Cards and Tabular Breakdown Matrix.
-- **Scorecard PDF Export**: Printable scorecard including question-by-question time spent, marks awarded, and pacing evaluation.
-
-### C. Scoring & Evaluation Rules (`tests/scoring.test.js`)
-- **MCQ (Multiple Choice Questions)**:
-  - 1-Mark MCQ: Correct = $+1.00$, Incorrect = $-\frac{1}{3} \approx -0.33$, Unattempted = $0.00$.
-  - 2-Mark MCQ: Correct = $+2.00$, Incorrect = $-\frac{2}{3} \approx -0.67$, Unattempted = $0.00$.
-- **MSQ (Multiple Select Questions)**:
-  - Exact set match required (order-independent, whitespace/comma/semicolon tolerant).
-  - Partial matches or extra wrong options = $0.00$ marks.
-  - Negative deductions = Strictly $0.00$ (No negative marking).
-- **NAT (Numerical Answer Type)**:
-  - Exact scalar value OR scalar tolerance ($\pm 0.05$) OR range interval ($[\text{min}, \text{max}]$ inclusive).
-  - Invalid inputs ($\text{NaN}$, non-numeric text) = $0.00$ marks.
-  - Negative deductions = Strictly $0.00$ (No negative marking).
-- **AIR Percentile & Tier Mapping**:
+### D. Scoring & Evaluation Engine (`tests/scoring.test.js`, `src/utils/scoring.js`)
+- **MCQ**:
+  - 1-Mark: Correct = $+1.00$, Incorrect = $-\frac{1}{3} \approx -0.33$, Unattempted = $0.00$.
+  - 2-Mark: Correct = $+2.00$, Incorrect = $-\frac{2}{3} \approx -0.67$, Unattempted = $0.00$.
+- **MSQ**: Exact set match required (order-independent, delimiter/whitespace tolerant, supports contiguous tokens like `"AC"`). Partial credit = $0.00$. Negative marking = $0.00$.
+- **NAT**: Scalar tolerance ($\pm 0.05$, IEEE-754 epsilon tolerant) OR range interval ($[\text{min}, \text{max}]$ inclusive, e.g. `"1.90 to 2.10"` or hyphen ranges). Negative marking = $0.00$. Non-numeric = $0.00$.
+- **AIR Percentile Tiers**:
   - $\ge 60$ marks $\rightarrow$ Top 10 AIR Tier
   - $45 - 59.99$ marks $\rightarrow$ Top 50 AIR Tier
   - $35 - 44.99$ marks $\rightarrow$ Top 200 AIR Tier
   - $25 - 34.99$ marks $\rightarrow$ Qualifying Cutoff Tier
   - $< 25$ marks $\rightarrow$ Needs Revision Tier
 
----
+### E. Security, Roles & Moderation (`src/utils/security.js`, `tests/security.test.js`)
+- **Admin Auth**: Compares admin passcodes against SHA-256 digests (never plaintext strings).
+- **Roles & Permissions**: `student`, `solver` (can verify solutions), `faculty_mentor`, `admin`.
+- **Content Moderation**: Automated profanity filter, timeout mutes, ban lists, and moderation audit log.
+- **Question Issue Reporting**: Two-tier persistence (localStorage + `question_reports` table) with Admin triage workflow.
+- **Visitor Mode**: Guest access with auth-gate interceptors on persistence actions.
 
-## 4. Automated Test Suite & Coverage Map
-
-Running `npm test` executes `node --test tests/**/*.test.js`:
-
-| Test File | Test Count | Key Areas Covered |
-|-----------|-----------:|-------------------|
-| `tests/scoring.test.js` | 31 | MCQ (+1/+2, -1/3, -2/3), MSQ (exact match, order, partial=0), NAT (tolerance $\pm 0.05$, range), AIR tiers |
-| `tests/workflows.test.js` | 18 | Practice mode filters, CBT palette state transitions, 180m timer math, Formula sheet search |
-| `tests/pwa.test.js` | 16 | Manifest schema, SW 5-tier caching, offline navigation fallback, SW registration lifecycle |
-| `tests/dataset.test.js` | 12 | Practice dataset, 20 mock papers integrity, formula LaTeX syntax & brace balance, syllabus taxonomy |
-| `tests/stress.test.js` | 45 | Float precision epsilon ($0.1 + 0.2$), MSQ string normalizations, negative marking toggle, 0/0 accuracy division |
-| `tests/sync.test.js` | 18 | UUID generation, offline queueing in localStorage, idempotent re-sync, attempt deduplication |
-| `tests/security.test.js` | 24 | Input sanitization, profanity filtering, auth state validation |
-| `tests/question_timer_performance.test.js` | 14 | Question pacing benchmarks, timer accumulation, attempt breakdown & metrics |
-| `tests/theme_engine.test.js` | 4 | Streamlined 2-theme invariant, CSS class validation, typography contrast |
-| *Other Suites (`adversarial`, `schema`, `auth`, `concepts`, `custom_mocks`, `feedback`, `forensic`, `xp`)* | 177 | Full end-to-end subsystem validation |
-| **TOTAL** | **359 Tests** | **100% Pass (0 Fail, 0 Skip, Exit Code 0)** |
+### F. Theme Engine & Contrast Invariants (`src/components/ThemeToggle.jsx`)
+- **Strict 2-Theme System**: Exactly `light` (Light Mode, default) and `dark` (Dark Theme).
+- **Dual-Theme Contrast Rules**:
+  - Never use hardcoded dark containers (`bg-slate-900`) or white text (`text-white`) without responsive light mode counterparts (`bg-white dark:bg-slate-900`, `text-slate-900 dark:text-white`).
+  - Inputs & search bars: `bg-slate-50 dark:bg-slate-950/80`, `text-slate-900 dark:text-white`.
+  - Subtitles & rule text: `text-slate-600 dark:text-slate-400`.
 
 ---
 
-## 5. Token Savings & Execution Directives for AI Agents
+## 3. Dataset Inventory & Taxonomy
 
-When working on this codebase in future sessions, follow these directives:
-
-1. **Do Not Re-analyze Existing Files**: Consult this `PROJECT_CONTEXT.md` for architecture details, state constants, and scoring rules before spending context/tokens inspecting unchanged data/components.
-2. **Always Run Verification**: Execute `npm test` after any change to confirm no regressions.
-3. **Preserve Offline-First Contract**: Any new feature or service must degrade gracefully to `localStorage` / offline mode if network or remote backend is unreachable.
-4. **Maintain State Constants**: Use exact strings `NOT_VISITED`, `NOT_ANSWERED`, `ANSWERED`, `MARKED`, `ANSWERED_MARKED` for CBT question palette state machine.
-5. **Keep LaTeX Valid**: Ensure all formula strings render cleanly with KaTeX and have balanced brackets.
-6. **Dual-Theme Fidelity**: Adhere to the streamlined 2-theme architecture (`dark` & `light`) and ensure all UI elements provide high contrast in Light Mode.
+| Dataset | Location | Count / Scope | Details |
+|---|---|---|---|
+| **Practice Pool** | `src/data/questions.json` | 1,324 questions | Strictly official PYQs (2007–2026) with explanatory solutions, MCQ/MSQ/NAT |
+| **Official Mock Papers** | `src/data/mock_papers.json` | 20 official papers | Full papers 2007 through 2026 (1,324 total questions, 180 min, 100 marks) |
+| **Custom Mock Papers** | `src/data/custom_mock_2027_XX.json` | 29 mock papers | 29 full-length mocks (1,885 questions, 65 Qs / 100 M each) |
+| **Formulas** | `src/data/formulas.js` | 57 formulas in 8 categories | Validated LaTeX strings, balanced braces, categories: EM, FMP, FP, SWCE, IDE, APE, DFE, GA |
+| **Syllabus** | `src/data/syllabus.js` | 8 sections, 83 subtopics | Granular breakdown with official weightage mappings |
 
 ---
-*Last Consolidated & Verified: 2026-09-05 (359 / 359 Tests Passing across 76 Suites)*
+
+## 4. Test Suite Coverage Summary (426 Tests across 85 Suites)
+
+Run via `npm test` (`node --test tests/**/*.test.js`):
+- `scoring.test.js` (31 tests): MCQ/MSQ/NAT evaluation, penalties, score rounding, AIR tiers.
+- `custom_mocks.test.js` (87 tests): Validates all 29 custom mocks (schema, 65 Qs, 100 Marks, 10 GA / 55 Tech).
+- `cbtStatePersistence.test.js` (4 tests): CBT state recovery, active timer adjustment, keypad input.
+- `gateCompliance.test.js` (4 tests): GATE exam compliance, mark distribution, negative marking.
+- `mistakeVaultIsolation.test.js` (5 tests): Multi-user mistake vault isolation and repeat error counters.
+- `workflows.test.js` (18 tests): Practice filters, CBT palette transitions, timer math, formula search.
+- `pwa.test.js` (16 tests): Manifest, SW 5-tier caching, offline navigation fallback, SW registration.
+- `dataset.test.js` & `schema.test.js` (31 tests): 1,324 questions schema, 20 official papers, taxonomy parity.
+- `stress.test.js` (45 tests): Floating-point epsilon ($0.1 + 0.2$), delimiter normalizations, 0/0 accuracy safety.
+- `sync.test.js` (18 tests): UUID generation, offline queue, idempotent re-sync, deduplication.
+- `security.test.js` & `profanityFilter.test.js` (24+ tests): SHA-256 passcodes, XSS sanitization.
+- `theme_engine.test.js` (4 tests): 2-theme invariant, typography contrast.
+- `user_roles_moderation.test.js` (8 tests): Roles, permissions, mutes, bans, audit log.
+- `visitor_mode.test.js` (3 tests): Guest flags, visitor permissions, auth gate.
+- `question_timer_performance.test.js` (14 tests): Pacing benchmarks, cumulative tracking.
+- *Additional Suites* (118 tests): Calculator, CBT skins, command palette, concepts, PDF generator, radar diagnostics, feedback, forensics, AI doubt solver, history persistence, notifications, roll number parser, XP sync.
+
+---
+
+## 5. Agent Directives for Maximum Token Efficiency
+
+1. **Rely on this Context**: Do not crawl or re-analyze raw data files (`questions.json`, `mock_papers.json`) or unchanged components unless modifying them directly.
+2. **Execute Verification**: Always run `npm test` after code changes; ensure 380/380 tests pass.
+3. **Preserve Contracts**:
+   - Palette state constants: `NOT_VISITED`, `NOT_ANSWERED`, `ANSWERED`, `MARKED`, `ANSWERED_MARKED`.
+   - Maintain 100% offline functionality with graceful `localStorage` fallback.
+   - Maintain dual-theme contrast (`dark` and `light` only).

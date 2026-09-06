@@ -156,6 +156,52 @@ create policy "Allow reading test attempts" on public.test_attempts for select u
 create policy "Allow inserting test attempts" on public.test_attempts for insert with check (student_name is not null or student_id is not null);
 create policy "Allow updating own test attempts" on public.test_attempts for update using (client_attempt_id is not null or id is not null);
 
--- 4. Reload PostgREST Schema Cache so newly added columns (like username) are immediately detected
+-- 4. Create Question Reports Table
+create table if not exists public.question_reports (
+  id text primary key,
+  question_id text not null,
+  paper_title text,
+  question_text text,
+  issue_type text not null,
+  description text,
+  student_name text,
+  student_email text,
+  status text default 'pending' check (status in ('pending', 'reviewed', 'resolved', 'rejected')),
+  created_at timestamptz default now(),
+  updated_at timestamptz default now()
+);
+
+create index if not exists idx_question_reports_status on public.question_reports(status);
+create index if not exists idx_question_reports_question_id on public.question_reports(question_id);
+
+alter table public.question_reports enable row level security;
+drop policy if exists "Allow reading question reports" on public.question_reports;
+drop policy if exists "Allow submitting question reports" on public.question_reports;
+drop policy if exists "Allow updating question reports" on public.question_reports;
+
+create policy "Allow reading question reports" on public.question_reports for select using (true);
+create policy "Allow submitting question reports" on public.question_reports for insert with check (true);
+create policy "Allow updating question reports" on public.question_reports for update using (true);
+
+-- 5. Create Student Mistake Vault Table
+create table if not exists public.student_mistake_vault (
+  id uuid primary key default gen_random_uuid(),
+  student_identifier text unique not null,
+  vault_data jsonb not null default '{}'::jsonb,
+  created_at timestamptz default now(),
+  updated_at timestamptz default now()
+);
+
+create unique index if not exists idx_mistake_vault_student_id on public.student_mistake_vault(student_identifier);
+
+alter table public.student_mistake_vault enable row level security;
+drop policy if exists "Allow reading mistake vault" on public.student_mistake_vault;
+drop policy if exists "Allow upserting mistake vault" on public.student_mistake_vault;
+
+create policy "Allow reading mistake vault" on public.student_mistake_vault for select using (true);
+create policy "Allow upserting mistake vault" on public.student_mistake_vault for insert with check (student_identifier is not null);
+create policy "Allow updating mistake vault" on public.student_mistake_vault for update using (student_identifier is not null);
+
+-- 6. Reload PostgREST Schema Cache so newly added columns and tables are immediately detected
 NOTIFY pgrst, 'reload schema';
 

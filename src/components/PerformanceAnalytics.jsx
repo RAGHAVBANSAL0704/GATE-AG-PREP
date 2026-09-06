@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { 
   BarChart3, 
   TrendingUp, 
@@ -40,7 +40,8 @@ function formatAttemptForResultModal(att, allQuestions = []) {
       explanation: matched.explanation || r.explanation || r.solution || '',
       marks: r.marks || matched.marks || 1,
       negative_marks: r.negative_marks !== undefined ? r.negative_marks : (matched.negative_marks || 0),
-      image: matched.image || r.image || null,
+      image: matched.image_url || matched.image || r.image || null,
+      image_url: matched.image_url || matched.image || r.image || null,
       tolerance: matched.tolerance || r.tolerance || 0.05
     };
   });
@@ -110,6 +111,8 @@ function formatAttemptForPracticeAnalysis(att, allQuestions = []) {
       solution: matched.solution || r.solution || r.explanation || '',
       explanation: matched.explanation || r.explanation || r.solution || '',
       marks: r.marks || matched.marks || 1,
+      image: matched.image_url || matched.image || r.image || null,
+      image_url: matched.image_url || matched.image || r.image || null,
       tolerance: matched.tolerance || r.tolerance || 0.05
     };
 
@@ -223,6 +226,14 @@ export default function PerformanceAnalytics({
   const totalTimeSecs = filteredAttempts.reduce((acc, a) => acc + (Number(a.time_spent_seconds) || 0), 0);
   const avgTimePerQSec = totalAttemptedQs > 0 ? Math.round(totalTimeSecs / totalAttemptedQs) : 0;
 
+  const allQuestionsPool = useMemo(() => {
+    const list = [...questions];
+    (customMockPapers || []).forEach(p => {
+      (p.questions || []).forEach(q => list.push(q));
+    });
+    return list;
+  }, [questions, customMockPapers]);
+
   // Section-Wise Breakdown Calculation
   const sectionStats = SYLLABUS_SECTIONS.map(secName => {
     let attempted = 0;
@@ -231,7 +242,7 @@ export default function PerformanceAnalytics({
     filteredAttempts.forEach(att => {
       if (Array.isArray(att.question_responses)) {
         att.question_responses.forEach(resp => {
-          const matchQ = questions.find(q => q.id === (resp.question_id || resp.qId) || q.qnum === resp.qnum);
+          const matchQ = allQuestionsPool.find(q => q.id === (resp.question_id || resp.qId) || q.qnum === resp.qnum);
           const qSec = matchQ?.section || resp.section;
           if (qSec) {
             const normQSec = normalizeSectionTitle(qSec);
@@ -719,7 +730,7 @@ export default function PerformanceAnalytics({
       <div className="fixed inset-0 z-[120] bg-slate-950/85 backdrop-blur-md overflow-y-auto p-4 sm:p-8 animate-in fade-in duration-150">
         <div className="max-w-6xl mx-auto my-auto py-4">
           <PracticeAnalysisView
-            sessionResult={formatAttemptForPracticeAnalysis(selectedAttemptForAnalysis, questions)}
+            sessionResult={formatAttemptForPracticeAnalysis(selectedAttemptForAnalysis, allQuestionsPool)}
             returnLabel="Close & Return to Attempt History"
             onReturnToHub={() => setSelectedAttemptForAnalysis(null)}
             onOpenCalc={onOpenCalc}
@@ -732,7 +743,7 @@ export default function PerformanceAnalytics({
 
     {selectedAttemptForAnalysis && selectedAttemptForAnalysis.test_type !== 'practice_session' && (
       <TestResultModal
-        result={formatAttemptForResultModal(selectedAttemptForAnalysis, questions)}
+        result={formatAttemptForResultModal(selectedAttemptForAnalysis, allQuestionsPool)}
         onClose={() => setSelectedAttemptForAnalysis(null)}
         onRetake={() => {
           setSelectedAttemptForAnalysis(null);

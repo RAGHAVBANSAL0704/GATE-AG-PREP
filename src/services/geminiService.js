@@ -142,27 +142,45 @@ async function callGeminiApi(contents, systemInstruction = GATE_AG_SYSTEM_INSTRU
  * Generate Step-by-Step Explanation for a Question
  */
 export async function explainQuestionWithGemini(question, studentAnswer = null, isCorrect = null) {
+  const qText = question.question || question.questionText || '';
+  const qSec = question.section || question.subject || 'GATE AG';
+  const qTopic = question.topic || 'General';
+  const qAns = question.correct_answer || question.answer || 'Refer to official key';
+  const qExpl = question.solution || question.explanation || 'Standard GATE AG derivation applies.';
+  const qType = question.type || 'MCQ/NAT';
+  const qMarks = question.marks || 1;
+
+  let optionsStr = 'NAT / Numerical Answer';
+  if (question.options) {
+    if (Array.isArray(question.options)) {
+      optionsStr = question.options.map((opt, i) => `${String.fromCharCode(65 + i)}) ${opt}`).join('\n');
+    } else if (typeof question.options === 'object') {
+      optionsStr = Object.entries(question.options).map(([k, v]) => `${k}) ${v}`).join('\n');
+    }
+  }
+
   const questionDetails = `
-Subject / Section: ${question.section || question.subject || 'GATE AG'}
-Topic: ${question.topic || 'General'}
-Question Type: ${question.type || 'MCQ/NAT'} (Marks: ${question.marks || 1})
+Subject / Section: ${qSec}
+Topic: ${qTopic}
+Question Type: ${qType} (Marks: ${qMarks})
 Question Statement:
-${question.question}
+${qText}
 
 Options (if applicable):
-${question.options ? Object.entries(question.options).map(([k, v]) => `${k}) ${v}`).join('\n') : 'NAT / Numerical Answer'}
+${optionsStr}
 
-Official Answer Key: ${Array.isArray(question.answer) ? question.answer.join(', ') : question.answer}
-Existing Solution Notes: ${question.explanation || 'None provided'}
+Official Answer Key: ${Array.isArray(qAns) ? qAns.join(', ') : qAns}
+Existing Solution Notes: ${qExpl}
 ${studentAnswer !== null ? `Student Selected Answer: ${studentAnswer} (${isCorrect ? 'CORRECT' : 'INCORRECT'})` : ''}
 
 Task:
 Provide a comprehensive, verified, step-by-step pedagogical solution broken into:
 1. **Given Data & Unit Identifications**
-2. **Key Governing Formulas / Principles**
+2. **Key Governing Formulas / Principles** (Render all math in KaTeX $...$)
 3. **Step-by-Step Derivation & Calculation**
 4. **Final Answer Verification**
 5. **Common Traps / Shortcut Trick for GATE Exam**
+${studentAnswer !== null && !isCorrect ? `6. **Student Mistake Analysis**: Explain why "${studentAnswer}" is incorrect and the specific misconception that leads to it.` : ''}
 `;
 
   try {
@@ -186,12 +204,17 @@ Provide a comprehensive, verified, step-by-step pedagogical solution broken into
  * Generate Progressive Hint for a Question
  */
 export async function getProgressiveHint(question, hintLevel = 1) {
+  const qText = question.question || question.questionText || '';
+  const qSec = question.section || question.subject || 'GATE AG';
+  const qTopic = question.topic || 'General';
+  const qAns = question.correct_answer || question.answer || '';
+
   const hintPrompt = `
 Question Statement:
-${question.question}
+${qText}
 
-Topic: ${question.section} - ${question.topic}
-Answer Key: ${Array.isArray(question.answer) ? question.answer.join(', ') : question.answer}
+Topic: ${qSec} - ${qTopic}
+Answer Key: ${Array.isArray(qAns) ? qAns.join(', ') : qAns}
 
 Request: Provide Hint Level ${hintLevel} out of 3.
 Level 1: Subtle clue about the physical principle or concept without revealing the formula.
@@ -209,6 +232,78 @@ Keep it strictly under 3 sentences. Use LaTeX math notation where needed.
     return { 
       success: false, 
       text: generateOfflineHint(question, hintLevel) 
+    };
+  }
+}
+
+/**
+ * Generate an AI Practice Variant of a Question
+ * Clearly demarcates that the generated practice question is NOT an official GATE PYQ.
+ */
+export async function generateSimilarPracticeQuestion(question) {
+  const qText = question.question || question.questionText || '';
+  const qSec = question.section || question.subject || 'Agricultural Engineering';
+  const qTopic = question.topic || 'General';
+  const qType = question.type || 'MCQ';
+
+  const prompt = `
+You are an expert examiner for GATE Agricultural Engineering.
+Generate a NEW practice variation conceptually similar to the following question.
+
+Original Question:
+"${qText}"
+Section: ${qSec}
+Topic: ${qTopic}
+Type: ${qType}
+
+Requirements:
+1. Create a fresh numerical or conceptual problem with modified parameter values.
+2. Maintain authentic GATE AG engineering rigor and standard SI units.
+3. Clearly provide the Question, 4 Options (A, B, C, D) if MCQ or numerical value if NAT, Correct Answer, and Step-by-Step Solution with LaTeX formulas ($...$).
+4. Format strictly as JSON with keys:
+{
+  "question": "string",
+  "options": { "A": "...", "B": "...", "C": "...", "D": "..." } or null for NAT,
+  "answer": "string",
+  "explanation": "string"
+}
+`;
+
+  try {
+    const response = await callGeminiApi([
+      { role: 'user', parts: [{ text: prompt }] }
+    ]);
+    
+    // Clean code fences if present
+    const jsonMatch = response.match(/```(?:json)?\s*([\s\S]*?)\s*```/) || [null, response];
+    const parsed = JSON.parse(jsonMatch[1].trim());
+    return {
+      success: true,
+      isAiGenerated: true,
+      label: 'AI-Generated Practice Concept',
+      disclaimer: '⚠️ AI-Generated Practice Question — NOT an Official GATE PYQ. Verify independently.',
+      question: parsed.question,
+      options: parsed.options,
+      answer: parsed.answer,
+      explanation: parsed.explanation,
+      type: qType,
+      topic: qTopic,
+      section: qSec
+    };
+  } catch (error) {
+    // Return structured offline conceptual variation
+    return {
+      success: false,
+      isAiGenerated: true,
+      label: 'Offline Practice Concept',
+      disclaimer: '⚠️ Practice Concept — NOT an Official GATE PYQ. Solve for concept reinforcement.',
+      question: `[Practice Variant] Consider a similar setup for ${qTopic} (${qSec}): If the operating conditions or input parameters change by ±20%, recalculate the governing response using standard GATE AG relations.`,
+      options: null,
+      answer: 'Practice exercise',
+      explanation: `Refer to the official solution of ${question.id || 'the parent question'}: apply the same fundamental relation with updated numerical inputs.`,
+      type: qType,
+      topic: qTopic,
+      section: qSec
     };
   }
 }

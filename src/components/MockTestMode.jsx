@@ -24,13 +24,15 @@ import {
   User,
   AlertCircle,
   Maximize,
-  Minimize
+  Minimize,
+  Flag
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import { evaluateQuestion } from '../utils/scoring.js';
 import { saveTestAttempt } from '../services/testAttemptService';
 import { calculateAttemptXP, awardStudentXP } from '../services/leaderboardService';
 import { GATE_AG_FORMULAS } from '../data/formulas';
+import QuestionReportModal from './QuestionReportModal';
 
 export default function MockTestMode({ 
   mockPapers = [], 
@@ -73,6 +75,94 @@ export default function MockTestMode({
   const [paletteFilter, setPaletteFilter] = useState('ALL'); // 'ALL' | 'MARKED' | 'UNANSWERED' | 'ANSWERED'
   const [showFormulaSheetModal, setShowFormulaSheetModal] = useState(false);
   const [selectedFormulaCat, setSelectedFormulaCat] = useState('All');
+  const [showReportModal, setShowReportModal] = useState(false);
+  const [restoredSessionNotice, setRestoredSessionNotice] = useState(false);
+
+  // Live sync: update active paperQuestions if an admin edits a question
+  useEffect(() => {
+    const handleQuestionLiveUpdate = (e) => {
+      const updatedQ = e.detail;
+      if (!updatedQ || !updatedQ.id) return;
+      setPaperQuestions(prev => {
+        const idx = prev.findIndex(q => q.id === updatedQ.id);
+        if (idx === -1) return prev;
+        const copy = [...prev];
+        copy[idx] = { ...copy[idx], ...updatedQ };
+        return copy;
+      });
+    };
+
+    window.addEventListener('gate_ag_question_updated', handleQuestionLiveUpdate);
+    return () => window.removeEventListener('gate_ag_question_updated', handleQuestionLiveUpdate);
+  }, []);
+
+  // Auto-save active CBT test session to localStorage for crash & refresh recovery
+  useEffect(() => {
+    if (testStarted && selectedPaper) {
+      try {
+        const sessionData = {
+          paperTitle: selectedPaper.title,
+          paperYear: selectedPaper.year,
+          selectedPaper,
+          paperInstructions,
+          paperQuestions,
+          activeSection,
+          currentQIndex,
+          timeLeft,
+          userAnswers,
+          questionStates,
+          questionTimes,
+          savedAt: Date.now()
+        };
+        localStorage.setItem('gate_ag_active_cbt_session', JSON.stringify(sessionData));
+      } catch (e) {
+        console.warn('Failed to save CBT active session:', e);
+      }
+    }
+  }, [testStarted, selectedPaper, paperInstructions, paperQuestions, activeSection, currentQIndex, timeLeft, userAnswers, questionStates, questionTimes]);
+
+  // Check for saved session on mount and restore state if valid
+  useEffect(() => {
+    try {
+      const savedRaw = localStorage.getItem('gate_ag_active_cbt_session');
+      if (savedRaw && !testStarted) {
+        const parsed = JSON.parse(savedRaw);
+        const elapsedSinceSave = (Date.now() - (parsed.savedAt || 0)) / 1000;
+        if (parsed.timeLeft > elapsedSinceSave && parsed.paperQuestions?.length > 0) {
+          const remainingSec = Math.max(10, Math.floor(parsed.timeLeft - elapsedSinceSave));
+          setSelectedPaper(parsed.selectedPaper);
+          setPaperInstructions(parsed.paperInstructions);
+          setPaperQuestions(parsed.paperQuestions);
+          setActiveSection(parsed.activeSection || 'ALL');
+          setCurrentQIndex(parsed.currentQIndex || 0);
+          setTimeLeft(remainingSec);
+          setUserAnswers(parsed.userAnswers || {});
+          setQuestionStates(parsed.questionStates || {});
+          setQuestionTimes(parsed.questionTimes || {});
+          setTestStarted(true);
+          setIsTimerRunning(true);
+          setRestoredSessionNotice(true);
+        } else {
+          localStorage.removeItem('gate_ag_active_cbt_session');
+        }
+      }
+    } catch (e) {
+      console.warn('Failed to restore active CBT session:', e);
+    }
+  }, []);
+
+  // Beforeunload protection when test is in progress
+  useEffect(() => {
+    const handleBeforeUnload = (e) => {
+      if (testStarted && isTimerRunning) {
+        e.preventDefault();
+        e.returnValue = 'You have an active GATE CBT Mock Test in progress. Your progress is saved, but time will continue to elapse. Are you sure you want to leave?';
+        return e.returnValue;
+      }
+    };
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
+  }, [testStarted, isTimerRunning]);
 
   useEffect(() => {
     const onFsChange = () => {
@@ -266,6 +356,30 @@ export default function MockTestMode({
     setUserAnswers(prev => ({ ...prev, [currentQ.id]: val }));
   };
 
+  // On-screen Virtual Keypad for NAT questions
+  const handleKeypadPress = (key) => {
+    if (!currentQ) return;
+    const currentVal = String(userAnswers[currentQ.id] || '');
+    if (key === 'BACK') {
+      const nextVal = currentVal.slice(0, -1);
+      setUserAnswers(prev => ({ ...prev, [currentQ.id]: nextVal }));
+    } else if (key === 'CLEAR') {
+      setUserAnswers(prev => ({ ...prev, [currentQ.id]: '' }));
+    } else if (key === '-') {
+      if (currentVal.startsWith('-')) {
+        setUserAnswers(prev => ({ ...prev, [currentQ.id]: currentVal.slice(1) }));
+      } else {
+        setUserAnswers(prev => ({ ...prev, [currentQ.id]: '-' + currentVal }));
+      }
+    } else if (key === '.') {
+      if (!currentVal.includes('.')) {
+        setUserAnswers(prev => ({ ...prev, [currentQ.id]: currentVal === '' ? '0.' : currentVal + '.' }));
+      }
+    } else {
+      setUserAnswers(prev => ({ ...prev, [currentQ.id]: currentVal + key }));
+    }
+  };
+
   // Action: Save & Next
   const handleSaveAndNext = () => {
     if (!currentQ) return;
@@ -332,6 +446,9 @@ export default function MockTestMode({
 
   // Submit Final
   const handleSubmitFinal = () => {
+    try {
+      localStorage.removeItem('gate_ag_active_cbt_session');
+    } catch (e) {}
     setShowSubmitModal(false);
     setIsTimerRunning(false);
 
@@ -871,6 +988,9 @@ export default function MockTestMode({
           <button
             onClick={() => {
               if (window.confirm("Are you sure you want to exit the active test? Your current progress will be reset.")) {
+                try {
+                  localStorage.removeItem('gate_ag_active_cbt_session');
+                } catch (e) {}
                 setTestStarted(false);
                 setSelectedPaper(null);
               }
@@ -881,6 +1001,19 @@ export default function MockTestMode({
           </button>
         </div>
       </div>
+
+      {/* Session Restored Recovery Banner */}
+      {restoredSessionNotice && (
+        <div className="bg-emerald-700 text-white px-4 py-2 text-xs font-bold flex items-center justify-between shadow-xs">
+          <div className="flex items-center gap-2">
+            <CheckCircle2 className="w-4 h-4 text-emerald-200" />
+            <span>Test session successfully restored! Your answers, remaining time, and question palette were recovered.</span>
+          </div>
+          <button onClick={() => setRestoredSessionNotice(false)} className="text-white hover:text-emerald-200 cursor-pointer">
+            <X className="w-4 h-4" />
+          </button>
+        </div>
+      )}
 
       {/* Sections Header Bar */}
       <div className="bg-[#e8f1fa] border-b border-[#b8d5f3] px-4 sm:px-6 py-2 flex items-center gap-2 overflow-x-auto">
@@ -967,6 +1100,15 @@ export default function MockTestMode({
                       Negative: 0.00
                     </span>
                   )}
+                  <button
+                    type="button"
+                    onClick={() => setShowReportModal(true)}
+                    className="flex items-center gap-1 px-2 py-0.5 rounded bg-slate-100 hover:bg-rose-50 text-slate-700 hover:text-rose-700 font-bold border border-slate-300 hover:border-rose-300 transition cursor-pointer"
+                    title="Report issue in this question"
+                  >
+                    <Flag className="w-3 h-3 text-rose-500" />
+                    <span>Report</span>
+                  </button>
                 </div>
               </div>
 
@@ -1060,20 +1202,72 @@ export default function MockTestMode({
                   </div>
                 )}
 
-                {/* NAT Numerical Input */}
+                {/* NAT Numerical Input with Authentic TCS iON Virtual Keypad */}
                 {currentQ.type === 'NAT' && (
-                  <div className="pt-3 space-y-3">
-                    <label className="cbt-blue-header block text-xs font-extrabold text-[#0B4A8F] uppercase tracking-wider">
-                      Numerical Answer Input (Use on-screen keypad or keyboard)
-                    </label>
-                    <input
-                      type="number"
-                      step="any"
-                      placeholder="Enter numerical answer..."
-                      value={userAnswers[currentQ.id] || ''}
-                      onChange={(e) => handleNatInput(e.target.value)}
-                      className="w-full sm:max-w-xs bg-white border-2 border-slate-400 rounded-xl px-4 py-3 text-base font-mono font-bold text-slate-900 outline-none focus:border-[#0B4A8F]"
-                    />
+                  <div className="pt-3 space-y-4 max-w-sm">
+                    <div className="flex items-center justify-between">
+                      <label className="cbt-blue-header block text-xs font-extrabold text-[#0B4A8F] uppercase tracking-wider">
+                        Numerical Answer (Use on-screen keypad or keyboard)
+                      </label>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <input
+                        type="text"
+                        inputMode="decimal"
+                        placeholder="Enter value..."
+                        value={userAnswers[currentQ.id] || ''}
+                        onChange={(e) => {
+                          const sanitized = e.target.value.replace(/[^0-9.-]/g, '');
+                          handleNatInput(sanitized);
+                        }}
+                        className="flex-1 bg-white border-2 border-slate-400 rounded-xl px-4 py-2.5 text-lg font-mono font-bold text-slate-900 outline-none focus:border-[#0B4A8F] shadow-inner"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => handleKeypadPress('CLEAR')}
+                        className="px-3.5 py-2.5 rounded-xl border border-slate-300 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs transition cursor-pointer"
+                        title="Clear input"
+                      >
+                        Clear
+                      </button>
+                    </div>
+
+                    {/* TCS iON Virtual Numeric Keypad */}
+                    <div className="bg-[#e8eef5] border border-slate-300 rounded-2xl p-3 shadow-xs space-y-2">
+                      <div className="text-[10px] font-bold text-slate-600 uppercase tracking-wider text-center flex items-center justify-center gap-1.5">
+                        <Calculator className="w-3.5 h-3.5 text-[#0B4A8F]" />
+                        <span>TCS iON Virtual Numeric Keypad</span>
+                      </div>
+                      <div className="grid grid-cols-3 gap-1.5">
+                        {['7', '8', '9', '4', '5', '6', '1', '2', '3', '0', '.', '-'].map((key) => (
+                          <button
+                            key={key}
+                            type="button"
+                            onClick={() => handleKeypadPress(key)}
+                            className="h-10 rounded-xl bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 font-mono font-bold text-base shadow-xs active:bg-slate-200 transition cursor-pointer"
+                          >
+                            {key}
+                          </button>
+                        ))}
+                      </div>
+                      <div className="grid grid-cols-2 gap-2 pt-1">
+                        <button
+                          type="button"
+                          onClick={() => handleKeypadPress('BACK')}
+                          className="h-9 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-xs transition cursor-pointer flex items-center justify-center gap-1"
+                        >
+                          <span>← Backspace</span>
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => handleKeypadPress('CLEAR')}
+                          className="h-9 rounded-xl bg-rose-100 hover:bg-rose-200 text-rose-700 font-bold text-xs transition cursor-pointer"
+                        >
+                          Clear All
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 )}
 
@@ -1410,6 +1604,15 @@ export default function MockTestMode({
           </div>
         </div>
       )}
+
+      {/* Question Issue Reporting Modal */}
+      <QuestionReportModal
+        isOpen={showReportModal}
+        onClose={() => setShowReportModal(false)}
+        question={currentQ}
+        paperTitle={selectedPaper?.title || 'CBT Mock Test'}
+        currentStudent={currentStudent}
+      />
 
     </div>
   );

@@ -75,8 +75,9 @@ export default function DownloadsHub({ questions = [], mockPapers = [], customMo
   const getPaperDocxUrl = (paper, idx) => {
     if (paper.docxUrl) return paper.docxUrl;
     if (paper.file_url && paper.file_url.endsWith('.docx')) return paper.file_url;
-    const match = (paper.id || paper.title || '').match(/(\d+)/);
-    const num = match ? String(parseInt(match[1])).padStart(2, '0') : String(idx + 1).padStart(2, '0');
+    const text = `${paper.id || ''} ${paper.title || ''}`;
+    const match = text.match(/MOCK[_\s]+(\d+)/i) || text.match(/Paper\s+(\d+)/i) || text.match(/(\d+)$/);
+    const num = match ? String(parseInt(match[1], 10)).padStart(2, '0') : String(idx + 1).padStart(2, '0');
     return `/downloads/mock_tests/MOCK ${num} GATE AG.docx`;
   };
 

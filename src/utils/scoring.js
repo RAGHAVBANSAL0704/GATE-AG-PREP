@@ -73,21 +73,26 @@ export function evaluateQuestion(param1, param2, param3, param4) {
 
   // 2. MSQ Evaluation (Strict zero-partial-credit, order-independent, zero negative penalty)
   if (question.type === 'MSQ') {
-    const userSorted = userAnsStr
-      .split(/[,;\s]+/)
-      .filter(Boolean)
-      .map(s => s.trim().toUpperCase())
-      .sort()
-      .join(';');
+    const parseMsqTokens = (val) => {
+      if (Array.isArray(val)) {
+        return val.map(s => String(s).trim().toUpperCase()).filter(Boolean).sort().join(';');
+      }
+      const str = String(val || '').trim();
+      if (/^[A-D]{2,4}$/i.test(str)) {
+        return str.toUpperCase().split('').sort().join(';');
+      }
+      return str
+        .replace(/,/g, ';')
+        .replace(/and/gi, ';')
+        .split(/[,;\s]+/)
+        .filter(Boolean)
+        .map(s => s.trim().toUpperCase())
+        .sort()
+        .join(';');
+    };
 
-    const keySorted = correctKey
-      .replace(/,/g, ';')
-      .replace(/and/gi, ';')
-      .split(/[,;\s]+/)
-      .filter(Boolean)
-      .map(s => s.trim().toUpperCase())
-      .sort()
-      .join(';');
+    const userSorted = parseMsqTokens(userAnswer || userAnsStr);
+    const keySorted = parseMsqTokens(correctKey);
 
     isCorrect = userSorted === keySorted && userSorted.length > 0;
     return {
@@ -102,13 +107,29 @@ export function evaluateQuestion(param1, param2, param3, param4) {
   if (question.type === 'NAT') {
     const numVal = parseFloat(userAnsStr);
     if (!isNaN(numVal)) {
-      if (correctKey.toLowerCase().includes(' to ')) {
-        const [minStr, maxStr] = correctKey.toLowerCase().split(' to ');
-        const min = parseFloat(minStr);
-        const max = parseFloat(maxStr);
-        if (!isNaN(min) && !isNaN(max)) {
-          isCorrect = (numVal >= min - EPSILON) && (numVal <= max + EPSILON);
+      const lowerKey = correctKey.toLowerCase().replace(/\[|\]/g, '').trim();
+      let min = NaN, max = NaN;
+
+      if (lowerKey.includes(' to ')) {
+        const [minStr, maxStr] = lowerKey.split(' to ');
+        min = parseFloat(minStr);
+        max = parseFloat(maxStr);
+      } else if (lowerKey.includes(' - ')) {
+        const [minStr, maxStr] = lowerKey.split(' - ');
+        min = parseFloat(minStr);
+        max = parseFloat(maxStr);
+      } else if (lowerKey.includes(',')) {
+        const parts = lowerKey.split(',').map(s => s.trim());
+        if (parts.length === 2) {
+          min = parseFloat(parts[0]);
+          max = parseFloat(parts[1]);
         }
+      }
+
+      if (!isNaN(min) && !isNaN(max)) {
+        const lower = Math.min(min, max);
+        const upper = Math.max(min, max);
+        isCorrect = (numVal >= lower - EPSILON) && (numVal <= upper + EPSILON);
       } else {
         const target = parseFloat(correctKey);
         if (!isNaN(target)) {

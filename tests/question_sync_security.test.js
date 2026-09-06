@@ -22,6 +22,8 @@ globalThis.sessionStorage = {
 import {
   getLocalEditedQuestionsMap,
   saveAndBroadcastQuestion,
+  deleteAndBroadcastQuestion,
+  processAndOptimizeImageFile,
   subscribeToLiveQuestionSync,
   isAdminUnlocked,
   setAdminUnlocked,
@@ -36,14 +38,21 @@ describe('Question Live Multi-Device Sync & Admin Passcode Security Tests', () =
     sessionStorage.clear();
   });
 
-  test('saves and retrieves edited questions from local store', async () => {
+  test('saves and retrieves edited questions from local store with difficulty, hints, and image_url', async () => {
     assert.deepEqual(getLocalEditedQuestionsMap(), {});
 
     const mockQ = {
       id: 'gate_2026_q1',
-      question: 'Updated draft question text',
+      question: 'Updated draft question text with figure',
       correct_answer: 'B',
-      marks: 2
+      marks: 2,
+      difficulty: 'Difficult',
+      image_url: 'data:image/webp;base64,UklGRkAAAABXRUJQVlA4IDQAAADwAQCdASoBAAEAAQAcJaACdLoAAP7/2QAA',
+      hints: [
+        'Hint 1: Draft equation',
+        'Hint 2: Convert ha to m2',
+        'Hint 3: Substitute Q'
+      ]
     };
 
     const saved = await saveAndBroadcastQuestion(mockQ);
@@ -52,6 +61,36 @@ describe('Question Live Multi-Device Sync & Admin Passcode Security Tests', () =
     const map = getLocalEditedQuestionsMap();
     assert.equal(map['gate_2026_q1']?.correct_answer, 'B');
     assert.equal(map['gate_2026_q1']?.marks, 2);
+    assert.equal(map['gate_2026_q1']?.difficulty, 'Difficult');
+    assert.equal(map['gate_2026_q1']?.image_url.startsWith('data:image/webp'), true);
+    assert.equal(map['gate_2026_q1']?.hints.length, 3);
+  });
+
+  test('deletes and broadcasts question removal to revert to original', async () => {
+    const mockQ = { id: 'gate_2026_q5', question: 'Temporary edit', correct_answer: 'C' };
+    await saveAndBroadcastQuestion(mockQ);
+    assert.equal(getLocalEditedQuestionsMap()['gate_2026_q5']?.correct_answer, 'C');
+
+    const deleted = await deleteAndBroadcastQuestion('gate_2026_q5');
+    assert.equal(deleted, true);
+    assert.equal(getLocalEditedQuestionsMap()['gate_2026_q5'], undefined);
+  });
+
+  test('processAndOptimizeImageFile rejects non-image inputs safely', async () => {
+    await assert.rejects(
+      async () => {
+        await processAndOptimizeImageFile(null);
+      },
+      { message: 'No file provided' }
+    );
+
+    const fakeTextFile = { name: 'notes.txt', type: 'text/plain', size: 120 };
+    await assert.rejects(
+      async () => {
+        await processAndOptimizeImageFile(fakeTextFile);
+      },
+      { message: 'Selected file must be an image (PNG, JPEG, WebP, SVG, GIF)' }
+    );
   });
 
   test('verifies master and default admin passcodes correctly', () => {
