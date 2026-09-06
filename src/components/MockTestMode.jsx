@@ -25,7 +25,8 @@ import {
   AlertCircle,
   Maximize,
   Minimize,
-  Flag
+  Flag,
+  Grid
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import { evaluateQuestion } from '../utils/scoring.js';
@@ -986,6 +987,15 @@ export default function MockTestMode({
           </button>
 
           <button
+            onClick={() => setShowMobilePalette(true)}
+            className="lg:hidden px-2.5 py-1.5 rounded-lg bg-[#ffffff]/15 hover:bg-[#ffffff]/25 border border-white/40 text-white font-bold text-xs flex items-center gap-1.5 transition cursor-pointer"
+            title="Open Question Palette"
+          >
+            <Grid className="w-4 h-4 text-emerald-300" />
+            <span className="font-mono text-[11px] font-black">Q.{currentQ?.qnum || 1}</span>
+          </button>
+
+          <button
             onClick={() => {
               if (window.confirm("Are you sure you want to exit the active test? Your current progress will be reset.")) {
                 try {
@@ -1288,6 +1298,15 @@ export default function MockTestMode({
                     className="px-4 py-2 rounded-xl bg-white hover:bg-slate-100 border border-slate-300 text-slate-800 font-bold text-xs transition shadow-xs cursor-pointer"
                   >
                     Clear Response
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => setShowMobilePalette(true)}
+                    className="lg:hidden px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs transition shadow-xs flex items-center gap-1.5 cursor-pointer"
+                  >
+                    <Grid className="w-3.5 h-3.5 text-emerald-300" />
+                    <span>Palette ({currentQIndex + 1}/{paperQuestions.length})</span>
                   </button>
                 </div>
 
@@ -1613,6 +1632,122 @@ export default function MockTestMode({
         paperTitle={selectedPaper?.title || 'CBT Mock Test'}
         currentStudent={currentStudent}
       />
+
+      {/* MODAL 5: MOBILE QUESTION PALETTE DRAWER */}
+      {showMobilePalette && (
+        <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/70 backdrop-blur-md animate-in fade-in">
+          <div className="w-full sm:max-w-lg max-h-[88vh] bg-white border border-slate-300 rounded-t-3xl sm:rounded-2xl shadow-2xl overflow-hidden flex flex-col">
+            <div className="bg-[#0B4A8F] text-white p-4 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Grid className="w-4 h-4 text-emerald-300" />
+                <h3 className="font-extrabold text-sm uppercase text-white tracking-wide">Question Palette</h3>
+              </div>
+              <button 
+                onClick={() => setShowMobilePalette(false)} 
+                className="p-1 rounded-lg hover:bg-white/10 text-white cursor-pointer"
+              >
+                <X className="w-5 h-5 text-white" />
+              </button>
+            </div>
+
+            {/* Candidate Info & Section Switcher */}
+            <div className="p-3 bg-slate-50 border-b border-slate-200 flex items-center justify-between gap-2 text-xs">
+              <div className="font-bold text-slate-800 truncate min-w-0">
+                {candidateName} <span className="text-[10px] font-mono text-slate-500 font-normal">({rollNo})</span>
+              </div>
+              {paperInstructions?.ga_qs > 0 && (
+                <div className="flex gap-1 shrink-0">
+                  <button
+                    onClick={() => setActiveSection('GA')}
+                    className={`px-2 py-1 rounded text-[10px] font-bold cursor-pointer transition ${
+                      activeSection === 'GA' ? 'bg-[#0B4A8F] text-white' : 'bg-white border border-slate-300 text-slate-700'
+                    }`}
+                  >
+                    GA (Q.1–10)
+                  </button>
+                  <button
+                    onClick={() => setActiveSection('AG')}
+                    className={`px-2 py-1 rounded text-[10px] font-bold cursor-pointer transition ${
+                      activeSection === 'AG' ? 'bg-[#0B4A8F] text-white' : 'bg-white border border-slate-300 text-slate-700'
+                    }`}
+                  >
+                    AG (Q.11–65)
+                  </button>
+                </div>
+              )}
+            </div>
+
+            {/* Palette Filter Pills */}
+            <div className="p-2.5 bg-slate-100/70 border-b border-slate-200 flex items-center gap-1.5 overflow-x-auto scrollbar-none text-xs">
+              {[
+                { id: 'ALL', label: `All (${sectionQuestions.length})` },
+                { id: 'ANSWERED', label: `Answered (${statusCounts.ANSWERED + statusCounts.ANSWERED_MARKED})` },
+                { id: 'UNANSWERED', label: `Unanswered (${statusCounts.NOT_ANSWERED})` },
+                { id: 'MARKED', label: `Review (${statusCounts.MARKED})` },
+              ].map(f => (
+                <button
+                  key={f.id}
+                  onClick={() => setPaletteFilter(f.id)}
+                  className={`px-2 py-1 rounded text-[10px] font-bold whitespace-nowrap cursor-pointer transition ${
+                    paletteFilter === f.id ? 'bg-[#0B4A8F] text-white shadow-2xs font-black' : 'bg-white border border-slate-200 text-slate-700'
+                  }`}
+                >
+                  {f.label}
+                </button>
+              ))}
+            </div>
+
+            {/* Questions Grid */}
+            <div className="p-4 overflow-y-auto max-h-[50vh]">
+              <div className="grid grid-cols-5 sm:grid-cols-6 gap-2">
+                {sectionQuestions
+                  .filter(q => {
+                    if (paletteFilter === 'ALL') return true;
+                    const st = questionStates[q.id] || 'NOT_VISITED';
+                    if (paletteFilter === 'MARKED') return st === 'MARKED' || st === 'ANSWERED_MARKED';
+                    if (paletteFilter === 'UNANSWERED') return st === 'NOT_ANSWERED' || st === 'NOT_VISITED';
+                    if (paletteFilter === 'ANSWERED') return st === 'ANSWERED' || st === 'ANSWERED_MARKED';
+                    return true;
+                  })
+                  .map(q => {
+                    const targetIdx = paperQuestions.findIndex(pQ => pQ.id === q.id);
+                    const st = questionStates[q.id] || 'NOT_VISITED';
+                    const isCur = targetIdx === currentQIndex;
+
+                    let btnBg = "bg-slate-100 text-slate-800 border-slate-300";
+                    if (st === 'ANSWERED') btnBg = "bg-[#2E7D32] text-white border-[#2E7D32]";
+                    else if (st === 'NOT_ANSWERED') btnBg = "bg-[#E53935] text-white border-[#E53935]";
+                    else if (st === 'MARKED') btnBg = "bg-[#7B1FA2] text-white border-[#7B1FA2]";
+                    else if (st === 'ANSWERED_MARKED') btnBg = "bg-[#7B1FA2] text-white border-[#7B1FA2] ring-2 ring-emerald-500";
+
+                    return (
+                      <button
+                        key={q.id}
+                        onClick={() => handleJumpToQuestion(targetIdx)}
+                        className={`h-10 rounded-xl font-bold text-xs flex items-center justify-center transition border shadow-2xs relative cursor-pointer ${btnBg} ${
+                          isCur ? 'ring-3 ring-[#0B4A8F] scale-105 font-black' : ''
+                        }`}
+                      >
+                        <span>{q.qnum}</span>
+                        {st === 'ANSWERED_MARKED' && (
+                          <span className="w-2 h-2 rounded-full bg-emerald-400 absolute top-1 right-1" />
+                        )}
+                      </button>
+                    );
+                  })}
+              </div>
+            </div>
+
+            {/* Legend Footer */}
+            <div className="p-3 bg-slate-50 border-t border-slate-200 grid grid-cols-2 gap-2 text-[10px] text-slate-600 font-semibold">
+              <div className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-[#2E7D32]"></span> Answered</div>
+              <div className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-[#E53935]"></span> Not Answered</div>
+              <div className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-[#7B1FA2]"></span> Marked for Review</div>
+              <div className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-slate-200 border"></span> Not Visited</div>
+            </div>
+          </div>
+        </div>
+      )}
 
     </div>
   );
