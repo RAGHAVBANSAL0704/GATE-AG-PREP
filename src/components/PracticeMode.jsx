@@ -32,7 +32,9 @@ import {
   Grid,
   BarChart3,
   X,
-  Flag
+  Flag,
+  Zap,
+  AlertTriangle
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import { evaluateQuestion } from '../utils/scoring.js';
@@ -47,6 +49,7 @@ import { getOfficialSections, getOfficialTopicsForSection, getOfficialSubtopicsF
 import { getSectionHierarchyStats, buildPracticeSessionPool } from '../utils/practiceSessionBuilder.js';
 import { saveTestAttempt, generateUUID, getStudentTestAttempts } from '../services/testAttemptService.js';
 import { recordQuestionOutcomes } from '../services/mistakeVaultService.js';
+import { awardStudentXP } from '../services/leaderboardService.js';
 
 const SECTION_NORM_MAP = {
   'farm power and machinery': 'Section 2: Farm Machinery',
@@ -188,6 +191,8 @@ export default function PracticeMode({
   const [userAnswers, setUserAnswers] = useState({});
   const [submittedState, setSubmittedState] = useState({});
   const [showSolution, setShowSolution] = useState({});
+  const [peekedSolutions, setPeekedSolutions] = useState({});
+  const [awardedXpMap, setAwardedXpMap] = useState({});
   const [activeAITutorQuestion, setActiveAITutorQuestion] = useState(null);
   const [natUnitWarning, setNatUnitWarning] = useState(null);
   const [sessionAnalysis, setSessionAnalysis] = useState(null);
@@ -596,6 +601,37 @@ export default function PracticeMode({
     setSubmittedState({ ...submittedState, [qId]: { isSubmitted: true, isCorrect } });
     setShowSolution({ ...showSolution, [qId]: true });
 
+    // Award Academic XP (with strict Solution-Peek Zero-XP penalty)
+    const wasPeeked = Boolean(peekedSolutions[qId]);
+    const prevAward = awardedXpMap[qId] || { xp: 0, isPeeked: wasPeeked };
+
+    if (wasPeeked || prevAward.isPeeked) {
+      // Peeking at solution prior to submitting completely forfeits XP
+      setAwardedXpMap(prev => ({
+        ...prev,
+        [qId]: { xp: 0, isPeeked: true, label: 'Solution Viewed (0 XP)' }
+      }));
+    } else if (isCorrect) {
+      // 1.0 XP for correct; if previously awarded 0.5 XP effort credit, award 0.5 delta
+      const delta = Math.max(0, 1.0 - (prevAward.xp || 0));
+      if (delta > 0) {
+        awardStudentXP(delta);
+      }
+      setAwardedXpMap(prev => ({
+        ...prev,
+        [qId]: { xp: 1.0, isPeeked: false, label: delta > 0 && prevAward.xp > 0 ? '+0.5 XP Correct Upgrade 🎯' : '+1.0 XP Earned 🎯' }
+      }));
+    } else {
+      // 0.5 XP effort credit for incorrect attempt
+      if (!prevAward.xp) {
+        awardStudentXP(0.5);
+        setAwardedXpMap(prev => ({
+          ...prev,
+          [qId]: { xp: 0.5, isPeeked: false, label: '+0.5 XP Attempt Credit 💡' }
+        }));
+      }
+    }
+
     // Record into persistent Mistake Vault
     recordQuestionOutcomes({
       attempted: [qId],
@@ -669,6 +705,45 @@ export default function PracticeMode({
       accuracy: s.attempted > 0 ? Math.round((s.correct / s.attempted) * 100) : 0
     }));
 
+    // Finalize XP for any attempted questions not individually checked yet
+    let sessionQuestionXP = 0;
+    const updatedXpMap = { ...awardedXpMap };
+
+    evaluations.forEach(e => {
+      const qId = e.question.id;
+      if (!e.isAttempted) return;
+
+      const wasPeeked = Boolean(peekedSolutions[qId]);
+      const prev = updatedXpMap[qId];
+
+      if (prev) {
+        if (!prev.isPeeked) {
+          sessionQuestionXP += Number(prev.xp || 0);
+        }
+      } else {
+        if (wasPeeked) {
+          updatedXpMap[qId] = { xp: 0, isPeeked: true, label: 'Solution Viewed (0 XP)' };
+        } else if (e.isCorrect) {
+          awardStudentXP(1.0);
+          sessionQuestionXP += 1.0;
+          updatedXpMap[qId] = { xp: 1.0, isPeeked: false, label: '+1.0 XP Earned 🎯' };
+        } else {
+          awardStudentXP(0.5);
+          sessionQuestionXP += 0.5;
+          updatedXpMap[qId] = { xp: 0.5, isPeeked: false, label: '+0.5 XP Attempt Credit 💡' };
+        }
+      }
+    });
+    setAwardedXpMap(updatedXpMap);
+
+    // Milestone bonus for unpeeked completed questions (+5 XP per 15 Qs)
+    const unpeekedCompletedCount = evaluations.filter(e => e.isAttempted && !peekedSolutions[e.question.id]).length;
+    const milestoneBonus15Qs = Math.floor(unpeekedCompletedCount / 15) * 5;
+    if (milestoneBonus15Qs > 0) {
+      awardStudentXP(milestoneBonus15Qs);
+    }
+    const totalEarnedSessionXP = Number((sessionQuestionXP + milestoneBonus15Qs).toFixed(1));
+
     const result = {
       totalQuestions: evaluations.length,
       attemptedCount,
@@ -682,6 +757,8 @@ export default function PracticeMode({
       avgTimeSec,
       questionEvaluations: evaluations,
       sectionStats,
+      earnedXP: totalEarnedSessionXP,
+      milestoneBonusXP: milestoneBonus15Qs,
       timestamp: new Date().toLocaleTimeString()
     };
 
@@ -1875,7 +1952,12 @@ export default function PracticeMode({
                 )}
 
                 <button
-                  onClick={() => setShowSolution({ ...showSolution, [currentQ.id]: !showSolution[currentQ.id] })}
+                  onClick={() => {
+                    if (!submittedState[currentQ.id]?.isSubmitted) {
+                      setPeekedSolutions(prev => ({ ...prev, [currentQ.id]: true }));
+                    }
+                    setShowSolution(prev => ({ ...prev, [currentQ.id]: !prev[currentQ.id] }));
+                  }}
                   className="h-10.5 px-3.5 sm:px-4 rounded-xl bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 hover:bg-emerald-100 dark:hover:bg-emerald-900/60 font-bold text-xs transition cursor-pointer inline-flex items-center justify-center gap-1.5"
                 >
                   <Eye className="w-3.5 h-3.5" />
@@ -1887,6 +1969,9 @@ export default function PracticeMode({
                     if (!currentStudent && onRequireAuth) {
                       onRequireAuth("Sign In or Register free to ask questions to AI Doubt Assistant!");
                       return;
+                    }
+                    if (!submittedState[currentQ.id]?.isSubmitted) {
+                      setPeekedSolutions(prev => ({ ...prev, [currentQ.id]: true }));
                     }
                     setActiveAITutorQuestion(currentQ);
                   }}
@@ -1913,6 +1998,25 @@ export default function PracticeMode({
                   <Flag className="w-3.5 h-3.5" />
                   <span className="hidden sm:inline">Report</span>
                 </button>
+
+                {/* XP Reward Badge */}
+                {submittedState[currentQ.id]?.isSubmitted && awardedXpMap[currentQ.id] && (
+                  awardedXpMap[currentQ.id].isPeeked ? (
+                    <span className="h-10.5 px-3 rounded-xl bg-amber-50 dark:bg-amber-950/80 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800 text-xs font-bold inline-flex items-center gap-1.5 animate-in fade-in">
+                      <AlertTriangle className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                      <span>Solution Viewed (0 XP)</span>
+                    </span>
+                  ) : (
+                    <span className={`h-10.5 px-3 rounded-xl ${
+                      awardedXpMap[currentQ.id].xp >= 1
+                        ? 'bg-emerald-50 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800'
+                        : 'bg-blue-50 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800'
+                    } text-xs font-bold inline-flex items-center gap-1.5 animate-in fade-in`}>
+                      <Zap className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                      <span>{awardedXpMap[currentQ.id].label}</span>
+                    </span>
+                  )
+                )}
               </div>
 
               <div className="flex items-center gap-2 w-full sm:w-auto order-1 sm:order-2">
@@ -1956,6 +2060,12 @@ export default function PracticeMode({
             {/* Solution & Personal Notes Display Drawer */}
             {showSolution[currentQ.id] && (
               <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-4 animate-in fade-in duration-150">
+                {peekedSolutions[currentQ.id] && (
+                  <div className="p-3 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-800 dark:text-amber-300 text-xs font-semibold flex items-center gap-2">
+                    <AlertTriangle className="w-4 h-4 text-amber-500 shrink-0" />
+                    <span>Solution revealed before submitting answer: Academic XP is withheld (0 XP).</span>
+                  </div>
+                )}
                 <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
                   <div className="flex items-center gap-2">
                     <button

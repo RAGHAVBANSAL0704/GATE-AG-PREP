@@ -1,5 +1,4 @@
-export default 
-[
+export default [
   {
     "id": "QB_SWCE_001",
     "section": "Section 4: Soil and Water Conservation Engineering",
@@ -2257,5 +2256,791 @@ export default
     "correct_answer": "A",
     "solution": "Closed contour lines with elevation values increasing towards the center represent a hill. If the elevation values decrease towards the center, it represents a depression or pond.",
     "difficulty": "Easy"
+  },
+  {
+    "id": "QB_SWCE_EXP_056",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Fluid Mechanics",
+    "subtopic": "Fluid pressure and its measurement",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "A vertical rectangular sluice gate of width $2.0\\text{ m}$ and height $3.0\\text{ m}$ retains water up to its top edge on one side. Calculate the total hydrostatic force acting on the gate in $\\text{kN}$. (Take $\\rho = 1000\\text{ kg/m}^3$ and $g = 9.81\\text{ m/s}^2$)",
+    "solution": "Area of the gate $A = 2.0 \\times 3.0 = 6.0\\text{ m}^2$.\nDepth of centroid from free surface $\\bar{h} = \\frac{3.0}{2} = 1.5\\text{ m}$.\nTotal hydrostatic force:\n$$F = \\rho g A \\bar{h} = 1000 \\times 9.81 \\times 6.0 \\times 1.5 = 88290\\text{ N} = 88.29\\text{ kN}$$",
+    "difficulty": "Easy",
+    "correct_answer": 88.29,
+    "answer": 88.29,
+    "numerical_range": {
+      "min": 87.5,
+      "max": 89
+    }
+  },
+  {
+    "id": "QB_SWCE_EXP_057",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Fluid Mechanics",
+    "subtopic": "Flow through pipes",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "Water flows through a commercial PVC pipe of diameter $150\\text{ mm}$ ($0.15\\text{ m}$) and length $200\\text{ m}$ at a mean velocity of $2.0\\text{ m/s}$. If the Darcy-Weisbach friction factor is $f = 0.024$, calculate the head loss due to friction in $\\text{meters}$. (Take $g = 9.81\\text{ m/s}^2$)",
+    "solution": "Darcy-Weisbach formula:\n$$h_f = \\frac{f L v^2}{2 g D} = \\frac{0.024 \\times 200 \\times (2.0)^2}{2 \\times 9.81 \\times 0.15} = \\frac{19.2}{2.943} \\approx 6.524\\text{ m}$$",
+    "difficulty": "Easy",
+    "correct_answer": 6.52,
+    "answer": 6.52,
+    "numerical_range": {
+      "min": 6.4,
+      "max": 6.6
+    }
+  },
+  {
+    "id": "QB_SWCE_EXP_058",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Fluid Mechanics",
+    "subtopic": "Open channel flow",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "A rectangular open drainage channel of width $4.0\\text{ m}$ carries water at a depth of $1.5\\text{ m}$. Calculate the hydraulic radius $R$ of the channel in $\\text{meters}$.",
+    "solution": "Flow area $A = 4.0 \\times 1.5 = 6.0\\text{ m}^2$.\nWetted perimeter $P = B + 2y = 4.0 + 2(1.5) = 7.0\\text{ m}$.\nHydraulic radius:\n$$R = \\frac{A}{P} = \\frac{6.0}{7.0} \\approx 0.8571\\text{ m}$$",
+    "difficulty": "Easy",
+    "correct_answer": 0.857,
+    "answer": 0.857,
+    "numerical_range": {
+      "min": 0.84,
+      "max": 0.87
+    }
+  },
+  {
+    "id": "QB_SWCE_EXP_059",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil Mechanics",
+    "subtopic": "Index properties of soil",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "A soil sample has a void ratio $e = 0.65$. Calculate the porosity $n$ of the soil in percentage.",
+    "solution": "$$n = \\frac{e}{1 + e} \\times 100 = \\frac{0.65}{1 + 0.65} \\times 100 = \\frac{0.65}{1.65} \\times 100 \\approx 39.394\\%$$",
+    "difficulty": "Easy",
+    "correct_answer": 39.39,
+    "answer": 39.39,
+    "numerical_range": {
+      "min": 39,
+      "max": 39.8
+    }
+  },
+  {
+    "id": "QB_SWCE_EXP_060",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil Mechanics",
+    "subtopic": "Soil classification",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "In consistency limits testing of an agricultural clay soil, the liquid limit is $w_L = 52\\%$ and the plastic limit is $w_P = 24\\%$. Calculate the Plasticity Index ($I_P$) in percentage.",
+    "solution": "Plasticity Index:\n$$I_P = w_L - w_P = 52 - 24 = 28\\%$$",
+    "difficulty": "Easy",
+    "correct_answer": 28,
+    "answer": 28,
+    "numerical_range": {
+      "min": 27.5,
+      "max": 28.5
+    }
+  },
+  {
+    "id": "QB_SWCE_EXP_061",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Hydrology",
+    "subtopic": "Runoff – components, factors affecting, measurement of runoff",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "Using the Rational method $Q = \\frac{C I A}{360}$, calculate the peak runoff rate in $\\text{m}^3/\\text{s}$ from an agricultural watershed of area $A = 120\\text{ ha}$, with a runoff coefficient $C = 0.45$ and a rainfall intensity $I = 60\\text{ mm/h}$.",
+    "solution": "$$Q = \\frac{C \\times I \\times A}{360} = \\frac{0.45 \\times 60 \\times 120}{360} = \\frac{3240}{360} = 9.0\\text{ m}^3/\\text{s}$$",
+    "difficulty": "Easy",
+    "correct_answer": 9,
+    "answer": 9,
+    "numerical_range": {
+      "min": 8.9,
+      "max": 9.1
+    }
+  },
+  {
+    "id": "QB_SWCE_EXP_062",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil and Water Erosion",
+    "subtopic": "Soil loss estimation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "According to the Universal Soil Loss Equation (USLE) $A = R K L S C P$, calculate the average annual soil loss $A$ in $\\text{tonnes/(ha}\\cdot\\text{year)}$ for an agricultural field where rainfall erosivity factor $R = 400$, soil erodibility factor $K = 0.25$, topographic slope factor $L S = 1.20$, cropping management factor $C = 0.25$, and conservation practice factor $P = 0.80$.",
+    "solution": "$$A = R \\times K \\times LS \\times C \\times P = 400 \\times 0.25 \\times 1.20 \\times 0.25 \\times 0.80 = 100 \\times 1.20 \\times 0.20 = 120 \\times 0.20 = 24.0\\text{ tonnes/(ha}\\cdot\\text{year)}$$",
+    "difficulty": "Easy",
+    "correct_answer": 24,
+    "answer": 24,
+    "numerical_range": {
+      "min": 23.5,
+      "max": 24.5
+    }
+  },
+  {
+    "id": "QB_SWCE_EXP_063",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil and Water Erosion",
+    "subtopic": "Terraces and bunds",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "A contour bund system is planned for a field on a land slope of $S = 4\\%$. Using Ramser's empirical formula for vertical interval $VI = \\frac{S}{3} + 2$ (where $VI$ is in feet and $S$ is in percent), calculate the vertical interval $VI$ in $\\text{feet}$.",
+    "solution": "$$VI = \\frac{S}{3} + 2 = \\frac{4}{3} + 2 = 1.333 + 2 = 3.333\\text{ ft}$$",
+    "difficulty": "Easy",
+    "correct_answer": 3.333,
+    "answer": 3.333,
+    "numerical_range": {
+      "min": 3.3,
+      "max": 3.4
+    }
+  },
+  {
+    "id": "QB_SWCE_EXP_064",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Surveying",
+    "subtopic": "Types of levelling",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "In differential levelling, the backsight reading on a permanent benchmark of reduced level $RL = 150.000\\text{ m}$ is $1.850\\text{ m}$. The foresight reading on a forward station $A$ is $1.250\\text{ m}$. Calculate the reduced level of station $A$ in $\\text{meters}$.",
+    "solution": "Height of Instrument ($HI$):\n$$HI = RL_{\\text{BM}} + BS = 150.000 + 1.850 = 151.850\\text{ m}$$\nReduced level of station $A$:\n$$RL_A = HI - FS = 151.850 - 1.250 = 150.600\\text{ m}$$",
+    "difficulty": "Easy",
+    "correct_answer": 150.6,
+    "answer": 150.6,
+    "numerical_range": {
+      "min": 150.55,
+      "max": 150.65
+    }
+  },
+  {
+    "id": "QB_SWCE_EXP_065",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil and Water Erosion",
+    "subtopic": "Gully control structures – drop, drop inlet and chute spillways",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "A straight drop spillway has a rectangular weir crest of length $L = 3.0\\text{ m}$. For a design head over crest $H = 0.80\\text{ m}$, calculate the peak discharge capacity in $\\text{m}^3/\\text{s}$ using the broad-crested weir formula $Q = 1.77 L H^{3/2}$.",
+    "solution": "$$H^{3/2} = (0.80)^{1.5} \\approx 0.71554$$\n$$Q = 1.77 \\times 3.0 \\times 0.71554 = 5.31 \\times 0.71554 \\approx 3.7995\\text{ m}^3/\\text{s}$$",
+    "difficulty": "Moderate",
+    "correct_answer": 3.797,
+    "answer": 3.797,
+    "numerical_range": {
+      "min": 3.75,
+      "max": 3.85
+    }
+  },
+  {
+    "id": "QB_SWCE_EXP_066",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Fluid Mechanics",
+    "subtopic": "Open channel flow",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "A wide rectangular open channel carries water at a uniform flow depth of $y = 1.2\\text{ m}$ and flow velocity $v = 2.4\\text{ m/s}$. Calculate the Froude number ($Fr = \\frac{v}{\\sqrt{g y}}$) of the flow. (Take $g = 9.81\\text{ m/s}^2$)",
+    "solution": "$$Fr = \\frac{v}{\\sqrt{g y}} = \\frac{2.4}{\\sqrt{9.81 \\times 1.2}} = \\frac{2.4}{\\sqrt{11.772}} = \\frac{2.4}{3.431} \\approx 0.6995$$\n(Since $Fr < 1$, the flow is subcritical).",
+    "difficulty": "Easy",
+    "correct_answer": 0.7,
+    "answer": 0.7,
+    "numerical_range": {
+      "min": 0.68,
+      "max": 0.72
+    }
+  },
+  {
+    "id": "QB_SWCE_EXP_067",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil Mechanics",
+    "subtopic": "Compaction of soil",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "In the Standard Proctor compaction test of a soil, increasing the compaction effort results in:",
+    "solution": "Higher compaction energy packs soil particles more densely (raising maximum dry unit weight $\\gamma_{d,\\max}$) while requiring less lubricating water to reach peak packing (lowering Optimum Moisture Content).",
+    "difficulty": "Easy",
+    "options": {
+      "A": "Higher maximum dry density and lower Optimum Moisture Content (OMC)",
+      "B": "Lower maximum dry density and higher OMC",
+      "C": "Higher maximum dry density and higher OMC",
+      "D": "Lower maximum dry density and lower OMC"
+    },
+    "correct_answer": "A",
+    "answer": "A"
+  },
+  {
+    "id": "QB_SWCE_EXP_068",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Hydrology",
+    "subtopic": "Hydrograph analysis – unit hydrograph, S-curve hydrograph, synthetic hydrograph",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "A 4-hour unit hydrograph of a watershed of area $A = 180\\text{ km}^2$ has a peak discharge. Calculate the total volume of direct runoff represented by this 4-hour unit hydrograph in million cubic meters ($\\text{Mm}^3$). (1 UH represents $1\\text{ cm}$ of direct runoff over the catchment).",
+    "solution": "A unit hydrograph represents $1\\text{ cm} = 0.01\\text{ m}$ depth of direct surface runoff:\n$$V = A \\times d = (180 \\times 10^6\\text{ m}^2) \\times 0.01\\text{ m} = 1.8 \\times 10^6\\text{ m}^3 = 1.80\\text{ Mm}^3$$",
+    "difficulty": "Easy",
+    "correct_answer": 1.8,
+    "answer": 1.8,
+    "numerical_range": {
+      "min": 1.78,
+      "max": 1.82
+    }
+  },
+  {
+    "id": "QB_SWCE_EXP_069",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil and Water Erosion",
+    "subtopic": "Mechanics of soil erosion – wind and water erosion",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "The progressive stages of water erosion in order of increasing severity are:",
+    "solution": "Water erosion begins with raindrop impact (splash erosion), progresses to thin uniform surface removal (sheet erosion), concentrates into microscopic channels (rill erosion), and deepens into impassable channels (gully erosion).",
+    "difficulty": "Easy",
+    "options": {
+      "A": "Splash erosion $\\to$ Sheet erosion $\\to$ Rill erosion $\\to$ Gully erosion",
+      "B": "Sheet erosion $\\to$ Splash erosion $\\to$ Gully erosion $\\to$ Rill erosion",
+      "C": "Rill erosion $\\to$ Gully erosion $\\to$ Sheet erosion $\\to$ Splash erosion",
+      "D": "Gully erosion $\\to$ Rill erosion $\\to$ Sheet erosion $\\to$ Splash erosion"
+    },
+    "correct_answer": "A",
+    "answer": "A"
+  },
+  {
+    "id": "QB_SWCE_EXP_070",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Watershed Management",
+    "subtopic": "Check dams and farm ponds",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "A dugout farm pond has top dimensions $30\\text{ m} \\times 20\\text{ m}$, bottom dimensions $24\\text{ m} \\times 14\\text{ m}$, and a uniform depth of $3.0\\text{ m}$. Using the prismoidal formula $V = \\frac{d}{6} (A_1 + 4 A_m + A_2)$, calculate the water storage capacity of the pond in $\\text{m}^3$.",
+    "solution": "Top area $A_1 = 30 \\times 20 = 600\\text{ m}^2$.\nBottom area $A_2 = 24 \\times 14 = 336\\text{ m}^2$.\nMid-dimensions: length $= \\frac{30 + 24}{2} = 27\\text{ m}$, width $= \\frac{20 + 14}{2} = 17\\text{ m}$.\nMid-area $A_m = 27 \\times 17 = 459\\text{ m}^2$.\nDepth $d = 3.0\\text{ m}$.\nPrismoidal volume:\n$$V = \\frac{3.0}{6} [600 + 4(459) + 336] = 0.5 [600 + 1836 + 336] = 0.5 [2772] = 1404\\text{ m}^3$$",
+    "difficulty": "Moderate",
+    "correct_answer": 1404,
+    "answer": 1404,
+    "numerical_range": {
+      "min": 1390,
+      "max": 1410
+    }
+  },
+  {
+    "id": "QB_SWCE_EXP_071",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Fluid Mechanics",
+    "subtopic": "Open channel flow",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "In a horizontal rectangular flume of width $2.0\\text{ m}$, a hydraulic jump occurs where the initial pre-jump depth is $y_1 = 0.20\\text{ m}$ and the initial Froude number is $Fr_1 = 4.0$. Using the Belanger momentum equation $\\frac{y_2}{y_1} = \\frac{1}{2} \\left( \\sqrt{1 + 8 Fr_1^2} - 1 \\right)$, calculate the sequent depth $y_2$ after the jump in $\\text{meters}$.",
+    "solution": "$$\\sqrt{1 + 8 Fr_1^2} = \\sqrt{1 + 8(4)^2} = \\sqrt{1 + 128} = \\sqrt{129} \\approx 11.3578$$\n$$\\frac{y_2}{y_1} = \\frac{1}{2} (11.3578 - 1) = \\frac{10.3578}{2} = 5.1789$$\n$$y_2 = 5.1789 \\times 0.20 \\approx 1.0358\\text{ m}$$",
+    "difficulty": "Moderate",
+    "correct_answer": 1.036,
+    "answer": 1.036,
+    "numerical_range": {
+      "min": 1.02,
+      "max": 1.06
+    }
+  },
+  {
+    "id": "QB_SWCE_EXP_072",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil Mechanics",
+    "subtopic": "Shear strength of soil",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "A direct shear test on a sandy soil sample under a normal stress of $\\sigma = 150\\text{ kPa}$ gave a shear stress at failure of $\\tau = 90\\text{ kPa}$. Assuming effective cohesion $c = 0$, calculate the angle of internal shearing resistance $\\phi$ in $\\text{degrees}$.",
+    "solution": "Mohr-Coulomb failure criterion for cohesionless soil ($c = 0$):\n$$\\tau = \\sigma \\tan\\phi$$\n$$\\tan\\phi = \\frac{\\tau}{\\sigma} = \\frac{90}{150} = 0.60$$\n$$\\phi = \\arctan(0.60) \\approx 30.964^\\circ$$",
+    "difficulty": "Easy",
+    "correct_answer": 30.96,
+    "answer": 30.96,
+    "numerical_range": {
+      "min": 30.5,
+      "max": 31.5
+    }
+  },
+  {
+    "id": "QB_SWCE_EXP_073",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Hydrology",
+    "subtopic": "Precipitation – forms, measurement, network design",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "A catchment has 5 existing rain gauge stations with an average annual rainfall coefficient of variation $C_v = 30\\%$. For an allowable percentage error in rainfall estimation of $\\epsilon = 10\\%$, calculate the optimal total number of rain gauge stations required ($N = (C_v / \\epsilon)^2$).",
+    "solution": "$$N = \\left(\\frac{C_v}{\\epsilon}\\right)^2 = \\left(\\frac{30}{10}\\right)^2 = 3^2 = 9$$",
+    "difficulty": "Easy",
+    "correct_answer": 9,
+    "answer": 9,
+    "numerical_range": {
+      "min": 8.9,
+      "max": 9.1
+    }
+  },
+  {
+    "id": "QB_SWCE_EXP_074",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil and Water Erosion",
+    "subtopic": "Earthen dams",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "In a homogeneous earthen dam without an internal drainage chimney filter, the line separating the saturated seepage zone from the dry zone within the dam body is termed the:",
+    "solution": "The phreatic line (seepage line) is the uppermost flow line in an earthen embankment dam along which atmospheric pressure prevails ($p = 0$).",
+    "difficulty": "Easy",
+    "options": {
+      "A": "Phreatic line (top flow line)",
+      "B": "Equipotential threshold",
+      "C": "Hydraulic grade ceiling",
+      "D": "Capillary fringe apex"
+    },
+    "correct_answer": "A",
+    "answer": "A"
+  },
+  {
+    "id": "QB_SWCE_EXP_075",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Surveying",
+    "subtopic": "Theodolite traversing",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "In a closed polygon traverse $ABCDE$ having $n = 5$ sides, calculate the theoretical sum of all interior angles in $\\text{degrees}$.",
+    "solution": "Theoretical sum of interior angles for an $n$-sided polygon:\n$$\\Sigma \\theta = (2n - 4) \\times 90^\\circ = (2(5) - 4) \\times 90^\\circ = (10 - 4) \\times 90^\\circ = 6 \\times 90^\\circ = 540^\\circ$$",
+    "difficulty": "Easy",
+    "correct_answer": 540,
+    "answer": 540,
+    "numerical_range": {
+      "min": 539,
+      "max": 541
+    }
+  },
+  {
+    "id": "QB_SWCE_EXP_076",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil Mechanics",
+    "subtopic": "Permeability of soil",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "A sand layer has specific gravity $G = 2.65$ and void ratio $e = 0.65$. Calculate the critical hydraulic gradient ($i_{cr} = \\frac{G - 1}{1 + e}$) at which quicksand condition occurs.",
+    "solution": "$$i_{cr} = \\frac{G - 1}{1 + e} = \\frac{2.65 - 1}{1 + 0.65} = \\frac{1.65}{1.65} = 1.0$$",
+    "difficulty": "Easy",
+    "correct_answer": 1,
+    "answer": 1,
+    "numerical_range": {
+      "min": 0.98,
+      "max": 1.02
+    }
+  },
+  {
+    "id": "QB_SWCE_EXP_077",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil and Water Erosion",
+    "subtopic": "Mechanics of soil erosion – wind and water erosion",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "In wind erosion mechanics, the movement of soil particles of diameter $0.1 - 0.5\\text{ mm}$ by a series of short bounces and leaps along the surface is termed:",
+    "solution": "Saltation accounts for $50 - 75\\%$ of total soil movement by wind, characterized by particles of $0.1 - 0.5\\text{ mm}$ bouncing in low parabolic arcs. Coarser particles ($0.5 - 1.0\\text{ mm}$) roll by surface creep, while fine dust ($< 0.1\\text{ mm}$) stays in suspension.",
+    "difficulty": "Easy",
+    "options": {
+      "A": "Saltation",
+      "B": "Suspension",
+      "C": "Surface creep",
+      "D": "Abrasion"
+    },
+    "correct_answer": "A",
+    "answer": "A"
+  },
+  {
+    "id": "QB_SWCE_EXP_078",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Hydrology",
+    "subtopic": "Flood routing – hydrologic and hydraulic routing",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "In Muskingum channel flood routing, the routing equation is $Q_2 = C_0 I_2 + C_1 I_1 + C_2 Q_1$. If the routing coefficients are $C_0 = 0.08$ and $C_1 = 0.52$, calculate the value of coefficient $C_2$ using the condition $C_0 + C_1 + C_2 = 1.0$.",
+    "solution": "$$C_2 = 1.0 - (C_0 + C_1) = 1.0 - (0.08 + 0.52) = 1.0 - 0.60 = 0.40$$",
+    "difficulty": "Easy",
+    "correct_answer": 0.4,
+    "answer": 0.4,
+    "numerical_range": {
+      "min": 0.39,
+      "max": 0.41
+    }
+  },
+  {
+    "id": "QB_SWCE_EXP_079",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil and Water Erosion",
+    "subtopic": "Terraces and bunds",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "A graded bund of trapezoidal cross-section has top width $0.50\\text{ m}$, base width $2.50\\text{ m}$, and height $0.80\\text{ m}$. Calculate the cross-sectional area of the bund in $\\text{m}^2$.",
+    "solution": "Area of a trapezoid:\n$$A = \\frac{b_{\\text{top}} + b_{\\text{base}}}{2} \\times h = \\frac{0.50 + 2.50}{2} \\times 0.80 = \\frac{3.0}{2} \\times 0.80 = 1.50 \\times 0.80 = 1.20\\text{ m}^2$$",
+    "difficulty": "Easy",
+    "correct_answer": 1.2,
+    "answer": 1.2,
+    "numerical_range": {
+      "min": 1.18,
+      "max": 1.22
+    }
+  },
+  {
+    "id": "QB_SWCE_EXP_080",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil Mechanics",
+    "subtopic": "Effective stress, total stress and pore water pressure",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "At a depth of $4.0\\text{ m}$ below the ground surface, a saturated soil has a saturated unit weight of $\\gamma_{\\text{sat}} = 19.81\\text{ kN/m}^3$. The water table is at the ground surface. Calculate the effective vertical stress $\\sigma'$ at this depth in $\\text{kPa}$. (Unit weight of water $\\gamma_w = 9.81\\text{ kN/m}^3$)",
+    "solution": "Submerged unit weight of soil:\n$$\\gamma' = \\gamma_{\\text{sat}} - \\gamma_w = 19.81 - 9.81 = 10.0\\text{ kN/m}^3$$\nEffective stress:\n$$\\sigma' = \\gamma' \\times z = 10.0\\text{ kN/m}^3 \\times 4.0\\text{ m} = 40.0\\text{ kPa}$$",
+    "difficulty": "Easy",
+    "correct_answer": 40,
+    "answer": 40,
+    "numerical_range": {
+      "min": 39.5,
+      "max": 40.5
+    }
+  },
+  {
+    "id": "QB_SWCE_EXP_081",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Fluid Mechanics",
+    "subtopic": "Open channel flow",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "A trapezoidal canal has side slope $1.5 : 1$ ($H : V$, so $z = 1.5$) and bottom width $B = 3.0\\text{ m}$. If the water depth is $y = 1.0\\text{ m}$, calculate the wetted perimeter $P = B + 2 y \\sqrt{1 + z^2}$ in $\\text{meters}$.",
+    "solution": "$$\\sqrt{1 + z^2} = \\sqrt{1 + (1.5)^2} = \\sqrt{1 + 2.25} = \\sqrt{3.25} \\approx 1.8028$$\n$$P = 3.0 + 2(1.0)(1.8028) = 3.0 + 3.6056 = 6.6056\\text{ m}$$",
+    "difficulty": "Easy",
+    "correct_answer": 6.606,
+    "answer": 6.606,
+    "numerical_range": {
+      "min": 6.55,
+      "max": 6.65
+    }
+  },
+  {
+    "id": "QB_SWCE_EXP_082",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil and Water Erosion",
+    "subtopic": "Vegetative waterways",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "A grassed waterway is designed primarily to:",
+    "solution": "Grassed waterways are broad, shallow parabolic or trapezoidal channels protected by dense erosion-resistant grasses, designed to conduct surplus runoff water off agricultural land without scouring or gullies.",
+    "difficulty": "Easy",
+    "options": {
+      "A": "Convey concentrated surface runoff safely down a slope at non-erosive flow velocities",
+      "B": "Store water permanently for livestock drinking",
+      "C": "Trap sand for construction use",
+      "D": "Increase the speed of gully head advancement"
+    },
+    "correct_answer": "A",
+    "answer": "A"
+  },
+  {
+    "id": "QB_SWCE_EXP_083",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Surveying",
+    "subtopic": "Contouring",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "A series of closed contour lines with concentric higher elevations towards the center indicates a:",
+    "solution": "Closed contour rings with values increasing towards the inside represent a hill or knoll. Closed contours with values decreasing inward represent a depression or pond.",
+    "difficulty": "Easy",
+    "options": {
+      "A": "Hill / Peak",
+      "B": "Pond / Depression",
+      "C": "Saddle",
+      "D": "Vertical cliff"
+    },
+    "correct_answer": "A",
+    "answer": "A"
+  },
+  {
+    "id": "QB_SWCE_EXP_084",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Fluid Mechanics",
+    "subtopic": "Fluid properties",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "A fluid has dynamic viscosity $\\mu = 0.002\\text{ Pa}\\cdot\\text{s}$ and density $\\rho = 800\\text{ kg/m}^3$. Calculate its kinematic viscosity $\\nu$ in $\\text{m}^2/\\text{s}$. (Enter value multiplied by $10^6$, i.e. $\\nu \\times 10^6$)",
+    "solution": "$$\\nu = \\frac{\\mu}{\\rho} = \\frac{0.002}{800} = 2.5 \\times 10^{-6}\\text{ m}^2/\\text{s}$$\nValue multiplied by $10^6$ is $2.5$.",
+    "difficulty": "Easy",
+    "correct_answer": 2.5,
+    "answer": 2.5,
+    "numerical_range": {
+      "min": 2.45,
+      "max": 2.55
+    }
+  },
+  {
+    "id": "QB_SWCE_EXP_085",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil Mechanics",
+    "subtopic": "Index properties of soil",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "A moist soil sample weighing $115\\text{ g}$ has an oven-dry weight of $100\\text{ g}$. Calculate the gravimetric moisture content ($w$) of the soil on a dry weight basis in percentage.",
+    "solution": "Weight of water $W_w = 115 - 100 = 15\\text{ g}$.\nMoisture content dry basis:\n$$w = \\frac{W_w}{W_d} \\times 100 = \\frac{15}{100} \\times 100 = 15.0\\%$$",
+    "difficulty": "Easy",
+    "correct_answer": 15,
+    "answer": 15,
+    "numerical_range": {
+      "min": 14.8,
+      "max": 15.2
+    }
+  },
+  {
+    "id": "QB_SWCE_EXP_086",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Hydrology",
+    "subtopic": "Precipitation – forms, measurement, network design",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "In Thiessen polygon method for calculating average rainfall over a watershed, three polygons have areas of $40\\text{ km}^2$, $35\\text{ km}^2$, and $25\\text{ km}^2$ with recorded station rainfalls of $80\\text{ mm}$, $60\\text{ mm}$, and $50\\text{ mm}$ respectively. Calculate the weighted average precipitation over the watershed in $\\text{mm}$.",
+    "solution": "Total area $A = 40 + 35 + 25 = 100\\text{ km}^2$.\nWeighted precipitation:\n$$\\bar{P} = \\frac{(40 \\times 80) + (35 \\times 60) + (25 \\times 50)}{100} = \\frac{3200 + 2100 + 1250}{100} = \\frac{6550}{100} = 65.5\\text{ mm}$$",
+    "difficulty": "Easy",
+    "correct_answer": 65.5,
+    "answer": 65.5,
+    "numerical_range": {
+      "min": 65,
+      "max": 66
+    }
+  },
+  {
+    "id": "QB_SWCE_EXP_087",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil and Water Erosion",
+    "subtopic": "Biological and engineering measures to control erosion",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "Which of the following agronomic practices are effective biological measures to control soil erosion on sloping croplands?",
+    "solution": "- A, B, and C protect the soil from direct droplet impact and reduce surface runoff velocity.\n- D creates steep channels that severely accelerate rill and gully erosion.",
+    "difficulty": "Easy",
+    "options": {
+      "A": "Contour strip cropping",
+      "B": "Mulch tillage leaving crop residue on the surface",
+      "C": "Cover cropping with dense canopy leguminous crops",
+      "D": "Deep ploughing straight up and down the steepest slope direction"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SWCE_EXP_088",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Watershed Management",
+    "subtopic": "Rainwater harvesting",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "A rooftop rainwater harvesting system collects rain from a corrugated GI sheet roof of horizontal catchment area $150\\text{ m}^2$. The seasonal rainfall is $800\\text{ mm}$ ($0.80\\text{ m}$) and the runoff coefficient of the roof is $0.85$. Calculate the volume of water harvested in $\\text{m}^3$.",
+    "solution": "$$V = A \\times P \\times C = 150\\text{ m}^2 \\times 0.80\\text{ m} \\times 0.85 = 120 \\times 0.85 = 102.0\\text{ m}^3$$",
+    "difficulty": "Easy",
+    "correct_answer": 102,
+    "answer": 102,
+    "numerical_range": {
+      "min": 101.5,
+      "max": 102.5
+    }
+  },
+  {
+    "id": "QB_SWCE_EXP_089",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Surveying",
+    "subtopic": "Computation of areas and volume",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "A railway embankment cutting has three cross-sectional areas spaced $20\\text{ m}$ apart ($h = 20\\text{ m}$): $A_0 = 40\\text{ m}^2$, $A_1 = 65\\text{ m}^2$, and $A_2 = 50\\text{ m}^2$. Using Simpson's prismoidal rule $V = \\frac{h}{3} (A_0 + 4 A_1 + A_2)$, calculate the volume of earthwork in $\\text{m}^3$.",
+    "solution": "$$V = \\frac{20}{3} [40 + 4(65) + 50] = \\frac{20}{3} [40 + 260 + 50] = \\frac{20}{3} [350] = \\frac{7000}{3} \\approx 2333.33\\text{ m}^3$$",
+    "difficulty": "Moderate",
+    "correct_answer": 2333.33,
+    "answer": 2333.33,
+    "numerical_range": {
+      "min": 2330,
+      "max": 2340
+    }
+  },
+  {
+    "id": "QB_SWCE_EXP_090",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil Mechanics",
+    "subtopic": "Soil classification",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "In the Unified Soil Classification System (USCS), a fine-grained soil with liquid limit $w_L > 50\\%$ that plots ABOVE the 'A-line' ($I_P = 0.73(w_L - 20)$) on the plasticity chart is designated as:",
+    "solution": "The A-line differentiates clays (above A-line) from silts and organic soils (below A-line). Liquid limit $> 50\\%$ indicates high plasticity ($H$). Thus, above A-line with $w_L > 50\\%$ is classified as CH.",
+    "difficulty": "Easy",
+    "options": {
+      "A": "CH (Inorganic clay of high plasticity)",
+      "B": "MH (Inorganic silt of high compressibility)",
+      "C": "CL (Inorganic clay of low plasticity)",
+      "D": "OH (Organic clay of high plasticity)"
+    },
+    "correct_answer": "A",
+    "answer": "A"
+  },
+  {
+    "id": "QB_SWCE_EXP_091",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Fluid Mechanics",
+    "subtopic": "Open channel flow",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "A wide rectangular channel of bed slope $S_0 = 0.0004$ carries water at a depth of $1.5\\text{ m}$ ($R \\approx y = 1.5\\text{ m}$). If Manning's roughness coefficient is $n = 0.02$, calculate the flow velocity in $\\text{m/s}$ using Manning's equation $v = \\frac{1}{n} R^{2/3} S_0^{1/2}$.",
+    "solution": "$$R^{2/3} = (1.5)^{2/3} \\approx 1.31037$$\n$$S_0^{1/2} = \\sqrt{0.0004} = 0.02$$\n$$v = \\frac{1}{0.02} \\times 1.31037 \\times 0.02 = 1.31037\\text{ m/s}$$",
+    "difficulty": "Moderate",
+    "correct_answer": 1.31,
+    "answer": 1.31,
+    "numerical_range": {
+      "min": 1.28,
+      "max": 1.34
+    }
+  },
+  {
+    "id": "QB_SWCE_EXP_092",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil and Water Erosion",
+    "subtopic": "Terraces and bunds",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "A hillside has a uniform ground slope of $S = 20\\%$. For constructing level bench terraces, the vertical interval is determined to be $VI = 2.0\\text{ m}$. Calculate the width of the bench terrace $W = \\frac{VI \\times 100}{S}$ in $\\text{meters}$.",
+    "solution": "$$W = \\frac{VI}{S/100} = \\frac{2.0}{0.20} = 10.0\\text{ m}$$",
+    "difficulty": "Easy",
+    "correct_answer": 10,
+    "answer": 10,
+    "numerical_range": {
+      "min": 9.8,
+      "max": 10.2
+    }
+  },
+  {
+    "id": "QB_SWCE_EXP_093",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil and Water Erosion",
+    "subtopic": "Gully control structures – drop, drop inlet and chute spillways",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "In gully control structures, the structural component of a drop spillway specifically designed to dissipate hydraulic kinetic energy of falling water and protect downstream channel from scouring is the:",
+    "solution": "The stilling basin (apron with chute blocks, baffle piers, and end sill) forces a hydraulic jump to form on the reinforced concrete apron, dissipating high kinetic energy before discharge into downstream channel.",
+    "difficulty": "Easy",
+    "options": {
+      "A": "Headwall extension",
+      "B": "Stilling basin with baffle piers and end sill",
+      "C": "Cut-off wall",
+      "D": "Wingwall"
+    },
+    "correct_answer": "B",
+    "answer": "B"
+  },
+  {
+    "id": "QB_SWCE_EXP_094",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Watershed Management",
+    "subtopic": "Water budgeting in watershed",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "In an annual watershed water budget equation $P = Q + ET + \\Delta S$, the annual precipitation is $P = 1100\\text{ mm}$, stream runoff is $Q = 350\\text{ mm}$, and the increase in basin groundwater storage is $\\Delta S = 50\\text{ mm}$. Calculate the annual evapotranspiration ($ET$) in $\\text{mm}$.",
+    "solution": "$$ET = P - Q - \\Delta S = 1100 - 350 - 50 = 700\\text{ mm}$$",
+    "difficulty": "Easy",
+    "correct_answer": 700,
+    "answer": 700,
+    "numerical_range": {
+      "min": 695,
+      "max": 705
+    }
+  },
+  {
+    "id": "QB_SWCE_EXP_095",
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Fluid Mechanics",
+    "subtopic": "Fluid pressure and its measurement",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "source": "R. Suresh - Soil and Water Conservation Engineering",
+    "question": "A piezometer tube inserted into a pressurized water conduit registers a static water column height of $4.5\\text{ m}$. Calculate the gauge pressure in the conduit in $\\text{kPa}$. (Take $g = 9.81\\text{ m/s}^2$ and $\\rho = 1000\\text{ kg/m}^3$)",
+    "solution": "$$p = \\rho g h = 1000 \\times 9.81 \\times 4.5 = 44145\\text{ Pa} = 44.145\\text{ kPa}$$",
+    "difficulty": "Easy",
+    "correct_answer": 44.15,
+    "answer": 44.15,
+    "numerical_range": {
+      "min": 43.8,
+      "max": 44.4
+    }
   }
 ];

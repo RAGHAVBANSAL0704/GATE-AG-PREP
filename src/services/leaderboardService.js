@@ -80,16 +80,44 @@ export function calculateAttemptXP({ correctCount = 0, incorrectCount = 0, total
 
 /**
  * Award Academic Test XP to a student and update Supabase / LocalStorage
+ * Supports signatures:
+ * - awardStudentXP(xpAmount: number)
+ * - awardStudentXP({ totalEarnedXP: number })
+ * - awardStudentXP(studentId: string, xpAmount: number | { totalEarnedXP: number })
  */
-export async function awardStudentXP(studentId, xpEarned) {
-  if (!xpEarned || xpEarned <= 0) return;
+export async function awardStudentXP(studentIdOrEarned, maybeXpEarned) {
+  let targetStudentId = null;
+  let xp = 0;
+
+  if (typeof studentIdOrEarned === 'object' && studentIdOrEarned !== null) {
+    if (studentIdOrEarned.totalEarnedXP !== undefined) {
+      xp = Number(studentIdOrEarned.totalEarnedXP);
+    } else if (studentIdOrEarned.xpEarned !== undefined) {
+      xp = Number(studentIdOrEarned.xpEarned);
+    }
+    const session = getActiveStudentSession();
+    targetStudentId = session?.id || null;
+  } else if (typeof studentIdOrEarned === 'number') {
+    xp = studentIdOrEarned;
+    const session = getActiveStudentSession();
+    targetStudentId = session?.id || null;
+  } else {
+    targetStudentId = studentIdOrEarned;
+    if (typeof maybeXpEarned === 'object' && maybeXpEarned !== null) {
+      xp = Number(maybeXpEarned.totalEarnedXP || 0);
+    } else {
+      xp = Number(maybeXpEarned || 0);
+    }
+  }
+
+  if (isNaN(xp) || xp <= 0) return { success: false, xpAwarded: 0, newTotalXP: getLocalAcademicXP() };
 
   let newTotalXP = 0;
 
   // Local storage update for Academic Test XP
   try {
     const currentLocalXP = getLocalAcademicXP();
-    newTotalXP = Number((currentLocalXP + xpEarned).toFixed(1));
+    newTotalXP = Number((currentLocalXP + xp).toFixed(1));
     localStorage.setItem(LOCAL_STORAGE_XP_KEY, String(newTotalXP));
 
     // Update active session student object
@@ -110,8 +138,8 @@ export async function awardStudentXP(studentId, xpEarned) {
     try {
       localXPBroadcast.postMessage({
         type: 'ACADEMIC_XP_AWARDED',
-        studentId,
-        xpEarned,
+        studentId: targetStudentId,
+        xpEarned: xp,
         newTotalXP,
         timestamp: Date.now()
       });
@@ -119,12 +147,12 @@ export async function awardStudentXP(studentId, xpEarned) {
   }
 
   // Supabase update for Academic Test XP & Live Broadcast
-  if (isSupabaseConfigured && supabase && studentId) {
+  if (isSupabaseConfigured && supabase && targetStudentId) {
     try {
       const { data: student } = await supabase
         .from('students')
         .select('xp_points')
-        .eq('id', studentId)
+        .eq('id', targetStudentId)
         .single();
 
       const currentXP = Number(student?.xp_points || 0);
@@ -133,19 +161,21 @@ export async function awardStudentXP(studentId, xpEarned) {
       await supabase
         .from('students')
         .update({ xp_points: updatedDBXP })
-        .eq('id', studentId);
+        .eq('id', targetStudentId);
 
       // Broadcast over Supabase Realtime channel across devices
       const channel = supabase.channel('gate_ag_xp_live');
       channel.send({
         type: 'broadcast',
         event: 'xp_updated',
-        payload: { studentId, type: 'academic', xp_points: updatedDBXP }
+        payload: { studentId: targetStudentId, type: 'academic', xp_points: updatedDBXP }
       });
     } catch (err) {
       console.warn("Supabase Academic XP update warning:", err);
     }
   }
+
+  return { success: true, xpAwarded: xp, newTotalXP };
 }
 
 /**

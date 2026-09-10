@@ -1,5 +1,4 @@
-export default 
-[
+export default [
   {
     "id": "QB_EM_LA_001",
     "section": "Section 1: Engineering Mathematics",
@@ -1626,6 +1625,1744 @@ export default
     "solution": "1. Unlike multistep methods (e.g. Adams–Bashforth), Runge–Kutta methods compute $y_{n+1}$ using only $(x_n, y_n)$, so they are self-starting single-step methods (A is true).\n2. RK2 with weights $k_1 = h f(x_n, y_n)$ and $k_2 = h f(x_n + h, y_n + k_1)$ and $y_{n+1} = y_n + \\frac{1}{2}(k_1 + k_2)$ is precisely Heun's method (B is true).\n3. Classical RK4 computes four slopes $k_1, k_2, k_3, k_4$, requiring 4 evaluations of $f(x, y)$ per step (C is true).\n4. RK1 evaluates $k_1 = h f(x_n, y_n)$ with $y_{n+1} = y_n + k_1$, which is Euler's forward method (D is true).",
     "difficulty": "Moderate",
     "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EM_083",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Eigen values and Eigen vectors",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "For the matrix $A = \\begin{pmatrix} 2 & 1 \\\\ 1 & 2 \\end{pmatrix}$, calculate the trace of the matrix $A^3$.",
+    "solution": "The characteristic equation of $A$ is:\n$$\\det(A - \\lambda I) = (2 - \\lambda)^2 - 1 = \\lambda^2 - 4\\lambda + 3 = 0$$\n$$(\\lambda - 3)(\\lambda - 1) = 0 \\implies \\lambda_1 = 3, \\quad \\lambda_2 = 1$$\nThe eigenvalues of $A^3$ are $\\lambda_1^3$ and $\\lambda_2^3$:\n$$\\lambda_1^3 = 3^3 = 27$$\n$$\\lambda_2^3 = 1^3 = 1$$\nThe trace of $A^3$ is the sum of its eigenvalues:\n$$\\text{Trace}(A^3) = 27 + 1 = 28$$",
+    "difficulty": "Moderate",
+    "correct_answer": 28,
+    "answer": 28,
+    "numerical_range": {
+      "min": 27.5,
+      "max": 28.5
+    }
+  },
+  {
+    "id": "QB_EM_084",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Cayley–Hamilton theorem",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "According to the Cayley-Hamilton theorem, every square matrix satisfies its own:",
+    "solution": "The Cayley-Hamilton theorem states that every square matrix $A \\in \\mathbb{R}^{n \\times n}$ satisfies its own characteristic equation $P(\\lambda) = \\det(A - \\lambda I) = 0$, that is, $P(A) = O$.",
+    "difficulty": "Easy",
+    "options": {
+      "A": "Adjugate matrix equation",
+      "B": "Characteristic polynomial equation",
+      "C": "Row-reduced echelon form",
+      "D": "Singular value decomposition"
+    },
+    "correct_answer": "B",
+    "answer": "B"
+  },
+  {
+    "id": "QB_EM_085",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Matrices and determinants",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "Consider a $3 \\times 3$ real matrix $A$ with $\\det(A) = 5$. Calculate the determinant of the matrix $2 A^{-1}$.",
+    "solution": "For an $n \\times n$ matrix $A$:\n$$\\det(k A^{-1}) = k^n \\det(A^{-1}) = \\frac{k^n}{\\det(A)}$$\nHere $n = 3$, $k = 2$, and $\\det(A) = 5$:\n$$\\det(2 A^{-1}) = \\frac{2^3}{\\det(A)} = \\frac{8}{5} = 1.6$$",
+    "difficulty": "Moderate",
+    "correct_answer": 1.6,
+    "answer": 1.6,
+    "numerical_range": {
+      "min": 1.55,
+      "max": 1.65
+    }
+  },
+  {
+    "id": "QB_EM_086",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Solutions of linear equations",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "Erwin Kreyszig - Advanced Engineering Mathematics",
+    "question": "For the system of linear equations:\n$$\\begin{aligned} x + y + z &= 6 \\\\ x + 2y + 3z &= 10 \\\\ x + 2y + k z &= \\mu \\end{aligned}$$\nCalculate the value of $k$ for which the system has infinitely many solutions (given $\\mu = 10$).",
+    "solution": "Using row reduction on the augmented matrix $[A | B]$:\n$$\\begin{pmatrix} 1 & 1 & 1 & | & 6 \\\\ 1 & 2 & 3 & | & 10 \\\\ 1 & 2 & k & | & \\mu \\end{pmatrix}$$\nRow operations $R_2 \\to R_2 - R_1$ and $R_3 \\to R_3 - R_2$:\n$$\\begin{pmatrix} 1 & 1 & 1 & | & 6 \\\\ 0 & 1 & 2 & | & 4 \\\\ 0 & 0 & k - 3 & | & \\mu - 10 \\end{pmatrix}$$\nFor infinitely many solutions, the rank of $A$ must equal the rank of $[A|B] < 3$:\n$$k - 3 = 0 \\implies k = 3$$\nand $\\mu - 10 = 0 \\implies \\mu = 10$.",
+    "difficulty": "Moderate",
+    "correct_answer": 3,
+    "answer": 3,
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    }
+  },
+  {
+    "id": "QB_EM_087",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Linear and orthogonal transformations",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "Which of the following statements are TRUE for any real orthogonal matrix $Q$ ($Q^T Q = I$)?",
+    "solution": "- A is true: $\\det(Q^T Q) = [\\det(Q)]^2 = 1 \\implies \\det(Q) = \\pm 1$.\n- B is true: For $Q x = \\lambda x$, $\\|Q x\\| = \\|x\\| \\implies |\\lambda| = 1$.\n- C is true: $Q^T Q = I$ means $q_i^T q_j = \\delta_{ij}$, an orthonormal basis.\n- D is false: Orthogonal matrices need not be symmetric (e.g., standard 2D rotation matrix for $\\theta \\ne 0$).",
+    "difficulty": "Moderate",
+    "options": {
+      "A": "The determinant of $Q$ can only be $+1$ or $-1$",
+      "B": "The absolute value (modulus) of each of its eigenvalues is equal to $1$",
+      "C": "The column vectors of $Q$ form an orthonormal set",
+      "D": "The matrix $Q$ is always symmetric ($Q = Q^T$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_EM_088",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Limit, continuity and differentiability",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "Evaluate the limit:\n$$L = \\lim_{x \\to 0} \\frac{\\sin(3x) - 3x}{x^3}$$",
+    "solution": "Using Maclaurin expansion of $\\sin(3x)$:\n$$\\sin(3x) = 3x - \\frac{(3x)^3}{3!} + \\frac{(3x)^5}{5!} - \\dots = 3x - \\frac{27 x^3}{6} + O(x^5) = 3x - 4.5 x^3 + O(x^5)$$\nSubstituting into limit:\n$$L = \\lim_{x \\to 0} \\frac{(3x - 4.5 x^3) - 3x}{x^3} = \\lim_{x \\to 0} \\frac{-4.5 x^3}{x^3} = -4.5$$",
+    "difficulty": "Moderate",
+    "correct_answer": -4.5,
+    "answer": -4.5,
+    "numerical_range": {
+      "min": -4.6,
+      "max": -4.4
+    }
+  },
+  {
+    "id": "QB_EM_089",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Fourier, Taylor and MacLaurin series",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "Erwin Kreyszig - Advanced Engineering Mathematics",
+    "question": "The coefficient of $(x - 2)^3$ in the Taylor series expansion of $f(x) = e^{2x}$ about $x = 2$ is $C e^4$. Calculate the numerical value of $C$.",
+    "solution": "Taylor series coefficient for $(x - a)^n$ is $\\frac{f^{(n)}(a)}{n!}$.\nHere $f(x) = e^{2x}$, $a = 2$, $n = 3$.\n$$f'(x) = 2 e^{2x}, \\quad f''(x) = 4 e^{2x}, \\quad f'''(x) = 8 e^{2x}$$\n$$f'''(2) = 8 e^4$$\n$$\\text{Coefficient} = \\frac{8 e^4}{3!} = \\frac{8 e^4}{6} = \\frac{4}{3} e^4 \\approx 1.333 e^4$$\nSo $C = \\frac{4}{3} \\approx 1.333$.",
+    "difficulty": "Moderate",
+    "correct_answer": 1.333,
+    "answer": 1.333,
+    "numerical_range": {
+      "min": 1.3,
+      "max": 1.35
+    }
+  },
+  {
+    "id": "QB_EM_090",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Homogeneous function – Euler's theorem on homogeneous functions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "If $u = \\sin^{-1}\\left( \\frac{x^3 + y^3}{x + y} \\right)$, calculate the value of $x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y}$ when $u = \\frac{\\pi}{6}$.",
+    "solution": "Let $z = \\sin(u) = \\frac{x^3 + y^3}{x + y}$.\n$z$ is a homogeneous function of degree $n = 3 - 1 = 2$.\nBy Euler's theorem for homogeneous functions:\n$$x \\frac{\\partial z}{\\partial x} + y \\frac{\\partial z}{\\partial y} = n z = 2 z$$\nSince $z = \\sin(u)$:\n$$\\frac{\\partial z}{\\partial x} = \\cos(u) \\frac{\\partial u}{\\partial x}, \\quad \\frac{\\partial z}{\\partial y} = \\cos(u) \\frac{\\partial u}{\\partial y}$$\n$$\\cos(u) \\left( x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y} \\right) = 2 \\sin(u)$$\n$$x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y} = 2 \\tan(u)$$\nFor $u = \\frac{\\pi}{6}$ ($30^\\circ$):\n$$2 \\tan(30^\\circ) = 2 \\times \\frac{1}{\\sqrt{3}} = \\frac{2}{1.732} \\approx 1.1547$$",
+    "difficulty": "Hard",
+    "correct_answer": 1.155,
+    "answer": 1.155,
+    "numerical_range": {
+      "min": 1.12,
+      "max": 1.18
+    }
+  },
+  {
+    "id": "QB_EM_091",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Maxima and minima of function with several independent variables",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "Find the local minimum value of the function $f(x, y) = x^2 + 2y^2 - 4x - 4y + 10$.",
+    "solution": "Completing the squares:\n$$f(x, y) = (x^2 - 4x + 4) + 2(y^2 - 2y + 1) + 10 - 4 - 2$$\n$$f(x, y) = (x - 2)^2 + 2(y - 1)^2 + 4$$\nSince $(x - 2)^2 \\ge 0$ and $2(y - 1)^2 \\ge 0$, the minimum value is $4$, occurring at $(x, y) = (2, 1)$.",
+    "difficulty": "Easy",
+    "correct_answer": 4,
+    "answer": 4,
+    "numerical_range": {
+      "min": 3.95,
+      "max": 4.05
+    }
+  },
+  {
+    "id": "QB_EM_092",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Scalar and vector point functions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "Calculate the directional derivative of $\\phi(x, y, z) = 2xy + z^2$ at the point $P(1, 2, 3)$ in the direction of the vector $\\vec{v} = 3\\hat{i} + 4\\hat{j}$.",
+    "solution": "Gradient $\\nabla \\phi = \\frac{\\partial \\phi}{\\partial x}\\hat{i} + \\frac{\\partial \\phi}{\\partial y}\\hat{j} + \\frac{\\partial \\phi}{\\partial z}\\hat{k}$:\n$$\\nabla \\phi = (2y)\\hat{i} + (2x)\\hat{j} + (2z)\\hat{k}$$\nAt $P(1, 2, 3)$:\n$$\\nabla \\phi = 2(2)\\hat{i} + 2(1)\\hat{j} + 2(3)\\hat{k} = 4\\hat{i} + 2\\hat{j} + 6\\hat{k}$$\nUnit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{3\\hat{i} + 4\\hat{j}}{\\sqrt{3^2 + 4^2}} = \\frac{3}{5}\\hat{i} + \\frac{4}{5}\\hat{j}$$\nDirectional derivative:\n$$D_{\\hat{u}} = \\nabla \\phi \\cdot \\hat{u} = \\left(4 \\times \\frac{3}{5}\\right) + \\left(2 \\times \\frac{4}{5}\\right) + (6 \\times 0) = \\frac{12 + 8}{5} = \\frac{20}{5} = 4.0$$",
+    "difficulty": "Moderate",
+    "correct_answer": 4,
+    "answer": 4,
+    "numerical_range": {
+      "min": 3.95,
+      "max": 4.05
+    }
+  },
+  {
+    "id": "QB_EM_093",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Divergence and curl",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "A vector field $\\vec{F}$ is solenoidal if and only if:",
+    "solution": "A vector field is solenoidal (divergence-free) if $\\nabla \\cdot \\vec{F} = 0$. If $\\nabla \\times \\vec{F} = 0$, the vector field is irrotational (conservative).",
+    "difficulty": "Easy",
+    "options": {
+      "A": "$\\nabla \\times \\vec{F} = 0$",
+      "B": "$\\nabla \\cdot \\vec{F} = 0$",
+      "C": "$\\nabla (\\nabla \\cdot \\vec{F}) = 0$",
+      "D": "$\\nabla^2 \\vec{F} = 0$"
+    },
+    "correct_answer": "B",
+    "answer": "B"
+  },
+  {
+    "id": "QB_EM_094",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Physical interpretations – line, surface and volume integrals",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "Erwin Kreyszig - Advanced Engineering Mathematics",
+    "question": "Using Gauss Divergence Theorem, evaluate the outward surface integral $\\iint_S \\vec{F} \\cdot \\hat{n}\\, dS$, where $\\vec{F} = 2x\\hat{i} + 3y\\hat{j} + 4z\\hat{k}$ and $S$ is the surface of a sphere of radius $R = 1$ centered at origin. (Take $\\pi = 3.1416$)",
+    "solution": "By Gauss Divergence Theorem:\n$$\\iint_S \\vec{F} \\cdot \\hat{n}\\, dS = \\iiint_V (\\nabla \\cdot \\vec{F})\\, dV$$\n$$\\nabla \\cdot \\vec{F} = \\frac{\\partial(2x)}{\\partial x} + \\frac{\\partial(3y)}{\\partial y} + \\frac{\\partial(4z)}{\\partial z} = 2 + 3 + 4 = 9$$\nVolume of unit sphere $V = \\frac{4}{3} \\pi R^3 = \\frac{4}{3} \\pi (1)^3 = \\frac{4\\pi}{3}$:\n$$\\iint_S \\vec{F} \\cdot \\hat{n}\\, dS = 9 \\times \\frac{4\\pi}{3} = 12\\pi = 12 \\times 3.14159 \\approx 37.70$$",
+    "difficulty": "Moderate",
+    "correct_answer": 37.7,
+    "answer": 37.7,
+    "numerical_range": {
+      "min": 37.5,
+      "max": 37.9
+    }
+  },
+  {
+    "id": "QB_EM_095",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Sequences and series – infinite series, tests for convergence",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "The p-series $\\sum_{n=1}^\\infty \\frac{1}{n^p}$ converges if and only if:",
+    "solution": "By the integral test for p-series, $\\sum_{n=1}^\\infty \\frac{1}{n^p}$ converges strictly when $p > 1$. For $p = 1$, it is the harmonic series which diverges to infinity.",
+    "difficulty": "Easy",
+    "options": {
+      "A": "$p > 1$",
+      "B": "$p \\ge 1$",
+      "C": "$p < 1$",
+      "D": "$p \\le 0$"
+    },
+    "correct_answer": "A",
+    "answer": "A"
+  },
+  {
+    "id": "QB_EM_096",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Eigen values and Eigen vectors",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "For a real skew-symmetric matrix $A$ ($A^T = -A$), which of the following statements must be TRUE?",
+    "solution": "- A is true: $a_{ii} = -a_{ii} \\implies a_{ii} = 0$.\n- B is true: For skew-symmetric real matrices, eigenvalues are of the form $i \\beta$ (purely imaginary or 0).\n- C is true: $\\det(A) = \\det(A^T) = \\det(-A) = (-1)^n \\det(A)$. For odd $n$, $\\det(A) = -\\det(A) \\implies \\det(A) = 0$.\n- D is false: Any odd-order skew-symmetric matrix has determinant zero and is singular (non-invertible).",
+    "difficulty": "Moderate",
+    "options": {
+      "A": "All diagonal elements of $A$ are zero",
+      "B": "All eigenvalues of $A$ are purely imaginary or zero",
+      "C": "The determinant of $A$ is zero if $A$ is of odd order",
+      "D": "The matrix $A$ is always invertible"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_EM_097",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Partial derivatives",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "If $z = e^{xy}$, calculate the value of $\\frac{\\partial^2 z}{\\partial x \\partial y}$ evaluated at $x = 1, y = 1$. (Give answer as a multiple of $e$, i.e. $\\text{Value} / e$)",
+    "solution": "$$\\frac{\\partial z}{\\partial y} = x e^{xy}$$\n$$\\frac{\\partial^2 z}{\\partial x \\partial y} = \\frac{\\partial}{\\partial x}(x e^{xy}) = e^{xy} + x(y e^{xy}) = (1 + xy) e^{xy}$$\nAt $x = 1, y = 1$:\n$$\\frac{\\partial^2 z}{\\partial x \\partial y} = (1 + 1) e^{1} = 2 e$$\nValue divided by $e$ is $2.0$.",
+    "difficulty": "Moderate",
+    "correct_answer": 2,
+    "answer": 2,
+    "numerical_range": {
+      "min": 1.95,
+      "max": 2.05
+    }
+  },
+  {
+    "id": "QB_EM_098",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Divergence and curl",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "For the vector field $\\vec{F} = (4y)\\hat{i} + (x)\\hat{j} + (2z)\\hat{k}$, calculate the magnitude of the curl $|\\nabla \\times \\vec{F}|$.",
+    "solution": "The curl of $\\vec{F}$ is given by:\n$$\\nabla \\times \\vec{F} = \\begin{vmatrix} \\hat{i} & \\hat{j} & \\hat{k} \\\\ \\frac{\\partial}{\\partial x} & \\frac{\\partial}{\\partial y} & \\frac{\\partial}{\\partial z} \\\\ 4y & x & 2z \\end{vmatrix}$$\nComponents:\n$$\\hat{i}: \\frac{\\partial(2z)}{\\partial y} - \\frac{\\partial(x)}{\\partial z} = 0 - 0 = 0$$\n$$\\hat{j}: -\\left(\\frac{\\partial(2z)}{\\partial x} - \\frac{\\partial(4y)}{\\partial z}\\right) = 0 - 0 = 0$$\n$$\\hat{k}: \\frac{\\partial(x)}{\\partial x} - \\frac{\\partial(4y)}{\\partial y} = 1 - 4 = -3$$\n$$\\nabla \\times \\vec{F} = -3\\hat{k}$$\nMagnitude:\n$$|\\nabla \\times \\vec{F}| = |-3| = 3.0$$",
+    "difficulty": "Moderate",
+    "correct_answer": 3,
+    "answer": 3,
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    }
+  },
+  {
+    "id": "QB_EM_099",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Eigen values and Eigen vectors",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "If the eigenvalues of a $3 \\times 3$ matrix $A$ are $1, -2,$ and $4$, calculate the determinant of $A$.",
+    "solution": "The determinant of a square matrix is the product of its eigenvalues:\n$$\\det(A) = \\lambda_1 \\times \\lambda_2 \\times \\lambda_3 = 1 \\times (-2) \\times 4 = -8.0$$",
+    "difficulty": "Easy",
+    "correct_answer": -8,
+    "answer": -8,
+    "numerical_range": {
+      "min": -8.1,
+      "max": -7.9
+    }
+  },
+  {
+    "id": "QB_EM_100",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Total differentiation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "A right circular cone has radius $r = 10\\text{ cm}$ and height $h = 20\\text{ cm}$. If radius increases by $1\\%$ and height decreases by $1\\%$, calculate the approximate percentage change in its volume.",
+    "solution": "Volume of a cone $V = \\frac{1}{3} \\pi r^2 h$.\nTaking natural logarithm:\n$$\\ln V = \\ln\\left(\\frac{\\pi}{3}\\right) + 2 \\ln r + \\ln h$$\nDifferentiating totally:\n$$\\frac{dV}{V} = 2 \\frac{dr}{r} + \\frac{dh}{h}$$\nGiven $\\frac{dr}{r} = +1\\% = +0.01$ and $\\frac{dh}{h} = -1\\% = -0.01$:\n$$\\frac{dV}{V} = 2(+1\\%) + (-1\\%) = +2\\% - 1\\% = +1.0\\%$$",
+    "difficulty": "Moderate",
+    "correct_answer": 1,
+    "answer": 1,
+    "numerical_range": {
+      "min": 0.95,
+      "max": 1.05
+    }
+  },
+  {
+    "id": "QB_EM_101",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Matrices and determinants",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "Calculate the rank of the matrix:\n$$A = \\begin{pmatrix} 1 & 2 & 3 \\\\ 2 & 4 & 6 \\\\ 3 & 6 & 9 \\end{pmatrix}$$",
+    "solution": "Notice that row 2 is $2 \\times R_1$ and row 3 is $3 \\times R_1$. Performing row operations $R_2 \\to R_2 - 2 R_1$ and $R_3 \\to R_3 - 3 R_1$ yields:\n$$\\begin{pmatrix} 1 & 2 & 3 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\end{pmatrix}$$\nThere is only 1 non-zero row in echelon form, so $\\text{rank}(A) = 1$.",
+    "difficulty": "Easy",
+    "correct_answer": 1,
+    "answer": 1,
+    "numerical_range": {
+      "min": 0.95,
+      "max": 1.05
+    }
+  },
+  {
+    "id": "QB_EM_102",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Limit, continuity and differentiability",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "Evaluate the limit:\n$$L = \\lim_{x \\to 0} (1 + 2x)^{1/x}$$",
+    "solution": "This is of indeterminate form $1^\\infty$.\n$$\\ln L = \\lim_{x \\to 0} \\frac{\\ln(1 + 2x)}{x}$$\nApplying L'Hopital's rule:\n$$\\ln L = \\lim_{x \\to 0} \\frac{\\frac{2}{1 + 2x}}{1} = 2$$\n$$L = e^2 \\approx 7.389$$",
+    "difficulty": "Moderate",
+    "correct_answer": 7.389,
+    "answer": 7.389,
+    "numerical_range": {
+      "min": 7.3,
+      "max": 7.5
+    }
+  },
+  {
+    "id": "QB_EM_103",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Scalar and vector point functions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "If $\\vec{r} = x\\hat{i} + y\\hat{j} + z\\hat{k}$ and $r = |\\vec{r}|$, calculate the value of $\\nabla \\cdot \\vec{r}$.",
+    "solution": "$$\\nabla \\cdot \\vec{r} = \\frac{\\partial x}{\\partial x} + \\frac{\\partial y}{\\partial y} + \\frac{\\partial z}{\\partial z} = 1 + 1 + 1 = 3.0$$",
+    "difficulty": "Easy",
+    "correct_answer": 3,
+    "answer": 3,
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    }
+  },
+  {
+    "id": "QB_EM_104",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Physical interpretations – line, surface and volume integrals",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "Erwin Kreyszig - Advanced Engineering Mathematics",
+    "question": "Using Green's theorem in the plane, evaluate the line integral $\\oint_C (x^2 - y) dx + (x + y^2) dy$ around the counterclockwise circular path $C: x^2 + y^2 = 4$. (Take $\\pi = 3.1416$)",
+    "solution": "By Green's theorem:\n$$\\oint_C M dx + N dy = \\iint_R \\left( \\frac{\\partial N}{\\partial x} - \\frac{\\partial M}{\\partial y} \\right) dA$$\nHere $M = x^2 - y$ and $N = x + y^2$:\n$$\\frac{\\partial N}{\\partial x} = 1, \\quad \\frac{\\partial M}{\\partial y} = -1$$\n$$\\frac{\\partial N}{\\partial x} - \\frac{\\partial M}{\\partial y} = 1 - (-1) = 2$$\n$$\\oint_C M dx + N dy = \\iint_R 2\\, dA = 2 \\times \\text{Area}(R)$$\nRegion $R$ is circle of radius $R = 2$, area $\\pi (2)^2 = 4\\pi$:\n$$\\text{Integral} = 2 \\times 4\\pi = 8\\pi = 8 \\times 3.14159 \\approx 25.132$$",
+    "difficulty": "Moderate",
+    "correct_answer": 25.13,
+    "answer": 25.13,
+    "numerical_range": {
+      "min": 25,
+      "max": 25.3
+    }
+  },
+  {
+    "id": "QB_EM_105",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Eigen values and Eigen vectors",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "A $2 \\times 2$ matrix has trace $7$ and determinant $10$. Calculate the largest eigenvalue of the matrix.",
+    "solution": "The characteristic equation of a $2 \\times 2$ matrix is:\n$$\\lambda^2 - \\text{Tr}(A) \\lambda + \\det(A) = 0$$\n$$\\lambda^2 - 7\\lambda + 10 = 0$$\n$$(\\lambda - 5)(\\lambda - 2) = 0$$\nEigenvalues are $\\lambda_1 = 5$ and $\\lambda_2 = 2$.\nThe largest eigenvalue is $5.0$.",
+    "difficulty": "Easy",
+    "correct_answer": 5,
+    "answer": 5,
+    "numerical_range": {
+      "min": 4.95,
+      "max": 5.05
+    }
+  },
+  {
+    "id": "QB_EM_106",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Maxima and minima of function with several independent variables",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "For a function $f(x, y)$ with stationary point $(a, b)$, let $r = f_{xx}, s = f_{xy}, t = f_{yy}$. A saddle point occurs if:",
+    "solution": "The discriminant is $D = r t - s^2$:\n- If $D > 0$ and $r > 0$: Local minimum.\n- If $D > 0$ and $r < 0$: Local maximum.\n- If $D < 0$: Saddle point.\n- If $D = 0$: Test is inconclusive.",
+    "difficulty": "Easy",
+    "options": {
+      "A": "$r t - s^2 > 0$ and $r > 0$",
+      "B": "$r t - s^2 > 0$ and $r < 0$",
+      "C": "$r t - s^2 < 0$",
+      "D": "$r t - s^2 = 0$"
+    },
+    "correct_answer": "C",
+    "answer": "C"
+  },
+  {
+    "id": "QB_EM_107",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Divergence and curl",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "For any twice continuously differentiable scalar field $\\phi$, calculate the value of $|\\nabla \\times (\\nabla \\phi)|$.",
+    "solution": "The curl of the gradient of any smooth scalar field is identically zero:\n$$\\nabla \\times (\\nabla \\phi) = \\vec{0} \\implies |\\nabla \\times (\\nabla \\phi)| = 0$$",
+    "difficulty": "Easy",
+    "correct_answer": 0,
+    "answer": 0,
+    "numerical_range": {
+      "min": -0.01,
+      "max": 0.01
+    }
+  },
+  {
+    "id": "QB_EM_108",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Linear and non-linear first order Ordinary Differential Equations (ODE)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "Find the integrating factor $I(x)$ for the linear first-order differential equation $\\frac{dy}{dx} + \\frac{2}{x} y = x^3$ (for $x > 0$). Calculate the value of $I(x)$ at $x = 3$.",
+    "solution": "The standard linear form is $\\frac{dy}{dx} + P(x) y = Q(x)$ where $P(x) = \\frac{2}{x}$.\nThe integrating factor is:\n$$I(x) = e^{\\int P(x) dx} = e^{\\int \\frac{2}{x} dx} = e^{2 \\ln x} = e^{\\ln(x^2)} = x^2$$\nAt $x = 3$:\n$$I(3) = 3^2 = 9.0$$",
+    "difficulty": "Easy",
+    "correct_answer": 9,
+    "answer": 9,
+    "numerical_range": {
+      "min": 8.95,
+      "max": 9.05
+    }
+  },
+  {
+    "id": "QB_EM_109",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Higher order linear ODEs with constant coefficients",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "For the differential equation $\\frac{d^2 y}{dx^2} - 6\\frac{dy}{dx} + 9y = 0$ with initial conditions $y(0) = 1$ and $y'(0) = 5$, calculate the value of $y(1) / e^3$.",
+    "solution": "Characteristic equation:\n$$m^2 - 6m + 9 = 0 \\implies (m - 3)^2 = 0 \\implies m = 3, 3$$\nGeneral solution for repeated roots:\n$$y(x) = (C_1 + C_2 x) e^{3x}$$\nAt $x = 0$:\n$$y(0) = C_1 = 1$$\nDerivative:\n$$y'(x) = C_2 e^{3x} + 3(C_1 + C_2 x) e^{3x}$$\n$$y'(0) = C_2 + 3 C_1 = C_2 + 3(1) = 5 \\implies C_2 = 2$$\nThus, $y(x) = (1 + 2x) e^{3x}$.\nAt $x = 1$:\n$$y(1) = (1 + 2(1)) e^3 = 3 e^3$$\n$$y(1)/e^3 = 3.0$$",
+    "difficulty": "Moderate",
+    "correct_answer": 3,
+    "answer": 3,
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    }
+  },
+  {
+    "id": "QB_EM_110",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Laplace transforms and their inverse",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "source": "Erwin Kreyszig - Advanced Engineering Mathematics",
+    "question": "The Laplace transform of $f(t) = t^2 e^{3t}$ is given by:",
+    "solution": "By the first shifting theorem, $\\mathcal{L}\\{e^{at} f(t)\\} = F(s - a)$.\nSince $\\mathcal{L}\\{t^2\\} = \\frac{2!}{s^3} = \\frac{2}{s^3}$, shifting with $a = 3$ yields:\n$$\\mathcal{L}\\{t^2 e^{3t}\\} = \\frac{2}{(s - 3)^3}$$",
+    "difficulty": "Easy",
+    "options": {
+      "A": "$\\frac{2}{(s - 3)^3}$",
+      "B": "$\\frac{1}{(s - 3)^3}$",
+      "C": "$\\frac{2}{(s + 3)^3}$",
+      "D": "$\\frac{6}{(s - 3)^2}$"
+    },
+    "correct_answer": "A",
+    "answer": "A"
+  },
+  {
+    "id": "QB_EM_111",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Partial Differential Equations – Laplace, heat and wave equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "The one-dimensional heat conduction equation $\\frac{\\partial u}{\\partial t} = \\alpha \\frac{\\partial^2 u}{\\partial x^2}$ is classified as:",
+    "solution": "For a second order PDE $A u_{xx} + B u_{xt} + C u_{tt} + \\dots = 0$, the discriminant is $B^2 - 4AC$.\nHere $A = \\alpha, B = 0, C = 0$, so $B^2 - 4AC = 0$, which classifies the heat equation as parabolic. (The wave equation is hyperbolic with $B^2 - 4AC > 0$, and Laplace equation is elliptic with $B^2 - 4AC < 0$).",
+    "difficulty": "Easy",
+    "options": {
+      "A": "Elliptic partial differential equation",
+      "B": "Parabolic partial differential equation",
+      "C": "Hyperbolic partial differential equation",
+      "D": "Ultra-hyperbolic partial differential equation"
+    },
+    "correct_answer": "B",
+    "answer": "B"
+  },
+  {
+    "id": "QB_EM_112",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Random variables",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "A continuous random variable $X$ has probability density function $f(x) = k x (2 - x)$ for $0 \\le x \\le 2$ and $0$ elsewhere. Calculate the value of the constant $k$.",
+    "solution": "For a valid probability density function, $\\int_{-\\infty}^\\infty f(x) dx = 1$:\n$$k \\int_0^2 (2x - x^2) dx = 1$$\n$$k \\left[ x^2 - \\frac{x^3}{3} \\right]_0^2 = 1$$\n$$k \\left[ 4 - \\frac{8}{3} \\right] = k \\left( \\frac{4}{3} \\right) = 1$$\n$$k = \\frac{3}{4} = 0.75$$",
+    "difficulty": "Moderate",
+    "correct_answer": 0.75,
+    "answer": 0.75,
+    "numerical_range": {
+      "min": 0.74,
+      "max": 0.76
+    }
+  },
+  {
+    "id": "QB_EM_113",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Poisson, normal and binomial distributions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "If a random variable $X$ follows a Poisson distribution such that $P(X = 1) = P(X = 2)$, calculate the mean $\\lambda$ of the distribution.",
+    "solution": "For a Poisson distribution, $P(X = k) = \\frac{e^{-\\lambda} \\lambda^k}{k!}$.\n$$P(X = 1) = \\frac{e^{-\\lambda} \\lambda^1}{1!} = \\lambda e^{-\\lambda}$$\n$$P(X = 2) = \\frac{e^{-\\lambda} \\lambda^2}{2!} = \\frac{\\lambda^2 e^{-\\lambda}}{2}$$\nEquating the two:\n$$\\lambda e^{-\\lambda} = \\frac{\\lambda^2 e^{-\\lambda}}{2}$$\nSince $\\lambda > 0$ and $e^{-\\lambda} \\ne 0$:\n$$1 = \\frac{\\lambda}{2} \\implies \\lambda = 2.0$$",
+    "difficulty": "Easy",
+    "correct_answer": 2,
+    "answer": 2,
+    "numerical_range": {
+      "min": 1.95,
+      "max": 2.05
+    }
+  },
+  {
+    "id": "QB_EM_114",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Poisson, normal and binomial distributions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "In a binomial distribution with parameters $n = 100$ and $p = 0.20$, calculate the standard deviation $\\sigma$ of the distribution.",
+    "solution": "For a binomial distribution $B(n, p)$:\n$$\\text{Variance } \\sigma^2 = n p q$$\nWhere $q = 1 - p = 1 - 0.20 = 0.80$.\n$$\\sigma^2 = 100 \\times 0.20 \\times 0.80 = 16$$\n$$\\sigma = \\sqrt{16} = 4.0$$",
+    "difficulty": "Easy",
+    "correct_answer": 4,
+    "answer": 4,
+    "numerical_range": {
+      "min": 3.95,
+      "max": 4.05
+    }
+  },
+  {
+    "id": "QB_EM_115",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Correlation and regression analysis",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "The two regression lines are given by $3x + 2y = 26$ and $6x + y = 31$. Calculate the correlation coefficient $r$ between $x$ and $y$.",
+    "solution": "Let the regression line of $y$ on $x$ be $3x + 2y = 26 \\implies 2y = -3x + 26 \\implies y = -\\frac{3}{2} x + 13$, so $b_{yx} = -1.5$.\nThen the regression line of $x$ on $y$ is $6x + y = 31 \\implies 6x = -y + 31 \\implies x = -\\frac{1}{6} y + \\frac{31}{6}$, so $b_{xy} = -\\frac{1}{6}$.\nChecking product:\n$$b_{yx} \\times b_{xy} = (-1.5) \\times \\left(-\\frac{1}{6}\\right) = \\frac{1.5}{6} = 0.25 \\le 1$$\nThis is a valid assignment. The correlation coefficient is:\n$$r = -\\sqrt{b_{yx} \\times b_{xy}} = -\\sqrt{0.25} = -0.5$$",
+    "difficulty": "Moderate",
+    "correct_answer": -0.5,
+    "answer": -0.5,
+    "numerical_range": {
+      "min": -0.52,
+      "max": -0.48
+    }
+  },
+  {
+    "id": "QB_EM_116",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods",
+    "subtopic": "Solutions of linear and non-linear algebraic equations",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "Newton-Raphson method is used to find a root of $f(x) = x^2 - 5 = 0$. If the initial guess is $x_0 = 2.0$, calculate the approximation $x_1$ after the first iteration.",
+    "solution": "Newton-Raphson formula:\n$$x_1 = x_0 - \\frac{f(x_0)}{f'(x_0)}$$\nHere $f(x) = x^2 - 5$, $f'(x) = 2x$.\nAt $x_0 = 2.0$:\n$$f(2.0) = 2^2 - 5 = -1$$\n$$f'(2.0) = 2(2) = 4$$\n$$x_1 = 2.0 - \\frac{-1}{4} = 2.0 + 0.25 = 2.25$$",
+    "difficulty": "Easy",
+    "correct_answer": 2.25,
+    "answer": 2.25,
+    "numerical_range": {
+      "min": 2.24,
+      "max": 2.26
+    }
+  },
+  {
+    "id": "QB_EM_117",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods",
+    "subtopic": "Solutions of linear and non-linear algebraic equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "source": "Erwin Kreyszig - Advanced Engineering Mathematics",
+    "question": "The order of convergence of the Newton-Raphson method for a simple real root is:",
+    "solution": "Newton-Raphson method has quadratic convergence (order $p = 2$) near a simple root ($f'(r) \\ne 0$), meaning the number of correct decimal digits roughly doubles with each iteration.",
+    "difficulty": "Easy",
+    "options": {
+      "A": "1 (Linear)",
+      "B": "2 (Quadratic)",
+      "C": "1.618 (Super-linear)",
+      "D": "3 (Cubic)"
+    },
+    "correct_answer": "B",
+    "answer": "B"
+  },
+  {
+    "id": "QB_EM_118",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods",
+    "subtopic": "Numerical integration – trapezoidal and Simpson's rule",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "Evaluate $\\int_0^2 x^3 dx$ using Simpson's $1/3$ rule with a step size of $h = 1.0$.",
+    "solution": "Given $h = 1.0$, intervals: $x_0 = 0, x_1 = 1, x_2 = 2$.\nFunction values $y = x^3$:\n$$y_0 = 0^3 = 0$$\n$$y_1 = 1^3 = 1$$\n$$y_2 = 2^3 = 8$$\nSimpson's $1/3$ rule:\n$$I = \\frac{h}{3} [y_0 + 4y_1 + y_2] = \\frac{1}{3} [0 + 4(1) + 8] = \\frac{12}{3} = 4.0$$\n(Note: Simpson's rule integrates polynomials of degree up to 3 exactly).",
+    "difficulty": "Moderate",
+    "correct_answer": 4,
+    "answer": 4,
+    "numerical_range": {
+      "min": 3.95,
+      "max": 4.05
+    }
+  },
+  {
+    "id": "QB_EM_119",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods",
+    "subtopic": "Numerical integration – trapezoidal and Simpson's rule",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "Evaluate $\\int_0^2 x^2 dx$ using the Trapezoidal rule with $2$ equal sub-intervals ($h = 1.0$).",
+    "solution": "Points: $x_0 = 0, x_1 = 1, x_2 = 2$.\nFunction values $y = x^2$:\n$$y_0 = 0^2 = 0$$\n$$y_1 = 1^2 = 1$$\n$$y_2 = 2^2 = 4$$\nTrapezoidal rule:\n$$I = \\frac{h}{2} [y_0 + 2y_1 + y_2] = \\frac{1}{2} [0 + 2(1) + 4] = \\frac{6}{2} = 3.0$$",
+    "difficulty": "Easy",
+    "correct_answer": 3,
+    "answer": 3,
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    }
+  },
+  {
+    "id": "QB_EM_120",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods",
+    "subtopic": "Numerical solutions of ODEs",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "Erwin Kreyszig - Advanced Engineering Mathematics",
+    "question": "Using Euler's method with a step size of $h = 0.1$, find the value of $y(0.2)$ for the initial value problem $\\frac{dy}{dx} = x + y$, with $y(0) = 1$.",
+    "solution": "Step 1: at $x_0 = 0, y_0 = 1$:\n$$f(x_0, y_0) = 0 + 1 = 1$$\n$$y_1 = y_0 + h f(x_0, y_0) = 1 + (0.1)(1) = 1.1$$\nat $x_1 = 0.1$.\n\nStep 2: at $x_1 = 0.1, y_1 = 1.1$:\n$$f(x_1, y_1) = 0.1 + 1.1 = 1.2$$\n$$y_2 = y_1 + h f(x_1, y_1) = 1.1 + (0.1)(1.2) = 1.1 + 0.12 = 1.22$$",
+    "difficulty": "Moderate",
+    "correct_answer": 1.22,
+    "answer": 1.22,
+    "numerical_range": {
+      "min": 1.21,
+      "max": 1.23
+    }
+  },
+  {
+    "id": "QB_EM_121",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Homogeneous differential equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "The differential equation $\\frac{dy}{dx} = \\frac{x^2 + y^2}{2xy}$ can be transformed into a separable ODE by substituting:",
+    "solution": "The numerator $x^2 + y^2$ and denominator $2xy$ are both homogeneous functions of degree 2. Hence, substituting $y = v x$ (where $\\frac{dy}{dx} = v + x \\frac{dv}{dx}$) reduces the ODE to variables separable in $v$ and $x$.",
+    "difficulty": "Easy",
+    "options": {
+      "A": "$y = v x$",
+      "B": "$y = v + x$",
+      "C": "$y = v x^2$",
+      "D": "$y = \\frac{v}{x}$"
+    },
+    "correct_answer": "A",
+    "answer": "A"
+  },
+  {
+    "id": "QB_EM_122",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Mean, median, mode and standard deviation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "For a moderately skewed frequency distribution, the mean is $45$ and the median is $42$. Using Karl Pearson's empirical formula, calculate the mode of the distribution.",
+    "solution": "Karl Pearson's empirical relationship is:\n$$\\text{Mode} = 3(\\text{Median}) - 2(\\text{Mean})$$\n$$\\text{Mode} = 3(42) - 2(45) = 126 - 90 = 36.0$$",
+    "difficulty": "Easy",
+    "correct_answer": 36,
+    "answer": 36,
+    "numerical_range": {
+      "min": 35.5,
+      "max": 36.5
+    }
+  },
+  {
+    "id": "QB_EM_123",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Random variables",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "For any two independent random variables $X$ and $Y$, which of the following mathematical properties are ALWAYS satisfied?",
+    "solution": "- A is true: Independence implies product expectation factorizes.\n- B is true: $\\text{Var}(X + Y) = \\text{Var}(X) + \\text{Var}(Y) + 2\\text{Cov}(X, Y) = \\text{Var}(X) + \\text{Var}(Y)$.\n- C is true: Covariance is identically zero for independent variables.\n- D is false: $\\text{Var}(X - Y) = \\text{Var}(X) + \\text{Var}(Y) - 2\\text{Cov}(X, Y) = \\text{Var}(X) + \\text{Var}(Y)$, variances add.",
+    "difficulty": "Moderate",
+    "options": {
+      "A": "$E(X Y) = E(X) \\cdot E(Y)$",
+      "B": "$\\text{Var}(X + Y) = \\text{Var}(X) + \\text{Var}(Y)$",
+      "C": "$\\text{Cov}(X, Y) = 0$",
+      "D": "$\\text{Var}(X - Y) = \\text{Var}(X) - \\text{Var}(Y)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_EM_124",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods",
+    "subtopic": "Solutions of linear and non-linear algebraic equations",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "Erwin Kreyszig - Advanced Engineering Mathematics",
+    "question": "In the Bisection method to isolate a real root of $f(x) = 0$ in the initial bracket $[1, 9]$, calculate the minimum number of bisection iterations required to guarantee an absolute error of less than $0.01$.",
+    "solution": "The interval length after $n$ iterations is $\\frac{b - a}{2^n}$.\nFor error $\\le 0.01$:\n$$\\frac{9 - 1}{2^n} \\le 0.01 \\implies \\frac{8}{2^n} \\le 0.01 \\implies 2^n \\ge 800$$\nSince $2^9 = 512$ and $2^{10} = 1024$, the minimum number of iterations is $n = 10$.",
+    "difficulty": "Moderate",
+    "correct_answer": 10,
+    "answer": 10,
+    "numerical_range": {
+      "min": 9.5,
+      "max": 10.5
+    }
+  },
+  {
+    "id": "QB_EM_125",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Linear and non-linear first order Ordinary Differential Equations (ODE)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "If $(2xy + 3) dx + (x^2 + 4y) dy = 0$ is an exact differential equation, its general solution is given by $x^2 y + 3x + k y^2 = C$. Calculate the numerical value of the constant $k$.",
+    "solution": "Here $M = 2xy + 3$ and $N = x^2 + 4y$.\n$$\\frac{\\partial M}{\\partial y} = 2x = \\frac{\\partial N}{\\partial x}$$\nExact solution:\n$$\\int M dx (\\text{with } y \\text{ constant}) + \\int (N \\text{ terms without } x) dy = C$$\n$$\\int (2xy + 3) dx + \\int 4y dy = C$$\n$$x^2 y + 3x + 2y^2 = C$$\nComparing with $x^2 y + 3x + k y^2 = C$, we have $k = 2.0$.",
+    "difficulty": "Easy",
+    "correct_answer": 2,
+    "answer": 2,
+    "numerical_range": {
+      "min": 1.95,
+      "max": 2.05
+    }
+  },
+  {
+    "id": "QB_EM_126",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Poisson, normal and binomial distributions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "A normal distribution has mean $\\mu = 50$ and standard deviation $\\sigma = 10$. If the standardized normal score $Z = \\frac{X - \\mu}{\\sigma}$ corresponding to a value $X$ is $1.5$, calculate the value of $X$.",
+    "solution": "$$Z = \\frac{X - \\mu}{\\sigma} \\implies X = \\mu + Z \\sigma = 50 + (1.5 \\times 10) = 50 + 15 = 65.0$$",
+    "difficulty": "Easy",
+    "correct_answer": 65,
+    "answer": 65,
+    "numerical_range": {
+      "min": 64.5,
+      "max": 65.5
+    }
+  },
+  {
+    "id": "QB_EM_127",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Laplace transforms and their inverse",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "source": "Erwin Kreyszig - Advanced Engineering Mathematics",
+    "question": "Calculate the inverse Laplace transform value $\\mathcal{L}^{-1}\\left\\{ \\frac{s}{s^2 + 16} \\right\\}$ evaluated at $t = \\frac{\\pi}{8}$.",
+    "solution": "$$\\mathcal{L}^{-1}\\left\\{ \\frac{s}{s^2 + \\omega^2} \\right\\} = \\cos(\\omega t)$$\nHere $\\omega = 4$:\n$$f(t) = \\cos(4t)$$\nAt $t = \\frac{\\pi}{8}$:\n$$f\\left(\\frac{\\pi}{8}\\right) = \\cos\\left(4 \\times \\frac{\\pi}{8}\\right) = \\cos\\left(\\frac{\\pi}{2}\\right) = 0.0$$",
+    "difficulty": "Easy",
+    "correct_answer": 0,
+    "answer": 0,
+    "numerical_range": {
+      "min": -0.05,
+      "max": 0.05
+    }
+  },
+  {
+    "id": "QB_EM_128",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Fourier, Taylor and MacLaurin series",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "In the Fourier series expansion of the function $f(x) = x^2$ on the symmetric interval $[-\\pi, \\pi]$, calculate the constant term $a_0 = \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^2 dx$. (Express as a multiple of $\\pi^2$, i.e. $a_0 / \\pi^2$).",
+    "solution": "$$a_0 = \\frac{1}{\\pi} \\int_{-\\pi}^\\pi x^2 dx = \\frac{2}{\\pi} \\int_0^\\pi x^2 dx = \\frac{2}{\\pi} \\left[ \\frac{x^3}{3} \\right]_0^\\pi = \\frac{2}{\\pi} \\frac{\\pi^3}{3} = \\frac{2}{3} \\pi^2$$\nSo $a_0 / \\pi^2 = \\frac{2}{3} \\approx 0.667$.",
+    "difficulty": "Moderate",
+    "correct_answer": 0.667,
+    "answer": 0.667,
+    "numerical_range": {
+      "min": 0.65,
+      "max": 0.68
+    }
+  },
+  {
+    "id": "QB_EM_129",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods",
+    "subtopic": "Numerical integration – trapezoidal and Simpson's rule",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "Simpson's $1/3$ rule of numerical integration requires the total number of sub-intervals $n$ to be:",
+    "solution": "Simpson's $1/3$ rule pairs two adjacent sub-intervals per parabolic arc, thus requiring the total number of sub-intervals $n$ to be an even number. (Simpson's $3/8$ rule requires $n$ to be a multiple of 3).",
+    "difficulty": "Easy",
+    "options": {
+      "A": "Any positive integer",
+      "B": "Strictly an even number",
+      "C": "Strictly an odd number",
+      "D": "A multiple of 3"
+    },
+    "correct_answer": "B",
+    "answer": "B"
+  },
+  {
+    "id": "QB_EM_130",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Random variables",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "A fair six-sided die is tossed twice. Calculate the probability that the sum of the numbers obtained is equal to $8$.",
+    "solution": "Total possible outcomes $= 6 \\times 6 = 36$.\nFavorable outcomes with sum $= 8$ are:\n$(2, 6), (3, 5), (4, 4), (5, 3), (6, 2)$ (5 outcomes).\nProbability:\n$$P(\\text{Sum} = 8) = \\frac{5}{36} \\approx 0.1389$$",
+    "difficulty": "Easy",
+    "correct_answer": 0.1389,
+    "answer": 0.1389,
+    "numerical_range": {
+      "min": 0.13,
+      "max": 0.15
+    }
+  },
+  {
+    "id": "QB_EM_131",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Higher order linear ODEs with constant coefficients",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "Find the particular integral $y_p$ of the differential equation $\\frac{d^2 y}{dx^2} + 4y = 8$. The value of $y_p$ is:",
+    "solution": "$$y_p = \\frac{1}{D^2 + 4} (8 e^{0 \\cdot x}) = \\frac{8}{0^2 + 4} = \\frac{8}{4} = 2.0$$",
+    "difficulty": "Easy",
+    "correct_answer": 2,
+    "answer": 2,
+    "numerical_range": {
+      "min": 1.95,
+      "max": 2.05
+    }
+  },
+  {
+    "id": "QB_EM_132",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Matrices and determinants",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "source": "B.S. Grewal - Higher Engineering Mathematics",
+    "question": "If $A$ is a $3 \\times 3$ skew-symmetric matrix, calculate the determinant $\\det(A)$.",
+    "solution": "For any skew-symmetric matrix $A^T = -A$:\n$$\\det(A) = \\det(A^T) = \\det(-A) = (-1)^n \\det(A)$$\nFor $n = 3$ (odd order):\n$$\\det(A) = -\\det(A) \\implies 2\\det(A) = 0 \\implies \\det(A) = 0$$",
+    "difficulty": "Easy",
+    "correct_answer": 0,
+    "answer": 0,
+    "numerical_range": {
+      "min": -0.01,
+      "max": 0.01
+    }
+  },
+  {
+    "id": "QB_EM_133",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Matrices and determinants",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Calculate the determinant of the $3 \\times 3$ matrix $A = \\begin{bmatrix} 2 & 1 & 3 \\\\ 0 & 4 & 5 \\\\ 0 & 0 & 6 \\end{bmatrix}$.",
+    "numerical_range": {
+      "min": 47.9,
+      "max": 48.1
+    },
+    "answer": 48,
+    "correct_answer": 48,
+    "difficulty": "Easy",
+    "solution": "For an upper triangular matrix, the determinant equals the product of its diagonal elements:\n$$\\det(A) = 2 \\times 4 \\times 6 = 48$$",
+    "source": "B.S. Grewal - Higher Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_134",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Eigen values and Eigen vectors",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A $3 \\times 3$ matrix $M$ has eigenvalues $\\lambda_1 = 1$, $\\lambda_2 = 3$, and $\\lambda_3 = 5$. Calculate the determinant of the matrix $M^2$.",
+    "numerical_range": {
+      "min": 224,
+      "max": 226
+    },
+    "answer": 225,
+    "correct_answer": 225,
+    "difficulty": "Easy",
+    "solution": "The determinant of a matrix equals the product of its eigenvalues:\n$$\\det(M) = \\lambda_1 \\times \\lambda_2 \\times \\lambda_3 = 1 \\times 3 \\times 5 = 15$$\nBy properties of determinants:\n$$\\det(M^2) = (\\det(M))^2 = 15^2 = 225$$",
+    "source": "B.S. Grewal - Higher Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_135",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Cayley–Hamilton theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A $2 \\times 2$ matrix $A$ has trace equal to $5$ and determinant equal to $6$. According to the Cayley-Hamilton theorem, $A^2 - 5A + kI = 0$. What is the value of the scalar constant $k$?",
+    "numerical_range": {
+      "min": 5.9,
+      "max": 6.1
+    },
+    "answer": 6,
+    "correct_answer": 6,
+    "difficulty": "Easy",
+    "solution": "The characteristic equation of a $2 \\times 2$ matrix is:\n$$\\lambda^2 - \\text{tr}(A)\\lambda + \\det(A) = 0 \\implies \\lambda^2 - 5\\lambda + 6 = 0$$\nBy the Cayley-Hamilton theorem, every square matrix satisfies its own characteristic equation:\n$$A^2 - 5A + 6I = 0$$\nThus $k = 6$.",
+    "source": "B.S. Grewal - Higher Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_136",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Linear and orthogonal transformations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If a real square matrix $Q$ is orthogonal ($Q^T Q = I$), then the determinant of $Q$ must be:",
+    "options": {
+      "A": "+1 or -1",
+      "B": "0",
+      "C": "+2 or -2",
+      "D": "Any arbitrary real number"
+    },
+    "correct_answer": "A",
+    "answer": "A",
+    "difficulty": "Easy",
+    "solution": "Since $Q^T Q = I$, taking determinants gives $\\det(Q^T) \\det(Q) = (\\det(Q))^2 = \\det(I) = 1$, which implies $\\det(Q) = \\pm 1$.",
+    "source": "Erwin Kreyszig - Advanced Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_137",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Solutions of linear equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A system of $n$ linear equations in $n$ variables $A X = B$ has a UNIQUE solution if and only if:",
+    "options": {
+      "A": "Rank of $A$ equals $n$ (i.e., $\\det(A) \\neq 0$)",
+      "B": "Rank of $A$ is strictly less than $n$",
+      "C": "Determinant of $A$ equals 0",
+      "D": "Rank of augmented matrix $[A|B]$ is strictly greater than rank of $A$"
+    },
+    "correct_answer": "A",
+    "answer": "A",
+    "difficulty": "Easy",
+    "solution": "By Rouché-Capelli theorem, a linear system $AX = B$ with $n$ variables has a unique solution if and only if $\\text{rank}(A) = \\text{rank}([A|B]) = n$, which is equivalent to $\\det(A) \\neq 0$.",
+    "source": "B.S. Grewal - Higher Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_138",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Eigen values and Eigen vectors",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the eigenvalues and eigenvectors of a real symmetric matrix $A$ are CORRECT?",
+    "options": {
+      "A": "All eigenvalues of a real symmetric matrix are real numbers.",
+      "B": "Eigenvectors corresponding to distinct eigenvalues are mutually orthogonal.",
+      "C": "The trace of $A$ equals the sum of its eigenvalues.",
+      "D": "The determinant of $A$ equals zero for all real symmetric matrices."
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "difficulty": "Moderate",
+    "solution": "Statements A, B, and C are fundamental spectral theorems for real symmetric matrices: eigenvalues are all real, eigenvectors from distinct eigenspaces are orthogonal, and the sum of eigenvalues equals trace. Statement D is false because real symmetric matrices can be non-singular with non-zero determinants.",
+    "source": "B.S. Grewal - Higher Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_139",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Limit, continuity and differentiability",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Evaluate the limit: $\\lim_{x \\to 0} \\frac{\\sin(4x)}{\\tan(2x)}$.",
+    "numerical_range": {
+      "min": 1.99,
+      "max": 2.01
+    },
+    "answer": 2,
+    "correct_answer": 2,
+    "difficulty": "Easy",
+    "solution": "Using standard trigonometric limits:\n$$\\lim_{x \\to 0} \\frac{\\sin(4x)}{\\tan(2x)} = \\lim_{x \\to 0} \\frac{\\frac{\\sin(4x)}{4x} \\cdot 4x}{\\frac{\\tan(2x)}{2x} \\cdot 2x} = \\frac{1 \\cdot 4}{1 \\cdot 2} = 2.0$$",
+    "source": "B.S. Grewal - Higher Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_140",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Partial derivatives",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Given $f(x, y) = x^3 y^2 + 2x^2 y + 5$. Calculate the mixed second partial derivative $\\frac{\\partial^2 f}{\\partial x \\partial y}$ evaluated at $(x=1, y=2)$.",
+    "numerical_range": {
+      "min": 15.9,
+      "max": 16.1
+    },
+    "answer": 16,
+    "correct_answer": 16,
+    "difficulty": "Easy",
+    "solution": "First, differentiate with respect to $y$:\n$$\\frac{\\partial f}{\\partial y} = 2x^3 y + 2x^2$$\nNext, differentiate with respect to $x$:\n$$\\frac{\\partial^2 f}{\\partial x \\partial y} = 6x^2 y + 4x$$\nEvaluating at $x = 1, y = 2$:\n$$\\left. \\frac{\\partial^2 f}{\\partial x \\partial y} \\right|_{(1,2)} = 6(1)^2(2) + 4(1) = 12 + 4 = 16.0$$",
+    "source": "B.S. Grewal - Higher Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_141",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Homogeneous function – Euler's theorem on homogeneous functions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "If $u(x, y) = \\frac{x^4 + y^4}{x + y}$, calculate the value of $x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y}$ when $u = 8$.",
+    "numerical_range": {
+      "min": 23.9,
+      "max": 24.1
+    },
+    "answer": 24,
+    "correct_answer": 24,
+    "difficulty": "Easy",
+    "solution": "The degree of homogeneity $n$ is:\n$$u(tx, ty) = \\frac{t^4(x^4 + y^4)}{t(x + y)} = t^3 u(x, y) \\implies n = 3$$\nBy Euler's theorem on homogeneous functions:\n$$x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y} = n u = 3 \\times 8 = 24$$",
+    "source": "B.S. Grewal - Higher Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_142",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Total differentiation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The power dissipated across an electrical resistor is $P = I^2 R$. In an experiment, current $I$ is measured with an error of $+2\\%$ and resistance $R$ is measured with an error of $+1\\%$. Using total differentiation, calculate the estimated percentage error in calculated power $P$.",
+    "numerical_range": {
+      "min": 4.9,
+      "max": 5.1
+    },
+    "answer": 5,
+    "correct_answer": 5,
+    "difficulty": "Easy",
+    "solution": "Taking natural logarithms:\n$$\\ln P = 2 \\ln I + \\ln R$$\nTaking total differentials:\n$$\\frac{dP}{P} = 2 \\frac{dI}{I} + \\frac{dR}{R}$$\nPercentage error:\n$$\\frac{dP}{P} \\times 100 = 2(2\\%) + 1\\% = 4\\% + 1\\% = 5\\%$$",
+    "source": "B.S. Grewal - Higher Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_143",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Maxima and minima of function with several independent variables",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For a function $f(x, y)$ with stationary point $(a, b)$, let $r = f_{xx}(a, b)$, $s = f_{xy}(a, b)$, and $t = f_{yy}(a, b)$. The point $(a, b)$ is a SADDLE POINT if:",
+    "options": {
+      "A": "$r t - s^2 < 0$",
+      "B": "$r t - s^2 > 0$ and $r > 0$",
+      "C": "$r t - s^2 > 0$ and $r < 0$",
+      "D": "$r t - s^2 = 0$"
+    },
+    "correct_answer": "A",
+    "answer": "A",
+    "difficulty": "Easy",
+    "solution": "By the second derivative test for functions of two variables:\n- If $rt - s^2 > 0$ and $r > 0$, $(a,b)$ is a local minimum.\n- If $rt - s^2 > 0$ and $r < 0$, $(a,b)$ is a local maximum.\n- If $rt - s^2 < 0$, $(a,b)$ is a saddle point.",
+    "source": "B.S. Grewal - Higher Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_144",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Sequences and series – infinite series, tests for convergence",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following infinite series are CONVERGENT?",
+    "options": {
+      "A": "$\\sum_{n=1}^\\infty \\frac{1}{n^2}$",
+      "B": "$\\sum_{n=1}^\\infty \\left(\\frac{1}{2}\\right)^n$",
+      "C": "$\\sum_{n=1}^\\infty \\frac{1}{n}$",
+      "D": "$\\sum_{n=1}^\\infty \\frac{1}{n^{1/2}}$"
+    },
+    "correct_answer": [
+      "A",
+      "B"
+    ],
+    "answer": [
+      "A",
+      "B"
+    ],
+    "difficulty": "Easy",
+    "solution": "- Series A is a $p$-series with $p = 2 > 1$, hence convergent.\n- Series B is a geometric series with common ratio $r = 1/2 < 1$, hence convergent.\n- Series C is the harmonic series ($p = 1$), which is divergent.\n- Series D is a $p$-series with $p = 0.5 \\le 1$, which is divergent.",
+    "source": "Erwin Kreyszig - Advanced Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_145",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Fourier, Taylor and MacLaurin series",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In the Taylor series expansion of $f(x) = e^{2x}$ about $x = 0$ (Maclaurin series), what is the coefficient of $x^3$ (round off to 3 decimal places)?",
+    "numerical_range": {
+      "min": 1.32,
+      "max": 1.35
+    },
+    "answer": 1.333,
+    "correct_answer": 1.333,
+    "difficulty": "Easy",
+    "solution": "Maclaurin series of $e^{2x}$ is:\n$$e^{2x} = \\sum_{n=0}^\\infty \\frac{(2x)^n}{n!} = 1 + 2x + \\frac{4x^2}{2!} + \\frac{8x^3}{3!} + \\dots$$\nThe coefficient of $x^3$ is:\n$$\\frac{8}{3!} = \\frac{8}{6} = \\frac{4}{3} \\approx 1.333$$",
+    "source": "B.S. Grewal - Higher Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_146",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Vector differential operators – del, gradient",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Calculate the directional derivative of the scalar field $\\phi(x, y, z) = x^2 y + y z$ at the point $P(1, 2, 1)$ in the direction of the unit vector $\\hat{u} = \\frac{1}{\\sqrt{3}}(\\hat{i} + \\hat{j} + \\hat{k})$ (round off to 2 decimal places).",
+    "numerical_range": {
+      "min": 4.5,
+      "max": 4.7
+    },
+    "answer": 4.62,
+    "correct_answer": 4.62,
+    "difficulty": "Moderate",
+    "solution": "Gradient of $\\phi$:\n$$\\nabla \\phi = \\left(2xy\\right)\\hat{i} + \\left(x^2 + z\\right)\\hat{j} + y\\hat{k}$$\nAt point $P(1, 2, 1)$:\n$$\\nabla \\phi = (2 \\times 1 \\times 2)\\hat{i} + (1^2 + 1)\\hat{j} + 2\\hat{k} = 4\\hat{i} + 2\\hat{j} + 2\\hat{k}$$\nDirectional derivative:\n$$D_{\\hat{u}}\\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{4(1) + 2(1) + 2(1)}{\\sqrt{3}} = \\frac{8}{\\sqrt{3}} \\approx \\frac{8}{1.732} \\approx 4.619 \\approx 4.62$$\nAcceptable range: $4.5 - 4.7$.",
+    "source": "B.S. Grewal - Higher Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_147",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Divergence and curl",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "For the position vector $\\vec{r} = x\\hat{i} + y\\hat{j} + z\\hat{k}$, calculate the divergence $\\nabla \\cdot \\vec{r}$.",
+    "numerical_range": {
+      "min": 2.99,
+      "max": 3.01
+    },
+    "answer": 3,
+    "correct_answer": 3,
+    "difficulty": "Easy",
+    "solution": "$$\\nabla \\cdot \\vec{r} = \\frac{\\partial(x)}{\\partial x} + \\frac{\\partial(y)}{\\partial y} + \\frac{\\partial(z)}{\\partial z} = 1 + 1 + 1 = 3$$",
+    "source": "B.S. Grewal - Higher Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_148",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Stokes, Gauss and Green's theorems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Using Gauss divergence theorem, calculate the outward flux of the vector field $\\vec{F} = x\\hat{i} + y\\hat{j} + z\\hat{k}$ through the closed surface of a sphere of radius $R = 2$ centered at the origin (take $\\pi = 3.1416$; round off to 1 decimal place).",
+    "numerical_range": {
+      "min": 99,
+      "max": 102
+    },
+    "answer": 100.5,
+    "correct_answer": 100.5,
+    "difficulty": "Moderate",
+    "solution": "By Gauss divergence theorem:\n$$\\iint_S \\vec{F} \\cdot \\hat{n}\\, dS = \\iiint_V (\\nabla \\cdot \\vec{F})\\, dV$$\nHere $\\nabla \\cdot \\vec{F} = 1 + 1 + 1 = 3$.\nVolume of sphere of radius $R = 2$:\n$$V = \\frac{4}{3}\\pi R^3 = \\frac{4}{3}\\pi (8) = \\frac{32}{3}\\pi$$\nOutward flux:\n$$\\text{Flux} = 3 \\times V = 3 \\times \\frac{32}{3}\\pi = 32\\pi = 32 \\times 3.14159 \\approx 100.53$$\nAcceptable range: $99.0 - 102.0$.",
+    "source": "B.S. Grewal - Higher Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_149",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Stokes, Gauss and Green's theorems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If a vector field $\\vec{F}$ is conservative (i.e., $\\vec{F} = \\nabla \\phi$), then the circulation $\\oint_C \\vec{F} \\cdot d\\vec{r}$ along ANY closed path $C$ is:",
+    "options": {
+      "A": "Always zero",
+      "B": "Equal to the enclosed area",
+      "C": "Equal to the divergence of $\\vec{F}$",
+      "D": "Infinity"
+    },
+    "correct_answer": "A",
+    "answer": "A",
+    "difficulty": "Easy",
+    "solution": "For a conservative vector field, $\\nabla \\times \\vec{F} = 0$. By Stokes' theorem, the line integral around any closed loop is identically zero: $\\oint_C \\vec{F} \\cdot d\\vec{r} = \\iint_S (\\nabla \\times \\vec{F}) \\cdot \\hat{n}\\, dS = 0$.",
+    "source": "B.S. Grewal - Higher Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_150",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Physical interpretations – line, surface and volume integrals",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following vector identities are mathematically VALID for any sufficiently smooth scalar field $\\phi$ and vector field $\\vec{A}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (curl of gradient is always zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{A}) = 0$ (divergence of curl is always zero)",
+      "C": "$\\nabla \\cdot (\\nabla \\phi) = \\nabla^2 \\phi$ (Laplacian of scalar field)",
+      "D": "$\\nabla \\times (\\nabla \\times \\vec{A}) = \\vec{0}$ for all vector fields"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "difficulty": "Moderate",
+    "solution": "Identities A, B, and C are standard vector calculus theorems. Identity D is false because $\\nabla \\times (\\nabla \\times \\vec{A}) = \\nabla(\\nabla \\cdot \\vec{A}) - \\nabla^2 \\vec{A}$, which is generally non-zero.",
+    "source": "B.S. Grewal - Higher Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_151",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Linear and non-linear first order Ordinary Differential Equations (ODE)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the first-order linear ordinary differential equation $\\frac{dy}{dx} + \\frac{2}{x} y = x^3$ ($x > 0$), the integrating factor $I(x)$ is:",
+    "options": {
+      "A": "$x^2$",
+      "B": "$2x$",
+      "C": "$\\ln(x)$",
+      "D": "$e^{2x}$"
+    },
+    "correct_answer": "A",
+    "answer": "A",
+    "difficulty": "Easy",
+    "solution": "The integrating factor is:\n$$I(x) = e^{\\int P(x)\\, dx} = e^{\\int \\frac{2}{x}\\, dx} = e^{2 \\ln x} = e^{\\ln(x^2)} = x^2$$",
+    "source": "B.S. Grewal - Higher Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_152",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Homogeneous differential equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "To convert Euler-Cauchy's differential equation $x^2 \\frac{d^2 y}{dx^2} + a x \\frac{dy}{dx} + b y = 0$ into a linear differential equation with constant coefficients, the standard substitution used is:",
+    "options": {
+      "A": "$x = e^z$ or $z = \\ln x$",
+      "B": "$y = e^z$",
+      "C": "$x = z^2$",
+      "D": "$y = x v$"
+    },
+    "correct_answer": "A",
+    "answer": "A",
+    "difficulty": "Easy",
+    "solution": "The independent variable substitution $x = e^z \\iff z = \\ln x$ transforms $x \\frac{dy}{dx} = \\frac{dy}{dz}$ and $x^2 \\frac{d^2 y}{dx^2} = \\frac{d^2 y}{dz^2} - \\frac{dy}{dz}$, yielding an ODE with constant coefficients.",
+    "source": "Erwin Kreyszig - Advanced Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_153",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Higher order linear ODEs with constant coefficients",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Consider the differential equation $\\frac{d^2 y}{dx^2} - 6 \\frac{dy}{dx} + 9 y = 0$ with initial conditions $y(0) = 1$ and $y'(0) = 5$. Calculate the value of $y(1)$ (take $e = 2.718$; round off to 1 decimal place).",
+    "numerical_range": {
+      "min": 58,
+      "max": 62
+    },
+    "answer": 60.3,
+    "correct_answer": 60.3,
+    "difficulty": "Moderate",
+    "solution": "Characteristic equation:\n$$m^2 - 6m + 9 = 0 \\implies (m - 3)^2 = 0 \\implies m = 3, 3$$\nGeneral solution:\n$$y(x) = (c_1 + c_2 x) e^{3x}$$\nApplying $y(0) = 1$:\n$$c_1 = 1$$\nDifferentiating:\n$$y'(x) = c_2 e^{3x} + 3(c_1 + c_2 x) e^{3x}$$\n$$y'(0) = c_2 + 3 c_1 = 5 \\implies c_2 + 3(1) = 5 \\implies c_2 = 2$$\nThus:\n$$y(x) = (1 + 2x) e^{3x}$$\nAt $x = 1$:\n$$y(1) = (1 + 2) e^3 = 3 e^3 = 3 \\times (20.0855) \\approx 60.26$$\nAcceptable range: $58.0 - 62.0$.",
+    "source": "B.S. Grewal - Higher Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_154",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Laplace transforms and their inverse",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "If $F(s) = \\mathcal{L}\\{e^{-3t} \\cos(4t)\\}$, evaluate $F(1)$ (round off to 3 decimal places).",
+    "numerical_range": {
+      "min": 0.12,
+      "max": 0.13
+    },
+    "answer": 0.125,
+    "correct_answer": 0.125,
+    "difficulty": "Easy",
+    "solution": "Using the frequency-shifting property of Laplace transforms:\n$$\\mathcal{L}\\{\\cos(4t)\\} = \\frac{s}{s^2 + 4^2} = \\frac{s}{s^2 + 16}$$\n$$\\mathcal{L}\\{e^{-3t} \\cos(4t)\\} = \\frac{s + 3}{(s + 3)^2 + 16}$$\nEvaluating at $s = 1$:\n$$F(1) = \\frac{1 + 3}{(1 + 3)^2 + 16} = \\frac{4}{16 + 16} = \\frac{4}{32} = 0.125$$",
+    "source": "Erwin Kreyszig - Advanced Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_155",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Partial Differential Equations – Laplace, heat and wave equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The one-dimensional wave equation $\\frac{\\partial^2 u}{\\partial t^2} = c^2 \\frac{\\partial^2 u}{\\partial x^2}$ is classified as which type of partial differential equation?",
+    "options": {
+      "A": "Hyperbolic",
+      "B": "Parabolic",
+      "C": "Elliptic",
+      "D": "Non-linear"
+    },
+    "correct_answer": "A",
+    "answer": "A",
+    "difficulty": "Easy",
+    "solution": "For $A u_{xx} + B u_{xt} + C u_{tt} = 0$, here $A = c^2$, $B = 0$, $C = -1$. The discriminant is $B^2 - 4AC = 0 - 4(c^2)(-1) = 4c^2 > 0$, which classifies the equation as hyperbolic.",
+    "source": "Erwin Kreyszig - Advanced Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_156",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Laplace transforms and their inverse",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding Laplace transforms are CORRECT?",
+    "options": {
+      "A": "The Laplace transform is a linear operator: $\\mathcal{L}\\{a f(t) + b g(t)\\} = a \\mathcal{L}\\{f(t)\\} + b \\mathcal{L}\\{g(t)\\}$.",
+      "B": "$\\mathcal{L}\\{f'(t)\\} = s F(s) - f(0)$ assuming $f(t)$ is continuous.",
+      "C": "According to the Final Value Theorem, $\\lim_{t \\to \\infty} f(t) = \\lim_{s \\to 0} s F(s)$ if all poles of $s F(s)$ lie in the left half of the $s$-plane.",
+      "D": "$\\mathcal{L}\\{1\\} = \\frac{1}{s^2}$ for all $s > 0$."
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "difficulty": "Moderate",
+    "solution": "Statements A, B, and C are standard operational theorems in Laplace transform theory. Statement D is false because $\\mathcal{L}\\{1\\} = \\frac{1}{s}$ (whereas $\\mathcal{L}\\{t\\} = \\frac{1}{s^2}$).",
+    "source": "B.S. Grewal - Higher Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_157",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Mean, median, mode and standard deviation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Calculate the sample standard deviation $s$ of the dataset: $\\{4, 8, 6, 5, 7\\}$ (use denominator $n - 1 = 4$; round off to 2 decimal places).",
+    "numerical_range": {
+      "min": 1.55,
+      "max": 1.62
+    },
+    "answer": 1.58,
+    "correct_answer": 1.58,
+    "difficulty": "Easy",
+    "solution": "Mean:\n$$\\bar{x} = \\frac{4 + 8 + 6 + 5 + 7}{5} = \\frac{30}{5} = 6.0$$\nDeviations and squares:\n$$(4-6)^2 = 4$$\n$$(8-6)^2 = 4$$\n$$(6-6)^2 = 0$$\n$$(5-6)^2 = 1$$\n$$(7-6)^2 = 1$$\nSum of squared deviations $= 4 + 4 + 0 + 1 + 1 = 10$.\nSample variance:\n$$s^2 = \\frac{10}{5 - 1} = \\frac{10}{4} = 2.5$$\nSample standard deviation:\n$$s = \\sqrt{2.5} \\approx 1.581 \\approx 1.58$$",
+    "source": "B.S. Grewal - Higher Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_158",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Random variables",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A continuous random variable $X$ has probability density function $f(x) = 2x$ for $0 \\le x \\le 1$ and $f(x) = 0$ otherwise. Calculate the variance $\\text{Var}(X)$ (round off to 3 decimal places).",
+    "numerical_range": {
+      "min": 0.052,
+      "max": 0.058
+    },
+    "answer": 0.056,
+    "correct_answer": 0.056,
+    "difficulty": "Moderate",
+    "solution": "Expectation $E[X]$:\n$$E[X] = \\int_0^1 x (2x)\\, dx = 2 \\left[ \\frac{x^3}{3} \\right]_0^1 = \\frac{2}{3}$$\nSecond moment $E[X^2]$:\n$$E[X^2] = \\int_0^1 x^2 (2x)\\, dx = 2 \\left[ \\frac{x^4}{4} \\right]_0^1 = \\frac{2}{4} = \\frac{1}{2}$$\nVariance:\n$$\\text{Var}(X) = E[X^2] - (E[X])^2 = \\frac{1}{2} - \\left(\\frac{2}{3}\\right)^2 = \\frac{1}{2} - \\frac{4}{9} = \\frac{9 - 8}{18} = \\frac{1}{18} \\approx 0.0556 \\approx 0.056$$",
+    "source": "B.S. Grewal - Higher Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_159",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Poisson, normal and binomial distributions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The number of tractor breakdowns occurring in a farm fleet follows a Poisson distribution with an average rate of $\\lambda = 2$ breakdowns per month. Calculate the probability of observing EXACTLY ZERO breakdowns in a given month (take $e^{-2} = 0.1353$; round off to 3 decimal places).",
+    "numerical_range": {
+      "min": 0.134,
+      "max": 0.137
+    },
+    "answer": 0.135,
+    "correct_answer": 0.135,
+    "difficulty": "Easy",
+    "solution": "Poisson probability mass function:\n$$P(X = k) = \\frac{e^{-\\lambda} \\lambda^k}{k!}$$\nFor $k = 0$ and $\\lambda = 2$:\n$$P(X = 0) = \\frac{e^{-2} (2)^0}{0!} = e^{-2} \\approx 0.1353 \\approx 0.135$$",
+    "source": "B.S. Grewal - Higher Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_160",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Poisson, normal and binomial distributions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following are TRUE properties of a standard Normal distribution $Z \\sim \\mathcal{N}(0, 1)$?",
+    "options": {
+      "A": "The probability density function is symmetric about $z = 0$.",
+      "B": "Mean, median, and mode are all equal to 0.",
+      "C": "The total area under the probability density curve is equal to 1.",
+      "D": "The variance of the distribution is 2."
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "difficulty": "Easy",
+    "solution": "For the standard normal distribution $\\mathcal{N}(0, 1)$, the curve is symmetric about mean $\\mu = 0$, so mean $=$ median $=$ mode $= 0$. Total probability area $= 1$. Statement D is false because standard normal variance $\\sigma^2 = 1$, not 2.",
+    "source": "B.S. Grewal - Higher Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_161",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Correlation and regression analysis",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a bivariate data set, the two regression lines are given by $y = 0.4x + 3$ and $x = 0.9y + 2$. Calculate the Karl Pearson correlation coefficient $r$ between $x$ and $y$ (round off to 1 decimal place).",
+    "numerical_range": {
+      "min": 0.58,
+      "max": 0.62
+    },
+    "answer": 0.6,
+    "correct_answer": 0.6,
+    "difficulty": "Easy",
+    "solution": "The regression coefficients are $b_{yx} = 0.4$ and $b_{xy} = 0.9$.\nThe correlation coefficient is:\n$$r = \\sqrt{b_{yx} \\times b_{xy}} = \\sqrt{0.4 \\times 0.9} = \\sqrt{0.36} = 0.6$$",
+    "source": "B.S. Grewal - Higher Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_162",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Correlation and regression analysis",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Pearson correlation coefficient $r$ between two random variables $X$ and $Y$ always lies strictly in the range:",
+    "options": {
+      "A": "$-1 \\le r \\le 1$",
+      "B": "$0 \\le r \\le 1$",
+      "C": "$-\\infty < r < \\infty$",
+      "D": "$-0.5 \\le r \\le 0.5$"
+    },
+    "correct_answer": "A",
+    "answer": "A",
+    "difficulty": "Easy",
+    "solution": "By the Cauchy-Schwarz inequality, the correlation coefficient $r = \\frac{\\text{Cov}(X, Y)}{\\sigma_X \\sigma_Y}$ satisfies $-1 \\le r \\le 1$.",
+    "source": "B.S. Grewal - Higher Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_163",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods",
+    "subtopic": "Solutions of linear and non-linear algebraic equations",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Using the Newton-Raphson method, find the next approximation $x_1$ for the root of $f(x) = x^2 - 5$ starting from initial guess $x_0 = 2.0$.",
+    "numerical_range": {
+      "min": 2.24,
+      "max": 2.26
+    },
+    "answer": 2.25,
+    "correct_answer": 2.25,
+    "difficulty": "Easy",
+    "solution": "Here $f(x) = x^2 - 5$ and $f'(x) = 2x$.\nAt $x_0 = 2.0$:\n$$f(2.0) = 4 - 5 = -1$$\n$$f'(2.0) = 2(2.0) = 4$$\nNewton-Raphson formula:\n$$x_1 = x_0 - \\frac{f(x_0)}{f'(x_0)} = 2.0 - \\frac{-1}{4} = 2.0 + 0.25 = 2.25$$",
+    "source": "B.S. Grewal - Higher Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_164",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods",
+    "subtopic": "Numerical integration – trapezoidal and Simpson's rule",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Evaluate the integral $I = \\int_0^2 x^2\\, dx$ numerically using the Trapezoidal Rule with 2 equal sub-intervals ($h = 1.0$).",
+    "numerical_range": {
+      "min": 2.99,
+      "max": 3.01
+    },
+    "answer": 3,
+    "correct_answer": 3,
+    "difficulty": "Easy",
+    "solution": "Step size $h = 1.0$. Grid points: $x_0 = 0, x_1 = 1, x_2 = 2$.\nFunction values:\n$$y_0 = 0^2 = 0$$\n$$y_1 = 1^2 = 1$$\n$$y_2 = 2^2 = 4$$\nTrapezoidal rule:\n$$I = \\frac{h}{2} [y_0 + 2y_1 + y_2] = \\frac{1.0}{2} [0 + 2(1) + 4] = \\frac{1}{2} [6] = 3.0$$",
+    "source": "B.S. Grewal - Higher Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_165",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods",
+    "subtopic": "Numerical integration – trapezoidal and Simpson's rule",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding Simpson's $1/3$ rule for numerical integration are CORRECT?",
+    "options": {
+      "A": "The total number of sub-intervals must be an EVEN integer.",
+      "B": "The rule approximates the integrand by a quadratic parabola over each pair of intervals.",
+      "C": "It gives the EXACT value of the integral for any polynomial up to degree 3 (cubic polynomials).",
+      "D": "The truncation error is proportional to the first derivative of the integrand."
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "difficulty": "Moderate",
+    "solution": "Simpson's $1/3$ rule requires an even number of sub-intervals ($n$ even). It fits a second-degree polynomial across successive point triplets and yields exact results for polynomials up to degree 3 because third-order error terms cancel out. Statement D is false: error is proportional to $h^4 f^{(4)}(\\xi)$.",
+    "source": "B.S. Grewal - Higher Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_166",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods",
+    "subtopic": "Numerical solutions of ODEs",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Using Euler's explicit method with step size $h = 0.1$, solve $\\frac{dy}{dx} = x + y$ with initial condition $y(0) = 1$. Calculate the value of $y(0.1)$.",
+    "numerical_range": {
+      "min": 1.09,
+      "max": 1.11
+    },
+    "answer": 1.1,
+    "correct_answer": 1.1,
+    "difficulty": "Easy",
+    "solution": "Euler's update formula:\n$$y_{n+1} = y_n + h f(x_n, y_n)$$\nGiven $x_0 = 0, y_0 = 1, h = 0.1$:\n$$f(x_0, y_0) = 0 + 1 = 1$$\n$$y_1 = 1 + (0.1)(1) = 1.1$$",
+    "source": "B.S. Grewal - Higher Engineering Mathematics"
+  },
+  {
+    "id": "QB_EM_167",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods",
+    "subtopic": "Numerical solutions of ODEs",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The standard fourth-order Runge-Kutta (RK4) method for solving initial value problems has a local truncation error of order:",
+    "options": {
+      "A": "$\\mathcal{O}(h^5)$",
+      "B": "$\\mathcal{O}(h^4)$",
+      "C": "$\\mathcal{O}(h^3)$",
+      "D": "$\\mathcal{O}(h^2)$"
+    },
+    "correct_answer": "A",
+    "answer": "A",
+    "difficulty": "Moderate",
+    "solution": "For the classical RK4 method, the local truncation error per step is $\\mathcal{O}(h^5)$, which accumulates to a global truncation error of $\\mathcal{O}(h^4)$ over a finite interval.",
+    "source": "B.S. Grewal - Higher Engineering Mathematics"
   }
-]
-;
+];

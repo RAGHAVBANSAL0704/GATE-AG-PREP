@@ -1,5 +1,4 @@
-export default 
-[
+export default [
   {
     "id": "QB_IDE_001",
     "section": "Section 5: Irrigation and Drainage Engineering",
@@ -1973,5 +1972,882 @@ export default
     },
     "solution": "When two identical pumps operate in parallel:\n• The head developed across each pump remains the same: $H_{parallel} = H_1 = H_2 = 20.0\\text{ m}$.\n• The discharges of the pumps add up: $Q_{parallel} = Q_1 + Q_2 = 0.025 + 0.025 = 0.050\\text{ m}^3\\text{/s}$.",
     "difficulty": "Easy"
+  },
+  {
+    "id": "QB_IDE_EXP_056",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relationship",
+    "subtopic": "Water requirement of crops",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "A crop root zone depth is $D = 0.80\\text{ m}$. The soil has field capacity $FC = 28\\%$, permanent wilting point $PWP = 14\\%$, and dry bulk density $\\rho_b = 1400\\text{ kg/m}^3$. If the allowable depletion of available moisture is $50\\%$, calculate the net depth of irrigation water to be applied in $\\text{mm}$. (Density of water $\\rho_w = 1000\\text{ kg/m}^3$)",
+    "solution": "Available water capacity:\n$$AWC = \\frac{\\rho_b}{\\rho_w} \\times D \\times (FC - PWP) = \\frac{1400}{1000} \\times 800\\text{ mm} \\times (0.28 - 0.14)$$\n$$AWC = 1.4 \\times 800 \\times 0.14 = 156.8\\text{ mm}$$\nNet irrigation requirement at $50\\%$ depletion:\n$$d = 0.50 \\times AWC = 0.50 \\times 156.8 = 78.4\\text{ mm}$$",
+    "difficulty": "Easy",
+    "correct_answer": 78.4,
+    "answer": 78.4,
+    "numerical_range": {
+      "min": 78,
+      "max": 79
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_057",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Irrigation efficiencies",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "A stream of $100\\text{ L/s}$ is diverted from a canal into a field channel. The stream delivers $80\\text{ L/s}$ at the farm gate. Out of the water delivered to the farm, $60\\text{ L/s}$ is effectively stored in the crop root zone. Calculate the water conveyance efficiency ($\\eta_c$) in percentage.",
+    "solution": "Water conveyance efficiency:\n$$\\eta_c = \\frac{\\text{Water delivered to farm}}{\\text{Water diverted from canal}} \\times 100 = \\frac{80\\text{ L/s}}{100\\text{ L/s}} \\times 100 = 80.0\\%$$",
+    "difficulty": "Easy",
+    "correct_answer": 80,
+    "answer": 80,
+    "numerical_range": {
+      "min": 79.5,
+      "max": 80.5
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_058",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Irrigation efficiencies",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "For the same irrigation system in the previous problem, calculate the water application efficiency ($\\eta_a$) in percentage.",
+    "solution": "Water application efficiency:\n$$\\eta_a = \\frac{\\text{Water stored in root zone}}{\\text{Water delivered to farm}} \\times 100 = \\frac{60\\text{ L/s}}{80\\text{ L/s}} \\times 100 = 75.0\\%$$",
+    "difficulty": "Easy",
+    "correct_answer": 75,
+    "answer": 75,
+    "numerical_range": {
+      "min": 74.5,
+      "max": 75.5
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_059",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Surface, sprinkler and micro irrigation methods",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "A pressure-compensating drip emitter has a discharge exponent of $x = 0.0$ in the flow equation $q = k h^x$. If the operating pressure head $h$ doubles from $10\\text{ m}$ to $20\\text{ m}$, calculate the ratio of the new discharge to the original discharge ($q_2 / q_1$).",
+    "solution": "$$\\frac{q_2}{q_1} = \\left(\\frac{h_2}{h_1}\\right)^x = \\left(\\frac{20}{10}\\right)^0 = 2^0 = 1.0$$",
+    "difficulty": "Easy",
+    "correct_answer": 1,
+    "answer": 1,
+    "numerical_range": {
+      "min": 0.98,
+      "max": 1.02
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_060",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Surface, sprinkler and micro irrigation methods",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "A micro-irrigation drip lateral supplies 50 emitters spaced $1.0\\text{ m}$ apart, each discharging $4.0\\text{ L/h}$. Calculate the total water discharge rate of the lateral in $\\text{L/h}$.",
+    "solution": "$$Q = N \\times q = 50 \\times 4.0\\text{ L/h} = 200\\text{ L/h}$$",
+    "difficulty": "Easy",
+    "correct_answer": 200,
+    "answer": 200,
+    "numerical_range": {
+      "min": 198,
+      "max": 202
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_061",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Drainage coefficient",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "Ritzema - Drainage Principles and Applications",
+    "question": "An agricultural drainage system has a design drainage coefficient of $DC = 12\\text{ mm/day}$ ($0.012\\text{ m/day}$). If the catchment area drained is $50\\text{ ha}$ ($500,000\\text{ m}^2$), calculate the design peak drainage discharge in $\\text{L/s}$.",
+    "solution": "Volume per day:\n$$V = 500000\\text{ m}^2 \\times 0.012\\text{ m} = 6000\\text{ m}^3/\\text{day}$$\nDischarge in $\\text{m}^3/\\text{s}$:\n$$Q = \\frac{6000}{86400\\text{ s}} = 0.06944\\text{ m}^3/\\text{s} = 69.44\\text{ L/s}$$",
+    "difficulty": "Moderate",
+    "correct_answer": 69.44,
+    "answer": 69.44,
+    "numerical_range": {
+      "min": 68.5,
+      "max": 70
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_062",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Leaching requirement and salinity control",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "Using the US Salinity Laboratory formula $LR = \\frac{EC_w}{5 EC_e - EC_w}$, calculate the leaching requirement ($LR$) for irrigation water with electrical conductivity $EC_w = 1.5\\text{ dS/m}$ applied to a crop with permissible root zone salinity $EC_e = 4.5\\text{ dS/m}$.",
+    "solution": "$$LR = \\frac{1.5}{(5 \\times 4.5) - 1.5} = \\frac{1.5}{22.5 - 1.5} = \\frac{1.5}{21.0} = \\frac{1}{14} \\approx 0.0714 = 7.14\\%$$",
+    "difficulty": "Moderate",
+    "correct_answer": 0.0714,
+    "answer": 0.0714,
+    "numerical_range": {
+      "min": 0.068,
+      "max": 0.075
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_063",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Groundwater movement; Darcy's Law",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "Todd - Groundwater Hydrology",
+    "question": "A confined aquifer of uniform thickness $b = 15\\text{ m}$ has a hydraulic conductivity of $K = 24\\text{ m/day}$. Calculate the transmissivity ($T = K b$) of the aquifer in $\\text{m}^2/\\text{day}$.",
+    "solution": "$$T = K \\times b = 24\\text{ m/day} \\times 15\\text{ m} = 360\\text{ m}^2/\\text{day}$$",
+    "difficulty": "Easy",
+    "correct_answer": 360,
+    "answer": 360,
+    "numerical_range": {
+      "min": 355,
+      "max": 365
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_064",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Steady and unsteady flow in confined and unconfined aquifers",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "Todd - Groundwater Hydrology",
+    "question": "A fully penetrating well pumps water from a confined aquifer of transmissivity $T = 400\\text{ m}^2/\\text{day}$ at a steady rate of $Q = 1000\\text{ m}^3/\\text{day}$. Two observation piezometers are located at radial distances $r_1 = 10\\text{ m}$ and $r_2 = 50\\text{ m}$. Using Thiem's formula $s_1 - s_2 = \\frac{Q}{2 \\pi T} \\ln(r_2 / r_1)$, calculate the drawdown difference $(s_1 - s_2)$ in $\\text{meters}$. (Take $\\pi = 3.1416$)",
+    "solution": "$$\\ln\\left(\\frac{r_2}{r_1}\\right) = \\ln\\left(\\frac{50}{10}\\right) = \\ln(5) \\approx 1.6094$$\n$$s_1 - s_2 = \\frac{1000}{2 \\times 3.1416 \\times 400} \\times 1.6094 = \\frac{1609.4}{2513.28} \\approx 0.6403\\text{ m}$$",
+    "difficulty": "Moderate",
+    "correct_answer": 0.64,
+    "answer": 0.64,
+    "numerical_range": {
+      "min": 0.62,
+      "max": 0.66
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_065",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Classification of pumps",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "A centrifugal pump discharges $30\\text{ L/s}$ ($0.030\\text{ m}^3/\\text{s}$) of water against a total dynamic head of $25\\text{ m}$. If the pump efficiency is $75\\%$, calculate the brake power required to drive the pump in $\\text{kW}$. (Take $\\rho = 1000\\text{ kg/m}^3$ and $g = 9.81\\text{ m/s}^2$)",
+    "solution": "Water power (hydraulic power):\n$$P_w = \\frac{\\rho g Q H}{1000} = \\frac{1000 \\times 9.81 \\times 0.030 \\times 25}{1000} = 7.3575\\text{ kW}$$\nBrake power:\n$$P_{\\text{brake}} = \\frac{P_w}{\\eta} = \\frac{7.3575}{0.75} = 9.81\\text{ kW}$$",
+    "difficulty": "Easy",
+    "correct_answer": 9.81,
+    "answer": 9.81,
+    "numerical_range": {
+      "min": 9.7,
+      "max": 9.9
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_066",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Pump characteristics",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "A centrifugal pump running at $1440\\text{ rpm}$ discharges $40\\text{ L/s}$ against a total head of $20\\text{ m}$. If the pump speed is increased to $1800\\text{ rpm}$, calculate the new discharge in $\\text{L/s}$ using pump affinity laws ($Q \\propto N$).",
+    "solution": "$$Q_2 = Q_1 \\times \\frac{N_2}{N_1} = 40 \\times \\frac{1800}{1440} = 40 \\times 1.25 = 50.0\\text{ L/s}$$",
+    "difficulty": "Easy",
+    "correct_answer": 50,
+    "answer": 50,
+    "numerical_range": {
+      "min": 49.5,
+      "max": 50.5
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_067",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Pump characteristics",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "For the same centrifugal pump in the previous question, calculate the new head developed in $\\text{meters}$ at $1800\\text{ rpm}$ ($H \\propto N^2$).",
+    "solution": "$$H_2 = H_1 \\times \\left(\\frac{N_2}{N_1}\\right)^2 = 20 \\times (1.25)^2 = 20 \\times 1.5625 = 31.25\\text{ m}$$",
+    "difficulty": "Easy",
+    "correct_answer": 31.25,
+    "answer": 31.25,
+    "numerical_range": {
+      "min": 31,
+      "max": 31.5
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_068",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relationship",
+    "subtopic": "Consumptive use and evapotranspiration",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "In the FAO-56 Penman-Monteith method, the reference crop evapotranspiration ($ET_0$) is defined for a hypothetical reference surface with an assumed height of:",
+    "solution": "The FAO-56 Penman-Monteith reference surface is an idealized hypothetical grass reference crop with an assumed height of $0.12\\text{ m}$, a fixed surface resistance of $70\\text{ s/m}$, and an albedo of $0.23$.",
+    "difficulty": "Easy",
+    "options": {
+      "A": "$0.12\\text{ m}$ (tall fescue/grass)",
+      "B": "$0.50\\text{ m}$ (alfalfa)",
+      "C": "$1.0\\text{ m}$ (wheat)",
+      "D": "$2.0\\text{ m}$ (maize)"
+    },
+    "correct_answer": "A",
+    "answer": "A"
+  },
+  {
+    "id": "QB_IDE_EXP_069",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Surface, sprinkler and micro irrigation methods",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "In a sprinkler test with 4 catch cans catching water depths of $10\\text{ mm}$, $12\\text{ mm}$, $8\\text{ mm}$, and $10\\text{ mm}$, calculate Christiansen's Uniformity Coefficient ($CU = 100 \\left[1 - \\frac{\\sum |x_i - \\bar{x}|}{n \\bar{x}}\\right]$) in percentage.",
+    "solution": "Mean depth $\\bar{x} = \\frac{10 + 12 + 8 + 10}{4} = \\frac{40}{4} = 10.0\\text{ mm}$.\nAbsolute deviations:\n$|10 - 10| = 0$\n$|12 - 10| = 2$\n$|8 - 10| = 2$\n$|10 - 10| = 0$\nSum of absolute deviations $\\sum |x_i - \\bar{x}| = 0 + 2 + 2 + 0 = 4\\text{ mm}$.\n$$CU = 100 \\left[ 1 - \\frac{4}{4 \\times 10} \\right] = 100 \\left[ 1 - \\frac{4}{40} \\right] = 100 [1 - 0.10] = 90.0\\%$$",
+    "difficulty": "Moderate",
+    "correct_answer": 90,
+    "answer": 90,
+    "numerical_range": {
+      "min": 89.5,
+      "max": 90.5
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_070",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Planning, design and layout of surface and sub-surface drainage systems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "Ritzema - Drainage Principles and Applications",
+    "question": "In Hooghoudt's steady-state drain spacing formula $S^2 = \\frac{8 K_2 d m + 4 K_1 m^2}{q}$, for an impervious floor located exactly at the drain level ($d = 0$), the formula simplifies to $S = m \\sqrt{\\frac{4 K_1}{q}}$. If $m = 1.0\\text{ m}$, hydraulic conductivity $K_1 = 1.2\\text{ m/day}$, and steady recharge $q = 0.003\\text{ m/day}$, calculate the drain spacing $S$ in $\\text{meters}$.",
+    "solution": "$$\\frac{4 K_1}{q} = \\frac{4 \\times 1.2}{0.003} = \\frac{4.8}{0.003} = 1600$$\n$$S = 1.0 \\times \\sqrt{1600} = 40.0\\text{ m}$$",
+    "difficulty": "Easy",
+    "correct_answer": 40,
+    "answer": 40,
+    "numerical_range": {
+      "min": 39.5,
+      "max": 40.5
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_071",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Groundwater movement; Darcy's Law",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "Todd - Groundwater Hydrology",
+    "question": "In a laboratory permeameter, water flows through a sand column of length $L = 0.50\\text{ m}$ under a constant head loss of $\\Delta h = 0.05\\text{ m}$. Calculate the hydraulic gradient ($i = \\Delta h / L$).",
+    "solution": "$$i = \\frac{\\Delta h}{L} = \\frac{0.05\\text{ m}}{0.50\\text{ m}} = 0.10$$",
+    "difficulty": "Easy",
+    "correct_answer": 0.1,
+    "answer": 0.1,
+    "numerical_range": {
+      "min": 0.098,
+      "max": 0.102
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_072",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Types of wells",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "Todd - Groundwater Hydrology",
+    "question": "A tubewell discharges $1800\\text{ L/min}$ at a steady drawdown of $3.0\\text{ m}$. Calculate the specific capacity of the well in $\\text{L/(min}\\cdot\\text{m)}$.",
+    "solution": "Specific capacity:\n$$SC = \\frac{Q}{s} = \\frac{1800\\text{ L/min}}{3.0\\text{ m}} = 600\\text{ L/(min}\\cdot\\text{m)}$$",
+    "difficulty": "Easy",
+    "correct_answer": 600,
+    "answer": 600,
+    "numerical_range": {
+      "min": 595,
+      "max": 605
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_073",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Design of irrigation channels and underground pipelines",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "Using Kennedy's critical velocity formula $v_0 = 0.55 m y^{0.64}$, calculate the critical non-silting, non-scouring velocity in $\\text{m/s}$ for a canal with water depth $y = 1.0\\text{ m}$ and critical velocity ratio $m = 1.0$.",
+    "solution": "$$v_0 = 0.55 \\times 1.0 \\times (1.0)^{0.64} = 0.55\\text{ m/s}$$",
+    "difficulty": "Easy",
+    "correct_answer": 0.55,
+    "answer": 0.55,
+    "numerical_range": {
+      "min": 0.54,
+      "max": 0.56
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_074",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relationship",
+    "subtopic": "Measurement of infiltration, soil moisture and irrigation water infiltration",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "In Kostiakov's cumulative infiltration equation $Z = k t^a$, cumulative infiltration depth is $Z = 3.0\\text{ cm}$ at $t = 1\\text{ hour}$ ($k = 3.0$). If $a = 0.50$, calculate the cumulative infiltration depth in $\\text{cm}$ after $t = 4\\text{ hours}$.",
+    "solution": "$$Z = 3.0 \\times (4)^{0.50} = 3.0 \\times 2.0 = 6.0\\text{ cm}$$",
+    "difficulty": "Easy",
+    "correct_answer": 6,
+    "answer": 6,
+    "numerical_range": {
+      "min": 5.9,
+      "max": 6.1
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_075",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Surface, sprinkler and micro irrigation methods",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "A sprinkler nozzle of orifice area $a = 2.0 \\times 10^{-4}\\text{ m}^2$ operates under a pressure head of $h = 20\\text{ m}$. If the coefficient of discharge is $C_d = 0.95$, calculate the nozzle discharge in $\\text{L/s}$. (Take $g = 9.81\\text{ m/s}^2$)",
+    "solution": "Theoretical velocity:\n$$v = \\sqrt{2 g h} = \\sqrt{2 \\times 9.81 \\times 20} = \\sqrt{392.4} \\approx 19.809\\text{ m/s}$$\nDischarge:\n$$Q = C_d \\times a \\times v = 0.95 \\times (2.0 \\times 10^{-4}) \\times 19.809 = 0.003764\\text{ m}^3/\\text{s} = 3.764\\text{ L/s}$$",
+    "difficulty": "Moderate",
+    "correct_answer": 3.76,
+    "answer": 3.76,
+    "numerical_range": {
+      "min": 3.7,
+      "max": 3.85
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_076",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Classification of pumps",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "Calculate the specific speed ($N_s = \\frac{N \\sqrt{Q}}{H^{3/4}}$ in rpm, $\\text{m}^3/\\text{s}$, $\\text{m}$) of a centrifugal pump operating at $N = 1450\\text{ rpm}$, discharge $Q = 0.04\\text{ m}^3/\\text{s}$, and total head $H = 16\\text{ m}$.",
+    "solution": "$$\\sqrt{Q} = \\sqrt{0.04} = 0.20$$\n$$H^{3/4} = (16)^{3/4} = (16^{1/4})^3 = 2^3 = 8$$\n$$N_s = \\frac{1450 \\times 0.20}{8} = \\frac{290}{8} = 36.25$$",
+    "difficulty": "Moderate",
+    "correct_answer": 36.25,
+    "answer": 36.25,
+    "numerical_range": {
+      "min": 35.5,
+      "max": 37
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_077",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Irrigation scheduling",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "A crop has a daily peak evapotranspiration rate of $ET_c = 6.0\\text{ mm/day}$. The root zone depth is $D = 60\\text{ cm}$ with an available water storage capacity of $120\\text{ mm}$. If irrigation is scheduled when $50\\%$ of available water is depleted, calculate the irrigation interval in $\\text{days}$.",
+    "solution": "Readily available water (RAW):\n$$RAW = 0.50 \\times 120\\text{ mm} = 60\\text{ mm}$$\nIrrigation interval:\n$$I = \\frac{RAW}{ET_c} = \\frac{60\\text{ mm}}{6.0\\text{ mm/day}} = 10.0\\text{ days}$$",
+    "difficulty": "Easy",
+    "correct_answer": 10,
+    "answer": 10,
+    "numerical_range": {
+      "min": 9.8,
+      "max": 10.2
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_078",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Irrigation efficiencies",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "During an irrigation event, water depths stored at four equidistant sampling locations along a furrow run are $80\\text{ mm}$, $100\\text{ mm}$, $120\\text{ mm}$, and $100\\text{ mm}$. Calculate the water distribution efficiency ($\\eta_d = 100 \\left[1 - \\frac{\\bar{y}}{\\bar{d}}\\right]$) in percentage, where $\\bar{d}$ is the numerical average depth and $\\bar{y}$ is the average absolute deviation from $\\bar{d}$.",
+    "solution": "Average depth $\\bar{d} = \\frac{80 + 100 + 120 + 100}{4} = \\frac{400}{4} = 100\\text{ mm}$.\nDeviations:\n$|80 - 100| = 20$\n$|100 - 100| = 0$\n$|120 - 100| = 20$\n$|100 - 100| = 0$\nAverage deviation $\\bar{y} = \\frac{20 + 0 + 20 + 0}{4} = \\frac{40}{4} = 10\\text{ mm}$.\n$$\\eta_d = 100 \\left[ 1 - \\frac{10}{100} \\right] = 100 [1 - 0.10] = 90.0\\%$$",
+    "difficulty": "Moderate",
+    "correct_answer": 90,
+    "answer": 90,
+    "numerical_range": {
+      "min": 89.5,
+      "max": 90.5
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_079",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Design of irrigation channels and underground pipelines",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "According to Lacey's regime theory for alluvial channels, the wetted perimeter is given by $P = 4.75 \\sqrt{Q}$. For a regime canal carrying a design discharge of $Q = 16\\text{ m}^3/\\text{s}$, calculate the wetted perimeter $P$ in $\\text{meters}$.",
+    "solution": "$$P = 4.75 \\times \\sqrt{16} = 4.75 \\times 4 = 19.0\\text{ m}$$",
+    "difficulty": "Easy",
+    "correct_answer": 19,
+    "answer": 19,
+    "numerical_range": {
+      "min": 18.8,
+      "max": 19.2
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_080",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Design of irrigation channels and underground pipelines",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "In Lacey's regime theory, the silt factor is $f = 1.0$. For a canal carrying discharge $Q = 64\\text{ m}^3/\\text{s}$, calculate the regime flow velocity $V = \\left(\\frac{Q f^2}{140}\\right)^{1/6}$ in $\\text{m/s}$.",
+    "solution": "$$\\frac{Q f^2}{140} = \\frac{64 \\times 1^2}{140} = \\frac{64}{140} = 0.45714$$\n$$V = (0.45714)^{1/6} \\approx 0.8778\\text{ m/s}$$",
+    "difficulty": "Moderate",
+    "correct_answer": 0.88,
+    "answer": 0.88,
+    "numerical_range": {
+      "min": 0.86,
+      "max": 0.9
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_081",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Groundwater exploration techniques",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "Todd - Groundwater Hydrology",
+    "question": "In a Wenner electrical resistivity sounding survey for groundwater exploration, four equally spaced electrodes have an electrode spacing of $a = 10.0\\text{ m}$. If the measured electrical resistance is $R = 2.5\\text{ }\\Omega$, calculate the apparent resistivity of the subsurface stratum in $\\Omega\\cdot\\text{m}$ using $\\rho_a = 2 \\pi a R$. (Take $\\pi = 3.1416$)",
+    "solution": "$$\\rho_a = 2 \\pi a R = 2 \\times 3.1416 \\times 10.0 \\times 2.5 = 50 \\times 3.1416 = 157.08\\text{ }\\Omega\\cdot\\text{m}$$",
+    "difficulty": "Easy",
+    "correct_answer": 157.08,
+    "answer": 157.08,
+    "numerical_range": {
+      "min": 156,
+      "max": 158
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_082",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Pump characteristics",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "Cavitation in a centrifugal irrigation pump occurs when the absolute fluid pressure at the impeller eye falls below the:",
+    "solution": "When the local static pressure drops below the saturation vapor pressure of the liquid, vapor bubbles nucleate and subsequently collapse violently against the impeller vanes in higher pressure regions, causing cavitation pitting and vibration.",
+    "difficulty": "Easy",
+    "options": {
+      "A": "Saturation vapor pressure of the liquid at operating temperature",
+      "B": "Atmospheric pressure",
+      "C": "Shut-off head pressure",
+      "D": "Discharge piping static pressure"
+    },
+    "correct_answer": "A",
+    "answer": "A"
+  },
+  {
+    "id": "QB_IDE_EXP_083",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Pump selection and installation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "A centrifugal pump is installed at a location where atmospheric pressure head is $10.1\\text{ m}$ and water vapor pressure head is $0.3\\text{ m}$. The suction pipe head loss is $h_{fs} = 0.8\\text{ m}$. If the pump requires a Net Positive Suction Head of $\\text{NPSH}_R = 3.0\\text{ m}$, calculate the maximum permissible suction lift height $h_s$ above the sump water surface in $\\text{meters}$ to prevent cavitation.",
+    "solution": "$$\\text{NPSH}_A = \\frac{P_{\\text{atm}}}{\\gamma} - \\frac{P_v}{\\gamma} - h_s - h_{fs} \\ge \\text{NPSH}_R$$\n$$10.1 - 0.3 - h_s - 0.8 \\ge 3.0$$\n$$9.0 - h_s \\ge 3.0$$\n$$h_s \\le 9.0 - 3.0 = 6.0\\text{ m}$$",
+    "difficulty": "Moderate",
+    "correct_answer": 6,
+    "answer": 6,
+    "numerical_range": {
+      "min": 5.9,
+      "max": 6.1
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_084",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Non-conventional drainage system",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "source": "Ritzema - Drainage Principles and Applications",
+    "question": "The biological drainage (bio-drainage) technique for reclaiming waterlogged and saline agricultural lands utilizes:",
+    "solution": "Bio-drainage involves planting fast-growing, deep-rooted phreatophytic trees (e.g. *Eucalyptus tereticornis*, *Casuarina*) that transpire tremendous volumes of subsurface groundwater through solar energy, thereby lowering saline water tables without producing disposal effluents.",
+    "difficulty": "Easy",
+    "options": {
+      "A": "Deep-rooted, high-transpiration vegetation (such as Eucalyptus trees) to lower water table levels",
+      "B": "Genetically modified earthworms to burrow horizontal drainage paths",
+      "C": "Bacterial inoculation to dissolve soil clay particles",
+      "D": "Algal mats to cover the water surface"
+    },
+    "correct_answer": "A",
+    "answer": "A"
+  },
+  {
+    "id": "QB_IDE_EXP_085",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Surface, sprinkler and micro irrigation methods",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "A border irrigation strip of width $W = 10\\text{ m}$ and length $L = 100\\text{ m}$ is irrigated with an inflow stream of $Q = 0.02\\text{ m}^3/\\text{s}$. If the average water infiltration rate into the soil is $f = 0.00001\\text{ m/s}$ ($3.6\\text{ cm/h}$), calculate the maximum border strip area $A_{\\max} = Q / f$ in $\\text{m}^2$ that this stream can theoretically cover before advance ceases.",
+    "solution": "$$A_{\\max} = \\frac{Q}{f} = \\frac{0.02\\text{ m}^3/\\text{s}}{0.00001\\text{ m/s}} = 2000\\text{ m}^2$$",
+    "difficulty": "Easy",
+    "correct_answer": 2000,
+    "answer": 2000,
+    "numerical_range": {
+      "min": 1950,
+      "max": 2050
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_086",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relationship",
+    "subtopic": "Water requirement of crops",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "A crop has a base period of $B = 120\\text{ days}$ and a total depth of water required during the base period (delta) of $\\Delta = 60\\text{ cm}$ ($0.60\\text{ m}$). Using the standard duty formula $D = \\frac{8.64 B}{\\Delta}$, calculate the duty of irrigation water in $\\text{ha/cumec}$.",
+    "solution": "$$D = \\frac{8.64 \\times B}{\\Delta} = \\frac{8.64 \\times 120}{0.60} = 8.64 \\times 200 = 1728\\text{ ha/cumec}$$",
+    "difficulty": "Easy",
+    "correct_answer": 1728,
+    "answer": 1728,
+    "numerical_range": {
+      "min": 1720,
+      "max": 1735
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_087",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Steady and unsteady flow in confined and unconfined aquifers",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "Todd - Groundwater Hydrology",
+    "question": "In an unconfined aquifer, a fully penetrating well of radius $r_w = 0.20\\text{ m}$ is pumped to produce a steady drawdown of $s_w = 2.0\\text{ m}$. The initial saturated thickness of the unconfined aquifer is $H = 20.0\\text{ m}$. Calculate the equivalent drawdown $s'$ in a confined aquifer having the same transmissivity using Dupuit's correction $s' = s_w - \\frac{s_w^2}{2 H}$ in $\\text{meters}$.",
+    "solution": "$$s' = s_w - \\frac{s_w^2}{2 H} = 2.0 - \\frac{2.0^2}{2 \\times 20.0} = 2.0 - \\frac{4.0}{40.0} = 2.0 - 0.10 = 1.90\\text{ m}$$",
+    "difficulty": "Moderate",
+    "correct_answer": 1.9,
+    "answer": 1.9,
+    "numerical_range": {
+      "min": 1.88,
+      "max": 1.92
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_088",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Pump characteristics",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "Which of the following operational modifications will INCREASE the Net Positive Suction Head Available ($\text{NPSH}_A$) of an agricultural irrigation pump?",
+    "solution": "- A, B, and C decrease suction line losses and suction lift, increasing $\\text{NPSH}_A = \\frac{P_{\\text{atm}} - P_v}{\\gamma} - h_s - h_{fs}$.\n- D increases vapor pressure $P_v$, which severely reduces $\\text{NPSH}_A$ and induces cavitation.",
+    "difficulty": "Moderate",
+    "options": {
+      "A": "Lowering the pump closer to the water level in the sump (reducing static suction lift $h_s$)",
+      "B": "Increasing the diameter of the suction pipe to decrease frictional head loss ($h_{fs}$)",
+      "C": "Installing a foot valve with an unrestricted, streamlined strainer",
+      "D": "Pumping water at higher temperatures near boiling"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_IDE_EXP_089",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Irrigation and drainage water quality and reuse",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "Calculate the Sodium Adsorption Ratio ($SAR$) of irrigation water having cation concentrations of $\\text{Na}^+ = 9.0\\text{ meq/L}$, $\\text{Ca}^{2+} = 3.0\\text{ meq/L}$, and $\\text{Mg}^{2+} = 5.0\\text{ meq/L}$ using $SAR = \\frac{\\text{Na}^+}{\\sqrt{(\\text{Ca}^{2+} + \\text{Mg}^{2+})/2}}$.",
+    "solution": "$$\\frac{\\text{Ca}^{2+} + \\text{Mg}^{2+}}{2} = \\frac{3.0 + 5.0}{2} = \\frac{8.0}{2} = 4.0$$\n$$\\sqrt{4.0} = 2.0$$\n$$SAR = \\frac{9.0}{2.0} = 4.50$$",
+    "difficulty": "Easy",
+    "correct_answer": 4.5,
+    "answer": 4.5,
+    "numerical_range": {
+      "min": 4.45,
+      "max": 4.55
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_090",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Surface, sprinkler and micro irrigation methods",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "In an orchard drip irrigation system, tree spacing is $6.0\\text{ m} \\times 6.0\\text{ m}$. Each tree is provided with 4 drippers of $4.0\\text{ L/h}$ discharge each. If the daily irrigation duration is $3.0\\text{ hours}$, calculate the volume of water applied per tree per day in $\\text{liters}$.",
+    "solution": "Discharge rate per tree:\n$$q_{\\text{tree}} = 4 \\times 4.0 = 16.0\\text{ L/h}$$\nVolume applied in 3 hours:\n$$V = 16.0\\text{ L/h} \\times 3.0\\text{ h} = 48.0\\text{ liters}$$",
+    "difficulty": "Easy",
+    "correct_answer": 48,
+    "answer": 48,
+    "numerical_range": {
+      "min": 47.5,
+      "max": 48.5
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_091",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relationship",
+    "subtopic": "Consumptive use and evapotranspiration",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "In Blaney-Criddle formula $ET_0 = p (0.46 T + 8.13)$, for a month with mean daily temperature $T = 25^\\circ\\text{C}$ and mean daily percentage of annual daytime hours $p = 0.28$, calculate the reference evapotranspiration $ET_0$ in $\\text{mm/day}$.",
+    "solution": "$$0.46 T + 8.13 = (0.46 \\times 25) + 8.13 = 11.5 + 8.13 = 19.63$$\n$$ET_0 = 0.28 \\times 19.63 = 5.4964 \\approx 5.50\\text{ mm/day}$$",
+    "difficulty": "Easy",
+    "correct_answer": 5.5,
+    "answer": 5.5,
+    "numerical_range": {
+      "min": 5.4,
+      "max": 5.6
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_092",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Design and construction of water wells",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "In gravel-packed tubewells, the gravel pack thickness around the slotted well screen typically ranges between:",
+    "solution": "A standard gravel pack envelope surrounding an agricultural well screen has a radial thickness of $7.5\\text{ cm}$ to $15\\text{ cm}$ ($3 - 6\\text{ inches}$), engineered to retain formation aquifer sand while allowing sand-free inflow.",
+    "difficulty": "Easy",
+    "options": {
+      "A": "$7.5 - 15\\text{ cm}$",
+      "B": "$1 - 2\\text{ mm}$",
+      "C": "$50 - 100\\text{ cm}$",
+      "D": "$1.5 - 2.0\\text{ m}$"
+    },
+    "correct_answer": "A",
+    "answer": "A"
+  },
+  {
+    "id": "QB_IDE_EXP_093",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Groundwater movement; Darcy's Law",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "Todd - Groundwater Hydrology",
+    "question": "Water flows through an aquifer of porosity $n = 0.25$ with a Darcy discharge velocity of $v = 0.20\\text{ m/day}$. Calculate the actual average linear seepage velocity ($v_s = v / n$) in $\\text{m/day}$.",
+    "solution": "$$v_s = \\frac{v}{n} = \\frac{0.20\\text{ m/day}}{0.25} = 0.80\\text{ m/day}$$",
+    "difficulty": "Easy",
+    "correct_answer": 0.8,
+    "answer": 0.8,
+    "numerical_range": {
+      "min": 0.79,
+      "max": 0.81
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_094",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Surface, sprinkler and micro irrigation methods",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "In a solid-set sprinkler system, sprinklers are spaced $12\\text{ m}$ along the lateral and the laterals are spaced $18\\text{ m}$ along the main line. Each sprinkler discharges $1.2\\text{ m}^3/\\text{h}$. Calculate the application precipitation rate in $\\text{mm/h}$.",
+    "solution": "Area covered per sprinkler:\n$$A = S_l \\times S_m = 12\\text{ m} \\times 18\\text{ m} = 216\\text{ m}^2$$\nDischarge $Q = 1.2\\text{ m}^3/\\text{h}$.\nApplication rate:\n$$I = \\frac{Q}{A} = \\frac{1.2\\text{ m}^3/\\text{h}}{216\\text{ m}^2} = 0.005556\\text{ m/h} = 5.56\\text{ mm/h}$$",
+    "difficulty": "Moderate",
+    "correct_answer": 5.56,
+    "answer": 5.56,
+    "numerical_range": {
+      "min": 5.4,
+      "max": 5.7
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_095",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Planning, design and layout of surface and sub-surface drainage systems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "source": "Ritzema - Drainage Principles and Applications",
+    "question": "In sub-surface agricultural tile drainage, corrugated perforated plastic tubing (CPT) has largely superseded clay tiles because:",
+    "solution": "Corrugated perforated HDPE/PVC pipes come in continuous coils of several hundred meters, allowing high-speed mechanized laser-guided installation using specialized drain plows or trenchers with minimal labour.",
+    "difficulty": "Easy",
+    "options": {
+      "A": "It is lightweight, continuous, highly flexible, and can be installed rapidly by trenchless drainage plows",
+      "B": "It dissolves in alkaline soils",
+      "C": "It requires no envelope or filter in sandy soils",
+      "D": "It has a higher friction factor than unglazed clay tiles"
+    },
+    "correct_answer": "A",
+    "answer": "A"
+  },
+  {
+    "id": "QB_IDE_EXP_096",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relationship",
+    "subtopic": "Water requirement of crops",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "A sugarcane crop has a seasonal consumptive use of $ET_c = 1200\\text{ mm}$. Effective rainfall during the growing season is $P_e = 400\\text{ mm}$. If the overall irrigation efficiency is $60\\%$, calculate the gross irrigation requirement ($GIR$) in $\\text{mm}$.",
+    "solution": "Net irrigation requirement:\n$$NIR = ET_c - P_e = 1200 - 400 = 800\\text{ mm}$$\nGross irrigation requirement:\n$$GIR = \\frac{NIR}{\\eta} = \\frac{800}{0.60} \\approx 1333.33\\text{ mm}$$",
+    "difficulty": "Moderate",
+    "correct_answer": 1333.33,
+    "answer": 1333.33,
+    "numerical_range": {
+      "min": 1325,
+      "max": 1340
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_097",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Pump characteristics",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "A pump delivers power to water at $10\\text{ kW}$. If the drive motor delivers $12.5\\text{ kW}$ to the pump shaft, calculate the pump mechanical efficiency in percentage.",
+    "solution": "$$\\eta = \\frac{\\text{Water Power}}{\\text{Brake Power}} \\times 100 = \\frac{10}{12.5} \\times 100 = 80.0\\%$$",
+    "difficulty": "Easy",
+    "correct_answer": 80,
+    "answer": 80,
+    "numerical_range": {
+      "min": 79.5,
+      "max": 80.5
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_098",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Steady and unsteady flow in confined and unconfined aquifers",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "Todd - Groundwater Hydrology",
+    "question": "The storage coefficient of an unconfined aquifer corresponds to its specific yield $S_y$. A sandy aquifer has porosity $n = 0.35$ and specific retention $S_r = 0.10$. Calculate the specific yield $S_y = n - S_r$ in percentage.",
+    "solution": "$$S_y = n - S_r = 0.35 - 0.10 = 0.25 = 25.0\\%$$",
+    "difficulty": "Easy",
+    "correct_answer": 25,
+    "answer": 25,
+    "numerical_range": {
+      "min": 24.5,
+      "max": 25.5
+    }
+  },
+  {
+    "id": "QB_IDE_EXP_099",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Surface, sprinkler and micro irrigation methods",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "In drip irrigation systems, the primary filter installed immediately downstream of the pump to remove heavy suspended sand and gravel particles from surface canal water using vortex action is a:",
+    "solution": "A hydrocyclone uses centrifugal vortex velocity to spin out coarse inorganic suspended solids like sand and silt ($> 75\\text{ }\\mu\\text{m}$), collecting them in an underflow collection chamber before the water enters media and screen filtration units.",
+    "difficulty": "Easy",
+    "options": {
+      "A": "Hydrocyclone (sand separator)",
+      "B": "Media (gravel/sand) filter",
+      "C": "Disc filter",
+      "D": "Screen filter"
+    },
+    "correct_answer": "A",
+    "answer": "A"
+  },
+  {
+    "id": "QB_IDE_EXP_100",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relationship",
+    "subtopic": "Measurement of infiltration, soil moisture and irrigation water infiltration",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "source": "A.M. Michael - Irrigation Theory and Practice",
+    "question": "A double-ring infiltrometer has an inner ring diameter of $30\\text{ cm}$ ($0.30\\text{ m}$). Over a period of $30\\text{ minutes}$ ($0.5\\text{ h}$), the water level in the inner cylinder drops by $15\\text{ mm}$. Calculate the infiltration rate in $\\text{mm/h}$.",
+    "solution": "$$\\text{Infiltration Rate} = \\frac{\\Delta h}{\\Delta t} = \\frac{15\\text{ mm}}{0.5\\text{ h}} = 30.0\\text{ mm/h}$$",
+    "difficulty": "Easy",
+    "correct_answer": 30,
+    "answer": 30,
+    "numerical_range": {
+      "min": 29.5,
+      "max": 30.5
+    }
   }
 ];

@@ -197,6 +197,20 @@ export default function PracticeAnalysisView({
                 {score} <span className="text-sm text-slate-400 font-normal">/ {totalPossibleMarks}</span>
               </span>
             </div>
+            {sessionResult?.earnedXP !== undefined && (
+              <>
+                <div className="h-10 w-px bg-slate-200 dark:bg-slate-800" />
+                <div className="text-center">
+                  <span className="text-[10px] uppercase font-extrabold tracking-wider text-amber-600 dark:text-amber-400 block">
+                    Academic XP
+                  </span>
+                  <span className="text-2xl sm:text-3xl font-mono font-black text-amber-600 dark:text-amber-400 flex items-center justify-center gap-1">
+                    <Zap className="w-5 h-5 fill-amber-500 text-amber-500" />
+                    +{sessionResult.earnedXP}
+                  </span>
+                </div>
+              </>
+            )}
           </div>
         </div>
 

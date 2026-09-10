@@ -26,10 +26,13 @@ import {
   Droplets,
   Factory,
   Utensils,
-  Brain
+  Brain,
+  Zap,
+  AlertTriangle
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import { evaluateQuestion } from '../utils/scoring.js';
+import { awardStudentXP } from '../services/leaderboardService.js';
 import { 
   ALL_QUESTION_BANK_QUESTIONS, 
   getQuestionBankStats 
@@ -75,6 +78,7 @@ export default function QuestionBankView({
   const [userAnswers, setUserAnswers] = useState({});
   const [checkedQuestions, setCheckedQuestions] = useState({});
   const [showSolutions, setShowSolutions] = useState({});
+  const [peekedQuestions, setPeekedQuestions] = useState({});
   const [showPalette, setShowPalette] = useState(false);
 
   // Question Palette Windowing / Pagination (blocks of 50 questions for stutter-free DOM)
@@ -243,6 +247,29 @@ export default function QuestionBankView({
     setCheckedQuestions(prev => ({ ...prev, [currentQ.id]: true }));
     setShowSolutions(prev => ({ ...prev, [currentQ.id]: true }));
 
+    // Award Academic XP (with strict Solution-Peek Zero-XP penalty)
+    const wasPeeked = Boolean(peekedQuestions[currentQ.id] || qbankProgress[currentQ.id]?.peeked);
+    const prevXpAwarded = Number(qbankProgress[currentQ.id]?.xpAwarded || 0);
+
+    let newXpAwarded = prevXpAwarded;
+    let deltaXp = 0;
+
+    if (wasPeeked) {
+      newXpAwarded = 0;
+    } else if (evalResult.isCorrect) {
+      deltaXp = Math.max(0, 1.0 - prevXpAwarded);
+      newXpAwarded = 1.0;
+      if (deltaXp > 0) {
+        awardStudentXP(deltaXp);
+      }
+    } else {
+      if (prevXpAwarded === 0) {
+        deltaXp = 0.5;
+        newXpAwarded = 0.5;
+        awardStudentXP(0.5);
+      }
+    }
+
     // Record persistent progress
     setQbankProgress(prev => ({
       ...prev,
@@ -250,6 +277,8 @@ export default function QuestionBankView({
         attempted: true,
         isCorrect: evalResult.isCorrect,
         marksAwarded: evalResult.marksAwarded,
+        peeked: wasPeeked,
+        xpAwarded: newXpAwarded,
         lastAttemptedAt: new Date().toISOString()
       }
     }));
@@ -279,16 +308,19 @@ export default function QuestionBankView({
     const totalBank = ALL_QUESTION_BANK_QUESTIONS.length;
     let attempted = 0;
     let correct = 0;
+    let totalXpEarned = 0;
 
     Object.values(qbankProgress).forEach(p => {
       if (p.attempted) attempted++;
       if (p.isCorrect) correct++;
+      if (p.xpAwarded) totalXpEarned += Number(p.xpAwarded);
     });
 
     return {
       totalBank,
       attempted,
       correct,
+      totalXpEarned: Number(totalXpEarned.toFixed(1)),
       accuracy: attempted > 0 ? Math.round((correct / attempted) * 100) : 0,
       pctComplete: Math.round((attempted / totalBank) * 100)
     };
@@ -334,6 +366,11 @@ export default function QuestionBankView({
             <div className="px-3 py-1.5 text-center">
               <span className="text-[10px] uppercase font-bold text-blue-600 dark:text-blue-400">Accuracy</span>
               <p className="text-sm font-black text-blue-600 dark:text-blue-400">{userProgressStats.accuracy}%</p>
+            </div>
+            <div className="w-px h-8 bg-slate-200 dark:bg-slate-800" />
+            <div className="px-3 py-1.5 text-center">
+              <span className="text-[10px] uppercase font-bold text-amber-600 dark:text-amber-400">XP Earned</span>
+              <p className="text-sm font-black text-amber-600 dark:text-amber-400 font-mono">+{userProgressStats.totalXpEarned}</p>
             </div>
           </div>
         </div>
@@ -893,11 +930,35 @@ export default function QuestionBankView({
                     <RotateCcw className="w-3.5 h-3.5" />
                     <span>Reset</span>
                   </button>
+
+                  {/* XP Reward Badge */}
+                  {checkedQuestions[currentQ.id] && qbankProgress[currentQ.id] && (
+                    qbankProgress[currentQ.id].peeked ? (
+                      <span className="px-3 py-1.5 rounded-xl bg-amber-50 dark:bg-amber-950/80 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800 text-xs font-bold inline-flex items-center gap-1.5 animate-in fade-in">
+                        <AlertTriangle className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                        <span>Solution Viewed (0 XP)</span>
+                      </span>
+                    ) : (
+                      <span className={`px-3 py-1.5 rounded-xl ${
+                        qbankProgress[currentQ.id].xpAwarded >= 1
+                          ? 'bg-emerald-50 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800'
+                          : 'bg-blue-50 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800'
+                      } text-xs font-bold inline-flex items-center gap-1.5 animate-in fade-in`}>
+                        <Zap className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                        <span>{qbankProgress[currentQ.id].xpAwarded >= 1 ? '+1.0 XP Earned 🎯' : '+0.5 XP Attempt Credit 💡'}</span>
+                      </span>
+                    )
+                  )}
                 </div>
 
                 <div className="flex items-center gap-2">
                   <button
-                    onClick={() => setShowSolutions(prev => ({ ...prev, [currentQ.id]: !prev[currentQ.id] }))}
+                    onClick={() => {
+                      if (!checkedQuestions[currentQ.id]) {
+                        setPeekedQuestions(prev => ({ ...prev, [currentQ.id]: true }));
+                      }
+                      setShowSolutions(prev => ({ ...prev, [currentQ.id]: !prev[currentQ.id] }));
+                    }}
                     className="px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 text-xs font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition"
                   >
                     {showSolutions[currentQ.id] ? 'Hide Solution' : 'View Solution'}
@@ -908,6 +969,12 @@ export default function QuestionBankView({
               {/* Solution Box (Step-by-step KaTeX) */}
               {showSolutions[currentQ.id] && (
                 <div className="p-5 rounded-2xl bg-emerald-50/60 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 space-y-3 animate-in fade-in duration-200">
+                  {(peekedQuestions[currentQ.id] || qbankProgress[currentQ.id]?.peeked) && (
+                    <div className="p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-800 dark:text-amber-300 text-xs font-semibold flex items-center gap-2">
+                      <AlertTriangle className="w-4 h-4 text-amber-500 shrink-0" />
+                      <span>Solution revealed before checking an answer: Academic XP is withheld (0 XP).</span>
+                    </div>
+                  )}
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-bold text-emerald-800 dark:text-emerald-300 flex items-center gap-1.5">
                       <Sparkles className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
