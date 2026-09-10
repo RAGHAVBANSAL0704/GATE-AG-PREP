@@ -462,10 +462,10 @@ export default function Dashboard({
           </div>
 
           {/* Era Filter */}
-          <div className="flex items-center gap-1 bg-slate-100 dark:bg-slate-950 p-1 rounded-xl border border-slate-200 dark:border-slate-800 text-xs font-bold">
+          <div className="flex items-center gap-1 bg-slate-100 dark:bg-slate-950 p-1 rounded-xl border border-slate-200 dark:border-slate-800 text-xs font-bold max-w-full overflow-x-auto scrollbar-none">
             <button
               onClick={() => setPaperEraFilter('all')}
-              className={`px-3 py-1.5 rounded-lg transition cursor-pointer ${
+              className={`px-3 py-1.5 rounded-lg transition cursor-pointer whitespace-nowrap ${
                 paperEraFilter === 'all'
                   ? 'bg-emerald-600 text-white shadow-xs font-extrabold'
                   : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
@@ -475,7 +475,7 @@ export default function Dashboard({
             </button>
             <button
               onClick={() => setPaperEraFilter('recent')}
-              className={`px-3 py-1.5 rounded-lg transition cursor-pointer ${
+              className={`px-3 py-1.5 rounded-lg transition cursor-pointer whitespace-nowrap ${
                 paperEraFilter === 'recent'
                   ? 'bg-emerald-600 text-white shadow-xs font-extrabold'
                   : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
@@ -485,7 +485,7 @@ export default function Dashboard({
             </button>
             <button
               onClick={() => setPaperEraFilter('classic')}
-              className={`px-3 py-1.5 rounded-lg transition cursor-pointer ${
+              className={`px-3 py-1.5 rounded-lg transition cursor-pointer whitespace-nowrap ${
                 paperEraFilter === 'classic'
                   ? 'bg-emerald-600 text-white shadow-xs font-extrabold'
                   : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'

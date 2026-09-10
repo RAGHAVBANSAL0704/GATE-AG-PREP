@@ -212,7 +212,7 @@ export default function Leaderboard({ currentStudent }) {
               <div className="py-8 text-center text-xs text-slate-400">Loading standings...</div>
             ) : (
               <div className="overflow-x-auto">
-                <table className="w-full text-left text-xs border-collapse">
+                <table className="w-full min-w-[600px] text-left text-xs border-collapse">
                   <thead>
                     <tr className="border-b border-slate-200 dark:border-slate-800 text-[11px] font-extrabold uppercase text-slate-400 tracking-wider">
                       <th className="py-3 px-3">Rank</th>
@@ -379,7 +379,7 @@ export default function Leaderboard({ currentStudent }) {
             </div>
 
             <div className="overflow-x-auto">
-              <table className="w-full text-left text-xs border-collapse">
+              <table className="w-full min-w-[480px] text-left text-xs border-collapse">
                 <thead>
                   <tr className="border-b border-slate-200 dark:border-slate-800 text-[11px] font-extrabold uppercase text-slate-400 tracking-wider">
                     <th className="py-3 px-3">Rank</th>

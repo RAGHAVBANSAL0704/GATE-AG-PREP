@@ -67,12 +67,12 @@ export default function FormulaSheet({ onOpenCalc }) {
             </h2>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3">
             {/* View Mode Toggle */}
             <div className="flex items-center p-1 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
               <button
                 onClick={() => setViewMode('cards')}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition ${
+                className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg text-xs font-bold transition ${
                   viewMode === 'cards'
                     ? 'bg-blue-600 text-white shadow-2xs'
                     : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
@@ -81,11 +81,12 @@ export default function FormulaSheet({ onOpenCalc }) {
               >
                 <LayoutGrid className="w-3.5 h-3.5" />
                 <span className="hidden sm:inline">Detailed Cards</span>
+                <span className="sm:hidden">Cards</span>
               </button>
 
               <button
                 onClick={() => setViewMode('table')}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition ${
+                className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg text-xs font-bold transition ${
                   viewMode === 'table'
                     ? 'bg-blue-600 text-white shadow-2xs'
                     : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
@@ -94,24 +95,25 @@ export default function FormulaSheet({ onOpenCalc }) {
               >
                 <Table className="w-3.5 h-3.5" />
                 <span className="hidden sm:inline">Compact Table</span>
+                <span className="sm:hidden">Table</span>
               </button>
             </div>
 
             <button
               onClick={() => window.print()}
-              className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-800 text-xs font-bold shadow-xs hover:bg-blue-100 transition no-print"
+              className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-2 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-800 text-xs font-bold shadow-xs hover:bg-blue-100 transition no-print"
               title="Print or Save as PDF"
             >
               <Printer className="w-4 h-4" />
-              <span>Export PDF / Print</span>
+              <span><span className="hidden sm:inline">Export </span>PDF</span>
             </button>
 
             <button
               onClick={onOpenCalc}
-              className="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 text-xs font-bold shadow-md hover:bg-slate-800 transition"
+              className="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 rounded-xl bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 text-xs font-bold shadow-md hover:bg-slate-800 transition"
             >
               <Calculator className="w-4 h-4 text-blue-400 dark:text-blue-600" />
-              <span>Scientific Calc</span>
+              <span><span className="hidden sm:inline">Scientific </span>Calc</span>
             </button>
           </div>
         </div>
@@ -218,7 +220,7 @@ export default function FormulaSheet({ onOpenCalc }) {
           </div>
 
           <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse text-xs">
+            <table className="w-full min-w-[640px] text-left border-collapse text-xs">
               <thead>
                 <tr className="bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400 uppercase font-extrabold text-[10px] tracking-wider border-b border-slate-200 dark:border-slate-700">
                   <th className="py-3 px-4 w-16">Sec</th>

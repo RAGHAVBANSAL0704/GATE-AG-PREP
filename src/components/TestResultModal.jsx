@@ -389,32 +389,32 @@ export default function TestResultModal({ result, onClose, onRetake }) {
               <button
                 onClick={handleShareScorecardImage}
                 disabled={isGeneratingImage}
-                className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs transition shadow-md cursor-pointer disabled:opacity-50"
+                className="flex items-center gap-1.5 px-3 sm:px-3.5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs transition shadow-md cursor-pointer disabled:opacity-50"
                 title="Download Ultra-HD Shareable Scorecard Card (PNG) for WhatsApp, LinkedIn, & Telegram"
               >
                 <Share2 className="w-3.5 h-3.5" />
-                <span>{isGeneratingImage ? 'Generating...' : 'Share Card (PNG)'}</span>
+                <span>{isGeneratingImage ? 'Generating...' : <span>Share<span className="hidden sm:inline"> Card (PNG)</span></span>}</span>
               </button>
 
               <button
                 onClick={handleDownloadPDF}
-                className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition shadow-md cursor-pointer"
+                className="flex items-center gap-1.5 px-3 sm:px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs transition shadow-md cursor-pointer"
                 title="Download Comprehensive Result Scorecard as PDF"
               >
                 <Printer className="w-3.5 h-3.5" />
-                <span>Scorecard PDF</span>
+                <span><span className="hidden sm:inline">Scorecard </span>PDF</span>
               </button>
 
               <button
                 onClick={onRetake}
-                className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs border border-slate-700 transition cursor-pointer"
+                className="flex items-center gap-1.5 px-3 sm:px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs border border-slate-700 transition cursor-pointer"
               >
                 <RotateCcw className="w-3.5 h-3.5" />
                 <span>Retake</span>
               </button>
               <button
                 onClick={onClose}
-                className="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs transition cursor-pointer"
+                className="px-3.5 sm:px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs transition cursor-pointer"
               >
                 Done
               </button>
@@ -629,7 +629,7 @@ export default function TestResultModal({ result, onClose, onRetake }) {
                ======================================================= */
             <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-xs">
               <div className="overflow-x-auto">
-                <table className="w-full text-left text-xs border-collapse">
+                <table className="w-full min-w-[700px] text-left text-xs border-collapse">
                   <thead>
                     <tr className="bg-slate-100 dark:bg-slate-800/80 border-b border-slate-200 dark:border-slate-700 text-[11px] font-extrabold text-slate-500 uppercase tracking-wider">
                       <th className="py-3 px-3">Q#</th>

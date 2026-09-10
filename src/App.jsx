@@ -38,6 +38,7 @@ function lazyWithRetry(componentImport) {
 
 // Code-split heavy sub-tabs for ultra-fast initial page load (< 200ms) with deployment resilience
 const MockTestMode = lazyWithRetry(() => import('./components/MockTestMode'));
+const QuestionBankView = lazyWithRetry(() => import('./components/QuestionBankView'));
 const LearningHub = lazyWithRetry(() => import('./components/LearningHub'));
 const CommunityHub = lazyWithRetry(() => import('./components/CommunityHub'));
 const CreatorAdminHQ = lazyWithRetry(() => import('./components/CreatorAdminHQ'));
@@ -699,7 +700,7 @@ export default function App() {
       {/* Main Wide Canvas */}
       <div className="flex-1 flex flex-col min-w-0 overflow-y-auto">
         {/* Raghav Bansal Educational Network Top Strip */}
-        <div className="w-full bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 px-4 py-1.5 sm:px-6 lg:px-8 text-[11px] font-medium z-10 shrink-0">
+        <div className="w-full bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 px-4 py-1.5 sm:px-6 lg:px-8 text-[11px] font-medium z-10 shrink-0 mt-14 sm:mt-0">
           <div className="max-w-7xl 2xl:max-w-[1500px] mx-auto flex flex-wrap items-center justify-between gap-2">
             <div className="flex items-center gap-2">
               <Globe className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
@@ -751,7 +752,7 @@ export default function App() {
           </div>
         </div>
 
-        <main className="flex-1 max-w-7xl 2xl:max-w-[1500px] w-full mx-auto px-3 sm:px-6 lg:px-8 pt-16 sm:pt-6 pb-8">
+        <main className="flex-1 max-w-7xl 2xl:max-w-[1500px] w-full mx-auto px-3 sm:px-6 lg:px-8 pt-3 sm:pt-6 pb-24 sm:pb-8">
           
           {/* Guest Visitor Mode Top Banner */}
           {!currentStudent && (
@@ -796,6 +797,17 @@ export default function App() {
                 setActiveTab={setActiveTab}
                 onOpenEngineersDay={() => setShowEngineersDay(true)}
               />
+            )}
+
+            {(activeTab === 'questionbank' || activeTab === 'qbank') && (
+              <Suspense fallback={<TabLoadingSkeleton />}>
+                <QuestionBankView
+                  onOpenCalc={() => setIsCalcOpen(true)}
+                  bookmarks={bookmarks}
+                  onToggleBookmark={handleToggleBookmark}
+                  currentStudent={currentStudent}
+                />
+              </Suspense>
             )}
 
             {['practicehub', 'practice', 'custompractice', 'customtest'].includes(activeTab) && (

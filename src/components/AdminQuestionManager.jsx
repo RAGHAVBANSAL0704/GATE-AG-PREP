@@ -520,10 +520,10 @@ export default function AdminQuestionManager({
         )}
 
         {/* View Modes */}
-        <div className="flex border-b border-blue-500/30 pt-2 gap-2 text-xs font-bold">
+        <div className="flex border-b border-blue-500/30 pt-2 gap-2 text-xs font-bold overflow-x-auto scrollbar-none">
           <button
             onClick={() => { setStudioMode('custom-mocks'); setPaperQIndex(0); }}
-            className={`px-4 py-2.5 rounded-t-xl transition flex items-center gap-2 ${
+            className={`px-4 py-2.5 rounded-t-xl transition flex items-center gap-2 whitespace-nowrap shrink-0 ${
               studioMode === 'custom-mocks'
                 ? 'bg-white text-blue-950 font-extrabold shadow-md'
                 : 'text-blue-200 hover:bg-white/10'
@@ -535,7 +535,7 @@ export default function AdminQuestionManager({
 
           <button
             onClick={() => { setStudioMode('official-pyqs'); setPaperQIndex(0); }}
-            className={`px-4 py-2.5 rounded-t-xl transition flex items-center gap-2 ${
+            className={`px-4 py-2.5 rounded-t-xl transition flex items-center gap-2 whitespace-nowrap shrink-0 ${
               studioMode === 'official-pyqs'
                 ? 'bg-white text-blue-950 font-extrabold shadow-md'
                 : 'text-blue-200 hover:bg-white/10'
@@ -547,7 +547,7 @@ export default function AdminQuestionManager({
 
           <button
             onClick={() => { setStudioMode('all-questions'); setPaperQIndex(0); }}
-            className={`px-4 py-2.5 rounded-t-xl transition flex items-center gap-2 ${
+            className={`px-4 py-2.5 rounded-t-xl transition flex items-center gap-2 whitespace-nowrap shrink-0 ${
               studioMode === 'all-questions'
                 ? 'bg-white text-blue-950 font-extrabold shadow-md'
                 : 'text-blue-200 hover:bg-white/10'
@@ -559,7 +559,7 @@ export default function AdminQuestionManager({
 
           <button
             onClick={() => { setStudioMode('reported-issues'); refreshReports(); }}
-            className={`px-4 py-2.5 rounded-t-xl transition flex items-center gap-2 ${
+            className={`px-4 py-2.5 rounded-t-xl transition flex items-center gap-2 whitespace-nowrap shrink-0 ${
               studioMode === 'reported-issues'
                 ? 'bg-white text-blue-950 font-extrabold shadow-md'
                 : 'text-blue-200 hover:bg-white/10'

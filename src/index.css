@@ -691,3 +691,22 @@ html.dark .tcs-cbt-container input[type="number"] {
   color: #111827 !important;
   border-color: #94A3B8 !important;
 }
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS & SAFE-AREA UTILITIES
+   ========================================================================== */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top);
+  }
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  -webkit-tap-highlight-color: transparent;
+}
+

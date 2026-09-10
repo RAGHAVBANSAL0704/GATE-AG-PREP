@@ -165,22 +165,22 @@ export default function DownloadsHub({ questions = [], mockPapers = [], customMo
           </div>
 
           {/* Tab Switcher */}
-          <div className="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-950 p-1.5 rounded-2xl border border-slate-200 dark:border-slate-800 shrink-0 w-full sm:w-auto">
+          <div className="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-950 p-1.5 rounded-2xl border border-slate-200 dark:border-slate-800 overflow-x-auto scrollbar-none shrink-0 w-full sm:w-auto">
             <button
               onClick={() => setVaultTab('generator')}
-              className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold transition cursor-pointer ${
+              className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold transition whitespace-nowrap shrink-0 cursor-pointer ${
                 vaultTab === 'generator'
                   ? 'bg-emerald-600 text-white shadow-xs font-extrabold'
                   : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
               <FileDown className="w-4 h-4" />
-              <span>Custom PDF Generator</span>
+              <span>PDF Generator</span>
             </button>
 
             <button
               onClick={() => setVaultTab('official')}
-              className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold transition cursor-pointer ${
+              className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold transition whitespace-nowrap shrink-0 cursor-pointer ${
                 vaultTab === 'official'
                   ? 'bg-blue-600 text-white shadow-xs font-extrabold'
                   : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
@@ -192,7 +192,7 @@ export default function DownloadsHub({ questions = [], mockPapers = [], customMo
 
             <button
               onClick={() => setVaultTab('custom')}
-              className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold transition cursor-pointer ${
+              className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold transition whitespace-nowrap shrink-0 cursor-pointer ${
                 vaultTab === 'custom'
                   ? 'bg-purple-600 text-white shadow-xs font-extrabold'
                   : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'

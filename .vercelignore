@@ -2,7 +2,18 @@ node_modules
 dist
 QUESTIONS
 SYLLABUS
+CONCEPTS
+REPORT TREND ANALYSIS
+tests
+scripts
+.agents
+*.log.txt
+tmp_*
+dataset_audit_report.json
+ORIGINAL_REQUEST.md
+CONTACT_DETAILS.md
 public/question_snippets
 *.py
 .DS_Store
 .vercel
+

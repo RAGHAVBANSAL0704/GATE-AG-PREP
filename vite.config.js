@@ -135,7 +135,7 @@ export default defineConfig(({ command }) => ({
     host: true
   },
   build: {
-    chunkSizeWarningLimit: 1500,
+    chunkSizeWarningLimit: 1700,
     rollupOptions: {
       output: {
         manualChunks(id) {
@@ -153,6 +153,14 @@ export default defineConfig(({ command }) => ({
               return 'dataset-custom-mocks-44-50';
             }
             return 'dataset-custom-mocks-1-6';
+          }
+          if (id.includes('/data/question_bank/')) {
+            if (id.includes('section_1')) return 'dataset-qb-em';
+            if (id.includes('section_2') || id.includes('section_3')) return 'dataset-qb-fm-fp';
+            if (id.includes('section_4') || id.includes('section_5')) return 'dataset-qb-swce-ide';
+            if (id.includes('section_6') || id.includes('section_7')) return 'dataset-qb-ape-dfe';
+            if (id.includes('section_8') || id.includes('index.js')) return 'dataset-qb-ga';
+            return 'dataset-qb-ga';
           }
           if (id.includes('/data/mock_papers.json')) return 'dataset-pyq-mocks';
           if (id.includes('/data/questions.json')) return 'dataset-questions-archive';

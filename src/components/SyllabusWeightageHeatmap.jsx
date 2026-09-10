@@ -831,7 +831,7 @@ export default function SyllabusWeightageHeatmap({
 
             {/* Side-by-Side Comparative Table */}
             <div className="overflow-x-auto">
-              <table className="w-full text-left text-xs border-collapse">
+              <table className="w-full min-w-[760px] text-left text-xs border-collapse">
                 <thead>
                   <tr className="border-b border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 font-bold uppercase tracking-wider text-[11px]">
                     <th className="py-3 px-3 min-w-[240px]">Syllabus Section</th>
@@ -1156,7 +1156,7 @@ export default function SyllabusWeightageHeatmap({
             </div>
 
             <div className="overflow-x-auto">
-              <table className="w-full text-left text-xs border-collapse">
+              <table className="w-full min-w-[700px] text-left text-xs border-collapse">
                 <thead>
                   <tr className="border-b border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 font-bold">
                     <th className="py-3 px-3 min-w-[220px]">Section / Discipline</th>

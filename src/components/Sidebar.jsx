@@ -22,7 +22,8 @@ import {
   MessageSquare,
   Award,
   Search,
-  Palette
+  Palette,
+  Database
 } from 'lucide-react';
 
 export default function Sidebar({ 
@@ -47,6 +48,12 @@ export default function Sidebar({
       label: 'Dashboard', 
       icon: Compass, 
       matches: ['dashboard'] 
+    },
+    { 
+      id: 'questionbank', 
+      label: 'Question Bank', 
+      icon: Database, 
+      matches: ['questionbank', 'qbank'] 
     },
     { 
       id: 'practicehub', 
@@ -121,33 +128,66 @@ export default function Sidebar({
   return (
     <>
       {/* Mobile Top Bar */}
-      <div className="sm:hidden fixed top-0 left-0 right-0 h-14 bg-white dark:bg-slate-900 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 z-40 px-4 flex items-center justify-between no-print">
+      <div className="sm:hidden fixed top-0 left-0 right-0 h-14 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 z-40 px-3 flex items-center justify-between no-print">
         <div 
           onClick={() => handleNavClick('dashboard')}
-          className="flex items-center gap-2 cursor-pointer"
+          className="flex items-center gap-2 cursor-pointer shrink-0"
         >
           <div className="w-8 h-8 rounded-lg bg-emerald-600 text-white font-extrabold flex items-center justify-center text-xs shadow-sm">
             AG
           </div>
-          <span className="font-extrabold text-xs text-slate-900 dark:text-white">
+          <span className="font-extrabold text-xs text-slate-900 dark:text-white truncate">
             GATE AG Prep
           </span>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5 shrink-0">
+          <button
+            onClick={onOpenCommandPalette}
+            className="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 text-xs font-bold"
+            title="Search (Cmd+K / Ctrl+K)"
+            aria-label="Search"
+          >
+            <Search className="w-4 h-4 text-emerald-500" />
+          </button>
+
+          <button
+            onClick={() => setDarkMode ? setDarkMode(!darkMode) : setCurrentTheme && setCurrentTheme(currentTheme === 'slate-light' ? 'obsidian-emerald' : 'slate-light')}
+            className="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 text-xs font-bold"
+            title={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+            aria-label={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+          >
+            {darkMode ? <Sun className="w-4 h-4 text-amber-500" /> : <Moon className="w-4 h-4 text-slate-700 dark:text-slate-300" />}
+          </button>
+
           <button
             onClick={onOpenCalc}
             className="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 text-xs font-bold"
             title="Calculator"
+            aria-label="Calculator"
           >
             <Calculator className="w-4 h-4 text-emerald-500" />
           </button>
 
           <button
+            onClick={onOpenProfile}
+            className="p-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 text-xs font-bold"
+            title={currentStudent ? currentStudent.full_name : "Sign In / Profile"}
+            aria-label="Profile"
+          >
+            {currentStudent?.profile_photo_url ? (
+              <img src={currentStudent.profile_photo_url} alt="Profile" className="w-5 h-5 rounded-md object-cover" />
+            ) : (
+              <User className="w-4 h-4 text-emerald-500" />
+            )}
+          </button>
+
+          <button
             onClick={() => setIsMobileOpen(!isMobileOpen)}
             className="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700"
+            aria-label={isMobileOpen ? "Close navigation menu" : "Open navigation menu"}
           >
-            {isMobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {isMobileOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
           </button>
         </div>
       </div>
@@ -328,6 +368,51 @@ export default function Sidebar({
 
         </div>
       </aside>
+
+      {/* Mobile Bottom Navigation Bar (Hidden during full CBT exam to maximize exam viewport) */}
+      {activeTab !== 'mocktest' && (
+        <nav className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 px-2 py-1.5 pb-safe flex items-center justify-around shadow-lg no-print">
+          {[
+            { id: 'dashboard', label: 'Home', icon: Compass, matches: ['dashboard'] },
+            { id: 'practicehub', label: 'Practice', icon: Target, matches: ['practicehub', 'practice', 'custompractice', 'customtest'] },
+            { id: 'learninghub', label: 'Learn', icon: GraduationCap, matches: ['learninghub', 'concepts', 'revision', 'formulas', 'simulators', 'flashcards', 'radar'] },
+            { id: 'community', label: 'Community', icon: MessageSquare, matches: ['community', 'chat', 'qa', 'discussions', 'ai_tutor', 'aisolver', 'aitutor'] },
+            { id: 'mocktest', label: 'Mocks', icon: Clock, matches: ['mocktest'] },
+          ].map(tab => {
+            const Icon = tab.icon;
+            const isActive = tab.matches.includes(activeTab);
+            return (
+              <button
+                key={tab.id}
+                onClick={() => handleNavClick(tab.id)}
+                className={`flex flex-col items-center justify-center py-1 px-2 rounded-xl transition-all cursor-pointer min-w-[52px] ${
+                  isActive
+                    ? 'text-emerald-600 dark:text-emerald-400 font-extrabold'
+                    : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                }`}
+              >
+                <div className={`p-1 rounded-lg transition-transform ${isActive ? 'bg-emerald-50 dark:bg-emerald-950/80 scale-105' : ''}`}>
+                  <Icon className="w-4 h-4" />
+                </div>
+                <span className="text-[10px] tracking-tight mt-0.5">{tab.label}</span>
+              </button>
+            );
+          })}
+          <button
+            onClick={() => setIsMobileOpen(!isMobileOpen)}
+            className={`flex flex-col items-center justify-center py-1 px-2 rounded-xl transition-all cursor-pointer min-w-[52px] ${
+              isMobileOpen
+                ? 'text-emerald-600 dark:text-emerald-400 font-extrabold'
+                : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+            }`}
+          >
+            <div className={`p-1 rounded-lg transition-transform ${isMobileOpen ? 'bg-emerald-50 dark:bg-emerald-950/80 scale-105' : ''}`}>
+              <Menu className="w-4 h-4" />
+            </div>
+            <span className="text-[10px] tracking-tight mt-0.5">More</span>
+          </button>
+        </nav>
+      )}
     </>
   );
 }

@@ -52,10 +52,10 @@ export default function SyllabusTracker({ userProgress, onUpdateProgress, onStar
     <div className="space-y-6 animate-in fade-in duration-200">
       
       {/* Sub-Tab Navigation Switcher */}
-      <div className="flex flex-wrap items-center gap-2 p-1.5 rounded-2xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 w-fit">
+      <div className="flex items-center gap-2 p-1.5 rounded-2xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 w-full sm:w-fit overflow-x-auto scrollbar-none">
         <button
           onClick={() => setActiveView('tracker')}
-          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-extrabold transition cursor-pointer ${
+          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-extrabold transition cursor-pointer whitespace-nowrap shrink-0 ${
             activeView === 'tracker'
               ? 'bg-blue-600 text-white shadow-sm'
               : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
@@ -67,7 +67,7 @@ export default function SyllabusTracker({ userProgress, onUpdateProgress, onStar
 
         <button
           onClick={() => setActiveView('heatmap')}
-          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-extrabold transition cursor-pointer ${
+          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-extrabold transition cursor-pointer whitespace-nowrap shrink-0 ${
             activeView === 'heatmap'
               ? 'bg-indigo-600 text-white shadow-sm'
               : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
@@ -102,7 +102,7 @@ export default function SyllabusTracker({ userProgress, onUpdateProgress, onStar
             </p>
           </div>
 
-          <div className="bg-slate-50 dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700 min-w-[200px] text-center space-y-1">
+          <div className="bg-slate-50 dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700 w-full sm:w-auto sm:min-w-[200px] text-center space-y-1">
             <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Overall Syllabus Mastery</span>
             <div className="text-2xl font-bold text-slate-900 dark:text-white font-mono">{completionPct}%</div>
             <div className="w-full bg-slate-200 dark:bg-slate-700 h-2 rounded-full overflow-hidden mt-2">

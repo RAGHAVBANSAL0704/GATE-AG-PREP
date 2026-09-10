@@ -236,22 +236,22 @@ export default function CommandPaletteModal({
 
   return (
     <div 
-      className="fixed inset-0 z-[150] flex items-start justify-center pt-16 sm:pt-24 px-4 bg-slate-950/80 backdrop-blur-md animate-in fade-in duration-150"
+      className="fixed inset-0 z-[150] flex items-start justify-center pt-3 sm:pt-20 px-2 sm:px-4 bg-slate-950/80 backdrop-blur-md animate-in fade-in duration-150"
       onClick={onClose}
     >
       
       {/* Search Palette Container */}
       <div 
-        className="relative w-full max-w-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[80vh]"
+        className="relative w-full max-w-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[88vh]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Top Search Input Bar */}
-        <div className="p-4 sm:p-5 border-b border-slate-100 dark:border-slate-800 flex items-center gap-3 bg-slate-50/60 dark:bg-slate-950/40">
+        <div className="p-3 sm:p-5 border-b border-slate-100 dark:border-slate-800 flex items-center gap-2.5 sm:gap-3 bg-slate-50/60 dark:bg-slate-950/40">
           <Search className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0" />
           <input
             ref={inputRef}
             type="text"
-            placeholder="Search formulas, PYQ mocks (2007–2026), syllabus, shortcuts... (↑↓ to navigate, ↵ to select)"
+            placeholder="Search formulas, PYQ mocks, syllabus, shortcuts..."
             value={query}
             onChange={(e) => {
               setQuery(e.target.value);

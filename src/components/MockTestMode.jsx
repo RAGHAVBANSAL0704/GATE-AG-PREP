@@ -1261,102 +1261,110 @@ export default function MockTestMode({
     <div className="tcs-cbt-container max-w-7xl mx-auto bg-[#f4f7f9] border border-slate-300 rounded-2xl shadow-xl overflow-hidden animate-in fade-in duration-200 text-slate-900 font-sans">
       
       {/* Top Bar: Official TCS iON Blue Header */}
-      <div className="cbt-top-bar bg-[#0B4A8F] text-white px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-3 border-b-2 border-[#003366]">
-        <div className="flex items-center gap-3">
-          <span className="font-extrabold text-sm sm:text-base tracking-wide uppercase text-white">
-            GATE 2027 • Agricultural Engineering (AG)
-          </span>
-          <span className="hidden md:inline-block text-xs text-blue-200 font-mono">
-            | {selectedPaper.title || `Official Paper ${selectedPaper.year}`}
-          </span>
-        </div>
-
-        {/* Live Countdown Clock & Tools */}
-        <div className="flex items-center gap-3">
-          <div className="cbt-timer px-3.5 py-1.5 rounded-lg bg-[#003366] border border-blue-400/40 text-amber-300 font-mono font-black text-sm flex items-center gap-2 shadow-inner">
-            <Clock className="w-4 h-4 animate-pulse" />
-            <span>Time Left: {formatTimer(timeLeft)}</span>
+      <div className="cbt-top-bar bg-[#0B4A8F] text-white px-3 sm:px-6 py-2.5 sm:py-3 space-y-2 border-b-2 border-[#003366]">
+        {/* Top Header Row: Title, Live Timer, and Quick Toggles */}
+        <div className="flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2 min-w-0">
+            <span className="font-extrabold text-xs sm:text-base tracking-wide uppercase text-white truncate">
+              GATE 2027 • AG
+            </span>
+            <span className="hidden md:inline-block text-xs text-blue-200 font-mono truncate">
+              | {selectedPaper.title || `Official Paper ${selectedPaper.year}`}
+            </span>
           </div>
 
+          <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
+            {/* Live Countdown Clock */}
+            <div className="cbt-timer px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg bg-[#003366] border border-blue-400/40 text-amber-300 font-mono font-black text-xs sm:text-sm flex items-center gap-1.5 shadow-inner">
+              <Clock className="w-3.5 h-3.5 animate-pulse shrink-0" />
+              <span>{formatTimer(timeLeft)}</span>
+            </div>
+
+            {/* Mobile Palette Button */}
+            <button
+              onClick={() => setShowMobilePalette(true)}
+              className="lg:hidden px-2 py-1 sm:py-1.5 rounded-lg bg-[#ffffff]/15 hover:bg-[#ffffff]/25 border border-white/40 text-white font-bold text-xs flex items-center gap-1 transition cursor-pointer shrink-0"
+              title="Open Question Palette"
+            >
+              <Grid className="w-3.5 h-3.5 text-emerald-300" />
+              <span className="font-mono text-[11px] font-black">Q.{currentQ?.qnum || 1}</span>
+            </button>
+
+            {/* Calculator Button */}
+            <button
+              onClick={onOpenCalc}
+              className="px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-[#ffffff]/10 hover:bg-[#ffffff]/20 border border-white/30 text-white font-bold text-xs flex items-center gap-1 transition cursor-pointer shrink-0"
+              title="Open Scientific Virtual Calculator"
+            >
+              <Calculator className="w-3.5 h-3.5 text-blue-200" />
+              <span className="hidden sm:inline">Calc</span>
+            </button>
+          </div>
+        </div>
+
+        {/* Secondary Toolbar: Fullscreen, Blueprint, Formulas, Instructions, Paper, Save, Cancel */}
+        <div className="flex items-center gap-1.5 overflow-x-auto scrollbar-none pb-0.5 text-xs pt-1 border-t border-white/10">
           <button
             onClick={toggleFullscreen}
-            className="px-3 py-1.5 rounded-lg bg-[#ffffff]/10 hover:bg-[#ffffff]/20 border border-white/30 text-white font-bold text-xs flex items-center gap-1.5 transition cursor-pointer"
+            className="px-2.5 py-1 rounded-lg bg-[#ffffff]/10 hover:bg-[#ffffff]/20 border border-white/30 text-white font-bold text-[11px] flex items-center gap-1 transition cursor-pointer whitespace-nowrap shrink-0"
             title={isFullscreen ? "Exit Fullscreen" : "Enter Exam Fullscreen Mode"}
           >
-            {isFullscreen ? <Minimize className="w-4 h-4 text-emerald-300" /> : <Maximize className="w-4 h-4 text-emerald-300" />}
-            <span className="hidden md:inline">{isFullscreen ? 'Exit Full' : 'Fullscreen'}</span>
-          </button>
-
-          <button
-            onClick={onOpenCalc}
-            className="px-3 py-1.5 rounded-lg bg-[#ffffff]/10 hover:bg-[#ffffff]/20 border border-white/30 text-white font-bold text-xs flex items-center gap-1.5 transition cursor-pointer"
-            title="Open Scientific Virtual Calculator"
-          >
-            <Calculator className="w-4 h-4 text-blue-200" />
-            <span className="hidden sm:inline">Calculator</span>
+            {isFullscreen ? <Minimize className="w-3.5 h-3.5 text-emerald-300" /> : <Maximize className="w-3.5 h-3.5 text-emerald-300" />}
+            <span>{isFullscreen ? 'Exit Full' : 'Fullscreen'}</span>
           </button>
 
           <button
             onClick={() => setShowFormulaSheetModal(true)}
-            className="px-3 py-1.5 rounded-lg bg-[#ffffff]/10 hover:bg-[#ffffff]/20 border border-white/30 text-white font-bold text-xs flex items-center gap-1.5 transition cursor-pointer"
+            className="px-2.5 py-1 rounded-lg bg-[#ffffff]/10 hover:bg-[#ffffff]/20 border border-white/30 text-white font-bold text-[11px] flex items-center gap-1 transition cursor-pointer whitespace-nowrap shrink-0"
             title="Open Quick Formula Sheet Reference"
           >
-            <BookOpen className="w-4 h-4 text-teal-300" />
-            <span className="hidden md:inline">Formulas</span>
+            <BookOpen className="w-3.5 h-3.5 text-teal-300" />
+            <span>Formulas</span>
           </button>
 
           <button
             onClick={() => setAnalyzingPaper(selectedPaper)}
-            className="px-3 py-1.5 rounded-lg bg-[#ffffff]/10 hover:bg-[#ffffff]/20 border border-white/30 text-white font-bold text-xs flex items-center gap-1.5 transition cursor-pointer"
+            className="px-2.5 py-1 rounded-lg bg-[#ffffff]/10 hover:bg-[#ffffff]/20 border border-white/30 text-white font-bold text-[11px] flex items-center gap-1 transition cursor-pointer whitespace-nowrap shrink-0"
             title="View Paper Blueprint & Topic Weightage"
           >
-            <BarChart3 className="w-4 h-4 text-purple-300" />
-            <span className="hidden md:inline">Blueprint</span>
+            <BarChart3 className="w-3.5 h-3.5 text-purple-300" />
+            <span>Blueprint</span>
           </button>
 
           <button
             onClick={() => setShowInstructionsModal(true)}
-            className="px-3 py-1.5 rounded-lg bg-[#ffffff]/10 hover:bg-[#ffffff]/20 border border-white/30 text-white font-bold text-xs flex items-center gap-1.5 transition cursor-pointer"
+            className="px-2.5 py-1 rounded-lg bg-[#ffffff]/10 hover:bg-[#ffffff]/20 border border-white/30 text-white font-bold text-[11px] flex items-center gap-1 transition cursor-pointer whitespace-nowrap shrink-0"
           >
-            <Info className="w-4 h-4 text-amber-300" />
-            <span className="hidden sm:inline">Instructions</span>
+            <Info className="w-3.5 h-3.5 text-amber-300" />
+            <span>Instructions</span>
           </button>
 
           <button
             onClick={() => setShowQuestionPaperModal(true)}
-            className="px-3 py-1.5 rounded-lg bg-[#ffffff]/10 hover:bg-[#ffffff]/20 border border-white/30 text-white font-bold text-xs flex items-center gap-1.5 transition cursor-pointer"
+            className="px-2.5 py-1 rounded-lg bg-[#ffffff]/10 hover:bg-[#ffffff]/20 border border-white/30 text-white font-bold text-[11px] flex items-center gap-1 transition cursor-pointer whitespace-nowrap shrink-0"
           >
-            <FileText className="w-4 h-4" />
-            <span className="hidden sm:inline">Paper</span>
-          </button>
-
-          <button
-            onClick={() => setShowMobilePalette(true)}
-            className="lg:hidden px-2.5 py-1.5 rounded-lg bg-[#ffffff]/15 hover:bg-[#ffffff]/25 border border-white/40 text-white font-bold text-xs flex items-center gap-1.5 transition cursor-pointer"
-            title="Open Question Palette"
-          >
-            <Grid className="w-4 h-4 text-emerald-300" />
-            <span className="font-mono text-[11px] font-black">Q.{currentQ?.qnum || 1}</span>
+            <FileText className="w-3.5 h-3.5" />
+            <span>Paper</span>
           </button>
 
           <button
             type="button"
             onClick={() => setShowSaveMidwayModal(true)}
-            className="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs flex items-center gap-1.5 transition shadow-xs cursor-pointer active:scale-95"
+            className="px-2.5 py-1 rounded-lg bg-amber-600 hover:bg-amber-700 text-white font-bold text-[11px] flex items-center gap-1 transition shadow-xs cursor-pointer active:scale-95 whitespace-nowrap shrink-0"
             title="Pause exam and save answers midway to resume later"
           >
             <Pause className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">Save Midway</span>
+            <span>Save Midway</span>
           </button>
 
           <button
             type="button"
             onClick={() => setShowCancelExamModal(true)}
-            className="px-3 py-1.5 rounded-lg bg-rose-700 hover:bg-rose-800 text-white font-bold text-xs flex items-center gap-1.5 transition shadow-xs cursor-pointer active:scale-95"
+            className="px-2.5 py-1 rounded-lg bg-rose-700 hover:bg-rose-800 text-white font-bold text-[11px] flex items-center gap-1 transition shadow-xs cursor-pointer active:scale-95 whitespace-nowrap shrink-0 ml-auto"
             title="Cancel exam midway and permanently delete all answers and history"
           >
             <Trash2 className="w-3.5 h-3.5" />
-            <span>Cancel Exam</span>
+            <span>Cancel</span>
           </button>
         </div>
       </div>
@@ -1633,43 +1641,43 @@ export default function MockTestMode({
               </div>
 
               {/* Bottom Actions Bar */}
-              <div className="bg-[#f0f4f8] px-4 sm:px-6 py-3.5 border-t border-slate-300 flex flex-wrap items-center justify-between gap-3">
-                <div className="flex items-center gap-2">
+              <div className="bg-[#f0f4f8] px-3 sm:px-6 py-3 border-t border-slate-300 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+                <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap order-2 sm:order-1">
                   <button
                     onClick={handleMarkForReviewAndNext}
-                    className="px-4 py-2 rounded-xl bg-[#7B1FA2] hover:bg-[#6A1B9A] text-white font-bold text-xs transition shadow-xs cursor-pointer"
+                    className="flex-1 sm:flex-initial px-3 sm:px-4 py-2.5 sm:py-2 rounded-xl bg-[#7B1FA2] hover:bg-[#6A1B9A] text-white font-bold text-xs transition shadow-xs cursor-pointer text-center whitespace-nowrap"
                   >
                     Mark for Review & Next
                   </button>
 
                   <button
                     onClick={handleClearResponse}
-                    className="px-4 py-2 rounded-xl bg-white hover:bg-slate-100 border border-slate-300 text-slate-800 font-bold text-xs transition shadow-xs cursor-pointer"
+                    className="px-3 sm:px-4 py-2.5 sm:py-2 rounded-xl bg-white hover:bg-slate-100 border border-slate-300 text-slate-800 font-bold text-xs transition shadow-xs cursor-pointer text-center"
                   >
-                    Clear Response
+                    Clear
                   </button>
 
                   <button
                     type="button"
                     onClick={() => setShowMobilePalette(true)}
-                    className="lg:hidden px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs transition shadow-xs flex items-center gap-1.5 cursor-pointer"
+                    className="lg:hidden px-3 py-2.5 sm:py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs transition shadow-xs flex items-center gap-1 cursor-pointer"
                   >
                     <Grid className="w-3.5 h-3.5 text-emerald-300" />
                     <span>Palette ({currentQIndex + 1}/{paperQuestions.length})</span>
                   </button>
                 </div>
 
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 order-1 sm:order-2">
                   <button
                     onClick={handleSaveAndNext}
-                    className="px-6 py-2.5 rounded-xl bg-[#0B4A8F] hover:bg-[#003366] text-white font-extrabold text-xs transition shadow-md active:scale-95 cursor-pointer"
+                    className="flex-1 sm:flex-initial px-5 sm:px-6 py-2.5 rounded-xl bg-[#0B4A8F] hover:bg-[#003366] text-white font-extrabold text-xs sm:text-sm transition shadow-md active:scale-95 cursor-pointer text-center"
                   >
                     Save & Next →
                   </button>
 
                   <button
                     onClick={() => setShowSubmitModal(true)}
-                    className="px-5 py-2.5 rounded-xl bg-[#2E7D32] hover:bg-[#1B5E20] text-white font-extrabold text-xs transition shadow-md active:scale-95 cursor-pointer"
+                    className="px-4 sm:px-5 py-2.5 rounded-xl bg-[#2E7D32] hover:bg-[#1B5E20] text-white font-extrabold text-xs sm:text-sm transition shadow-md active:scale-95 cursor-pointer text-center"
                   >
                     Submit Test
                   </button>

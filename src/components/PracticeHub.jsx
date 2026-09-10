@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PracticeMode from './PracticeMode';
 import CustomPracticePool from './CustomPracticePool';
 import CustomTestCreator from './CustomTestCreator';
-import { Layers, Sparkles, Sliders, Target } from 'lucide-react';
+import { Layers, Sparkles, Sliders, Target, Database } from 'lucide-react';
 
 export default function PracticeHub({
   activeSubTab = 'practice',
@@ -30,6 +30,12 @@ export default function PracticeHub({
   }, [activeSubTab]);
 
   const handleTabClick = (tabId) => {
+    if (tabId === 'qbank') {
+      if (onSubTabChange) {
+        onSubTabChange('questionbank');
+      }
+      return;
+    }
     setCurrentSubTab(tabId);
     if (onSubTabChange) {
       onSubTabChange(tabId);
@@ -37,6 +43,7 @@ export default function PracticeHub({
   };
 
   const subTabs = [
+    { id: 'qbank', label: 'Question Bank (Topic-wise)', icon: Database },
     { id: 'practice', label: 'PYQ Pool (Past Papers)', icon: Layers },
     { id: 'custompractice', label: 'Custom Pool (Mock Papers)', icon: Sparkles },
     { id: 'customtest', label: 'Custom Speed Test', icon: Sliders },
@@ -63,7 +70,7 @@ export default function PracticeHub({
           </div>
 
           {/* Segment Switcher */}
-          <div className="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-950 p-1.5 rounded-2xl border border-slate-200 dark:border-slate-800 overflow-x-auto shrink-0 w-full sm:w-auto">
+          <div className="flex items-center gap-1.5 bg-slate-100 dark:bg-slate-950 p-1.5 rounded-2xl border border-slate-200 dark:border-slate-800 overflow-x-auto scrollbar-none shrink-0 w-full sm:w-auto">
             {subTabs.map((tab) => {
               const Icon = tab.icon;
               const isActive = currentSubTab === tab.id;

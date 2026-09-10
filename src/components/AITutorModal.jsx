@@ -236,10 +236,10 @@ export default function AITutorModal({
         )}
 
         {/* Sub-Navigation Tabs */}
-        <div className="flex border-b border-slate-200 dark:border-slate-800 px-5 pt-2 gap-2 bg-slate-50/40 dark:bg-slate-950/20">
+        <div className="flex border-b border-slate-200 dark:border-slate-800 px-4 sm:px-5 pt-2 gap-2 bg-slate-50/40 dark:bg-slate-950/20 overflow-x-auto scrollbar-none">
           <button
             onClick={() => setActiveTab('solution')}
-            className={`pb-2 px-3 text-xs font-bold border-b-2 transition cursor-pointer flex items-center gap-1.5 ${
+            className={`pb-2 px-3 text-xs font-bold border-b-2 transition cursor-pointer flex items-center gap-1.5 whitespace-nowrap shrink-0 ${
               activeTab === 'solution'
                 ? 'border-purple-600 text-purple-600 dark:text-purple-400'
                 : 'border-transparent text-slate-500 hover:text-slate-800 dark:hover:text-slate-300'
@@ -251,7 +251,7 @@ export default function AITutorModal({
 
           <button
             onClick={() => setActiveTab('hints')}
-            className={`pb-2 px-3 text-xs font-bold border-b-2 transition cursor-pointer flex items-center gap-1.5 ${
+            className={`pb-2 px-3 text-xs font-bold border-b-2 transition cursor-pointer flex items-center gap-1.5 whitespace-nowrap shrink-0 ${
               activeTab === 'hints'
                 ? 'border-purple-600 text-purple-600 dark:text-purple-400'
                 : 'border-transparent text-slate-500 hover:text-slate-800 dark:hover:text-slate-300'
@@ -263,7 +263,7 @@ export default function AITutorModal({
 
           <button
             onClick={() => setActiveTab('chat')}
-            className={`pb-2 px-3 text-xs font-bold border-b-2 transition cursor-pointer flex items-center gap-1.5 ${
+            className={`pb-2 px-3 text-xs font-bold border-b-2 transition cursor-pointer flex items-center gap-1.5 whitespace-nowrap shrink-0 ${
               activeTab === 'chat'
                 ? 'border-purple-600 text-purple-600 dark:text-purple-400'
                 : 'border-transparent text-slate-500 hover:text-slate-800 dark:hover:text-slate-300'

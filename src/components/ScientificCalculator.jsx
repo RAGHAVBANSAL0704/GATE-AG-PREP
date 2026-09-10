@@ -85,6 +85,7 @@ export default function ScientificCalculator({ isOpen, onClose }) {
   // Window drag handlers
   const handleDragStart = (e) => {
     if (e.target.closest('button') || e.target.closest('input')) return;
+    if (typeof window !== 'undefined' && window.innerWidth < 640) return; // Keep anchored on mobile
     setIsDragging(true);
     const clientX = e.touches ? e.touches[0].clientX : e.clientX;
     const clientY = e.touches ? e.touches[0].clientY : e.clientY;
@@ -97,16 +98,28 @@ export default function ScientificCalculator({ isOpen, onClose }) {
   };
 
   useEffect(() => {
+    const handleResize = () => {
+      if (typeof window !== 'undefined' && window.innerWidth < 640) {
+        setPosition({ x: 0, y: 0 });
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
     const handleDragMove = (e) => {
       if (!isDragging) return;
+      if (typeof window !== 'undefined' && window.innerWidth < 640) return;
       const clientX = e.touches ? e.touches[0].clientX : e.clientX;
       const clientY = e.touches ? e.touches[0].clientY : e.clientY;
       const dx = clientX - dragRef.current.startX;
       const dy = clientY - dragRef.current.startY;
-      setPosition({
-        x: dragRef.current.origX + dx,
-        y: dragRef.current.origY + dy
-      });
+      const maxX = typeof window !== 'undefined' ? Math.max(80, (window.innerWidth - 380) / 2) : 250;
+      const maxY = typeof window !== 'undefined' ? Math.max(80, (window.innerHeight - 500) / 2) : 250;
+      const newX = Math.max(-maxX, Math.min(maxX, dragRef.current.origX + dx));
+      const newY = Math.max(-maxY, Math.min(maxY, dragRef.current.origY + dy));
+      setPosition({ x: newX, y: newY });
     };
 
     const handleDragEnd = () => {

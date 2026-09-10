@@ -1375,54 +1375,57 @@ export default function PracticeMode({
     <div className="space-y-6 animate-in fade-in duration-200">
       
       {/* Top Header Bar with Back Button, Real Time, and Session Timers */}
-      <div className="card-3d rounded-2xl p-4 sm:p-5 flex flex-wrap items-center justify-between gap-4">
-        <button
-          onClick={() => setIsHubActive(true)}
-          className="h-10 inline-flex items-center gap-2 px-3.5 rounded-xl bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900 text-xs font-bold transition border border-blue-200 dark:border-blue-900 shadow-xs cursor-pointer"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>← Modify Selection / Selection Hub</span>
-          <span className="text-[10px] font-mono font-bold bg-blue-200 dark:bg-blue-800 text-blue-900 dark:text-blue-100 px-2 py-0.5 rounded-full">
-            {activePracticePool.length || filteredQuestions.length} Qs
-          </span>
-        </button>
+      <div className="card-3d rounded-2xl p-3 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div className="flex items-center justify-between gap-2 w-full sm:w-auto">
+          <button
+            onClick={() => setIsHubActive(true)}
+            className="h-10 inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 rounded-xl bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 hover:bg-blue-100 dark:hover:bg-blue-900 text-xs font-bold transition border border-blue-200 dark:border-blue-900 shadow-xs cursor-pointer"
+          >
+            <ArrowLeft className="w-4 h-4 shrink-0" />
+            <span className="hidden sm:inline">← Modify Selection / Selection Hub</span>
+            <span className="sm:hidden">← Selection</span>
+            <span className="text-[10px] font-mono font-bold bg-blue-200 dark:bg-blue-800 text-blue-900 dark:text-blue-100 px-2 py-0.5 rounded-full shrink-0">
+              {activePracticePool.length || filteredQuestions.length} Qs
+            </span>
+          </button>
 
-        <div className="flex items-center gap-3 text-xs font-mono font-bold text-slate-700 dark:text-slate-300">
-          <div className="h-10 px-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 inline-flex items-center gap-1.5">
-            <Clock className="w-3.5 h-3.5 text-blue-500" />
-            <span>Clock: {realTimeStr}</span>
-          </div>
+          <div className="flex items-center gap-2 text-xs font-mono font-bold text-slate-700 dark:text-slate-300">
+            <div className="h-10 px-2 sm:px-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 inline-flex items-center gap-1.5 shrink-0" title={`Clock: ${realTimeStr}`}>
+              <Clock className="w-3.5 h-3.5 text-blue-500 shrink-0" />
+              <span className="text-[11px] sm:text-xs">{realTimeStr}</span>
+            </div>
 
-          <div className="h-10 px-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 inline-flex items-center gap-1.5">
-            <Sparkles className="w-3.5 h-3.5 text-emerald-500" />
-            <span>Session: {formatSec(sessionElapsedSec)}</span>
+            <div className="h-10 px-2 sm:px-3 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 inline-flex items-center gap-1.5 shrink-0" title={`Session Time: ${formatSec(sessionElapsedSec)}`}>
+              <Sparkles className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+              <span className="text-[11px] sm:text-xs">{formatSec(sessionElapsedSec)}</span>
+            </div>
           </div>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 overflow-x-auto scrollbar-none pb-0.5 w-full sm:w-auto justify-end">
           <button
             onClick={() => setShowPaletteDrawer(prev => !prev)}
-            className="h-10 inline-flex items-center gap-1.5 px-3.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 text-xs font-bold border border-slate-200 dark:border-slate-700 transition cursor-pointer"
+            className="h-10 inline-flex items-center gap-1.5 px-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 text-xs font-bold border border-slate-200 dark:border-slate-700 transition cursor-pointer shrink-0"
           >
-            <Grid className="w-3.5 h-3.5 text-purple-500" />
-            <span>Question Palette</span>
+            <Grid className="w-3.5 h-3.5 text-purple-500 shrink-0" />
+            <span>Palette</span>
           </button>
 
           <button
             onClick={onOpenCalc}
-            className="h-10 inline-flex items-center gap-2 px-3.5 rounded-xl bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 text-xs font-bold border border-blue-200 dark:border-blue-900 hover:bg-blue-600 hover:text-white transition cursor-pointer"
+            className="h-10 inline-flex items-center gap-1.5 px-3 rounded-xl bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 text-xs font-bold border border-blue-200 dark:border-blue-900 hover:bg-blue-600 hover:text-white transition cursor-pointer shrink-0"
           >
-            <Calculator className="w-4 h-4" />
-            <span>Scientific Calc</span>
+            <Calculator className="w-4 h-4 shrink-0" />
+            <span>Calc</span>
           </button>
 
           <button
             onClick={() => setShowSubmitConfirmModal(true)}
-            className="h-10 inline-flex items-center gap-1.5 px-3.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-extrabold shadow-sm transition cursor-pointer"
+            className="h-10 inline-flex items-center gap-1.5 px-3 sm:px-3.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-extrabold shadow-sm transition cursor-pointer shrink-0"
             title="Submit all attempted questions and view detailed analysis"
           >
-            <CheckCircle2 className="w-4 h-4" />
-            <span>Submit All ({answeredCount}/{filteredQuestions.length})</span>
+            <CheckCircle2 className="w-4 h-4 shrink-0" />
+            <span>Submit ({answeredCount}/{filteredQuestions.length})</span>
           </button>
         </div>
       </div>
@@ -1850,8 +1853,8 @@ export default function PracticeMode({
             )}
 
             {/* Answer Action Buttons */}
-            <div className="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3">
-              <div className="flex flex-wrap items-center gap-2">
+            <div className="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div className="flex flex-wrap items-center gap-2 order-2 sm:order-1">
                 {!submittedState[currentQ.id]?.isSubmitted ? (
                   <button
                     onClick={() => handleSubmitAnswer(currentQ.id)}
@@ -1873,10 +1876,10 @@ export default function PracticeMode({
 
                 <button
                   onClick={() => setShowSolution({ ...showSolution, [currentQ.id]: !showSolution[currentQ.id] })}
-                  className="h-10.5 px-4 rounded-xl bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 hover:bg-emerald-100 dark:hover:bg-emerald-900/60 font-bold text-xs transition cursor-pointer inline-flex items-center justify-center gap-1.5"
+                  className="h-10.5 px-3.5 sm:px-4 rounded-xl bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 hover:bg-emerald-100 dark:hover:bg-emerald-900/60 font-bold text-xs transition cursor-pointer inline-flex items-center justify-center gap-1.5"
                 >
                   <Eye className="w-3.5 h-3.5" />
-                  <span>{showSolution[currentQ.id] ? 'Hide Solution' : 'View Solution & Notes'}</span>
+                  <span>{showSolution[currentQ.id] ? 'Hide Solution' : 'Solution & Notes'}</span>
                 </button>
 
                 <button
@@ -1887,19 +1890,19 @@ export default function PracticeMode({
                     }
                     setActiveAITutorQuestion(currentQ);
                   }}
-                  className="h-10.5 px-4 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold text-xs shadow-sm transition cursor-pointer inline-flex items-center justify-center gap-1.5"
+                  className="h-10.5 px-3.5 sm:px-4 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold text-xs shadow-sm transition cursor-pointer inline-flex items-center justify-center gap-1.5"
                 >
                   <Sparkles className="w-3.5 h-3.5" />
-                  <span>✨ Ask Gemini AI</span>
+                  <span>✨ Ask AI</span>
                 </button>
 
                 <button
                   onClick={() => setShowSimilarDrawer(true)}
-                  className="h-10.5 px-3.5 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/80 hover:bg-indigo-100 dark:hover:bg-indigo-900/60 font-bold text-xs transition cursor-pointer inline-flex items-center justify-center gap-1.5"
+                  className="h-10.5 px-3 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800/80 hover:bg-indigo-100 dark:hover:bg-indigo-900/60 font-bold text-xs transition cursor-pointer inline-flex items-center justify-center gap-1.5"
                   title="Practice similar GATE questions"
                 >
                   <Layers className="w-3.5 h-3.5" />
-                  <span>Similar Qs</span>
+                  <span>Similar</span>
                 </button>
 
                 <button
@@ -1912,11 +1915,11 @@ export default function PracticeMode({
                 </button>
               </div>
 
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 w-full sm:w-auto order-1 sm:order-2">
                 <button
                   onClick={() => setCurrentIndex(prev => Math.max(0, prev - 1))}
                   disabled={currentIndex === 0}
-                  className="h-10.5 px-4 rounded-xl bg-slate-100 dark:bg-slate-800 disabled:opacity-40 text-slate-700 dark:text-slate-300 text-xs font-bold transition border border-slate-200 dark:border-slate-700 cursor-pointer inline-flex items-center justify-center gap-1 hover:bg-slate-200 dark:hover:bg-slate-700"
+                  className="flex-1 sm:flex-initial h-10.5 px-4 rounded-xl bg-slate-100 dark:bg-slate-800 disabled:opacity-40 text-slate-700 dark:text-slate-300 text-xs font-bold transition border border-slate-200 dark:border-slate-700 cursor-pointer inline-flex items-center justify-center gap-1 hover:bg-slate-200 dark:hover:bg-slate-700"
                 >
                   <ChevronLeft className="w-4 h-4" />
                   <span>Previous</span>
@@ -1925,15 +1928,15 @@ export default function PracticeMode({
                 {currentIndex === filteredQuestions.length - 1 ? (
                   <button
                     onClick={() => setShowSubmitConfirmModal(true)}
-                    className="h-10.5 px-5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-extrabold shadow-md shadow-emerald-500/25 transition cursor-pointer inline-flex items-center justify-center gap-1.5 animate-in zoom-in-95"
+                    className="flex-1 sm:flex-initial h-10.5 px-5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-extrabold shadow-md shadow-emerald-500/25 transition cursor-pointer inline-flex items-center justify-center gap-1.5 animate-in zoom-in-95 text-center"
                   >
                     <CheckCircle2 className="w-4 h-4" />
-                    <span>Submit All Questions ({answeredCount}/{filteredQuestions.length})</span>
+                    <span>Submit ({answeredCount}/{filteredQuestions.length})</span>
                   </button>
                 ) : (
                   <button
                     onClick={() => setCurrentIndex(prev => Math.min(filteredQuestions.length - 1, prev + 1))}
-                    className="h-10.5 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition shadow-md cursor-pointer inline-flex items-center justify-center gap-1"
+                    className="flex-1 sm:flex-initial h-10.5 px-5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold transition shadow-md cursor-pointer inline-flex items-center justify-center gap-1 text-center"
                   >
                     <span>Next</span>
                     <ChevronRight className="w-4 h-4" />

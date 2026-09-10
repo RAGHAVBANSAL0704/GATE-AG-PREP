@@ -16,7 +16,7 @@ export const NAT_DEFAULT_TOLERANCE = 0.05;
 export function evaluateQuestion(param1, param2, param3, param4) {
   let question, userAnswer, state, enableNegativeMarking;
 
-  if (param1 && typeof param1 === 'object' && ('question' in param1 || 'state' in param1)) {
+  if (param2 === undefined && param1 && typeof param1 === 'object' && ('question' in param1 || 'state' in param1 || 'userAnswer' in param1)) {
     ({ question, userAnswer, state, enableNegativeMarking = true } = param1);
   } else {
     question = param1;
@@ -150,7 +150,10 @@ export function evaluateQuestion(param1, param2, param3, param4) {
       const lowerKey = correctKey.toLowerCase().replace(/\[|\]/g, '').trim();
       let min = NaN, max = NaN;
 
-      if (lowerKey.includes(' to ')) {
+      if (question.numerical_range && typeof question.numerical_range.min === 'number' && typeof question.numerical_range.max === 'number') {
+        min = question.numerical_range.min;
+        max = question.numerical_range.max;
+      } else if (lowerKey.includes(' to ')) {
         const [minStr, maxStr] = lowerKey.split(' to ');
         min = parseFloat(minStr);
         max = parseFloat(maxStr);
