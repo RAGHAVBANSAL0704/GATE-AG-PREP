@@ -38,7 +38,6 @@ function lazyWithRetry(componentImport) {
 
 // Code-split heavy sub-tabs for ultra-fast initial page load (< 200ms) with deployment resilience
 const MockTestMode = lazyWithRetry(() => import('./components/MockTestMode'));
-const QuestionBankView = lazyWithRetry(() => import('./components/QuestionBankView'));
 const LearningHub = lazyWithRetry(() => import('./components/LearningHub'));
 const CommunityHub = lazyWithRetry(() => import('./components/CommunityHub'));
 const CreatorAdminHQ = lazyWithRetry(() => import('./components/CreatorAdminHQ'));
@@ -799,20 +798,13 @@ export default function App() {
               />
             )}
 
-            {(activeTab === 'questionbank' || activeTab === 'qbank') && (
-              <Suspense fallback={<TabLoadingSkeleton />}>
-                <QuestionBankView
-                  onOpenCalc={() => setIsCalcOpen(true)}
-                  bookmarks={bookmarks}
-                  onToggleBookmark={handleToggleBookmark}
-                  currentStudent={currentStudent}
-                />
-              </Suspense>
-            )}
-
-            {['practicehub', 'practice', 'custompractice', 'customtest'].includes(activeTab) && (
+            {['practicehub', 'practice', 'custompractice', 'customtest', 'questionbank', 'qbank'].includes(activeTab) && (
               <PracticeHub
-                activeSubTab={activeTab === 'practicehub' ? 'practice' : activeTab}
+                activeSubTab={
+                  activeTab === 'practicehub' ? 'practice' : 
+                  (activeTab === 'questionbank' || activeTab === 'qbank') ? 'qbank' : 
+                  activeTab
+                }
                 onSubTabChange={(subTab) => setActiveTab(subTab)}
                 questions={questions}
                 customMockPapers={customMockPapers}

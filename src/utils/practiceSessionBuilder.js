@@ -2,14 +2,17 @@ import { normalizeSectionTitle } from './syllabusTaxonomy.js';
 import { GATE_AG_SYLLABUS } from '../data/syllabus.js';
 
 /**
- * Filter pool questions by global criteria (source, type, marks, year)
+ * Filter pool questions by global criteria (source, type, marks, year, paper, difficulty, subtopic)
  */
 export function filterQuestionsByCriteria(questions, filters = {}) {
   const {
     sourceFilter = 'All',
     selectedType = 'All',
     selectedMarks = 'All',
-    selectedYear = 'All'
+    selectedYear = 'All',
+    selectedPaper = 'All',
+    selectedDifficulty = 'All',
+    selectedSubtopic = 'All'
   } = filters;
 
   return questions.filter(q => {
@@ -18,12 +21,15 @@ export function filterQuestionsByCriteria(questions, filters = {}) {
     if (selectedType !== 'All' && q.type !== selectedType) return false;
     if (selectedMarks !== 'All' && String(q.marks) !== String(selectedMarks)) return false;
     if (selectedYear !== 'All' && String(q.year) !== String(selectedYear)) return false;
+    if (selectedPaper !== 'All' && q.sourceTitle !== selectedPaper && q.paperTitle !== selectedPaper) return false;
+    if (selectedDifficulty !== 'All' && q.difficulty !== selectedDifficulty) return false;
+    if (selectedSubtopic !== 'All' && q.subtopic !== selectedSubtopic) return false;
     return true;
   });
 }
 
 /**
- * Calculate available question counts and topic breakdowns for all syllabus sections
+ * Calculate available question counts and topic/subtopic breakdowns for all syllabus sections
  */
 export function getSectionHierarchyStats(combinedPool, filters = {}) {
   const filteredPool = filterQuestionsByCriteria(combinedPool, filters);
@@ -32,11 +38,15 @@ export function getSectionHierarchyStats(combinedPool, filters = {}) {
     const canonTitle = normalizeSectionTitle(sec.title);
     const secQuestions = filteredPool.filter(q => normalizeSectionTitle(q.section) === canonTitle);
 
-    // Group questions by topic
+    // Group questions by topic and subtopic
     const topicCountMap = {};
+    const subtopicCountMap = {};
     secQuestions.forEach(q => {
       const top = q.topic || 'General';
+      const sub = q.subtopic || 'General';
       topicCountMap[top] = (topicCountMap[top] || 0) + 1;
+      if (!subtopicCountMap[top]) subtopicCountMap[top] = {};
+      subtopicCountMap[top][sub] = (subtopicCountMap[top][sub] || 0) + 1;
     });
 
     // Compile topics list combining official syllabus topics and question topics
@@ -48,10 +58,19 @@ export function getSectionHierarchyStats(combinedPool, filters = {}) {
 
     const topicsWithStats = allTopicNames.map(topName => {
       const officialObj = (sec.topics || []).find(t => t.topic_name === topName);
+      const subtopicsList = Array.from(new Set([
+        ...(officialObj?.subtopics || []),
+        ...Object.keys(subtopicCountMap[topName] || {})
+      ])).sort();
+
       return {
         topic_name: topName,
         availableCount: topicCountMap[topName] || 0,
-        subtopics: officialObj?.subtopics || []
+        subtopics: officialObj?.subtopics || [],
+        subtopicsWithStats: subtopicsList.map(st => ({
+          subtopic_name: st,
+          availableCount: subtopicCountMap[topName]?.[st] || 0
+        }))
       };
     });
 
@@ -68,12 +87,13 @@ export function getSectionHierarchyStats(combinedPool, filters = {}) {
 }
 
 /**
- * Builds the practice question pool from multi-section and multi-topic selections with custom counts
+ * Builds the practice question pool from multi-section, multi-topic and subtopic selections with custom counts
  */
 export function buildPracticeSessionPool({
   combinedPool,
   selectedSections = {},
   selectedTopicsMap = {},
+  selectedSubtopicsMap = {},
   sectionAllocations = {},
   filters = {},
   shuffle = false
@@ -96,6 +116,18 @@ export function buildPracticeSessionPool({
         secQuestions = secQuestions.filter(q => {
           const top = q.topic || 'General';
           return Boolean(topicSelection[top]);
+        });
+      }
+    }
+
+    // Check if specific subtopics are selected for this section
+    const subtopicSelection = selectedSubtopicsMap[canonTitle];
+    if (subtopicSelection && typeof subtopicSelection === 'object') {
+      const hasActiveSubtopicFilter = Object.values(subtopicSelection).some(Boolean);
+      if (hasActiveSubtopicFilter) {
+        secQuestions = secQuestions.filter(q => {
+          const sub = q.subtopic || '';
+          return Boolean(subtopicSelection[sub]);
         });
       }
     }

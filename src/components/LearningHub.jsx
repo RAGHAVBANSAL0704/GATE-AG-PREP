@@ -13,7 +13,6 @@ import {
   GraduationCap, 
   Cpu, 
   Brain, 
-  FlaskConical, 
   Sparkles,
   Search,
   X,
@@ -131,28 +130,6 @@ export default function LearningHub({
   return (
     <div className="space-y-6 animate-in fade-in duration-200 min-w-0 max-w-full overflow-hidden">
       
-      {/* Notice Banner: Under Testing & Improvements */}
-      <div className="bg-gradient-to-r from-amber-500/10 via-purple-500/10 to-blue-500/10 border border-amber-500/30 dark:border-amber-500/20 rounded-2xl p-4 sm:p-4.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-slate-800 dark:text-slate-200 shadow-xs">
-        <div className="flex items-start sm:items-center gap-3">
-          <div className="p-2 rounded-xl bg-amber-500/20 text-amber-600 dark:text-amber-400 shrink-0">
-            <FlaskConical className="w-5 h-5" />
-          </div>
-          <div>
-            <div className="flex items-center gap-2 flex-wrap">
-              <span className="text-xs font-extrabold text-amber-700 dark:text-amber-300 uppercase tracking-wider bg-amber-500/20 px-2 py-0.5 rounded-md">
-                Active Beta / Testing
-              </span>
-              <span className="text-xs font-bold text-slate-900 dark:text-white">
-                Learning Hub is under active testing & continuous improvement
-              </span>
-            </div>
-            <p className="text-[11px] sm:text-xs text-slate-600 dark:text-slate-400 mt-1">
-              We are constantly refining concept guides, physics simulations, formula sheets, and AI concept explanations.
-            </p>
-          </div>
-        </div>
-      </div>
-
       {/* Responsive Header & Navigation Hub Bar with Universal Search */}
       <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-5 sm:p-6 shadow-xs space-y-5">
         

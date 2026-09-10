@@ -256,7 +256,7 @@
       "type": "MCQ",
       "marks": 1,
       "negative_marks": 0.3333333333333333,
-      "question": "Evaluate: 2627\\lim_{x \\to 0} \\frac{sin(5x) - 5x}{x^3}2627",
+      "question": "Evaluate: 1111611116\\lim_{x \\to 0} \\frac{sin(5x) - 5x}{x^3}1111611116",
       "options": {
         "A": "-125/6",
         "B": "0",
@@ -264,7 +264,7 @@
         "D": "125/6"
       },
       "correct_answer": "A",
-      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.11 Solution:• Correct Answer: A• Section: Engineering Mathematics | Sub-topic: Calculus | Type: MCQ | Marks: 1Q.11   |  Topic: Calculus  |  [MCQ · 1 mark]Question:Evaluate: 2627\\lim_{x \\to 0} \\frac{sin(5x) - 5x}{x^3(A)}2627 -125/6(B) 0(C) 5/6(D) 125/6Answer: (A)Explanation:Using the Taylor expansion sin(5x) = 5x - (5x)^3/3! + (5x)^5/5! - ... = 5x - 125x^3/6 + .... Then sin(5x) - 5x = -125x^3/6 + higher-order terms. Dividing by x^3 and letting x->0, the limit equals -125/6 (approximately -20.83).Why the other options are incorrect:(B) 0 would result from using only the linear term of the Taylor expansion and missing the cubic term entirely.(C) 5/6 arises from an error in the coefficient inside the Taylor expansion, e.g. forgetting to cube the factor of 5 in (5x)^3.(D) 125/6 has the correct magnitude but the wrong sign, arising from mishandling the negative sign in the Taylor series term -(5x)^3/3!.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.11 Solution:• Correct Answer: A• Section: Engineering Mathematics | Sub-topic: Calculus | Type: MCQ | Marks: 1Q.11   |  Topic: Calculus  |  [MCQ · 1 mark]Question:Evaluate: 1111611116\\lim_{x \\to 0} \\frac{sin(5x) - 5x}{x^3(A)}1111611116 -125/6(B) 0(C) 5/6(D) 125/6Answer: (A)Explanation:Using the Taylor expansion sin(5x) = 5x - (5x)^3/3! + (5x)^5/5! - ... = 5x - 125x^3/6 + .... Then sin(5x) - 5x = -125x^3/6 + higher-order terms. Dividing by x^3 and letting x->0, the limit equals -125/6 (approximately -20.83).Why the other options are incorrect:(B) 0 would result from using only the linear term of the Taylor expansion and missing the cubic term entirely.(C) 5/6 arises from an error in the coefficient inside the Taylor expansion, e.g. forgetting to cube the factor of 5 in (5x)^3.(D) 125/6 has the correct magnitude but the wrong sign, arising from mishandling the negative sign in the Taylor series term -(5x)^3/3!.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
       "topic": "Calculus",
       "difficulty": "Hard"
@@ -279,7 +279,7 @@
       "type": "MCQ",
       "marks": 1,
       "negative_marks": 0.3333333333333333,
-      "question": "A \times 3$ matrix $ has eigenvalues 569X2, 1,$ and $. The determinant of B$ is:",
+      "question": "A $3 \\times 3$ matrix $B$ has eigenvalues $-2, 1,$ and $4$. The determinant of the matrix $2B$ is:",
       "options": {
         "A": "-64",
         "B": "-8",
@@ -287,7 +287,7 @@
         "D": "64"
       },
       "correct_answer": "A",
-      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Official GATE AG Solution:\nProduct of eigenvalues $\\det(B) = (-2) \times 1 \times 4 = -8$.\nFor an  \times n$ matrix $ (here  = 3$):\n2627\\det(kB) = k^n \\det(B) \\implies \\det(2B) = 2^3 \\det(B) = 8 \times (-8) = -642627\n\nCorrect Answer: (A) -64",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Product of eigenvalues gives $\\det(B) = (-2) \\times 1 \\times 4 = -8$.\n• Step 2 (Chained Formulations): For an $n \\times n$ matrix $B$ (here $n = 3$):\n$$\\det(kB) = k^n \\det(B)$$\n• Step 3 (Evaluation & Unit Conversion):\n$$\\det(2B) = 2^3 \\det(B) = 8 \\times (-8) = -64$$\n\nCorrect Answer: (A) -64",
       "isCustomUploaded": true,
       "topic": "Linear Algebra",
       "difficulty": "Hard"
@@ -302,10 +302,10 @@
       "type": "NAT",
       "marks": 1,
       "negative_marks": 0,
-      "question": "Find the rank of the matrix: 2627\\begin{pmatrix} 1 & 3 & 2 \\ 2 & 6 & 4 \\ 1 & 4 & 3 \\end{pmatrix}2627. (Answer as a whole number.) Answer: ________________",
+      "question": "Find the rank of the matrix: 1111611116\\begin{pmatrix} 1 & 3 & 2 \\ 2 & 6 & 4 \\ 1 & 4 & 3 \\end{pmatrix}1111611116. (Answer as a whole number.) Answer: ________________",
       "options": null,
       "correct_answer": "2 to 2",
-      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.13 Solution:• Correct Answer: 2 to 2• Section: Engineering Mathematics | Sub-topic: Linear Algebra | Type: NAT | Marks: 1Q.13   |  Topic: Linear Algebra  |  [NAT · 1 mark]Question:Find the rank of the matrix: 2627\\begin{pmatrix} 1 & 3 & 2 \\ 2 & 6 & 4 \\ 1 & 4 & 3 \\end{pmatrix}2627. (Answer as a whole number.)Answer: 2 to 2Explanation:Row 2 = 2 x Row 1, so Row 2 is linearly dependent on Row 1. Checking Row 3 against Row 1: Row 3 - Row 1 = [0, 1, 1], which is not a scalar multiple of Row 1 = [1,3,2], so Row 3 is independent of Row 1. Thus exactly 2 rows are linearly independent, and the rank of the matrix is 2.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.13 Solution:• Correct Answer: 2 to 2• Section: Engineering Mathematics | Sub-topic: Linear Algebra | Type: NAT | Marks: 1Q.13   |  Topic: Linear Algebra  |  [NAT · 1 mark]Question:Find the rank of the matrix: 1111611116\\begin{pmatrix} 1 & 3 & 2 \\ 2 & 6 & 4 \\ 1 & 4 & 3 \\end{pmatrix}1111611116. (Answer as a whole number.)Answer: 2 to 2Explanation:Row 2 = 2 x Row 1, so Row 2 is linearly dependent on Row 1. Checking Row 3 against Row 1: Row 3 - Row 1 = [0, 1, 1], which is not a scalar multiple of Row 1 = [1,3,2], so Row 3 is independent of Row 1. Thus exactly 2 rows are linearly independent, and the rank of the matrix is 2.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
       "topic": "Linear Algebra",
       "difficulty": "Hard"

@@ -22,8 +22,7 @@ import {
   MessageSquare,
   Award,
   Search,
-  Palette,
-  Database
+  Palette
 } from 'lucide-react';
 
 export default function Sidebar({ 
@@ -50,16 +49,10 @@ export default function Sidebar({
       matches: ['dashboard'] 
     },
     { 
-      id: 'questionbank', 
-      label: 'Question Bank', 
-      icon: Database, 
-      matches: ['questionbank', 'qbank'] 
-    },
-    { 
       id: 'practicehub', 
       label: 'Practice Hub', 
       icon: Target, 
-      matches: ['practicehub', 'practice', 'custompractice', 'customtest'] 
+      matches: ['practicehub', 'practice', 'custompractice', 'customtest', 'questionbank', 'qbank'] 
     },
     { 
       id: 'learninghub', 

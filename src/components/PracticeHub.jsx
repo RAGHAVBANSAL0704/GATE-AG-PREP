@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, lazy, Suspense } from 'react';
 import PracticeMode from './PracticeMode';
 import CustomPracticePool from './CustomPracticePool';
 import CustomTestCreator from './CustomTestCreator';
 import { Layers, Sparkles, Sliders, Target, Database } from 'lucide-react';
+
+const QuestionBankView = lazy(() => import('./QuestionBankView'));
 
 export default function PracticeHub({
   activeSubTab = 'practice',
@@ -30,12 +32,6 @@ export default function PracticeHub({
   }, [activeSubTab]);
 
   const handleTabClick = (tabId) => {
-    if (tabId === 'qbank') {
-      if (onSubTabChange) {
-        onSubTabChange('questionbank');
-      }
-      return;
-    }
     setCurrentSubTab(tabId);
     if (onSubTabChange) {
       onSubTabChange(tabId);
@@ -48,6 +44,17 @@ export default function PracticeHub({
     { id: 'custompractice', label: 'Custom Pool (Mock Papers)', icon: Sparkles },
     { id: 'customtest', label: 'Custom Speed Test', icon: Sliders },
   ];
+
+  const allCustomQuestions = useMemo(() => {
+    return (customMockPapers || []).flatMap((p, pIdx) =>
+      (p.questions || []).map(q => ({
+        ...q,
+        paperTitle: p.title || `Mock Test ${pIdx + 1}`,
+        sourceTitle: p.title || `Mock Test ${pIdx + 1}`,
+        isCustomUploaded: true
+      }))
+    );
+  }, [customMockPapers]);
 
   return (
     <div className="space-y-6 animate-in fade-in duration-200">
@@ -64,7 +71,7 @@ export default function PracticeHub({
                 Practice Hub
               </h1>
               <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5 font-medium">
-                <strong className="text-blue-600 dark:text-blue-400">PYQ Pool</strong>: Solved Official GATE AG Past Questions • <strong className="text-purple-600 dark:text-purple-400">Custom Pool</strong>: Curated Mock Questions
+                <strong className="text-emerald-600 dark:text-emerald-400">Question Bank</strong>: 1,200+ Topic-wise Qs • <strong className="text-blue-600 dark:text-blue-400">PYQ Pool</strong>: Solved Official Past Papers • <strong className="text-purple-600 dark:text-purple-400">Custom Pool</strong>: Curated Mocks
               </p>
             </div>
           </div>
@@ -95,32 +102,76 @@ export default function PracticeHub({
 
       {/* Active Tool View */}
       <div>
+        {(currentSubTab === 'qbank' || currentSubTab === 'questionbank') && (
+          <Suspense fallback={
+            <div className="p-12 text-center text-slate-500 dark:text-slate-400 font-semibold bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800">
+              Loading Autonomous Question Bank...
+            </div>
+          }>
+            <QuestionBankView
+              poolType="qbank"
+              poolTitle="Autonomous Question Bank"
+              poolSubtitle="Modular repository of high-yield questions categorized across all 8 official GATE AG sections."
+              badgeLabel="Topic & Subtopic Wise"
+              badgeColor="emerald"
+              storageKey="gate_ag_qbank_progress"
+              onOpenCalc={onOpenCalc}
+              bookmarks={bookmarks}
+              onToggleBookmark={onToggleBookmark}
+              currentStudent={currentStudent}
+              onRequireAuth={onRequireAuth}
+              mistakeFilterIds={mistakeFilterIds}
+            />
+          </Suspense>
+        )}
+
         {currentSubTab === 'practice' && (
-          <PracticeMode
-            questions={questions}
-            customMockPapers={customMockPapers}
-            bookmarks={bookmarks}
-            onToggleBookmark={onToggleBookmark}
-            initialSection={practiceSection}
-            onOpenCalc={onOpenCalc}
-            onEditQuestion={onEditQuestion}
-            currentStudent={currentStudent}
-            onRequireAuth={onRequireAuth}
-            mistakeFilterIds={mistakeFilterIds}
-            onClearMistakeFilter={onClearMistakeFilter}
-          />
+          <Suspense fallback={
+            <div className="p-12 text-center text-slate-500 dark:text-slate-400 font-semibold bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800">
+              Loading Official GATE AG PYQ Practice Pool...
+            </div>
+          }>
+            <QuestionBankView
+              poolType="pyq"
+              questionsData={questions}
+              poolTitle="Official GATE AG PYQ Practice Pool"
+              poolSubtitle="1,324 official GATE Agricultural Engineering past paper questions (2007–2026) organized section-wise, topic-wise, and subtopic-wise with real-time per-question timer."
+              badgeLabel="Official GATE PYQ Pool (2007–2026)"
+              badgeColor="blue"
+              storageKey="gate_ag_pyq_progress"
+              initialSection={practiceSection}
+              onOpenCalc={onOpenCalc}
+              bookmarks={bookmarks}
+              onToggleBookmark={onToggleBookmark}
+              currentStudent={currentStudent}
+              onRequireAuth={onRequireAuth}
+              mistakeFilterIds={mistakeFilterIds}
+            />
+          </Suspense>
         )}
 
         {currentSubTab === 'custompractice' && (
-          <CustomPracticePool
-            customMockPapers={customMockPapers}
-            bookmarks={bookmarks}
-            onToggleBookmark={onToggleBookmark}
-            onOpenCalc={onOpenCalc}
-            onEditQuestion={onEditQuestion}
-            currentStudent={currentStudent}
-            onRequireAuth={onRequireAuth}
-          />
+          <Suspense fallback={
+            <div className="p-12 text-center text-slate-500 dark:text-slate-400 font-semibold bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800">
+              Loading Custom Mock Questions Practice Pool...
+            </div>
+          }>
+            <QuestionBankView
+              poolType="custom"
+              questionsData={allCustomQuestions}
+              poolTitle="Custom Mock Questions Practice Pool"
+              poolSubtitle="3,250 curated questions across all 50 full-length GATE AG mock papers with section, topic, and subtopic breakdown."
+              badgeLabel="Custom Mock Pool (50 Full-Length Mocks)"
+              badgeColor="purple"
+              storageKey="gate_ag_custom_progress"
+              onOpenCalc={onOpenCalc}
+              bookmarks={bookmarks}
+              onToggleBookmark={onToggleBookmark}
+              currentStudent={currentStudent}
+              onRequireAuth={onRequireAuth}
+              mistakeFilterIds={mistakeFilterIds}
+            />
+          </Suspense>
         )}
 
         {currentSubTab === 'customtest' && (

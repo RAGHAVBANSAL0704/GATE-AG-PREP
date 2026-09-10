@@ -24,29 +24,27 @@ export default function SupportPage({ currentStudent }) {
 
   const upiId = "raghavbansal0704@oksbi";
   const whatsappNumber = "919812203728"; // Raghav Bansal WhatsApp contact
+  const upiUrl = `upi://pay?pa=${upiId}&pn=${encodeURIComponent('GATE AG Prep Mission')}&cu=INR`;
 
   const handleCopyUpi = () => {
-    navigator.clipboard.writeText(upiId);
+    if (navigator?.clipboard?.writeText) {
+      navigator.clipboard.writeText(upiId).catch(() => {});
+    }
     setCopiedUpi(true);
     setTimeout(() => setCopiedUpi(false), 2500);
   };
 
-  const handleDirectUpiPay = (amount = null) => {
-    let url = `upi://pay?pa=${upiId}&pn=${encodeURIComponent('GATE AG Prep Mission')}&cu=INR`;
-    if (amount) {
-      url += `&am=${amount}`;
-    }
-
+  const handleDirectUpiPay = () => {
     try {
-      const link = document.createElement('a');
-      link.href = url;
-      link.click();
+      window.location.href = upiUrl;
     } catch (err) {
       console.warn("UPI protocol launch note:", err);
     }
 
-    // Auto-copy UPI ID to clipboard as instant fallback
-    navigator.clipboard.writeText(upiId);
+    // Auto-copy UPI ID to clipboard as instant fallback (especially for desktop browsers)
+    if (navigator?.clipboard?.writeText) {
+      navigator.clipboard.writeText(upiId).catch(() => {});
+    }
     setCopiedUpi(true);
     setTimeout(() => setCopiedUpi(false), 2500);
   };
@@ -88,20 +86,20 @@ export default function SupportPage({ currentStudent }) {
       {/* Grid: Support Hosting & Direct WhatsApp Request */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         
-        {/* Left Column: Direct UPI Support */}
+        {/* Left Column: Direct Phone UPI Support */}
         <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-4 sm:p-5 space-y-4 shadow-xs flex flex-col justify-between">
           <div className="space-y-4">
             <div className="flex items-center gap-2.5 pb-3 border-b border-slate-100 dark:border-slate-800">
               <Coffee className="w-4 h-4 text-emerald-500 shrink-0" />
               <h2 className="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white">
-                Support Server & Hosting Costs
+                Platform Hosting &amp; Domain Support
               </h2>
             </div>
 
             <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 space-y-3">
               <div className="flex items-center justify-between text-xs">
                 <span className="font-bold text-slate-700 dark:text-slate-300">Official UPI ID</span>
-                <span className="text-[10px] font-mono text-slate-400">GPay / PhonePe / Paytm</span>
+                <span className="text-[10px] font-mono text-slate-500 dark:text-slate-400">GPay / PhonePe / Paytm</span>
               </div>
 
               {/* UPI Field */}
@@ -110,60 +108,41 @@ export default function SupportPage({ currentStudent }) {
                   {upiId}
                 </div>
                 <button
+                  type="button"
                   onClick={handleCopyUpi}
-                  className="px-3.5 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs transition flex items-center gap-1.5 shrink-0 shadow-xs"
+                  className="px-3.5 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs transition flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer"
+                  title="Copy UPI ID to clipboard"
                 >
                   {copiedUpi ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                   <span>{copiedUpi ? 'Copied!' : 'Copy UPI'}</span>
                 </button>
               </div>
 
-              {/* Direct UPI App Launch Button */}
-              <button
-                onClick={() => handleDirectUpiPay()}
-                className="w-full py-2.5 px-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-xs shadow-md transition flex items-center justify-center gap-2"
+              {/* Direct Phone UPI App Launch Button */}
+              <a
+                href={upiUrl}
+                onClick={handleDirectUpiPay}
+                className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 hover:from-blue-500 hover:via-indigo-500 hover:to-blue-600 text-white font-extrabold text-xs shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer text-center group"
               >
-                <CreditCard className="w-4 h-4 text-white" />
-                <span>Pay via UPI App (GPay / PhonePe / Paytm)</span>
-                <ExternalLink className="w-3.5 h-3.5 text-blue-200" />
-              </button>
+                <CreditCard className="w-4 h-4 text-white group-hover:scale-110 transition-transform" />
+                <span>Open in Phone UPI App (GPay / PhonePe / Paytm)</span>
+                <ExternalLink className="w-3.5 h-3.5 text-blue-200 group-hover:translate-x-0.5 transition-transform" />
+              </a>
 
-              {/* Preset 1-Click Contribution Pay Chips */}
-              <div className="grid grid-cols-3 gap-2 text-center text-xs font-bold pt-1">
-                <button
-                  onClick={() => handleDirectUpiPay(50)}
-                  className="p-2 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 transition text-left sm:text-center"
-                >
-                  <div className="text-emerald-600 dark:text-emerald-400 font-extrabold text-xs">₹50</div>
-                  <div className="text-[9px] text-slate-400 font-normal mt-0.5">Pay ₹50</div>
-                </button>
-
-                <button
-                  onClick={() => handleDirectUpiPay(100)}
-                  className="p-2 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-blue-500 transition text-left sm:text-center"
-                >
-                  <div className="text-blue-600 dark:text-blue-400 font-extrabold text-xs">₹100</div>
-                  <div className="text-[9px] text-slate-400 font-normal mt-0.5">Pay ₹100</div>
-                </button>
-
-                <button
-                  onClick={() => handleDirectUpiPay(250)}
-                  className="p-2 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-purple-500 transition text-left sm:text-center"
-                >
-                  <div className="text-purple-600 dark:text-purple-400 font-extrabold text-xs">₹250</div>
-                  <div className="text-[9px] text-slate-400 font-normal mt-0.5">Pay ₹250</div>
-                </button>
-              </div>
+              <p className="text-[11px] text-slate-500 dark:text-slate-400 text-center leading-relaxed">
+                Redirects directly to your installed phone UPI app. Any voluntary amount can be chosen directly inside your UPI app.
+              </p>
             </div>
           </div>
 
-          <div className="p-3 rounded-xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-900 text-[11px] space-y-1 text-slate-600 dark:text-slate-300 mt-3">
-            <div className="font-bold text-blue-900 dark:text-blue-200 flex items-center gap-1">
-              <ShieldCheck className="w-3.5 h-3.5 text-blue-500" />
-              <span>100% Free Guarantee</span>
+          {/* Transparent Infrastructure & Hosting Statement */}
+          <div className="p-3.5 rounded-xl bg-emerald-50/70 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/80 text-[11px] space-y-1.5 text-slate-700 dark:text-slate-300 mt-3">
+            <div className="font-bold text-emerald-950 dark:text-emerald-200 flex items-center gap-1.5">
+              <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
+              <span>Hosting &amp; Domain Expense Allocation</span>
             </div>
-            <p>
-              This portal will remain free forever for all students. Optional contributions help cover domain & hosting bandwidth.
+            <p className="leading-relaxed">
+              <strong>100% Transparency Guarantee:</strong> Support money is used <strong>only to cover hosting, custom domain registration, server maintenance, and other related operational platform infrastructure charges</strong>. The portal is completely non-profit, ad-free, and 100% free forever for all students.
             </p>
           </div>
         </div>
@@ -298,7 +277,7 @@ export default function SupportPage({ currentStudent }) {
               <span>Independent Platform &amp; Non-Affiliation</span>
             </h4>
             <p className="text-[11px]">
-              GATE is conducted by IITs &amp; IISc on behalf of the National Coordination Board (NCB)-GATE, Department of Higher Education, Ministry of Education, Government of India. This website is an independent educational platform created by Raghav Bansal and is <strong>not affiliated with or endorsed by IITs, IISc, or the Ministry of Education</strong>.
+              GATE is conducted by IITs &amp; IISc on behalf of the National Coordination Board (NCB)-GATE, Department of Higher Education, Ministry of Education, Government of India. This website is an independent educational platform created by Raghav Bansal (B.Tech Agricultural Engineering, Batch 2024, COAET CCS HAU Hisar) and is <strong>not affiliated with or endorsed by IITs, IISc, or the Ministry of Education</strong>.
             </p>
           </div>
 

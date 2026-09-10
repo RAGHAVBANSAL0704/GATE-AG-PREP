@@ -279,7 +279,7 @@
       "type": "MCQ",
       "marks": 1,
       "negative_marks": 0.3333333333333333,
-      "question": "The value of 2627\\lim_{x \\to 0} \\frac{sin(3x) }{tan(5x)]}2627 is:",
+      "question": "The value of 1111611116\\lim_{x \\to 0} \\frac{sin(3x) }{tan(5x)]}1111611116 is:",
       "options": {
         "A": "3/5",
         "B": "5/3",
@@ -287,7 +287,7 @@
         "D": "0"
       },
       "correct_answer": "A",
-      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.12 Solution:• Correct Answer: A• Section: Engineering Mathematics | Sub-topic: Calculus: limit, continuity and differentiability | Type: MCQ | Marks: 1Q.12   Calculus: limit, continuity and differentiabilityType & Marks: MCQ — 1 markQuestion:The value of 2627\\lim_{x \\to 0} \\frac{sin(3x) }{tan(5x)]}2627 is:(A) 3/5(B) 5/3(C) 1(D) 0Answer: ADetailed Explanation:For small x, sin(3x) ≈ 3x and tan(5x) ≈ 5x. So the limit reduces to 3x/5x = 3/5.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.12 Solution:• Correct Answer: A• Section: Engineering Mathematics | Sub-topic: Calculus: limit, continuity and differentiability | Type: MCQ | Marks: 1Q.12   Calculus: limit, continuity and differentiabilityType & Marks: MCQ — 1 markQuestion:The value of 1111611116\\lim_{x \\to 0} \\frac{sin(3x) }{tan(5x)]}1111611116 is:(A) 3/5(B) 5/3(C) 1(D) 0Answer: ADetailed Explanation:For small x, sin(3x) ≈ 3x and tan(5x) ≈ 5x. So the limit reduces to 3x/5x = 3/5.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
       "topic": "Calculus",
       "difficulty": "Hard"
@@ -302,7 +302,7 @@
       "type": "MCQ",
       "marks": 1,
       "negative_marks": 0.3333333333333333,
-      "question": "The rank of the matrix 2627\\begin{pmatrix} 1 & 2 & 3 \\ 2 & 4 & 6 \\ 1 & 1 & 1 \\end{pmatrix}2627 is:",
+      "question": "The rank of the matrix 1111611116\\begin{pmatrix} 1 & 2 & 3 \\ 2 & 4 & 6 \\ 1 & 1 & 1 \\end{pmatrix}1111611116 is:",
       "options": {
         "A": "0",
         "B": "1",
@@ -310,7 +310,7 @@
         "D": "3"
       },
       "correct_answer": "C",
-      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.13 Solution:• Correct Answer: C• Section: Engineering Mathematics | Sub-topic: Linear Algebra: Matrices and determinants (rank) | Type: MCQ | Marks: 1Q.13   Linear Algebra: Matrices and determinants (rank)Type & Marks: MCQ — 1 markQuestion:The rank of the matrix 2627\\begin{pmatrix} 1 & 2 & 3 \\ 2 & 4 & 6 \\ 1 & 1 & 1 \\end{pmatrix}2627 is:(A) 0(B) 1(C) 2(D) 3Answer: CDetailed Explanation:Row 2 = 2 × Row 1, so Row 1 and Row 2 are linearly dependent, reducing the rank below 3. Row 1 and Row 3 are not proportional to each other, so at least a 2×2 non-zero minor exists (e.g., using Row 1 and Row 3). Hence rank = 2.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.13 Solution:• Correct Answer: C• Section: Engineering Mathematics | Sub-topic: Linear Algebra: Matrices and determinants (rank) | Type: MCQ | Marks: 1Q.13   Linear Algebra: Matrices and determinants (rank)Type & Marks: MCQ — 1 markQuestion:The rank of the matrix 1111611116\\begin{pmatrix} 1 & 2 & 3 \\ 2 & 4 & 6 \\ 1 & 1 & 1 \\end{pmatrix}1111611116 is:(A) 0(B) 1(C) 2(D) 3Answer: CDetailed Explanation:Row 2 = 2 × Row 1, so Row 1 and Row 2 are linearly dependent, reducing the rank below 3. Row 1 and Row 3 are not proportional to each other, so at least a 2×2 non-zero minor exists (e.g., using Row 1 and Row 3). Hence rank = 2.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
       "topic": "Linear Algebra",
       "difficulty": "Hard"
@@ -776,7 +776,7 @@
       "type": "MCQ",
       "marks": 2,
       "negative_marks": 0.6666666666666666,
-      "question": "The eigenvalues of the matrix 2627\\begin{pmatrix} 4 & 1 \\ 2 & 3 \\end{pmatrix}2627 are:",
+      "question": "The eigenvalues of the matrix 1111611116\\begin{pmatrix} 4 & 1 \\ 2 & 3 \\end{pmatrix}1111611116 are:",
       "options": {
         "A": "2 and 3",
         "B": "2 and 5",
@@ -784,7 +784,7 @@
         "D": "3 and 4"
       },
       "correct_answer": "B",
-      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.36 Solution:• Correct Answer: B• Section: Engineering Mathematics | Sub-topic: Linear Algebra: Eigen values and Eigen vectors | Type: MCQ | Marks: 2Q.36   Linear Algebra: Eigen values and Eigen vectorsType & Marks: MCQ — 2 marksQuestion:The eigenvalues of the matrix 2627\\begin{pmatrix} 4 & 1 \\ 2 & 3 \\end{pmatrix}2627 are:(A) 2 and 3(B) 2 and 5(C) 1 and 4(D) 3 and 4Answer: BDetailed Explanation:Characteristic equation: det(A − λI) = 0 → (4−λ)(3−λ) − (1)(2) = 0 → λ² − 7λ + 10 = 0 → (λ−2)(λ−5) = 0. So λ = 2, 5.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.36 Solution:• Correct Answer: B• Section: Engineering Mathematics | Sub-topic: Linear Algebra: Eigen values and Eigen vectors | Type: MCQ | Marks: 2Q.36   Linear Algebra: Eigen values and Eigen vectorsType & Marks: MCQ — 2 marksQuestion:The eigenvalues of the matrix 1111611116\\begin{pmatrix} 4 & 1 \\ 2 & 3 \\end{pmatrix}1111611116 are:(A) 2 and 3(B) 2 and 5(C) 1 and 4(D) 3 and 4Answer: BDetailed Explanation:Characteristic equation: det(A − λI) = 0 → (4−λ)(3−λ) − (1)(2) = 0 → λ² − 7λ + 10 = 0 → (λ−2)(λ−5) = 0. So λ = 2, 5.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
       "topic": "Linear Algebra",
       "difficulty": "Hard"

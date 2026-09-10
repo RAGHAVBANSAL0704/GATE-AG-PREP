@@ -256,7 +256,7 @@
       "type": "MCQ",
       "marks": 1,
       "negative_marks": 0.3333333333333333,
-      "question": "Evaluate: 2627\\lim_{x \\to 0} \\frac{e^{2x} - 1 - 2x}{x^2}2627",
+      "question": "Evaluate: 1111611116\\lim_{x \\to 0} \\frac{e^{2x} - 1 - 2x}{x^2}1111611116",
       "options": {
         "A": "0",
         "B": "1",
@@ -264,7 +264,7 @@
         "D": "4"
       },
       "correct_answer": "C",
-      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.11 Solution:• Correct Answer: C• Section: Engineering Mathematics | Sub-topic: Calculus | Type: MCQ | Marks: 1Q.11   |  Topic: Calculus  |  [MCQ · 1 mark]Question:Evaluate: 2627\\lim_{x \\to 0} \\frac{e^{2x} - 1 - 2x}{x^2(A)}2627 0(B) 1(C) 2(D) 4Answer: (C)Explanation:Using the Taylor expansion e^{2x} = 1 + 2x + (2x)^2/2! + (2x)^3/3! + ... = 1 + 2x + 2x^2 + (4/3)x^3 + ... . Then e^{2x} - 1 - 2x = 2x^2 + (4/3)x^3 + ... . Dividing by x^2 and letting x->0, the limit equals 2.Why the other options are incorrect:(A) 0 would result from a lower-order Taylor expansion that misses the quadratic term.(B) 1 arises from an error in the coefficient of the x^2 term when expanding e^{2x} (e.g. forgetting the factor of 2 inside the exponential before squaring).(D) 4 arises from squaring the coefficient of x in the exponent (2) without correctly applying the (2x)^2/2! term of the Taylor series.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.11 Solution:• Correct Answer: C• Section: Engineering Mathematics | Sub-topic: Calculus | Type: MCQ | Marks: 1Q.11   |  Topic: Calculus  |  [MCQ · 1 mark]Question:Evaluate: 1111611116\\lim_{x \\to 0} \\frac{e^{2x} - 1 - 2x}{x^2(A)}1111611116 0(B) 1(C) 2(D) 4Answer: (C)Explanation:Using the Taylor expansion e^{2x} = 1 + 2x + (2x)^2/2! + (2x)^3/3! + ... = 1 + 2x + 2x^2 + (4/3)x^3 + ... . Then e^{2x} - 1 - 2x = 2x^2 + (4/3)x^3 + ... . Dividing by x^2 and letting x->0, the limit equals 2.Why the other options are incorrect:(A) 0 would result from a lower-order Taylor expansion that misses the quadratic term.(B) 1 arises from an error in the coefficient of the x^2 term when expanding e^{2x} (e.g. forgetting the factor of 2 inside the exponential before squaring).(D) 4 arises from squaring the coefficient of x in the exponent (2) without correctly applying the (2x)^2/2! term of the Taylor series.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
       "topic": "Calculus",
       "difficulty": "Hard"
@@ -279,7 +279,7 @@
       "type": "MCQ",
       "marks": 1,
       "negative_marks": 0.3333333333333333,
-      "question": "A \times 3$ matrix $ has eigenvalues , -1,$ and $. The determinant of the matrix $, where $ is the \times 3$ identity matrix, is:",
+      "question": "A $3 \\times 3$ matrix $A$ has eigenvalues $2, -1,$ and $3$. The determinant of the matrix $A^2 - I$, where $I$ is the $3 \\times 3$ identity matrix, is:",
       "options": {
         "A": "0",
         "B": "24",
@@ -287,7 +287,7 @@
         "D": "72"
       },
       "correct_answer": "A",
-      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Official GATE AG Solution:\nIf $\\lambda$ is an eigenvalue of $, then $\\lambda^2 - 1$ is an eigenvalue of $.\nFor eigenvalues $\\lambda_1 = 2, \\lambda_2 = -1, \\lambda_3 = 3$:\n• $\\mu_1 = 2^2 - 1 = 3$\n• $\\mu_2 = (-1)^2 - 1 = 0$\n• $\\mu_3 = 3^2 - 1 = 8$\n\nThe determinant is the product of eigenvalues:\n2627\\det(A^2 - I) = \\mu_1 \\cdot \\mu_2 \\cdot \\mu_3 = 3 \\cdot 0 \\cdot 8 = 02627\n\nCorrect Answer: (A) 0",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): If $\\lambda$ is an eigenvalue of matrix $A$, then $\\lambda^2 - 1$ is an eigenvalue of $A^2 - I$.\n• Step 2 (Chained Formulations): For eigenvalues $\\lambda_1 = 2, \\lambda_2 = -1, \\lambda_3 = 3$:\n• $\\mu_1 = 2^2 - 1 = 3$\n• $\\mu_2 = (-1)^2 - 1 = 0$\n• $\\mu_3 = 3^2 - 1 = 8$\n• Step 3 (Evaluation & Unit Conversion): The determinant is the product of eigenvalues:\n$$\\det(A^2 - I) = \\mu_1 \\cdot \\mu_2 \\cdot \\mu_3 = 3 \\cdot 0 \\cdot 8 = 0$$\n\nCorrect Answer: (A) 0",
       "isCustomUploaded": true,
       "topic": "Linear Algebra",
       "difficulty": "Hard"
@@ -302,10 +302,10 @@
       "type": "NAT",
       "marks": 1,
       "negative_marks": 0,
-      "question": "Find the rank of the matrix: 2627\\begin{pmatrix} 1 & 2 & 3 \\ 2 & 4 & 6 \\ 1 & 3 & 4 \\end{pmatrix}2627. (Answer as a whole number.) Answer: ________________",
+      "question": "Find the rank of the matrix: 1111611116\\begin{pmatrix} 1 & 2 & 3 \\ 2 & 4 & 6 \\ 1 & 3 & 4 \\end{pmatrix}1111611116. (Answer as a whole number.) Answer: ________________",
       "options": null,
       "correct_answer": "2 to 2",
-      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.13 Solution:• Correct Answer: 2 to 2• Section: Engineering Mathematics | Sub-topic: Linear Algebra | Type: NAT | Marks: 1Q.13   |  Topic: Linear Algebra  |  [NAT · 1 mark]Question:Find the rank of the matrix: 2627\\begin{pmatrix} 1 & 2 & 3 \\ 2 & 4 & 6 \\ 1 & 3 & 4 \\end{pmatrix}2627. (Answer as a whole number.)Answer: 2 to 2Explanation:Row 2 = 2 x Row 1, so Row 2 is linearly dependent on Row 1. Checking Row 3 against Row 1: Row 3 - Row 1 = [0, 1, 1], which is not a scalar multiple of Row 1 = [1,2,3], so Row 3 is independent of Row 1. Thus exactly 2 rows are linearly independent, and the rank of the matrix is 2.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.13 Solution:• Correct Answer: 2 to 2• Section: Engineering Mathematics | Sub-topic: Linear Algebra | Type: NAT | Marks: 1Q.13   |  Topic: Linear Algebra  |  [NAT · 1 mark]Question:Find the rank of the matrix: 1111611116\\begin{pmatrix} 1 & 2 & 3 \\ 2 & 4 & 6 \\ 1 & 3 & 4 \\end{pmatrix}1111611116. (Answer as a whole number.)Answer: 2 to 2Explanation:Row 2 = 2 x Row 1, so Row 2 is linearly dependent on Row 1. Checking Row 3 against Row 1: Row 3 - Row 1 = [0, 1, 1], which is not a scalar multiple of Row 1 = [1,2,3], so Row 3 is independent of Row 1. Thus exactly 2 rows are linearly independent, and the rank of the matrix is 2.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
       "topic": "Linear Algebra",
       "difficulty": "Hard"
@@ -328,7 +328,7 @@
         "D": "1/12"
       },
       "correct_answer": "A",
-      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Official GATE AG Solution:\nTotal outcomes when rolling two dice =  \times 6 = 36$.\nFavourable outcomes with sum $\\ge 10$:\n• Sum = 10: , (5,5), (6,4)$ — 3 outcomes\n• Sum = 11: , (6,5)$ — 2 outcomes\n• Sum = 12: $ — 1 outcome\nTotal favourable outcomes =  + 2 + 1 = 6$.\n2627P = rac{6}{36} = rac{1}{6}2627\n\nCorrect Answer: (A) 1/6",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Total possible outcomes when rolling two fair dice = $6 \\times 6 = 36$.\n• Step 2 (Chained Formulations): Favourable outcomes with sum $\\ge 10$:\n• Sum = 10: (4,6), (5,5), (6,4) [3 outcomes]\n• Sum = 11: (5,6), (6,5) [2 outcomes]\n• Sum = 12: (6,6) [1 outcome]\nTotal favourable outcomes = $3 + 2 + 1 = 6$.\n• Step 3 (Evaluation & Unit Conversion):\n$$P(\\text{Sum} \\ge 10) = \\frac{6}{36} = \\frac{1}{6}$$\n\nCorrect Answer: (A) 1/6",
       "isCustomUploaded": true,
       "topic": "Probability and Statistics",
       "difficulty": "Hard"

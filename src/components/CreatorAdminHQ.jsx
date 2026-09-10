@@ -125,11 +125,11 @@ export default function CreatorAdminHQ({
   const acknowledgements = [
     {
       title: "CCS Haryana Agricultural University (CCS HAU, Hisar)",
-      subtitle: "Academic & Institutional Alma Mater",
+      subtitle: "Academic & Institutional Alma Mater (Batch 2024)",
       icon: Building,
       badge: "Institutional Heritage",
       badgeColor: "bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800",
-      description: "Profound gratitude to CCS HAU Hisar, the College of Agricultural Engineering and Technology (COAE&T), and revered professors whose rigorous academic teachings in Farm Machinery & Power, Soil & Water Conservation, Agricultural Processing, and Renewable Energy formed the core bedrock of this platform."
+      description: "Profound gratitude to CCS HAU Hisar, the College of Agricultural Engineering and Technology (COAE&T, Batch 2024), and revered professors whose rigorous academic teachings in Farm Machinery & Power, Soil & Water Conservation, Agricultural Processing, and Renewable Energy formed the core bedrock of this platform."
     },
     {
       title: "GATE Organizing IITs & IISc Bangalore",
@@ -237,17 +237,28 @@ export default function CreatorAdminHQ({
 
               {/* Bio Text */}
               <div className="text-center sm:text-left space-y-3">
-                <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-100 dark:bg-emerald-500/10 border border-emerald-300 dark:border-emerald-400/20 text-xs font-bold text-emerald-800 dark:text-emerald-300">
-                  <Sparkles className="w-3.5 h-3.5 text-amber-500 dark:text-amber-400" />
-                  <span>Platform Creator & Lead Developer</span>
+                <div className="flex items-center gap-2 flex-wrap justify-center sm:justify-start">
+                  <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-100 dark:bg-emerald-500/10 border border-emerald-300 dark:border-emerald-400/20 text-xs font-bold text-emerald-800 dark:text-emerald-300">
+                    <Sparkles className="w-3.5 h-3.5 text-amber-500 dark:text-amber-400" />
+                    <span>Platform Creator &amp; Lead Developer</span>
+                  </div>
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800 text-xs font-bold text-blue-700 dark:text-blue-300">
+                    <GraduationCap className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
+                    <span>COAET CCS HAU Hisar • Batch 2024</span>
+                  </div>
                 </div>
 
-                <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-                  Raghav Bansal
-                </h1>
+                <div>
+                  <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                    Raghav Bansal
+                  </h1>
+                  <p className="text-xs sm:text-sm font-semibold text-emerald-700 dark:text-emerald-400 mt-1">
+                    B.Tech Agricultural Engineering • Batch 2024 (COAET, CCS HAU Hisar)
+                  </p>
+                </div>
 
                 <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed font-medium">
-                  Creator of the <strong className="text-slate-900 dark:text-white">GATE AG Prep Portal</strong> — engineered to empower Agricultural Engineering aspirants with 20 years of PYQ mock test CBT simulations, section-wise solved practice pools, AI doubt solvers, and real-time concept analytics.
+                  Creator of the <strong className="text-slate-900 dark:text-white">GATE AG Prep Portal</strong> — engineered to empower Agricultural Engineering aspirants with 5,800+ curated questions, 50 full-length CBT mock tests (3,250 questions), 20 years of official PYQs (2007–2026), 83-subtopic autonomous question bank, and real-time concept analytics.
                 </p>
               </div>
             </div>

@@ -279,7 +279,7 @@
       "type": "MCQ",
       "marks": 1,
       "negative_marks": 0.3333333333333333,
-      "question": "The value of 2627\\lim_{x \\to 0} \\frac{(1 − cos x)}{x²]}2627 is:",
+      "question": "The value of 1111611116\\lim_{x \\to 0} \\frac{(1 − cos x)}{x²]}1111611116 is:",
       "options": {
         "A": "0",
         "B": "1/4",
@@ -287,7 +287,7 @@
         "D": "1"
       },
       "correct_answer": "C",
-      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.12 Solution:• Correct Answer: C• Section: Engineering Mathematics | Sub-topic: Calculus: limit, continuity and differentiability | Type: MCQ | Marks: 1Q.12   Calculus: limit, continuity and differentiabilityType & Marks: MCQ — 1 markQuestion:The value of 2627\\lim_{x \\to 0} \\frac{(1 − cos x)}{x²]}2627 is:(A) 0(B) 1/4(C) 1/2(D) 1Answer: CDetailed Explanation:Using the standard limit (1−cos x)/x² → 1/2 as x→0 (from the Taylor expansion cos x ≈ 1 − x²/2 + …, giving (1−cos x)/x² ≈ 1/2).\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.12 Solution:• Correct Answer: C• Section: Engineering Mathematics | Sub-topic: Calculus: limit, continuity and differentiability | Type: MCQ | Marks: 1Q.12   Calculus: limit, continuity and differentiabilityType & Marks: MCQ — 1 markQuestion:The value of 1111611116\\lim_{x \\to 0} \\frac{(1 − cos x)}{x²]}1111611116 is:(A) 0(B) 1/4(C) 1/2(D) 1Answer: CDetailed Explanation:Using the standard limit (1−cos x)/x² → 1/2 as x→0 (from the Taylor expansion cos x ≈ 1 − x²/2 + …, giving (1−cos x)/x² ≈ 1/2).\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
       "topic": "Calculus",
       "difficulty": "Hard"
@@ -302,7 +302,7 @@
       "type": "MCQ",
       "marks": 1,
       "negative_marks": 0.3333333333333333,
-      "question": "For the matrix 2627\\begin{pmatrix} 2 & −1 \\ 4 & 3 \\end{pmatrix}2627, the product of its eigenvalues equals:",
+      "question": "For the matrix 1111611116\\begin{pmatrix} 2 & −1 \\ 4 & 3 \\end{pmatrix}1111611116, the product of its eigenvalues equals:",
       "options": {
         "A": "5",
         "B": "7",
@@ -310,7 +310,7 @@
         "D": "14"
       },
       "correct_answer": "C",
-      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.13 Solution:• Correct Answer: C• Section: Engineering Mathematics | Sub-topic: Linear Algebra: Matrices and determinants | Type: MCQ | Marks: 1Q.13   Linear Algebra: Matrices and determinantsType & Marks: MCQ — 1 markQuestion:For the matrix 2627\\begin{pmatrix} 2 & −1 \\ 4 & 3 \\end{pmatrix}2627, the product of its eigenvalues equals:(A) 5(B) 7(C) 10(D) 14Answer: CDetailed Explanation:The product of the eigenvalues of a matrix equals its determinant. det(2627\\begin{pmatrix} 2 & −1 \\ 4 & 3 \\end{pmatrix}2627) = (2×3) − (−1×4) = 6 + 4 = 10.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.13 Solution:• Correct Answer: C• Section: Engineering Mathematics | Sub-topic: Linear Algebra: Matrices and determinants | Type: MCQ | Marks: 1Q.13   Linear Algebra: Matrices and determinantsType & Marks: MCQ — 1 markQuestion:For the matrix 1111611116\\begin{pmatrix} 2 & −1 \\ 4 & 3 \\end{pmatrix}1111611116, the product of its eigenvalues equals:(A) 5(B) 7(C) 10(D) 14Answer: CDetailed Explanation:The product of the eigenvalues of a matrix equals its determinant. det(1111611116\\begin{pmatrix} 2 & −1 \\ 4 & 3 \\end{pmatrix}1111611116) = (2×3) − (−1×4) = 6 + 4 = 10.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
       "topic": "Linear Algebra",
       "difficulty": "Hard"
@@ -776,7 +776,7 @@
       "type": "MCQ",
       "marks": 2,
       "negative_marks": 0.6666666666666666,
-      "question": "The eigenvalues of the matrix 2627\\begin{pmatrix} 3 & 2 \\ 1 & 4 \\end{pmatrix}2627 are:",
+      "question": "The eigenvalues of the matrix 1111611116\\begin{pmatrix} 3 & 2 \\ 1 & 4 \\end{pmatrix}1111611116 are:",
       "options": {
         "A": "1 and 6",
         "B": "2 and 5",
@@ -784,7 +784,7 @@
         "D": "2 and 6"
       },
       "correct_answer": "B",
-      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.36 Solution:• Correct Answer: B• Section: Engineering Mathematics | Sub-topic: Linear Algebra: Eigen values and Eigen vectors | Type: MCQ | Marks: 2Q.36   Linear Algebra: Eigen values and Eigen vectorsType & Marks: MCQ — 2 marksQuestion:The eigenvalues of the matrix 2627\\begin{pmatrix} 3 & 2 \\ 1 & 4 \\end{pmatrix}2627 are:(A) 1 and 6(B) 2 and 5(C) 3 and 4(D) 2 and 6Answer: BDetailed Explanation:Characteristic equation: (3−λ)(4−λ) − (2)(1) = 0 → λ² − 7λ + 10 = 0 → (λ−2)(λ−5) = 0 → λ = 2, 5.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.36 Solution:• Correct Answer: B• Section: Engineering Mathematics | Sub-topic: Linear Algebra: Eigen values and Eigen vectors | Type: MCQ | Marks: 2Q.36   Linear Algebra: Eigen values and Eigen vectorsType & Marks: MCQ — 2 marksQuestion:The eigenvalues of the matrix 1111611116\\begin{pmatrix} 3 & 2 \\ 1 & 4 \\end{pmatrix}1111611116 are:(A) 1 and 6(B) 2 and 5(C) 3 and 4(D) 2 and 6Answer: BDetailed Explanation:Characteristic equation: (3−λ)(4−λ) − (2)(1) = 0 → λ² − 7λ + 10 = 0 → (λ−2)(λ−5) = 0 → λ = 2, 5.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
       "topic": "Linear Algebra",
       "difficulty": "Hard"

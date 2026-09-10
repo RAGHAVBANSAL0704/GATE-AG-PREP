@@ -28,6 +28,7 @@ import {
   ListFilter,
   CheckSquare,
   Flag,
+  Database,
   Image as ImageIcon
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
@@ -38,6 +39,7 @@ import { getOfficialSections, getOfficialTopicsForSection, getOfficialSubtopicsF
 import { getQuestionNumber, sortQuestionsByNumber } from '../utils/questionUtils.js';
 import { getAllQuestionReports, updateReportStatus } from '../services/questionReportService.js';
 import { subscribeToLiveQuestionSync } from '../services/questionSyncService.js';
+import { ALL_QUESTION_BANK_QUESTIONS, SECTION_DATASETS, getQuestionBankStats } from '../data/question_bank/index.js';
 
 const QUICK_LATEX_HELPERS = [
   { label: 'Fraction', latex: '\\frac{a}{b}' },
@@ -55,6 +57,7 @@ export default function AdminQuestionManager({
   questions = [], 
   mockPapers = [],
   customMockPapers = [], 
+  editedQuestionsMap = {},
   onSaveEditedQuestion,
   onOpenCalc 
 }) {
@@ -63,6 +66,11 @@ export default function AdminQuestionManager({
   const [selectedSectionFilter, setSelectedSectionFilter] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [showQuestionPalette, setShowQuestionPalette] = useState(true);
+
+  // Question Bank Cascading Filter State
+  const [bankSectionFilter, setBankSectionFilter] = useState('All');
+  const [bankTopicFilter, setBankTopicFilter] = useState('All');
+  const [bankSubtopicFilter, setBankSubtopicFilter] = useState('All');
 
   // Reported Issues Triage State
   const [reportedIssuesList, setReportedIssuesList] = useState([]);
@@ -164,6 +172,25 @@ export default function AdminQuestionManager({
   const customPapersList = customMockPapers || [];
   const officialPYQYears = [2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007];
 
+  // Overlay Question Bank with any local edits
+  const bankQuestionsWithEdits = useMemo(() => {
+    return ALL_QUESTION_BANK_QUESTIONS.map(q => (editedQuestionsMap && editedQuestionsMap[q.id]) || q);
+  }, [editedQuestionsMap]);
+
+  // Total custom mock questions count
+  const totalCustomMockQuestionsCount = useMemo(() => {
+    return customPapersList.reduce((acc, p) => acc + (p.questions?.length || 0), 0);
+  }, [customPapersList]);
+
+  // Total unique questions across all repositories
+  const totalRepositoryCount = useMemo(() => {
+    const ids = new Set();
+    questions.forEach(q => q && q.id && ids.add(q.id));
+    customPapersList.forEach(p => (p.questions || []).forEach(q => q && q.id && ids.add(q.id)));
+    bankQuestionsWithEdits.forEach(q => q && q.id && ids.add(q.id));
+    return ids.size;
+  }, [questions, customPapersList, bankQuestionsWithEdits]);
+
   const handleEditReportedQuestion = (rep) => {
     if (!rep || !rep.question_id) return;
     const targetId = rep.question_id;
@@ -203,12 +230,26 @@ export default function AdminQuestionManager({
       }
     }
 
-    // 3. Fallback: Search all questions
+    // 3. Check Autonomous Question Bank
+    const bankIdx = bankQuestionsWithEdits.findIndex(q => q.id === targetId);
+    if (bankIdx !== -1) {
+      const targetQ = bankQuestionsWithEdits[bankIdx];
+      setStudioMode('question-bank');
+      setBankSectionFilter(targetQ.section || 'All');
+      setBankTopicFilter('All');
+      setBankSubtopicFilter('All');
+      setPaperQIndex(bankIdx);
+      setSyncStatusMsg(`Switched to Question Bank — ${targetQ.id}`);
+      setTimeout(() => setSyncStatusMsg(''), 3000);
+      return;
+    }
+
+    // 4. Fallback: Search all questions
     setStudioMode('all-questions');
     setSelectedSectionFilter('All');
     setSearchQuery(targetId);
     setPaperQIndex(0);
-    setSyncStatusMsg(`Searching for question: ${targetId}`);
+    setSyncStatusMsg(`Searching repository for question: ${targetId}`);
     setTimeout(() => setSyncStatusMsg(''), 3000);
   };
 
@@ -231,10 +272,12 @@ export default function AdminQuestionManager({
       if (!selectedPaperTitle || !selectedPaperTitle.startsWith('GATE ')) {
         setSelectedPaperTitle('GATE 2026');
       }
+    } else if (studioMode === 'question-bank') {
+      setSelectedPaperTitle('Autonomous Question Bank');
     }
   }, [studioMode, customPapersList]);
 
-  // Gather active questions list and sort deterministically by Question Number (Q1 to Q65)
+  // Gather active questions list and sort deterministically by Question Number
   const activeQuestionsList = useMemo(() => {
     let list = [];
     if (studioMode === 'custom-mocks') {
@@ -257,21 +300,73 @@ export default function AdminQuestionManager({
           return qYear === yearNum || (q.paperTitle && q.paperTitle.includes(String(yearNum))) || (q.id && q.id.includes(`GATE_${yearNum}`));
         });
       }
-    } else {
-      list = questions.filter(q => {
+    } else if (studioMode === 'question-bank') {
+      list = bankQuestionsWithEdits.filter(q => {
+        if (bankSectionFilter !== 'All' && normalizeSectionTitle(q.section) !== normalizeSectionTitle(bankSectionFilter)) return false;
+        if (bankTopicFilter !== 'All' && (q.topic || '').toLowerCase() !== bankTopicFilter.toLowerCase()) return false;
+        if (bankSubtopicFilter !== 'All' && (q.subtopic || '').toLowerCase() !== bankSubtopicFilter.toLowerCase()) return false;
+        if (searchQuery.trim()) {
+          const qLower = searchQuery.toLowerCase();
+          const matchText = (q.question || '').toLowerCase().includes(qLower);
+          const matchId = (q.id || '').toLowerCase().includes(qLower);
+          const matchTopic = (q.topic || '').toLowerCase().includes(qLower);
+          const matchSub = (q.subtopic || '').toLowerCase().includes(qLower);
+          if (!matchText && !matchId && !matchTopic && !matchSub) return false;
+        }
+        return true;
+      });
+    } else if (studioMode === 'all-questions') {
+      const allCombined = [];
+      const seenIds = new Set();
+      
+      // 1. Official PYQs & Base questions
+      questions.forEach(q => {
+        if (q && q.id && !seenIds.has(q.id)) {
+          seenIds.add(q.id);
+          allCombined.push(q);
+        }
+      });
+
+      // 2. Custom Mocks
+      customPapersList.forEach(p => {
+        (p.questions || []).forEach(q => {
+          if (q && q.id && !seenIds.has(q.id)) {
+            seenIds.add(q.id);
+            allCombined.push({ ...q, paperTitle: q.paperTitle || p.title });
+          }
+        });
+      });
+
+      // 3. Question Bank
+      bankQuestionsWithEdits.forEach(q => {
+        if (q && q.id && !seenIds.has(q.id)) {
+          seenIds.add(q.id);
+          allCombined.push({ ...q, paperTitle: q.paperTitle || 'Question Bank' });
+        }
+      });
+
+      list = allCombined.filter(q => {
         if (selectedSectionFilter !== 'All' && normalizeSectionTitle(q.section) !== normalizeSectionTitle(selectedSectionFilter)) return false;
-        if (searchQuery.trim() && !q.question.toLowerCase().includes(searchQuery.toLowerCase()) && !q.id.toLowerCase().includes(searchQuery.toLowerCase())) return false;
+        if (searchQuery.trim()) {
+          const qLower = searchQuery.toLowerCase();
+          const matchText = (q.question || '').toLowerCase().includes(qLower);
+          const matchId = (q.id || '').toLowerCase().includes(qLower);
+          const matchTopic = (q.topic || '').toLowerCase().includes(qLower);
+          const matchSub = (q.subtopic || '').toLowerCase().includes(qLower);
+          if (!matchText && !matchId && !matchTopic && !matchSub) return false;
+        }
         return true;
       });
     }
 
-    // Sort questions strictly by ascending Question Number so Palette Q65 opens actual Q65
+    // Sort questions deterministically
     return [...list].sort((a, b) => {
       const numA = getQuestionNumber(a, 0);
       const numB = getQuestionNumber(b, 0);
-      return numA - numB;
+      if (numA !== numB) return numA - numB;
+      return (a.id || '').localeCompare(b.id || '');
     });
-  }, [studioMode, selectedPaperTitle, selectedSectionFilter, searchQuery, customPapersList, mockPapers, questions]);
+  }, [studioMode, selectedPaperTitle, selectedSectionFilter, searchQuery, bankSectionFilter, bankTopicFilter, bankSubtopicFilter, customPapersList, mockPapers, questions, bankQuestionsWithEdits]);
 
   // Load selected question into form
   useEffect(() => {
@@ -429,29 +524,41 @@ export default function AdminQuestionManager({
 
   const handleAddNewQuestion = () => {
     let yearNum = 2026;
+    let newId = '';
+    let pTitle = selectedPaperTitle;
+
     if (studioMode === 'official-pyqs') {
       const parsed = parseInt(selectedPaperTitle.replace(/\D/g, ''), 10);
       if (!isNaN(parsed)) yearNum = parsed;
+      newId = `q_pyq_${yearNum}_${Date.now().toString().slice(-5)}`;
+      pTitle = selectedPaperTitle || `GATE ${yearNum}`;
+    } else if (studioMode === 'question-bank') {
+      const secCode = (formData.section || bankSectionFilter || 'FM').replace(/[^a-zA-Z0-9]/g, '_').slice(0, 8).toUpperCase();
+      newId = `QB_${secCode}_${Date.now().toString().slice(-6)}`;
+      pTitle = 'Autonomous Question Bank';
+    } else {
+      newId = `q_custom_${Date.now().toString().slice(-5)}`;
+      pTitle = selectedPaperTitle || 'Custom Mock';
     }
 
-    const newId = `q_${studioMode === 'official-pyqs' ? 'pyq_' + yearNum : 'custom'}_${Date.now().toString().slice(-5)}`;
     const newQ = {
       id: newId,
       year: yearNum,
-      paperTitle: selectedPaperTitle || `GATE ${yearNum}`,
-      section: formData.section || 'Section 2: Farm Machinery & Power',
-      topic: formData.topic || 'Farm Machinery & Implements',
-      subtopic: formData.subtopic || 'Primary & Secondary Tillage Implements',
+      paperTitle: pTitle,
+      section: (studioMode === 'question-bank' && bankSectionFilter !== 'All') ? bankSectionFilter : (formData.section || 'Section 2: Farm Machinery'),
+      topic: (studioMode === 'question-bank' && bankTopicFilter !== 'All') ? bankTopicFilter : (formData.topic || 'Farm Machinery'),
+      subtopic: (studioMode === 'question-bank' && bankSubtopicFilter !== 'All') ? bankSubtopicFilter : (formData.subtopic || 'Soil tillage'),
       type: 'MCQ',
       marks: 1,
-      question: `[${selectedPaperTitle || 'Official PYQ'}] Enter question text or LaTeX formula here...`,
+      difficulty: 'Moderate',
+      question: `[${pTitle}] Enter question text or LaTeX formula here...`,
       options: { A: 'Option A', B: 'Option B', C: 'Option C', D: 'Option D' },
       correct_answer: 'A',
       solution: 'Step 1: Given parameters...\nStep 2: Formula derivation...'
     };
 
     onSaveEditedQuestion(newQ);
-    setSyncStatusMsg(`✨ Added new question #${newId} to ${selectedPaperTitle}!`);
+    setSyncStatusMsg(`✨ Added new question #${newId} to ${pTitle}!`);
     setTimeout(() => setSyncStatusMsg(''), 3500);
   };
 
@@ -483,11 +590,11 @@ export default function AdminQuestionManager({
               <h1 className="font-extrabold text-xl sm:text-2xl text-slate-900 dark:text-white flex items-center gap-2">
                 <span>Question Refinement Studio</span>
                 <span className="text-xs px-2.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-500/30 text-blue-700 dark:text-blue-200 border border-blue-200 dark:border-blue-400/30 font-mono">
-                  Answer Key & PYQ Editor
+                  Master Repository Studio
                 </span>
               </h1>
               <p className="text-xs text-slate-600 dark:text-blue-200/80">
-                1-Click Answer Key picker for Official PYQs & Custom Mocks with instant KaTeX live preview.
+                1-Click Answer Key picker for PYQs, Custom Mocks & Question Bank ({totalRepositoryCount.toLocaleString()} total questions) with instant KaTeX live preview.
               </p>
             </div>
           </div>
@@ -495,18 +602,18 @@ export default function AdminQuestionManager({
           <div className="flex flex-wrap items-center gap-2">
             <button
               onClick={handleAddNewQuestion}
-              className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md transition"
+              className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-md transition cursor-pointer"
             >
               <Plus className="w-4 h-4" />
-              <span>Add Question to {selectedPaperTitle || 'Paper'}</span>
+              <span>Add Question</span>
             </button>
 
             <button
               onClick={handleExportPaperJson}
-              className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-white font-bold text-xs shadow-xs transition"
+              className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-white font-bold text-xs shadow-xs transition cursor-pointer"
             >
               <Download className="w-4 h-4" />
-              <span>Export JSON</span>
+              <span>Export JSON ({activeQuestionsList.length})</span>
             </button>
           </div>
         </div>
@@ -523,43 +630,55 @@ export default function AdminQuestionManager({
         <div className="flex border-b border-blue-500/30 pt-2 gap-2 text-xs font-bold overflow-x-auto scrollbar-none">
           <button
             onClick={() => { setStudioMode('custom-mocks'); setPaperQIndex(0); }}
-            className={`px-4 py-2.5 rounded-t-xl transition flex items-center gap-2 whitespace-nowrap shrink-0 ${
+            className={`px-4 py-2.5 rounded-t-xl transition flex items-center gap-2 whitespace-nowrap shrink-0 cursor-pointer ${
               studioMode === 'custom-mocks'
                 ? 'bg-white text-blue-950 font-extrabold shadow-md'
                 : 'text-blue-200 hover:bg-white/10'
             }`}
           >
             <Sparkles className="w-4 h-4 text-emerald-400" />
-            <span>Custom Mock Papers ({customPapersList.length})</span>
+            <span>Custom Mock Papers ({customPapersList.length} Mocks • {totalCustomMockQuestionsCount} Qs)</span>
           </button>
 
           <button
             onClick={() => { setStudioMode('official-pyqs'); setPaperQIndex(0); }}
-            className={`px-4 py-2.5 rounded-t-xl transition flex items-center gap-2 whitespace-nowrap shrink-0 ${
+            className={`px-4 py-2.5 rounded-t-xl transition flex items-center gap-2 whitespace-nowrap shrink-0 cursor-pointer ${
               studioMode === 'official-pyqs'
                 ? 'bg-white text-blue-950 font-extrabold shadow-md'
                 : 'text-blue-200 hover:bg-white/10'
             }`}
           >
-            <Layers className="w-4 h-4 text-emerald-400" />
-            <span>Official PYQ Papers (2007–2026)</span>
+            <Layers className="w-4 h-4 text-blue-400" />
+            <span>Official PYQs (2007–2026 • {questions.length} Qs)</span>
+          </button>
+
+          <button
+            onClick={() => { setStudioMode('question-bank'); setPaperQIndex(0); }}
+            className={`px-4 py-2.5 rounded-t-xl transition flex items-center gap-2 whitespace-nowrap shrink-0 cursor-pointer ${
+              studioMode === 'question-bank'
+                ? 'bg-white text-blue-950 font-extrabold shadow-md'
+                : 'text-blue-200 hover:bg-white/10'
+            }`}
+          >
+            <Database className="w-4 h-4 text-emerald-400" />
+            <span>Question Bank (83 Subtopics • {bankQuestionsWithEdits.length} Qs)</span>
           </button>
 
           <button
             onClick={() => { setStudioMode('all-questions'); setPaperQIndex(0); }}
-            className={`px-4 py-2.5 rounded-t-xl transition flex items-center gap-2 whitespace-nowrap shrink-0 ${
+            className={`px-4 py-2.5 rounded-t-xl transition flex items-center gap-2 whitespace-nowrap shrink-0 cursor-pointer ${
               studioMode === 'all-questions'
                 ? 'bg-white text-blue-950 font-extrabold shadow-md'
                 : 'text-blue-200 hover:bg-white/10'
             }`}
           >
-            <BookOpen className="w-4 h-4 text-emerald-400" />
-            <span>Search & Filter All ({questions.length})</span>
+            <BookOpen className="w-4 h-4 text-purple-400" />
+            <span>Search All Repository ({totalRepositoryCount} Qs)</span>
           </button>
 
           <button
             onClick={() => { setStudioMode('reported-issues'); refreshReports(); }}
-            className={`px-4 py-2.5 rounded-t-xl transition flex items-center gap-2 whitespace-nowrap shrink-0 ${
+            className={`px-4 py-2.5 rounded-t-xl transition flex items-center gap-2 whitespace-nowrap shrink-0 cursor-pointer ${
               studioMode === 'reported-issues'
                 ? 'bg-white text-blue-950 font-extrabold shadow-md'
                 : 'text-blue-200 hover:bg-white/10'
@@ -571,8 +690,8 @@ export default function AdminQuestionManager({
         </div>
       </div>
 
-      {/* Paper Selector & Palette Bar */}
-      {studioMode !== 'all-questions' && studioMode !== 'reported-issues' ? (
+      {/* Mode 1 & 2: Custom Mocks & Official PYQs Selector & Palette Bar */}
+      {(studioMode === 'custom-mocks' || studioMode === 'official-pyqs') ? (
         <div className="space-y-3">
           <div className="card-3d rounded-2xl p-4 sm:p-5 flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center gap-3">
@@ -604,7 +723,7 @@ export default function AdminQuestionManager({
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setShowQuestionPalette(!showQuestionPalette)}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 text-xs font-bold hover:bg-slate-200 transition"
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 text-xs font-bold hover:bg-slate-200 transition cursor-pointer"
               >
                 <Grid className="w-3.5 h-3.5 text-blue-500" />
                 <span>{showQuestionPalette ? 'Hide Palette' : 'Show Palette'}</span>
@@ -612,7 +731,7 @@ export default function AdminQuestionManager({
 
               <button
                 onClick={handleAddNewQuestion}
-                className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-xs shadow-md transition"
+                className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-xs shadow-md transition cursor-pointer"
               >
                 <Plus className="w-3.5 h-3.5" />
                 <span>Add Question</span>
@@ -639,7 +758,7 @@ export default function AdminQuestionManager({
                     <button
                       key={q.id || idx}
                       onClick={() => setPaperQIndex(idx)}
-                      className={`w-8 h-8 rounded-lg text-xs font-mono font-bold transition flex items-center justify-center border ${
+                      className={`w-8 h-8 rounded-lg text-xs font-mono font-bold transition flex items-center justify-center border cursor-pointer ${
                         isSelected 
                           ? 'bg-blue-600 text-white border-blue-600 shadow-md ring-2 ring-blue-400' 
                           : hasSolution 
@@ -656,29 +775,190 @@ export default function AdminQuestionManager({
             </div>
           )}
         </div>
+      ) : studioMode === 'question-bank' ? (
+        /* Mode 3: Question Bank Section/Topic/Subtopic Selector & Jump Bar */
+        <div className="space-y-3">
+          <div className="card-3d rounded-2xl p-4 sm:p-5 flex flex-wrap items-center justify-between gap-4">
+            <div className="flex flex-wrap items-center gap-3">
+              <div className="flex items-center gap-2">
+                <Database className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                <span className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider">
+                  Syllabus Unit:
+                </span>
+              </div>
+
+              {/* Section Selector */}
+              <select
+                value={bankSectionFilter}
+                onChange={(e) => {
+                  setBankSectionFilter(e.target.value);
+                  setBankTopicFilter('All');
+                  setBankSubtopicFilter('All');
+                  setPaperQIndex(0);
+                }}
+                className="bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 dark:text-slate-100 outline-none focus:ring-1 focus:ring-emerald-500"
+              >
+                <option value="All">All 8 Sections ({bankQuestionsWithEdits.length} Qs)</option>
+                {GATE_AG_SYLLABUS.map(sec => {
+                  const secCount = bankQuestionsWithEdits.filter(q => normalizeSectionTitle(q.section) === normalizeSectionTitle(sec.title)).length;
+                  return (
+                    <option key={sec.id} value={sec.title}>{sec.title} ({secCount} Qs)</option>
+                  );
+                })}
+              </select>
+
+              {/* Topic Selector */}
+              {bankSectionFilter !== 'All' && (
+                <select
+                  value={bankTopicFilter}
+                  onChange={(e) => {
+                    setBankTopicFilter(e.target.value);
+                    setBankSubtopicFilter('All');
+                    setPaperQIndex(0);
+                  }}
+                  className="bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 dark:text-slate-100 outline-none focus:ring-1 focus:ring-emerald-500 max-w-xs truncate"
+                >
+                  <option value="All">All Topics</option>
+                  {getOfficialTopicsForSection(bankSectionFilter).map((t, idx) => (
+                    <option key={idx} value={t.topic_name}>{t.topic_name}</option>
+                  ))}
+                </select>
+              )}
+
+              {/* Subtopic Selector */}
+              {bankSectionFilter !== 'All' && bankTopicFilter !== 'All' && (
+                <select
+                  value={bankSubtopicFilter}
+                  onChange={(e) => {
+                    setBankSubtopicFilter(e.target.value);
+                    setPaperQIndex(0);
+                  }}
+                  className="bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 dark:text-slate-100 outline-none focus:ring-1 focus:ring-emerald-500 max-w-xs truncate"
+                >
+                  <option value="All">All Subtopics</option>
+                  {getOfficialSubtopicsForTopic(bankSectionFilter, bankTopicFilter).map((sub, idx) => (
+                    <option key={idx} value={sub}>{sub}</option>
+                  ))}
+                </select>
+              )}
+            </div>
+
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setShowQuestionPalette(!showQuestionPalette)}
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 text-xs font-bold hover:bg-slate-200 transition cursor-pointer"
+              >
+                <Grid className="w-3.5 h-3.5 text-emerald-500" />
+                <span>{showQuestionPalette ? 'Hide Palette' : `Show Palette (${activeQuestionsList.length})`}</span>
+              </button>
+
+              <button
+                onClick={handleAddNewQuestion}
+                className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-xs shadow-md transition cursor-pointer"
+              >
+                <Plus className="w-3.5 h-3.5" />
+                <span>Add QBank Question</span>
+              </button>
+            </div>
+          </div>
+
+          {/* Question Bank Palette Grid */}
+          {showQuestionPalette && activeQuestionsList.length > 0 && (
+            <div className="card-3d rounded-2xl p-4 sm:p-5 space-y-3">
+              <div className="flex items-center justify-between text-xs font-bold text-slate-600 dark:text-slate-400">
+                <span>Question Bank Palette ({activeQuestionsList.length} filtered questions):</span>
+                <span className="text-[11px] font-medium text-slate-400">
+                  Green = verified solution • Blue = active
+                </span>
+              </div>
+              <div className="grid grid-cols-8 sm:grid-cols-12 md:grid-cols-16 lg:grid-cols-20 gap-1.5 max-h-56 overflow-y-auto pr-1">
+                {activeQuestionsList.map((q, idx) => {
+                  const isSelected = idx === paperQIndex;
+                  const hasSolution = Boolean(q.solution && q.solution.trim().length > 10);
+                  const qNum = idx + 1;
+
+                  return (
+                    <button
+                      key={q.id || idx}
+                      onClick={() => setPaperQIndex(idx)}
+                      className={`w-8 h-8 rounded-lg text-xs font-mono font-bold transition flex items-center justify-center border cursor-pointer ${
+                        isSelected 
+                          ? 'bg-blue-600 text-white border-blue-600 shadow-md ring-2 ring-blue-400' 
+                          : hasSolution 
+                            ? 'bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800'
+                            : 'bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-800'
+                      }`}
+                      title={`Q${qNum} (${q.id}): Key: ${q.correct_answer || 'N/A'} | ${q.type || 'MCQ'} (${q.marks || 1}M) | ${q.subtopic || q.topic || ''}`}
+                    >
+                      {qNum}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+        </div>
       ) : studioMode === 'all-questions' ? (
-        /* Global Search Bar */
-        <div className="card-3d rounded-2xl p-4 sm:p-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="relative">
-            <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-3 pointer-events-none" />
-            <input
-              type="text"
-              placeholder="Search question text or ID..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl pl-10 pr-4 py-2.5 text-xs font-sans text-slate-900 dark:text-slate-100 outline-none focus:ring-2 focus:ring-blue-500"
-            />
+        /* Mode 4: Search All Repository */
+        <div className="space-y-3">
+          <div className="card-3d rounded-2xl p-4 sm:p-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="relative">
+              <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-3 pointer-events-none" />
+              <input
+                type="text"
+                placeholder="Search by text, ID, topic, or subtopic across 5,800+ questions..."
+                value={searchQuery}
+                onChange={(e) => { setSearchQuery(e.target.value); setPaperQIndex(0); }}
+                className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl pl-10 pr-4 py-2.5 text-xs font-sans text-slate-900 dark:text-slate-100 outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div>
+              <select
+                value={selectedSectionFilter}
+                onChange={(e) => { setSelectedSectionFilter(e.target.value); setPaperQIndex(0); }}
+                className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-3 py-2.5 text-xs font-bold text-slate-900 dark:text-slate-100 outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                <option value="All">All Syllabus Sections (Unified 5,800+ Qs)</option>
+                {GATE_AG_SYLLABUS.map(sec => <option key={sec.id} value={sec.title}>{sec.title}</option>)}
+              </select>
+            </div>
           </div>
-          <div>
-            <select
-              value={selectedSectionFilter}
-              onChange={(e) => setSelectedSectionFilter(e.target.value)}
-              className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-3 py-2.5 text-xs font-bold text-slate-900 dark:text-slate-100 outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              <option value="All">All Syllabus Sections</option>
-              {GATE_AG_SYLLABUS.map(sec => <option key={sec.id} value={sec.title}>{sec.title}</option>)}
-            </select>
-          </div>
+
+          {/* Palette jump for search results if filtered count is available */}
+          {activeQuestionsList.length > 0 && (
+            <div className="card-3d rounded-2xl p-4 sm:p-5 space-y-3">
+              <div className="flex items-center justify-between text-xs font-bold text-slate-600 dark:text-slate-400">
+                <span>Matching Questions ({activeQuestionsList.length} total results):</span>
+                <span className="text-[11px] font-medium text-slate-400">
+                  Showing top {Math.min(activeQuestionsList.length, 100)} in palette
+                </span>
+              </div>
+              <div className="grid grid-cols-8 sm:grid-cols-12 md:grid-cols-16 lg:grid-cols-20 gap-1.5 max-h-48 overflow-y-auto pr-1">
+                {activeQuestionsList.slice(0, 100).map((q, idx) => {
+                  const isSelected = idx === paperQIndex;
+                  const hasSolution = Boolean(q.solution && q.solution.trim().length > 10);
+                  const qNum = idx + 1;
+
+                  return (
+                    <button
+                      key={q.id || idx}
+                      onClick={() => setPaperQIndex(idx)}
+                      className={`w-8 h-8 rounded-lg text-xs font-mono font-bold transition flex items-center justify-center border cursor-pointer ${
+                        isSelected 
+                          ? 'bg-blue-600 text-white border-blue-600 shadow-md ring-2 ring-blue-400' 
+                          : hasSolution 
+                            ? 'bg-emerald-50 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800'
+                            : 'bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-800'
+                      }`}
+                      title={`Q${qNum} (${q.id}): ${q.paperTitle || 'Repository'} | Key: ${q.correct_answer || 'N/A'} | ${q.type || 'MCQ'}`}
+                    >
+                      {qNum}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
         </div>
       ) : null}
 
