@@ -20,8 +20,12 @@ import {
   CornerDownRight,
   ShieldAlert,
   CheckCircle2,
-  FileText,
-  AlertTriangle
+  Copy,
+  Check,
+  Search,
+  Smile,
+  Code2,
+  ChevronDown
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import { validateCleanInput, sanitizeText } from '../utils/profanityFilter';
@@ -40,11 +44,35 @@ import {
 } from '../services/userRoleService';
 
 const CHANNELS = [
-  { id: 'general-lounge', name: 'general-lounge', label: '💬 General Lounge' },
-  { id: 'gate-ag-2027', name: 'gate-ag-2027', label: '🎯 GATE AG 2027 Target' },
-  { id: 'doubts-and-maths', name: 'doubts-and-maths', label: '📐 Doubts & Engineering Maths' },
-  { id: 'fmp-machinery', name: 'fmp-machinery', label: '🚜 Farm Machinery & Power' },
-  { id: 'apfe-processing', name: 'apfe-processing', label: '🌾 Food & Process Engineering' }
+  { id: 'general-lounge', name: 'general-lounge', label: 'General Lounge', icon: '💬', desc: 'Syllabus strategy, exam tips & peer lounge' },
+  { id: 'gate-ag-2027', name: 'gate-ag-2027', label: 'GATE AG 2027 Target', icon: '🎯', desc: 'Milestones, daily study schedules & PYQ discussions' },
+  { id: 'doubts-and-maths', name: 'doubts-and-maths', label: 'Engg Maths & Calculus', icon: '📐', desc: 'Linear algebra, calculus, matrices & differential equations' },
+  { id: 'fmp-machinery', name: 'fmp-machinery', label: 'Farm Machinery (FMPE)', icon: '🚜', desc: 'Tractor kinematics, moldboard plows, draft & field capacity' },
+  { id: 'swce-hydrology', name: 'swce-hydrology', label: 'Soil & Water (SWCE)', icon: '💧', desc: 'Curve number, runoff, hydraulics & drip irrigation' },
+  { id: 'apfe-processing', name: 'apfe-processing', label: 'Food Processing (APFE)', icon: '🌾', desc: 'Psychrometry, drying rates, rheology & heat transfer' }
+];
+
+const QUICK_REACTIONS = [
+  { emoji: '👍', label: 'Helpful' },
+  { emoji: '💡', label: 'Smart Trick' },
+  { emoji: '🎯', label: 'Spot-on' },
+  { emoji: '❓', label: 'Doubt' },
+  { emoji: '🔥', label: 'Awesome' }
+];
+
+const MATH_SNIPPETS = [
+  { label: '√x', latex: '\\sqrt{}' },
+  { label: 'x²', latex: '^2' },
+  { label: 'a/b', latex: '\\frac{}{}' },
+  { label: 'λ', latex: '\\lambda' },
+  { label: 'η', latex: '\\eta' },
+  { label: 'Δ', latex: '\\Delta' },
+  { label: 'Σ', latex: '\\sum' },
+  { label: '∫', latex: '\\int' },
+  { label: 'π', latex: '\\pi' },
+  { label: '±', latex: '\\pm' },
+  { label: 'θ', latex: '\\theta' },
+  { label: 'ρ', latex: '\\rho' }
 ];
 
 const DEFAULT_MESSAGES = [
@@ -55,9 +83,10 @@ const DEFAULT_MESSAGES = [
     role: 'admin',
     contributorBadge: 'Creator & Lead Developer',
     verified: true,
-    text: 'Welcome to the official GATE AG Prep Community Chat! Ask questions, share shortcuts, and study together.',
+    text: 'Welcome to the official GATE AG Prep Community Lounge! Ask numerical doubts, share shortcuts, and study together.',
     timestamp: new Date(Date.now() - 3600000).toISOString(),
-    upvotes: 8
+    upvotes: 8,
+    reactions: { '👍': 8, '💡': 5 }
   },
   {
     id: 'chat_2',
@@ -68,7 +97,8 @@ const DEFAULT_MESSAGES = [
     verified: true,
     text: 'For 3x3 matrices in GATE Engineering Mathematics, remember $\\text{Trace}(A) = \\sum \\lambda_i$ and $\\det(A) = \\prod \\lambda_i$. This solves 80% of eigenvalue MCQs in 10 seconds.',
     timestamp: new Date(Date.now() - 2400000).toISOString(),
-    upvotes: 14
+    upvotes: 14,
+    reactions: { '💡': 14, '🎯': 9, '🔥': 6 }
   },
   {
     id: 'chat_3',
@@ -79,7 +109,20 @@ const DEFAULT_MESSAGES = [
     verified: true,
     text: 'Also remember that for symmetric matrices, eigenvalues are always real numbers!',
     timestamp: new Date(Date.now() - 1800000).toISOString(),
-    upvotes: 6
+    upvotes: 6,
+    reactions: { '👍': 6, '🎯': 4 }
+  },
+  {
+    id: 'chat_4',
+    channel: 'swce-hydrology',
+    sender: 'Er. Sunil Sharma',
+    role: 'mentor',
+    department: 'SWCE',
+    verified: true,
+    text: 'In SCS-CN method, maximum potential retention is $S = \\frac{25400}{CN} - 254$ when precipitation $P$ and $S$ are in millimeters. Always convert before squaring in $Q = \\frac{(P - 0.2S)^2}{P + 0.8S}$.',
+    timestamp: new Date(Date.now() - 1200000).toISOString(),
+    upvotes: 11,
+    reactions: { '💡': 11, '🎯': 7 }
   }
 ];
 
@@ -87,10 +130,15 @@ export default function CommunityChatHub({ currentStudent, onRequireAuth }) {
   const [activeChannel, setActiveChannel] = useState('general-lounge');
   const [messages, setMessages] = useState(DEFAULT_MESSAGES);
   const [inputText, setInputText] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
   const [moderationError, setModerationError] = useState('');
   const [actionNotice, setActionNotice] = useState('');
   const [replyingTo, setReplyingTo] = useState(null);
   const [imageAttachment, setImageAttachment] = useState(null);
+  const [showMathRibbon, setShowMathRibbon] = useState(false);
+  const [copiedMsgId, setCopiedMsgId] = useState(null);
+  const [activeReactionPickerMsgId, setActiveReactionPickerMsgId] = useState(null);
+  
   const [isModQueueOpen, setIsModQueueOpen] = useState(false);
   const [flaggedQueue, setFlaggedQueue] = useState([]);
   const [auditLogs, setAuditLogs] = useState([]);
@@ -99,6 +147,7 @@ export default function CommunityChatHub({ currentStudent, onRequireAuth }) {
   const [reportReason, setReportReason] = useState('Inappropriate Language');
 
   const fileInputRef = useRef(null);
+  const inputFieldRef = useRef(null);
   const messagesContainerRef = useRef(null);
 
   const hasModPerks = canModerate(currentStudent);
@@ -135,6 +184,26 @@ export default function CommunityChatHub({ currentStudent, onRequireAuth }) {
     }
   }, [cooldownSec]);
 
+  // Insert Math Symbol at cursor position
+  const handleInsertMath = (snippet) => {
+    const input = inputFieldRef.current;
+    if (!input) {
+      setInputText(prev => prev + ` $${snippet}$ `);
+      return;
+    }
+    const start = input.selectionStart || 0;
+    const end = input.selectionEnd || 0;
+    const text = inputText;
+    const mathStr = ` $${snippet}$ `;
+    const updated = text.substring(0, start) + mathStr + text.substring(end);
+    setInputText(updated);
+    setTimeout(() => {
+      input.focus();
+      const nextPos = start + mathStr.length;
+      input.setSelectionRange(nextPos, nextPos);
+    }, 50);
+  };
+
   // Image Upload handler with canvas thumbnail compression
   const handleImageSelect = (e) => {
     const file = e.target.files?.[0];
@@ -166,7 +235,7 @@ export default function CommunityChatHub({ currentStudent, onRequireAuth }) {
   };
 
   const handleSendMessage = async (e) => {
-    e.preventDefault();
+    if (e) e.preventDefault();
     setModerationError('');
     setActionNotice('');
 
@@ -187,7 +256,6 @@ export default function CommunityChatHub({ currentStudent, onRequireAuth }) {
 
     if (!inputText.trim() && !imageAttachment) return;
 
-    // Strict Profanity & Abusive Language Validation
     if (inputText.trim()) {
       const val = validateCleanInput(inputText, 'Chat Message');
       if (!val.isValid) {
@@ -213,7 +281,8 @@ export default function CommunityChatHub({ currentStudent, onRequireAuth }) {
       replyTo: replyingTo ? { id: replyingTo.id, sender: replyingTo.sender, text: replyingTo.text?.substring(0, 70) } : null,
       imageUrl: imageAttachment || null,
       timestamp: new Date().toISOString(),
-      upvotes: 0
+      upvotes: 0,
+      reactions: {}
     };
 
     const updated = [...messages, newMsgObj];
@@ -222,11 +291,34 @@ export default function CommunityChatHub({ currentStudent, onRequireAuth }) {
     setInputText('');
     setReplyingTo(null);
     setImageAttachment(null);
-    setCooldownSec(3); // 3-second anti-spam rate limiter
+    setCooldownSec(3);
   };
 
-  const handleUpvoteMsg = (msgId) => {
-    setMessages(messages.map(m => m.id === msgId ? { ...m, upvotes: m.upvotes + 1 } : m));
+  // Interactive Emoji Reactions
+  const handleToggleReaction = (msgId, emoji) => {
+    if (!currentStudent && onRequireAuth) {
+      onRequireAuth("Sign In or Register free to react to chat messages!");
+      return;
+    }
+    setMessages(prev => prev.map(m => {
+      if (m.id !== msgId) return m;
+      const currentReactions = { ...(m.reactions || {}) };
+      const currentCount = currentReactions[emoji] || 0;
+      currentReactions[emoji] = currentCount + 1;
+      return { 
+        ...m, 
+        reactions: currentReactions,
+        upvotes: (m.upvotes || 0) + 1 
+      };
+    }));
+    setActiveReactionPickerMsgId(null);
+  };
+
+  // Copy message text to clipboard
+  const handleCopyMessage = (msgId, text) => {
+    navigator.clipboard.writeText(text);
+    setCopiedMsgId(msgId);
+    setTimeout(() => setCopiedMsgId(null), 2000);
   };
 
   // Student: Report message
@@ -314,402 +406,498 @@ export default function CommunityChatHub({ currentStudent, onRequireAuth }) {
     refreshModQueue();
   };
 
-  const channelMessages = messages.filter(m => m.channel === activeChannel);
+  // Filtering messages by active channel and search
+  const activeChannelObj = CHANNELS.find(c => c.id === activeChannel) || CHANNELS[0];
+  const channelMessages = messages.filter(m => {
+    if (m.channel !== activeChannel) return false;
+    if (!searchQuery.trim()) return true;
+    const q = searchQuery.toLowerCase();
+    return (
+      m.text?.toLowerCase().includes(q) ||
+      m.sender?.toLowerCase().includes(q)
+    );
+  });
 
   return (
-    <div className="max-w-5xl mx-auto space-y-4 animate-in fade-in duration-200">
+    <div className="max-w-6xl mx-auto space-y-4 animate-in fade-in duration-200">
       
-      {/* Live Study Lounge Header Banner */}
-      <div className="card-3d bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-5 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div className="flex items-center gap-3.5">
-          <div className="w-11 h-11 rounded-2xl bg-emerald-50 dark:bg-emerald-950/80 border border-emerald-200 dark:border-emerald-900 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 shadow-xs">
-            <MessageSquare className="w-5 h-5" />
-          </div>
-          <div>
-            <div className="flex items-center gap-2">
-              <h2 className="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">
-                Live Study Lounge & Subject Channels
-              </h2>
-              <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
-                5 Active Lounges
-              </span>
-            </div>
-            <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">
-              Discuss syllabus doubts, exchange derivation shortcuts, and collaborate with faculty & verified solvers.
-            </p>
-          </div>
-        </div>
-
-        <div className="flex items-center gap-2 self-start sm:self-auto shrink-0">
-          <span className="text-[11px] font-mono font-bold px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
-            #{activeChannel}
-          </span>
-        </div>
-      </div>
-
-      {/* Notice Banner: Under Active Testing & Review */}
-      <div className="p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-amber-50/90 via-amber-50/50 to-orange-50/40 dark:from-amber-950/40 dark:via-slate-900 dark:to-amber-950/20 border border-amber-300 dark:border-amber-700/60 shadow-xs flex items-start sm:items-center gap-3 text-xs">
-        <div className="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-700 dark:text-amber-400 flex items-center justify-center shrink-0 mt-0.5 sm:mt-0 font-bold border border-amber-400/30">
-          <AlertTriangle className="w-4 h-4" />
-        </div>
-        <div className="flex-1 space-y-0.5">
-          <div className="flex items-center gap-2 flex-wrap">
-            <span className="font-black uppercase tracking-wider text-amber-900 dark:text-amber-300 text-xs">
-              Notice: Under Active Testing & Review
-            </span>
-            <span className="text-[10px] font-mono font-bold px-2 py-0.2 rounded-full bg-amber-200/70 dark:bg-amber-900/60 text-amber-900 dark:text-amber-200 border border-amber-300 dark:border-amber-700">
-              Community Moderation Beta
-            </span>
-          </div>
-          <p className="text-[11px] text-slate-600 dark:text-slate-300 leading-relaxed">
-            The Live Study Lounge and peer messaging system are currently undergoing active testing and review. Automated profanity filters, LaTeX equation previews, solver verified badges, and moderator audit mechanisms are actively monitored.
-          </p>
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+      {/* 2-Column Split: Channel Navigation Rail + Main Interactive Chat Stream */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
         
-        {/* Sidebar Channels Control */}
-        <div className="md:col-span-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-5 space-y-4 shadow-xs">
-        <div className="flex items-center gap-2 border-b border-slate-100 dark:border-slate-800 pb-3">
-          <MessageSquare className="w-4 h-4 text-emerald-500" />
-          <h2 className="font-extrabold text-xs uppercase tracking-wider text-slate-900 dark:text-white">Chat Channels</h2>
-        </div>
-
-        <div className="flex flex-row overflow-x-auto md:flex-col gap-1 pb-2 md:pb-0">
-          {CHANNELS.map(ch => (
-            <button
-              key={ch.id}
-              onClick={() => { setActiveChannel(ch.id); setModerationError(''); }}
-              className={`text-left px-3.5 py-2.5 rounded-2xl text-xs font-bold transition flex items-center justify-between shrink-0 cursor-pointer ${
-                activeChannel === ch.id
-                  ? 'bg-emerald-600 text-white shadow-xs'
-                  : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800'
-              }`}
-            >
-              <span>{ch.label}</span>
-            </button>
-          ))}
-        </div>
-
-        {/* Solver / Mod Tools Strip */}
-        {hasModPerks && (
-          <div className="pt-3 border-t border-slate-100 dark:border-slate-800 space-y-2">
-            <button
-              onClick={() => { refreshModQueue(); setIsModQueueOpen(true); }}
-              className="w-full py-2 px-3 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 text-amber-700 dark:text-amber-400 border border-amber-500/30 text-xs font-bold flex items-center justify-between cursor-pointer transition"
-            >
-              <div className="flex items-center gap-1.5">
-                <ShieldAlert className="w-3.5 h-3.5" />
-                <span>Mod Queue & Audit</span>
+        {/* Left Rail: Channels & Mod Tools */}
+        <div className="lg:col-span-4 space-y-3">
+          
+          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-4 shadow-xs space-y-3">
+            <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-2.5">
+              <div className="flex items-center gap-2">
+                <Hash className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                <h2 className="font-extrabold text-xs uppercase tracking-wider text-slate-900 dark:text-white">
+                  Study Lounges
+                </h2>
               </div>
-              {flaggedQueue.length > 0 && (
-                <span className="w-5 h-5 rounded-full bg-rose-500 text-white text-[10px] font-mono flex items-center justify-center font-bold">
-                  {flaggedQueue.length}
-                </span>
-              )}
-            </button>
-          </div>
-        )}
-
-        <div className="pt-3 border-t border-slate-100 dark:border-slate-800 space-y-2 text-[11px] text-slate-500 dark:text-slate-400">
-          <div className="font-bold uppercase tracking-wider text-[10px] text-slate-700 dark:text-slate-300">Community Rules</div>
-          <div>✅ Respect fellow GATE AG aspirants</div>
-          <div>🚫 Zero tolerance for abusive words</div>
-          <div>📸 Share diagram & LaTeX formulas</div>
-        </div>
-      </div>
-
-      {/* Main Chat Feed */}
-      <div className="md:col-span-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl flex flex-col h-[600px] shadow-xs overflow-hidden">
-        
-        {/* Chat Room Header */}
-        <div className="p-4 bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Hash className="w-4 h-4 text-emerald-500" />
-            <span className="font-extrabold text-sm text-slate-900 dark:text-white">
-              {CHANNELS.find(c => c.id === activeChannel)?.label}
-            </span>
-          </div>
-
-          <div className="flex items-center gap-2">
-            {hasModPerks && (
-              <span className="text-[10px] font-bold px-2 py-0.5 rounded-md bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20 flex items-center gap-1">
-                <Zap className="w-3 h-3" />
-                <span>Moderator Shield</span>
+              <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
+                {CHANNELS.length} Channels
               </span>
-            )}
-            <span className="text-[11px] font-mono text-slate-500 dark:text-slate-400 font-bold">
-              {channelMessages.length} Messages
-            </span>
-          </div>
-        </div>
-
-        {/* Action Notice (Deleted / Banned / Flagged feedback) */}
-        {actionNotice && (
-          <div className="p-2.5 bg-emerald-50 dark:bg-emerald-950/60 border-b border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 text-xs font-bold flex items-center gap-2 animate-in fade-in">
-            <CheckCircle2 className="w-3.5 h-3.5 shrink-0 text-emerald-600" />
-            <span>{actionNotice}</span>
-          </div>
-        )}
-
-        {/* Message Feed Container */}
-        <div ref={messagesContainerRef} className="flex-1 p-4 space-y-3.5 overflow-y-auto">
-          {channelMessages.length === 0 ? (
-            <div className="h-full flex flex-col items-center justify-center text-center text-slate-400 text-xs space-y-2">
-              <MessageSquare className="w-8 h-8 opacity-40" />
-              <div>No messages in #{activeChannel} yet. Be the first to start the discussion!</div>
             </div>
-          ) : (
-            channelMessages.map(msg => {
-              const isFacultyMsg = msg.role === 'faculty' || msg.role === 'mentor' || (msg.sender && (msg.sender.startsWith('Dr.') || msg.sender.startsWith('Prof.') || msg.sender.startsWith('Er.')));
-              const isSolverMsg = msg.role === 'solver';
-              const isAdminMsg = msg.role === 'admin';
 
-              return (
-                <div 
-                  key={msg.id} 
-                  className={`p-3.5 rounded-2xl border transition-all text-xs space-y-2 ${
-                    isFacultyMsg
-                      ? 'bg-slate-50/90 dark:bg-slate-900/90 border-indigo-200/60 dark:border-indigo-800/50'
-                      : (isSolverMsg 
-                          ? 'bg-slate-50/90 dark:bg-slate-900/90 border-amber-200/60 dark:border-amber-800/50'
-                          : 'bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700/60')
-                  }`}
-                >
-                  {/* Threaded Quoted Message if present */}
-                  {msg.replyTo && (
-                    <div className="p-2 rounded-xl bg-black/5 dark:bg-white/5 border-l-2 border-emerald-500 text-[11px] text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
-                      <CornerDownRight className="w-3 h-3 text-emerald-500 shrink-0" />
-                      <span className="font-bold text-slate-900 dark:text-slate-200">{msg.replyTo.sender}:</span>
-                      <span className="truncate">{msg.replyTo.text}</span>
-                    </div>
-                  )}
-
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2 flex-wrap">
-                      {/* Avatar with subtle ring for Faculty & Solvers */}
-                      <div className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold overflow-hidden shrink-0 ${
-                        isFacultyMsg 
-                          ? 'bg-indigo-600 text-white ring-1 ring-indigo-400/50' 
-                          : (isSolverMsg ? 'bg-amber-500 text-white ring-1 ring-amber-400/50' : 'bg-slate-300 dark:bg-slate-700 text-slate-700 dark:text-slate-200')
-                      }`}>
-                        {msg.photoUrl ? (
-                          <img src={msg.photoUrl} alt="Avatar" className="w-full h-full object-cover" />
-                        ) : (
-                          isFacultyMsg ? <Award className="w-3 h-3" /> : (isSolverMsg ? <Zap className="w-3 h-3" /> : (msg.sender?.[0] || 'U'))
-                        )}
-                      </div>
-
-                      <span className={`font-bold ${
-                        isFacultyMsg 
-                          ? 'text-indigo-900 dark:text-indigo-200' 
-                          : (isSolverMsg ? 'text-amber-900 dark:text-amber-200' : 'text-slate-900 dark:text-white')
-                      }`}>
-                        {msg.sender}
-                      </span>
-
-                      {/* Distinguished Badges */}
-                      {isFacultyMsg && (
-                        <span className="inline-flex items-center gap-0.5 text-[9px] font-extrabold px-1.5 py-0.2 rounded bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
-                          <Award className="w-2.5 h-2.5" />
-                          <span>{msg.role === 'mentor' ? 'Faculty Mentor' : 'Faculty'}</span>
-                        </span>
-                      )}
-
-                      {isSolverMsg && (
-                        <span className="inline-flex items-center gap-0.5 text-[9px] font-extrabold px-1.5 py-0.2 rounded bg-amber-50 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
-                          <Zap className="w-2.5 h-2.5" />
-                          <span>Solver</span>
-                        </span>
-                      )}
-
-                      {isAdminMsg && (
-                        <span className="inline-flex items-center gap-0.5 text-[9px] font-extrabold px-1.5 py-0.2 rounded bg-rose-50 dark:bg-rose-950 text-rose-700 dark:text-rose-400 border border-rose-200 dark:border-rose-800">
-                          <span>Admin</span>
-                        </span>
-                      )}
-
-                      {msg.department && (
-                        <span className="text-[9px] font-mono text-slate-500">
-                          [{msg.department.replace(/ \(.+\)/, '')}]
-                        </span>
-                      )}
-                    </div>
-
-                    <div className="flex items-center gap-2">
-                      <span className="text-[10px] text-slate-500 dark:text-slate-400 font-mono">
-                        {new Date(msg.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                      </span>
-
-                      {/* Student: Report Flag */}
-                      {!hasModPerks && msg.sender !== currentStudent?.full_name && (
-                        <button
-                          onClick={() => setReportingMsgId(reportingMsgId === msg.id ? null : msg.id)}
-                          className="p-1 text-slate-400 hover:text-rose-500 transition cursor-pointer"
-                          title="Report this message"
-                        >
-                          <Flag className="w-3 h-3" />
-                        </button>
-                      )}
-
-                      {/* Solver / Moderator Tools: Delete, Mute 24h, Ban */}
-                      {hasModPerks && (
-                        <div className="flex items-center gap-1 opacity-70 hover:opacity-100 transition">
-                          <button
-                            onClick={() => handleDeleteMessage(msg.id)}
-                            className="p-1 rounded hover:bg-rose-50 dark:hover:bg-rose-950 text-rose-500 transition cursor-pointer"
-                            title="Delete inappropriate message"
-                          >
-                            <Trash2 className="w-3 h-3" />
-                          </button>
-
-                          {msg.role !== 'admin' && (
-                            <>
-                              <button
-                                onClick={() => handleMuteUser(msg, 24)}
-                                className="p-1 rounded hover:bg-amber-50 dark:hover:bg-amber-950 text-amber-600 transition cursor-pointer"
-                                title="Mute user for 24 hours"
-                              >
-                                <Clock className="w-3 h-3" />
-                              </button>
-                              
-                              <button
-                                onClick={() => handleBanUser(msg)}
-                                className="p-1 rounded hover:bg-rose-50 dark:hover:bg-rose-950 text-rose-600 transition cursor-pointer"
-                                title="Permanent ban / block"
-                              >
-                                <Ban className="w-3 h-3" />
-                              </button>
-                            </>
-                          )}
+            {/* Channels Pill List */}
+            <div className="flex flex-row overflow-x-auto lg:flex-col gap-1.5 pb-1 lg:pb-0 scrollbar-none">
+              {CHANNELS.map(ch => {
+                const isActive = activeChannel === ch.id;
+                const count = messages.filter(m => m.channel === ch.id).length;
+                return (
+                  <button
+                    key={ch.id}
+                    onClick={() => { 
+                      setActiveChannel(ch.id); 
+                      setModerationError(''); 
+                      setSearchQuery('');
+                    }}
+                    className={`text-left p-2.5 rounded-2xl text-xs font-bold transition flex items-center justify-between shrink-0 cursor-pointer w-full group ${
+                      isActive
+                        ? 'bg-emerald-600 text-white shadow-xs'
+                        : 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800/80'
+                    }`}
+                  >
+                    <div className="flex items-center gap-2 min-w-0">
+                      <span className="text-base">{ch.icon}</span>
+                      <div className="truncate">
+                        <div className="truncate leading-tight">{ch.label}</div>
+                        <div className={`text-[10px] font-normal truncate ${isActive ? 'text-emerald-100' : 'text-slate-400'}`}>
+                          {ch.desc}
                         </div>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Inline Report Reason Box */}
-                  {reportingMsgId === msg.id && (
-                    <div className="p-2 rounded-xl bg-rose-50 dark:bg-rose-950/60 border border-rose-200 dark:border-rose-900 flex items-center justify-between gap-2 animate-in fade-in">
-                      <div className="flex items-center gap-2 flex-1">
-                        <span className="text-[10px] font-bold text-rose-700 dark:text-rose-300">Reason:</span>
-                        <select
-                          value={reportReason}
-                          onChange={(e) => setReportReason(e.target.value)}
-                          className="text-[11px] p-1 rounded bg-white dark:bg-slate-900 border border-rose-300 text-slate-800 dark:text-slate-200 outline-none"
-                        >
-                          <option value="Inappropriate Language">Inappropriate Language</option>
-                          <option value="Spam / Promotion">Spam / Promotion</option>
-                          <option value="Incorrect / Misleading">Incorrect / Misleading</option>
-                          <option value="Harassment">Harassment</option>
-                        </select>
                       </div>
-                      <button
-                        onClick={() => handleReportMessage(msg.id)}
-                        className="px-2 py-0.5 bg-rose-600 hover:bg-rose-500 text-white rounded text-[10px] font-bold cursor-pointer"
-                      >
-                        Submit Flag
-                      </button>
                     </div>
-                  )}
+                    <span className={`text-[10px] font-mono px-1.5 py-0.5 rounded-full shrink-0 ml-1.5 ${
+                      isActive ? 'bg-emerald-700 text-white' : 'bg-slate-100 dark:bg-slate-800 text-slate-500'
+                    }`}>
+                      {count}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
 
-                  {/* Attached Diagram / Image if present */}
-                  {msg.imageUrl && (
-                    <div className="my-1.5 max-w-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-slate-950/5">
-                      <img src={msg.imageUrl} alt="Attached Diagram" className="max-h-60 w-auto object-contain rounded-lg" />
-                    </div>
-                  )}
-
-                  {/* Clean text styling with LaTeX Math */}
-                  <div className="text-slate-900 dark:text-slate-100 font-medium leading-relaxed">
-                    <MathRenderer content={msg.text} />
+            {/* Moderator Shield Button */}
+            {hasModPerks && (
+              <div className="pt-2 border-t border-slate-100 dark:border-slate-800">
+                <button
+                  onClick={() => { refreshModQueue(); setIsModQueueOpen(true); }}
+                  className="w-full py-2 px-3 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 text-amber-800 dark:text-amber-400 border border-amber-500/30 text-xs font-bold flex items-center justify-between cursor-pointer transition"
+                >
+                  <div className="flex items-center gap-1.5">
+                    <ShieldAlert className="w-3.5 h-3.5" />
+                    <span>Mod Queue & Audit</span>
                   </div>
+                  {flaggedQueue.length > 0 && (
+                    <span className="w-5 h-5 rounded-full bg-rose-500 text-white text-[10px] font-mono flex items-center justify-center font-bold">
+                      {flaggedQueue.length}
+                    </span>
+                  )}
+                </button>
+              </div>
+            )}
+          </div>
 
-                  <div className="pt-1 flex items-center justify-between text-[10px]">
-                    <button
-                      onClick={() => setReplyingTo(msg)}
-                      className="flex items-center gap-1 text-slate-500 hover:text-emerald-600 font-bold transition cursor-pointer"
-                    >
-                      <CornerDownRight className="w-3 h-3" />
-                      <span>Reply</span>
-                    </button>
+          {/* Quick Guidance Card */}
+          <div className="hidden lg:block bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-3xl p-4 text-[11px] text-slate-600 dark:text-slate-400 space-y-2">
+            <div className="font-bold uppercase tracking-wider text-[10px] text-slate-900 dark:text-white flex items-center gap-1.5">
+              <Sparkles className="w-3.5 h-3.5 text-emerald-500" />
+              <span>Study Tips & Guidelines</span>
+            </div>
+            <div>💡 Use <strong>$E=mc^2$</strong> syntax for instant LaTeX rendering.</div>
+            <div>📸 Click the paperclip to attach working diagrams & schematics.</div>
+            <div>⚡ Verified solvers & faculty mentors earn badges for step-by-step help.</div>
+          </div>
 
-                    <button
-                      onClick={() => handleUpvoteMsg(msg.id)}
-                      className="flex items-center gap-1 font-bold text-slate-500 hover:text-emerald-600 transition cursor-pointer"
-                    >
-                      <ThumbsUp className="w-3 h-3" />
-                      <span>{msg.upvotes > 0 ? msg.upvotes : ''}</span>
-                    </button>
-                  </div>
-                </div>
-              );
-            })
-          )}
         </div>
 
-        {/* Input Form, Reply Preview & Moderation Status */}
-        <div className="p-4 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 space-y-2">
-          {isBanned ? (
-            <div className="p-3 rounded-2xl bg-rose-500/10 border border-rose-500/30 text-rose-400 text-xs font-bold flex items-center gap-2">
-              <Ban className="w-4 h-4 text-rose-500 shrink-0" />
-              <span>Your account is permanently restricted from chatting due to administrative moderation.</span>
-            </div>
-          ) : muteStatus.isMuted ? (
-            <div className="p-3 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-700 dark:text-amber-400 text-xs font-bold flex items-center gap-2">
-              <Clock className="w-4 h-4 text-amber-500 shrink-0" />
-              <span>Account temporarily muted for {muteStatus.remainingMinutes}m. Reason: {muteStatus.reason}</span>
-            </div>
-          ) : (
-            <>
-              {/* Replying Banner */}
-              {replyingTo && (
-                <div className="p-2 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 flex items-center justify-between text-xs animate-in fade-in">
-                  <div className="flex items-center gap-1.5 text-emerald-800 dark:text-emerald-300 min-w-0">
-                    <CornerDownRight className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                    <span className="font-bold">Replying to {replyingTo.sender}:</span>
-                    <span className="truncate text-slate-600 dark:text-slate-400">{replyingTo.text}</span>
-                  </div>
-                  <button onClick={() => setReplyingTo(null)} className="text-slate-400 hover:text-slate-600 p-0.5 cursor-pointer">
-                    <X className="w-3.5 h-3.5" />
-                  </button>
+        {/* Right Main Feed: Discord-like Interactive Stream */}
+        <div className="lg:col-span-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl flex flex-col h-[640px] shadow-xs overflow-hidden">
+          
+          {/* Channel Header with Search Bar */}
+          <div className="p-3.5 sm:p-4 bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shrink-0">
+            <div className="flex items-center gap-2.5 min-w-0">
+              <span className="text-xl">{activeChannelObj.icon}</span>
+              <div className="truncate">
+                <div className="flex items-center gap-2">
+                  <h3 className="font-extrabold text-sm text-slate-900 dark:text-white truncate">
+                    #{activeChannelObj.label}
+                  </h3>
+                  <span className="inline-flex items-center gap-1 text-[10px] font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950 px-2 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-900/40 shrink-0">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                    Online
+                  </span>
                 </div>
-              )}
+                <p className="text-[11px] text-slate-500 dark:text-slate-400 truncate">
+                  {activeChannelObj.desc}
+                </p>
+              </div>
+            </div>
 
-              {/* Image Preview Banner */}
-              {imageAttachment && (
-                <div className="relative inline-block border border-slate-300 dark:border-slate-700 rounded-xl overflow-hidden p-1 bg-white dark:bg-slate-900">
-                  <img src={imageAttachment} alt="Preview" className="h-16 w-auto rounded-lg object-contain" />
+            {/* Quick Search in Channel */}
+            <div className="flex items-center gap-2 self-stretch sm:self-auto shrink-0">
+              <div className="relative flex-1 sm:w-48">
+                <Search className="w-3.5 h-3.5 absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400" />
+                <input
+                  type="text"
+                  placeholder="Search in lounge..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700/80 rounded-xl pl-8 pr-3 py-1.5 text-xs text-slate-900 dark:text-white placeholder:text-slate-400 outline-none focus:ring-1 focus:ring-emerald-500"
+                />
+                {searchQuery && (
                   <button 
-                    onClick={() => setImageAttachment(null)}
-                    className="absolute top-1 right-1 p-0.5 rounded-full bg-black/60 text-white hover:bg-black cursor-pointer"
+                    onClick={() => setSearchQuery('')}
+                    className="absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600"
                   >
                     <X className="w-3 h-3" />
                   </button>
-                </div>
-              )}
+                )}
+              </div>
+            </div>
+          </div>
 
-              {moderationError && (
-                <div className="p-2.5 rounded-xl bg-rose-50 dark:bg-rose-950/60 border border-rose-200 text-rose-700 dark:text-rose-300 text-xs font-bold flex items-center gap-2 animate-in fade-in">
-                  <AlertCircle className="w-4 h-4 shrink-0 text-rose-500" />
-                  <span>{moderationError}</span>
-                </div>
-              )}
+          {/* Action Notice (Deleted / Banned / Flagged feedback) */}
+          {actionNotice && (
+            <div className="p-2.5 bg-emerald-50 dark:bg-emerald-950/60 border-b border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 text-xs font-bold flex items-center gap-2 animate-in fade-in shrink-0">
+              <CheckCircle2 className="w-3.5 h-3.5 shrink-0 text-emerald-600" />
+              <span>{actionNotice}</span>
+            </div>
+          )}
 
-              {!currentStudent ? (
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-3 p-3.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-xs">
-                  <div className="text-xs text-slate-500 dark:text-slate-400">
-                    👋 You are browsing this study channel in <strong>Guest Preview Mode</strong>.
-                  </div>
-                  <button
-                    type="button"
-                    onClick={() => onRequireAuth?.("Sign In or Register free to participate in live community chats and discuss with peers!")}
-                    className="w-full sm:w-auto px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shrink-0 cursor-pointer shadow-xs transition"
+          {/* Interactive Messages Stream */}
+          <div ref={messagesContainerRef} className="flex-1 p-4 space-y-3 overflow-y-auto">
+            {channelMessages.length === 0 ? (
+              <div className="h-full flex flex-col items-center justify-center text-center text-slate-400 text-xs space-y-2">
+                <MessageSquare className="w-8 h-8 opacity-40" />
+                <div>
+                  {searchQuery ? `No messages found matching "${searchQuery}".` : `No messages in #${activeChannelObj.label} yet. Be the first to start!`}
+                </div>
+              </div>
+            ) : (
+              channelMessages.map(msg => {
+                const isFaculty = msg.role === 'faculty' || msg.role === 'mentor' || (msg.sender && (msg.sender.startsWith('Dr.') || msg.sender.startsWith('Prof.') || msg.sender.startsWith('Er.')));
+                const isSolver = msg.role === 'solver';
+                const isAdmin = msg.role === 'admin';
+
+                return (
+                  <div 
+                    key={msg.id} 
+                    className={`group relative p-3 rounded-2xl border transition-all text-xs space-y-2 ${
+                      isFaculty
+                        ? 'bg-indigo-50/40 dark:bg-indigo-950/20 border-indigo-200/60 dark:border-indigo-800/40'
+                        : (isSolver 
+                            ? 'bg-amber-50/40 dark:bg-amber-950/20 border-amber-200/60 dark:border-amber-800/40'
+                            : 'bg-slate-50/70 dark:bg-slate-800/40 border-slate-200/80 dark:border-slate-700/50 hover:border-slate-300 dark:hover:border-slate-600')
+                    }`}
                   >
-                    Sign In to Chat
-                  </button>
+                    {/* Hover Floating Action Bar */}
+                    <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-all flex items-center gap-1 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl p-1 shadow-sm z-10">
+                      
+                      {/* React Picker Button */}
+                      <button
+                        onClick={() => setActiveReactionPickerMsgId(activeReactionPickerMsgId === msg.id ? null : msg.id)}
+                        className="p-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-500 hover:text-emerald-600 transition cursor-pointer"
+                        title="React with emoji"
+                      >
+                        <Smile className="w-3.5 h-3.5" />
+                      </button>
+
+                      {/* Reply Button */}
+                      <button
+                        onClick={() => setReplyingTo(msg)}
+                        className="p-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-500 hover:text-emerald-600 transition cursor-pointer"
+                        title="Reply in thread"
+                      >
+                        <CornerDownRight className="w-3.5 h-3.5" />
+                      </button>
+
+                      {/* Copy Message / LaTeX */}
+                      <button
+                        onClick={() => handleCopyMessage(msg.id, msg.text)}
+                        className="p-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-500 hover:text-emerald-600 transition cursor-pointer"
+                        title="Copy text / LaTeX"
+                      >
+                        {copiedMsgId === msg.id ? (
+                          <Check className="w-3.5 h-3.5 text-emerald-500" />
+                        ) : (
+                          <Copy className="w-3.5 h-3.5" />
+                        )}
+                      </button>
+
+                      {/* Student: Report */}
+                      {!hasModPerks && msg.sender !== currentStudent?.full_name && (
+                        <button
+                          onClick={() => setReportingMsgId(reportingMsgId === msg.id ? null : msg.id)}
+                          className="p-1 rounded-lg hover:bg-rose-50 dark:hover:bg-rose-950 text-slate-400 hover:text-rose-500 transition cursor-pointer"
+                          title="Report message"
+                        >
+                          <Flag className="w-3.5 h-3.5" />
+                        </button>
+                      )}
+
+                      {/* Mod Actions */}
+                      {hasModPerks && (
+                        <>
+                          <button
+                            onClick={() => handleDeleteMessage(msg.id)}
+                            className="p-1 rounded-lg hover:bg-rose-50 dark:hover:bg-rose-950 text-rose-500 transition cursor-pointer"
+                            title="Delete message"
+                          >
+                            <Trash2 className="w-3.5 h-3.5" />
+                          </button>
+                          {msg.role !== 'admin' && (
+                            <button
+                              onClick={() => handleMuteUser(msg, 24)}
+                              className="p-1 rounded-lg hover:bg-amber-50 dark:hover:bg-amber-950 text-amber-600 transition cursor-pointer"
+                              title="Mute user 24h"
+                            >
+                              <Clock className="w-3.5 h-3.5" />
+                            </button>
+                          )}
+                        </>
+                      )}
+                    </div>
+
+                    {/* Popover Reaction Bar when picker active */}
+                    {activeReactionPickerMsgId === msg.id && (
+                      <div className="absolute top-10 right-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl p-1.5 shadow-lg z-20 flex items-center gap-1.5 animate-in fade-in zoom-in-95">
+                        {QUICK_REACTIONS.map(qr => (
+                          <button
+                            key={qr.emoji}
+                            onClick={() => handleToggleReaction(msg.id, qr.emoji)}
+                            className="p-1.5 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-xl text-sm transition cursor-pointer"
+                            title={qr.label}
+                          >
+                            {qr.emoji}
+                          </button>
+                        ))}
+                      </div>
+                    )}
+
+                    {/* Quoted Message snippet if reply */}
+                    {msg.replyTo && (
+                      <div className="p-2 rounded-xl bg-slate-100/70 dark:bg-slate-900/60 border-l-2 border-emerald-500 text-[11px] text-slate-600 dark:text-slate-400 flex items-center gap-1.5">
+                        <CornerDownRight className="w-3 h-3 text-emerald-500 shrink-0" />
+                        <span className="font-bold text-slate-800 dark:text-slate-200">{msg.replyTo.sender}:</span>
+                        <span className="truncate">{msg.replyTo.text}</span>
+                      </div>
+                    )}
+
+                    {/* Message Header */}
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        
+                        {/* Avatar */}
+                        <div className={`w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold overflow-hidden shrink-0 ${
+                          isFaculty 
+                            ? 'bg-indigo-600 text-white' 
+                            : (isSolver ? 'bg-amber-500 text-white' : 'bg-slate-300 dark:bg-slate-700 text-slate-700 dark:text-slate-200')
+                        }`}>
+                          {msg.photoUrl ? (
+                            <img src={msg.photoUrl} alt="Avatar" className="w-full h-full object-cover" />
+                          ) : (
+                            isFaculty ? <Award className="w-3.5 h-3.5" /> : (isSolver ? <Zap className="w-3.5 h-3.5" /> : (msg.sender?.[0] || 'U'))
+                          )}
+                        </div>
+
+                        {/* Author Name */}
+                        <span className={`font-bold ${
+                          isFaculty 
+                            ? 'text-indigo-900 dark:text-indigo-200' 
+                            : (isSolver ? 'text-amber-900 dark:text-amber-200' : 'text-slate-900 dark:text-white')
+                        }`}>
+                          {msg.sender}
+                        </span>
+
+                        {/* Role Badges */}
+                        {isFaculty && (
+                          <span className="inline-flex items-center gap-1 text-[9px] font-black px-1.5 py-0.2 rounded bg-indigo-100 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
+                            <Award className="w-2.5 h-2.5" />
+                            <span>{msg.role === 'mentor' ? 'Faculty Mentor' : 'Faculty'}</span>
+                          </span>
+                        )}
+
+                        {isSolver && (
+                          <span className="inline-flex items-center gap-1 text-[9px] font-black px-1.5 py-0.2 rounded bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+                            <Zap className="w-2.5 h-2.5" />
+                            <span>Solver</span>
+                          </span>
+                        )}
+
+                        {isAdmin && (
+                          <span className="inline-flex items-center gap-1 text-[9px] font-black px-1.5 py-0.2 rounded bg-rose-100 dark:bg-rose-950 text-rose-700 dark:text-rose-400 border border-rose-200 dark:border-rose-800">
+                            <span>Admin</span>
+                          </span>
+                        )}
+
+                        {msg.department && (
+                          <span className="text-[9px] font-mono text-slate-400">
+                            [{msg.department.replace(/ \(.+\)/, '')}]
+                          </span>
+                        )}
+
+                        {/* Timestamp */}
+                        <span className="text-[10px] text-slate-400 font-mono ml-1">
+                          {new Date(msg.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Inline Report Reason Box */}
+                    {reportingMsgId === msg.id && (
+                      <div className="p-2 rounded-xl bg-rose-50 dark:bg-rose-950/60 border border-rose-200 dark:border-rose-900 flex items-center justify-between gap-2 animate-in fade-in">
+                        <div className="flex items-center gap-2 flex-1">
+                          <span className="text-[10px] font-bold text-rose-700 dark:text-rose-300">Reason:</span>
+                          <select
+                            value={reportReason}
+                            onChange={(e) => setReportReason(e.target.value)}
+                            className="text-[11px] p-1 rounded bg-white dark:bg-slate-900 border border-rose-300 text-slate-800 dark:text-slate-200 outline-none"
+                          >
+                            <option value="Inappropriate Language">Inappropriate Language</option>
+                            <option value="Spam / Promotion">Spam / Promotion</option>
+                            <option value="Incorrect / Misleading">Incorrect / Misleading</option>
+                            <option value="Harassment">Harassment</option>
+                          </select>
+                        </div>
+                        <button
+                          onClick={() => handleReportMessage(msg.id)}
+                          className="px-2.5 py-1 bg-rose-600 hover:bg-rose-500 text-white rounded-lg text-[10px] font-bold cursor-pointer"
+                        >
+                          Submit Flag
+                        </button>
+                      </div>
+                    )}
+
+                    {/* Attached Diagram / Image */}
+                    {msg.imageUrl && (
+                      <div className="my-1.5 max-w-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-slate-950/5">
+                        <img src={msg.imageUrl} alt="Attached Diagram" className="max-h-60 w-auto object-contain rounded-lg" />
+                      </div>
+                    )}
+
+                    {/* Message Text with KaTeX Math Rendering */}
+                    <div className="text-slate-900 dark:text-slate-100 font-medium leading-relaxed break-words">
+                      <MathRenderer content={msg.text} />
+                    </div>
+
+                    {/* Interactive Reaction Pills */}
+                    <div className="pt-1 flex items-center gap-1.5 flex-wrap">
+                      {msg.reactions && Object.entries(msg.reactions).map(([emoji, count]) => {
+                        if (!count) return null;
+                        return (
+                          <button
+                            key={emoji}
+                            onClick={() => handleToggleReaction(msg.id, emoji)}
+                            className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800/80 hover:bg-emerald-50 dark:hover:bg-emerald-950 border border-slate-200 dark:border-slate-700/60 text-[11px] text-slate-700 dark:text-slate-300 transition cursor-pointer"
+                          >
+                            <span>{emoji}</span>
+                            <span className="font-mono text-[10px] font-bold">{count}</span>
+                          </button>
+                        );
+                      })}
+
+                      {/* Quick Add Reaction Button */}
+                      <button
+                        onClick={() => setActiveReactionPickerMsgId(activeReactionPickerMsgId === msg.id ? null : msg.id)}
+                        className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded-full bg-slate-100/60 dark:bg-slate-800/40 hover:bg-slate-200 dark:hover:bg-slate-700 text-[10px] text-slate-400 hover:text-slate-600 transition cursor-pointer"
+                        title="Add reaction"
+                      >
+                        <Smile className="w-3 h-3" />
+                        <span>+</span>
+                      </button>
+                    </div>
+
+                  </div>
+                );
+              })
+            )}
+          </div>
+
+          {/* Bottom Dock: Math Ribbon, Attachment, Input & Send */}
+          <div className="p-3 sm:p-4 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 space-y-2 shrink-0">
+            
+            {isBanned ? (
+              <div className="p-3 rounded-2xl bg-rose-500/10 border border-rose-500/30 text-rose-500 text-xs font-bold flex items-center gap-2">
+                <Ban className="w-4 h-4 shrink-0" />
+                <span>Your account is permanently restricted from chatting due to administrative moderation.</span>
+              </div>
+            ) : muteStatus.isMuted ? (
+              <div className="p-3 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-700 dark:text-amber-400 text-xs font-bold flex items-center gap-2">
+                <Clock className="w-4 h-4 shrink-0" />
+                <span>Account temporarily muted for {muteStatus.remainingMinutes}m. Reason: {muteStatus.reason}</span>
+              </div>
+            ) : !currentStudent ? (
+              <div className="flex flex-col sm:flex-row items-center justify-between gap-3 p-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-xs">
+                <div className="text-xs text-slate-600 dark:text-slate-400">
+                  👋 You are previewing <strong>#{activeChannelObj.label}</strong> in Guest Mode.
                 </div>
-              ) : (
+                <button
+                  type="button"
+                  onClick={() => onRequireAuth?.("Sign In or Register free to participate in live study chats!")}
+                  className="w-full sm:w-auto px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shrink-0 cursor-pointer shadow-xs transition"
+                >
+                  Sign In to Chat
+                </button>
+              </div>
+            ) : (
+              <>
+                {/* Replying Banner */}
+                {replyingTo && (
+                  <div className="p-2 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 flex items-center justify-between text-xs animate-in fade-in">
+                    <div className="flex items-center gap-1.5 text-emerald-800 dark:text-emerald-300 min-w-0">
+                      <CornerDownRight className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                      <span className="font-bold">Replying to {replyingTo.sender}:</span>
+                      <span className="truncate text-slate-600 dark:text-slate-400">{replyingTo.text}</span>
+                    </div>
+                    <button onClick={() => setReplyingTo(null)} className="text-slate-400 hover:text-slate-600 p-0.5 cursor-pointer">
+                      <X className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                )}
+
+                {/* Attached Image Preview */}
+                {imageAttachment && (
+                  <div className="relative inline-block border border-slate-300 dark:border-slate-700 rounded-xl overflow-hidden p-1 bg-white dark:bg-slate-900">
+                    <img src={imageAttachment} alt="Preview" className="h-14 w-auto rounded-lg object-contain" />
+                    <button 
+                      onClick={() => setImageAttachment(null)}
+                      className="absolute top-1 right-1 p-0.5 rounded-full bg-black/60 text-white hover:bg-black cursor-pointer"
+                    >
+                      <X className="w-3 h-3" />
+                    </button>
+                  </div>
+                )}
+
+                {/* Error Banner */}
+                {moderationError && (
+                  <div className="p-2.5 rounded-xl bg-rose-50 dark:bg-rose-950/60 border border-rose-200 text-rose-700 dark:text-rose-300 text-xs font-bold flex items-center gap-2 animate-in fade-in">
+                    <AlertCircle className="w-4 h-4 shrink-0 text-rose-500" />
+                    <span>{moderationError}</span>
+                  </div>
+                )}
+
+                {/* Quick Math Ribbon Toolbar (Collapsible) */}
+                {showMathRibbon && (
+                  <div className="p-2 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center gap-1.5 overflow-x-auto scrollbar-none animate-in fade-in">
+                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider pl-1 shrink-0">
+                      Quick Math:
+                    </span>
+                    {MATH_SNIPPETS.map(snip => (
+                      <button
+                        key={snip.label}
+                        type="button"
+                        onClick={() => handleInsertMath(snip.latex)}
+                        className="px-2 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-emerald-50 dark:hover:bg-emerald-950 text-slate-800 dark:text-slate-200 text-xs font-mono font-bold border border-slate-200/80 dark:border-slate-700 transition cursor-pointer shrink-0"
+                      >
+                        {snip.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+
+                {/* Composer Form */}
                 <form onSubmit={handleSendMessage} className="flex items-center gap-2">
                   <input
                     type="file"
@@ -719,38 +907,56 @@ export default function CommunityChatHub({ currentStudent, onRequireAuth }) {
                     className="hidden"
                   />
                   
+                  {/* Attach Image Button */}
                   <button
                     type="button"
                     onClick={() => fileInputRef.current?.click()}
-                    className="p-2.5 rounded-xl bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 transition cursor-pointer"
+                    className="p-2.5 rounded-xl bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 transition cursor-pointer shrink-0"
                     title="Attach Diagram / Working Photo"
                   >
                     <Paperclip className="w-4 h-4" />
                   </button>
 
+                  {/* Toggle Math Ribbon Button */}
+                  <button
+                    type="button"
+                    onClick={() => setShowMathRibbon(!showMathRibbon)}
+                    className={`p-2.5 rounded-xl border transition cursor-pointer shrink-0 ${
+                      showMathRibbon
+                        ? 'bg-emerald-50 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 border-emerald-300 dark:border-emerald-800'
+                        : 'bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300'
+                    }`}
+                    title="Insert Mathematical LaTeX Symbols"
+                  >
+                    <Code2 className="w-4 h-4" />
+                  </button>
+
+                  {/* Input Box */}
                   <input
+                    ref={inputFieldRef}
                     type="text"
-                    placeholder={`Message #${activeChannel}... (LaTeX $E=mc^2$ supported)`}
+                    placeholder={`Message #${activeChannelObj.label}... (LaTeX $x^2$ supported)`}
                     value={inputText}
                     onChange={(e) => setInputText(e.target.value)}
                     className="flex-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-2.5 text-xs text-slate-900 dark:text-white font-medium outline-none focus:ring-2 focus:ring-emerald-500"
                   />
                   
+                  {/* Send Button */}
                   <button
                     type="submit"
                     disabled={(!inputText.trim() && !imageAttachment) || cooldownSec > 0}
-                    className="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 disabled:opacity-40 text-white font-extrabold text-xs transition flex items-center gap-1 cursor-pointer shrink-0"
+                    className="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 disabled:opacity-40 text-white font-extrabold text-xs transition flex items-center gap-1 cursor-pointer shrink-0 shadow-xs"
                   >
                     <Send className="w-3.5 h-3.5" />
                     <span>{cooldownSec > 0 ? `${cooldownSec}s` : 'Send'}</span>
                   </button>
                 </form>
-              )}
-            </>
-          )}
-        </div>
+              </>
+            )}
 
-      </div>
+          </div>
+
+        </div>
 
       </div>
 
@@ -856,3 +1062,4 @@ export default function CommunityChatHub({ currentStudent, onRequireAuth }) {
     </div>
   );
 }
+

@@ -20,9 +20,9 @@
       "id": "GATE_2027_MOCK_17_Q01",
       "year": "2027",
       "qnum": 1,
-      "section": "General Aptitude",
-      "topic": "General Aptitude",
-      "subtopic": "Quantitative Aptitude",
+      "section": "Section 8: General Aptitude",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Quantitative Aptitude Problem Analysis",
       "gate_section": "GA",
       "type": "MCQ",
       "marks": 1,
@@ -36,15 +36,16 @@
       },
       "correct_answer": "C",
       "solution": "Answer: C\nExplanation:\nAmount under compound interest, A = P(1+r)ⁿ = 50,000 × (1.10)² = 50,000 × 1.21 = Rs 60,500.\nWhy others are wrong: (A) 55,000 corresponds to simple interest for 1 year at 10%, not compound interest for 2 years. (B) 58,000 underestimates the compounding effect. (D) 63,000 overestimates it (e.g. using a higher effective rate or 3 years).",
-      "isCustomUploaded": true
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q02",
       "year": "2027",
       "qnum": 2,
-      "section": "General Aptitude",
-      "topic": "General Aptitude",
-      "subtopic": "Quantitative Aptitude",
+      "section": "Section 8: General Aptitude",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "General Aptitude Fundamentals",
       "gate_section": "GA",
       "type": "MCQ",
       "marks": 1,
@@ -58,37 +59,39 @@
       },
       "correct_answer": "C",
       "solution": "Answer: C\nExplanation:\nTotal yield of the original 5 plots = 5 × 42 = 210 quintals. Adding the sixth plot: new total = 210 + 60 = 270 quintals. New average = 270/6 = 45 quintals/ha.\nWhy others are wrong: (A) 43 and (B) 44 underestimate the effect of adding a higher-yielding plot. (D) 46 overestimates it — only 45 is consistent with the arithmetic.",
-      "isCustomUploaded": true
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q03",
       "year": "2027",
       "qnum": 3,
-      "section": "General Aptitude",
-      "topic": "General Aptitude",
-      "subtopic": "Verbal Aptitude",
+      "section": "Section 8: General Aptitude",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Grammar & Vocabulary",
       "gate_section": "GA",
       "type": "MCQ",
       "marks": 1,
       "negative_marks": 0.3333333333333333,
-      "question": "Choose the pair that best expresses a relationship similar to that expressed by the pair: DROUGHT : IRRIGATION",
-      "options": {
-        "A": "Disease : Vaccination",
-        "B": "Rain : Cloud",
-        "C": "Fire : Heat",
-        "D": "Wind : Storm"
-      },
-      "correct_answer": "A",
-      "solution": "Answer: A\nExplanation:\nA drought is a problem/deficiency that is countered or mitigated by irrigation, a deliberate corrective measure. Analogously, a disease is a problem that is countered or prevented by vaccination, a deliberate corrective/preventive measure — both pairs express a problem-to-countermeasure relationship.\nWhy others are wrong: (B) Rain : Cloud describes a cause-effect/source relationship, not a problem-to-remedy relationship. (C) Fire : Heat describes a phenomenon and one of its inherent properties, not a problem-remedy pair. (D) Wind : Storm describes a component-to-larger-phenomenon relationship, again not a problem-remedy pair.",
-      "isCustomUploaded": true
+      "question": "Fill in the blank with the most grammatically appropriate word:\n'The commission recommended that the statutory guidelines ______ amended with immediate effect.'",
+      "options": [
+        "are",
+        "be",
+        "was",
+        "is"
+      ],
+      "correct_answer": "B",
+      "solution": "Subjunctive mood after verbs of recommendation/demand ('recommended that...') requires the bare infinitive 'be'.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q04",
       "year": "2027",
       "qnum": 4,
-      "section": "General Aptitude",
-      "topic": "General Aptitude",
-      "subtopic": "Analytical Aptitude",
+      "section": "Section 8: General Aptitude",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "General Aptitude Fundamentals",
       "gate_section": "GA",
       "type": "MCQ",
       "marks": 1,
@@ -102,15 +105,16 @@
       },
       "correct_answer": "B",
       "solution": "Answer: B\nExplanation:\nA is B's sister, and C is married to A. The husband of one's sister is one's brother-in-law. Therefore C is B's brother-in-law.\nWhy others are wrong: (A) Brother would require C to share parents with B, which is not stated — C is related to B only through marriage to A. (C) Uncle would require C to be a sibling of one of B's parents, which is not given. (D) Cousin would require C to share a grandparent with B, which is also not given.",
-      "isCustomUploaded": true
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q05",
       "year": "2027",
       "qnum": 5,
-      "section": "General Aptitude",
-      "topic": "General Aptitude",
-      "subtopic": "Data Interpretation",
+      "section": "Section 8: General Aptitude",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Quantitative Aptitude Problem Analysis",
       "gate_section": "GA",
       "type": "MCQ",
       "marks": 1,
@@ -125,81 +129,85 @@
       "correct_answer": "D",
       "solution": "Answer: D\nExplanation:\nReading month-on-month percentage changes from the graph: Feb over Jan = (92−90)/90 = 2.22%; Mar over Feb = (95−92)/92 = 3.26%; Apr over Mar = (99−95)/95 = 4.21%; May over Apr = (101−99)/99 = 2.02%; Jun over May = (108−101)/101 = 6.93%. The highest percentage increase occurs in June.\nWhy others are wrong: March (3.26%), April (4.21%) and May (2.02%) all show smaller percentage increases than June (6.93%), even though the absolute price rise from April to May might look visually similar to other months on the graph — the question specifically asks for the percentage, not absolute, change.",
       "isCustomUploaded": true,
-      "image_url": "/docx_images/mock_17_q05.png"
+      "image_url": "/docx_images/mock_17_q05.png",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q06",
       "year": "2027",
       "qnum": 6,
-      "section": "General Aptitude",
-      "topic": "General Aptitude",
-      "subtopic": "Quantitative Aptitude",
+      "section": "Section 8: General Aptitude",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Reading Comprehension",
       "gate_section": "GA",
       "type": "MCQ",
       "marks": 2,
       "negative_marks": 0.6666666666666666,
-      "question": "A dealer marks up the price of a rotavator by 40% above cost price, then offers a discount of 20% on the marked price. If the final selling price is Rs 33,600, find the cost price.",
-      "options": {
-        "A": "Rs 28,000",
-        "B": "Rs 29,000",
-        "C": "Rs 30,000",
-        "D": "Rs 32,000"
-      },
-      "correct_answer": "C",
-      "solution": "Answer: C\nExplanation:\nMarked price = CP × 1.40. Selling price after 20% discount = Marked price × 0.80 = CP × 1.40 × 0.80 = CP × 1.12. Given CP × 1.12 = 33,600, so CP = 33,600/1.12 = Rs 30,000.\nWhy others are wrong: (A) 28,000 and (B) 29,000 underestimate CP; multiplying either by 1.12 does not give 33,600. (D) 32,000 overestimates CP; 32,000 × 1.12 = 35,840 ≠ 33,600.",
-      "isCustomUploaded": true
+      "question": "Read the following excerpt carefully:\n\"Epistemic modesty implies recognizing the inherent limitations and fallibility of one's own worldview, enabling open discourse and iterative error-correction.\"\n\nThe primary virtue of epistemic modesty highlighted in the excerpt is that it:",
+      "options": [
+        "Guarantees absolute immunity from cognitive error",
+        "Facilitates open dialogue and continuous correction of mistakes",
+        "Proves that all viewpoints possess equal empirical validity",
+        "Replaces empirical investigation with intuitive consensus"
+      ],
+      "correct_answer": "B",
+      "solution": "The text directly states that recognizing limitations enables 'open discourse and iterative error-correction'.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q07",
       "year": "2027",
       "qnum": 7,
-      "section": "General Aptitude",
-      "topic": "General Aptitude",
-      "subtopic": "Quantitative Aptitude",
+      "section": "Section 8: General Aptitude",
+      "topic": "Verbal Aptitude",
+      "subtopic": "Reading Comprehension",
       "gate_section": "GA",
       "type": "MCQ",
       "marks": 2,
       "negative_marks": 0.6666666666666666,
-      "question": "A canal, if flowing continuously, can irrigate a field in 12 days. Due to a rotation schedule, water is supplied only on alternate days (supply on day 1, no supply on day 2, supply on day 3, and so on). How many total calendar days will it take to complete the irrigation?",
-      "options": {
-        "A": "21 days",
-        "B": "22 days",
-        "C": "23 days",
-        "D": "24 days"
-      },
-      "correct_answer": "C",
-      "solution": "Answer: C\nExplanation:\nThe canal's rate is 1/12 of the field per full day of flow. Water flows only on odd-numbered calendar days (1, 3, 5, …). After 11 flow days (occurring by calendar day 21), 11/12 of the field is irrigated, leaving 1/12 remaining. The 12th flow day occurs on calendar day 23 (the next odd day after day 21), and exactly one more full day of flow (1/12) completes the job. So the work finishes at the end of calendar day 23.\nWhy others are wrong: (A) 21 days accounts for only 11 flow days (11/12 complete, not fully finished). (B) 22 days is a non-flow day under the schedule, so no additional progress is made on it beyond day 21's progress. (D) 24 days overshoots — the job is already complete by the end of day 23.",
-      "isCustomUploaded": true
+      "question": "Read the following excerpt carefully:\n\"Game theory models of the Prisoner's Dilemma demonstrate that when individuals pursue strictly dominant self-interested strategies in one-shot interactions, the collective outcome is Pareto-suboptimal.\"\n\nWhat fundamental dilemma does the author illustrate through this scenario?",
+      "options": [
+        "Individual rational choices can culminate in mutually disadvantageous outcomes",
+        "Cooperation is statistically impossible in repeated interactions",
+        "Altruism always produces optimal economic equilibrium",
+        "Self-interest is universally superior to collective bargaining"
+      ],
+      "correct_answer": "A",
+      "solution": "In the Prisoner's Dilemma, individually dominant strategies lead to a Pareto-suboptimal (mutually worse) outcome.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q08",
       "year": "2027",
       "qnum": 8,
-      "section": "General Aptitude",
-      "topic": "General Aptitude",
-      "subtopic": "Verbal Aptitude",
+      "section": "Section 8: General Aptitude",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
       "gate_section": "GA",
       "type": "MCQ",
       "marks": 2,
       "negative_marks": 0.6666666666666666,
-      "question": "Consider the statement: \"Every irrigation project sanctioned by the state receives central funding ONLY IF it meets the minimum command area criterion. Project X, a state-sanctioned project, has received central funding.\"\nWhich one of the following can be logically concluded from this statement alone?",
-      "options": {
-        "A": "Project X meets the minimum command area criterion.",
-        "B": "Project X does not meet the minimum command area criterion.",
-        "C": "No conclusion regarding the criterion can be drawn for Project X.",
-        "D": "All state-sanctioned projects meet the criterion."
-      },
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 11% and 16% respectively. If an institutional endowment invests ₹10,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3456 : 0.2321",
+        "1 : 1",
+        "16 : 11",
+        "121 : 256"
+      ],
       "correct_answer": "A",
-      "solution": "Answer: A\nExplanation:\nThe phrase \"receives funding ONLY IF it meets the criterion\" translates logically to: (receives funding) → (meets criterion). Since Project X is stated to have received central funding, applying modus ponens directly gives that Project X meets the minimum command area criterion. This is a valid, direct inference (unlike statements phrased as \"only if [condition], then [outcome]\" used elsewhere, \"P only if Q\" always means P→Q).\nWhy others are wrong: (B) directly contradicts the valid modus ponens conclusion. (C) incorrectly claims insufficiency, when in fact the \"only if\" structure provides exactly the needed logical link. (D) over-generalizes from a single project (X) to a universal claim about \"all\" state-sanctioned projects, which the statement does not support.",
-      "isCustomUploaded": true
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 × [(1 + r1)² - 1] = C2 × [(1 + r2)² - 1]. Therefore C1/C2 = [(1 + r2)² - 1] / [(1 + r1)² - 1] = 0.3456 : 0.2321.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q09",
       "year": "2027",
       "qnum": 9,
-      "section": "General Aptitude",
-      "topic": "General Aptitude",
-      "subtopic": "Analytical Aptitude",
+      "section": "Section 8: General Aptitude",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Quantitative Aptitude Problem Analysis",
       "gate_section": "GA",
       "type": "MCQ",
       "marks": 2,
@@ -213,15 +221,16 @@
       },
       "correct_answer": "D",
       "solution": "Answer: D\nExplanation:\nEach term follows the rule: next term = 2 × current term + 1. Check: 3×2+1=7; 7×2+1=15; 15×2+1=31; 31×2+1=63; 63×2+1=127.\nWhy others are wrong: 95, 111 and 120 do not satisfy the rule 2×63+1=127; they would require a different (incorrect) recurrence relation.",
-      "isCustomUploaded": true
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q10",
       "year": "2027",
       "qnum": 10,
-      "section": "General Aptitude",
-      "topic": "General Aptitude",
-      "subtopic": "Spatial Aptitude",
+      "section": "Section 8: General Aptitude",
+      "topic": "Analytical & Spatial Aptitude",
+      "subtopic": "Analytical & Spatial Aptitude Problem Analysis",
       "gate_section": "GA",
       "type": "MCQ",
       "marks": 2,
@@ -236,14 +245,15 @@
       "correct_answer": "B",
       "solution": "Answer: B\nExplanation:\nThe angular positions shown are 0°, 70°, 140°, 210° — each successive position is obtained by adding a fixed increment of 70° to the previous one (70−0=70; 140−70=70; 210−140=70). Continuing this fixed increment, the fifth position requires a further rotation of 70° from the fourth position (210°), reaching 280°.\nWhy others are wrong: 60°, 80° and 90° do not match the consistent 70° increment observed between every consecutive pair of positions in the given sequence.",
       "isCustomUploaded": true,
-      "image_url": "/docx_images/mock_17_q10.png"
+      "image_url": "/docx_images/mock_17_q10.png",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q11",
       "year": "2027",
       "qnum": 11,
-      "section": "Engineering Mathematics",
-      "topic": "S1",
+      "section": "Section 1: Engineering Mathematics",
+      "topic": "Calculus",
       "subtopic": "Engineering Mathematics",
       "gate_section": "AG",
       "type": "MCQ",
@@ -257,15 +267,16 @@
         "D": "2"
       },
       "correct_answer": "B",
-      "solution": "Answer: B\nExplanation:\ndy/dx = 2x/(x²+1) (chain rule). At x=1: dy/dx = 2(1)/(1²+1) = 2/2 = 1.\nWhy others are wrong: (A) 0.5 and (C) 1.5 would result from an arithmetic slip in evaluating 2/2. (D) 2 would result from omitting the denominator (x²+1) entirely.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: B\nExplanation:\ndy/dx = 2x/(x²+1) (chain rule). At x=1: dy/dx = 2(1)/(1²+1) = 2/2 = 1.\nWhy others are wrong: (A) 0.5 and (C) 1.5 would result from an arithmetic slip in evaluating 2/2. (D) 2 would result from omitting the denominator (x²+1) entirely.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q12",
       "year": "2027",
       "qnum": 12,
-      "section": "Engineering Mathematics",
-      "topic": "S1",
+      "section": "Section 1: Engineering Mathematics",
+      "topic": "Calculus",
       "subtopic": "Engineering Mathematics",
       "gate_section": "AG",
       "type": "MCQ",
@@ -279,15 +290,16 @@
         "D": "(2, 2, 4)"
       },
       "correct_answer": "A",
-      "solution": "Answer: A\nExplanation:\n∇φ = (∂φ/∂x, ∂φ/∂y, ∂φ/∂z) = (2xy, x²+z², 2yz). At (1,2,1): ∂φ/∂x = 2(1)(2) = 4; ∂φ/∂y = 1²+1² = 2; ∂φ/∂z = 2(2)(1) = 4. So ∇φ = (4, 2, 4).\nWhy others are wrong: (B), (C) and (D) all correspond to permuting or miscalculating one or more of the three partial derivatives (e.g. swapping the x- and y-components, or mis-evaluating x²+z²).",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: A\nExplanation:\n∇φ = (∂φ/∂x, ∂φ/∂y, ∂φ/∂z) = (2xy, x²+z², 2yz). At (1,2,1): ∂φ/∂x = 2(1)(2) = 4; ∂φ/∂y = 1²+1² = 2; ∂φ/∂z = 2(2)(1) = 4. So ∇φ = (4, 2, 4).\nWhy others are wrong: (B), (C) and (D) all correspond to permuting or miscalculating one or more of the three partial derivatives (e.g. swapping the x- and y-components, or mis-evaluating x²+z²).",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q13",
       "year": "2027",
       "qnum": 13,
-      "section": "Engineering Mathematics",
-      "topic": "S1",
+      "section": "Section 1: Engineering Mathematics",
+      "topic": "Linear Algebra",
       "subtopic": "Engineering Mathematics",
       "gate_section": "AG",
       "type": "MCQ",
@@ -301,15 +313,16 @@
         "D": "It has complex eigenvalues"
       },
       "correct_answer": "A",
-      "solution": "Answer: A\nExplanation:\nRow 2 = [2,4] = 2 × [1,2] = 2 × Row 1, so the rows are linearly dependent, making det(A) = (1)(4) − (2)(2) = 4−4 = 0. A matrix with zero determinant is singular (non-invertible).\nWhy others are wrong: (B) Symmetry alone does not imply singularity — many symmetric matrices are perfectly invertible. (C) The trace of A is 1+4=5, not zero, so this reasoning does not even apply here. (D) A is real and symmetric, so by the spectral theorem its eigenvalues are real, not complex — and even if it did have complex eigenvalues, that alone would not necessarily imply singularity.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: A\nExplanation:\nRow 2 = [2,4] = 2 × [1,2] = 2 × Row 1, so the rows are linearly dependent, making det(A) = (1)(4) − (2)(2) = 4−4 = 0. A matrix with zero determinant is singular (non-invertible).\nWhy others are wrong: (B) Symmetry alone does not imply singularity — many symmetric matrices are perfectly invertible. (C) The trace of A is 1+4=5, not zero, so this reasoning does not even apply here. (D) A is real and symmetric, so by the spectral theorem its eigenvalues are real, not complex — and even if it did have complex eigenvalues, that alone would not necessarily imply singularity.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q14",
       "year": "2027",
       "qnum": 14,
-      "section": "Engineering Mathematics",
-      "topic": "S1",
+      "section": "Section 1: Engineering Mathematics",
+      "topic": "Differential Equations",
       "subtopic": "Engineering Mathematics",
       "gate_section": "AG",
       "type": "MCQ",
@@ -323,15 +336,16 @@
         "D": "1/x²"
       },
       "correct_answer": "B",
-      "solution": "Answer: B\nExplanation:\nWriting the equation in standard form dy/dx + P(x)y = Q(x), here P(x) = −1/x. Integrating factor = e^(∫P dx) = e^(∫(−1/x)dx) = e^(−ln x) = 1/x.\nWhy others are wrong: (A) x would be the integrating factor if P(x) were +1/x, not −1/x. (C) x² and (D) 1/x² do not correspond to ∫(−1/x)dx = −ln x at all.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: B\nExplanation:\nWriting the equation in standard form dy/dx + P(x)y = Q(x), here P(x) = −1/x. Integrating factor = e^(∫P dx) = e^(∫(−1/x)dx) = e^(−ln x) = 1/x.\nWhy others are wrong: (A) x would be the integrating factor if P(x) were +1/x, not −1/x. (C) x² and (D) 1/x² do not correspond to ∫(−1/x)dx = −ln x at all.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q15",
       "year": "2027",
       "qnum": 15,
-      "section": "Engineering Mathematics",
-      "topic": "S1",
+      "section": "Section 1: Engineering Mathematics",
+      "topic": "Differential Equations",
       "subtopic": "Engineering Mathematics",
       "gate_section": "AG",
       "type": "MCQ",
@@ -345,14 +359,15 @@
         "D": "C₁ e^(3x) + C₂x e^(3x)"
       },
       "correct_answer": "A",
-      "solution": "Answer: A\nExplanation:\nThe auxiliary equation is m² + 9 = 0, giving purely imaginary roots m = ±3i. For complex conjugate roots ±βi, the general solution takes the trigonometric form y = C₁cos(βx) + C₂sin(βx); here β=3, giving y = C₁cos3x + C₂sin3x.\nWhy others are wrong: (B) applies to real, distinct roots (not the case here, since the roots are imaginary). (C) and (D) apply to repeated real roots, which also does not match this equation's purely imaginary roots.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: A\nExplanation:\nThe auxiliary equation is m² + 9 = 0, giving purely imaginary roots m = ±3i. For complex conjugate roots ±βi, the general solution takes the trigonometric form y = C₁cos(βx) + C₂sin(βx); here β=3, giving y = C₁cos3x + C₂sin3x.\nWhy others are wrong: (B) applies to real, distinct roots (not the case here, since the roots are imaginary). (C) and (D) apply to repeated real roots, which also does not match this equation's purely imaginary roots.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q16",
       "year": "2027",
       "qnum": 16,
-      "section": "Farm Machinery",
+      "section": "Section 2: Farm Machinery",
       "topic": "Farm Machinery",
       "subtopic": "Farm Machinery",
       "gate_section": "AG",
@@ -367,16 +382,17 @@
         "D": "70°–85°"
       },
       "correct_answer": "B",
-      "solution": "Answer: B\nExplanation:\nA disc angle in the range of approximately 25°–45° is standard practice for disc ploughs, balancing adequate penetration, soil inversion and draft requirements — the 45° angle shown in the figure lies at the upper end of this typical range.\nWhy others are wrong: (A) 10°–20° is too shallow an angle to achieve proper soil inversion and penetration. (C) 50°–65° and (D) 70°–85° are excessively steep angles that would produce poor penetration and excessive side-thrust rather than effective cutting/turning of the furrow slice.",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: B\nExplanation:\nA disc angle in the range of approximately 25°–45° is standard practice for disc ploughs, balancing adequate penetration, soil inversion and draft requirements — the 45° angle shown in the figure lies at the upper end of this typical range.\nWhy others are wrong: (A) 10°–20° is too shallow an angle to achieve proper soil inversion and penetration. (C) 50°–65° and (D) 70°–85° are excessively steep angles that would produce poor penetration and excessive side-thrust rather than effective cutting/turning of the furrow slice.",
       "isCustomUploaded": true,
-      "image_url": "/docx_images/mock_17_q16.png"
+      "image_url": "/docx_images/mock_17_q16.png",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q17",
       "year": "2027",
       "qnum": 17,
-      "section": "Farm Machinery",
-      "topic": "Farm Machinery",
+      "section": "Section 3: Farm Power",
+      "topic": "Farm Power",
       "subtopic": "Farm Machinery",
       "gate_section": "AG",
       "type": "MCQ",
@@ -390,15 +406,16 @@
         "D": "Pressing the crop stems between rollers"
       },
       "correct_answer": "A",
-      "solution": "Answer: A\nExplanation:\nA sickle-bar mower cuts by a shearing action: the reciprocating (back-and-forth moving) sickle section moves across stationary guards (ledger plates), trapping and shearing crop stems between the moving blade edge and the fixed guard edge.\nWhy others are wrong: (B) High-speed rotary impact cutting describes rotary mowers/disc mowers, a different cutting mechanism. (C) Suction is not part of the mowing/cutting mechanism at all. (D) Pressing between rollers describes a crushing/conditioning action (as in mower-conditioners), not the primary cutting action itself.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: A\nExplanation:\nA sickle-bar mower cuts by a shearing action: the reciprocating (back-and-forth moving) sickle section moves across stationary guards (ledger plates), trapping and shearing crop stems between the moving blade edge and the fixed guard edge.\nWhy others are wrong: (B) High-speed rotary impact cutting describes rotary mowers/disc mowers, a different cutting mechanism. (C) Suction is not part of the mowing/cutting mechanism at all. (D) Pressing between rollers describes a crushing/conditioning action (as in mower-conditioners), not the primary cutting action itself.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q18",
       "year": "2027",
       "qnum": 18,
-      "section": "Farm Machinery",
-      "topic": "Farm Machinery",
+      "section": "Section 2: Farm Machinery",
+      "topic": "Machine Design",
       "subtopic": "Farm Machinery",
       "gate_section": "AG",
       "type": "MCQ",
@@ -412,16 +429,17 @@
         "D": "Exactly 90°"
       },
       "correct_answer": "B",
-      "solution": "Answer: B\nExplanation:\nIn an open belt drive connecting unequal-diameter pulleys, the belt makes a smaller contact angle on the smaller pulley (less than 180°) and a correspondingly larger contact angle on the larger pulley (greater than 180°), because the belt must angle inward more sharply around the smaller pulley to reach the larger one.\nWhy others are wrong: (A) 180° would apply only if the two pulleys were of equal diameter. (C) Greater than 180° describes the wrap angle on the LARGER pulley, not the smaller one. (D) 90° has no general basis in belt-drive geometry for this configuration.",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: B\nExplanation:\nIn an open belt drive connecting unequal-diameter pulleys, the belt makes a smaller contact angle on the smaller pulley (less than 180°) and a correspondingly larger contact angle on the larger pulley (greater than 180°), because the belt must angle inward more sharply around the smaller pulley to reach the larger one.\nWhy others are wrong: (A) 180° would apply only if the two pulleys were of equal diameter. (C) Greater than 180° describes the wrap angle on the LARGER pulley, not the smaller one. (D) 90° has no general basis in belt-drive geometry for this configuration.",
       "isCustomUploaded": true,
-      "image_url": "/docx_images/mock_17_q18.png"
+      "image_url": "/docx_images/mock_17_q18.png",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q19",
       "year": "2027",
       "qnum": 19,
-      "section": "Farm Power",
-      "topic": "Farm Power",
+      "section": "Section 3: Farm Power",
+      "topic": "Sources of Power",
       "subtopic": "Farm Power",
       "gate_section": "AG",
       "type": "MCQ",
@@ -435,15 +453,16 @@
         "D": "400 W"
       },
       "correct_answer": "C",
-      "solution": "Answer: C\nExplanation:\nPower output = efficiency × irradiance × area = 0.18 × 1000 W/m² × 2 m² = 360 W.\nWhy others are wrong: (A) 200 W and (B) 280 W underestimate the output (e.g. using a lower efficiency or smaller area). (D) 400 W overestimates it (e.g. using a 20% efficiency instead of 18%).",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: C\nExplanation:\nPower output = efficiency × irradiance × area = 0.18 × 1000 W/m² × 2 m² = 360 W.\nWhy others are wrong: (A) 200 W and (B) 280 W underestimate the output (e.g. using a lower efficiency or smaller area). (D) 400 W overestimates it (e.g. using a 20% efficiency instead of 18%).",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q20",
       "year": "2027",
       "qnum": 20,
-      "section": "Farm Power",
-      "topic": "Farm Power",
+      "section": "Section 3: Farm Power",
+      "topic": "Tractors and Power Tillers",
       "subtopic": "Farm Power",
       "gate_section": "AG",
       "type": "MCQ",
@@ -457,14 +476,15 @@
         "D": "The vertical deflection of the tyre under load"
       },
       "correct_answer": "B",
-      "solution": "Answer: B\nExplanation:\nWheel slip is defined as the percentage shortfall between the actual distance travelled and the theoretical distance the wheel would cover (based on its rotational speed and rolling radius, assuming no slip), for the same number of wheel revolutions — this shortfall arises because some wheel rotation is \"wasted\" overcoming soil shear rather than producing forward travel.\nWhy others are wrong: (A) describes a speed ratio, not the standard percentage-shortfall definition of slip. (C) describes wheel toe angle or crab angle, an unrelated steering/alignment concept. (D) describes tyre deflection, a structural/loading concept unrelated to slip.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: B\nExplanation:\nWheel slip is defined as the percentage shortfall between the actual distance travelled and the theoretical distance the wheel would cover (based on its rotational speed and rolling radius, assuming no slip), for the same number of wheel revolutions — this shortfall arises because some wheel rotation is \"wasted\" overcoming soil shear rather than producing forward travel.\nWhy others are wrong: (A) describes a speed ratio, not the standard percentage-shortfall definition of slip. (C) describes wheel toe angle or crab angle, an unrelated steering/alignment concept. (D) describes tyre deflection, a structural/loading concept unrelated to slip.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q21",
       "year": "2027",
       "qnum": 21,
-      "section": "Farm Power",
+      "section": "Section 3: Farm Power",
       "topic": "Farm Power",
       "subtopic": "Farm Power",
       "gate_section": "AG",
@@ -474,14 +494,15 @@
       "question": "An engine has 4 cylinders, each with a bore of 90 mm and a stroke of 100 mm. Calculate the total swept volume of the engine (in litres). (Round off to two decimal places.)",
       "options": null,
       "correct_answer": "2.45 to 2.65",
-      "solution": "Answer: 2.45 to 2.65\nExplanation:\nSwept volume of one cylinder = (π/4)d²L = (π/4)(0.09)²(0.10) = 0.7854 × 0.0081 × 0.10 = 0.0006362 m³ = 0.6362 L. Total swept volume for 4 cylinders = 4 × 0.6362 = 2.545 L.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 2.45 to 2.65\nExplanation:\nSwept volume of one cylinder = (π/4)d²L = (π/4)(0.09)²(0.10) = 0.7854 × 0.0081 × 0.10 = 0.0006362 m³ = 0.6362 L. Total swept volume for 4 cylinders = 4 × 0.6362 = 2.545 L.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q22",
       "year": "2027",
       "qnum": 22,
-      "section": "Farm Power",
+      "section": "Section 3: Farm Power",
       "topic": "Farm Power",
       "subtopic": "Farm Power",
       "gate_section": "AG",
@@ -491,15 +512,16 @@
       "question": "As per standard ergonomic/occupational lighting guidelines, the recommended minimum illumination level (in lux) for general farm workshop tasks (e.g. routine machinery maintenance) is approximately ___ lux.",
       "options": null,
       "correct_answer": "280 to 320",
-      "solution": "Answer: 280 to 320\nExplanation:\nStandard occupational lighting guidance for general workshop maintenance tasks recommends a minimum illumination level of approximately 300 lux, sufficient for routine visual tasks without excessive eye strain.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 280 to 320\nExplanation:\nStandard occupational lighting guidance for general workshop maintenance tasks recommends a minimum illumination level of approximately 300 lux, sufficient for routine visual tasks without excessive eye strain.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q23",
       "year": "2027",
       "qnum": 23,
-      "section": "Soil and Water Conservation Engineering",
-      "topic": "S4",
+      "section": "Section 4: Soil and Water Conservation Engineering",
+      "topic": "Watershed Management",
       "subtopic": "Soil & Water Conservation Engineering",
       "gate_section": "AG",
       "type": "MCQ",
@@ -513,15 +535,16 @@
         "D": "The relationship between infiltration and evaporation only"
       },
       "correct_answer": "B",
-      "solution": "Answer: B\nExplanation:\nHorton's equation, f = fc + (f0−fc)e^(−kt), models infiltration capacity as decaying exponentially from an initial rate f0 (typically high, at the onset of a storm on relatively dry soil) towards a final, essentially constant rate fc (as the soil becomes progressively saturated), with k being the decay constant.\nWhy others are wrong: (A) describes a fundamentally different, non-decaying (constant-rate) model, not Horton's equation. (C) describes only the cumulative infiltration volume, a related but distinct quantity from the infiltration rate, which is what Horton's equation directly models. (D) is unrelated — Horton's equation involves only infiltration rate and time, with no explicit evaporation term.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: B\nExplanation:\nHorton's equation, f = fc + (f0−fc)e^(−kt), models infiltration capacity as decaying exponentially from an initial rate f0 (typically high, at the onset of a storm on relatively dry soil) towards a final, essentially constant rate fc (as the soil becomes progressively saturated), with k being the decay constant.\nWhy others are wrong: (A) describes a fundamentally different, non-decaying (constant-rate) model, not Horton's equation. (C) describes only the cumulative infiltration volume, a related but distinct quantity from the infiltration rate, which is what Horton's equation directly models. (D) is unrelated — Horton's equation involves only infiltration rate and time, with no explicit evaporation term.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q24",
       "year": "2027",
       "qnum": 24,
-      "section": "Soil and Water Conservation Engineering",
-      "topic": "S4",
+      "section": "Section 4: Soil and Water Conservation Engineering",
+      "topic": "Watershed Management",
       "subtopic": "Soil & Water Conservation Engineering",
       "gate_section": "AG",
       "type": "MCQ",
@@ -535,15 +558,16 @@
         "D": "Sphere"
       },
       "correct_answer": "B",
-      "solution": "Answer: B\nExplanation:\nFor rigid-body rotation, the free surface adopts a shape where the pressure is constant (atmospheric), and analysis of the radial and vertical pressure variation under centrifugal and gravitational effects shows that this surface is a paraboloid of revolution, with the surface elevation increasing as the square of the radial distance from the axis.\nWhy others are wrong: (A) A flat plane would apply only to a fluid at rest (no rotation). (C) A cone would imply a linear (not quadratic) relationship between elevation and radius, which does not match the governing pressure-balance equations. (D) A sphere is not the shape predicted by the balance of centrifugal and gravitational forces on the free surface.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: B\nExplanation:\nFor rigid-body rotation, the free surface adopts a shape where the pressure is constant (atmospheric), and analysis of the radial and vertical pressure variation under centrifugal and gravitational effects shows that this surface is a paraboloid of revolution, with the surface elevation increasing as the square of the radial distance from the axis.\nWhy others are wrong: (A) A flat plane would apply only to a fluid at rest (no rotation). (C) A cone would imply a linear (not quadratic) relationship between elevation and radius, which does not match the governing pressure-balance equations. (D) A sphere is not the shape predicted by the balance of centrifugal and gravitational forces on the free surface.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q25",
       "year": "2027",
       "qnum": 25,
-      "section": "Soil and Water Conservation Engineering",
-      "topic": "S4",
+      "section": "Section 4: Soil and Water Conservation Engineering",
+      "topic": "Soil and Water Erosion",
       "subtopic": "Soil & Water Conservation Engineering",
       "gate_section": "AG",
       "type": "NAT",
@@ -552,15 +576,16 @@
       "question": "Using the Universal Soil Loss Equation A = R·K·LS·C·P, with R = 200, K = 0.35, LS = 1.2, C = 0.30 and P = 1.0, calculate the estimated annual soil loss A (in t/ha/yr). (Round off to two decimal places.)",
       "options": null,
       "correct_answer": "24.50 to 26.00",
-      "solution": "Answer: 24.50 to 26.00\nExplanation:\nA = R×K×LS×C×P = 200 × 0.35 × 1.2 × 0.30 × 1.0. Step by step: 200×0.35=70; 70×1.2=84; 84×0.30=25.20.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 24.50 to 26.00\nExplanation:\nA = R×K×LS×C×P = 200 × 0.35 × 1.2 × 0.30 × 1.0. Step by step: 200×0.35=70; 70×1.2=84; 84×0.30=25.20.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q26",
       "year": "2027",
       "qnum": 26,
-      "section": "Soil and Water Conservation Engineering",
-      "topic": "S4",
+      "section": "Section 4: Soil and Water Conservation Engineering",
+      "topic": "Soil Mechanics",
       "subtopic": "Soil & Water Conservation Engineering",
       "gate_section": "AG",
       "type": "NAT",
@@ -569,15 +594,16 @@
       "question": "A soil sample has a dry unit weight of 16 kN/m³ and a specific gravity of solids Gs = 2.68. Taking the unit weight of water as 9.81 kN/m³, calculate the void ratio of the soil. (Round off to two decimal places.)",
       "options": null,
       "correct_answer": "0.60 to 0.68",
-      "solution": "Answer: 0.60 to 0.68\nExplanation:\nDry unit weight, γd = Gs·γw/(1+e). So 16 = (2.68 × 9.81)/(1+e) = 26.29/(1+e), giving (1+e) = 26.29/16 = 1.643, so e = 0.643.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 0.60 to 0.68\nExplanation:\nDry unit weight, γd = Gs·γw/(1+e). So 16 = (2.68 × 9.81)/(1+e) = 26.29/(1+e), giving (1+e) = 26.29/16 = 1.643, so e = 0.643.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q27",
       "year": "2027",
       "qnum": 27,
-      "section": "Agricultural Process Engineering",
-      "topic": "S5",
+      "section": "Section 6: Agricultural Process Engineering",
+      "topic": "Storage Systems",
       "subtopic": "Irrigation & Drainage Engineering",
       "gate_section": "AG",
       "type": "MCQ",
@@ -591,15 +617,16 @@
         "D": "10 to 50"
       },
       "correct_answer": "B",
-      "solution": "Answer: B\nExplanation:\nConfined aquifers release water primarily through the elastic compressibility of the aquifer skeleton and the slight compressibility of water itself, resulting in a storage coefficient that is very small, typically in the range of about 0.00005 to 0.005 — orders of magnitude smaller than the specific yield of an unconfined aquifer.\nWhy others are wrong: (A) 0.05 to 0.30 is more representative of the specific yield of an UNCONFINED aquifer (governed by gravity drainage of pores), not the storage coefficient of a confined aquifer. (C) and (D) are far too large to be physically meaningful storage coefficients for any real aquifer, confined or otherwise.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: B\nExplanation:\nConfined aquifers release water primarily through the elastic compressibility of the aquifer skeleton and the slight compressibility of water itself, resulting in a storage coefficient that is very small, typically in the range of about 0.00005 to 0.005 — orders of magnitude smaller than the specific yield of an unconfined aquifer.\nWhy others are wrong: (A) 0.05 to 0.30 is more representative of the specific yield of an UNCONFINED aquifer (governed by gravity drainage of pores), not the storage coefficient of a confined aquifer. (C) and (D) are far too large to be physically meaningful storage coefficients for any real aquifer, confined or otherwise.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q28",
       "year": "2027",
       "qnum": 28,
-      "section": "Agricultural Process Engineering",
-      "topic": "S5",
+      "section": "Section 6: Agricultural Process Engineering",
+      "topic": "Processing of Agriculture Produce",
       "subtopic": "Irrigation & Drainage Engineering",
       "gate_section": "AG",
       "type": "NAT",
@@ -608,15 +635,16 @@
       "question": "A crop's total available water in the root zone is 120 mm. If irrigation is scheduled when 50% of the available water has been depleted, and the average daily crop evapotranspiration is 5 mm/day, calculate the irrigation interval (in days). (Round off to two decimal places.)",
       "options": null,
       "correct_answer": "11.50 to 12.50",
-      "solution": "Answer: 11.50 to 12.50\nExplanation:\nAllowable depletion = 50% × 120 mm = 60 mm. Irrigation interval = allowable depletion / daily ET = 60/5 = 12.00 days.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 11.50 to 12.50\nExplanation:\nAllowable depletion = 50% × 120 mm = 60 mm. Irrigation interval = allowable depletion / daily ET = 60/5 = 12.00 days.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q29",
       "year": "2027",
       "qnum": 29,
-      "section": "Agricultural Process Engineering",
-      "topic": "S6",
+      "section": "Section 6: Agricultural Process Engineering",
+      "topic": "Evaporation and Drying",
       "subtopic": "Agricultural Process Engineering",
       "gate_section": "AG",
       "type": "MCQ",
@@ -630,15 +658,16 @@
         "D": "The grain reaches its maximum safe storage limit"
       },
       "correct_answer": "B",
-      "solution": "Answer: B\nExplanation:\nThe equilibrium moisture content is the specific moisture content a hygroscopic material (like grain) eventually attains when exposed indefinitely to air at a given constant temperature and relative humidity, at which point there is no net moisture exchange between the grain and the surrounding air.\nWhy others are wrong: (A) Zero moisture is an extreme, not generally the equilibrium value under real ambient conditions. (C) Critical moisture content is a distinct drying-curve concept (constant-rate to falling-rate transition), not related to air-equilibrium. (D) Safe storage moisture content is a storage-stability criterion, a different concept from the air-equilibrium condition defining EMC.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: B\nExplanation:\nThe equilibrium moisture content is the specific moisture content a hygroscopic material (like grain) eventually attains when exposed indefinitely to air at a given constant temperature and relative humidity, at which point there is no net moisture exchange between the grain and the surrounding air.\nWhy others are wrong: (A) Zero moisture is an extreme, not generally the equilibrium value under real ambient conditions. (C) Critical moisture content is a distinct drying-curve concept (constant-rate to falling-rate transition), not related to air-equilibrium. (D) Safe storage moisture content is a storage-stability criterion, a different concept from the air-equilibrium condition defining EMC.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q30",
       "year": "2027",
       "qnum": 30,
-      "section": "Agricultural Process Engineering",
-      "topic": "S6",
+      "section": "Section 6: Agricultural Process Engineering",
+      "topic": "Processing of Agriculture Produce",
       "subtopic": "Agricultural Process Engineering",
       "gate_section": "AG",
       "type": "MCQ",
@@ -652,15 +681,16 @@
         "D": "Centrifugal separation"
       },
       "correct_answer": "B",
-      "solution": "Answer: B\nExplanation:\nExpeller (screw) pressing uses a continuously rotating screw (worm shaft) within a barrel to progressively compress oilseed material, squeezing out oil under continuously increasing pressure as the seed cake is conveyed along the screw.\nWhy others are wrong: (A) Solvent extraction uses a chemical solvent (e.g. hexane) to dissolve out the oil, not mechanical pressing. (C) Hydraulic (batch) pressing uses static hydraulic pressure applied in discrete batches, not continuous screw rotation. (D) Centrifugal separation separates substances (e.g. cream from milk, or oil from water) by density difference under centrifugal force, not by pressing oilseeds.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: B\nExplanation:\nExpeller (screw) pressing uses a continuously rotating screw (worm shaft) within a barrel to progressively compress oilseed material, squeezing out oil under continuously increasing pressure as the seed cake is conveyed along the screw.\nWhy others are wrong: (A) Solvent extraction uses a chemical solvent (e.g. hexane) to dissolve out the oil, not mechanical pressing. (C) Hydraulic (batch) pressing uses static hydraulic pressure applied in discrete batches, not continuous screw rotation. (D) Centrifugal separation separates substances (e.g. cream from milk, or oil from water) by density difference under centrifugal force, not by pressing oilseeds.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q31",
       "year": "2027",
       "qnum": 31,
-      "section": "Agricultural Process Engineering",
-      "topic": "S6",
+      "section": "Section 6: Agricultural Process Engineering",
+      "topic": "Engineering Properties of Agriculture Produce",
       "subtopic": "Agricultural Process Engineering",
       "gate_section": "AG",
       "type": "NAT",
@@ -669,15 +699,16 @@
       "question": "The angle of repose of a granular agricultural material is found to be 32°. If the material is heaped (in a cone) on a circular base of diameter 4 m, calculate the height of the resulting conical heap (in m). (Round off to two decimal places.)",
       "options": null,
       "correct_answer": "1.15 to 1.35",
-      "solution": "Answer: 1.15 to 1.35\nExplanation:\nFor a conical heap, tan(angle of repose) = height/radius. Radius = 4/2 = 2 m. Height = radius × tan(32°) = 2 × 0.6249 = 1.25 m.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 1.15 to 1.35\nExplanation:\nFor a conical heap, tan(angle of repose) = height/radius. Radius = 4/2 = 2 m. Height = radius × tan(32°) = 2 × 0.6249 = 1.25 m.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q32",
       "year": "2027",
       "qnum": 32,
-      "section": "Agricultural Process Engineering",
-      "topic": "S6",
+      "section": "Section 6: Agricultural Process Engineering",
+      "topic": "Storage Systems",
       "subtopic": "Agricultural Process Engineering",
       "gate_section": "AG",
       "type": "NAT",
@@ -686,15 +717,16 @@
       "question": "A hopper-bottom storage bin has a cylindrical section of diameter 3 m and height 5 m, plus a conical hopper section (same base diameter, height 1.2 m) below it. Calculate the total storage volume (in m³). (Round off to two decimal places.)",
       "options": null,
       "correct_answer": "37.50 to 38.80",
-      "solution": "Answer: 37.50 to 38.80\nExplanation:\nCylinder volume = (π/4)d²h = (π/4)(3)²(5) = 0.7854×9×5 = 35.343 m³. Cone volume = (1/3)(π/4)d²h = (1/3)(0.7854)(9)(1.2) = (1/3)(8.482) = 2.827 m³. Total volume = 35.343 + 2.827 = 38.17 m³.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 37.50 to 38.80\nExplanation:\nCylinder volume = (π/4)d²h = (π/4)(3)²(5) = 0.7854×9×5 = 35.343 m³. Cone volume = (1/3)(π/4)d²h = (1/3)(0.7854)(9)(1.2) = (1/3)(8.482) = 2.827 m³. Total volume = 35.343 + 2.827 = 38.17 m³.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q33",
       "year": "2027",
       "qnum": 33,
-      "section": "Agricultural Process Engineering",
-      "topic": "S6",
+      "section": "Section 6: Agricultural Process Engineering",
+      "topic": "Processing of Agriculture Produce",
       "subtopic": "Agricultural Process Engineering",
       "gate_section": "AG",
       "type": "NAT",
@@ -703,15 +735,16 @@
       "question": "200 kg of tapioca chips at 65% moisture content (wet basis) is dried to 12% moisture content (wet basis). Calculate the mass of water removed (in kg). (Round off to two decimal places.)",
       "options": null,
       "correct_answer": "118.50 to 122.00",
-      "solution": "Answer: 118.50 to 122.00\nExplanation:\nMass of dry matter (unchanged during drying) = 200 × (1−0.65) = 70 kg. Final total mass at 12% m.c.: dry matter is 88% of final mass, so final mass = 70/0.88 = 79.545 kg. Water removed = initial mass − final mass = 200 − 79.545 = 120.45 kg.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 118.50 to 122.00\nExplanation:\nMass of dry matter (unchanged during drying) = 200 × (1−0.65) = 70 kg. Final total mass at 12% m.c.: dry matter is 88% of final mass, so final mass = 70/0.88 = 79.545 kg. Water removed = initial mass − final mass = 200 − 79.545 = 120.45 kg.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q34",
       "year": "2027",
       "qnum": 34,
-      "section": "Agricultural Process Engineering",
-      "topic": "S7",
+      "section": "Section 6: Agricultural Process Engineering",
+      "topic": "Processing of Agriculture Produce",
       "subtopic": "Dairy & Food Engineering",
       "gate_section": "AG",
       "type": "MCQ",
@@ -725,15 +758,16 @@
         "D": "UHT processing"
       },
       "correct_answer": "C",
-      "solution": "Answer: C\nExplanation:\nSalting (or curing) draws water out of food via osmosis and binds remaining water, thereby lowering water activity below the threshold needed for microbial growth — this is fundamentally a water-activity-based preservation mechanism, not a thermal one.\nWhy others are wrong: (A) Pasteurization, (B) Sterilization and (D) UHT processing are all fundamentally heat-based preservation methods, relying on thermal inactivation of microorganisms rather than a reduction in water activity.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: C\nExplanation:\nSalting (or curing) draws water out of food via osmosis and binds remaining water, thereby lowering water activity below the threshold needed for microbial growth — this is fundamentally a water-activity-based preservation mechanism, not a thermal one.\nWhy others are wrong: (A) Pasteurization, (B) Sterilization and (D) UHT processing are all fundamentally heat-based preservation methods, relying on thermal inactivation of microorganisms rather than a reduction in water activity.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q35",
       "year": "2027",
       "qnum": 35,
-      "section": "Agricultural Process Engineering",
-      "topic": "S7",
+      "section": "Section 6: Agricultural Process Engineering",
+      "topic": "Processing of Agriculture Produce",
       "subtopic": "Dairy & Food Engineering",
       "gate_section": "AG",
       "type": "NAT",
@@ -742,15 +776,16 @@
       "question": "In a plate heat exchanger, the overall heat transfer coefficient is 2500 W/(m²·K), the heat transfer area is 4 m², and the effective mean temperature difference is 12°C. Calculate the rate of heat transfer (in kW). (Round off to two decimal places.)",
       "options": null,
       "correct_answer": "118.00 to 122.00",
-      "solution": "Answer: 118.00 to 122.00\nExplanation:\nRate of heat transfer, Q = U × A × ΔT = 2500 W/(m²·K) × 4 m² × 12 K = 1,20,000 W = 120.00 kW.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 118.00 to 122.00\nExplanation:\nRate of heat transfer, Q = U × A × ΔT = 2500 W/(m²·K) × 4 m² × 12 K = 1,20,000 W = 120.00 kW.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q36",
       "year": "2027",
       "qnum": 36,
-      "section": "Engineering Mathematics",
-      "topic": "S1",
+      "section": "Section 1: Engineering Mathematics",
+      "topic": "Calculus",
       "subtopic": "Engineering Mathematics",
       "gate_section": "AG",
       "type": "MCQ",
@@ -764,16 +799,17 @@
         "D": "12"
       },
       "correct_answer": "C",
-      "solution": "Answer: C\nExplanation:\n∫(4x−x²)dx = 2x² − x³/3 + C. Evaluating from 0 to 4: [2(4)² − (4)³/3] − [0] = [32 − 64/3] = [96/3 − 64/3] = 32/3 = 10.67.\nWhy others are wrong: (A) 8 and (D) 12 do not match the correct antiderivative evaluation. (B) 9.33 (=28/3) would result from a small arithmetic slip in combining the two terms of the antiderivative.",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: C\nExplanation:\n∫(4x−x²)dx = 2x² − x³/3 + C. Evaluating from 0 to 4: [2(4)² − (4)³/3] − [0] = [32 − 64/3] = [96/3 − 64/3] = 32/3 = 10.67.\nWhy others are wrong: (A) 8 and (D) 12 do not match the correct antiderivative evaluation. (B) 9.33 (=28/3) would result from a small arithmetic slip in combining the two terms of the antiderivative.",
       "isCustomUploaded": true,
-      "image_url": "/docx_images/mock_17_q36.png"
+      "image_url": "/docx_images/mock_17_q36.png",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q37",
       "year": "2027",
       "qnum": 37,
-      "section": "Engineering Mathematics",
-      "topic": "S1",
+      "section": "Section 1: Engineering Mathematics",
+      "topic": "Calculus",
       "subtopic": "Engineering Mathematics",
       "gate_section": "AG",
       "type": "NAT",
@@ -782,15 +818,16 @@
       "question": "Evaluate: ∫₀¹ [x²/(1+x³)] dx. (Round off to two decimal places.)",
       "options": null,
       "correct_answer": "0.20 to 0.25",
-      "solution": "Answer: 0.20 to 0.25\nExplanation:\nSubstitute u = 1+x³, so du = 3x²dx, i.e. x²dx = du/3. When x=0, u=1; when x=1, u=2. The integral becomes (1/3)∫₁² du/u = (1/3)[ln u]₁² = (1/3)(ln2 − ln1) = (1/3)(0.6931) = 0.231 ≈ 0.23.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 0.20 to 0.25\nExplanation:\nSubstitute u = 1+x³, so du = 3x²dx, i.e. x²dx = du/3. When x=0, u=1; when x=1, u=2. The integral becomes (1/3)∫₁² du/u = (1/3)[ln u]₁² = (1/3)(ln2 − ln1) = (1/3)(0.6931) = 0.231 ≈ 0.23.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q38",
       "year": "2027",
       "qnum": 38,
-      "section": "Engineering Mathematics",
-      "topic": "S1",
+      "section": "Section 1: Engineering Mathematics",
+      "topic": "Linear Algebra",
       "subtopic": "Engineering Mathematics",
       "gate_section": "AG",
       "type": "NAT",
@@ -799,15 +836,16 @@
       "question": "For the matrix A = [[5, 3], [1, 3]], find the LARGER of its two eigenvalues.",
       "options": null,
       "correct_answer": "5.80 to 6.20",
-      "solution": "Answer: 5.80 to 6.20\nExplanation:\nCharacteristic equation: (5−λ)(3−λ) − (3)(1) = 0 → 15 −5λ −3λ +λ² − 3 = 0 → λ² − 8λ + 12 = 0 → (λ−6)(λ−2) = 0. Eigenvalues are 6 and 2; the larger is 6.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 5.80 to 6.20\nExplanation:\nCharacteristic equation: (5−λ)(3−λ) − (3)(1) = 0 → 15 −5λ −3λ +λ² − 3 = 0 → λ² − 8λ + 12 = 0 → (λ−6)(λ−2) = 0. Eigenvalues are 6 and 2; the larger is 6.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q39",
       "year": "2027",
       "qnum": 39,
-      "section": "Engineering Mathematics",
-      "topic": "S1",
+      "section": "Section 1: Engineering Mathematics",
+      "topic": "Probability and Statistics",
       "subtopic": "Engineering Mathematics",
       "gate_section": "AG",
       "type": "NAT",
@@ -816,15 +854,16 @@
       "question": "The heights (cm) of 6 wheat plants are: 82, 85, 88, 90, 92, 95. Calculate the coefficient of variation (%), using the sample standard deviation (n−1 divisor). (Round off to two decimal places.)",
       "options": null,
       "correct_answer": "5.00 to 5.60",
-      "solution": "Answer: 5.00 to 5.60\nExplanation:\nMean = (82+85+88+90+92+95)/6 = 532/6 = 88.667. Deviations: −6.667, −3.667, −0.667, 1.333, 3.333, 6.333. Squared deviations sum ≈ 111.33. Sample variance = 111.33/5 = 22.267. Sample SD = √22.267 = 4.718. Coefficient of variation = (SD/mean) × 100 = (4.718/88.667) × 100 = 5.32%.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 5.00 to 5.60\nExplanation:\nMean = (82+85+88+90+92+95)/6 = 532/6 = 88.667. Deviations: −6.667, −3.667, −0.667, 1.333, 3.333, 6.333. Squared deviations sum ≈ 111.33. Sample variance = 111.33/5 = 22.267. Sample SD = √22.267 = 4.718. Coefficient of variation = (SD/mean) × 100 = (4.718/88.667) × 100 = 5.32%.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q40",
       "year": "2027",
       "qnum": 40,
-      "section": "Farm Machinery",
-      "topic": "Farm Machinery",
+      "section": "Section 3: Farm Power",
+      "topic": "Farm Power",
       "subtopic": "Farm Machinery",
       "gate_section": "AG",
       "type": "NAT",
@@ -833,15 +872,16 @@
       "question": "A rotary tiller has 6 blades per flange, operates at a forward speed of 0.6 m/s and a rotor speed of 200 rpm. Calculate the pitch (distance travelled per blade strike) in mm. [Pitch = forward speed / (rotor speed in rev/s × number of blades per flange)] (Round off to two decimal places.)",
       "options": null,
       "correct_answer": "28.00 to 32.00",
-      "solution": "Answer: 28.00 to 32.00\nExplanation:\nRotor speed = 200 rpm = 200/60 = 3.333 rev/s. Total blade strikes per second = 3.333 × 6 = 20 strikes/s. Pitch = forward speed / strikes per second = 0.6 m/s / 20 = 0.03 m = 30.00 mm.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 28.00 to 32.00\nExplanation:\nRotor speed = 200 rpm = 200/60 = 3.333 rev/s. Total blade strikes per second = 3.333 × 6 = 20 strikes/s. Pitch = forward speed / strikes per second = 0.6 m/s / 20 = 0.03 m = 30.00 mm.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q41",
       "year": "2027",
       "qnum": 41,
-      "section": "Farm Machinery",
-      "topic": "Farm Machinery",
+      "section": "Section 3: Farm Power",
+      "topic": "Farm Power",
       "subtopic": "Farm Machinery",
       "gate_section": "AG",
       "type": "NAT",
@@ -850,14 +890,15 @@
       "question": "A forage harvester cuts a swath width of 1.8 m at a forward speed of 6 km/h, handling a crop with a yield of 40 t/ha (fresh weight). Calculate the fresh forage throughput rate (in t/h). (Round off to two decimal places.)",
       "options": null,
       "correct_answer": "42.00 to 44.50",
-      "solution": "Answer: 42.00 to 44.50\nExplanation:\nForward speed = 6 km/h = 6000 m/h. Area covered per hour = speed × width = 6000 × 1.8 = 10,800 m²/h = 1.08 ha/h. Throughput rate = area rate × yield = 1.08 × 40 = 43.20 t/h.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 42.00 to 44.50\nExplanation:\nForward speed = 6 km/h = 6000 m/h. Area covered per hour = speed × width = 6000 × 1.8 = 10,800 m²/h = 1.08 ha/h. Throughput rate = area rate × yield = 1.08 × 40 = 43.20 t/h.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q42",
       "year": "2027",
       "qnum": 42,
-      "section": "Farm Machinery",
+      "section": "Section 2: Farm Machinery",
       "topic": "Farm Machinery",
       "subtopic": "Farm Machinery",
       "gate_section": "AG",
@@ -867,14 +908,15 @@
       "question": "An aerial spraying aircraft covers a swath width of 18 m at a flying speed of 160 km/h, applying a spray volume rate of 12 L/ha. Calculate the required nozzle discharge flow rate for the aircraft (in L/min). (Round off to two decimal places.)",
       "options": null,
       "correct_answer": "56.00 to 59.50",
-      "solution": "Answer: 56.00 to 59.50\nExplanation:\nFlying speed = 160 km/h = 1,60,000 m/h = 2666.67 m/min. Area covered per minute = 2666.67 × 18 = 48,000 m²/min = 4.8 ha/min. Required flow rate = area rate × application rate = 4.8 ha/min × 12 L/ha = 57.60 L/min.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 56.00 to 59.50\nExplanation:\nFlying speed = 160 km/h = 1,60,000 m/h = 2666.67 m/min. Area covered per minute = 2666.67 × 18 = 48,000 m²/min = 4.8 ha/min. Required flow rate = area rate × application rate = 4.8 ha/min × 12 L/ha = 57.60 L/min.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q43",
       "year": "2027",
       "qnum": 43,
-      "section": "Farm Machinery",
+      "section": "Section 2: Farm Machinery",
       "topic": "Farm Machinery",
       "subtopic": "Farm Machinery",
       "gate_section": "AG",
@@ -884,15 +926,16 @@
       "question": "A tractor costs Rs 9,00,000, has a useful life of 10,000 hours, and a salvage value equal to 12% of its cost. Using straight-line depreciation, calculate the depreciation cost per hour of operation (in Rs). (Round off to two decimal places.)",
       "options": null,
       "correct_answer": "77.00 to 81.50",
-      "solution": "Answer: 77.00 to 81.50\nExplanation:\nSalvage value = 12% × 9,00,000 = Rs 1,08,000. Total depreciable amount = 9,00,000 − 1,08,000 = Rs 7,92,000. Depreciation cost per hour = 7,92,000/10,000 = Rs 79.20/hour.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 77.00 to 81.50\nExplanation:\nSalvage value = 12% × 9,00,000 = Rs 1,08,000. Total depreciable amount = 9,00,000 − 1,08,000 = Rs 7,92,000. Depreciation cost per hour = 7,92,000/10,000 = Rs 79.20/hour.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q44",
       "year": "2027",
       "qnum": 44,
-      "section": "Farm Power",
-      "topic": "Farm Power",
+      "section": "Section 3: Farm Power",
+      "topic": "Tractors and Power Tillers",
       "subtopic": "Farm Power",
       "gate_section": "AG",
       "type": "MCQ",
@@ -906,16 +949,17 @@
         "D": "Is completely independent of the amount of wheel slip"
       },
       "correct_answer": "C",
-      "solution": "Answer: C\nExplanation:\nAs shown in the graph, tractive effort rises with slip up to an optimum range (where the curve peaks), but beyond that range, further slip causes the tractive effort (and hence tractive efficiency, since more wheel rotation is being \"wasted\" without corresponding gain in pull) to decline, as the curve's downward trend past the peak illustrates.\nWhy others are wrong: (A) contradicts the graph, which clearly shows a decline after the peak, not indefinite increase. (B) and (D) both ignore the graph's clear dependence of tractive effort on slip, which rises and then falls rather than staying constant or being unrelated.",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: C\nExplanation:\nAs shown in the graph, tractive effort rises with slip up to an optimum range (where the curve peaks), but beyond that range, further slip causes the tractive effort (and hence tractive efficiency, since more wheel rotation is being \"wasted\" without corresponding gain in pull) to decline, as the curve's downward trend past the peak illustrates.\nWhy others are wrong: (A) contradicts the graph, which clearly shows a decline after the peak, not indefinite increase. (B) and (D) both ignore the graph's clear dependence of tractive effort on slip, which rises and then falls rather than staying constant or being unrelated.",
       "isCustomUploaded": true,
-      "image_url": "/docx_images/mock_17_q44.png"
+      "image_url": "/docx_images/mock_17_q44.png",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q45",
       "year": "2027",
       "qnum": 45,
-      "section": "Farm Power",
-      "topic": "Farm Power",
+      "section": "Section 3: Farm Power",
+      "topic": "Sources of Power",
       "subtopic": "Farm Power",
       "gate_section": "AG",
       "type": "NAT",
@@ -924,15 +968,16 @@
       "question": "A biomass-gasifier-based dual-fuel genset uses producer gas with a methane content of 65% and a calorific value of methane of 35.5 MJ/m³. The genset consumes gas at 0.5 m³/min, and the overall gas-to-electrical conversion efficiency is 25%. Estimate the electrical power output (in kW). (Round off to two decimal places.)",
       "options": null,
       "correct_answer": "46.50 to 49.50",
-      "solution": "Answer: 46.50 to 49.50\nExplanation:\nCalorific value of the producer gas ≈ 0.65 × 35.5 = 23.075 MJ/m³ (assuming the non-methane fraction contributes negligibly). Thermal energy input rate = 0.5 m³/min × 23.075 MJ/m³ = 11.5375 MJ/min = 11,537.5 kJ / 60 s = 192.29 kW (thermal). Electrical power output = 192.29 × 0.25 = 48.07 kW.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 46.50 to 49.50\nExplanation:\nCalorific value of the producer gas ≈ 0.65 × 35.5 = 23.075 MJ/m³ (assuming the non-methane fraction contributes negligibly). Thermal energy input rate = 0.5 m³/min × 23.075 MJ/m³ = 11.5375 MJ/min = 11,537.5 kJ / 60 s = 192.29 kW (thermal). Electrical power output = 192.29 × 0.25 = 48.07 kW.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q46",
       "year": "2027",
       "qnum": 46,
-      "section": "Farm Power",
-      "topic": "Farm Power",
+      "section": "Section 3: Farm Power",
+      "topic": "Tractors and Power Tillers",
       "subtopic": "Farm Power",
       "gate_section": "AG",
       "type": "NAT",
@@ -941,15 +986,16 @@
       "question": "A tractor's theoretical (no-slip) forward speed, based on wheel rpm and rolling radius, is 8 km/h. Under load, the actual measured forward speed is 7.2 km/h. Calculate the wheel slip (in %). (Round off to two decimal places.)",
       "options": null,
       "correct_answer": "9.50 to 10.50",
-      "solution": "Answer: 9.50 to 10.50\nExplanation:\nWheel slip (%) = [(theoretical speed − actual speed)/theoretical speed] × 100 = [(8 − 7.2)/8] × 100 = (0.8/8) × 100 = 10.00%.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 9.50 to 10.50\nExplanation:\nWheel slip (%) = [(theoretical speed − actual speed)/theoretical speed] × 100 = [(8 − 7.2)/8] × 100 = (0.8/8) × 100 = 10.00%.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q47",
       "year": "2027",
       "qnum": 47,
-      "section": "Farm Power",
-      "topic": "Farm Power",
+      "section": "Section 3: Farm Power",
+      "topic": "Tractors and Power Tillers",
       "subtopic": "Farm Power",
       "gate_section": "AG",
       "type": "NAT",
@@ -958,15 +1004,16 @@
       "question": "A tractor's differential distributes 40 kW total power equally between its two rear wheels when travelling straight (20 kW per wheel). One wheel experiences a 20% useful-power loss due to slip, while the other experiences only a 5% loss. Calculate the total power effectively converted to useful tractive work at the two wheels combined (in kW). [Useful power per wheel = power delivered × (1 − slip loss fraction)] (Round off to two decimal places.)",
       "options": null,
       "correct_answer": "34.00 to 36.00",
-      "solution": "Answer: 34.00 to 36.00\nExplanation:\nWheel 1 (20% loss): useful power = 20 × (1 − 0.20) = 16 kW. Wheel 2 (5% loss): useful power = 20 × (1 − 0.05) = 19 kW. Total useful tractive power = 16 + 19 = 35.00 kW.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 34.00 to 36.00\nExplanation:\nWheel 1 (20% loss): useful power = 20 × (1 − 0.20) = 16 kW. Wheel 2 (5% loss): useful power = 20 × (1 − 0.05) = 19 kW. Total useful tractive power = 16 + 19 = 35.00 kW.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q48",
       "year": "2027",
       "qnum": 48,
-      "section": "Farm Power",
-      "topic": "Farm Power",
+      "section": "Section 3: Farm Power",
+      "topic": "Tractors and Power Tillers",
       "subtopic": "Farm Power",
       "gate_section": "AG",
       "type": "NAT",
@@ -975,15 +1022,16 @@
       "question": "A diesel engine has a mechanical efficiency of 85% and an indicated thermal efficiency of 42%. Calculate the brake thermal efficiency (in %). (Round off to two decimal places.)",
       "options": null,
       "correct_answer": "35.00 to 36.50",
-      "solution": "Answer: 35.00 to 36.50\nExplanation:\nBrake thermal efficiency = Indicated thermal efficiency × Mechanical efficiency = 0.42 × 0.85 = 0.357 = 35.70%.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 35.00 to 36.50\nExplanation:\nBrake thermal efficiency = Indicated thermal efficiency × Mechanical efficiency = 0.42 × 0.85 = 0.357 = 35.70%.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q49",
       "year": "2027",
       "qnum": 49,
-      "section": "Soil and Water Conservation Engineering",
-      "topic": "S4",
+      "section": "Section 4: Soil and Water Conservation Engineering",
+      "topic": "Watershed Management",
       "subtopic": "Soil & Water Conservation Engineering",
       "gate_section": "AG",
       "type": "MCQ",
@@ -997,16 +1045,17 @@
         "D": "Infinity"
       },
       "correct_answer": "C",
-      "solution": "Answer: C\nExplanation:\nAs shown in the graph, the curve decays exponentially from f₀ = 60 mm/h and asymptotically flattens out, approaching the final constant infiltration rate fc = 8 mm/h as time becomes large — this is the defining behaviour of Horton's exponential-decay model.\nWhy others are wrong: (A) Zero is not the asymptotic value shown; the curve levels off at fc = 8 mm/h, not 0. (B) The initial rate f₀ applies only at the very start (t=0), not as time increases. (D) Infinity is inconsistent with the graph, which shows the rate decreasing and stabilizing, never increasing without bound.",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: C\nExplanation:\nAs shown in the graph, the curve decays exponentially from f₀ = 60 mm/h and asymptotically flattens out, approaching the final constant infiltration rate fc = 8 mm/h as time becomes large — this is the defining behaviour of Horton's exponential-decay model.\nWhy others are wrong: (A) Zero is not the asymptotic value shown; the curve levels off at fc = 8 mm/h, not 0. (B) The initial rate f₀ applies only at the very start (t=0), not as time increases. (D) Infinity is inconsistent with the graph, which shows the rate decreasing and stabilizing, never increasing without bound.",
       "isCustomUploaded": true,
-      "image_url": "/docx_images/mock_17_q49.png"
+      "image_url": "/docx_images/mock_17_q49.png",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q50",
       "year": "2027",
       "qnum": 50,
-      "section": "Soil and Water Conservation Engineering",
-      "topic": "S4",
+      "section": "Section 4: Soil and Water Conservation Engineering",
+      "topic": "Watershed Management",
       "subtopic": "Soil & Water Conservation Engineering",
       "gate_section": "AG",
       "type": "MCQ",
@@ -1020,16 +1069,17 @@
         "D": "Q ∝ H^3"
       },
       "correct_answer": "C",
-      "solution": "Answer: C\nExplanation:\nThe standard theoretical discharge formula for a V-notch (triangular) weir is Q = Cd(8/15)√(2g)·tan(θ/2)·H^2.5, derived by integrating the elemental strip discharge across the triangular opening — giving discharge proportional to H raised to the power 2.5.\nWhy others are wrong: (A) Q∝H and (B) Q∝H^1.5 are the relationships associated with (respectively) an orifice under a small constant head approximation and a rectangular (not triangular) sharp-crested weir. (D) Q∝H^3 does not correspond to the correct exponent derived from the V-notch geometry.",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: C\nExplanation:\nThe standard theoretical discharge formula for a V-notch (triangular) weir is Q = Cd(8/15)√(2g)·tan(θ/2)·H^2.5, derived by integrating the elemental strip discharge across the triangular opening — giving discharge proportional to H raised to the power 2.5.\nWhy others are wrong: (A) Q∝H and (B) Q∝H^1.5 are the relationships associated with (respectively) an orifice under a small constant head approximation and a rectangular (not triangular) sharp-crested weir. (D) Q∝H^3 does not correspond to the correct exponent derived from the V-notch geometry.",
       "isCustomUploaded": true,
-      "image_url": "/docx_images/mock_17_q50.png"
+      "image_url": "/docx_images/mock_17_q50.png",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q51",
       "year": "2027",
       "qnum": 51,
-      "section": "Soil and Water Conservation Engineering",
-      "topic": "S4",
+      "section": "Section 4: Soil and Water Conservation Engineering",
+      "topic": "Watershed Management",
       "subtopic": "Soil & Water Conservation Engineering",
       "gate_section": "AG",
       "type": "NAT",
@@ -1038,15 +1088,16 @@
       "question": "Using Horton's equation f = fc + (f0−fc)e^(−kt), with f0 = 60 mm/h, fc = 8 mm/h and decay constant k = 0.4 per hour, calculate the infiltration rate at t = 2 hours (in mm/h). (Round off to two decimal places.)",
       "options": null,
       "correct_answer": "30.50 to 32.50",
-      "solution": "Answer: 30.50 to 32.50\nExplanation:\nf = 8 + (60−8)e^(−0.4×2) = 8 + 52 × e^(−0.8) = 8 + 52 × 0.4493 = 8 + 23.36 = 31.36 mm/h.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 30.50 to 32.50\nExplanation:\nf = 8 + (60−8)e^(−0.4×2) = 8 + 52 × e^(−0.8) = 8 + 52 × 0.4493 = 8 + 23.36 = 31.36 mm/h.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q52",
       "year": "2027",
       "qnum": 52,
-      "section": "Soil and Water Conservation Engineering",
-      "topic": "S4",
+      "section": "Section 4: Soil and Water Conservation Engineering",
+      "topic": "Watershed Management",
       "subtopic": "Soil & Water Conservation Engineering",
       "gate_section": "AG",
       "type": "NAT",
@@ -1055,15 +1106,16 @@
       "question": "For the 90° V-notch weir shown earlier, with a coefficient of discharge Cd = 0.62, calculate the discharge (in L/s) for a head H = 0.25 m, using Q = Cd(8/15)√(2g)·tan(45°)·H^2.5. (Round off to two decimal places.)",
       "options": null,
       "correct_answer": "44.00 to 47.50",
-      "solution": "Answer: 44.00 to 47.50\nExplanation:\n√(2g) = √19.62 = 4.429. tan(45°) = 1. H^2.5 = (0.25)^2.5 = 0.0625 × √0.25 = 0.0625 × 0.5 = 0.03125. Q = 0.62 × (8/15) × 4.429 × 1 × 0.03125 = 0.62 × 0.5333 × 4.429 × 0.03125 = 0.04578 m³/s = 45.78 L/s.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 44.00 to 47.50\nExplanation:\n√(2g) = √19.62 = 4.429. tan(45°) = 1. H^2.5 = (0.25)^2.5 = 0.0625 × √0.25 = 0.0625 × 0.5 = 0.03125. Q = 0.62 × (8/15) × 4.429 × 1 × 0.03125 = 0.62 × 0.5333 × 4.429 × 0.03125 = 0.04578 m³/s = 45.78 L/s.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q53",
       "year": "2027",
       "qnum": 53,
-      "section": "Soil and Water Conservation Engineering",
-      "topic": "S4",
+      "section": "Section 4: Soil and Water Conservation Engineering",
+      "topic": "Soil and Water Erosion",
       "subtopic": "Soil & Water Conservation Engineering",
       "gate_section": "AG",
       "type": "NAT",
@@ -1072,15 +1124,16 @@
       "question": "A field with USLE parameters R = 300, K = 0.32, LS = 2.2 and C = 0.18 has an annual soil loss above the tolerable limit T = 9.5 t/ha/yr. If a support practice (P factor) is introduced to bring the soil loss down to exactly this tolerable limit, calculate the required value of P. (Round off to two decimal places.)",
       "options": null,
       "correct_answer": "0.23 to 0.27",
-      "solution": "Answer: 0.23 to 0.27\nExplanation:\nSoil loss without the support practice, A₀ = R×K×LS×C = 300 × 0.32 × 2.2 × 0.18. Step by step: 300×0.32=96; 96×2.2=211.2; 211.2×0.18=38.016 t/ha/yr. Required P = T/A₀ = 9.5/38.016 = 0.2499 ≈ 0.25.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 0.23 to 0.27\nExplanation:\nSoil loss without the support practice, A₀ = R×K×LS×C = 300 × 0.32 × 2.2 × 0.18. Step by step: 300×0.32=96; 96×2.2=211.2; 211.2×0.18=38.016 t/ha/yr. Required P = T/A₀ = 9.5/38.016 = 0.2499 ≈ 0.25.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q54",
       "year": "2027",
       "qnum": 54,
-      "section": "Soil and Water Conservation Engineering",
-      "topic": "S4",
+      "section": "Section 4: Soil and Water Conservation Engineering",
+      "topic": "Watershed Management",
       "subtopic": "Soil & Water Conservation Engineering",
       "gate_section": "AG",
       "type": "NAT",
@@ -1089,15 +1142,16 @@
       "question": "A closed traverse ABCD has interior angles measured at three of its four corners: A = 89°30', B = 91°15', C = 88°45'. Using the property that the sum of interior angles of a closed quadrilateral traverse equals 360°, calculate the interior angle at corner D (in decimal degrees). (Round off to two decimal places.)",
       "options": null,
       "correct_answer": "90.30 to 90.70",
-      "solution": "Answer: 90.30 to 90.70\nExplanation:\nConverting to decimal degrees: A = 89.50°, B = 91.25°, C = 88.75°. Sum of known angles = 89.50+91.25+88.75 = 269.50°. Since the four interior angles of a closed quadrilateral traverse must sum to 360°: D = 360 − 269.50 = 90.50°.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 90.30 to 90.70\nExplanation:\nConverting to decimal degrees: A = 89.50°, B = 91.25°, C = 88.75°. Sum of known angles = 89.50+91.25+88.75 = 269.50°. Since the four interior angles of a closed quadrilateral traverse must sum to 360°: D = 360 − 269.50 = 90.50°.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q55",
       "year": "2027",
       "qnum": 55,
-      "section": "Agricultural Process Engineering",
-      "topic": "S5",
+      "section": "Section 6: Agricultural Process Engineering",
+      "topic": "Processing of Agriculture Produce",
       "subtopic": "Irrigation & Drainage Engineering",
       "gate_section": "AG",
       "type": "MSQ",
@@ -1111,15 +1165,16 @@
         "D": "Clogging of emitters due to physical, chemical, or biological factors is a significant operational concern in drip irrigation."
       },
       "correct_answer": "A, C, D",
-      "solution": "Answer: A, C, D\nExplanation:\n(A) Correct — drip irrigation delivers water directly and slowly to the root zone, minimizing conveyance, evaporation and deep-percolation losses, generally giving higher application efficiency than surface methods. (C) Correct — the point/localized wetting pattern of drip irrigation is particularly well matched to individually-spaced plants such as row crops, orchard trees and vineyards. (D) Correct — emitter clogging (from suspended solids, chemical precipitates, or biological growth/slime) is indeed a well-documented and significant maintenance concern in drip systems.\n(B) is incorrect — drip irrigation deliberately wets only a limited zone of soil near each emitter (partial wetting), fundamentally different from the full-surface flooding characteristic of basin irrigation.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: A, C, D\nExplanation:\n(A) Correct — drip irrigation delivers water directly and slowly to the root zone, minimizing conveyance, evaporation and deep-percolation losses, generally giving higher application efficiency than surface methods. (C) Correct — the point/localized wetting pattern of drip irrigation is particularly well matched to individually-spaced plants such as row crops, orchard trees and vineyards. (D) Correct — emitter clogging (from suspended solids, chemical precipitates, or biological growth/slime) is indeed a well-documented and significant maintenance concern in drip systems.\n(B) is incorrect — drip irrigation deliberately wets only a limited zone of soil near each emitter (partial wetting), fundamentally different from the full-surface flooding characteristic of basin irrigation.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q56",
       "year": "2027",
       "qnum": 56,
-      "section": "Agricultural Process Engineering",
-      "topic": "S5",
+      "section": "Section 6: Agricultural Process Engineering",
+      "topic": "Processing of Agriculture Produce",
       "subtopic": "Irrigation & Drainage Engineering",
       "gate_section": "AG",
       "type": "NAT",
@@ -1128,16 +1183,17 @@
       "question": "The figure below shows a semi-log plot of drawdown (s) versus time (t) from a pumping test on a confined aquifer, analyzed using the Cooper–Jacob straight-line method. The plot shows a drawdown change of Δs = 0.55 m per log cycle of time, for a pumping rate Q = 1500 m³/day.\nFigure: Cooper–Jacob semi-log drawdown plot\nUsing the Cooper–Jacob formula T = 2.303Q/(4πΔs), calculate the aquifer transmissivity T (in m²/day). (Round off to two decimal places.)",
       "options": null,
       "correct_answer": "495.00 to 505.00",
-      "solution": "Answer: 495.00 to 505.00\nExplanation:\nT = 2.303 × Q / (4π × Δs) = (2.303 × 1500) / (4π × 0.55) = 3454.5 / 6.9115 = 499.72 m²/day.",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 495.00 to 505.00\nExplanation:\nT = 2.303 × Q / (4π × Δs) = (2.303 × 1500) / (4π × 0.55) = 3454.5 / 6.9115 = 499.72 m²/day.",
       "isCustomUploaded": true,
-      "image_url": "/docx_images/mock_17_q56.png"
+      "image_url": "/docx_images/mock_17_q56.png",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q57",
       "year": "2027",
       "qnum": 57,
-      "section": "Agricultural Process Engineering",
-      "topic": "S5",
+      "section": "Section 6: Agricultural Process Engineering",
+      "topic": "Processing of Agriculture Produce",
       "subtopic": "Irrigation & Drainage Engineering",
       "gate_section": "AG",
       "type": "NAT",
@@ -1146,15 +1202,16 @@
       "question": "For a subsurface tile drain resting directly on an impermeable barrier layer, the drainage coefficient may be estimated using q = 4Kh²/L², where K is the hydraulic conductivity, h is the height of the water table above the drain at the midpoint between drains, and L is the drain spacing. Given K = 0.45 m/day, L = 45 m and h = 1.0 m, calculate q (in mm/day). (Round off to two decimal places.)",
       "options": null,
       "correct_answer": "0.82 to 0.96",
-      "solution": "Answer: 0.82 to 0.96\nExplanation:\nq = 4Kh²/L² = 4 × 0.45 × (1.0)² / (45)² = 1.8/2025 = 0.000889 m/day = 0.89 mm/day.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 0.82 to 0.96\nExplanation:\nq = 4Kh²/L² = 4 × 0.45 × (1.0)² / (45)² = 1.8/2025 = 0.000889 m/day = 0.89 mm/day.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q58",
       "year": "2027",
       "qnum": 58,
-      "section": "Agricultural Process Engineering",
-      "topic": "S5",
+      "section": "Section 6: Agricultural Process Engineering",
+      "topic": "Processing of Agriculture Produce",
       "subtopic": "Irrigation & Drainage Engineering",
       "gate_section": "AG",
       "type": "NAT",
@@ -1163,15 +1220,16 @@
       "question": "A confined aquifer has a transmissivity of 450 m²/day and an aquifer thickness of 18 m. Calculate its hydraulic conductivity K (in m/day). (Round off to two decimal places.)",
       "options": null,
       "correct_answer": "24.00 to 26.00",
-      "solution": "Answer: 24.00 to 26.00\nExplanation:\nTransmissivity, T = K × aquifer thickness, so K = T/thickness = 450/18 = 25.00 m/day.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 24.00 to 26.00\nExplanation:\nTransmissivity, T = K × aquifer thickness, so K = T/thickness = 450/18 = 25.00 m/day.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q59",
       "year": "2027",
       "qnum": 59,
-      "section": "Agricultural Process Engineering",
-      "topic": "S6",
+      "section": "Section 6: Agricultural Process Engineering",
+      "topic": "Processing of Agriculture Produce",
       "subtopic": "Agricultural Process Engineering",
       "gate_section": "AG",
       "type": "MSQ",
@@ -1185,15 +1243,16 @@
         "D": "The oil cake (meal) remaining after oil extraction has no nutritional value and is typically discarded as waste."
       },
       "correct_answer": "A, B, C",
-      "solution": "Answer: A, B, C\nExplanation:\n(A) Correct — solvent extraction can achieve much more complete oil removal from the residual meal (often leaving only 1% or less residual oil) compared to mechanical pressing alone (which typically leaves several percent residual oil). (B) Correct — pre-heating/cooking softens cell walls and reduces oil viscosity, both of which improve mechanical oil expression during pressing. (C) Correct — degumming precisely targets phospholipids and other gum-forming impurities as an early step in oil refining.\n(D) is incorrect — oil cake/meal is a valuable, protein-rich by-product that is widely used as animal feed, not discarded as waste.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: A, B, C\nExplanation:\n(A) Correct — solvent extraction can achieve much more complete oil removal from the residual meal (often leaving only 1% or less residual oil) compared to mechanical pressing alone (which typically leaves several percent residual oil). (B) Correct — pre-heating/cooking softens cell walls and reduces oil viscosity, both of which improve mechanical oil expression during pressing. (C) Correct — degumming precisely targets phospholipids and other gum-forming impurities as an early step in oil refining.\n(D) is incorrect — oil cake/meal is a valuable, protein-rich by-product that is widely used as animal feed, not discarded as waste.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q60",
       "year": "2027",
       "qnum": 60,
-      "section": "Agricultural Process Engineering",
-      "topic": "S6",
+      "section": "Section 6: Agricultural Process Engineering",
+      "topic": "Evaporation and Drying",
       "subtopic": "Agricultural Process Engineering",
       "gate_section": "AG",
       "type": "NAT",
@@ -1202,16 +1261,17 @@
       "question": "The figure below shows a simplified psychrometric process diagram for a grain dryer: ambient air (state 1) at 28°C dry-bulb with a humidity ratio of 0.014 kg/kg dry air is heated at constant humidity ratio to state 2 at 60°C, then passes through the grain bed and exits as state 3 at 38°C with a humidity ratio of 0.024 kg/kg dry air.\nFigure: Simplified psychrometric process — grain dryer\nUsing the process shown, calculate the moisture picked up by the air per kg of dry air as it passes through the grain bed (state 2 to state 3), in kg moisture/kg dry air. (Round off to four decimal places.)",
       "options": null,
       "correct_answer": "0.0090 to 0.0110",
-      "solution": "Answer: 0.0090 to 0.0110\nExplanation:\nMoisture pickup, Δw = w₃ − w₂. Since heating (1→2) occurs at constant humidity ratio, w₂ = w₁ = 0.014 kg/kg dry air (as shown in the figure). So Δw = 0.024 − 0.014 = 0.0100 kg moisture per kg dry air.",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 0.0090 to 0.0110\nExplanation:\nMoisture pickup, Δw = w₃ − w₂. Since heating (1→2) occurs at constant humidity ratio, w₂ = w₁ = 0.014 kg/kg dry air (as shown in the figure). So Δw = 0.024 − 0.014 = 0.0100 kg moisture per kg dry air.",
       "isCustomUploaded": true,
-      "image_url": "/docx_images/mock_17_q60.png"
+      "image_url": "/docx_images/mock_17_q60.png",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q61",
       "year": "2027",
       "qnum": 61,
-      "section": "Agricultural Process Engineering",
-      "topic": "S6",
+      "section": "Section 6: Agricultural Process Engineering",
+      "topic": "Engineering Properties of Agriculture Produce",
       "subtopic": "Agricultural Process Engineering",
       "gate_section": "AG",
       "type": "NAT",
@@ -1220,15 +1280,16 @@
       "question": "A flat-bottom cylindrical bin of diameter 5 m is filled with maize to a height of 7 m. If the bulk density of maize is 740 kg/m³, calculate the total mass of maize stored (in tonnes). (Round off to two decimal places.)",
       "options": null,
       "correct_answer": "100.50 to 103.00",
-      "solution": "Answer: 100.50 to 103.00\nExplanation:\nVolume = (π/4)d²h = (π/4)(5)²(7) = 0.7854×25×7 = 137.44 m³. Mass = volume × bulk density = 137.44 × 740 = 1,01,706 kg = 101.71 t.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 100.50 to 103.00\nExplanation:\nVolume = (π/4)d²h = (π/4)(5)²(7) = 0.7854×25×7 = 137.44 m³. Mass = volume × bulk density = 137.44 × 740 = 1,01,706 kg = 101.71 t.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q62",
       "year": "2027",
       "qnum": 62,
-      "section": "Agricultural Process Engineering",
-      "topic": "S6",
+      "section": "Section 6: Agricultural Process Engineering",
+      "topic": "Processing of Agriculture Produce",
       "subtopic": "Agricultural Process Engineering",
       "gate_section": "AG",
       "type": "NAT",
@@ -1237,15 +1298,16 @@
       "question": "A cross-flow grain dryer processes grain with a constant dry-matter feed rate of 500 kg/h. Moisture content is reduced from 22% to 13% (both wet basis). Taking the latent heat of vaporization as 2260 kJ/kg, calculate the heat energy required for evaporation alone (in kW). (Round off to two decimal places.)",
       "options": null,
       "correct_answer": "40.50 to 42.80",
-      "solution": "Answer: 40.50 to 42.80\nExplanation:\nAt 22% m.c. (wet basis), with dry matter = 500 kg/h: total mass = 500/(1−0.22) = 500/0.78 = 641.03 kg/h, so water content = 641.03−500 = 141.03 kg/h. At 13% m.c.: total mass = 500/(1−0.13) = 500/0.87 = 574.71 kg/h, so water content = 574.71−500 = 74.71 kg/h. Water removed per hour = 141.03 − 74.71 = 66.32 kg/h. Heat required = 66.32 kg/h × 2260 kJ/kg = 1,49,883 kJ/h = 1,49,883/3600 = 41.63 kW.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 40.50 to 42.80\nExplanation:\nAt 22% m.c. (wet basis), with dry matter = 500 kg/h: total mass = 500/(1−0.22) = 500/0.78 = 641.03 kg/h, so water content = 641.03−500 = 141.03 kg/h. At 13% m.c.: total mass = 500/(1−0.13) = 500/0.87 = 574.71 kg/h, so water content = 574.71−500 = 74.71 kg/h. Water removed per hour = 141.03 − 74.71 = 66.32 kg/h. Heat required = 66.32 kg/h × 2260 kJ/kg = 1,49,883 kJ/h = 1,49,883/3600 = 41.63 kW.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q63",
       "year": "2027",
       "qnum": 63,
-      "section": "Agricultural Process Engineering",
-      "topic": "S7",
+      "section": "Section 6: Agricultural Process Engineering",
+      "topic": "Processing of Agriculture Produce",
       "subtopic": "Dairy & Food Engineering",
       "gate_section": "AG",
       "type": "MSQ",
@@ -1259,16 +1321,17 @@
         "D": "The direction of fluid flow (counter-current vs parallel) has no effect on the log mean temperature difference (LMTD) of the exchanger."
       },
       "correct_answer": "A, B, C",
-      "solution": "Answer: A, B, C\nExplanation:\n(A) Correct — as illustrated by the roughly parallel-sloped hot and cold lines in the figure, counter-current flow tends to maintain a more uniform temperature difference along the exchanger length compared to parallel flow, where the temperature difference shrinks rapidly toward the outlet. (B) Correct — this more favourable (higher, more uniform) temperature-difference profile is precisely why counter-current exchangers achieve the same heat duty with a smaller required area than parallel-flow exchangers for the same terminal temperatures. (C) Correct — for heat to flow spontaneously from the hot to the cold stream at every point along the exchanger, the hot stream's local temperature must exceed the cold stream's local temperature everywhere, exactly as shown by the hot (red) curve remaining above the cold (blue) curve throughout the figure.\n(D) is incorrect — flow direction directly affects the LMTD; for the same terminal temperatures, counter-current flow yields a higher LMTD than parallel flow, which is exactly why it requires less area (as per statement B).",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: A, B, C\nExplanation:\n(A) Correct — as illustrated by the roughly parallel-sloped hot and cold lines in the figure, counter-current flow tends to maintain a more uniform temperature difference along the exchanger length compared to parallel flow, where the temperature difference shrinks rapidly toward the outlet. (B) Correct — this more favourable (higher, more uniform) temperature-difference profile is precisely why counter-current exchangers achieve the same heat duty with a smaller required area than parallel-flow exchangers for the same terminal temperatures. (C) Correct — for heat to flow spontaneously from the hot to the cold stream at every point along the exchanger, the hot stream's local temperature must exceed the cold stream's local temperature everywhere, exactly as shown by the hot (red) curve remaining above the cold (blue) curve throughout the figure.\n(D) is incorrect — flow direction directly affects the LMTD; for the same terminal temperatures, counter-current flow yields a higher LMTD than parallel flow, which is exactly why it requires less area (as per statement B).",
       "isCustomUploaded": true,
-      "image_url": "/docx_images/mock_17_q63.png"
+      "image_url": "/docx_images/mock_17_q63.png",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q64",
       "year": "2027",
       "qnum": 64,
-      "section": "Agricultural Process Engineering",
-      "topic": "S7",
+      "section": "Section 6: Agricultural Process Engineering",
+      "topic": "Storage Systems",
       "subtopic": "Dairy & Food Engineering",
       "gate_section": "AG",
       "type": "MSQ",
@@ -1282,15 +1345,16 @@
         "D": "CAS is generally applied in large bulk storage facilities (e.g. for apples), while MAP is more commonly applied at the individual package level."
       },
       "correct_answer": "A, C, D",
-      "solution": "Answer: A, C, D\nExplanation:\n(A) Correct — both MAP and CAS work by altering the atmospheric composition around the produce (typically lower O2, higher CO2) to slow down respiration and associated ripening/senescence processes. (C) Correct — if O2 levels drop below a produce's specific tolerance threshold, the tissue can shift to anaerobic respiration, producing off-flavours (from fermentation products like ethanol/acetaldehyde) and physiological damage. (D) Correct — CAS is typically implemented in large, sealed bulk storage rooms with continuous atmosphere control (e.g. for long-term apple storage), whereas MAP is applied at the scale of individual consumer packages.\n(B) is incorrect — MAP typically establishes a passive or initially-modified atmosphere within a sealed package that then evolves over time (through produce respiration and package permeability) rather than being actively and continuously monitored/regulated, unlike CAS, which does involve continuous, active atmosphere control.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: A, C, D\nExplanation:\n(A) Correct — both MAP and CAS work by altering the atmospheric composition around the produce (typically lower O2, higher CO2) to slow down respiration and associated ripening/senescence processes. (C) Correct — if O2 levels drop below a produce's specific tolerance threshold, the tissue can shift to anaerobic respiration, producing off-flavours (from fermentation products like ethanol/acetaldehyde) and physiological damage. (D) Correct — CAS is typically implemented in large, sealed bulk storage rooms with continuous atmosphere control (e.g. for long-term apple storage), whereas MAP is applied at the scale of individual consumer packages.\n(B) is incorrect — MAP typically establishes a passive or initially-modified atmosphere within a sealed package that then evolves over time (through produce respiration and package permeability) rather than being actively and continuously monitored/regulated, unlike CAS, which does involve continuous, active atmosphere control.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_17_Q65",
       "year": "2027",
       "qnum": 65,
-      "section": "Agricultural Process Engineering",
-      "topic": "S7",
+      "section": "Section 6: Agricultural Process Engineering",
+      "topic": "Processing of Agriculture Produce",
       "subtopic": "Dairy & Food Engineering",
       "gate_section": "AG",
       "type": "NAT",
@@ -1299,8 +1363,9 @@
       "question": "Referring to the counter-current heat exchanger temperature profile shown in the previous figure, milk enters at 5°C and leaves at 72°C, while hot water enters at 85°C and leaves at 25°C.\nFigure: Counter-current heat exchanger — temperature profile (repeated for reference)\nUsing these terminal temperatures, calculate the Log Mean Temperature Difference (LMTD) for this counter-current exchanger (in °C). (Round off to two decimal places.)",
       "options": null,
       "correct_answer": "15.50 to 17.00",
-      "solution": "Answer: 15.50 to 17.00\nExplanation:\nFor a counter-current exchanger, pair the temperature differences at each end: ΔT1 = (hot inlet − cold outlet) = 85 − 72 = 13°C; ΔT2 = (hot outlet − cold inlet) = 25 − 5 = 20°C. LMTD = (ΔT1 − ΔT2)/ln(ΔT1/ΔT2) = (13−20)/ln(13/20) = (−7)/ln(0.65) = (−7)/(−0.4308) = 16.25°C.",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Answer: 15.50 to 17.00\nExplanation:\nFor a counter-current exchanger, pair the temperature differences at each end: ΔT1 = (hot inlet − cold outlet) = 85 − 72 = 13°C; ΔT2 = (hot outlet − cold inlet) = 25 − 5 = 20°C. LMTD = (ΔT1 − ΔT2)/ln(ΔT1/ΔT2) = (13−20)/ln(13/20) = (−7)/ln(0.65) = (−7)/(−0.4308) = 16.25°C.",
+      "isCustomUploaded": true,
+      "difficulty": "Hard"
     }
   ]
 }

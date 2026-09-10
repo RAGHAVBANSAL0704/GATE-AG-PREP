@@ -327,7 +327,7 @@ export default function AuthModal({
       if (res.success) {
         setSuccessMsg('Account created successfully! Redirecting...');
         setTimeout(() => {
-          onLoginSuccess(res.student);
+          onLoginSuccess(res.student, true);
         }, 500);
       } else if (res.isDuplicate) {
         setErrorMsg(res.message);
@@ -395,7 +395,7 @@ export default function AuthModal({
       if (res.success) {
         setSuccessMsg(`Welcome, ${res.student.display_name || res.student.full_name}! Faculty access granted.`);
         setTimeout(() => {
-          onLoginSuccess(res.student);
+          onLoginSuccess(res.student, true);
         }, 500);
       } else if (res.isDuplicate) {
         setErrorMsg(res.message);

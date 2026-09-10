@@ -78,17 +78,18 @@ export default function Navbar({
 
             <span className="text-slate-300 dark:text-slate-700">•</span>
 
-            <a
-              href="https://coaet-students-corner.vercel.app/homepage"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-bold transition group"
-              title="COAET Student's Corner by Raghav Bansal"
+            <button
+              type="button"
+              onClick={() => alert("COAET Student's Corner is currently under active testing and development. Access is temporarily disabled.")}
+              className="inline-flex items-center gap-1.5 text-slate-400 dark:text-slate-500 font-bold transition cursor-not-allowed opacity-80"
+              title="COAET Student's Corner is currently under testing & development"
             >
-              <GraduationCap className="w-3 h-3 text-blue-500" />
+              <GraduationCap className="w-3 h-3 text-slate-400 dark:text-slate-500" />
               <span>COAET Student's Corner</span>
-              <ExternalLink className="w-2.5 h-2.5 text-slate-400 opacity-60 group-hover:opacity-100 transition-opacity" />
-            </a>
+              <span className="text-[9px] font-extrabold uppercase px-1.5 py-0.2 rounded bg-amber-100 dark:bg-amber-950/80 text-amber-700 dark:text-amber-400 border border-amber-300 dark:border-amber-800">
+                Under Dev
+              </span>
+            </button>
           </div>
         </div>
       </div>

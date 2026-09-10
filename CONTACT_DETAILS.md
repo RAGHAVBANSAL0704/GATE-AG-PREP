@@ -13,7 +13,7 @@
 | **Primary Email** | `raghavbansal0704@gmail.com` | [Send Email](mailto:raghavbansal0704@gmail.com) |
 | **Admin / Support Email** | `admin@gateagprep.in` | [Send Email](mailto:admin@gateagprep.in) |
 | **Primary WhatsApp / Phone** | `+91 7206283166` | [Chat on WhatsApp](https://wa.me/917206283166) |
-| **Secondary WhatsApp / Phone** | `+91 9466810704` | [Chat on WhatsApp](https://wa.me/919466810704) |
+| **Secondary WhatsApp / Phone** | `+91 9812203728` | [Chat on WhatsApp](https://wa.me/919812203728) |
 
 ---
 
@@ -57,7 +57,7 @@
   "supportEmail": "admin@gateagprep.in",
   "phones": [
     "+917206283166",
-    "+919466810704"
+    "+919812203728"
   ],
   "socials": {
     "linkedin": "https://linkedin.com/in/raghavbansal0704",

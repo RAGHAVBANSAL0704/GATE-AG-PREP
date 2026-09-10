@@ -48,9 +48,49 @@ export function evaluateQuestion(param1, param2, param3, param4) {
   const userAnsStr = String(userAnswer).trim();
   let isCorrect = false;
 
-  // 1. MCQ Evaluation (Strict exact case-insensitive match)
+  // 1. MCQ Evaluation (Strict exact case-insensitive match with resilient option-text resolution)
   if (question.type === 'MCQ') {
-    isCorrect = userAnsStr.toUpperCase() === correctKey.toUpperCase();
+    let resolvedUserKey = userAnsStr.toUpperCase();
+    let resolvedCorrectKey = correctKey.toUpperCase();
+
+    // Defensive fallback: If either userAnsStr or correctKey represents option text rather than a letter A-D
+    if (question.options) {
+      if (!['A', 'B', 'C', 'D'].includes(resolvedCorrectKey)) {
+        if (typeof question.options === 'object' && !Array.isArray(question.options)) {
+          for (const [k, v] of Object.entries(question.options)) {
+            if (String(v).trim().toLowerCase() === correctKey.toLowerCase()) {
+              resolvedCorrectKey = k.toUpperCase();
+              break;
+            }
+          }
+        } else if (Array.isArray(question.options)) {
+          question.options.forEach((v, idx) => {
+            if (String(v).trim().toLowerCase() === correctKey.toLowerCase()) {
+              resolvedCorrectKey = String.fromCharCode(65 + idx);
+            }
+          });
+        }
+      }
+
+      if (!['A', 'B', 'C', 'D'].includes(resolvedUserKey)) {
+        if (typeof question.options === 'object' && !Array.isArray(question.options)) {
+          for (const [k, v] of Object.entries(question.options)) {
+            if (String(v).trim().toLowerCase() === userAnsStr.toLowerCase()) {
+              resolvedUserKey = k.toUpperCase();
+              break;
+            }
+          }
+        } else if (Array.isArray(question.options)) {
+          question.options.forEach((v, idx) => {
+            if (String(v).trim().toLowerCase() === userAnsStr.toLowerCase()) {
+              resolvedUserKey = String.fromCharCode(65 + idx);
+            }
+          });
+        }
+      }
+    }
+
+    isCorrect = resolvedUserKey === resolvedCorrectKey;
     if (isCorrect) {
       return {
         isAttempted: true,

@@ -13,7 +13,8 @@ import {
   CreditCard,
   Globe,
   Shield,
-  GraduationCap
+  GraduationCap,
+  Scale
 } from 'lucide-react';
 
 export default function SupportPage({ currentStudent }) {
@@ -22,7 +23,7 @@ export default function SupportPage({ currentStudent }) {
   const [requestedExamNotes, setRequestedExamNotes] = useState('');
 
   const upiId = "raghavbansal0704@oksbi";
-  const whatsappNumber = "919466810704"; // Raghav Bansal WhatsApp contact
+  const whatsappNumber = "919812203728"; // Raghav Bansal WhatsApp contact
 
   const handleCopyUpi = () => {
     navigator.clipboard.writeText(upiId);
@@ -257,27 +258,59 @@ export default function SupportPage({ currentStudent }) {
             <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition" />
           </a>
 
-          <a
-            href="https://coaet-students-corner.vercel.app/homepage"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3.5 rounded-xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-800/60 hover:border-blue-400 dark:hover:border-blue-600 transition flex items-center justify-between group shadow-2xs"
-          >
+          <div className="p-3.5 rounded-xl bg-slate-50/70 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 opacity-85 flex items-center justify-between shadow-2xs">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-900/60 text-blue-700 dark:text-blue-300 flex items-center justify-center shrink-0">
+              <div className="w-10 h-10 rounded-xl bg-amber-50 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 border border-amber-200 dark:border-amber-800">
                 <GraduationCap className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="font-bold text-xs text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                  COAET Student's Corner
-                </h3>
+                <div className="flex items-center gap-2">
+                  <h3 className="font-bold text-xs text-slate-800 dark:text-slate-200">
+                    COAET Student's Corner
+                  </h3>
+                  <span className="text-[9px] font-extrabold uppercase px-1.5 py-0.2 rounded bg-amber-100 dark:bg-amber-950/80 text-amber-700 dark:text-amber-400 border border-amber-300 dark:border-amber-800">
+                    Under Dev
+                  </span>
+                </div>
                 <p className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">
-                  Academic Repository of COAET CCS HAU Hisar
+                  Currently offline for testing and feature development • Launching soon
                 </p>
               </div>
             </div>
-            <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition" />
-          </a>
+            <span className="text-[10px] font-bold text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/60 px-2 py-1 rounded-md border border-amber-200 dark:border-amber-800">
+              Disabled
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* Legal, Intellectual Property & Fair Dealing Statement */}
+      <div className="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-4 sm:p-5 shadow-xs space-y-3">
+        <div className="flex items-center gap-2 pb-2.5 border-b border-slate-100 dark:border-slate-800 text-xs font-bold text-slate-800 dark:text-slate-200 uppercase tracking-wider">
+          <Scale className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+          <span>Official Disclaimer &amp; Fair Dealing Compliance</span>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+          <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 space-y-1.5">
+            <h4 className="font-bold text-slate-900 dark:text-white flex items-center gap-1.5 text-xs">
+              <Shield className="w-3.5 h-3.5 text-blue-500" />
+              <span>Independent Platform &amp; Non-Affiliation</span>
+            </h4>
+            <p className="text-[11px]">
+              GATE is conducted by IITs &amp; IISc on behalf of the National Coordination Board (NCB)-GATE, Department of Higher Education, Ministry of Education, Government of India. This website is an independent educational platform created by Raghav Bansal and is <strong>not affiliated with or endorsed by IITs, IISc, or the Ministry of Education</strong>.
+            </p>
+          </div>
+
+          <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 space-y-1.5">
+            <h4 className="font-bold text-slate-900 dark:text-white flex items-center gap-1.5 text-xs">
+              <Scale className="w-3.5 h-3.5 text-emerald-500" />
+              <span>Fair Dealing (Sec 52, Indian Copyright Act 1957)</span>
+            </h4>
+            <p className="text-[11px]">
+              Past question papers and keys are the property of NCB-GATE / Organizing IITs, referenced here under <strong>Section 52(1)(a) &amp; (h)</strong> for non-commercial student study and examination preparation. All solutions, CBT algorithms, formula compendiums, and analytics are transformative original educational works.
+            </p>
+          </div>
         </div>
       </div>
 

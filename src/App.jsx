@@ -52,6 +52,8 @@ const TestResultModal = lazyWithRetry(() => import('./components/TestResultModal
 const QuestionEditorModal = lazyWithRetry(() => import('./components/QuestionEditorModal'));
 const AuthModal = lazyWithRetry(() => import('./components/AuthModal'));
 const UserProfileModal = lazyWithRetry(() => import('./components/UserProfileModal'));
+const WelcomeModal = lazyWithRetry(() => import('./components/WelcomeModal'));
+const EngineersDayModal = lazyWithRetry(() => import('./components/EngineersDayModal'));
 
 function TabLoadingSkeleton() {
   return (
@@ -105,6 +107,27 @@ import preloadedCustomMock26 from './data/custom_mock_2027_26.json';
 import preloadedCustomMock27 from './data/custom_mock_2027_27.json';
 import preloadedCustomMock28 from './data/custom_mock_2027_28.json';
 import preloadedCustomMock29 from './data/custom_mock_2027_29.json';
+import preloadedCustomMock30 from './data/custom_mock_2027_30.json';
+import preloadedCustomMock31 from './data/custom_mock_2027_31.json';
+import preloadedCustomMock32 from './data/custom_mock_2027_32.json';
+import preloadedCustomMock33 from './data/custom_mock_2027_33.json';
+import preloadedCustomMock34 from './data/custom_mock_2027_34.json';
+import preloadedCustomMock35 from './data/custom_mock_2027_35.json';
+import preloadedCustomMock36 from './data/custom_mock_2027_36.json';
+import preloadedCustomMock37 from './data/custom_mock_2027_37.json';
+import preloadedCustomMock38 from './data/custom_mock_2027_38.json';
+import preloadedCustomMock39 from './data/custom_mock_2027_39.json';
+import preloadedCustomMock40 from './data/custom_mock_2027_40.json';
+import preloadedCustomMock41 from './data/custom_mock_2027_41.json';
+import preloadedCustomMock42 from './data/custom_mock_2027_42.json';
+import preloadedCustomMock43 from './data/custom_mock_2027_43.json';
+import preloadedCustomMock44 from './data/custom_mock_2027_44.json';
+import preloadedCustomMock45 from './data/custom_mock_2027_45.json';
+import preloadedCustomMock46 from './data/custom_mock_2027_46.json';
+import preloadedCustomMock47 from './data/custom_mock_2027_47.json';
+import preloadedCustomMock48 from './data/custom_mock_2027_48.json';
+import preloadedCustomMock49 from './data/custom_mock_2027_49.json';
+import preloadedCustomMock50 from './data/custom_mock_2027_50.json';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState(() => {
@@ -167,6 +190,19 @@ export default function App() {
     return true;
   });
   const [authModalReason, setAuthModalReason] = useState('');
+  const [welcomeUser, setWelcomeUser] = useState(null);
+  const [showEngineersDay, setShowEngineersDay] = useState(() => {
+    try {
+      const now = new Date();
+      const cutoff = new Date('2026-09-15T23:59:59+05:30');
+      if (now.getTime() > cutoff.getTime()) return false;
+      if (localStorage.getItem('engineers_day_2026_dismissed') === 'true') return false;
+      if (sessionStorage.getItem('engineers_day_2026_session_dismissed') === 'true') return false;
+      return true;
+    } catch (e) {
+      return false;
+    }
+  });
 
   const handleContinueAsGuest = () => {
     try {
@@ -181,13 +217,17 @@ export default function App() {
     setIsAuthModalOpen(true);
   };
 
-  const handleLoginSuccess = (student) => {
+  const handleLoginSuccess = (student, isNewRegistration = false) => {
     setCurrentStudent(student);
     setIsAuthModalOpen(false);
     setAuthModalReason('');
     try {
       localStorage.removeItem('gate_ag_guest_mode');
     } catch (e) {}
+
+    if (isNewRegistration) {
+      setWelcomeUser(student);
+    }
   };
 
   useEffect(() => {
@@ -309,7 +349,7 @@ export default function App() {
     }
   });
 
-  const allCustomMockPapers = [
+  const allCustomMockPapers = useMemo(() => [
     preloadedCustomMock01,
     preloadedCustomMock02,
     preloadedCustomMock03,
@@ -339,8 +379,29 @@ export default function App() {
     preloadedCustomMock27,
     preloadedCustomMock28,
     preloadedCustomMock29,
+    preloadedCustomMock30,
+    preloadedCustomMock31,
+    preloadedCustomMock32,
+    preloadedCustomMock33,
+    preloadedCustomMock34,
+    preloadedCustomMock35,
+    preloadedCustomMock36,
+    preloadedCustomMock37,
+    preloadedCustomMock38,
+    preloadedCustomMock39,
+    preloadedCustomMock40,
+    preloadedCustomMock41,
+    preloadedCustomMock42,
+    preloadedCustomMock43,
+    preloadedCustomMock44,
+    preloadedCustomMock45,
+    preloadedCustomMock46,
+    preloadedCustomMock47,
+    preloadedCustomMock48,
+    preloadedCustomMock49,
+    preloadedCustomMock50,
     ...userUploadedMocks
-  ];
+  ], [userUploadedMocks]);
 
   const [editedQuestionsMap, setEditedQuestionsMap] = useState(() => {
     try {
@@ -674,17 +735,18 @@ export default function App() {
 
               <span className="text-slate-300 dark:text-slate-700">•</span>
 
-              <a
-                href="https://coaet-students-corner.vercel.app/homepage"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-bold transition group"
-                title="COAET Student's Corner by Raghav Bansal"
+              <button
+                type="button"
+                onClick={() => alert("COAET Student's Corner is currently under active testing and development. Access is temporarily disabled.")}
+                className="inline-flex items-center gap-1.5 text-slate-400 dark:text-slate-500 font-bold transition cursor-not-allowed opacity-80"
+                title="COAET Student's Corner is currently under testing & development"
               >
-                <GraduationCap className="w-3 h-3 text-blue-500" />
+                <GraduationCap className="w-3 h-3 text-slate-400 dark:text-slate-500" />
                 <span>COAET Student's Corner</span>
-                <ExternalLink className="w-2.5 h-2.5 text-slate-400 opacity-60 group-hover:opacity-100 transition-opacity" />
-              </a>
+                <span className="text-[9px] font-extrabold uppercase px-1.5 py-0.2 rounded bg-amber-100 dark:bg-amber-950/80 text-amber-700 dark:text-amber-400 border border-amber-300 dark:border-amber-800">
+                  Under Dev
+                </span>
+              </button>
             </div>
           </div>
         </div>
@@ -732,6 +794,7 @@ export default function App() {
                 onStartMock={handleStartMock}
                 onStartSectionPractice={handleStartSectionPractice}
                 setActiveTab={setActiveTab}
+                onOpenEngineersDay={() => setShowEngineersDay(true)}
               />
             )}
 
@@ -835,6 +898,8 @@ export default function App() {
                 userProgress={syllabusProgress}
                 onUpdateProgress={handleUpdateSyllabusProgress}
                 onStartSectionPractice={handleStartSectionPractice}
+                questions={questions}
+                customMockPapers={customMockPapers}
               />
             )}
 
@@ -889,6 +954,32 @@ export default function App() {
             student={currentStudent}
             onClose={() => setIsProfileOpen(false)}
             onProfileUpdated={(updatedStudent) => setCurrentStudent(updatedStudent)}
+          />
+        )}
+
+        {welcomeUser && (
+          <WelcomeModal
+            user={welcomeUser}
+            onClose={() => setWelcomeUser(null)}
+            onStartPractice={() => {
+              setWelcomeUser(null);
+              setActiveTab('practice');
+            }}
+            onStartMock={() => {
+              setWelcomeUser(null);
+              setActiveTab('mocktest');
+            }}
+          />
+        )}
+
+        {showEngineersDay && (
+          <EngineersDayModal
+            isOpen={showEngineersDay}
+            onClose={() => setShowEngineersDay(false)}
+            onExplore={() => {
+              setShowEngineersDay(false);
+              setActiveTab('practice');
+            }}
           />
         )}
 

@@ -28,7 +28,8 @@ import {
   KeyRound,
   Radio,
   Globe,
-  Shield
+  Shield,
+  Clock
 } from 'lucide-react';
 import SupportPage from './SupportPage';
 import AdminQuestionManager from './AdminQuestionManager';
@@ -308,12 +309,12 @@ export default function CreatorAdminHQ({
                 </div>
               </div>
 
-              {/* Card 2: COAET Student's Corner */}
-              <div className="card-3d rounded-3xl p-6 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm flex flex-col justify-between space-y-4 hover:border-blue-400 dark:hover:border-blue-600 transition-all">
+              {/* Card 2: COAET Student's Corner (Under Testing & Development) */}
+              <div className="card-3d rounded-3xl p-6 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm flex flex-col justify-between space-y-4 opacity-90 transition-all">
                 <div className="space-y-3">
                   <div className="flex items-start justify-between gap-3">
                     <div className="flex items-center gap-3">
-                      <div className="w-12 h-12 rounded-2xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800 flex items-center justify-center text-blue-600 dark:text-blue-400 shadow-xs shrink-0">
+                      <div className="w-12 h-12 rounded-2xl bg-amber-50 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800 flex items-center justify-center text-amber-600 dark:text-amber-400 shadow-xs shrink-0">
                         <GraduationCap className="w-6 h-6" />
                       </div>
                       <div>
@@ -325,29 +326,28 @@ export default function CreatorAdminHQ({
                         </p>
                       </div>
                     </div>
-                    <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded border bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-800 shrink-0">
-                      CCS HAU Archive
+                    <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded border bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 border-amber-200 dark:border-amber-800 shrink-0">
+                      Under Testing &amp; Dev
                     </span>
                   </div>
 
                   <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed font-medium pt-2 border-t border-slate-100 dark:border-slate-800">
-                    The centralized academic digital repository curated specifically for students of the College of Agricultural Engineering and Technology (COAE&T), CCS HAU Hisar. Hosts semester syllabi, lecture notes, lab practical files, and previous semester exam papers.
+                    The centralized academic digital repository curated for students of the College of Agricultural Engineering and Technology (COAE&T), CCS HAU Hisar is currently offline for testing and system enhancements. Access is temporarily disabled during this active development phase.
                   </p>
                 </div>
 
                 <div className="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2">
-                  <span className="text-[11px] font-mono text-slate-500 dark:text-slate-400 truncate max-w-[190px]">
-                    coaet-students-corner.vercel.app
+                  <span className="text-[11px] font-mono text-slate-400 dark:text-slate-500 italic">
+                    Temporarily Unavailable
                   </span>
-                  <a
-                    href="https://coaet-students-corner.vercel.app/homepage"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs shadow-sm transition group"
+                  <button
+                    type="button"
+                    disabled
+                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-400 dark:text-slate-500 font-bold text-xs cursor-not-allowed border border-slate-200 dark:border-slate-700"
                   >
-                    <span>Explore COAET Corner</span>
-                    <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-                  </a>
+                    <Clock className="w-3.5 h-3.5" />
+                    <span>Under Development</span>
+                  </button>
                 </div>
               </div>
             </div>

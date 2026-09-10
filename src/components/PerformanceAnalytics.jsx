@@ -46,31 +46,52 @@ function formatAttemptForResultModal(att, allQuestions = []) {
     };
   });
 
-  const questionEvaluations = responses.map((r, idx) => ({
-    id: r.question_id || `q_${idx + 1}`,
-    qnum: r.qnum || (idx + 1),
-    section: r.section || 'General',
-    type: r.type || 'MCQ',
-    marks: r.marks || 1,
-    negative_marks: r.negative_marks || 0,
-    userAnswer: r.user_answer || '',
-    correct_answer: r.correct_answer || '',
-    isCorrect: Boolean(r.is_correct),
-    isAttempted: Boolean(r.is_attempted ?? (r.user_answer !== undefined && r.user_answer !== '')),
-    marksAwarded: Number(r.marks_awarded || (r.is_correct ? (r.marks || 1) : 0)),
-    timeSpentSec: Number(r.time_spent_seconds || 0),
-    status: r.status || (r.is_correct ? 'CORRECT' : (r.is_attempted ? 'INCORRECT' : 'UNATTEMPTED'))
-  }));
+  const questionEvaluations = responses.map((r, idx) => {
+    const matched = allQuestions.find(q => q.id === (r.question_id || r.qId)) || {};
+    const qid = r.question_id || matched.id || `q_${idx + 1}`;
+    const rawUserAns = r.user_answer !== undefined && r.user_answer !== null ? String(r.user_answer).trim() : '';
+    const isUnattemptedState = r.status === 'UNATTEMPTED' || r.status === 'NOT_ANSWERED' || r.status === 'NOT_VISITED';
+    
+    // Explicit is_attempted flag check, fallback to non-empty answer and valid status
+    const isAttempted = r.is_attempted !== undefined
+      ? Boolean(r.is_attempted)
+      : (rawUserAns !== '' && !isUnattemptedState);
+
+    const isCorrect = isAttempted && Boolean(r.is_correct);
+
+    return {
+      id: qid,
+      qnum: r.qnum || matched.qnum || (idx + 1),
+      section: r.section || matched.section || 'General',
+      type: r.type || matched.type || 'MCQ',
+      marks: r.marks || matched.marks || 1,
+      negative_marks: r.negative_marks !== undefined ? r.negative_marks : (matched.negative_marks || 0),
+      userAnswer: isAttempted ? rawUserAns : '',
+      correct_answer: r.correct_answer || matched.correct_answer || matched.answer || '',
+      isCorrect,
+      isAttempted,
+      marksAwarded: Number(r.marks_awarded !== undefined ? r.marks_awarded : (isCorrect ? (r.marks || 1) : 0)),
+      timeSpentSec: Number(r.time_spent_seconds || 0),
+      status: !isAttempted ? 'UNATTEMPTED' : (isCorrect ? 'CORRECT' : 'INCORRECT')
+    };
+  });
 
   const userAnswers = {};
   const questionTimes = {};
   const questionStates = {};
 
   responses.forEach((r, idx) => {
-    const qid = r.question_id || `q_${idx + 1}`;
-    userAnswers[qid] = r.user_answer || '';
+    const matched = allQuestions.find(q => q.id === (r.question_id || r.qId)) || {};
+    const qid = r.question_id || matched.id || `q_${idx + 1}`;
+    const rawUserAns = r.user_answer !== undefined && r.user_answer !== null ? String(r.user_answer).trim() : '';
+    const isUnattemptedState = r.status === 'UNATTEMPTED' || r.status === 'NOT_ANSWERED' || r.status === 'NOT_VISITED';
+    const isAttempted = r.is_attempted !== undefined
+      ? Boolean(r.is_attempted)
+      : (rawUserAns !== '' && !isUnattemptedState);
+
+    userAnswers[qid] = isAttempted ? rawUserAns : '';
     questionTimes[qid] = Number(r.time_spent_seconds || 0);
-    questionStates[qid] = r.is_attempted ? (r.is_correct ? 'ANSWERED' : 'ANSWERED') : 'NOT_VISITED';
+    questionStates[qid] = isAttempted ? 'ANSWERED' : 'NOT_VISITED';
   });
 
   return {
@@ -116,13 +137,22 @@ function formatAttemptForPracticeAnalysis(att, allQuestions = []) {
       tolerance: matched.tolerance || r.tolerance || 0.05
     };
 
+    const rawUserAns = r.user_answer !== undefined && r.user_answer !== null ? String(r.user_answer).trim() : '';
+    const isUnattemptedState = r.status === 'UNATTEMPTED' || r.status === 'NOT_ANSWERED' || r.status === 'NOT_VISITED';
+    const isAttempted = r.is_attempted !== undefined
+      ? Boolean(r.is_attempted)
+      : (rawUserAns !== '' && !isUnattemptedState);
+
+    const isCorrect = isAttempted && Boolean(r.is_correct);
+
     return {
       question: qObj,
-      userAnswer: r.user_answer || '',
-      isAttempted: Boolean(r.is_attempted ?? (r.user_answer !== undefined && r.user_answer !== '')),
-      isCorrect: Boolean(r.is_correct),
-      marksAwarded: Number(r.marks_awarded || (r.is_correct ? (r.marks || 1) : 0)),
-      timeSpentSec: Number(r.time_spent_seconds || 0)
+      userAnswer: isAttempted ? rawUserAns : '',
+      isAttempted,
+      isCorrect,
+      marksAwarded: Number(r.marks_awarded !== undefined ? r.marks_awarded : (isCorrect ? (r.marks || 1) : 0)),
+      timeSpentSec: Number(r.time_spent_seconds || 0),
+      status: !isAttempted ? 'UNATTEMPTED' : (isCorrect ? 'CORRECT' : 'INCORRECT')
     };
   });
 
@@ -238,6 +268,7 @@ export default function PerformanceAnalytics({
   const sectionStats = SYLLABUS_SECTIONS.map(secName => {
     let attempted = 0;
     let correct = 0;
+    let unattempted = 0;
 
     filteredAttempts.forEach(att => {
       if (Array.isArray(att.question_responses)) {
@@ -247,8 +278,19 @@ export default function PerformanceAnalytics({
           if (qSec) {
             const normQSec = normalizeSectionTitle(qSec);
             if (normQSec === normalizeSectionTitle(secName)) {
-              attempted++;
-              if (resp.status === 'ANSWERED' || resp.status === 'CORRECT' || resp.is_correct) correct++;
+              const rawAns = resp.user_answer !== undefined && resp.user_answer !== null ? String(resp.user_answer).trim() : '';
+              const isUnattemptedState = resp.status === 'UNATTEMPTED' || resp.status === 'NOT_ANSWERED' || resp.status === 'NOT_VISITED';
+              const isAttempted = resp.is_attempted !== undefined
+                ? Boolean(resp.is_attempted)
+                : (rawAns !== '' && !isUnattemptedState);
+
+              if (isAttempted) {
+                attempted++;
+                const isCorrect = Boolean(resp.is_correct || resp.status === 'CORRECT');
+                if (isCorrect) correct++;
+              } else {
+                unattempted++;
+              }
             }
           }
         });
@@ -262,13 +304,15 @@ export default function PerformanceAnalytics({
       correct = Math.round(totalCorrect * weight);
     }
 
+    const incorrect = Math.max(0, attempted - correct);
     const accuracy = attempted > 0 ? ((correct / attempted) * 100).toFixed(1) : '0.0';
 
     return {
       section: secName,
       attempted,
+      unattempted,
       correct,
-      incorrect: Math.max(0, attempted - correct),
+      incorrect,
       accuracy: Number(accuracy)
     };
   });
@@ -531,10 +575,11 @@ export default function PerformanceAnalytics({
                   />
                 </div>
 
-                <div className="flex items-center justify-between text-[11px] text-slate-500 font-mono">
+                <div className="flex items-center justify-between text-[11px] text-slate-500 font-mono flex-wrap gap-1">
                   <span>Attempted: <strong>{sec.attempted} Qs</strong></span>
                   <span className="text-emerald-600 dark:text-emerald-400">Correct: {sec.correct}</span>
                   <span className="text-rose-500">Incorrect: {sec.incorrect}</span>
+                  {sec.unattempted > 0 && <span className="text-slate-400">Unattempted: {sec.unattempted}</span>}
                 </div>
               </div>
             ))}

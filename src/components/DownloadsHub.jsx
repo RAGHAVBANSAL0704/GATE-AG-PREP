@@ -16,7 +16,9 @@ import {
   BookOpen,
   CheckCircle2,
   Check,
-  FileDown
+  FileDown,
+  ShieldCheck,
+  Scale
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import { downloadBulkZip } from '../utils/zipDownloader';
@@ -59,6 +61,14 @@ export default function DownloadsHub({ questions = [], mockPapers = [], customMo
     if (eraFilter === 'recent' && yNum < 2016) return false;
     if (eraFilter === 'classic' && yNum > 2015) return false;
     return true;
+  });
+
+  const filteredCustomMocks = customMockPapers.filter(paper => {
+    if (!searchTerm) return true;
+    const term = searchTerm.toLowerCase();
+    const titleMatch = (paper.title || '').toLowerCase().includes(term);
+    const idMatch = (paper.id || '').toLowerCase().includes(term);
+    return titleMatch || idMatch;
   });
 
   const getOfficialPaperQuestions = (year) => {
@@ -276,7 +286,7 @@ export default function DownloadsHub({ questions = [], mockPapers = [], customMo
                   disabled={isZipping}
                   onClick={handleDownloadAllCustomMocksZip}
                   className="px-3.5 py-2 rounded-xl bg-purple-600 hover:bg-purple-700 disabled:opacity-50 text-white text-xs font-bold transition flex items-center gap-2 shadow-xs active:scale-95 cursor-pointer"
-                  title="Package and download all 18 custom mock DOCX papers in one ZIP"
+                  title={`Package and download all ${customMockPapers.length} custom mock DOCX papers in one ZIP`}
                 >
                   {isZipping ? <Loader2 className="w-4 h-4 animate-spin" /> : <Archive className="w-4 h-4" />}
                   <span>Download All Custom Mocks (ZIP)</span>
@@ -298,6 +308,14 @@ export default function DownloadsHub({ questions = [], mockPapers = [], customMo
 
       {vaultTab === 'official' && (
         <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
+          {/* Fair Dealing Notice Banner */}
+          <div className="p-4 bg-slate-50 dark:bg-slate-950/80 border-b border-slate-200 dark:border-slate-800 flex items-start sm:items-center gap-3 text-xs text-slate-600 dark:text-slate-400">
+            <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5 sm:mt-0" />
+            <p className="text-[11px] leading-relaxed">
+              <span className="font-bold text-slate-800 dark:text-slate-200">Fair Dealing &amp; Educational Notice:</span> Official GATE question papers and keys are original publications of the organizing IITs/IISc on behalf of NCB-GATE, provided here free of charge for non-commercial student preparation under Section 52(1) of the Indian Copyright Act, 1957.
+            </p>
+          </div>
+
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse text-xs">
               <thead>
@@ -409,13 +427,13 @@ export default function DownloadsHub({ questions = [], mockPapers = [], customMo
       {vaultTab === 'custom' && (
         /* Custom Uploaded Mocks Download Vault Grid */
         <div className="space-y-4">
-          {customMockPapers.length === 0 ? (
+          {filteredCustomMocks.length === 0 ? (
             <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-8 text-center text-slate-400 text-xs">
-              No custom mock papers found.
+              {searchTerm ? `No custom mock papers matching "${searchTerm}".` : 'No custom mock papers found.'}
             </div>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {customMockPapers.map((paper, idx) => (
+              {filteredCustomMocks.map((paper, idx) => (
                 <div
                   key={paper.id || idx}
                   className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-5 flex flex-col justify-between space-y-4 shadow-sm hover:border-purple-500 transition group"

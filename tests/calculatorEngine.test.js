@@ -139,4 +139,53 @@ describe('Calculator Engine & Agricultural Constants Validation', () => {
     });
   });
 
+  describe('React Rules of Hooks Invariants in ScientificCalculator', () => {
+    it('verifies that all hooks in ScientificCalculator.jsx are defined before any return statements', async () => {
+      const { readFileSync } = await import('node:fs');
+      const { join } = await import('node:path');
+      const filePath = join(process.cwd(), 'src', 'components', 'ScientificCalculator.jsx');
+      const content = readFileSync(filePath, 'utf8');
+
+      // Find indices of all hook calls: useState, useEffect, useRef, useMemo, useCallback
+      const hookRegex = /\b(useState|useEffect|useRef|useMemo|useCallback)\s*\(/g;
+      const hookIndices = [];
+      let match;
+      while ((match = hookRegex.exec(content)) !== null) {
+        hookIndices.push({ hook: match[1], index: match.index });
+      }
+
+      assert.ok(hookIndices.length > 0, 'Should find hooks in ScientificCalculator.jsx');
+      const lastHookIndex = hookIndices[hookIndices.length - 1].index;
+
+      // Find first occurrence of early return statement at the component level
+      // Specifically return null, return (, etc. that exit the component
+      const earlyReturnRegex = /\bif\s*\(\s*!isOpen\s*\)\s*return\b/g;
+      const earlyReturnMatch = earlyReturnRegex.exec(content);
+
+      assert.ok(earlyReturnMatch, 'Should find early return for !isOpen');
+      assert.ok(
+        earlyReturnMatch.index > lastHookIndex,
+        `React Rules of Hooks violation: "if (!isOpen) return" (at index ${earlyReturnMatch.index}) must come AFTER the last hook (at index ${lastHookIndex})`
+      );
+    });
+
+    it('verifies that ScientificCalculator has drills completely removed and conforms to 2-theme system', async () => {
+      const { readFileSync } = await import('node:fs');
+      const { join } = await import('node:path');
+      const filePath = join(process.cwd(), 'src', 'components', 'ScientificCalculator.jsx');
+      const content = readFileSync(filePath, 'utf8');
+
+      // Assert drills removal
+      assert.strictEqual(content.includes('isDrillOpen'), false, 'isDrillOpen state should be removed');
+      assert.strictEqual(content.includes('CalculatorDrillsModal'), false, 'CalculatorDrillsModal import and usage should be removed');
+      assert.strictEqual(content.includes('Speed Drill'), false, 'Speed Drill button/text should be removed');
+
+      // Assert 2-theme compliance (no extraneous multi-skin switchers)
+      assert.strictEqual(content.includes('calcSkin'), false, 'calcSkin state should be removed');
+      assert.strictEqual(content.includes('skinConfigs'), false, 'skinConfigs should be removed');
+      assert.strictEqual(content.includes('handleCycleSkin'), false, 'handleCycleSkin should be removed');
+    });
+  });
+
 });
+

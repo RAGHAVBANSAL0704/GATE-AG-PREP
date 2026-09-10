@@ -11,8 +11,8 @@
 - **Backend & Storage**: Supabase JS Client v2 (Auth, Test Attempts, Solvers Leaderboard), LocalStorage & IndexedDB (Offline cache & sync queue).
 - **Test Infrastructure**: Native Node.js Test Runner (`node --test tests/**/*.test.js`), `node:assert/strict`.
 - **Verification Commands**:
-  - `npm test`: **426 tests across 85 suites (100% passing, 0 failures, exit code 0)** in ~340ms.
-  - `npm run build`: Clean production bundle compiled into `dist/` in ~2.4s.
+  - `npm test`: **561 tests across 93 suites (100% passing, 0 failures, exit code 0)** in ~400ms.
+  - `npm run build`: Clean production bundle compiled into `dist/` in ~2.1s.
 
 ```mermaid
 graph TD
@@ -24,9 +24,10 @@ graph TD
     App --> Sync[Test Attempt Sync Service]
     
     Sync --> LocalQueue[LocalStorage Offline Queue]
+    Sync --> IDB[IndexedDB gate_ag_prep_db Deep Storage]
     Sync --> Supabase[Supabase DB / Remote Backend]
     
-    App --> Datasets[1,324 PYQs + 1,885 Custom Mock Qs = 3,209 Total Qs]
+    App --> Datasets[1,324 PYQs + 3,250 Custom Mock Qs = 4,574 Total Qs]
 ```
 
 ---
@@ -45,8 +46,9 @@ graph TD
 
 ### B. Offline Resilience & Sync Subsystem (`src/services/testAttemptService.js`)
 - **UUID Generation**: Every attempt gets a client-generated UUID v4 (`client_attempt_id`).
-- **Offline Queueing**: Attempts are queued in `localStorage` with `_syncedToBackend: false`.
+- **Deep Storage & Offline Queueing**: Complete attempts with full `question_responses` (selected answers, marks, timing) are saved to IndexedDB (`gate_ag_prep_db`) and queued in `localStorage` with `_syncedToBackend: false`.
 - **Automatic Re-sync**: Listens to `online` and `app-online` window events; pushes pending attempts to Supabase table `test_attempts` idempotently without duplicates.
+- **Guest-to-User Claiming**: Guest mock attempts stored prior to login are claimed via `associateGuestAttemptsWithStudent()`.
 - **History Merging**: Merges local and remote attempts by student identifier (email or admission roll number) sorted chronologically.
 
 ### C. CBT Mock Test Engine & Palette States (`src/components/MockTestMode.jsx`)
@@ -56,7 +58,7 @@ graph TD
   3. `ANSWERED` (Green)
   4. `MARKED` (Purple)
   5. `ANSWERED_MARKED` (Purple with green indicator)
-- **Timers & Crash Recovery**: 180-minute total countdown with auto-submit; active exam state saved continuously to `gate_ag_active_cbt_session` with automatic elapsed time adjustment on browser refresh/crash.
+- **Wall-Clock Timers & Crash Recovery**: 180-minute countdown based on target wall-clock timestamp (`targetEndTimeRef`) with `visibilitychange` resync and auto-submit; active state saved to `gate_ag_active_cbt_session` with throttled disk writes (on user actions and 10s intervals).
 - **TCS iON Keypad**: Floating on-screen numeric keypad for NAT inputs (`0-9`, `.`, `-`, `Backspace`, `Clear`).
 - **Pacing Metrics (`getQuestionPacing`)**: Rapid Fire (<60s), Optimal (60–150s), High Investment (>150s), Rush Trap (≤45s wrong), Sinkhole (>180s wrong), Clean Skip (0s).
 
@@ -64,6 +66,7 @@ graph TD
 - **MCQ**:
   - 1-Mark: Correct = $+1.00$, Incorrect = $-\frac{1}{3} \approx -0.33$, Unattempted = $0.00$.
   - 2-Mark: Correct = $+2.00$, Incorrect = $-\frac{2}{3} \approx -0.67$, Unattempted = $0.00$.
+  - Bi-directional letter-key and option-text defensive fallback.
 - **MSQ**: Exact set match required (order-independent, delimiter/whitespace tolerant, supports contiguous tokens like `"AC"`). Partial credit = $0.00$. Negative marking = $0.00$.
 - **NAT**: Scalar tolerance ($\pm 0.05$, IEEE-754 epsilon tolerant) OR range interval ($[\text{min}, \text{max}]$ inclusive, e.g. `"1.90 to 2.10"` or hyphen ranges). Negative marking = $0.00$. Non-numeric = $0.00$.
 - **AIR Percentile Tiers**:
@@ -95,17 +98,17 @@ graph TD
 |---|---|---|---|
 | **Practice Pool** | `src/data/questions.json` | 1,324 questions | Strictly official PYQs (2007–2026) with explanatory solutions, MCQ/MSQ/NAT |
 | **Official Mock Papers** | `src/data/mock_papers.json` | 20 official papers | Full papers 2007 through 2026 (1,324 total questions, 180 min, 100 marks) |
-| **Custom Mock Papers** | `src/data/custom_mock_2027_XX.json` | 29 mock papers | 29 full-length mocks (1,885 questions, 65 Qs / 100 M each) |
+| **Custom Mock Papers** | `src/data/custom_mock_2027_XX.json` | 50 mock papers | 50 full-length mocks (3,250 questions, 65 Qs / 100 M each, 100% Hard Multi-Chain) |
 | **Formulas** | `src/data/formulas.js` | 57 formulas in 8 categories | Validated LaTeX strings, balanced braces, categories: EM, FMP, FP, SWCE, IDE, APE, DFE, GA |
 | **Syllabus** | `src/data/syllabus.js` | 8 sections, 83 subtopics | Granular breakdown with official weightage mappings |
 
 ---
 
-## 4. Test Suite Coverage Summary (426 Tests across 85 Suites)
+## 4. Test Suite Coverage Summary (561 Tests across 93 Suites)
 
 Run via `npm test` (`node --test tests/**/*.test.js`):
 - `scoring.test.js` (31 tests): MCQ/MSQ/NAT evaluation, penalties, score rounding, AIR tiers.
-- `custom_mocks.test.js` (87 tests): Validates all 29 custom mocks (schema, 65 Qs, 100 Marks, 10 GA / 55 Tech).
+- `custom_mocks.test.js` (150 tests): Validates all 50 custom mocks (schema, 65 Qs, 100 Marks, 10 GA / 55 Tech, MCQ keys format).
 - `cbtStatePersistence.test.js` (4 tests): CBT state recovery, active timer adjustment, keypad input.
 - `gateCompliance.test.js` (4 tests): GATE exam compliance, mark distribution, negative marking.
 - `mistakeVaultIsolation.test.js` (5 tests): Multi-user mistake vault isolation and repeat error counters.
@@ -114,20 +117,21 @@ Run via `npm test` (`node --test tests/**/*.test.js`):
 - `dataset.test.js` & `schema.test.js` (31 tests): 1,324 questions schema, 20 official papers, taxonomy parity.
 - `stress.test.js` (45 tests): Floating-point epsilon ($0.1 + 0.2$), delimiter normalizations, 0/0 accuracy safety.
 - `sync.test.js` (18 tests): UUID generation, offline queue, idempotent re-sync, deduplication.
+- `historyPersistence.test.js` (4 tests): Guest attempt claiming, IndexedDB & LocalStorage merged retrieval.
 - `security.test.js` & `profanityFilter.test.js` (24+ tests): SHA-256 passcodes, XSS sanitization.
 - `theme_engine.test.js` (4 tests): 2-theme invariant, typography contrast.
 - `user_roles_moderation.test.js` (8 tests): Roles, permissions, mutes, bans, audit log.
 - `visitor_mode.test.js` (3 tests): Guest flags, visitor permissions, auth gate.
 - `question_timer_performance.test.js` (14 tests): Pacing benchmarks, cumulative tracking.
-- *Additional Suites* (118 tests): Calculator, CBT skins, command palette, concepts, PDF generator, radar diagnostics, feedback, forensics, AI doubt solver, history persistence, notifications, roll number parser, XP sync.
+- *Additional Suites* (185+ tests): Calculator, CBT skins, command palette, concepts, PDF generator, radar diagnostics, feedback, forensics, AI doubt solver, question reports, dataset quality, notifications, roll number parser, XP sync.
 
 ---
 
 ## 5. Agent Directives for Maximum Token Efficiency
 
 1. **Rely on this Context**: Do not crawl or re-analyze raw data files (`questions.json`, `mock_papers.json`) or unchanged components unless modifying them directly.
-2. **Execute Verification**: Always run `npm test` after code changes; ensure 380/380 tests pass.
+2. **Execute Verification**: Always run `npm test` after code changes; ensure 561/561 tests pass.
 3. **Preserve Contracts**:
    - Palette state constants: `NOT_VISITED`, `NOT_ANSWERED`, `ANSWERED`, `MARKED`, `ANSWERED_MARKED`.
-   - Maintain 100% offline functionality with graceful `localStorage` fallback.
+   - Maintain 100% offline functionality with graceful `localStorage` and `IndexedDB` fallback.
    - Maintain dual-theme contrast (`dark` and `light` only).

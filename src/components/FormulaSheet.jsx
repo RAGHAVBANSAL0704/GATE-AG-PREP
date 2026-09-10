@@ -187,7 +187,7 @@ export default function FormulaSheet({ onOpenCalc }) {
                           </div>
 
                           {/* KaTeX Math Formula Box */}
-                          <div className="p-4 rounded-xl bg-slate-950 border border-slate-800 text-center text-emerald-400 font-semibold overflow-x-auto shadow-inner min-h-[60px] flex items-center justify-center">
+                          <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-center text-slate-900 dark:text-emerald-400 font-semibold overflow-x-auto shadow-inner min-h-[60px] flex items-center justify-center">
                             <MathRenderer content={`\\[ ${item.formula} \\]`} inline={false} />
                           </div>
 
@@ -209,12 +209,12 @@ export default function FormulaSheet({ onOpenCalc }) {
       {/* VIEW MODE 2: COMPACT QUICK-GRID TABLE */}
       {viewMode === 'table' && (
         <div className="card-3d rounded-2xl overflow-hidden shadow-md">
-          <div className="px-6 py-4 bg-slate-900 text-white flex items-center justify-between border-b border-slate-800">
+          <div className="px-6 py-4 bg-slate-100 dark:bg-slate-900 text-slate-900 dark:text-white flex items-center justify-between border-b border-slate-200 dark:border-slate-800">
             <h3 className="font-extrabold text-sm flex items-center gap-2">
-              <Table className="w-4 h-4 text-blue-400" />
+              <Table className="w-4 h-4 text-blue-500" />
               <span>Compact Single-Line Formula Reference Sheet</span>
             </h3>
-            <span className="text-xs font-mono text-slate-400">Total Formulas: {allFilteredFormulas.length}</span>
+            <span className="text-xs font-mono text-slate-500 dark:text-slate-400">Total Formulas: {allFilteredFormulas.length}</span>
           </div>
 
           <div className="overflow-x-auto">
@@ -238,7 +238,7 @@ export default function FormulaSheet({ onOpenCalc }) {
                       <div className="font-bold text-slate-900 dark:text-white">{item.title}</div>
                       <div className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">{item.topicName}</div>
                     </td>
-                    <td className="py-3.5 px-6 text-center bg-slate-950 text-emerald-400 font-semibold rounded-lg my-1">
+                    <td className="py-3.5 px-6 text-center bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-emerald-400 font-semibold rounded-lg my-1 border border-slate-200/60 dark:border-slate-800">
                       <MathRenderer content={`$${item.formula}$`} inline={true} />
                     </td>
                     <td className="py-3.5 px-4 text-slate-600 dark:text-slate-300 leading-normal">

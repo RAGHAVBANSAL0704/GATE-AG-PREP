@@ -147,10 +147,10 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
 
   return (
     <div className="fixed inset-0 z-[120] flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md overflow-y-auto">
-      <div className="relative w-full max-w-xl bg-slate-900 border border-slate-800 rounded-3xl shadow-2xl overflow-hidden my-auto p-6 sm:p-8 space-y-6">
+      <div className="relative w-full max-w-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-2xl overflow-hidden my-auto p-6 sm:p-8 space-y-6 text-slate-900 dark:text-slate-100">
         
         {/* Header */}
-        <div className="flex items-center justify-between border-b border-slate-800 pb-4">
+        <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-4">
           <div className="flex items-center gap-3">
             
             {/* Avatar Preview with Local Device Upload Trigger */}
@@ -182,7 +182,7 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
             </div>
 
             <div>
-              <h3 className="text-lg font-bold text-white flex items-center gap-2">
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
                 <span>{student?.display_name || student?.full_name}</span>
                 <span className={`text-xs px-2.5 py-0.5 rounded-full font-mono border ${
                   isFaculty 
@@ -192,21 +192,21 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
                   {isFaculty ? '🏛️ Verified Faculty' : (student?.student_type === 'hau' ? 'CCS HAU' : 'External')}
                 </span>
               </h3>
-              <p className="text-xs text-slate-400">{student?.email}</p>
+              <p className="text-xs text-slate-500 dark:text-slate-400">{student?.email}</p>
             </div>
           </div>
 
           <button
             onClick={onClose}
-            className="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition cursor-pointer"
+            className="p-2 rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Rate Limit Info Banner */}
-        <div className="flex items-center justify-between p-3.5 rounded-2xl bg-slate-950 border border-slate-800 text-xs">
-          <div className="flex items-center gap-2 text-slate-300">
+        <div className="flex items-center justify-between p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 text-xs">
+          <div className="flex items-center gap-2 text-slate-600 dark:text-slate-300">
             <ShieldAlert className={`w-4 h-4 ${isFaculty ? 'text-indigo-400' : 'text-emerald-400'}`} />
             <span>Weekly Edit Limit:</span>
           </div>
@@ -240,14 +240,14 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
             {/* Faculty Title Prefix (If Faculty) */}
             {isFaculty && (
               <div className="space-y-1 sm:col-span-4">
-                <label className="font-medium text-slate-300 flex items-center gap-1.5">
+                <label className="font-medium text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
                   <Award className="w-3.5 h-3.5 text-indigo-400" />
                   Title / Prefix
                 </label>
                 <select
                   value={titlePrefix}
                   onChange={(e) => setTitlePrefix(e.target.value)}
-                  className="w-full px-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 font-semibold focus:outline-none focus:border-indigo-500"
+                  className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 font-semibold focus:outline-none focus:border-indigo-500"
                 >
                   {FACULTY_SALUTATIONS.map((sal) => (
                     <option key={sal} value={sal}>{sal}</option>
@@ -258,7 +258,7 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
 
             {/* Full Name */}
             <div className={`space-y-1 ${isFaculty ? 'sm:col-span-8' : 'sm:col-span-12'}`}>
-              <label className="font-medium text-slate-300 flex items-center gap-1.5">
+              <label className="font-medium text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
                 <UserCheck className={`w-3.5 h-3.5 ${isFaculty ? 'text-indigo-400' : 'text-emerald-400'}`} />
                 Full Name
               </label>
@@ -267,21 +267,21 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
                 placeholder="e.g. Rajesh Kumar"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
-                className="w-full px-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 placeholder-slate-400 focus:outline-none focus:border-indigo-500"
+                className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:border-indigo-500"
               />
             </div>
 
             {/* Faculty Department (If Faculty) */}
             {isFaculty && (
               <div className="space-y-1 sm:col-span-12">
-                <label className="font-medium text-slate-300 flex items-center gap-1.5">
+                <label className="font-medium text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
                   <Briefcase className="w-3.5 h-3.5 text-indigo-400" />
                   Department
                 </label>
                 <select
                   value={department}
                   onChange={(e) => setDepartment(e.target.value)}
-                  className="w-full px-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 focus:outline-none focus:border-indigo-500"
+                  className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 focus:outline-none focus:border-indigo-500"
                 >
                   {AGRI_ENGG_DEPARTMENTS.map((dept, i) => (
                     <option key={i} value={dept}>{dept}</option>
@@ -292,7 +292,7 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
 
             {/* Unique Username (@username) */}
             <div className="space-y-1 sm:col-span-12">
-              <label className="font-medium text-slate-300 flex items-center gap-1.5">
+              <label className="font-medium text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
                 <AtSign className={`w-3.5 h-3.5 ${isFaculty ? 'text-indigo-400' : 'text-emerald-400'}`} />
                 Unique Username (@username)
               </label>
@@ -303,7 +303,7 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
                   placeholder="username"
                   value={username.replace(/^@/, '')}
                   onChange={(e) => setUsername(e.target.value.toLowerCase().replace(/[^a-z0-9_]/g, ''))}
-                  className="w-full pl-8 pr-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 placeholder-slate-400 focus:outline-none focus:border-indigo-500 font-mono"
+                  className="w-full pl-8 pr-3.5 py-2.5 bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:border-indigo-500 font-mono"
                 />
               </div>
               <p className="text-[10px] text-slate-400">Can be used to log in instead of Email or Mobile. Must be unique.</p>
@@ -311,12 +311,12 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
 
             {/* Direct Device Image File Picker Button */}
             <div className="space-y-1 sm:col-span-12">
-              <label className="font-medium text-slate-300 flex items-center gap-1.5">
+              <label className="font-medium text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
                 <Camera className={`w-3.5 h-3.5 ${isFaculty ? 'text-indigo-400' : 'text-emerald-400'}`} />
                 Profile Photo (Upload from Device Storage)
               </label>
               <div className="flex items-center gap-2">
-                <label className="flex-1 px-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-slate-400 hover:text-white cursor-pointer flex items-center justify-between border-dashed hover:border-indigo-500 transition">
+                <label className="flex-1 px-3.5 py-2.5 bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white cursor-pointer flex items-center justify-between border-dashed hover:border-indigo-500 transition">
                   <span>{photoUrl ? 'Photo Selected! (Click to change)' : 'Choose image file from phone / PC...'}</span>
                   <Upload className={`w-4 h-4 ${isFaculty ? 'text-indigo-400' : 'text-emerald-400'}`} />
                   <input
@@ -340,14 +340,14 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
 
             {/* Gender Select */}
             <div className="space-y-1 sm:col-span-6">
-              <label className="font-medium text-slate-300 flex items-center gap-1.5">
+              <label className="font-medium text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
                 <User className={`w-3.5 h-3.5 ${isFaculty ? 'text-indigo-400' : 'text-emerald-400'}`} />
                 Gender
               </label>
               <select
                 value={gender}
                 onChange={(e) => setGender(e.target.value)}
-                className="w-full px-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 focus:outline-none focus:border-indigo-500"
+                className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 focus:outline-none focus:border-indigo-500"
               >
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
@@ -357,7 +357,7 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
 
             {/* Mobile Number */}
             <div className="space-y-1 sm:col-span-6">
-              <label className="font-medium text-slate-300 flex items-center gap-1.5">
+              <label className="font-medium text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
                 <Phone className={`w-3.5 h-3.5 ${isFaculty ? 'text-indigo-400' : 'text-emerald-400'}`} />
                 Mobile Number
               </label>
@@ -366,13 +366,13 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
                 placeholder="10-digit mobile"
                 value={mobileNumber}
                 onChange={(e) => setMobileNumber(e.target.value)}
-                className="w-full px-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 focus:outline-none focus:border-indigo-500"
+                className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 focus:outline-none focus:border-indigo-500"
               />
             </div>
 
             {/* Date of Birth */}
             <div className="space-y-1 sm:col-span-6">
-              <label className="font-medium text-slate-300 flex items-center gap-1.5">
+              <label className="font-medium text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
                 <Calendar className={`w-3.5 h-3.5 ${isFaculty ? 'text-indigo-400' : 'text-emerald-400'}`} />
                 Date of Birth
               </label>
@@ -380,21 +380,21 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
                 type="date"
                 value={dob}
                 onChange={(e) => setDob(e.target.value)}
-                className="w-full px-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 focus:outline-none focus:border-indigo-500"
+                className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 focus:outline-none focus:border-indigo-500"
               />
             </div>
 
             {/* Semester / Year (Only for Students) */}
             {!isFaculty && (
               <div className="space-y-1 sm:col-span-6">
-                <label className="font-medium text-slate-300 flex items-center gap-1.5">
+                <label className="font-medium text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
                   <GraduationCap className="w-3.5 h-3.5 text-emerald-400" />
                   Semester / Year
                 </label>
                 <select
                   value={currentYearSem}
                   onChange={(e) => setCurrentYearSem(e.target.value)}
-                  className="w-full px-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 focus:outline-none focus:border-emerald-500"
+                  className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 focus:outline-none focus:border-emerald-500"
                 >
                   <option value="1st Year / 1st Sem">1st Year / 1st Sem</option>
                   <option value="1st Year / 2nd Sem">1st Year / 2nd Sem</option>
@@ -412,7 +412,7 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
             {/* HAU Admission No (Only for HAU Students) */}
             {!isFaculty && student?.student_type === 'hau' && (
               <div className="space-y-1 sm:col-span-12">
-                <label className="font-medium text-slate-300 flex items-center gap-1.5">
+                <label className="font-medium text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
                   <GraduationCap className="w-3.5 h-3.5 text-emerald-400" />
                   HAU Admission No.
                 </label>
@@ -420,14 +420,14 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
                   type="text"
                   value={admissionNo}
                   onChange={(e) => setAdmissionNo(e.target.value)}
-                  className="w-full px-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 focus:outline-none focus:border-emerald-500 font-mono uppercase"
+                  className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 focus:outline-none focus:border-emerald-500 font-mono uppercase"
                 />
               </div>
             )}
 
             {/* College / Institute Name */}
             <div className="space-y-1 sm:col-span-12">
-              <label className="font-medium text-slate-300 flex items-center gap-1.5">
+              <label className="font-medium text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
                 <Building2 className={`w-3.5 h-3.5 ${isFaculty ? 'text-indigo-400' : 'text-emerald-400'}`} />
                 {isFaculty ? 'Institute / University' : 'College / Institute'}
               </label>
@@ -435,13 +435,13 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
                 type="text"
                 value={collegeName}
                 onChange={(e) => setCollegeName(e.target.value)}
-                className="w-full px-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 focus:outline-none focus:border-indigo-500"
+                className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 focus:outline-none focus:border-indigo-500"
               />
             </div>
 
             {/* Address */}
             <div className="space-y-1 sm:col-span-12">
-              <label className="font-medium text-slate-300 flex items-center gap-1.5">
+              <label className="font-medium text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
                 <MapPin className={`w-3.5 h-3.5 ${isFaculty ? 'text-indigo-400' : 'text-emerald-400'}`} />
                 Department / Campus Address (Optional)
               </label>
@@ -450,14 +450,14 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
                 placeholder="e.g. Department of FMPE, COAET"
                 value={address}
                 onChange={(e) => setAddress(e.target.value)}
-                className="w-full px-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 placeholder-slate-400 focus:outline-none focus:border-indigo-500"
+                className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:border-indigo-500"
               />
             </div>
 
             {/* Change Password */}
-            <div className="space-y-1 sm:col-span-12 pt-2 border-t border-slate-800/80">
+            <div className="space-y-1 sm:col-span-12 pt-2 border-t border-slate-200 dark:border-slate-800">
               <div className="flex items-center justify-between">
-                <label className="font-medium text-slate-300 flex items-center gap-1.5">
+                <label className="font-medium text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
                   <Lock className={`w-3.5 h-3.5 ${isFaculty ? 'text-indigo-400' : 'text-emerald-400'}`} />
                   Set New Password (Optional)
                 </label>
@@ -469,7 +469,7 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
                   placeholder="Min 6 characters"
                   value={newPassword}
                   onChange={(e) => setNewPassword(e.target.value)}
-                  className="w-full pl-3.5 pr-10 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 placeholder-slate-400 focus:outline-none focus:border-indigo-500"
+                  className="w-full pl-3.5 pr-10 py-2.5 bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:border-indigo-500"
                 />
                 <button
                   type="button"
@@ -482,9 +482,9 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
             </div>
 
             {/* AI Assistant API Key */}
-            <div className="space-y-1 sm:col-span-12 pt-2 border-t border-slate-800/80">
+            <div className="space-y-1 sm:col-span-12 pt-2 border-t border-slate-200 dark:border-slate-800">
               <div className="flex items-center justify-between">
-                <label className="font-medium text-slate-300 flex items-center gap-1.5">
+                <label className="font-medium text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
                   <Key className="w-3.5 h-3.5 text-amber-400" />
                   Gemini API Key (Optional / Private)
                 </label>
@@ -504,7 +504,7 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
                   placeholder="Paste your Gemini AI Studio API key here"
                   value={geminiApiKey}
                   onChange={(e) => setGeminiApiKey(e.target.value)}
-                  className="w-full pl-3.5 pr-10 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-slate-100 placeholder-slate-400 focus:outline-none focus:border-amber-500 font-mono text-xs"
+                  className="w-full pl-3.5 pr-10 py-2.5 bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:border-amber-500 font-mono text-xs"
                 />
                 <button
                   type="button"
@@ -522,7 +522,7 @@ export default function UserProfileModal({ student, onClose, onProfileUpdated })
             <button
               type="button"
               onClick={onClose}
-              className="px-5 py-2.5 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800 transition cursor-pointer"
+              className="px-5 py-2.5 rounded-xl text-xs font-semibold text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer"
             >
               Cancel
             </button>

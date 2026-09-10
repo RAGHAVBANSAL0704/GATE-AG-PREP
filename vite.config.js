@@ -147,7 +147,10 @@ export default defineConfig(({ command }) => ({
               if (num <= 12) return 'dataset-custom-mocks-7-12';
               if (num <= 18) return 'dataset-custom-mocks-13-18';
               if (num <= 24) return 'dataset-custom-mocks-19-24';
-              return 'dataset-custom-mocks-25-29';
+              if (num <= 29) return 'dataset-custom-mocks-25-29';
+              if (num <= 36) return 'dataset-custom-mocks-30-36';
+              if (num <= 43) return 'dataset-custom-mocks-37-43';
+              return 'dataset-custom-mocks-44-50';
             }
             return 'dataset-custom-mocks-1-6';
           }

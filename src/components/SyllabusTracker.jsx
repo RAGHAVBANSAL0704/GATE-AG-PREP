@@ -14,7 +14,7 @@ import {
 import { GATE_AG_SYLLABUS } from '../data/syllabus';
 import SyllabusWeightageHeatmap from './SyllabusWeightageHeatmap';
 
-export default function SyllabusTracker({ userProgress, onUpdateProgress, onStartSectionPractice }) {
+export default function SyllabusTracker({ userProgress, onUpdateProgress, onStartSectionPractice, questions, customMockPapers }) {
   const [activeView, setActiveView] = useState('tracker'); // 'tracker' | 'heatmap'
   const [expandedSec, setExpandedSec] = useState(GATE_AG_SYLLABUS[0].id);
 
@@ -74,12 +74,16 @@ export default function SyllabusTracker({ userProgress, onUpdateProgress, onStar
           }`}
         >
           <BarChart3 className="w-3.5 h-3.5" />
-          <span>14-Year Weightage & Trend Heatmap (2012–2026)</span>
+          <span>Section &amp; Topic Heatmap (PYQ Audit)</span>
         </button>
       </div>
 
       {activeView === 'heatmap' ? (
-        <SyllabusWeightageHeatmap />
+        <SyllabusWeightageHeatmap 
+          questions={questions}
+          customMockPapers={customMockPapers}
+          onStartSectionPractice={onStartSectionPractice}
+        />
       ) : (
         <>
           {/* Header Banner */}

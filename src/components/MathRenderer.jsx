@@ -106,11 +106,12 @@ export default function MathRenderer({ content, math, text, inline = false, clas
           
           // Style key lines or step headers cleanly
           let blockStyle = "leading-relaxed text-inherit";
-          if (trimmed.startsWith('<b>Official GATE') || trimmed.startsWith('Official GATE')) {
+          const lower = trimmed.toLowerCase();
+          if (lower.includes('official gate') || lower.startsWith('official gate') || lower.startsWith('<b>official gate') || lower.startsWith('&lt;b&gt;official gate')) {
             blockStyle = "p-2.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 text-emerald-900 dark:text-emerald-200 font-medium text-xs sm:text-sm";
-          } else if (trimmed.startsWith('<b>Section:') || trimmed.startsWith('Section:')) {
+          } else if (lower.startsWith('section:') || lower.startsWith('<b>section:') || lower.startsWith('&lt;b&gt;section:')) {
             blockStyle = "text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider";
-          } else if (trimmed.startsWith('1.') || trimmed.startsWith('2.') || trimmed.startsWith('3.')) {
+          } else if (/^\d+\./.test(trimmed)) {
             blockStyle = "pl-2 border-l-2 border-blue-500 text-slate-800 dark:text-slate-200 my-1 py-0.5";
           }
 

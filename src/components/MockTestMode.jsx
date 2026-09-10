@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { 
   Clock, 
   Calculator, 
@@ -26,7 +26,13 @@ import {
   Maximize,
   Minimize,
   Flag,
-  Grid
+  Grid,
+  Pause,
+  Save,
+  Trash2,
+  AlertOctagon,
+  BookmarkCheck,
+  BarChart3
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import { evaluateQuestion } from '../utils/scoring.js';
@@ -34,6 +40,7 @@ import { saveTestAttempt } from '../services/testAttemptService';
 import { calculateAttemptXP, awardStudentXP } from '../services/leaderboardService';
 import { GATE_AG_FORMULAS } from '../data/formulas';
 import QuestionReportModal from './QuestionReportModal';
+import MockPaperAnalysisModal from './MockPaperAnalysisModal';
 
 export default function MockTestMode({ 
   mockPapers = [], 
@@ -67,6 +74,13 @@ export default function MockTestMode({
   const [questionStates, setQuestionStates] = useState({});
   const [questionTimes, setQuestionTimes] = useState({});
 
+  // Wall-clock & Throttled Persistence Refs
+  const targetEndTimeRef = useRef(null);
+  const lastSaveTimeRef = useRef(0);
+  const prevAnswersRef = useRef(userAnswers);
+  const prevStatesRef = useRef(questionStates);
+  const prevQIndexRef = useRef(currentQIndex);
+
   // Modals
   const [showQuestionPaperModal, setShowQuestionPaperModal] = useState(false);
   const [showInstructionsModal, setShowInstructionsModal] = useState(false);
@@ -78,6 +92,19 @@ export default function MockTestMode({
   const [selectedFormulaCat, setSelectedFormulaCat] = useState('All');
   const [showReportModal, setShowReportModal] = useState(false);
   const [restoredSessionNotice, setRestoredSessionNotice] = useState(false);
+  const [pausedSession, setPausedSession] = useState(null);
+  const [showSaveMidwayModal, setShowSaveMidwayModal] = useState(false);
+  const [showCancelExamModal, setShowCancelExamModal] = useState(false);
+  const [analyzingPaper, setAnalyzingPaper] = useState(null);
+  const [actionToast, setActionToast] = useState(null);
+
+  // Auto-dismiss notification toasts after 5 seconds
+  useEffect(() => {
+    if (actionToast) {
+      const timer = setTimeout(() => setActionToast(null), 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [actionToast]);
 
   // Live sync: update active paperQuestions if an admin edits a question
   useEffect(() => {
@@ -97,9 +124,24 @@ export default function MockTestMode({
     return () => window.removeEventListener('gate_ag_question_updated', handleQuestionLiveUpdate);
   }, []);
 
-  // Auto-save active CBT test session to localStorage for crash & refresh recovery
+  // Auto-save active CBT test session to localStorage for crash & refresh recovery (Throttled & Action-Triggered)
   useEffect(() => {
-    if (testStarted && selectedPaper) {
+    if (!testStarted || !selectedPaper) return;
+
+    const answersChanged = prevAnswersRef.current !== userAnswers;
+    const statesChanged = prevStatesRef.current !== questionStates;
+    const qIndexChanged = prevQIndexRef.current !== currentQIndex;
+    const isMajorAction = answersChanged || statesChanged || qIndexChanged;
+
+    const now = Date.now();
+    const timeSinceLastSave = now - lastSaveTimeRef.current;
+
+    if (isMajorAction || timeSinceLastSave >= 10000) {
+      prevAnswersRef.current = userAnswers;
+      prevStatesRef.current = questionStates;
+      prevQIndexRef.current = currentQIndex;
+      lastSaveTimeRef.current = now;
+
       try {
         const sessionData = {
           paperTitle: selectedPaper.title,
@@ -113,14 +155,15 @@ export default function MockTestMode({
           userAnswers,
           questionStates,
           questionTimes,
-          savedAt: Date.now()
+          savedAt: now,
+          isPaused: false
         };
         localStorage.setItem('gate_ag_active_cbt_session', JSON.stringify(sessionData));
       } catch (e) {
         console.warn('Failed to save CBT active session:', e);
       }
     }
-  }, [testStarted, selectedPaper, paperInstructions, paperQuestions, activeSection, currentQIndex, timeLeft, userAnswers, questionStates, questionTimes]);
+  }, [testStarted, selectedPaper, paperInstructions, paperQuestions, activeSection, currentQIndex, userAnswers, questionStates, timeLeft]);
 
   // Check for saved session on mount and restore state if valid
   useEffect(() => {
@@ -128,23 +171,30 @@ export default function MockTestMode({
       const savedRaw = localStorage.getItem('gate_ag_active_cbt_session');
       if (savedRaw && !testStarted) {
         const parsed = JSON.parse(savedRaw);
-        const elapsedSinceSave = (Date.now() - (parsed.savedAt || 0)) / 1000;
-        if (parsed.timeLeft > elapsedSinceSave && parsed.paperQuestions?.length > 0) {
-          const remainingSec = Math.max(10, Math.floor(parsed.timeLeft - elapsedSinceSave));
-          setSelectedPaper(parsed.selectedPaper);
-          setPaperInstructions(parsed.paperInstructions);
-          setPaperQuestions(parsed.paperQuestions);
-          setActiveSection(parsed.activeSection || 'ALL');
-          setCurrentQIndex(parsed.currentQIndex || 0);
-          setTimeLeft(remainingSec);
-          setUserAnswers(parsed.userAnswers || {});
-          setQuestionStates(parsed.questionStates || {});
-          setQuestionTimes(parsed.questionTimes || {});
-          setTestStarted(true);
-          setIsTimerRunning(true);
-          setRestoredSessionNotice(true);
+        if (parsed.isPaused) {
+          // Deliberately paused midway: keep timer frozen and display resume card on dashboard
+          setPausedSession(parsed);
         } else {
-          localStorage.removeItem('gate_ag_active_cbt_session');
+          // Unpaused session (crash or accidental reload during active exam)
+          const elapsedSinceSave = (Date.now() - (parsed.savedAt || 0)) / 1000;
+          if (parsed.timeLeft > elapsedSinceSave && parsed.paperQuestions?.length > 0) {
+            const remainingSec = Math.max(10, Math.floor(parsed.timeLeft - elapsedSinceSave));
+            setSelectedPaper(parsed.selectedPaper);
+            setPaperInstructions(parsed.paperInstructions);
+            setPaperQuestions(parsed.paperQuestions);
+            setActiveSection(parsed.activeSection || 'ALL');
+            setCurrentQIndex(parsed.currentQIndex || 0);
+            setTimeLeft(remainingSec);
+            targetEndTimeRef.current = Date.now() + remainingSec * 1000;
+            setUserAnswers(parsed.userAnswers || {});
+            setQuestionStates(parsed.questionStates || {});
+            setQuestionTimes(parsed.questionTimes || {});
+            setTestStarted(true);
+            setIsTimerRunning(!parsed.paperInstructions?.is_untimed);
+            setRestoredSessionNotice(true);
+          } else {
+            localStorage.removeItem('gate_ag_active_cbt_session');
+          }
         }
       }
     } catch (e) {
@@ -157,7 +207,7 @@ export default function MockTestMode({
     const handleBeforeUnload = (e) => {
       if (testStarted && isTimerRunning) {
         e.preventDefault();
-        e.returnValue = 'You have an active GATE CBT Mock Test in progress. Your progress is saved, but time will continue to elapse. Are you sure you want to leave?';
+        e.returnValue = 'You have an active GATE CBT Mock Test in progress. Your progress is saved, but time will continue to elapse. Use "Save Midway" to pause safely.';
         return e.returnValue;
       }
     };
@@ -206,12 +256,113 @@ export default function MockTestMode({
     }
   }, [customPaper, directLaunchPaper]);
 
+  // Handle Save Test Midway (User pauses exam deliberately to resume later)
+  const handleSaveTestMidway = () => {
+    if (!testStarted || !selectedPaper) return;
+    try {
+      const sessionData = {
+        paperTitle: selectedPaper.title,
+        paperYear: selectedPaper.year,
+        selectedPaper,
+        paperInstructions,
+        paperQuestions,
+        activeSection,
+        currentQIndex,
+        timeLeft,
+        userAnswers,
+        questionStates,
+        questionTimes,
+        savedAt: Date.now(),
+        isPaused: true
+      };
+      localStorage.setItem('gate_ag_active_cbt_session', JSON.stringify(sessionData));
+      setPausedSession(sessionData);
+      setIsTimerRunning(false);
+      setTestStarted(false);
+      setSelectedPaper(null);
+      setShowSaveMidwayModal(false);
+      setActionToast({
+        type: 'success',
+        message: `Exam "${selectedPaper.title || 'Official Paper'}" paused & saved midway! Your progress and remaining time are preserved. You can resume anytime from the dashboard.`
+      });
+    } catch (e) {
+      console.error('Failed to save test midway:', e);
+    }
+  };
+
+  // Handle Resume Paused Test
+  const handleResumePausedTest = (sessionToResume = pausedSession) => {
+    if (!sessionToResume) return;
+    try {
+      setSelectedPaper(sessionToResume.selectedPaper);
+      setPaperInstructions(sessionToResume.paperInstructions);
+      setPaperQuestions(sessionToResume.paperQuestions);
+      setActiveSection(sessionToResume.activeSection || 'ALL');
+      setCurrentQIndex(sessionToResume.currentQIndex || 0);
+      setTimeLeft(sessionToResume.timeLeft);
+      setUserAnswers(sessionToResume.userAnswers || {});
+      setQuestionStates(sessionToResume.questionStates || {});
+      setQuestionTimes(sessionToResume.questionTimes || {});
+
+      const activeSession = {
+        ...sessionToResume,
+        isPaused: false,
+        savedAt: Date.now()
+      };
+      localStorage.setItem('gate_ag_active_cbt_session', JSON.stringify(activeSession));
+
+      setTestStarted(true);
+      setIsTimerRunning(!sessionToResume.paperInstructions?.is_untimed);
+      setRestoredSessionNotice(true);
+      setPausedSession(null);
+      setActionToast(null);
+    } catch (e) {
+      console.error('Failed to resume paused test:', e);
+    }
+  };
+
+  // Handle Cancel Exam Midway (Deletes all session answers, flags, and records zero history)
+  const handleCancelExam = () => {
+    try {
+      localStorage.removeItem('gate_ag_active_cbt_session');
+    } catch (e) {}
+
+    setUserAnswers({});
+    setQuestionStates({});
+    setQuestionTimes({});
+    setTimeLeft(0);
+    setIsTimerRunning(false);
+    setTestStarted(false);
+    setSelectedPaper(null);
+    setShowingPreExamInstructions(false);
+    setPausedSession(null);
+    setShowCancelExamModal(false);
+    setShowSaveMidwayModal(false);
+
+    setActionToast({
+      type: 'info',
+      message: 'Exam cancelled. All session answers, question flags, and attempt progress have been permanently deleted.'
+    });
+  };
+
   // Step 1: User selects a paper -> Show Official GATE / TCS iON Pre-Exam Instructions Screen
   const handleSelectPaperForInstructions = (paper) => {
     if (!currentStudent && onRequireAuth) {
       onRequireAuth("Sign In or Register free to attempt 180-minute official CBT Mock Tests, record scores, and track your AIR Rank!");
       return;
     }
+
+    if (pausedSession && (pausedSession.paperTitle !== paper.title || String(pausedSession.paperYear) !== String(paper.year))) {
+      const proceed = window.confirm(
+        `You currently have a paused exam for "${pausedSession.paperTitle}". Starting a new exam will overwrite your saved progress. Do you want to discard it and proceed with this new exam?`
+      );
+      if (!proceed) return;
+      try {
+        localStorage.removeItem('gate_ag_active_cbt_session');
+      } catch (e) {}
+      setPausedSession(null);
+    }
+
     setSelectedPaper(paper);
     setPaperInstructions(paper.instructions);
     const paperQs = [...(paper?.questions || [])].sort((a, b) => (a.qnum || 0) - (b.qnum || 0));
@@ -242,8 +393,11 @@ export default function MockTestMode({
     if (paperInstructions?.is_untimed) {
       setIsTimerRunning(false);
       setTimeLeft(0);
+      targetEndTimeRef.current = null;
     } else {
-      setTimeLeft((paperInstructions?.duration_mins || 180) * 60);
+      const durationSeconds = (paperInstructions?.duration_mins || 180) * 60;
+      setTimeLeft(durationSeconds);
+      targetEndTimeRef.current = Date.now() + durationSeconds * 1000;
       setIsTimerRunning(true);
     }
     setTestStarted(true);
@@ -251,16 +405,37 @@ export default function MockTestMode({
 
   useEffect(() => {
     let interval = null;
-    if (isTimerRunning && timeLeft > 0) {
-      interval = setInterval(() => {
-        setTimeLeft(prev => prev - 1);
-      }, 1000);
-    } else if (timeLeft === 0 && isTimerRunning) {
-      setIsTimerRunning(false);
-      handleSubmitFinal();
+    if (!isTimerRunning) return;
+
+    if (!targetEndTimeRef.current && timeLeft > 0) {
+      targetEndTimeRef.current = Date.now() + timeLeft * 1000;
     }
-    return () => clearInterval(interval);
-  }, [isTimerRunning, timeLeft]);
+
+    const syncRemainingTime = () => {
+      if (!targetEndTimeRef.current) return;
+      const rem = Math.max(0, Math.round((targetEndTimeRef.current - Date.now()) / 1000));
+      setTimeLeft(rem);
+      if (rem === 0) {
+        setIsTimerRunning(false);
+        handleSubmitFinal();
+      }
+    };
+
+    interval = setInterval(syncRemainingTime, 1000);
+
+    const handleVisibilityOrFocus = () => {
+      syncRemainingTime();
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityOrFocus);
+    window.addEventListener('focus', handleVisibilityOrFocus);
+
+    return () => {
+      if (interval) clearInterval(interval);
+      document.removeEventListener('visibilitychange', handleVisibilityOrFocus);
+      window.removeEventListener('focus', handleVisibilityOrFocus);
+    };
+  }, [isTimerRunning]);
 
   // Current question data
   const currentQ = paperQuestions[currentQIndex];
@@ -742,8 +917,9 @@ export default function MockTestMode({
         </div>
 
         {/* Bottom Control Bar */}
-        <div className="p-5 bg-slate-100 border-t border-slate-300 flex items-center justify-between">
+        <div className="p-5 bg-slate-100 border-t border-slate-300 flex flex-wrap items-center justify-between gap-3">
           <button
+            type="button"
             onClick={() => {
               setShowingPreExamInstructions(false);
               setSelectedPaper(null);
@@ -753,19 +929,45 @@ export default function MockTestMode({
             ← Back to Papers List
           </button>
 
-          <button
-            onClick={handleStartExam}
-            disabled={!hasAgreedDeclaration}
-            className={`px-8 py-3 rounded-xl text-xs font-extrabold transition shadow-md flex items-center gap-2 cursor-pointer ${
-              hasAgreedDeclaration
-                ? 'bg-[#0B4A8F] hover:bg-[#003366] text-white active:scale-95'
-                : 'bg-slate-300 text-slate-500 cursor-not-allowed'
-            }`}
-          >
-            <Play className="w-4 h-4 fill-current" />
-            <span>I am ready to begin</span>
-          </button>
+          <div className="flex items-center gap-3">
+            <button
+              type="button"
+              onClick={() => setAnalyzingPaper(selectedPaper)}
+              className="px-4 py-2.5 rounded-xl border border-purple-300 dark:border-purple-800 bg-purple-50 dark:bg-purple-950/40 hover:bg-purple-100 text-purple-700 dark:text-purple-300 text-xs font-bold transition shadow-xs flex items-center gap-1.5 cursor-pointer"
+              title="View topic & subtopic weightage analysis"
+            >
+              <BarChart3 className="w-4 h-4 text-purple-600 dark:text-purple-400" />
+              <span>📊 View Blueprint & Weightage</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={handleStartExam}
+              disabled={!hasAgreedDeclaration}
+              className={`px-8 py-3 rounded-xl text-xs font-extrabold transition shadow-md flex items-center gap-2 cursor-pointer ${
+                hasAgreedDeclaration
+                  ? 'bg-[#0B4A8F] hover:bg-[#003366] text-white active:scale-95'
+                  : 'bg-slate-300 text-slate-500 cursor-not-allowed'
+              }`}
+            >
+              <Play className="w-4 h-4 fill-current" />
+              <span>I am ready to begin</span>
+            </button>
+          </div>
         </div>
+
+        {/* Paper Analysis Modal */}
+        <MockPaperAnalysisModal
+          isOpen={!!analyzingPaper}
+          paper={analyzingPaper}
+          allPapers={[...customMockPapers, ...mockPapers]}
+          onClose={() => setAnalyzingPaper(null)}
+          onSelectPaper={setAnalyzingPaper}
+          onStartPaper={(p) => {
+            setAnalyzingPaper(null);
+            handleSelectPaperForInstructions(p);
+          }}
+        />
 
       </div>
     );
@@ -790,7 +992,7 @@ export default function MockTestMode({
                   Official GATE AG CBT Exam Simulator
                 </h1>
                 <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-                  100% authentic TCS iON Computer-Based Test (CBT) platform replica with complete instructions, virtual calculator, and official scoring.
+                  100% authentic Official GATE Computer-Based Test (CBT) platform simulator with complete instructions, virtual calculator, and official scoring.
                 </p>
               </div>
             </div>
@@ -798,6 +1000,96 @@ export default function MockTestMode({
               20 Official Papers
             </div>
           </div>
+
+          {/* Action Notification Toast Banner */}
+          {actionToast && (
+            <div className={`p-4 rounded-2xl text-xs font-bold flex items-center justify-between shadow-xs border animate-in fade-in ${
+              actionToast.type === 'success'
+                ? 'bg-emerald-50 dark:bg-emerald-950/60 text-emerald-900 dark:text-emerald-200 border-emerald-300 dark:border-emerald-800'
+                : 'bg-blue-50 dark:bg-blue-950/60 text-blue-900 dark:text-blue-200 border-blue-300 dark:border-blue-800'
+            }`}>
+              <div className="flex items-center gap-2.5">
+                {actionToast.type === 'success' ? (
+                  <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                ) : (
+                  <Info className="w-5 h-5 text-blue-600 dark:text-blue-400 shrink-0" />
+                )}
+                <span>{actionToast.message}</span>
+              </div>
+              <button
+                type="button"
+                onClick={() => setActionToast(null)}
+                className="p-1 text-slate-500 hover:text-slate-800 dark:hover:text-white cursor-pointer"
+                title="Dismiss"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+          )}
+
+          {/* Active / Paused In-Progress Exam Banner Card */}
+          {pausedSession && (
+            <div className="bg-gradient-to-br from-amber-500/10 via-amber-500/5 to-orange-500/10 dark:from-amber-950/50 dark:via-slate-900 dark:to-orange-950/50 border-2 border-amber-400 dark:border-amber-600/70 rounded-3xl p-5 sm:p-6 space-y-4 shadow-md animate-in fade-in slide-in-from-top-2">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div className="flex items-center gap-3.5">
+                  <div className="w-12 h-12 rounded-2xl bg-amber-500 text-white flex items-center justify-center shrink-0 shadow-xs animate-pulse">
+                    <Pause className="w-6 h-6 fill-current" />
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-amber-500 text-white font-mono">
+                        EXAM PAUSED MIDWAY
+                      </span>
+                      <span className="text-xs font-mono text-slate-500 dark:text-slate-400">
+                        Saved {pausedSession.savedAt ? new Date(pausedSession.savedAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : 'Recently'}
+                      </span>
+                    </div>
+                    <h3 className="text-base sm:text-lg font-black text-slate-900 dark:text-white mt-1">
+                      {pausedSession.paperTitle || `GATE ${pausedSession.paperYear} Exam`}
+                    </h3>
+                  </div>
+                </div>
+
+                {/* Metrics */}
+                <div className="flex items-center gap-2.5 flex-wrap">
+                  <div className="px-3 py-1.5 rounded-xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-xs font-bold text-slate-700 dark:text-slate-300">
+                    ⏱️ <span className="text-amber-600 dark:text-amber-400 font-mono font-extrabold">{formatTimer(pausedSession.timeLeft || 0)}</span> remaining
+                  </div>
+                  <div className="px-3 py-1.5 rounded-xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-xs font-bold text-slate-700 dark:text-slate-300">
+                    📝 <span className="text-emerald-600 dark:text-emerald-400 font-mono font-extrabold">{Object.keys(pausedSession.userAnswers || {}).filter(k => pausedSession.userAnswers[k]).length}</span> Answered
+                  </div>
+                  <div className="px-3 py-1.5 rounded-xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-xs font-bold text-slate-700 dark:text-slate-300">
+                    🔖 <span className="text-purple-600 dark:text-purple-400 font-mono font-extrabold">{Object.values(pausedSession.questionStates || {}).filter(st => (st || '').includes('MARKED')).length}</span> Marked
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-3 border-t border-amber-200 dark:border-amber-900/60">
+                <p className="text-xs text-slate-600 dark:text-slate-400">
+                  You can resume your paused test anytime with all remaining time, responses, and question palette states preserved.
+                </p>
+                <div className="flex items-center gap-2 shrink-0">
+                  <button
+                    type="button"
+                    onClick={() => setShowCancelExamModal(true)}
+                    className="px-4 py-2.5 rounded-xl bg-rose-50 hover:bg-rose-100 dark:bg-rose-950/40 dark:hover:bg-rose-900/60 text-rose-700 dark:text-rose-300 border border-rose-300 dark:border-rose-800 text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer active:scale-95"
+                  >
+                    <Trash2 className="w-4 h-4" />
+                    <span>Discard Exam</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => handleResumePausedTest(pausedSession)}
+                    className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white text-xs font-extrabold transition shadow-md flex items-center justify-center gap-2 cursor-pointer active:scale-95"
+                  >
+                    <Play className="w-4 h-4 fill-white" />
+                    <span>Resume Exam</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
 
           {/* Custom & Curated Mock Tests Section */}
           {customMockPapers.length > 0 && (
@@ -833,16 +1125,31 @@ export default function MockTestMode({
                       </h3>
                     </div>
 
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        handleSelectPaperForInstructions(paper);
-                      }}
-                      className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold transition shadow-xs active:scale-95 cursor-pointer"
-                    >
-                      <Play className="w-4 h-4 fill-white" />
-                      <span>Take CBT Exam</span>
-                    </button>
+                    <div className="grid grid-cols-2 gap-2 pt-1">
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setAnalyzingPaper(paper);
+                        }}
+                        className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-purple-50 dark:bg-purple-950/50 hover:bg-purple-100 dark:hover:bg-purple-900/50 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800 text-xs font-bold transition cursor-pointer"
+                        title="View topic & subtopic weightage analysis"
+                      >
+                        <BarChart3 className="w-3.5 h-3.5 text-purple-600 dark:text-purple-400" />
+                        <span>Weightage</span>
+                      </button>
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleSelectPaperForInstructions(paper);
+                        }}
+                        className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold transition shadow-xs active:scale-95 cursor-pointer"
+                      >
+                        <Play className="w-3.5 h-3.5 fill-white" />
+                        <span>Take CBT</span>
+                      </button>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -889,13 +1196,28 @@ export default function MockTestMode({
                     </div>
 
                     {isAvail ? (
-                      <button
-                        onClick={() => handleSelectPaperForInstructions(paper)}
-                        className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-[#0B4A8F] hover:bg-[#003366] text-white font-bold text-xs transition shadow-xs active:scale-95 cursor-pointer"
-                      >
-                        <Play className="w-4 h-4 fill-white" />
-                        <span>Start CBT ({paper.year})</span>
-                      </button>
+                      <div className="grid grid-cols-2 gap-2 pt-1">
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setAnalyzingPaper(paper);
+                          }}
+                          className="flex items-center justify-center gap-1.5 py-2 rounded-xl bg-blue-50 dark:bg-blue-950/50 hover:bg-blue-100 dark:hover:bg-blue-900/50 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 text-xs font-bold transition cursor-pointer"
+                          title="View topic & subtopic weightage analysis"
+                        >
+                          <BarChart3 className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
+                          <span>Weightage</span>
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => handleSelectPaperForInstructions(paper)}
+                          className="flex items-center justify-center gap-1.5 py-2 rounded-xl bg-[#0B4A8F] hover:bg-[#003366] text-white font-bold text-xs transition shadow-xs active:scale-95 cursor-pointer"
+                        >
+                          <Play className="w-3.5 h-3.5 fill-white" />
+                          <span>Start CBT</span>
+                        </button>
+                      </div>
                     ) : (
                       <button
                         onClick={() => alert(`Detailed Solved Paper for GATE ${paper.year} is currently being verified.`)}
@@ -912,6 +1234,19 @@ export default function MockTestMode({
           </div>
 
         </div>
+
+        {/* Paper Analysis Modal */}
+        <MockPaperAnalysisModal
+          isOpen={!!analyzingPaper}
+          paper={analyzingPaper}
+          allPapers={[...customMockPapers, ...mockPapers]}
+          onClose={() => setAnalyzingPaper(null)}
+          onSelectPaper={setAnalyzingPaper}
+          onStartPaper={(p) => {
+            setAnalyzingPaper(null);
+            handleSelectPaperForInstructions(p);
+          }}
+        />
       </div>
     );
   }
@@ -971,6 +1306,15 @@ export default function MockTestMode({
           </button>
 
           <button
+            onClick={() => setAnalyzingPaper(selectedPaper)}
+            className="px-3 py-1.5 rounded-lg bg-[#ffffff]/10 hover:bg-[#ffffff]/20 border border-white/30 text-white font-bold text-xs flex items-center gap-1.5 transition cursor-pointer"
+            title="View Paper Blueprint & Topic Weightage"
+          >
+            <BarChart3 className="w-4 h-4 text-purple-300" />
+            <span className="hidden md:inline">Blueprint</span>
+          </button>
+
+          <button
             onClick={() => setShowInstructionsModal(true)}
             className="px-3 py-1.5 rounded-lg bg-[#ffffff]/10 hover:bg-[#ffffff]/20 border border-white/30 text-white font-bold text-xs flex items-center gap-1.5 transition cursor-pointer"
           >
@@ -996,18 +1340,23 @@ export default function MockTestMode({
           </button>
 
           <button
-            onClick={() => {
-              if (window.confirm("Are you sure you want to exit the active test? Your current progress will be reset.")) {
-                try {
-                  localStorage.removeItem('gate_ag_active_cbt_session');
-                } catch (e) {}
-                setTestStarted(false);
-                setSelectedPaper(null);
-              }
-            }}
-            className="px-3 py-1.5 rounded-lg bg-rose-700 hover:bg-rose-800 text-white font-bold text-xs transition shadow-xs cursor-pointer"
+            type="button"
+            onClick={() => setShowSaveMidwayModal(true)}
+            className="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs flex items-center gap-1.5 transition shadow-xs cursor-pointer active:scale-95"
+            title="Pause exam and save answers midway to resume later"
           >
-            Exit
+            <Pause className="w-3.5 h-3.5" />
+            <span className="hidden sm:inline">Save Midway</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setShowCancelExamModal(true)}
+            className="px-3 py-1.5 rounded-lg bg-rose-700 hover:bg-rose-800 text-white font-bold text-xs flex items-center gap-1.5 transition shadow-xs cursor-pointer active:scale-95"
+            title="Cancel exam midway and permanently delete all answers and history"
+          >
+            <Trash2 className="w-3.5 h-3.5" />
+            <span>Cancel Exam</span>
           </button>
         </div>
       </div>
@@ -1247,7 +1596,7 @@ export default function MockTestMode({
                     <div className="bg-[#e8eef5] border border-slate-300 rounded-2xl p-3 shadow-xs space-y-2">
                       <div className="text-[10px] font-bold text-slate-600 uppercase tracking-wider text-center flex items-center justify-center gap-1.5">
                         <Calculator className="w-3.5 h-3.5 text-[#0B4A8F]" />
-                        <span>TCS iON Virtual Numeric Keypad</span>
+                        <span>Official GATE Virtual Numeric Keypad</span>
                       </div>
                       <div className="grid grid-cols-3 gap-1.5">
                         {['7', '8', '9', '4', '5', '6', '1', '2', '3', '0', '.', '-'].map((key) => (
@@ -1739,15 +2088,192 @@ export default function MockTestMode({
             </div>
 
             {/* Legend Footer */}
-            <div className="p-3 bg-slate-50 border-t border-slate-200 grid grid-cols-2 gap-2 text-[10px] text-slate-600 font-semibold">
+            <div className="p-3 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 grid grid-cols-2 gap-2 text-[10px] text-slate-600 dark:text-slate-400 font-semibold">
               <div className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-[#2E7D32]"></span> Answered</div>
               <div className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-[#E53935]"></span> Not Answered</div>
               <div className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-[#7B1FA2]"></span> Marked for Review</div>
-              <div className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-slate-200 border"></span> Not Visited</div>
+              <div className="flex items-center gap-1.5"><span className="w-3 h-3 rounded bg-slate-200 dark:bg-slate-700 border dark:border-slate-600"></span> Not Visited</div>
+            </div>
+
+            {/* Mobile Actions: Save Midway & Cancel Exam */}
+            <div className="p-3 bg-slate-100 dark:bg-slate-900/90 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2">
+              <button
+                type="button"
+                onClick={() => {
+                  setShowMobilePalette(false);
+                  setShowSaveMidwayModal(true);
+                }}
+                className="flex-1 py-2 px-3 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold flex items-center justify-center gap-1.5 cursor-pointer shadow-xs active:scale-95"
+              >
+                <Pause className="w-3.5 h-3.5" />
+                <span>Save Midway</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setShowMobilePalette(false);
+                  setShowCancelExamModal(true);
+                }}
+                className="flex-1 py-2 px-3 rounded-xl bg-rose-700 hover:bg-rose-800 text-white text-xs font-bold flex items-center justify-center gap-1.5 cursor-pointer shadow-xs active:scale-95"
+              >
+                <Trash2 className="w-3.5 h-3.5" />
+                <span>Cancel Exam</span>
+              </button>
             </div>
           </div>
         </div>
       )}
+
+      {/* MODAL 6: SAVE TEST MIDWAY CONFIRMATION */}
+      {showSaveMidwayModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-md animate-in fade-in font-sans">
+          <div className="w-full max-w-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 shadow-2xl space-y-5">
+            <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
+              <div className="flex items-center gap-2.5">
+                <div className="w-9 h-9 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-600 dark:text-amber-400 flex items-center justify-center">
+                  <Pause className="w-5 h-5 fill-current" />
+                </div>
+                <div>
+                  <h3 className="font-extrabold text-base text-slate-900 dark:text-white">
+                    Pause & Save Exam Midway
+                  </h3>
+                  <p className="text-[11px] text-slate-500 dark:text-slate-400">
+                    {selectedPaper?.title || 'Active GATE CBT Exam'}
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShowSaveMidwayModal(false)}
+                className="p-1 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 cursor-pointer"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 text-xs text-amber-900 dark:text-amber-200 leading-relaxed space-y-2">
+              <div className="font-bold flex items-center gap-1.5">
+                <BookmarkCheck className="w-4 h-4 text-amber-600 dark:text-amber-400" />
+                <span>Your progress will be securely saved:</span>
+              </div>
+              <p>
+                The countdown timer will pause immediately at <strong>{formatTimer(timeLeft)}</strong>. All your answers and review flags will be kept intact so you can resume anytime from the dashboard.
+              </p>
+            </div>
+
+            {/* Current Snapshot Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+              <div className="p-3 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-center">
+                <div className="text-[10px] uppercase font-bold text-slate-400">Time Left</div>
+                <div className="text-sm font-mono font-black text-amber-600 dark:text-amber-400 mt-0.5">
+                  {formatTimer(timeLeft)}
+                </div>
+              </div>
+              <div className="p-3 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-center">
+                <div className="text-[10px] uppercase font-bold text-slate-400">Answered</div>
+                <div className="text-sm font-mono font-black text-emerald-600 dark:text-emerald-400 mt-0.5">
+                  {statusCounts.ANSWERED + statusCounts.ANSWERED_MARKED}
+                </div>
+              </div>
+              <div className="p-3 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-center">
+                <div className="text-[10px] uppercase font-bold text-slate-400">Marked</div>
+                <div className="text-sm font-mono font-black text-purple-600 dark:text-purple-400 mt-0.5">
+                  {statusCounts.MARKED}
+                </div>
+              </div>
+              <div className="p-3 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-center">
+                <div className="text-[10px] uppercase font-bold text-slate-400">Remaining</div>
+                <div className="text-sm font-mono font-black text-slate-700 dark:text-slate-300 mt-0.5">
+                  {statusCounts.NOT_ANSWERED + statusCounts.NOT_VISITED}
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-end gap-3 pt-2">
+              <button
+                type="button"
+                onClick={() => setShowSaveMidwayModal(false)}
+                className="px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-bold transition cursor-pointer"
+              >
+                Continue Exam
+              </button>
+              <button
+                type="button"
+                onClick={handleSaveTestMidway}
+                className="px-6 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs font-extrabold transition shadow-md flex items-center gap-2 cursor-pointer active:scale-95"
+              >
+                <Save className="w-4 h-4" />
+                <span>Save & Exit for Later</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* MODAL 7: CANCEL EXAM & DELETE ANSWERS CONFIRMATION */}
+      {showCancelExamModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-in fade-in font-sans">
+          <div className="w-full max-w-lg bg-white dark:bg-slate-900 border border-red-200 dark:border-red-900/50 rounded-3xl p-6 shadow-2xl space-y-5">
+            <div className="flex items-center gap-3 border-b border-slate-100 dark:border-slate-800 pb-3">
+              <div className="w-10 h-10 rounded-2xl bg-rose-500/10 border border-rose-500/20 text-rose-600 dark:text-rose-400 flex items-center justify-center shrink-0">
+                <AlertOctagon className="w-6 h-6" />
+              </div>
+              <div>
+                <h3 className="font-extrabold text-base text-slate-900 dark:text-white">
+                  Cancel Exam & Delete All Answers?
+                </h3>
+                <p className="text-[11px] text-slate-500 dark:text-slate-400">
+                  {selectedPaper?.title || pausedSession?.paperTitle || 'Active Exam Session'}
+                </p>
+              </div>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-900/60 text-xs text-rose-900 dark:text-rose-200 space-y-2 leading-relaxed">
+              <div className="font-extrabold flex items-center gap-1.5 text-rose-700 dark:text-rose-300">
+                <AlertTriangle className="w-4 h-4 shrink-0" />
+                <span>Permanent Deletion Warning</span>
+              </div>
+              <ul className="list-disc pl-4 space-y-1 text-[11px]">
+                <li>All entered answers for this exam session will be <strong>wiped immediately</strong>.</li>
+                <li>All marked question flags and time tracking data will be <strong>discarded</strong>.</li>
+                <li><strong>No score, report, or history record will be saved</strong> to your profile or leaderboard.</li>
+                <li>This action cannot be undone.</li>
+              </ul>
+            </div>
+
+            <div className="flex items-center justify-end gap-3 pt-2">
+              <button
+                type="button"
+                onClick={() => setShowCancelExamModal(false)}
+                className="px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-bold transition cursor-pointer"
+              >
+                Keep Taking Exam
+              </button>
+              <button
+                type="button"
+                onClick={handleCancelExam}
+                className="px-6 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-extrabold transition shadow-md flex items-center gap-2 cursor-pointer active:scale-95"
+              >
+                <Trash2 className="w-4 h-4" />
+                <span>Yes, Cancel & Delete Everything</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Paper Analysis Modal */}
+      <MockPaperAnalysisModal
+        isOpen={!!analyzingPaper}
+        paper={analyzingPaper}
+        allPapers={[...customMockPapers, ...mockPapers]}
+        onClose={() => setAnalyzingPaper(null)}
+        onSelectPaper={setAnalyzingPaper}
+        onStartPaper={(p) => {
+          setAnalyzingPaper(null);
+          handleSelectPaperForInstructions(p);
+        }}
+      />
 
     </div>
   );

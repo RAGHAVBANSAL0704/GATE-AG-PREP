@@ -1,0 +1,109 @@
+{
+  "timestamp": "2026-09-09",
+  "pyq_audit": {
+    "dataset_name": "Official PYQs (questions.json)",
+    "total_questions": 1324,
+    "missing_or_stub_solutions": 0,
+    "trailing_quote_subtopics": 0,
+    "options_tag_in_question": 0,
+    "boilerplate_prefix_in_question": 0,
+    "generic_fallback_topics": 0,
+    "invalid_section_names": 0,
+    "sample_missing_solution_ids": [],
+    "sample_trailing_quote_ids": []
+  },
+  "custom_mocks_summary": {
+    "total_questions": 3250,
+    "missing_solutions": 0,
+    "trailing_quotes": 0,
+    "options_in_stem": 0,
+    "generic_topics": 0
+  },
+  "duplicate_clusters_count": 301,
+  "duplicate_clusters_sample": [
+    [
+      "GATE_2019_Q1",
+      "GATE_2019_Q2",
+      "GATE_2019_Q3",
+      "GATE_2019_Q4",
+      "GATE_2019_Q5",
+      "GATE_2019_Q6",
+      "GATE_2019_Q7",
+      "GATE_2019_Q8",
+      "GATE_2019_Q9",
+      "GATE_2019_Q10"
+    ],
+    [
+      "GATE_2014_Q1",
+      "GATE_2014_Q2",
+      "GATE_2015_Q1",
+      "GATE_2011_Q56",
+      "GATE_2011_Q58"
+    ],
+    [
+      "GATE_2013_Q50",
+      "GATE_2013_Q51"
+    ],
+    [
+      "GATE_2019_Q35",
+      "GATE_2019_Q51",
+      "GATE_2019_Q53"
+    ],
+    [
+      "GATE_2015_Q51",
+      "GATE_2015_Q44",
+      "GATE_2017_Q41"
+    ],
+    [
+      "GATE_2007_Q78",
+      "GATE_2007_Q79"
+    ],
+    [
+      "GATE_2013_Q48",
+      "GATE_2013_Q49"
+    ],
+    [
+      "GATE_2019_Q14",
+      "GATE_2019_Q15",
+      "GATE_2019_Q16",
+      "GATE_2019_Q28",
+      "GATE_2019_Q29",
+      "GATE_2019_Q39",
+      "GATE_2019_Q40",
+      "GATE_2019_Q56"
+    ],
+    [
+      "GATE_2013_Q54",
+      "GATE_2013_Q55"
+    ],
+    [
+      "GATE_2011_Q60",
+      "GATE_2010_Q60"
+    ],
+    [
+      "GATE_2019_Q25",
+      "GATE_2019_Q64"
+    ],
+    [
+      "GATE_2019_Q19",
+      "GATE_2019_Q31",
+      "GATE_2019_Q32",
+      "GATE_2019_Q44",
+      "GATE_2019_Q59"
+    ],
+    [
+      "GATE_2019_Q33",
+      "GATE_2019_Q62"
+    ],
+    [
+      "GATE_2019_Q24",
+      "GATE_2019_Q52",
+      "GATE_2019_Q65"
+    ],
+    [
+      "GATE_2019_Q13",
+      "GATE_2019_Q27",
+      "GATE_2019_Q55"
+    ]
+  ]
+}

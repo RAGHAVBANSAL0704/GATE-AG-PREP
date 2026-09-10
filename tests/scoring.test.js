@@ -388,4 +388,71 @@ describe('Scoring Subsystem & Evaluation Engine', () => {
     });
   });
 
+  describe('Unattempted Question Integrity & Section Isolation', () => {
+    it('strictly classifies unattempted questions with zero marks and UNATTEMPTED status', () => {
+      const q = { id: 'q_unatt', type: 'MCQ', marks: 2, negative_marks: 0.67, correct_answer: 'B' };
+      
+      // Null answer
+      const resNull = evaluateQuestion({ question: q, userAnswer: null, state: 'NOT_ANSWERED' });
+      assert.strictEqual(resNull.isAttempted, false);
+      assert.strictEqual(resNull.isCorrect, false);
+      assert.strictEqual(resNull.marksAwarded, 0);
+      assert.strictEqual(resNull.status, 'UNATTEMPTED');
+
+      // Empty string answer
+      const resEmpty = evaluateQuestion({ question: q, userAnswer: '', state: 'NOT_VISITED' });
+      assert.strictEqual(resEmpty.isAttempted, false);
+      assert.strictEqual(resEmpty.isCorrect, false);
+      assert.strictEqual(resEmpty.marksAwarded, 0);
+      assert.strictEqual(resEmpty.status, 'UNATTEMPTED');
+
+      // Whitespace only answer
+      const resSpace = evaluateQuestion({ question: q, userAnswer: '   ', state: 'NOT_ANSWERED' });
+      assert.strictEqual(resSpace.isAttempted, false);
+      assert.strictEqual(resSpace.isCorrect, false);
+      assert.strictEqual(resSpace.marksAwarded, 0);
+      assert.strictEqual(resSpace.status, 'UNATTEMPTED');
+    });
+
+    it('ensures unattempted questions do not inflate incorrect count or deflate accuracy in section breakdown', () => {
+      // 10 questions in a section: 2 attempted (1 correct, 1 incorrect), 8 unattempted
+      const responses = [
+        { question_id: 'q1', section: 'Section 2: Farm Machinery', user_answer: 'A', is_correct: true, is_attempted: true, status: 'CORRECT' },
+        { question_id: 'q2', section: 'Section 2: Farm Machinery', user_answer: 'B', is_correct: false, is_attempted: true, status: 'INCORRECT' },
+        { question_id: 'q3', section: 'Section 2: Farm Machinery', user_answer: null, is_correct: false, is_attempted: false, status: 'UNATTEMPTED' },
+        { question_id: 'q4', section: 'Section 2: Farm Machinery', user_answer: '', is_correct: false, is_attempted: false, status: 'NOT_ANSWERED' },
+        { question_id: 'q5', section: 'Section 2: Farm Machinery', user_answer: null, is_correct: false, is_attempted: false, status: 'NOT_VISITED' }
+      ];
+
+      let attempted = 0;
+      let correct = 0;
+      let unattempted = 0;
+
+      responses.forEach(resp => {
+        const rawAns = resp.user_answer !== undefined && resp.user_answer !== null ? String(resp.user_answer).trim() : '';
+        const isUnattemptedState = resp.status === 'UNATTEMPTED' || resp.status === 'NOT_ANSWERED' || resp.status === 'NOT_VISITED';
+        const isAttempted = resp.is_attempted !== undefined
+          ? Boolean(resp.is_attempted)
+          : (rawAns !== '' && !isUnattemptedState);
+
+        if (isAttempted) {
+          attempted++;
+          if (resp.is_correct) correct++;
+        } else {
+          unattempted++;
+        }
+      });
+
+      const incorrect = Math.max(0, attempted - correct);
+      const accuracy = attempted > 0 ? (correct / attempted) * 100 : 0;
+
+      assert.strictEqual(attempted, 2, 'Only 2 questions should be counted as attempted');
+      assert.strictEqual(correct, 1, 'Exactly 1 correct answer');
+      assert.strictEqual(incorrect, 1, 'Exactly 1 incorrect answer (not 4)');
+      assert.strictEqual(unattempted, 3, 'Exactly 3 unattempted questions');
+      assert.strictEqual(accuracy, 50, 'Accuracy should be 50% based on attempted questions');
+    });
+  });
+
 });
+

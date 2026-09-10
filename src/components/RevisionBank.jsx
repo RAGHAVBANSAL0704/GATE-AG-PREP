@@ -403,15 +403,15 @@ export default function RevisionBank({
 
                 {/* Detailed Solution Drawer */}
                 {isSolutionOpen && (
-                  <div className="p-4 rounded-xl bg-slate-900 text-white space-y-3 animate-in fade-in duration-150 border border-slate-800">
-                    <div className="flex items-center justify-between text-xs font-bold text-emerald-400 border-b border-slate-800 pb-2">
+                  <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-white space-y-3 animate-in fade-in duration-150 border border-slate-200 dark:border-slate-800">
+                    <div className="flex items-center justify-between text-xs font-bold text-emerald-700 dark:text-emerald-400 border-b border-slate-200 dark:border-slate-800 pb-2">
                       <span>Official Solution & Step-by-Step Breakdown</span>
-                      <span className="font-mono text-amber-400">
+                      <span className="font-mono text-amber-600 dark:text-amber-400">
                         Official Answer: {officialCorrectAnswer}
                       </span>
                     </div>
 
-                    <div className="text-xs leading-relaxed text-slate-300">
+                    <div className="text-xs leading-relaxed text-slate-700 dark:text-slate-300">
                       <MathRenderer content={q.solution || q.solutionText || q.explanation || 'Detailed step-by-step solution provided above.'} />
                     </div>
                   </div>

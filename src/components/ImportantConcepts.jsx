@@ -18,11 +18,14 @@ import {
   Type,
   Sun,
   Moon,
-  BookMarked
+  BookMarked,
+  Bookmark,
+  Star
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import initialConcepts from '../data/concepts.json';
 import { normalizeSectionTitle } from '../utils/syllabusTaxonomy.js';
+import InlineAIConceptExplainer from './InlineAIConceptExplainer';
 
 export default function ImportantConcepts() {
   const [concepts] = useState(initialConcepts);
@@ -30,10 +33,30 @@ export default function ImportantConcepts() {
   const [searchTerm, setSearchTerm] = useState('');
   const [readerConcept, setReaderConcept] = useState(null); // Concept open in Reader Mode
   const [copiedId, setCopiedId] = useState(null);
+  const [activeExplainingId, setActiveExplainingId] = useState(null);
+  const [bookmarkedIds, setBookmarkedIds] = useState(() => {
+    try {
+      const saved = localStorage.getItem('gate_ag_bookmarked_concepts');
+      return saved ? JSON.parse(saved) : [];
+    } catch (e) {
+      return [];
+    }
+  });
+  const [showBookmarkedOnly, setShowBookmarkedOnly] = useState(false);
 
   // Reader Mode Customizations
   const [fontSize, setFontSize] = useState('text-sm'); // 'text-xs', 'text-sm', 'text-base', 'text-lg'
   const [readerTheme, setReaderTheme] = useState('paper'); // 'paper', 'dark', 'sepia'
+
+  const handleToggleBookmark = (id) => {
+    setBookmarkedIds(prev => {
+      const next = prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id];
+      try {
+        localStorage.setItem('gate_ag_bookmarked_concepts', JSON.stringify(next));
+      } catch (e) {}
+      return next;
+    });
+  };
 
   const sections = [
     'All',
@@ -49,6 +72,8 @@ export default function ImportantConcepts() {
 
   const filteredConcepts = useMemo(() => {
     return concepts.filter(item => {
+      if (showBookmarkedOnly && !bookmarkedIds.includes(item.id)) return false;
+
       if (selectedSection !== 'All') {
         const normItemSec = normalizeSectionTitle(item.section);
         if (normItemSec !== normalizeSectionTitle(selectedSection)) return false;
@@ -64,7 +89,7 @@ export default function ImportantConcepts() {
 
       return true;
     });
-  }, [concepts, selectedSection, searchTerm]);
+  }, [concepts, selectedSection, searchTerm, showBookmarkedOnly, bookmarkedIds]);
 
   const handleCopy = (id, text) => {
     navigator.clipboard.writeText(text);
@@ -103,12 +128,29 @@ export default function ImportantConcepts() {
         {/* Section Filters & Search */}
         <div className="space-y-3 pt-2">
           <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none">
+            <button
+              onClick={() => {
+                setShowBookmarkedOnly(!showBookmarkedOnly);
+              }}
+              className={`px-3 py-1.5 rounded-xl text-xs font-bold transition whitespace-nowrap flex items-center gap-1.5 cursor-pointer ${
+                showBookmarkedOnly
+                  ? 'bg-amber-500 text-white shadow-xs'
+                  : 'bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800 hover:bg-amber-100'
+              }`}
+            >
+              <Star className={`w-3.5 h-3.5 ${showBookmarkedOnly ? 'fill-white' : 'fill-amber-400 text-amber-500'}`} />
+              <span>Bookmarked ({bookmarkedIds.length})</span>
+            </button>
+
             {sections.map(sec => (
               <button
                 key={sec}
-                onClick={() => setSelectedSection(sec)}
-                className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition whitespace-nowrap ${
-                  selectedSection === sec
+                onClick={() => {
+                  setSelectedSection(sec);
+                  setShowBookmarkedOnly(false);
+                }}
+                className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition whitespace-nowrap cursor-pointer ${
+                  !showBookmarkedOnly && selectedSection === sec
                     ? 'bg-blue-600 text-white shadow-xs'
                     : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
                 }`}
@@ -157,16 +199,27 @@ export default function ImportantConcepts() {
                     <span className="text-[11px] font-extrabold px-2.5 py-0.5 rounded-lg bg-blue-50 dark:bg-blue-950/80 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-800">
                       {item.section}
                     </span>
-                    {item.has_docx ? (
-                      <span className="text-[10px] font-extrabold px-2.5 py-0.5 rounded-md bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-900 flex items-center gap-1">
-                        <FileText className="w-3 h-3 text-emerald-600" />
-                        <span>Authentic DOCX Document</span>
-                      </span>
-                    ) : (
-                      <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900">
-                        {item.importance || 'High'} Importance
-                      </span>
-                    )}
+                    <div className="flex items-center gap-1.5 ml-auto">
+                      {item.has_docx ? (
+                        <span className="text-[10px] font-extrabold px-2.5 py-0.5 rounded-md bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-900 flex items-center gap-1">
+                          <FileText className="w-3 h-3 text-emerald-600" />
+                          <span>DOCX</span>
+                        </span>
+                      ) : (
+                        <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900">
+                          {item.importance || 'High'}
+                        </span>
+                      )}
+
+                      <button
+                        onClick={() => handleToggleBookmark(item.id)}
+                        className="p-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-400 hover:text-amber-500 transition-colors"
+                        title={bookmarkedIds.includes(item.id) ? "Remove bookmark" : "Bookmark concept"}
+                        aria-label="Toggle bookmark"
+                      >
+                        <Star className={`w-4 h-4 ${bookmarkedIds.includes(item.id) ? 'fill-amber-400 text-amber-500' : 'text-slate-400'}`} />
+                      </button>
+                    </div>
                   </div>
 
                   <div>
@@ -187,27 +240,50 @@ export default function ImportantConcepts() {
                       </div>
                     </div>
                   )}
+
+                  {/* In-line AI Concept Explainer Accordion */}
+                  {activeExplainingId === item.id && (
+                    <InlineAIConceptExplainer 
+                      topic={item.title} 
+                      onClose={() => setActiveExplainingId(null)} 
+                    />
+                  )}
                 </div>
 
                 <div className="flex flex-wrap items-center justify-between gap-2 pt-3 border-t border-slate-100 dark:border-slate-800/80">
-                  {item.docx_url ? (
-                    <a
-                      href={item.docx_url}
-                      download
-                      className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-700 dark:text-slate-300 font-bold text-xs transition border border-slate-200 dark:border-slate-700"
-                    >
-                      <Download className="w-3.5 h-3.5 text-blue-500" />
-                      <span>Download DOCX</span>
-                    </a>
-                  ) : (
+                  <div className="flex items-center gap-2">
                     <button
-                      onClick={() => handleCopy(item.id, item.content)}
-                      className="flex items-center gap-1.5 text-xs text-slate-500 hover:text-blue-600 transition font-bold"
+                      onClick={() => setActiveExplainingId(activeExplainingId === item.id ? null : item.id)}
+                      className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition border cursor-pointer ${
+                        activeExplainingId === item.id
+                          ? 'bg-purple-600 text-white border-purple-600 shadow-xs'
+                          : 'bg-purple-50 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-800/60 hover:bg-purple-100'
+                      }`}
+                      title="Explain this concept with AI"
                     >
-                      {copiedId === item.id ? <Check className="w-3.5 h-3.5 text-emerald-500" /> : <Copy className="w-3.5 h-3.5" />}
-                      <span>{copiedId === item.id ? 'Copied Note' : 'Copy Note'}</span>
+                      <Sparkles className={`w-3.5 h-3.5 ${activeExplainingId === item.id ? 'text-amber-300' : 'text-purple-500'}`} />
+                      <span>{activeExplainingId === item.id ? 'Hide AI Explanation' : 'Explain with AI'}</span>
                     </button>
-                  )}
+
+                    {item.docx_url ? (
+                      <a
+                        href={item.docx_url}
+                        download
+                        className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-700 dark:text-slate-300 font-bold text-xs transition border border-slate-200 dark:border-slate-700"
+                      >
+                        <Download className="w-3.5 h-3.5 text-blue-500" />
+                        <span className="hidden sm:inline">DOCX</span>
+                      </a>
+                    ) : (
+                      <button
+                        onClick={() => handleCopy(item.id, item.content)}
+                        className="flex items-center gap-1.5 text-xs text-slate-500 hover:text-blue-600 transition font-bold"
+                      >
+                        {copiedId === item.id ? <Check className="w-3.5 h-3.5 text-emerald-500" /> : <Copy className="w-3.5 h-3.5" />}
+                        <span>{copiedId === item.id ? 'Copied' : 'Copy'}</span>
+                      </button>
+                    )}
+                  </div>
 
                   <button
                     onClick={() => setReaderConcept(item)}
@@ -299,6 +375,16 @@ export default function ImportantConcepts() {
                   </button>
                 </div>
 
+                {/* Print / Save as PDF Button */}
+                <button
+                  onClick={() => window.print()}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-extrabold transition shadow-xs cursor-pointer"
+                  title="Print or Save as PDF Cheatsheet"
+                >
+                  <Printer className="w-3.5 h-3.5" />
+                  <span className="hidden sm:inline">Print / PDF</span>
+                </button>
+
                 {/* Download DOCX if available */}
                 {readerConcept.docx_url && (
                   <a
@@ -315,7 +401,7 @@ export default function ImportantConcepts() {
                 {/* Close Button */}
                 <button
                   onClick={() => setReaderConcept(null)}
-                  className="p-2 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 transition"
+                  className="p-2 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 transition cursor-pointer"
                   title="Close Reader Mode"
                 >
                   <X className="w-4 h-4" />
@@ -351,6 +437,11 @@ export default function ImportantConcepts() {
                 {/* Main Rendered Document Content with KaTeX */}
                 <div className={`leading-relaxed space-y-4 font-sans ${fontSize}`}>
                   <MathRenderer content={readerConcept.content} inline={false} />
+                </div>
+
+                {/* In-line AI Solved Numerical Walkthrough & Traps */}
+                <div className="pt-6 border-t border-slate-200/80 dark:border-slate-800">
+                  <InlineAIConceptExplainer topic={readerConcept.title} defaultExpanded={true} />
                 </div>
 
               </div>

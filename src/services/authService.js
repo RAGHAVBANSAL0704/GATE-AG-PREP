@@ -1,6 +1,6 @@
 import { supabase, isSupabaseConfigured } from './supabaseClient.js';
 import { validateCleanInput } from '../utils/profanityFilter.js';
-import { syncPendingTestAttempts } from './testAttemptService.js';
+import { syncPendingTestAttempts, associateGuestAttemptsWithStudent } from './testAttemptService.js';
 
 const LOCAL_STORAGE_SESSION_KEY = 'gate_ag_prep_session_token';
 const LOCAL_STORAGE_USERS_KEY = 'gate_ag_prep_mock_users';
@@ -522,6 +522,11 @@ export async function registerStudent(formData) {
       savedAt: Date.now()
     }));
 
+    // Associate any previous guest test attempts with the new student and sync to database
+    try {
+      associateGuestAttemptsWithStudent(newStudent);
+    } catch (e) {}
+
     return { success: true, student: newStudent };
   }
 
@@ -880,6 +885,11 @@ export async function loginStudent(identifierInput, passwordInput, rememberMe = 
       student: safeStudent,
       savedAt: Date.now()
     }));
+
+    // Associate any unassigned guest test attempts with this student and sync to database
+    try {
+      associateGuestAttemptsWithStudent(safeStudent);
+    } catch (e) {}
 
     return { success: true, student: safeStudent };
   }

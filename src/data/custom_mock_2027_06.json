@@ -20,7 +20,7 @@
       "id": "GATE_2027_MOCK_06_Q01",
       "year": "2027",
       "qnum": 1,
-      "section": "General Aptitude",
+      "section": "Section 8: General Aptitude",
       "subtopic": "Verbal Aptitude",
       "gate_section": "GA",
       "type": "MCQ",
@@ -36,19 +36,20 @@
       "correct_answer": "B",
       "solution": "Option (B) \"Painstaking\" is correct. \"Meticulous\" means taking or showing extreme care about minute details; painstaking means done with or employing great care and thoroughness.",
       "isCustomUploaded": true,
-      "topic": "Quantitative Aptitude"
+      "topic": "Quantitative Aptitude",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q02",
       "year": "2027",
       "qnum": 2,
-      "section": "General Aptitude",
-      "subtopic": "Analytical Aptitude",
+      "section": "Section 8: General Aptitude",
+      "subtopic": "Quantitative Aptitude Problem Analysis",
       "gate_section": "GA",
       "type": "MCQ",
       "marks": 1,
       "negative_marks": 0.3333333333333333,
-      "question": "Statements: (i) All engineers are logical. (ii) Some logical people are creative.Which of the following conclusions can be logically drawn from the two statements above?",
+      "question": "s: (i) All engineers are logical. (ii) Some logical people are creative.Which of the following conclusions can be logically drawn from the two statements above?",
       "options": {
         "A": "All engineers are creative",
         "B": "Some engineers are creative",
@@ -58,14 +59,15 @@
       "correct_answer": "C",
       "solution": "Q.2 Solution:• Correct Answer: C• Section: General Aptitude | Sub-topic: Analytical Aptitude | Type: MCQ | Marks: 1Q.2Section: General Aptitude   |   Topic: Analytical Aptitude   |   Type: MCQ   |   Marks: 1Question: Statements: (i) All engineers are logical. (ii) Some logical people are creative.Which of the following conclusions can be logically drawn from the two statements above?(A)  All engineers are creative(B)  Some engineers are creative(C)  No definite conclusion can be drawn about engineers being creative(D)  All creative people are engineersAnswer: (C) No definite conclusion can be drawn about engineers being creativeDetailed Explanation:Governing concept: syllogism / valid deduction.Statement (i) places 'engineers' wholly inside 'logical people'. Statement (ii) says only that the 'logical people' set and the 'creative people' set overlap partially — it does not specify that this overlap includes any engineers.(A) is too strong — not guaranteed by the premises.(B) assumes the overlapping logical-creative people include engineers, which is not certain.(D) reverses the relationship without support.Because the premises leave the engineer/creative relationship undetermined, (C) is the only logically safe conclusion.Final Answer: (C).\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Quantitative Aptitude"
+      "topic": "Quantitative Aptitude",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q03",
       "year": "2027",
       "qnum": 3,
-      "section": "General Aptitude",
-      "subtopic": "Spatial Aptitude",
+      "section": "Section 8: General Aptitude",
+      "subtopic": "Analytical & Spatial Aptitude Problem Analysis",
       "gate_section": "GA",
       "type": "MCQ",
       "marks": 1,
@@ -80,14 +82,15 @@
       "correct_answer": "A",
       "solution": "Q.3 Solution:• Correct Answer: A• Section: General Aptitude | Sub-topic: Spatial Aptitude | Type: MCQ | Marks: 1Q.3Section: General Aptitude   |   Topic: Spatial Aptitude   |   Type: MCQ   |   Marks: 1Question: [Figure description: A series of three squares is shown. Square 1 contains one diagonal line drawn from the top-left corner to the bottom-right corner. Square 2 contains both diagonals (top-left to bottom-right AND top-right to bottom-left). Square 3 contains both diagonals plus a horizontal line joining the midpoints of the left and right sides. Each square in the series adds exactly one new straight line to all the lines already present in the previous square, and no line already drawn is ever removed.]Which of the following best describes Square 4, the next figure in the series?Figure Q.3 — spatial figure series (squares with increasing internal lines)(A)  Both diagonals, the horizontal midline, and a vertical line joining the midpoints of the top and bottom sides(B)  Only a vertical line joining the midpoints of the top and bottom sides(C)  Both diagonals only, with the horizontal midline removed(D)  An empty square with no internal linesAnswer: (A) Both diagonals, the horizontal midline, and a vertical line joining the midpoints of the top and bottom sidesDetailed Explanation:Governing concept: figural/spatial series completion.The rule is 'add exactly one new line each time, keep all previous lines.' Square 3 already has both diagonals and the horizontal midline (3 lines). Square 4 must retain all three of these and add exactly one further line — the only internal straight line not yet drawn is the vertical midline.(B) drops previously drawn lines, violating the rule.(C) removes an existing line, violating the rule.(D) removes all lines.Final Answer: (A).\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Quantitative Aptitude"
+      "topic": "Analytical & Spatial Aptitude",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q04",
       "year": "2027",
       "qnum": 4,
-      "section": "General Aptitude",
-      "subtopic": "Spatial Aptitude",
+      "section": "Section 8: General Aptitude",
+      "subtopic": "Analytical & Spatial Aptitude Problem Analysis",
       "gate_section": "GA",
       "type": "MCQ",
       "marks": 1,
@@ -102,36 +105,38 @@
       "correct_answer": "A",
       "solution": "Q.4 Solution:• Correct Answer: A• Section: General Aptitude | Sub-topic: Spatial Aptitude | Type: MCQ | Marks: 1Q.4Section: General Aptitude   |   Topic: Spatial Aptitude   |   Type: MCQ   |   Marks: 1Question: An analogue clock shows the time as 3:40. A plane (vertical) mirror is held facing the clock. What time does the mirror image of the clock display?(A)  8:20(B)  8:40(C)  3:20(D)  4:20Answer: (A) 8:20Detailed Explanation:Governing concept: mirror reflection of clock time (vertical mirror).For a vertical mirror, the reflected time is obtained from: mirror time = 12:00 − actual time (treating both as durations after 12:00, then converting back to clock format).12:00 − 3:40 = 8:20.(B) 8:40 results from an arithmetic slip of adding instead of the correct subtraction pattern.(C) 3:20 confuses the minute-hand reflection only, ignoring the hour-hand reflection.(D) 4:20 incorrectly reflects only the hour value.Final Answer: (A) 8:20.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Quantitative Aptitude"
+      "topic": "Analytical & Spatial Aptitude",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q05",
       "year": "2027",
       "qnum": 5,
-      "section": "General Aptitude",
-      "subtopic": "Data interpretation (chart/table)",
+      "section": "Section 8: General Aptitude",
+      "subtopic": "Grammar & Vocabulary",
       "gate_section": "GA",
       "type": "MCQ",
       "marks": 1,
       "negative_marks": 0.3333333333333333,
-      "question": "The table below shows the annual wheat production (in lakh tonnes) of four states in a given year.State : Production (lakh tonnes) P : 85Q : 102R : 76S : 93What is the ratio of the production of State Q to the combined production of States P and R (rounded to two decimal places)?",
-      "options": {
-        "A": "0.63",
-        "B": "0.95",
-        "C": "1.21",
-        "D": "0.55"
-      },
-      "correct_answer": "A",
-      "solution": "Q.5 Solution:• Correct Answer: A• Section: General Aptitude | Sub-topic: Data interpretation (chart/table) | Type: MCQ | Marks: 1Q.5Section: General Aptitude   |   Topic: Data interpretation (chart/table)   |   Type: MCQ   |   Marks: 1Question: The table below shows the annual wheat production (in lakh tonnes) of four states in a given year.State : Production (lakh tonnes)P : 85Q : 102R : 76S : 93What is the ratio of the production of State Q to the combined production of States P and R (rounded to two decimal places)?(A)  0.63(B)  0.95(C)  1.21(D)  0.55Answer: (A) 0.63Detailed Explanation:Governing concept: reading and computing a ratio from tabulated data.P + R = 85 + 76 = 161 lakh tonnes.Required ratio = Q / (P+R) = 102 / 161 = 0.6335 ≈ 0.63.(B) 0.95 would result from dividing Q by S alone (102/93 ≈ 1.10, not matching — a plausible but incorrect denominator choice).(C) 1.21 results from inverting a similar ratio.(D) 0.55 results from using P alone as the denominator with an arithmetic slip.Final Answer: (A) 0.63.\n──────────────────────────────────────────────────",
+      "question": "Choose the word that is most nearly OPPOSITE in meaning to 'ESOTERIC':",
+      "options": [
+        "Arcane",
+        "Obscure",
+        "Recondite",
+        "Familiar"
+      ],
+      "correct_answer": "D",
+      "solution": "'Esoteric' describes knowledge intended for or likely to be understood by only a small number of people. The antonym is 'Familiar'.",
       "isCustomUploaded": true,
-      "topic": "Quantitative Aptitude"
+      "topic": "Verbal Aptitude",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q06",
       "year": "2027",
       "qnum": 6,
-      "section": "General Aptitude",
-      "subtopic": "Quantitative Aptitude",
+      "section": "Section 8: General Aptitude",
+      "subtopic": "Quantitative Aptitude Problem Analysis",
       "gate_section": "GA",
       "type": "MCQ",
       "marks": 2,
@@ -146,14 +151,15 @@
       "correct_answer": "A",
       "solution": "Q.6 Solution:• Correct Answer: A• Section: General Aptitude | Sub-topic: Quantitative Aptitude | Type: MCQ | Marks: 2Q.6Section: General Aptitude   |   Topic: Quantitative Aptitude   |   Type: MCQ   |   Marks: 2Question: A tank can be filled by pipe A alone in 6 hours and by pipe B alone in 8 hours. Both pipes are opened together, but pipe B is shut off after 2 hours; pipe A continues alone until the tank is full. Find the total time taken (from the start) to fill the tank.(A)  4.5 hours(B)  4 hours(C)  5 hours(D)  3.5 hoursAnswer: (A) 4.5 hoursDetailed Explanation:Governing concept: pipes-and-cisterns (rate addition).Rate of A = 1/6 tank/h, Rate of B = 1/8 tank/h. Combined rate (first 2 h) = 1/6+1/8 = 7/24 tank/h.Volume filled in first 2 h = 2 × 7/24 = 7/12 of the tank.Remaining volume = 1 − 7/12 = 5/12 of the tank, filled by A alone at 1/6 tank/h:Time = (5/12) ÷ (1/6) = (5/12)×6 = 2.5 h.Total time = 2 + 2.5 = 4.5 h.(B) 4 h omits the extra 0.5 h needed after B is closed.(C) 5 h results from using A's full-tank time as the residual time without proportioning.(D) 3.5 h results from swapping the roles of A and B.Final Answer: (A) 4.5 hours.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Quantitative Aptitude"
+      "topic": "Quantitative Aptitude",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q07",
       "year": "2027",
       "qnum": 7,
-      "section": "General Aptitude",
-      "subtopic": "Quantitative Aptitude",
+      "section": "Section 8: General Aptitude",
+      "subtopic": "Quantitative Aptitude Problem Analysis",
       "gate_section": "GA",
       "type": "MCQ",
       "marks": 2,
@@ -168,14 +174,15 @@
       "correct_answer": "A",
       "solution": "Q.7 Solution:• Correct Answer: A• Section: General Aptitude | Sub-topic: Quantitative Aptitude | Type: MCQ | Marks: 2Q.7Section: General Aptitude   |   Topic: Quantitative Aptitude   |   Type: MCQ   |   Marks: 2Question: The average of 5 consecutive odd numbers is 51. What is the largest number among them?(A)  55(B)  53(C)  59(D)  57Answer: (A) 55Detailed Explanation:Governing concept: arithmetic progression — mean of consecutive terms equals the middle term.For 5 consecutive odd numbers, the mean equals the middle (3rd) number, so the middle number = 51.The numbers are 47, 49, 51, 53, 55. The largest is 55.(B) 53 is the 4th number, not the largest.(C) 59 assumes a spread of 8 between consecutive terms (incorrect; odd numbers differ by 2).(D) 57 results from adding 6 instead of the correct 4 (2 steps × 2) to the mean.Final Answer: (A) 55.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Quantitative Aptitude"
+      "topic": "Quantitative Aptitude",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q08",
       "year": "2027",
       "qnum": 8,
-      "section": "General Aptitude",
-      "subtopic": "Quantitative Aptitude",
+      "section": "Section 8: General Aptitude",
+      "subtopic": "Quantitative Aptitude Problem Analysis",
       "gate_section": "GA",
       "type": "MCQ",
       "marks": 2,
@@ -190,13 +197,14 @@
       "correct_answer": "A",
       "solution": "Q.8 Solution:• Correct Answer: A• Section: General Aptitude | Sub-topic: Quantitative Aptitude | Type: MCQ | Marks: 2Q.8Section: General Aptitude   |   Topic: Quantitative Aptitude   |   Type: MCQ   |   Marks: 2Question: A box contains 4 red and 6 blue balls. Two balls are drawn at random, without replacement. What is the probability that both balls drawn are red (rounded to two decimal places)?(A)  0.13(B)  0.20(C)  0.40(D)  0.27Answer: (A) 0.13Detailed Explanation:Governing concept: probability without replacement (combinations).P(both red) = C(4,2)/C(10,2) = 6/45 = 0.1333 ≈ 0.13.(B) 0.20 results from using 4/10 × 4/8 with a wrong second-draw denominator.(C) 0.40 is simply 4/10, i.e. the probability for a single draw only.(D) 0.27 results from computing P(at least one red) incorrectly.Final Answer: (A) 0.13.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Quantitative Aptitude"
+      "topic": "Quantitative Aptitude",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q09",
       "year": "2027",
       "qnum": 9,
-      "section": "General Aptitude",
+      "section": "Section 8: General Aptitude",
       "subtopic": "Verbal Aptitude",
       "gate_section": "GA",
       "type": "MCQ",
@@ -212,14 +220,15 @@
       "correct_answer": "D",
       "solution": "Q.9 Solution:• Correct Answer: D• Section: General Aptitude | Sub-topic: Verbal Aptitude | Type: MCQ | Marks: 2Q.9Section: General Aptitude   |   Topic: Verbal Aptitude   |   Type: MCQ   |   Marks: 2Question: Select the pair that best expresses a relationship similar to that expressed in the pair:THERMOMETER : TEMPERATURE(A)  Barometer : Pressure(B)  Clock : Time(C)  Speedometer : Distance(D)  Both (A) and (B)Answer: (D) Both (A) and (B)Detailed Explanation:Governing concept: analogy — instrument used to measure a specific physical quantity.A thermometer is an instrument that measures temperature. A barometer measures pressure, and a clock measures time — both are instrument : measured-quantity pairs of exactly the same type.(C) is a distractor because a speedometer measures speed, not distance, so 'Speedometer : Distance' is not a matching instrument-quantity pair.Since both (A) and (B) match the given relationship equally well, (D) is correct.Final Answer: (D).\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Quantitative Aptitude"
+      "topic": "Quantitative Aptitude",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q10",
       "year": "2027",
       "qnum": 10,
-      "section": "General Aptitude",
-      "subtopic": "Analytical Aptitude",
+      "section": "Section 8: General Aptitude",
+      "subtopic": "Quantitative Aptitude Problem Analysis",
       "gate_section": "GA",
       "type": "MCQ",
       "marks": 2,
@@ -234,13 +243,14 @@
       "correct_answer": "A",
       "solution": "Q.10 Solution:• Correct Answer: A• Section: General Aptitude | Sub-topic: Analytical Aptitude | Type: MCQ | Marks: 2Q.10Section: General Aptitude   |   Topic: Analytical Aptitude   |   Type: MCQ   |   Marks: 2Question: In a certain code, 'FARM' is written as 'HCTO'. Using the same coding scheme, how is 'SEED' written?(A)  UGGF(B)  UGFG(C)  TFFE(D)  VHHGAnswer: (A) UGGFDetailed Explanation:Governing concept: letter-shift coding.Check the shift for each letter of FARM → HCTO: F(+2)=H, A(+2)=C, R(+2)=T, M(+2)=O. Every letter is shifted forward by 2 positions in the alphabet.Applying the same +2 shift to SEED: S(+2)=U, E(+2)=G, E(+2)=G, D(+2)=F → UGGF.(B) UGFG mis-orders the last two shifted letters.(C) TFFE uses a +1 shift instead of +2.(D) VHHG uses a +3 shift instead of +2.Final Answer: (A) UGGF.Agricultural Engineering (AG) — Solutions\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Quantitative Aptitude"
+      "topic": "Quantitative Aptitude",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q11",
       "year": "2027",
       "qnum": 11,
-      "section": "Engineering Mathematics",
+      "section": "Section 1: Engineering Mathematics",
       "subtopic": "Calculus",
       "gate_section": "AG",
       "type": "MCQ",
@@ -254,15 +264,16 @@
         "D": "2.25"
       },
       "correct_answer": "A",
-      "solution": "Q.11 Solution:• Correct Answer: A• Section: Engineering Mathematics | Sub-topic: Calculus | Type: MCQ | Marks: 1Q.11Section: Engineering Mathematics   |   Topic: Calculus   |   Type: MCQ   |   Marks: 1Question: Evaluate: 2627\\lim_{x \\to 0} \\frac{1 − cos(3x)}{x²(A)}2627  4.5(B)  3(C)  9(D)  2.25Answer: (A) 4.5Detailed Explanation:Governing concept: standard limit 1−cos(ax) ≈ (a²x²)/2 for small x (from Taylor expansion of cosine).1 − cos(3x) = 2 sin²(3x/2) ≈ 2(3x/2)² = (9/2)x² for small x.Hence lim = (9/2)x² / x² = 9/2 = 4.5.(B) 3 results from mistakenly using a²/3 instead of a²/2.(C) 9 forgets to divide by 2 (uses a² directly).(D) 2.25 results from using (a/2)² instead of a²/2.Final Answer: (A) 4.5.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.11 Solution:• Correct Answer: A• Section: Engineering Mathematics | Sub-topic: Calculus | Type: MCQ | Marks: 1Q.11Section: Engineering Mathematics   |   Topic: Calculus   |   Type: MCQ   |   Marks: 1Question: Evaluate: 2627\\lim_{x \\to 0} \\frac{1 − cos(3x)}{x²(A)}2627  4.5(B)  3(C)  9(D)  2.25Answer: (A) 4.5Detailed Explanation:Governing concept: standard limit 1−cos(ax) ≈ (a²x²)/2 for small x (from Taylor expansion of cosine).1 − cos(3x) = 2 sin²(3x/2) ≈ 2(3x/2)² = (9/2)x² for small x.Hence lim = (9/2)x² / x² = 9/2 = 4.5.(B) 3 results from mistakenly using a²/3 instead of a²/2.(C) 9 forgets to divide by 2 (uses a² directly).(D) 2.25 results from using (a/2)² instead of a²/2.Final Answer: (A) 4.5.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Calculus"
+      "topic": "Calculus",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q12",
       "year": "2027",
       "qnum": 12,
-      "section": "Engineering Mathematics",
+      "section": "Section 1: Engineering Mathematics",
       "subtopic": "Differential Equations",
       "gate_section": "AG",
       "type": "MCQ",
@@ -276,15 +287,16 @@
         "D": "A partial differential equation"
       },
       "correct_answer": "A",
-      "solution": "Q.12 Solution:• Correct Answer: A• Section: Engineering Mathematics | Sub-topic: Differential Equations | Type: MCQ | Marks: 1Q.12Section: Engineering Mathematics   |   Topic: Differential Equations   |   Type: MCQ   |   Marks: 1Question: Which one of the following best classifies the differential equation \\frac{dy}{dx} + P(x)·y = Q(x)?(A)  Linear, first-order ordinary differential equation(B)  Non-linear, first-order ordinary differential equation(C)  Linear, second-order ordinary differential equation(D)  A partial differential equationAnswer: (A) Linear, first-order ordinary differential equationDetailed Explanation:Governing concept: classification of ODEs.The equation has the dependent variable y and its first derivative appearing only to the first power, with coefficients P(x), Q(x) depending on the independent variable only — this is the standard form of a linear first-order ODE, solvable by the integrating-factor method.(B) is wrong because y and \\frac{dy}{dx} appear linearly (power 1), not non-linearly.(C) is wrong because only the first derivative appears.(D) is wrong because there is only one independent variable x.Final Answer: (A).\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.12 Solution:• Correct Answer: A• Section: Engineering Mathematics | Sub-topic: Differential Equations | Type: MCQ | Marks: 1Q.12Section: Engineering Mathematics   |   Topic: Differential Equations   |   Type: MCQ   |   Marks: 1Question: Which one of the following best classifies the differential equation \\frac{dy}{dx} + P(x)·y = Q(x)?(A)  Linear, first-order ordinary differential equation(B)  Non-linear, first-order ordinary differential equation(C)  Linear, second-order ordinary differential equation(D)  A partial differential equationAnswer: (A) Linear, first-order ordinary differential equationDetailed Explanation:Governing concept: classification of ODEs.The equation has the dependent variable y and its first derivative appearing only to the first power, with coefficients P(x), Q(x) depending on the independent variable only — this is the standard form of a linear first-order ODE, solvable by the integrating-factor method.(B) is wrong because y and \\frac{dy}{dx} appear linearly (power 1), not non-linearly.(C) is wrong because only the first derivative appears.(D) is wrong because there is only one independent variable x.Final Answer: (A).\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Differential Equations"
+      "topic": "Differential Equations",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q13",
       "year": "2027",
       "qnum": 13,
-      "section": "Engineering Mathematics",
+      "section": "Section 1: Engineering Mathematics",
       "subtopic": "Differential Equations",
       "gate_section": "AG",
       "type": "NAT",
@@ -293,15 +305,16 @@
       "question": "Solve the initial value problem \\frac{dy}{dx} + 2y = 0, with y(0) = 5. Find the value of y at x = (ln 2)/2. (Answer: 2.40 to 2.60)",
       "options": null,
       "correct_answer": "2.40 to 2.60",
-      "solution": "Q.13 Solution:• Correct Answer: 2.40 to 2.60• Section: Engineering Mathematics | Sub-topic: Differential Equations | Type: NAT | Marks: 1Q.13Section: Engineering Mathematics   |   Topic: Differential Equations   |   Type: NAT   |   Marks: 1Question: Solve the initial value problem \\frac{dy}{dx} + 2y = 0, with y(0) = 5. Find the value of y at x = (ln 2)/2. (Answer: 2.40 to 2.60)Answer: 2.40 to 2.60Detailed Explanation:Governing concept: first-order linear homogeneous ODE (exponential decay).\\frac{dy}{dx} = −2y ⇒ y = C e^{−2x}. Using y(0)=5 ⇒ C = 5, so y = 5e^(−2x).At x = (ln 2)/2: y = 5·e^{−2·(ln2}/2) = 5·e^{−ln2} = 5×(1/2) = 2.5.Final Answer: y = 2.50.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.13 Solution:• Correct Answer: 2.40 to 2.60• Section: Engineering Mathematics | Sub-topic: Differential Equations | Type: NAT | Marks: 1Q.13Section: Engineering Mathematics   |   Topic: Differential Equations   |   Type: NAT   |   Marks: 1Question: Solve the initial value problem \\frac{dy}{dx} + 2y = 0, with y(0) = 5. Find the value of y at x = (ln 2)/2. (Answer: 2.40 to 2.60)Answer: 2.40 to 2.60Detailed Explanation:Governing concept: first-order linear homogeneous ODE (exponential decay).\\frac{dy}{dx} = −2y ⇒ y = C e^{−2x}. Using y(0)=5 ⇒ C = 5, so y = 5e^(−2x).At x = (ln 2)/2: y = 5·e^{−2·(ln2}/2) = 5·e^{−ln2} = 5×(1/2) = 2.5.Final Answer: y = 2.50.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Differential Equations"
+      "topic": "Differential Equations",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q14",
       "year": "2027",
       "qnum": 14,
-      "section": "Engineering Mathematics",
+      "section": "Section 1: Engineering Mathematics",
       "subtopic": "Probability and Statistics",
       "gate_section": "AG",
       "type": "MCQ",
@@ -315,15 +328,16 @@
         "D": "1/6"
       },
       "correct_answer": "A",
-      "solution": "Official GATE AG Solution:\nFor a uniform random variable  \\sim U(0,1)$, the probability density function is (x) = 1$ for /bin/zsh \\le x \\le 1$.\n2627E[X^2] = \\int_{0}^{1} x^2 \\cdot f(x) \\, dx = \\int_{0}^{1} x^2 \\, dx = \\left[ \frac{x^3}{3} \right]_{0}^{1} = \frac{1}{3}2627\n\nCorrect Answer: (A) 1/3",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Official GATE AG Solution:\nFor a uniform random variable  \\sim U(0,1)$, the probability density function is (x) = 1$ for /bin/zsh \\le x \\le 1$.\n2627E[X^2] = \\int_{0}^{1} x^2 \\cdot f(x) \\, dx = \\int_{0}^{1} x^2 \\, dx = \\left[ rac{x^3}{3} \right]_{0}^{1} = rac{1}{3}2627\n\nCorrect Answer: (A) 1/3",
       "isCustomUploaded": true,
-      "topic": "Probability and Statistics"
+      "topic": "Probability and Statistics",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q15",
       "year": "2027",
       "qnum": 15,
-      "section": "Engineering Mathematics",
+      "section": "Section 1: Engineering Mathematics",
       "subtopic": "Probability and Statistics",
       "gate_section": "AG",
       "type": "NAT",
@@ -332,15 +346,16 @@
       "question": "Two fair six-faced dice are rolled together. What is the probability that the sum of the two faces shown is equal to 8? (Round off to two decimal places.) (Answer: 0.13 to 0.15)",
       "options": null,
       "correct_answer": "0.13 to 0.15",
-      "solution": "Q.15 Solution:• Correct Answer: 0.13 to 0.15• Section: Engineering Mathematics | Sub-topic: Probability and Statistics | Type: NAT | Marks: 1Q.15Section: Engineering Mathematics   |   Topic: Probability and Statistics   |   Type: NAT   |   Marks: 1Question: Two fair six-faced dice are rolled together. What is the probability that the sum of the two faces shown is equal to 8? (Round off to two decimal places.) (Answer: 0.13 to 0.15)Answer: 0.13 to 0.15Detailed Explanation:Governing concept: classical probability, sample space enumeration.Total equally likely outcomes = 6 × 6 = 36.Outcomes with sum 8: (2,6),(3,5),(4,4),(5,3),(6,2) → 5 favourable outcomes.P(sum = 8) = 5/36 = 0.1389 ≈ 0.14.Final Answer: 0.14.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.15 Solution:• Correct Answer: 0.13 to 0.15• Section: Engineering Mathematics | Sub-topic: Probability and Statistics | Type: NAT | Marks: 1Q.15Section: Engineering Mathematics   |   Topic: Probability and Statistics   |   Type: NAT   |   Marks: 1Question: Two fair six-faced dice are rolled together. What is the probability that the sum of the two faces shown is equal to 8? (Round off to two decimal places.) (Answer: 0.13 to 0.15)Answer: 0.13 to 0.15Detailed Explanation:Governing concept: classical probability, sample space enumeration.Total equally likely outcomes = 6 × 6 = 36.Outcomes with sum 8: (2,6),(3,5),(4,4),(5,3),(6,2) → 5 favourable outcomes.P(sum = 8) = 5/36 = 0.1389 ≈ 0.14.Final Answer: 0.14.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Probability and Statistics"
+      "topic": "Probability and Statistics",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q16",
       "year": "2027",
       "qnum": 16,
-      "section": "Farm Machinery",
+      "section": "Section 2: Farm Machinery",
       "subtopic": "Machine Design: machine elements",
       "gate_section": "AG",
       "type": "MCQ",
@@ -354,16 +369,17 @@
         "D": "250 rpm"
       },
       "correct_answer": "A",
-      "solution": "Q.16 Solution:• Correct Answer: A• Section: Agricultural Engineering | Sub-topic: Machine Design: machine elements | Type: MCQ | Marks: 1Q.16Section: Farm Machinery   |   Topic: Machine Design: machine elements   |   Type: MCQ   |   Marks: 1Question: A belt drive connects a driver pulley of diameter 250 mm running at 1000 rpm to a driven pulley of diameter 500 mm. Neglecting belt slip, find the speed of the driven pulley.(A)  500 rpm(B)  2000 rpm(C)  750 rpm(D)  250 rpmAnswer: (A) 500 rpmDetailed Explanation:Governing concept: belt-drive velocity ratio, N1D1 = N2D2 (no slip).N2 = N1 × D1/D2 = 1000 × (250/500) = 500 rpm.(B) 2000 rpm results from inverting the diameter ratio.(C) 750 rpm and (D) 250 rpm are not consistent with the direct proportionality relation.Final Answer: (A) 500 rpm.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.16 Solution:• Correct Answer: A• Section: Agricultural Engineering | Sub-topic: Machine Design: machine elements | Type: MCQ | Marks: 1Q.16Section: Farm Machinery   |   Topic: Machine Design: machine elements   |   Type: MCQ   |   Marks: 1Question: A belt drive connects a driver pulley of diameter 250 mm running at 1000 rpm to a driven pulley of diameter 500 mm. Neglecting belt slip, find the speed of the driven pulley.(A)  500 rpm(B)  2000 rpm(C)  750 rpm(D)  250 rpmAnswer: (A) 500 rpmDetailed Explanation:Governing concept: belt-drive velocity ratio, N1D1 = N2D2 (no slip).N2 = N1 × D1/D2 = 1000 × (250/500) = 500 rpm.(B) 2000 rpm results from inverting the diameter ratio.(C) 750 rpm and (D) 250 rpm are not consistent with the direct proportionality relation.Final Answer: (A) 500 rpm.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Machine Design"
+      "topic": "Farm Machinery",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q17",
       "year": "2027",
       "qnum": 17,
-      "section": "Agricultural Engineering",
-      "subtopic": "equipment for sowing/planting/fertilizer application",
+      "section": "Section 2: Farm Machinery",
+      "subtopic": "Planting and Sowing",
       "gate_section": "AG",
       "type": "MCQ",
       "marks": 1,
@@ -376,15 +392,17 @@
         "D": "Changing the height of the seed hopper"
       },
       "correct_answer": "B",
-      "solution": "Q.17 Solution:• Correct Answer: B• Section: Agricultural Engineering | Sub-topic: equipment for sowing/planting/fertilizer application | Type: MCQ | Marks: 1Q.17Section: Farm Machinery   |   Topic: equipment for sowing/planting/fertilizer application   |   Type: MCQ   |   Marks: 1Question: In a fluted-roller type seed metering mechanism used in seed drills, the seed rate delivered is primarily varied by:(A)  Changing the rotational speed of the roller only(B)  Changing the effective (active) length of the fluted roller exposed to the seed(C)  Changing the diameter of the fluted roller(D)  Changing the height of the seed hopperAnswer: (B) Changing the effective (active) length of the fluted roller exposed to the seedDetailed Explanation:Governing concept: working principle of fluted-roller seed metering mechanisms.In a fluted-roller metering unit, the seed rate is controlled mainly by sliding the roller axially to change the effective (exposed) fluted length in contact with the seed cell, which changes the volume of seed metered per revolution.(A) Roller speed does influence rate somewhat, but is not the primary control method used in practice for calibration; ground-wheel-driven roller speed is fixed by forward speed.(C) Roller diameter is fixed by design and not adjustable during operation.(D) Hopper height affects flow uniformity, not the metered rate.Final Answer: (B).\n──────────────────────────────────────────────────",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.17 Solution:• Correct Answer: B• Section: Agricultural Engineering | Sub-topic: equipment for sowing/planting/fertilizer application | Type: MCQ | Marks: 1Q.17Section: Farm Machinery   |   Topic: equipment for sowing/planting/fertilizer application   |   Type: MCQ   |   Marks: 1Question: In a fluted-roller type seed metering mechanism used in seed drills, the seed rate delivered is primarily varied by:(A)  Changing the rotational speed of the roller only(B)  Changing the effective (active) length of the fluted roller exposed to the seed(C)  Changing the diameter of the fluted roller(D)  Changing the height of the seed hopperAnswer: (B) Changing the effective (active) length of the fluted roller exposed to the seedDetailed Explanation:Governing concept: working principle of fluted-roller seed metering mechanisms.In a fluted-roller metering unit, the seed rate is controlled mainly by sliding the roller axially to change the effective (exposed) fluted length in contact with the seed cell, which changes the volume of seed metered per revolution.(A) Roller speed does influence rate somewhat, but is not the primary control method used in practice for calibration; ground-wheel-driven roller speed is fixed by forward speed.(C) Roller diameter is fixed by design and not adjustable during operation.(D) Hopper height affects flow uniformity, not the metered rate.Final Answer: (B).\n──────────────────────────────────────────────────",
+      "isCustomUploaded": true,
+      "topic": "Farm Machinery",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q18",
       "year": "2027",
       "qnum": 18,
-      "section": "Agricultural Engineering",
-      "subtopic": "cost analysis of implements and tractors",
+      "section": "Section 2: Farm Machinery",
+      "subtopic": "Agricultural Engineering Fundamentals",
       "gate_section": "AG",
       "type": "NAT",
       "marks": 1,
@@ -392,14 +410,16 @@
       "question": "farm implement is purchased for ₹8,00,000. Its salvage value is estimated as 10% of the purchase price, and its useful life is 10 years. Using the straight-line method, compute the annual depreciation. (Answer in ₹ lakh per year, round off to two decimal places.) (Answer: 0.70 to 0.74)",
       "options": null,
       "correct_answer": "0.70 to 0.74",
-      "solution": "Q.18 Solution:• Correct Answer: 0.70 to 0.74• Section: Agricultural Engineering | Sub-topic: cost analysis of implements and tractors | Type: NAT | Marks: 1Q.18Section: Farm Machinery   |   Topic: cost analysis of implements and tractors   |   Type: NAT   |   Marks: 1Question: A farm implement is purchased for ₹8,00,000. Its salvage value is estimated as 10% of the purchase price, and its useful life is 10 years. Using the straight-line method, compute the annual depreciation. (Answer in ₹ lakh per year, round off to two decimal places.) (Answer: 0.70 to 0.74)Answer: 0.70 to 0.74Detailed Explanation:Governing concept: straight-line depreciation, D = (P − S)/L.P = ₹8,00,000; S = 0.10 × 8,00,000 = ₹80,000; L = 10 years.D = (8,00,000 − 80,000)/10 = 7,20,000/10 = ₹72,000/year = ₹0.72 lakh/year.Final Answer: 0.72 ₹ lakh/year.\n──────────────────────────────────────────────────",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.18 Solution:• Correct Answer: 0.70 to 0.74• Section: Agricultural Engineering | Sub-topic: cost analysis of implements and tractors | Type: NAT | Marks: 1Q.18Section: Farm Machinery   |   Topic: cost analysis of implements and tractors   |   Type: NAT   |   Marks: 1Question: A farm implement is purchased for ₹8,00,000. Its salvage value is estimated as 10% of the purchase price, and its useful life is 10 years. Using the straight-line method, compute the annual depreciation. (Answer in ₹ lakh per year, round off to two decimal places.) (Answer: 0.70 to 0.74)Answer: 0.70 to 0.74Detailed Explanation:Governing concept: straight-line depreciation, D = (P − S)/L.P = ₹8,00,000; S = 0.10 × 8,00,000 = ₹80,000; L = 10 years.D = (8,00,000 − 80,000)/10 = 7,20,000/10 = ₹72,000/year = ₹0.72 lakh/year.Final Answer: 0.72 ₹ lakh/year.\n──────────────────────────────────────────────────",
+      "isCustomUploaded": true,
+      "topic": "Farm Machinery",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q19",
       "year": "2027",
       "qnum": 19,
-      "section": "Farm Power",
+      "section": "Section 3: Farm Power",
       "subtopic": "power transmission (clutch, gear box, differential, final drive, brakes)",
       "gate_section": "AG",
       "type": "MCQ",
@@ -413,15 +433,16 @@
         "D": "Final drive"
       },
       "correct_answer": "A",
-      "solution": "Q.19 Solution:• Correct Answer: A• Section: Farm Power and Machinery | Sub-topic: power transmission (clutch, gear box, differential, final drive, brakes) | Type: MCQ | Marks: 1Q.19Section: Farm Power   |   Topic: power transmission (clutch, gear box, differential, final drive, brakes)   |   Type: MCQ   |   Marks: 1Question: Which component in a tractor's power-transmission system allows the two driving wheels to rotate at different speeds while the tractor is turning?(A)  Differential(B)  Gearbox(C)  Clutch(D)  Final driveAnswer: (A) DifferentialDetailed Explanation:Governing concept: function of the differential unit in a vehicle drivetrain.The differential distributes torque to both drive wheels while permitting them to rotate at different speeds during turns (the outer wheel travels a longer arc than the inner wheel).(B) The gearbox changes torque/speed ratio between engine and wheels but does not allow wheel-to-wheel speed difference.(C) The clutch engages/disengages engine power from the transmission.(D) The final drive provides the last-stage speed reduction/torque increase, not differential action.Final Answer: (A) Differential.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.19 Solution:• Correct Answer: A• Section: Farm Power and Machinery | Sub-topic: power transmission (clutch, gear box, differential, final drive, brakes) | Type: MCQ | Marks: 1Q.19Section: Farm Power   |   Topic: power transmission (clutch, gear box, differential, final drive, brakes)   |   Type: MCQ   |   Marks: 1Question: Which component in a tractor's power-transmission system allows the two driving wheels to rotate at different speeds while the tractor is turning?(A)  Differential(B)  Gearbox(C)  Clutch(D)  Final driveAnswer: (A) DifferentialDetailed Explanation:Governing concept: function of the differential unit in a vehicle drivetrain.The differential distributes torque to both drive wheels while permitting them to rotate at different speeds during turns (the outer wheel travels a longer arc than the inner wheel).(B) The gearbox changes torque/speed ratio between engine and wheels but does not allow wheel-to-wheel speed difference.(C) The clutch engages/disengages engine power from the transmission.(D) The final drive provides the last-stage speed reduction/torque increase, not differential action.Final Answer: (A) Differential.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Farm Power"
+      "topic": "Tractors and Power Tillers",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q20",
       "year": "2027",
       "qnum": 20,
-      "section": "Farm Power",
+      "section": "Section 3: Farm Power",
       "subtopic": "fuels, combustion and lubricants",
       "gate_section": "AG",
       "type": "NAT",
@@ -430,15 +451,16 @@
       "question": "Diesel fuel has a calorific value of 45 MJ/kg. Calculate the total heat released on burning 2.5 kg of this diesel. (Answer in MJ, round off to two decimal places.) (Answer: 112.00 to 113.00)",
       "options": null,
       "correct_answer": "112.00 to 113.00",
-      "solution": "Q.20 Solution:• Correct Answer: 112.00 to 113.00• Section: Farm Power and Machinery | Sub-topic: fuels, combustion and lubricants | Type: NAT | Marks: 1Q.20Section: Farm Power   |   Topic: fuels, combustion and lubricants   |   Type: NAT   |   Marks: 1Question: Diesel fuel has a calorific value of 45 MJ/kg. Calculate the total heat released on burning 2.5 kg of this diesel. (Answer in MJ, round off to two decimal places.) (Answer: 112.00 to 113.00)Answer: 112.00 to 113.00Detailed Explanation:Governing concept: heat released = mass × calorific value.Heat released = 2.5 kg × 45 MJ/kg = 112.50 MJ.Final Answer: 112.50 MJ.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.20 Solution:• Correct Answer: 112.00 to 113.00• Section: Farm Power and Machinery | Sub-topic: fuels, combustion and lubricants | Type: NAT | Marks: 1Q.20Section: Farm Power   |   Topic: fuels, combustion and lubricants   |   Type: NAT   |   Marks: 1Question: Diesel fuel has a calorific value of 45 MJ/kg. Calculate the total heat released on burning 2.5 kg of this diesel. (Answer in MJ, round off to two decimal places.) (Answer: 112.00 to 113.00)Answer: 112.00 to 113.00Detailed Explanation:Governing concept: heat released = mass × calorific value.Heat released = 2.5 kg × 45 MJ/kg = 112.50 MJ.Final Answer: 112.50 MJ.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Farm Power"
+      "topic": "Farm Power",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q21",
       "year": "2027",
       "qnum": 21,
-      "section": "Farm Power",
+      "section": "Section 3: Farm Power",
       "subtopic": "Sources of Power (wind, solar, biomass, bio-fuels, human, animal)",
       "gate_section": "AG",
       "type": "NAT",
@@ -447,15 +469,16 @@
       "question": "wind turbine rotor has a diameter of 4 m and operates in a wind stream of velocity 8 m/s. Taking air density as 1.2 kg/m³, calculate the wind power available in the swept area (before applying any turbine efficiency). (Answer in kW, round off to two decimal places.) (Answer: 3.75 to 3.95)",
       "options": null,
       "correct_answer": "3.75 to 3.95",
-      "solution": "Q.21 Solution:• Correct Answer: 3.75 to 3.95• Section: Farm Power and Machinery | Sub-topic: Sources of Power (wind, solar, biomass, bio-fuels, human, animal) | Type: NAT | Marks: 1Q.21Section: Farm Power   |   Topic: Sources of Power (wind, solar, biomass, bio-fuels, human, animal)   |   Type: NAT   |   Marks: 1Question: A wind turbine rotor has a diameter of 4 m and operates in a wind stream of velocity 8 m/s. Taking air density as 1.2 kg/m³, calculate the wind power available in the swept area (before applying any turbine efficiency). (Answer in kW, round off to two decimal places.) (Answer: 3.75 to 3.95)Answer: 3.75 to 3.95Detailed Explanation:Governing concept: available wind power, P = 0.5 ρ A V³.Swept area A = (π/4)D² = (π/4)(4)² = 12.566 m².P = 0.5 × 1.2 × 12.566 × 8³ = 0.5 × 1.2 × 12.566 × 512 = 3860.4 W = 3.86 kW.Final Answer: 3.86 kW.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.21 Solution:• Correct Answer: 3.75 to 3.95• Section: Farm Power and Machinery | Sub-topic: Sources of Power (wind, solar, biomass, bio-fuels, human, animal) | Type: NAT | Marks: 1Q.21Section: Farm Power   |   Topic: Sources of Power (wind, solar, biomass, bio-fuels, human, animal)   |   Type: NAT   |   Marks: 1Question: A wind turbine rotor has a diameter of 4 m and operates in a wind stream of velocity 8 m/s. Taking air density as 1.2 kg/m³, calculate the wind power available in the swept area (before applying any turbine efficiency). (Answer in kW, round off to two decimal places.) (Answer: 3.75 to 3.95)Answer: 3.75 to 3.95Detailed Explanation:Governing concept: available wind power, P = 0.5 ρ A V³.Swept area A = (π/4)D² = (π/4)(4)² = 12.566 m².P = 0.5 × 1.2 × 12.566 × 8³ = 0.5 × 1.2 × 12.566 × 512 = 3860.4 W = 3.86 kW.Final Answer: 3.86 kW.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Sources of Power"
+      "topic": "Sources of Power",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q22",
       "year": "2027",
       "qnum": 22,
-      "section": "Farm Power",
+      "section": "Section 3: Farm Power",
       "subtopic": "Tractors & Power Tillers: traction theory and mechanics of tractor chassis",
       "gate_section": "AG",
       "type": "MCQ",
@@ -469,15 +492,16 @@
         "D": "80–90%"
       },
       "correct_answer": "A",
-      "solution": "Q.22 Solution:• Correct Answer: A• Section: Farm Power and Machinery | Sub-topic: Tractors & Power Tillers: traction theory and mechanics of tractor chassis | Type: MCQ | Marks: 1Q.22Section: Farm Power   |   Topic: Tractors & Power Tillers: traction theory and mechanics of tractor chassis   |   Type: MCQ   |   Marks: 1Question: As wheel slip of a tractor's drive wheels increases from zero, the drawbar pull first increases and then decreases at very high slip. The slip at which drawbar power is typically maximum for an agricultural tractor on firm soil lies in the range:(A)  8–15%(B)  25–35%(C)  50–60%(D)  80–90%Answer: (A) 8–15%Detailed Explanation:Governing concept: traction theory — relationship between wheel slip, drawbar pull and drawbar power.Drawbar pull rises steeply with slip at low slip values and levels off; drawbar power (pull × travel speed, where travel speed falls as slip rises) peaks at a relatively low slip, typically about 8–15% for agricultural tyres on firm soil, before efficiency losses dominate at higher slip.(B), (C), (D) all correspond to slip values well past the optimum, where travel-speed losses outweigh further pull gains and drawbar power efficiency drops sharply.Final Answer: (A) 8–15%.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.22 Solution:• Correct Answer: A• Section: Farm Power and Machinery | Sub-topic: Tractors & Power Tillers: traction theory and mechanics of tractor chassis | Type: MCQ | Marks: 1Q.22Section: Farm Power   |   Topic: Tractors & Power Tillers: traction theory and mechanics of tractor chassis   |   Type: MCQ   |   Marks: 1Question: As wheel slip of a tractor's drive wheels increases from zero, the drawbar pull first increases and then decreases at very high slip. The slip at which drawbar power is typically maximum for an agricultural tractor on firm soil lies in the range:(A)  8–15%(B)  25–35%(C)  50–60%(D)  80–90%Answer: (A) 8–15%Detailed Explanation:Governing concept: traction theory — relationship between wheel slip, drawbar pull and drawbar power.Drawbar pull rises steeply with slip at low slip values and levels off; drawbar power (pull × travel speed, where travel speed falls as slip rises) peaks at a relatively low slip, typically about 8–15% for agricultural tyres on firm soil, before efficiency losses dominate at higher slip.(B), (C), (D) all correspond to slip values well past the optimum, where travel-speed losses outweigh further pull gains and drawbar power efficiency drops sharply.Final Answer: (A) 8–15%.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Farm Power"
+      "topic": "Tractors and Power Tillers",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q23",
       "year": "2027",
       "qnum": 23,
-      "section": "Soil and Water Conservation Engineering",
+      "section": "Section 4: Soil and Water Conservation Engineering",
       "subtopic": "Surveying and Leveling",
       "gate_section": "AG",
       "type": "MCQ",
@@ -491,15 +515,16 @@
         "D": "Chain"
       },
       "correct_answer": "A",
-      "solution": "Q.23 Solution:• Correct Answer: A• Section: Soil and Water Conservation Engineering | Sub-topic: Surveying and Leveling | Type: MCQ | Marks: 1Q.23Section: Soil & Water Conservation Engineering   |   Topic: Surveying and Leveling   |   Type: MCQ   |   Marks: 1Question: Which surveying instrument is used to measure both horizontal and vertical angles at a station?(A)  Theodolite(B)  Dumpy level(C)  Planimeter(D)  ChainAnswer: (A) TheodoliteDetailed Explanation:Governing concept: function of common surveying instruments.A theodolite is specifically designed to measure both horizontal and vertical angles precisely, making it essential for triangulation, traversing, and setting out works.(B) A dumpy level measures only differences in elevation (levelling), not angles.(C) A planimeter measures plane areas from a map/plan, not angles in the field.(D) A chain measures linear distance only.Final Answer: (A) Theodolite.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.23 Solution:• Correct Answer: A• Section: Soil and Water Conservation Engineering | Sub-topic: Surveying and Leveling | Type: MCQ | Marks: 1Q.23Section: Soil & Water Conservation Engineering   |   Topic: Surveying and Leveling   |   Type: MCQ   |   Marks: 1Question: Which surveying instrument is used to measure both horizontal and vertical angles at a station?(A)  Theodolite(B)  Dumpy level(C)  Planimeter(D)  ChainAnswer: (A) TheodoliteDetailed Explanation:Governing concept: function of common surveying instruments.A theodolite is specifically designed to measure both horizontal and vertical angles precisely, making it essential for triangulation, traversing, and setting out works.(B) A dumpy level measures only differences in elevation (levelling), not angles.(C) A planimeter measures plane areas from a map/plan, not angles in the field.(D) A chain measures linear distance only.Final Answer: (A) Theodolite.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Surveying and Leveling"
+      "topic": "Surveying and Levelling",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q24",
       "year": "2027",
       "qnum": 24,
-      "section": "Soil and Water Conservation Engineering",
+      "section": "Section 4: Soil and Water Conservation Engineering",
       "subtopic": "Soil Mechanics",
       "gate_section": "AG",
       "type": "MCQ",
@@ -513,15 +538,16 @@
         "D": "Sandy loam"
       },
       "correct_answer": "C",
-      "solution": "Q.24 Solution:• Correct Answer: C• Section: Soil and Water Conservation Engineering | Sub-topic: Soil Mechanics | Type: MCQ | Marks: 1Q.24Section: Soil & Water Conservation Engineering   |   Topic: Soil Mechanics   |   Type: MCQ   |   Marks: 1Question: Among the following soil textural classes, which one typically exhibits the highest field capacity (on a mass or volume basis)?(A)  Sand(B)  Loamy sand(C)  Clay(D)  Sandy loamAnswer: (C) ClayDetailed Explanation:Governing concept: relationship between soil texture and water-holding capacity.Fine-textured soils such as clay have a larger proportion of micropores and greater specific surface area, giving them much higher water retention (field capacity) than coarse-textured soils.(A) Sand has large pores that drain quickly under gravity, giving it the lowest field capacity among the options.(B) and (D) are intermediate-textured soils with field capacities between sand and clay.Final Answer: (C) Clay.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.24 Solution:• Correct Answer: C• Section: Soil and Water Conservation Engineering | Sub-topic: Soil Mechanics | Type: MCQ | Marks: 1Q.24Section: Soil & Water Conservation Engineering   |   Topic: Soil Mechanics   |   Type: MCQ   |   Marks: 1Question: Among the following soil textural classes, which one typically exhibits the highest field capacity (on a mass or volume basis)?(A)  Sand(B)  Loamy sand(C)  Clay(D)  Sandy loamAnswer: (C) ClayDetailed Explanation:Governing concept: relationship between soil texture and water-holding capacity.Fine-textured soils such as clay have a larger proportion of micropores and greater specific surface area, giving them much higher water retention (field capacity) than coarse-textured soils.(A) Sand has large pores that drain quickly under gravity, giving it the lowest field capacity among the options.(B) and (D) are intermediate-textured soils with field capacities between sand and clay.Final Answer: (C) Clay.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Soil Mechanics"
+      "topic": "Watershed Management",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q25",
       "year": "2027",
       "qnum": 25,
-      "section": "Soil and Water Conservation Engineering",
+      "section": "Section 4: Soil and Water Conservation Engineering",
       "subtopic": "Soil Mechanics",
       "gate_section": "AG",
       "type": "NAT",
@@ -530,15 +556,16 @@
       "question": "soil sample has a bulk density of 1.35 g/cm³ and a particle (solid) density of 2.65 g/cm³. Calculate the porosity of the soil. (Answer in %, round off to two decimal places.) (Answer: 48.50 to 49.50)",
       "options": null,
       "correct_answer": "48.50 to 49.50",
-      "solution": "Q.25 Solution:• Correct Answer: 48.50 to 49.50• Section: Soil and Water Conservation Engineering | Sub-topic: Soil Mechanics | Type: NAT | Marks: 1Q.25Section: Soil & Water Conservation Engineering   |   Topic: Soil Mechanics   |   Type: NAT   |   Marks: 1Question: A soil sample has a bulk density of 1.35 g/cm³ and a particle (solid) density of 2.65 g/cm³. Calculate the porosity of the soil. (Answer in %, round off to two decimal places.) (Answer: 48.50 to 49.50)Answer: 48.50 to 49.50Detailed Explanation:Governing concept: soil porosity from bulk and particle density, n = 1 − (ρb/ρs).n = 1 − (1.35/2.65) = 1 − 0.5094 = 0.4906 = 49.06%.Final Answer: 49.06%.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.25 Solution:• Correct Answer: 48.50 to 49.50• Section: Soil and Water Conservation Engineering | Sub-topic: Soil Mechanics | Type: NAT | Marks: 1Q.25Section: Soil & Water Conservation Engineering   |   Topic: Soil Mechanics   |   Type: NAT   |   Marks: 1Question: A soil sample has a bulk density of 1.35 g/cm³ and a particle (solid) density of 2.65 g/cm³. Calculate the porosity of the soil. (Answer in %, round off to two decimal places.) (Answer: 48.50 to 49.50)Answer: 48.50 to 49.50Detailed Explanation:Governing concept: soil porosity from bulk and particle density, n = 1 − (ρb/ρs).n = 1 − (1.35/2.65) = 1 − 0.5094 = 0.4906 = 49.06%.Final Answer: 49.06%.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Soil Mechanics"
+      "topic": "Soil Mechanics",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q26",
       "year": "2027",
       "qnum": 26,
-      "section": "Soil and Water Conservation Engineering",
+      "section": "Section 4: Soil and Water Conservation Engineering",
       "subtopic": "Hydrology",
       "gate_section": "AG",
       "type": "NAT",
@@ -547,15 +574,16 @@
       "question": "catchment of area 250 ha receives a rainfall of 40 mm, producing a total runoff volume of 60,000 m³. Compute the runoff coefficient. (Round off to two decimal places.) (Answer: 0.58 to 0.62)",
       "options": null,
       "correct_answer": "0.58 to 0.62",
-      "solution": "Q.26 Solution:• Correct Answer: 0.58 to 0.62• Section: Soil and Water Conservation Engineering | Sub-topic: Hydrology | Type: NAT | Marks: 1Q.26Section: Soil & Water Conservation Engineering   |   Topic: Hydrology   |   Type: NAT   |   Marks: 1Question: A catchment of area 250 ha receives a rainfall of 40 mm, producing a total runoff volume of 60,000 m³. Compute the runoff coefficient. (Round off to two decimal places.) (Answer: 0.58 to 0.62)Answer: 0.58 to 0.62Detailed Explanation:Governing concept: runoff coefficient C = runoff volume / rainfall volume.Rainfall volume = Area × depth = 250 ha × 10,000 m²/ha × 0.040 m = 1,00,000 m³.C = 60,000 / 1,00,000 = 0.60.Final Answer: 0.60.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.26 Solution:• Correct Answer: 0.58 to 0.62• Section: Soil and Water Conservation Engineering | Sub-topic: Hydrology | Type: NAT | Marks: 1Q.26Section: Soil & Water Conservation Engineering   |   Topic: Hydrology   |   Type: NAT   |   Marks: 1Question: A catchment of area 250 ha receives a rainfall of 40 mm, producing a total runoff volume of 60,000 m³. Compute the runoff coefficient. (Round off to two decimal places.) (Answer: 0.58 to 0.62)Answer: 0.58 to 0.62Detailed Explanation:Governing concept: runoff coefficient C = runoff volume / rainfall volume.Rainfall volume = Area × depth = 250 ha × 10,000 m²/ha × 0.040 m = 1,00,000 m³.C = 60,000 / 1,00,000 = 0.60.Final Answer: 0.60.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Hydrology"
+      "topic": "Hydrology",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q27",
       "year": "2027",
       "qnum": 27,
-      "section": "Irrigation and Drainage Engineering",
+      "section": "Section 5: Irrigation and Drainage Engineering",
       "subtopic": "Agricultural Drainage",
       "gate_section": "AG",
       "type": "MCQ",
@@ -569,15 +597,16 @@
         "D": "The spacing between two adjacent drain laterals"
       },
       "correct_answer": "A",
-      "solution": "Q.27 Solution:• Correct Answer: A• Section: General Aptitude | Sub-topic: Agricultural Drainage | Type: MCQ | Marks: 1Q.27Section: Irrigation & Drainage Engineering   |   Topic: Agricultural Drainage   |   Type: MCQ   |   Marks: 1Question: The 'drainage coefficient' used in the design of a subsurface (tile) drainage system represents:(A)  The design rate (depth per day) at which excess water must be removed from the field(B)  The total depth of water applied during one irrigation event(C)  The hydraulic conductivity of the soil profile(D)  The spacing between two adjacent drain lateralsAnswer: (A) The design rate (depth per day) at which excess water must be removed from the fieldDetailed Explanation:Governing concept: definition of the drainage coefficient in agricultural drainage design.The drainage coefficient is the design discharge rate, usually expressed as a depth of water removed per day, that the drainage system must be capable of removing to keep the water table at or below a target depth for crop growth.(B) describes an irrigation depth, an unrelated quantity.(C) describes hydraulic conductivity K, an input parameter, not the drainage coefficient itself.(D) describes drain spacing S, a design output, not the coefficient.Final Answer: (A).\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.27 Solution:• Correct Answer: A• Section: General Aptitude | Sub-topic: Agricultural Drainage | Type: MCQ | Marks: 1Q.27Section: Irrigation & Drainage Engineering   |   Topic: Agricultural Drainage   |   Type: MCQ   |   Marks: 1Question: The 'drainage coefficient' used in the design of a subsurface (tile) drainage system represents:(A)  The design rate (depth per day) at which excess water must be removed from the field(B)  The total depth of water applied during one irrigation event(C)  The hydraulic conductivity of the soil profile(D)  The spacing between two adjacent drain lateralsAnswer: (A) The design rate (depth per day) at which excess water must be removed from the fieldDetailed Explanation:Governing concept: definition of the drainage coefficient in agricultural drainage design.The drainage coefficient is the design discharge rate, usually expressed as a depth of water removed per day, that the drainage system must be capable of removing to keep the water table at or below a target depth for crop growth.(B) describes an irrigation depth, an unrelated quantity.(C) describes hydraulic conductivity K, an input parameter, not the drainage coefficient itself.(D) describes drain spacing S, a design output, not the coefficient.Final Answer: (A).\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Agricultural Drainage"
+      "topic": "Agricultural Drainage",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q28",
       "year": "2027",
       "qnum": 28,
-      "section": "Irrigation and Drainage Engineering",
+      "section": "Section 5: Irrigation and Drainage Engineering",
       "subtopic": "Agricultural Drainage",
       "gate_section": "AG",
       "type": "NAT",
@@ -586,15 +615,16 @@
       "question": "For a subsurface tile drain, Hooghoudt's steady-state drain-spacing equation may be rearranged to estimate the drainage coefficient as q = 4K·h·(2d + h) / S², where K = 1.0 m/day (hydraulic conductivity), h = 0.6 m (height of water table above drain level at the midpoint between drains), d = 1.5 m (Hooghoudt's equivalent depth to the impermeable layer), and S = 20 m (drain spacing). Calculate the drainage coefficient q. (Answer in mm/day, round off to two decimal places.) (Answer: 21.00 to 22.00)",
       "options": null,
       "correct_answer": "21.00 to 22.00",
-      "solution": "Q.28 Solution:• Correct Answer: 21.00 to 22.00• Section: General Aptitude | Sub-topic: Agricultural Drainage | Type: NAT | Marks: 1Q.28Section: Irrigation & Drainage Engineering   |   Topic: Agricultural Drainage   |   Type: NAT   |   Marks: 1Question: For a subsurface tile drain, Hooghoudt's steady-state drain-spacing equation may be rearranged to estimate the drainage coefficient as q = 4K·h·(2d + h) / S², where K = 1.0 m/day (hydraulic conductivity), h = 0.6 m (height of water table above drain level at the midpoint between drains), d = 1.5 m (Hooghoudt's equivalent depth to the impermeable layer), and S = 20 m (drain spacing). Calculate the drainage coefficient q. (Answer in mm/day, round off to two decimal places.) (Answer: 21.00 to 22.00)Answer: 21.00 to 22.00Detailed Explanation:Governing concept: Hooghoudt's steady-state equation for subsurface drainage.q = 4Kh(2d+h)/S² = 4 × 1.0 × 0.6 × (2×1.5 + 0.6) / 20²= 4 × 1.0 × 0.6 × 3.6 / 400 = 8.64/400 = 0.0216 m/day = 21.60 mm/day.Final Answer: 21.60 mm/day.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.28 Solution:• Correct Answer: 21.00 to 22.00• Section: General Aptitude | Sub-topic: Agricultural Drainage | Type: NAT | Marks: 1Q.28Section: Irrigation & Drainage Engineering   |   Topic: Agricultural Drainage   |   Type: NAT   |   Marks: 1Question: For a subsurface tile drain, Hooghoudt's steady-state drain-spacing equation may be rearranged to estimate the drainage coefficient as q = 4K·h·(2d + h) / S², where K = 1.0 m/day (hydraulic conductivity), h = 0.6 m (height of water table above drain level at the midpoint between drains), d = 1.5 m (Hooghoudt's equivalent depth to the impermeable layer), and S = 20 m (drain spacing). Calculate the drainage coefficient q. (Answer in mm/day, round off to two decimal places.) (Answer: 21.00 to 22.00)Answer: 21.00 to 22.00Detailed Explanation:Governing concept: Hooghoudt's steady-state equation for subsurface drainage.q = 4Kh(2d+h)/S² = 4 × 1.0 × 0.6 × (2×1.5 + 0.6) / 20²= 4 × 1.0 × 0.6 × 3.6 / 400 = 8.64/400 = 0.0216 m/day = 21.60 mm/day.Final Answer: 21.60 mm/day.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Agricultural Drainage"
+      "topic": "Agricultural Drainage",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q29",
       "year": "2027",
       "qnum": 29,
-      "section": "Agricultural Process Engineering",
+      "section": "Section 6: Agricultural Process Engineering",
       "subtopic": "Engineering properties of agricultural produce",
       "gate_section": "AG",
       "type": "MCQ",
@@ -608,15 +638,16 @@
         "D": "The angle of contact between a liquid droplet and the grain surface"
       },
       "correct_answer": "A",
-      "solution": "Q.29 Solution:• Correct Answer: A• Section: Agricultural Process Engineering | Sub-topic: Engineering properties of agricultural produce | Type: MCQ | Marks: 1Q.29Section: Agricultural Process Engineering   |   Topic: Engineering properties of agricultural produce   |   Type: MCQ   |   Marks: 1Question: The 'angle of repose' of a granular agricultural material is best described as:(A)  The angle that the free (sloped) surface of a freely piled heap of the material makes with the horizontal(B)  The angle at which a grain kernel fractures under compressive loading(C)  The angle between the major and minor axes of a grain kernel(D)  The angle of contact between a liquid droplet and the grain surfaceAnswer: (A) The angle that the free (sloped) surface of a freely piled heap of the material makes with the horizontalDetailed Explanation:Governing concept: definition of angle of repose for granular/particulate materials.The angle of repose is the steepest angle, measured from the horizontal, at which a sloped surface of loosely piled granular material remains stable without sliding — it governs hopper and bin design, and free-flow behaviour.(B) describes a mechanical failure angle, unrelated to repose.(C) describes kernel shape geometry, not a bulk-flow property.(D) describes a wetting/contact angle, unrelated to granular pile behaviour.Final Answer: (A).\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.29 Solution:• Correct Answer: A• Section: Agricultural Process Engineering | Sub-topic: Engineering properties of agricultural produce | Type: MCQ | Marks: 1Q.29Section: Agricultural Process Engineering   |   Topic: Engineering properties of agricultural produce   |   Type: MCQ   |   Marks: 1Question: The 'angle of repose' of a granular agricultural material is best described as:(A)  The angle that the free (sloped) surface of a freely piled heap of the material makes with the horizontal(B)  The angle at which a grain kernel fractures under compressive loading(C)  The angle between the major and minor axes of a grain kernel(D)  The angle of contact between a liquid droplet and the grain surfaceAnswer: (A) The angle that the free (sloped) surface of a freely piled heap of the material makes with the horizontalDetailed Explanation:Governing concept: definition of angle of repose for granular/particulate materials.The angle of repose is the steepest angle, measured from the horizontal, at which a sloped surface of loosely piled granular material remains stable without sliding — it governs hopper and bin design, and free-flow behaviour.(B) describes a mechanical failure angle, unrelated to repose.(C) describes kernel shape geometry, not a bulk-flow property.(D) describes a wetting/contact angle, unrelated to granular pile behaviour.Final Answer: (A).\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Engineering Properties of Agriculture Produce"
+      "topic": "Engineering Properties of Agriculture Produce",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q30",
       "year": "2027",
       "qnum": 30,
-      "section": "Agricultural Process Engineering",
+      "section": "Section 6: Agricultural Process Engineering",
       "subtopic": "Engineering properties of agricultural produce",
       "gate_section": "AG",
       "type": "NAT",
@@ -625,15 +656,16 @@
       "question": "maize kernel has a major axis (length) of 11 mm, an intermediate axis (width) of 9 mm, and a minor axis (thickness) of 5 mm. Using the geometric-mean-diameter method, sphericity φ = (abc)^(1/3) / a, where a, b, c are the major, intermediate and minor axes respectively. Calculate the sphericity of the kernel. (Round off to two decimal places.) (Answer: 0.70 to 0.74)",
       "options": null,
       "correct_answer": "0.70 to 0.74",
-      "solution": "Q.30 Solution:• Correct Answer: 0.70 to 0.74• Section: Agricultural Process Engineering | Sub-topic: Engineering properties of agricultural produce | Type: NAT | Marks: 1Q.30Section: Agricultural Process Engineering   |   Topic: Engineering properties of agricultural produce   |   Type: NAT   |   Marks: 1Question: A maize kernel has a major axis (length) of 11 mm, an intermediate axis (width) of 9 mm, and a minor axis (thickness) of 5 mm. Using the geometric-mean-diameter method, sphericity φ = (abc)^(1/3) / a, where a, b, c are the major, intermediate and minor axes respectively. Calculate the sphericity of the kernel. (Round off to two decimal places.) (Answer: 0.70 to 0.74)Answer: 0.70 to 0.74Detailed Explanation:Governing concept: geometric-mean-diameter sphericity of an agricultural grain.abc = 11 × 9 × 5 = 495 mm³.(abc)^(1/3) = 495^(1/3) = 7.916 mm.φ = 7.916 / 11 = 0.7196 ≈ 0.72.Final Answer: 0.72.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.30 Solution:• Correct Answer: 0.70 to 0.74• Section: Agricultural Process Engineering | Sub-topic: Engineering properties of agricultural produce | Type: NAT | Marks: 1Q.30Section: Agricultural Process Engineering   |   Topic: Engineering properties of agricultural produce   |   Type: NAT   |   Marks: 1Question: A maize kernel has a major axis (length) of 11 mm, an intermediate axis (width) of 9 mm, and a minor axis (thickness) of 5 mm. Using the geometric-mean-diameter method, sphericity φ = (abc)^(1/3) / a, where a, b, c are the major, intermediate and minor axes respectively. Calculate the sphericity of the kernel. (Round off to two decimal places.) (Answer: 0.70 to 0.74)Answer: 0.70 to 0.74Detailed Explanation:Governing concept: geometric-mean-diameter sphericity of an agricultural grain.abc = 11 × 9 × 5 = 495 mm³.(abc)^(1/3) = 495^(1/3) = 7.916 mm.φ = 7.916 / 11 = 0.7196 ≈ 0.72.Final Answer: 0.72.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Engineering Properties of Agriculture Produce"
+      "topic": "Engineering Properties of Agriculture Produce",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q31",
       "year": "2027",
       "qnum": 31,
-      "section": "Agricultural Process Engineering",
+      "section": "Section 6: Agricultural Process Engineering",
       "subtopic": "Storage Systems",
       "gate_section": "AG",
       "type": "NAT",
@@ -642,15 +674,16 @@
       "question": "batch of grain has a moisture content of 18% on a wet basis. Express this moisture content on a dry basis. (Answer in %, round off to two decimal places.) (Answer: 21.50 to 22.50)",
       "options": null,
       "correct_answer": "21.50 to 22.50",
-      "solution": "Q.31 Solution:• Correct Answer: 21.50 to 22.50• Section: Agricultural Process Engineering | Sub-topic: Storage Systems | Type: NAT | Marks: 1Q.31Section: Agricultural Process Engineering   |   Topic: Storage Systems   |   Type: NAT   |   Marks: 1Question: A batch of grain has a moisture content of 18% on a wet basis. Express this moisture content on a dry basis. (Answer in %, round off to two decimal places.) (Answer: 21.50 to 22.50)Answer: 21.50 to 22.50Detailed Explanation:Governing concept: conversion between wet-basis and dry-basis moisture content.MCdb = MCwb / (1 − MCwb) = 0.18 / (1 − 0.18) = 0.18/0.82 = 0.2195 = 21.95%.Final Answer: 21.95%.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.31 Solution:• Correct Answer: 21.50 to 22.50• Section: Agricultural Process Engineering | Sub-topic: Storage Systems | Type: NAT | Marks: 1Q.31Section: Agricultural Process Engineering   |   Topic: Storage Systems   |   Type: NAT   |   Marks: 1Question: A batch of grain has a moisture content of 18% on a wet basis. Express this moisture content on a dry basis. (Answer in %, round off to two decimal places.) (Answer: 21.50 to 22.50)Answer: 21.50 to 22.50Detailed Explanation:Governing concept: conversion between wet-basis and dry-basis moisture content.MCdb = MCwb / (1 − MCwb) = 0.18 / (1 − 0.18) = 0.18/0.82 = 0.2195 = 21.95%.Final Answer: 21.95%.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Storage Systems"
+      "topic": "Storage Systems",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q32",
       "year": "2027",
       "qnum": 32,
-      "section": "Agricultural Process Engineering",
+      "section": "Section 6: Agricultural Process Engineering",
       "subtopic": "Storage Systems",
       "gate_section": "AG",
       "type": "NAT",
@@ -659,15 +692,16 @@
       "question": "500 kg of paddy at 22% moisture content (wet basis) is to be dried to 14% moisture content (wet basis). Using Wf = Wi(100−MCi)/(100−MCf), calculate the mass of water removed during drying. (Answer in kg, round off to two decimal places.) (Answer: 46.00 to 47.00)",
       "options": null,
       "correct_answer": "46.00 to 47.00",
-      "solution": "Q.32 Solution:• Correct Answer: 46.00 to 47.00• Section: Agricultural Process Engineering | Sub-topic: Storage Systems | Type: NAT | Marks: 1Q.32Section: Agricultural Process Engineering   |   Topic: Storage Systems   |   Type: NAT   |   Marks: 1Question: 500 kg of paddy at 22% moisture content (wet basis) is to be dried to 14% moisture content (wet basis). Using Wf = Wi(100−MCi)/(100−MCf), calculate the mass of water removed during drying. (Answer in kg, round off to two decimal places.) (Answer: 46.00 to 47.00)Answer: 46.00 to 47.00Detailed Explanation:Governing concept: dry-matter balance for grain drying.Wf = 500 × (100−22)/(100−14) = 500 × 78/86 = 500 × 0.90698 = 453.49 kg.Water removed = Wi − Wf = 500 − 453.49 = 46.51 kg.Final Answer: 46.51 kg.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.32 Solution:• Correct Answer: 46.00 to 47.00• Section: Agricultural Process Engineering | Sub-topic: Storage Systems | Type: NAT | Marks: 1Q.32Section: Agricultural Process Engineering   |   Topic: Storage Systems   |   Type: NAT   |   Marks: 1Question: 500 kg of paddy at 22% moisture content (wet basis) is to be dried to 14% moisture content (wet basis). Using Wf = Wi(100−MCi)/(100−MCf), calculate the mass of water removed during drying. (Answer in kg, round off to two decimal places.) (Answer: 46.00 to 47.00)Answer: 46.00 to 47.00Detailed Explanation:Governing concept: dry-matter balance for grain drying.Wf = 500 × (100−22)/(100−14) = 500 × 78/86 = 500 × 0.90698 = 453.49 kg.Water removed = Wi − Wf = 500 − 453.49 = 46.51 kg.Final Answer: 46.51 kg.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Storage Systems"
+      "topic": "Storage Systems",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q33",
       "year": "2027",
       "qnum": 33,
-      "section": "Agricultural Process Engineering",
+      "section": "Section 6: Agricultural Process Engineering",
       "subtopic": "Evaporation and Drying",
       "gate_section": "AG",
       "type": "NAT",
@@ -678,13 +712,14 @@
       "correct_answer": "2.50 to 2.60",
       "solution": "Q.33 Solution:• Correct Answer: 2.50 to 2.60• Section: Agricultural Process Engineering | Sub-topic: Evaporation and Drying | Type: NAT | Marks: 1Q.33Section: Agricultural Process Engineering   |   Topic: Evaporation and Drying   |   Type: NAT   |   Marks: 1Question: Air at a dry-bulb temperature of 30°C has a relative humidity of 60%. Given that the saturation vapour pressure at 30°C is 4.246 kPa, calculate the actual (partial) vapour pressure of the air. (Answer in kPa, round off to two decimal places.) (Answer: 2.50 to 2.60)Answer: 2.50 to 2.60Detailed Explanation:Governing concept: relative humidity as the ratio of actual to saturation vapour pressure.RH = Pv/Psat ⇒ Pv = RH × Psat = 0.60 × 4.246 = 2.5476 kPa.Final Answer: 2.55 kPa.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Processing of Agricultural Produce"
+      "topic": "Processing of Agriculture Produce",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q34",
       "year": "2027",
       "qnum": 34,
-      "section": "Dairy and Food Engineering",
+      "section": "Section 7: Dairy and Food Engineering",
       "subtopic": "Preservation of Food",
       "gate_section": "AG",
       "type": "MCQ",
@@ -698,15 +733,16 @@
         "D": "Remove all water from milk to produce a shelf-stable powder"
       },
       "correct_answer": "A",
-      "solution": "Q.34 Solution:• Correct Answer: A• Section: Agricultural Engineering | Sub-topic: Preservation of Food | Type: MCQ | Marks: 1Q.34Section: Dairy & Food Engineering   |   Topic: Preservation of Food   |   Type: MCQ   |   Marks: 1Question: The primary objective of pasteurization of milk is to:(A)  Destroy pathogenic microorganisms and reduce spoilage organisms, while largely retaining the nutritional and sensory quality of milk(B)  Achieve complete sterilization of milk, destroying all microorganisms including spores(C)  Increase the fat content of milk(D)  Remove all water from milk to produce a shelf-stable powderAnswer: (A) Destroy pathogenic microorganisms and reduce spoilage organisms, while largely retaining the nutritional and sensory quality of milkDetailed Explanation:Governing concept: purpose and scope of pasteurization in dairy processing.Pasteurization uses a controlled heat treatment (e.g. HTST) to inactivate pathogens and reduce spoilage microflora to safe/extend-shelf-life levels, while preserving the milk's nutritional value and sensory characteristics — it is deliberately milder than sterilization.(B) describes sterilization (e.g. UHT/canning), not pasteurization, which does not destroy bacterial spores.(C) is unrelated — pasteurization does not alter fat content.(D) describes spray drying/milk powder manufacture, a different unit operation.Final Answer: (A).\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.34 Solution:• Correct Answer: A• Section: Agricultural Engineering | Sub-topic: Preservation of Food | Type: MCQ | Marks: 1Q.34Section: Dairy & Food Engineering   |   Topic: Preservation of Food   |   Type: MCQ   |   Marks: 1Question: The primary objective of pasteurization of milk is to:(A)  Destroy pathogenic microorganisms and reduce spoilage organisms, while largely retaining the nutritional and sensory quality of milk(B)  Achieve complete sterilization of milk, destroying all microorganisms including spores(C)  Increase the fat content of milk(D)  Remove all water from milk to produce a shelf-stable powderAnswer: (A) Destroy pathogenic microorganisms and reduce spoilage organisms, while largely retaining the nutritional and sensory quality of milkDetailed Explanation:Governing concept: purpose and scope of pasteurization in dairy processing.Pasteurization uses a controlled heat treatment (e.g. HTST) to inactivate pathogens and reduce spoilage microflora to safe/extend-shelf-life levels, while preserving the milk's nutritional value and sensory characteristics — it is deliberately milder than sterilization.(B) describes sterilization (e.g. UHT/canning), not pasteurization, which does not destroy bacterial spores.(C) is unrelated — pasteurization does not alter fat content.(D) describes spray drying/milk powder manufacture, a different unit operation.Final Answer: (A).\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Preservation of Food"
+      "topic": "Preservation of Food",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q35",
       "year": "2027",
       "qnum": 35,
-      "section": "Dairy and Food Engineering",
+      "section": "Section 7: Dairy and Food Engineering",
       "subtopic": "Preservation of Food",
       "gate_section": "AG",
       "type": "MSQ",
@@ -720,15 +756,16 @@
         "D": "Controlled/modified atmosphere storage"
       },
       "correct_answer": "A, B, D",
-      "solution": "Q.35 Solution:• Correct Answer: A, B, D• Section: Agricultural Engineering | Sub-topic: Preservation of Food | Type: MSQ | Marks: 1Q.35Section: Dairy & Food Engineering   |   Topic: Preservation of Food   |   Type: MSQ   |   Marks: 1Question: Which of the following are recognized methods of food preservation?(A)  Canning(B)  Irradiation(C)  Fractional distillation(D)  Controlled/modified atmosphere storageAnswer: (A) Canning; (B) Irradiation; (D) Controlled/modified atmosphere storageDetailed Explanation:Governing concept: classification of food-preservation methods.(A) Correct — canning (thermal processing + hermetic sealing) is a classical preservation method.(B) Correct — ionizing irradiation is an approved method for reducing microbial/insect load and extending shelf life.(C) Incorrect — fractional distillation is a separation technique used to separate liquid mixtures by volatility differences (e.g. in petroleum refining or alcohol concentration); it is not classified as a food-preservation method in itself.(D) Correct — controlled/modified atmosphere storage alters O2/CO2 levels to slow respiration and microbial spoilage, a recognized preservation technique.Final Answer: (A), (B), (D).\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.35 Solution:• Correct Answer: A, B, D• Section: Agricultural Engineering | Sub-topic: Preservation of Food | Type: MSQ | Marks: 1Q.35Section: Dairy & Food Engineering   |   Topic: Preservation of Food   |   Type: MSQ   |   Marks: 1Question: Which of the following are recognized methods of food preservation?(A)  Canning(B)  Irradiation(C)  Fractional distillation(D)  Controlled/modified atmosphere storageAnswer: (A) Canning; (B) Irradiation; (D) Controlled/modified atmosphere storageDetailed Explanation:Governing concept: classification of food-preservation methods.(A) Correct — canning (thermal processing + hermetic sealing) is a classical preservation method.(B) Correct — ionizing irradiation is an approved method for reducing microbial/insect load and extending shelf life.(C) Incorrect — fractional distillation is a separation technique used to separate liquid mixtures by volatility differences (e.g. in petroleum refining or alcohol concentration); it is not classified as a food-preservation method in itself.(D) Correct — controlled/modified atmosphere storage alters O2/CO2 levels to slow respiration and microbial spoilage, a recognized preservation technique.Final Answer: (A), (B), (D).\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Preservation of Food"
+      "topic": "Heat and Mass Transfer",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q36",
       "year": "2027",
       "qnum": 36,
-      "section": "Engineering Mathematics",
+      "section": "Section 1: Engineering Mathematics",
       "subtopic": "Calculus",
       "gate_section": "AG",
       "type": "MCQ",
@@ -742,15 +779,16 @@
         "D": "−1"
       },
       "correct_answer": "A",
-      "solution": "Q.36 Solution:• Correct Answer: A• Section: Engineering Mathematics | Sub-topic: Calculus | Type: MCQ | Marks: 2Q.36Section: Engineering Mathematics   |   Topic: Calculus   |   Type: MCQ   |   Marks: 2Question: Find the local minimum value of the function f(x) = x³ − 6x² + 9x + 1.(A)  1(B)  3(C)  5(D)  −1Answer: (A) 1Detailed Explanation:Governing concept: maxima/minima using first and second derivative tests.f'(x) = 3x² − 12x + 9 = 3(x−1)(x−3). Critical points: x = 1, x = 3.f''(x) = 6x − 12. At x=1, f''=−6 < 0 (local maximum). At x=3, f''=6 > 0 (local minimum).f(3) = 27 − 54 + 27 + 1 = 1.(B) 3 is not the value of f at either critical point.(C) 5 is actually f(1), the local maximum value, not the minimum.(D) −1 results from a sign error while substituting x=3.Final Answer: (A) 1.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.36 Solution:• Correct Answer: A• Section: Engineering Mathematics | Sub-topic: Calculus | Type: MCQ | Marks: 2Q.36Section: Engineering Mathematics   |   Topic: Calculus   |   Type: MCQ   |   Marks: 2Question: Find the local minimum value of the function f(x) = x³ − 6x² + 9x + 1.(A)  1(B)  3(C)  5(D)  −1Answer: (A) 1Detailed Explanation:Governing concept: maxima/minima using first and second derivative tests.f'(x) = 3x² − 12x + 9 = 3(x−1)(x−3). Critical points: x = 1, x = 3.f''(x) = 6x − 12. At x=1, f''=−6 < 0 (local maximum). At x=3, f''=6 > 0 (local minimum).f(3) = 27 − 54 + 27 + 1 = 1.(B) 3 is not the value of f at either critical point.(C) 5 is actually f(1), the local maximum value, not the minimum.(D) −1 results from a sign error while substituting x=3.Final Answer: (A) 1.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Calculus"
+      "topic": "Calculus",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q37",
       "year": "2027",
       "qnum": 37,
-      "section": "Engineering Mathematics",
+      "section": "Section 1: Engineering Mathematics",
       "subtopic": "Calculus",
       "gate_section": "AG",
       "type": "NAT",
@@ -759,15 +797,16 @@
       "question": "Evaluate the definite integral ∫₀² (3x² + 2x) dx. (Answer: 11.90 to 12.10)",
       "options": null,
       "correct_answer": "11.90 to 12.10",
-      "solution": "Q.37 Solution:• Correct Answer: 11.90 to 12.10• Section: Engineering Mathematics | Sub-topic: Calculus | Type: NAT | Marks: 2Q.37Section: Engineering Mathematics   |   Topic: Calculus   |   Type: NAT   |   Marks: 2Question: Evaluate the definite integral ∫₀² (3x² + 2x) dx. (Answer: 11.90 to 12.10)Answer: 11.90 to 12.10Detailed Explanation:Governing concept: definite integration using the power rule.∫(3x²+2x)dx = x³ + x² + C.Evaluating between 0 and 2: (2³+2²) − (0+0) = (8+4) − 0 = 12.Final Answer: 12.00.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.37 Solution:• Correct Answer: 11.90 to 12.10• Section: Engineering Mathematics | Sub-topic: Calculus | Type: NAT | Marks: 2Q.37Section: Engineering Mathematics   |   Topic: Calculus   |   Type: NAT   |   Marks: 2Question: Evaluate the definite integral ∫₀² (3x² + 2x) dx. (Answer: 11.90 to 12.10)Answer: 11.90 to 12.10Detailed Explanation:Governing concept: definite integration using the power rule.∫(3x²+2x)dx = x³ + x² + C.Evaluating between 0 and 2: (2³+2²) − (0+0) = (8+4) − 0 = 12.Final Answer: 12.00.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Calculus"
+      "topic": "Calculus",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q38",
       "year": "2027",
       "qnum": 38,
-      "section": "Engineering Mathematics",
+      "section": "Section 1: Engineering Mathematics",
       "subtopic": "Linear Algebra",
       "gate_section": "AG",
       "type": "MCQ",
@@ -781,15 +820,16 @@
         "D": "10"
       },
       "correct_answer": "A",
-      "solution": "Q.38 Solution:• Correct Answer: A• Section: Engineering Mathematics | Sub-topic: Linear Algebra | Type: MCQ | Marks: 2Q.38Section: Engineering Mathematics   |   Topic: Linear Algebra   |   Type: MCQ   |   Marks: 2Question: Find the larger eigenvalue of the matrix A = 2627\\begin{pmatrix} 4 & 1 \\ 2 & 3 \\end{pmatrix}2627.(A)  5(B)  7(C)  2(D)  10Answer: (A) 5Detailed Explanation:Governing concept: eigenvalues via the characteristic equation det(A − λI) = 0.Trace(A) = 4+3 = 7, Det(A) = (4)(3) − (1)(2) = 12 − 2 = 10.Characteristic equation: λ² − 7λ + 10 = 0 ⇒ (λ−5)(λ−2)=0 ⇒ λ = 5, 2.The larger eigenvalue is 5.(B) 7 is the trace (sum of eigenvalues), not an eigenvalue itself.(C) 2 is the smaller eigenvalue, not the larger one asked for.(D) 10 is the determinant (product of eigenvalues), not an eigenvalue.Final Answer: (A) 5.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.38 Solution:• Correct Answer: A• Section: Engineering Mathematics | Sub-topic: Linear Algebra | Type: MCQ | Marks: 2Q.38Section: Engineering Mathematics   |   Topic: Linear Algebra   |   Type: MCQ   |   Marks: 2Question: Find the larger eigenvalue of the matrix A = 2627\\begin{pmatrix} 4 & 1 \\ 2 & 3 \\end{pmatrix}2627.(A)  5(B)  7(C)  2(D)  10Answer: (A) 5Detailed Explanation:Governing concept: eigenvalues via the characteristic equation det(A − λI) = 0.Trace(A) = 4+3 = 7, Det(A) = (4)(3) − (1)(2) = 12 − 2 = 10.Characteristic equation: λ² − 7λ + 10 = 0 ⇒ (λ−5)(λ−2)=0 ⇒ λ = 5, 2.The larger eigenvalue is 5.(B) 7 is the trace (sum of eigenvalues), not an eigenvalue itself.(C) 2 is the smaller eigenvalue, not the larger one asked for.(D) 10 is the determinant (product of eigenvalues), not an eigenvalue.Final Answer: (A) 5.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Linear Algebra"
+      "topic": "Linear Algebra",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q39",
       "year": "2027",
       "qnum": 39,
-      "section": "Engineering Mathematics",
+      "section": "Section 1: Engineering Mathematics",
       "subtopic": "Linear Algebra",
       "gate_section": "AG",
       "type": "MCQ",
@@ -803,15 +843,16 @@
         "D": "0"
       },
       "correct_answer": "B",
-      "solution": "Q.39 Solution:• Correct Answer: B• Section: Engineering Mathematics | Sub-topic: Linear Algebra | Type: MCQ | Marks: 2Q.39Section: Engineering Mathematics   |   Topic: Linear Algebra   |   Type: MCQ   |   Marks: 2Question: Determine the rank of the matrix A = 2627\\begin{pmatrix} 1 & 2 & 3 \\ 2 & 4 & 6 \\ 1 & 0 & 1 \\end{pmatrix}2627.(A)  1(B)  2(C)  3(D)  0Answer: (B) 2Detailed Explanation:Governing concept: matrix rank via row reduction.R2 = 2×R1, so R2 is linearly dependent on R1; R2 − 2R1 → [0,0,0].Remaining independent rows: R1=[1,2,3] and R3=[1,0,1]. These two are not proportional to each other, so they are linearly independent.Hence rank(A) = 2.(A) 1 would require all three rows to be proportional, which is false since R1 and R3 differ in direction.(C) 3 (full rank) would require all rows independent, but R2 is dependent on R1.(D) 0 would mean A is the zero matrix, which it is not.Final Answer: (B) 2.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.39 Solution:• Correct Answer: B• Section: Engineering Mathematics | Sub-topic: Linear Algebra | Type: MCQ | Marks: 2Q.39Section: Engineering Mathematics   |   Topic: Linear Algebra   |   Type: MCQ   |   Marks: 2Question: Determine the rank of the matrix A = 2627\\begin{pmatrix} 1 & 2 & 3 \\ 2 & 4 & 6 \\ 1 & 0 & 1 \\end{pmatrix}2627.(A)  1(B)  2(C)  3(D)  0Answer: (B) 2Detailed Explanation:Governing concept: matrix rank via row reduction.R2 = 2×R1, so R2 is linearly dependent on R1; R2 − 2R1 → [0,0,0].Remaining independent rows: R1=[1,2,3] and R3=[1,0,1]. These two are not proportional to each other, so they are linearly independent.Hence rank(A) = 2.(A) 1 would require all three rows to be proportional, which is false since R1 and R3 differ in direction.(C) 3 (full rank) would require all rows independent, but R2 is dependent on R1.(D) 0 would mean A is the zero matrix, which it is not.Final Answer: (B) 2.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Linear Algebra"
+      "topic": "Linear Algebra",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q40",
       "year": "2027",
       "qnum": 40,
-      "section": "Farm Machinery",
+      "section": "Section 3: Farm Power",
       "subtopic": "Farm Machinery: soil tillage & forces on a tillage tool",
       "gate_section": "AG",
       "type": "NAT",
@@ -822,13 +863,14 @@
       "correct_answer": "2.75 to 2.89",
       "solution": "Q.40 Solution:• Correct Answer: 2.75 to 2.89• Section: Agricultural Engineering | Sub-topic: Farm Machinery: soil tillage & forces on a tillage tool | Type: NAT | Marks: 2Q.40Section: Farm Machinery   |   Topic: Farm Machinery: soil tillage & forces on a tillage tool   |   Type: NAT   |   Marks: 2Question: A mouldboard plough exerts a draft of 2.4 kN while operating at a forward speed of 3.6 km/h. If the tractor's transmission efficiency between the engine and the drawbar is 85%, calculate the engine power required. (Answer in kW, round off to two decimal places.) (Answer: 2.75 to 2.89)Answer: 2.75 to 2.89Detailed Explanation:Governing concept: drawbar power and transmission-efficiency correction (two-step calculation).Step 1 — convert speed: v = 3.6 km/h = 3.6×1000/3600 = 1.0 m/s.Step 2 — drawbar power: Pdb = Draft × v = 2400 N × 1.0 m/s = 2400 W = 2.40 kW.Step 3 — required engine power: Peng = Pdb / ηtrans = 2.40 / 0.85 = 2.8235 kW.Final Answer: 2.82 kW.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Farm Machinery"
+      "topic": "Tractors and Power Tillers",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q41",
       "year": "2027",
       "qnum": 41,
-      "section": "Farm Machinery",
+      "section": "Section 2: Farm Machinery",
       "subtopic": "Farm Machinery: soil tillage & forces on a tillage tool",
       "gate_section": "AG",
       "type": "NAT",
@@ -837,15 +879,16 @@
       "question": "disc plough operates at a working width of 0.9 m and a depth of 0.20 m, producing a total draft of 3.6 kN. Compute the unit draft (specific soil resistance). (Answer in kPa, round off to two decimal places.) (Answer: 19.50 to 20.50)",
       "options": null,
       "correct_answer": "19.50 to 20.50",
-      "solution": "Q.41 Solution:• Correct Answer: 19.50 to 20.50• Section: Agricultural Engineering | Sub-topic: Farm Machinery: soil tillage & forces on a tillage tool | Type: NAT | Marks: 2Q.41Section: Farm Machinery   |   Topic: Farm Machinery: soil tillage & forces on a tillage tool   |   Type: NAT   |   Marks: 2Question: A disc plough operates at a working width of 0.9 m and a depth of 0.20 m, producing a total draft of 3.6 kN. Compute the unit draft (specific soil resistance). (Answer in kPa, round off to two decimal places.) (Answer: 19.50 to 20.50)Figure Q.41 — cross-section of cut showing tillage-tool draft force, width and depthAnswer: 19.50 to 20.50Detailed Explanation:Governing concept: unit draft = total draft / (cross-sectional area of cut).Cross-sectional area = width × depth = 0.9 m × 0.20 m = 0.18 m².Unit draft = 3600 N / 0.18 m² = 20,000 Pa = 20.00 kPa.Final Answer: 20.00 kPa.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.41 Solution:• Correct Answer: 19.50 to 20.50• Section: Agricultural Engineering | Sub-topic: Farm Machinery: soil tillage & forces on a tillage tool | Type: NAT | Marks: 2Q.41Section: Farm Machinery   |   Topic: Farm Machinery: soil tillage & forces on a tillage tool   |   Type: NAT   |   Marks: 2Question: A disc plough operates at a working width of 0.9 m and a depth of 0.20 m, producing a total draft of 3.6 kN. Compute the unit draft (specific soil resistance). (Answer in kPa, round off to two decimal places.) (Answer: 19.50 to 20.50)Figure Q.41 — cross-section of cut showing tillage-tool draft force, width and depthAnswer: 19.50 to 20.50Detailed Explanation:Governing concept: unit draft = total draft / (cross-sectional area of cut).Cross-sectional area = width × depth = 0.9 m × 0.20 m = 0.18 m².Unit draft = 3600 N / 0.18 m² = 20,000 Pa = 20.00 kPa.Final Answer: 20.00 kPa.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Farm Machinery"
+      "topic": "Farm Machinery",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q42",
       "year": "2027",
       "qnum": 42,
-      "section": "Farm Machinery",
+      "section": "Section 2: Farm Machinery",
       "subtopic": "Machine Design: machine elements",
       "gate_section": "AG",
       "type": "NAT",
@@ -854,16 +897,17 @@
       "question": "gear train has an input shaft rotating at 1440 rpm. Gear A (20 teeth) on the input shaft meshes with gear B (60 teeth) on a countershaft. On the same countershaft, gear C (24 teeth) meshes with gear D (48 teeth) on the output shaft. Compute the output shaft speed. (Answer in rpm, round off to two decimal places.) (Answer: 238.00 to 242.00)",
       "options": null,
       "correct_answer": "238.00 to 242.00",
-      "solution": "Q.42 Solution:• Correct Answer: 238.00 to 242.00• Section: Agricultural Engineering | Sub-topic: Machine Design: machine elements | Type: NAT | Marks: 2Q.42Section: Farm Machinery   |   Topic: Machine Design: machine elements   |   Type: NAT   |   Marks: 2Question: A gear train has an input shaft rotating at 1440 rpm. Gear A (20 teeth) on the input shaft meshes with gear B (60 teeth) on a countershaft. On the same countershaft, gear C (24 teeth) meshes with gear D (48 teeth) on the output shaft. Compute the output shaft speed. (Answer in rpm, round off to two decimal places.) (Answer: 238.00 to 242.00)Figure Q.42 — compound gear train (gears A–B on countershaft, C–D to output shaft)Answer: 238.00 to 242.00Detailed Explanation:Governing concept: compound gear train speed ratio = product of individual stage ratios.N_out = N_in × (T_A/T_B) × (T_C/T_D) = 1440 × (20/60) × (24/48)= 1440 × 0.3333 × 0.5 = 240.00 rpm.Final Answer: 240.00 rpm.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.42 Solution:• Correct Answer: 238.00 to 242.00• Section: Agricultural Engineering | Sub-topic: Machine Design: machine elements | Type: NAT | Marks: 2Q.42Section: Farm Machinery   |   Topic: Machine Design: machine elements   |   Type: NAT   |   Marks: 2Question: A gear train has an input shaft rotating at 1440 rpm. Gear A (20 teeth) on the input shaft meshes with gear B (60 teeth) on a countershaft. On the same countershaft, gear C (24 teeth) meshes with gear D (48 teeth) on the output shaft. Compute the output shaft speed. (Answer in rpm, round off to two decimal places.) (Answer: 238.00 to 242.00)Figure Q.42 — compound gear train (gears A–B on countershaft, C–D to output shaft)Answer: 238.00 to 242.00Detailed Explanation:Governing concept: compound gear train speed ratio = product of individual stage ratios.N_out = N_in × (T_A/T_B) × (T_C/T_D) = 1440 × (20/60) × (24/48)= 1440 × 0.3333 × 0.5 = 240.00 rpm.Final Answer: 240.00 rpm.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Machine Design"
+      "topic": "Machine Design",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q43",
       "year": "2027",
       "qnum": 43,
-      "section": "Agricultural Engineering",
-      "subtopic": "equipment for spraying",
+      "section": "Section 2: Farm Machinery",
+      "subtopic": "Plant Protection & Agricultural Drones",
       "gate_section": "AG",
       "type": "MCQ",
       "marks": 2,
@@ -876,14 +920,16 @@
         "D": "40 L/ha"
       },
       "correct_answer": "A",
-      "solution": "Q.43 Solution:• Correct Answer: A• Section: Agricultural Engineering | Sub-topic: equipment for spraying | Type: MCQ | Marks: 2Q.43Section: Farm Machinery   |   Topic: equipment for spraying   |   Type: MCQ   |   Marks: 2Question: A boom sprayer nozzle discharges 600 mL/min. Nozzle spacing on the boom is 0.5 m and the boom travels at 4.5 km/h. Calculate the application (spray) rate.(A)  160 L/ha(B)  80 L/ha(C)  320 L/ha(D)  40 L/haAnswer: (A) 160 L/haDetailed Explanation:Governing concept: sprayer application-rate calculation from nozzle discharge, spacing and travel speed.Convert speed: v = 4.5 km/h = 4500 m/h = 75 m/min.Area covered per nozzle per minute = v × spacing = 75 × 0.5 = 37.5 m²/min.Volume applied per minute = 600 mL = 0.6 L.Rate = 0.6 L / 37.5 m² = 0.016 L/m² = 0.016 × 10,000 = 160 L/ha.(B) 80 L/ha results from using double the correct area (e.g. forgetting the spacing term).(C) 320 L/ha results from halving the area instead of using it directly.(D) 40 L/ha results from a compounded speed/spacing unit-conversion error.Final Answer: (A) 160 L/ha.\n──────────────────────────────────────────────────",
-      "isCustomUploaded": true
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.43 Solution:• Correct Answer: A• Section: Agricultural Engineering | Sub-topic: equipment for spraying | Type: MCQ | Marks: 2Q.43Section: Farm Machinery   |   Topic: equipment for spraying   |   Type: MCQ   |   Marks: 2Question: A boom sprayer nozzle discharges 600 mL/min. Nozzle spacing on the boom is 0.5 m and the boom travels at 4.5 km/h. Calculate the application (spray) rate.(A)  160 L/ha(B)  80 L/ha(C)  320 L/ha(D)  40 L/haAnswer: (A) 160 L/haDetailed Explanation:Governing concept: sprayer application-rate calculation from nozzle discharge, spacing and travel speed.Convert speed: v = 4.5 km/h = 4500 m/h = 75 m/min.Area covered per nozzle per minute = v × spacing = 75 × 0.5 = 37.5 m²/min.Volume applied per minute = 600 mL = 0.6 L.Rate = 0.6 L / 37.5 m² = 0.016 L/m² = 0.016 × 10,000 = 160 L/ha.(B) 80 L/ha results from using double the correct area (e.g. forgetting the spacing term).(C) 320 L/ha results from halving the area instead of using it directly.(D) 40 L/ha results from a compounded speed/spacing unit-conversion error.Final Answer: (A) 160 L/ha.\n──────────────────────────────────────────────────",
+      "isCustomUploaded": true,
+      "topic": "Farm Machinery",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q44",
       "year": "2027",
       "qnum": 44,
-      "section": "Farm Power",
+      "section": "Section 3: Farm Power",
       "subtopic": "Sources of Power (wind, solar, biomass, bio-fuels, human, animal)",
       "gate_section": "AG",
       "type": "NAT",
@@ -892,15 +938,16 @@
       "question": "solar photovoltaic array of 2 kW peak capacity operates with an average capacity factor of 18% over the course of a day. Estimate the energy generated in one day. (Answer in kWh, round off to two decimal places.) (Answer: 8.50 to 8.80)",
       "options": null,
       "correct_answer": "8.50 to 8.80",
-      "solution": "Q.44 Solution:• Correct Answer: 8.50 to 8.80• Section: Farm Power and Machinery | Sub-topic: Sources of Power (wind, solar, biomass, bio-fuels, human, animal) | Type: NAT | Marks: 2Q.44Section: Farm Power   |   Topic: Sources of Power (wind, solar, biomass, bio-fuels, human, animal)   |   Type: NAT   |   Marks: 2Question: A solar photovoltaic array of 2 kW peak capacity operates with an average capacity factor of 18% over the course of a day. Estimate the energy generated in one day. (Answer in kWh, round off to two decimal places.) (Answer: 8.50 to 8.80)Answer: 8.50 to 8.80Detailed Explanation:Governing concept: energy generated = rated capacity × time × capacity factor.Energy = 2 kW × 24 h × 0.18 = 8.64 kWh.Final Answer: 8.64 kWh.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.44 Solution:• Correct Answer: 8.50 to 8.80• Section: Farm Power and Machinery | Sub-topic: Sources of Power (wind, solar, biomass, bio-fuels, human, animal) | Type: NAT | Marks: 2Q.44Section: Farm Power   |   Topic: Sources of Power (wind, solar, biomass, bio-fuels, human, animal)   |   Type: NAT   |   Marks: 2Question: A solar photovoltaic array of 2 kW peak capacity operates with an average capacity factor of 18% over the course of a day. Estimate the energy generated in one day. (Answer in kWh, round off to two decimal places.) (Answer: 8.50 to 8.80)Answer: 8.50 to 8.80Detailed Explanation:Governing concept: energy generated = rated capacity × time × capacity factor.Energy = 2 kW × 24 h × 0.18 = 8.64 kWh.Final Answer: 8.64 kWh.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Sources of Power"
+      "topic": "Sources of Power",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q45",
       "year": "2027",
       "qnum": 45,
-      "section": "Farm Power",
+      "section": "Section 3: Farm Power",
       "subtopic": "Tractors & Power Tillers: traction theory and mechanics of tractor chassis",
       "gate_section": "AG",
       "type": "NAT",
@@ -909,15 +956,16 @@
       "question": "tractor has a dynamic weight of 18 kN on its rear (driving) axle and a coefficient of traction (soil-tyre) of 0.55. If the total rolling resistance of the tractor is 1.8 kN, calculate the maximum drawbar pull available. (Answer in kN, round off to two decimal places.) (Answer: 8.00 to 8.20)",
       "options": null,
       "correct_answer": "8.00 to 8.20",
-      "solution": "Q.45 Solution:• Correct Answer: 8.00 to 8.20• Section: Farm Power and Machinery | Sub-topic: Tractors & Power Tillers: traction theory and mechanics of tractor chassis | Type: NAT | Marks: 2Q.45Section: Farm Power   |   Topic: Tractors & Power Tillers: traction theory and mechanics of tractor chassis   |   Type: NAT   |   Marks: 2Question: A tractor has a dynamic weight of 18 kN on its rear (driving) axle and a coefficient of traction (soil-tyre) of 0.55. If the total rolling resistance of the tractor is 1.8 kN, calculate the maximum drawbar pull available. (Answer in kN, round off to two decimal places.) (Answer: 8.00 to 8.20)Answer: 8.00 to 8.20Detailed Explanation:Governing concept: maximum tractive effort and net drawbar pull.Maximum tractive (gross traction) force = μ × W = 0.55 × 18 kN = 9.90 kN.Net drawbar pull = Gross tractive force − Rolling resistance = 9.90 − 1.80 = 8.10 kN.Final Answer: 8.10 kN.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.45 Solution:• Correct Answer: 8.00 to 8.20• Section: Farm Power and Machinery | Sub-topic: Tractors & Power Tillers: traction theory and mechanics of tractor chassis | Type: NAT | Marks: 2Q.45Section: Farm Power   |   Topic: Tractors & Power Tillers: traction theory and mechanics of tractor chassis   |   Type: NAT   |   Marks: 2Question: A tractor has a dynamic weight of 18 kN on its rear (driving) axle and a coefficient of traction (soil-tyre) of 0.55. If the total rolling resistance of the tractor is 1.8 kN, calculate the maximum drawbar pull available. (Answer in kN, round off to two decimal places.) (Answer: 8.00 to 8.20)Answer: 8.00 to 8.20Detailed Explanation:Governing concept: maximum tractive effort and net drawbar pull.Maximum tractive (gross traction) force = μ × W = 0.55 × 18 kN = 9.90 kN.Net drawbar pull = Gross tractive force − Rolling resistance = 9.90 − 1.80 = 8.10 kN.Final Answer: 8.10 kN.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Farm Power"
+      "topic": "Tractors and Power Tillers",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q46",
       "year": "2027",
       "qnum": 46,
-      "section": "Farm Power",
+      "section": "Section 3: Farm Power",
       "subtopic": "Farm Power: engine components & I.C. engine systems",
       "gate_section": "AG",
       "type": "MCQ",
@@ -931,15 +979,16 @@
         "D": "2.4 m/s"
       },
       "correct_answer": "A",
-      "solution": "Q.46 Solution:• Correct Answer: A• Section: Farm Power and Machinery | Sub-topic: Farm Power: engine components & I.C. engine systems | Type: MCQ | Marks: 2Q.46Section: Farm Power   |   Topic: Farm Power: engine components & I.C. engine systems   |   Type: MCQ   |   Marks: 2Question: A four-stroke engine has a bore of 100 mm and a stroke of 120 mm, and runs at 2000 rpm. Calculate the mean piston speed.Figure Q.46 — piston-cylinder arrangement showing bore and stroke(A)  8 m/s(B)  4 m/s(C)  16 m/s(D)  2.4 m/sAnswer: (A) 8 m/sDetailed Explanation:Governing concept: mean piston speed, Vp = 2LN/60, where L is stroke length in metres and N is speed in rpm.Vp = 2 × 0.12 m × 2000 / 60 = 480/60 = 8.0 m/s.(B) 4 m/s results from omitting the factor of 2 (forgetting the piston travels the stroke twice per revolution).(C) 16 m/s results from doubling the correct answer (using 4L instead of 2L).(D) 2.4 m/s results from confusing bore with stroke in the formula.Final Answer: (A) 8 m/s.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.46 Solution:• Correct Answer: A• Section: Farm Power and Machinery | Sub-topic: Farm Power: engine components & I.C. engine systems | Type: MCQ | Marks: 2Q.46Section: Farm Power   |   Topic: Farm Power: engine components & I.C. engine systems   |   Type: MCQ   |   Marks: 2Question: A four-stroke engine has a bore of 100 mm and a stroke of 120 mm, and runs at 2000 rpm. Calculate the mean piston speed.Figure Q.46 — piston-cylinder arrangement showing bore and stroke(A)  8 m/s(B)  4 m/s(C)  16 m/s(D)  2.4 m/sAnswer: (A) 8 m/sDetailed Explanation:Governing concept: mean piston speed, Vp = 2LN/60, where L is stroke length in metres and N is speed in rpm.Vp = 2 × 0.12 m × 2000 / 60 = 480/60 = 8.0 m/s.(B) 4 m/s results from omitting the factor of 2 (forgetting the piston travels the stroke twice per revolution).(C) 16 m/s results from doubling the correct answer (using 4L instead of 2L).(D) 2.4 m/s results from confusing bore with stroke in the formula.Final Answer: (A) 8 m/s.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Farm Power"
+      "topic": "Farm Power",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q47",
       "year": "2027",
       "qnum": 47,
-      "section": "Farm Power",
+      "section": "Section 3: Farm Power",
       "subtopic": "thermodynamic principles & I.C. engine cycles",
       "gate_section": "AG",
       "type": "NAT",
@@ -948,15 +997,16 @@
       "question": "An engine operates on the ideal Otto cycle with a compression ratio of 8. Taking γ = 1.4 for the working fluid, calculate the thermal efficiency of the cycle. (Answer in %, round off to two decimal places.) (Answer: 56.00 to 57.00)",
       "options": null,
       "correct_answer": "56.00 to 57.00",
-      "solution": "Q.47 Solution:• Correct Answer: 56.00 to 57.00• Section: Farm Power and Machinery | Sub-topic: thermodynamic principles & I.C. engine cycles | Type: NAT | Marks: 2Q.47Section: Farm Power   |   Topic: thermodynamic principles & I.C. engine cycles   |   Type: NAT   |   Marks: 2Question: An engine operates on the ideal Otto cycle with a compression ratio of 8. Taking γ = 1.4 for the working fluid, calculate the thermal efficiency of the cycle. (Answer in %, round off to two decimal places.) (Answer: 56.00 to 57.00)Answer: 56.00 to 57.00Detailed Explanation:Governing concept: air-standard Otto-cycle efficiency, η = 1 − 1/r^(γ−1).η = 1 − 1/8^(0.4) = 1 − 1/2.2974 = 1 − 0.4353 = 0.5647 = 56.47%.Final Answer: 56.47%.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.47 Solution:• Correct Answer: 56.00 to 57.00• Section: Farm Power and Machinery | Sub-topic: thermodynamic principles & I.C. engine cycles | Type: NAT | Marks: 2Q.47Section: Farm Power   |   Topic: thermodynamic principles & I.C. engine cycles   |   Type: NAT   |   Marks: 2Question: An engine operates on the ideal Otto cycle with a compression ratio of 8. Taking γ = 1.4 for the working fluid, calculate the thermal efficiency of the cycle. (Answer in %, round off to two decimal places.) (Answer: 56.00 to 57.00)Answer: 56.00 to 57.00Detailed Explanation:Governing concept: air-standard Otto-cycle efficiency, η = 1 − 1/r^(γ−1).η = 1 − 1/8^(0.4) = 1 − 1/2.2974 = 1 − 0.4353 = 0.5647 = 56.47%.Final Answer: 56.47%.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Farm Power"
+      "topic": "Farm Power",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q48",
       "year": "2027",
       "qnum": 48,
-      "section": "Farm Power",
+      "section": "Section 3: Farm Power",
       "subtopic": "human engineering, ergonomics and safety",
       "gate_section": "AG",
       "type": "NAT",
@@ -965,15 +1015,16 @@
       "question": "farm worker performs a task with an energy expenditure of 5.5 kcal/min, against a recommended maximum permissible continuous energy expenditure of 5.0 kcal/min. Using the standard rest-allowance formula R = T(E − S)/(E − 1.5), where T = 60 min is the work period, E = actual energy expenditure (kcal/min) and S = standard permissible energy expenditure (kcal/min), compute the rest period required per 60 minutes of work. (Answer in minutes, round off to two decimal places.) (Answer: 7.30 to 7.70)",
       "options": null,
       "correct_answer": "7.30 to 7.70",
-      "solution": "Q.48 Solution:• Correct Answer: 7.30 to 7.70• Section: Farm Power and Machinery | Sub-topic: human engineering, ergonomics and safety | Type: NAT | Marks: 2Q.48Section: Farm Power   |   Topic: human engineering, ergonomics and safety   |   Type: NAT   |   Marks: 2Question: A farm worker performs a task with an energy expenditure of 5.5 kcal/min, against a recommended maximum permissible continuous energy expenditure of 5.0 kcal/min. Using the standard rest-allowance formula R = T(E − S)/(E − 1.5), where T = 60 min is the work period, E = actual energy expenditure (kcal/min) and S = standard permissible energy expenditure (kcal/min), compute the rest period required per 60 minutes of work. (Answer in minutes, round off to two decimal places.) (Answer: 7.30 to 7.70)Answer: 7.30 to 7.70Detailed Explanation:Governing concept: work-rest allowance (Murrell's formula) in ergonomics.R = T(E−S)/(E−1.5) = 60(5.5−5.0)/(5.5−1.5) = 60 × 0.5/4.0 = 30/4 = 7.50 min.Final Answer: 7.50 min.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.48 Solution:• Correct Answer: 7.30 to 7.70• Section: Farm Power and Machinery | Sub-topic: human engineering, ergonomics and safety | Type: NAT | Marks: 2Q.48Section: Farm Power   |   Topic: human engineering, ergonomics and safety   |   Type: NAT   |   Marks: 2Question: A farm worker performs a task with an energy expenditure of 5.5 kcal/min, against a recommended maximum permissible continuous energy expenditure of 5.0 kcal/min. Using the standard rest-allowance formula R = T(E − S)/(E − 1.5), where T = 60 min is the work period, E = actual energy expenditure (kcal/min) and S = standard permissible energy expenditure (kcal/min), compute the rest period required per 60 minutes of work. (Answer in minutes, round off to two decimal places.) (Answer: 7.30 to 7.70)Answer: 7.30 to 7.70Detailed Explanation:Governing concept: work-rest allowance (Murrell's formula) in ergonomics.R = T(E−S)/(E−1.5) = 60(5.5−5.0)/(5.5−1.5) = 60 × 0.5/4.0 = 30/4 = 7.50 min.Final Answer: 7.50 min.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Farm Power"
+      "topic": "Farm Power",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q49",
       "year": "2027",
       "qnum": 49,
-      "section": "Soil and Water Conservation Engineering",
+      "section": "Section 4: Soil and Water Conservation Engineering",
       "subtopic": "Hydrology",
       "gate_section": "AG",
       "type": "MCQ",
@@ -987,15 +1038,16 @@
         "D": "25.4 mm"
       },
       "correct_answer": "A",
-      "solution": "Q.49 Solution:• Correct Answer: A• Section: Soil and Water Conservation Engineering | Sub-topic: Hydrology | Type: MCQ | Marks: 2Q.49Section: Soil & Water Conservation Engineering   |   Topic: Hydrology   |   Type: MCQ   |   Marks: 2Question: Using the SCS Curve Number (CN) method, the potential maximum retention S is given by S = (25400/CN) − 254 (S in mm). For a catchment with CN = 78, estimate S.(A)  71.6 mm(B)  50.8 mm(C)  101.6 mm(D)  25.4 mmAnswer: (A) 71.6 mmDetailed Explanation:Governing concept: SCS-CN method — potential maximum retention.S = 25400/78 − 254 = 325.64 − 254 = 71.64 mm ≈ 71.6 mm.(B) 50.8 mm and (D) 25.4 mm are 'round' distractor values not obtained from the correct substitution.(C) 101.6 mm results from a mid-calculation arithmetic slip.Final Answer: (A) 71.6 mm.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.49 Solution:• Correct Answer: A• Section: Soil and Water Conservation Engineering | Sub-topic: Hydrology | Type: MCQ | Marks: 2Q.49Section: Soil & Water Conservation Engineering   |   Topic: Hydrology   |   Type: MCQ   |   Marks: 2Question: Using the SCS Curve Number (CN) method, the potential maximum retention S is given by S = (25400/CN) − 254 (S in mm). For a catchment with CN = 78, estimate S.(A)  71.6 mm(B)  50.8 mm(C)  101.6 mm(D)  25.4 mmAnswer: (A) 71.6 mmDetailed Explanation:Governing concept: SCS-CN method — potential maximum retention.S = 25400/78 − 254 = 325.64 − 254 = 71.64 mm ≈ 71.6 mm.(B) 50.8 mm and (D) 25.4 mm are 'round' distractor values not obtained from the correct substitution.(C) 101.6 mm results from a mid-calculation arithmetic slip.Final Answer: (A) 71.6 mm.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Hydrology"
+      "topic": "Hydrology",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q50",
       "year": "2027",
       "qnum": 50,
-      "section": "Soil and Water Conservation Engineering",
+      "section": "Section 4: Soil and Water Conservation Engineering",
       "subtopic": "Hydrology",
       "gate_section": "AG",
       "type": "NAT",
@@ -1004,15 +1056,16 @@
       "question": "For the catchment of the previous question (CN = 78, S = 71.64 mm), if a storm produces a rainfall depth P = 100 mm, estimate the direct surface runoff Q using the SCS-CN relation Q = (P − 0.2S)² / (P + 0.8S). (Answer in mm, round off to two decimal places.) (Answer: 46.30 to 46.90)",
       "options": null,
       "correct_answer": "46.30 to 46.90",
-      "solution": "Q.50 Solution:• Correct Answer: 46.30 to 46.90• Section: Soil and Water Conservation Engineering | Sub-topic: Hydrology | Type: NAT | Marks: 2Q.50Section: Soil & Water Conservation Engineering   |   Topic: Hydrology   |   Type: NAT   |   Marks: 2Question: For the catchment of the previous question (CN = 78, S = 71.64 mm), if a storm produces a rainfall depth P = 100 mm, estimate the direct surface runoff Q using the SCS-CN relation Q = (P − 0.2S)² / (P + 0.8S). (Answer in mm, round off to two decimal places.) (Answer: 46.30 to 46.90)Answer: 46.30 to 46.90Detailed Explanation:Governing concept: SCS-CN direct runoff estimation (two-step problem, following on from S).0.2S = 0.2 × 71.64 = 14.328 mm; P − 0.2S = 100 − 14.328 = 85.672 mm.0.8S = 0.8 × 71.64 = 57.312 mm; P + 0.8S = 100 + 57.312 = 157.312 mm.Q = (85.672)² / 157.312 = 7339.7/157.312 = 46.66 mm.Final Answer: 46.66 mm.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.50 Solution:• Correct Answer: 46.30 to 46.90• Section: Soil and Water Conservation Engineering | Sub-topic: Hydrology | Type: NAT | Marks: 2Q.50Section: Soil & Water Conservation Engineering   |   Topic: Hydrology   |   Type: NAT   |   Marks: 2Question: For the catchment of the previous question (CN = 78, S = 71.64 mm), if a storm produces a rainfall depth P = 100 mm, estimate the direct surface runoff Q using the SCS-CN relation Q = (P − 0.2S)² / (P + 0.8S). (Answer in mm, round off to two decimal places.) (Answer: 46.30 to 46.90)Answer: 46.30 to 46.90Detailed Explanation:Governing concept: SCS-CN direct runoff estimation (two-step problem, following on from S).0.2S = 0.2 × 71.64 = 14.328 mm; P − 0.2S = 100 − 14.328 = 85.672 mm.0.8S = 0.8 × 71.64 = 57.312 mm; P + 0.8S = 100 + 57.312 = 157.312 mm.Q = (85.672)² / 157.312 = 7339.7/157.312 = 46.66 mm.Final Answer: 46.66 mm.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Hydrology"
+      "topic": "Hydrology",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q51",
       "year": "2027",
       "qnum": 51,
-      "section": "Soil and Water Conservation Engineering",
+      "section": "Section 4: Soil and Water Conservation Engineering",
       "subtopic": "Fluid Mechanics",
       "gate_section": "AG",
       "type": "NAT",
@@ -1021,15 +1074,16 @@
       "question": "Water flows through a pipe of diameter 150 mm at a velocity of 2 m/s. This pipe reduces to a diameter of 100 mm. Using the continuity equation, find the velocity of flow in the smaller pipe. (Answer in m/s, round off to two decimal places.) (Answer: 4.40 to 4.60)",
       "options": null,
       "correct_answer": "4.40 to 4.60",
-      "solution": "Q.51 Solution:• Correct Answer: 4.40 to 4.60• Section: Soil and Water Conservation Engineering | Sub-topic: Fluid Mechanics | Type: NAT | Marks: 2Q.51Section: Soil & Water Conservation Engineering   |   Topic: Fluid Mechanics   |   Type: NAT   |   Marks: 2Question: Water flows through a pipe of diameter 150 mm at a velocity of 2 m/s. This pipe reduces to a diameter of 100 mm. Using the continuity equation, find the velocity of flow in the smaller pipe. (Answer in m/s, round off to two decimal places.) (Answer: 4.40 to 4.60)Answer: 4.40 to 4.60Detailed Explanation:Governing concept: continuity equation for incompressible flow, A1V1 = A2V2.Since A ∝ D²: V2 = V1 × (D1/D2)² = 2 × (150/100)² = 2 × 2.25 = 4.50 m/s.Final Answer: 4.50 m/s.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.51 Solution:• Correct Answer: 4.40 to 4.60• Section: Soil and Water Conservation Engineering | Sub-topic: Fluid Mechanics | Type: NAT | Marks: 2Q.51Section: Soil & Water Conservation Engineering   |   Topic: Fluid Mechanics   |   Type: NAT   |   Marks: 2Question: Water flows through a pipe of diameter 150 mm at a velocity of 2 m/s. This pipe reduces to a diameter of 100 mm. Using the continuity equation, find the velocity of flow in the smaller pipe. (Answer in m/s, round off to two decimal places.) (Answer: 4.40 to 4.60)Answer: 4.40 to 4.60Detailed Explanation:Governing concept: continuity equation for incompressible flow, A1V1 = A2V2.Since A ∝ D²: V2 = V1 × (D1/D2)² = 2 × (150/100)² = 2 × 2.25 = 4.50 m/s.Final Answer: 4.50 m/s.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Fluid Mechanics"
+      "topic": "Watershed Management",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q52",
       "year": "2027",
       "qnum": 52,
-      "section": "Soil and Water Conservation Engineering",
+      "section": "Section 4: Soil and Water Conservation Engineering",
       "subtopic": "Fluid Mechanics",
       "gate_section": "AG",
       "type": "NAT",
@@ -1038,15 +1092,16 @@
       "question": "Water flows over a rectangular sharp-crested notch of crest length 0.6 m under a head of 0.25 m. Using Q = (2/3)·Cd·b·√(2 g)·H^1.5, with Cd = 0.62 and g = 9.81 m/s², compute the discharge over the notch. (Answer in L/s, round off to two decimal places.) (Answer: 136.50 to 138.00) Figure Q.52 — rectangular sharp-crested notch (elevation view)",
       "options": null,
       "correct_answer": "136.50 to 138.00",
-      "solution": "Q.52 Solution:• Correct Answer: 136.50 to 138.00• Section: Soil and Water Conservation Engineering | Sub-topic: Fluid Mechanics | Type: NAT | Marks: 2Q.52Section: Soil & Water Conservation Engineering   |   Topic: Fluid Mechanics   |   Type: NAT   |   Marks: 2Question: Water flows over a rectangular sharp-crested notch of crest length 0.6 m under a head of 0.25 m. Using Q = (2/3)·Cd·b·√(2g)·H^1.5, with Cd = 0.62 and g = 9.81 m/s², compute the discharge over the notch. (Answer in L/s, round off to two decimal places.) (Answer: 136.50 to 138.00)Figure Q.52 — rectangular sharp-crested notch (elevation view)Answer: 136.50 to 138.00Detailed Explanation:Governing concept: discharge over a rectangular notch/weir.Q = (2/3) × 0.62 × 0.6 × √(2×9.81) × 0.25^1.5√(19.62) = 4.429; 0.25^1.5 = 0.125.Q = 0.6667 × 0.62 × 0.6 × 4.429 × 0.125 = 0.1373 m³/s = 137.31 L/s.Final Answer: 137.31 L/s.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.52 Solution:• Correct Answer: 136.50 to 138.00• Section: Soil and Water Conservation Engineering | Sub-topic: Fluid Mechanics | Type: NAT | Marks: 2Q.52Section: Soil & Water Conservation Engineering   |   Topic: Fluid Mechanics   |   Type: NAT   |   Marks: 2Question: Water flows over a rectangular sharp-crested notch of crest length 0.6 m under a head of 0.25 m. Using Q = (2/3)·Cd·b·√(2g)·H^1.5, with Cd = 0.62 and g = 9.81 m/s², compute the discharge over the notch. (Answer in L/s, round off to two decimal places.) (Answer: 136.50 to 138.00)Figure Q.52 — rectangular sharp-crested notch (elevation view)Answer: 136.50 to 138.00Detailed Explanation:Governing concept: discharge over a rectangular notch/weir.Q = (2/3) × 0.62 × 0.6 × √(2×9.81) × 0.25^1.5√(19.62) = 4.429; 0.25^1.5 = 0.125.Q = 0.6667 × 0.62 × 0.6 × 4.429 × 0.125 = 0.1373 m³/s = 137.31 L/s.Final Answer: 137.31 L/s.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Fluid Mechanics"
+      "topic": "Watershed Management",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q53",
       "year": "2027",
       "qnum": 53,
-      "section": "Soil and Water Conservation Engineering",
+      "section": "Section 4: Soil and Water Conservation Engineering",
       "subtopic": "Soil and Water Erosion",
       "gate_section": "AG",
       "type": "MCQ",
@@ -1060,15 +1115,16 @@
         "D": "126.0 t/ha/yr"
       },
       "correct_answer": "A",
-      "solution": "Q.53 Solution:• Correct Answer: A• Section: Soil and Water Conservation Engineering | Sub-topic: Soil and Water Erosion | Type: MCQ | Marks: 2Q.53Section: Soil & Water Conservation Engineering   |   Topic: Soil and Water Erosion   |   Type: MCQ   |   Marks: 2Question: Using the Universal Soil Loss Equation A = R·K·LS·C·P, with R = 450 MJ·mm/(ha·h·yr), K = 0.28 t·ha·h/(ha·MJ·mm), LS = 1.5, C = 0.35, and P = 0.9, estimate the average annual soil loss.(A)  59.5 t/ha/yr(B)  66.2 t/ha/yr(C)  33.1 t/ha/yr(D)  126.0 t/ha/yrAnswer: (A) 59.5 t/ha/yrDetailed Explanation:Governing concept: Universal Soil Loss Equation (USLE).A = R×K×LS×C×P = 450×0.28×1.5×0.35×0.9= 126.0 × 1.5 × 0.35 × 0.9 = 189.0 × 0.35 × 0.9 = 66.15 × 0.9 = 59.535 ≈ 59.5 t/ha/yr.(B) 66.2 t/ha/yr results from omitting the support-practice factor P.(C) 33.1 t/ha/yr results from halving the correct product by mistake.(D) 126.0 t/ha/yr is only R×K, omitting LS, C and P entirely.Final Answer: (A) 59.5 t/ha/yr.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.53 Solution:• Correct Answer: A• Section: Soil and Water Conservation Engineering | Sub-topic: Soil and Water Erosion | Type: MCQ | Marks: 2Q.53Section: Soil & Water Conservation Engineering   |   Topic: Soil and Water Erosion   |   Type: MCQ   |   Marks: 2Question: Using the Universal Soil Loss Equation A = R·K·LS·C·P, with R = 450 MJ·mm/(ha·h·yr), K = 0.28 t·ha·h/(ha·MJ·mm), LS = 1.5, C = 0.35, and P = 0.9, estimate the average annual soil loss.(A)  59.5 t/ha/yr(B)  66.2 t/ha/yr(C)  33.1 t/ha/yr(D)  126.0 t/ha/yrAnswer: (A) 59.5 t/ha/yrDetailed Explanation:Governing concept: Universal Soil Loss Equation (USLE).A = R×K×LS×C×P = 450×0.28×1.5×0.35×0.9= 126.0 × 1.5 × 0.35 × 0.9 = 189.0 × 0.35 × 0.9 = 66.15 × 0.9 = 59.535 ≈ 59.5 t/ha/yr.(B) 66.2 t/ha/yr results from omitting the support-practice factor P.(C) 33.1 t/ha/yr results from halving the correct product by mistake.(D) 126.0 t/ha/yr is only R×K, omitting LS, C and P entirely.Final Answer: (A) 59.5 t/ha/yr.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Soil and Water Erosion"
+      "topic": "Soil and Water Erosion",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q54",
       "year": "2027",
       "qnum": 54,
-      "section": "Soil and Water Conservation Engineering",
+      "section": "Section 4: Soil and Water Conservation Engineering",
       "subtopic": "Soil and Water Erosion",
       "gate_section": "AG",
       "type": "NAT",
@@ -1077,15 +1133,16 @@
       "question": "For a field of slope length λ = 200 m and slope 3%, the USLE slope-length-steepness factor is LS = (λ/22.13)^m × (65.41 sin²θ + 4.56 sinθ + 0.065), where θ is the slope angle. Using m = 0.5 as given for this problem, compute the LS factor. (Round off to two decimal places.) (Answer: 0.74 to 0.82) Figure Q.54 — field slope-length profile for USLE LS-factor calculation",
       "options": null,
       "correct_answer": "0.74 to 0.82",
-      "solution": "Q.54 Solution:• Correct Answer: 0.74 to 0.82• Section: Soil and Water Conservation Engineering | Sub-topic: Soil and Water Erosion | Type: NAT | Marks: 2Q.54Section: Soil & Water Conservation Engineering   |   Topic: Soil and Water Erosion   |   Type: NAT   |   Marks: 2Question: For a field of slope length λ = 200 m and slope 3%, the USLE slope-length-steepness factor is LS = (λ/22.13)^m × (65.41 sin²θ + 4.56 sinθ + 0.065), where θ is the slope angle. Using m = 0.5 as given for this problem, compute the LS factor. (Round off to two decimal places.) (Answer: 0.74 to 0.82)Figure Q.54 — field slope-length profile for USLE LS-factor calculationAnswer: 0.74 to 0.82Detailed Explanation:Governing concept: USLE topographic (LS) factor.Slope 3% ⇒ tanθ = 0.03 ⇒ θ = 1.7188°, sinθ = 0.02999.(λ/22.13)^0.5 = (200/22.13)^0.5 = (9.037)^0.5 = 3.0062.65.41 sin²θ = 65.41 × 0.0008994 = 0.0588; 4.56 sinθ = 4.56 × 0.02999 = 0.1368.Sum = 0.0588 + 0.1368 + 0.065 = 0.2607.LS = 3.0062 × 0.2607 = 0.7838 ≈ 0.78.Final Answer: 0.78.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.54 Solution:• Correct Answer: 0.74 to 0.82• Section: Soil and Water Conservation Engineering | Sub-topic: Soil and Water Erosion | Type: NAT | Marks: 2Q.54Section: Soil & Water Conservation Engineering   |   Topic: Soil and Water Erosion   |   Type: NAT   |   Marks: 2Question: For a field of slope length λ = 200 m and slope 3%, the USLE slope-length-steepness factor is LS = (λ/22.13)^m × (65.41 sin²θ + 4.56 sinθ + 0.065), where θ is the slope angle. Using m = 0.5 as given for this problem, compute the LS factor. (Round off to two decimal places.) (Answer: 0.74 to 0.82)Figure Q.54 — field slope-length profile for USLE LS-factor calculationAnswer: 0.74 to 0.82Detailed Explanation:Governing concept: USLE topographic (LS) factor.Slope 3% ⇒ tanθ = 0.03 ⇒ θ = 1.7188°, sinθ = 0.02999.(λ/22.13)^0.5 = (200/22.13)^0.5 = (9.037)^0.5 = 3.0062.65.41 sin²θ = 65.41 × 0.0008994 = 0.0588; 4.56 sinθ = 4.56 × 0.02999 = 0.1368.Sum = 0.0588 + 0.1368 + 0.065 = 0.2607.LS = 3.0062 × 0.2607 = 0.7838 ≈ 0.78.Final Answer: 0.78.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Soil and Water Erosion"
+      "topic": "Soil and Water Erosion",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q55",
       "year": "2027",
       "qnum": 55,
-      "section": "Irrigation and Drainage Engineering",
+      "section": "Section 5: Irrigation and Drainage Engineering",
       "subtopic": "Groundwater Hydrology",
       "gate_section": "AG",
       "type": "NAT",
@@ -1094,15 +1151,16 @@
       "question": "confined aquifer has a transmissivity T = 250 m²/day. Using Thiem's steady radial-flow equation Q = 2πT(h2−h1)/ln(r2/r1), the drawdown difference between two observation wells at radial distances r1 = 15 m and r2 = 90 m from a pumping well is (h2−h1) = 1.5 m. Compute the steady-state discharge Q. (Answer in m³/day, round off to two decimal places.) (Answer: 1300.00 to 1330.00)",
       "options": null,
       "correct_answer": "1300.00 to 1330.00",
-      "solution": "Q.55 Solution:• Correct Answer: 1300.00 to 1330.00• Section: General Aptitude | Sub-topic: Groundwater Hydrology | Type: NAT | Marks: 2Q.55Section: Irrigation & Drainage Engineering   |   Topic: Groundwater Hydrology   |   Type: NAT   |   Marks: 2Question: A confined aquifer has a transmissivity T = 250 m²/day. Using Thiem's steady radial-flow equation Q = 2πT(h2−h1)/ln(r2/r1), the drawdown difference between two observation wells at radial distances r1 = 15 m and r2 = 90 m from a pumping well is (h2−h1) = 1.5 m. Compute the steady-state discharge Q. (Answer in m³/day, round off to two decimal places.) (Answer: 1300.00 to 1330.00)Answer: 1300.00 to 1330.00Detailed Explanation:Governing concept: Thiem's equation for steady radial flow to a well in a confined aquifer.ln(r2/r1) = ln(90/15) = ln(6) = 1.7918.Q = 2π × 250 × 1.5 / 1.7918 = 2356.19 / 1.7918 = 1315.02 m³/day.Final Answer: 1315.02 m³/day.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.55 Solution:• Correct Answer: 1300.00 to 1330.00• Section: General Aptitude | Sub-topic: Groundwater Hydrology | Type: NAT | Marks: 2Q.55Section: Irrigation & Drainage Engineering   |   Topic: Groundwater Hydrology   |   Type: NAT   |   Marks: 2Question: A confined aquifer has a transmissivity T = 250 m²/day. Using Thiem's steady radial-flow equation Q = 2πT(h2−h1)/ln(r2/r1), the drawdown difference between two observation wells at radial distances r1 = 15 m and r2 = 90 m from a pumping well is (h2−h1) = 1.5 m. Compute the steady-state discharge Q. (Answer in m³/day, round off to two decimal places.) (Answer: 1300.00 to 1330.00)Answer: 1300.00 to 1330.00Detailed Explanation:Governing concept: Thiem's equation for steady radial flow to a well in a confined aquifer.ln(r2/r1) = ln(90/15) = ln(6) = 1.7918.Q = 2π × 250 × 1.5 / 1.7918 = 2356.19 / 1.7918 = 1315.02 m³/day.Final Answer: 1315.02 m³/day.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Groundwater Hydrology"
+      "topic": "Groundwater Hydrology",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q56",
       "year": "2027",
       "qnum": 56,
-      "section": "Irrigation and Drainage Engineering",
+      "section": "Section 5: Irrigation and Drainage Engineering",
       "subtopic": "Soil-Water-Plant Relationship",
       "gate_section": "AG",
       "type": "MSQ",
@@ -1116,15 +1174,16 @@
         "D": "Readily available water is generally taken as about 50–75% of the total available water capacity, before crop water stress begins to limit yield"
       },
       "correct_answer": "A, B, D",
-      "solution": "Q.56 Solution:• Correct Answer: A, B, D• Section: General Aptitude | Sub-topic: Soil-Water-Plant Relationship | Type: MSQ | Marks: 2Q.56Section: Irrigation & Drainage Engineering   |   Topic: Soil-Water-Plant Relationship   |   Type: MSQ   |   Marks: 2Question: Which of the following statements regarding the soil-water-plant relationship are CORRECT?(A)  Field capacity is the water content remaining in soil after gravitational drainage ceases, typically at a soil-water tension of about 33 kPa (1/3 bar) for most agricultural soils(B)  Permanent wilting point corresponds to a soil-water tension of approximately 1500 kPa (15 bar)(C)  Available water capacity is the water held in the soil between saturation and field capacity(D)  Readily available water is generally taken as about 50–75% of the total available water capacity, before crop water stress begins to limit yieldAnswer: (A) Field capacity is the water content remaining in soil after gravitational drainage ceases, typically at a soil-water tension of about 33 kPa (1/3 bar) for most agricultural soils; (B) Permanent wilting point corresponds to a soil-water tension of approximately 1500 kPa (15 bar); (D) Readily available water is generally taken as about 50–75% of the total available water capacity, before crop water stress begins to limit yieldDetailed Explanation:Governing concept: soil-water constants and plant-available water.(A) Correct — field capacity is conventionally defined at approximately −0.033 MPa (1/3 bar) tension for most soils, representing the water content after free drainage stops.(B) Correct — the permanent wilting point is conventionally defined at −1.5 MPa (15 bar) tension, beyond which plants can no longer extract water.(C) Incorrect — available water capacity is the water held between field capacity and permanent wilting point, NOT between saturation and field capacity (the latter, gravitational water, drains away and is not plant-available in the root zone for long).(D) Correct — readily available water (RAW) is commonly taken as roughly 50–75% of total available water, the fraction that can be depleted before yield-limiting stress sets in.Final Answer: (A), (B), (D).\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.56 Solution:• Correct Answer: A, B, D• Section: General Aptitude | Sub-topic: Soil-Water-Plant Relationship | Type: MSQ | Marks: 2Q.56Section: Irrigation & Drainage Engineering   |   Topic: Soil-Water-Plant Relationship   |   Type: MSQ   |   Marks: 2Question: Which of the following statements regarding the soil-water-plant relationship are CORRECT?(A)  Field capacity is the water content remaining in soil after gravitational drainage ceases, typically at a soil-water tension of about 33 kPa (1/3 bar) for most agricultural soils(B)  Permanent wilting point corresponds to a soil-water tension of approximately 1500 kPa (15 bar)(C)  Available water capacity is the water held in the soil between saturation and field capacity(D)  Readily available water is generally taken as about 50–75% of the total available water capacity, before crop water stress begins to limit yieldAnswer: (A) Field capacity is the water content remaining in soil after gravitational drainage ceases, typically at a soil-water tension of about 33 kPa (1/3 bar) for most agricultural soils; (B) Permanent wilting point corresponds to a soil-water tension of approximately 1500 kPa (15 bar); (D) Readily available water is generally taken as about 50–75% of the total available water capacity, before crop water stress begins to limit yieldDetailed Explanation:Governing concept: soil-water constants and plant-available water.(A) Correct — field capacity is conventionally defined at approximately −0.033 MPa (1/3 bar) tension for most soils, representing the water content after free drainage stops.(B) Correct — the permanent wilting point is conventionally defined at −1.5 MPa (15 bar) tension, beyond which plants can no longer extract water.(C) Incorrect — available water capacity is the water held between field capacity and permanent wilting point, NOT between saturation and field capacity (the latter, gravitational water, drains away and is not plant-available in the root zone for long).(D) Correct — readily available water (RAW) is commonly taken as roughly 50–75% of total available water, the fraction that can be depleted before yield-limiting stress sets in.Final Answer: (A), (B), (D).\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Soil-Water-Plant Relationship"
+      "topic": "Agricultural Drainage",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q57",
       "year": "2027",
       "qnum": 57,
-      "section": "Irrigation and Drainage Engineering",
+      "section": "Section 5: Irrigation and Drainage Engineering",
       "subtopic": "Irrigation Water Conveyance and Application Methods",
       "gate_section": "AG",
       "type": "NAT",
@@ -1133,15 +1192,16 @@
       "question": "For a furrow-irrigated field, the cumulative infiltration follows the Kostiakov equation Z = 0.65 t^0.45, where Z is the infiltrated depth in cm and t is the intake opportunity time in minutes. If the required net application depth is 6 cm, find the required intake opportunity time. (Answer in minutes, round off to two decimal places.) (Answer: 138.00 to 141.50)",
       "options": null,
       "correct_answer": "138.00 to 141.50",
-      "solution": "Q.57 Solution:• Correct Answer: 138.00 to 141.50• Section: General Aptitude | Sub-topic: Irrigation Water Conveyance and Application Methods | Type: NAT | Marks: 2Q.57Section: Irrigation & Drainage Engineering   |   Topic: Irrigation Water Conveyance and Application Methods   |   Type: NAT   |   Marks: 2Question: For a furrow-irrigated field, the cumulative infiltration follows the Kostiakov equation Z = 0.65 t^0.45, where Z is the infiltrated depth in cm and t is the intake opportunity time in minutes. If the required net application depth is 6 cm, find the required intake opportunity time. (Answer in minutes, round off to two decimal places.) (Answer: 138.00 to 141.50)Answer: 138.00 to 141.50Detailed Explanation:Governing concept: Kostiakov infiltration equation, solved for time given target depth.6 = 0.65 t^0.45 ⇒ t^0.45 = 6/0.65 = 9.2308.t = (9.2308)^(1/0.45) = (9.2308)^(2.2222) = 139.63 min.Final Answer: 139.63 min.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.57 Solution:• Correct Answer: 138.00 to 141.50• Section: General Aptitude | Sub-topic: Irrigation Water Conveyance and Application Methods | Type: NAT | Marks: 2Q.57Section: Irrigation & Drainage Engineering   |   Topic: Irrigation Water Conveyance and Application Methods   |   Type: NAT   |   Marks: 2Question: For a furrow-irrigated field, the cumulative infiltration follows the Kostiakov equation Z = 0.65 t^0.45, where Z is the infiltrated depth in cm and t is the intake opportunity time in minutes. If the required net application depth is 6 cm, find the required intake opportunity time. (Answer in minutes, round off to two decimal places.) (Answer: 138.00 to 141.50)Answer: 138.00 to 141.50Detailed Explanation:Governing concept: Kostiakov infiltration equation, solved for time given target depth.6 = 0.65 t^0.45 ⇒ t^0.45 = 6/0.65 = 9.2308.t = (9.2308)^(1/0.45) = (9.2308)^(2.2222) = 139.63 min.Final Answer: 139.63 min.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Irrigation Water Conveyance and Application Methods"
+      "topic": "Agricultural Drainage",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q58",
       "year": "2027",
       "qnum": 58,
-      "section": "Irrigation and Drainage Engineering",
+      "section": "Section 5: Irrigation and Drainage Engineering",
       "subtopic": "Wells and Pumps",
       "gate_section": "AG",
       "type": "NAT",
@@ -1150,15 +1210,16 @@
       "question": "centrifugal pump delivers 25 L/s of water against a total head of 18 m, with an overall pump efficiency of 65%. Calculate the power required to drive the pump. Take ρ = 1000 kg/m³ and g = 9.81 m/s². (Answer in kW, round off to two decimal places.) (Answer: 6.70 to 6.90)",
       "options": null,
       "correct_answer": "6.70 to 6.90",
-      "solution": "Q.58 Solution:• Correct Answer: 6.70 to 6.90• Section: General Aptitude | Sub-topic: Wells and Pumps | Type: NAT | Marks: 2Q.58Section: Irrigation & Drainage Engineering   |   Topic: Wells and Pumps   |   Type: NAT   |   Marks: 2Question: A centrifugal pump delivers 25 L/s of water against a total head of 18 m, with an overall pump efficiency of 65%. Calculate the power required to drive the pump. Take ρ = 1000 kg/m³ and g = 9.81 m/s². (Answer in kW, round off to two decimal places.) (Answer: 6.70 to 6.90)Answer: 6.70 to 6.90Detailed Explanation:Governing concept: pump shaft (input) power, P = ρgQH/η.Q = 25 L/s = 0.025 m³/s.P = (1000 × 9.81 × 0.025 × 18) / 0.65 = 4414.5 / 0.65 = 6791.5 W = 6.79 kW.Final Answer: 6.79 kW.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.58 Solution:• Correct Answer: 6.70 to 6.90• Section: General Aptitude | Sub-topic: Wells and Pumps | Type: NAT | Marks: 2Q.58Section: Irrigation & Drainage Engineering   |   Topic: Wells and Pumps   |   Type: NAT   |   Marks: 2Question: A centrifugal pump delivers 25 L/s of water against a total head of 18 m, with an overall pump efficiency of 65%. Calculate the power required to drive the pump. Take ρ = 1000 kg/m³ and g = 9.81 m/s². (Answer in kW, round off to two decimal places.) (Answer: 6.70 to 6.90)Answer: 6.70 to 6.90Detailed Explanation:Governing concept: pump shaft (input) power, P = ρgQH/η.Q = 25 L/s = 0.025 m³/s.P = (1000 × 9.81 × 0.025 × 18) / 0.65 = 4414.5 / 0.65 = 6791.5 W = 6.79 kW.Final Answer: 6.79 kW.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Wells and Pumps"
+      "topic": "Wells and Pumps",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q59",
       "year": "2027",
       "qnum": 59,
-      "section": "Agricultural Process Engineering",
+      "section": "Section 6: Agricultural Process Engineering",
       "subtopic": "Evaporation and Drying",
       "gate_section": "AG",
       "type": "MCQ",
@@ -1172,15 +1233,16 @@
         "D": "600 kg/h"
       },
       "correct_answer": "A",
-      "solution": "Q.59 Solution:• Correct Answer: A• Section: Agricultural Process Engineering | Sub-topic: Evaporation and Drying | Type: MCQ | Marks: 2Q.59Section: Agricultural Process Engineering   |   Topic: Evaporation and Drying   |   Type: MCQ   |   Marks: 2Question: In a single-effect evaporator, milk is fed at 1000 kg/h with 9% total solids and concentrated to a product containing 40% total solids. Assuming no solids are lost, estimate the rate of water evaporation.(A)  775 kg/h(B)  900 kg/h(C)  225 kg/h(D)  600 kg/hAnswer: (A) 775 kg/hDetailed Explanation:Governing concept: mass and solids balance across an evaporator.Solids balance: 1000 × 0.09 = Wproduct × 0.40 ⇒ Wproduct = 90/0.40 = 225 kg/h.Water evaporated = Feed − Product = 1000 − 225 = 775 kg/h.(B) 900 kg/h results from an incorrect solids balance (e.g. dividing by 0.10 instead of 0.40).(C) 225 kg/h is the mass of concentrated product, not the water evaporated.(D) 600 kg/h results from a simple (incorrect) linear assumption ignoring the true solids balance.Final Answer: (A) 775 kg/h.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.59 Solution:• Correct Answer: A• Section: Agricultural Process Engineering | Sub-topic: Evaporation and Drying | Type: MCQ | Marks: 2Q.59Section: Agricultural Process Engineering   |   Topic: Evaporation and Drying   |   Type: MCQ   |   Marks: 2Question: In a single-effect evaporator, milk is fed at 1000 kg/h with 9% total solids and concentrated to a product containing 40% total solids. Assuming no solids are lost, estimate the rate of water evaporation.(A)  775 kg/h(B)  900 kg/h(C)  225 kg/h(D)  600 kg/hAnswer: (A) 775 kg/hDetailed Explanation:Governing concept: mass and solids balance across an evaporator.Solids balance: 1000 × 0.09 = Wproduct × 0.40 ⇒ Wproduct = 90/0.40 = 225 kg/h.Water evaporated = Feed − Product = 1000 − 225 = 775 kg/h.(B) 900 kg/h results from an incorrect solids balance (e.g. dividing by 0.10 instead of 0.40).(C) 225 kg/h is the mass of concentrated product, not the water evaporated.(D) 600 kg/h results from a simple (incorrect) linear assumption ignoring the true solids balance.Final Answer: (A) 775 kg/h.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Processing of Agricultural Produce"
+      "topic": "Processing of Agriculture Produce",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q60",
       "year": "2027",
       "qnum": 60,
-      "section": "Agricultural Process Engineering",
+      "section": "Section 6: Agricultural Process Engineering",
       "subtopic": "Evaporation and Drying",
       "gate_section": "AG",
       "type": "NAT",
@@ -1189,15 +1251,16 @@
       "question": "batch dryer is loaded with 2000 kg of wet wheat grain at 20% moisture content (wet basis), to be dried to 12% moisture content (wet basis). Using Wf = Wi(100−MCi)/(100−MCf), calculate the final mass of dried grain. (Answer in kg, round off to two decimal places.) (Answer: 1815.00 to 1822.00)",
       "options": null,
       "correct_answer": "1815.00 to 1822.00",
-      "solution": "Q.60 Solution:• Correct Answer: 1815.00 to 1822.00• Section: Agricultural Process Engineering | Sub-topic: Evaporation and Drying | Type: NAT | Marks: 2Q.60Section: Agricultural Process Engineering   |   Topic: Evaporation and Drying   |   Type: NAT   |   Marks: 2Question: A batch dryer is loaded with 2000 kg of wet wheat grain at 20% moisture content (wet basis), to be dried to 12% moisture content (wet basis). Using Wf = Wi(100−MCi)/(100−MCf), calculate the final mass of dried grain. (Answer in kg, round off to two decimal places.) (Answer: 1815.00 to 1822.00)Answer: 1815.00 to 1822.00Detailed Explanation:Governing concept: dry-matter balance for grain drying.Wf = 2000 × (100−20)/(100−12) = 2000 × 80/88 = 2000 × 0.90909 = 1818.18 kg.Final Answer: 1818.18 kg.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.60 Solution:• Correct Answer: 1815.00 to 1822.00• Section: Agricultural Process Engineering | Sub-topic: Evaporation and Drying | Type: NAT | Marks: 2Q.60Section: Agricultural Process Engineering   |   Topic: Evaporation and Drying   |   Type: NAT   |   Marks: 2Question: A batch dryer is loaded with 2000 kg of wet wheat grain at 20% moisture content (wet basis), to be dried to 12% moisture content (wet basis). Using Wf = Wi(100−MCi)/(100−MCf), calculate the final mass of dried grain. (Answer in kg, round off to two decimal places.) (Answer: 1815.00 to 1822.00)Answer: 1815.00 to 1822.00Detailed Explanation:Governing concept: dry-matter balance for grain drying.Wf = 2000 × (100−20)/(100−12) = 2000 × 80/88 = 2000 × 0.90909 = 1818.18 kg.Final Answer: 1818.18 kg.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Processing of Agricultural Produce"
+      "topic": "Processing of Agriculture Produce",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q61",
       "year": "2027",
       "qnum": 61,
-      "section": "Agricultural Process Engineering",
+      "section": "Section 6: Agricultural Process Engineering",
       "subtopic": "Size Reduction and Material Handling",
       "gate_section": "AG",
       "type": "MSQ",
@@ -1211,15 +1274,16 @@
         "D": "Hammer mills reduce particle size primarily by compressing material between two smooth counter-rotating rollers"
       },
       "correct_answer": "A, B, C",
-      "solution": "Q.61 Solution:• Correct Answer: A, B, C• Section: Agricultural Process Engineering | Sub-topic: Size Reduction and Material Handling | Type: MSQ | Marks: 2Q.61Section: Agricultural Process Engineering   |   Topic: Size Reduction and Material Handling   |   Type: MSQ   |   Marks: 2Question: Which of the following statements about size-reduction laws and equipment used in agricultural process engineering are CORRECT?(A)  Rittinger's law states that the energy required for size reduction is proportional to the new surface area created(B)  Kick's law states that the energy required is proportional to the logarithm of the reduction ratio (initial size / final size)(C)  Bond's law is generally considered most applicable to coarse crushing operations, while Rittinger's law fits fine-grinding operations better(D)  Hammer mills reduce particle size primarily by compressing material between two smooth counter-rotating rollersAnswer: (A) Rittinger's law states that the energy required for size reduction is proportional to the new surface area created; (B) Kick's law states that the energy required is proportional to the logarithm of the reduction ratio (initial size / final size); (C) Bond's law is generally considered most applicable to coarse crushing operations, while Rittinger's law fits fine-grinding operations betterDetailed Explanation:Governing concept: classical size-reduction (comminution) laws and equipment principles.(A) Correct — Rittinger's law: energy ∝ newly created surface area, i.e. ∝ (1/Df − 1/Di).(B) Correct — Kick's law: energy ∝ ln(Di/Df), i.e. proportional to the size-reduction ratio.(C) Correct — empirically, Bond's law (intermediate exponent) suits crushing of coarse particles, while Rittinger's law (surface-area based) better represents fine grinding.(D) Incorrect — hammer mills reduce size mainly by high-speed impact (hammers striking the material) and attrition, not by compression between smooth rollers (that describes roller mills).Final Answer: (A), (B), (C).\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.61 Solution:• Correct Answer: A, B, C• Section: Agricultural Process Engineering | Sub-topic: Size Reduction and Material Handling | Type: MSQ | Marks: 2Q.61Section: Agricultural Process Engineering   |   Topic: Size Reduction and Material Handling   |   Type: MSQ   |   Marks: 2Question: Which of the following statements about size-reduction laws and equipment used in agricultural process engineering are CORRECT?(A)  Rittinger's law states that the energy required for size reduction is proportional to the new surface area created(B)  Kick's law states that the energy required is proportional to the logarithm of the reduction ratio (initial size / final size)(C)  Bond's law is generally considered most applicable to coarse crushing operations, while Rittinger's law fits fine-grinding operations better(D)  Hammer mills reduce particle size primarily by compressing material between two smooth counter-rotating rollersAnswer: (A) Rittinger's law states that the energy required for size reduction is proportional to the new surface area created; (B) Kick's law states that the energy required is proportional to the logarithm of the reduction ratio (initial size / final size); (C) Bond's law is generally considered most applicable to coarse crushing operations, while Rittinger's law fits fine-grinding operations betterDetailed Explanation:Governing concept: classical size-reduction (comminution) laws and equipment principles.(A) Correct — Rittinger's law: energy ∝ newly created surface area, i.e. ∝ (1/Df − 1/Di).(B) Correct — Kick's law: energy ∝ ln(Di/Df), i.e. proportional to the size-reduction ratio.(C) Correct — empirically, Bond's law (intermediate exponent) suits crushing of coarse particles, while Rittinger's law (surface-area based) better represents fine grinding.(D) Incorrect — hammer mills reduce size mainly by high-speed impact (hammers striking the material) and attrition, not by compression between smooth rollers (that describes roller mills).Final Answer: (A), (B), (C).\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Size Reduction and Material Handling"
+      "topic": "Size Reduction and Material Handling",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q62",
       "year": "2027",
       "qnum": 62,
-      "section": "Agricultural Process Engineering",
+      "section": "Section 6: Agricultural Process Engineering",
       "subtopic": "Size Reduction and Material Handling",
       "gate_section": "AG",
       "type": "NAT",
@@ -1228,15 +1292,16 @@
       "question": "hammer mill reduces maize from an initial mean particle size of 8 mm to a final mean size of 2 mm. Using Bond's law in the form E = Wi (1/√d2 − 1/√d1), where E is the specific energy (kWh/t), Wi = 12 (kWh·mm^0.5/t) is the work index, and d1, d2 are the initial and final particle sizes in mm, calculate the specific energy required. (Answer in kWh/t, round off to two decimal places.) (Answer: 4.15 to 4.35)",
       "options": null,
       "correct_answer": "4.15 to 4.35",
-      "solution": "Q.62 Solution:• Correct Answer: 4.15 to 4.35• Section: Agricultural Process Engineering | Sub-topic: Size Reduction and Material Handling | Type: NAT | Marks: 2Q.62Section: Agricultural Process Engineering   |   Topic: Size Reduction and Material Handling   |   Type: NAT   |   Marks: 2Question: A hammer mill reduces maize from an initial mean particle size of 8 mm to a final mean size of 2 mm. Using Bond's law in the form E = Wi (1/√d2 − 1/√d1), where E is the specific energy (kWh/t), Wi = 12 (kWh·mm^0.5/t) is the work index, and d1, d2 are the initial and final particle sizes in mm, calculate the specific energy required. (Answer in kWh/t, round off to two decimal places.) (Answer: 4.15 to 4.35)Answer: 4.15 to 4.35Detailed Explanation:Governing concept: Bond's law of size-reduction energy.E = 12 × (1/√2 − 1/√8) = 12 × (0.7071 − 0.3536) = 12 × 0.3536 = 4.24 kWh/t.Final Answer: 4.24 kWh/t.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.62 Solution:• Correct Answer: 4.15 to 4.35• Section: Agricultural Process Engineering | Sub-topic: Size Reduction and Material Handling | Type: NAT | Marks: 2Q.62Section: Agricultural Process Engineering   |   Topic: Size Reduction and Material Handling   |   Type: NAT   |   Marks: 2Question: A hammer mill reduces maize from an initial mean particle size of 8 mm to a final mean size of 2 mm. Using Bond's law in the form E = Wi (1/√d2 − 1/√d1), where E is the specific energy (kWh/t), Wi = 12 (kWh·mm^0.5/t) is the work index, and d1, d2 are the initial and final particle sizes in mm, calculate the specific energy required. (Answer in kWh/t, round off to two decimal places.) (Answer: 4.15 to 4.35)Answer: 4.15 to 4.35Detailed Explanation:Governing concept: Bond's law of size-reduction energy.E = 12 × (1/√2 − 1/√8) = 12 × (0.7071 − 0.3536) = 12 × 0.3536 = 4.24 kWh/t.Final Answer: 4.24 kWh/t.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Size Reduction and Material Handling"
+      "topic": "Size Reduction and Material Handling",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q63",
       "year": "2027",
       "qnum": 63,
-      "section": "Dairy and Food Engineering",
+      "section": "Section 7: Dairy and Food Engineering",
       "subtopic": "Heat and Mass Transfer",
       "gate_section": "AG",
       "type": "NAT",
@@ -1245,15 +1310,16 @@
       "question": "In a counter-flow plate heat exchanger, milk is heated from 5°C to 72°C using hot water entering at 85°C and leaving at 25°C. Calculate the Log Mean Temperature Difference (LMTD) for this exchanger. (Answer in °C, round off to two decimal places.) (",
       "options": null,
       "correct_answer": "16.00 to 16.50",
-      "solution": "Q.63 Solution:• Correct Answer: 16.00 to 16.50• Section: Agricultural Engineering | Sub-topic: Heat and Mass Transfer | Type: NAT | Marks: 2Q.63Section: Dairy & Food Engineering   |   Topic: Heat and Mass Transfer   |   Type: NAT   |   Marks: 2Question: In a counter-flow plate heat exchanger, milk is heated from 5°C to 72°C using hot water entering at 85°C and leaving at 25°C. Calculate the Log Mean Temperature Difference (LMTD) for this exchanger. (Answer in °C, round off to two decimal places.) (Answer: 16.00 to 16.50)Answer: 16.00 to 16.50Detailed Explanation:Governing concept: LMTD for a counter-current heat exchanger.ΔT1 (hot inlet end) = Th,in − Tc,out = 85 − 72 = 13°C.ΔT2 (hot outlet end) = Th,out − Tc,in = 25 − 5 = 20°C.LMTD = (ΔT2 − ΔT1) / ln(ΔT2/ΔT1) = (20−13) / ln(20/13) = 7 / 0.4308 = 16.25°C.Final Answer: 16.25°C.\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.63 Solution:• Correct Answer: 16.00 to 16.50• Section: Agricultural Engineering | Sub-topic: Heat and Mass Transfer | Type: NAT | Marks: 2Q.63Section: Dairy & Food Engineering   |   Topic: Heat and Mass Transfer   |   Type: NAT   |   Marks: 2Question: In a counter-flow plate heat exchanger, milk is heated from 5°C to 72°C using hot water entering at 85°C and leaving at 25°C. Calculate the Log Mean Temperature Difference (LMTD) for this exchanger. (Answer in °C, round off to two decimal places.) (Answer: 16.00 to 16.50)Answer: 16.00 to 16.50Detailed Explanation:Governing concept: LMTD for a counter-current heat exchanger.ΔT1 (hot inlet end) = Th,in − Tc,out = 85 − 72 = 13°C.ΔT2 (hot outlet end) = Th,out − Tc,in = 25 − 5 = 20°C.LMTD = (ΔT2 − ΔT1) / ln(ΔT2/ΔT1) = (20−13) / ln(20/13) = 7 / 0.4308 = 16.25°C.Final Answer: 16.25°C.\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Heat and Mass Transfer"
+      "topic": "Heat and Mass Transfer",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q64",
       "year": "2027",
       "qnum": 64,
-      "section": "Dairy and Food Engineering",
+      "section": "Section 7: Dairy and Food Engineering",
       "subtopic": "Heat and Mass Transfer",
       "gate_section": "AG",
       "type": "MSQ",
@@ -1267,15 +1333,16 @@
         "D": "The convective heat-transfer coefficient depends only on the fluid's thermal conductivity and is independent of flow velocity"
       },
       "correct_answer": "A, B, C",
-      "solution": "Q.64 Solution:• Correct Answer: A, B, C• Section: Agricultural Engineering | Sub-topic: Heat and Mass Transfer | Type: MSQ | Marks: 2Q.64Section: Dairy & Food Engineering   |   Topic: Heat and Mass Transfer   |   Type: MSQ   |   Marks: 2Question: Which of the following statements regarding heat transfer in dairy/food processing are CORRECT?(A)  For the same inlet and outlet temperatures, the LMTD of a counter-flow heat exchanger is generally greater than or equal to that of an equivalent parallel-flow (co-current) exchanger(B)  The thermal conductivity of most food materials increases with increasing moisture content(C)  In HTST pasteurization, milk is typically held at about 72°C for approximately 15 seconds(D)  The convective heat-transfer coefficient depends only on the fluid's thermal conductivity and is independent of flow velocityAnswer: (A) For the same inlet and outlet temperatures, the LMTD of a counter-flow heat exchanger is generally greater than or equal to that of an equivalent parallel-flow (co-current) exchanger; (B) The thermal conductivity of most food materials increases with increasing moisture content; (C) In HTST pasteurization, milk is typically held at about 72°C for approximately 15 secondsDetailed Explanation:Governing concept: heat-transfer fundamentals as applied to dairy/food processing.(A) Correct — for identical terminal temperatures, counter-flow arrangement yields a higher (or equal) LMTD than parallel-flow, allowing a smaller required heat-transfer area.(B) Correct — water has much higher thermal conductivity than air/dry solids, so moist foods generally conduct heat better than dry ones.(C) Correct — the standard HTST condition is approximately 72°C for 15 s, sufficient to inactivate pathogens such as Coxiella burnetii.(D) Incorrect — the convective heat-transfer coefficient depends strongly on flow velocity (and flow regime, geometry, and fluid properties), not on thermal conductivity alone; this is reflected in correlations such as Nu = f(Re, Pr).Final Answer: (A), (B), (C).\n──────────────────────────────────────────────────",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.64 Solution:• Correct Answer: A, B, C• Section: Agricultural Engineering | Sub-topic: Heat and Mass Transfer | Type: MSQ | Marks: 2Q.64Section: Dairy & Food Engineering   |   Topic: Heat and Mass Transfer   |   Type: MSQ   |   Marks: 2Question: Which of the following statements regarding heat transfer in dairy/food processing are CORRECT?(A)  For the same inlet and outlet temperatures, the LMTD of a counter-flow heat exchanger is generally greater than or equal to that of an equivalent parallel-flow (co-current) exchanger(B)  The thermal conductivity of most food materials increases with increasing moisture content(C)  In HTST pasteurization, milk is typically held at about 72°C for approximately 15 seconds(D)  The convective heat-transfer coefficient depends only on the fluid's thermal conductivity and is independent of flow velocityAnswer: (A) For the same inlet and outlet temperatures, the LMTD of a counter-flow heat exchanger is generally greater than or equal to that of an equivalent parallel-flow (co-current) exchanger; (B) The thermal conductivity of most food materials increases with increasing moisture content; (C) In HTST pasteurization, milk is typically held at about 72°C for approximately 15 secondsDetailed Explanation:Governing concept: heat-transfer fundamentals as applied to dairy/food processing.(A) Correct — for identical terminal temperatures, counter-flow arrangement yields a higher (or equal) LMTD than parallel-flow, allowing a smaller required heat-transfer area.(B) Correct — water has much higher thermal conductivity than air/dry solids, so moist foods generally conduct heat better than dry ones.(C) Correct — the standard HTST condition is approximately 72°C for 15 s, sufficient to inactivate pathogens such as Coxiella burnetii.(D) Incorrect — the convective heat-transfer coefficient depends strongly on flow velocity (and flow regime, geometry, and fluid properties), not on thermal conductivity alone; this is reflected in correlations such as Nu = f(Re, Pr).Final Answer: (A), (B), (C).\n──────────────────────────────────────────────────",
       "isCustomUploaded": true,
-      "topic": "Heat and Mass Transfer"
+      "topic": "Heat and Mass Transfer",
+      "difficulty": "Hard"
     },
     {
       "id": "GATE_2027_MOCK_06_Q65",
       "year": "2027",
       "qnum": 65,
-      "section": "Dairy and Food Engineering",
+      "section": "Section 7: Dairy and Food Engineering",
       "subtopic": "Preservation of Food",
       "gate_section": "AG",
       "type": "NAT",
@@ -1284,9 +1351,10 @@
       "question": "food product has an initial microbial load of 10⁶ CFU/g. A thermal process has a decimal reduction time (D-value) of 2.5 minutes at the process temperature. Calculate the processing time required to achieve a 5-log reduction in microbial population. (Answer in minutes, round off to two decimal places.) (Answer: 12.30 to 12.70)",
       "options": null,
       "correct_answer": "12.30 to 12.70",
-      "solution": "Q.65 Solution:• Correct Answer: 12.30 to 12.70• Section: Agricultural Engineering | Sub-topic: Preservation of Food | Type: NAT | Marks: 2Q.65Section: Dairy & Food Engineering   |   Topic: Preservation of Food   |   Type: NAT   |   Marks: 2Question: A food product has an initial microbial load of 10⁶ CFU/g. A thermal process has a decimal reduction time (D-value) of 2.5 minutes at the process temperature. Calculate the processing time required to achieve a 5-log reduction in microbial population. (Answer in minutes, round off to two decimal places.) (Answer: 12.30 to 12.70)Answer: 12.30 to 12.70Detailed Explanation:Governing concept: thermal death-time kinetics, t = D × (log reduction).t = D × n = 2.5 min × 5 = 12.50 min.Final Answer: 12.50 min.",
+      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Q.65 Solution:• Correct Answer: 12.30 to 12.70• Section: Agricultural Engineering | Sub-topic: Preservation of Food | Type: NAT | Marks: 2Q.65Section: Dairy & Food Engineering   |   Topic: Preservation of Food   |   Type: NAT   |   Marks: 2Question: A food product has an initial microbial load of 10⁶ CFU/g. A thermal process has a decimal reduction time (D-value) of 2.5 minutes at the process temperature. Calculate the processing time required to achieve a 5-log reduction in microbial population. (Answer in minutes, round off to two decimal places.) (Answer: 12.30 to 12.70)Answer: 12.30 to 12.70Detailed Explanation:Governing concept: thermal death-time kinetics, t = D × (log reduction).t = D × n = 2.5 min × 5 = 12.50 min.Final Answer: 12.50 min.",
       "isCustomUploaded": true,
-      "topic": "Preservation of Food"
+      "topic": "Preservation of Food",
+      "difficulty": "Hard"
     }
   ]
 }

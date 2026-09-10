@@ -75,12 +75,12 @@ export default function TestResultModal({ result, onClose, onRetake }) {
       const qState = evalData?.state || questionStates[q.id] || (userAns !== '' ? 'ANSWERED' : 'NOT_VISITED');
 
       const isAttempted = evalData?.isAttempted !== undefined
-        ? evalData.isAttempted
+        ? Boolean(evalData.isAttempted)
         : (userAns !== '' && (qState === 'ANSWERED' || qState === 'ANSWERED_MARKED'));
 
       const key = String(q.correct_answer || q.answer || '').trim();
       let isCorrect = evalData?.isCorrect;
-      if (isCorrect === undefined) {
+      if (isCorrect === undefined || !isAttempted) {
         if (!isAttempted) {
           isCorrect = false;
         } else if (q.type === 'MCQ') {
@@ -106,7 +106,7 @@ export default function TestResultModal({ result, onClose, onRetake }) {
       }
 
       let marksAwarded = evalData?.marksAwarded;
-      if (marksAwarded === undefined) {
+      if (marksAwarded === undefined || !isAttempted) {
         if (!isAttempted) {
           marksAwarded = 0;
         } else if (isCorrect) {

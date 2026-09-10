@@ -164,6 +164,54 @@ export default function AdminQuestionManager({
   const customPapersList = customMockPapers || [];
   const officialPYQYears = [2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007];
 
+  const handleEditReportedQuestion = (rep) => {
+    if (!rep || !rep.question_id) return;
+    const targetId = rep.question_id;
+
+    // 1. Check custom mock papers
+    for (const paper of customPapersList) {
+      const qList = [...(paper.questions || [])].sort((a, b) => getQuestionNumber(a, 0) - getQuestionNumber(b, 0));
+      const idx = qList.findIndex(q => q.id === targetId);
+      if (idx !== -1) {
+        setSelectedPaperTitle(paper.title);
+        setStudioMode('custom-mocks');
+        setPaperQIndex(idx);
+        setSyncStatusMsg(`Switched to ${paper.title} — Q.${getQuestionNumber(qList[idx], idx)}`);
+        setTimeout(() => setSyncStatusMsg(''), 3000);
+        return;
+      }
+    }
+
+    // 2. Check official PYQ years
+    for (const yr of officialPYQYears) {
+      const yrStr = String(yr);
+      if (targetId.includes(yrStr) || (rep.year && parseInt(rep.year, 10) === yr)) {
+        const officialPaper = (mockPapers || []).find(p => parseInt(p.year, 10) === yr || (p.title && p.title.includes(yrStr)));
+        const qList = (officialPaper && officialPaper.questions && officialPaper.questions.length > 0)
+          ? officialPaper.questions
+          : questions.filter(q => parseInt(q.year, 10) === yr || (q.id && q.id.includes(`GATE_${yr}`)));
+        const sortedList = [...qList].sort((a, b) => getQuestionNumber(a, 0) - getQuestionNumber(b, 0));
+        const idx = sortedList.findIndex(q => q.id === targetId);
+        if (idx !== -1) {
+          setSelectedPaperTitle(`GATE ${yr}`);
+          setStudioMode('official-pyqs');
+          setPaperQIndex(idx);
+          setSyncStatusMsg(`Switched to GATE ${yr} — Q.${getQuestionNumber(sortedList[idx], idx)}`);
+          setTimeout(() => setSyncStatusMsg(''), 3000);
+          return;
+        }
+      }
+    }
+
+    // 3. Fallback: Search all questions
+    setStudioMode('all-questions');
+    setSelectedSectionFilter('All');
+    setSearchQuery(targetId);
+    setPaperQIndex(0);
+    setSyncStatusMsg(`Searching for question: ${targetId}`);
+    setTimeout(() => setSyncStatusMsg(''), 3000);
+  };
+
   // Helper: Available topics for selected section
   const availableTopics = useMemo(() => {
     return getOfficialTopicsForSection(formData.section);
@@ -714,6 +762,13 @@ export default function AdminQuestionManager({
                         }`}>
                           Status: {rep.status || 'pending'}
                         </span>
+                        <span className={`text-[10px] font-bold px-2 py-0.5 rounded-md flex items-center gap-1 ${
+                          rep.source === 'whatsapp'
+                            ? 'bg-emerald-50 dark:bg-emerald-950/70 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800'
+                            : 'bg-blue-50 dark:bg-blue-950/70 text-blue-700 dark:text-blue-300 border border-blue-300 dark:border-blue-800'
+                        }`}>
+                          {rep.source === 'whatsapp' ? '📱 WhatsApp' : '🌐 Portal'}
+                        </span>
                       </div>
 
                       <span className="text-[11px] text-slate-500 font-mono">
@@ -745,7 +800,15 @@ export default function AdminQuestionManager({
                         {rep.student_email ? ` (${rep.student_email})` : ''}
                       </span>
 
-                      <div className="flex items-center gap-1.5">
+                      <div className="flex items-center gap-1.5 flex-wrap">
+                        <button
+                          onClick={() => handleEditReportedQuestion(rep)}
+                          className="px-2.5 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold text-[11px] transition cursor-pointer flex items-center gap-1 shadow-xs"
+                          title="Jump straight to this question in Question Studio to correct it"
+                        >
+                          <Edit3 className="w-3 h-3" />
+                          <span>Edit in Studio</span>
+                        </button>
                         <button
                           onClick={() => handleUpdateReport(rep.id, 'reviewed')}
                           className="px-2.5 py-1 rounded-lg bg-sky-50 dark:bg-sky-950/80 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800 font-bold text-[11px] hover:bg-sky-100 transition cursor-pointer"

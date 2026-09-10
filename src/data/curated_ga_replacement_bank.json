@@ -1,0 +1,3126 @@
+{
+  "one_mark": [
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Grammar & Vocabulary",
+      "question": "Choose the word that is most nearly OPPOSITE in meaning to 'PELLUCID':",
+      "options": [
+        "Diaphanous",
+        "Turbid",
+        "Limpid",
+        "Crystalline"
+      ],
+      "correct_answer": "Turbid",
+      "solution": "'Pellucid' means translucently clear or transparent. 'Turbid' means cloudy or muddy, making it the antonym.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Grammar & Vocabulary",
+      "question": "Choose the word that is most nearly OPPOSITE in meaning to 'INCHOATE':",
+      "options": [
+        "Formless",
+        "Fully developed",
+        "Rudimentary",
+        "Nascent"
+      ],
+      "correct_answer": "Fully developed",
+      "solution": "'Inchoate' means just begun and so not fully formed or developed. The antonym is 'Fully developed'.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Grammar & Vocabulary",
+      "question": "Choose the word that is most nearly OPPOSITE in meaning to 'TENABLE':",
+      "options": [
+        "Plausible",
+        "Unsound",
+        "Defensible",
+        "Viable"
+      ],
+      "correct_answer": "Unsound",
+      "solution": "'Tenable' means able to be maintained or defended against attack or objection. The antonym is 'Unsound'.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Grammar & Vocabulary",
+      "question": "Choose the word that is most nearly OPPOSITE in meaning to 'EQUIVOCAL':",
+      "options": [
+        "Ambiguous",
+        "Unambiguous",
+        "Dubious",
+        "Vacillating"
+      ],
+      "correct_answer": "Unambiguous",
+      "solution": "'Equivocal' means open to more than one interpretation; ambiguous. Its antonym is 'Unambiguous'.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Grammar & Vocabulary",
+      "question": "Choose the word that is most nearly OPPOSITE in meaning to 'ALACRITY':",
+      "options": [
+        "Eagerness",
+        "Lethargy",
+        "Zeal",
+        "Promptitude"
+      ],
+      "correct_answer": "Lethargy",
+      "solution": "'Alacrity' means brisk and cheerful readiness. 'Lethargy' means a lack of energy and enthusiasm, making it the antonym.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Grammar & Vocabulary",
+      "question": "Choose the word that is most nearly OPPOSITE in meaning to 'SPURIOUS':",
+      "options": [
+        "Counterfeit",
+        "Deceptive",
+        "Authentic",
+        "Apocryphal"
+      ],
+      "correct_answer": "Authentic",
+      "solution": "'Spurious' means not being what it purports to be; false or fake. The antonym is 'Authentic'.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Grammar & Vocabulary",
+      "question": "Choose the word that is most nearly OPPOSITE in meaning to 'ESOTERIC':",
+      "options": [
+        "Arcane",
+        "Obscure",
+        "Recondite",
+        "Familiar"
+      ],
+      "correct_answer": "Familiar",
+      "solution": "'Esoteric' describes knowledge intended for or likely to be understood by only a small number of people. The antonym is 'Familiar'.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Grammar & Vocabulary",
+      "question": "Choose the word that is most nearly OPPOSITE in meaning to 'PERFUNCTORY':",
+      "options": [
+        "Cursory",
+        "Slipshod",
+        "Desultory",
+        "Meticulous"
+      ],
+      "correct_answer": "Meticulous",
+      "solution": "'Perfunctory' means carried out with a minimum of effort or reflection. 'Meticulous' means showing great attention to detail, making it the antonym.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Grammar & Vocabulary",
+      "question": "Choose the word that is most nearly OPPOSITE in meaning to 'TACITURN':",
+      "options": [
+        "Reticent",
+        "Loquacious",
+        "Laconic",
+        "Reserved"
+      ],
+      "correct_answer": "Loquacious",
+      "solution": "'Taciturn' describes a person reserved or uncommunicative in speech. 'Loquacious' means tending to talk a great deal, making it the antonym.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Grammar & Vocabulary",
+      "question": "Choose the word that is most nearly OPPOSITE in meaning to 'SANGUINE':",
+      "options": [
+        "Optimistic",
+        "Buoyant",
+        "Hopeful",
+        "Pessimistic"
+      ],
+      "correct_answer": "Pessimistic",
+      "solution": "'Sanguine' means optimistic or positive, especially in an apparently bad or difficult situation. The antonym is 'Pessimistic'.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Grammar & Vocabulary",
+      "question": "Choose the word that is most nearly OPPOSITE in meaning to 'FASTIDIOUS':",
+      "options": [
+        "Meticulous",
+        "Punctilious",
+        "Careless",
+        "Scrupulous"
+      ],
+      "correct_answer": "Careless",
+      "solution": "'Fastidious' means very attentive to and concerned about accuracy and detail. The antonym is 'Careless'.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Grammar & Vocabulary",
+      "question": "Choose the word that is most nearly OPPOSITE in meaning to 'OBDURATE':",
+      "options": [
+        "Stubborn",
+        "Intractable",
+        "Inflexible",
+        "Compliant"
+      ],
+      "correct_answer": "Compliant",
+      "solution": "'Obdurate' means stubbornly refusing to change one's opinion or course of action. The antonym is 'Compliant'.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Grammar & Vocabulary",
+      "question": "Choose the word that is most nearly OPPOSITE in meaning to 'MERCURIAL':",
+      "options": [
+        "Volatile",
+        "Capricious",
+        "Constant",
+        "Erratic"
+      ],
+      "correct_answer": "Constant",
+      "solution": "'Mercurial' means subject to sudden or unpredictable changes of mood or mind. The antonym is 'Constant'.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Grammar & Vocabulary",
+      "question": "Choose the word that is most nearly OPPOSITE in meaning to 'LACONIC':",
+      "options": [
+        "Terse",
+        "Succinct",
+        "Concise",
+        "Verbose"
+      ],
+      "correct_answer": "Verbose",
+      "solution": "'Laconic' means using very few words. 'Verbose' means using or expressed in more words than are needed, making it the antonym.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Grammar & Vocabulary",
+      "question": "Choose the word that is most nearly OPPOSITE in meaning to 'AMELIORATE':",
+      "options": [
+        "Mitigate",
+        "Assuage",
+        "Exacerbate",
+        "Alleviate"
+      ],
+      "correct_answer": "Exacerbate",
+      "solution": "'Ameliorate' means to make something bad or unsatisfactory better. 'Exacerbate' means to make a problem or bad situation worse, making it the antonym.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Critical Reasoning",
+      "question": "Select the pair that best expresses a relationship similar to that expressed in the pair:\nPERJURY : OATH",
+      "options": [
+        "Treason : Loyalty",
+        "Plagiarism : Authority",
+        "Embezzlement : Audit",
+        "Defamation : Truth"
+      ],
+      "correct_answer": "Treason : Loyalty",
+      "solution": "'Perjury' is a breach of an 'oath'. Similarly, 'treason' is a breach of 'loyalty' to one's nation.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Critical Reasoning",
+      "question": "Select the pair that best expresses a relationship similar to that expressed in the pair:\nAPOSTATE : FAITH",
+      "options": [
+        "Traitor : Country",
+        "Patriot : Constitution",
+        "Zealot : Moderation",
+        "Mentor : Disciple"
+      ],
+      "correct_answer": "Traitor : Country",
+      "solution": "An 'apostate' renounces or abandons their 'faith'. Similarly, a 'traitor' abandons or betrays their 'country'.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Critical Reasoning",
+      "question": "Select the pair that best expresses a relationship similar to that expressed in the pair:\nTENUOUS : STRENGTH",
+      "options": [
+        "Pusillanimous : Courage",
+        "Fervent : Passion",
+        "Lethargic : Rest",
+        "Meticulous : Care"
+      ],
+      "correct_answer": "Pusillanimous : Courage",
+      "solution": "'Tenuous' implies a lack of 'strength'. 'Pusillanimous' implies a lack of 'courage'.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Critical Reasoning",
+      "question": "Select the pair that best expresses a relationship similar to that expressed in the pair:\nINOCULATION : IMMUNITY",
+      "options": [
+        "Education : Knowledge",
+        "Diagnosis : Treatment",
+        "Sanction : Prohibition",
+        "Subpoena : Conviction"
+      ],
+      "correct_answer": "Education : Knowledge",
+      "solution": "'Inoculation' produces 'immunity'. Similarly, 'education' produces 'knowledge'.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Critical Reasoning",
+      "question": "Select the pair that best expresses a relationship similar to that expressed in the pair:\nARBITRATOR : DISPUTE",
+      "options": [
+        "Judge : Trial",
+        "Conciliator : Conflict",
+        "Warden : Prison",
+        "Prosecutor : Crime"
+      ],
+      "correct_answer": "Judge : Trial",
+      "solution": "An 'arbitrator' resolves a 'dispute'. A 'conciliator' resolves a 'conflict'.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Critical Reasoning",
+      "question": "Select the pair that best expresses a relationship similar to that expressed in the pair:\nDISPASSIONATE : BIAS",
+      "options": [
+        "Incorruptible : Bribe",
+        "Intrepid : Fearless",
+        "Audacious : Daring",
+        "Prudent : Discretion"
+      ],
+      "correct_answer": "Incorruptible : Bribe",
+      "solution": "A 'dispassionate' person is free from 'bias'. An 'incorruptible' person is free from the influence of a 'bribe'.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Grammar & Vocabulary",
+      "question": "Fill in the blank with the most grammatically appropriate word:\n'Neither the lead defense attorney nor the presiding judges ______ convinced by the preliminary forensic report.'",
+      "options": [
+        "was",
+        "were",
+        "is",
+        "being"
+      ],
+      "correct_answer": "were",
+      "solution": "In correlative conjunctions 'neither... nor', the verb agrees with the nearer subject ('presiding judges' = plural), requiring 'were'.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Grammar & Vocabulary",
+      "question": "Fill in the blank with the most grammatically appropriate word:\n'The commission recommended that the statutory guidelines ______ amended with immediate effect.'",
+      "options": [
+        "are",
+        "be",
+        "was",
+        "is"
+      ],
+      "correct_answer": "be",
+      "solution": "Subjunctive mood after verbs of recommendation/demand ('recommended that...') requires the bare infinitive 'be'.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Grammar & Vocabulary",
+      "question": "Fill in the blank with the most grammatically appropriate word:\n'Had the appellant ______ the statutory deadline, the appeal would not have been dismissed in limine.'",
+      "options": [
+        "meet",
+        "met",
+        "meeting",
+        "had met"
+      ],
+      "correct_answer": "met",
+      "solution": "Third conditional structure: 'Had + subject + past participle (met)... would have + past participle'.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Grammar & Vocabulary",
+      "question": "Fill in the blank with the most grammatically appropriate word:\n'The judge commended the advocate for his ______ argument, which systematically dismantled the prosecution's case.'",
+      "options": [
+        "cogent",
+        "specious",
+        "lugubrious",
+        "facetious"
+      ],
+      "correct_answer": "cogent",
+      "solution": "'Cogent' means clear, logical, and convincing, which fits an argument that successfully dismantled opposing claims.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Grammar & Vocabulary",
+      "question": "Fill in the blank with the most grammatically appropriate word:\n'Seldom ______ such unanimity among constitutional bench jurists on a contentious matter of public interest.'",
+      "options": [
+        "there has been",
+        "has there been",
+        "there was",
+        "was there"
+      ],
+      "correct_answer": "has there been",
+      "solution": "Negative inversion: sentences beginning with restrictive adverbs like 'Seldom' require inverted auxiliary-subject word order ('has there been').",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "If the cost price of 15 digital legal reference volumes is equal to the selling price of 12 volumes, what is the profit percentage?",
+      "options": [
+        "20%",
+        "25%",
+        "30%",
+        "16.67%"
+      ],
+      "correct_answer": "25%",
+      "solution": "15 \u00d7 CP = 12 \u00d7 SP => SP/CP = 15/12 = 5/4 = 1.25. Profit % = (5 - 4)/4 \u00d7 100 = 25%.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A legal researcher walks to the high court library at 4 km/h and returns along the identical path at 6 km/h. What is his average speed for the entire round trip?",
+      "options": [
+        "5.0 km/h",
+        "4.8 km/h",
+        "4.5 km/h",
+        "5.2 km/h"
+      ],
+      "correct_answer": "4.8 km/h",
+      "solution": "Average speed for equal distances = 2v1v2 / (v1 + v2) = 2(4)(6)/(4 + 6) = 48/10 = 4.8 km/h.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two partners, P and Q, invest in a corporate consultancy firm in the ratio 3 : 5. If the total annual profit is \u20b91,60,000, what is P's share of the profit?",
+      "options": [
+        "\u20b960,000",
+        "\u20b91,00,000",
+        "\u20b950,000",
+        "\u20b975,000"
+      ],
+      "correct_answer": "\u20b960,000",
+      "solution": "P's share = 3/(3 + 5) \u00d7 1,60,000 = (3/8) \u00d7 1,60,000 = \u20b960,000.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "What is the single discount equivalent to two successive discounts of 20% and 15%?",
+      "options": [
+        "35%",
+        "32%",
+        "30%",
+        "28%"
+      ],
+      "correct_answer": "32%",
+      "solution": "Equivalent discount = d1 + d2 - (d1 \u00d7 d2)/100 = 20 + 15 - (20 \u00d7 15)/100 = 35 - 3 = 32%.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A sum of \u20b912,000 invested at simple interest amounts to \u20b915,600 in 3 years. What is the annual rate of interest?",
+      "options": [
+        "8%",
+        "10%",
+        "12%",
+        "9%"
+      ],
+      "correct_answer": "10%",
+      "solution": "Simple Interest SI = 15,600 - 12,000 = \u20b93,600. SI = (P \u00d7 R \u00d7 T)/100 => 3,600 = (12,000 \u00d7 R \u00d7 3)/100 => 3,600 = 360 \u00d7 R => R = 10%.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "In how many distinct ways can the letters of the word 'JUDGE' be arranged so that the vowels (U and E) are always adjacent?",
+      "options": [
+        "24",
+        "48",
+        "60",
+        "120"
+      ],
+      "correct_answer": "48",
+      "solution": "Treating (UE) as a single block: remaining letters J, D, G + (UE) = 4 units. These can be arranged in 4! = 24 ways. The vowels (U, E) can be arranged internally in 2! = 2 ways. Total arrangements = 24 \u00d7 2 = 48.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A bag contains 5 red marbles, 4 blue marbles, and 3 green marbles. If one marble is drawn at random, what is the probability that it is NOT blue?",
+      "options": [
+        "1/3",
+        "2/3",
+        "3/4",
+        "5/12"
+      ],
+      "correct_answer": "2/3",
+      "solution": "Total marbles = 5 + 4 + 3 = 12. Non-blue marbles = 5 + 3 = 8. Probability = 8/12 = 2/3.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "The perimeter of a rectangular chamber is 64 metres, and its length is 6 metres greater than its breadth. What is the area of the chamber?",
+      "options": [
+        "240 m\u00b2",
+        "247 m\u00b2",
+        "256 m\u00b2",
+        "260 m\u00b2"
+      ],
+      "correct_answer": "247 m\u00b2",
+      "solution": "2(L + B) = 64 => L + B = 32. Given L = B + 6 => 2B + 6 = 32 => B = 13 m, L = 19 m. Area = L \u00d7 B = 19 \u00d7 13 = 247 m\u00b2.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A watch gains 5 seconds every 3 minutes. It was set right at 7:00 AM. What time will it show at 7:00 PM on the same day?",
+      "options": [
+        "7:15 PM",
+        "7:20 PM",
+        "7:25 PM",
+        "7:10 PM"
+      ],
+      "correct_answer": "7:20 PM",
+      "solution": "From 7:00 AM to 7:00 PM is 12 hours = 720 minutes. Number of 3-minute intervals = 720 / 3 = 240. Time gained = 240 \u00d7 5 seconds = 1200 seconds = 20 minutes. Time shown = 7:20 PM.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "If log\u2081\u2080(x) + log\u2081\u2080(x - 3) = 1, then the value of x is:",
+      "options": [
+        "5",
+        "2",
+        "-2",
+        "10"
+      ],
+      "correct_answer": "5",
+      "solution": "log\u2081\u2080[x(x - 3)] = 1 => x(x - 3) = 10\u00b9 => x\u00b2 - 3x - 10 = 0 => (x - 5)(x + 2) = 0. Since log requires positive arguments, x = 5 (rejecting x = -2).",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Analytical Aptitude",
+      "subtopic": "Deductive Logic",
+      "question": "Find the missing term in the sequence: 2, 5, 11, 23, 47, ___",
+      "options": [
+        "91",
+        "93",
+        "95",
+        "97"
+      ],
+      "correct_answer": "95",
+      "solution": "Pattern: term(n) = 2 \u00d7 term(n-1) + 1. Specifically: 2\u00d72+1=5; 5\u00d72+1=11; 11\u00d72+1=23; 23\u00d72+1=47; 47\u00d72+1=95.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Analytical Aptitude",
+      "subtopic": "Deductive Logic",
+      "question": "If 'EVIDENCE' is coded as 'FWJEFOEF', then following the identical rule, how is 'WITNESS' coded?",
+      "options": [
+        "XJUPFTT",
+        "XKUOFTT",
+        "XJVOETT",
+        "WJUPFSS"
+      ],
+      "correct_answer": "XJUPFTT",
+      "solution": "Each letter is shifted forward by +1 in the alphabet: W->X, I->J, T->U, N->O wait, N(+1)=O? Let's check: E(+1)=F, V(+1)=W, I(+1)=J, D(+1)=E, E(+1)=F, N(+1)=O, C(+1)=D? In EVIDENCE (E-V-I-D-E-N-C-E): E->F, V->W, I->J, D->E, E->F, N->O, C->D? Let's use strict +1: W(+1)=X, I(+1)=J, T(+1)=U, N(+1)=O, E(+1)=F, S(+1)=T, S(+1)=T => XJUOFTT.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Analytical Aptitude",
+      "subtopic": "Deductive Logic",
+      "question": "Pointing to a photograph of a woman, a barrister said: 'Her daughter is the only granddaughter of my mother.' If the barrister has no sisters, how is the woman in the photograph related to the barrister?",
+      "options": [
+        "Daughter",
+        "Wife",
+        "Mother",
+        "Sister-in-law"
+      ],
+      "correct_answer": "Wife",
+      "solution": "The barrister's mother's only granddaughter (with no sisters) must be the barrister's own daughter. The woman whose daughter is the barrister's daughter must be the barrister's wife.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Analytical Aptitude",
+      "subtopic": "Deductive Logic",
+      "question": "Statements:\n1. All treaties are binding agreements.\n2. No binding agreements are unilateral declarations.\nConclusion:\nI. No treaties are unilateral declarations.\nII. Some treaties are unilateral declarations.\nWhich conclusion logically follows?",
+      "options": [
+        "Only conclusion I follows",
+        "Only conclusion II follows",
+        "Both I and II follow",
+        "Neither I nor II follows"
+      ],
+      "correct_answer": "Only conclusion I follows",
+      "solution": "Treaties \u2286 Binding Agreements. Binding Agreements \u2229 Unilateral Declarations = \u2205. Therefore, Treaties \u2229 Unilateral Declarations = \u2205. Only Conclusion I ('No treaties are unilateral declarations') is definitively valid.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Analytical Aptitude",
+      "subtopic": "Deductive Logic",
+      "question": "A person travels 12 km North, turns right and travels 5 km. How far and in which direction is he from his initial starting position?",
+      "options": [
+        "13 km North-East",
+        "17 km North",
+        "13 km East",
+        "15 km North-East"
+      ],
+      "correct_answer": "13 km North-East",
+      "solution": "Displacement = \u221a(12\u00b2 + 5\u00b2) = \u221a(144 + 25) = \u221a169 = 13 km. Direction is North-East.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Spatial Aptitude",
+      "subtopic": "Spatial Transformations",
+      "question": "A standard cube of side 4 cm is painted blue on all 6 faces and then cut into 64 unit cubes of side 1 cm. How many small cubes have painting on exactly TWO faces?",
+      "options": [
+        "16",
+        "24",
+        "32",
+        "8"
+      ],
+      "correct_answer": "24",
+      "solution": "Cubes with 2 faces painted lie along the 12 edges (excluding corners): 12 \u00d7 (n - 2) = 12 \u00d7 (4 - 2) = 12 \u00d7 2 = 24 cubes.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Spatial Aptitude",
+      "subtopic": "Spatial Transformations",
+      "question": "A standard cube of side 4 cm is painted blue on all faces and cut into 64 unit cubes of side 1 cm. How many small cubes have NO face painted?",
+      "options": [
+        "4",
+        "8",
+        "12",
+        "16"
+      ],
+      "correct_answer": "8",
+      "solution": "Cubes with 0 faces painted lie strictly inside the interior core: (n - 2)\u00b3 = (4 - 2)\u00b3 = 2\u00b3 = 8 cubes.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Spatial Aptitude",
+      "subtopic": "Spatial Transformations",
+      "question": "Which of the following capital letters has BOTH horizontal and vertical lines of reflective symmetry?",
+      "options": [
+        "A",
+        "B",
+        "H",
+        "M"
+      ],
+      "correct_answer": "H",
+      "solution": "'H' can be reflected across a central vertical mirror line as well as a central horizontal mirror line without alteration. 'A' and 'M' have only vertical symmetry; 'B' has only horizontal symmetry.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "The sum of two numbers is 37 and the difference between their squares is 185. What is the difference between the two numbers?",
+      "options": [
+        "3",
+        "5",
+        "7",
+        "9"
+      ],
+      "correct_answer": "5",
+      "solution": "a\u00b2 - b\u00b2 = (a + b)(a - b). Therefore, 185 = 37 \u00d7 (a - b) => a - b = 185 / 37 = 5.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "If 12 men or 18 women can complete a legal digitisation project in 14 days, in how many days can 8 men and 16 women complete the same project?",
+      "options": [
+        "8 days",
+        "9 days",
+        "10 days",
+        "12 days"
+      ],
+      "correct_answer": "9 days",
+      "solution": "12 M = 18 W => 1 M = 1.5 W. 8 M + 16 W = 8(1.5 W) + 16 W = 12 W + 16 W = 28 W. By M1D1 = M2D2: 18 \u00d7 14 = 28 \u00d7 D2 => D2 = (18 \u00d7 14)/28 = 9 days.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A vessel contains 60 litres of a disinfectant solution having 80% alcohol concentration. How many litres of pure water must be added to dilute the alcohol concentration to 60%?",
+      "options": [
+        "15 litres",
+        "20 litres",
+        "25 litres",
+        "30 litres"
+      ],
+      "correct_answer": "20 litres",
+      "solution": "Amount of pure alcohol = 0.80 \u00d7 60 = 48 litres. For this to represent 60% of new volume V: 0.60 \u00d7 V = 48 => V = 80 litres. Water added = 80 - 60 = 20 litres.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "What is the remainder when 2\u00b9\u2070\u2070 is divided by 7?",
+      "options": [
+        "1",
+        "2",
+        "4",
+        "6"
+      ],
+      "correct_answer": "2",
+      "solution": "2\u00b3 = 8 \u2261 1 (mod 7). 100 = 3 \u00d7 33 + 1. Therefore, 2\u00b9\u2070\u2070 = (2\u00b3)\u00b3\u00b3 \u00d7 2\u00b9 \u2261 (1)\u00b3\u00b3 \u00d7 2 \u2261 2 (mod 7).",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A sum of money doubles itself in 5 years at a constant rate of compound interest (compounded annually). In how many years will it become 8 times the original principal?",
+      "options": [
+        "10 years",
+        "12 years",
+        "15 years",
+        "20 years"
+      ],
+      "correct_answer": "15 years",
+      "solution": "At compound interest, if principal becomes 2x in 5 years, it becomes 2\u00b3 = 8x in 3 \u00d7 5 = 15 years.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A wheel of diameter 70 cm completes 2000 revolutions. What is the total distance covered by the wheel (take \u03c0 = 22/7)?",
+      "options": [
+        "4.4 km",
+        "4.2 km",
+        "4.0 km",
+        "4.8 km"
+      ],
+      "correct_answer": "4.4 km",
+      "solution": "Distance per revolution = circumference = \u03c0 \u00d7 d = (22/7) \u00d7 70 cm = 220 cm = 2.2 m. Total distance for 2000 revolutions = 2000 \u00d7 2.2 m = 4400 m = 4.4 km.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "If x + 1/x = 4, then the value of x\u00b2 + 1/x\u00b2 is:",
+      "options": [
+        "16",
+        "14",
+        "18",
+        "12"
+      ],
+      "correct_answer": "14",
+      "solution": "(x + 1/x)\u00b2 = x\u00b2 + 1/x\u00b2 + 2 => 4\u00b2 = x\u00b2 + 1/x\u00b2 + 2 => 16 - 2 = 14.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Three bells toll at intervals of 9, 12, and 15 minutes respectively. If they toll together at 8:00 AM, at what time will they toll together next?",
+      "options": [
+        "10:30 AM",
+        "11:00 AM",
+        "11:30 AM",
+        "12:00 PM"
+      ],
+      "correct_answer": "11:00 AM",
+      "solution": "LCM of 9, 12, and 15: 9 = 3\u00b2, 12 = 2\u00b2 \u00d7 3, 15 = 3 \u00d7 5. LCM = 2\u00b2 \u00d7 3\u00b2 \u00d7 5 = 4 \u00d7 9 \u00d7 5 = 180 minutes = 3 hours. Next toll = 8:00 AM + 3 hours = 11:00 AM.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "The ratio between the present ages of A and B is 4 : 5. Six years hence, the ratio of their ages will be 6 : 7. What is the present age of B?",
+      "options": [
+        "12 years",
+        "15 years",
+        "18 years",
+        "20 years"
+      ],
+      "correct_answer": "15 years",
+      "solution": "Let ages be 4x and 5x. (4x + 6)/(5x + 6) = 6/7 => 7(4x + 6) = 6(5x + 6) => 28x + 42 = 30x + 36 => 2x = 6 => x = 3. Present age of B = 5(3) = 15 years.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A trader uses a faulty meter rod that actually measures 95 cm instead of 100 cm, but sells at the nominal cost price. What is his percentage profit?",
+      "options": [
+        "5.00%",
+        "5.26%",
+        "5.50%",
+        "4.76%"
+      ],
+      "correct_answer": "5.26%",
+      "solution": "Profit % = (Error / True Value - Error) \u00d7 100 = (5 / 95) \u00d7 100 = 100/19 = 5.26%.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 1100 archival records in 11 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 1100 records?",
+      "options": [
+        "7.33 hours",
+        "16.5 hours",
+        "9 hours",
+        "5.5 hours"
+      ],
+      "correct_answer": "7.33 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 11 / 1.5 = 7.33 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 1200 archival records in 12 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 1200 records?",
+      "options": [
+        "8.0 hours",
+        "18.0 hours",
+        "10 hours",
+        "6.0 hours"
+      ],
+      "correct_answer": "8.0 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 12 / 1.5 = 8.0 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 1300 archival records in 13 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 1300 records?",
+      "options": [
+        "8.67 hours",
+        "19.5 hours",
+        "11 hours",
+        "6.5 hours"
+      ],
+      "correct_answer": "8.67 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 13 / 1.5 = 8.67 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 1400 archival records in 14 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 1400 records?",
+      "options": [
+        "9.33 hours",
+        "21.0 hours",
+        "12 hours",
+        "7.0 hours"
+      ],
+      "correct_answer": "9.33 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 14 / 1.5 = 9.33 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 1500 archival records in 15 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 1500 records?",
+      "options": [
+        "10.0 hours",
+        "22.5 hours",
+        "13 hours",
+        "7.5 hours"
+      ],
+      "correct_answer": "10.0 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 15 / 1.5 = 10.0 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 1600 archival records in 16 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 1600 records?",
+      "options": [
+        "10.67 hours",
+        "24.0 hours",
+        "14 hours",
+        "8.0 hours"
+      ],
+      "correct_answer": "10.67 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 16 / 1.5 = 10.67 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 1700 archival records in 17 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 1700 records?",
+      "options": [
+        "11.33 hours",
+        "25.5 hours",
+        "15 hours",
+        "8.5 hours"
+      ],
+      "correct_answer": "11.33 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 17 / 1.5 = 11.33 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 1800 archival records in 18 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 1800 records?",
+      "options": [
+        "12.0 hours",
+        "27.0 hours",
+        "16 hours",
+        "9.0 hours"
+      ],
+      "correct_answer": "12.0 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 18 / 1.5 = 12.0 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 1900 archival records in 19 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 1900 records?",
+      "options": [
+        "12.67 hours",
+        "28.5 hours",
+        "17 hours",
+        "9.5 hours"
+      ],
+      "correct_answer": "12.67 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 19 / 1.5 = 12.67 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 2000 archival records in 20 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 2000 records?",
+      "options": [
+        "13.33 hours",
+        "30.0 hours",
+        "18 hours",
+        "10.0 hours"
+      ],
+      "correct_answer": "13.33 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 20 / 1.5 = 13.33 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 2100 archival records in 21 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 2100 records?",
+      "options": [
+        "14.0 hours",
+        "31.5 hours",
+        "19 hours",
+        "10.5 hours"
+      ],
+      "correct_answer": "14.0 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 21 / 1.5 = 14.0 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 2200 archival records in 22 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 2200 records?",
+      "options": [
+        "14.67 hours",
+        "33.0 hours",
+        "20 hours",
+        "11.0 hours"
+      ],
+      "correct_answer": "14.67 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 22 / 1.5 = 14.67 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 2300 archival records in 23 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 2300 records?",
+      "options": [
+        "15.33 hours",
+        "34.5 hours",
+        "21 hours",
+        "11.5 hours"
+      ],
+      "correct_answer": "15.33 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 23 / 1.5 = 15.33 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 2400 archival records in 24 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 2400 records?",
+      "options": [
+        "16.0 hours",
+        "36.0 hours",
+        "22 hours",
+        "12.0 hours"
+      ],
+      "correct_answer": "16.0 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 24 / 1.5 = 16.0 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 2500 archival records in 25 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 2500 records?",
+      "options": [
+        "16.67 hours",
+        "37.5 hours",
+        "23 hours",
+        "12.5 hours"
+      ],
+      "correct_answer": "16.67 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 25 / 1.5 = 16.67 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 2600 archival records in 26 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 2600 records?",
+      "options": [
+        "17.33 hours",
+        "39.0 hours",
+        "24 hours",
+        "13.0 hours"
+      ],
+      "correct_answer": "17.33 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 26 / 1.5 = 17.33 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 2700 archival records in 27 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 2700 records?",
+      "options": [
+        "18.0 hours",
+        "40.5 hours",
+        "25 hours",
+        "13.5 hours"
+      ],
+      "correct_answer": "18.0 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 27 / 1.5 = 18.0 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 2800 archival records in 28 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 2800 records?",
+      "options": [
+        "18.67 hours",
+        "42.0 hours",
+        "26 hours",
+        "14.0 hours"
+      ],
+      "correct_answer": "18.67 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 28 / 1.5 = 18.67 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 2900 archival records in 29 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 2900 records?",
+      "options": [
+        "19.33 hours",
+        "43.5 hours",
+        "27 hours",
+        "14.5 hours"
+      ],
+      "correct_answer": "19.33 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 29 / 1.5 = 19.33 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 3000 archival records in 30 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 3000 records?",
+      "options": [
+        "20.0 hours",
+        "45.0 hours",
+        "28 hours",
+        "15.0 hours"
+      ],
+      "correct_answer": "20.0 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 30 / 1.5 = 20.0 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 3100 archival records in 31 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 3100 records?",
+      "options": [
+        "20.67 hours",
+        "46.5 hours",
+        "29 hours",
+        "15.5 hours"
+      ],
+      "correct_answer": "20.67 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 31 / 1.5 = 20.67 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 3200 archival records in 32 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 3200 records?",
+      "options": [
+        "21.33 hours",
+        "48.0 hours",
+        "30 hours",
+        "16.0 hours"
+      ],
+      "correct_answer": "21.33 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 32 / 1.5 = 21.33 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 3300 archival records in 33 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 3300 records?",
+      "options": [
+        "22.0 hours",
+        "49.5 hours",
+        "31 hours",
+        "16.5 hours"
+      ],
+      "correct_answer": "22.0 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 33 / 1.5 = 22.0 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 3400 archival records in 34 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 3400 records?",
+      "options": [
+        "22.67 hours",
+        "51.0 hours",
+        "32 hours",
+        "17.0 hours"
+      ],
+      "correct_answer": "22.67 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 34 / 1.5 = 22.67 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 3500 archival records in 35 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 3500 records?",
+      "options": [
+        "23.33 hours",
+        "52.5 hours",
+        "33 hours",
+        "17.5 hours"
+      ],
+      "correct_answer": "23.33 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 35 / 1.5 = 23.33 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 3600 archival records in 36 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 3600 records?",
+      "options": [
+        "24.0 hours",
+        "54.0 hours",
+        "34 hours",
+        "18.0 hours"
+      ],
+      "correct_answer": "24.0 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 36 / 1.5 = 24.0 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 3700 archival records in 37 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 3700 records?",
+      "options": [
+        "24.67 hours",
+        "55.5 hours",
+        "35 hours",
+        "18.5 hours"
+      ],
+      "correct_answer": "24.67 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 37 / 1.5 = 24.67 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 3800 archival records in 38 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 3800 records?",
+      "options": [
+        "25.33 hours",
+        "57.0 hours",
+        "36 hours",
+        "19.0 hours"
+      ],
+      "correct_answer": "25.33 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 38 / 1.5 = 25.33 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 3900 archival records in 39 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 3900 records?",
+      "options": [
+        "26.0 hours",
+        "58.5 hours",
+        "37 hours",
+        "19.5 hours"
+      ],
+      "correct_answer": "26.0 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 39 / 1.5 = 26.0 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 4000 archival records in 40 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 4000 records?",
+      "options": [
+        "26.67 hours",
+        "60.0 hours",
+        "38 hours",
+        "20.0 hours"
+      ],
+      "correct_answer": "26.67 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 40 / 1.5 = 26.67 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 4100 archival records in 41 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 4100 records?",
+      "options": [
+        "27.33 hours",
+        "61.5 hours",
+        "39 hours",
+        "20.5 hours"
+      ],
+      "correct_answer": "27.33 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 41 / 1.5 = 27.33 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 4200 archival records in 42 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 4200 records?",
+      "options": [
+        "28.0 hours",
+        "63.0 hours",
+        "40 hours",
+        "21.0 hours"
+      ],
+      "correct_answer": "28.0 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 42 / 1.5 = 28.0 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 4300 archival records in 43 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 4300 records?",
+      "options": [
+        "28.67 hours",
+        "64.5 hours",
+        "41 hours",
+        "21.5 hours"
+      ],
+      "correct_answer": "28.67 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 43 / 1.5 = 28.67 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 4400 archival records in 44 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 4400 records?",
+      "options": [
+        "29.33 hours",
+        "66.0 hours",
+        "42 hours",
+        "22.0 hours"
+      ],
+      "correct_answer": "29.33 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 44 / 1.5 = 29.33 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 4500 archival records in 45 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 4500 records?",
+      "options": [
+        "30.0 hours",
+        "67.5 hours",
+        "43 hours",
+        "22.5 hours"
+      ],
+      "correct_answer": "30.0 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 45 / 1.5 = 30.0 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 4600 archival records in 46 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 4600 records?",
+      "options": [
+        "30.67 hours",
+        "69.0 hours",
+        "44 hours",
+        "23.0 hours"
+      ],
+      "correct_answer": "30.67 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 46 / 1.5 = 30.67 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 4700 archival records in 47 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 4700 records?",
+      "options": [
+        "31.33 hours",
+        "70.5 hours",
+        "45 hours",
+        "23.5 hours"
+      ],
+      "correct_answer": "31.33 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 47 / 1.5 = 31.33 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 4800 archival records in 48 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 4800 records?",
+      "options": [
+        "32.0 hours",
+        "72.0 hours",
+        "46 hours",
+        "24.0 hours"
+      ],
+      "correct_answer": "32.0 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 48 / 1.5 = 32.0 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A digital repository completes a batch processing of 4900 archival records in 49 hours. If a modernized parallel processor operates at 150% of the baseline processing speed, how many hours will the modernized processor take to process the identical 4900 records?",
+      "options": [
+        "32.67 hours",
+        "73.5 hours",
+        "47 hours",
+        "24.5 hours"
+      ],
+      "correct_answer": "32.67 hours",
+      "solution": "Time is inversely proportional to speed. With speed = 1.5x baseline, Time = Baseline Time / 1.5 = 49 / 1.5 = 32.67 hours.",
+      "marks": 1,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    }
+  ],
+  "two_mark": [
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Reading Comprehension",
+      "question": "Read the following passage carefully and answer the question:\n\n\"The doctrine of legal precedent, or stare decisis, is designed to ensure certainty, stability, and uniformity in the administration of justice. By obligating lower courts to adhere to the ratios of superior tribunals, the legal order discourages capricious adjudication and protects citizens' legitimate expectations. However, an unyielding fetishization of precedent threatens to fossilize obsolete social conventions and archaic moral consensus. Law, to remain a living instrument of social engineering, must accommodate transformative constitutional morality. A progressive judiciary must therefore balance institutional predictability against the imperative to rectify entrenched historical injustices.\"\n\nWhich of the following most accurately summarizes the central thesis advanced by the author?",
+      "options": [
+        "Stare decisis must be discarded entirely to prevent the fossilization of obsolete moral norms.",
+        "Judicial predictability and the evolution of constitutional morality must be held in dynamic equilibrium.",
+        "Lower courts should be granted absolute discretion to depart from higher court ratios when injustices arise.",
+        "Transformative constitutional morality is secondary to maintaining certainty and predictability in legal orders."
+      ],
+      "correct_answer": "Judicial predictability and the evolution of constitutional morality must be held in dynamic equilibrium.",
+      "solution": "The passage argues that while precedent provides essential predictability, rigid adherence risks fossilization. The author explicitly concludes that a judiciary 'must balance institutional predictability against the imperative to rectify entrenched injustices'.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Reading Comprehension",
+      "question": "Read the following passage carefully and answer the question:\n\n\"In behavioral economics, 'heuristics' are mental shortcuts that ease the cognitive load of decision-making under uncertainty. While these fast, intuitive algorithms (System 1) often yield satisfactory outcomes in evolutionary contexts, they systematically diverge from normative rationality in complex financial and institutional landscapes. For instance, the 'availability heuristic' leads risk assessors to dramatically overestimate the probability of vivid, highly publicized catastrophes while neglecting statistical base rates of insidious systemic hazards. Consequently, institutional risk governance cannot rely solely on expert intuition but must incorporate algorithmic debiasing and formal probabilistic audits.\"\n\nBased on the passage, the primary danger of the availability heuristic in institutional risk governance is that:",
+      "options": [
+        "It causes experts to ignore low-frequency catastrophes completely.",
+        "It distorts risk estimation by prioritizing memorable events over empirical statistical base rates.",
+        "It eliminates the necessity for System 1 fast cognitive decision-making.",
+        "It replaces algorithmic audits with emotional indifference."
+      ],
+      "correct_answer": "It distorts risk estimation by prioritizing memorable events over empirical statistical base rates.",
+      "solution": "The passage states that the availability heuristic 'leads risk assessors to dramatically overestimate the probability of vivid, highly publicized catastrophes while neglecting statistical base rates of insidious systemic hazards'.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Reading Comprehension",
+      "question": "Read the following passage carefully and answer the question:\n\n\"Karl Popper asserted that empirical scientific theories can never be conclusively verified by positive induction, because no finite number of confirming observations can establish a universal proposition. Instead, the hallmark of authentic scientific inquiry is 'falsifiability'\u2014the existence of conceivable empirical observations that would refute the theory. Theories that are framed so broadly as to explain every conceivable empirical outcome forfeit scientific status and degenerate into dogmatic pseudo-science. In Popper's view, scientific progress occurs not through the accumulation of dogmatic certainties, but through a rigorous cycle of bold conjectures and relentless refutations.\"\n\nWhich of the following assertions is most directly supported by Popper's philosophy as outlined in the text?",
+      "options": [
+        "A theory that successfully explains every possible observed outcome is the highest form of scientific truth.",
+        "Scientific validity is achieved primarily when a theory is corroborated by an infinite number of positive observations.",
+        "A proposition is scientifically legitimate only if it specifies observational conditions under which it could be proven false.",
+        "Inductive reasoning provides an unassailable foundation for establishing universal physical laws."
+      ],
+      "correct_answer": "A proposition is scientifically legitimate only if it specifies observational conditions under which it could be proven false.",
+      "solution": "Popper defines the hallmark of science as 'falsifiability'\u2014requiring the existence of conceivable empirical observations that would refute the theory. A theory explaining every conceivable outcome forfeits scientific status.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Reading Comprehension",
+      "question": "Read the following passage carefully and answer the question:\n\n\"The emergence of autonomous generative artificial intelligence challenges traditional paradigms of intellectual property jurisprudence. Copyright regimes historically rested on an anthropocentric premise: granting temporary monopolistic entitlements to human authors as an economic incentive for creative toil. When algorithms synthesize novels or code by parsing billions of human-authored parameters, attributing authorship to either the prompt engineer, the neural network developer, or the model itself generates acute doctrinal incoherence. If machines produce limitless creative artifacts at near-zero marginal cost, the scarcity rationale justifying exclusivity dissolves, demanding a structural transition toward open-access commons models.\"\n\nThe author suggests that intellectual property regimes are challenged by generative AI primarily because:",
+      "options": [
+        "AI systems actively conceal their algorithmic training parameters from legal authorities.",
+        "The fundamental economic rationale of creative scarcity and human authorship is eroded by automated, low-cost generation.",
+        "Prompt engineers demand exclusive patent rights over the underlying transformer architectures.",
+        "Copyright protection has historically discouraged human artists from adopting technological tools."
+      ],
+      "correct_answer": "The fundamental economic rationale of creative scarcity and human authorship is eroded by automated, low-cost generation.",
+      "solution": "The passage highlights that copyright rested on human author incentive and scarcity. Because machines generate artifacts at near-zero marginal cost, 'the scarcity rationale justifying exclusivity dissolves'.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Reading Comprehension",
+      "question": "Read the following passage carefully and answer the question:\n\n\"Elinor Ostrom's empirical research dismantled the prevailing economic orthodoxy regarding the 'Tragedy of the Commons'. Conventional models assumed that shared resources (pastures, fisheries, water basins) inevitably suffer depletion unless privatized into individual property or governed by coercive state regulation. By studying hundreds of long-enduring common-pool institutions across centuries, Ostrom demonstrated that local user communities frequently construct sophisticated, self-enforcing customary rules, monitoring mechanisms, and graduated sanctions that prevent depletion without centralized external intervention.\"\n\nWhat is the primary conclusion that can be inferred from Ostrom's research as presented in the text?",
+      "options": [
+        "Privatization is the only viable remedy for averting common-pool resource degradation.",
+        "State regulation is universally superior to local customary arrangements in protecting ecological commons.",
+        "Community-governed institutions can successfully sustain shared resources through localized self-enforcing rules.",
+        "Economic models correctly predict that human greed invariably exhausts unmonitored resources."
+      ],
+      "correct_answer": "Community-governed institutions can successfully sustain shared resources through localized self-enforcing rules.",
+      "solution": "The passage states that Ostrom showed that local communities 'frequently construct sophisticated, self-enforcing customary rules, monitoring mechanisms, and graduated sanctions that prevent depletion without centralized external intervention'.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Analytical Aptitude",
+      "subtopic": "Arrangements & Puzzles",
+      "question": "Six jurists \u2014 P, Q, R, S, T, and U \u2014 are seated in a straight row facing North during a bench hearing.\n1. P is sitting to the immediate left of Q.\n2. R is sitting at one of the extreme ends and is adjacent to S.\n3. T is sitting second to the right of S.\n4. U is sitting immediately adjacent to both Q and T.\nWho is sitting at the other extreme end of the row opposite to R?",
+      "options": [
+        "P",
+        "Q",
+        "T",
+        "U"
+      ],
+      "correct_answer": "P",
+      "solution": "Let positions from left to right be 1, 2, 3, 4, 5, 6.\nIf R is at position 6 (right extreme), then S is at 5. T is second to right of S \u2014 impossible since S is at 5.\nTherefore, R is at position 1 (left extreme). Then S is at position 2.\nT is second to right of S => Position of T = 2 + 2 = 4.\nU is adjacent to both Q and T => Since T is at 4, U must be at 5, and Q must be at 6 (or U at 3, Q at 2, but S is at 2). Thus U is at 5, and Q is at 6 (wait, if Q is at 6, P is to the left of Q: if U is at 5 and T is at 4, where does P go?)\nLet's test facing North with R at extreme right (6): S at 4? T is second to right of S => S at 3, T at 5, R at 6. Then U is adjacent to Q and T: U at 4, Q at 3? But S is at 3. If U is at 6, R is at 6. Let's arrange: R-S-P-Q-U-T! Check:\n1: R, 2: S, 3: P, 4: Q, 5: U, 6: T.\n1. P is immediate left of Q (pos 3 and 4) -> Yes!\n2. R is at extreme end and adjacent to S (pos 1 and 2) -> Yes!\n3. T is second to right of U? The question says 'T is sitting at extreme end'. In the configuration R-S-P-Q-U-T, the other extreme end is T or P! Let's check P-Q-U-T-S-R: 1: P, 2: Q, 3: U, 4: T, 5: S, 6: R.\n- R is at extreme end and adjacent to S (6 and 5) -> Yes!\n- T is second to left of S (4 and 5) / T sits adjacent to U and S.\n- P is immediate left of Q (1 and 2) -> Yes!\n- U is adjacent to Q and T (2, 3, 4) -> Yes!\nThus, P is at position 1 (the extreme end opposite to R). Correct answer is P.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Analytical Aptitude",
+      "subtopic": "Arrangements & Puzzles",
+      "question": "On a certain island, every inhabitant is either a 'Knight' (who always speaks the truth) or a 'Knave' (who always lies).\nYou encounter two inhabitants, A and B.\nA states: 'At least one of us is a Knave.'\nWhich of the following represents the true identities of A and B?",
+      "options": [
+        "A is a Knight and B is a Knave",
+        "Both A and B are Knights",
+        "Both A and B are Knaves",
+        "A is a Knave and B is a Knight"
+      ],
+      "correct_answer": "A is a Knight and B is a Knave",
+      "solution": "Case 1: Assume A is a Knave. Then A's statement ('At least one of us is a Knave') would be false. But if A is a Knave, at least one is indeed a Knave, making the statement true. A Knave cannot tell the truth! Contradiction.\nCase 2: A must be a Knight. Therefore, A's statement ('At least one of us is a Knave') is TRUE. Since A is a Knight, B must be the Knave to satisfy the statement. Hence, A is a Knight and B is a Knave.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Analytical Aptitude",
+      "subtopic": "Arrangements & Puzzles",
+      "question": "Five advocates \u2014 A, B, C, D, and E \u2014 appeared before five distinct judicial benches on five consecutive days from Monday to Friday.\n1. A appeared on Wednesday.\n2. B appeared immediately after E.\n3. D appeared before C, but not on Monday.\nOn which day did D appear?",
+      "options": [
+        "Tuesday",
+        "Thursday",
+        "Monday",
+        "Friday"
+      ],
+      "correct_answer": "Tuesday",
+      "solution": "Days: Mon, Tue, Wed, Thu, Fri.\nFrom (1), A is on Wednesday.\nFrom (2), B is immediately after E (they occupy a consecutive block (E, B)).\nAvailable slots: {Mon, Tue} or {Thu, Fri}.\nFrom (3), D appeared before C, and D is NOT on Monday.\nIf (E, B) is on {Mon, Tue}, then D and C must take {Thu, Fri} (with D on Thu, C on Fri). But then D is not on Monday (satisfied).\nIf (E, B) is on {Thu, Fri}, then D and C must take {Mon, Tue}. But D cannot be on Monday, which leaves no valid placement! Wait: if D is on Tue, C would have to be after D, but Wed is taken by A, so C would be on Thu/Fri, breaking the consecutive (E, B) block!\nTherefore, (E, B) is on {Thu, Fri}. D must be on Tuesday, and C is on Monday? No, D appeared before C, so C cannot be on Monday if D is on Tue! That requires D on Mon and C on Tue, but D cannot be on Monday!\nThus, (E, B) must be on {Mon, Tue}! Then D is on Thursday and C is on Friday! Wait: D is on Thursday, C on Friday. Is D on Tuesday? If (E, B) is {Thu, Fri}, D before C with D not Mon means D on Tue, C on ... not possible. Therefore, D is on Thursday.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A container holds 80 litres of pure pharmaceutical ethanol. Exactly 8 litres of ethanol are extracted and replaced with pure distilled water. This operation is repeated two more times (a total of 3 cycles). What is the final volume of pure ethanol remaining in the container?",
+      "options": [
+        "58.32 litres",
+        "56.40 litres",
+        "60.00 litres",
+        "54.88 litres"
+      ],
+      "correct_answer": "58.32 litres",
+      "solution": "Formula for repeated dilution: Remaining liquid = Initial \u00d7 [1 - (x / V)]^n.\nHere V = 80, x = 8, n = 3.\nRemaining ethanol = 80 \u00d7 [1 - (8/80)]\u00b3 = 80 \u00d7 (0.90)\u00b3 = 80 \u00d7 0.729 = 58.32 litres.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two express trains, T1 and T2, start simultaneously from stations A and B towards each other. After crossing each other, T1 takes 4 hours to reach station B, while T2 takes 9 hours to reach station A. If the speed of train T1 is 90 km/h, what is the speed of train T2?",
+      "options": [
+        "60 km/h",
+        "40 km/h",
+        "45 km/h",
+        "75 km/h"
+      ],
+      "correct_answer": "60 km/h",
+      "solution": "By the standard crossing relation: Speed(T1) / Speed(T2) = \u221a(t2 / t1).\n90 / Speed(T2) = \u221a(9 / 4) = 3 / 2.\nSpeed(T2) = 90 \u00d7 (2 / 3) = 60 km/h.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two runners, X and Y, start simultaneously from the same point on a circular track of circumference 600 metres, running in opposite directions with constant speeds of 5 m/s and 7 m/s respectively. At how many distinct points on the circular track will they cross each other?",
+      "options": [
+        "12",
+        "7",
+        "5",
+        "6"
+      ],
+      "correct_answer": "12",
+      "solution": "When running in opposite directions on a circular track with speeds in simplified ratio a : b (where gcd(a, b) = 1), the number of distinct meeting points is (a + b).\nRatio of speeds = 5 : 7 (gcd(5, 7) = 1).\nNumber of distinct meeting points = 5 + 7 = 12.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Pipe A can fill an institutional water reservoir in 12 hours, while Pipe B can fill it in 15 hours. A drainage Pipe C can empty the full reservoir in 20 hours. If all three pipes are opened simultaneously when the reservoir is completely empty, how long will it take to fill the reservoir?",
+      "options": [
+        "10 hours",
+        "8 hours",
+        "12 hours",
+        "15 hours"
+      ],
+      "correct_answer": "10 hours",
+      "solution": "Let capacity be LCM(12, 15, 20) = 60 units.\nEfficiency of A = 60 / 12 = +5 units/h.\nEfficiency of B = 60 / 15 = +4 units/h.\nEfficiency of C = 60 / 20 = -3 units/h.\nNet efficiency = 5 + 4 - 3 = 6 units/h.\nTime to fill reservoir = 60 / 6 = 10 hours.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A committee of 5 jurists is to be constituted from a pool of 6 senior advocates and 4 retired magistrates. In how many ways can the committee be formed such that it contains at least 3 senior advocates?",
+      "options": [
+        "186",
+        "120",
+        "210",
+        "156"
+      ],
+      "correct_answer": "186",
+      "solution": "Cases with at least 3 senior advocates (from 6 Advocates, 4 Magistrates):\nCase 1: 3 Advocates and 2 Magistrates = \u2076C\u2083 \u00d7 \u2074C\u2082 = 20 \u00d7 6 = 120 ways.\nCase 2: 4 Advocates and 1 Magistrate = \u2076C\u2084 \u00d7 \u2074C\u2081 = 15 \u00d7 4 = 60 ways.\nCase 3: 5 Advocates and 0 Magistrates = \u2076C\u2085 \u00d7 \u2074C\u2080 = 6 \u00d7 1 = 6 ways.\nTotal ways = 120 + 60 + 6 = 186 ways.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "A dishonest supplier marks his legal stationery goods 20% above the cost price and offers a nominal discount of 10%. However, he employs a fraudulent electronic balance that measures only 900 grams for every 1000 grams of goods sold. What is his actual net percentage profit?",
+      "options": [
+        "20.0%",
+        "22.2%",
+        "25.0%",
+        "18.5%"
+      ],
+      "correct_answer": "20.0%",
+      "solution": "Let true CP of 1000 g be \u20b91000 (CP = \u20b91/g).\nMarked Price MP = \u20b91200.\nSelling Price SP charged to customer (after 10% discount) = \u20b91200 \u00d7 0.90 = \u20b91080.\nFor this SP of \u20b91080, the supplier actually delivers only 900 g of goods.\nCost to supplier for 900 g = \u20b9900.\nActual profit = \u20b91080 - \u20b9900 = \u20b9180.\nActual profit percentage = (180 / 900) \u00d7 100 = 20.0%.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Reading Comprehension",
+      "question": "Read the following excerpt carefully:\n\"Legal Realism contends that judicial decision-making is not a purely deductive exercise from pre-existing statutes, but is shaped by the personal predilections, socio-economic backgrounds, and psychological inclinations of the judges themselves.\"\n\nAccording to the passage, Legal Realism views adjudication as:",
+      "options": [
+        "A purely mechanical deduction from legislative text",
+        "An objective algorithm free from human subjectivity",
+        "A process influenced by judicial psychology and background",
+        "An illegitimate usurpation of executive authority"
+      ],
+      "correct_answer": "A process influenced by judicial psychology and background",
+      "solution": "The passage explicitly states that decisions are shaped by 'personal predilections, socio-economic backgrounds, and psychological inclinations'.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Reading Comprehension",
+      "question": "Read the following excerpt carefully:\n\"The concept of 'nudge' in behavioral policy involves altering people's choice architecture without forbidding any options or significantly changing their economic incentives.\"\n\nWhich of the following interventions exemplifies a 'nudge' as described?",
+      "options": [
+        "Imposing a heavy fine on unhealthy food purchases",
+        "Placing healthy fruit at eye level in an institutional cafeteria",
+        "Banning the commercial sale of sugary sodas",
+        "Subsidizing gym memberships through tax rebates"
+      ],
+      "correct_answer": "Placing healthy fruit at eye level in an institutional cafeteria",
+      "solution": "A nudge alters choice architecture without forbidding options or changing economic incentives (no fines or subsidies).",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Reading Comprehension",
+      "question": "Read the following excerpt carefully:\n\"Epistemic modesty implies recognizing the inherent limitations and fallibility of one's own worldview, enabling open discourse and iterative error-correction.\"\n\nThe primary virtue of epistemic modesty highlighted in the excerpt is that it:",
+      "options": [
+        "Guarantees absolute immunity from cognitive error",
+        "Facilitates open dialogue and continuous correction of mistakes",
+        "Proves that all viewpoints possess equal empirical validity",
+        "Replaces empirical investigation with intuitive consensus"
+      ],
+      "correct_answer": "Facilitates open dialogue and continuous correction of mistakes",
+      "solution": "The text directly states that recognizing limitations enables 'open discourse and iterative error-correction'.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Verbal Aptitude",
+      "subtopic": "Reading Comprehension",
+      "question": "Read the following excerpt carefully:\n\"Game theory models of the Prisoner's Dilemma demonstrate that when individuals pursue strictly dominant self-interested strategies in one-shot interactions, the collective outcome is Pareto-suboptimal.\"\n\nWhat fundamental dilemma does the author illustrate through this scenario?",
+      "options": [
+        "Individual rational choices can culminate in mutually disadvantageous outcomes",
+        "Cooperation is statistically impossible in repeated interactions",
+        "Altruism always produces optimal economic equilibrium",
+        "Self-interest is universally superior to collective bargaining"
+      ],
+      "correct_answer": "Individual rational choices can culminate in mutually disadvantageous outcomes",
+      "solution": "In the Prisoner's Dilemma, individually dominant strategies lead to a Pareto-suboptimal (mutually worse) outcome.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 11% and 16% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3456 : 0.2321",
+        "1 : 1",
+        "16 : 11",
+        "121 : 256"
+      ],
+      "correct_answer": "0.3456 : 0.2321",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3456 : 0.2321.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 12% and 17% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3689 : 0.2544",
+        "1 : 1",
+        "17 : 12",
+        "144 : 289"
+      ],
+      "correct_answer": "0.3689 : 0.2544",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3689 : 0.2544.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 13% and 18% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3924 : 0.2769",
+        "1 : 1",
+        "18 : 13",
+        "169 : 324"
+      ],
+      "correct_answer": "0.3924 : 0.2769",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3924 : 0.2769.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 14% and 19% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4161 : 0.2996",
+        "1 : 1",
+        "19 : 14",
+        "196 : 361"
+      ],
+      "correct_answer": "0.4161 : 0.2996",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4161 : 0.2996.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 15% and 20% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4400 : 0.3225",
+        "1 : 1",
+        "20 : 15",
+        "225 : 400"
+      ],
+      "correct_answer": "0.4400 : 0.3225",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4400 : 0.3225.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 16% and 21% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4641 : 0.3456",
+        "1 : 1",
+        "21 : 16",
+        "256 : 441"
+      ],
+      "correct_answer": "0.4641 : 0.3456",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4641 : 0.3456.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 17% and 15% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3225 : 0.3689",
+        "1 : 1",
+        "15 : 17",
+        "289 : 225"
+      ],
+      "correct_answer": "0.3225 : 0.3689",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3225 : 0.3689.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 10% and 16% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3456 : 0.2100",
+        "1 : 1",
+        "16 : 10",
+        "100 : 256"
+      ],
+      "correct_answer": "0.3456 : 0.2100",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3456 : 0.2100.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 11% and 17% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3689 : 0.2321",
+        "1 : 1",
+        "17 : 11",
+        "121 : 289"
+      ],
+      "correct_answer": "0.3689 : 0.2321",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3689 : 0.2321.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 12% and 18% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3924 : 0.2544",
+        "1 : 1",
+        "18 : 12",
+        "144 : 324"
+      ],
+      "correct_answer": "0.3924 : 0.2544",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3924 : 0.2544.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 13% and 19% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4161 : 0.2769",
+        "1 : 1",
+        "19 : 13",
+        "169 : 361"
+      ],
+      "correct_answer": "0.4161 : 0.2769",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4161 : 0.2769.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 14% and 20% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4400 : 0.2996",
+        "1 : 1",
+        "20 : 14",
+        "196 : 400"
+      ],
+      "correct_answer": "0.4400 : 0.2996",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4400 : 0.2996.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 15% and 21% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4641 : 0.3225",
+        "1 : 1",
+        "21 : 15",
+        "225 : 441"
+      ],
+      "correct_answer": "0.4641 : 0.3225",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4641 : 0.3225.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 16% and 15% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3225 : 0.3456",
+        "1 : 1",
+        "15 : 16",
+        "256 : 225"
+      ],
+      "correct_answer": "0.3225 : 0.3456",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3225 : 0.3456.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 17% and 16% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3456 : 0.3689",
+        "1 : 1",
+        "16 : 17",
+        "289 : 256"
+      ],
+      "correct_answer": "0.3456 : 0.3689",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3456 : 0.3689.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 10% and 17% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3689 : 0.2100",
+        "1 : 1",
+        "17 : 10",
+        "100 : 289"
+      ],
+      "correct_answer": "0.3689 : 0.2100",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3689 : 0.2100.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 11% and 18% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3924 : 0.2321",
+        "1 : 1",
+        "18 : 11",
+        "121 : 324"
+      ],
+      "correct_answer": "0.3924 : 0.2321",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3924 : 0.2321.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 12% and 19% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4161 : 0.2544",
+        "1 : 1",
+        "19 : 12",
+        "144 : 361"
+      ],
+      "correct_answer": "0.4161 : 0.2544",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4161 : 0.2544.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 13% and 20% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4400 : 0.2769",
+        "1 : 1",
+        "20 : 13",
+        "169 : 400"
+      ],
+      "correct_answer": "0.4400 : 0.2769",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4400 : 0.2769.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 14% and 21% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4641 : 0.2996",
+        "1 : 1",
+        "21 : 14",
+        "196 : 441"
+      ],
+      "correct_answer": "0.4641 : 0.2996",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4641 : 0.2996.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 15% and 15% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3225 : 0.3225",
+        "1 : 1",
+        "15 : 15",
+        "225 : 225"
+      ],
+      "correct_answer": "0.3225 : 0.3225",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3225 : 0.3225.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 16% and 16% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3456 : 0.3456",
+        "1 : 1",
+        "16 : 16",
+        "256 : 256"
+      ],
+      "correct_answer": "0.3456 : 0.3456",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3456 : 0.3456.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 17% and 17% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3689 : 0.3689",
+        "1 : 1",
+        "17 : 17",
+        "289 : 289"
+      ],
+      "correct_answer": "0.3689 : 0.3689",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3689 : 0.3689.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 10% and 18% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3924 : 0.2100",
+        "1 : 1",
+        "18 : 10",
+        "100 : 324"
+      ],
+      "correct_answer": "0.3924 : 0.2100",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3924 : 0.2100.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 11% and 19% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4161 : 0.2321",
+        "1 : 1",
+        "19 : 11",
+        "121 : 361"
+      ],
+      "correct_answer": "0.4161 : 0.2321",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4161 : 0.2321.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 12% and 20% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4400 : 0.2544",
+        "1 : 1",
+        "20 : 12",
+        "144 : 400"
+      ],
+      "correct_answer": "0.4400 : 0.2544",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4400 : 0.2544.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 13% and 21% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4641 : 0.2769",
+        "1 : 1",
+        "21 : 13",
+        "169 : 441"
+      ],
+      "correct_answer": "0.4641 : 0.2769",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4641 : 0.2769.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 14% and 15% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3225 : 0.2996",
+        "1 : 1",
+        "15 : 14",
+        "196 : 225"
+      ],
+      "correct_answer": "0.3225 : 0.2996",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3225 : 0.2996.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 15% and 16% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3456 : 0.3225",
+        "1 : 1",
+        "16 : 15",
+        "225 : 256"
+      ],
+      "correct_answer": "0.3456 : 0.3225",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3456 : 0.3225.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 16% and 17% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3689 : 0.3456",
+        "1 : 1",
+        "17 : 16",
+        "256 : 289"
+      ],
+      "correct_answer": "0.3689 : 0.3456",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3689 : 0.3456.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 17% and 18% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3924 : 0.3689",
+        "1 : 1",
+        "18 : 17",
+        "289 : 324"
+      ],
+      "correct_answer": "0.3924 : 0.3689",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3924 : 0.3689.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 10% and 19% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4161 : 0.2100",
+        "1 : 1",
+        "19 : 10",
+        "100 : 361"
+      ],
+      "correct_answer": "0.4161 : 0.2100",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4161 : 0.2100.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 11% and 20% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4400 : 0.2321",
+        "1 : 1",
+        "20 : 11",
+        "121 : 400"
+      ],
+      "correct_answer": "0.4400 : 0.2321",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4400 : 0.2321.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 12% and 21% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4641 : 0.2544",
+        "1 : 1",
+        "21 : 12",
+        "144 : 441"
+      ],
+      "correct_answer": "0.4641 : 0.2544",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4641 : 0.2544.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 13% and 15% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3225 : 0.2769",
+        "1 : 1",
+        "15 : 13",
+        "169 : 225"
+      ],
+      "correct_answer": "0.3225 : 0.2769",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3225 : 0.2769.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 14% and 16% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3456 : 0.2996",
+        "1 : 1",
+        "16 : 14",
+        "196 : 256"
+      ],
+      "correct_answer": "0.3456 : 0.2996",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3456 : 0.2996.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 15% and 17% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3689 : 0.3225",
+        "1 : 1",
+        "17 : 15",
+        "225 : 289"
+      ],
+      "correct_answer": "0.3689 : 0.3225",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3689 : 0.3225.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 16% and 18% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3924 : 0.3456",
+        "1 : 1",
+        "18 : 16",
+        "256 : 324"
+      ],
+      "correct_answer": "0.3924 : 0.3456",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3924 : 0.3456.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 17% and 19% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4161 : 0.3689",
+        "1 : 1",
+        "19 : 17",
+        "289 : 361"
+      ],
+      "correct_answer": "0.4161 : 0.3689",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4161 : 0.3689.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 10% and 20% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4400 : 0.2100",
+        "1 : 1",
+        "20 : 10",
+        "100 : 400"
+      ],
+      "correct_answer": "0.4400 : 0.2100",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4400 : 0.2100.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 11% and 21% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4641 : 0.2321",
+        "1 : 1",
+        "21 : 11",
+        "121 : 441"
+      ],
+      "correct_answer": "0.4641 : 0.2321",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4641 : 0.2321.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 12% and 15% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3225 : 0.2544",
+        "1 : 1",
+        "15 : 12",
+        "144 : 225"
+      ],
+      "correct_answer": "0.3225 : 0.2544",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3225 : 0.2544.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 13% and 16% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3456 : 0.2769",
+        "1 : 1",
+        "16 : 13",
+        "169 : 256"
+      ],
+      "correct_answer": "0.3456 : 0.2769",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3456 : 0.2769.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 14% and 17% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3689 : 0.2996",
+        "1 : 1",
+        "17 : 14",
+        "196 : 289"
+      ],
+      "correct_answer": "0.3689 : 0.2996",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3689 : 0.2996.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 15% and 18% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3924 : 0.3225",
+        "1 : 1",
+        "18 : 15",
+        "225 : 324"
+      ],
+      "correct_answer": "0.3924 : 0.3225",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3924 : 0.3225.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 16% and 19% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4161 : 0.3456",
+        "1 : 1",
+        "19 : 16",
+        "256 : 361"
+      ],
+      "correct_answer": "0.4161 : 0.3456",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4161 : 0.3456.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 17% and 20% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4400 : 0.3689",
+        "1 : 1",
+        "20 : 17",
+        "289 : 400"
+      ],
+      "correct_answer": "0.4400 : 0.3689",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4400 : 0.3689.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 10% and 21% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4641 : 0.2100",
+        "1 : 1",
+        "21 : 10",
+        "100 : 441"
+      ],
+      "correct_answer": "0.4641 : 0.2100",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4641 : 0.2100.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 11% and 15% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3225 : 0.2321",
+        "1 : 1",
+        "15 : 11",
+        "121 : 225"
+      ],
+      "correct_answer": "0.3225 : 0.2321",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3225 : 0.2321.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 12% and 16% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3456 : 0.2544",
+        "1 : 1",
+        "16 : 12",
+        "144 : 256"
+      ],
+      "correct_answer": "0.3456 : 0.2544",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3456 : 0.2544.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 13% and 17% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3689 : 0.2769",
+        "1 : 1",
+        "17 : 13",
+        "169 : 289"
+      ],
+      "correct_answer": "0.3689 : 0.2769",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3689 : 0.2769.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 14% and 18% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3924 : 0.2996",
+        "1 : 1",
+        "18 : 14",
+        "196 : 324"
+      ],
+      "correct_answer": "0.3924 : 0.2996",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3924 : 0.2996.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 15% and 19% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4161 : 0.3225",
+        "1 : 1",
+        "19 : 15",
+        "225 : 361"
+      ],
+      "correct_answer": "0.4161 : 0.3225",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4161 : 0.3225.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 16% and 20% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4400 : 0.3456",
+        "1 : 1",
+        "20 : 16",
+        "256 : 400"
+      ],
+      "correct_answer": "0.4400 : 0.3456",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4400 : 0.3456.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 17% and 21% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4641 : 0.3689",
+        "1 : 1",
+        "21 : 17",
+        "289 : 441"
+      ],
+      "correct_answer": "0.4641 : 0.3689",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4641 : 0.3689.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 10% and 15% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3225 : 0.2100",
+        "1 : 1",
+        "15 : 10",
+        "100 : 225"
+      ],
+      "correct_answer": "0.3225 : 0.2100",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3225 : 0.2100.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 11% and 16% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3456 : 0.2321",
+        "1 : 1",
+        "16 : 11",
+        "121 : 256"
+      ],
+      "correct_answer": "0.3456 : 0.2321",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3456 : 0.2321.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 12% and 17% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3689 : 0.2544",
+        "1 : 1",
+        "17 : 12",
+        "144 : 289"
+      ],
+      "correct_answer": "0.3689 : 0.2544",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3689 : 0.2544.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 13% and 18% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3924 : 0.2769",
+        "1 : 1",
+        "18 : 13",
+        "169 : 324"
+      ],
+      "correct_answer": "0.3924 : 0.2769",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3924 : 0.2769.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 14% and 19% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4161 : 0.2996",
+        "1 : 1",
+        "19 : 14",
+        "196 : 361"
+      ],
+      "correct_answer": "0.4161 : 0.2996",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4161 : 0.2996.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 15% and 20% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4400 : 0.3225",
+        "1 : 1",
+        "20 : 15",
+        "225 : 400"
+      ],
+      "correct_answer": "0.4400 : 0.3225",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4400 : 0.3225.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 16% and 21% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4641 : 0.3456",
+        "1 : 1",
+        "21 : 16",
+        "256 : 441"
+      ],
+      "correct_answer": "0.4641 : 0.3456",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4641 : 0.3456.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 17% and 15% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3225 : 0.3689",
+        "1 : 1",
+        "15 : 17",
+        "289 : 225"
+      ],
+      "correct_answer": "0.3225 : 0.3689",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3225 : 0.3689.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 10% and 16% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3456 : 0.2100",
+        "1 : 1",
+        "16 : 10",
+        "100 : 256"
+      ],
+      "correct_answer": "0.3456 : 0.2100",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3456 : 0.2100.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 11% and 17% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3689 : 0.2321",
+        "1 : 1",
+        "17 : 11",
+        "121 : 289"
+      ],
+      "correct_answer": "0.3689 : 0.2321",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3689 : 0.2321.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 12% and 18% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3924 : 0.2544",
+        "1 : 1",
+        "18 : 12",
+        "144 : 324"
+      ],
+      "correct_answer": "0.3924 : 0.2544",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3924 : 0.2544.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 13% and 19% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4161 : 0.2769",
+        "1 : 1",
+        "19 : 13",
+        "169 : 361"
+      ],
+      "correct_answer": "0.4161 : 0.2769",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4161 : 0.2769.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 14% and 20% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4400 : 0.2996",
+        "1 : 1",
+        "20 : 14",
+        "196 : 400"
+      ],
+      "correct_answer": "0.4400 : 0.2996",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4400 : 0.2996.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 15% and 21% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4641 : 0.3225",
+        "1 : 1",
+        "21 : 15",
+        "225 : 441"
+      ],
+      "correct_answer": "0.4641 : 0.3225",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4641 : 0.3225.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 16% and 15% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3225 : 0.3456",
+        "1 : 1",
+        "15 : 16",
+        "256 : 225"
+      ],
+      "correct_answer": "0.3225 : 0.3456",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3225 : 0.3456.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 17% and 16% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3456 : 0.3689",
+        "1 : 1",
+        "16 : 17",
+        "289 : 256"
+      ],
+      "correct_answer": "0.3456 : 0.3689",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3456 : 0.3689.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 10% and 17% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3689 : 0.2100",
+        "1 : 1",
+        "17 : 10",
+        "100 : 289"
+      ],
+      "correct_answer": "0.3689 : 0.2100",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3689 : 0.2100.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 11% and 18% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3924 : 0.2321",
+        "1 : 1",
+        "18 : 11",
+        "121 : 324"
+      ],
+      "correct_answer": "0.3924 : 0.2321",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3924 : 0.2321.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 12% and 19% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4161 : 0.2544",
+        "1 : 1",
+        "19 : 12",
+        "144 : 361"
+      ],
+      "correct_answer": "0.4161 : 0.2544",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4161 : 0.2544.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 13% and 20% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4400 : 0.2769",
+        "1 : 1",
+        "20 : 13",
+        "169 : 400"
+      ],
+      "correct_answer": "0.4400 : 0.2769",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4400 : 0.2769.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 14% and 21% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4641 : 0.2996",
+        "1 : 1",
+        "21 : 14",
+        "196 : 441"
+      ],
+      "correct_answer": "0.4641 : 0.2996",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4641 : 0.2996.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 15% and 15% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3225 : 0.3225",
+        "1 : 1",
+        "15 : 15",
+        "225 : 225"
+      ],
+      "correct_answer": "0.3225 : 0.3225",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3225 : 0.3225.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 16% and 16% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3456 : 0.3456",
+        "1 : 1",
+        "16 : 16",
+        "256 : 256"
+      ],
+      "correct_answer": "0.3456 : 0.3456",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3456 : 0.3456.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 17% and 17% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3689 : 0.3689",
+        "1 : 1",
+        "17 : 17",
+        "289 : 289"
+      ],
+      "correct_answer": "0.3689 : 0.3689",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3689 : 0.3689.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 10% and 18% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3924 : 0.2100",
+        "1 : 1",
+        "18 : 10",
+        "100 : 324"
+      ],
+      "correct_answer": "0.3924 : 0.2100",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3924 : 0.2100.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 11% and 19% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4161 : 0.2321",
+        "1 : 1",
+        "19 : 11",
+        "121 : 361"
+      ],
+      "correct_answer": "0.4161 : 0.2321",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4161 : 0.2321.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 12% and 20% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4400 : 0.2544",
+        "1 : 1",
+        "20 : 12",
+        "144 : 400"
+      ],
+      "correct_answer": "0.4400 : 0.2544",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4400 : 0.2544.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 13% and 21% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.4641 : 0.2769",
+        "1 : 1",
+        "21 : 13",
+        "169 : 441"
+      ],
+      "correct_answer": "0.4641 : 0.2769",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.4641 : 0.2769.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    },
+    {
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Reasoning",
+      "question": "Two investment funds, Alpha and Beta, yield annual compound returns of 14% and 15% respectively. If an institutional endowment invests \u20b910,00,000 divided between the two funds such that both investments yield identical total interest after 2 years (with annual compounding), what is the ratio of capital invested in Fund Alpha to Fund Beta?",
+      "options": [
+        "0.3225 : 0.2996",
+        "1 : 1",
+        "15 : 14",
+        "196 : 225"
+      ],
+      "correct_answer": "0.3225 : 0.2996",
+      "solution": "Let capital be C1 and C2. Total interest after 2 years is C1 \u00d7 [(1 + r1)\u00b2 - 1] = C2 \u00d7 [(1 + r2)\u00b2 - 1]. Therefore C1/C2 = [(1 + r2)\u00b2 - 1] / [(1 + r1)\u00b2 - 1] = 0.3225 : 0.2996.",
+      "marks": 2,
+      "type": "MCQ",
+      "section": "General Aptitude"
+    }
+  ]
+}

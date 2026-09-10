@@ -14,6 +14,7 @@ import {
   generateUUID, 
   saveTestAttempt, 
   getStudentTestAttempts, 
+  associateGuestAttemptsWithStudent,
   LOCAL_STORAGE_TEST_ATTEMPTS_KEY 
 } from '../src/services/testAttemptService.js';
 
@@ -153,6 +154,36 @@ describe('Test & Practice History Persistence and Analysis Subsystem', () => {
       const guestAttempts = await getStudentTestAttempts('guest');
       assert.strictEqual(guestAttempts.length, 1);
       assert.strictEqual(guestAttempts[0].client_attempt_id, 'guest_prac_01');
+    });
+
+    it('associates guest test attempts with student upon registration/login', async () => {
+      await saveTestAttempt({
+        client_attempt_id: 'guest_att_999',
+        paper_title: 'Unassigned Mock Test 01',
+        test_type: 'cbt_mock',
+        score: 64.5,
+        total_marks: 100,
+        student_id: null,
+        student_name: 'Guest Student',
+        admission_no: null,
+        email: null
+      });
+
+      const student = {
+        id: 'std_user_123',
+        full_name: 'Rohit Verma',
+        admission_no: '2024AE99BIV',
+        email: 'rohit@example.com'
+      };
+
+      const updatedCount = await associateGuestAttemptsWithStudent(student);
+      assert.strictEqual(updatedCount, 1);
+
+      const attempts = await getStudentTestAttempts('std_user_123');
+      assert.strictEqual(attempts.length, 1);
+      assert.strictEqual(attempts[0].student_id, 'std_user_123');
+      assert.strictEqual(attempts[0].student_name, 'Rohit Verma');
+      assert.strictEqual(attempts[0].admission_no, '2024AE99BIV');
     });
   });
 });

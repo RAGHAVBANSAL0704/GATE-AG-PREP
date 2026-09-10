@@ -169,7 +169,7 @@ export default function ConceptStudyModal({ question, onClose, onOpenCalc }) {
                         )}
                       </div>
 
-                      <div className="p-3 rounded-xl bg-slate-950 border border-slate-800 font-mono text-center overflow-x-auto text-emerald-400 text-xs shadow-inner">
+                      <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 font-mono text-center overflow-x-auto text-slate-900 dark:text-emerald-400 text-xs shadow-inner">
                         <MathRenderer content={item.formula} inline={false} />
                       </div>
 

@@ -45,6 +45,11 @@ export function renderMathToHtmlString(text) {
 
   let str = text;
 
+  // Pre-process word and math boundary spacing before tokenization
+  str = str.replace(/([a-zA-Z0-9\)])(\$|\\\(|\\\[)/g, '$1 $2')
+           .replace(/(\$|\\\)|\\\])([a-zA-Z0-9\(/])/g, '$1 $2')
+           .replace(/\]([a-zA-Z])/g, '] $1');
+
   // 1. Extract display math \[ ... \]
   str = str.replace(/\\\[([\s\S]*?)\\\]/g, (match, mathStr) => {
     return pushToken(mathStr, true);
@@ -74,11 +79,6 @@ export function renderMathToHtmlString(text) {
 
   // 6. Escape raw HTML entities in text segments
   str = escapeHtml(str);
-
-  // 7. Automatic Spacing Sanitization for Word & Math Boundaries
-  str = str.replace(/([a-zA-Z0-9\)])(\$|\\\(|\\\[)/g, '$1 $2')
-           .replace(/(\$|\\\)|\\\])([a-zA-Z0-9\(/])/g, '$1 $2')
-           .replace(/\]([a-zA-Z])/g, '] $1');
 
   // 8. Pre-process common engineering units and sub/superscripts
   str = str.replace(/\bdeg C\b/gi, '°C')

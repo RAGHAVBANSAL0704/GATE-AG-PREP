@@ -1,4 +1,5 @@
 import { supabase, isSupabaseConfigured } from './supabaseClient.js';
+import { saveToIDB, getAllFromIDB } from '../utils/indexedDB.js';
 
 export const LOCAL_STORAGE_TEST_ATTEMPTS_KEY = 'gate_ag_prep_test_attempts';
 
@@ -13,7 +14,7 @@ export function generateUUID() {
 }
 
 /**
- * Save a test attempt to Supabase and LocalStorage with robust offline resilience
+ * Save a test attempt to Supabase, IndexedDB and LocalStorage with robust offline resilience
  */
 export async function saveTestAttempt(attemptData) {
   const clientAttemptId = attemptData.client_attempt_id || generateUUID();
@@ -42,7 +43,14 @@ export async function saveTestAttempt(attemptData) {
     _syncedToBackend: false
   };
 
-  // 1. Save to Local Storage fallback array immediately
+  // 1. Asynchronously save complete record with all individual question responses to IndexedDB
+  try {
+    saveToIDB('test_attempts', { id: clientAttemptId, ...attemptPayload });
+  } catch (idbErr) {
+    console.warn("IndexedDB attempt save warning:", idbErr);
+  }
+
+  // 2. Save to Local Storage fallback array immediately
   let localAttempts = [];
   try {
     const rawLocal = localStorage.getItem(LOCAL_STORAGE_TEST_ATTEMPTS_KEY);
@@ -160,7 +168,72 @@ export async function syncPendingTestAttempts() {
 }
 
 /**
- * Fetch past test attempts for a student, seamlessly merging Supabase and unsynced local attempts
+ * Re-attribute any unassigned or guest test attempts to newly registered or logged-in student
+ */
+export async function associateGuestAttemptsWithStudent(student) {
+  if (!student) return 0;
+  let updatedCount = 0;
+
+  const targetStudentId = student.id || null;
+  const targetName = student.full_name || student.username || 'Candidate';
+  const targetAdmNo = student.admission_no || null;
+  const targetEmail = student.email || null;
+  const targetMobile = student.mobile_number || null;
+
+  // 1. Update localStorage attempts
+  try {
+    const rawLocal = localStorage.getItem(LOCAL_STORAGE_TEST_ATTEMPTS_KEY);
+    if (rawLocal) {
+      const localAttempts = JSON.parse(rawLocal);
+      if (Array.isArray(localAttempts)) {
+        localAttempts.forEach(att => {
+          if (!att.student_id || att.student_name === 'Guest Student' || att.student_name === 'Candidate') {
+            att.student_id = targetStudentId || att.student_id;
+            att.student_name = targetName;
+            if (targetAdmNo) att.admission_no = targetAdmNo;
+            if (targetEmail) att.email = targetEmail;
+            if (targetMobile) att.mobile_number = targetMobile;
+            att._syncedToBackend = false;
+            updatedCount++;
+          }
+        });
+        localStorage.setItem(LOCAL_STORAGE_TEST_ATTEMPTS_KEY, JSON.stringify(localAttempts));
+      }
+    }
+  } catch (e) {
+    console.warn('Error associating localStorage guest attempts:', e);
+  }
+
+  // 2. Update IndexedDB attempts
+  try {
+    const idbAttempts = await getAllFromIDB('test_attempts');
+    if (Array.isArray(idbAttempts)) {
+      for (const att of idbAttempts) {
+        if (!att.student_id || att.student_name === 'Guest Student' || att.student_name === 'Candidate') {
+          att.student_id = targetStudentId || att.student_id;
+          att.student_name = targetName;
+          if (targetAdmNo) att.admission_no = targetAdmNo;
+          if (targetEmail) att.email = targetEmail;
+          if (targetMobile) att.mobile_number = targetMobile;
+          att._syncedToBackend = false;
+          await saveToIDB('test_attempts', att);
+        }
+      }
+    }
+  } catch (e) {
+    console.warn('Error associating IndexedDB guest attempts:', e);
+  }
+
+  // 3. Immediately trigger background synchronization to Supabase
+  if (updatedCount > 0) {
+    syncPendingTestAttempts();
+  }
+
+  return updatedCount;
+}
+
+/**
+ * Fetch past test attempts for a student, seamlessly merging Supabase, IndexedDB, and local attempts
  */
 export async function getStudentTestAttempts(studentIdentifier) {
   if (!studentIdentifier) return [];
@@ -175,7 +248,7 @@ export async function getStudentTestAttempts(studentIdentifier) {
       const { data, error } = await supabase
         .from('test_attempts')
         .select('*')
-        .or(`admission_no.eq.${cleanId},email.eq.${cleanId},student_name.ilike.%${cleanId}%`)
+        .or(`student_id.eq.${cleanId},admission_no.eq.${cleanId},email.eq.${cleanId},student_name.ilike.%${cleanId}%`)
         .order('submitted_at', { ascending: false });
 
       if (!error && Array.isArray(data)) {
@@ -186,6 +259,15 @@ export async function getStudentTestAttempts(studentIdentifier) {
     }
   }
 
+  // Load IndexedDB deep attempts
+  let idbAttempts = [];
+  try {
+    idbAttempts = await getAllFromIDB('test_attempts');
+    if (!Array.isArray(idbAttempts)) idbAttempts = [];
+  } catch (e) {
+    idbAttempts = [];
+  }
+
   // Load Local Storage attempts
   let localAttempts = [];
   try {
@@ -193,23 +275,25 @@ export async function getStudentTestAttempts(studentIdentifier) {
     if (rawLocal) {
       const parsed = JSON.parse(rawLocal);
       if (Array.isArray(parsed)) {
-        const lowerId = cleanId.toLowerCase();
-        localAttempts = parsed.filter(a => {
-          if (lowerId === 'guest' || lowerId === 'all') {
-            return true;
-          }
-          const adm = (a.admission_no || '').trim().toLowerCase();
-          const em = (a.email || '').trim().toLowerCase();
-          const name = (a.student_name || '').trim().toLowerCase();
-          const sid = (a.student_id || '').trim().toLowerCase();
-          return (adm && adm === lowerId) || 
-                 (em && em === lowerId) || 
-                 (sid && sid === lowerId) ||
-                 (name && (name === lowerId || name.includes(lowerId)));
-        });
+        localAttempts = parsed;
       }
     }
   } catch (e) {}
+
+  const lowerId = cleanId.toLowerCase();
+  const filterByStudent = (a) => {
+    if (lowerId === 'guest' || lowerId === 'all') {
+      return true;
+    }
+    const adm = (a.admission_no || '').trim().toLowerCase();
+    const em = (a.email || '').trim().toLowerCase();
+    const name = (a.student_name || '').trim().toLowerCase();
+    const sid = (a.student_id || '').trim().toLowerCase();
+    return (adm && adm === lowerId) || 
+           (em && em === lowerId) || 
+           (sid && sid === lowerId) ||
+           (name && (name === lowerId || name.includes(lowerId)));
+  };
 
   // Merge & Deduplicate by client_attempt_id or (submitted_at + paper_title)
   const mergedMap = new Map();
@@ -218,7 +302,16 @@ export async function getStudentTestAttempts(studentIdentifier) {
     mergedMap.set(key, { ...ca, _syncedToBackend: true });
   });
 
-  localAttempts.forEach(la => {
+  // Merge IndexedDB attempts
+  idbAttempts.filter(filterByStudent).forEach(ia => {
+    const key = ia.client_attempt_id || (ia.submitted_at + '_' + (ia.paper_title || ''));
+    if (!mergedMap.has(key)) {
+      mergedMap.set(key, ia);
+    }
+  });
+
+  // Merge LocalStorage attempts
+  localAttempts.filter(filterByStudent).forEach(la => {
     const key = la.client_attempt_id || (la.submitted_at + '_' + (la.paper_title || ''));
     if (!mergedMap.has(key)) {
       mergedMap.set(key, la);

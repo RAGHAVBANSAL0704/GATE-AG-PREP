@@ -238,13 +238,21 @@ export default function PracticeMode({
         tolerance: matched.tolerance || r.tolerance || 0.05
       };
 
+      const rawAns = r.user_answer !== undefined && r.user_answer !== null ? String(r.user_answer).trim() : '';
+      const isUnattemptedState = r.status === 'UNATTEMPTED' || r.status === 'NOT_ANSWERED' || r.status === 'NOT_VISITED';
+      const isAttempted = r.is_attempted !== undefined
+        ? Boolean(r.is_attempted)
+        : (rawAns !== '' && !isUnattemptedState);
+      const isCorrect = isAttempted && Boolean(r.is_correct);
+
       return {
         question: qObj,
-        userAnswer: r.user_answer || '',
-        isAttempted: Boolean(r.is_attempted ?? (r.user_answer !== undefined && r.user_answer !== '')),
-        isCorrect: Boolean(r.is_correct),
-        marksAwarded: Number(r.marks_awarded || (r.is_correct ? (r.marks || 1) : 0)),
-        timeSpentSec: Number(r.time_spent_seconds || 0)
+        userAnswer: isAttempted ? rawAns : '',
+        isAttempted,
+        isCorrect,
+        marksAwarded: Number(r.marks_awarded !== undefined ? r.marks_awarded : (isCorrect ? (r.marks || 1) : 0)),
+        timeSpentSec: Number(r.time_spent_seconds || 0),
+        status: !isAttempted ? 'UNATTEMPTED' : (isCorrect ? 'CORRECT' : 'INCORRECT')
       };
     });
 

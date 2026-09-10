@@ -24,10 +24,15 @@ import {
   FileText,
   TrendingUp,
   Award,
-  Quote
+  Quote,
+  AlertCircle,
+  Cog,
+  ChevronDown,
+  ChevronUp
 } from 'lucide-react';
 import { GATE_AG_SYLLABUS } from '../data/syllabus';
 import { normalizeSectionTitle } from '../utils/syllabusTaxonomy.js';
+import { isEngineersDayActive } from '../utils/engineersDay.js';
 
 const akhandBharatBackdrop = '/icons/akhand_bharat_backdrop.jpg';
 const swamiVivekanandaPortrait = '/icons/swami_vivekananda_real_portrait.jpg';
@@ -51,8 +56,24 @@ const getSectionIcon = (secCode) => {
   }
 };
 
-export default function Dashboard({ questions, mockPapers = [], customMockPapers = [], userStats, onStartMock, onStartSectionPractice, setActiveTab }) {
+export default function Dashboard({ 
+  questions, 
+  mockPapers = [], 
+  customMockPapers = [], 
+  userStats, 
+  onStartMock, 
+  onStartSectionPractice, 
+  setActiveTab,
+  onOpenEngineersDay
+}) {
   const [paperEraFilter, setPaperEraFilter] = useState('all');
+  const [isEngineersDayCardCompact, setIsEngineersDayCardCompact] = useState(() => {
+    try {
+      return localStorage.getItem('engineers_day_compact_view') === 'true';
+    } catch (e) {
+      return false;
+    }
+  });
 
   const paperMap = useMemo(() => {
     const map = {};
@@ -112,6 +133,108 @@ export default function Dashboard({ questions, mockPapers = [], customMockPapers
           <strong className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black tracking-wide text-amber-950 dark:text-amber-300 drop-shadow-sm">
             🚩 मेरा संकल्प : आत्मनिर्भर, अखंड और अजय भारत 🇮🇳
           </strong>
+        </div>
+      </div>
+
+      {/* Minimized Engineers' Day 2026 Commemorative Banner (Active till 15 Sept 2026) */}
+      {isEngineersDayActive() && (
+        <div className="relative overflow-hidden rounded-2xl border border-amber-300 dark:border-amber-700/80 bg-gradient-to-r from-emerald-50 via-amber-50/50 to-teal-50 dark:from-emerald-950/40 dark:via-amber-950/30 dark:to-teal-950/40 p-3.5 sm:p-4 shadow-sm text-slate-900 dark:text-white transition-all">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
+            
+            {/* Left Column with Sir M. Visvesvaraya Portrait */}
+            <div className="flex items-start sm:items-center gap-3">
+              <div className="relative shrink-0">
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl overflow-hidden border-2 border-amber-400 dark:border-amber-500 shadow-md bg-slate-900">
+                  <img 
+                    src="/icons/visvesvaraya_portrait.jpg" 
+                    alt="Bharat Ratna Sir M. Visvesvaraya" 
+                    className="w-full h-full object-cover object-top"
+                    loading="eager"
+                  />
+                </div>
+                <div className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-emerald-600 text-white flex items-center justify-center border border-white dark:border-slate-900 shadow-xs" title="Engineering Innovation">
+                  <Cog className="w-2.5 h-2.5 animate-spin-slow" />
+                </div>
+              </div>
+
+              <div className="space-y-0.5">
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 font-mono border border-emerald-300 dark:border-emerald-700/60">
+                    Engineers' Day • 15 Sept 2026
+                  </span>
+                  <span className="text-[11px] font-bold text-slate-700 dark:text-slate-300">
+                    COAET, CCS HAU Hisar
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-2 flex-wrap">
+                  <h3 className="text-xs sm:text-sm font-extrabold text-amber-950 dark:text-amber-200">
+                    🌾 क्षेत्रवेद यंत्रधारा • Ksetraveda Yantradhara ⚙️
+                  </h3>
+                </div>
+
+                {!isEngineersDayCardCompact && (
+                  <p className="text-xs text-slate-700 dark:text-slate-300 font-medium leading-relaxed max-w-3xl pt-0.5">
+                    कृषि ज्ञान की पावन धरोहर और अभियांत्रिकी का अविरल संगम। Honoring the spirit of farm mechanization, sustainable hydrology, and agrarian engineering excellence.
+                  </p>
+                )}
+              </div>
+            </div>
+
+            {/* Right Controls */}
+            <div className="flex items-center gap-2 self-end md:self-center shrink-0">
+              <button
+                onClick={() => {
+                  const nextState = !isEngineersDayCardCompact;
+                  setIsEngineersDayCardCompact(nextState);
+                  try {
+                    localStorage.setItem('engineers_day_compact_view', String(nextState));
+                  } catch (e) {}
+                }}
+                className="p-1.5 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-400 hover:bg-white dark:hover:bg-slate-800 text-xs transition-colors cursor-pointer"
+                title={isEngineersDayCardCompact ? "Expand celebration details" : "Minimize view"}
+                aria-label={isEngineersDayCardCompact ? "Expand celebration details" : "Minimize view"}
+              >
+                {isEngineersDayCardCompact ? <ChevronDown className="w-4 h-4" /> : <ChevronUp className="w-4 h-4" />}
+              </button>
+
+              <button
+                onClick={() => {
+                  if (typeof onOpenEngineersDay === 'function') {
+                    onOpenEngineersDay();
+                  }
+                }}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white text-xs font-bold shadow-xs hover:shadow-md transition-all cursor-pointer"
+              >
+                <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+                <span>View Celebration</span>
+                <ArrowRight className="w-3 h-3" />
+              </button>
+            </div>
+
+          </div>
+        </div>
+      )}
+
+      {/* Active Testing & Review Notice */}
+      <div className="bg-amber-50 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-800/80 rounded-2xl p-4 sm:p-4.5 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-slate-900 dark:text-white">
+        <div className="flex items-start sm:items-center gap-3.5">
+          <div className="w-10 h-10 rounded-xl bg-amber-500/15 border border-amber-500/30 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0">
+            <AlertCircle className="w-5 h-5" />
+          </div>
+          <div className="space-y-0.5">
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded bg-amber-500/20 dark:bg-amber-500/30 text-amber-800 dark:text-amber-300 font-mono border border-amber-300 dark:border-amber-700/60">
+                Notice • Beta
+              </span>
+              <h3 className="text-xs sm:text-sm font-extrabold text-amber-950 dark:text-amber-200">
+                Portal is under active testing and review
+              </h3>
+            </div>
+            <p className="text-xs text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
+              We are actively verifying question solutions, mock papers, and platform features for GATE AG 2027. If you spot any discrepancies or have suggestions, please use the <strong>Report Question</strong> tool or reach out through our <strong>Support & WhatsApp</strong> channels.
+            </p>
+          </div>
         </div>
       </div>
 
