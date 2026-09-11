@@ -604,7 +604,7 @@ export default function MockTestMode({
 
   // Global Keyboard Shortcuts for CBT Exam Mode (GATE Pattern)
   useEffect(() => {
-    if (!testStarted || testSubmitted) return;
+    if (!testStarted) return;
 
     const handleKeyDown = (e) => {
       const isInput = ['INPUT', 'TEXTAREA'].includes(e.target?.tagName);
@@ -640,7 +640,7 @@ export default function MockTestMode({
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [testStarted, testSubmitted, currentQIndex, currentQ, userAnswers, paperQuestions.length]);
+  }, [testStarted, currentQIndex, currentQ, userAnswers, paperQuestions.length]);
 
   // Status Counts for the Active Section or Full Test
   const getStatusCounts = () => {

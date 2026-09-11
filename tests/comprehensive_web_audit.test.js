@@ -278,6 +278,11 @@ describe("FULL WEB AUDIT: Security, Data Storage, Functionality & Invariants", (
       assert.strictEqual(manifest.theme_color, "#2563EB");
       assert.ok(manifest.icons && manifest.icons.length >= 4);
     });
+
+    it("verifies MockTestMode has no undefined testSubmitted variable references", () => {
+      const mockTestCode = fs.readFileSync(path.join(projectRoot, "src/components/MockTestMode.jsx"), "utf8");
+      assert.strictEqual(mockTestCode.includes("testSubmitted"), false, "MockTestMode must not reference undeclared testSubmitted");
+    });
   });
 
   describe("Pillar 5: Service Worker & PWA Performance Audit", () => {
