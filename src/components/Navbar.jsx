@@ -22,7 +22,8 @@ import {
   Globe,
   Shield,
   ExternalLink,
-  Download
+  Download,
+  Activity
 } from 'lucide-react';
 import NotificationDropdown from './NotificationDropdown';
 
@@ -42,6 +43,7 @@ export default function Navbar({
 }) {
   const navItems = [
     { id: 'dashboard', label: 'Dashboard', icon: Compass },
+    { id: 'livestats', label: 'Live Board', icon: Activity, badge: 'Live', matches: ['livestats', 'telemetry', 'liveboard'] },
     { id: 'practicehub', label: 'Practice Hub', icon: Target, badge: '3-in-1', matches: ['practicehub', 'practice', 'custompractice', 'customtest'] },
     { id: 'learninghub', label: 'Learning Hub', icon: GraduationCap, badge: '5-in-1', matches: ['learninghub', 'concepts', 'revision', 'formulas', 'simulators', 'flashcards'] },
     { id: 'community', label: 'Community', icon: MessageSquare, badge: 'Live', matches: ['community', 'chat', 'qa', 'discussions', 'ai_tutor', 'aisolver', 'aitutor'] },

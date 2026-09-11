@@ -292,9 +292,11 @@ export default function QuestionBankView({
   }, [qbankProgress, storageKey]);
 
   useEffect(() => {
-    if (initialSection) {
+    if (initialSection && initialSection !== 'All' && initialSection !== 'All Sections' && initialSection !== 'ALL') {
       const canon = normalizeSectionTitle(initialSection);
-      setExpandedSections(prev => ({ ...prev, [canon]: true }));
+      if (canon && canon !== 'All') {
+        setExpandedSections(prev => ({ ...prev, [canon]: true }));
+      }
     }
   }, [initialSection]);
 

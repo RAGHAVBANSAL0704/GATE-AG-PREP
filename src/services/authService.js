@@ -1,6 +1,7 @@
 import { supabase, isSupabaseConfigured } from './supabaseClient.js';
 import { validateCleanInput } from '../utils/profanityFilter.js';
 import { syncPendingTestAttempts, associateGuestAttemptsWithStudent } from './testAttemptService.js';
+import { recordLiveAction } from './liveStatisticsService.js';
 
 const LOCAL_STORAGE_SESSION_KEY = 'gate_ag_prep_session_token';
 const LOCAL_STORAGE_USERS_KEY = 'gate_ag_prep_mock_users';
@@ -527,6 +528,16 @@ export async function registerStudent(formData) {
       associateGuestAttemptsWithStudent(newStudent);
     } catch (e) {}
 
+    try {
+      recordLiveAction({
+        type: 'session_login',
+        studentName: newStudent.full_name,
+        collegeName: newStudent.college_name,
+        section: 'Student Registration',
+        details: `New aspirant registered from ${newStudent.college_name || 'India'}`
+      });
+    } catch (e) {}
+
     return { success: true, student: newStudent };
   }
 
@@ -569,6 +580,16 @@ export async function registerStudent(formData) {
     student: mockUser,
     savedAt: Date.now()
   }));
+
+  try {
+    recordLiveAction({
+      type: 'session_login',
+      studentName: mockUser.full_name,
+      collegeName: mockUser.college_name,
+      section: 'Student Registration',
+      details: `New aspirant registered from ${mockUser.college_name || 'India'}`
+    });
+  } catch (e) {}
 
   return { success: true, student: mockUser };
 }
@@ -891,6 +912,16 @@ export async function loginStudent(identifierInput, passwordInput, rememberMe = 
       associateGuestAttemptsWithStudent(safeStudent);
     } catch (e) {}
 
+    try {
+      recordLiveAction({
+        type: 'session_login',
+        studentName: safeStudent.full_name,
+        collegeName: safeStudent.college_name,
+        section: 'Student Login',
+        details: `Logged into GATE AG Portal from ${safeStudent.college_name || 'India'}`
+      });
+    } catch (e) {}
+
     return { success: true, student: safeStudent };
   }
 
@@ -938,7 +969,121 @@ export async function loginStudent(identifierInput, passwordInput, rememberMe = 
     savedAt: Date.now()
   }));
 
+  try {
+    recordLiveAction({
+      type: 'session_login',
+      studentName: safeStudent.full_name,
+      collegeName: safeStudent.college_name,
+      section: 'Student Login',
+      details: `Logged into GATE AG Portal from ${safeStudent.college_name || 'India'}`
+    });
+  } catch (e) {}
+
   return { success: true, student: safeStudent };
+}
+
+export const PRESET_SECURITY_QUESTIONS = [
+  "What is your favorite Agricultural Engineering subject / topic?",
+  "What was the name of your first school or college campus?",
+  "In which city or town were you born?",
+  "What is your dream GATE AG All-India Rank / Goal?",
+  "What was the model or brand of your family's first tractor or vehicle?",
+  "What is your favorite agricultural crop or farm machine?",
+  "What was your childhood nickname?"
+];
+
+/**
+ * Helper to get current calendar month in YYYY-MM format
+ */
+export function getCurrentMonthKey(date = new Date()) {
+  const d = date instanceof Date ? date : new Date(date);
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, '0');
+  return `${year}-${month}`;
+}
+
+/**
+ * Calculates exact date and time when the monthly 3-edit limit will reset (1st of next month at 00:00:00 IST)
+ */
+export function getNextMonthlyResetInfo(currentDate = new Date()) {
+  const now = currentDate instanceof Date ? currentDate : new Date(currentDate);
+  const year = now.getFullYear();
+  const month = now.getMonth(); // 0-indexed
+  
+  // 1st of next month at 00:00:00
+  const resetDate = new Date(year, month + 1, 1, 0, 0, 0, 0);
+  const diffMs = Math.max(0, resetDate.getTime() - now.getTime());
+  
+  const daysRemaining = Math.floor(diffMs / (24 * 60 * 60 * 1000));
+  const hoursRemaining = Math.floor((diffMs % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
+  const minutesRemaining = Math.floor((diffMs % (60 * 60 * 1000)) / (60 * 1000));
+  
+  const monthNames = [
+    'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December'
+  ];
+  
+  const currentMonthName = `${monthNames[month]} ${year}`;
+  const nextMonthIdx = (month + 1) % 12;
+  const nextYear = month === 11 ? year + 1 : year;
+  const nextMonthName = `${monthNames[nextMonthIdx]} ${nextYear}`;
+  
+  const shortMonthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const formattedDate = `1 ${shortMonthNames[nextMonthIdx]} ${nextYear}, 12:00 AM IST`;
+  
+  return {
+    resetTimestamp: resetDate.getTime(),
+    resetDateISO: resetDate.toISOString(),
+    formattedDate,
+    currentMonthName,
+    nextMonthName,
+    daysRemaining,
+    hoursRemaining,
+    minutesRemaining
+  };
+}
+
+/**
+ * Computes live monthly edit quota status for a student
+ */
+export function getStudentMonthlyEditsStatus(student) {
+  const resetInfo = getNextMonthlyResetInfo();
+  const currentMonthKey = getCurrentMonthKey();
+  
+  if (!student) {
+    return {
+      editsUsed: 0,
+      editsRemaining: 3,
+      maxEdits: 3,
+      isLimitReached: false,
+      currentMonthKey,
+      resetInfo
+    };
+  }
+
+  const lastEditMonth = student.last_edit_month || (student.last_update_timestamp ? getCurrentMonthKey(new Date(student.last_update_timestamp)) : null);
+
+  let editsUsed = 0;
+  if (lastEditMonth === currentMonthKey) {
+    if (typeof student.monthly_edits_count === 'number') {
+      editsUsed = student.monthly_edits_count;
+    } else if (typeof student.profile_updates_count === 'number') {
+      editsUsed = student.profile_updates_count;
+    }
+  }
+
+  const maxEdits = 3;
+  const editsRemaining = Math.max(0, maxEdits - editsUsed);
+  const isLimitReached = editsRemaining <= 0;
+
+  return {
+    editsUsed,
+    editsRemaining,
+    maxEdits,
+    isLimitReached,
+    currentMonthKey,
+    resetInfo
+  };
 }
 
 export async function updateStudentProfile(studentId, updatedFields) {
@@ -960,8 +1105,6 @@ export async function updateStudentProfile(studentId, updatedFields) {
     if (!colVal.isValid) return { success: false, message: colVal.message };
   }
 
-  const ONE_WEEK_MS = 7 * 24 * 60 * 60 * 1000;
-
   const rawSession = localStorage.getItem(LOCAL_STORAGE_SESSION_KEY);
   if (!rawSession) return { success: false, message: 'No active session found.' };
 
@@ -969,46 +1112,76 @@ export async function updateStudentProfile(studentId, updatedFields) {
   let currentStudent = session.student;
   delete currentStudent.password_plain;
 
-  let count = currentStudent.profile_updates_count || 0;
-  let lastUpdate = currentStudent.last_update_timestamp 
-    ? new Date(currentStudent.last_update_timestamp).getTime() 
-    : 0;
+  const status = getStudentMonthlyEditsStatus(currentStudent);
 
-  if (Date.now() - lastUpdate > ONE_WEEK_MS) {
-    count = 0;
-  }
-
-  if (count >= 3) {
+  if (status.isLimitReached) {
     return {
       success: false,
-      message: '🔒 Weekly limit reached! You can only update your profile 3 times per week.'
+      message: `🔒 Monthly limit reached (3/3 edits used)! Profile edits will reset on ${status.resetInfo.formattedDate}.`,
+      resetInfo: status.resetInfo,
+      updatesRemaining: 0
     };
   }
 
-  const newCount = count + 1;
+  // Password verification: If setting new password, verify old password from backend
+  if (updatedFields.newPassword && updatedFields.newPassword.trim().length > 0) {
+    if (updatedFields.newPassword.trim().length < 6) {
+      return { success: false, message: 'New password must be at least 6 characters long.' };
+    }
+    if (!updatedFields.oldPassword || !updatedFields.oldPassword.trim()) {
+      return { success: false, message: 'Please enter your current (old) password to set a new password.' };
+    }
+
+    const isOldPasswordValid = await verifyPassword(updatedFields.oldPassword.trim(), currentStudent);
+    if (!isOldPasswordValid) {
+      return { success: false, message: 'Current (old) password is incorrect. Please verify and try again.' };
+    }
+  }
+
+  const newCount = status.editsUsed + 1;
   const newTimestamp = new Date().toISOString();
+  const currentMonthKey = status.currentMonthKey;
+
+  const isFac = updatedFields.is_faculty !== undefined 
+    ? Boolean(updatedFields.is_faculty) 
+    : (updatedFields.role === 'faculty' || Boolean(currentStudent.is_faculty));
 
   const payload = {
-    full_name: updatedFields.full_name,
+    full_name: updatedFields.full_name?.trim() || currentStudent.full_name,
     gender: updatedFields.gender || currentStudent.gender || 'Male',
     mobile_number: sanitizeMobileNumber(updatedFields.mobile_number),
     email: updatedFields.email ? updatedFields.email.trim().toLowerCase() : currentStudent.email,
-    dob: updatedFields.dob,
-    current_year_sem: updatedFields.current_year_sem,
-    college_name: updatedFields.college_name,
-    address: updatedFields.address || null,
-    profile_photo_url: updatedFields.profile_photo_url || null,
-    title_prefix: updatedFields.title_prefix || currentStudent.title_prefix || null,
-    department: updatedFields.department || currentStudent.department || null,
-    institute: updatedFields.institute || updatedFields.college_name || currentStudent.institute || null,
-    is_faculty: Boolean(updatedFields.is_faculty || currentStudent.is_faculty),
-    role: updatedFields.role || currentStudent.role || (currentStudent.is_faculty ? 'faculty' : 'student'),
-    display_name: updatedFields.title_prefix && updatedFields.full_name 
-      ? `${updatedFields.title_prefix} ${updatedFields.full_name}` 
-      : (currentStudent.display_name || updatedFields.full_name),
+    dob: updatedFields.dob || currentStudent.dob,
+    current_year_sem: isFac ? (updatedFields.current_year_sem || `Faculty • ${updatedFields.department || currentStudent.department || 'AG'}`) : (updatedFields.current_year_sem || currentStudent.current_year_sem),
+    college_name: updatedFields.college_name || currentStudent.college_name,
+    institute: updatedFields.institute || updatedFields.college_name || currentStudent.institute || currentStudent.college_name,
+    address: updatedFields.address !== undefined ? updatedFields.address : currentStudent.address,
+    city: updatedFields.city !== undefined ? updatedFields.city : (currentStudent.city || null),
+    state: updatedFields.state !== undefined ? updatedFields.state : (currentStudent.state || null),
+    pincode: updatedFields.pincode !== undefined ? updatedFields.pincode : (currentStudent.pincode || null),
+    profile_photo_url: updatedFields.profile_photo_url !== undefined ? updatedFields.profile_photo_url : currentStudent.profile_photo_url,
+    title_prefix: isFac ? (updatedFields.title_prefix || currentStudent.title_prefix || 'Dr.') : null,
+    department: isFac ? (updatedFields.department || currentStudent.department || AGRI_ENGG_DEPARTMENTS[0]) : null,
+    designation: isFac ? (updatedFields.designation || currentStudent.designation || 'Faculty Member') : null,
+    gate_target_year: !isFac ? (updatedFields.gate_target_year || currentStudent.gate_target_year || 'GATE 2027') : null,
+    bio: updatedFields.bio !== undefined ? updatedFields.bio : (currentStudent.bio || null),
+    is_faculty: isFac,
+    role: isFac ? 'faculty' : (updatedFields.role || 'student'),
+    student_type: updatedFields.student_type || currentStudent.student_type || (isFac ? 'faculty' : 'external'),
+    display_name: isFac && (updatedFields.title_prefix || currentStudent.title_prefix) && (updatedFields.full_name || currentStudent.full_name)
+      ? `${updatedFields.title_prefix || currentStudent.title_prefix || 'Dr.'} ${updatedFields.full_name || currentStudent.full_name}`.trim()
+      : (updatedFields.full_name || currentStudent.full_name),
+    monthly_edits_count: newCount,
+    last_edit_month: currentMonthKey,
     profile_updates_count: newCount,
     last_update_timestamp: newTimestamp
   };
+
+  if (updatedFields.security_question && updatedFields.security_answer && updatedFields.security_answer.trim()) {
+    payload.security_question = updatedFields.security_question.trim();
+    payload.security_answer_hash = await hashPassword(updatedFields.security_answer.trim().toLowerCase());
+    payload.has_security_question = true;
+  }
 
   if (updatedFields.admission_no) {
     payload.admission_no = updatedFields.admission_no.trim().toUpperCase();
@@ -1050,6 +1223,7 @@ export async function updateStudentProfile(studentId, updatedFields) {
     payload.password_hash = await hashPassword(plainPwd);
     payload.has_custom_password = true;
   }
+
 
   if (isSupabaseConfigured && supabase) {
     let updated = null;
@@ -1206,6 +1380,519 @@ export function logoutStudent() {
 
 export function getRememberedIdentifier() {
   return localStorage.getItem(LOCAL_STORAGE_REMEMBER_KEY) || '';
+}
+
+/**
+ * Fetch latest profile for a student directly from Supabase backend
+ */
+export async function fetchStudentProfileFromBackend(studentOrIdentifier) {
+  if (!studentOrIdentifier || !isSupabaseConfigured || !supabase) return null;
+
+  try {
+    let studentId = null;
+    let email = null;
+    let username = null;
+    let admissionNo = null;
+    let mobile = null;
+
+    if (typeof studentOrIdentifier === 'object') {
+      studentId = studentOrIdentifier.id;
+      email = studentOrIdentifier.email;
+      username = studentOrIdentifier.username;
+      admissionNo = studentOrIdentifier.admission_no;
+      mobile = studentOrIdentifier.mobile_number;
+    } else if (typeof studentOrIdentifier === 'string') {
+      const trimmed = studentOrIdentifier.trim();
+      if (trimmed.includes('@')) {
+        email = trimmed;
+      } else if (trimmed.startsWith('@')) {
+        username = trimmed.replace(/^@/, '').toLowerCase();
+      } else {
+        studentId = trimmed;
+        admissionNo = trimmed;
+      }
+    }
+
+    let backendUser = null;
+
+    // 1. Try lookup by exact ID
+    if (studentId) {
+      const { data, error } = await supabase
+        .from('students')
+        .select('*')
+        .eq('id', studentId)
+        .maybeSingle();
+      if (!error && data) backendUser = data;
+    }
+
+    // 2. Try lookup by email
+    if (!backendUser && email) {
+      const { data, error } = await supabase
+        .from('students')
+        .select('*')
+        .eq('email', email)
+        .maybeSingle();
+      if (!error && data) backendUser = data;
+    }
+
+    // 3. Try lookup by username
+    if (!backendUser && username) {
+      const formattedUsername = username.replace(/^@/, '').toLowerCase();
+      const { data, error } = await supabase
+        .from('students')
+        .select('*')
+        .eq('username', formattedUsername)
+        .maybeSingle();
+      if (!error && data) backendUser = data;
+    }
+
+    // 4. Try lookup by admission_no
+    if (!backendUser && admissionNo) {
+      const { data, error } = await supabase
+        .from('students')
+        .select('*')
+        .eq('admission_no', admissionNo)
+        .maybeSingle();
+      if (!error && data) backendUser = data;
+    }
+
+    // 5. Try lookup by mobile
+    if (!backendUser && mobile) {
+      const { data, error } = await supabase
+        .from('students')
+        .select('*')
+        .eq('mobile_number', mobile)
+        .maybeSingle();
+      if (!error && data) backendUser = data;
+    }
+
+    if (!backendUser) return null;
+
+    // Clean sensitive properties
+    delete backendUser.password_plain;
+    delete backendUser.password_hash;
+
+    // Merge with any current session values
+    const rawSession = localStorage.getItem(LOCAL_STORAGE_SESSION_KEY);
+    if (rawSession) {
+      try {
+        const session = JSON.parse(rawSession);
+        const cur = session?.student;
+        const isCurrentActive = cur && (
+          cur.id === backendUser.id || 
+          (cur.email && cur.email === backendUser.email) ||
+          (cur.username && cur.username === backendUser.username) ||
+          (cur.admission_no && cur.admission_no === backendUser.admission_no)
+        );
+
+        if (isCurrentActive) {
+          const merged = {
+            ...cur,
+            ...backendUser
+          };
+          delete merged.password_plain;
+          delete merged.password_hash;
+          session.student = merged;
+          session.savedAt = Date.now();
+          localStorage.setItem(LOCAL_STORAGE_SESSION_KEY, JSON.stringify(session));
+
+          // Also update local mock users if present
+          const savedUsersRaw = localStorage.getItem(LOCAL_STORAGE_USERS_KEY);
+          if (savedUsersRaw) {
+            const localUsers = JSON.parse(savedUsersRaw);
+            const idx = localUsers.findIndex(u => 
+              u.id === merged.id || 
+              (u.email && u.email === merged.email) || 
+              (u.admission_no && u.admission_no === merged.admission_no)
+            );
+            if (idx !== -1) {
+              localUsers[idx] = { ...localUsers[idx], ...merged };
+              localStorage.setItem(LOCAL_STORAGE_USERS_KEY, JSON.stringify(localUsers));
+            }
+          }
+          return merged;
+        }
+      } catch (e) {
+        console.warn('Error merging backend user profile into session:', e);
+      }
+    }
+
+    return backendUser;
+  } catch (err) {
+    console.warn('Backend student profile fetch warning:', err);
+    return null;
+  }
+}
+
+/**
+ * Refreshes current active student session with fresh data from Supabase backend
+ */
+export async function refreshCurrentStudentProfile() {
+  try {
+    const raw = localStorage.getItem(LOCAL_STORAGE_SESSION_KEY);
+    if (!raw) return null;
+    const session = JSON.parse(raw);
+    const student = session?.student;
+    if (!student) return null;
+
+    const refreshed = await fetchStudentProfileFromBackend(student);
+    return refreshed || student;
+  } catch (e) {
+    console.warn('Failed to refresh current student profile:', e);
+    return null;
+  }
+}
+
+/**
+ * Real-time synchronization subscription for current student profile
+ * Listens for Supabase database changes, window focus, tab visibility change, and heartbeat polls.
+ */
+export function subscribeToStudentProfileSync(currentStudent, onProfileUpdate) {
+  if (!currentStudent || typeof onProfileUpdate !== 'function') {
+    return () => {};
+  }
+
+  let isSubscribed = true;
+  let supabaseChannel = null;
+
+  // 1. Initial immediate background sync
+  refreshCurrentStudentProfile().then(refreshed => {
+    if (isSubscribed && refreshed) {
+      onProfileUpdate(refreshed);
+    }
+  }).catch(() => {});
+
+  // 2. Realtime Postgres Changes Subscription via Supabase
+  if (isSupabaseConfigured && supabase) {
+    try {
+      const channelId = `profile_sync_${currentStudent.id || currentStudent.admission_no || currentStudent.email || Date.now()}`;
+      supabaseChannel = supabase
+        .channel(channelId)
+        .on(
+          'postgres_changes',
+          { event: 'UPDATE', schema: 'public', table: 'students' },
+          (payload) => {
+            if (!isSubscribed || !payload?.new) return;
+            const updatedRow = payload.new;
+            const isMatch =
+              (currentStudent.id && updatedRow.id === currentStudent.id) ||
+              (currentStudent.email && updatedRow.email === currentStudent.email) ||
+              (currentStudent.username && updatedRow.username === currentStudent.username) ||
+              (currentStudent.admission_no && updatedRow.admission_no === currentStudent.admission_no);
+
+            if (isMatch) {
+              // Update local session
+              fetchStudentProfileFromBackend(updatedRow).then(merged => {
+                if (isSubscribed && merged) {
+                  onProfileUpdate(merged);
+                }
+              }).catch(() => {});
+            }
+          }
+        )
+        .subscribe();
+    } catch (e) {
+      console.warn('Realtime profile sync channel warning:', e);
+    }
+  }
+
+  // 3. Focus and Visibility change handler (refreshes immediately if user changes DB in another tab / dashboard)
+  const handleTabFocus = () => {
+    if (!isSubscribed) return;
+    refreshCurrentStudentProfile().then(refreshed => {
+      if (isSubscribed && refreshed) {
+        onProfileUpdate(refreshed);
+      }
+    }).catch(() => {});
+  };
+
+  if (typeof window !== 'undefined') {
+    window.addEventListener('focus', handleTabFocus);
+    if (typeof document !== 'undefined') {
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState === 'visible') {
+          handleTabFocus();
+        }
+      });
+    }
+  }
+
+  // 4. Heartbeat interval sync (every 15 seconds)
+  let intervalId = null;
+  if (typeof setInterval !== 'undefined') {
+    intervalId = setInterval(() => {
+      if (!isSubscribed) return;
+      refreshCurrentStudentProfile().then(refreshed => {
+        if (isSubscribed && refreshed) {
+          onProfileUpdate(refreshed);
+        }
+      }).catch(() => {});
+    }, 15000);
+  }
+
+  // Return unsubscribe cleanup function
+  return () => {
+    isSubscribed = false;
+    if (intervalId) clearInterval(intervalId);
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('focus', handleTabFocus);
+      if (typeof document !== 'undefined') {
+        document.removeEventListener('visibilitychange', handleTabFocus);
+      }
+    }
+    if (supabaseChannel && supabase) {
+      try {
+        supabase.removeChannel(supabaseChannel);
+      } catch (e) {}
+    }
+  };
+}
+
+/**
+ * Lookup configured security question or default challenge for password recovery
+ */
+export async function fetchSecurityQuestionForUser(identifier) {
+  if (!identifier || !identifier.trim()) {
+    return { success: false, message: 'Please provide your Email, Username, Mobile, or Roll Number.' };
+  }
+
+  const cleanId = identifier.trim();
+  let user = null;
+
+  // 1. Check Supabase if configured
+  if (isSupabaseConfigured && supabase) {
+    try {
+      const matchConditions = [];
+      if (cleanId.includes('@')) {
+        matchConditions.push(`email.eq.${cleanId.toLowerCase()}`);
+      }
+      const formattedUsername = cleanId.replace(/^@/, '').toLowerCase();
+      matchConditions.push(`username.eq.${formattedUsername}`);
+      const cleanMobile = sanitizeMobileNumber(cleanId);
+      if (cleanMobile) matchConditions.push(`mobile_number.eq.${cleanMobile}`);
+      matchConditions.push(`admission_no.eq.${cleanId.toUpperCase()}`);
+
+      const { data, error } = await supabase
+        .from('students')
+        .select('*')
+        .or(matchConditions.join(','))
+        .maybeSingle();
+
+      if (!error && data) {
+        user = data;
+      }
+    } catch (e) {
+      console.warn('Backend user lookup for security question error:', e);
+    }
+  }
+
+  // 2. Local mock users check fallback
+  if (!user) {
+    const rawUsers = localStorage.getItem(LOCAL_STORAGE_USERS_KEY);
+    if (rawUsers) {
+      try {
+        const localUsers = JSON.parse(rawUsers);
+        const lowerId = cleanId.toLowerCase();
+        const usernameClean = cleanId.replace(/^@/, '').toLowerCase();
+        const mobileClean = sanitizeMobileNumber(cleanId);
+        user = localUsers.find(u => 
+          (u.email && u.email.toLowerCase() === lowerId) ||
+          (u.username && u.username.toLowerCase() === usernameClean) ||
+          (u.mobile_number && u.mobile_number === mobileClean) ||
+          (u.admission_no && u.admission_no.toUpperCase() === cleanId.toUpperCase())
+        );
+      } catch (e) {}
+    }
+  }
+
+  // 3. Current active session check fallback
+  if (!user) {
+    const rawSession = localStorage.getItem(LOCAL_STORAGE_SESSION_KEY);
+    if (rawSession) {
+      try {
+        const sess = JSON.parse(rawSession);
+        const s = sess?.student;
+        if (s && (
+          (s.email && s.email.toLowerCase() === cleanId.toLowerCase()) ||
+          (s.username && s.username.toLowerCase() === cleanId.replace(/^@/, '').toLowerCase()) ||
+          (s.admission_no && s.admission_no.toUpperCase() === cleanId.toUpperCase()) ||
+          (s.mobile_number && s.mobile_number === sanitizeMobileNumber(cleanId))
+        )) {
+          user = s;
+        }
+      } catch (e) {}
+    }
+  }
+
+  if (!user) {
+    return { 
+      success: false, 
+      message: 'No registered student or faculty account was found matching this identifier.' 
+    };
+  }
+
+  if (user.security_question && user.security_answer_hash) {
+    return {
+      success: true,
+      question: user.security_question,
+      hasCustomQuestion: true,
+      isDobFallback: false,
+      studentName: user.full_name,
+      studentId: user.id,
+      identifier: user.email || user.username || user.admission_no || cleanId
+    };
+  }
+
+  // Fallback to Date of Birth Security Challenge if no custom question set
+  return {
+    success: true,
+    question: 'What is your registered Date of Birth in DD/MM/YYYY format? (e.g. 15/08/2002)',
+    hasCustomQuestion: false,
+    isDobFallback: true,
+    studentName: user.full_name,
+    studentId: user.id,
+    identifier: user.email || user.username || user.admission_no || cleanId
+  };
+}
+
+/**
+ * Reset password securely via security question answer verification
+ */
+export async function resetPasswordViaSecurityQuestion(identifier, securityAnswer, newPassword) {
+  if (!identifier || !identifier.trim()) {
+    return { success: false, message: 'Account identifier is required.' };
+  }
+  if (!securityAnswer || !securityAnswer.trim()) {
+    return { success: false, message: 'Please provide the answer to the security question.' };
+  }
+  if (!newPassword || newPassword.trim().length < 6) {
+    return { success: false, message: 'New password must be at least 6 characters long.' };
+  }
+
+  const cleanId = identifier.trim();
+  const cleanAnswer = securityAnswer.trim().toLowerCase();
+  let user = null;
+
+  // Find user in Supabase
+  if (isSupabaseConfigured && supabase) {
+    try {
+      const matchConditions = [];
+      if (cleanId.includes('@')) matchConditions.push(`email.eq.${cleanId.toLowerCase()}`);
+      matchConditions.push(`username.eq.${cleanId.replace(/^@/, '').toLowerCase()}`);
+      const cleanMobile = sanitizeMobileNumber(cleanId);
+      if (cleanMobile) matchConditions.push(`mobile_number.eq.${cleanMobile}`);
+      matchConditions.push(`admission_no.eq.${cleanId.toUpperCase()}`);
+
+      const { data, error } = await supabase
+        .from('students')
+        .select('*')
+        .or(matchConditions.join(','))
+        .maybeSingle();
+
+      if (!error && data) user = data;
+    } catch (e) {}
+  }
+
+  if (!user) {
+    const rawUsers = localStorage.getItem(LOCAL_STORAGE_USERS_KEY);
+    if (rawUsers) {
+      try {
+        const localUsers = JSON.parse(rawUsers);
+        const lowerId = cleanId.toLowerCase();
+        const usernameClean = cleanId.replace(/^@/, '').toLowerCase();
+        const mobileClean = sanitizeMobileNumber(cleanId);
+        user = localUsers.find(u => 
+          (u.email && u.email.toLowerCase() === lowerId) ||
+          (u.username && u.username.toLowerCase() === usernameClean) ||
+          (u.mobile_number && u.mobile_number === mobileClean) ||
+          (u.admission_no && u.admission_no.toUpperCase() === cleanId.toUpperCase())
+        );
+      } catch (e) {}
+    }
+  }
+
+  if (!user) {
+    const rawSession = localStorage.getItem(LOCAL_STORAGE_SESSION_KEY);
+    if (rawSession) {
+      try {
+        const sess = JSON.parse(rawSession);
+        user = sess?.student;
+      } catch (e) {}
+    }
+  }
+
+  if (!user) {
+    return { success: false, message: 'Account not found.' };
+  }
+
+  // Verify Answer
+  let isAnswerCorrect = false;
+
+  if (user.security_answer_hash) {
+    const testHash = await hashPassword(cleanAnswer);
+    if (user.security_answer_hash === testHash || user.security_answer_hash === cleanAnswer) {
+      isAnswerCorrect = true;
+    }
+  }
+
+  if (!isAnswerCorrect && user.dob) {
+    const dobFormatted = formatDOBPassword(user.dob).toLowerCase();
+    if (dobFormatted === cleanAnswer || user.dob === cleanAnswer) {
+      isAnswerCorrect = true;
+    }
+  }
+
+  if (!isAnswerCorrect) {
+    return { success: false, message: '❌ Security answer is incorrect. Please check your answer and try again.' };
+  }
+
+  // Update password
+  const newHash = await hashPassword(newPassword.trim());
+  const updatePayload = {
+    password_hash: newHash,
+    has_custom_password: true,
+    last_update_timestamp: new Date().toISOString()
+  };
+
+  if (isSupabaseConfigured && supabase && user.id) {
+    try {
+      await supabase.from('students').update(updatePayload).eq('id', user.id);
+    } catch (e) {
+      console.warn('Backend password reset update error:', e);
+    }
+  }
+
+  // Update local session if currently active
+  const rawSession = localStorage.getItem(LOCAL_STORAGE_SESSION_KEY);
+  if (rawSession) {
+    try {
+      const sess = JSON.parse(rawSession);
+      if (sess?.student && (sess.student.id === user.id || sess.student.email === user.email)) {
+        sess.student.password_hash = newHash;
+        sess.student.has_custom_password = true;
+        localStorage.setItem(LOCAL_STORAGE_SESSION_KEY, JSON.stringify(sess));
+      }
+    } catch (e) {}
+  }
+
+  // Update local users array
+  const savedUsersRaw = localStorage.getItem(LOCAL_STORAGE_USERS_KEY);
+  if (savedUsersRaw) {
+    try {
+      const localUsers = JSON.parse(savedUsersRaw);
+      const idx = localUsers.findIndex(u => u.id === user.id || u.email === user.email);
+      if (idx !== -1) {
+        localUsers[idx].password_hash = newHash;
+        localUsers[idx].has_custom_password = true;
+        localStorage.setItem(LOCAL_STORAGE_USERS_KEY, JSON.stringify(localUsers));
+      }
+    } catch (e) {}
+  }
+
+  return {
+    success: true,
+    message: '✅ Password has been reset successfully! You can now log in.'
+  };
 }
 
 // Preserved Quick Demo / Preview Profiles (Retained for future feature flags or testing)

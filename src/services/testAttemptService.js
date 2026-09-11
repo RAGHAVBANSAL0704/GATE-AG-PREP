@@ -1,5 +1,6 @@
 import { supabase, isSupabaseConfigured } from './supabaseClient.js';
 import { saveToIDB, getAllFromIDB } from '../utils/indexedDB.js';
+import { recordLiveAction } from './liveStatisticsService.js';
 
 export const LOCAL_STORAGE_TEST_ATTEMPTS_KEY = 'gate_ag_prep_test_attempts';
 
@@ -49,6 +50,19 @@ export async function saveTestAttempt(attemptData) {
   } catch (idbErr) {
     console.warn("IndexedDB attempt save warning:", idbErr);
   }
+
+  // Record live telemetry activity
+  try {
+    recordLiveAction({
+      type: 'mock_completed',
+      studentName: attemptPayload.student_name,
+      collegeName: attemptData.college_name || 'COAET CCS HAU Hisar',
+      score: attemptPayload.score,
+      count: attemptPayload.correct_count + attemptPayload.incorrect_count,
+      section: attemptPayload.paper_title || 'CBT Mock Test',
+      details: `Completed ${attemptPayload.paper_title} (Score: ${attemptPayload.score.toFixed(2)} / ${attemptPayload.total_marks.toFixed(2)})`
+    });
+  } catch (e) {}
 
   // 2. Save to Local Storage fallback array immediately
   let localAttempts = [];

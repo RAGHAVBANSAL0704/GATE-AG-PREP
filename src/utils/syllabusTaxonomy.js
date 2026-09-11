@@ -97,8 +97,8 @@ export function normalizeSectionTitle(sectionInput) {
   if (!sectionInput) return 'Section 8: General Aptitude';
   const inputLower = String(sectionInput).toLowerCase().trim();
 
-  if (inputLower.includes('aptitude') || inputLower.includes('verbal') || inputLower.includes('spatial') || inputLower.includes('general') || inputLower.includes('reasoning') || inputLower.includes('quantitative')) {
-    return 'Section 8: General Aptitude';
+  if (inputLower === 'all' || inputLower === 'all sections') {
+    return 'All';
   }
 
   // 1. Exact match first
@@ -130,6 +130,9 @@ export function normalizeSectionTitle(sectionInput) {
   if (inputLower.includes('irrigation') || inputLower.includes('drainage') || inputLower.includes('well') || inputLower.includes('pump')) return 'Section 5: Irrigation and Drainage Engineering';
   if (inputLower.includes('process') || inputLower.includes('drying') || inputLower.includes('storage') || inputLower.includes('size reduction')) return 'Section 6: Agricultural Process Engineering';
   if (inputLower.includes('dairy') || inputLower.includes('food') || inputLower.includes('heat') || inputLower.includes('preservation')) return 'Section 7: Dairy and Food Engineering';
+  if (inputLower.includes('aptitude') || inputLower.includes('verbal') || inputLower.includes('spatial') || inputLower.includes('general') || inputLower.includes('reasoning') || inputLower.includes('quantitative') || inputLower === 'ga') {
+    return 'Section 8: General Aptitude';
+  }
 
   return 'Section 8: General Aptitude';
 }

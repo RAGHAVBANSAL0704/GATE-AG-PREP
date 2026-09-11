@@ -5,26 +5,43 @@
 -- 1. Create Students Table
 create table if not exists public.students (
   id uuid primary key default gen_random_uuid(),
-  student_type text default 'hau' check (student_type in ('hau', 'non_hau', 'visitor', 'external')),
+  student_type text default 'hau' check (student_type in ('hau', 'non_hau', 'visitor', 'external', 'faculty')),
+  role text default 'student',
+  is_faculty boolean default false,
+  title_prefix text,
   full_name text not null,
+  display_name text,
   username text unique,
   gender text default 'Male' check (gender in ('Male', 'Female', 'Other')),
+  department text,
+  designation text,
   mobile_number text,
   admission_no text,
   email text,
   password_hash text,
   has_custom_password boolean default false,
+  security_question text,
+  security_answer_hash text,
+  has_security_question boolean default false,
   profile_updates_count integer default 0,
+  monthly_edits_count integer default 0,
+  last_edit_month text,
   last_update_timestamp timestamptz,
   address text,
+  city text,
+  state text,
+  pincode text,
   profile_photo_url text,
   current_year_sem text,
   email_verified boolean default false,
   dob text,
   college_name text,
+  institute text,
   degree text,
   graduation_year text,
+  gate_target_year text default 'GATE 2027',
   target_year text default '2027',
+  bio text,
   xp_points numeric default 0,
   break_xp numeric default 0,
   created_at timestamptz default now(),
@@ -33,12 +50,29 @@ create table if not exists public.students (
 
 -- Ensure missing columns are added if students table already existed
 alter table public.students add column if not exists username text;
+alter table public.students add column if not exists role text default 'student';
+alter table public.students add column if not exists is_faculty boolean default false;
+alter table public.students add column if not exists title_prefix text;
+alter table public.students add column if not exists display_name text;
+alter table public.students add column if not exists department text;
+alter table public.students add column if not exists designation text;
 alter table public.students add column if not exists gender text check (gender in ('Male', 'Female', 'Other'));
 alter table public.students add column if not exists password_hash text;
 alter table public.students add column if not exists has_custom_password boolean default false;
+alter table public.students add column if not exists security_question text;
+alter table public.students add column if not exists security_answer_hash text;
+alter table public.students add column if not exists has_security_question boolean default false;
 alter table public.students add column if not exists profile_updates_count integer default 0;
+alter table public.students add column if not exists monthly_edits_count integer default 0;
+alter table public.students add column if not exists last_edit_month text;
 alter table public.students add column if not exists last_update_timestamp timestamptz;
 alter table public.students add column if not exists address text;
+alter table public.students add column if not exists city text;
+alter table public.students add column if not exists state text;
+alter table public.students add column if not exists pincode text;
+alter table public.students add column if not exists bio text;
+alter table public.students add column if not exists gate_target_year text default 'GATE 2027';
+alter table public.students add column if not exists institute text;
 alter table public.students add column if not exists profile_photo_url text;
 alter table public.students add column if not exists current_year_sem text;
 alter table public.students add column if not exists email_verified boolean default false;
@@ -50,13 +84,15 @@ alter table public.students drop column if exists password_plain;
 
 -- Update student_type constraint if table was previously created with old check constraint
 alter table public.students drop constraint if exists students_student_type_check;
-alter table public.students add constraint students_student_type_check check (student_type in ('hau', 'non_hau', 'visitor', 'external'));
+alter table public.students add constraint students_student_type_check check (student_type in ('hau', 'non_hau', 'visitor', 'external', 'faculty'));
 
 -- Fast Lookup Indexes for students
 create index if not exists idx_students_username on public.students(username);
 create index if not exists idx_students_admission_no on public.students(admission_no);
 create index if not exists idx_students_email on public.students(email);
+create index if not exists idx_students_mobile on public.students(mobile_number);
 create index if not exists idx_students_gender on public.students(gender);
+create index if not exists idx_students_role on public.students(role);
 
 -- Enable RLS for students
 alter table public.students enable row level security;

@@ -29,6 +29,8 @@ import {
   loginFaculty,
   getRememberedIdentifier, 
   validateHAUAdmissionNo,
+  fetchSecurityQuestionForUser,
+  resetPasswordViaSecurityQuestion,
   FACULTY_SALUTATIONS,
   AGRI_ENGG_DEPARTMENTS,
   PRESET_DEMO_PROFILES
@@ -200,6 +202,19 @@ export default function AuthModal({
   const [isCapsLockOn, setIsCapsLockOn] = useState(false);
   const [showForgotPasswordModal, setShowForgotPasswordModal] = useState(false);
   const [copiedResetText, setCopiedResetText] = useState(false);
+
+  // Self-Service Password Reset via Security Question State
+  const [forgotIdentifier, setForgotIdentifier] = useState('');
+  const [forgotStep, setForgotStep] = useState(1); // 1: identify, 2: challenge, 3: success
+  const [securityQuestionData, setSecurityQuestionData] = useState(null);
+  const [securityAnswerInput, setSecurityAnswerInput] = useState('');
+  const [showSecurityAnswerInput, setShowSecurityAnswerInput] = useState(false);
+  const [resetNewPassword, setResetNewPassword] = useState('');
+  const [resetConfirmPassword, setResetConfirmPassword] = useState('');
+  const [showResetNewPassword, setShowResetNewPassword] = useState(false);
+  const [forgotError, setForgotError] = useState('');
+  const [forgotSuccess, setForgotSuccess] = useState('');
+  const [forgotLoading, setForgotLoading] = useState(false);
 
   // UI Feedback State
   const [errorMsg, setErrorMsg] = useState('');
@@ -1286,77 +1301,332 @@ export default function AuthModal({
       </div>
 
       {/* ======================================================== */}
-      {/* FORGOT PASSWORD / ADMIN RECOVERY MODAL                   */}
+      {/* SELF-SERVICE PASSWORD RESET VIA SECURITY QUESTION MODAL */}
       {/* ======================================================== */}
       {showForgotPasswordModal && (
-        <div className="fixed inset-0 z-[200] flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-in fade-in">
-          <div className="relative w-full max-w-md bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 shadow-2xl space-y-4">
+        <div className="fixed inset-0 z-[200] flex items-center justify-center p-3 sm:p-4 bg-slate-950/80 backdrop-blur-md animate-in fade-in overflow-y-auto">
+          <div className="relative w-full max-w-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-5 sm:p-7 shadow-2xl space-y-4 my-auto">
+            
+            {/* Modal Header */}
             <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">
-              <div className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400">
-                <HelpCircle className="w-5 h-5" />
-                <h3 className="font-extrabold text-sm text-slate-900 dark:text-white">
-                  Account Recovery & Password Help
-                </h3>
+              <div className="flex items-center gap-2.5 text-emerald-600 dark:text-emerald-400">
+                <div className="p-2 rounded-xl bg-emerald-500/10 dark:bg-emerald-500/20">
+                  <ShieldCheck className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="font-extrabold text-sm sm:text-base text-slate-900 dark:text-white">
+                    Self-Service Password Reset
+                  </h3>
+                  <p className="text-[11px] text-slate-500 dark:text-slate-400">
+                    Verify Security Question & Set New Password
+                  </p>
+                </div>
               </div>
               <button
                 type="button"
-                onClick={() => setShowForgotPasswordModal(false)}
-                className="p-1.5 rounded-xl text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 cursor-pointer"
+                onClick={() => {
+                  setShowForgotPasswordModal(false);
+                  setForgotStep(1);
+                  setForgotError('');
+                  setForgotSuccess('');
+                }}
+                className="p-2 rounded-xl text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 cursor-pointer transition"
               >
                 <X className="w-4 h-4" />
               </button>
             </div>
 
-            <div className="space-y-3 text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
-              <div className="p-3.5 rounded-2xl bg-indigo-50/70 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-900/60 space-y-1.5">
-                <span className="font-extrabold text-indigo-900 dark:text-indigo-200 block text-[11px] uppercase tracking-wider">
-                  💡 Default Password Rules
-                </span>
-                <p className="text-slate-700 dark:text-slate-300">
-                  <strong>Student Accounts:</strong> Your default password is your <strong>Date of Birth</strong> in <code>DD/MM/YYYY</code> format (e.g. <code>15/08/2002</code>).
-                </p>
-                <p className="text-slate-700 dark:text-slate-300">
-                  <strong>Faculty Accounts:</strong> Your default password is <code>Faculty@2026</code>.
-                </p>
+            {/* Error & Success Toasts */}
+            {forgotError && (
+              <div className="p-3 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-600 dark:text-rose-300 text-xs flex items-center gap-2">
+                <AlertCircle className="w-4 h-4 text-rose-500 shrink-0" />
+                <span>{forgotError}</span>
               </div>
+            )}
 
-              <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 space-y-2">
-                <span className="font-extrabold text-slate-900 dark:text-white block">
-                  Forgot your custom password?
-                </span>
-                <p className="text-slate-600 dark:text-slate-400">
-                  Contact the portal administrator or your faculty mentor to reset your credentials. Send an email to:
-                </p>
-                <div className="font-mono text-xs font-bold text-indigo-600 dark:text-indigo-400 bg-white dark:bg-slate-900 p-2 rounded-xl border border-slate-200 dark:border-slate-800 text-center select-all">
-                  admin@gateagprep.in
-                </div>
+            {forgotSuccess && (
+              <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-600 dark:text-emerald-300 text-xs flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+                <span>{forgotSuccess}</span>
               </div>
-            </div>
+            )}
 
-            {/* Quick Copy Support Request */}
-            <div className="pt-2 flex items-center gap-2">
-              <button
-                type="button"
-                onClick={() => {
-                  const reqText = `Subject: GATE AG Prep - Password Reset Request\n\nHello Admin,\nPlease reset my password for the GATE AG Prep Portal.\nAccount Identifier: ${loginIdentifier || '[Enter Email/Username/Roll No]'}`;
-                  navigator.clipboard.writeText(reqText);
-                  setCopiedResetText(true);
-                  setTimeout(() => setCopiedResetText(false), 2500);
+            {/* STEP 1: Enter Account Identifier */}
+            {forgotStep === 1 && (
+              <form 
+                onSubmit={async (e) => {
+                  e.preventDefault();
+                  setForgotError('');
+                  const targetId = (forgotIdentifier || loginIdentifier).trim();
+                  if (!targetId) {
+                    setForgotError('Please enter your Email, Username, Mobile, or Roll Number.');
+                    return;
+                  }
+                  setForgotLoading(true);
+                  try {
+                    const res = await fetchSecurityQuestionForUser(targetId);
+                    if (res.success) {
+                      setSecurityQuestionData(res);
+                      setForgotIdentifier(res.identifier || targetId);
+                      setForgotStep(2);
+                    } else {
+                      setForgotError(res.message);
+                    }
+                  } catch (err) {
+                    setForgotError('Unable to connect to recovery service.');
+                  } finally {
+                    setForgotLoading(false);
+                  }
                 }}
-                className="flex-1 py-2.5 px-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs transition flex items-center justify-center gap-2 shadow-sm cursor-pointer"
+                className="space-y-4 text-xs"
               >
-                <Copy className="w-4 h-4" />
-                <span>{copiedResetText ? 'Copied Request Template!' : 'Copy Support Request'}</span>
-              </button>
+                <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 space-y-1">
+                  <span className="font-bold text-slate-800 dark:text-slate-200 block">
+                    Step 1: Locate Your Account
+                  </span>
+                  <p className="text-slate-500 dark:text-slate-400 text-[11px]">
+                    Enter your registered Email address, @username, 10-digit mobile number, or HAU Admission Number.
+                  </p>
+                </div>
 
-              <button
-                type="button"
-                onClick={() => setShowForgotPasswordModal(false)}
-                className="py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold text-xs cursor-pointer"
+                <div className="space-y-1">
+                  <label className="font-semibold text-slate-700 dark:text-slate-300">
+                    Account Identifier
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="e.g. aspirant@gateagprep.in / @username / 9876543210"
+                    value={forgotIdentifier || loginIdentifier}
+                    onChange={(e) => {
+                      setForgotIdentifier(e.target.value);
+                      setForgotError('');
+                    }}
+                    className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:border-emerald-500"
+                    required
+                  />
+                </div>
+
+                <div className="pt-2 flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={() => setShowForgotPasswordModal(false)}
+                    className="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold transition cursor-pointer"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="submit"
+                    disabled={forgotLoading}
+                    className="flex-1 py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold transition flex items-center justify-center gap-2 shadow-md cursor-pointer disabled:opacity-50"
+                  >
+                    {forgotLoading ? (
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                    ) : (
+                      <>
+                        <span>Find Security Question</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </>
+                    )}
+                  </button>
+                </div>
+              </form>
+            )}
+
+            {/* STEP 2: Answer Security Question & Enter New Password */}
+            {forgotStep === 2 && securityQuestionData && (
+              <form
+                onSubmit={async (e) => {
+                  e.preventDefault();
+                  setForgotError('');
+                  if (!securityAnswerInput.trim()) {
+                    setForgotError('Please enter the answer to the security question.');
+                    return;
+                  }
+                  if (resetNewPassword.length < 6) {
+                    setForgotError('New password must be at least 6 characters long.');
+                    return;
+                  }
+                  if (resetNewPassword !== resetConfirmPassword) {
+                    setForgotError('New passwords do not match.');
+                    return;
+                  }
+
+                  setForgotLoading(true);
+                  try {
+                    const res = await resetPasswordViaSecurityQuestion(
+                      forgotIdentifier,
+                      securityAnswerInput,
+                      resetNewPassword
+                    );
+
+                    if (res.success) {
+                      setForgotSuccess(res.message);
+                      setForgotStep(3);
+                      setLoginIdentifier(forgotIdentifier);
+                      setLoginPassword(resetNewPassword);
+                    } else {
+                      setForgotError(res.message);
+                    }
+                  } catch (err) {
+                    setForgotError('Failed to reset password.');
+                  } finally {
+                    setForgotLoading(false);
+                  }
+                }}
+                className="space-y-3.5 text-xs"
               >
-                Close
-              </button>
-            </div>
+                {/* Account info card */}
+                <div className="p-3 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-between">
+                  <div>
+                    <span className="text-[10px] text-emerald-600 dark:text-emerald-400 uppercase font-bold tracking-wider block">Account Found:</span>
+                    <span className="font-bold text-slate-900 dark:text-white text-xs">{securityQuestionData.studentName}</span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setForgotStep(1);
+                      setForgotError('');
+                    }}
+                    className="text-[10px] text-emerald-600 dark:text-emerald-400 hover:underline font-semibold cursor-pointer"
+                  >
+                    Change Account
+                  </button>
+                </div>
+
+                {/* Security Question Box */}
+                <div className="space-y-1.5 p-3.5 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
+                  <label className="font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                    <HelpCircle className="w-3.5 h-3.5 text-amber-500" />
+                    <span>Security Challenge Question:</span>
+                  </label>
+                  <p className="font-bold text-slate-900 dark:text-white text-xs leading-snug">
+                    "{securityQuestionData.question}"
+                  </p>
+                  {securityQuestionData.isDobFallback && (
+                    <p className="text-[10px] text-slate-500">Hint: Enter your Date of Birth exactly as DD/MM/YYYY (e.g. 15/08/2002).</p>
+                  )}
+                </div>
+
+                {/* Security Answer Input */}
+                <div className="space-y-1">
+                  <label className="font-medium text-slate-700 dark:text-slate-300">
+                    Your Secret Answer <span className="text-rose-500">*</span>
+                  </label>
+                  <div className="relative">
+                    <input
+                      type={showSecurityAnswerInput ? "text" : "password"}
+                      placeholder="Type your security answer..."
+                      value={securityAnswerInput}
+                      onChange={(e) => setSecurityAnswerInput(e.target.value)}
+                      className="w-full pl-3.5 pr-10 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:border-emerald-500"
+                      required
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setShowSecurityAnswerInput(!showSecurityAnswerInput)}
+                      className="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-slate-200"
+                    >
+                      {showSecurityAnswerInput ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                    </button>
+                  </div>
+                </div>
+
+                {/* New Password & Confirm Password */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 border-t border-slate-200 dark:border-slate-800">
+                  <div className="space-y-1">
+                    <label className="font-medium text-slate-700 dark:text-slate-300">
+                      New Password (Min 6 chars) <span className="text-rose-500">*</span>
+                    </label>
+                    <div className="relative">
+                      <input
+                        type={showResetNewPassword ? "text" : "password"}
+                        placeholder="New password"
+                        value={resetNewPassword}
+                        onChange={(e) => setResetNewPassword(e.target.value)}
+                        className="w-full pl-3.5 pr-10 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:border-emerald-500"
+                        required
+                      />
+                      <button
+                        type="button"
+                        onClick={() => setShowResetNewPassword(!showResetNewPassword)}
+                        className="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-slate-200"
+                      >
+                        {showResetNewPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                      </button>
+                    </div>
+                  </div>
+
+                  <div className="space-y-1">
+                    <label className="font-medium text-slate-700 dark:text-slate-300">
+                      Confirm New Password <span className="text-rose-500">*</span>
+                    </label>
+                    <input
+                      type={showResetNewPassword ? "text" : "password"}
+                      placeholder="Re-enter password"
+                      value={resetConfirmPassword}
+                      onChange={(e) => setResetConfirmPassword(e.target.value)}
+                      className="w-full px-3.5 py-2.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:border-emerald-500"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="pt-2 flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={() => setForgotStep(1)}
+                    className="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold transition cursor-pointer"
+                  >
+                    Back
+                  </button>
+
+                  <button
+                    type="submit"
+                    disabled={forgotLoading}
+                    className="flex-1 py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold transition flex items-center justify-center gap-2 shadow-md cursor-pointer disabled:opacity-50"
+                  >
+                    {forgotLoading ? (
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                    ) : (
+                      <>
+                        <Lock className="w-4 h-4" />
+                        <span>Reset Password Now</span>
+                      </>
+                    )}
+                  </button>
+                </div>
+              </form>
+            )}
+
+            {/* STEP 3: Success Confirmation */}
+            {forgotStep === 3 && (
+              <div className="space-y-4 text-center py-4">
+                <div className="w-14 h-14 mx-auto rounded-full bg-emerald-500/20 text-emerald-500 flex items-center justify-center animate-bounce">
+                  <CheckCircle2 className="w-8 h-8" />
+                </div>
+                <div>
+                  <h4 className="font-extrabold text-base text-slate-900 dark:text-white">
+                    Password Reset Successfully!
+                  </h4>
+                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                    Your credentials have been updated in the database. Your new credentials have been auto-filled into the sign-in form.
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setShowForgotPasswordModal(false);
+                    setForgotStep(1);
+                    setPrimaryTab('login');
+                  }}
+                  className="w-full py-3 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-lg transition cursor-pointer flex items-center justify-center gap-2"
+                >
+                  <span>Proceed to Sign In</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              </div>
+            )}
+
           </div>
         </div>
       )}

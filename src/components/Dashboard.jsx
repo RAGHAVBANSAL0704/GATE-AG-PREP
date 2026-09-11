@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { 
   Trophy, 
   Target, 
@@ -7,31 +7,38 @@ import {
   CheckCircle2, 
   Play, 
   ArrowRight,
-  Zap,
-  BookOpen,
-  HelpCircle,
-  Sparkles,
-  GraduationCap,
-  Gamepad2,
-  MessageSquare,
-  Calculator,
-  Wrench,
-  Waves,
-  Droplets,
-  Factory,
-  Utensils,
-  Brain,
-  FileText,
-  TrendingUp,
-  Award,
-  Quote,
-  Cog,
-  ChevronDown,
-  ChevronUp
+  Zap, 
+  BookOpen, 
+  HelpCircle, 
+  Sparkles, 
+  GraduationCap, 
+  Gamepad2, 
+  MessageSquare, 
+  Calculator, 
+  Wrench, 
+  Waves, 
+  Droplets, 
+  Factory, 
+  Utensils, 
+  Brain, 
+  FileText, 
+  TrendingUp, 
+  Award, 
+  Quote, 
+  Cog, 
+  ChevronDown, 
+  ChevronUp,
+  Activity,
+  Radio,
+  Users,
+  Building2,
+  Flame,
+  RefreshCw
 } from 'lucide-react';
 import { GATE_AG_SYLLABUS } from '../data/syllabus';
 import { normalizeSectionTitle } from '../utils/syllabusTaxonomy.js';
 import { isEngineersDayActive } from '../utils/engineersDay.js';
+import { subscribeToLiveStats, formatLiveRelativeTime } from '../services/liveStatisticsService.js';
 
 const akhandBharatBackdrop = '/icons/akhand_bharat_backdrop.jpg';
 const swamiVivekanandaPortrait = '/icons/swami_vivekananda_real_portrait.jpg';
@@ -123,6 +130,17 @@ export default function Dashboard({
     return history;
   }, [userStats]);
 
+  const [liveStats, setLiveStats] = useState(null);
+
+  useEffect(() => {
+    const unsub = subscribeToLiveStats((data) => {
+      setLiveStats(data);
+    });
+    return () => {
+      if (typeof unsub === 'function') unsub();
+    };
+  }, []);
+
   return (
     <div className="space-y-6 animate-in fade-in duration-200">
       
@@ -143,11 +161,11 @@ export default function Dashboard({
             {/* Left Column with Sir M. Visvesvaraya Portrait */}
             <div className="flex items-start sm:items-center gap-3">
               <div className="relative shrink-0">
-                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl overflow-hidden border-2 border-amber-400 dark:border-amber-500 shadow-md bg-slate-900">
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl overflow-hidden border-2 border-amber-400 dark:border-amber-500 shadow-md bg-slate-950 flex items-center justify-center">
                   <img 
                     src="/icons/visvesvaraya_portrait.jpg" 
                     alt="Bharat Ratna Sir M. Visvesvaraya" 
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-contain p-0.5"
                     loading="eager"
                   />
                 </div>
@@ -168,13 +186,13 @@ export default function Dashboard({
 
                 <div className="flex items-center gap-2 flex-wrap">
                   <h3 className="text-xs sm:text-sm font-extrabold text-amber-950 dark:text-amber-200">
-                    🌾 क्षेत्रवेद यंत्रधारा • Ksetraveda Yantradhara ⚙️
+                    🌾 KṣetraVeda Yantradhārā • क्षेत्रवेद यन्त्रधारा ⚙️
                   </h3>
                 </div>
 
                 {!isEngineersDayCardCompact && (
                   <p className="text-xs text-slate-700 dark:text-slate-300 font-medium leading-relaxed max-w-3xl pt-0.5">
-                    कृषि ज्ञान की पावन धरोहर और अभियांत्रिकी का अविरल संगम। Honoring the spirit of farm mechanization, sustainable hydrology, and agrarian engineering excellence.
+                    A continuous stream of knowledge and technology flowing through the fields of agriculture. Bridging the wisdom of the soil with the power of modern engineering.
                   </p>
                 )}
               </div>
@@ -285,6 +303,88 @@ export default function Dashboard({
             </div>
           </div>
 
+        </div>
+      </div>
+
+      {/* REAL-TIME LIVE STATISTICS & TELEMETRY BOARD WIDGET */}
+      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-emerald-50/90 via-white to-teal-50/80 dark:from-slate-900 dark:via-slate-950 dark:to-emerald-950 text-slate-900 dark:text-white border-2 border-emerald-300 dark:border-emerald-500/40 p-5 sm:p-6 shadow-sm dark:shadow-xl space-y-4">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div className="space-y-1">
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 text-[11px] font-black font-mono border border-emerald-300 dark:border-emerald-500/40">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                LIVE BOARD TELEMETRY
+              </span>
+              <span className="text-[11px] font-mono text-emerald-800 dark:text-emerald-200/70 font-semibold">
+                • Real-time updates active
+              </span>
+            </div>
+            <h2 className="text-lg sm:text-xl font-black text-slate-900 dark:text-white flex items-center gap-2">
+              <span>All-India Aspirant Live Activity Board</span>
+              <Activity className="w-5 h-5 text-emerald-600 dark:text-emerald-400 animate-pulse" />
+            </h2>
+            <p className="text-xs text-slate-600 dark:text-slate-300">
+              Live updates of registered aspirants, active sessions, questions solved, and mock test attempts.
+            </p>
+          </div>
+
+          <button
+            onClick={() => setActiveTab('livestats')}
+            className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs transition shadow-md active:scale-95 flex items-center gap-1.5 cursor-pointer shrink-0 self-start md:self-center"
+          >
+            <span>Open Full Live Board</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </button>
+        </div>
+
+        {/* 4 Quick Live Counters */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 pt-1">
+          <div className="p-3.5 rounded-2xl bg-white dark:bg-slate-900/80 border border-emerald-200 dark:border-emerald-500/30 space-y-1 shadow-xs">
+            <div className="flex items-center justify-between">
+              <span className="text-[10px] uppercase font-bold text-emerald-700 dark:text-emerald-300/80">Online Right Now</span>
+              <Users className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+            </div>
+            <div className="text-xl sm:text-2xl font-black text-emerald-700 dark:text-emerald-300 font-mono">
+              {liveStats?.activeOnlineStudents || 1}
+            </div>
+            <p className="text-[10px] text-slate-500 dark:text-slate-400">Active Aspirants</p>
+          </div>
+
+          <div className="p-3.5 rounded-2xl bg-white dark:bg-slate-900/80 border border-blue-200 dark:border-blue-500/30 space-y-1 shadow-xs">
+            <div className="flex items-center justify-between">
+              <span className="text-[10px] uppercase font-bold text-blue-700 dark:text-blue-300/80">Registered Students</span>
+              <GraduationCap className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
+            </div>
+            <div className="text-xl sm:text-2xl font-black text-blue-700 dark:text-blue-300 font-mono">
+              {liveStats?.totalRegisteredStudents || 1}
+            </div>
+            <p className="text-[10px] text-slate-500 dark:text-slate-400">All-India Institutes</p>
+          </div>
+
+          <div className="p-3.5 rounded-2xl bg-white dark:bg-slate-900/80 border border-purple-200 dark:border-purple-500/30 space-y-1 shadow-xs">
+            <div className="flex items-center justify-between">
+              <span className="text-[10px] uppercase font-bold text-purple-700 dark:text-purple-300/80">Questions Solved</span>
+              <Target className="w-3.5 h-3.5 text-purple-600 dark:text-purple-400" />
+            </div>
+            <div className="text-xl sm:text-2xl font-black text-purple-700 dark:text-purple-300 font-mono">
+              {liveStats?.totalQuestionsSolved || attemptedCount}
+            </div>
+            <p className="text-[10px] text-slate-500 dark:text-slate-400">{liveStats?.overallAccuracy || accuracy}% Overall Acc.</p>
+          </div>
+
+          <div className="p-3.5 rounded-2xl bg-white dark:bg-slate-900/80 border border-amber-200 dark:border-amber-500/30 space-y-1 shadow-xs">
+            <div className="flex items-center justify-between">
+              <span className="text-[10px] uppercase font-bold text-amber-700 dark:text-amber-300/80">Session Logins</span>
+              <Zap className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400" />
+            </div>
+            <div className="text-xl sm:text-2xl font-black text-amber-700 dark:text-amber-300 font-mono">
+              {liveStats?.totalSessionLogins || 1}
+            </div>
+            <p className="text-[10px] text-slate-500 dark:text-slate-400">Device Telemetry</p>
+          </div>
         </div>
       </div>
 

@@ -129,6 +129,82 @@ export async function getAllFromIDB(storeName) {
 }
 
 /**
+ * Get a single item by key from an IndexedDB store
+ */
+export async function getFromIDB(storeName, key) {
+  try {
+    const db = await initDB();
+    if (!db) return null;
+
+    return new Promise((resolve) => {
+      const tx = db.transaction(storeName, 'readonly');
+      const store = tx.objectStore(storeName);
+      const req = store.get(key);
+
+      req.onsuccess = () => resolve(req.result || null);
+      req.onerror = () => resolve(null);
+    });
+  } catch (e) {
+    console.error(`Error reading key ${key} from IDB store ${storeName}:`, e);
+    return null;
+  }
+}
+
+/**
+ * Delete an item from an IndexedDB store
+ */
+export async function deleteFromIDB(storeName, key) {
+  try {
+    const db = await initDB();
+    if (!db) return false;
+
+    return new Promise((resolve) => {
+      const tx = db.transaction(storeName, 'readwrite');
+      const store = tx.objectStore(storeName);
+      const req = store.delete(key);
+
+      req.onsuccess = () => resolve(true);
+      req.onerror = () => resolve(false);
+    });
+  } catch (e) {
+    console.error(`Error deleting key ${key} from IDB store ${storeName}:`, e);
+    return false;
+  }
+}
+
+/**
+ * Query browser storage quota and usage
+ */
+export async function getStorageQuotaEstimate() {
+  if (typeof navigator !== 'undefined' && navigator.storage && typeof navigator.storage.estimate === 'function') {
+    try {
+      const { usage = 0, quota = 0 } = await navigator.storage.estimate();
+      const usageMb = (usage / (1024 * 1024)).toFixed(2);
+      const quotaMb = (quota / (1024 * 1024)).toFixed(2);
+      const percent = quota > 0 ? ((usage / quota) * 100).toFixed(1) : '0.0';
+      return {
+        supported: true,
+        usageBytes: usage,
+        quotaBytes: quota,
+        usageMb: Number(usageMb),
+        quotaMb: Number(quotaMb),
+        percent: Number(percent)
+      };
+    } catch (e) {
+      // Fallback
+    }
+  }
+  return {
+    supported: false,
+    usageBytes: 0,
+    quotaBytes: 0,
+    usageMb: 0,
+    quotaMb: 0,
+    percent: 0
+  };
+}
+
+/**
  * Export complete offline prep data (Stats, Attempts, Bookmarks, Syllabus, Flashcards) as a JSON payload
  */
 export async function exportFullDataJSON() {

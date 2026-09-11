@@ -26,7 +26,8 @@ import {
   Shield,
   Eye,
   Leaf,
-  Sliders
+  Sliders,
+  Activity
 } from 'lucide-react';
 import { GATE_AG_FORMULAS } from '../data/formulas';
 import { GATE_AG_SYLLABUS } from '../data/syllabus';
@@ -104,6 +105,7 @@ export default function CommandPaletteModal({
   // Navigation & Actions
   const navShortcuts = useMemo(() => [
     { id: 'nav_dash', type: 'action', title: 'Go to Dashboard', icon: Target, action: () => onNavigate('dashboard') },
+    { id: 'nav_livestats', type: 'action', title: 'Open Real-Time Live Statistics & Telemetry Board', icon: Activity, action: () => onNavigate('livestats') },
     { id: 'nav_practice', type: 'action', title: 'Open Practice Hub & Question Pools', icon: Target, action: () => onNavigate('practicehub') },
     { id: 'nav_formulas', type: 'action', title: 'Open GATE AG Formula Sheet', icon: BookOpen, action: () => onNavigate('formulas') },
     { id: 'nav_learning', type: 'action', title: 'Open Learning Hub & Concept Vault', icon: GraduationCap, action: () => onNavigate('learninghub') },

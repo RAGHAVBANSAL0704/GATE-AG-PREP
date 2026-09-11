@@ -27,13 +27,14 @@ describe('Engineers Day 2026 Pop-up & Theme Tests', () => {
     assert.equal(isEngineersDayActive(october1), false);
   });
 
-  test('validates COAET CCS HAU Hisar and Ksetraveda Yantradhara theme details', () => {
-    assert.equal(ENGINEERS_DAY_METADATA.themeName, 'Ksetraveda Yantradhara');
-    assert.equal(ENGINEERS_DAY_METADATA.themeHindi, 'क्षेत्रवेद यंत्रधारा');
+  test('validates COAET CCS HAU Hisar and KṣetraVeda Yantradhārā theme details', () => {
+    assert.equal(ENGINEERS_DAY_METADATA.themeName, 'KṣetraVeda Yantradhārā');
+    assert.equal(ENGINEERS_DAY_METADATA.themeHindi, 'क्षेत्रवेद यन्त्रधारा');
     assert.match(ENGINEERS_DAY_METADATA.organizerShort, /COAET, CCS HAU Hisar/);
-    assert.match(ENGINEERS_DAY_METADATA.invocationHindi, /क्षेत्रवेद यंत्रधारा/);
-    assert.match(ENGINEERS_DAY_METADATA.invocationEnglish, /Ksetraveda/);
-    assert.match(ENGINEERS_DAY_METADATA.invocationEnglish, /Yantradhara/);
+    assert.match(ENGINEERS_DAY_METADATA.invocationHindi, /KṣetraVeda Yantradhārā/);
+    assert.match(ENGINEERS_DAY_METADATA.invocationEnglish, /knowledge and technology/);
+    assert.ok(Array.isArray(ENGINEERS_DAY_METADATA.etymology), 'etymology must be an array');
+    assert.equal(ENGINEERS_DAY_METADATA.etymology.length, 4, 'Must have 4 Sanskrit pillars');
   });
 
   test('validates that dashboard minimized celebration banner is active independent of user role or visitor state', () => {

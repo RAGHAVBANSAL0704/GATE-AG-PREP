@@ -43,6 +43,7 @@ const CommunityHub = lazyWithRetry(() => import('./components/CommunityHub'));
 const CreatorAdminHQ = lazyWithRetry(() => import('./components/CreatorAdminHQ'));
 const PerformanceAnalytics = lazyWithRetry(() => import('./components/PerformanceAnalytics'));
 const Leaderboard = lazyWithRetry(() => import('./components/Leaderboard'));
+const LiveStatisticsBoard = lazyWithRetry(() => import('./components/LiveStatisticsBoard'));
 const FeedbackForum = lazyWithRetry(() => import('./components/FeedbackForum'));
 const DownloadsHub = lazyWithRetry(() => import('./components/DownloadsHub'));
 const SyllabusTracker = lazyWithRetry(() => import('./components/SyllabusTracker'));
@@ -69,7 +70,12 @@ function TabLoadingSkeleton() {
   );
 }
 
-import { checkCurrentSession, logoutStudent } from './services/authService';
+import { 
+  checkCurrentSession, 
+  logoutStudent, 
+  subscribeToStudentProfileSync, 
+  refreshCurrentStudentProfile 
+} from './services/authService';
 import { initAutoSyncOnReconnect } from './services/testAttemptService';
 import { saveAndBroadcastQuestion, subscribeToLiveQuestionSync } from './services/questionSyncService';
 import { recordQuestionOutcomes } from './services/mistakeVaultService';
@@ -133,7 +139,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState(() => {
     try {
       const hash = window.location.hash.replace(/^#\/?/, '');
-      const validTabs = ['dashboard', 'practicehub', 'practice', 'custompractice', 'customtest', 'learninghub', 'concepts', 'simulators', 'flashcards', 'community', 'chat', 'qa', 'discussions', 'ai_tutor', 'aisolver', 'aitutor', 'revision', 'formulas', 'mocktest', 'games', 'admin', 'feedback', 'downloads', 'syllabus', 'creator', 'support', 'hq'];
+      const validTabs = ['dashboard', 'livestats', 'telemetry', 'liveboard', 'practicehub', 'practice', 'custompractice', 'customtest', 'learninghub', 'concepts', 'simulators', 'flashcards', 'community', 'chat', 'qa', 'discussions', 'ai_tutor', 'aisolver', 'aitutor', 'revision', 'formulas', 'mocktest', 'games', 'admin', 'feedback', 'downloads', 'syllabus', 'creator', 'support', 'hq'];
       if (validTabs.includes(hash)) {
         return hash;
       }
@@ -146,7 +152,7 @@ export default function App() {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace(/^#\/?/, '');
-      const validTabs = ['dashboard', 'practicehub', 'practice', 'custompractice', 'customtest', 'learninghub', 'concepts', 'simulators', 'flashcards', 'community', 'chat', 'qa', 'discussions', 'ai_tutor', 'aisolver', 'aitutor', 'revision', 'formulas', 'mocktest', 'games', 'admin', 'feedback', 'downloads', 'syllabus', 'creator', 'support', 'hq'];
+      const validTabs = ['dashboard', 'livestats', 'telemetry', 'liveboard', 'practicehub', 'practice', 'custompractice', 'customtest', 'learninghub', 'concepts', 'simulators', 'flashcards', 'community', 'chat', 'qa', 'discussions', 'ai_tutor', 'aisolver', 'aitutor', 'revision', 'formulas', 'mocktest', 'games', 'admin', 'feedback', 'downloads', 'syllabus', 'creator', 'support', 'hq'];
       if (validTabs.includes(hash)) {
         setActiveTab(hash);
       }
@@ -229,6 +235,26 @@ export default function App() {
       setWelcomeUser(student);
     }
   };
+
+  // Real-time live profile synchronization with Supabase backend (e.g. backend name/email/college changes)
+  useEffect(() => {
+    if (!currentStudent) return;
+    const unsub = subscribeToStudentProfileSync(currentStudent, (updatedStudent) => {
+      if (updatedStudent) {
+        setCurrentStudent(prev => {
+          if (!prev) return updatedStudent;
+          return {
+            ...prev,
+            ...updatedStudent
+          };
+        });
+      }
+    });
+
+    return () => {
+      if (typeof unsub === 'function') unsub();
+    };
+  }, [currentStudent?.id, currentStudent?.email, currentStudent?.username, currentStudent?.admission_no]);
 
   useEffect(() => {
     const unsub = subscribeToLiveRoleSync((update) => {
@@ -697,7 +723,7 @@ export default function App() {
       />
 
       {/* Main Wide Canvas */}
-      <div className="flex-1 flex flex-col min-w-0 overflow-y-auto">
+      <div className="flex-1 flex flex-col min-w-0">
         {/* Raghav Bansal Educational Network Top Strip */}
         <div className="w-full bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 px-4 py-1.5 sm:px-6 lg:px-8 text-[11px] font-medium z-10 shrink-0 mt-14 sm:mt-0">
           <div className="max-w-7xl 2xl:max-w-[1500px] mx-auto flex flex-wrap items-center justify-between gap-2">
@@ -880,6 +906,14 @@ export default function App() {
             {activeTab === 'leaderboard' && (
               <Leaderboard 
                 currentStudent={currentStudent} 
+              />
+            )}
+
+            {['livestats', 'telemetry', 'liveboard'].includes(activeTab) && (
+              <LiveStatisticsBoard 
+                onNavigate={(tab) => setActiveTab(tab)}
+                onStartMock={handleStartMock}
+                onOpenPractice={handleStartSectionPractice}
               />
             )}
 

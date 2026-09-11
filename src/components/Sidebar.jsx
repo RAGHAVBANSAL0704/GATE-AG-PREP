@@ -22,7 +22,8 @@ import {
   MessageSquare,
   Award,
   Search,
-  Palette
+  Palette,
+  Activity
 } from 'lucide-react';
 
 export default function Sidebar({ 
@@ -47,6 +48,13 @@ export default function Sidebar({
       label: 'Dashboard', 
       icon: Compass, 
       matches: ['dashboard'] 
+    },
+    { 
+      id: 'livestats', 
+      label: 'Live Board', 
+      icon: Activity, 
+      badge: 'Live',
+      matches: ['livestats', 'telemetry', 'liveboard'] 
     },
     { 
       id: 'practicehub', 
@@ -193,10 +201,10 @@ export default function Sidebar({
         />
       )}
 
-      {/* Minimalist Left Sidebar */}
+      {/* Persistent Left Sidebar */}
       <aside className={`
-        fixed sm:sticky top-0 left-0 h-screen shrink-0 bg-white dark:bg-slate-900 border-r border-slate-200/80 dark:border-slate-800/80 overflow-y-auto z-50
-        w-60 sm:w-16 md:w-60 transition-all duration-200
+        fixed top-0 left-0 h-screen sm:h-[100dvh] shrink-0 bg-white dark:bg-slate-900 border-r border-slate-200/80 dark:border-slate-800/80 overflow-y-auto z-30
+        w-60 sm:w-16 md:w-60 transition-transform duration-200 ease-in-out
         ${isMobileOpen ? 'translate-x-0' : '-translate-x-full sm:translate-x-0'}
       `}>
         <div className="flex flex-col h-full justify-between p-3.5 space-y-4">
@@ -358,9 +366,11 @@ export default function Sidebar({
             </div>
 
           </div>
-
         </div>
       </aside>
+      
+      {/* Desktop Layout Spacer to maintain exact page layout dimensions with fixed sidebar */}
+      <div className="hidden sm:block sm:w-16 md:w-60 shrink-0 pointer-events-none" aria-hidden="true" />
 
       {/* Mobile Bottom Navigation Bar (Hidden during full CBT exam to maximize exam viewport) */}
       {activeTab !== 'mocktest' && (

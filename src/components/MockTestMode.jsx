@@ -602,6 +602,46 @@ export default function MockTestMode({
     }));
   };
 
+  // Global Keyboard Shortcuts for CBT Exam Mode (GATE Pattern)
+  useEffect(() => {
+    if (!testStarted || testSubmitted) return;
+
+    const handleKeyDown = (e) => {
+      const isInput = ['INPUT', 'TEXTAREA'].includes(e.target?.tagName);
+
+      if (e.altKey) {
+        const key = e.key ? e.key.toLowerCase() : '';
+        if (key === 'n') {
+          e.preventDefault();
+          handleSaveAndNext();
+        } else if (key === 'm') {
+          e.preventDefault();
+          handleMarkForReviewAndNext();
+        } else if (key === 'c') {
+          e.preventDefault();
+          handleClearResponse();
+        } else if (key === 'p') {
+          e.preventDefault();
+          if (currentQIndex > 0) handleJumpToQuestion(currentQIndex - 1);
+        } else if (key === 'q') {
+          e.preventDefault();
+          setShowQuestionPaperModal(prev => !prev);
+        }
+      } else if (!isInput) {
+        if (e.key === 'ArrowRight' && currentQIndex < paperQuestions.length - 1) {
+          e.preventDefault();
+          handleJumpToQuestion(currentQIndex + 1);
+        } else if (e.key === 'ArrowLeft' && currentQIndex > 0) {
+          e.preventDefault();
+          handleJumpToQuestion(currentQIndex - 1);
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [testStarted, testSubmitted, currentQIndex, currentQ, userAnswers, paperQuestions.length]);
+
   // Status Counts for the Active Section or Full Test
   const getStatusCounts = () => {
     const counts = {

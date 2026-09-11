@@ -25,6 +25,14 @@ import {
   registerFaculty, 
   loginFaculty, 
   updateStudentProfile,
+  getStudentMonthlyEditsStatus,
+  getNextMonthlyResetInfo,
+  subscribeToStudentProfileSync,
+  refreshCurrentStudentProfile,
+  fetchStudentProfileFromBackend,
+  fetchSecurityQuestionForUser,
+  resetPasswordViaSecurityQuestion,
+  PRESET_SECURITY_QUESTIONS,
   FACULTY_SALUTATIONS,
   AGRI_ENGG_DEPARTMENTS
 } from '../src/services/authService.js';
@@ -124,7 +132,7 @@ describe('Username Sign-Up & Authentication Unit Tests', () => {
     assert.equal(loginPlain.student.username, 'sneha_gate');
   });
 
-  test('handles profile update username and password validation', async () => {
+  test('handles profile update username and password validation with old password verification', async () => {
     const reg = await registerStudent({
       studentType: 'visitor',
       fullName: 'Vikram Singh',
@@ -137,14 +145,38 @@ describe('Username Sign-Up & Authentication Unit Tests', () => {
 
     assert.equal(reg.success, true);
 
+    // 1. Trying to update new password without old password should fail
+    const failNoOld = await updateStudentProfile(reg.student.id, {
+      full_name: 'Vikram Singh',
+      newPassword: 'newsecurepassword123'
+    });
+    assert.equal(failNoOld.success, false);
+    assert.match(failNoOld.message, /current \(old\) password/i);
+
+    // 2. Trying to update new password with incorrect old password should fail
+    const failWrongOld = await updateStudentProfile(reg.student.id, {
+      full_name: 'Vikram Singh',
+      oldPassword: 'wrongpassword999',
+      newPassword: 'newsecurepassword123'
+    });
+    assert.equal(failWrongOld.success, false);
+    assert.match(failWrongOld.message, /incorrect/i);
+
+    // 3. Updating with correct old password (initial DOB 01/01/2000) should succeed
     const updateRes = await updateStudentProfile(reg.student.id, {
       full_name: 'Vikram Singh',
       username: '@vikram_singh_2026',
+      oldPassword: '01/01/2000',
       newPassword: 'newsecurepassword123'
     });
 
     assert.equal(updateRes.success, true);
     assert.equal(updateRes.student.username, 'vikram_singh_2026');
+
+    // 4. Verify login with the newly set password works
+    const loginNew = await loginStudent('@vikram_singh_2026', 'newsecurepassword123');
+    assert.equal(loginNew.success, true);
+    assert.equal(loginNew.student.id, reg.student.id);
   });
 
 });
@@ -336,6 +368,157 @@ describe('Faculty Authentication & Registration Unit Tests', () => {
     const loginMobile = await loginStudent('9876501234', '12/04/2003');
     assert.equal(loginMobile.success, true);
     assert.equal(loginMobile.student.id, regNoMobile.student.id);
+  });
+
+  test('subscribeToStudentProfileSync returns cleanup function and handles offline session gracefully', async () => {
+    const student = {
+      id: 'mock_student_sync_1',
+      full_name: 'Raghav',
+      email: 'raghav@example.com',
+      username: 'raghav'
+    };
+
+    let receivedUpdate = null;
+    const unsub = subscribeToStudentProfileSync(student, (updated) => {
+      receivedUpdate = updated;
+    });
+
+    assert.equal(typeof unsub, 'function');
+    unsub();
+  });
+
+  test('refreshCurrentStudentProfile returns current student when backend is unconfigured or offline', async () => {
+    const student = {
+      id: 'mock_student_sync_2',
+      full_name: 'Raghav Bansal',
+      email: 'raghav.bansal@example.com'
+    };
+
+    localStorage.setItem('gate_ag_prep_session_token', JSON.stringify({
+      student,
+      savedAt: Date.now()
+    }));
+
+    const refreshed = await refreshCurrentStudentProfile();
+    assert.equal(refreshed.full_name, 'Raghav Bansal');
+  });
+
+  test('enforces strict 3-edit-per-month limit and calculates exact reset date & time', async () => {
+    const reg = await registerStudent({
+      studentType: 'external',
+      fullName: 'Ananya Sharma',
+      username: 'ananya_agri',
+      gender: 'Female',
+      email: 'ananya@agri.edu',
+      dob: '2004-03-15',
+      collegeName: 'GBPUAT Pantnagar'
+    });
+
+    assert.equal(reg.success, true);
+
+    // Initial status should have 3 edits remaining
+    const initialStatus = getStudentMonthlyEditsStatus(reg.student);
+    assert.equal(initialStatus.editsRemaining, 3);
+    assert.equal(initialStatus.isLimitReached, false);
+    assert.match(initialStatus.resetInfo.formattedDate, /1 [A-Z][a-z]{2} \d{4}, 12:00 AM IST/);
+
+    // 1st Edit: Update address and city
+    const edit1 = await updateStudentProfile(reg.student.id, {
+      full_name: 'Ananya Sharma',
+      address: 'Hostel 4, Campus',
+      city: 'Pantnagar',
+      state: 'Uttarakhand',
+      bio: 'Aiming for AIR 1 in GATE AG 2027!'
+    });
+    assert.equal(edit1.success, true);
+    assert.equal(edit1.updatesRemaining, 2);
+    assert.equal(edit1.student.city, 'Pantnagar');
+    assert.equal(edit1.student.bio, 'Aiming for AIR 1 in GATE AG 2027!');
+
+    // 2nd Edit: Update photo URL and target year
+    const edit2 = await updateStudentProfile(reg.student.id, {
+      profile_photo_url: 'https://example.com/photo.png',
+      gate_target_year: 'GATE 2027'
+    });
+    assert.equal(edit2.success, true);
+    assert.equal(edit2.updatesRemaining, 1);
+    assert.equal(edit2.student.gate_target_year, 'GATE 2027');
+
+    // 3rd Edit: Switch to faculty/mentor role with department
+    const edit3 = await updateStudentProfile(reg.student.id, {
+      role: 'faculty',
+      is_faculty: true,
+      title_prefix: 'Er.',
+      department: 'Processing & Food Engineering (PFE / APFE)'
+    });
+    assert.equal(edit3.success, true);
+    assert.equal(edit3.updatesRemaining, 0);
+    assert.equal(edit3.student.is_faculty, true);
+    assert.equal(edit3.student.role, 'faculty');
+
+    // 4th Edit: Should be rejected because monthly limit is reached
+    const edit4 = await updateStudentProfile(reg.student.id, {
+      full_name: 'Ananya Sharma (Modified)'
+    });
+    assert.equal(edit4.success, false);
+    assert.match(edit4.message, /Monthly limit reached \(3\/3 edits used\)/);
+    assert.ok(edit4.resetInfo);
+    assert.match(edit4.resetInfo.formattedDate, /1 [A-Z][a-z]{2} \d{4}, 12:00 AM IST/);
+  });
+
+  test('validates PRESET_SECURITY_QUESTIONS list', () => {
+    assert.ok(Array.isArray(PRESET_SECURITY_QUESTIONS));
+    assert.ok(PRESET_SECURITY_QUESTIONS.length >= 5);
+    assert.ok(PRESET_SECURITY_QUESTIONS.some(q => q.includes('Agricultural Engineering')));
+  });
+
+  test('supports saving security question & answer and resetting forgotten password', async () => {
+    // 1. Register a student
+    const reg = await registerStudent({
+      studentType: 'external',
+      fullName: 'Gaurav Kumar',
+      username: 'gaurav_agri',
+      gender: 'Male',
+      email: 'gaurav@example.com',
+      dob: '2001-07-25',
+      collegeName: 'IIT Kharagpur'
+    });
+    assert.equal(reg.success, true);
+
+    // 2. Fetch security question before setting custom one -> falls back to registered DOB challenge
+    const defaultQuestRes = await fetchSecurityQuestionForUser('gaurav_agri');
+    assert.equal(defaultQuestRes.success, true);
+    assert.equal(defaultQuestRes.isDobFallback, true);
+    assert.match(defaultQuestRes.question, /Date of Birth/i);
+
+    // 3. User sets a custom security question in profile
+    const profileRes = await updateStudentProfile(reg.student.id, {
+      security_question: 'What is your dream GATE AG All-India Rank / Goal?',
+      security_answer: 'AIR 1'
+    });
+    assert.equal(profileRes.success, true);
+    assert.equal(profileRes.student.security_question, 'What is your dream GATE AG All-India Rank / Goal?');
+
+    // 4. Look up security question using email or @username
+    const lookupRes = await fetchSecurityQuestionForUser('@gaurav_agri');
+    assert.equal(lookupRes.success, true);
+    assert.equal(lookupRes.question, 'What is your dream GATE AG All-India Rank / Goal?');
+    assert.equal(lookupRes.isDobFallback, false);
+
+    // 5. Attempt password reset with incorrect answer -> should fail
+    const resetFail = await resetPasswordViaSecurityQuestion('gaurav@example.com', 'AIR 100', 'GauravNewPass#2027');
+    assert.equal(resetFail.success, false);
+    assert.match(resetFail.message, /incorrect/i);
+
+    // 6. Attempt password reset with correct answer (case-insensitive) -> should succeed
+    const resetSuccess = await resetPasswordViaSecurityQuestion('gaurav_agri', '  air 1  ', 'GauravNewPass#2027');
+    assert.equal(resetSuccess.success, true);
+    assert.match(resetSuccess.message, /successfully/i);
+
+    // 7. Test logging in with newly reset password
+    const newLogin = await loginStudent('gaurav_agri', 'GauravNewPass#2027');
+    assert.equal(newLogin.success, true);
+    assert.equal(newLogin.student.full_name, 'Gaurav Kumar');
   });
 
 });

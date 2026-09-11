@@ -11,7 +11,7 @@
 - **Backend & Storage**: Supabase JS Client v2 (Auth, Test Attempts, Solvers Leaderboard), LocalStorage & IndexedDB (Offline cache & sync queue).
 - **Test Infrastructure**: Native Node.js Test Runner (`node --test tests/**/*.test.js`), `node:assert/strict`.
 - **Verification Commands**:
-  - `npm test`: **561 tests across 93 suites (100% passing, 0 failures, exit code 0)** in ~400ms.
+  - `npm test`: **668 tests across 119 suites (100% passing, 0 failures, exit code 0)** in ~1.2s.
   - `npm run build`: Clean production bundle compiled into `dist/` in ~2.1s.
 
 ```mermaid

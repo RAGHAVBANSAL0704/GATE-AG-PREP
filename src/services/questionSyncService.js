@@ -14,6 +14,7 @@
 
 import { supabase, isSupabaseConfigured } from './supabaseClient.js';
 import { hashPasswordSync } from './authService.js';
+import { saveToIDB, deleteFromIDB } from '../utils/indexedDB.js';
 
 const LOCAL_STORAGE_QUESTIONS_MAP = 'gate_ag_edited_questions_map';
 const SESSION_STORAGE_ADMIN_UNLOCK = 'gate_ag_admin_session_unlocked';
@@ -183,11 +184,12 @@ export function processAndOptimizeImageFile(file, maxDimension = 1280, quality =
 export async function saveAndBroadcastQuestion(updatedQ) {
   if (!updatedQ || !updatedQ.id) return false;
 
-  // 1. Update local storage map
+  // 1. Update local storage map and IndexedDB
   try {
     const currentMap = getLocalEditedQuestionsMap();
     currentMap[updatedQ.id] = updatedQ;
     localStorage.setItem(LOCAL_STORAGE_QUESTIONS_MAP, JSON.stringify(currentMap));
+    saveToIDB('edited_questions', updatedQ).catch(() => {});
   } catch (e) {
     console.warn('Local storage save warning:', e);
   }
@@ -245,6 +247,7 @@ export async function deleteAndBroadcastQuestion(questionId) {
     const currentMap = getLocalEditedQuestionsMap();
     delete currentMap[questionId];
     localStorage.setItem(LOCAL_STORAGE_QUESTIONS_MAP, JSON.stringify(currentMap));
+    deleteFromIDB('edited_questions', questionId).catch(() => {});
   } catch (e) {}
 
   try {
