@@ -772,6 +772,16 @@ export async function registerFaculty(formData) {
         savedAt: Date.now()
       }));
 
+      try {
+        recordLiveAction({
+          type: 'session_login',
+          studentName: newFaculty.full_name,
+          collegeName: newFaculty.college_name,
+          section: 'Faculty Registration',
+          details: `New faculty mentor registered from ${newFaculty.college_name || 'India'}`
+        });
+      } catch (e) {}
+
       saveRememberedCredentials(cleanUsername || cleanEmail, facultyPayload.password_plain, newFaculty);
 
       return { success: true, student: newFaculty };
@@ -816,6 +826,16 @@ export async function registerFaculty(formData) {
     student: mockFaculty,
     savedAt: Date.now()
   }));
+
+  try {
+    recordLiveAction({
+      type: 'session_login',
+      studentName: mockFaculty.full_name,
+      collegeName: mockFaculty.college_name,
+      section: 'Faculty Registration',
+      details: `New faculty mentor registered from ${mockFaculty.college_name || 'India'}`
+    });
+  } catch (e) {}
 
   saveRememberedCredentials(cleanUsername || cleanEmail, facultyPayload.password_plain, mockFaculty);
 

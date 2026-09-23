@@ -77,10 +77,11 @@ import {
   refreshCurrentStudentProfile 
 } from './services/authService';
 import { initAutoSyncOnReconnect } from './services/testAttemptService';
-import { syncStudentCloudData } from './services/studentProgressSyncService';
+import { syncStudentCloudData, getStudentUserStatsKey } from './services/studentProgressSyncService';
 import { saveAndBroadcastQuestion, subscribeToLiveQuestionSync } from './services/questionSyncService';
 import { recordQuestionOutcomes } from './services/mistakeVaultService';
 import { subscribeToLiveRoleSync } from './services/userRoleService';
+import { initGlobalPresence, updatePresenceStudent } from './services/liveStatisticsService';
 import { saveToIDB } from './utils/indexedDB';
 
 
@@ -233,9 +234,39 @@ export default function App() {
       localStorage.removeItem('gate_ag_guest_mode');
     } catch (e) {}
 
-    // Instantly hydrate user stats, test history, and mistake vault across devices
+    // Update real-time global presence on device
+    updatePresenceStudent(student);
+
+    // Isolate & hydrate this student's account-scoped local data immediately
+    const sid = student?.id || student?.admission_no || student?.email || 'guest';
+    const scopedStatsKey = getStudentUserStatsKey(student);
+    try {
+      const rawScoped = localStorage.getItem(scopedStatsKey);
+      if (rawScoped) {
+        setUserStats(JSON.parse(rawScoped));
+      } else {
+        setUserStats({ attempted: [], correct: [], testHistory: [] });
+      }
+
+      const rawBm = localStorage.getItem(`gate_ag_bookmarks_${sid}`);
+      if (rawBm) setBookmarks(JSON.parse(rawBm));
+      else setBookmarks([]);
+
+      const rawProg = localStorage.getItem(`gate_ag_progress_${sid}`);
+      if (rawProg) setSyllabusProgress(JSON.parse(rawProg));
+      else setSyllabusProgress({});
+
+      if (typeof student?.xp_points === 'number') {
+        localStorage.setItem('gate_ag_student_xp_data', String(student.xp_points));
+      }
+      if (typeof student?.break_xp === 'number') {
+        localStorage.setItem('gate_ag_break_xp', String(student.break_xp));
+      }
+    } catch (e) {}
+
+    // Instantly hydrate full cloud test history, mistake vault and question progress across devices
     if (student) {
-      syncStudentCloudData(student, userStats).then(result => {
+      syncStudentCloudData(student).then(result => {
         if (result && result.userStats) {
           setUserStats(result.userStats);
         }
@@ -248,6 +279,14 @@ export default function App() {
       setWelcomeUser(student);
     }
   };
+
+  // Persistent Global Presence Sync across all devices and tabs
+  useEffect(() => {
+    const unsubPresence = initGlobalPresence(currentStudent);
+    return () => {
+      if (typeof unsubPresence === 'function') unsubPresence();
+    };
+  }, [currentStudent?.id, currentStudent?.admission_no, currentStudent?.email, currentStudent?.full_name]);
 
   // Cross-Device Progress & User Stats Synchronization on startup / session change
   useEffect(() => {
@@ -349,10 +388,19 @@ export default function App() {
 
   const handleLogout = () => {
     logoutStudent();
+    updatePresenceStudent(null);
     setCurrentStudent(null);
     setIsProfileOpen(false);
+    setUserStats({ attempted: [], correct: [], testHistory: [] });
+    setBookmarks([]);
+    setSyllabusProgress({});
     try {
       localStorage.removeItem('gate_ag_guest_mode');
+      localStorage.setItem('gate_ag_student_xp_data', '0');
+      localStorage.setItem('gate_ag_break_xp', '0');
+      localStorage.setItem('gate_ag_user_stats', JSON.stringify({ attempted: [], correct: [], testHistory: [] }));
+      localStorage.setItem('gate_ag_bookmarks', JSON.stringify([]));
+      localStorage.setItem('gate_ag_progress', JSON.stringify({}));
     } catch (e) {}
     setIsAuthModalOpen(false);
   };
@@ -575,7 +623,9 @@ export default function App() {
 
   const [userStats, setUserStats] = useState(() => {
     try {
-      const saved = localStorage.getItem('gate_ag_user_stats');
+      const activeStudent = checkCurrentSession();
+      const key = getStudentUserStatsKey(activeStudent);
+      const saved = localStorage.getItem(key) || localStorage.getItem('gate_ag_user_stats');
       if (saved) {
         const parsed = JSON.parse(saved);
         return {
@@ -592,7 +642,9 @@ export default function App() {
 
   const [bookmarks, setBookmarks] = useState(() => {
     try {
-      const saved = localStorage.getItem('gate_ag_bookmarks');
+      const activeStudent = checkCurrentSession();
+      const sid = activeStudent?.id || activeStudent?.admission_no || activeStudent?.email || 'guest';
+      const saved = localStorage.getItem(`gate_ag_bookmarks_${sid}`) || localStorage.getItem('gate_ag_bookmarks');
       if (saved) {
         const parsed = JSON.parse(saved);
         return Array.isArray(parsed) ? parsed : [];
@@ -605,7 +657,9 @@ export default function App() {
 
   const [syllabusProgress, setSyllabusProgress] = useState(() => {
     try {
-      const saved = localStorage.getItem('gate_ag_progress');
+      const activeStudent = checkCurrentSession();
+      const sid = activeStudent?.id || activeStudent?.admission_no || activeStudent?.email || 'guest';
+      const saved = localStorage.getItem(`gate_ag_progress_${sid}`) || localStorage.getItem('gate_ag_progress');
       if (saved) {
         const parsed = JSON.parse(saved);
         return typeof parsed === 'object' && parsed !== null ? parsed : {};
@@ -617,16 +671,22 @@ export default function App() {
   });
 
   useEffect(() => {
+    const key = getStudentUserStatsKey(currentStudent);
+    localStorage.setItem(key, JSON.stringify(userStats));
     localStorage.setItem('gate_ag_user_stats', JSON.stringify(userStats));
-  }, [userStats]);
+  }, [userStats, currentStudent?.id, currentStudent?.admission_no, currentStudent?.email]);
 
   useEffect(() => {
+    const sid = currentStudent?.id || currentStudent?.admission_no || currentStudent?.email || 'guest';
+    localStorage.setItem(`gate_ag_bookmarks_${sid}`, JSON.stringify(bookmarks));
     localStorage.setItem('gate_ag_bookmarks', JSON.stringify(bookmarks));
-  }, [bookmarks]);
+  }, [bookmarks, currentStudent?.id, currentStudent?.admission_no, currentStudent?.email]);
 
   useEffect(() => {
+    const sid = currentStudent?.id || currentStudent?.admission_no || currentStudent?.email || 'guest';
+    localStorage.setItem(`gate_ag_progress_${sid}`, JSON.stringify(syllabusProgress));
     localStorage.setItem('gate_ag_progress', JSON.stringify(syllabusProgress));
-  }, [syllabusProgress]);
+  }, [syllabusProgress, currentStudent?.id, currentStudent?.admission_no, currentStudent?.email]);
 
   const handleToggleBookmark = (qId) => {
     if (bookmarks.includes(qId)) {
@@ -672,6 +732,46 @@ export default function App() {
     setDirectLaunchPaper(null);
     setCustomTestPaper({ ...customPaperObj, _launchId: Date.now() });
     setActiveTab('mocktest');
+  };
+
+  const handleStartQuestionTypeDrill = (type, count = 20) => {
+    if (!currentStudent) {
+      handleOpenAuth("Sign In or Register free to launch targeted question-type drills and save performance analytics!");
+      return;
+    }
+    const qType = String(type || 'MCQ').toUpperCase();
+    const allPool = [
+      ...questions,
+      ...customMockPapers.flatMap(p => p.questions || [])
+    ];
+    const matching = allPool.filter(q => (q.type || 'MCQ').toUpperCase() === qType);
+    if (matching.length === 0) return;
+
+    // Shuffle and select
+    const shuffled = [...matching].sort(() => 0.5 - Math.random());
+    const selectedQs = shuffled.slice(0, Math.min(count, shuffled.length)).map((q, idx) => ({
+      ...q,
+      qnum: idx + 1
+    }));
+
+    const totalMarks = selectedQs.reduce((sum, q) => sum + Number(q.marks || 1), 0);
+    const durationMins = Math.round(selectedQs.length * 2.5);
+
+    const drillPaper = {
+      id: `DRILL_${qType}_${Date.now()}`,
+      title: `Targeted ${qType} Strategy Drill (${selectedQs.length} Questions)`,
+      year: 'Custom Drill',
+      instructions: {
+        total_qs: selectedQs.length,
+        max_marks: totalMarks,
+        duration_mins: durationMins,
+        isCustom: true
+      },
+      questions: selectedQs
+    };
+
+    setTestResult(null);
+    handleStartCustomTest(drillPaper);
   };
 
   const [practiceMistakeFilter, setPracticeMistakeFilter] = useState(null);
@@ -898,11 +998,12 @@ export default function App() {
               />
             )}
 
-            {['practicehub', 'practice', 'custompractice', 'customtest', 'questionbank', 'qbank'].includes(activeTab) && (
+            {['practicehub', 'practice', 'custompractice', 'customtest', 'questionbank', 'qbank', 'generator', 'pdfgenerator'].includes(activeTab) && (
               <PracticeHub
                 activeSubTab={
                   activeTab === 'practicehub' ? 'practice' : 
                   (activeTab === 'questionbank' || activeTab === 'qbank') ? 'qbank' : 
+                  (activeTab === 'generator' || activeTab === 'pdfgenerator') ? 'generator' :
                   activeTab
                 }
                 onSubTabChange={(subTab) => setActiveTab(subTab)}
@@ -956,12 +1057,13 @@ export default function App() {
               />
             )}
 
-            {activeTab === 'mocktest' && (
+            {['mocktest', 'downloads'].includes(activeTab) && (
               <MockTestMode
                 mockPapers={mockPapers}
                 customMockPapers={customMockPapers}
                 customPaper={customTestPaper}
                 directLaunchPaper={directLaunchPaper}
+                questions={questions}
                 onOpenCalc={() => setIsCalcOpen(true)}
                 onFinishTest={handleFinishTest}
                 onEditQuestion={(q) => setEditingQuestion(q)}
@@ -976,6 +1078,7 @@ export default function App() {
                 questions={questions} 
                 customMockPapers={customMockPapers}
                 onStartCustomTest={handleStartCustomTest}
+                onStartTypeDrill={handleStartQuestionTypeDrill}
                 onOpenCalc={() => setIsCalcOpen(true)}
               />
             )}
@@ -996,16 +1099,6 @@ export default function App() {
 
             {activeTab === 'feedback' && (
               <FeedbackForum />
-            )}
-
-            {activeTab === 'downloads' && (
-              <DownloadsHub
-                questions={questions}
-                mockPapers={mockPapers}
-                customMockPapers={customMockPapers}
-                onStartMock={handleStartMock}
-                onDeleteMock={handleDeleteCustomMock}
-              />
             )}
 
             {activeTab === 'syllabus' && (
@@ -1049,6 +1142,7 @@ export default function App() {
           <TestResultModal
             result={testResult}
             onClose={() => setTestResult(null)}
+            onStartTypeDrill={handleStartQuestionTypeDrill}
             onRetake={() => {
               setTestResult(null);
               setActiveTab('mocktest');

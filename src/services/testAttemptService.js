@@ -265,21 +265,46 @@ export async function associateGuestAttemptsWithStudent(student) {
 export async function getStudentTestAttempts(studentIdentifier) {
   if (!studentIdentifier) return [];
 
-  const cleanId = String(studentIdentifier).trim();
-  if (!cleanId) return [];
+  let cleanId = '';
+  const searchIds = new Set();
+
+  if (typeof studentIdentifier === 'object' && studentIdentifier !== null) {
+    if (studentIdentifier.id) searchIds.add(String(studentIdentifier.id).trim());
+    if (studentIdentifier.admission_no) searchIds.add(String(studentIdentifier.admission_no).trim());
+    if (studentIdentifier.email) searchIds.add(String(studentIdentifier.email).trim());
+    if (studentIdentifier.username) searchIds.add(String(studentIdentifier.username).trim());
+    if (studentIdentifier.full_name) searchIds.add(String(studentIdentifier.full_name).trim());
+    cleanId = studentIdentifier.id || studentIdentifier.admission_no || studentIdentifier.email || studentIdentifier.username || studentIdentifier.full_name || '';
+  } else {
+    cleanId = String(studentIdentifier || '').trim();
+    if (cleanId) searchIds.add(cleanId);
+  }
+
+  if (!cleanId && searchIds.size === 0) return [];
 
   let cloudAttempts = [];
 
   if (isSupabaseConfigured && supabase) {
     try {
-      const { data, error } = await supabase
-        .from('test_attempts')
-        .select('*')
-        .or(`student_id.eq.${cleanId},admission_no.eq.${cleanId},email.eq.${cleanId},student_name.ilike.%${cleanId}%`)
-        .order('submitted_at', { ascending: false });
+      const orConditions = [];
+      searchIds.forEach(id => {
+        if (!id) return;
+        orConditions.push(`student_id.eq.${id}`);
+        orConditions.push(`admission_no.eq.${id}`);
+        orConditions.push(`email.eq.${id}`);
+        orConditions.push(`student_name.ilike.%${id}%`);
+      });
 
-      if (!error && Array.isArray(data)) {
-        cloudAttempts = data;
+      if (orConditions.length > 0) {
+        const { data, error } = await supabase
+          .from('test_attempts')
+          .select('*')
+          .or(orConditions.join(','))
+          .order('submitted_at', { ascending: false });
+
+        if (!error && Array.isArray(data)) {
+          cloudAttempts = data;
+        }
       }
     } catch (e) {
       console.warn("Error fetching Supabase test attempts:", e);
@@ -307,19 +332,24 @@ export async function getStudentTestAttempts(studentIdentifier) {
     }
   } catch (e) {}
 
-  const lowerId = cleanId.toLowerCase();
+  const lowerCleanId = cleanId.toLowerCase();
+  const searchIdArray = Array.from(searchIds).map(s => s.toLowerCase());
+
   const filterByStudent = (a) => {
-    if (lowerId === 'guest' || lowerId === 'all') {
+    if (lowerCleanId === 'guest' || lowerCleanId === 'all') {
       return true;
     }
     const adm = (a.admission_no || '').trim().toLowerCase();
     const em = (a.email || '').trim().toLowerCase();
-    const name = (a.student_name || '').trim().toLowerCase();
     const sid = (a.student_id || '').trim().toLowerCase();
-    return (adm && adm === lowerId) || 
-           (em && em === lowerId) || 
-           (sid && sid === lowerId) ||
-           (name && (name === lowerId || name.includes(lowerId)));
+    const name = (a.student_name || '').trim().toLowerCase();
+
+    for (const target of searchIdArray) {
+      if ((adm && adm === target) || (em && em === target) || (sid && sid === target) || (name && (name === target || name.includes(target)))) {
+        return true;
+      }
+    }
+    return false;
   };
 
   // Merge & Deduplicate by client_attempt_id or (submitted_at + paper_title)

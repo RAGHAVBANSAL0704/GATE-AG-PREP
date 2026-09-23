@@ -78,7 +78,7 @@ export default function Sidebar({
       id: 'mocktest', 
       label: 'PYQ & Mocks', 
       icon: Clock, 
-      matches: ['mocktest'] 
+      matches: ['mocktest', 'downloads', 'vault'] 
     },
     { 
       id: 'analytics', 
@@ -97,12 +97,6 @@ export default function Sidebar({
       label: 'Break Zone', 
       icon: Gamepad2, 
       matches: ['games'] 
-    },
-    { 
-      id: 'downloads', 
-      label: 'PYQ Vault', 
-      icon: Download, 
-      matches: ['downloads'] 
     },
     { 
       id: 'syllabus', 

@@ -27,7 +27,8 @@ import {
   Eye,
   Leaf,
   Sliders,
-  Activity
+  Activity,
+  FileDown
 } from 'lucide-react';
 import { GATE_AG_FORMULAS } from '../data/formulas';
 import { GATE_AG_SYLLABUS } from '../data/syllabus';
@@ -111,10 +112,10 @@ export default function CommandPaletteModal({
     { id: 'nav_learning', type: 'action', title: 'Open Learning Hub & Concept Vault', icon: GraduationCap, action: () => onNavigate('learninghub') },
     { id: 'nav_community', type: 'action', title: 'Open Community & Doubt Solver Lounge', icon: MessageSquare, action: () => onNavigate('community') },
     { id: 'nav_calc', type: 'action', title: 'Launch GATE Virtual Calculator', icon: Calculator, action: () => onOpenCalc && onOpenCalc() },
-    { id: 'nav_mocks', type: 'action', title: 'View All 20 PYQ CBT Mock Tests (2007–2026)', icon: Clock, action: () => onNavigate('mocktest') },
+    { id: 'nav_mocks', type: 'action', title: 'Open PYQ & Mock Tests Vault (20 Official + 50 Mocks)', icon: Clock, action: () => onNavigate('mocktest') },
+    { id: 'nav_generator', type: 'action', title: 'Open Printable PDF & Custom Paper Generator', icon: FileDown, action: () => onNavigate('generator') },
     { id: 'nav_analytics', type: 'action', title: 'View Performance Analytics & Score Radar', icon: BarChart3, action: () => onNavigate('analytics') },
     { id: 'nav_games', type: 'action', title: 'Open Break Zone & 2048 Mini Games', icon: Gamepad2, action: () => onNavigate('games') },
-    { id: 'nav_downloads', type: 'action', title: 'Open Downloads & PYQ Archive', icon: Download, action: () => onNavigate('downloads') },
     { 
       id: 'nav_toggle_theme', 
       type: 'action', 

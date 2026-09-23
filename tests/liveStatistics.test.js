@@ -12,12 +12,26 @@ const localStorageMock = (() => {
   };
 })();
 
+// Mock Browser SessionStorage
+const sessionStorageMock = (() => {
+  let store = {};
+  return {
+    getItem: (key) => store[key] || null,
+    setItem: (key, val) => { store[key] = String(val); },
+    removeItem: (key) => { delete store[key]; },
+    clear: () => { store = {}; }
+  };
+})();
+
 globalThis.localStorage = localStorageMock;
+globalThis.sessionStorage = sessionStorageMock;
 
 import { 
   fetchLivePlatformStats, 
   recordLiveAction, 
   getLocalLiveActivityFeed, 
+  mergeIncomingLiveEvent,
+  getDevicePresenceKey,
   formatLiveRelativeTime 
 } from '../src/services/liveStatisticsService.js';
 
@@ -154,5 +168,36 @@ describe('Real-Time Live Statistics & Telemetry Subsystem', () => {
     assert.strictEqual(formatLiveRelativeTime(now - 120000), '2m ago');
     assert.strictEqual(formatLiveRelativeTime(now - 7200000), '2h ago');
     assert.strictEqual(formatLiveRelativeTime(now - 172800000), '2d ago');
+  });
+
+  test('generates and persists unique device/tab presence key per session', () => {
+    sessionStorage.clear();
+    const student1 = { id: 'stu_device_1', full_name: 'Device 1 Aspirant' };
+    const key1 = getDevicePresenceKey(student1);
+    assert.ok(key1.includes('user_stu_device_1_'), 'Key should contain user id prefix');
+    
+    // Calling again returns the exact same cached tab key
+    const key1Repeat = getDevicePresenceKey(student1);
+    assert.strictEqual(key1, key1Repeat);
+  });
+
+  test('merges incoming live action events without duplication', () => {
+    const incomingEvent = {
+      id: 'act_incoming_999',
+      type: 'test_submitted',
+      studentName: 'Device 2 Aspirant',
+      collegeName: 'IIT Kharagpur',
+      details: 'Completed Mock 05 with 68.5 Marks',
+      timestamp: Date.now()
+    };
+
+    mergeIncomingLiveEvent(incomingEvent);
+    // Merge again to test deduplication
+    mergeIncomingLiveEvent(incomingEvent);
+
+    const feed = getLocalLiveActivityFeed();
+    const matching = feed.filter(e => e.id === 'act_incoming_999');
+    assert.strictEqual(matching.length, 1);
+    assert.strictEqual(matching[0].studentName, 'Device 2 Aspirant');
   });
 });

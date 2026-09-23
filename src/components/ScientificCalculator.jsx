@@ -107,6 +107,21 @@ export default function ScientificCalculator({ isOpen, onClose }) {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // Prevent background body scroll when calculator window is open
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
+    if (isOpen && !isMinimized) {
+      const originalOverflow = document.body.style.overflow;
+      const originalTouchAction = document.body.style.touchAction;
+      document.body.style.overflow = 'hidden';
+      document.body.style.touchAction = 'none';
+      return () => {
+        document.body.style.overflow = originalOverflow;
+        document.body.style.touchAction = originalTouchAction;
+      };
+    }
+  }, [isOpen, isMinimized]);
+
   useEffect(() => {
     const handleDragMove = (e) => {
       if (!isDragging) return;

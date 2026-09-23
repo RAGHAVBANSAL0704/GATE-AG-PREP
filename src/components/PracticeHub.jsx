@@ -2,9 +2,10 @@ import React, { useState, useEffect, useMemo, lazy, Suspense } from 'react';
 import PracticeMode from './PracticeMode';
 import CustomPracticePool from './CustomPracticePool';
 import CustomTestCreator from './CustomTestCreator';
-import { Layers, Sparkles, Sliders, Target, Database } from 'lucide-react';
+import { Layers, Sparkles, Sliders, Target, Database, FileDown } from 'lucide-react';
 
 const QuestionBankView = lazy(() => import('./QuestionBankView'));
+const CustomPdfQuestionGenerator = lazy(() => import('./CustomPdfQuestionGenerator'));
 
 export default function PracticeHub({
   activeSubTab = 'practice',
@@ -43,7 +44,8 @@ export default function PracticeHub({
     { id: 'qbank', label: 'Question Bank (1,915 Qs)', icon: Database },
     { id: 'practice', label: 'PYQ Pool (1,324 Qs)', icon: Layers },
     { id: 'custompractice', label: 'Custom Pool (3,250 Qs)', icon: Sparkles },
-    { id: 'customtest', label: 'Custom Speed Test (6,489 Qs)', icon: Sliders },
+    { id: 'customtest', label: 'Speed Test Creator', icon: Sliders },
+    { id: 'generator', label: 'PDF Generator', icon: FileDown },
   ];
 
   const allCustomQuestions = useMemo(() => {
@@ -71,9 +73,6 @@ export default function PracticeHub({
               <h1 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
                 Practice Hub
               </h1>
-              <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5 font-medium">
-                <strong className="text-emerald-600 dark:text-emerald-400">Question Bank</strong>: 1,915 Topic-wise Qs • <strong className="text-blue-600 dark:text-blue-400">PYQ Pool</strong>: 1,324 Official PYQs (2007–2026) • <strong className="text-purple-600 dark:text-purple-400">Custom Pool</strong>: 3,250 Mocks (50 Full Papers)
-              </p>
             </div>
           </div>
 
@@ -189,6 +188,20 @@ export default function PracticeHub({
             currentStudent={currentStudent}
             onRequireAuth={onRequireAuth}
           />
+        )}
+
+        {currentSubTab === 'generator' && (
+          <Suspense fallback={
+            <div className="p-12 text-center text-slate-500 dark:text-slate-400 font-semibold bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800">
+              Loading Printable PDF &amp; Custom Paper Generator...
+            </div>
+          }>
+            <CustomPdfQuestionGenerator
+              questions={questions}
+              mockPapers={mockPapers}
+              customMockPapers={customMockPapers}
+            />
+          </Suspense>
         )}
       </div>
 

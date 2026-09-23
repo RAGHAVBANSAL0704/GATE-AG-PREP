@@ -39,7 +39,7 @@ function formatSec(seconds) {
   return `${remSec}s`;
 }
 
-export default function TestResultModal({ result, onClose, onRetake }) {
+export default function TestResultModal({ result, onClose, onRetake, onStartTypeDrill }) {
   const [filterType, setFilterType] = useState('ALL'); // 'ALL', 'CORRECT', 'INCORRECT', 'UNATTEMPTED', 'SLOW', 'RUSH'
   const [viewMode, setViewMode] = useState('cards'); // 'cards' | 'table'
   const [activeAIQuestion, setActiveAIQuestion] = useState(null);
@@ -192,6 +192,84 @@ export default function TestResultModal({ result, onClose, onRetake }) {
       fastestCorrect,
       slowestAttempt,
       timeLostOnErrors
+    };
+  }, [processedQuestions]);
+
+  // Question-Type Strategy & Score Leak Breakdown (MCQ vs MSQ vs NAT)
+  const questionTypeAnalytics = useMemo(() => {
+    const types = ['MCQ', 'MSQ', 'NAT'];
+    const data = {};
+
+    types.forEach(t => {
+      const qs = processedQuestions.filter(q => (q.type || 'MCQ').toUpperCase() === t);
+      const total = qs.length;
+      const attempted = qs.filter(q => q.isAttempted).length;
+      const correct = qs.filter(q => q.isCorrect).length;
+      const incorrect = qs.filter(q => q.isAttempted && !q.isCorrect).length;
+      const unattempted = total - attempted;
+      const typeAccuracy = attempted > 0 ? Math.round((correct / attempted) * 100) : 0;
+      
+      const totalMarksPossible = qs.reduce((sum, q) => sum + Number(q.marks || 1), 0);
+      const marksScored = qs.filter(q => q.isCorrect).reduce((sum, q) => sum + Number(q.marks || 1), 0);
+      
+      // Negative marks lost
+      const negativeMarksLost = qs.filter(q => q.isAttempted && !q.isCorrect).reduce((sum, q) => {
+        if (t === 'MCQ') {
+          const deduction = Number(q.marks) === 2 ? (2 / 3) : (1 / 3);
+          return sum + (q.negative_marks !== undefined ? Number(q.negative_marks) : deduction);
+        }
+        return sum; // MSQ & NAT have 0 negative marks
+      }, 0);
+
+      const netMarks = marksScored - negativeMarksLost;
+      const avgTime = attempted > 0 
+        ? Math.round(qs.filter(q => q.isAttempted).reduce((sum, q) => sum + q.timeSpent, 0) / attempted)
+        : 0;
+
+      data[t] = {
+        total,
+        attempted,
+        correct,
+        incorrect,
+        unattempted,
+        accuracy: typeAccuracy,
+        totalMarksPossible,
+        marksScored,
+        negativeMarksLost: Number(negativeMarksLost.toFixed(2)),
+        netMarks: Number(netMarks.toFixed(2)),
+        avgTime
+      };
+    });
+
+    // Identify primary leak / weakest question type
+    let weakestType = null;
+    let weakestReason = '';
+
+    const attemptedTypes = types.filter(t => data[t].attempted > 0);
+    if (attemptedTypes.length > 0) {
+      if (data.MCQ.negativeMarksLost >= 2) {
+        weakestType = 'MCQ';
+        weakestReason = `Conceded ${data.MCQ.negativeMarksLost} marks to negative penalty (${data.MCQ.incorrect} incorrect MCQs). Precision eliminates this bleed!`;
+      } else {
+        const sorted = [...attemptedTypes].sort((a, b) => data[a].accuracy - data[b].accuracy);
+        weakestType = sorted[0];
+        if (weakestType === 'NAT') {
+          weakestReason = `Calculation accuracy in NATs was ${data.NAT.accuracy}% (${data.NAT.incorrect} numerical errors). Zero negative penalty means huge scoring potential!`;
+        } else if (weakestType === 'MSQ') {
+          weakestReason = `Multi-selection accuracy was ${data.MSQ.accuracy}%. Targeted option elimination will recover lost marks.`;
+        } else {
+          weakestReason = `MCQ accuracy was ${data.MCQ.accuracy}%. Targeted conceptual drills will stop penalty loss.`;
+        }
+      }
+    } else {
+      weakestType = 'NAT';
+      weakestReason = 'Target high-yield NAT numerical calculations to build confidence without negative risk.';
+    }
+
+    return {
+      byType: data,
+      weakestType,
+      weakestReason
     };
   }, [processedQuestions]);
 
@@ -552,6 +630,160 @@ export default function TestResultModal({ result, onClose, onRetake }) {
             </div>
           );
         })()}
+
+        {/* Question-Type Strategy & Score Leak Audit Card */}
+        <div className="px-4 sm:px-6 py-4 bg-slate-50 dark:bg-slate-950/90 border-b border-slate-200 dark:border-slate-800 space-y-3 shrink-0">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div className="flex items-center gap-2">
+              <Target className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+              <h3 className="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white">
+                Question-Type Strategy &amp; Score Leak Audit
+              </h3>
+            </div>
+            <span className="text-[11px] text-slate-500 font-medium">
+              MCQ penalty bleed vs. Zero-negative MSQ &amp; NAT capture rates
+            </span>
+          </div>
+
+          {/* 3 Strategy Columns */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            
+            {/* MCQ Strategy Card */}
+            <div className={`p-3.5 rounded-2xl border transition ${
+              questionTypeAnalytics.byType.MCQ.negativeMarksLost > 0
+                ? 'bg-rose-50/40 dark:bg-rose-950/20 border-rose-200 dark:border-rose-900/50'
+                : 'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800'
+            }`}>
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-black text-slate-900 dark:text-white flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-blue-500"></span>
+                  MCQ Strategy
+                </span>
+                <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300">
+                  {questionTypeAnalytics.byType.MCQ.attempted}/{questionTypeAnalytics.byType.MCQ.total} Attempted
+                </span>
+              </div>
+              <div className="grid grid-cols-3 gap-1 mt-2.5 text-center pt-2 border-t border-slate-200/60 dark:border-slate-800">
+                <div>
+                  <span className="text-[10px] text-slate-500 block">Accuracy</span>
+                  <span className={`text-xs font-extrabold font-mono ${
+                    questionTypeAnalytics.byType.MCQ.accuracy >= 70 ? 'text-emerald-600 dark:text-emerald-400' : 'text-amber-600 dark:text-amber-400'
+                  }`}>
+                    {questionTypeAnalytics.byType.MCQ.accuracy}%
+                  </span>
+                </div>
+                <div>
+                  <span className="text-[10px] text-slate-500 block">Penalty Lost</span>
+                  <span className="text-xs font-extrabold font-mono text-rose-600 dark:text-rose-400">
+                    {questionTypeAnalytics.byType.MCQ.negativeMarksLost > 0 ? `-${questionTypeAnalytics.byType.MCQ.negativeMarksLost}` : '0.00'}
+                  </span>
+                </div>
+                <div>
+                  <span className="text-[10px] text-slate-500 block">Net Marks</span>
+                  <span className="text-xs font-extrabold font-mono text-slate-900 dark:text-white">
+                    +{questionTypeAnalytics.byType.MCQ.netMarks}
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* MSQ Strategy Card */}
+            <div className="p-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-black text-slate-900 dark:text-white flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-purple-500"></span>
+                  MSQ Strategy
+                </span>
+                <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300">
+                  {questionTypeAnalytics.byType.MSQ.attempted}/{questionTypeAnalytics.byType.MSQ.total} Attempted
+                </span>
+              </div>
+              <div className="grid grid-cols-3 gap-1 mt-2.5 text-center pt-2 border-t border-slate-200/60 dark:border-slate-800">
+                <div>
+                  <span className="text-[10px] text-slate-500 block">Match Rate</span>
+                  <span className={`text-xs font-extrabold font-mono ${
+                    questionTypeAnalytics.byType.MSQ.accuracy >= 60 ? 'text-emerald-600 dark:text-emerald-400' : 'text-amber-600 dark:text-amber-400'
+                  }`}>
+                    {questionTypeAnalytics.byType.MSQ.accuracy}%
+                  </span>
+                </div>
+                <div>
+                  <span className="text-[10px] text-slate-500 block">Penalty Risk</span>
+                  <span className="text-xs font-extrabold font-mono text-emerald-600 dark:text-emerald-400">
+                    0.00 (Zero)
+                  </span>
+                </div>
+                <div>
+                  <span className="text-[10px] text-slate-500 block">Net Marks</span>
+                  <span className="text-xs font-extrabold font-mono text-slate-900 dark:text-white">
+                    +{questionTypeAnalytics.byType.MSQ.netMarks}
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* NAT Calculation Card */}
+            <div className={`p-3.5 rounded-2xl border transition ${
+              questionTypeAnalytics.byType.NAT.accuracy < 50 && questionTypeAnalytics.byType.NAT.attempted > 0
+                ? 'bg-amber-50/40 dark:bg-amber-950/20 border-amber-200 dark:border-amber-900/50'
+                : 'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800'
+            }`}>
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-black text-slate-900 dark:text-white flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+                  NAT Calculation
+                </span>
+                <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300">
+                  {questionTypeAnalytics.byType.NAT.attempted}/{questionTypeAnalytics.byType.NAT.total} Attempted
+                </span>
+              </div>
+              <div className="grid grid-cols-3 gap-1 mt-2.5 text-center pt-2 border-t border-slate-200/60 dark:border-slate-800">
+                <div>
+                  <span className="text-[10px] text-slate-500 block">Calc Acc.</span>
+                  <span className={`text-xs font-extrabold font-mono ${
+                    questionTypeAnalytics.byType.NAT.accuracy >= 65 ? 'text-emerald-600 dark:text-emerald-400' : 'text-amber-600 dark:text-amber-400'
+                  }`}>
+                    {questionTypeAnalytics.byType.NAT.accuracy}%
+                  </span>
+                </div>
+                <div>
+                  <span className="text-[10px] text-slate-500 block">Penalty Risk</span>
+                  <span className="text-xs font-extrabold font-mono text-emerald-600 dark:text-emerald-400">
+                    0.00 (Zero)
+                  </span>
+                </div>
+                <div>
+                  <span className="text-[10px] text-slate-500 block">Net Marks</span>
+                  <span className="text-xs font-extrabold font-mono text-slate-900 dark:text-white">
+                    +{questionTypeAnalytics.byType.NAT.netMarks}
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Action-Focused Remediation Drill Launcher */}
+          {questionTypeAnalytics.weakestType && onStartTypeDrill && (
+            <div className="p-3 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-emerald-500/10 dark:from-blue-950/40 dark:via-purple-950/40 dark:to-emerald-950/40 border border-blue-200 dark:border-blue-800 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+              <div className="flex items-center gap-2.5 flex-1">
+                <Sparkles className="w-4 h-4 text-purple-600 dark:text-purple-400 shrink-0" />
+                <p className="text-slate-800 dark:text-slate-200 font-medium">
+                  <strong className="text-blue-600 dark:text-blue-400 font-bold">Action Recommendation:</strong> {questionTypeAnalytics.weakestReason}
+                </p>
+              </div>
+
+              <button
+                type="button"
+                onClick={() => onStartTypeDrill(questionTypeAnalytics.weakestType, 20)}
+                className="px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-extrabold text-xs transition shadow-xs flex items-center justify-center gap-2 shrink-0 cursor-pointer active:scale-95"
+              >
+                <Target className="w-3.5 h-3.5" />
+                <span>Launch {questionTypeAnalytics.weakestType} Drill (20 Qs)</span>
+              </button>
+            </div>
+          )}
+        </div>
 
         {/* Controls & Filter Bar */}
         <div className="px-4 sm:px-6 py-3 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3 shrink-0">

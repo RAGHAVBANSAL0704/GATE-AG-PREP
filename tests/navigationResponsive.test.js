@@ -48,7 +48,6 @@ describe('Mobile Navigation & Responsive Layout Test Suite', () => {
       'analytics',
       'leaderboard',
       'games',
-      'downloads',
       'syllabus',
       'creator'
     ];

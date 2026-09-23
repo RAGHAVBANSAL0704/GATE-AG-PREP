@@ -72,6 +72,8 @@ export default function LiveStatisticsBoard({ onNavigate, onStartMock, onOpenPra
 
   const registeredCount = stats?.totalRegisteredStudents ?? 0;
   const onlineCount = stats?.activeOnlineStudents ?? 0;
+  const onlineAspirants = stats?.onlineAspirants || [];
+  const liveActivityFeed = stats?.liveActivityFeed || [];
   const questionsSolved = stats?.totalQuestionsSolved ?? 0;
   const correctCount = stats?.totalCorrectSolved ?? 0;
   const loginsCount = stats?.totalSessionLogins ?? 0;
@@ -265,6 +267,71 @@ export default function LiveStatisticsBoard({ onNavigate, onStartMock, onOpenPra
         </div>
 
       </div>
+
+      {/* 2.5. REAL-TIME ACTIVE ASPIRANTS & MULTI-DEVICE TELEMETRY */}
+      {onlineAspirants.length > 0 && (
+        <div className="bg-gradient-to-r from-emerald-500/10 via-teal-500/5 to-transparent dark:from-emerald-950/40 dark:via-slate-900/60 dark:to-transparent rounded-3xl border border-emerald-300/80 dark:border-emerald-500/30 p-5 sm:p-6 shadow-sm space-y-4">
+          <div className="flex items-center justify-between flex-wrap gap-2">
+            <div className="flex items-center gap-2.5">
+              <span className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+              </span>
+              <div>
+                <h2 className="text-sm sm:text-base font-black text-slate-900 dark:text-white flex items-center gap-2">
+                  <span>Live Connected Aspirants Across Devices</span>
+                  <span className="px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-300 font-mono text-[11px] font-bold border border-emerald-200 dark:border-emerald-700">
+                    {onlineCount} Online
+                  </span>
+                </h2>
+                <p className="text-xs text-slate-600 dark:text-slate-400">
+                  Real-time active sessions synchronized via Supabase Realtime across multiple devices and browsers.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pt-1">
+            {onlineAspirants.map((user, idx) => (
+              <div 
+                key={user.presenceKey || user.userId || idx}
+                className="p-3.5 rounded-2xl bg-white dark:bg-slate-900/90 border border-emerald-200/80 dark:border-emerald-800/60 shadow-xs flex items-center justify-between gap-3 hover:border-emerald-500 transition"
+              >
+                <div className="flex items-center gap-3 min-w-0">
+                  <div className="w-9 h-9 rounded-xl bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 font-black text-xs flex items-center justify-center border border-emerald-300 dark:border-emerald-700 shrink-0">
+                    {(user.name || 'A').substring(0, 2).toUpperCase()}
+                  </div>
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-1.5 flex-wrap">
+                      <span className="text-xs font-bold text-slate-900 dark:text-white truncate">
+                        {user.name}
+                      </span>
+                      {user.role === 'faculty' && (
+                        <span className="px-1.5 py-0.2 rounded bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 text-[9px] font-bold border border-purple-200 dark:border-purple-800">
+                          Faculty
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-[11px] text-slate-500 dark:text-slate-400 truncate">
+                      {user.college}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="shrink-0 flex flex-col items-end gap-1">
+                  <span className="inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                    Active Now
+                  </span>
+                  <span className="text-[9px] font-mono text-slate-400 dark:text-slate-500">
+                    {formatLiveRelativeTime(user.onlineAt)}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* 3. SECTION: ALL-INDIA INSTITUTES & UNIVERSITIES STANDINGS */}
       <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-6 sm:p-7 shadow-sm space-y-4">

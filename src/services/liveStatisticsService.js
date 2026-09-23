@@ -15,10 +15,30 @@ try {
   }
 } catch (e) {}
 
-// Supabase Realtime Channels
+// Supabase Realtime Channels & Global Presence State
 let supabaseStatsChannel = null;
 let supabasePresenceChannel = null;
 let activePresenceUsers = new Map();
+const statsSubscribers = new Set();
+let globalPresenceStudent = null;
+
+/**
+ * Generate or retrieve a persistent per-tab/device unique presence session key
+ */
+export function getDevicePresenceKey(student = null) {
+  if (typeof sessionStorage === 'undefined') return 'server_' + Math.random().toString(36).substring(2, 9);
+  try {
+    let key = sessionStorage.getItem('gate_ag_tab_presence_key');
+    if (!key) {
+      const studentPrefix = student?.id ? `user_${student.id}_` : 'dev_';
+      key = studentPrefix + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 8);
+      sessionStorage.setItem('gate_ag_tab_presence_key', key);
+    }
+    return key;
+  } catch (e) {
+    return (student?.id ? `user_${student.id}_` : 'anon_') + Math.random().toString(36).substring(2, 8);
+  }
+}
 
 /**
  * Get active student details from session storage
@@ -50,6 +70,21 @@ export function getLocalLiveActivityFeed() {
     }
   } catch (e) {}
   return [];
+}
+
+/**
+ * Merge an incoming real-time activity event into local storage
+ */
+export function mergeIncomingLiveEvent(event) {
+  if (!event || !event.id) return;
+  const currentFeed = getLocalLiveActivityFeed();
+  if (currentFeed.some(e => e.id === event.id)) return;
+  const updatedFeed = [event, ...currentFeed].slice(0, 50);
+  try {
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem(LOCAL_STORAGE_LIVE_ACTIVITY_KEY, JSON.stringify(updatedFeed));
+    }
+  } catch (e) {}
 }
 
 /**
@@ -105,14 +140,29 @@ export function recordLiveAction({
   // 2. Multi-device Supabase Realtime Broadcast
   if (isSupabaseConfigured && supabase) {
     try {
-      const channel = supabase.channel('gate_ag_telemetry_live');
-      channel.send({
-        type: 'broadcast',
-        event: 'live_action_event',
-        payload: newEvent
-      });
+      if (supabaseStatsChannel) {
+        supabaseStatsChannel.send({
+          type: 'broadcast',
+          event: 'live_action_event',
+          payload: newEvent
+        });
+      } else {
+        const tempChannel = supabase.channel('gate_ag_telemetry_live');
+        tempChannel.subscribe(status => {
+          if (status === 'SUBSCRIBED') {
+            tempChannel.send({
+              type: 'broadcast',
+              event: 'live_action_event',
+              payload: newEvent
+            });
+          }
+        });
+      }
     } catch (e) {}
   }
+
+  // Notify any local active listeners
+  notifyAllStatsSubscribers(true);
 
   return newEvent;
 }
@@ -155,21 +205,34 @@ export async function fetchLivePlatformStats(forceRefresh = false) {
   // 1. Try querying real backend if Supabase is connected
   if (supabase) {
     try {
-      // Query profiles/students count
+      // Query students table for count and university distribution
       try {
-        const { count, error: countErr } = await supabase
-          .from('profiles')
-          .select('id', { count: 'exact', head: true });
+        const { data: studentsData, count, error: countErr } = await supabase
+          .from('students')
+          .select('id, college_name', { count: 'exact' });
         
-        if (!countErr && count !== null) {
-          dbStudentsCount = count;
+        let actualCount = 0;
+        if (!countErr && typeof count === 'number' && count > 0) {
+          actualCount = count;
+        } else if (Array.isArray(studentsData) && studentsData.length > 0) {
+          actualCount = studentsData.length;
+        }
+
+        if (actualCount > 0) {
+          dbStudentsCount = actualCount;
+        }
+        if (Array.isArray(studentsData)) {
+          studentsData.forEach(s => {
+            const col = s.college_name || 'COAET CCS HAU Hisar';
+            collegeMap[col] = (collegeMap[col] || 0) + 1;
+          });
         }
       } catch (e) {}
 
       // Query test attempts
       const { data: attempts, error: attErr } = await supabase
         .from('test_attempts')
-        .select('id, score, correct_count, incorrect_count, total_questions, paper_title, test_type, submitted_at')
+        .select('id, score, correct_count, incorrect_count, total_questions, paper_title, test_type, submitted_at, question_responses')
         .order('submitted_at', { ascending: false })
         .limit(100);
 
@@ -280,11 +343,10 @@ export async function fetchLivePlatformStats(forceRefresh = false) {
 
   // 3. Compute Real Integrated Totals & Deduplicated Attempt Metrics
   const activeStudent = getActiveSessionStudent();
-  const currentPresenceCount = activePresenceUsers.size > 0 ? activePresenceUsers.size : (activeStudent ? 1 : 0);
+  const onlinePresenceSize = activePresenceUsers.size;
+  const currentPresenceCount = onlinePresenceSize > 0 ? onlinePresenceSize : (activeStudent ? 1 : 0);
 
-  const totalRegisteredStudents = dbStudentsCount > 0 
-    ? dbStudentsCount 
-    : (localUsersCount > 0 ? localUsersCount : (activeStudent ? 1 : 0));
+  const totalRegisteredStudents = Math.max(dbStudentsCount, localUsersCount, (activeStudent ? 1 : 0));
 
   // Collect all real attempt scores across cloud and local storage without duplication
   const allAttemptScores = [];
@@ -294,7 +356,6 @@ export async function fetchLivePlatformStats(forceRefresh = false) {
   let countMsq = 0, correctMsq = 0;
   let hourBuckets = [0, 0, 0, 0]; // [06-10, 10-14, 14-18, 18-23/06]
   let totalHourEvents = 0;
-  let mobileCount = 0, desktopCount = 0, tabletCount = 0;
 
   const rawLocal = typeof localStorage !== 'undefined' ? localStorage.getItem(LOCAL_STORAGE_TEST_ATTEMPTS_KEY) : null;
   const parsedLocalAttempts = rawLocal ? JSON.parse(rawLocal) : [];
@@ -362,9 +423,7 @@ export async function fetchLivePlatformStats(forceRefresh = false) {
   const totalQuestionsSolved = Math.max(dbQuestionsSolved, localQuestionsSolved);
   const totalCorrectSolved = Math.max(dbCorrectCount, localCorrectCount);
   
-  const totalSessionLogins = dbTotalLogins > 0 
-    ? dbTotalLogins 
-    : (localLoginsCount > 0 ? localLoginsCount : (activeStudent ? 1 : 0));
+  const totalSessionLogins = Math.max(dbTotalLogins, localLoginsCount);
 
   const overallAccuracy = totalQuestionsSolved > 0 
     ? Number(((totalCorrectSolved / totalQuestionsSolved) * 100).toFixed(1))
@@ -407,7 +466,6 @@ export async function fetchLivePlatformStats(forceRefresh = false) {
   ];
 
   // Question type analytics calculated from actual responses or 0
-  const totalTypedQuestions = countMcq + countNat + countMsq;
   const questionTypeStats = {
     mcq: { 
       label: 'Multiple Choice (MCQ)', 
@@ -472,10 +530,28 @@ export async function fetchLivePlatformStats(forceRefresh = false) {
 
   const liveFeed = getLocalLiveActivityFeed();
 
+  // Extract online aspirants list from presence Map
+  const onlineAspirantsList = [];
+  activePresenceUsers.forEach((presences, key) => {
+    if (Array.isArray(presences)) {
+      presences.forEach(p => {
+        onlineAspirantsList.push({
+          presenceKey: key,
+          userId: p.user_id || key,
+          name: p.name || 'GATE AG Aspirant',
+          college: p.college || 'COAET CCS HAU Hisar',
+          role: p.role || 'student',
+          onlineAt: p.online_at || new Date().toISOString()
+        });
+      });
+    }
+  });
+
   cachedPlatformStats = {
     timestamp: Date.now(),
     connectionStatus: isOnlineBackend ? 'connected' : 'local_fallback',
-    activeOnlineStudents: currentPresenceCount,
+    activeOnlineStudents: Math.max(currentPresenceCount, onlineAspirantsList.length > 0 ? onlineAspirantsList.length : (activeStudent ? 1 : 0)),
+    onlineAspirants: onlineAspirantsList,
     totalRegisteredStudents,
     totalQuestionsSolved,
     totalCorrectSolved,
@@ -499,29 +575,150 @@ export async function fetchLivePlatformStats(forceRefresh = false) {
 }
 
 /**
+ * Track current device presence payload
+ */
+async function trackCurrentDevicePresence() {
+  if (!supabasePresenceChannel || !isSupabaseConfigured) return;
+  const cur = globalPresenceStudent || getActiveSessionStudent();
+  const presenceKey = getDevicePresenceKey(cur);
+  try {
+    await supabasePresenceChannel.track({
+      user_id: cur?.id || ('anon_' + presenceKey),
+      presence_key: presenceKey,
+      name: cur?.full_name || 'GATE AG Aspirant',
+      college: cur?.college_name || 'COAET CCS HAU Hisar',
+      role: cur?.role || 'student',
+      online_at: new Date().toISOString()
+    });
+  } catch (e) {}
+}
+
+/**
+ * Initialize persistent global presence across tabs & devices
+ */
+export function initGlobalPresence(student = null) {
+  if (typeof window === 'undefined') return () => {};
+  
+  if (student) {
+    globalPresenceStudent = student;
+  } else if (!globalPresenceStudent) {
+    globalPresenceStudent = getActiveSessionStudent();
+  }
+
+  // If Supabase is configured, initialize telemetry and presence channels
+  if (isSupabaseConfigured && supabase) {
+    if (!supabaseStatsChannel) {
+      supabaseStatsChannel = supabase
+        .channel('gate_ag_telemetry_live')
+        .on('broadcast', { event: 'live_action_event' }, (payload) => {
+          if (payload?.payload) {
+            mergeIncomingLiveEvent(payload.payload);
+          }
+          notifyAllStatsSubscribers(true);
+        })
+        .on('postgres_changes', { event: '*', schema: 'public', table: 'test_attempts' }, () => {
+          notifyAllStatsSubscribers(true);
+        })
+        .on('postgres_changes', { event: '*', schema: 'public', table: 'students' }, () => {
+          notifyAllStatsSubscribers(true);
+        })
+        .on('postgres_changes', { event: '*', schema: 'public', table: 'device_sessions' }, () => {
+          notifyAllStatsSubscribers(true);
+        })
+        .subscribe();
+    }
+
+    const presenceKey = getDevicePresenceKey(globalPresenceStudent);
+
+    if (!supabasePresenceChannel) {
+      supabasePresenceChannel = supabase.channel('gate_ag_presence_live', {
+        config: {
+          presence: { key: presenceKey }
+        }
+      });
+
+      const syncPresences = () => {
+        try {
+          const state = supabasePresenceChannel.presenceState();
+          activePresenceUsers.clear();
+          Object.keys(state).forEach(key => {
+            activePresenceUsers.set(key, state[key]);
+          });
+          notifyAllStatsSubscribers(false);
+        } catch (e) {}
+      };
+
+      supabasePresenceChannel
+        .on('presence', { event: 'sync' }, syncPresences)
+        .on('presence', { event: 'join' }, ({ key, newPresences }) => {
+          activePresenceUsers.set(key, newPresences);
+          notifyAllStatsSubscribers(false);
+        })
+        .on('presence', { event: 'leave' }, ({ key }) => {
+          activePresenceUsers.delete(key);
+          notifyAllStatsSubscribers(false);
+        })
+        .subscribe(async (status) => {
+          if (status === 'SUBSCRIBED') {
+            await trackCurrentDevicePresence();
+          }
+        });
+    } else {
+      trackCurrentDevicePresence();
+    }
+  }
+
+  return () => {
+    // Keep global channel active for background presence
+  };
+}
+
+/**
+ * Update active presence when student logs in, updates profile, or logs out
+ */
+export async function updatePresenceStudent(student = null) {
+  globalPresenceStudent = student;
+  await trackCurrentDevicePresence();
+  notifyAllStatsSubscribers(true);
+}
+
+/**
+ * Notify all subscribed UI components
+ */
+export function notifyAllStatsSubscribers(force = false) {
+  fetchLivePlatformStats(force).then(stats => {
+    statsSubscribers.forEach(cb => {
+      try {
+        cb(stats);
+      } catch (e) {}
+    });
+  }).catch(() => {});
+}
+
+/**
  * Subscribe to Real-Time Live Statistics Updates & Presence Channel
  */
 export function subscribeToLiveStats(onStatsUpdate) {
   if (typeof window === 'undefined') return () => {};
 
-  let pollInterval = null;
+  if (typeof onStatsUpdate === 'function') {
+    statsSubscribers.add(onStatsUpdate);
+  }
 
-  const refreshAndNotify = async (force = false) => {
-    try {
-      const stats = await fetchLivePlatformStats(force);
-      if (typeof onStatsUpdate === 'function') {
-        onStatsUpdate(stats);
-      }
-    } catch (e) {}
-  };
+  // Ensure persistent global presence & telemetry are initiated
+  initGlobalPresence();
 
-  // Initial immediate fetch
-  refreshAndNotify(false);
+  // Immediate fetch to populate caller state
+  fetchLivePlatformStats(false).then(stats => {
+    if (typeof onStatsUpdate === 'function') {
+      onStatsUpdate(stats);
+    }
+  }).catch(() => {});
 
-  // 1. Cross-Tab BroadcastChannel Listener
+  // Cross-Tab BroadcastChannel Listener
   const handleLocalTelemetryMessage = (event) => {
     if (event.data?.type === 'LIVE_ACTIVITY_EVENT' || event.data?.type === 'LIVE_STATS_REFRESH') {
-      refreshAndNotify(true);
+      notifyAllStatsSubscribers(true);
     }
   };
 
@@ -529,85 +726,18 @@ export function subscribeToLiveStats(onStatsUpdate) {
     localTelemetryBroadcast.addEventListener('message', handleLocalTelemetryMessage);
   }
 
-  // 2. Supabase Realtime Channels (Presence & Postgres Changes)
-  if (isSupabaseConfigured && supabase) {
-    try {
-      // Realtime Activity Broadcast Channel
-      supabaseStatsChannel = supabase
-        .channel('gate_ag_telemetry_live')
-        .on('broadcast', { event: 'live_action_event' }, () => {
-          refreshAndNotify(true);
-        })
-        .on('postgres_changes', { event: '*', schema: 'public', table: 'test_attempts' }, () => {
-          refreshAndNotify(true);
-        })
-        .on('postgres_changes', { event: '*', schema: 'public', table: 'students' }, () => {
-          refreshAndNotify(true);
-        })
-        .on('postgres_changes', { event: '*', schema: 'public', table: 'device_sessions' }, () => {
-          refreshAndNotify(true);
-        })
-        .subscribe();
-
-      // Realtime Presence Channel (Online Aspirants Tracking)
-      const currentStudent = getActiveSessionStudent();
-      const currentPresenceKey = currentStudent?.id || ('anon_' + Math.random().toString(36).substring(2, 9));
-
-      supabasePresenceChannel = supabase.channel('gate_ag_presence_live', {
-        config: {
-          presence: { key: currentPresenceKey }
-        }
-      });
-
-      supabasePresenceChannel
-        .on('presence', { event: 'sync' }, () => {
-          const state = supabasePresenceChannel.presenceState();
-          activePresenceUsers.clear();
-          Object.keys(state).forEach(key => {
-            activePresenceUsers.set(key, state[key]);
-          });
-          refreshAndNotify(false);
-        })
-        .on('presence', { event: 'join' }, ({ key, newPresences }) => {
-          activePresenceUsers.set(key, newPresences);
-          refreshAndNotify(false);
-        })
-        .on('presence', { event: 'leave' }, ({ key }) => {
-          activePresenceUsers.delete(key);
-          refreshAndNotify(false);
-        })
-        .subscribe(async (status) => {
-          if (status === 'SUBSCRIBED') {
-            await supabasePresenceChannel.track({
-              user_id: currentPresenceKey,
-              name: currentStudent?.full_name || 'GATE AG Aspirant',
-              college: currentStudent?.college_name || 'COAET CCS HAU Hisar',
-              role: currentStudent?.role || 'student',
-              online_at: new Date().toISOString()
-            });
-          }
-        });
-
-    } catch (err) {
-      console.warn('Supabase realtime telemetry channel warning:', err);
-    }
-  }
-
-  // 3. Heartbeat Polling Interval (every 5 minutes / 300,000ms as relaxed fallback)
-  pollInterval = setInterval(() => refreshAndNotify(true), 300000);
+  // Polling interval (every 30 seconds for live board freshness)
+  const pollInterval = setInterval(() => {
+    notifyAllStatsSubscribers(true);
+  }, 30000);
 
   return () => {
+    if (typeof onStatsUpdate === 'function') {
+      statsSubscribers.delete(onStatsUpdate);
+    }
     if (pollInterval) clearInterval(pollInterval);
     if (localTelemetryBroadcast) {
       localTelemetryBroadcast.removeEventListener('message', handleLocalTelemetryMessage);
-    }
-    if (supabaseStatsChannel && supabase) {
-      supabase.removeChannel(supabaseStatsChannel);
-    }
-    if (supabasePresenceChannel && supabase) {
-      supabasePresenceChannel.untrack().then(() => {
-        supabase.removeChannel(supabasePresenceChannel);
-      }).catch(() => {});
     }
   };
 }

@@ -14,7 +14,11 @@ import {
   Layers, 
   Sparkles,
   ChevronRight,
-  BookOpen
+  BookOpen,
+  ShieldAlert,
+  Play,
+  Flame,
+  ArrowUpRight
 } from 'lucide-react';
 import { getStudentTestAttempts } from '../services/testAttemptService';
 import { getOfficialSections, normalizeSectionTitle } from '../utils/syllabusTaxonomy.js';
@@ -205,6 +209,7 @@ export default function PerformanceAnalytics({
   questions = [], 
   customMockPapers = [],
   onStartCustomTest,
+  onStartTypeDrill,
   onOpenCalc
 }) {
   const [activeSubTab, setActiveSubTab] = useState('overview'); // 'overview' | 'radar'
@@ -320,6 +325,104 @@ export default function PerformanceAnalytics({
   // Strengths & Weaknesses
   const strongSections = sectionStats.filter(s => s.attempted > 0 && s.accuracy >= 65);
   const weakSections = sectionStats.filter(s => s.attempted > 0 && s.accuracy < 65);
+
+  // Question-Type Strategy & Score Leak Analytics (Longitudinal Historical Aggregation)
+  const questionTypeStats = useMemo(() => {
+    const raw = {
+      MCQ: { total: 0, attempted: 0, correct: 0, incorrect: 0, marksGained: 0, penaltyLost: 0, totalTimeSec: 0 },
+      MSQ: { total: 0, attempted: 0, correct: 0, incorrect: 0, marksGained: 0, penaltyLost: 0, totalTimeSec: 0 },
+      NAT: { total: 0, attempted: 0, correct: 0, incorrect: 0, marksGained: 0, penaltyLost: 0, totalTimeSec: 0 }
+    };
+
+    filteredAttempts.forEach(att => {
+      if (Array.isArray(att.question_responses)) {
+        att.question_responses.forEach(resp => {
+          const matchQ = allQuestionsPool.find(q => q.id === (resp.question_id || resp.qId) || q.qnum === resp.qnum);
+          const rawType = (resp.type || matchQ?.type || 'MCQ').toUpperCase().trim();
+          const qType = rawType.includes('MSQ') ? 'MSQ' : rawType.includes('NAT') ? 'NAT' : 'MCQ';
+
+          raw[qType].total += 1;
+
+          const rawAns = resp.user_answer !== undefined && resp.user_answer !== null ? String(resp.user_answer).trim() : '';
+          const isUnattemptedState = resp.status === 'UNATTEMPTED' || resp.status === 'NOT_ANSWERED' || resp.status === 'NOT_VISITED';
+          const isAttempted = resp.is_attempted !== undefined
+            ? Boolean(resp.is_attempted)
+            : (rawAns !== '' && !isUnattemptedState);
+
+          const timeSec = Number(resp.time_spent_seconds || 0);
+          raw[qType].totalTimeSec += timeSec;
+
+          if (isAttempted) {
+            raw[qType].attempted += 1;
+            const isCorrect = Boolean(resp.is_correct || resp.status === 'CORRECT');
+            const marks = Number(resp.marks || matchQ?.marks || 1);
+            if (isCorrect) {
+              raw[qType].correct += 1;
+              raw[qType].marksGained += Number(resp.marks_awarded !== undefined ? resp.marks_awarded : marks);
+            } else {
+              raw[qType].incorrect += 1;
+              if (qType === 'MCQ') {
+                const neg = Number(resp.negative_marks !== undefined ? resp.negative_marks : (marks === 2 ? 2/3 : 1/3));
+                raw[qType].penaltyLost += neg;
+              }
+            }
+          }
+        });
+      }
+    });
+
+    const formatMetrics = (type) => {
+      const s = raw[type];
+      const acc = s.attempted > 0 ? (s.correct / s.attempted) * 100 : 0;
+      const netMarks = s.marksGained - s.penaltyLost;
+      const avgTime = s.attempted > 0 ? Math.round(s.totalTimeSec / s.attempted) : 0;
+      return {
+        ...s,
+        accuracy: Number(acc.toFixed(1)),
+        netMarks: Number(netMarks.toFixed(2)),
+        penaltyLost: Number(s.penaltyLost.toFixed(2)),
+        avgTime
+      };
+    };
+
+    const MCQ = formatMetrics('MCQ');
+    const MSQ = formatMetrics('MSQ');
+    const NAT = formatMetrics('NAT');
+
+    // Determine Weakest Format for targeted remediation
+    const activeTypes = ['MCQ', 'MSQ', 'NAT'].filter(t => raw[t].attempted > 0);
+    let weakest = 'NAT';
+    let weakestReason = 'Practice numerical calculations (0 negative risk) to maximize quantitative strike rate.';
+
+    if (activeTypes.length > 0) {
+      if (MCQ.penaltyLost >= 2) {
+        weakest = 'MCQ';
+        weakestReason = `Conceded -${MCQ.penaltyLost} marks across past tests to MCQ negative penalties. Precision drills will stop penalty bleed!`;
+      } else {
+        const sorted = [...activeTypes].sort((a, b) => {
+          const accA = a === 'MCQ' ? MCQ.accuracy : a === 'MSQ' ? MSQ.accuracy : NAT.accuracy;
+          const accB = b === 'MCQ' ? MCQ.accuracy : b === 'MSQ' ? MSQ.accuracy : NAT.accuracy;
+          return accA - accB;
+        });
+        weakest = sorted[0];
+        if (weakest === 'NAT') {
+          weakestReason = `Historical NAT accuracy is ${NAT.accuracy}% with zero negative penalty risk. Focus on calculation drills!`;
+        } else if (weakest === 'MSQ') {
+          weakestReason = `Historical MSQ accuracy is ${MSQ.accuracy}%. Targeted multi-select elimination will capture full marks.`;
+        } else {
+          weakestReason = `Historical MCQ accuracy is ${MCQ.accuracy}%. Strengthen conceptual clarity to minimize wrong guesses.`;
+        }
+      }
+    }
+
+    return {
+      MCQ,
+      MSQ,
+      NAT,
+      weakest,
+      weakestReason
+    };
+  }, [filteredAttempts, allQuestionsPool]);
 
   return (
     <div className="max-w-6xl mx-auto space-y-6 animate-in fade-in duration-200">
@@ -459,6 +562,227 @@ export default function PerformanceAnalytics({
           <div className="text-[10px] text-slate-400 font-medium">GATE Ideal: ~165 seconds</div>
         </div>
 
+      </div>
+
+      {/* Question-Type Strategy & Score Leak Analyzer (MCQ vs MSQ vs NAT) */}
+      <div className="card-3d rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-5 space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-100 dark:border-slate-800 pb-3">
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-xl bg-blue-600/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 flex items-center justify-center">
+              <Target className="w-4 h-4" />
+            </div>
+            <div>
+              <h2 className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-slate-900 dark:text-white">
+                Question-Type Strategy &amp; Score Leak Analyzer
+              </h2>
+              <p className="text-[11px] text-slate-400 font-medium">
+                Longitudinal strike rates, penalty mark bleed (MCQ), and zero-penalty opportunities (MSQ &amp; NAT)
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2 text-[11px] font-mono text-slate-500 dark:text-slate-400">
+            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 font-bold">
+              3 Format Categories
+            </span>
+          </div>
+        </div>
+
+        {/* 3 Interactive Strategy Cards: MCQ vs MSQ vs NAT */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5">
+          
+          {/* MCQ Card */}
+          <div className={`p-4 rounded-2xl border transition space-y-3 ${
+            questionTypeStats.MCQ.penaltyLost > 0
+              ? 'bg-rose-50/40 dark:bg-rose-950/20 border-rose-200 dark:border-rose-900/50'
+              : 'bg-slate-50/70 dark:bg-slate-950/50 border-slate-200 dark:border-slate-800'
+          }`}>
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-black text-slate-900 dark:text-white flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+                Multiple Choice (MCQ)
+              </span>
+              <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300">
+                {questionTypeStats.MCQ.attempted}/{questionTypeStats.MCQ.total} Attempted
+              </span>
+            </div>
+
+            <div className="grid grid-cols-3 gap-1.5 text-center py-2 px-1 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/70 dark:border-slate-800/80">
+              <div>
+                <span className="text-[10px] text-slate-400 block font-medium">Accuracy</span>
+                <span className={`text-xs font-extrabold font-mono ${
+                  questionTypeStats.MCQ.accuracy >= 70 ? 'text-emerald-600 dark:text-emerald-400' : 'text-amber-600 dark:text-amber-400'
+                }`}>
+                  {questionTypeStats.MCQ.accuracy}%
+                </span>
+              </div>
+              <div>
+                <span className="text-[10px] text-slate-400 block font-medium">Penalty Lost</span>
+                <span className="text-xs font-extrabold font-mono text-rose-600 dark:text-rose-400">
+                  {questionTypeStats.MCQ.penaltyLost > 0 ? `-${questionTypeStats.MCQ.penaltyLost}` : '0.00'}
+                </span>
+              </div>
+              <div>
+                <span className="text-[10px] text-slate-400 block font-medium">Net Score</span>
+                <span className="text-xs font-extrabold font-mono text-slate-900 dark:text-white">
+                  +{questionTypeStats.MCQ.netMarks}
+                </span>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between text-[11px] text-slate-500 font-mono">
+              <span>Avg Time: {questionTypeStats.MCQ.avgTime}s / Q</span>
+              <span className="text-[10px] text-rose-500 font-bold">
+                {questionTypeStats.MCQ.incorrect} Negative Errors
+              </span>
+            </div>
+
+            {onStartTypeDrill && (
+              <button
+                type="button"
+                onClick={() => onStartTypeDrill('MCQ', 20)}
+                className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white font-bold text-xs transition shadow-xs cursor-pointer"
+              >
+                <Play className="w-3.5 h-3.5" />
+                <span>Launch MCQ Drill (20 Qs)</span>
+              </button>
+            )}
+          </div>
+
+          {/* MSQ Card */}
+          <div className="p-4 rounded-2xl bg-slate-50/70 dark:bg-slate-950/50 border border-slate-200 dark:border-slate-800 space-y-3">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-black text-slate-900 dark:text-white flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-purple-500"></span>
+                Multiple Select (MSQ)
+              </span>
+              <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300">
+                {questionTypeStats.MSQ.attempted}/{questionTypeStats.MSQ.total} Attempted
+              </span>
+            </div>
+
+            <div className="grid grid-cols-3 gap-1.5 text-center py-2 px-1 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/70 dark:border-slate-800/80">
+              <div>
+                <span className="text-[10px] text-slate-400 block font-medium">Match Rate</span>
+                <span className={`text-xs font-extrabold font-mono ${
+                  questionTypeStats.MSQ.accuracy >= 60 ? 'text-emerald-600 dark:text-emerald-400' : 'text-amber-600 dark:text-amber-400'
+                }`}>
+                  {questionTypeStats.MSQ.accuracy}%
+                </span>
+              </div>
+              <div>
+                <span className="text-[10px] text-slate-400 block font-medium">Penalty Risk</span>
+                <span className="text-xs font-extrabold font-mono text-emerald-600 dark:text-emerald-400">
+                  0.00 (Zero)
+                </span>
+              </div>
+              <div>
+                <span className="text-[10px] text-slate-400 block font-medium">Net Score</span>
+                <span className="text-xs font-extrabold font-mono text-slate-900 dark:text-white">
+                  +{questionTypeStats.MSQ.netMarks}
+                </span>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between text-[11px] text-slate-500 font-mono">
+              <span>Avg Time: {questionTypeStats.MSQ.avgTime}s / Q</span>
+              <span className="text-[10px] text-purple-600 dark:text-purple-400 font-bold">
+                Zero Risk Format
+              </span>
+            </div>
+
+            {onStartTypeDrill && (
+              <button
+                type="button"
+                onClick={() => onStartTypeDrill('MSQ', 20)}
+                className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-purple-600 hover:bg-purple-500 active:bg-purple-700 text-white font-bold text-xs transition shadow-xs cursor-pointer"
+              >
+                <Play className="w-3.5 h-3.5" />
+                <span>Launch MSQ Drill (20 Qs)</span>
+              </button>
+            )}
+          </div>
+
+          {/* NAT Card */}
+          <div className={`p-4 rounded-2xl border transition space-y-3 ${
+            questionTypeStats.NAT.accuracy < 50 && questionTypeStats.NAT.attempted > 0
+              ? 'bg-amber-50/40 dark:bg-amber-950/20 border-amber-200 dark:border-amber-900/50'
+              : 'bg-slate-50/70 dark:bg-slate-950/50 border-slate-200 dark:border-slate-800'
+          }`}>
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-black text-slate-900 dark:text-white flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                Numerical Answer (NAT)
+              </span>
+              <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300">
+                {questionTypeStats.NAT.attempted}/{questionTypeStats.NAT.total} Attempted
+              </span>
+            </div>
+
+            <div className="grid grid-cols-3 gap-1.5 text-center py-2 px-1 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/70 dark:border-slate-800/80">
+              <div>
+                <span className="text-[10px] text-slate-400 block font-medium">Calc Acc.</span>
+                <span className={`text-xs font-extrabold font-mono ${
+                  questionTypeStats.NAT.accuracy >= 65 ? 'text-emerald-600 dark:text-emerald-400' : 'text-amber-600 dark:text-amber-400'
+                }`}>
+                  {questionTypeStats.NAT.accuracy}%
+                </span>
+              </div>
+              <div>
+                <span className="text-[10px] text-slate-400 block font-medium">Penalty Risk</span>
+                <span className="text-xs font-extrabold font-mono text-emerald-600 dark:text-emerald-400">
+                  0.00 (Zero)
+                </span>
+              </div>
+              <div>
+                <span className="text-[10px] text-slate-400 block font-medium">Net Score</span>
+                <span className="text-xs font-extrabold font-mono text-slate-900 dark:text-white">
+                  +{questionTypeStats.NAT.netMarks}
+                </span>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-between text-[11px] text-slate-500 font-mono">
+              <span>Avg Time: {questionTypeStats.NAT.avgTime}s / Q</span>
+              <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold">
+                High-Yield Zero Risk
+              </span>
+            </div>
+
+            {onStartTypeDrill && (
+              <button
+                type="button"
+                onClick={() => onStartTypeDrill('NAT', 20)}
+                className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-bold text-xs transition shadow-xs cursor-pointer"
+              >
+                <Play className="w-3.5 h-3.5" />
+                <span>Launch NAT Drill (20 Qs)</span>
+              </button>
+            )}
+          </div>
+
+        </div>
+
+        {/* Action-Focused Targeted Remediation Callout */}
+        {questionTypeStats.weakest && onStartTypeDrill && (
+          <div className="p-3.5 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-emerald-500/10 dark:from-blue-950/40 dark:via-purple-950/40 dark:to-emerald-950/40 border border-blue-200/80 dark:border-blue-800/80 rounded-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+            <div className="flex items-center gap-2.5 flex-1">
+              <Sparkles className="w-4 h-4 text-purple-600 dark:text-purple-400 shrink-0" />
+              <p className="text-slate-800 dark:text-slate-200 font-medium leading-relaxed">
+                <strong className="text-blue-600 dark:text-blue-400 font-bold">Tactical Action Recommendation:</strong> {questionTypeStats.weakestReason}
+              </p>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => onStartTypeDrill(questionTypeStats.weakest, 20)}
+              className="px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-extrabold text-xs transition shadow-xs flex items-center justify-center gap-2 shrink-0 cursor-pointer active:scale-95"
+            >
+              <Target className="w-3.5 h-3.5" />
+              <span>Launch {questionTypeStats.weakest} Remediation Drill (20 Qs)</span>
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Interactive Syllabus Mastery Heatmap */}
@@ -790,6 +1114,10 @@ export default function PerformanceAnalytics({
       <TestResultModal
         result={formatAttemptForResultModal(selectedAttemptForAnalysis, allQuestionsPool)}
         onClose={() => setSelectedAttemptForAnalysis(null)}
+        onStartTypeDrill={(type, count) => {
+          setSelectedAttemptForAnalysis(null);
+          if (onStartTypeDrill) onStartTypeDrill(type, count);
+        }}
         onRetake={() => {
           setSelectedAttemptForAnalysis(null);
           if (onStartCustomTest) onStartCustomTest();

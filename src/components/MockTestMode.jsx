@@ -8,37 +8,47 @@ import {
   AlertTriangle, 
   ChevronLeft, 
   ChevronRight, 
-  X,
-  Play,
-  RotateCcw,
-  Trophy,
-  Award,
-  BookOpen,
-  Info,
-  Sparkles,
-  Layers,
-  Image as ImageIcon,
-  Edit3,
-  CheckSquare,
-  Shield,
-  User,
-  AlertCircle,
-  Maximize,
-  Minimize,
-  Flag,
-  Grid,
-  Pause,
-  Save,
-  Trash2,
-  AlertOctagon,
-  BookmarkCheck,
-  BarChart3
+  X, 
+  Play, 
+  RotateCcw, 
+  Trophy, 
+  Award, 
+  BookOpen, 
+  Info, 
+  Sparkles, 
+  Layers, 
+  Image as ImageIcon, 
+  Edit3, 
+  CheckSquare, 
+  Shield, 
+  User, 
+  AlertCircle, 
+  Maximize, 
+  Minimize, 
+  Flag, 
+  Grid, 
+  Pause, 
+  Save, 
+  Trash2, 
+  AlertOctagon, 
+  BookmarkCheck, 
+  BarChart3,
+  Download,
+  Key,
+  FileCode,
+  Archive,
+  Loader2,
+  Eye,
+  ShieldCheck,
+  Search,
+  Check
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import { evaluateQuestion } from '../utils/scoring.js';
 import { saveTestAttempt } from '../services/testAttemptService';
 import { calculateAttemptXP, awardStudentXP } from '../services/leaderboardService';
 import { GATE_AG_FORMULAS } from '../data/formulas';
+import { downloadBulkZip } from '../utils/zipDownloader';
 import QuestionReportModal from './QuestionReportModal';
 import MockPaperAnalysisModal from './MockPaperAnalysisModal';
 
@@ -47,11 +57,12 @@ export default function MockTestMode({
   customMockPapers = [], 
   customPaper, 
   directLaunchPaper, 
+  questions = [],
   onOpenCalc, 
   onFinishTest, 
   onEditQuestion, 
-  currentStudent,
-  onRequireAuth
+  currentStudent, 
+  onRequireAuth 
 }) {
   const [selectedPaper, setSelectedPaper] = useState(null);
   const [showingPreExamInstructions, setShowingPreExamInstructions] = useState(false);
@@ -97,6 +108,113 @@ export default function MockTestMode({
   const [showCancelExamModal, setShowCancelExamModal] = useState(false);
   const [analyzingPaper, setAnalyzingPaper] = useState(null);
   const [actionToast, setActionToast] = useState(null);
+
+  // Downloads & Filter states for Unified PYQ & Mocks Hub
+  const [paperFilter, setPaperFilter] = useState('all'); // 'all' | 'official' | 'custom'
+  const [searchTerm, setSearchTerm] = useState('');
+  const [eraFilter, setEraFilter] = useState('all'); // 'all' | 'recent' | 'classic'
+  const [isZipping, setIsZipping] = useState(false);
+  const [previewPaper, setPreviewPaper] = useState(null);
+  const [previewSearch, setPreviewSearch] = useState('');
+  const [showBulkZipDropdown, setShowBulkZipDropdown] = useState(false);
+
+  const yearsData = [
+    { year: '2026', paperPdf: '/downloads/question_papers/AG2026.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2026-FULL-SOLVED.docx' },
+    { year: '2025', paperPdf: '/downloads/question_papers/AG2025.pdf', keyPdf: '/downloads/answer_keys/AG25KEY.pdf', solvedDocx: '/downloads/solved_docx/2025-FULL-SOLVED.docx' },
+    { year: '2024', paperPdf: '/downloads/question_papers/AG2024.pdf', keyPdf: '/downloads/answer_keys/AG24KEY.pdf', solvedDocx: '/downloads/solved_docx/2024-FULL-SOLVED.docx' },
+    { year: '2023', paperPdf: '/downloads/question_papers/AG2023.pdf', keyPdf: '/downloads/answer_keys/AG23KEY.pdf', solvedDocx: '/downloads/solved_docx/2023-FULL-SOLVED.docx' },
+    { year: '2022', paperPdf: '/downloads/question_papers/AG2022.pdf', keyPdf: '/downloads/answer_keys/AG22KEY.pdf', solvedDocx: '/downloads/solved_docx/2022-FULL-SOLVED.docx' },
+    { year: '2021', paperPdf: '/downloads/question_papers/AG2021.pdf', keyPdf: '/downloads/answer_keys/AG21KEY.pdf', solvedDocx: '/downloads/solved_docx/2021-FULL-SOLVED.docx' },
+    { year: '2020', paperPdf: '/downloads/question_papers/AG2020.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2020-FULL-SOLVED.docx' },
+    { year: '2019', paperPdf: '/downloads/question_papers/AG2019.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2019-FULL-SOLVED.docx' },
+    { year: '2018', paperPdf: '/downloads/question_papers/AG2018.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2018-FULL-SOLVED.docx' },
+    { year: '2017', paperPdf: '/downloads/question_papers/AG2017.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2017-FULL-SOLVED.docx' },
+    { year: '2016', paperPdf: '/downloads/question_papers/AG2016.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2016-FULL-SOLVED.docx' },
+    { year: '2015', paperPdf: '/downloads/question_papers/AG2015.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2015-FULL-SOLVED.docx' },
+    { year: '2014', paperPdf: '/downloads/question_papers/AG2014.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2014-FULL-SOLVED.docx' },
+    { year: '2013', paperPdf: '/downloads/question_papers/AG2013.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2013-FULL-SOLVED.docx' },
+    { year: '2012', paperPdf: '/downloads/question_papers/AG2012.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2012-FULL-SOLVED.docx' },
+    { year: '2011', paperPdf: '/downloads/question_papers/AG2011.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2011-FULL-SOLVED.docx' },
+    { year: '2010', paperPdf: '/downloads/question_papers/AG2010.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2010-FULL-SOLVED.docx' },
+    { year: '2009', paperPdf: '/downloads/question_papers/AG2009.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2009-FULL-SOLVED.docx' },
+    { year: '2008', paperPdf: '/downloads/question_papers/AG2008.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2008-FULL-SOLVED.docx' },
+    { year: '2007', paperPdf: '/downloads/question_papers/AG2007.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2007-FULL-SOLVED.docx' },
+  ];
+
+  const getOfficialPaperQuestions = (year) => {
+    const yStr = String(year);
+    const foundPaper = mockPapers.find(p => String(p.year) === yStr || (p.title && p.title.includes(yStr)));
+    if (foundPaper && foundPaper.questions && foundPaper.questions.length > 0) {
+      return foundPaper.questions;
+    }
+    const filtered = (questions || []).filter(q => String(q.year) === yStr || (q.id && q.id.startsWith(`GATE_${yStr}_`)));
+    if (filtered.length > 0) return filtered;
+    return [];
+  };
+
+  const getPaperDocxUrl = (paper, idx) => {
+    if (paper.docxUrl) return paper.docxUrl;
+    if (paper.file_url && paper.file_url.endsWith('.docx')) return paper.file_url;
+    const text = `${paper.id || ''} ${paper.title || ''}`;
+    const match = text.match(/MOCK[_\s]+(\d+)/i) || text.match(/Paper\s+(\d+)/i) || text.match(/(\d+)$/);
+    const num = match ? String(parseInt(match[1], 10)).padStart(2, '0') : String(idx + 1).padStart(2, '0');
+    return `/downloads/mock_tests/MOCK ${num} GATE AG.docx`;
+  };
+
+  const handleDownloadAllSolvedDocx = async () => {
+    setIsZipping(true);
+    setShowBulkZipDropdown(false);
+    try {
+      const filesToZip = yearsData
+        .filter(item => item.solvedDocx)
+        .map(item => ({
+          name: `${item.year}-FULL-SOLVED.docx`,
+          url: item.solvedDocx
+        }));
+      await downloadBulkZip(filesToZip, 'GATE_AG_All_Solved_Papers_2007_2026.zip');
+    } catch (err) {
+      console.error("Bulk zip failed", err);
+      alert("Could not build ZIP file. Try downloading files individually.");
+    } finally {
+      setIsZipping(false);
+    }
+  };
+
+  const handleDownloadAllPdfs = async () => {
+    setIsZipping(true);
+    setShowBulkZipDropdown(false);
+    try {
+      const filesToZip = yearsData
+        .filter(item => item.paperPdf)
+        .map(item => ({
+          name: `GATE_AG_${item.year}_Question_Paper.pdf`,
+          url: item.paperPdf
+        }));
+      await downloadBulkZip(filesToZip, 'GATE_AG_Official_Question_Papers_2007_2026.zip');
+    } catch (err) {
+      console.error("Bulk zip failed", err);
+      alert("Could not build ZIP file. Try downloading files individually.");
+    } finally {
+      setIsZipping(false);
+    }
+  };
+
+  const handleDownloadAllCustomMocksZip = async () => {
+    setIsZipping(true);
+    setShowBulkZipDropdown(false);
+    try {
+      const filesToZip = customMockPapers.map((paper, idx) => ({
+        name: `${(paper.title || `MOCK_${idx + 1}_GATE_AG`).replace(/[/\\?%*:|"<>]/g, '_')}.docx`,
+        url: getPaperDocxUrl(paper, idx)
+      }));
+      await downloadBulkZip(filesToZip, 'GATE_AG_Custom_Mock_Papers_All.zip');
+    } catch (err) {
+      console.error("Bulk custom mock zip failed", err);
+      alert("Could not build ZIP file. Try downloading files individually.");
+    } finally {
+      setIsZipping(false);
+    }
+  };
 
   // Auto-dismiss notification toasts after 5 seconds
   useEffect(() => {
@@ -1014,9 +1132,35 @@ export default function MockTestMode({
   }
 
   // =========================================================================
-  // VIEW 2: PAPERS SELECTION LIST (DEFAULT PORTAL VIEW)
+  // VIEW 2: PAPERS SELECTION LIST (UNIFIED CBT & DOWNLOADS VAULT)
   // =========================================================================
   if (!testStarted || !selectedPaper) {
+    const filteredOfficialPapers = mockPapers.filter(paper => {
+      const yNum = parseInt(paper.year, 10);
+      if (searchTerm) {
+        const term = searchTerm.toLowerCase();
+        const matchYear = String(paper.year).includes(term);
+        const matchTitle = (paper.title || '').toLowerCase().includes(term);
+        if (!matchYear && !matchTitle) return false;
+      }
+      if (eraFilter === 'recent' && yNum < 2016) return false;
+      if (eraFilter === 'classic' && yNum > 2015) return false;
+      return true;
+    });
+
+    const filteredCustomPapers = customMockPapers.filter(paper => {
+      if (!searchTerm) return true;
+      const term = searchTerm.toLowerCase();
+      const titleMatch = (paper.title || '').toLowerCase().includes(term);
+      const idMatch = (paper.id || '').toLowerCase().includes(term);
+      const yearMatch = String(paper.year || '').includes(term);
+      return titleMatch || idMatch || yearMatch;
+    });
+
+    const getOfficialDownloads = (year) => {
+      return yearsData.find(y => String(y.year) === String(year)) || {};
+    };
+
     return (
       <div className="max-w-6xl mx-auto space-y-6 animate-in fade-in duration-200 font-sans">
         <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-5 sm:p-6 space-y-6 shadow-sm">
@@ -1029,15 +1173,21 @@ export default function MockTestMode({
               </div>
               <div>
                 <h1 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
-                  Official GATE AG CBT Exam Simulator
+                  PYQ &amp; Full Mock Tests
                 </h1>
                 <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-                  100% authentic Official GATE Computer-Based Test (CBT) platform simulator with complete instructions, virtual calculator, and official scoring.
+                  100% authentic GATE AG CBT platform simulator with virtual calculator, weightage insights, offline preview reader &amp; complete paper downloads.
                 </p>
               </div>
             </div>
-            <div className="text-xs font-mono font-bold px-3.5 py-2 rounded-xl bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 shrink-0">
-              20 Official Papers
+            
+            <div className="flex items-center gap-2 shrink-0">
+              <div className="text-xs font-mono font-bold px-3 py-1.5 rounded-xl bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800">
+                20 Official PYQs
+              </div>
+              <div className="text-xs font-mono font-bold px-3 py-1.5 rounded-xl bg-purple-50 dark:bg-purple-950 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800">
+                50 Custom Mocks
+              </div>
             </div>
           </div>
 
@@ -1131,147 +1281,391 @@ export default function MockTestMode({
             </div>
           )}
 
+          {/* Unified Filter & Bulk Archive Toolbar */}
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3 p-3 bg-slate-50 dark:bg-slate-950 rounded-2xl border border-slate-200 dark:border-slate-800">
+            
+            {/* Search & Paper Type Filter */}
+            <div className="flex flex-wrap items-center gap-2 flex-1">
+              <div className="relative min-w-[200px] flex-1 sm:flex-initial sm:w-64">
+                <Search className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
+                <input
+                  type="text"
+                  placeholder="Search papers (e.g. 2026, Mock 10)..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl pl-9 pr-3 py-2 text-xs text-slate-900 dark:text-slate-100 outline-none focus:ring-1 focus:ring-blue-500 font-medium"
+                />
+              </div>
+
+              {/* Segmented Filter */}
+              <div className="flex items-center gap-1 bg-white dark:bg-slate-900 p-1 rounded-xl border border-slate-200 dark:border-slate-800 text-xs font-bold">
+                <button
+                  onClick={() => setPaperFilter('all')}
+                  className={`px-3 py-1.5 rounded-lg transition cursor-pointer ${
+                    paperFilter === 'all'
+                      ? 'bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900 shadow-xs'
+                      : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                  }`}
+                >
+                  All (70)
+                </button>
+                <button
+                  onClick={() => setPaperFilter('official')}
+                  className={`px-3 py-1.5 rounded-lg transition cursor-pointer ${
+                    paperFilter === 'official'
+                      ? 'bg-blue-600 text-white shadow-xs font-extrabold'
+                      : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                  }`}
+                >
+                  Official PYQs (20)
+                </button>
+                <button
+                  onClick={() => setPaperFilter('custom')}
+                  className={`px-3 py-1.5 rounded-lg transition cursor-pointer ${
+                    paperFilter === 'custom'
+                      ? 'bg-purple-600 text-white shadow-xs font-extrabold'
+                      : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                  }`}
+                >
+                  Custom Mocks (50)
+                </button>
+              </div>
+
+              {/* Era Sub-filter for Official */}
+              {paperFilter === 'official' && (
+                <div className="flex items-center gap-1 bg-white dark:bg-slate-900 p-1 rounded-xl border border-slate-200 dark:border-slate-800 text-xs font-bold">
+                  <button
+                    onClick={() => setEraFilter('all')}
+                    className={`px-2.5 py-1 rounded-lg transition cursor-pointer ${
+                      eraFilter === 'all'
+                        ? 'bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 font-extrabold'
+                        : 'text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
+                    }`}
+                  >
+                    All Years
+                  </button>
+                  <button
+                    onClick={() => setEraFilter('recent')}
+                    className={`px-2.5 py-1 rounded-lg transition cursor-pointer ${
+                      eraFilter === 'recent'
+                        ? 'bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 font-extrabold'
+                        : 'text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
+                    }`}
+                  >
+                    2016–2026
+                  </button>
+                  <button
+                    onClick={() => setEraFilter('classic')}
+                    className={`px-2.5 py-1 rounded-lg transition cursor-pointer ${
+                      eraFilter === 'classic'
+                        ? 'bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 font-extrabold'
+                        : 'text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
+                    }`}
+                  >
+                    2007–2015
+                  </button>
+                </div>
+              )}
+            </div>
+
+            {/* Bulk ZIP Downloads Dropdown */}
+            <div className="relative">
+              <button
+                type="button"
+                disabled={isZipping}
+                onClick={() => setShowBulkZipDropdown(!showBulkZipDropdown)}
+                className="px-3.5 py-2 rounded-xl bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-200 text-xs font-bold transition flex items-center gap-2 shadow-xs cursor-pointer active:scale-95 disabled:opacity-50"
+              >
+                {isZipping ? <Loader2 className="w-4 h-4 animate-spin" /> : <Archive className="w-4 h-4" />}
+                <span>Bulk ZIP Archives</span>
+              </button>
+
+              {showBulkZipDropdown && (
+                <div className="absolute right-0 mt-2 w-64 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-xl p-2 z-20 space-y-1 animate-in fade-in zoom-in-95">
+                  <button
+                    onClick={handleDownloadAllSolvedDocx}
+                    className="w-full text-left px-3 py-2 rounded-xl text-xs font-bold text-amber-900 dark:text-amber-300 bg-amber-50/60 dark:bg-amber-950/40 hover:bg-amber-100 dark:hover:bg-amber-900/60 transition flex items-center gap-2 cursor-pointer"
+                  >
+                    <FileCode className="w-4 h-4 text-amber-500 shrink-0" />
+                    <span>Download Solved DOCX (ZIP)</span>
+                  </button>
+                  <button
+                    onClick={handleDownloadAllPdfs}
+                    className="w-full text-left px-3 py-2 rounded-xl text-xs font-bold text-blue-900 dark:text-blue-300 bg-blue-50/60 dark:bg-blue-950/40 hover:bg-blue-100 dark:hover:bg-blue-900/60 transition flex items-center gap-2 cursor-pointer"
+                  >
+                    <FileText className="w-4 h-4 text-blue-500 shrink-0" />
+                    <span>Download Official PDFs (ZIP)</span>
+                  </button>
+                  <button
+                    onClick={handleDownloadAllCustomMocksZip}
+                    className="w-full text-left px-3 py-2 rounded-xl text-xs font-bold text-purple-900 dark:text-purple-300 bg-purple-50/60 dark:bg-purple-950/40 hover:bg-purple-100 dark:hover:bg-purple-900/60 transition flex items-center gap-2 cursor-pointer"
+                  >
+                    <Sparkles className="w-4 h-4 text-purple-500 shrink-0" />
+                    <span>Download 50 Mocks (ZIP)</span>
+                  </button>
+                </div>
+              )}
+            </div>
+
+          </div>
+
           {/* Custom & Curated Mock Tests Section */}
-          {customMockPapers.length > 0 && (
+          {(paperFilter === 'all' || paperFilter === 'custom') && filteredCustomPapers.length > 0 && (
             <div className="space-y-4">
-              <h2 className="text-xs font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400 flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-amber-400" />
-                <span>Custom & Curated Mock Tests ({customMockPapers.length})</span>
-              </h2>
+              <div className="flex items-center justify-between">
+                <h2 className="text-xs font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400 flex items-center gap-2">
+                  <Sparkles className="w-4 h-4 text-amber-400" />
+                  <span>Custom Full-Length Mock Papers ({filteredCustomPapers.length})</span>
+                </h2>
+                <span className="text-[11px] text-slate-400 font-mono">
+                  Full 65 Qs • 100 Marks • Complete DOCX files
+                </span>
+              </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {customMockPapers.map((paper) => (
-                  <div
-                    key={paper.id}
-                    onClick={() => handleSelectPaperForInstructions(paper)}
-                    className="bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 hover:border-purple-500 rounded-3xl p-5 flex flex-col justify-between space-y-4 transition group cursor-pointer shadow-sm hover:shadow-md"
-                  >
-                    <div className="space-y-2">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2">
-                          <div className="w-8 h-8 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-600 dark:text-purple-400 flex items-center justify-center">
-                            <Sparkles className="w-4 h-4" />
+                {filteredCustomPapers.map((paper, idx) => {
+                  const docxUrl = getPaperDocxUrl(paper, idx);
+                  return (
+                    <div
+                      key={paper.id || idx}
+                      className="bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 hover:border-purple-500 rounded-3xl p-5 flex flex-col justify-between space-y-4 transition group shadow-sm hover:shadow-md"
+                    >
+                      <div className="space-y-2">
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <div className="w-8 h-8 rounded-xl bg-purple-500/10 border border-purple-500/20 text-purple-600 dark:text-purple-400 flex items-center justify-center">
+                              <Sparkles className="w-4 h-4" />
+                            </div>
+                            <span className="text-[10px] font-extrabold px-2.5 py-0.5 rounded bg-purple-600 text-white font-mono">
+                              {paper.year || 'MOCK'}
+                            </span>
                           </div>
-                          <span className="text-[10px] font-extrabold px-2.5 py-0.5 rounded bg-purple-600 text-white font-mono">
-                            {paper.year}
+                          <span className="text-xs font-mono text-slate-400">
+                            {paper.questions?.length || 65} Qs • {paper.instructions?.duration_mins || 180}m
                           </span>
                         </div>
-                        <span className="text-xs font-mono text-slate-400">
-                          {paper.questions?.length} Qs • {paper.instructions?.duration_mins || 180}m
-                        </span>
+                        <h3 className="text-sm font-extrabold text-slate-900 dark:text-white leading-snug">
+                          {paper.title}
+                        </h3>
                       </div>
-                      <h3 className="text-sm font-extrabold text-slate-900 dark:text-white leading-snug">
-                        {paper.title}
-                      </h3>
-                    </div>
 
-                    <div className="grid grid-cols-2 gap-2 pt-1">
-                      <button
-                        type="button"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setAnalyzingPaper(paper);
-                        }}
-                        className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-purple-50 dark:bg-purple-950/50 hover:bg-purple-100 dark:hover:bg-purple-900/50 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800 text-xs font-bold transition cursor-pointer"
-                        title="View topic & subtopic weightage analysis"
-                      >
-                        <BarChart3 className="w-3.5 h-3.5 text-purple-600 dark:text-purple-400" />
-                        <span>Weightage</span>
-                      </button>
-                      <button
-                        type="button"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          handleSelectPaperForInstructions(paper);
-                        }}
-                        className="flex items-center justify-center gap-1.5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold transition shadow-xs active:scale-95 cursor-pointer"
-                      >
-                        <Play className="w-3.5 h-3.5 fill-white" />
-                        <span>Take CBT</span>
-                      </button>
+                      <div className="space-y-2 pt-1 border-t border-slate-200/60 dark:border-slate-800/80">
+                        {/* Action buttons row 1 */}
+                        <div className="grid grid-cols-2 gap-2">
+                          <button
+                            type="button"
+                            onClick={() => setAnalyzingPaper(paper)}
+                            className="flex items-center justify-center gap-1.5 py-2 rounded-xl bg-white dark:bg-slate-900 hover:bg-purple-50 dark:hover:bg-purple-950/50 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 text-xs font-bold transition cursor-pointer"
+                            title="View topic & subtopic weightage analysis"
+                          >
+                            <BarChart3 className="w-3.5 h-3.5 text-purple-500" />
+                            <span>Weightage</span>
+                          </button>
+
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setPreviewSearch('');
+                              setPreviewPaper({
+                                title: paper.title,
+                                year: paper.year || '2027',
+                                docxUrl,
+                                questions: paper.questions || [],
+                                summaryText: `Custom Full-Length Mock Paper containing ${paper.questions?.length || 65} questions with complete step-by-step solutions.`
+                              });
+                            }}
+                            className="flex items-center justify-center gap-1.5 py-2 rounded-xl bg-white dark:bg-slate-900 hover:bg-purple-50 dark:hover:bg-purple-950/50 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 text-xs font-bold transition cursor-pointer"
+                            title="Preview Questions & Solutions without starting exam timer"
+                          >
+                            <Eye className="w-3.5 h-3.5 text-blue-500" />
+                            <span>Preview</span>
+                          </button>
+                        </div>
+
+                        {/* Action buttons row 2: Start CBT & Download DOCX */}
+                        <div className="grid grid-cols-2 gap-2">
+                          <button
+                            type="button"
+                            onClick={() => handleSelectPaperForInstructions(paper)}
+                            className="flex items-center justify-center gap-1.5 py-2 rounded-xl bg-purple-600 hover:bg-purple-700 text-white text-xs font-extrabold transition shadow-xs active:scale-95 cursor-pointer"
+                          >
+                            <Play className="w-3.5 h-3.5 fill-white" />
+                            <span>Take CBT</span>
+                          </button>
+
+                          <a
+                            href={docxUrl}
+                            download={`${(paper.title || 'MOCK_PAPER').replace(/\s+/g, '_')}.docx`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center justify-center gap-1.5 py-2 rounded-xl bg-amber-50 dark:bg-amber-950/40 hover:bg-amber-600 hover:text-white text-amber-900 dark:text-amber-300 border border-amber-200 dark:border-amber-900 text-xs font-bold transition shadow-xs group"
+                            title="Download Word Test Document (.docx)"
+                          >
+                            <FileCode className="w-3.5 h-3.5 text-amber-500 group-hover:text-white shrink-0" />
+                            <span>DOCX</span>
+                            <Download className="w-3 h-3 opacity-70" />
+                          </a>
+                        </div>
+                      </div>
+
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           )}
 
           {/* Official GATE Papers Grid */}
-          <div className="space-y-4">
-            <h2 className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
-              Official GATE AG Past Papers (2007–2026)
-            </h2>
+          {(paperFilter === 'all' || paperFilter === 'official') && (
+            <div className="space-y-4">
+              
+              {/* Fair Dealing Notice */}
+              <div className="p-3.5 bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 rounded-2xl flex items-start sm:items-center gap-3 text-xs text-slate-600 dark:text-slate-400">
+                <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5 sm:mt-0" />
+                <p className="text-[11px] leading-relaxed">
+                  <span className="font-bold text-slate-800 dark:text-slate-200">Official Past Papers (2007–2026):</span> Complete past papers with authentic CBT exam simulation, original question PDFs, official answer keys &amp; fully solved DOCX derivations.
+                </p>
+              </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {mockPapers.map((paper) => {
-                const inst = paper.instructions;
-                const isAvail = paper.has_solved_docx === true || (paper.questions && paper.questions.length > 0);
-                return (
-                  <div 
-                    key={paper.year} 
-                    className={`rounded-3xl p-5 border flex flex-col justify-between space-y-4 transition ${
-                      isAvail
-                        ? 'bg-slate-50 dark:bg-slate-950 border-slate-200 dark:border-slate-800 hover:border-blue-500 cursor-pointer shadow-sm hover:shadow-md group'
-                        : 'bg-slate-50/50 dark:bg-slate-950/40 border-slate-200/40 dark:border-slate-900 opacity-60'
-                    }`}
-                  >
-                    <div className="space-y-2">
-                      <div className="flex items-center justify-between">
-                        <div className="w-9 h-9 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 flex items-center justify-center font-mono font-black text-xs">
-                          {paper.year.slice(-2)}'
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                {filteredOfficialPapers.map((paper) => {
+                  const inst = paper.instructions || { max_marks: 100, total_qs: 65, duration_mins: 180 };
+                  const isAvail = paper.has_solved_docx === true || (paper.questions && paper.questions.length > 0);
+                  const dl = getOfficialDownloads(paper.year);
+                  const paperQuestionsList = getOfficialPaperQuestions(paper.year);
+
+                  return (
+                    <div 
+                      key={paper.year} 
+                      className={`rounded-3xl p-5 border flex flex-col justify-between space-y-4 transition ${
+                        isAvail
+                          ? 'bg-slate-50 dark:bg-slate-950 border-slate-200 dark:border-slate-800 hover:border-blue-500 shadow-sm hover:shadow-md'
+                          : 'bg-slate-50/50 dark:bg-slate-950/40 border-slate-200/40 dark:border-slate-900 opacity-60'
+                      }`}
+                    >
+                      <div className="space-y-2">
+                        <div className="flex items-center justify-between">
+                          <div className="w-9 h-9 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 flex items-center justify-center font-mono font-black text-xs">
+                            {paper.year.slice(-2)}'
+                          </div>
+                          <span className="text-xs font-mono font-extrabold text-blue-600 dark:text-blue-400">
+                            GATE {paper.year}
+                          </span>
                         </div>
-                        <span className="text-xs font-mono font-extrabold text-blue-600 dark:text-blue-400">
-                          GATE {paper.year}
-                        </span>
+
+                        <h3 className="font-extrabold text-slate-900 dark:text-white text-xs leading-snug">
+                          Official GATE {paper.year} AG Paper
+                        </h3>
+                        
+                        <div className="text-xs text-slate-500 font-mono flex justify-between">
+                          <span>{inst.max_marks || 100} Marks</span>
+                          <span>{isAvail ? `${inst.total_qs || 65} Qs • ${inst.duration_mins || 180}m` : 'Pending'}</span>
+                        </div>
                       </div>
 
-                      <h3 className="font-extrabold text-slate-900 dark:text-white text-xs leading-snug">
-                        Official GATE {paper.year} AG Paper
-                      </h3>
-                      
-                      <div className="text-xs text-slate-500 font-mono flex justify-between">
-                        <span>{inst.max_marks} Marks</span>
-                        <span>{isAvail ? `${inst.total_qs} Qs • ${inst.duration_mins}m` : 'Pending'}</span>
-                      </div>
+                      {isAvail ? (
+                        <div className="space-y-2 pt-1 border-t border-slate-200/60 dark:border-slate-800/80">
+                          {/* Row 1: Weightage & Preview */}
+                          <div className="grid grid-cols-2 gap-2">
+                            <button
+                              type="button"
+                              onClick={() => setAnalyzingPaper(paper)}
+                              className="flex items-center justify-center gap-1.5 py-1.5 rounded-xl bg-white dark:bg-slate-900 hover:bg-blue-50 dark:hover:bg-blue-950/50 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 text-xs font-bold transition cursor-pointer"
+                              title="View topic & subtopic weightage analysis"
+                            >
+                              <BarChart3 className="w-3.5 h-3.5 text-blue-500" />
+                              <span>Weightage</span>
+                            </button>
+
+                            <button
+                              type="button"
+                              onClick={() => {
+                                setPreviewSearch('');
+                                setPreviewPaper({
+                                  title: `GATE ${paper.year} Solved Paper`,
+                                  year: paper.year,
+                                  docxUrl: dl.solvedDocx,
+                                  pdfUrl: dl.paperPdf,
+                                  questions: paperQuestionsList,
+                                  summaryText: `Official GATE ${paper.year} Agricultural Engineering Paper containing ${paperQuestionsList.length > 0 ? paperQuestionsList.length : 65} verified questions, answer keys, and step-by-step solved derivations.`
+                                });
+                              }}
+                              className="flex items-center justify-center gap-1.5 py-1.5 rounded-xl bg-white dark:bg-slate-900 hover:bg-purple-50 dark:hover:bg-purple-950/50 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 text-xs font-bold transition cursor-pointer"
+                              title="Preview Paper Questions & Solved Derivations"
+                            >
+                              <Eye className="w-3.5 h-3.5 text-purple-500" />
+                              <span>Preview</span>
+                            </button>
+                          </div>
+
+                          {/* Row 2: Start CBT */}
+                          <button
+                            type="button"
+                            onClick={() => handleSelectPaperForInstructions(paper)}
+                            className="w-full flex items-center justify-center gap-1.5 py-2 rounded-xl bg-[#0B4A8F] hover:bg-[#003366] text-white font-bold text-xs transition shadow-xs active:scale-95 cursor-pointer"
+                          >
+                            <Play className="w-3.5 h-3.5 fill-white" />
+                            <span>Start CBT Exam</span>
+                          </button>
+
+                          {/* Row 3: Download Buttons (PDF, Key, Solved DOCX) */}
+                          <div className="flex items-center gap-1 pt-1 border-t border-slate-200/60 dark:border-slate-800/80">
+                            {dl.paperPdf && (
+                              <a
+                                href={dl.paperPdf}
+                                download={`GATE_AG_${paper.year}_Question_Paper.pdf`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex-1 py-1 px-1.5 rounded-lg bg-white dark:bg-slate-900 hover:bg-blue-600 hover:text-white text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 text-[11px] font-bold transition flex items-center justify-center gap-1"
+                                title="Download Official Question Paper (PDF)"
+                              >
+                                <FileText className="w-3 h-3 text-blue-500" />
+                                <span>PDF</span>
+                              </a>
+                            )}
+                            {dl.keyPdf && (
+                              <a
+                                href={dl.keyPdf}
+                                download={`GATE_AG_${paper.year}_Answer_Key.pdf`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex-1 py-1 px-1.5 rounded-lg bg-white dark:bg-slate-900 hover:bg-emerald-600 hover:text-white text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 text-[11px] font-bold transition flex items-center justify-center gap-1"
+                                title="Download Official Answer Key (PDF)"
+                              >
+                                <Key className="w-3 h-3 text-emerald-500" />
+                                <span>Key</span>
+                              </a>
+                            )}
+                            {dl.solvedDocx && (
+                              <a
+                                href={dl.solvedDocx}
+                                download={`${paper.year}-FULL-SOLVED.docx`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex-1 py-1 px-1.5 rounded-lg bg-amber-50 dark:bg-amber-950/40 hover:bg-amber-600 hover:text-white text-amber-900 dark:text-amber-300 border border-amber-200 dark:border-amber-900 text-[11px] font-bold transition flex items-center justify-center gap-1"
+                                title="Download Solved Word Paper (.docx)"
+                              >
+                                <FileCode className="w-3 h-3 text-amber-500" />
+                                <span>Solved</span>
+                              </a>
+                            )}
+                          </div>
+                        </div>
+                      ) : (
+                        <button
+                          onClick={() => alert(`Detailed Solved Paper for GATE ${paper.year} is currently being verified.`)}
+                          className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-400 text-xs font-bold transition cursor-not-allowed"
+                        >
+                          <Clock className="w-4 h-4" />
+                          <span>Adding Soon</span>
+                        </button>
+                      )}
                     </div>
-
-                    {isAvail ? (
-                      <div className="grid grid-cols-2 gap-2 pt-1">
-                        <button
-                          type="button"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            setAnalyzingPaper(paper);
-                          }}
-                          className="flex items-center justify-center gap-1.5 py-2 rounded-xl bg-blue-50 dark:bg-blue-950/50 hover:bg-blue-100 dark:hover:bg-blue-900/50 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800 text-xs font-bold transition cursor-pointer"
-                          title="View topic & subtopic weightage analysis"
-                        >
-                          <BarChart3 className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
-                          <span>Weightage</span>
-                        </button>
-                        <button
-                          type="button"
-                          onClick={() => handleSelectPaperForInstructions(paper)}
-                          className="flex items-center justify-center gap-1.5 py-2 rounded-xl bg-[#0B4A8F] hover:bg-[#003366] text-white font-bold text-xs transition shadow-xs active:scale-95 cursor-pointer"
-                        >
-                          <Play className="w-3.5 h-3.5 fill-white" />
-                          <span>Start CBT</span>
-                        </button>
-                      </div>
-                    ) : (
-                      <button
-                        onClick={() => alert(`Detailed Solved Paper for GATE ${paper.year} is currently being verified.`)}
-                        className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-400 text-xs font-bold transition cursor-not-allowed"
-                      >
-                        <Clock className="w-4 h-4" />
-                        <span>Adding Soon</span>
-                      </button>
-                    )}
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
-          </div>
+          )}
 
         </div>
 
@@ -1287,6 +1681,191 @@ export default function MockTestMode({
             handleSelectPaperForInstructions(p);
           }}
         />
+
+        {/* In-App Reader Preview Modal */}
+        {previewPaper && (
+          <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-xs flex items-center justify-center p-3 sm:p-6 no-print">
+            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col overflow-hidden animate-in fade-in zoom-in duration-150">
+              
+              {/* Modal Title Bar */}
+              <div className="bg-slate-50 dark:bg-slate-800/90 px-5 py-3.5 flex flex-wrap items-center justify-between gap-3 border-b border-slate-200 dark:border-slate-700 shrink-0">
+                <div className="flex items-center gap-2.5">
+                  <Eye className="w-4 h-4 text-purple-600 dark:text-purple-400" />
+                  <div>
+                    <h3 className="font-extrabold text-sm text-slate-900 dark:text-white">
+                      {previewPaper.title}
+                    </h3>
+                    <span className="text-[10px] font-mono text-slate-500 dark:text-slate-400">
+                      {previewPaper.questions?.length || 0} Questions • Full Step-by-Step Solved Derivations
+                    </span>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  {previewPaper.docxUrl && (
+                    <a
+                      href={previewPaper.docxUrl}
+                      download
+                      className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold transition shadow-xs"
+                    >
+                      <Download className="w-3.5 h-3.5" />
+                      <span>Download (.docx)</span>
+                    </a>
+                  )}
+
+                  <button
+                    onClick={() => setPreviewPaper(null)}
+                    className="p-1.5 rounded-lg text-slate-400 hover:text-slate-900 dark:hover:text-white transition hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
+                </div>
+              </div>
+
+              {/* Modal Content */}
+              <div className="p-5 sm:p-6 overflow-y-auto space-y-4 flex-1">
+                
+                {/* Summary and Search Header */}
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 rounded-xl bg-purple-50/50 dark:bg-purple-950/20 border border-purple-200 dark:border-purple-900">
+                  <div className="space-y-0.5 text-xs flex-1">
+                    <span className="font-bold text-purple-700 dark:text-purple-300 uppercase tracking-wider text-[10px]">
+                      Document In-App Reader &amp; Solutions
+                    </span>
+                    <p className="text-slate-700 dark:text-slate-300 font-medium">
+                      {previewPaper.summaryText}
+                    </p>
+                  </div>
+
+                  {previewPaper.questions && previewPaper.questions.length > 0 && (
+                    <div className="relative w-full sm:w-64 shrink-0">
+                      <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-2.5" />
+                      <input
+                        type="text"
+                        placeholder="Search question / topic..."
+                        value={previewSearch}
+                        onChange={(e) => setPreviewSearch(e.target.value)}
+                        className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg pl-8 pr-3 py-1.5 text-xs text-slate-900 dark:text-slate-100 outline-none focus:ring-1 focus:ring-purple-500"
+                      />
+                    </div>
+                  )}
+                </div>
+
+                {previewPaper.questions && previewPaper.questions.length > 0 ? (
+                  <div className="space-y-4 pt-1">
+                    {(() => {
+                      const filtered = previewPaper.questions.filter(q => {
+                        if (!previewSearch) return true;
+                        const s = previewSearch.toLowerCase();
+                        return (
+                          (q.question && q.question.toLowerCase().includes(s)) ||
+                          (q.section && q.section.toLowerCase().includes(s)) ||
+                          (q.topic && q.topic.toLowerCase().includes(s)) ||
+                          (q.solution && q.solution.toLowerCase().includes(s)) ||
+                          (q.explanation && q.explanation.toLowerCase().includes(s))
+                        );
+                      });
+
+                      if (filtered.length === 0) {
+                        return (
+                          <div className="p-8 text-center text-slate-400 text-xs bg-slate-50 dark:bg-slate-950 rounded-xl">
+                            No questions matching "{previewSearch}".
+                          </div>
+                        );
+                      }
+
+                      return filtered.map((q, idx) => (
+                        <div key={q.id || idx} className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 space-y-3.5 text-xs shadow-xs">
+                          
+                          {/* Question Badge & Metadata */}
+                          <div className="flex flex-wrap items-center justify-between gap-2 pb-2 border-b border-slate-200 dark:border-slate-800">
+                            <div className="flex items-center gap-2">
+                              <span className="font-extrabold text-xs text-blue-600 dark:text-blue-400 font-mono px-2 py-0.5 rounded bg-blue-50 dark:bg-blue-950 border border-blue-200 dark:border-blue-900">
+                                Q.{q.qnum || idx + 1}
+                              </span>
+                              <span className="font-semibold text-slate-700 dark:text-slate-300">
+                                {q.section} {q.topic ? `• ${q.topic}` : ''}
+                              </span>
+                            </div>
+                            <div className="flex items-center gap-1.5 font-mono text-[10px] text-slate-500">
+                              <span className="px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-800 font-bold">{q.type || 'MCQ'}</span>
+                              <span className="px-2 py-0.5 rounded bg-slate-200 dark:bg-slate-800 font-bold">{q.marks || 1} Mark{(q.marks || 1) > 1 ? 's' : ''}</span>
+                            </div>
+                          </div>
+
+                          {/* Question Content */}
+                          <div className="text-sm font-semibold text-slate-900 dark:text-slate-100 leading-relaxed overflow-x-auto">
+                            <MathRenderer content={q.question} inline={false} />
+                          </div>
+
+                          {/* Options if MCQ / MSQ */}
+                          {q.options && Object.keys(q.options).length > 0 && (
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1">
+                              {Object.entries(q.options).map(([key, val]) => {
+                                const isCorrect = (q.correct_answer || '').toUpperCase().includes(key.toUpperCase());
+                                return (
+                                  <div
+                                    key={key}
+                                    className={`p-3 rounded-xl border text-xs flex items-start gap-2.5 transition ${
+                                      isCorrect
+                                        ? 'bg-emerald-50 dark:bg-emerald-950/50 border-emerald-300 dark:border-emerald-700 text-emerald-900 dark:text-emerald-100 font-semibold'
+                                        : 'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200'
+                                    }`}
+                                  >
+                                    <span className={`w-5 h-5 rounded-full text-[10px] font-bold flex items-center justify-center shrink-0 ${
+                                      isCorrect ? 'bg-emerald-600 text-white' : 'bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300'
+                                    }`}>
+                                      {key}
+                                    </span>
+                                    <div className="pt-0.5 flex-1 overflow-x-auto">
+                                      <MathRenderer content={val} inline={true} />
+                                    </div>
+                                    {isCorrect && <Check className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />}
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          )}
+
+                          {/* Correct Answer Key & Step-by-Step Solution Breakdown */}
+                          <div className="p-4 rounded-xl bg-emerald-50/70 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-900/60 space-y-2 text-xs">
+                            <div className="flex items-center justify-between font-bold text-emerald-800 dark:text-emerald-300">
+                              <span className="flex items-center gap-1.5 font-extrabold uppercase tracking-wider text-[11px]">
+                                <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                                <span>Official Step-by-Step Derivation</span>
+                              </span>
+                              <span className="font-mono text-xs px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-200">
+                                Correct Key: {q.correct_answer || 'Verified'}
+                              </span>
+                            </div>
+
+                            <div className="text-slate-800 dark:text-slate-200 leading-relaxed overflow-x-auto pt-1">
+                              <MathRenderer 
+                                content={q.solution || q.solutionText || q.explanation || 'Detailed mathematical derivation and calculation steps verified.'} 
+                                inline={false}
+                              />
+                            </div>
+                          </div>
+
+                        </div>
+                      ));
+                    })()}
+                  </div>
+                ) : (
+                  <div className="p-8 text-center text-slate-400 text-xs bg-slate-50 dark:bg-slate-950 rounded-xl space-y-2">
+                    <p className="font-semibold text-slate-700 dark:text-slate-300">
+                      Full document is packaged and ready.
+                    </p>
+                    <p>
+                      Download the original document above to access the full offline file.
+                    </p>
+                  </div>
+                )}
+
+              </div>
+
+            </div>
+          </div>
+        )}
       </div>
     );
   }
