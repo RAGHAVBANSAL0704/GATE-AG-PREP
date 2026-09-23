@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Root Portal -->
+  <url>
+    <loc>https://gate-ag-prep.vercel.app/</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- CBT Mock Test Engine & PYQs -->
+  <url>
+    <loc>https://gate-ag-prep.vercel.app/#mocktest</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Topic-wise Practice Pool -->
+  <url>
+    <loc>https://gate-ag-prep.vercel.app/#practicehub</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://gate-ag-prep.vercel.app/#practice</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Formula Revision Sheet -->
+  <url>
+    <loc>https://gate-ag-prep.vercel.app/#formulas</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Syllabus & Weightage Tracker -->
+  <url>
+    <loc>https://gate-ag-prep.vercel.app/#syllabus</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Learning Hub & Concept Breakdown -->
+  <url>
+    <loc>https://gate-ag-prep.vercel.app/#learninghub</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Interactive Simulators -->
+  <url>
+    <loc>https://gate-ag-prep.vercel.app/#simulators</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Flashcards -->
+  <url>
+    <loc>https://gate-ag-prep.vercel.app/#flashcards</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Downloads Hub (DOCX & Mock Papers) -->
+  <url>
+    <loc>https://gate-ag-prep.vercel.app/#downloads</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Community Discussions & Q&A -->
+  <url>
+    <loc>https://gate-ag-prep.vercel.app/#community</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Live Telemetry & Statistics Board -->
+  <url>
+    <loc>https://gate-ag-prep.vercel.app/#livestats</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Break Zone Mini Games -->
+  <url>
+    <loc>https://gate-ag-prep.vercel.app/#games</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>

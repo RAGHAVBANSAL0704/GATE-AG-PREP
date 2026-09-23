@@ -83,6 +83,7 @@ import { recordQuestionOutcomes } from './services/mistakeVaultService';
 import { subscribeToLiveRoleSync } from './services/userRoleService';
 import { initGlobalPresence, updatePresenceStudent } from './services/liveStatisticsService';
 import { saveToIDB } from './utils/indexedDB';
+import { updatePageSEO } from './utils/seo';
 
 
 import initialQuestions from './data/questions.json';
@@ -166,6 +167,7 @@ export default function App() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    updatePageSEO(activeTab);
   }, [activeTab]);
 
   useEffect(() => {
