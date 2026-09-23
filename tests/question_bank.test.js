@@ -154,7 +154,7 @@ describe('Autonomous Question Bank Subsystem Comprehensive Verification', () => 
     });
 
     it('validates canonical literature source attribution on question entries', () => {
-      const canonicalKeywords = /(Grewal|Sanjay Kumar|Ojha|Michael|Sahay|Suresh|Sukumar De|Earle|GATE|NPTEL|ICAR|Kreyszig|Todd|Ritzema|Ganesan|Aggarwal|Liljedahl|Geankoplis|Das)/i;
+      const canonicalKeywords = /(Grewal|Sanjay Kumar|Ojha|Michael|Sahay|Suresh|Sukumar De|Earle|GATE|NPTEL|ICAR|Kreyszig|Todd|Ritzema|Ganesan|Aggarwal|Liljedahl|Geankoplis|Das|Kepner|Schwab|Punmia|Toledo|McCabe|Kumar|Subramanya|Brennan|Jain|Henderson|Perry|Singh|Bhandari|Gill|Vanden Berg|Wren|Martin)/i;
       const questionsWithSource = ALL_QUESTION_BANK_QUESTIONS.filter(q => q.source);
       
       assert.ok(questionsWithSource.length >= 35, `Expected at least 35 questions with source attribution, found ${questionsWithSource.length}`);

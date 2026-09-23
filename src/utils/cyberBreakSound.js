@@ -1,5 +1,7 @@
 // Web Audio API Synthesizer for High-Octane Cyberpunk Break Zone SFX
 
+import { soundFX } from './soundFX.js';
+
 let audioCtx = null;
 
 function getAudioContext() {
@@ -17,6 +19,7 @@ function getAudioContext() {
 
 export const playCyberSound = (type) => {
   try {
+    if (soundFX && typeof soundFX.isMuted === 'function' && soundFX.isMuted()) return;
     const ctx = getAudioContext();
     if (!ctx) return;
 

@@ -27,7 +27,11 @@ import {
   Search,
   Plus,
   ArrowUpDown,
-  Code2
+  Code2,
+  CornerDownRight,
+  Eye,
+  Tag,
+  BookOpen
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import { validateCleanInput, sanitizeText } from '../utils/profanityFilter';
@@ -40,6 +44,7 @@ import {
   getTopSolversLeaderboard,
   flagMessage 
 } from '../services/userRoleService';
+import { awardStudentXP } from '../services/leaderboardService';
 import { addPriorityNotification } from '../services/notificationService';
 
 const TOPIC_CATEGORIES = [
@@ -49,6 +54,19 @@ const TOPIC_CATEGORIES = [
   { id: 'APFE', label: 'Food Processing (APFE)' },
   { id: 'Maths', label: 'Engineering Maths' },
   { id: 'General', label: 'Strategy & General' }
+];
+
+export const POPULAR_TAGS = [
+  'All',
+  '#Psychrometry',
+  '#TractorDraft',
+  '#RunoffCN',
+  '#NAT_Trap',
+  '#GATE2026',
+  '#Eigenvalues',
+  '#DryingRates',
+  '#Hydraulics',
+  '#Thermodynamics'
 ];
 
 const MATH_CHIPS = [
@@ -137,9 +155,15 @@ const INITIAL_POSTS = [
   }
 ];
 
-export default function CommunityDiscussions({ currentStudent, onRequireAuth }) {
+export default function CommunityDiscussions({ 
+  currentStudent, 
+  onRequireAuth,
+  selectedQuestionForDiscussion = null,
+  onClearSelectedQuestion = () => {}
+}) {
   const [posts, setPosts] = useState(INITIAL_POSTS);
   const [selectedTopic, setSelectedTopic] = useState('All');
+  const [selectedTag, setSelectedTag] = useState('All');
   const [statusFilter, setStatusFilter] = useState('all'); // 'all', 'solved', 'unsolved'
   const [sortBy, setSortBy] = useState('upvotes'); // 'upvotes', 'latest'
   const [searchQuery, setSearchQuery] = useState('');
@@ -149,8 +173,10 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
   const [newTitle, setNewTitle] = useState('');
   const [newContent, setNewContent] = useState('');
   const [newTopic, setNewTopic] = useState('FMP');
+  const [selectedTagsForPost, setSelectedTagsForPost] = useState([]);
   const [postImageAttachment, setPostImageAttachment] = useState(null);
   const [showMathRibbon, setShowMathRibbon] = useState(false);
+  const [modalTab, setModalTab] = useState('write'); // 'write' | 'preview'
   const [errorMsg, setErrorMsg] = useState('');
   const [successMsg, setSuccessMsg] = useState(false);
 
@@ -158,6 +184,8 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
   const [expandedComments, setExpandedComments] = useState({});
   const [commentDrafts, setCommentDrafts] = useState({});
   const [commentImageAttachments, setCommentImageAttachments] = useState({});
+  const [nestedReplyDrafts, setNestedReplyDrafts] = useState({});
+  const [openNestedReplyId, setOpenNestedReplyId] = useState(null);
   const [actionNotice, setActionNotice] = useState('');
   const [copiedId, setCopiedId] = useState(null);
   const [isLeaderboardOpen, setIsLeaderboardOpen] = useState(false);
@@ -183,6 +211,34 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
     setIsLeaderboardOpen(true);
   };
 
+  // If a question was passed for discussion, pre-fill when opening
+  const handleOpenDiscussionForSelectedQuestion = () => {
+    if (!selectedQuestionForDiscussion) return;
+    const q = selectedQuestionForDiscussion;
+    const year = q.year || 'PYQ';
+    const qNum = q.question_number || q.id || '';
+    const subj = q.subject || q.topic || 'General';
+    
+    // Map subject to topic category
+    let mappedTopic = 'General';
+    const upperSubj = (subj || '').toUpperCase();
+    if (upperSubj.includes('FARM') || upperSubj.includes('MACHINERY') || upperSubj.includes('TRACTOR') || upperSubj.includes('FMP')) {
+      mappedTopic = 'FMP';
+    } else if (upperSubj.includes('SOIL') || upperSubj.includes('WATER') || upperSubj.includes('HYDRO') || upperSubj.includes('SWCE') || upperSubj.includes('IRRIGATION')) {
+      mappedTopic = 'SWCE';
+    } else if (upperSubj.includes('FOOD') || upperSubj.includes('PROCESS') || upperSubj.includes('APFE') || upperSubj.includes('DAIRY')) {
+      mappedTopic = 'APFE';
+    } else if (upperSubj.includes('MATH') || upperSubj.includes('CALCULUS') || upperSubj.includes('LINEAR')) {
+      mappedTopic = 'Maths';
+    }
+
+    setNewTitle(`[GATE AG ${year} Q${qNum}] ${subj}`);
+    setNewTopic(mappedTopic);
+    setNewContent(`**Question Problem Statement:**\n${q.question || ''}\n\n**Marks:** ${q.marks || 1}M | **Type:** ${q.type || 'MCQ'}\n\n*How do we solve this step-by-step? What is the standard formula / shortcut?*`);
+    setSelectedTagsForPost([`#GATE${year}`, `#${mappedTopic}`]);
+    setIsPostModalOpen(true);
+  };
+
   // Insert Math Symbol at cursor position in new post
   const handleInsertMathInPost = (snippet) => {
     const input = postContentRef.current;
@@ -203,7 +259,7 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
     }, 50);
   };
 
-  // Image upload with canvas compression for posts
+  // Image upload with canvas compression for posts (< 120KB)
   const handlePostImageSelect = (e) => {
     const file = e.target.files?.[0];
     if (!file) return;
@@ -218,11 +274,20 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
         canvas.height = img.width > MAX_WIDTH ? img.height * scale : img.height;
         const ctx = canvas.getContext('2d');
         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-        setPostImageAttachment(canvas.toDataURL('image/jpeg', 0.75));
+        setPostImageAttachment(canvas.toDataURL('image/webp', 0.75));
       };
       img.src = event.target.result;
     };
     reader.readAsDataURL(file);
+  };
+
+  const toggleTagForPost = (tag) => {
+    if (selectedTagsForPost.includes(tag)) {
+      setSelectedTagsForPost(selectedTagsForPost.filter(t => t !== tag));
+    } else {
+      if (selectedTagsForPost.length >= 4) return;
+      setSelectedTagsForPost([...selectedTagsForPost, tag]);
+    }
   };
 
   const handleCreatePost = async (e) => {
@@ -267,6 +332,7 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
       department: currentStudent?.department || null,
       photoUrl: currentStudent?.profile_photo_url || null,
       topic: newTopic || 'General',
+      tags: selectedTagsForPost.length > 0 ? selectedTagsForPost : [`#${newTopic}`],
       questionTitle: sanitizeText(newTitle.trim()),
       content: sanitizeText(newContent.trim()),
       imageUrl: postImageAttachment || null,
@@ -281,8 +347,12 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
 
     setNewTitle('');
     setNewContent('');
+    setSelectedTagsForPost([]);
     setPostImageAttachment(null);
     setIsPostModalOpen(false);
+    if (selectedQuestionForDiscussion) {
+      onClearSelectedQuestion();
+    }
     setActionNotice('🎉 Question successfully posted to discussion board!');
     setTimeout(() => setActionNotice(''), 3500);
   };
@@ -322,7 +392,8 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
       text: sanitizeText((draft || '').trim()),
       imageUrl: attachedImg || null,
       isVerifiedSolution: false,
-      date: new Date().toISOString()
+      date: new Date().toISOString(),
+      replies: []
     };
 
     const targetPost = posts.find(p => p.id === postId);
@@ -358,7 +429,63 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
     setExpandedComments({ ...expandedComments, [postId]: true });
   };
 
-  // Mark as Verified Solution (Author or Faculty/Mentor/Admin)
+  // Add 2-level nested reply to a comment
+  const handleAddNestedReply = (postId, commentId) => {
+    if (!currentStudent && onRequireAuth) {
+      onRequireAuth("Sign In or Register free to reply!");
+      return;
+    }
+    const draft = nestedReplyDrafts[commentId];
+    if (!draft || !draft.trim()) return;
+
+    if (isBanned) {
+      setActionNotice('Account restricted from replying.');
+      return;
+    }
+
+    const val = validateCleanInput(draft, 'Nested Reply');
+    if (!val.isValid) {
+      setActionNotice(val.message);
+      return;
+    }
+
+    const authorName = currentStudent?.display_name || currentStudent?.full_name || currentStudent?.username || 'GATE Aspirant';
+    const userRole = (currentStudent?.role || (currentStudent?.is_faculty ? 'faculty' : 'student')).toLowerCase();
+
+    const newReply = {
+      id: 'nr_' + Date.now() + '_' + Math.random().toString(36).substring(2, 6),
+      author: authorName,
+      authorId: currentStudent?.id || currentStudent?.username || null,
+      authorRole: userRole,
+      department: currentStudent?.department || null,
+      text: sanitizeText(draft.trim()),
+      date: new Date().toISOString()
+    };
+
+    const updated = posts.map(p => {
+      if (p.id === postId) {
+        return {
+          ...p,
+          comments: (p.comments || []).map(c => {
+            if (c.id === commentId) {
+              return {
+                ...c,
+                replies: [...(c.replies || []), newReply]
+              };
+            }
+            return c;
+          })
+        };
+      }
+      return p;
+    });
+
+    setPosts(updated);
+    setNestedReplyDrafts({ ...nestedReplyDrafts, [commentId]: '' });
+    setOpenNestedReplyId(null);
+  };
+
+  // Mark as Verified Solution (Author or Faculty/Mentor/Admin) + Award +25 XP Bounty
   const handleToggleVerifySolution = (postId, commentId) => {
     const targetPost = posts.find(p => p.id === postId);
     if (!targetPost) return;
@@ -374,7 +501,9 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
         targetComment.author,
         targetComment.authorRole
       );
-      setActionNotice(`✅ Marked as Verified Solution! Awarded +25 Contributor XP to ${targetComment.author}.`);
+      // Award +25 Academic XP to the student / solver
+      awardStudentXP(25);
+      setActionNotice(`✅ Marked as Verified Solution! Awarded +25 Academic XP to ${targetComment.author}.`);
     } else {
       setActionNotice("Verified solution mark removed.");
     }
@@ -463,6 +592,12 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
   const filteredAndSortedPosts = posts
     .filter(p => {
       if (selectedTopic !== 'All' && p.topic !== selectedTopic) return false;
+      if (selectedTag !== 'All') {
+        const hasTag = p.tags?.some(t => t.toLowerCase() === selectedTag.toLowerCase());
+        const inTitle = p.questionTitle?.toLowerCase().includes(selectedTag.replace('#', '').toLowerCase());
+        const inContent = p.content?.toLowerCase().includes(selectedTag.replace('#', '').toLowerCase());
+        if (!hasTag && !inTitle && !inContent) return false;
+      }
       const hasVerified = p.comments?.some(c => c.isVerifiedSolution);
       if (statusFilter === 'solved' && !hasVerified) return false;
       if (statusFilter === 'unsolved' && hasVerified) return false;
@@ -471,7 +606,8 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
       return (
         p.questionTitle?.toLowerCase().includes(q) ||
         p.content?.toLowerCase().includes(q) ||
-        p.author?.toLowerCase().includes(q)
+        p.author?.toLowerCase().includes(q) ||
+        p.tags?.some(t => t.toLowerCase().includes(q))
       );
     })
     .sort((a, b) => {
@@ -485,8 +621,52 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
   const verifiedQuestions = posts.filter(p => p.comments?.some(c => c.isVerifiedSolution)).length;
 
   return (
-    <div className="max-w-5xl mx-auto space-y-4 sm:space-y-5 animate-in fade-in duration-200">
+    <div className="max-w-5xl mx-auto space-y-4 sm:space-y-5 animate-in fade-in duration-200 min-w-0 max-w-full">
       
+      {/* 1-Click "Discuss this Question" Reference Banner (if navigated from QBank) */}
+      {selectedQuestionForDiscussion && (
+        <div className="p-4 rounded-3xl bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-indigo-500/10 border-2 border-emerald-500/30 dark:border-emerald-500/20 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-3 animate-in slide-in-from-top-2 min-w-0">
+          <div className="flex items-start gap-3 min-w-0 flex-1">
+            <div className="p-2 rounded-2xl bg-emerald-600 text-white shrink-0 mt-0.5">
+              <BookOpen className="w-5 h-5" />
+            </div>
+            <div className="space-y-0.5 min-w-0 flex-1">
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 font-extrabold text-[11px] shrink-0">
+                  GATE AG {selectedQuestionForDiscussion.year || 'PYQ'} Q{selectedQuestionForDiscussion.question_number || selectedQuestionForDiscussion.id}
+                </span>
+                <span className="text-xs font-bold text-slate-700 dark:text-slate-300 truncate">
+                  {selectedQuestionForDiscussion.subject || 'Agricultural Engineering'}
+                </span>
+                <span className="text-[10px] font-mono text-slate-400 shrink-0">
+                  [{selectedQuestionForDiscussion.marks || 1}M {selectedQuestionForDiscussion.type || 'MCQ'}]
+                </span>
+              </div>
+              <p className="text-xs text-slate-600 dark:text-slate-400 line-clamp-2 italic break-words">
+                "{selectedQuestionForDiscussion.question?.replace(/<[^>]*>?/gm, '').substring(0, 110)}..."
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2 shrink-0 self-end sm:self-center">
+            <button
+              onClick={handleOpenDiscussionForSelectedQuestion}
+              className="px-4 py-2 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-black flex items-center gap-1.5 shadow-xs transition cursor-pointer"
+            >
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Discuss This Question</span>
+            </button>
+            <button
+              onClick={onClearSelectedQuestion}
+              className="p-2 rounded-2xl hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-400 hover:text-slate-600 transition cursor-pointer"
+              title="Dismiss question banner"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Top Interactive Q&A Control Bar */}
       <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-5 shadow-xs space-y-4">
         
@@ -514,7 +694,7 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
               className="px-3.5 py-2 rounded-2xl bg-amber-50 dark:bg-amber-950/60 hover:bg-amber-100 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800 text-xs font-bold flex items-center gap-1.5 transition cursor-pointer"
             >
               <Trophy className="w-4 h-4 text-amber-500" />
-              <span className="hidden sm:inline">Top Solvers</span>
+              <span className="hidden sm:inline">Top Solvers (+25 XP)</span>
             </button>
 
             {/* Ask Question Primary Button */}
@@ -542,7 +722,7 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
             <Search className="w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
             <input
               type="text"
-              placeholder="Search doubts, formula shortcuts, derivations..."
+              placeholder="Search doubts, formula shortcuts, derivations, tags (#Hydraulics)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl pl-9 pr-8 py-2 text-xs text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-emerald-500"
@@ -600,7 +780,7 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
 
         </div>
 
-        {/* Topic Pill Filters */}
+        {/* Topic Category Pills */}
         <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none">
           {TOPIC_CATEGORIES.map(tc => {
             const isSelected = selectedTopic === tc.id;
@@ -615,6 +795,30 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
                 }`}
               >
                 {tc.label}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Granular Tag Chips */}
+        <div className="flex items-center gap-1.5 overflow-x-auto pt-1 border-t border-slate-100 dark:border-slate-800/60 scrollbar-none">
+          <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 shrink-0 flex items-center gap-1">
+            <Tag className="w-3 h-3" />
+            <span>Tags:</span>
+          </span>
+          {POPULAR_TAGS.map(tag => {
+            const isSelected = selectedTag === tag;
+            return (
+              <button
+                key={tag}
+                onClick={() => setSelectedTag(tag)}
+                className={`px-2.5 py-0.5 rounded-lg text-[11px] font-semibold font-mono transition cursor-pointer whitespace-nowrap ${
+                  isSelected
+                    ? 'bg-indigo-600 text-white shadow-xs'
+                    : 'bg-indigo-50/50 dark:bg-indigo-950/40 text-indigo-700 dark:text-indigo-300 hover:bg-indigo-100 dark:hover:bg-indigo-900 border border-indigo-200/60 dark:border-indigo-800/40'
+                }`}
+              >
+                {tag}
               </button>
             );
           })}
@@ -660,8 +864,8 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
               >
                 
                 {/* Question Top Header */}
-                <div className="flex items-start justify-between gap-3">
-                  <div className="flex items-center gap-2.5 flex-wrap">
+                <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2.5 min-w-0">
+                  <div className="flex items-center gap-2.5 flex-wrap min-w-0">
                     
                     {/* Author Avatar */}
                     <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shrink-0 ${
@@ -679,14 +883,14 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
                         <span className="font-bold text-xs text-slate-900 dark:text-white">{post.author}</span>
                         
                         {isFacultyPost && (
-                          <span className="text-[9px] font-black px-1.5 py-0.2 rounded bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 flex items-center gap-0.5">
+                          <span className="text-[9px] font-black px-1.5 py-0.2 rounded bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 flex items-center gap-0.5 shrink-0">
                             <Award className="w-2.5 h-2.5" />
                             <span>{post.authorRole === 'mentor' ? 'Faculty Mentor' : 'Faculty'}</span>
                           </span>
                         )}
 
                         {isSolverPost && (
-                          <span className="text-[9px] font-black px-1.5 py-0.2 rounded bg-amber-50 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800 flex items-center gap-0.5">
+                          <span className="text-[9px] font-black px-1.5 py-0.2 rounded bg-amber-50 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800 flex items-center gap-0.5 shrink-0">
                             <Zap className="w-2.5 h-2.5" />
                             <span>Solver</span>
                           </span>
@@ -704,10 +908,17 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-1.5 shrink-0">
-                    <span className="px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-[10px] font-bold text-slate-600 dark:text-slate-300">
+                  <div className="flex items-center gap-1.5 flex-wrap self-start sm:self-auto">
+                    <span className="px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-[10px] font-bold text-slate-600 dark:text-slate-300 shrink-0">
                       #{post.topic}
                     </span>
+
+                    {/* Tag Chips */}
+                    {post.tags?.map(t => (
+                      <span key={t} className="px-2 py-0.5 rounded-md bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 text-[9px] font-mono font-semibold shrink-0">
+                        {t}
+                      </span>
+                    ))}
 
                     {/* Copy LaTeX / Content */}
                     <button
@@ -752,11 +963,11 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
                 </div>
 
                 {/* Title & Content */}
-                <div className="space-y-1.5">
-                  <h3 className="font-extrabold text-sm sm:text-base text-slate-900 dark:text-white leading-snug">
+                <div className="space-y-1.5 min-w-0 break-words">
+                  <h3 className="font-extrabold text-sm sm:text-base text-slate-900 dark:text-white leading-snug break-words">
                     {post.questionTitle}
                   </h3>
-                  <div className="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed font-medium">
+                  <div className="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed font-medium overflow-x-auto max-w-full scrollbar-none">
                     <MathRenderer content={post.content} />
                   </div>
                 </div>
@@ -764,23 +975,23 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
                 {/* Attached Diagram / Image */}
                 {post.imageUrl && (
                   <div className="my-2 max-w-md rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-950/5">
-                    <img src={post.imageUrl} alt="Attached Discussion Figure" className="max-h-72 w-auto object-contain rounded-xl" />
+                    <img src={post.imageUrl} alt="Attached Discussion Figure" className="max-h-72 w-auto max-w-full object-contain rounded-xl" />
                   </div>
                 )}
 
                 {/* Pinned Verified Solution (Highlight Ribbon) */}
                 {isSolved && verifiedComment && !isExpanded && (
-                  <div className="p-3 rounded-2xl bg-emerald-50/70 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800/60 space-y-1.5">
+                  <div className="p-3 rounded-2xl bg-emerald-50/70 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800/60 space-y-1.5 min-w-0 overflow-hidden">
                     <div className="flex items-center justify-between text-[11px] font-bold text-emerald-800 dark:text-emerald-300">
                       <div className="flex items-center gap-1.5">
-                        <CheckCircle className="w-4 h-4 text-emerald-600" />
+                        <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0" />
                         <span>Accepted Verified Solution by {verifiedComment.author}</span>
                       </div>
-                      <span className="font-mono text-[10px] text-emerald-600 bg-emerald-100 dark:bg-emerald-900/60 px-2 py-0.5 rounded-full">
+                      <span className="font-mono text-[10px] text-emerald-600 bg-emerald-100 dark:bg-emerald-900/60 px-2 py-0.5 rounded-full font-bold shrink-0">
                         +25 Solver XP
                       </span>
                     </div>
-                    <div className="text-xs text-slate-800 dark:text-slate-200 line-clamp-2">
+                    <div className="text-xs text-slate-800 dark:text-slate-200 line-clamp-2 break-words overflow-x-auto max-w-full scrollbar-none">
                       <MathRenderer content={verifiedComment.text} />
                     </div>
                   </div>
@@ -825,16 +1036,17 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
                     
                     {/* Answers List */}
                     {commentsCount > 0 && (
-                      <div className="space-y-2.5">
+                      <div className="space-y-3">
                         {post.comments.map(comment => {
                           const isFacultyReply = comment.authorRole === 'faculty' || comment.authorRole === 'mentor' || (comment.author && (comment.author.startsWith('Dr.') || comment.author.startsWith('Prof.') || comment.author.startsWith('Er.')));
                           const isSolverReply = comment.authorRole === 'solver';
                           const isVerified = Boolean(comment.isVerifiedSolution);
+                          const isReplyingThis = openNestedReplyId === comment.id;
 
                           return (
                             <div 
                               key={comment.id} 
-                              className={`p-3.5 rounded-2xl border text-xs space-y-2 transition ${
+                              className={`p-3.5 rounded-2xl border text-xs space-y-2.5 transition ${
                                 isVerified
                                   ? 'bg-emerald-50/50 dark:bg-emerald-950/20 border-emerald-300 dark:border-emerald-800/80 shadow-xs'
                                   : 'bg-slate-50 dark:bg-slate-800/40 border-slate-200/80 dark:border-slate-800'
@@ -908,25 +1120,36 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
                                 </div>
                               </div>
 
-                              <div className="text-slate-800 dark:text-slate-200 font-medium leading-relaxed pt-0.5">
+                              <div className="text-slate-800 dark:text-slate-200 font-medium leading-relaxed pt-0.5 break-words overflow-x-auto max-w-full scrollbar-none">
                                 <MathRenderer content={comment.text} />
                               </div>
 
-                              {/* Verified Solution Button & Copy Action */}
-                              <div className="flex items-center justify-between pt-1 text-[10px]">
-                                {canVerify && (
+                              {/* Verified Solution Button, Copy Action, and Reply Trigger */}
+                              <div className="flex items-center justify-between pt-1 text-[10px] flex-wrap gap-2">
+                                <div className="flex items-center gap-2">
+                                  {canVerify && (
+                                    <button
+                                      onClick={() => handleToggleVerifySolution(post.id, comment.id)}
+                                      className={`font-bold flex items-center gap-1 transition cursor-pointer px-2 py-0.5 rounded-md ${
+                                        isVerified 
+                                          ? 'bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300' 
+                                          : 'text-slate-500 hover:text-emerald-600'
+                                      }`}
+                                    >
+                                      <CheckCircle className="w-3 h-3" />
+                                      <span>{isVerified ? 'Verified Solution ✅' : 'Mark Verified Solution (+25 XP)'}</span>
+                                    </button>
+                                  )}
+
+                                  {/* Level 2 Reply Button */}
                                   <button
-                                    onClick={() => handleToggleVerifySolution(post.id, comment.id)}
-                                    className={`font-bold flex items-center gap-1 transition cursor-pointer px-2 py-0.5 rounded-md ${
-                                      isVerified 
-                                        ? 'bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300' 
-                                        : 'text-slate-500 hover:text-emerald-600'
-                                    }`}
+                                    onClick={() => setOpenNestedReplyId(isReplyingThis ? null : comment.id)}
+                                    className="font-bold text-slate-500 hover:text-indigo-600 flex items-center gap-1 transition cursor-pointer px-1.5 py-0.5 rounded"
                                   >
-                                    <CheckCircle className="w-3 h-3" />
-                                    <span>{isVerified ? 'Verified Solution ✅' : 'Mark Verified Solution'}</span>
+                                    <CornerDownRight className="w-3 h-3" />
+                                    <span>Reply</span>
                                   </button>
-                                )}
+                                </div>
 
                                 <button
                                   onClick={() => handleCopyText(comment.id, comment.text)}
@@ -937,13 +1160,63 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
                                   <span>Copy LaTeX</span>
                                 </button>
                               </div>
+
+                              {/* Nested Replies (Level 2) */}
+                              {comment.replies && comment.replies.length > 0 && (
+                                <div className="mt-2.5 pt-2 border-t border-slate-200 dark:border-slate-800 space-y-2 pl-3 sm:pl-4 border-l-2 border-l-indigo-400/50 min-w-0">
+                                  {comment.replies.map(reply => (
+                                    <div key={reply.id} className="text-[11px] space-y-1 min-w-0">
+                                      <div className="flex items-center justify-between">
+                                        <div className="flex items-center gap-1.5">
+                                          <span className="font-bold text-slate-900 dark:text-white">
+                                            {reply.author}
+                                          </span>
+                                          {reply.authorRole === 'faculty' && (
+                                            <span className="text-[8px] font-black px-1 rounded bg-indigo-50 dark:bg-indigo-950 text-indigo-700 dark:text-indigo-300">
+                                              Faculty
+                                            </span>
+                                          )}
+                                        </div>
+                                        <span className="text-[9px] font-mono text-slate-400">
+                                          {reply.date ? new Date(reply.date).toLocaleDateString() : ''}
+                                        </span>
+                                      </div>
+                                      <div className="text-slate-700 dark:text-slate-300 font-medium break-words overflow-x-auto max-w-full scrollbar-none">
+                                        <MathRenderer content={reply.text} />
+                                      </div>
+                                    </div>
+                                  ))}
+                                </div>
+                              )}
+
+                              {/* Nested Reply Input Box */}
+                              {isReplyingThis && (
+                                <div className="mt-2 pt-2 border-t border-slate-200 dark:border-slate-800 flex items-center gap-2">
+                                  <input
+                                    type="text"
+                                    placeholder={`Reply to ${comment.author}...`}
+                                    value={nestedReplyDrafts[comment.id] || ''}
+                                    onChange={(e) => setNestedReplyDrafts({ ...nestedReplyDrafts, [comment.id]: e.target.value })}
+                                    onKeyDown={(e) => { if (e.key === 'Enter') handleAddNestedReply(post.id, comment.id); }}
+                                    className="flex-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-1.5 text-xs text-slate-900 dark:text-white outline-none focus:ring-1 focus:ring-indigo-500"
+                                  />
+                                  <button
+                                    onClick={() => handleAddNestedReply(post.id, comment.id)}
+                                    disabled={!nestedReplyDrafts[comment.id]?.trim()}
+                                    className="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-500 disabled:opacity-40 text-white rounded-xl text-xs font-bold transition cursor-pointer"
+                                  >
+                                    Reply
+                                  </button>
+                                </div>
+                              )}
+
                             </div>
                           );
                         })}
                       </div>
                     )}
 
-                    {/* Write Reply / Answer Input */}
+                    {/* Write Main Reply / Answer Input */}
                     {!isBanned && (
                       <div className="flex items-center gap-2 pt-1">
                         <input
@@ -974,11 +1247,11 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
         )}
       </div>
 
-      {/* Modal Composer: "Ask Question / Share Trick" */}
+      {/* Modal Composer: "Ask Question / Share Trick" with Live Math Split Preview */}
       {isPostModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-md animate-in fade-in duration-200">
           <div 
-            className="w-full max-w-lg rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl p-6 space-y-4 max-h-[90vh] overflow-y-auto"
+            className="w-full max-w-2xl rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl p-6 space-y-4 max-h-[92vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
@@ -998,22 +1271,49 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
 
             <form onSubmit={handleCreatePost} className="space-y-3.5 text-xs">
               
-              {/* Topic Selector */}
-              <div>
-                <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
-                  Subject Section
-                </label>
-                <select
-                  value={newTopic}
-                  onChange={(e) => setNewTopic(e.target.value)}
-                  className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-slate-900 dark:text-white font-medium outline-none cursor-pointer"
-                >
-                  <option value="FMP">🚜 Farm Machinery & Power (FMP)</option>
-                  <option value="SWCE">💧 Soil & Water Conservation (SWCE)</option>
-                  <option value="APFE">🌾 Food & Agricultural Processing (APFE)</option>
-                  <option value="Maths">📐 Engineering Mathematics</option>
-                  <option value="General">🎯 Exam Strategy & General</option>
-                </select>
+              {/* Topic & Tag Selectors */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                    Subject Section
+                  </label>
+                  <select
+                    value={newTopic}
+                    onChange={(e) => setNewTopic(e.target.value)}
+                    className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-slate-900 dark:text-white font-medium outline-none cursor-pointer"
+                  >
+                    <option value="FMP">🚜 Farm Machinery & Power (FMP)</option>
+                    <option value="SWCE">💧 Soil & Water Conservation (SWCE)</option>
+                    <option value="APFE">🌾 Food & Agricultural Processing (APFE)</option>
+                    <option value="Maths">📐 Engineering Mathematics</option>
+                    <option value="General">🎯 Exam Strategy & General</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                    Tags (Select up to 4)
+                  </label>
+                  <div className="flex items-center gap-1 flex-wrap max-h-18 overflow-y-auto p-1.5 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl">
+                    {POPULAR_TAGS.filter(t => t !== 'All').map(tag => {
+                      const isSelected = selectedTagsForPost.includes(tag);
+                      return (
+                        <button
+                          key={tag}
+                          type="button"
+                          onClick={() => toggleTagForPost(tag)}
+                          className={`px-2 py-0.5 rounded text-[10px] font-mono font-bold transition cursor-pointer ${
+                            isSelected
+                              ? 'bg-indigo-600 text-white'
+                              : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700'
+                          }`}
+                        >
+                          {tag}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
 
               {/* Title Input */}
@@ -1031,19 +1331,43 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
                 />
               </div>
 
-              {/* Description / Numerical content */}
+              {/* Editor & Live Split Preview Tabs */}
               <div>
-                <div className="flex items-center justify-between mb-1">
-                  <label className="block font-bold text-slate-700 dark:text-slate-300">
-                    Numerical Problem / Explanation (LaTeX supported)
-                  </label>
+                <div className="flex items-center justify-between mb-1.5">
+                  <div className="flex items-center gap-2">
+                    <label className="block font-bold text-slate-700 dark:text-slate-300">
+                      Problem Details (LaTeX math: $E = mc^2$)
+                    </label>
+                    <div className="inline-flex p-0.5 bg-slate-100 dark:bg-slate-800 rounded-lg text-[10px] font-bold">
+                      <button
+                        type="button"
+                        onClick={() => setModalTab('write')}
+                        className={`px-2 py-0.5 rounded-md transition cursor-pointer ${
+                          modalTab === 'write' ? 'bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-xs' : 'text-slate-500'
+                        }`}
+                      >
+                        Write
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setModalTab('preview')}
+                        className={`px-2 py-0.5 rounded-md transition cursor-pointer flex items-center gap-1 ${
+                          modalTab === 'preview' ? 'bg-white dark:bg-slate-900 text-emerald-600 dark:text-emerald-400 shadow-xs' : 'text-slate-500'
+                        }`}
+                      >
+                        <Eye className="w-3 h-3" />
+                        <span>Live Math Preview</span>
+                      </button>
+                    </div>
+                  </div>
+
                   <button
                     type="button"
                     onClick={() => setShowMathRibbon(!showMathRibbon)}
                     className="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold flex items-center gap-0.5 cursor-pointer"
                   >
                     <Code2 className="w-3 h-3" />
-                    <span>{showMathRibbon ? 'Hide Math Chips' : 'Show Math Chips'}</span>
+                    <span>{showMathRibbon ? 'Hide Math Chips' : 'Math Chips'}</span>
                   </button>
                 </div>
 
@@ -1063,15 +1387,30 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
                   </div>
                 )}
 
-                <textarea
-                  ref={postContentRef}
-                  rows={4}
-                  required
-                  placeholder="Type your question or formula breakdown here. Example: Calculate draft force $D = C_s \cdot w \cdot d$..."
-                  value={newContent}
-                  onChange={(e) => setNewContent(e.target.value)}
-                  className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl p-3 text-slate-900 dark:text-white font-medium outline-none focus:ring-2 focus:ring-emerald-500 resize-none"
-                />
+                {modalTab === 'write' ? (
+                  <textarea
+                    ref={postContentRef}
+                    rows={5}
+                    required
+                    placeholder="Type your numerical question or shortcut formula. Enclose LaTeX in dollar signs, e.g. $D = C_s \cdot w \cdot d$..."
+                    value={newContent}
+                    onChange={(e) => setNewContent(e.target.value)}
+                    className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl p-3 text-slate-900 dark:text-white font-mono text-xs font-medium outline-none focus:ring-2 focus:ring-emerald-500 resize-none"
+                  />
+                ) : (
+                  <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 min-h-32 max-h-56 overflow-y-auto space-y-2">
+                    <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+                      Live KaTeX Preview:
+                    </div>
+                    {newContent.trim() ? (
+                      <div className="text-xs sm:text-sm text-slate-900 dark:text-white leading-relaxed">
+                        <MathRenderer content={newContent} />
+                      </div>
+                    ) : (
+                      <span className="text-xs text-slate-400 italic">No content typed yet.</span>
+                    )}
+                  </div>
+                )}
               </div>
 
               {/* Image Preview */}
@@ -1111,7 +1450,7 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
                   className="px-3 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-xl font-bold flex items-center gap-1.5 transition cursor-pointer"
                 >
                   <Paperclip className="w-3.5 h-3.5" />
-                  <span>Attach Diagram</span>
+                  <span>Attach Diagram (WebP)</span>
                 </button>
 
                 <div className="flex items-center gap-2">
@@ -1128,7 +1467,7 @@ export default function CommunityDiscussions({ currentStudent, onRequireAuth }) 
                     className="px-5 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl font-extrabold flex items-center gap-1.5 shadow-xs transition cursor-pointer"
                   >
                     <Send className="w-3.5 h-3.5" />
-                    <span>Publish</span>
+                    <span>Publish Discussion</span>
                   </button>
                 </div>
               </div>

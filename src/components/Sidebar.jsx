@@ -145,7 +145,7 @@ export default function Sidebar({
         <div className="flex items-center gap-1.5 shrink-0">
           <button
             onClick={onOpenCommandPalette}
-            className="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 text-xs font-bold"
+            className="w-9 h-9 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 text-xs font-bold cursor-pointer select-none active:scale-95 transition"
             title="Search (Cmd+K / Ctrl+K)"
             aria-label="Search"
           >
@@ -154,7 +154,7 @@ export default function Sidebar({
 
           <button
             onClick={() => setDarkMode ? setDarkMode(!darkMode) : setCurrentTheme && setCurrentTheme(currentTheme === 'slate-light' ? 'obsidian-emerald' : 'slate-light')}
-            className="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 text-xs font-bold"
+            className="w-9 h-9 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 text-xs font-bold cursor-pointer select-none active:scale-95 transition"
             title={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
             aria-label={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
           >
@@ -163,7 +163,7 @@ export default function Sidebar({
 
           <button
             onClick={onOpenCalc}
-            className="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 text-xs font-bold"
+            className="w-9 h-9 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 text-xs font-bold cursor-pointer select-none active:scale-95 transition"
             title="Calculator"
             aria-label="Calculator"
           >
@@ -172,7 +172,7 @@ export default function Sidebar({
 
           <button
             onClick={onOpenProfile}
-            className="p-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 text-xs font-bold"
+            className="w-9 h-9 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 text-xs font-bold cursor-pointer select-none active:scale-95 transition"
             title={currentStudent ? currentStudent.full_name : "Sign In / Profile"}
             aria-label="Profile"
           >
@@ -185,7 +185,7 @@ export default function Sidebar({
 
           <button
             onClick={() => setIsMobileOpen(!isMobileOpen)}
-            className="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700"
+            className="w-9 h-9 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 cursor-pointer select-none active:scale-95 transition"
             aria-label={isMobileOpen ? "Close navigation menu" : "Open navigation menu"}
           >
             {isMobileOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
@@ -197,14 +197,15 @@ export default function Sidebar({
       {isMobileOpen && (
         <div 
           onClick={() => setIsMobileOpen(false)}
-          className="sm:hidden fixed inset-0 bg-black/50 backdrop-blur-xs z-40"
+          className="sm:hidden fixed inset-0 bg-black/60 backdrop-blur-xs z-40 transition-opacity duration-200 cursor-pointer"
+          aria-label="Close menu overlay"
         />
       )}
 
-      {/* Persistent Left Sidebar */}
+      {/* Persistent Left Sidebar / Mobile Slide-over Drawer */}
       <aside className={`
-        fixed top-0 left-0 h-screen sm:h-[100dvh] shrink-0 bg-white dark:bg-slate-900 border-r border-slate-200/80 dark:border-slate-800/80 overflow-y-auto z-30
-        w-60 sm:w-16 md:w-60 transition-transform duration-200 ease-in-out
+        fixed top-0 left-0 h-screen sm:h-[100dvh] shrink-0 bg-white dark:bg-slate-900 border-r border-slate-200/80 dark:border-slate-800/80 overflow-y-auto z-50 sm:z-30
+        w-72 max-w-[85vw] sm:w-16 md:w-60 transition-transform duration-200 ease-in-out shadow-2xl sm:shadow-none
         ${isMobileOpen ? 'translate-x-0' : '-translate-x-full sm:translate-x-0'}
       `}>
         <div className="flex flex-col h-full justify-between p-3.5 space-y-4">
@@ -262,16 +263,28 @@ export default function Sidebar({
                 return (
                   <button
                     key={item.id}
+                    type="button"
                     onClick={() => handleNavClick(item.id)}
                     title={item.label}
-                    className={`w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
+                    className={`w-full flex items-center justify-between px-3 py-2.5 sm:py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
                       isActive
                         ? 'bg-emerald-600 text-white shadow-xs font-bold'
                         : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60'
                     }`}
                   >
-                    <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'scale-105' : ''}`} />
-                    <span className="block sm:hidden md:block text-left truncate">{item.label}</span>
+                    <div className="flex items-center gap-3 min-w-0">
+                      <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'scale-105' : ''}`} />
+                      <span className="block sm:hidden md:block text-left truncate">{item.label}</span>
+                    </div>
+                    {item.badge && (
+                      <span className={`text-[9px] px-1.5 py-0.5 rounded font-bold shrink-0 block sm:hidden md:block ${
+                        isActive
+                          ? 'bg-emerald-700 text-white'
+                          : 'bg-emerald-100 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-400 border border-emerald-300 dark:border-emerald-800'
+                      }`}>
+                        {item.badge}
+                      </span>
+                    )}
                   </button>
                 );
               })}
@@ -285,7 +298,10 @@ export default function Sidebar({
             {/* Student Profile Strip or Guest Mode Pill */}
             {currentStudent ? (
               <div 
-                onClick={onOpenProfile}
+                onClick={() => {
+                  onOpenProfile?.();
+                  setIsMobileOpen(false);
+                }}
                 className="block sm:hidden md:flex items-center gap-2.5 p-2 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800/80 cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800/80 transition group"
                 title="View Profile"
               >
@@ -307,7 +323,10 @@ export default function Sidebar({
               </div>
             ) : (
               <div 
-                onClick={() => onOpenProfile?.()}
+                onClick={() => {
+                  onOpenProfile?.();
+                  setIsMobileOpen(false);
+                }}
                 className="block sm:hidden md:flex items-center justify-between gap-2 p-2 rounded-xl bg-emerald-500/10 border border-emerald-500/25 cursor-pointer hover:bg-emerald-500/20 transition group"
                 title="Sign In or Register"
               >
@@ -333,7 +352,11 @@ export default function Sidebar({
             {/* Quick Icon Tools */}
             <div className="flex items-center justify-between gap-1 px-1">
               <button
-                onClick={onOpenCalc}
+                type="button"
+                onClick={() => {
+                  onOpenCalc?.();
+                  setIsMobileOpen(false);
+                }}
                 className="flex-1 py-1.5 px-2 rounded-lg bg-slate-100 dark:bg-slate-800/80 hover:bg-emerald-50 dark:hover:bg-emerald-950 text-slate-600 dark:text-slate-300 hover:text-emerald-600 transition text-[11px] font-bold flex items-center justify-center gap-1 cursor-pointer"
                 title="GATE Calculator"
               >
@@ -342,6 +365,7 @@ export default function Sidebar({
               </button>
 
               <button
+                type="button"
                 onClick={() => setDarkMode ? setDarkMode(!darkMode) : setCurrentTheme && setCurrentTheme(currentTheme === 'slate-light' ? 'obsidian-emerald' : 'slate-light')}
                 className="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition cursor-pointer"
                 title={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
@@ -356,8 +380,12 @@ export default function Sidebar({
 
               {currentStudent && (
                 <button
-                  onClick={onLogout}
-                  className="p-1.5 rounded-lg text-rose-500 hover:bg-rose-500/10 transition"
+                  type="button"
+                  onClick={() => {
+                    onLogout?.();
+                    setIsMobileOpen(false);
+                  }}
+                  className="p-1.5 rounded-lg text-rose-500 hover:bg-rose-500/10 transition cursor-pointer"
                   title="Logout"
                 >
                   <LogOut className="w-3.5 h-3.5" />
@@ -374,12 +402,12 @@ export default function Sidebar({
 
       {/* Mobile Bottom Navigation Bar (Hidden during full CBT exam to maximize exam viewport) */}
       {activeTab !== 'mocktest' && (
-        <nav className="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 px-2 py-1.5 pb-safe flex items-center justify-around shadow-lg no-print">
+        <nav className="sm:hidden fixed bottom-0 left-0 right-0 z-30 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 px-2 py-1 pb-safe flex items-center justify-around shadow-lg no-print">
           {[
             { id: 'dashboard', label: 'Home', icon: Compass, matches: ['dashboard'] },
+            { id: 'livestats', label: 'Live', icon: Activity, matches: ['livestats', 'telemetry', 'liveboard'] },
             { id: 'practicehub', label: 'Practice', icon: Target, matches: ['practicehub', 'practice', 'custompractice', 'customtest'] },
             { id: 'learninghub', label: 'Learn', icon: GraduationCap, matches: ['learninghub', 'concepts', 'revision', 'formulas', 'simulators', 'flashcards', 'radar'] },
-            { id: 'community', label: 'Community', icon: MessageSquare, matches: ['community', 'chat', 'qa', 'discussions', 'ai_tutor', 'aisolver', 'aitutor'] },
             { id: 'mocktest', label: 'Mocks', icon: Clock, matches: ['mocktest'] },
           ].map(tab => {
             const Icon = tab.icon;
@@ -387,8 +415,9 @@ export default function Sidebar({
             return (
               <button
                 key={tab.id}
+                type="button"
                 onClick={() => handleNavClick(tab.id)}
-                className={`flex flex-col items-center justify-center py-1 px-2 rounded-xl transition-all cursor-pointer min-w-[52px] ${
+                className={`flex flex-col items-center justify-center py-1 px-2 rounded-xl transition-all cursor-pointer min-w-[48px] min-h-[44px] select-none touch-manipulation active:scale-95 ${
                   isActive
                     ? 'text-emerald-600 dark:text-emerald-400 font-extrabold'
                     : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
@@ -402,8 +431,9 @@ export default function Sidebar({
             );
           })}
           <button
-            onClick={() => setIsMobileOpen(!isMobileOpen)}
-            className={`flex flex-col items-center justify-center py-1 px-2 rounded-xl transition-all cursor-pointer min-w-[52px] ${
+            type="button"
+            onClick={() => setIsMobileOpen(prev => !prev)}
+            className={`flex flex-col items-center justify-center py-1 px-2 rounded-xl transition-all cursor-pointer min-w-[48px] min-h-[44px] select-none touch-manipulation active:scale-95 ${
               isMobileOpen
                 ? 'text-emerald-600 dark:text-emerald-400 font-extrabold'
                 : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'

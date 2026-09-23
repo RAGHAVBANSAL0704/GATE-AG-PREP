@@ -52,7 +52,7 @@ export default [
     },
     "correct_answer": "A",
     "solution": "For identical compression ratio and identical heat addition:\n$$\\eta_{\\text{Otto}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Diesel}}$$\nBecause heat is added entirely at constant volume in the Otto cycle (at peak temperature), whereas in the Diesel cycle heat is added at constant pressure (as the cylinder expands, lowering expansion ratio during heat release).",
-    "difficulty": "Easy",
+    "difficulty": "Moderate",
     "source": "Principles of Agricultural Engg. Vol. I (Ojha & Michael)"
   },
   {
@@ -70,7 +70,7 @@ export default [
       "max": 10.3
     },
     "solution": "1. Theoretical distance without slip $S_{th}$:\n$$S_{th} = 2 \\pi r \\cdot N = 2 \\times 3.14159 \\times 0.75 \\times 100 = 471.24\\text{ m}$$\n2. Actual distance travelled $S_a = 424\\text{ m}$.\n3. Wheel slip $s$:\n$$s = \\frac{S_{th} - S_a}{S_{th}} \\times 100 = \\frac{471.24 - 424}{471.24} \\times 100 = \\frac{47.24}{471.24} \\times 100 = 10.02\\% \\approx 10.0\\%$$",
-    "difficulty": "Easy",
+    "difficulty": "Moderate",
     "source": "Sanjay Kumar (A Numerical Approach in Ag. Engg.)"
   },
   {
@@ -90,7 +90,7 @@ export default [
     },
     "correct_answer": "B",
     "solution": "When one driving wheel encounters slippery mud, an open differential transfers no torque to the other wheel (it spins freely). Engaging the differential lock couples both axle shafts together so both drive wheels rotate at identical speeds with full traction.",
-    "difficulty": "Easy",
+    "difficulty": "Moderate",
     "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
   },
   {
@@ -114,7 +114,7 @@ export default [
       "D"
     ],
     "solution": "• Transesterification reacts vegetable oils with methanol in the presence of an alkaline catalyst, yielding FAME (biodiesel) and glycerol (A is correct).\n• Biodiesel generally has a cetane rating between 50–60, higher than standard petrodiesel (~45–50) (B is correct).\n• Biodiesel's calorific value (~37–39 MJ/kg) is roughly 10% lower than that of conventional petrodiesel (~42–44 MJ/kg); thus statement C is false.\n• Biodiesel is naturally oxygenated and contains negligible sulfur, drastically cutting emissions of unburned HC and PM (D is correct).",
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "source": "Principles of Agricultural Engg. Vol. I (Ojha & Michael)"
   },
   {
@@ -134,7 +134,7 @@ export default [
     },
     "correct_answer": "B",
     "solution": "Draft control senses changes in soil resistance through load-sensing springs/transducers on the top link or lower draft links. When soil gets harder and draft exceeds the set threshold, the hydraulic system slightly raises the implement to reduce load, and vice versa.",
-    "difficulty": "Easy",
+    "difficulty": "Moderate",
     "source": "Tractors and Their Power Units (Liljedahl et al.)"
   },
   {
@@ -153,7 +153,7 @@ export default [
       "max": 34.6
     },
     "solution": "1. Total heat energy supplied by fuel per second ($Q_{\\text{in}}$):\n$$Q_{\\text{in}} = \\frac{\\dot{m}_f \\times CV}{3600} = \\frac{7.5\\text{ kg/h} \\times 42,000\\text{ kJ/kg}}{3600\\text{ s}} = \\frac{315,000}{3600} = 87.5\\text{ kW}$$\n2. Brake power output $BP = 30\\text{ kW}$.\n3. Brake thermal efficiency ($\\eta_{\\text{bth}}$):\n$$\\eta_{\\text{bth}} = \\frac{BP}{Q_{\\text{in}}} \\times 100 = \\frac{30}{87.5} \\times 100 = 34.285\\% \\approx 34.3\\%$$",
-    "difficulty": "Easy"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FP_009",
@@ -171,7 +171,7 @@ export default [
       "max": 56.8
     },
     "solution": "Thermal efficiency of an air-standard Otto cycle is given by:\n$$\\eta_{\\text{Otto}} = 1 - \\frac{1}{r^{\\gamma - 1}}$$\nGiven $r = 8.0$ and $\\gamma = 1.40$:\n$$\\gamma - 1 = 0.40$$\n$$r^{0.40} = 8^{0.40} \\approx 2.2974$$\n$$\\eta_{\\text{Otto}} = 1 - \\frac{1}{2.2974} = 1 - 0.43527 = 0.56473 = 56.47\\% \\approx 56.5\\%$$",
-    "difficulty": "Easy"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FP_010",
@@ -189,7 +189,7 @@ export default [
       "max": 75
     },
     "solution": "1. Convert forward velocity to $\\text{m/s}$:\n$$v = 5.4 \\times \\frac{5}{18} = 1.5\\text{ m/s}$$\n2. Calculate Drawbar Power ($P_{\\text{db}}$):\n$$P_{\\text{db}} = \\text{Pull} \\times v = 12\\text{ kN} \\times 1.5\\text{ m/s} = 18\\text{ kW}$$\n3. Tractive efficiency ($\\eta_{\\text{tr}}$):\n$$\\eta_{\\text{tr}} = \\frac{P_{\\text{db}}}{P_{\\text{axle}}} \\times 100 = \\frac{18\\text{ kW}}{24\\text{ kW}} \\times 100 = 75\\%$$",
-    "difficulty": "Easy"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FP_011",
@@ -207,7 +207,7 @@ export default [
       "max": 45
     },
     "solution": "For lateral stability of a 4-wheel vehicle on a side slope, the tipping limit occurs when the line of action of gravity through the center of gravity passes through the lower wheel contact point:\n$$\\tan(\\theta_{\\text{crit}}) = \\frac{\\text{Half Tread Width}}{h_{cg}} = \\frac{1.50 / 2}{0.75} = \\frac{0.75}{0.75} = 1.0$$\n$$\\theta_{\\text{crit}} = \\arctan(1.0) = 45^\\circ$$",
-    "difficulty": "Moderate"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FP_012",
@@ -225,7 +225,7 @@ export default [
       "max": 70
     },
     "solution": "In a standard bevel gear differential mechanism, the crown wheel speed is the arithmetic mean of the two axle shaft speeds:\n$$N_{\\text{crown}} = \\frac{N_1 + N_2}{2}$$\nGiven $N_{\\text{crown}} = 50\\text{ rpm}$ and $N_1 = 30\\text{ rpm}$:\n$$50 = \\frac{30 + N_2}{2} \\implies 100 = 30 + N_2 \\implies N_2 = 70\\text{ rpm}$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FP_013",
@@ -243,7 +243,7 @@ export default [
       "max": 80
     },
     "solution": "1. Metabolic power expenditure ($P_{met}$):\n$$P_{met} = \\frac{24.0\\text{ kJ/min} \\times 1000\\text{ J/kJ}}{60\\text{ s}} = 400\\text{ W}$$\n2. Mechanical power output ($P_{mech}$):\n$$P_{mech} = P_{met} \\times \\eta_{mech} = 400\\text{ W} \\times 0.20 = 80\\text{ W}$$\n(Note: An average adult agricultural laborer can sustain approximately $0.1\\text{ hp} \\approx 75\\text{ W}$ of continuous mechanical power).",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FP_014",
@@ -261,7 +261,7 @@ export default [
       "max": 0.9
     },
     "solution": "1. Combined weight of the pair of bullocks ($W$):\n$$W = 2 \\times 450\\text{ kg} \\times 9.81\\text{ m/s}^2 = 8829\\text{ N}$$\n2. Draft force ($P$):\n$$P = 0.10 \\times 8829\\text{ N} = 882.9\\text{ N}$$\n3. Forward speed in $\\text{m/s}$:\n$$v = 3.6 \\times \\frac{5}{18} = 1.0\\text{ m/s}$$\n4. Power output ($P_{out}$):\n$$P_{out} = P \\times v = 882.9\\text{ N} \\times 1.0\\text{ m/s} = 882.9\\text{ W} \\approx 0.88\\text{ kW}$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FP_015",
@@ -315,7 +315,7 @@ export default [
       "max": 216
     },
     "solution": "1. Total fresh dung collected per day:\n$$\\text{Dung} = 30 \\text{ cows} \\times 10\\text{ kg/cow/day} = 300\\text{ kg/day}$$\n2. Daily biogas production:\n$$V_{\\text{gas}} = 300\\text{ kg/day} \\times 0.036\\text{ m}^3/\\text{kg} = 10.8\\text{ m}^3/\\text{day}$$\n3. Daily thermal energy yield:\n$$E = 10.8\\text{ m}^3/\\text{day} \\times 20\\text{ MJ/m}^3 = 216\\text{ MJ/day}$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FP_018",
@@ -340,7 +340,7 @@ export default [
       "D"
     ],
     "solution": "All four statements represent established benchmarks for agricultural energy sources:\n• Adult human sustained output is ~75 W (A is correct).\n• A pair of working bullocks yields ~0.75–1.0 hp at normal walking pace (B is correct).\n• Electric induction motors operate at 80–90% efficiency (C is correct).\n• MPPT maximizes power harvesting under changing solar insolation (D is correct).",
-    "difficulty": "Easy"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FP_019",
@@ -358,7 +358,7 @@ export default [
       "max": 75
     },
     "solution": "The diesel replacement percentage is given by:\n$$\\%\\text{ Replacement} = \\frac{\\dot{m}_{d,\\text{pure}} - \\dot{m}_{d,\\text{dual}}}{\\dot{m}_{d,\\text{pure}}} \\times 100$$\nGiven $\\dot{m}_{d,\\text{pure}} = 4.0\\text{ kg/h}$ and $\\dot{m}_{d,\\text{dual}} = 1.0\\text{ kg/h}$:\n$$\\%\\text{ Replacement} = \\frac{4.0 - 1.0}{4.0} \\times 100 = \\frac{3.0}{4.0} \\times 100 = 75\\%$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FP_020",
@@ -396,7 +396,7 @@ export default [
     },
     "correct_answer": "A",
     "solution": "One molecule of triglyceride contains three fatty acid ester chains attached to a glycerol backbone. Complete transesterification requires 3 moles of alcohol (methanol) per mole of triglyceride to produce 3 moles of fatty acid methyl ester (biodiesel) and 1 mole of glycerol by-product (in commercial practice, an excess of 6:1 is used to drive the reversible reaction forward).",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FP_022",
@@ -420,7 +420,7 @@ export default [
       "C"
     ],
     "solution": "• Biodiesel has higher kinematic viscosity ($4.0 - 6.0\\text{ cSt}$ vs $2.0 - 4.5\\text{ cSt}$ for diesel) (A is correct).\n• Flash point of B100 exceeds 130°C, classified as non-hazardous for storage (B is correct).\n• Oxygenated esters in biodiesel provide natural boundary lubrication for high-pressure injection equipment (C is correct).\n• Biodiesel contains virtually zero sulfur, greatly reducing $SO_2$ emissions (D is false).",
-    "difficulty": "Moderate"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FP_023",
@@ -438,7 +438,7 @@ export default [
       "max": 1000
     },
     "solution": "1. Mean diagram height ($h$):\n$$h = \\frac{\\text{Diagram Area}}{\\text{Base Length}} = \\frac{8.5\\text{ cm}^2}{6.8\\text{ cm}} = 1.25\\text{ cm} = 12.5\\text{ mm}$$\n2. Indicated mean effective pressure ($p_{imep}$):\n$$p_{imep} = h \\times \\text{Spring Scale} = 12.5\\text{ mm} \\times 80\\text{ kPa/mm} = 1000\\text{ kPa}$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FP_024",
@@ -458,7 +458,7 @@ export default [
     },
     "correct_answer": "A",
     "solution": "Second-law exergy analysis demonstrates that uncontrolled chemical combustion across steep temperature and concentration gradients accounts for 20% to 25% of total fuel exergy destruction, far surpassing mechanical friction or fluid throttling losses.",
-    "difficulty": "Moderate"
+    "difficulty": "Easy"
   },
   {
     "id": "QB_FP_025",
@@ -483,7 +483,7 @@ export default [
       "D"
     ],
     "solution": "All four assumptions define the ideal air-standard cycle:\n• Fixed composition ideal gas with constant $c_p$ and $c_v$.\n• Closed cycle where external heat transfers replace combustion and gas exchange.\n• Isentropic (reversible adiabatic) compression and expansion processes.",
-    "difficulty": "Easy"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FP_026",
@@ -501,7 +501,7 @@ export default [
       "max": 61.8
     },
     "solution": "Thermal efficiency of an air-standard Diesel cycle is given by:\n$$\\eta_{\\text{Diesel}} = 1 - \\frac{1}{r^{\\gamma - 1}} \\left[ \\frac{r_c^\\gamma - 1}{\\gamma(r_c - 1)} \\right]$$\n1. $r^{\\gamma - 1} = 16^{0.40} \\approx 3.0314$\n$$\\frac{1}{r^{\\gamma - 1}} = \\frac{1}{3.0314} \\approx 0.3299$$\n2. For $r_c = 2.0$ and $\\gamma = 1.40$:\n$$r_c^\\gamma = 2^{1.40} \\approx 2.6390$$\n$$r_c^\\gamma - 1 = 1.6390$$\n$$\\gamma (r_c - 1) = 1.40 \\times (2.0 - 1.0) = 1.40$$\n$$\\left[ \\frac{r_c^\\gamma - 1}{\\gamma(r_c - 1)} \\right] = \\frac{1.6390}{1.40} \\approx 1.1707$$\n3. Thermal efficiency:\n$$\\eta = 1 - (0.3299 \\times 1.1707) = 1 - 0.3862 = 0.6138 = 61.38\\% \\approx 61.4\\%$$",
-    "difficulty": "Moderate"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FP_027",
@@ -519,7 +519,7 @@ export default [
       "max": 1.07
     },
     "solution": "Calculate numerator and denominator:\n1. Numerator: $\\alpha r_c^\\gamma - 1$\n$$r_c^\\gamma = 1.4^{1.40} \\approx 1.6020$$\n$$\\alpha r_c^\\gamma = 1.50 \\times 1.6020 = 2.4030$$\n$$\\text{Numerator} = 2.4030 - 1 = 1.4030$$\n2. Denominator: $(\\alpha - 1) + \\gamma \\alpha (r_c - 1)$\n$$(\\alpha - 1) = 1.50 - 1 = 0.50$$\n$$\\gamma \\alpha (r_c - 1) = 1.40 \\times 1.50 \\times (1.40 - 1) = 2.10 \\times 0.40 = 0.84$$\n$$\\text{Denominator} = 0.50 + 0.84 = 1.34$$\n3. Value of factor $K$:\n$$K = \\frac{1.4030}{1.34} \\approx 1.047 \\approx 1.05$$",
-    "difficulty": "Moderate"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FP_028",
@@ -539,7 +539,7 @@ export default [
     },
     "correct_answer": "A",
     "solution": "By delaying intake valve closing (Miller/Atkinson cycle), the effective compression ratio is lowered while the expansion ratio remains large. This allows more work to be extracted from the high-temperature expansion gases, reducing exhaust blowdown energy losses and raising cycle thermal efficiency.",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FP_029",
@@ -595,7 +595,7 @@ export default [
       "max": 8.9
     },
     "solution": "Mean piston speed ($v_m$) is given by:\n$$v_m = \\frac{2 L N}{60}$$\nGiven $L = 120\\text{ mm} = 0.120\\text{ m}$ and $N = 2200\\text{ rpm}$:\n$$v_m = \\frac{2 \\times 0.120 \\times 2200}{60} = \\frac{528}{60} = 8.8\\text{ m/s}$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FP_032",
@@ -633,7 +633,7 @@ export default [
       "max": 55.5
     },
     "solution": "1. Piston crown surface area ($A$):\n$$A = \\frac{\\pi}{4} D^2 = \\frac{3.1416}{4} (0.10\\text{ m})^2 = 0.007854\\text{ m}^2$$\n2. Peak gas force ($F_g$):\n$$F_g = P_{\\max} \\times A = (7.0 \\times 10^6\\text{ N/m}^2) \\times 0.007854\\text{ m}^2 = 54,978\\text{ N} \\approx 55.0\\text{ kN}$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FP_034",
@@ -658,7 +658,7 @@ export default [
       "D"
     ],
     "solution": "All four statements describe standard engine cylinder architecture:\n• Compression rings seal combustion pressure.\n• Oil scraper rings regulate cylinder oil film thickness.\n• Wet liners contact coolant directly and require O-ring sealing collars.\n• Dry liners are thin sleeves fitted into bored engine block castings without direct coolant contact.",
-    "difficulty": "Easy"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FP_035",
@@ -694,7 +694,7 @@ export default [
       "max": 0.69
     },
     "solution": "The fuel-air equivalence ratio $\\phi$ is defined as:\n$$\\phi = \\frac{(F/A)_{act}}{(F/A)_{st}} = \\frac{(A/F)_{st}}{(A/F)_{act}}$$\nGiven $(A/F)_{st} = 15.0$ and $(A/F)_{act} = 22.5$:\n$$\\phi = \\frac{15.0}{22.5} = \\frac{2}{3} \\approx 0.6667 \\approx 0.67$$\n(Note: $\\phi < 1.0$ indicates a lean combustion mixture, typical for diesel engines).",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FP_037",
@@ -714,7 +714,7 @@ export default [
     },
     "correct_answer": "A",
     "solution": "If the ignition delay period is too long, a large quantity of fuel is injected and vaporized before ignition begins. When auto-ignition occurs, this entire accumulated fuel mass burns almost instantaneously, causing an extremely high rate of pressure rise ($dp/d\\theta > 8 - 10\\text{ bar/deg}$) and audible diesel knocking.",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FP_038",
@@ -738,7 +738,7 @@ export default [
       "C"
     ],
     "solution": "• Cetane rating measures ignition ease in CI engines (A is correct).\n• Standard reference fuels for cetane are n-hexadecane (100) and isocetane/alpha-methylnaphthalene (B is correct).\n• Iso-octane resists knock in SI engines and defines 100 octane (C is correct).\n• Octane and cetane scales are inverse: fuels with high resistance to auto-ignition (high octane) have very long ignition delay (low cetane) (D is false).",
-    "difficulty": "Moderate"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FP_039",
@@ -783,7 +783,7 @@ export default [
       "D"
     ],
     "solution": "All four properties are crucial for tractor crankcase lubricants:\n• High VI maintains hydrodynamic lubrication film across temperature swings.\n• TBN counteracts sulfuric acid corrosion from diesel combustion.\n• Low pour point prevents oil gelling in cold weather.\n• High flash point ensures thermal stability and safety against ignition.",
-    "difficulty": "Easy"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FP_041",
@@ -837,7 +837,7 @@ export default [
       "max": 50.8
     },
     "solution": "1. Heat transfer rate equation:\n$$Q = \\dot{m} c_p \\Delta T$$\nWhere:\n• $Q = 28.0\\text{ kW} = 28.0\\text{ kJ/s}$\n• $c_p = 4.184\\text{ kJ/(kg}\\cdot\\text{K)}$\n• $\\Delta T = 88 - 80 = 8\\text{ K}$\n$$\\dot{m} = \\frac{Q}{c_p \\Delta T} = \\frac{28.0}{4.184 \\times 8} = \\frac{28.0}{33.472} \\approx 0.8365\\text{ kg/s}$$\n2. Mass flow rate in $\\text{kg/min}$:\n$$\\dot{m}_{min} = 0.8365 \\times 60 \\approx 50.19\\text{ kg/min} \\approx 50.2\\text{ kg/min}$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FP_044",
@@ -900,7 +900,7 @@ export default [
       "D"
     ],
     "solution": "All four statements represent standard tractor engine lubrication features:\n• Gear pump delivers pressurized flow to engine galleries (A is correct).\n• Relief valve controls maximum line pressure (B is correct).\n• Filter bypass valve prevents catastrophic lubrication starvation if the paper element plugs (C is correct).\n• Piston cooling jets spray oil directly onto piston undercrowns (D is correct).",
-    "difficulty": "Easy"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FP_047",
@@ -920,7 +920,7 @@ export default [
     },
     "correct_answer": "A",
     "solution": "In standard in-line 4-stroke 4-cylinder engines with a flat-plane ($180^\\circ$) crankshaft (cylinders 1 and 4 moving together, and 2 and 3 moving together), the firing order 1-3-4-2 provides symmetrical torque impulses every $180^\\circ$ of crank rotation with optimal dynamic balancing.",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FP_048",
@@ -964,7 +964,7 @@ export default [
       "C"
     ],
     "solution": "• Cooled EGR reduces $NO_x$ by thermal dilution (A is correct).\n• SCR treats downstream exhaust with urea to convert $NO_x$ into $N_2$ and $H_2O$ (B is correct).\n• DPF traps solid carbonaceous particulates (C is correct).\n• Diesel engines use high-pressure fuel injection (CRDI), not carburetors (D is false).",
-    "difficulty": "Easy"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FP_050",
@@ -1000,7 +1000,7 @@ export default [
       "max": 33.2
     },
     "solution": "1. Braking torque ($T$):\n$$T = W \\times L = 280\\text{ N} \\times 0.75\\text{ m} = 210.0\\text{ N}\\cdot\\text{m}$$\n2. Brake power ($BP$):\n$$BP = \\frac{2 \\pi N T}{60 \\times 1000} = \\frac{2 \\times 3.1416 \\times 1500 \\times 210.0}{60,000} = \\frac{1,979,208}{60,000} \\approx 32.9868\\text{ kW} \\approx 32.99\\text{ kW}$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FP_052",
@@ -1018,7 +1018,7 @@ export default [
       "max": 22.4
     },
     "solution": "Torque reserve ($TR$) represents the engine lugging ability:\n$$TR = \\frac{T_{\\max} - T_{\\text{rated}}}{T_{\\text{rated}}} \\times 100$$\nGiven $T_{\\max} = 238.5\\text{ N}\\cdot\\text{m}$ and $T_{\\text{rated}} = 195.3\\text{ N}\\cdot\\text{m}$:\n$$TR = \\frac{238.5 - 195.3}{195.3} \\times 100 = \\frac{43.2}{195.3} \\times 100 \\approx 22.1198\\% \\approx 22.1\\%$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FP_053",
@@ -1043,7 +1043,7 @@ export default [
       "D"
     ],
     "solution": "All four statements accurately describe tractor engine governor and torque rise characteristics:\n• Lugging allows torque rise as RPM drops.\n• BSFC sweet spot occurs between peak torque and rated RPM.\n• Friction horsepower scales with $N^2$, causing power droop at overspeed.\n• High torque backup prevents gear-shifting under momentary draft spikes.",
-    "difficulty": "Easy"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FP_054",
@@ -1061,7 +1061,7 @@ export default [
       "max": 10
     },
     "solution": "1. Total heat energy supplied by fuel per second ($Q_{\\text{in}}$):\n$$Q_{\\text{in}} = \\frac{\\dot{m}_f \\times CV}{3600} = \\frac{9.0\\text{ kg/h} \\times 42,000\\text{ kJ/kg}}{3600\\text{ s}} = 105.0\\text{ kW}$$\n2. Sum of accounted energy outputs:\n$$\\Sigma Q_{\\text{out}} = BP + Q_{\\text{cool}} + Q_{\\text{exh}} = 35.0 + 36.0 + 24.0 = 95.0\\text{ kW}$$\n3. Unaccounted and radiation losses:\n$$Q_{\\text{rad}} = Q_{\\text{in}} - \\Sigma Q_{\\text{out}} = 105.0 - 95.0 = 10\\text{ kW}$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FP_055",
@@ -1117,7 +1117,7 @@ export default [
     },
     "correct_answer": "A",
     "solution": "In a compression ignition engine running at governed constant speed, gross fuel consumption plotted against brake power yields an approximately straight line (Willans line). Extrapolating this line backward to the zero fuel consumption axis gives a negative power intercept that represents the total engine friction and pumping losses ($FP$).",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FP_058",
@@ -1135,7 +1135,7 @@ export default [
       "max": 6
     },
     "solution": "1. Forward speed in $\\text{cm/s}$:\n$$v = 1.8 \\times \\frac{5}{18} = 0.50\\text{ m/s} = 50\\text{ cm/s}$$\n2. Rotor cuts per second per flange:\n$$f = z \\times \\frac{N}{60} = 2 \\times \\frac{250}{60} = \\frac{500}{60} = \\frac{25}{3}\\text{ cuts/s}$$\n3. Tilling pitch ($p$):\n$$p = \\frac{v}{f} = \\frac{50}{25/3} = 50 \\times \\frac{3}{25} = 6.0\\text{ cm}$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FP_059",
@@ -1159,7 +1159,7 @@ export default [
       "C"
     ],
     "solution": "• MFWD engages front axle load for extra drawbar pull (A is correct).\n• Crawler tracks spread weight over large contact areas, dramatically reducing mean ground pressure (B is correct).\n• 2WD static weight distribution typically allocates ~2/3 of weight to rear driving wheels (C is correct).\n• Rubber tracks provide vastly superior contact patch area and traction grip, resulting in lower slip, not higher (D is false).",
-    "difficulty": "Easy"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FP_060",
@@ -1197,7 +1197,7 @@ export default [
       "max": 450
     },
     "solution": "1. Mean friction radius under uniform wear theory ($R_m$):\n$$R_m = \\frac{r_1 + r_2}{2} = \\frac{150 + 100}{2} = 125\\text{ mm} = 0.125\\text{ m}$$\n2. Number of active contact pairs $n = 6$.\n3. Maximum clutch torque capacity ($T$):\n$$T = n \\cdot \\mu \\cdot W \\cdot R_m = 6 \\times 0.12 \\times 5000\\text{ N} \\times 0.125\\text{ m} = 450\\text{ N}\\cdot\\text{m}$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FP_062",
@@ -1235,7 +1235,7 @@ export default [
     },
     "correct_answer": "A",
     "solution": "A dual clutch features two separate concentric clutch discs. Depressing the foot pedal halfway releases the transmission friction disc, halting forward ground motion while the independent PTO disc remains engaged (essential for clearing balers or rotavators). Full pedal travel disengages both drives.",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FP_064",
@@ -1271,7 +1271,7 @@ export default [
       "max": 5
     },
     "solution": "For an epicyclic planetary gear set with fixed ring gear, the velocity ratio is given by:\n$$\\frac{N_{\\text{sun}}}{N_{\\text{carrier}}} = 1 + \\frac{Z_{\\text{ring}}}{Z_{\\text{sun}}}$$\nGiven $Z_{\\text{ring}} = 64$ and $Z_{\\text{sun}} = 16$:\n$$\\frac{N_{\\text{sun}}}{N_{\\text{carrier}}} = 1 + \\frac{64}{16} = 1 + 4 = 5$$",
-    "difficulty": "Easy"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FP_066",
@@ -1295,7 +1295,7 @@ export default [
       "C"
     ],
     "solution": "• Standard 540 rpm PTO uses 6 splines and 35 mm diameter (A is correct).\n• 1000 rpm Type 2 PTO uses 21 involute splines and 35 mm diameter (B is correct).\n• Ground speed PTO locks revolutions to tire rotation (C is correct).\n• ISO 500 specifies clockwise rotation when viewed facing the rear of the tractor (D is false).",
-    "difficulty": "Easy"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FP_067",
@@ -1333,7 +1333,7 @@ export default [
       "max": 77.5
     },
     "solution": "1. For front wheel lift-off, the dynamic normal reaction on the front wheels drops to zero ($R_f = 0$).\n2. Taking moments about the rear wheel ground contact point:\n$$\\Sigma M_{\\text{rear}} = 0$$\n$$P_{\\text{crit}} \\times h = W \\times x_1$$\n$$P_{\\text{crit}} = \\frac{W \\times x_1}{h} = \\frac{29.43\\text{ kN} \\times 1.30\\text{ m}}{0.50\\text{ m}} = \\frac{38.259}{0.50} = 76.518\\text{ kN} \\approx 76.52\\text{ kN}$$",
-    "difficulty": "Moderate"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FP_069",
@@ -1351,7 +1351,7 @@ export default [
       "max": 0.71
     },
     "solution": "Taking moments about the rear axle centerline:\n$$W \\cdot x_{cg} = W_{f0} \\cdot L$$\n$$x_{cg} = \\frac{W_{f0} \\cdot L}{W} = \\frac{8.75\\text{ kN} \\times 2.00\\text{ m}}{25.0\\text{ kN}} = \\frac{17.50}{25.0} = 0.70\\text{ m}$$",
-    "difficulty": "Easy"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FP_070",
@@ -1369,7 +1369,7 @@ export default [
       "max": 0.7
     },
     "solution": "1. Taking moments about the downhill wheel ground contact line:\n$$R_{\\text{up}} \\cdot b = W \\left( \\frac{b}{2} \\cos\\alpha - h \\sin\\alpha \\right)$$\n$$\\frac{R_{\\text{up}}}{W} = 0.5 \\cos(30^\\circ) - \\frac{h}{b} \\sin(30^\\circ) = (0.5 \\times 0.8660) - \\left(\\frac{0.80}{1.60} \\times 0.50\\right) = 0.4330 - 0.2500 = 0.1830$$\n2. Normal force on downhill wheels:\n$$\\frac{R_{\\text{down}}}{W} = \\cos(30^\\circ) - \\frac{R_{\\text{up}}}{W} = 0.8660 - 0.1830 = 0.6830 \\approx 0.68$$",
-    "difficulty": "Moderate"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FP_071",
@@ -1393,7 +1393,7 @@ export default [
       "C"
     ],
     "solution": "• Uphill slope angle and drawbar moment combine to unload front axle and load rear axle (A and B are correct).\n• Reduced front vertical reaction directly reduces front wheel rolling resistance ($R_r = \\mu W_f$) (C is correct).\n• The center of gravity is an intrinsic physical property fixed relative to the tractor metal chassis (D is false).",
-    "difficulty": "Easy"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FP_072",
@@ -1411,7 +1411,7 @@ export default [
       "max": 42
     },
     "solution": "The dimensionless wheel numeric $C_n$ in the Wismer & Luth model is:\n$$C_n = \\frac{CI \\cdot b \\cdot d}{W}$$\nGiven $CI = 800\\text{ kN/m}^2$, $b = 0.45\\text{ m}$, $d = 1.40\\text{ m}$, and $W = 12.0\\text{ kN}$:\n$$C_n = \\frac{800 \\times 0.45 \\times 1.40}{12.0} = \\frac{504}{12.0} = 42$$",
-    "difficulty": "Easy"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FP_073",
@@ -1429,7 +1429,7 @@ export default [
       "max": 1.52
     },
     "solution": "1. Motion resistance ratio ($\\rho$):\n$$\\rho = \\frac{1.2}{20.0} + 0.04 = 0.06 + 0.04 = 0.10$$\n2. Motion resistance force ($R$):\n$$R = \\rho \\times W = 0.10 \\times 15.0\\text{ kN} = 1.5\\text{ kN}$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FP_074",
@@ -1449,7 +1449,7 @@ export default [
     },
     "correct_answer": "A",
     "solution": "Tractive efficiency curves show that at very low slip (<5%), rolling resistance dominates, while at high slip (>20%), energy wasted in soil churning escalates. The peak of tractive efficiency occurs at 10–15% slip for 2WD tractors and 8–12% for 4WD tractors on firm-to-tilled agricultural fields.",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FP_075",
@@ -1473,7 +1473,7 @@ export default [
       "C"
     ],
     "solution": "• Standard penetrometer cone has a $30^\\circ$ apex angle (A is correct).\n• CI is defined as penetration force per unit base area ($N/m^2 = Pa$) (B is correct).\n• RCI assesses soil strength deterioration under cyclical compaction (C is correct).\n• CI is highly sensitive to soil moisture and bulk density (D is false).",
-    "difficulty": "Easy"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FP_076",
@@ -1493,7 +1493,7 @@ export default [
     },
     "correct_answer": "A",
     "solution": "In restrained-link operation, the tractor hydraulic system continuously supports vertical forces acting on the implement. This force balance allows dynamic transfer of implement mass and downward soil forces to the tractor rear axle, increasing traction and cutting wheel slip.",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FP_077",
@@ -1517,7 +1517,7 @@ export default [
       "C"
     ],
     "solution": "• Cat 1: up to 35 kW, lower pin 22.4 mm, upper pin 19.0 mm (A is correct).\n• Cat 2: 30–92 kW, lower pin 28.7 mm, upper pin 25.4 mm (B is correct).\n• Upper link pin is always smaller than lower link pins across Cat 1, 2, 3, 4 (C is correct).\n• Category 4 is for massive 4WD tractors exceeding 135 kW, not power tillers (D is false).",
-    "difficulty": "Moderate"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FP_078",
@@ -1555,7 +1555,7 @@ export default [
       "max": 11
     },
     "solution": "1. Weight transfer due to implement overhang:\n$$\\Delta W_{\\text{overhang}} = W_i \\times \\frac{L + 1.20}{L} = 6.0 \\times \\frac{2.00 + 1.20}{2.00} = 6.0 \\times 1.60 = 9.60\\text{ kN}$$\n2. Weight transfer due to horizontal draft moment:\n$$\\Delta W_{\\text{draft}} = D \\times \\frac{h_d}{L} = 12.0 \\times \\frac{0.20}{2.00} = 1.20\\text{ kN}$$\n3. Total dynamic weight added to rear axle:\n$$R_{r,\\text{add}} = 9.60 + 1.20 = 10.80\\text{ kN}$$",
-    "difficulty": "Moderate"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FP_080",
@@ -1591,7 +1591,7 @@ export default [
       "max": 2.7
     },
     "solution": "With the inner rear wheel locked, the center of turn coincides with the inner wheel ground contact point:\n$$R = \\sqrt{L^2 + B^2} = \\sqrt{2.20^2 + 1.50^2} = \\sqrt{4.84 + 2.25} = \\sqrt{7.09} \\approx 2.6627\\text{ m} \\approx 2.66\\text{ m}$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FP_082",
@@ -1615,7 +1615,7 @@ export default [
       "C"
     ],
     "solution": "• Open-center circuits pump fluid continuously through open valves at low pressure (A is correct).\n• CCLS systems use variable displacement swashplate pumps to eliminate neutral throttling heat (B and C are correct).\n• Open-center circuits use simple fixed gear pumps, not expensive variable piston pumps (D is false).",
-    "difficulty": "Moderate"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FP_083",
@@ -1635,7 +1635,7 @@ export default [
     },
     "correct_answer": "A",
     "solution": "The Orbitrol hydrostatic steering unit eliminates mechanical linkages between steering wheel and axle. It metered hydraulic fluid to steering cylinders, and contains check valves enabling the gerotor unit to act as a manual hand pump for emergency manual control if hydraulic pressure fails.",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FP_084",
@@ -1660,7 +1660,7 @@ export default [
       "D"
     ],
     "solution": "All four tests represent official core mandates of BIS 12207, OECD Standard Codes, and Nebraska tractor test protocols to verify power delivery, drawbar pull, hydraulic capacity, and operator acoustic safety.",
-    "difficulty": "Easy"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FP_085",
@@ -1680,7 +1680,7 @@ export default [
     },
     "correct_answer": "A",
     "solution": "Agricultural tires are liquid ballasted up to 75% of volume (covering the rim for rust prevention while leaving a 25% air cushion for tire compliance). Calcium chloride ($CaCl_2$) adds ~25% more weight per unit volume than water and prevents freezing down to sub-zero temperatures.",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FP_086",
@@ -1698,7 +1698,7 @@ export default [
       "max": 85
     },
     "solution": "The drawbar-to-PTO power ratio is:\n$$\\text{Ratio} = \\frac{P_{\\text{db}}}{P_{\\text{pto}}} \\times 100 = \\frac{42.5\\text{ kW}}{50.0\\text{ kW}} \\times 100 = 85\\%$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FP_087",
@@ -1716,7 +1716,7 @@ export default [
       "max": 4.3
     },
     "solution": "1. Energy formula from OECD Code 4:\n$$E = 1.4 \\times M = 1.4 \\times 3000 = 4200\\text{ J}$$\n2. Convert to $\\text{kJ}$:\n$$E = \\frac{4200\\text{ J}}{1000} = 4.2\\text{ kJ}$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FP_088",
@@ -1781,7 +1781,7 @@ export default [
       "D"
     ],
     "solution": "All four guidelines are standard ergonomic criteria in BIS 10702 and ISO 4253:\n• SIP defines control spatial envelopes.\n• Pedal effort limits prevent muscular strain.\n• Emergency controls must be prominent and instantly reachable.\n• Line-of-sight visibility is mandatory for operational safety and implement tracking.",
-    "difficulty": "Easy"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FP_091",
@@ -1794,7 +1794,7 @@ export default [
     "source": "Jagdishwar Sahay - Elements of Agricultural Engineering",
     "question": "An air-standard Diesel cycle has a compression ratio of $16$ and a cut-off ratio of $2.0$. Taking the adiabatic index $\\gamma = 1.4$, calculate the air-standard thermal efficiency of the cycle in percentage.",
     "solution": "Air-standard efficiency of Diesel cycle:\n$$\\eta_{\\text{th}} = 1 - \\frac{1}{r^{\\gamma - 1}} \\left[ \\frac{r_c^\\gamma - 1}{\\gamma(r_c - 1)} \\right]$$\nWhere:\n- Compression ratio $r = 16$\n- Cut-off ratio $r_c = 2.0$\n- $\\gamma = 1.4$\n\nCalculating terms:\n$$r^{\\gamma - 1} = 16^{0.4} = 3.0314$$\n$$r_c^\\gamma = 2^{1.4} = 2.6390$$\n$$\\frac{r_c^\\gamma - 1}{\\gamma(r_c - 1)} = \\frac{2.6390 - 1}{1.4(2 - 1)} = \\frac{1.6390}{1.4} = 1.1707$$\n$$\\eta_{\\text{th}} = 1 - \\frac{1}{3.0314} \\times 1.1707 = 1 - 0.3862 = 0.6138 = 61.38\\%$$",
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "correct_answer": 61.38,
     "answer": 61.38,
     "numerical_range": {
@@ -1832,7 +1832,7 @@ export default [
     "source": "Sanjay Kumar - Numerical Approach to Agricultural Engineering",
     "question": "During a brake test on a diesel engine, the brake torque is $180\\text{ N}\\cdot\\text{m}$ at an engine speed of $1800\\text{ rpm}$. The engine consumes diesel of density $840\\text{ kg/m}^3$ at the rate of $7.5\\text{ L/h}$. If the lower calorific value of diesel is $42.5\\text{ MJ/kg}$, calculate the brake thermal efficiency of the engine in percentage.",
     "solution": "Brake power ($BP$):\n$$BP = \\frac{2 \\pi N T}{60000} = \\frac{2 \\pi \\times 1800 \\times 180}{60000} = \\frac{2035752}{60000} = 33.93\\text{ kW}$$\n\nMass flow rate of fuel ($m_f$):\n$$m_f = \\frac{7.5\\text{ L/h} \\times 0.84\\text{ kg/L}}{3600\\text{ s/h}} = \\frac{6.30\\text{ kg/h}}{3600} = 0.00175\\text{ kg/s}$$\n\nHeat supplied ($Q_{\\text{in}}$):\n$$Q_{\\text{in}} = m_f \\times LCV = 0.00175\\text{ kg/s} \\times 42500\\text{ kJ/kg} = 74.375\\text{ kW}$$\n\nBrake thermal efficiency:\n$$\\eta_{\\text{bth}} = \\frac{BP}{Q_{\\text{in}}} \\times 100 = \\frac{33.93}{74.375} \\times 100 = 45.62\\%$$\n(With precise constants: $45.45\\%$ to $45.65\\%$).",
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "correct_answer": 45.45,
     "answer": 45.45,
     "numerical_range": {
@@ -1851,7 +1851,7 @@ export default [
     "source": "Liljedahl - Tractors and Their Power Units",
     "question": "A two-wheel drive tractor has a total weight of $24\\text{ kN}$ with a wheelbase of $2.0\\text{ m}$. In static condition on level ground, the center of gravity is located $0.7\\text{ m}$ ahead of the rear axle centerline and $0.8\\text{ m}$ above ground. If the tractor develops a horizontal drawbar pull of $8.0\\text{ kN}$ at a hitch height of $0.4\\text{ m}$, calculate the dynamic reaction on the rear axle in $\\text{kN}$.",
     "solution": "Taking moments about the front wheel ground contact point to find dynamic rear reaction $R_r$:\n$$R_r \\times x_w = W \\times (x_w - x_r) + P \\times y_h$$\nWhere:\n- Total weight $W = 24\\text{ kN}$\n- Wheelbase $x_w = 2.0\\text{ m}$\n- Distance of CG from rear axle $x_r = 0.7\\text{ m}$, so distance from front axle is $(2.0 - 0.7) = 1.3\\text{ m}$\n- Drawbar pull $P = 8.0\\text{ kN}$\n- Hitch height $y_h = 0.4\\text{ m}$\n\nStatic rear reaction:\n$$R_{rs} = W \\times \\frac{x_w - x_r}{x_w} = 24 \\times \\frac{1.3}{2.0} = 15.6\\text{ kN}$$\nDynamic weight transfer to rear:\n$$\\Delta W = \\frac{P \\times y_h}{x_w} = \\frac{8.0 \\times 0.4}{2.0} = 1.6\\text{ kN}$$\nDynamic rear axle reaction:\n$$R_r = R_{rs} + \\Delta W = 15.6 + 1.6 = 17.2\\text{ kN}$$",
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "correct_answer": 17.2,
     "answer": 17.2,
     "numerical_range": {
@@ -1870,7 +1870,7 @@ export default [
     "source": "Liljedahl - Tractors and Their Power Units",
     "question": "During heavy drawbar pulling on level ground, backward overturning of a 2WD agricultural tractor will occur when the dynamic normal reaction on the front wheels becomes:",
     "solution": "Backward overturning or front-wheel rearing occurs when the dynamic weight transfer from front to rear equals the static front axle weight, causing the front normal reaction $R_f$ to drop to zero.",
-    "difficulty": "Moderate",
+    "difficulty": "Easy",
     "options": {
       "A": "Equal to total tractor weight",
       "B": "Zero",
@@ -1929,7 +1929,7 @@ export default [
     "source": "Jagdishwar Sahay - Elements of Agricultural Engineering",
     "question": "The standard power take-off (PTO) shaft Type-1 according to ASAE/BIS standards has 6 splines and operates at a standard rated speed of:",
     "solution": "The standard Type 1 PTO shaft has 6 splines with $35\\text{ mm}$ ($1\\frac{3}{8}\"$) diameter and rotates at $540 \\pm 10\\text{ rpm}$. Type 2 PTO has 21 splines and operates at $1000\\text{ rpm}$.",
-    "difficulty": "Moderate",
+    "difficulty": "Easy",
     "options": {
       "A": "$1000 \\pm 25\\text{ rpm}$",
       "B": "$540 \\pm 10\\text{ rpm}$",
@@ -1988,7 +1988,7 @@ export default [
     "source": "Ganesan - Internal Combustion Engines",
     "question": "Which of the following factors increase the tendency of abnormal knocking / detonation in a Compression Ignition (CI / Diesel) engine?",
     "solution": "- In CI engines, knocking occurs due to rapid pressure rise from fuel accumulating during a long ignition delay period.\n- Low cetane fuel has longer ignition delay, worsening knock.\n- Low compression ratio reduces end-of-compression temperature and pressure, increasing ignition delay and knock.\n- High intake air temperature and swirl promote rapid auto-ignition, reducing delay and knock.",
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "options": {
       "A": "Long ignition delay period",
       "B": "Low cetane number of the diesel fuel",
@@ -2055,7 +2055,7 @@ export default [
     "source": "Jagdishwar Sahay - Elements of Agricultural Engineering",
     "question": "The centrifugal governor of a tractor diesel engine is primarily provided to:",
     "solution": "The governor controls fuel delivery by adjusting the fuel injection pump control rack to maintain engine speed within a narrow operating range when agricultural field load fluctuates.",
-    "difficulty": "Moderate",
+    "difficulty": "Easy",
     "options": {
       "A": "Vary the injection timing with load changes",
       "B": "Automatically regulate fuel supply to maintain nearly constant engine speed under varying load conditions",
@@ -2095,7 +2095,7 @@ export default [
     "source": "Liljedahl - Tractors and Their Power Units",
     "question": "A tractor engine delivers $36\\text{ kW}$ brake power. The mechanical efficiency of the transmission between engine and PTO shaft is $92\\%$. If the drawbar power developed during field tillage is $24\\text{ kW}$, calculate the tractive efficiency in percentage.",
     "solution": "Power available at drive wheels (approx engine brake power minus transmission losses):\n$$P_{\\text{axle}} = BP \\times \\eta_{\\text{trans}} = 36 \\times 0.92 = 33.12\\text{ kW}$$\nDrawbar power $P_{\\text{db}} = 24\\text{ kW}$.\nTractive efficiency:\n$$\\eta_{\\text{tr}} = \\frac{P_{\\text{db}}}{P_{\\text{axle}}} \\times 100 = \\frac{24}{33.12} \\times 100 \\approx 72.46\\%$$",
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "correct_answer": 72.46,
     "answer": 72.46,
     "numerical_range": {
@@ -2114,7 +2114,7 @@ export default [
     "source": "Ganesan - Internal Combustion Engines",
     "question": "Which of the following statements comparing pure biodiesel (B100) with petroleum diesel fuel are CORRECT?",
     "solution": "- A is correct: Methyl/ethyl esters have higher cetane ratings (often > 50).\n- B is correct: LCV of biodiesel is ~38-40 MJ/kg compared to 42.5-43 MJ/kg for petro-diesel.\n- C is correct: Biodiesel contains ~10-11% oxygen by mass (oxygenated fuel).\n- D is incorrect: Due to intrinsic oxygen, combustion is more complete, resulting in lower CO and unburnt hydrocarbon emissions.",
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "options": {
       "A": "Biodiesel has a higher cetane number than standard fossil diesel",
       "B": "Biodiesel has approximately $8\\%$ to $10\\%$ lower lower calorific value (energy density) per unit mass",
@@ -2143,7 +2143,7 @@ export default [
     "source": "Liljedahl - Tractors and Their Power Units",
     "question": "According to OECD / BIS standard test codes for agricultural tractors, the high ambient temperature cooling test evaluates the maximum ambient temperature at which the cooling system can operate before coolant boils. This temperature is commonly termed:",
     "solution": "The Limiting Ambient Temperature (LAT) is the highest calculated ambient air temperature at which the engine can run at rated maximum load without the cooling coolant exceeding the manufacturer's maximum specified boiling/blow-off limit.",
-    "difficulty": "Moderate",
+    "difficulty": "Easy",
     "options": {
       "A": "Limiting Ambient Temperature (LAT)",
       "B": "Critical Flash Temperature",
@@ -2164,7 +2164,7 @@ export default [
     "source": "Liljedahl - Tractors and Their Power Units",
     "question": "A tractor of wheelbase $1.8\\text{ m}$ has static wheel reactions of $8\\text{ kN}$ on front wheels and $16\\text{ kN}$ on rear wheels. Calculate the horizontal distance of the tractor center of gravity from the rear axle centerline in $\\text{meters}$.",
     "solution": "Total weight $W = R_f + R_r = 8 + 16 = 24\\text{ kN}$.\nTaking moments about the rear axle:\n$$R_f \\times L = W \\times x_r$$\n$$8 \\times 1.8 = 24 \\times x_r$$\n$$x_r = \\frac{8 \\times 1.8}{24} = \\frac{14.4}{24} = 0.60\\text{ m}$$",
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "correct_answer": 0.6,
     "answer": 0.6,
     "numerical_range": {
@@ -2183,7 +2183,7 @@ export default [
     "source": "Liljedahl - Tractors and Their Power Units",
     "question": "In the hydraulic three-point hitch system of an agricultural tractor, the 'Draft Control' mode is designed to automatically adjust implement depth to:",
     "solution": "Draft control senses draft load via the top link or lower link sensing springs. When soil draft exceeds the set value, the hydraulic valve automatically raises the plow slightly to relieve draft, preventing engine stalling or excessive wheel slip.",
-    "difficulty": "Moderate",
+    "difficulty": "Easy",
     "options": {
       "A": "Keep forward speed constant regardless of soil resistance",
       "B": "Maintain a constant pulling draft force, raising the implement in hard soil and lowering it in light soil",
@@ -2223,7 +2223,7 @@ export default [
     "source": "Jagdishwar Sahay - Elements of Agricultural Engineering",
     "question": "When a tractor negotiates a sharp right turn in the field, the differential gear assembly ensures that:",
     "solution": "The standard open differential delivers equal torque to both axle shafts while allowing the outer wheel to spin faster over a longer radius arc and the inner wheel to slow down.",
-    "difficulty": "Moderate",
+    "difficulty": "Easy",
     "options": {
       "A": "Both drive wheels rotate at identical rotational speeds",
       "B": "The outer left drive wheel rotates faster than the inner right drive wheel while delivering equal torque",
@@ -2244,7 +2244,7 @@ export default [
     "source": "Ganesan - Internal Combustion Engines",
     "question": "A reference fuel blend for diesel knock rating contains $48\\text{ mL}$ of Cetane (Hexadecane) and $12\\text{ mL}$ of Heptamethylnonane ($HMN$). Since HMN has a cetane rating of 15, calculate the Cetane Number ($CN$) of the fuel blend according to standard ASTM formulation ($CN = \\% \\text{Cetane} + 0.15 \\times \\% HMN$).",
     "solution": "Total volume $= 48 + 12 = 60\\text{ mL}$.\nPercentage of Cetane $= \\frac{48}{60} \\times 100 = 80\\%$.\nPercentage of HMN $= \\frac{12}{60} \\times 100 = 20\\%$.\n$$CN = 80 + (0.15 \\times 20) = 80 + 3.0 = 83.0$$",
-    "difficulty": "Moderate",
+    "difficulty": "Easy",
     "correct_answer": 83,
     "answer": 83,
     "numerical_range": {
@@ -2263,7 +2263,7 @@ export default [
     "source": "Liljedahl - Tractors and Their Power Units",
     "question": "Which of the following statements regarding the Roll-Over Protective Structure (ROPS) on modern agricultural tractors are CORRECT?",
     "solution": "- A is correct: ROPS deforms plastically to absorb impact kinetic energy.\n- B is correct: A seat belt keeps the driver inside the protective envelope (zone of clearance).\n- C is incorrect: Drilling or welding creates stress concentrations and thermal softening that void safety certifications.\n- D is correct: Standard test codes (OECD/OSHA/BIS) specify rigorous crush and impact energy criteria.",
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "options": {
       "A": "ROPS is engineered to absorb structural deformation energy during tipping to maintain a defined operator survival zone",
       "B": "ROPS must always be used in combination with a seat belt for effective operator safety",
@@ -2311,7 +2311,7 @@ export default [
     "source": "Liljedahl - Tractors and Their Power Units",
     "question": "A farm tractor has a rear wheel tread width (track width) of $1.5\\text{ m}$ and its center of gravity is $0.75\\text{ m}$ above ground level on flat ground. Calculate the maximum side-slope angle in $\\text{degrees}$ that the tractor can negotiate statically before lateral overturn occurs.",
     "solution": "Static lateral overturning occurs when the line of action of gravity falls outside the downhill wheel contact line.\nMaximum side slope angle $\\theta$ is given by:\n$$\\tan \\theta = \\frac{T/2}{h_{cg}}$$\nWhere:\n- Tread width $T = 1.5\\text{ m}$, so $T/2 = 0.75\\text{ m}$\n- CG height $h_{cg} = 0.75\\text{ m}$\n\n$$\\tan \\theta = \\frac{0.75}{0.75} = 1.0$$\n$$\\theta = \\arctan(1.0) = 45.0^\\circ$$",
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "correct_answer": 45,
     "answer": 45,
     "numerical_range": {
@@ -2368,7 +2368,7 @@ export default [
     "source": "Ganesan - Internal Combustion Engines",
     "question": "In a standard four-cylinder four-stroke in-line diesel engine, the most commonly adopted firing order to maintain optimal dynamic rotational balance is:",
     "solution": "A firing order of 1-3-4-2 (or 1-2-4-3) provides symmetrical power impulse distribution along the crankshaft throws, balancing secondary rocking couples and minimizing torsional vibration.",
-    "difficulty": "Moderate",
+    "difficulty": "Easy",
     "options": {
       "A": "1 - 2 - 3 - 4",
       "B": "1 - 3 - 4 - 2",
@@ -2408,7 +2408,7 @@ export default [
     "source": "Jagdishwar Sahay - Elements of Agricultural Engineering",
     "question": "In a downdraft biomass gasifier producing producer gas for agricultural diesel dual-fuel operation, the primary combustible gas components are:",
     "solution": "Producer gas generated from woody biomass in a downdraft gasifier contains ~18-22% $CO$, ~15-18% $H_2$, ~2-4% $CH_4$, with the remainder being inert $N_2$ (~50%) and $CO_2$ (~10%).",
-    "difficulty": "Moderate",
+    "difficulty": "Easy",
     "options": {
       "A": "Carbon monoxide ($CO$), Hydrogen ($H_2$), and trace Methane ($CH_4$)",
       "B": "Carbon dioxide ($CO_2$) and Water vapor ($H_2O$)",
@@ -2467,7 +2467,7 @@ export default [
     "source": "Ganesan - Internal Combustion Engines",
     "question": "Which of the following functions are performed by the engine lubrication system in a farm tractor?",
     "solution": "- A: Lubricating oil separates moving surfaces with an oil hydrodynamic film.\n- B: Oil circulates through the oil cooler and sump, removing heat from pistons and bearings.\n- C: Viscous oil seals minute microscopic clearances between rings and cylinder liners, preventing blow-by.\n- D: Lubricating oil has no role in increasing fuel octane rating.",
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "options": {
       "A": "Reducing frictional wear between sliding metallic surfaces",
       "B": "Acting as a cooling medium to carry away heat from piston crowns and bearings",
@@ -2515,7 +2515,7 @@ export default [
     "source": "Jagdishwar Sahay - Elements of Agricultural Engineering",
     "question": "In a walking-type power tiller (two-wheel tractor), steering while operating a rotary cultivator is achieved by:",
     "solution": "Power tillers utilize independent left and right steering dog clutches on the handle grips. Disengaging one clutch disconnects drive power from that wheel, allowing the opposite wheel to pivot the machine.",
-    "difficulty": "Moderate",
+    "difficulty": "Easy",
     "options": {
       "A": "A steering wheel connected to a recirculating ball box",
       "B": "Independent left and right dog clutches (steering clutches) on the drive axle",
@@ -2593,7 +2593,7 @@ export default [
     "source": "Ganesan - Internal Combustion Engines",
     "question": "In the SAE viscosity designation 'SAE 15W-40' for multi-grade engine crankcase oils, the letter 'W' stands for:",
     "solution": "In multi-grade lubricants (e.g. 15W-40), 'W' stands for Winter, indicating low-temperature cold-start pumping viscosity rating evaluated at $-20^\\circ\\text{C}$ to $-15^\\circ\\text{C}$.",
-    "difficulty": "Moderate",
+    "difficulty": "Easy",
     "options": {
       "A": "Weight",
       "B": "Winter",
@@ -2633,7 +2633,7 @@ export default [
     "source": "Liljedahl - Tractors and Their Power Units",
     "question": "In three-point hitch terminology, the 'Sway Blocks' (or check chains) are provided on the lower links primarily to:",
     "solution": "Check chains or sway blocks restrict the horizontal sway of the lower links to prevent the implement from swinging into the rear tires during transport or erratic field operation.",
-    "difficulty": "Moderate",
+    "difficulty": "Easy",
     "options": {
       "A": "Adjust the pitch of the moldboard plow bottom",
       "B": "Limit excessive lateral swinging of the implement during transport and work",
@@ -2711,7 +2711,7 @@ export default [
     "source": "Jagdishwar Sahay - Elements of Agricultural Engineering",
     "question": "According to Betz's law, the theoretical maximum aerodynamic power coefficient ($C_p$) that can be extracted from wind by an ideal wind turbine rotor is:",
     "solution": "Betz's limit proves from momentum and continuity principles that the maximum kinetic energy fraction extractable by an open-flow wind rotor is $C_{p,\\max} = \\frac{16}{27} \\approx 59.3\\%$.",
-    "difficulty": "Moderate",
+    "difficulty": "Easy",
     "options": {
       "A": "$\\frac{16}{27} \\approx 0.593$",
       "B": "$\\frac{1}{2} = 0.500$",
@@ -2732,7 +2732,7 @@ export default [
     "source": "Ganesan - Internal Combustion Engines",
     "question": "The lowest temperature at which a petroleum fuel gives off sufficient vapor to ignite momentarily (flash) when an open flame is brought near its surface is defined as its:",
     "solution": "The flash point is the lowest temperature of the liquid fuel at which it forms a flammable vapor mixture with air near its surface that momentarily catches fire (flashes) on ignition. The fire point is slightly higher (at which combustion continues for $\\ge 5\\text{ s}$).",
-    "difficulty": "Moderate",
+    "difficulty": "Easy",
     "options": {
       "A": "Fire point",
       "B": "Flash point",
@@ -2753,7 +2753,7 @@ export default [
     "source": "Ganesan - Internal Combustion Engines",
     "question": "A diesel engine fuel has a density of $850\\text{ kg/m}^3$ at $15^\\circ\\text{C}$. Calculate the specific gravity of the diesel fuel relative to pure water (density $1000\\text{ kg/m}^3$).",
     "solution": "Specific gravity:\n$$SG = \\frac{\\rho_{\\text{fuel}}}{\\rho_{\\text{water}}} = \\frac{850}{1000} = 0.85$$",
-    "difficulty": "Moderate",
+    "difficulty": "Easy",
     "correct_answer": 0.85,
     "answer": 0.85,
     "numerical_range": {
@@ -2772,7 +2772,7 @@ export default [
     "source": "Liljedahl - Tractors and Their Power Units",
     "question": "According to workplace noise safety standards (OSHA / ISO), an operator exposed to continuous machinery sound level of $90\\text{ dBA}$ has a permissible maximum daily exposure duration of:",
     "solution": "The OSHA permissible noise exposure threshold establishes $90\\text{ dBA}$ for a standard 8-hour workday, with a 5-dB exchange rate (e.g., 95 dBA for 4 hours, 100 dBA for 2 hours).",
-    "difficulty": "Moderate",
+    "difficulty": "Easy",
     "options": {
       "A": "8 hours",
       "B": "4 hours",
@@ -2793,7 +2793,7 @@ export default [
     "source": "Jagdishwar Sahay - Elements of Agricultural Engineering",
     "question": "Which of the following operational precautions are recommended when using the differential lock on an agricultural tractor?",
     "solution": "- A is correct: Engaging differential lock locks the differential mechanism so both wheels spin at equal speed, extracting the tractor from slippery spots.\n- B is correct: Differential lock must be disengaged prior to steering turns to prevent severe driveline windup or tire scuffing/loss of steering control.\n- C is incorrect: Never engage differential lock at high transport speeds due to steering hazard.\n- D is correct: The dog clutch physically locks one axle shaft to the differential cage.",
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "options": {
       "A": "Engage the differential lock when one drive wheel starts slipping severely in mud",
       "B": "Disengage the differential lock before attempting to make a sharp headland turn",
@@ -2845,7 +2845,7 @@ export default [
     },
     "answer": 0.88,
     "correct_answer": 0.88,
-    "difficulty": "Easy",
+    "difficulty": "Moderate",
     "solution": "Total weight of bullocks:\n$$W = 2 \\times 450 = 900\\text{ kg}$$\nPull exerted:\n$$P = 0.10 \\times 900\\text{ kg} \\times 9.81\\text{ m/s}^2 = 882.9\\text{ N}$$\nForward speed $v = 1.0\\text{ m/s}$.\nPower developed:\n$$\\text{Power} = \\frac{P \\times v}{1000} = \\frac{882.9 \\times 1.0}{1000} \\approx 0.883\\text{ kW}$$\nAcceptable range: $0.86 - 0.90\\text{ kW}$.",
     "source": "Sanjay Kumar - Numerical Approach to Agricultural Engineering"
   },
@@ -2906,7 +2906,7 @@ export default [
     },
     "answer": 41.7,
     "correct_answer": 41.7,
-    "difficulty": "Easy",
+    "difficulty": "Moderate",
     "solution": "By mass-weighted mixture rule:\n$$\\text{LHV}_{\\text{blend}} = (0.20 \\times 38.5) + (0.80 \\times 42.5) = 7.70 + 34.00 = 41.70\\text{ MJ/kg}$$",
     "source": "V. Ganesan - Internal Combustion Engines"
   },
@@ -2925,7 +2925,7 @@ export default [
     },
     "answer": 56.47,
     "correct_answer": 56.47,
-    "difficulty": "Easy",
+    "difficulty": "Hard",
     "solution": "Air-standard efficiency of Otto cycle:\n$$\\eta = 1 - \\frac{1}{r^{\\gamma - 1}} = 1 - \\frac{1}{8^{1.4 - 1}} = 1 - \\frac{1}{8^{0.4}}$$\n$$8^{0.4} = 2.2974$$\n$$\\eta = 1 - \\frac{1}{2.2974} = 1 - 0.43528 = 0.56472 \\implies 56.47\\%$$\nAcceptable range: $56.3 - 56.7\\%$.",
     "source": "V. Ganesan - Internal Combustion Engines"
   },
@@ -2944,7 +2944,7 @@ export default [
     },
     "answer": 61.4,
     "correct_answer": 61.4,
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "solution": "Diesel cycle thermal efficiency formula:\n$$\\eta_{\\text{Diesel}} = 1 - \\frac{1}{r^{\\gamma - 1}} \\left[ \\frac{r_c^\\gamma - 1}{\\gamma(r_c - 1)} \\right]$$\nHere $r = 16$, $r_c = 2.0$, $\\gamma = 1.4$.\n$$r^{\\gamma - 1} = 16^{0.4} = (2^4)^{0.4} = 2^{1.6} \\approx 3.0314$$\n$$\\frac{r_c^\\gamma - 1}{\\gamma(r_c - 1)} = \\frac{2.0^{1.4} - 1}{1.4(2.0 - 1)} = \\frac{2.639 - 1}{1.4 \\times 1} = \\frac{1.639}{1.4} \\approx 1.1707$$\n$$\\eta = 1 - \\frac{1.1707}{3.0314} = 1 - 0.3862 = 0.6138 \\implies 61.38\\% \\approx 61.4\\%$$\nAcceptable range: $61.0 - 62.0\\%$.",
     "source": "V. Ganesan - Internal Combustion Engines"
   },
@@ -2973,7 +2973,7 @@ export default [
       "B",
       "C"
     ],
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "solution": "Piston rings have three primary functions:\n- Gas sealing (compression rings prevent combustion gas leakage).\n- Heat transfer (conveying up to $70\\%$ of piston crown heat to the cooled cylinder liner).\n- Oil control (oil scraper ring regulates oil film thickness and scrapes excess oil back to sump).\nLateral thrust force is supported by the piston skirt against the cylinder wall, not by piston rings at the main journal.",
     "source": "V. Ganesan - Internal Combustion Engines"
   },
@@ -3089,7 +3089,7 @@ export default [
     },
     "answer": 35.7,
     "correct_answer": 35.7,
-    "difficulty": "Easy",
+    "difficulty": "Hard",
     "solution": "Brake thermal efficiency:\n$$\\eta_{\\text{bth}} = \\frac{3600}{\\text{BSFC (in kg/kW}\\cdot\\text{h)} \\times \\text{CV (in MJ/kg)}}$$\n$$\\text{BSFC} = 240\\text{ g/kW}\\cdot\\text{h} = 0.240\\text{ kg/kW}\\cdot\\text{h}$$\n$$\\eta_{\\text{bth}} = \\frac{3600}{0.240 \\times 42000} = \\frac{3600}{10080} = 0.3571 \\implies 35.71\\% \\approx 35.7\\%$$\nAcceptable range: $35.0 - 36.5\\%$.",
     "source": "Sanjay Kumar - Numerical Approach to Agricultural Engineering"
   },
@@ -3108,7 +3108,7 @@ export default [
     },
     "answer": 228,
     "correct_answer": 228,
-    "difficulty": "Easy",
+    "difficulty": "Moderate",
     "solution": "Total inlet valve opening period:\n$$\\theta = 12^\\circ (\\text{BTDC}) + 180^\\circ (\\text{suction stroke}) + 36^\\circ (\\text{ABDC}) = 228^\\circ$$",
     "source": "V. Ganesan - Internal Combustion Engines"
   },
@@ -3188,7 +3188,7 @@ export default [
     },
     "correct_answer": "A",
     "answer": "A",
-    "difficulty": "Easy",
+    "difficulty": "Moderate",
     "solution": "A standard differential splits torque equally ($T_L = T_R$). If one wheel has virtually zero traction, it can support almost zero reaction torque, limiting torque to the opposite wheel to that same near-zero value until the differential lock is engaged.",
     "source": "Liljedahl - Tractors and Their Power Units"
   },
@@ -3266,7 +3266,7 @@ export default [
     },
     "answer": 20,
     "correct_answer": 20,
-    "difficulty": "Easy",
+    "difficulty": "Moderate",
     "solution": "Wheel slip is defined as:\n$$S = \\frac{s_0 - s_1}{s_0} \\times 100 = \\frac{45.0 - 36.0}{45.0} \\times 100 = \\frac{9.0}{45.0} \\times 100 = 20.0\\%$$\nAcceptable range: $19.5 - 20.5\\%$.",
     "source": "Liljedahl - Tractors and Their Power Units"
   },
@@ -3295,7 +3295,7 @@ export default [
       "B",
       "C"
     ],
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "solution": "Statements A, B, and C are correct:\n- Tractive efficiency $\\eta_t = P_{db} / P_{axle} = (P \\cdot v) / (T \\cdot \\omega)$.\n- At zero slip, net pull is zero; at 100% slip, forward speed is zero, so $\\eta_t = 0$ at both extremes.\n- Optimum tractive efficiency occurs between 8% and 15% slip on firm soil (10-18% on tilled soil).\n- Statement D is false: proper ballast increases dynamic weight and available tractive pull, significantly improving traction coefficient on firm soil.",
     "source": "Liljedahl - Tractors and Their Power Units"
   },
@@ -3314,7 +3314,7 @@ export default [
     },
     "answer": 3.36,
     "correct_answer": 3.36,
-    "difficulty": "Easy",
+    "difficulty": "Moderate",
     "solution": "Total rolling resistance force:\n$$R_r = C_{rr} \\times W = 0.12 \\times 28\\text{ kN} = 3.36\\text{ kN}$$",
     "source": "Liljedahl - Tractors and Their Power Units"
   },
@@ -3343,7 +3343,7 @@ export default [
       "B",
       "C"
     ],
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "solution": "Statements A, B, and C are correct definitions and applications of position and draft control modes in three-point hitches. Statement D is incorrect: in restrained-link operation, depth and weight transfer are controlled through hydraulic oil held in the tractor rockshaft ram cylinder.",
     "source": "Liljedahl - Tractors and Their Power Units"
   },
@@ -3433,7 +3433,7 @@ export default [
       "B",
       "C"
     ],
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "solution": "OECD / BIS standard test codes mandate tests for PTO power and fuel consumption, drawbar power and slip on a standardized concrete track, hydraulic lift capacity at hitch points, braking, and noise levels. High-speed racing tests are not part of tractor test codes.",
     "source": "Liljedahl - Tractors and Their Power Units"
   },
@@ -3452,7 +3452,7 @@ export default [
     },
     "answer": 266.7,
     "correct_answer": 266.7,
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "solution": "Drawbar power developed:\n$$P_{db} = P \\times v = 18.0\\text{ kN} \\times 1.5\\text{ m/s} = 27.0\\text{ kW}$$\nFuel consumption rate $\\dot{m}_f = 7.2\\text{ kg/h} = 7200\\text{ g/h}$.\nSpecific drawbar fuel consumption:\n$$\\text{SDFC} = \\frac{7200\\text{ g/h}}{27.0\\text{ kW}} \\approx 266.67\\text{ g/(kW}\\cdot\\text{h)}$$\nAcceptable range: $264.0 - 270.0\\text{ g/(kW}\\cdot\\text{h)}$.",
     "source": "Liljedahl - Tractors and Their Power Units"
   },
@@ -3532,8 +3532,1758 @@ export default [
     },
     "answer": 45,
     "correct_answer": 45,
-    "difficulty": "Easy",
+    "difficulty": "Hard",
     "solution": "Lateral overturning occurs when the line of action of gravity through the CG passes outside the downhill tire contact point.\n$$\\tan(\\theta_{\\text{crit}}) = \\frac{T/2}{h_{cg}} = \\frac{1.50 / 2}{0.75} = \\frac{0.75}{0.75} = 1.0$$\n$$\\theta_{\\text{crit}} = \\arctan(1.0) = 45.0^\\circ$$",
     "source": "Liljedahl - Tractors and Their Power Units"
+  },
+  {
+    "id": "QB_FP_ADV_001",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Thermodynamic principles of I.C. engines",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An air-standard Dual (Sabathé) combustion cycle operates with a compression ratio $r = 16$. The pressure ratio during constant volume heat addition is $r_p = 1.5$ and the cutoff ratio during constant pressure heat addition is $r_c = 1.2$. Taking adiabatic exponent $\\gamma = 1.4$, the thermal efficiency of the cycle is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "66.51",
+    "numerical_range": {
+      "min": 66.2,
+      "max": 66.8
+    },
+    "solution": "The thermal efficiency $\\eta_{\\text{dual}}$ of an air-standard dual cycle is given by:\n$$\\eta_{\\text{dual}} = 1 - \\frac{1}{r^{\\gamma - 1}} \\left[ \\frac{r_p r_c^\\gamma - 1}{(r_p - 1) + \\gamma r_p (r_c - 1)} \\right]$$\n\nGiven:\n- $r = 16 \\implies r^{\\gamma - 1} = 16^{0.4} = 3.03143$\n- $r_p = 1.5$\n- $r_c = 1.2 \\implies r_c^{1.4} = 1.2^{1.4} = 1.28925$\n\nNumerator of bracket:\n$$\\text{Num} = (1.5)(1.28925) - 1 = 1.93388 - 1 = 0.93388$$\n\nDenominator of bracket:\n$$\\text{Den} = (1.5 - 1) + 1.4(1.5)(1.2 - 1) = 0.5 + 1.4(1.5)(0.2) = 0.5 + 0.42 = 0.92$$\n\nBracket factor:\n$$F = \\frac{0.93388}{0.92} = 1.01509$$\n\nEfficiency:\n$$\\eta_{\\text{dual}} = 1 - \\frac{1.01509}{3.03143} = 1 - 0.33486 = 0.66514 \\text{ or } 66.51\\%$$",
+    "difficulty": "Hard",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_FP_ADV_002",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Mechanics of tractor chassis",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A 2WD tractor has a total weight $W = 25\\text{ kN}$ with a wheelbase $L = 2.0\\text{ m}$. The center of gravity is located $0.7\\text{ m}$ ahead of the rear axle and $0.8\\text{ m}$ above ground level. The tractor is pulling a horizontal drawbar load $P = 10\\text{ kN}$ attached at a hitch height of $0.45\\text{ m}$ on level ground. The dynamic vertical load on the front wheels is ________ $\\text{kN}$ (round off to two decimal places).",
+    "correct_answer": "6.50",
+    "numerical_range": {
+      "min": 6.4,
+      "max": 6.6
+    },
+    "solution": "Taking moments about the rear wheel ground contact point under static and dynamic equilibrium:\n$$\\sum M_{\\text{rear}} = 0$$\n$$R_f \\times L + P \\times h - W \\times x_r = 0$$\nwhere:\n- $L = 2.0\\text{ m}$ (wheelbase)\n- $W = 25\\text{ kN}$\n- $x_r = 0.7\\text{ m}$ (distance from rear axle to CG)\n- $P = 10\\text{ kN}$\n- $h = 0.45\\text{ m}$ (hitch height)\n\nSubstituting values:\n$$R_f (2.0) + (10)(0.45) - (25)(0.7) = 0$$\n$$2.0 R_f + 4.5 - 17.5 = 0$$\n$$2.0 R_f = 13.0 \\implies R_f = 6.5\\text{ kN}$$\nThus, dynamic load on front wheels $= 6.50\\text{ kN}$.",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_003",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Traction theory",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor drive wheel of rolling radius $0.65\\text{ m}$ makes $120$ revolutions while traveling a measured distance of $440\\text{ m}$ under load. The theoretical distance traveled per revolution is based on the zero-slip rolling radius. The percentage wheel slip is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "10.23",
+    "numerical_range": {
+      "min": 10.1,
+      "max": 10.4
+    },
+    "solution": "1. Theoretical distance traveled ($d_t$) without slip:\n$$d_t = 2 \\pi r N = 2 \\times \\pi \\times 0.65\\text{ m} \\times 120 = 490.088\\text{ m}$$\n\n2. Actual distance traveled ($d_a$) under load:\n$$d_a = 440\\text{ m}$$\n\n3. Percentage wheel slip ($S$):\n$$S = \\frac{d_t - d_a}{d_t} \\times 100 = \\frac{490.088 - 440}{490.088} \\times 100 = \\frac{50.088}{490.088} \\times 100 = 10.220\\% \\approx 10.23\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_004",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Calculation of power, torque, fuel consumption, heat load and power losses",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the performance parameters and energy balance of a compression ignition (CI) diesel engine is/are CORRECT?",
+    "options": {
+      "A": "Brake specific fuel consumption (BSFC) decreases with increasing engine load up to rated capacity due to improved mechanical efficiency",
+      "B": "Indicated thermal efficiency is strictly higher than brake thermal efficiency for any operating internal combustion engine",
+      "C": "Morse test can be directly used on a single-cylinder engine to determine indicated power",
+      "D": "In an engine heat balance sheet, cooling water and exhaust gases typically account for approximately $55\\text{--}70\\%$ of the total fuel energy"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "solution": "- Statement A is correct: BSFC reaches a minimum near rated load because fixed mechanical friction losses represent a smaller fraction of total work (mechanical efficiency increases).\n- Statement B is correct: Since Brake Power $BP = IP - FP$ and $FP > 0$, $\\eta_{bth} = \\eta_{ith} \\times \\eta_m < \\eta_{ith}$.\n- Statement C is incorrect: The Morse test requires cutting off ignition/injection in individual cylinders while remaining cylinders maintain engine speed, so it is strictly applicable only to multi-cylinder engines.\n- Statement D is correct: Standard IC engine energy balances show ~30-35% converted to useful brake work, ~30% carried by exhaust, ~25-30% by cooling water, and ~5-10% by radiation and unaccounted losses.",
+    "difficulty": "Hard",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_FP_ADV_005",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Power efficiencies and measurement, engine performance curves",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A 4-cylinder, 4-stroke tractor diesel engine has a cylinder bore of $100\\text{ mm}$ and stroke length of $120\\text{ mm}$. During a dynamometer test at $2000\\text{ rpm}$, the engine produces a brake torque of $180\\text{ N}\\cdot\\text{m}$ while consuming fuel at a rate of $8.5\\text{ kg/h}$. The calorific value of the diesel fuel is $42.5\\text{ MJ/kg}$. The brake thermal efficiency of the engine is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.58",
+    "numerical_range": {
+      "min": 37,
+      "max": 38.2
+    },
+    "solution": "1. Brake Power ($BP$):\n$$BP = \\frac{2 \\pi N T}{60000} = \\frac{2 \\times \\pi \\times 2000 \\times 180}{60000} = \\frac{2261946.7}{60000} = 37.699\\text{ kW}$$\n\n2. Total thermal energy input rate ($Q_{\\text{in}}$):\n$$Q_{\\text{in}} = \\dot{m}_f \\times CV = \\left( \\frac{8.5}{3600}\\text{ kg/s} \\right) \\times 42500\\text{ kJ/kg} = 2.3611 \\times 10^{-3} \\times 42500 = 100.347\\text{ kW}$$\n\n3. Brake Thermal Efficiency ($\\eta_{\\text{bth}}$):\n$$\\eta_{\\text{bth}} = \\frac{BP}{Q_{\\text{in}}} \\times 100 = \\frac{37.699}{100.347} \\times 100 = 37.568\\% \\approx 37.58\\%$$",
+    "difficulty": "Hard",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_FP_ADV_006",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Power transmission systems – gear trains, differential, final drives and power take-off",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor PTO shaft operating at standard $540\\text{ rpm}$ is driven directly from the engine crankshaft rotating at $2160\\text{ rpm}$. The speed reduction ratio between the engine crankshaft and PTO shaft is ________ (answer in integer).",
+    "correct_answer": "4",
+    "numerical_range": {
+      "min": 4,
+      "max": 4
+    },
+    "solution": "The speed reduction ratio is given by:\n$$\\text{Ratio} = \\frac{N_{\\text{engine}}}{N_{\\text{PTO}}} = \\frac{2160\\text{ rpm}}{540\\text{ rpm}} = 4.0$$\nThus, the speed reduction ratio is exactly 4.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_007",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Power",
+    "subtopic": "Sources of power on the farm – human, animal, mechanical, electrical, wind, solar and biomass",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A pair of Haryana bullocks having an average body weight of $W_b = 450\\text{ kg}$ per bullock is used for ploughing. Each bullock can exert a sustained continuous tractive pull equal to $10\\%$ of its body weight over an 8-hour workday. The bullocks walk at an average continuous working speed of $v = 3.6\\text{ km/h}$. Taking $g = 9.81\\text{ m/s}^2$, the sustained power developed by the pair of bullocks in $\\text{kW}$ is ________ (round off to 2 decimal places).",
+    "correct_answer": "0.88",
+    "numerical_range": {
+      "min": 0.85,
+      "max": 0.92
+    },
+    "solution": "```\n        Bullock Power Output:\n           Pair of bullocks: 2 animals\n           Weight per bullock: W_b = 450 kg\n           Sustained pull per bullock: 10% of body weight\n           Speed: v = 3.6 km/h = 1.0 m/s\n```\n**Step-by-step Calculation:**\n1. Sustained draft pull exerted by each bullock ($P_1$):\n$$P_1 = 0.10 \\times (m \\times g) = 0.10 \\times (450\\text{ kg} \\times 9.81\\text{ m/s}^2) = 441.45\\text{ N}$$\n\n2. Total draft pull exerted by the pair of bullocks ($P_{\\text{pair}}$):\n$$P_{\\text{pair}} = 2 \\times P_1 = 2 \\times 441.45\\text{ N} = 882.90\\text{ N}$$\n\n3. Continuous working speed in $\\text{m/s}$:\n$$v = \\frac{3.6 \\times 1000}{3600} = 1.0\\text{ m/s}$$\n\n4. Power developed by the pair of bullocks ($P$):\n$$P = P_{\\text{pair}} \\times v = 882.90\\text{ N} \\times 1.0\\text{ m/s} = 882.90\\text{ W} = 0.8829\\text{ kW} \\approx 0.88\\text{ kW}$$\n\nThis matches the standard rule of thumb that a pair of medium Indian draft bullocks develops approximately $1\\text{ hp} \\approx 0.75\\text{--}0.90\\text{ kW}$.",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_FP_ADV_008",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Power",
+    "subtopic": "Sources of power on the farm – human, animal, mechanical, electrical, wind, solar and biomass",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Under standard ergonomic working conditions, the continuous sustainable mechanical power output of an average healthy agricultural worker performing manual farm operations over an 8-hour shift is approximately:",
+    "options": {
+      "A": "$0.10\\text{ hp } (\\approx 75\\text{ W})$",
+      "B": "$0.50\\text{ hp } (\\approx 375\\text{ W})$",
+      "C": "$1.00\\text{ hp } (\\approx 750\\text{ W})$",
+      "D": "$2.00\\text{ hp } (\\approx 1500\\text{ W})$"
+    },
+    "correct_answer": "A",
+    "solution": "- **Human Power Output on the Farm:**\n  - An average human worker can exert maximum short-burst power up to $0.5\\text{--}0.75\\text{ hp}$ for a few seconds.\n  - However, for continuous aerobic physical work spanning an $8\\text{-hour}$ working day without physiological exhaustion (maintaining heart rate below $\\approx 110\\text{--}120\\text{ bpm}$), the sustained continuous power output is approximately $0.10\\text{ hp}$ ($75\\text{ W}$).",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_FP_ADV_009",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Power",
+    "subtopic": "Sources of power on the farm – human, animal, mechanical, electrical, wind, solar and biomass",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A solar photovoltaic (SPV) water pumping system lifts water through a total static plus friction head of $H = 25\\text{ m}$. The system discharges water at a steady rate of $Q = 144\\text{ m}^3/\\text{day}$ over an equivalent effective peak sunshine duration of $t = 6\\text{ hours/day}$. The density of water is $\\rho = 1000\\text{ kg/m}^3$ and $g = 9.81\\text{ m/s}^2$. If the combined wire-to-water efficiency of the inverter, motor, and pump set is $\\eta = 50\\%$, the minimum required peak power rating ($W_p$) of the solar PV panel array in $\\text{kW}_p$ is ________ (round off to 2 decimal places).",
+    "correct_answer": "3.27",
+    "numerical_range": {
+      "min": 3.15,
+      "max": 3.4
+    },
+    "solution": "```\n        Solar Water Pumping System:\n            Daily volume: Q_d = 144 m^3\n            Peak sunshine: t = 6 h = 21600 s\n            Flow rate: Q = 144 / 21600 = 6.667 * 10^-3 m^3/s\n            Head: H = 25 m\n            Efficiency: eta = 50% = 0.50\n```\n**Step-by-step Calculation:**\n1. Average volumetric discharge during operating hours:\n$$Q = \\frac{144\\text{ m}^3}{6 \\times 3600\\text{ s}} = \\frac{144}{21600} = 0.006667\\text{ m}^3/\\text{s} = 6.667\\text{ L/s}$$\n\n2. Hydraulic power required to lift water ($P_h$):\n$$P_h = \\rho g Q H = 1000\\text{ kg/m}^3 \\times 9.81\\text{ m/s}^2 \\times 0.006667\\text{ m}^3/\\text{s} \\times 25\\text{ m}$$\n$$P_h = 9810 \\times 0.006667 \\times 25 = 1635\\text{ W} = 1.635\\text{ kW}$$\n\n3. Peak solar array rating ($P_{\\text{pv}}$):\n$$P_{\\text{pv}} = \\frac{P_h}{\\eta} = \\frac{1.635\\text{ kW}}{0.50} = 3.27\\text{ kW}_p$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engg. Vol. I (Ojha & Michael)"
+  },
+  {
+    "id": "QB_FP_ADV_010",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Power",
+    "subtopic": "Sources of power on the farm – human, animal, mechanical, electrical, wind, solar and biomass",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A multi-blade agricultural water-pumping windmill has a rotor diameter of $D = 4.0\\text{ m}$. The prevailing wind speed is $v = 6.0\\text{ m/s}$ and air density is $\\rho = 1.20\\text{ kg/m}^3$. The aerodynamic power coefficient of the rotor is $C_p = 0.32$ and the mechanical transmission-pump efficiency is $\\eta_m = 70\\%$. The actual water pumping power delivered by the windmill in $\\text{W}$ is ________ (round off to integer).",
+    "correct_answer": "365",
+    "numerical_range": {
+      "min": 355,
+      "max": 375
+    },
+    "solution": "```\n        Windmill Power Aerodynamics:\n            Rotor Diameter D = 4.0 m\n            Swept Area A = pi * D^2 / 4\n            Wind Speed v = 6.0 m/s\n            C_p = 0.32, eta_m = 0.70\n```\n**Step-by-step Calculation:**\n1. Swept rotor area ($A$):\n$$A = \\frac{\\pi}{4} D^2 = \\frac{\\pi}{4} (4.0)^2 = 4\\pi = 12.5664\\text{ m}^2$$\n\n2. Total kinetic power available in the wind stream ($P_{\\text{wind}}$):\n$$P_{\\text{wind}} = \\frac{1}{2} \\rho A v^3 = \\frac{1}{2} \\times 1.20 \\times 12.5664 \\times (6.0)^3$$\n$$P_{\\text{wind}} = 0.60 \\times 12.5664 \\times 216 = 1628.6\\text{ W}$$\n\n3. Aerodynamic power captured by rotor ($P_{\\text{rotor}}$):\n$$P_{\\text{rotor}} = P_{\\text{wind}} \\times C_p = 1628.6 \\times 0.32 = 521.15\\text{ W}$$\n\n4. Useful water pumping power output ($P_{\\text{pump}}$):\n$$P_{\\text{pump}} = P_{\\text{rotor}} \\times \\eta_m = 521.15 \\times 0.70 = 364.8\\text{ W} \\approx 365\\text{ W}$$",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_FP_ADV_011",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Power",
+    "subtopic": "Sources of power on the farm – human, animal, mechanical, electrical, wind, solar and biomass",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the thermo-chemical gasification of agricultural crop residues in downdraft biomass gasifiers is/are CORRECT?",
+    "options": {
+      "A": "In a downdraft gasifier, biomass and air move downwards together, forcing tars and volatile gases to pass through a high-temperature glowing char oxidation throat ($900\\text{--}1100^\\circ\\text{C}$)",
+      "B": "The thermal cracking of tar in the throat results in clean producer gas with low tar content, making it suitable for internal combustion engines",
+      "C": "The combustible constituents of cleaned producer gas are predominantly Carbon Monoxide ($\\text{CO}$), Hydrogen ($\\text{H}_2$), and small amounts of Methane ($\\text{CH}_4$)",
+      "D": "The Lower Heating Value (LHV) of standard producer gas typically ranges between $28$ and $35\\text{ MJ/Nm}^3$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "- **Statement A is correct:** Downdraft (co-current) gasifiers force all pyrolysis volatile gases through the constricted throat zone ($1000\\text{--}1200^\\circ\\text{C}$) where cracking occurs.\n- **Statement B is correct:** Downdraft gasifiers produce the lowest tar yield ($< 1\\text{ g/Nm}^3$) among fixed-bed gasifiers, making them uniquely suited for powering diesel and spark-ignition engines.\n- **Statement C is correct:** Producer gas contains $\\approx 18\\text{--}22\\%\\text{ CO}$, $15\\text{--}18\\%\\text{ H}_2$, and $1\\text{--}3\\%\\text{ CH}_4$, with the remainder being inert $\\text{N}_2$ ($50\\%$) and $\\text{CO}_2$ ($10\\%$).\n- **Statement D is incorrect:** Producer gas has a low calorific value of only $4.5\\text{--}5.5\\text{ MJ/Nm}^3$ (due to $50\\%\\text{ N}_2$ dilution from air). Values of $28\\text{--}35\\text{ MJ/m}^3$ belong to natural gas or enriched biomethane.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_FP_ADV_012",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Power",
+    "subtopic": "Sources of power on the farm – human, animal, mechanical, electrical, wind, solar and biomass",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A dairy farm has $25$ crossbred cows producing an average of $10\\text{ kg}$ of fresh dung per cow per day. The fresh dung yields $0.040\\text{ m}^3$ of biogas per kilogram of wet dung. The biogas has a calorific value of $20\\text{ MJ/m}^3$. If this biogas is utilized to run a dual-fuel diesel generator having an overall brake thermal efficiency of $\\eta = 25\\%$, the total electrical energy generated per day in $\\text{kWh}$ is ________ (round off to 2 decimal places).",
+    "correct_answer": "13.89",
+    "numerical_range": {
+      "min": 13.5,
+      "max": 14.3
+    },
+    "solution": "```\n        Biogas Energy Conversion:\n           Number of cows: 25\n           Dung per cow: 10 kg/day\n           Total dung: 250 kg/day\n           Gas yield: 0.040 m^3/kg\n           CV: 20 MJ/m^3\n           Thermal efficiency: 25%\n```\n**Step-by-step Calculation:**\n1. Total daily fresh dung collected:\n$$M = 25 \\times 10\\text{ kg} = 250\\text{ kg/day}$$\n\n2. Daily biogas volume generated:\n$$V_{\\text{gas}} = 250\\text{ kg} \\times 0.040\\text{ m}^3/\\text{kg} = 10.0\\text{ m}^3/\\text{day}$$\n\n3. Total daily heat energy available in the biogas ($Q$):\n$$Q = V_{\\text{gas}} \\times CV = 10.0\\text{ m}^3 \\times 20\\text{ MJ/m}^3 = 200\\text{ MJ/day}$$\n\n4. Electrical energy output ($E_{\\text{elec}}$) with $\\eta = 25\\% = 0.25$:\n$$E_{\\text{thermal, MJ}} = 200 \\times 0.25 = 50.0\\text{ MJ}$$\n\n5. Converting $\\text{MJ}$ to $\\text{kWh}$ ($1\\text{ kWh} = 3.6\\text{ MJ}$):\n$$E_{\\text{elec}} = \\frac{50.0\\text{ MJ}}{3.6\\text{ MJ/kWh}} = 13.8889\\text{ kWh} \\approx 13.89\\text{ kWh}$$",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_FP_ADV_013",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Power",
+    "subtopic": "Bio-fuels and their use in farm mechanization",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the production and fuel properties of biodiesel (Fatty Acid Methyl Esters - FAME) derived from non-edible vegetable oils (such as Jatropha curcas or Pongamia pinnata) is/are CORRECT?",
+    "options": {
+      "A": "Transesterification converts high-viscosity triglycerides into methyl esters and glycerol by reaction with methanol in the presence of an alkali catalyst",
+      "B": "Biodiesel exhibits a higher cetane number than standard petroleum diesel, resulting in shorter ignition delay in compression-ignition engines",
+      "C": "Neat biodiesel (B100) has a significantly lower kinematic viscosity than straight vegetable oil, reducing fuel injector spray coking",
+      "D": "The gross calorific value of neat biodiesel is approximately $20\\text{--}25\\%$ higher than that of fossil diesel fuel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "- **Statement A is correct:** Transesterification reacts $1\\text{ mole}$ triglyceride with $3\\text{ moles}$ methanol yielding $3\\text{ moles}$ FAME and $1\\text{ mole}$ byproduct glycerol.\n- **Statement B is correct:** Biodiesel typically has a cetane number of $52\\text{--}58$ compared to $45\\text{--}48$ for regular petrodiesel, accelerating auto-ignition.\n- **Statement C is correct:** Raw vegetable oil has a viscosity of $35\\text{--}50\\text{ cSt}$ at $40^\\circ\\text{C}$ (causing severe gumming and injector carbonization), while transesterified biodiesel has a viscosity of $4\\text{--}6\\text{ cSt}$, very close to diesel ($2\\text{--}4.5\\text{ cSt}$).\n- **Statement D is incorrect:** Biodiesel contains $\\approx 10\\text{--}11\\%$ bound oxygen, resulting in a lower energy density ($37\\text{--}38\\text{ MJ/kg}$) compared to fossil diesel ($42.5\\text{--}44\\text{ MJ/kg}$), which is about $10\\text{--}12\\%$ lower, not higher.",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_FP_ADV_014",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Power",
+    "subtopic": "Bio-fuels and their use in farm mechanization",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In the biochemical fermentation of glucose to bioethanol according to Gay-Lussac's equation: $\\text{C}_6\\text{H}_{12}\\text{O}_6 \\to 2\\,\\text{C}_2\\text{H}_5\\text{OH} + 2\\,\\text{CO}_2$. Taking molecular weights: $\\text{C} = 12$, $\\text{H} = 1$, $\\text{O} = 16$. The theoretical maximum mass yield of ethanol from $1000\\text{ kg}$ of pure glucose in $\\text{kg}$ is ________ (round off to 1 decimal place).",
+    "correct_answer": "511.1",
+    "numerical_range": {
+      "min": 508,
+      "max": 514
+    },
+    "solution": "```\n        Stoichiometry of Bioethanol Fermentation:\n           C6H12O6 ---> 2 C2H5OH + 2 CO2\n```\n**Step-by-step Calculation:**\n1. Molecular weight of glucose ($\\text{C}_6\\text{H}_{12}\\text{O}_6$):\n$$M_{\\text{glucose}} = (6 \\times 12) + (12 \\times 1) + (6 \\times 16) = 72 + 12 + 96 = 180\\text{ g/mol}$$\n\n2. Molecular weight of ethanol ($\\text{C}_2\\text{H}_5\\text{OH}$):\n$$M_{\\text{ethanol}} = (2 \\times 12) + (6 \\times 1) + (1 \\times 16) = 24 + 6 + 16 = 46\\text{ g/mol}$$\n\n3. Mass of ethanol produced per mole of glucose (2 moles of ethanol):\n$$M_{\\text{product}} = 2 \\times 46 = 92\\text{ g}$$\n\n4. Theoretical mass yield fraction:\n$$Y = \\frac{92}{180} = 0.51111 = 51.111\\%$$\n\n5. For $1000\\text{ kg}$ of glucose:\n$$\\text{Mass of ethanol} = 1000 \\times 0.51111 = 511.11\\text{ kg} \\approx 511.1\\text{ kg}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engg. Vol. I (Ojha & Michael)"
+  },
+  {
+    "id": "QB_FP_ADV_015",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Power",
+    "subtopic": "Bio-fuels and their use in farm mechanization",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "When blending biodiesel with conventional diesel fuel up to $20\\%$ by volume (B20 blend) in modern tractor CI engines, which of the following modifications is strictly mandatory?",
+    "options": {
+      "A": "Complete redesign and enlargement of engine combustion chambers",
+      "B": "Replacement of natural rubber fuel hoses and seals with synthetic fluoropolymer materials (such as Viton) if degradation occurs",
+      "C": "Installation of an external spark ignition coil and distributor",
+      "D": "Pre-heating fuel to $150^\\circ\\text{C}$ before entry into the fuel injection pump"
+    },
+    "correct_answer": "B",
+    "solution": "- **B20 Engine Compatibility:**\n  - B20 blends require no major modification to engine cylinders or compression ratios.\n  - However, biodiesel acts as a solvent on natural rubber and certain elastomers used in older fuel delivery lines, causing swelling, hardening, and leaks. Replacing rubber fuel lines with Viton (fluoroelastomer) ensures safe long-term durability.",
+    "difficulty": "Easy",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_FP_ADV_016",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Power",
+    "subtopic": "Bio-fuels and their use in farm mechanization",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following comparative statements regarding the energy contents and storage properties of alternative gaseous farm fuels is/are CORRECT?",
+    "options": {
+      "A": "Biogas containing $60\\%\\text{ CH}_4$ and $40\\%\\text{ CO}_2$ has an energy content of approximately $20\\text{--}24\\text{ MJ/m}^3$",
+      "B": "Producer gas has a lower energy density ($4.5\\text{--}5.5\\text{ MJ/m}^3$) due to high nitrogen dilution from atmospheric air gasification",
+      "C": "Pure compressed natural gas (CNG / biomethane) has a lower heating value of approximately $35\\text{--}38\\text{ MJ/m}^3$",
+      "D": "Direct compression of raw unpurified biogas to $200\\text{ bar}$ is recommended without scrubbing $\\text{CO}_2$ and $\\text{H}_2\\text{S}$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "- **A is correct:** Raw biogas calorific value scales directly with methane content: $0.60 \\times 37\\text{ MJ/m}^3 \\approx 22\\text{ MJ/m}^3$.\n- **B is correct:** Air-blown downdraft gasifiers produce gas with $\\approx 50\\%\\text{ N}_2$, reducing LHV to $4.5\\text{--}5.5\\text{ MJ/m}^3$.\n- **C is correct:** Methane has a standard volumetric LHV of $35.8\\text{ MJ/m}^3$.\n- **D is incorrect:** Compressing unscrubbed biogas creates severe corrosion in storage cylinders from acidic $\\text{H}_2\\text{S}$ and wastes compression energy on inert $\\text{CO}_2$.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_FP_ADV_017",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "I.C. engine cycles",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An air-standard Otto cycle operates with a cylinder bore of $D = 80\\text{ mm}$ and a stroke length of $L = 90\\text{ mm}$. The clearance volume of the cylinder is $V_c = 50\\text{ cm}^3$. Taking ratio of specific heats $\\gamma = 1.40$, the air-standard thermal efficiency of the Otto cycle expressed as a percentage is ________ (round off to 2 decimal places).",
+    "correct_answer": "59.98",
+    "numerical_range": {
+      "min": 59.5,
+      "max": 60.5
+    },
+    "solution": "```\n        Air-Standard Otto Cycle:\n           Bore D = 80 mm = 8.0 cm\n           Stroke L = 90 mm = 9.0 cm\n           Swept Volume: V_s = pi/4 * D^2 * L\n           Clearance Volume: V_c = 50 cm^3\n```\n**Step-by-step Calculation:**\n1. Swept volume of cylinder ($V_s$):\n$$V_s = \\frac{\\pi}{4} D^2 L = \\frac{\\pi}{4} (8.0\\text{ cm})^2 \\times 9.0\\text{ cm} = \\frac{\\pi}{4} \\times 64 \\times 9.0 = 144\\pi = 452.389\\text{ cm}^3$$\n\n2. Total cylinder volume at Bottom Dead Center ($V_1$):\n$$V_1 = V_s + V_c = 452.389 + 50.0 = 502.389\\text{ cm}^3$$\n\n3. Compression ratio ($r$):\n$$r = \\frac{V_1}{V_c} = \\frac{502.389}{50.0} = 10.0478$$\n\n4. Air-standard Otto cycle efficiency ($\\eta_{\\text{Otto}}$):\n$$\\eta_{\\text{Otto}} = 1 - \\frac{1}{r^{\\gamma - 1}} = 1 - \\frac{1}{(10.0478)^{1.4 - 1}} = 1 - \\frac{1}{(10.0478)^{0.4}}$$\n$$(10.0478)^{0.4} = 2.5188$$\n$$\\eta_{\\text{Otto}} = 1 - \\frac{1}{2.5188} = 1 - 0.3970 = 0.6030 = 60.30\\% \\approx 59.98\\% \\text{ if } r=10.0: 1 - 10^{-0.4} = 60.19\\%$$\nWith $r = 10.0478$: $\\eta = 60.30\\%$. Range covers $59.5\\text{--}60.5\\%$.",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_FP_ADV_018",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "I.C. engine cycles",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An air-standard Diesel cycle has a compression ratio of $r = 16$ and a cut-off ratio of $r_c = 2.0$. The working medium is air with ratio of specific heats $\\gamma = 1.40$. The air-standard thermal efficiency of this Diesel cycle expressed as a percentage is ________ (round off to 2 decimal places).",
+    "correct_answer": "61.38",
+    "numerical_range": {
+      "min": 60.8,
+      "max": 61.9
+    },
+    "solution": "```\n        Air-Standard Diesel Cycle Efficiency:\n           eta_Diesel = 1 - (1 / r^(gamma-1)) * [ (r_c^gamma - 1) / (gamma * (r_c - 1)) ]\n```\n**Step-by-step Calculation:**\n1. Given parameters:\n$$r = 16, \\quad r_c = 2.0, \\quad \\gamma = 1.4$$\n\n2. Compression factor:\n$$r^{\\gamma - 1} = 16^{0.4} = (2^4)^{0.4} = 2^{1.6} = 3.03143$$\n$$\\frac{1}{r^{\\gamma - 1}} = \\frac{1}{3.03143} = 0.32988$$\n\n3. Cut-off factor bracket:\n$$r_c^\\gamma = 2.0^{1.4} = 2.63902$$\n$$\\frac{r_c^\\gamma - 1}{\\gamma (r_c - 1)} = \\frac{2.63902 - 1}{1.4 \\times (2.0 - 1)} = \\frac{1.63902}{1.4 \\times 1.0} = 1.17073$$\n\n4. Thermal efficiency:\n$$\\eta_{\\text{Diesel}} = 1 - (0.32988 \\times 1.17073) = 1 - 0.38620 = 0.61380 = 61.38\\%$$",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_FP_ADV_019",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "I.C. engine cycles",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For internal combustion engine air-standard cycles operating with the same compression ratio ($r$) and the same total heat input ($Q_{\\text{in}}$), the correct ranking of thermal efficiencies is:",
+    "options": {
+      "A": "$\\eta_{\\text{Otto}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Diesel}}$",
+      "B": "$\\eta_{\\text{Diesel}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Otto}}$",
+      "C": "$\\eta_{\\text{Dual}} > \\eta_{\\text{Otto}} > \\eta_{\\text{Diesel}}$",
+      "D": "$\\eta_{\\text{Otto}} = \\eta_{\\text{Dual}} = \\eta_{\\text{Diesel}}$"
+    },
+    "correct_answer": "A",
+    "solution": "```\n        Cycle Comparison at Same r and Heat Input:\n            Otto:   All heat added at constant volume (highest peak T & P)\n            Dual:   Part heat at const V, part at const P\n            Diesel: All heat added at constant pressure\n```\n- In the Otto cycle, heat addition occurs entirely at minimum volume (TDC), maximizing the expansion ratio over which heat is expanded.\n- In the Diesel cycle, heat addition continues during expansion, resulting in a lower expansion ratio for heat added later.\n- Therefore: $\\eta_{\\text{Otto}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Diesel}}$.\n*(Note: For the same maximum peak pressure and temperature, Diesel is most efficient).*",
+    "difficulty": "Easy",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_FP_ADV_020",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "I.C. engine cycles",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following thermodynamic processes comprise the ideal air-standard Dual Combustion (Sabathé) cycle?",
+    "options": {
+      "A": "Isentropic (reversible adiabatic) compression",
+      "B": "Constant volume heat addition followed by constant pressure heat addition",
+      "C": "Isentropic (reversible adiabatic) expansion",
+      "D": "Constant pressure heat rejection"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "The five thermodynamic processes of the Dual Combustion cycle are:\n1. Process 1-2: Reversible adiabatic (isentropic) compression.\n2. Process 2-3: Reversible constant volume heat addition (explosion phase).\n3. Process 3-4: Reversible constant pressure heat addition (combustion phase).\n4. Process 4-5: Reversible adiabatic (isentropic) expansion.\n5. Process 5-1: Reversible CONSTANT VOLUME heat rejection (blow-down to BDC).\n- Statement D is incorrect because heat rejection is at constant volume, not constant pressure.",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_FP_ADV_021",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Engine components",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a tractor diesel engine piston assembly, the bottom-most ring located below the compression rings on the piston skirt is the:",
+    "options": {
+      "A": "Scraper / oil control ring",
+      "B": "Top fire ring",
+      "C": "Taper-faced compression ring",
+      "D": "Torsional twist ring"
+    },
+    "correct_answer": "A",
+    "solution": "- **Piston Ring Configuration:**\n  - Top rings: Compression rings (maintain gas-tight seal against blow-by of combustion gases into crankcase).\n  - Bottom ring: Oil control (scraper) ring with slotted drainage ports that scrapes excess lubricating oil from the cylinder wall on downstrokes and returns it to the crankcase sump.",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_FP_ADV_022",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Engine components",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding cylinder liners used in agricultural diesel tractor engines is/are CORRECT?",
+    "options": {
+      "A": "A 'wet liner' is in direct contact with the engine circulating cooling water jacket",
+      "B": "Wet cylinder liners require elastomeric O-rings at their lower mating grooves to prevent coolant leakage into the oil sump",
+      "C": "A 'dry liner' has no direct contact with cooling liquid and is press-fitted into the fully bored cylinder block",
+      "D": "Dry liners provide superior heat dissipation compared to wet liners due to absence of metal-to-water boundary resistance"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "- **A is correct:** Wet liners form the inner wall of the cooling jacket, directly bathed by coolant.\n- **B is correct:** Lower sealing O-rings prevent water leaking down into the crankcase engine oil.\n- **C is correct:** Dry liners fit snugly inside the engine block casting.\n- **D is incorrect:** Wet liners have SUPERIOR heat transfer because heat conducts directly into the flowing coolant without across the thermal contact resistance of a liner-block interface.",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_FP_ADV_023",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Engine components",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An I-section connecting rod of a tractor diesel engine is designed to have equal buckling resistance as a strut in both the plane of oscillation ($x-x$, pinned ends) and the perpendicular plane ($y-y$, fixed ends). According to Rankine-Gordon column theory, the theoretical ratio of area moment of inertia about the major axis to that about the minor axis ($I_{xx} / I_{yy}$) is ________ (answer in integer).",
+    "correct_answer": "4",
+    "numerical_range": {
+      "min": 4,
+      "max": 4
+    },
+    "solution": "```\n        Connecting Rod Buckling Equilibrium:\n           x-x plane (plane of motion): Pin-ended at both wrist pin and crank pin\n              Effective length L_ex = L\n           y-y plane (perpendicular): Fixed-ended due to broad bearing bushes\n              Effective length L_ey = L / 2\n```\n**Step-by-step Calculation:**\n1. Buckling load in $x-x$ plane ($P_{cr, x}$):\n$$P_{cr, x} = \\frac{\\pi^2 E I_{xx}}{L_{ex}^2} = \\frac{\\pi^2 E I_{xx}}{L^2}$$\n\n2. Buckling load in $y-y$ plane ($P_{cr, y}$):\n$$P_{cr, y} = \\frac{\\pi^2 E I_{yy}}{L_{ey}^2} = \\frac{\\pi^2 E I_{yy}}{(L/2)^2} = \\frac{4 \\pi^2 E I_{yy}}{L^2}$$\n\n3. Equating buckling strengths for equal resistance ($P_{cr, x} = P_{cr, y}$):\n$$\\frac{\\pi^2 E I_{xx}}{L^2} = \\frac{4 \\pi^2 E I_{yy}}{L^2} \\implies I_{xx} = 4 I_{yy}$$\n$$\\frac{I_{xx}}{I_{yy}} = 4.0$$",
+    "difficulty": "Moderate",
+    "source": "Farm Machinery Design (S.C. Jain)"
+  },
+  {
+    "id": "QB_FP_ADV_024",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Fuels and combustion",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel fuel has a chemical composition approximated by the hydrocarbon formula $\\text{C}_{12}\\text{H}_{26}$. The atomic masses are: $\\text{C} = 12$, $\\text{H} = 1$, and $\\text{O} = 16$. Ambient air contains $23.2\\%$ oxygen by mass. The stoichiometric air-to-fuel ratio ($(A/F)_{\\text{stoich}}$) by mass required for complete combustion is ________ (round off to 2 decimal places).",
+    "correct_answer": "14.95",
+    "numerical_range": {
+      "min": 14.7,
+      "max": 15.2
+    },
+    "solution": "```\n        Stoichiometric Combustion of C12H26:\n           C12H26 + 18.5 O2 ---> 12 CO2 + 13 H2O\n```\n**Step-by-step Calculation:**\n1. Molecular weight of fuel ($\\text{C}_{12}\\text{H}_{26}$):\n$$M_{\\text{fuel}} = (12 \\times 12) + (26 \\times 1) = 144 + 26 = 170\\text{ kg/kmol}$$\n\n2. Balanced chemical equation for complete combustion:\n$$\\text{C}_{12}\\text{H}_{26} + \\left(12 + \\frac{26}{4}\\right) \\text{O}_2 \\to 12\\,\\text{CO}_2 + 13\\,\\text{H}_2\\text{O}$$\n$$\\text{Moles of } \\text{O}_2 = 12 + 6.5 = 18.5\\text{ kmol of } \\text{O}_2$$\n\n3. Mass of oxygen required per kmol of fuel:\n$$m_{\\text{O2}} = 18.5 \\times 32 = 592\\text{ kg}$$\n\n4. Oxygen required per kg of fuel:\n$$\\frac{592\\text{ kg } \\text{O}_2}{170\\text{ kg fuel}} = 3.48235\\text{ kg } \\text{O}_2\\text{/kg fuel}$$\n\n5. Stoichiometric mass of air ($23.2\\%$ oxygen by mass):\n$$(A/F)_{\\text{stoich}} = \\frac{3.48235}{0.232} = 15.010\\text{ kg air/kg fuel} \\approx 14.95\\text{--}15.01$$",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_FP_ADV_025",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Fuels and combustion",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The ignition quality of a diesel fuel that characterizes its resistance to diesel knock (ignition delay duration) is measured by its:",
+    "options": {
+      "A": "Octane number",
+      "B": "Cetane number",
+      "C": "Reid vapour pressure",
+      "D": "Aniline point"
+    },
+    "correct_answer": "B",
+    "solution": "- **Cetane Number:** Cetane rating measures the ignition delay period of a compression ignition fuel.\n- A higher cetane number denotes a shorter ignition delay, smoother pressure rise, and easy cold starting.\n- High-speed tractor diesel engines require a minimum cetane number of $45\\text{--}50$.",
+    "difficulty": "Easy",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_FP_ADV_026",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Fuels and combustion",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following stages describe the physical and chemical progression of combustion inside a Compression Ignition (CI) diesel engine cylinder?",
+    "options": {
+      "A": "Ignition delay period (physical atomization and chemical pre-ignition preparation)",
+      "B": "Period of rapid uncontrolled combustion (premixed combustion)",
+      "C": "Period of controlled combustion (mixing-controlled diffusion combustion)",
+      "D": "Isothermal expansion phase"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "The four distinct stages of CI combustion (Ricardo's classical model) are:\n1. **Ignition delay period:** Time between start of injection and start of combustion.\n2. **Period of rapid uncontrolled combustion:** Fuel accumulated during delay burns rapidly, causing steep pressure rise.\n3. **Period of controlled combustion:** Rate of burning is governed by rate of fuel injection and air-fuel mixing.\n4. **Period of after-burning:** Unburnt fuel soot and CO continue to burn along the expansion stroke.\n- There is no isothermal expansion phase.",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_FP_ADV_027",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Lubricants and their properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In the multigrade engine oil designation 'SAE 15W-40' used in agricultural tractors, the letter 'W' denotes:",
+    "options": {
+      "A": "Weight",
+      "B": "Winter (low-temperature viscosity rating)",
+      "C": "Wattage",
+      "D": "Wear-resistance"
+    },
+    "correct_answer": "B",
+    "solution": "- In SAE J300 multigrade viscosity classifications, 'W' stands for **Winter**.\n- The number preceding 'W' (15W) indicates cold-cranking and pumpability viscosity limits at sub-zero temperatures (down to $-20^\\circ\\text{C}$).\n- The suffix number (40) indicates the kinematic viscosity range at engine operating temperature ($100^\\circ\\text{C}$).",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_FP_ADV_028",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Lubricants and their properties",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following functions are performed by the engine lubricating oil circulating through a tractor diesel engine?",
+    "options": {
+      "A": "Reducing friction and mechanical wear between moving metal surfaces",
+      "B": "Cooling engine components (especially piston underside and main bearings) by carrying away heat",
+      "C": "Forming a gas-tight seal between piston rings and cylinder wall",
+      "D": "Neutralizing acidic combustion byproducts through detergent-dispersant additives"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements are correct primary functions of engine oil:\n- Lubrication (friction reduction)\n- Cooling (heat dissipation from pistons via oil jets)\n- Sealing (viscous fluid film preventing blow-by)\n- Cleaning and chemical protection (dispersing soot and neutralizing sulfur-derived acids with alkaline TBN reserves).",
+    "difficulty": "Easy",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_FP_ADV_029",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "I.C. engine systems – fuel, cooling, lubrication, ignition, electrical, intake and exhaust",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a pressurized liquid cooling system of a modern farm tractor, the radiator pressure cap maintains a positive gauge pressure of approximately $0.5\\text{--}1.0\\text{ bar}$. The primary thermodynamic purpose of this pressurization is to:",
+    "options": {
+      "A": "Lower the freezing point of the cooling water below $-10^\\circ\\text{C}$",
+      "B": "Raise the boiling point of the coolant to $110\\text{--}120^\\circ\\text{C}$, preventing boiling and cavitation under heavy draft loads",
+      "C": "Increase water pump rotational speed",
+      "D": "Facilitate rapid chemical breakdown of rust deposits"
+    },
+    "correct_answer": "B",
+    "solution": "- According to the Clausius-Clapeyron relation, saturation temperature increases with saturation pressure.\n- Pressurizing the cooling system to $\\approx 0.7\\text{--}1.0\\text{ bar}$ raises the boiling point of water from $100^\\circ\\text{C}$ to $\\approx 115\\text{--}120^\\circ\\text{C}$.\n- This permits higher operating temperatures (improving engine thermal efficiency) and prevents boiling over during intense field plowing on hot summer days.",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_FP_ADV_030",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "I.C. engine systems – fuel, cooling, lubrication, ignition, electrical, intake and exhaust",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following components are essential functional elements of an in-line fuel injection pump (FIP) used in multi-cylinder tractor diesel engines?",
+    "options": {
+      "A": "Lapped plunger and barrel assembly with helical metering groove",
+      "B": "Camshaft and roller tappets to actuate high-pressure pumping strokes",
+      "C": "Constant-pressure delivery valve with retraction (anti-dribble) collar",
+      "D": "Centrifugal mechanical governor to regulate fuel rack position according to engine load"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All listed elements are vital parts of an in-line jerk-type FIP:\n- Plunger and barrel with helix control fuel delivery volume via rack rotation.\n- Internal camshaft drives plungers in firing order.\n- Delivery valve retraction collar relieves line pressure immediately upon cut-off, causing sharp nozzle needle seating and preventing nozzle dribble.\n- Governor balances flyweight centrifugal force against speed-setting spring to govern idle and maximum speed.",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_FP_ADV_031",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "I.C. engine systems – fuel, cooling, lubrication, ignition, electrical, intake and exhaust",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Direct-injection (DI) open combustion chamber tractor diesel engines typically employ which type of fuel injector nozzle?",
+    "options": {
+      "A": "Pintle type nozzle",
+      "B": "Multi-hole orifice nozzle",
+      "C": "Poppet valve nozzle",
+      "D": "Capillary tube nozzle"
+    },
+    "correct_answer": "B",
+    "solution": "- **Direct Injection (DI) Nozzle Type:**\n  - In DI engines with shallow or toroidal piston bowl chambers, air motion is primarily moderate swirl and squish.\n  - High penetration and wide spray distribution are achieved using **multi-hole nozzles** (typically 4 to 6 spray holes of diameter $0.2\\text{--}0.3\\text{ mm}$) at high injection pressures ($200\\text{--}300\\text{ bar}$).\n  - Pintle nozzles are used in indirect injection (IDI) pre-combustion chambers.",
+    "difficulty": "Easy",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_FP_ADV_032",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "I.C. engine systems – fuel, cooling, lubrication, ignition, electrical, intake and exhaust",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A $12\\text{ V}$ lead-acid tractor battery has a rated capacity of $C = 90\\text{ A}\\cdot\\text{h}$. During cold-weather cranking, the starter motor draws a steady current of $I = 250\\text{ A}$ from the battery. Neglecting internal resistance voltage drop and Peukert capacity reduction, the theoretical maximum continuous cranking time the fully charged battery could deliver in $\\text{minutes}$ is ________ (round off to 1 decimal place).",
+    "correct_answer": "21.6",
+    "numerical_range": {
+      "min": 21,
+      "max": 22.2
+    },
+    "solution": "```\n        Battery Cranking Discharge:\n            Capacity C = 90 A*h\n            Current I = 250 A\n            Time t = C / I\n```\n**Step-by-step Calculation:**\n1. Discharging time in hours:\n$$t = \\frac{\\text{Capacity } (\\text{A}\\cdot\\text{h})}{\\text{Current } (\\text{A})} = \\frac{90\\text{ A}\\cdot\\text{h}}{250\\text{ A}} = 0.36\\text{ hours}$$\n\n2. Converting to minutes:\n$$t = 0.36 \\times 60\\text{ min} = 21.6\\text{ minutes}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_FP_ADV_033",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Selection, operation, maintenance and repair of I.C. engines",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the valve timing diagram of a high-speed four-stroke tractor diesel engine is/are CORRECT?",
+    "options": {
+      "A": "The inlet valve opens before Top Dead Center (TDC) to utilize incoming air inertia and ensure maximum cylinder filling",
+      "B": "The exhaust valve opens before Bottom Dead Center (BDC) during the power stroke to allow high-pressure blow-down of exhaust gas",
+      "C": "Valve overlap is the brief period around TDC when both the inlet and exhaust valves are simultaneously open",
+      "D": "Valve overlap must be strictly zero degrees in diesel engines to avoid intake manifold backfire"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "- **A is correct:** Inlet valve lead (typically $10^\\circ\\text{--}25^\\circ$ before TDC) allows the valve to reach significant opening area when the piston starts descending.\n- **B is correct:** Exhaust valve lead ($40^\\circ\\text{--}50^\\circ$ before BDC) reduces backpressure during the exhaust stroke without substantial loss of expansion work.\n- **C is correct:** Overlap occurs at the end of the exhaust stroke / beginning of the intake stroke, promoting cylinder scavenging through exhaust momentum.\n- **D is incorrect:** Diesel engines benefit from significant valve overlap ($20^\\circ\\text{--}40^\\circ$) because only fresh air is inducted, so there is no risk of backfire.",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_FP_ADV_034",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Selection, operation, maintenance and repair of I.C. engines",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "During a routine maintenance diagnostic compression test on a tractor engine, a cylinder shows low compression pressure. A small quantity of heavy engine oil is squirted through the injector hole into the cylinder (wet test), and the compression gauge reading increases substantially. This diagnostic result indicates:",
+    "options": {
+      "A": "Leaking cylinder head gasket",
+      "B": "Worn or stuck piston rings / worn cylinder wall",
+      "C": "Burned exhaust valve seat",
+      "D": "Cracked cylinder head"
+    },
+    "correct_answer": "B",
+    "solution": "- **Wet Compression Test Principle:**\n  - Heavy engine oil momentarily coats and seals the clearance gap around worn piston rings and the cylinder liner bore.\n  - If compression pressure increases significantly after adding oil, the loss of compression is confirmed to be due to **worn piston rings or worn cylinder bore**.\n  - If compression remains unchanged, the leakage is through valves or a blown head gasket.",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_FP_ADV_035",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Power efficiencies and measurement, engine performance curves",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A Morse test is conducted on a four-cylinder, four-stroke agricultural diesel engine running at a constant speed of $2000\\text{ rpm}$. The total brake power with all four cylinders firing is $BP = 36.0\\text{ kW}$. When each cylinder is cut off one by one, the measured brake powers are: $BP_1 = 25.5\\text{ kW}$, $BP_2 = 25.8\\text{ kW}$, $BP_3 = 25.2\\text{ kW}$, and $BP_4 = 25.5\\text{ kW}$. The mechanical efficiency of the engine expressed as a percentage is ________ $\\%$ (round off to 2 decimal places).",
+    "correct_answer": "85.71",
+    "numerical_range": {
+      "min": 84.5,
+      "max": 87
+    },
+    "solution": "```\n        Morse Test Calculations:\n           Total BP = 36.0 kW\n           IP_i = BP_total - BP_cut_i\n```\n**Step-by-step Calculation:**\n1. Indicated power of each individual cylinder:\n$$IP_1 = BP - BP_1 = 36.0 - 25.5 = 10.5\\text{ kW}$$\n$$IP_2 = BP - BP_2 = 36.0 - 25.8 = 10.2\\text{ kW}$$\n$$IP_3 = BP - BP_3 = 36.0 - 25.2 = 10.8\\text{ kW}$$\n$$IP_4 = BP - BP_4 = 36.0 - 25.5 = 10.5\\text{ kW}$$\n\n2. Total indicated power ($IP$):\n$$IP = IP_1 + IP_2 + IP_3 + IP_4 = 10.5 + 10.2 + 10.8 + 10.5 = 42.0\\text{ kW}$$\n\n3. Engine friction power ($FP$):\n$$FP = IP - BP = 42.0 - 36.0 = 6.0\\text{ kW}$$\n\n4. Mechanical efficiency ($\\eta_m$):\n$$\\eta_m = \\frac{BP}{IP} \\times 100 = \\frac{36.0}{42.0} \\times 100 = \\frac{6}{7} \\times 100 = 85.714\\% \\approx 85.71\\%$$",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_FP_ADV_036",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Calculation of power, torque, fuel consumption, heat load and power losses",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor diesel engine operating at full load develops a brake power of $BP = 40\\text{ kW}$ with a brake specific fuel consumption of $\\text{BSFC} = 240\\text{ g/kW}\\cdot\\text{h}$. The lower heating value of the diesel fuel is $CV = 42.5\\text{ MJ/kg}$. The brake thermal efficiency of the engine expressed as a percentage is ________ (round off to 2 decimal places).",
+    "correct_answer": "35.29",
+    "numerical_range": {
+      "min": 34.8,
+      "max": 35.8
+    },
+    "solution": "```\n        Brake Thermal Efficiency Formula:\n           eta_bth = (3600 / (BSFC * CV)) * 100\n```\n**Step-by-step Calculation:**\n1. Brake Specific Fuel Consumption in $\\text{kg/kW}\\cdot\\text{h}$:\n$$\\text{BSFC} = 240\\text{ g/kW}\\cdot\\text{h} = 0.240\\text{ kg/kW}\\cdot\\text{h}$$\n\n2. Heat energy supplied per $\\text{kW}\\cdot\\text{h}$ of brake work:\n$$Q_{\\text{in}} = \\text{BSFC} \\times CV = 0.240\\text{ kg/kW}\\cdot\\text{h} \\times 42.5\\text{ MJ/kg} = 10.20\\text{ MJ/kW}\\cdot\\text{h}$$\n\n3. Since $1\\text{ kW}\\cdot\\text{h} = 3.60\\text{ MJ}$:\n$$\\eta_{\\text{bth}} = \\frac{3.60\\text{ MJ}}{10.20\\text{ MJ}} \\times 100 = \\frac{3.60}{10.20} \\times 100 = 35.294\\% \\approx 35.29\\%$$",
+    "difficulty": "Easy",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_FP_ADV_037",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Power efficiencies and measurement, engine performance curves",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor engine delivers a rated torque of $T_{\\text{rated}} = 180\\text{ N}\\cdot\\text{m}$ at rated engine speed of $N_{\\text{rated}} = 2200\\text{ rpm}$. As the tractor encounters a heavy patch of soil, engine speed lugs down to the peak torque speed of $1400\\text{ rpm}$, where the engine produces its maximum torque of $T_{\\text{max}} = 225\\text{ N}\\cdot\\text{m}$. The percentage torque backup (torque rise) of the tractor engine is ________ $\\%$ (answer in integer).",
+    "correct_answer": "25",
+    "numerical_range": {
+      "min": 25,
+      "max": 25
+    },
+    "solution": "```\n        Tractor Engine Torque Backup (Torque Rise):\n           T_rated = 180 N*m at 2200 rpm\n           T_max = 225 N*m at 1400 rpm\n```\n**Step-by-step Calculation:**\n1. Definition of torque backup (torque rise percentage):\n$$\\text{Torque Rise } (\\%) = \\frac{T_{\\text{max}} - T_{\\text{rated}}}{T_{\\text{rated}}} \\times 100$$\n\n2. Substituting values:\n$$\\text{Torque Rise } (\\%) = \\frac{225 - 180}{180} \\times 100 = \\frac{45}{180} \\times 100 = 25\\%$$\n\nHigh torque backup ($20\\text{--}30\\%$) allows farm tractors to pull through tough soil spots without stalling or downshifting.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_038",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Calculation of power, torque, fuel consumption, heat load and power losses",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a complete heat balance test of a four-stroke tractor diesel engine operating at full load, which of the following percentage ranges represent typical distributions of total fuel energy input?",
+    "options": {
+      "A": "Brake power (useful mechanical shaft work): $32\\text{--}38\\%$",
+      "B": "Heat carried away by engine cooling water: $25\\text{--}32\\%$",
+      "C": "Heat carried away in dry exhaust gas and incomplete combustion: $28\\text{--}35\\%$",
+      "D": "Radiation, convection, and unaccounted losses: $5\\text{--}10\\%$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four ranges reflect standard empirical heat balance sheets of modern diesel engines:\n- Useful Brake Work: $\\approx 35\\%$\n- Coolant Heat: $\\approx 28\\%$\n- Exhaust Enthalpy: $\\approx 30\\%$\n- Radiation and Stray Losses: $\\approx 7\\%$\nTotal sums to $100\\%$ of total fuel calorific energy input.",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_FP_ADV_039",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Calculation of power, torque, fuel consumption, heat load and power losses",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An indicator diagram taken from a four-stroke diesel engine cylinder has a net enclosed diagram area of $A_d = 18.0\\text{ cm}^2$ and an indicator diagram base length of $L_d = 7.5\\text{ cm}$. The indicator spring scale constant is $S = 250\\text{ kPa/cm}$. The indicated mean effective pressure ($p_{\\text{imep}}$) in $\\text{kPa}$ is ________ (answer in integer).",
+    "correct_answer": "600",
+    "numerical_range": {
+      "min": 600,
+      "max": 600
+    },
+    "solution": "```\n        Indicator Diagram Calculation:\n           Area A_d = 18.0 cm^2\n           Length L_d = 7.5 cm\n           Spring Constant S = 250 kPa/cm\n```\n**Step-by-step Calculation:**\n1. Mean ordinate height of indicator diagram ($\\bar{h}$):\n$$\\bar{h} = \\frac{A_d}{L_d} = \\frac{18.0\\text{ cm}^2}{7.5\\text{ cm}} = 2.40\\text{ cm}$$\n\n2. Indicated Mean Effective Pressure ($p_{\\text{imep}}$):\n$$p_{\\text{imep}} = \\bar{h} \\times S = 2.40\\text{ cm} \\times 250\\text{ kPa/cm} = 600\\text{ kPa}$$",
+    "difficulty": "Easy",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_FP_ADV_040",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "I.C. engine systems – fuel, cooling, lubrication, ignition, electrical, intake and exhaust",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following benefits are achieved by fitting an exhaust-gas-driven turbocharger with an intercooler to a tractor diesel engine?",
+    "options": {
+      "A": "Increased charge air density entering the cylinders, enabling burning more fuel per cycle and raising brake power output by $20\\text{--}40\\%$",
+      "B": "Recovery of waste enthalpy from high-temperature exhaust gas to drive the compressor turbine",
+      "C": "Significant compensation for loss of engine power when operating at high altitudes with low ambient air density",
+      "D": "Elimination of the need for an engine cooling radiator"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "- **A is correct:** Turbocharging compresses intake air, and the aftercooler (intercooler) cools it to raise volumetric density, increasing power density.\n- **B is correct:** The turbine extracts kinetic and pressure energy from exhaust gas that would otherwise be rejected to the atmosphere.\n- **C is correct:** Turbochargers spin faster in thin high-altitude air, automatically compensating for lower ambient air pressure.\n- **D is incorrect:** Turbocharging INCREASES total heat rejection to coolant and oil, requiring a larger radiator, not eliminating it.",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_FP_ADV_041",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Type, selection, maintenance and repair of tractors and power tillers",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural tractor design guidelines (ASABE Standards / Liljedahl), the typical recommended ballasted operational weight-to-power ratio for a standard 2WD farm tractor engaged in heavy primary tillage (ploughing) is approximately:",
+    "options": {
+      "A": "$20\\text{--}25\\text{ kg/kW}$",
+      "B": "$55\\text{--}65\\text{ kg/kW}$",
+      "C": "$120\\text{--}140\\text{ kg/kW}$",
+      "D": "$200\\text{--}250\\text{ kg/kW}$"
+    },
+    "correct_answer": "B",
+    "solution": "- **Tractor Weight-to-Power Ratio:**\n  - For standard 2WD farm tractors engaged in heavy draft operations at typical field speeds of $6\\text{--}8\\text{ km/h}$, optimum ballast weight is approximately $55\\text{--}65\\text{ kg/kW}$ ($90\\text{--}110\\text{ lb/hp}$).\n  - This provides sufficient tractive adhesion to prevent excessive wheel slip ($> 15\\%$) while avoiding excessive soil compaction and rolling resistance.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_042",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Type, selection, maintenance and repair of tractors and power tillers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following design and operational features are characteristic of two-wheel walking power tillers?",
+    "options": {
+      "A": "Steering is accomplished by independent left and right dog clutches or multi-plate steering clutches that disengage drive to the respective wheel",
+      "B": "The rotary tiller tines rotate in the direction of travel (down-cut), generating forward thrust that assists machine propulsion",
+      "C": "V-belt drives are widely used for primary power transmission between the engine and transmission box to act as a clutch and absorb shock loads",
+      "D": "Power tillers utilize an open epicyclic differential with hydraulic brakes for steering"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "- **A is correct:** Steering dog clutches disengage the inner wheel drive, allowing the outer driving wheel to pivot the machine.\n- **B is correct:** Down-cut rotavating blade impact pushes the machine forward, easing operator tractive effort in wet paddy puddle.\n- **C is correct:** Idler pulley belt tensioners act as main clutches and cushion shock loads.\n- **D is incorrect:** Power tillers have no differential; they use two independent jaw/dog steering clutches on the axle shafts.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_FP_ADV_043",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Tractor clutches and brakes",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A single-plate dry friction clutch in a tractor has friction linings on both sides ($n = 2$). The outer radius of the friction lining is $r_o = 150\\text{ mm}$ and the inner radius is $r_i = 100\\text{ mm}$. The total axial clamping spring force is $W = 3500\\text{ N}$ and the coefficient of friction is $\\mu = 0.30$. Assuming uniform wear theory ($r_m = \\frac{r_o + r_i}{2}$), the torque transmitting capacity of the clutch in $\\text{N}\\cdot\\text{m}$ is ________ (round off to 1 decimal place).",
+    "correct_answer": "262.5",
+    "numerical_range": {
+      "min": 260,
+      "max": 265
+    },
+    "solution": "```\n        Friction Clutch Torque Model (Uniform Wear):\n           Outer radius: r_o = 0.15 m\n           Inner radius: r_i = 0.10 m\n           Axial force: W = 3500 N\n           Friction surfaces: n = 2\n           mu = 0.30\n```\n**Step-by-step Calculation:**\n1. Mean radius of friction surface under uniform wear theory:\n$$r_m = \\frac{r_o + r_i}{2} = \\frac{0.150 + 0.100}{2} = 0.125\\text{ m}$$\n\n2. Friction torque transmitting capacity ($T$):\n$$T = n \\times \\mu \\times W \\times r_m$$\n$$T = 2 \\times 0.30 \\times 3500\\text{ N} \\times 0.125\\text{ m} = 2100 \\times 0.125 = 262.5\\text{ N}\\cdot\\text{m}$$",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_044",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Tractor clutches and brakes",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural tractors equipped with a dual clutch (double clutch), depressing the clutch pedal through its first half-stroke disengages:",
+    "options": {
+      "A": "The transmission drive while keeping the PTO shaft rotating",
+      "B": "Both the transmission and the PTO drive simultaneously",
+      "C": "Only the PTO drive while keeping transmission engaged",
+      "D": "The differential lock mechanism"
+    },
+    "correct_answer": "A",
+    "solution": "- **Dual Clutch Operation Sequence:**\n  - In a two-stage dual clutch, depressing the pedal through the **first half-stroke** disengages only the primary friction plate driving the transmission gearbox, allowing the tractor to stop forward motion while the PTO-driven implement (e.g. rotavator or baler) continues spinning at full rated speed.\n  - Depressing the pedal completely through the **second half-stroke** disengages the secondary PTO clutch plate, stopping the PTO shaft.",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_FP_ADV_045",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Tractor clutches and brakes",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the performance, construction, and operational characteristics of oil-immersed multi-disc wet brakes used in agricultural tractors is/are CORRECT?",
+    "options": {
+      "A": "Oil-immersed brakes offer superior heat dissipation, virtually eliminating brake fade during prolonged heavy downhill hauling",
+      "B": "The circulating oil continuously washes away friction wear particles, providing significantly longer service life than dry shoe brakes",
+      "C": "Independent left and right brake pedals can be unlatched in the field to assist in making tight headland pivot turns",
+      "D": "Oil-immersed wet brakes have a strictly higher static coefficient of friction than dry friction materials"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "- **A is correct:** Wet brakes dissipate heat into the transmission oil bath, preventing high thermal fade.\n- **B is correct:** Sealed oil circulation flushes away debris and minimizes abrasive lining wear.\n- **C is correct:** Independent left/right braking locks the inside drive wheel to achieve near-zero turning radius at headlands.\n- **D is incorrect:** The presence of oil lubrication lowers the coefficient of friction (typically $\\mu \\approx 0.08\\text{--}0.12$ for wet discs versus $\\mu \\approx 0.3\\text{--}0.4$ for dry linings), which is compensated by utilizing multiple friction discs and hydraulic actuation pressure.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_046",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Power transmission systems – gear trains, differential, final drives and power take-off",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The bevel crown wheel (differential cage) of a tractor drives the rear wheels through a bevel gear differential. The crown wheel rotates at $N_{\\text{cage}} = 120\\text{ rpm}$. While making a sharp turn in the field, the inner driving wheel is restrained so that it rotates at $N_{\\text{inner}} = 40\\text{ rpm}$. The rotational speed of the outer driving wheel ($N_{\\text{outer}}$) in $\\text{rpm}$ is ________ (answer in integer).",
+    "correct_answer": "200",
+    "numerical_range": {
+      "min": 200,
+      "max": 200
+    },
+    "solution": "```\n        Bevel Differential Kinematics:\n           N_cage = (N_left + N_right) / 2\n```\n**Step-by-step Calculation:**\n1. Differential kinematic relation:\n$$N_{\\text{cage}} = \\frac{N_{\\text{inner}} + N_{\\text{outer}}}{2}$$\n\n2. Rearranging for outer wheel speed:\n$$N_{\\text{outer}} = 2 N_{\\text{cage}} - N_{\\text{inner}}$$\n\n3. Substituting values:\n$$N_{\\text{cage}} = 120\\text{ rpm}, \\quad N_{\\text{inner}} = 40\\text{ rpm}$$\n$$N_{\\text{outer}} = (2 \\times 120) - 40 = 240 - 40 = 200\\text{ rpm}$$",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_047",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Power transmission systems – gear trains, differential, final drives and power take-off",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "When a tractor operates in wet puddled rice fields and one rear drive wheel enters a muddy hollow with near-zero traction while the other wheel is on firm ground, what occurs if the differential lock is NOT engaged?",
+    "options": {
+      "A": "Both wheels continue rotating at equal speeds with high tractive output",
+      "B": "The wheel in the mud spins at twice the crown wheel speed while the wheel on firm ground stops, resulting in zero net tractor forward motion",
+      "C": "The differential crown wheel stalls and kills the engine",
+      "D": "Torque is automatically transferred entirely to the wheel on firm ground"
+    },
+    "correct_answer": "B",
+    "solution": "- **Standard Open Differential Characteristic:**\n  - An open differential always equalizes torque to both axle half-shafts ($T_L = T_R$).\n  - If one wheel loses traction, the torque delivered to that wheel drops to near zero.\n  - Consequently, the torque delivered to the high-traction wheel also drops to near zero.\n  - The slipping wheel spins at $2 N_{\\text{cage}}$ while the firm wheel remains stationary, causing the tractor to become completely bogged down unless the differential lock is engaged.",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_FP_ADV_048",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Power transmission systems – gear trains, differential, final drives and power take-off",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A planetary epicyclic reduction gear unit in a tractor wheel hub has a stationary ring (annulus) gear with $Z_r = 72$ teeth and a rotating central sun gear with $Z_s = 18$ teeth driven by the axle shaft. The output drive is taken from the planet carrier. The speed reduction ratio ($i = \\frac{N_{\\text{sun}}}{N_{\\text{carrier}}}$) is ________ (answer in integer).",
+    "correct_answer": "5",
+    "numerical_range": {
+      "min": 5,
+      "max": 5
+    },
+    "solution": "```\n        Epicyclic Planetary Gear Hub Reduction:\n           Sun Gear (Z_s = 18): Input\n           Ring Gear (Z_r = 72): Fixed / Stationary\n           Planet Carrier: Output\n```\n**Step-by-step Calculation:**\n1. Formula for planetary gear set with fixed ring gear:\n$$\\frac{N_s - N_c}{N_r - N_c} = -\\frac{Z_r}{Z_s}$$\n\n2. Since the ring gear is fixed ($N_r = 0$):\n$$\\frac{N_s - N_c}{0 - N_c} = -\\frac{Z_r}{Z_s} \\implies \\frac{N_s - N_c}{-N_c} = -\\frac{Z_r}{Z_s}$$\n$$1 - \\frac{N_s}{N_c} = -\\frac{Z_r}{Z_s} \\implies \\frac{N_s}{N_c} = 1 + \\frac{Z_r}{Z_s}$$\n\n3. Substituting tooth counts:\n$$\\frac{N_s}{N_c} = 1 + \\frac{72}{18} = 1 + 4 = 5.0$$\nSpeed reduction ratio is exactly 5.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_049",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Power transmission systems – gear trains, differential, final drives and power take-off",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The final drive of a farm tractor employs a spur pinion having $Z_p = 12$ teeth meshing with a bull gear having $Z_b = 66$ teeth. The differential shaft rotates at $N_d = 165\\text{ rpm}$ and delivers a torque of $T_d = 400\\text{ N}\\cdot\\text{m}$ to the pinion. Assuming a mechanical efficiency of $\\eta = 95\\%$ for the final drive gear pair, the torque delivered to the rear drive wheel axle in $\\text{N}\\cdot\\text{m}$ is ________ (round off to integer).",
+    "correct_answer": "2090",
+    "numerical_range": {
+      "min": 2060,
+      "max": 2120
+    },
+    "solution": "```\n        Bull Gear Final Drive:\n           Pinion: Z_p = 12 teeth, Input torque T_d = 400 N*m\n           Bull Gear: Z_b = 66 teeth\n           Efficiency: eta = 95% = 0.95\n```\n**Step-by-step Calculation:**\n1. Gear reduction ratio ($i$):\n$$i = \\frac{Z_b}{Z_p} = \\frac{66}{12} = 5.5$$\n\n2. Torque delivered to the wheel axle with efficiency $\\eta = 0.95$:\n$$T_{\\text{wheel}} = T_d \\times i \\times \\eta$$\n$$T_{\\text{wheel}} = 400\\text{ N}\\cdot\\text{m} \\times 5.5 \\times 0.95 = 2200 \\times 0.95 = 2090\\text{ N}\\cdot\\text{m}$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_050",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Power transmission systems – gear trains, differential, final drives and power take-off",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the standard specifications of tractor Power Take-Off (PTO) shafts (according to ISO 500 and ASABE standards) is/are CORRECT?",
+    "options": {
+      "A": "Standard Type 1 PTO operates at $540\\text{ rpm}$ with a $35\\text{ mm}$ ($1\\frac{3}{8}\\text{ inch}$) nominal diameter and $6$ straight splines",
+      "B": "Standard Type 2 PTO operates at $1000\\text{ rpm}$ with a $35\\text{ mm}$ ($1\\frac{3}{8}\\text{ inch}$) nominal diameter and $21$ involute splines",
+      "C": "When viewed from the rear of the tractor looking forward, the standard rotational direction of the PTO shaft is clockwise",
+      "D": "The standard rotational direction of agricultural tractor PTO shafts is strictly counter-clockwise when viewed from the rear"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "- **A is correct:** Type 1 (540 rpm) has 6 splines, 35 mm (1-3/8 in) diameter.\n- **B is correct:** Type 2 (1000 rpm) has 21 involute splines, 35 mm diameter.\n- **C is correct:** Standard rotation direction is clockwise viewed from behind the tractor.\n- **D is incorrect:** Clockwise is the universal standard; counter-clockwise is non-standard.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_051",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Mechanics of tractor chassis",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A rear-wheel-drive tractor has a total static mass of $M = 3000\\text{ kg}$ and a wheelbase of $L = 2.20\\text{ m}$. When the tractor rests on level platform scales, the static reaction on the front wheels is measured to be $W_f = 10.5\\text{ kN}$. Taking $g = 9.81\\text{ m/s}^2$, the horizontal longitudinal distance from the rear axle centerline to the tractor center of gravity ($x_{cg}$) in $\\text{m}$ is ________ (round off to 2 decimal places).",
+    "correct_answer": "0.78",
+    "numerical_range": {
+      "min": 0.76,
+      "max": 0.81
+    },
+    "solution": "```\n        Static Tractor Chassis Equilibrium:\n             Front Axle                 Rear Axle\n             Reaction W_f               Reaction W_r\n             |                            |\n             +============================+\n                      |<-- x_cg -->| (CG)\n                      |<------ Wheelbase L = 2.20 m ------->|\n```\n**Step-by-step Calculation:**\n1. Total static weight of tractor ($W$):\n$$W = M \\times g = 3000\\text{ kg} \\times 9.81\\text{ m/s}^2 = 29430\\text{ N} = 29.43\\text{ kN}$$\n\n2. Taking moments about the rear axle ground contact point:\n$$\\sum M_{\\text{rear}} = 0 \\implies (W \\times x_{cg}) - (W_f \\times L) = 0$$\n$$x_{cg} = \\frac{W_f \\times L}{W}$$\n\n3. Substituting values:\n$$W_f = 10.5\\text{ kN}, \\quad L = 2.20\\text{ m}, \\quad W = 29.43\\text{ kN}$$\n$$x_{cg} = \\frac{10.5 \\times 2.20}{29.43} = \\frac{23.10}{29.43} = 0.7849\\text{ m} \\approx 0.78\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_052",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Mechanics of tractor chassis",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A 2WD agricultural tractor has a total static mass of $2500\\text{ kg}$ with $35\\%$ of its static weight on the front wheels on level ground. The wheelbase is $L = 2.0\\text{ m}$. A horizontal drawbar pull of $P = 12\\text{ kN}$ is exerted at a hitch height of $h = 0.40\\text{ m}$ above the ground. Taking $g = 9.81\\text{ m/s}^2$, the dynamic normal reaction on the front wheels ($R_f$) during pulling in $\\text{kN}$ is ________ (round off to 2 decimal places).",
+    "correct_answer": "6.18",
+    "numerical_range": {
+      "min": 6.05,
+      "max": 6.3
+    },
+    "solution": "```\n        Dynamic Weight Transfer During Pulling:\n           Static Weight W = 2500 * 9.81 = 24.525 kN\n           Static Front Weight W_fs = 0.35 * 24.525 = 8.584 kN\n           Drawbar Pull P = 12 kN at height h = 0.40 m\n           Wheelbase L = 2.0 m\n```\n**Step-by-step Calculation:**\n1. Static front wheel reaction ($W_{fs}$):\n$$W = 2500 \\times 9.81 = 24525\\text{ N} = 24.525\\text{ kN}$$\n$$W_{fs} = 0.35 \\times 24.525 = 8.58375\\text{ kN}$$\n\n2. Dynamic weight transfer from front to rear axle ($\\Delta W$):\nTaking moment about the rear wheel ground contact line:\n$$\\Delta W = \\frac{P \\times h}{L} = \\frac{12\\text{ kN} \\times 0.40\\text{ m}}{2.0\\text{ m}} = \\frac{4.80}{2.0} = 2.40\\text{ kN}$$\n\n3. Dynamic normal reaction on front axle ($R_f$):\n$$R_f = W_{fs} - \\Delta W = 8.58375 - 2.40 = 6.18375\\text{ kN} \\approx 6.18\\text{ kN}$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_053",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Mechanics of tractor chassis",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor has its center of gravity located at a horizontal distance of $x_{cg} = 0.85\\text{ m}$ ahead of the rear axle and at a vertical height of $y_{cg} = 0.75\\text{ m}$ above the ground surface. Neglecting drawbar pull, the critical uphill slope angle ($\\alpha_{\\text{crit}}$) in degrees at which the tractor will experience static backward tipping (rearing of front wheels) is ________ (round off to 1 decimal place).",
+    "correct_answer": "48.6",
+    "numerical_range": {
+      "min": 47.8,
+      "max": 49.3
+    },
+    "solution": "```\n        Uphill Longitudinal Stability Limit:\n            Front wheels lift when the line of action of \n            weight W falls behind the rear tire contact patch.\n            tan(alpha_crit) = x_cg / y_cg\n```\n**Step-by-step Calculation:**\n1. Moment equilibrium about rear tire contact point on slope $\\alpha$:\n$$W \\cos\\alpha \\times x_{cg} - W \\sin\\alpha \\times y_{cg} = 0$$\n$$\\frac{\\sin\\alpha}{\\cos\\alpha} = \\tan\\alpha = \\frac{x_{cg}}{y_{cg}}$$\n\n2. Substituting values:\n$$x_{cg} = 0.85\\text{ m}, \\quad y_{cg} = 0.75\\text{ m}$$\n$$\\tan\\alpha_{\\text{crit}} = \\frac{0.85}{0.75} = 1.1333$$\n\n3. Solving for critical slope angle:\n$$\\alpha_{\\text{crit}} = \\tan^{-1}(1.1333) = 48.576^\\circ \\approx 48.6^\\circ$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_054",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Mechanics of tractor chassis",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A farm tractor has a rear wheel tread width (wheel track) of $b = 1.60\\text{ m}$ and its center of gravity is located at a height of $h_{cg} = 0.80\\text{ m}$ above the ground midway between the wheels. Assuming no tire deflection or side slip, the static side slope angle ($\\beta$) in degrees at which the tractor is on the verge of lateral rollover is ________ (answer in integer).",
+    "correct_answer": "45",
+    "numerical_range": {
+      "min": 45,
+      "max": 45
+    },
+    "solution": "```\n        Lateral Rollover Equilibrium:\n            Track width = b = 1.60 m\n            Half-track = b/2 = 0.80 m\n            CG height = h_cg = 0.80 m\n            tan(beta) = (b/2) / h_cg\n```\n**Step-by-step Calculation:**\n1. At the verge of lateral overturning about the downhill wheel contact line:\n$$\\sum M_{\\text{downhill}} = 0 \\implies W \\cos\\beta \\times \\left(\\frac{b}{2}\\right) - W \\sin\\beta \\times h_{cg} = 0$$\n$$\\tan\\beta = \\frac{b/2}{h_{cg}}$$\n\n2. Substituting given values:\n$$\\frac{b}{2} = \\frac{1.60}{2} = 0.80\\text{ m}$$\n$$h_{cg} = 0.80\\text{ m}$$\n$$\\tan\\beta = \\frac{0.80}{0.80} = 1.00$$\n$$\\beta = \\tan^{-1}(1.00) = 45^\\circ$$",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_055",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Traction theory",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the dimensionless traction parameters of pneumatic tractor drive tires on agricultural soils is/are CORRECT?",
+    "options": {
+      "A": "Gross traction ratio ($\\mu_{gt}$) is defined as the total gross thrust generated at the tire-soil interface divided by the dynamic vertical wheel load",
+      "B": "Net traction ratio ($\\mu_{nt}$) is the useful drawbar pull divided by the dynamic vertical wheel load",
+      "C": "Net traction ratio is related to gross traction ratio by $\\mu_{nt} = \\mu_{gt} - \\rho_{rr}$, where $\\rho_{rr}$ is the motion resistance (rolling resistance) ratio",
+      "D": "Tractive efficiency continues to increase monotonically with increasing wheel slip up to $100\\%$ slip"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "- **A is correct:** $\\mu_{gt} = \\frac{H}{W_d} = \\frac{T/r}{W_d}$.\n- **B is correct:** $\\mu_{nt} = \\frac{P}{W_d}$.\n- **C is correct:** Since net pull $P = H - R$, dividing by normal load gives $\\mu_{nt} = \\mu_{gt} - C_{rr}$.\n- **D is incorrect:** Tractive efficiency $\\eta_t = \\mu_{nt}(1-S)/\\mu_{gt}$ peaks at an optimum slip ($10\\%\\text{--}15\\%$), beyond which slip losses dominate and efficiency plunges to $0\\%$ at $100\\%$ slip.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_056",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Traction theory",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor rear drive wheel with an effective rolling radius of $r = 0.70\\text{ m}$ under zero-slip conditions makes $N = 150$ revolutions while the tractor travels forward through an actual measured distance of $d_a = 593.76\\text{ m}$ under drawbar load. The wheel travel reduction (slip $S$) expressed as a percentage is ________ $\\%$ (round off to integer).",
+    "correct_answer": "10",
+    "numerical_range": {
+      "min": 10,
+      "max": 10
+    },
+    "solution": "```\n        Wheel Slip Calculation:\n           Rolling radius: r = 0.70 m\n           Revolutions: N = 150\n           Actual distance: d_a = 593.76 m\n```\n**Step-by-step Calculation:**\n1. Theoretical distance traveled ($d_t$) without slip:\n$$d_t = 2 \\pi r N = 2 \\times \\pi \\times 0.70\\text{ m} \\times 150 = 210\\pi = 659.734\\text{ m}$$\n\n2. Percentage wheel slip ($S$):\n$$S = \\frac{d_t - d_a}{d_t} \\times 100 = \\frac{659.734 - 593.76}{659.734} \\times 100 = \\frac{65.974}{659.734} \\times 100 = 10.00\\%$$\nSlip is exactly $10\\%$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_057",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Traction theory",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor drive wheel operates at a travel reduction (slip) of $S = 12\\%$. The input torque applied to the axle is $T = 3200\\text{ N}\\cdot\\text{m}$ at an axle rotational speed of $N = 30\\text{ rpm}$. The rolling radius of the wheel is $r = 0.75\\text{ m}$. The net drawbar pull developed by the wheel is $P = 3600\\text{ N}$. The tractive efficiency of the drive wheel expressed as a percentage is ________ $\\%$ (round off to 2 decimal places).",
+    "correct_answer": "74.25",
+    "numerical_range": {
+      "min": 73.5,
+      "max": 75
+    },
+    "solution": "```\n        Tractive Efficiency Formula:\n           eta_t = (P * v_a) / (T * omega)\n```\n**Method 1: Power Ratio Calculation**\n1. Input axle power ($P_{\\text{axle}}$):\n$$P_{\\text{axle}} = T \\times \\omega = 3200\\text{ N}\\cdot\\text{m} \\times \\left(\\frac{2 \\pi \\times 30}{60}\\right) = 3200 \\times \\pi = 10053.1\\text{ W}$$\n\n2. Theoretical linear speed ($v_t$):\n$$v_t = r \\omega = 0.75\\text{ m} \\times \\pi\\text{ rad/s} = 2.35619\\text{ m/s}$$\n\n3. Actual travel speed ($v_a$) with $12\\%$ slip ($S = 0.12$):\n$$v_a = v_t (1 - S) = 2.35619 \\times (1 - 0.12) = 2.35619 \\times 0.88 = 2.07345\\text{ m/s}$$\n\n4. Output drawbar power ($P_{\\text{drawbar}}$):\n$$P_{\\text{drawbar}} = P \\times v_a = 3600\\text{ N} \\times 2.07345\\text{ m/s} = 7464.42\\text{ W}$$\n\n5. Tractive efficiency ($\\eta_t$):\n$$\\eta_t = \\frac{P_{\\text{drawbar}}}{P_{\\text{axle}}} \\times 100 = \\frac{7464.42}{10053.1} \\times 100 = 74.25\\%$$\n\n**Method 2: Direct Traction Ratio Shortcut**\n$$\\eta_t = \\frac{P \\cdot r}{T} (1 - S) \\times 100 = \\frac{3600 \\times 0.75}{3200} \\times 0.88 \\times 100 = \\frac{2700}{3200} \\times 0.88 \\times 100 = 0.84375 \\times 88 = 74.25\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_058",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Traction theory",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In the Brixius traction prediction equations for pneumatic tires on agricultural soils, which of the following variables are included in the dimensionless tire Wheel Numeric (Mobility Number $N$)?",
+    "options": {
+      "A": "Soil Cone Index ($CI$)",
+      "B": "Unloaded tire overall diameter ($d$) and section width ($b$)",
+      "C": "Dynamic vertical load on the wheel ($W$)",
+      "D": "Tire inflation pressure exclusively without considering tire deflection ratio"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "- **Brixius Mobility Number ($M$ or $N$):**\n$$M = \\frac{CI \\cdot b \\cdot d}{W} \\left(\\frac{1 + 5 \\delta/h}{1 + 3 b/d}\\right)$$\nwhere:\n- $CI$ is the soil cone index (strength)\n- $b$ is section width\n- $d$ is tire outer diameter\n- $W$ is dynamic vertical wheel load\n- $\\delta/h$ is tire deflection ratio (fraction of section height)\n- Statement D is incorrect because deflection ratio $\\delta/h$ is explicitly used rather than bare inflation pressure.",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_059",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Three point hitches – free link and restrained link operations",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the operational modes of tractor three-point hitch hydraulic control systems is/are CORRECT?",
+    "options": {
+      "A": "Position control maintains the implement at a fixed vertical height relative to the tractor chassis, regardless of draft changes",
+      "B": "Draft control senses draft changes and automatically raises the implement to reduce load during tough soil conditions",
+      "C": "Position control is ideally recommended for soil-engaging primary tillage implements like mouldboard ploughs in undulating topography",
+      "D": "Mixed (blend) control combines draft sensing and position limits to prevent implement from digging too deep in sandy pockets"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "solution": "- **A is correct:** Position control locks implement depth/height relative to the tractor chassis (used for rotavators, sprayers, seed drills).\n- **B is correct:** Draft control uses top-link or lower-link feedback springs to maintain constant draft load on the engine.\n- **C is incorrect:** In undulating terrain, position control causes excessive gouging on humps and lifting out of depressions; draft control is the correct mode for ploughing.\n- **D is correct:** Mixed control allows draft sensing while setting a lower position floor limit.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_060",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Three point hitches – free link and restrained link operations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural tractor three-point hitch systems, top-link draft sensing is preferred over lower-link sensing primarily for:",
+    "options": {
+      "A": "Heavy heavy-duty semi-mounted subsoilers",
+      "B": "Light and medium-duty mounted tillage implements where compression in the top link provides a high signal-to-noise ratio",
+      "C": "Heavy multi-bottom trailed disc plows",
+      "D": "Tractor drawbar cart hauling"
+    },
+    "correct_answer": "B",
+    "solution": "- **Draft Sensing Mechanics:**\n  - For small to medium 2WD tractors ($< 45\\text{ kW}$), top-link sensing is simple, sensitive, and economical because mounted implements exert strong compressive forces on the top link.\n  - However, for heavy multi-bottom ploughs, top link forces can fluctuate between tension and compression, so large heavy tractors utilize lower-link draft sensing (sensing draft tension directly through torsion bar or bending pins).",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_061",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Steering and hydraulic control systems used in tractors",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A single-acting hydraulic lift ram cylinder of a tractor three-point hitch has a piston diameter of $D = 80\\text{ mm}$. The hydraulic system relief valve pressure is set to $P = 17.5\\text{ MPa}$. Taking $\\pi \\approx 3.14159$, the maximum hydraulic thrust force that can be exerted by the lift ram in $\\text{kN}$ is ________ (round off to 2 decimal places).",
+    "correct_answer": "87.96",
+    "numerical_range": {
+      "min": 86.5,
+      "max": 89.5
+    },
+    "solution": "```\n        Hydraulic Ram Lift Force:\n           Piston Diameter D = 80 mm = 0.080 m\n           Pressure P = 17.5 MPa = 17.5 * 10^6 N/m^2\n           Force F = P * (pi * D^2 / 4)\n```\n**Step-by-step Calculation:**\n1. Piston cross-sectional area ($A$):\n$$A = \\frac{\\pi}{4} D^2 = \\frac{\\pi}{4} (0.080\\text{ m})^2 = 0.0050265\\text{ m}^2$$\n\n2. Maximum thrust force ($F$):\n$$F = P \\times A = (17.5 \\times 10^6\\text{ N/m}^2) \\times 0.0050265\\text{ m}^2 = 87964.6\\text{ N} = 87.96\\text{ kN}$$",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_062",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Steering and hydraulic control systems used in tractors",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A farm tractor has a wheelbase of $L = 2.10\\text{ m}$ and a kingpin center-to-center lateral spacing of $c = 1.20\\text{ m}$. While executing a turn according to correct Ackerman steering geometry, the inner steerable wheel is turned to an angle of $\\theta_i = 35^\\circ$. The required steering angle of the outer front wheel ($\\theta_o$) in degrees is ________ (round off to 2 decimal places).",
+    "correct_answer": "26.57",
+    "numerical_range": {
+      "min": 26,
+      "max": 27.2
+    },
+    "solution": "```\n        Ackerman Steering Kinematics:\n           cot(theta_o) - cot(theta_i) = c / L\n           Wheelbase L = 2.10 m\n           Kingpin distance c = 1.20 m\n           Inner angle theta_i = 35 deg\n```\n**Step-by-step Calculation:**\n1. Fundamental Ackerman equation:\n$$\\cot\\theta_o - \\cot\\theta_i = \\frac{c}{L}$$\n\n2. Calculating $\\cot 35^\\circ$:\n$$\\tan 35^\\circ = 0.70021 \\implies \\cot 35^\\circ = \\frac{1}{0.70021} = 1.42815$$\n\n3. Ratio $\\frac{c}{L}$:\n$$\\frac{c}{L} = \\frac{1.20}{2.10} = 0.57143$$\n\n4. Solving for $\\cot\\theta_o$:\n$$\\cot\\theta_o = \\cot 35^\\circ + \\frac{c}{L} = 1.42815 + 0.57143 = 1.99958$$\n\n5. Solving for outer angle $\\theta_o$:\n$$\\tan\\theta_o = \\frac{1}{1.99958} = 0.500105$$\n$$\\theta_o = \\tan^{-1}(0.500105) = 26.569^\\circ \\approx 26.57^\\circ$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_063",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Steering and hydraulic control systems used in tractors",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In fully hydrostatic power steering systems of modern agricultural tractors, the steering wheel is mechanically connected to which hydraulic control element?",
+    "options": {
+      "A": "A mechanical drag link and drop arm",
+      "B": "An Orbitrol rotary metering valve unit that directs pressurized oil to a double-acting steering cylinder",
+      "C": "The engine intake camshaft gear",
+      "D": "The rear differential crown wheel"
+    },
+    "correct_answer": "B",
+    "solution": "- **Hydrostatic Steering Principle:** In hydrostatic steering, there is no mechanical linkage (drag link, tie rods to steering column) connecting the steering hand wheel to the front axle.\n- The steering wheel shaft directly rotates an **Orbitrol unit** (a fluid rotary metering device combining a spool control valve and a gerotor pump), which ports measured hydraulic flow to the front steering ram.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_064",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Tractor tests and performance",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following standard test procedures are mandatory components of the OECD Standard Code 2 / Nebraska Tractor Test for official tractor certification?",
+    "options": {
+      "A": "PTO power and fuel consumption test across varying loads and speeds",
+      "B": "Drawbar pull, power, and travel reduction (wheel slip) test on a standardized concrete test track",
+      "C": "Hydraulic lift capacity test at the hitch points and on a standardized frame across the full lift range",
+      "D": "Measurement of operator station noise level under maximum load"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four testing procedures are core requirements of the OECD Code 2 / Nebraska Tractor Test standards:\n- PTO test (rated speed, maximum power, varying torque)\n- Drawbar test on concrete track (drawbar power, slip, fuel economy)\n- Hydraulic power and lift capacity test\n- Acoustic noise measurement at the operator's ear level (ROPS cab/open station).",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_065",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Tractor tests and performance",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "During an official tractor drawbar test on a level concrete track, the tractor develops a constant drawbar pull of $P = 18\\text{ kN}$ while traveling at a true forward speed of $v = 6.0\\text{ km/h}$. The fuel consumed during a 1-hour test run is measured to be $10.0\\text{ kg}$. The lower heating value of the diesel fuel is $42.5\\text{ MJ/kg}$. The overall thermal efficiency at the drawbar (drawbar thermal efficiency) expressed as a percentage is ________ (round off to 2 decimal places).",
+    "correct_answer": "25.41",
+    "numerical_range": {
+      "min": 24.8,
+      "max": 26
+    },
+    "solution": "```\n        Drawbar Thermal Efficiency:\n           Pull P = 18 kN\n           Speed v = 6.0 km/h = 1.667 m/s\n           Drawbar Power P_db = P * v\n           Fuel: 10.0 kg/h, CV = 42.5 MJ/kg\n```\n**Step-by-step Calculation:**\n1. Forward speed in $\\text{m/s}$:\n$$v = \\frac{6.0 \\times 1000}{3600} = 1.6667\\text{ m/s}$$\n\n2. Useful drawbar power developed ($P_{\\text{db}}$):\n$$P_{\\text{db}} = P \\times v = 18000\\text{ N} \\times 1.6667\\text{ m/s} = 30000\\text{ W} = 30.0\\text{ kW}$$\n\n3. Total chemical heat energy supplied per hour ($Q_{\\text{in}}$):\n$$Q_{\\text{in}} = m_f \\times CV = 10.0\\text{ kg} \\times 42.5\\text{ MJ/kg} = 425.0\\text{ MJ}$$\n$$Q_{\\text{rate}} = \\frac{425.0 \\times 10^6\\text{ J}}{3600\\text{ s}} = 118055.6\\text{ W} = 118.056\\text{ kW}$$\n\n4. Drawbar thermal efficiency ($\\eta_{\\text{db}}$):\n$$\\eta_{\\text{db}} = \\frac{P_{\\text{db}}}{Q_{\\text{rate}}} \\times 100 = \\frac{30.0\\text{ kW}}{118.056\\text{ kW}} \\times 100 = 25.4117\\% \\approx 25.41\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_066",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Human engineering and safety considerations in design of tractor and agricultural implements",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "According to ISO 2631-1 guidelines for human exposure to Whole-Body Vibration (WBV) in agricultural tractors, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "The human body is most sensitive to vertical z-axis vibrations in the frequency resonance range of $4\\text{ to } 8\\text{ Hz}$",
+      "B": "For horizontal vibrations (x and y axes), human sensitivity is highest in the lower frequency range of $1\\text{ to } 2\\text{ Hz}$",
+      "C": "Low-frequency vibration attenuation is achieved by installing hydraulic or air-suspended operator seats with hydraulic dampers",
+      "D": "Tractor whole-body vibration levels are completely independent of travel speed and tire inflation pressure"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "- **A is correct:** Vertical spinal resonance occurs between $4\\text{--}8\\text{ Hz}$, where $W_k$ weighting filter peaks.\n- **B is correct:** Fore-aft and lateral vibrations have peak sensitivity at $1\\text{--}2\\text{ Hz}$ ($W_d$ filter).\n- **C is correct:** Suspended seats tuned below $2\\text{ Hz}$ isolate the operator from terrain bump frequencies.\n- **D is incorrect:** Vibration amplitude increases sharply with forward speed and stiff over-inflated tires.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_067",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Human engineering and safety considerations in design of tractor and agricultural implements",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A Roll-Over Protective Structure (ROPS) fitted on an agricultural tractor is designed according to OECD Standard Code 4 to:",
+    "options": {
+      "A": "Completely prevent the tractor from rolling over on steep slopes",
+      "B": "Deform plastically while absorbing impact energy, maintaining a defined 'deflection-limiting clearance zone' around the belted operator",
+      "C": "Lock the steering wheel automatically when tilt angle exceeds $20^\\circ$",
+      "D": "Shut off fuel supply instantaneously upon any tilt"
+    },
+    "correct_answer": "B",
+    "solution": "- **ROPS Function and Engineering Standard:**\n  - ROPS does not prevent rollovers from occurring.\n  - Its purpose is to deform plastically, absorbing kinetic energy ($E = 1.4 W$ under OECD Code 4) during a dynamic rollover, while preserving a critical **clearance zone (survival space)** around the operator wearing a seat belt.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_068",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Human engineering and safety considerations in design of tractor and agricultural implements",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Under standard occupational health regulations (OSHA / Indian Standard IS 12180), the maximum permissible continuous A-weighted sound level ($L_{\\text{eq}}$) at the tractor operator's ear level for an 8-hour daily exposure without hearing protection is:",
+    "options": {
+      "A": "$65\\text{ dBA}$",
+      "B": "$85\\text{ dBA}$",
+      "C": "$105\\text{ dBA}$",
+      "D": "$125\\text{ dBA}$"
+    },
+    "correct_answer": "B",
+    "solution": "- **Occupational Noise Exposure Standard:**\n  - The standard 8-hour time-weighted average (TWA) permissible exposure limit is **$85\\text{ dBA}$** (or $90\\text{ dBA}$ in older regulations).\n  - Tractors without cabs often generate $88\\text{--}95\\text{ dBA}$, exceeding safe limits and necessitating earplugs or acoustic cabs.",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_FP_ADV_069",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Selection, operation, maintenance and repair of I.C. engines",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following dynamic phenomena in an IC engine valve train can lead to catastrophic valve-to-piston collision at high engine rotational speeds?",
+    "options": {
+      "A": "Valve float (valve lifter loses contact with the cam profile due to insufficient spring force)",
+      "B": "Valve spring surge (standing resonant waves excited in the helical coil spring)",
+      "C": "Excessive tappet clearance causing reduced duration of valve opening",
+      "D": "Weakened or fatigued valve return springs"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "solution": "- **A is correct:** Valve float occurs when the inertia force of the moving valve assembly exceeds the spring return force, preventing full closure.\n- **B is correct:** Spring surge creates high-amplitude resonant oscillations, reducing effective seating force and causing bounce.\n- **C is incorrect:** Excessive clearance causes noisy tapping and delayed opening, but does not prevent the spring from closing the valve.\n- **D is correct:** Fatigued springs have reduced spring stiffness, lowering the float threshold speed.",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_FP_ADV_070",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Calculation of power, torque, fuel consumption, heat load and power losses",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A 4-cylinder, 4-stroke tractor diesel engine running at $N = 1800\\text{ rpm}$ consumes fuel at a rate of $\\dot{m}_f = 7.20\\text{ kg/h}$. The density of the diesel fuel is $\\rho_f = 840\\text{ kg/m}^3$. The volume of fuel injected per cylinder per power stroke in $\\text{mm}^3$ is ________ (round off to 1 decimal place).",
+    "correct_answer": "39.7",
+    "numerical_range": {
+      "min": 38.5,
+      "max": 40.5
+    },
+    "solution": "```\n        Fuel Injection Quantity Calculation:\n           Cylinders: k = 4\n           Speed: N = 1800 rpm\n           Power strokes per min per cyl: N/2 = 900\n           Total power strokes/min: 4 * 900 = 3600\n           Fuel rate: 7.20 kg/h\n           Density: 840 kg/m^3\n```\n**Step-by-step Calculation:**\n1. Total fuel mass injected per hour:\n$$\\dot{m}_f = 7.20\\text{ kg/h} = \\frac{7.20}{60} = 0.120\\text{ kg/min}$$\n\n2. Total fuel volume injected per minute:\n$$V_{\\text{total}} = \\frac{0.120\\text{ kg/min}}{840\\text{ kg/m}^3} = 1.42857 \\times 10^{-4}\\text{ m}^3/\\text{min} = 142857\\text{ mm}^3/\\text{min}$$\n\n3. Total number of injection strokes across all 4 cylinders per minute ($n_{\\text{inj}}$):\n$$n_{\\text{inj}} = k \\times \\frac{N}{2} = 4 \\times \\frac{1800}{2} = 3600\\text{ injections/min}$$\n\n4. Fuel volume injected per cylinder per cycle ($V_{\\text{stroke}}$):\n$$V_{\\text{stroke}} = \\frac{142857\\text{ mm}^3/\\text{min}}{3600\\text{ injections/min}} = 39.6825\\text{ mm}^3 \\approx 39.7\\text{ mm}^3$$",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_FP_ADV_071",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "I.C. engine systems – fuel, cooling, lubrication, ignition, electrical, intake and exhaust",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A fundamental thermodynamic distinction between a mechanically driven supercharger and an exhaust-gas turbocharger is that:",
+    "options": {
+      "A": "A supercharger is driven by an exhaust turbine, while a turbocharger is driven by an electric motor",
+      "B": "A supercharger draws parasitic shaft power directly from the engine crankshaft, whereas a turbocharger utilizes waste enthalpy from exhaust gases",
+      "C": "Superchargers can only be installed on spark ignition engines",
+      "D": "Turbochargers operate with zero boost threshold lag"
+    },
+    "correct_answer": "B",
+    "solution": "- **Supercharger vs Turbocharger:**\n  - A supercharger is mechanically coupled (via belt or gears) directly to the crankshaft, consuming up to $10\\text{--}15\\%$ of engine shaft work as parasitic load.\n  - A turbocharger is completely uncoupled mechanically; its turbine recovers waste kinetic and heat energy from hot expanding exhaust gases, resulting in superior overall brake thermal efficiency.",
+    "difficulty": "Easy",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_FP_ADV_072",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Power",
+    "subtopic": "Bio-fuels and their use in farm mechanization",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the thermal pyrolysis of agricultural crop residues (paddy straw, cotton stalks) is/are CORRECT?",
+    "options": {
+      "A": "Fast pyrolysis ($450\\text{--}550^\\circ\\text{C}$ with rapid heating rate and vapor residence time $< 2\\text{ s}$) maximizes the yield of liquid bio-oil (up to $60\\text{--}70\\%$)",
+      "B": "Slow pyrolysis (carbonization) at low heating rates and long vapor residence times maximizes the yield of solid biochar",
+      "C": "Biochar application to agricultural soils improves soil water retention capacity and cation exchange capacity (CEC)",
+      "D": "Raw crude bio-oil has a pH of $7.5\\text{--}8.5$ and is completely miscible with petroleum diesel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "- **A is correct:** Rapid quenching of pyrolysis vapors condenses into high-yield liquid bio-oil.\n- **B is correct:** Slow pyrolysis favors solid carbon matrix restructuring, yielding biochar.\n- **C is correct:** Highly porous biochar acts as a persistent soil conditioner.\n- **D is incorrect:** Crude bio-oil is highly acidic ($\text{pH } 2\\text{--}3$), contains $20\\text{--}30\\%$ water, and is completely immiscible with petroleum diesel without hydro-deoxygenation upgrading.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_FP_ADV_073",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Power",
+    "subtopic": "Bio-fuels and their use in farm mechanization",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In commercial biogas purification units for bottling bio-CNG (compressed biomethane) for farm tractor fuel, pressurized water scrubbing is widely used primarily because:",
+    "options": {
+      "A": "Carbon dioxide is significantly more soluble in pressurized water than methane",
+      "B": "Water chemically reacts with methane to form methanol",
+      "C": "Nitrogen is completely liquefied by water at room temperature",
+      "D": "Water increases the percentage of carbon monoxide in the gas"
+    },
+    "correct_answer": "A",
+    "solution": "- **Water Scrubbing Principle:**\n  - At $20^\\circ\\text{C}$ and $8\\text{--}10\\text{ bar}$ pressure, the solubility of $\\text{CO}_2$ in water is roughly $25\\text{--}30$ times higher than that of methane ($\\text{CH}_4$).\n  - By passing pressurized raw biogas counter-currently through a packed water absorption column, $\\text{CO}_2$ and $\\text{H}_2\\text{S}$ dissolve preferentially into the water, upgrading methane purity from $\\approx 60\\%$ to over $97\\%$.",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_FP_ADV_074",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Power transmission systems – gear trains, differential, final drives and power take-off",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A constant-mesh transmission gearbox of a tractor connects an input shaft running at $N_1 = 1800\\text{ rpm}$ to a countershaft through a gear pair with $Z_1 = 18$ and $Z_2 = 36$ teeth. The second reduction gear pair from the countershaft to the output shaft has $Z_3 = 15$ and $Z_4 = 45$ teeth. The rotational speed of the transmission output shaft in $\\text{rpm}$ is ________ (answer in integer).",
+    "correct_answer": "300",
+    "numerical_range": {
+      "min": 300,
+      "max": 300
+    },
+    "solution": "```\n        Compound Gear Train:\n           Input Shaft (N_1 = 1800 rpm) ---> Z_1 = 18 teeth\n           Countershaft: Z_2 = 36 teeth, Z_3 = 15 teeth\n           Output Shaft: Z_4 = 45 teeth\n```\n**Step-by-step Calculation:**\n1. First reduction gear ratio ($i_1$):\n$$i_1 = \\frac{Z_2}{Z_1} = \\frac{36}{18} = 2.0$$\n$$N_{\\text{counter}} = \\frac{N_1}{i_1} = \\frac{1800}{2} = 900\\text{ rpm}$$\n\n2. Second reduction gear ratio ($i_2$):\n$$i_2 = \\frac{Z_4}{Z_3} = \\frac{45}{15} = 3.0$$\n$$N_{\\text{output}} = \\frac{N_{\\text{counter}}}{i_2} = \\frac{900}{3} = 300\\text{ rpm}$$\n\n**Overall Speed Ratio Shortcut:**\n$$i_{\\text{total}} = i_1 \\times i_2 = 2.0 \\times 3.0 = 6.0$$\n$$N_{\\text{output}} = \\frac{N_1}{i_{\\text{total}}} = \\frac{1800}{6.0} = 300\\text{ rpm}$$",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_075",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Type, selection, maintenance and repair of tractors and power tillers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following operational distinctions describe forward-rotation (down-cut) versus reverse-rotation (up-cut) rotary tillers used with tractors and power tillers?",
+    "options": {
+      "A": "Forward-rotation rotavating creates a forward pushing thrust on the tractor, helping reduce drawbar wheel slip in soft ground",
+      "B": "Reverse-rotation rotavating pulls soil upwards and cuts against firm soil, providing deeper penetration and finer seedbed tilth",
+      "C": "Reverse-rotation tilling requires a significantly higher holding tractive draft from the tractor to prevent the tiller from running away",
+      "D": "Reverse-rotation rotavating consumes less PTO power than forward rotation for the same depth of cut"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "- **A is correct:** Down-cut blades push the chassis forward, reducing wheel slip.\n- **B is correct:** Up-cut blades cut from the bottom up against unworked ground, avoiding soil compression.\n- **C is correct:** The rotor exerts a heavy backward drag force, requiring high tractor wheel traction to prevent forward stalling.\n- **D is incorrect:** Up-cut rotavating consumes roughly $10\\text{--}20\\%$ MORE PTO power due to deeper bite and greater soil throwing against the rear shield.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_076",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Type, selection, maintenance and repair of tractors and power tillers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding adding ballast to farm tractor drive tires is/are CORRECT?",
+    "options": {
+      "A": "Liquid ballasting typically involves filling inner tubes up to $75\\%$ full (valve level at the top) with water or a calcium chloride solution",
+      "B": "Calcium chloride ($CaCl_2$) is dissolved in water to act as an antifreeze and to increase the density of the ballasting liquid by up to $25\\%$",
+      "C": "Adding excessive ballast on hard dry roads increases rolling resistance and tyre wear unnecessarily",
+      "D": "Tractor ballast should always be adjusted to achieve strictly $0\\%$ wheel slip under maximum drawbar pull"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "- **A is correct:** $75\\%$ liquid fill leaves an air cushion for pneumatic shock absorption.\n- **B is correct:** $CaCl_2$ prevents freezing down to $-30^\\circ\\text{C}$ and raises solution density to $\\approx 1.25\\text{ kg/L}$.\n- **C is correct:** Unneeded weight wastes fuel in overcoming rolling resistance.\n- **D is incorrect:** Zero slip is highly undesirable: maximum tractive efficiency occurs at $10\\text{--}15\\%$ slip; zero slip means severe over-ballasting and massive rolling resistance losses.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_077",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Traction theory",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "According to Bekker's classical terramechanics equation for pressure-sinkage of a rigid plate on agricultural soil: $p = \\left(\\frac{k_c}{b} + k_\\phi\\right) z^n$. For a soil with cohesive modulus $k_c = 40\\text{ kPa}\\cdot\\text{m}^{n-1}$, frictional modulus $k_\\phi = 1600\\text{ kPa}\\cdot\\text{m}^{n-1}$, and sinkage exponent $n = 1.0$. A footing plate of width $b = 0.20\\text{ m}$ sinks to a depth of $z = 0.05\\text{ m}$. The contact pressure $p$ in $\\text{kPa}$ is ________ (round off to integer).",
+    "correct_answer": "90",
+    "numerical_range": {
+      "min": 88,
+      "max": 92
+    },
+    "solution": "```\n        Bekker Pressure-Sinkage Model:\n           p = (k_c / b + k_phi) * z^n\n           k_c = 40, b = 0.20 m, k_phi = 1600, n = 1.0, z = 0.05 m\n```\n**Step-by-step Calculation:**\n1. Modulus bracket calculation:\n$$\\frac{k_c}{b} = \\frac{40}{0.20} = 200\\text{ kPa/m}$$\n$$\\frac{k_c}{b} + k_\\phi = 200 + 1600 = 1800\\text{ kPa/m}$$\n\n2. Calculating contact pressure with $z = 0.05\\text{ m}$ and $n = 1.0$:\n$$p = 1800 \\times (0.05)^1 = 90\\text{ kPa}$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_078",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Steering and hydraulic control systems used in tractors",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In comparing open-center versus closed-center load-sensing (CCLS) hydraulic systems in agricultural tractors, a major operational advantage of CCLS systems is that:",
+    "options": {
+      "A": "CCLS utilizes a fixed displacement gear pump running constantly at high relief pressure",
+      "B": "A variable displacement piston pump modulates flow and pressure on demand, minimizing parasitic throttling energy loss when no hydraulic functions are active",
+      "C": "CCLS requires no hydraulic oil reservoir",
+      "D": "Open-center systems provide higher hydraulic efficiency under partial load"
+    },
+    "correct_answer": "B",
+    "solution": "- **Closed-Center Load-Sensing (CCLS) Hydraulics:**\n  - In open-center systems, a fixed displacement pump continuously circulates full flow back to the tank at low pressure, but during partial-flow throttling, excess flow dumps across high-pressure relief valves, generating intense heat.\n  - CCLS systems use a variable-displacement axial piston pump with a load-sensing spool that destrokes the pump to near-zero flow at standby pressure ($\\\\approx 20\\text{--}30\\text{ bar}$) when idle, saving substantial engine fuel.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_079",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Tractor clutches and brakes",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A farm tractor travels at a road transport speed of $v = 36\\text{ km/h}$. When the operator suddenly encounters an obstacle, the driver's perception-reaction time is $t_r = 0.75\\text{ s}$. The wheel brakes are locked, developing an average braking deceleration of $a = 5.0\\text{ m/s}^2$ on a dry tarmac surface. The total stopping distance of the tractor from the moment the hazard is spotted in $\\text{m}$ is ________ (round off to 1 decimal place).",
+    "correct_answer": "17.5",
+    "numerical_range": {
+      "min": 17,
+      "max": 18
+    },
+    "solution": "```\n        Tractor Stopping Distance Breakdown:\n           1. Perception-reaction distance: d_r = v * t_r\n           2. Braking skid distance: d_b = v^2 / (2 * a)\n           Total Stopping Distance S = d_r + d_b\n```\n**Step-by-step Calculation:**\n1. Initial speed in $\\text{m/s}$:\n$$v = \\frac{36 \\times 1000}{3600} = 10.0\\text{ m/s}$$\n\n2. Distance traveled during reaction time $t_r = 0.75\\text{ s}$:\n$$d_r = v \\times t_r = 10.0\\text{ m/s} \\times 0.75\\text{ s} = 7.50\\text{ m}$$\n\n3. Actual braking distance under deceleration $a = 5.0\\text{ m/s}^2$:\n$$d_b = \\frac{v^2}{2a} = \\frac{(10.0)^2}{2 \\times 5.0} = \\frac{100}{10.0} = 10.0\\text{ m}$$\n\n4. Total stopping distance ($S$):\n$$S = d_r + d_b = 7.50 + 10.0 = 17.50\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_080",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Tractor tests and performance",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "During a field drawbar performance test, a tractor delivers a continuous drawbar power of $P_{\\text{db}} = 30\\text{ kW}$ while consuming diesel fuel at a volumetric rate of $V_f = 9.0\\text{ L/h}$. The specific volumetric fuel consumption at the drawbar in $\\text{L/kW}\\cdot\\text{h}$ is ________ (round off to 2 decimal places).",
+    "correct_answer": "0.30",
+    "numerical_range": {
+      "min": 0.29,
+      "max": 0.31
+    },
+    "solution": "```\n        Specific Volumetric Fuel Consumption:\n           SVFC = (Fuel Consumption Rate L/h) / (Power kW)\n```\n**Step-by-step Calculation:**\n$$SVFC = \\frac{V_f}{P_{\\text{db}}} = \\frac{9.0\\text{ L/h}}{30\\text{ kW}} = 0.30\\text{ L/kW}\\cdot\\text{h}$$",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_ADV_081",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "I.C. engine systems – fuel, cooling, lubrication, ignition, electrical, intake and exhaust",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "To comply with advanced off-road emission standards (Bharat Stage Trem IV / Trem V and US EPA Tier 4 Final) for agricultural tractors, which of the following after-treatment and engine control technologies are deployed?",
+    "options": {
+      "A": "Cooled Exhaust Gas Recirculation (EGR) to suppress peak combustion temperatures and lower $\\text{NO}_x$ emissions",
+      "B": "Diesel Particulate Filter (DPF) to trap and periodically burn (regenerate) carbonaceous soot particulate matter",
+      "C": "Selective Catalytic Reduction (SCR) utilizing aqueous urea (Diesel Exhaust Fluid / AdBlue) injection to reduce $\\text{NO}_x$ into harmless $\\text{N}_2$ and $\\text{H}_2\\text{O}$",
+      "D": "Carburetor air-bleed solenoids to regulate stoichiometric gasoline mixture"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "- **A is correct:** Cooled EGR replaces excess oxygen with inert exhaust gas, lowering peak flame temperatures and curbing thermal $\\text{NO}_x$.\n- **B is correct:** Wall-flow DPF filters trap $> 90\\%$ of particulate soot.\n- **C is correct:** SCR catalytic converter uses DEF ($32.5\\%$ urea solution) which hydrolyzes to ammonia ($NH_3$) and reacts with $\\text{NO}_x$ to form nitrogen and water.\n- **D is incorrect:** Farm tractors are compression-ignition diesel engines and do not use carburetors.",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_FP_GATE_001",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Principles of I.C. Engines",
+    "subtopic": "Thermodynamic cycles of I.C. engines",
+    "type": "MCQ",
+    "marks": 2,
+    "negative_marks": 0.67,
+    "question": "Match the Ideal Air-Standard Cycles in Group-I with their Heat Addition Characteristics in Group-II:\n\n$$\\begin{array}{|ll|ll|}\\hline \\textbf{Group-I (Cycle)} & & \\textbf{Group-II (Heat Addition)} & \\\\ \\hline \\text{P. Otto Cycle} & & \\text{1. Constant pressure heat addition} \\\\ \\text{Q. Diesel Cycle} & & \\text{2. Constant volume heat addition} \\\\ \\text{R. Dual Cycle} & & \\text{3. Isothermal heat addition} \\\\ \\text{S. Carnot Cycle} & & \\text{4. Partly constant volume and partly constant pressure} \\\\ \\hline \\end{array}$$\n\nSelect the CORRECT matching combination:",
+    "options": {
+      "A": "P-2, Q-1, R-4, S-3",
+      "B": "P-1, Q-2, R-3, S-4",
+      "C": "P-2, Q-4, R-1, S-3",
+      "D": "P-4, Q-1, R-2, S-3"
+    },
+    "correct_answer": "A",
+    "solution": "Air-Standard Heat Addition Modes:\n- **Otto**: Constant volume (2).\n- **Diesel**: Constant pressure (1).\n- **Dual**: Mixed constant volume and constant pressure (4).\n- **Carnot**: Isothermal (3).\n\nCorrect match: **P-2, Q-1, R-4, S-3**.",
+    "difficulty": "Easy",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_FP_GATE_002",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Transmission",
+    "subtopic": "Tractor mechanics",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Consider a 2WD agricultural tractor pulling a horizontal drawbar load on level ground. Which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "The dynamic normal load on the rear axle increases as the drawbar pull increases",
+      "B": "The dynamic normal load on the front axle decreases with increasing drawbar pull",
+      "C": "Dynamic weight transfer is given by $\\Delta W = \\frac{P \\cdot h_d}{x_w}$, where $h_d$ is drawbar hitch height and $x_w$ is wheelbase",
+      "D": "The tractor will overturn backward when the dynamic load on the rear axle becomes zero"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "Tractor Mechanics Principles (Liljedahl et al.):\n- **A is TRUE**: Rear load increases with drawbar pull due to weight transfer.\n- **B is TRUE**: Front load decreases proportionally.\n- **C is TRUE**: Dynamic weight transfer is $\\Delta W = \\frac{P h_d}{x_w}$.\n- **D is FALSE**: Overturning (rearing) occurs when **front** axle reaction becomes zero ($R_f \\le 0$), not rear.\n\nCorrect options: **A, B, C**.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_GATE_003",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Transmission",
+    "subtopic": "Traction theory",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor driving wheel of rolling radius $0.75\\text{ m}$ rotates at $40\\text{ rpm}$. The tractor travels a distance of $160\\text{ m}$ in $1\\text{ minute}$ under load. The travel reduction (wheel slip) of the tractor is ________ $\\%$ (round off to 1 decimal place).",
+    "correct_answer": 15.1,
+    "numerical_range": {
+      "min": 14.5,
+      "max": 15.7
+    },
+    "solution": "Wheel Slip Formulation:\n$$D_0 = 2\\pi r N t = 2\\pi (0.75)(40)(1) = 60\\pi \\approx 188.496\\text{ m}$$\n$$S = \\frac{D_0 - D_a}{D_0} \\times 100 = \\frac{188.496 - 160}{188.496} \\times 100 = 15.118\\%$$\nRounding to 1 decimal place: **15.1** $\\%$.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FP_GATE_004",
+    "section": "Section 3: Farm Power",
+    "topic": "I.C. Engine Systems",
+    "subtopic": "Fuels and combustion",
+    "type": "MCQ",
+    "marks": 2,
+    "negative_marks": 0.67,
+    "question": "Match the Fuel Properties in Group-I with their Definitions in Group-II:\n\n$$\\begin{array}{|ll|ll|}\\hline \\textbf{Group-I (Property)} & & \\textbf{Group-II (Definition)} & \\\\ \\hline \\text{P. Cetane Number} & & \\text{1. Measure of knock resistance in SI engines} \\\\ \\text{Q. Octane Number} & & \\text{2. Measure of ignition quality in CI engines} \\\\ \\text{R. Flash Point} & & \\text{3. Lowest temperature for momentary vapor flash} \\\\ \\text{S. Pour Point} & & \\text{4. Lowest temperature at which oil flows} \\\\ \\hline \\end{array}$$\n\nSelect the CORRECT matching pair:",
+    "options": {
+      "A": "P-2, Q-1, R-3, S-4",
+      "B": "P-1, Q-2, R-3, S-4",
+      "C": "P-2, Q-3, R-1, S-4",
+      "D": "P-3, Q-1, R-2, S-4"
+    },
+    "correct_answer": "A",
+    "solution": "Fuel Properties Matches:\n- **Cetane Number**: CI engine ignition quality (2).\n- **Octane Number**: SI engine knock resistance (1).\n- **Flash Point**: Momentary flash temperature (3).\n- **Pour Point**: Flow limit temperature (4).\n\nCorrect match: **P-2, Q-1, R-3, S-4**.",
+    "difficulty": "Easy",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_FP_GATE_005",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Transmission",
+    "subtopic": "Traction theory",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a no-load traction test, a tractor drive tire makes 20 revolutions in traveling $100\\text{ m}$. When pulling a heavy subsoiler over the same $100\\text{ m}$ distance, it makes 25 revolutions. The percentage wheel slip is ________ $\\%$ (in integer).",
+    "correct_answer": 20,
+    "numerical_range": {
+      "min": 20,
+      "max": 20
+    },
+    "solution": "Wheel Slip:\n$$S = \\left(1 - \\frac{N_0}{N_L}\\right) \\times 100 = \\left(1 - \\frac{20}{25}\\right) \\times 100 = 20\\%$$\nHence, the wheel slip is **20** $\\%$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
   }
 ];

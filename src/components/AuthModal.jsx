@@ -28,6 +28,8 @@ import {
   registerFaculty,
   loginFaculty,
   getRememberedIdentifier, 
+  getRememberedCredentials,
+  clearRememberedCredentials,
   validateHAUAdmissionNo,
   fetchSecurityQuestionForUser,
   resetPasswordViaSecurityQuestion,
@@ -199,6 +201,7 @@ export default function AuthModal({
   const [loginPassword, setLoginPassword] = useState('');
   const [showLoginPassword, setShowLoginPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(true);
+  const [rememberedAccount, setRememberedAccount] = useState(null);
   const [isCapsLockOn, setIsCapsLockOn] = useState(false);
   const [showForgotPasswordModal, setShowForgotPasswordModal] = useState(false);
   const [copiedResetText, setCopiedResetText] = useState(false);
@@ -238,11 +241,34 @@ export default function AuthModal({
     }
   }, [parsedRollInfo]);
 
-  // Load remembered login identifier on mount
+  // Load remembered login credentials (both identifier and password) on mount
   useEffect(() => {
-    const remembered = getRememberedIdentifier();
-    if (remembered) setLoginIdentifier(remembered);
+    const creds = getRememberedCredentials();
+    if (creds && (creds.identifier || creds.password)) {
+      setRememberedAccount(creds);
+      if (creds.identifier) setLoginIdentifier(creds.identifier);
+      if (creds.password) setLoginPassword(creds.password);
+      setRememberMe(true);
+      if (creds.role === 'faculty') {
+        setPortalRole('faculty');
+      }
+    } else {
+      const remembered = getRememberedIdentifier();
+      if (remembered) {
+        setLoginIdentifier(remembered);
+        setRememberMe(true);
+      }
+    }
   }, []);
+
+  const handleClearRemembered = (e) => {
+    if (e) e.preventDefault();
+    clearRememberedCredentials();
+    setRememberedAccount(null);
+    setLoginIdentifier('');
+    setLoginPassword('');
+    setRememberMe(false);
+  };
 
   // Handle Key CapsLock Detection
   const handleKeyModifierCheck = (e) => {
@@ -611,6 +637,24 @@ export default function AuthModal({
           {/* ======================================================== */}
           {primaryTab === 'login' && (
             <form onSubmit={handleLogin} className="space-y-4">
+              {rememberedAccount && rememberedAccount.identifier === loginIdentifier && (
+                <div className="p-2.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 flex items-center justify-between text-xs animate-fadeIn">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                    <span className="text-slate-700 dark:text-slate-300 truncate text-[11px]">
+                      Saved credentials remembered for <strong className="text-slate-900 dark:text-white font-bold">{rememberedAccount.fullName || rememberedAccount.identifier}</strong>
+                    </span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={handleClearRemembered}
+                    className="text-[11px] font-bold text-slate-500 hover:text-rose-600 dark:hover:text-rose-400 underline shrink-0 ml-2 cursor-pointer"
+                    title="Clear remembered credentials on this device"
+                  >
+                    Forget
+                  </button>
+                </div>
+              )}
               <div>
                 <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
                   {portalRole === 'faculty' ? 'Faculty Email or Username' : 'Account Identifier'}

@@ -118,21 +118,9 @@ export function recordQuestionOutcomes({
       localStorage.setItem('gate_ag_user_stats', JSON.stringify(stats));
     } catch (e) {}
 
-    // Async sync to Supabase if authenticated
+    // Debounced async sync to Supabase if authenticated to prevent excessive database writes
     if (isSupabaseConfigured && supabase && sid && sid !== 'default_student') {
-      try {
-        supabase
-          .from('student_mistake_vault')
-          .upsert([{
-            student_identifier: sid,
-            vault_data: vault,
-            updated_at: now
-          }], { onConflict: 'student_identifier' })
-          .then(({ error }) => {
-            if (error) console.warn('Mistake vault backend sync notice:', error.message);
-          })
-          .catch(() => {});
-      } catch (e) {}
+      scheduleDebouncedVaultSync(sid, vault, now);
     }
 
     return vault;
@@ -140,6 +128,33 @@ export function recordQuestionOutcomes({
     console.error('Failed to record question outcomes:', err);
     return getMistakeVault(studentId);
   }
+}
+
+let vaultSyncTimers = new Map();
+
+function scheduleDebouncedVaultSync(sid, vault, now) {
+  if (vaultSyncTimers.has(sid)) {
+    clearTimeout(vaultSyncTimers.get(sid));
+  }
+
+  const timer = setTimeout(() => {
+    vaultSyncTimers.delete(sid);
+    try {
+      supabase
+        .from('student_mistake_vault')
+        .upsert([{
+          student_identifier: sid,
+          vault_data: vault,
+          updated_at: now
+        }], { onConflict: 'student_identifier' })
+        .then(({ error }) => {
+          if (error) console.warn('Mistake vault backend sync notice:', error.message);
+        })
+        .catch(() => {});
+    } catch (e) {}
+  }, 5000); // 5-second debounce window
+
+  vaultSyncTimers.set(sid, timer);
 }
 
 export function getActiveMistakeIds(studentId = null) {
@@ -175,3 +190,55 @@ export function clearMistakeVault(studentId = null) {
     localStorage.removeItem(LEGACY_MISTAKE_KEY);
   }
 }
+
+/**
+ * Pull and merge remote mistake vault from Supabase for this student
+ */
+export async function fetchAndMergeRemoteMistakeVault(studentId = null) {
+  const sid = getEffectiveStudentId(studentId);
+  if (!isSupabaseConfigured || !supabase || !sid || sid === 'default_student') {
+    return getMistakeVault(sid);
+  }
+
+  try {
+    const { data, error } = await supabase
+      .from('student_mistake_vault')
+      .select('vault_data, updated_at')
+      .eq('student_identifier', sid)
+      .maybeSingle();
+
+    if (!error && data && data.vault_data && typeof data.vault_data === 'object') {
+      const remoteVault = data.vault_data;
+      const localVault = getMistakeVault(sid);
+      const mergedVault = { ...localVault };
+
+      Object.keys(remoteVault).forEach(qId => {
+        const remoteItem = remoteVault[qId];
+        const localItem = mergedVault[qId];
+
+        if (!localItem) {
+          mergedVault[qId] = remoteItem;
+        } else {
+          mergedVault[qId] = {
+            ...localItem,
+            mistakeCount: Math.max(localItem.mistakeCount || 1, remoteItem.mistakeCount || 1),
+            mastered: localItem.mastered || remoteItem.mastered,
+            firstMistakeAt: localItem.firstMistakeAt || remoteItem.firstMistakeAt,
+            lastMistakeAt: (new Date(localItem.lastMistakeAt || 0) > new Date(remoteItem.lastMistakeAt || 0))
+              ? localItem.lastMistakeAt
+              : remoteItem.lastMistakeAt
+          };
+        }
+      });
+
+      const key = getVaultStorageKey(sid);
+      localStorage.setItem(key, JSON.stringify(mergedVault));
+      return mergedVault;
+    }
+  } catch (e) {
+    console.warn('Mistake vault remote fetch exception:', e);
+  }
+
+  return getMistakeVault(sid);
+}
+

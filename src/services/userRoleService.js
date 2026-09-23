@@ -1,4 +1,5 @@
 import { supabase, isSupabaseConfigured } from './supabaseClient.js';
+import { hashPassword, sanitizeMobileNumber } from './authService.js';
 
 const LOCAL_STORAGE_USERS_KEY = 'gate_ag_prep_mock_users';
 const LOCAL_STORAGE_SESSION_KEY = 'gate_ag_prep_session_token';
@@ -227,14 +228,309 @@ export async function updateUserRole(userId, newRole, contributorBadge = null) {
 }
 
 /**
- * Subscribe to live role and badge updates across tabs and devices
+ * Update full user information directly from Admin Panel with instant live sync
+ */
+export async function adminUpdateUserInfo(targetUserId, updatedFields, adminActor = { name: 'Admin', role: 'admin' }) {
+  if (!targetUserId) return { success: false, message: 'Target User ID is required' };
+  if (!updatedFields || typeof updatedFields !== 'object') {
+    return { success: false, message: 'Updated fields object is required' };
+  }
+
+  const cleanFullName = updatedFields.full_name?.trim();
+  const cleanEmail = updatedFields.email?.trim()?.toLowerCase();
+  const cleanMobile = updatedFields.mobile_number ? String(updatedFields.mobile_number).replace(/\D/g, '') : undefined;
+  const cleanCollege = updatedFields.college_name?.trim();
+  const cleanDepartment = updatedFields.department?.trim();
+  const cleanTargetYear = updatedFields.gate_target_year?.trim();
+  const cleanRole = updatedFields.role ? updatedFields.role.toLowerCase() : undefined;
+  const cleanBadge = updatedFields.contributor_badge !== undefined ? (updatedFields.contributor_badge === 'None' ? null : updatedFields.contributor_badge) : undefined;
+  const cleanXP = updatedFields.xp_points !== undefined ? Math.max(0, Number(updatedFields.xp_points) || 0) : undefined;
+  const cleanBreakXP = updatedFields.break_xp !== undefined ? Math.max(0, Number(updatedFields.break_xp) || 0) : undefined;
+  const isFac = cleanRole === 'faculty' || cleanRole === 'mentor' || Boolean(updatedFields.is_faculty);
+
+  // 1. Role Overrides Map Update (if role or badge provided)
+  if (cleanRole !== undefined || cleanBadge !== undefined) {
+    const roleOverrides = getRoleOverridesMap();
+    const currentOverride = roleOverrides[targetUserId] || {};
+    roleOverrides[targetUserId] = {
+      ...currentOverride,
+      role: cleanRole !== undefined ? cleanRole : currentOverride.role,
+      contributor_badge: cleanBadge !== undefined ? cleanBadge : currentOverride.contributor_badge,
+      updated_at: new Date().toISOString()
+    };
+    localStorage.setItem(LOCAL_STORAGE_USER_ROLES_KEY, JSON.stringify(roleOverrides));
+  }
+
+  // 2. Ban / Unban Sync if provided
+  if (updatedFields.is_banned !== undefined) {
+    if (updatedFields.is_banned) {
+      banUser({ id: targetUserId, email: cleanEmail, full_name: cleanFullName }, updatedFields.ban_reason || 'Administrative restriction by Admin');
+    } else {
+      unbanUser(targetUserId);
+      if (cleanEmail) unbanUser(cleanEmail);
+    }
+  }
+
+  // 3. Local Mock Users Array Update
+  let matchedUser = null;
+  try {
+    const rawLocal = localStorage.getItem(LOCAL_STORAGE_USERS_KEY);
+    if (rawLocal) {
+      const parsed = JSON.parse(rawLocal);
+      const idx = parsed.findIndex(u => u.id === targetUserId || u.email === targetUserId || u.username === targetUserId || (cleanEmail && u.email === cleanEmail));
+      if (idx !== -1) {
+        parsed[idx] = {
+          ...parsed[idx],
+          ...(cleanFullName ? { full_name: cleanFullName, display_name: cleanFullName } : {}),
+          ...(cleanEmail ? { email: cleanEmail } : {}),
+          ...(cleanMobile !== undefined ? { mobile_number: cleanMobile } : {}),
+          ...(cleanCollege !== undefined ? { college_name: cleanCollege, institute: cleanCollege } : {}),
+          ...(cleanDepartment !== undefined ? { department: cleanDepartment } : {}),
+          ...(cleanTargetYear !== undefined ? { gate_target_year: cleanTargetYear } : {}),
+          ...(cleanXP !== undefined ? { xp_points: cleanXP } : {}),
+          ...(cleanBreakXP !== undefined ? { break_xp: cleanBreakXP } : {}),
+          ...(cleanRole ? { 
+            role: cleanRole, 
+            is_solver: cleanRole === 'solver', 
+            is_mentor: cleanRole === 'mentor', 
+            is_faculty: isFac 
+          } : {}),
+          ...(cleanBadge !== undefined ? { contributor_badge: cleanBadge } : {}),
+          ...(updatedFields.is_banned !== undefined ? { is_banned: updatedFields.is_banned } : {}),
+          ...(updatedFields.designation !== undefined ? { designation: updatedFields.designation } : {}),
+          ...(updatedFields.bio !== undefined ? { bio: updatedFields.bio } : {}),
+          ...(updatedFields.title_prefix !== undefined ? { title_prefix: updatedFields.title_prefix } : {})
+        };
+        matchedUser = parsed[idx];
+        localStorage.setItem(LOCAL_STORAGE_USERS_KEY, JSON.stringify(parsed));
+      }
+    }
+  } catch (e) {
+    console.warn("Local storage user update error:", e);
+  }
+
+  // 4. Active Session Update (if the currently logged in student is the target)
+  try {
+    const rawSession = localStorage.getItem(LOCAL_STORAGE_SESSION_KEY);
+    if (rawSession) {
+      const session = JSON.parse(rawSession);
+      const s = session?.student;
+      if (s?.id === targetUserId || s?.email === targetUserId || s?.username === targetUserId || (cleanEmail && s?.email === cleanEmail)) {
+        session.student = {
+          ...session.student,
+          ...(cleanFullName ? { full_name: cleanFullName, display_name: cleanFullName } : {}),
+          ...(cleanEmail ? { email: cleanEmail } : {}),
+          ...(cleanMobile !== undefined ? { mobile_number: cleanMobile } : {}),
+          ...(cleanCollege !== undefined ? { college_name: cleanCollege, institute: cleanCollege } : {}),
+          ...(cleanDepartment !== undefined ? { department: cleanDepartment } : {}),
+          ...(cleanTargetYear !== undefined ? { gate_target_year: cleanTargetYear } : {}),
+          ...(cleanXP !== undefined ? { xp_points: cleanXP } : {}),
+          ...(cleanBreakXP !== undefined ? { break_xp: cleanBreakXP } : {}),
+          ...(cleanRole ? { 
+            role: cleanRole, 
+            is_solver: cleanRole === 'solver', 
+            is_mentor: cleanRole === 'mentor', 
+            is_faculty: isFac 
+          } : {}),
+          ...(cleanBadge !== undefined ? { contributor_badge: cleanBadge } : {}),
+          ...(updatedFields.designation !== undefined ? { designation: updatedFields.designation } : {}),
+          ...(updatedFields.bio !== undefined ? { bio: updatedFields.bio } : {}),
+          ...(updatedFields.title_prefix !== undefined ? { title_prefix: updatedFields.title_prefix } : {})
+        };
+        localStorage.setItem(LOCAL_STORAGE_SESSION_KEY, JSON.stringify(session));
+
+        // Sync local XP counter if modified
+        if (cleanXP !== undefined) {
+          localStorage.setItem('gate_ag_student_xp_data', String(cleanXP));
+        }
+        if (cleanBreakXP !== undefined) {
+          localStorage.setItem('gate_ag_break_xp', String(cleanBreakXP));
+        }
+      }
+    }
+  } catch (e) {}
+
+  // 5. Supabase Backend Sync
+  if (isSupabaseConfigured && supabase) {
+    try {
+      const dbPayload = {};
+      if (cleanFullName) dbPayload.full_name = cleanFullName;
+      if (cleanEmail) dbPayload.email = cleanEmail;
+      if (cleanMobile !== undefined) dbPayload.mobile_number = cleanMobile;
+      if (cleanCollege !== undefined) {
+        dbPayload.college_name = cleanCollege;
+        dbPayload.institute = cleanCollege;
+      }
+      if (cleanDepartment !== undefined) dbPayload.department = cleanDepartment;
+      if (cleanTargetYear !== undefined) dbPayload.gate_target_year = cleanTargetYear;
+      if (cleanXP !== undefined) dbPayload.xp_points = cleanXP;
+      if (cleanBreakXP !== undefined) dbPayload.break_xp = cleanBreakXP;
+      if (cleanRole) {
+        dbPayload.role = cleanRole;
+        dbPayload.is_faculty = isFac;
+        dbPayload.is_solver = cleanRole === 'solver';
+        dbPayload.is_mentor = cleanRole === 'mentor';
+      }
+      if (cleanBadge !== undefined) dbPayload.contributor_badge = cleanBadge;
+      if (updatedFields.designation !== undefined) dbPayload.designation = updatedFields.designation;
+      if (updatedFields.bio !== undefined) dbPayload.bio = updatedFields.bio;
+      if (updatedFields.title_prefix !== undefined) dbPayload.title_prefix = updatedFields.title_prefix;
+
+      if (Object.keys(dbPayload).length > 0) {
+        await supabase
+          .from('students')
+          .update(dbPayload)
+          .or(`id.eq.${targetUserId},email.eq.${cleanEmail || targetUserId}`);
+      }
+
+      // Supabase Realtime Broadcast to notify all active student devices
+      const channel = supabase.channel('gate_ag_roles_live');
+      channel.send({
+        type: 'broadcast',
+        event: 'user_updated',
+        payload: {
+          userId: targetUserId,
+          targetEmail: cleanEmail,
+          updatedFields: {
+            ...updatedFields,
+            role: cleanRole,
+            contributor_badge: cleanBadge,
+            xp_points: cleanXP,
+            break_xp: cleanBreakXP
+          },
+          updatedAt: new Date().toISOString()
+        }
+      });
+    } catch (err) {
+      console.warn("Supabase user info update sync error:", err.message);
+    }
+  }
+
+  // 6. Moderation Audit Trail Logging
+  logModerationAction({
+    actorName: adminActor?.name || 'Admin Lead',
+    actorRole: adminActor?.role || 'admin',
+    action: 'UPDATE_USER_PROFILE',
+    targetUser: cleanFullName || cleanEmail || targetUserId,
+    targetMessage: `Updated fields: ${Object.keys(updatedFields).join(', ')}`,
+    reason: updatedFields.admin_notes || 'Administrative profile modification'
+  });
+
+  // 7. Cross-Tab BroadcastChannel Dispatch
+  const broadcastPayload = {
+    type: 'USER_UPDATED',
+    userId: targetUserId,
+    targetEmail: cleanEmail,
+    role: cleanRole,
+    contributor_badge: cleanBadge,
+    updatedFields: {
+      ...updatedFields,
+      role: cleanRole,
+      contributor_badge: cleanBadge,
+      xp_points: cleanXP,
+      break_xp: cleanBreakXP
+    },
+    timestamp: Date.now()
+  };
+
+  if (localRolesBroadcast) {
+    try {
+      localRolesBroadcast.postMessage(broadcastPayload);
+    } catch (e) {}
+  }
+
+  return {
+    success: true,
+    user: matchedUser,
+    message: 'User information updated and synced live across sessions.'
+  };
+}
+
+/**
+ * Admin Password Reset for a user
+ */
+export async function adminResetUserPassword(targetUserId, newPassword, adminActor = { name: 'Admin', role: 'admin' }) {
+  if (!targetUserId || !newPassword || newPassword.trim().length < 6) {
+    return { success: false, message: 'Password must be at least 6 characters long.' };
+  }
+
+  const cleanPwd = newPassword.trim();
+  let secureHash = null;
+  try {
+    secureHash = await hashPassword(cleanPwd);
+  } catch (e) {}
+
+  // 1. Update in local mock users array
+  try {
+    const rawLocal = localStorage.getItem(LOCAL_STORAGE_USERS_KEY);
+    if (rawLocal) {
+      const parsed = JSON.parse(rawLocal);
+      const idx = parsed.findIndex(u => u.id === targetUserId || u.email === targetUserId || u.username === targetUserId);
+      if (idx !== -1) {
+        parsed[idx].password_plain = cleanPwd;
+        if (secureHash) parsed[idx].password_hash = secureHash;
+        parsed[idx].has_custom_password = true;
+        localStorage.setItem(LOCAL_STORAGE_USERS_KEY, JSON.stringify(parsed));
+      }
+    }
+  } catch (e) {}
+
+  // 2. Update active session if target is active
+  try {
+    const rawSession = localStorage.getItem(LOCAL_STORAGE_SESSION_KEY);
+    if (rawSession) {
+      const session = JSON.parse(rawSession);
+      const s = session?.student;
+      if (s?.id === targetUserId || s?.email === targetUserId || s?.username === targetUserId) {
+        session.student.has_custom_password = true;
+        if (secureHash) session.student.password_hash = secureHash;
+        delete session.student.password_plain;
+        localStorage.setItem(LOCAL_STORAGE_SESSION_KEY, JSON.stringify(session));
+      }
+    }
+  } catch (e) {}
+
+  // 3. Supabase Database Update
+  if (isSupabaseConfigured && supabase) {
+    try {
+      const dbPayload = {
+        password_plain: cleanPwd,
+        has_custom_password: true
+      };
+      if (secureHash) {
+        dbPayload.password_hash = secureHash;
+      }
+      await supabase
+        .from('students')
+        .update(dbPayload)
+        .or(`id.eq.${targetUserId},email.eq.${targetUserId}`);
+    } catch (e) {
+      console.warn("Supabase admin password reset sync note:", e.message);
+    }
+  }
+
+  // 4. Log Moderation Action
+  logModerationAction({
+    actorName: adminActor?.name || 'Admin Lead',
+    actorRole: adminActor?.role || 'admin',
+    action: 'ADMIN_RESET_PASSWORD',
+    targetUser: targetUserId,
+    targetMessage: 'Admin initiated password reset',
+    reason: 'Administrative password reset'
+  });
+
+  return { success: true, message: 'Password reset successfully.' };
+}
+
+/**
+ * Subscribe to live role and full user updates across tabs and devices
  */
 export function subscribeToLiveRoleSync(onRoleUpdated) {
   if (typeof window === 'undefined') return () => {};
 
   // 1. Cross-Tab Broadcast Listener
   const handleLocalMessage = (event) => {
-    if (event.data?.type === 'ROLE_UPDATED' && typeof onRoleUpdated === 'function') {
+    if ((event.data?.type === 'ROLE_UPDATED' || event.data?.type === 'USER_UPDATED') && typeof onRoleUpdated === 'function') {
       onRoleUpdated(event.data);
     }
   };
@@ -253,6 +549,11 @@ export function subscribeToLiveRoleSync(onRoleUpdated) {
             onRoleUpdated(payload.payload);
           }
         })
+        .on('broadcast', { event: 'user_updated' }, (payload) => {
+          if (payload.payload && typeof onRoleUpdated === 'function') {
+            onRoleUpdated(payload.payload);
+          }
+        })
         .subscribe();
     } catch (e) {}
   }
@@ -267,6 +568,8 @@ export function subscribeToLiveRoleSync(onRoleUpdated) {
     }
   };
 }
+
+export const subscribeToLiveUserSync = subscribeToLiveRoleSync;
 
 /**
  * Get banned users list

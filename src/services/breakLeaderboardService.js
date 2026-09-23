@@ -47,8 +47,9 @@ export function getLocalBreakXP() {
 
 // Add XP with even weightage (+10 XP per objective/point)
 export function addBreakXP(amount = 10) {
+  const safeAmount = Math.max(0, Math.min(Number(amount) || 10, 100));
   const currentXP = getLocalBreakXP();
-  const newXP = currentXP + amount;
+  const newXP = currentXP + safeAmount;
   try {
     localStorage.setItem(LOCAL_STORAGE_BREAK_XP_KEY, newXP.toString());
     const rawSession = localStorage.getItem('gate_ag_prep_session_token');
@@ -67,7 +68,7 @@ export function addBreakXP(amount = 10) {
       localBreakXPBroadcast.postMessage({
         type: 'BREAK_XP_AWARDED',
         newXP,
-        amount,
+        amount: safeAmount,
         timestamp: Date.now()
       });
     } catch (e) {}

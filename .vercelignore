@@ -16,4 +16,6 @@ public/question_snippets
 *.py
 .DS_Store
 .vercel
+PROJECT_REPORT_*.docx
+scratch
 

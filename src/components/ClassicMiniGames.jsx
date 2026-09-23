@@ -1587,6 +1587,7 @@ export function WhackAWeedGame({ onRewardXP }) {
   const [combo, setCombo] = useState(0);
   const [timeLeft, setTimeLeft] = useState(35);
   const [isPlaying, setIsPlaying] = useState(false);
+  const scoreRef = useRef(0);
 
   const TARGETS = [
     { type: 'weed', emoji: '🌿', pts: 10, name: 'Wild Weed' },
@@ -1596,6 +1597,7 @@ export function WhackAWeedGame({ onRewardXP }) {
   ];
 
   const startGame = () => {
+    scoreRef.current = 0;
     setScore(0);
     setCombo(0);
     setTimeLeft(35);
@@ -1611,14 +1613,14 @@ export function WhackAWeedGame({ onRewardXP }) {
         if (t <= 1) {
           setIsPlaying(false);
           soundFX.playWin();
-          onRewardXP?.(Math.floor(score / 5));
+          onRewardXP?.(Math.floor(scoreRef.current / 5));
           return 0;
         }
         return t - 1;
       });
     }, 1000);
     return () => clearInterval(timer);
-  }, [isPlaying, score, onRewardXP]);
+  }, [isPlaying, onRewardXP]);
 
   useEffect(() => {
     if (!isPlaying) return;
@@ -1655,12 +1657,22 @@ export function WhackAWeedGame({ onRewardXP }) {
 
     if (target.isFriendly) {
       soundFX.playCrash();
-      setScore(s => Math.max(0, s + target.pts));
+      setScore(s => {
+        const ns = Math.max(0, s + target.pts);
+        scoreRef.current = ns;
+        return ns;
+      });
       setCombo(0);
     } else {
       soundFX.playScore();
-      setScore(s => s + target.pts * (combo >= 5 ? 2 : 1));
-      setCombo(c => c + 1);
+      const currentCombo = combo + 1;
+      setCombo(currentCombo);
+      const bonus = currentCombo > 3 ? 10 : 0;
+      setScore(s => {
+        const ns = s + target.pts + bonus;
+        scoreRef.current = ns;
+        return ns;
+      });
     }
 
     setHoles(prev => {
@@ -1671,42 +1683,42 @@ export function WhackAWeedGame({ onRewardXP }) {
   };
 
   return (
-    <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-5 space-y-4 max-w-md mx-auto shadow-xl text-center">
+    <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-5 space-y-4 max-w-md mx-auto shadow-lg text-center">
       <div className="flex justify-between items-center border-b border-slate-100 dark:border-slate-800 pb-3">
-        <div>
-          <h3 className="font-extrabold text-lg text-slate-900 dark:text-white flex items-center gap-2">
-            <span>🦔 Whack-A-Weed Frenzy</span>
-          </h3>
-          <p className="text-xs text-slate-500">Hit weeds & gophers, spare friendly sunflowers!</p>
-        </div>
+        <h3 className="font-extrabold text-lg text-slate-900 dark:text-white flex items-center gap-2">
+          <span>🦔 Whack-A-Weed Frenzy</span>
+        </h3>
         <div className="flex gap-3 text-xs font-mono font-bold">
           <span className="text-rose-500">⏳ {timeLeft}s</span>
           <span className="text-emerald-500">Score: {score}</span>
+          {combo > 2 && <span className="text-amber-500 animate-pulse">🔥 {combo}x</span>}
         </div>
       </div>
 
       {!isPlaying ? (
-        <div className="py-10 space-y-3 bg-slate-50 dark:bg-slate-950 rounded-2xl border border-slate-200 dark:border-slate-800">
-          <span className="text-5xl">🌿⚡</span>
+        <div className="py-8 space-y-3">
+          <span className="text-4xl">🌱</span>
           <h4 className="text-base font-extrabold text-slate-900 dark:text-white">35-Second Reflex Whack</h4>
+          <p className="text-xs text-slate-500 max-w-xs mx-auto">
+            Tap the wild weeds and golden bugs fast! Avoid whacking the friendly sunflowers!
+          </p>
           <button
             onClick={startGame}
             className="px-6 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold rounded-xl text-xs transition shadow-lg"
           >
-            START WHACKING ⚡
+            START WHACKING 🌾
           </button>
         </div>
       ) : (
-        <div className="grid grid-cols-3 gap-3 p-4 bg-amber-950/20 dark:bg-slate-950 rounded-2xl border border-amber-800/30">
+        <div className="grid grid-cols-3 gap-3 p-3 bg-emerald-950/20 dark:bg-emerald-950/40 rounded-2xl border border-emerald-500/20">
           {holes.map((hole, i) => (
             <button
               key={i}
               onClick={() => whackHole(i)}
-              className="h-20 sm:h-24 bg-gradient-to-b from-amber-900 to-amber-950 border-2 border-amber-800/60 rounded-2xl flex items-center justify-center text-4xl transform active:scale-90 transition-all shadow-inner relative overflow-hidden"
+              className="aspect-square bg-emerald-900/40 hover:bg-emerald-800/50 rounded-xl border border-emerald-500/30 flex items-center justify-center text-3xl active:scale-90 transition relative overflow-hidden shadow-inner"
             >
-              <div className="absolute inset-x-2 bottom-1 h-3 bg-amber-950 rounded-full blur-xs opacity-50" />
               {hole && (
-                <span className="animate-in zoom-in-50 duration-150 transform hover:scale-125">
+                <span className="animate-in zoom-in-50 duration-150 select-none">
                   {hole.emoji}
                 </span>
               )}
@@ -1728,6 +1740,15 @@ export function CyberSequenceGame({ onRewardXP }) {
   const [activePad, setActivePad] = useState(null);
   const [gameState, setGameState] = useState('ready'); // ready, playback, input, gameover
   const [streak, setStreak] = useState(0);
+  const playbackIntervalRef = useRef(null);
+
+  useEffect(() => {
+    return () => {
+      if (playbackIntervalRef.current) {
+        clearInterval(playbackIntervalRef.current);
+      }
+    };
+  }, []);
 
   const PADS = [
     { id: 0, color: 'bg-emerald-500 shadow-emerald-500/50', active: 'bg-emerald-300 ring-4 ring-white', freq: 330 },
@@ -1755,13 +1776,14 @@ export function CyberSequenceGame({ onRewardXP }) {
   };
 
   const startNextRound = (currentSeq) => {
+    if (playbackIntervalRef.current) clearInterval(playbackIntervalRef.current);
     const nextSeq = [...currentSeq, Math.floor(Math.random() * 4)];
     setSequence(nextSeq);
     setPlayerIdx(0);
     setGameState('playback');
 
     let i = 0;
-    const interval = setInterval(() => {
+    playbackIntervalRef.current = setInterval(() => {
       if (i < nextSeq.length) {
         const padId = nextSeq[i];
         setActivePad(padId);
@@ -1769,7 +1791,10 @@ export function CyberSequenceGame({ onRewardXP }) {
         setTimeout(() => setActivePad(null), 350);
         i++;
       } else {
-        clearInterval(interval);
+        if (playbackIntervalRef.current) {
+          clearInterval(playbackIntervalRef.current);
+          playbackIntervalRef.current = null;
+        }
         setGameState('input');
       }
     }, 600);

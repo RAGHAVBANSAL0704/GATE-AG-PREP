@@ -32,6 +32,12 @@ import {
   fetchStudentProfileFromBackend,
   fetchSecurityQuestionForUser,
   resetPasswordViaSecurityQuestion,
+  getRememberedCredentials,
+  saveRememberedCredentials,
+  clearRememberedCredentials,
+  getRememberedIdentifier,
+  LOCAL_STORAGE_REMEMBER_KEY,
+  LOCAL_STORAGE_REMEMBER_CREDENTIALS_KEY,
   PRESET_SECURITY_QUESTIONS,
   FACULTY_SALUTATIONS,
   AGRI_ENGG_DEPARTMENTS
@@ -519,6 +525,48 @@ describe('Faculty Authentication & Registration Unit Tests', () => {
     const newLogin = await loginStudent('gaurav_agri', 'GauravNewPass#2027');
     assert.equal(newLogin.success, true);
     assert.equal(newLogin.student.full_name, 'Gaurav Kumar');
+  });
+
+  test('Remember Me saves credentials and auto-fills on subsequent logins without re-entering password', async () => {
+    // 1. Register student
+    const reg = await registerStudent({
+      studentType: 'external',
+      fullName: 'Priya Sharma',
+      username: 'priya_sharma',
+      gender: 'Female',
+      email: 'priya@example.com',
+      dob: '2003-08-12',
+      collegeName: 'PAU Ludhiana'
+    });
+    assert.equal(reg.success, true);
+
+    // Initial registration should have saved credentials
+    let savedCreds = getRememberedCredentials();
+    assert.ok(savedCreds, 'Remembered credentials should exist after registration');
+    assert.equal(savedCreds.identifier, 'priya_sharma');
+    assert.equal(savedCreds.password, '12/08/2003');
+
+    // 2. Clear credentials manually (simulate fresh login or forget)
+    clearRememberedCredentials();
+    assert.equal(getRememberedCredentials(), null);
+    assert.equal(getRememberedIdentifier(), '');
+
+    // 3. Log in with rememberMe = true
+    const loginRes = await loginStudent('priya_sharma', '12/08/2003', true);
+    assert.equal(loginRes.success, true);
+
+    savedCreds = getRememberedCredentials();
+    assert.ok(savedCreds, 'Remembered credentials must be saved when rememberMe is true');
+    assert.equal(savedCreds.identifier, 'priya_sharma');
+    assert.equal(savedCreds.password, '12/08/2003');
+    assert.equal(savedCreds.fullName, 'Priya Sharma');
+    assert.equal(getRememberedIdentifier(), 'priya_sharma');
+
+    // 4. Log in with rememberMe = false -> should clear credentials
+    const loginNoRemember = await loginStudent('priya_sharma', '12/08/2003', false);
+    assert.equal(loginNoRemember.success, true);
+    assert.equal(getRememberedCredentials(), null);
+    assert.equal(getRememberedIdentifier(), '');
   });
 
 });

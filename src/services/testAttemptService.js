@@ -90,10 +90,23 @@ export async function saveTestAttempt(attemptData) {
       delete dbPayload._syncedToBackend;
       delete dbPayload._syncError;
 
+      // Compact question responses to minimize PostgreSQL row storage footprint
+      if (Array.isArray(dbPayload.question_responses)) {
+        dbPayload.question_responses = dbPayload.question_responses.map(qr => ({
+          qid: qr.question_id || qr.id || qr.qid,
+          qnum: qr.qnum,
+          sec: qr.section,
+          ans: qr.user_answer ?? qr.ans,
+          key: qr.correct_answer ?? qr.key,
+          ok: qr.is_correct ?? qr.ok,
+          m: qr.marks_awarded ?? qr.m ?? 0,
+          t: qr.time_spent_seconds ?? qr.t ?? 0
+        }));
+      }
+
       const { data, error } = await supabase
         .from('test_attempts')
-        .upsert([dbPayload], { onConflict: 'client_attempt_id' })
-        .select();
+        .upsert([dbPayload], { onConflict: 'client_attempt_id' });
 
       if (error) {
         console.warn("Supabase test_attempts upsert warning:", error.message);

@@ -77,10 +77,12 @@ import {
   refreshCurrentStudentProfile 
 } from './services/authService';
 import { initAutoSyncOnReconnect } from './services/testAttemptService';
+import { syncStudentCloudData } from './services/studentProgressSyncService';
 import { saveAndBroadcastQuestion, subscribeToLiveQuestionSync } from './services/questionSyncService';
 import { recordQuestionOutcomes } from './services/mistakeVaultService';
 import { subscribeToLiveRoleSync } from './services/userRoleService';
 import { saveToIDB } from './utils/indexedDB';
+
 
 import initialQuestions from './data/questions.json';
 import initialMockPapers from './data/mock_papers.json';
@@ -231,10 +233,44 @@ export default function App() {
       localStorage.removeItem('gate_ag_guest_mode');
     } catch (e) {}
 
+    // Instantly hydrate user stats, test history, and mistake vault across devices
+    if (student) {
+      syncStudentCloudData(student, userStats).then(result => {
+        if (result && result.userStats) {
+          setUserStats(result.userStats);
+        }
+      }).catch(err => {
+        console.warn('[App] Login progress hydration warning:', err);
+      });
+    }
+
     if (isNewRegistration) {
       setWelcomeUser(student);
     }
   };
+
+  // Cross-Device Progress & User Stats Synchronization on startup / session change
+  useEffect(() => {
+    if (!currentStudent) return;
+    syncStudentCloudData(currentStudent, userStats).then(result => {
+      if (result && result.userStats) {
+        setUserStats(result.userStats);
+      }
+    }).catch(err => {
+      console.warn('[App] Session startup progress sync warning:', err);
+    });
+  }, [currentStudent?.id, currentStudent?.admission_no, currentStudent?.email, currentStudent?.username]);
+
+  // Global listener for cross-device & background progress sync events
+  useEffect(() => {
+    const handleProgressSynced = (e) => {
+      if (e?.detail?.userStats) {
+        setUserStats(e.detail.userStats);
+      }
+    };
+    window.addEventListener('gate_ag_progress_synced', handleProgressSynced);
+    return () => window.removeEventListener('gate_ag_progress_synced', handleProgressSynced);
+  }, []);
 
   // Real-time live profile synchronization with Supabase backend (e.g. backend name/email/college changes)
   useEffect(() => {
@@ -262,17 +298,47 @@ export default function App() {
       const isTargetUser = 
         currentStudent.id === update.userId || 
         currentStudent.email === update.userId || 
-        currentStudent.username === update.userId;
+        currentStudent.username === update.userId ||
+        (update.targetEmail && currentStudent.email === update.targetEmail);
 
       if (isTargetUser) {
-        setCurrentStudent(prev => ({
-          ...prev,
-          role: update.role,
-          is_solver: update.role === 'solver',
-          is_mentor: update.role === 'mentor',
-          is_faculty: update.role === 'faculty' || update.role === 'mentor',
-          contributor_badge: update.contributor_badge
-        }));
+        const fields = update.updatedFields || {};
+        const newRole = update.role || fields.role;
+        const newBadge = update.contributor_badge !== undefined ? update.contributor_badge : fields.contributor_badge;
+        const isFac = newRole === 'faculty' || newRole === 'mentor' || (fields.is_faculty !== undefined ? Boolean(fields.is_faculty) : undefined);
+
+        setCurrentStudent(prev => {
+          if (!prev) return prev;
+          const updated = {
+            ...prev,
+            ...(fields.full_name ? { full_name: fields.full_name, display_name: fields.full_name } : {}),
+            ...(fields.email ? { email: fields.email } : {}),
+            ...(fields.mobile_number !== undefined ? { mobile_number: fields.mobile_number } : {}),
+            ...(fields.college_name !== undefined ? { college_name: fields.college_name, institute: fields.college_name } : {}),
+            ...(fields.department !== undefined ? { department: fields.department } : {}),
+            ...(fields.gate_target_year !== undefined ? { gate_target_year: fields.gate_target_year } : {}),
+            ...(fields.xp_points !== undefined ? { xp_points: fields.xp_points } : {}),
+            ...(fields.break_xp !== undefined ? { break_xp: fields.break_xp } : {}),
+            ...(newRole ? {
+              role: newRole,
+              is_solver: newRole === 'solver',
+              is_mentor: newRole === 'mentor',
+              is_faculty: isFac !== undefined ? isFac : (newRole === 'faculty' || newRole === 'mentor')
+            } : {}),
+            ...(newBadge !== undefined ? { contributor_badge: newBadge } : {})
+          };
+
+          try {
+            const rawSession = localStorage.getItem('gate_ag_prep_session_token');
+            if (rawSession) {
+              const parsedSession = JSON.parse(rawSession);
+              parsedSession.student = updated;
+              localStorage.setItem('gate_ag_prep_session_token', JSON.stringify(parsedSession));
+            }
+          } catch (e) {}
+
+          return updated;
+        });
       }
     });
 
@@ -609,6 +675,13 @@ export default function App() {
   };
 
   const [practiceMistakeFilter, setPracticeMistakeFilter] = useState(null);
+  const [selectedQuestionForDiscussion, setSelectedQuestionForDiscussion] = useState(null);
+
+  const handleDiscussQuestion = (question) => {
+    setSelectedQuestionForDiscussion(question);
+    setActiveTab('qa');
+    window.location.hash = '#qa';
+  };
 
   // PWA Install Prompt state & event listeners
   const [deferredPrompt, setDeferredPrompt] = useState(null);
@@ -817,6 +890,7 @@ export default function App() {
                 mockPapers={mockPapers}
                 customMockPapers={customMockPapers}
                 userStats={userStats}
+                currentStudent={currentStudent}
                 onStartMock={handleStartMock}
                 onStartSectionPractice={handleStartSectionPractice}
                 setActiveTab={setActiveTab}
@@ -841,6 +915,7 @@ export default function App() {
                 onOpenCalc={() => setIsCalcOpen(true)}
                 onEditQuestion={(q) => setEditingQuestion(q)}
                 onStartCustomTest={handleStartCustomTest}
+                onDiscussQuestion={handleDiscussQuestion}
                 currentStudent={currentStudent}
                 onRequireAuth={handleOpenAuth}
                 mistakeFilterIds={practiceMistakeFilter}
@@ -873,6 +948,8 @@ export default function App() {
                 currentStudent={currentStudent}
                 questions={questions}
                 mockPapers={mockPapers}
+                selectedQuestionForDiscussion={selectedQuestionForDiscussion}
+                onClearSelectedQuestion={() => setSelectedQuestionForDiscussion(null)}
                 onOpenCalc={() => setIsCalcOpen(true)}
                 onToggleBookmark={handleToggleBookmark}
                 onRequireAuth={handleOpenAuth}

@@ -25,7 +25,17 @@ import {
   Search,
   Smile,
   Code2,
-  ChevronDown
+  ChevronDown,
+  Pin,
+  BarChart2,
+  Timer,
+  Volume2,
+  VolumeX,
+  Play,
+  Pause,
+  RotateCcw,
+  BookOpen,
+  HelpCircle
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import { validateCleanInput, sanitizeText } from '../utils/profanityFilter';
@@ -42,6 +52,82 @@ import {
   logModerationAction,
   getModerationAuditLog 
 } from '../services/userRoleService';
+
+export const PINNED_BANNERS = {
+  'general-lounge': {
+    title: 'GATE AG Lounge Rules & Mission 2027',
+    text: 'Welcome! Keep discussions focused on Agricultural Engineering. Be courteous, share step-by-step methods, and verify formulas before posting.'
+  },
+  'gate-ag-2027': {
+    title: 'GATE AG 2027 Target Milestones',
+    text: 'Target 75+ Marks: General Aptitude (15M) + Engg Maths (13M) + FMPE (24M) + SWCE (24M) + APFE (24M). Daily target: 20 PYQs.'
+  },
+  'doubts-and-maths': {
+    title: 'Engineering Mathematics Core Identities',
+    text: 'Trace: $\\text{Tr}(A) = \\sum \\lambda_i$ | Determinant: $\\det(A) = \\prod \\lambda_i$ | Rank-Nullity: $\\text{Rank}(A) + \\text{Nullity}(A) = n$'
+  },
+  'fmp-machinery': {
+    title: 'Farm Machinery & Tractor Kinematics',
+    text: 'Draft: $D = C_s \\cdot w \\cdot d$ (N) | Drawbar Power: $P_{db} = D \\cdot v$ (kW) | Field Capacity: $C = \\frac{w \\cdot v \\cdot \\eta}{10}$ (ha/h)'
+  },
+  'swce-hydrology': {
+    title: 'Soil & Water Conservation Core Equations',
+    text: 'SCS-CN: $S = \\frac{25400}{CN} - 254$ mm | Runoff: $Q = \\frac{(P - 0.2S)^2}{P + 0.8S}$ (for $P > 0.2S$) | Rational: $Q_p = \\frac{C I A}{360}$ ($m^3/s$)'
+  },
+  'apfe-processing': {
+    title: 'Food Engineering & Thermodynamics Formulas',
+    text: 'Humid Heat: $h = 1.006t + w(2501 + 1.88t)$ kJ/kg | Page Model: $\\frac{M-M_e}{M_0-M_e} = \\exp(-kt^n)$ | Stoke\'s Law: $v_t = \\frac{g D^2 (\\rho_p - \\rho_f)}{18 \\mu}$'
+  }
+};
+
+// Native Web Audio Synthesizer for offline ambient focus sound
+class AmbientFocusAudio {
+  constructor() {
+    this.ctx = null;
+    this.osc1 = null;
+    this.osc2 = null;
+    this.gain = null;
+    this.isPlaying = false;
+  }
+  start() {
+    if (this.isPlaying) return;
+    try {
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      if (!AudioCtx) return;
+      this.ctx = new AudioCtx();
+      this.gain = this.ctx.createGain();
+      this.gain.gain.setValueAtTime(0.03, this.ctx.currentTime); // gentle calm volume
+
+      // 432 Hz Alpha wave harmonic drone
+      this.osc1 = this.ctx.createOscillator();
+      this.osc1.type = 'sine';
+      this.osc1.frequency.setValueAtTime(432, this.ctx.currentTime);
+
+      this.osc2 = this.ctx.createOscillator();
+      this.osc2.type = 'triangle';
+      this.osc2.frequency.setValueAtTime(216, this.ctx.currentTime);
+
+      this.osc1.connect(this.gain);
+      this.osc2.connect(this.gain);
+      this.gain.connect(this.ctx.destination);
+
+      this.osc1.start();
+      this.osc2.start();
+      this.isPlaying = true;
+    } catch (e) {
+      console.warn("Web Audio not supported", e);
+    }
+  }
+  stop() {
+    if (!this.isPlaying) return;
+    try {
+      if (this.osc1) this.osc1.stop();
+      if (this.osc2) this.osc2.stop();
+      if (this.ctx) this.ctx.close();
+    } catch (e) {}
+    this.isPlaying = false;
+  }
+}
 
 const CHANNELS = [
   { id: 'general-lounge', name: 'general-lounge', label: 'General Lounge', icon: '💬', desc: 'Syllabus strategy, exam tips & peer lounge' },
@@ -138,6 +224,18 @@ export default function CommunityChatHub({ currentStudent, onRequireAuth }) {
   const [showMathRibbon, setShowMathRibbon] = useState(false);
   const [copiedMsgId, setCopiedMsgId] = useState(null);
   const [activeReactionPickerMsgId, setActiveReactionPickerMsgId] = useState(null);
+  const [isPinnedBannerExpanded, setIsPinnedBannerExpanded] = useState(true);
+
+  // Live Poll State
+  const [isPollModalOpen, setIsPollModalOpen] = useState(false);
+  const [pollQuestion, setPollQuestion] = useState('');
+  const [pollOptions, setPollOptions] = useState(['', '']);
+
+  // Pomodoro & Lofi Focus Lounge State
+  const [pomodoroSeconds, setPomodoroSeconds] = useState(25 * 60);
+  const [isPomodoroActive, setIsPomodoroActive] = useState(false);
+  const [isAudioPlaying, setIsAudioPlaying] = useState(false);
+  const audioSynthRef = useRef(null);
   
   const [isModQueueOpen, setIsModQueueOpen] = useState(false);
   const [flaggedQueue, setFlaggedQueue] = useState([]);
@@ -184,6 +282,46 @@ export default function CommunityChatHub({ currentStudent, onRequireAuth }) {
     }
   }, [cooldownSec]);
 
+  // Pomodoro Countdown Timer
+  useEffect(() => {
+    let interval = null;
+    if (isPomodoroActive && pomodoroSeconds > 0) {
+      interval = setInterval(() => {
+        setPomodoroSeconds(prev => prev - 1);
+      }, 1000);
+    } else if (pomodoroSeconds === 0) {
+      setIsPomodoroActive(false);
+      setActionNotice("🔔 Pomodoro Focus Session Complete! Great job. Take a 5-minute break.");
+      setTimeout(() => setActionNotice(''), 5000);
+    }
+    return () => {
+      if (interval) clearInterval(interval);
+    };
+  }, [isPomodoroActive, pomodoroSeconds]);
+
+  const togglePomodoro = () => {
+    setIsPomodoroActive(prev => !prev);
+  };
+
+  const resetPomodoro = () => {
+    setIsPomodoroActive(false);
+    setPomodoroSeconds(25 * 60);
+  };
+
+  // Toggle Ambient Audio Drone
+  const toggleAmbientAudio = () => {
+    if (!audioSynthRef.current) {
+      audioSynthRef.current = new AmbientFocusAudio();
+    }
+    if (isAudioPlaying) {
+      audioSynthRef.current.stop();
+      setIsAudioPlaying(false);
+    } else {
+      audioSynthRef.current.start();
+      setIsAudioPlaying(true);
+    }
+  };
+
   // Insert Math Symbol at cursor position
   const handleInsertMath = (snippet) => {
     const input = inputFieldRef.current;
@@ -204,7 +342,7 @@ export default function CommunityChatHub({ currentStudent, onRequireAuth }) {
     }, 50);
   };
 
-  // Image Upload handler with canvas thumbnail compression
+  // Image Upload handler with canvas WebP thumbnail compression (< 120KB)
   const handleImageSelect = (e) => {
     const file = e.target.files?.[0];
     if (!file) return;
@@ -226,7 +364,7 @@ export default function CommunityChatHub({ currentStudent, onRequireAuth }) {
 
         const ctx = canvas.getContext('2d');
         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-        const compressedBase64 = canvas.toDataURL('image/jpeg', 0.75);
+        const compressedBase64 = canvas.toDataURL('image/webp', 0.75);
         setImageAttachment(compressedBase64);
       };
       img.src = event.target.result;
@@ -292,6 +430,80 @@ export default function CommunityChatHub({ currentStudent, onRequireAuth }) {
     setReplyingTo(null);
     setImageAttachment(null);
     setCooldownSec(3);
+  };
+
+  // Launch Poll
+  const handleCreatePollSubmit = async (e) => {
+    e.preventDefault();
+    if (!currentStudent && onRequireAuth) {
+      onRequireAuth("Sign In or Register free to create live study polls!");
+      return;
+    }
+    const cleanQ = pollQuestion.trim();
+    const cleanOpts = pollOptions.map(o => o.trim()).filter(Boolean);
+    if (!cleanQ || cleanOpts.length < 2) {
+      setModerationError("Please provide a poll question and at least 2 valid options.");
+      return;
+    }
+
+    const senderName = currentStudent?.display_name || currentStudent?.full_name || currentStudent?.username || 'GATE Aspirant';
+    const userRole = (currentStudent?.role || (currentStudent?.is_faculty ? 'faculty' : 'student')).toLowerCase();
+
+    const pollMsgObj = {
+      id: 'poll_' + Date.now() + '_' + Math.random().toString(36).substring(2, 6),
+      channel: activeChannel,
+      sender: senderName,
+      senderId: currentStudent?.id || currentStudent?.username || null,
+      role: userRole,
+      type: 'poll',
+      pollData: {
+        question: cleanQ,
+        options: cleanOpts.map(text => ({ text, votes: 0 })),
+        voters: {}
+      },
+      timestamp: new Date().toISOString(),
+      reactions: {}
+    };
+
+    const updated = [...messages, pollMsgObj];
+    setMessages(updated);
+    await saveToIDB('chat_messages', pollMsgObj);
+    setPollQuestion('');
+    setPollOptions(['', '']);
+    setIsPollModalOpen(false);
+    setActionNotice("📊 Study Poll published in lounge!");
+    setTimeout(() => setActionNotice(''), 3000);
+  };
+
+  // Vote on Poll Option
+  const handleVotePoll = async (msgId, optIdx) => {
+    if (!currentStudent && onRequireAuth) {
+      onRequireAuth("Sign In or Register free to cast your vote!");
+      return;
+    }
+    const voterKey = currentStudent?.id || currentStudent?.username || 'me';
+
+    const updated = messages.map(m => {
+      if (m.id !== msgId || m.type !== 'poll') return m;
+      const voters = { ...(m.pollData?.voters || {}) };
+      voters[voterKey] = optIdx;
+
+      const options = (m.pollData?.options || []).map((opt, i) => {
+        const count = Object.values(voters).filter(val => val === i).length;
+        return { ...opt, votes: count };
+      });
+
+      return {
+        ...m,
+        pollData: {
+          ...m.pollData,
+          options,
+          voters
+        }
+      };
+    });
+
+    setMessages(updated);
   };
 
   // Interactive Emoji Reactions
@@ -453,7 +665,7 @@ export default function CommunityChatHub({ currentStudent, onRequireAuth }) {
                       setModerationError(''); 
                       setSearchQuery('');
                     }}
-                    className={`text-left p-2.5 rounded-2xl text-xs font-bold transition flex items-center justify-between shrink-0 cursor-pointer w-auto min-w-[170px] lg:w-full group ${
+                    className={`text-left p-2.5 rounded-2xl text-xs font-bold transition flex items-center justify-between shrink-0 cursor-pointer w-auto min-w-[150px] lg:w-full group ${
                       isActive
                         ? 'bg-emerald-600 text-white shadow-xs'
                         : 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800/80'
@@ -461,7 +673,7 @@ export default function CommunityChatHub({ currentStudent, onRequireAuth }) {
                   >
                     <div className="flex items-center gap-2 min-w-0">
                       <span className="text-base">{ch.icon}</span>
-                      <div className="truncate">
+                      <div className="truncate min-w-0">
                         <div className="truncate leading-tight">{ch.label}</div>
                         <div className={`text-[10px] font-normal truncate ${isActive ? 'text-emerald-100' : 'text-slate-400'}`}>
                           {ch.desc}
@@ -477,26 +689,56 @@ export default function CommunityChatHub({ currentStudent, onRequireAuth }) {
                 );
               })}
             </div>
+          </div>
 
-            {/* Moderator Shield Button */}
-            {hasModPerks && (
-              <div className="pt-2 border-t border-slate-100 dark:border-slate-800">
+          {/* Virtual Pomodoro Study Room & Lofi Audio Lounge */}
+          <div className="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white rounded-3xl p-4 shadow-sm space-y-3 border border-indigo-800/40">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-1.5 font-extrabold text-xs tracking-wider uppercase">
+                <Timer className="w-4 h-4 text-emerald-400" />
+                <span>Pomodoro Focus Lounge</span>
+              </div>
+              <button
+                type="button"
+                onClick={toggleAmbientAudio}
+                className={`px-2 py-1 rounded-xl text-xs transition cursor-pointer flex items-center gap-1 font-bold ${
+                  isAudioPlaying ? 'bg-emerald-500 text-white shadow-xs' : 'bg-white/10 hover:bg-white/20 text-slate-300'
+                }`}
+                title={isAudioPlaying ? 'Mute 432Hz Focus Drone' : 'Play 432Hz Offline Focus Drone'}
+              >
+                {isAudioPlaying ? <Volume2 className="w-3.5 h-3.5" /> : <VolumeX className="w-3.5 h-3.5" />}
+                <span className="text-[10px]">{isAudioPlaying ? '432Hz On' : 'Lofi Drone'}</span>
+              </button>
+            </div>
+
+            <div className="flex items-center justify-between">
+              <div className="font-mono text-2xl font-black text-emerald-400 tracking-wider">
+                {String(Math.floor(pomodoroSeconds / 60)).padStart(2, '0')}:{String(pomodoroSeconds % 60).padStart(2, '0')}
+              </div>
+              <div className="flex items-center gap-1.5">
                 <button
-                  onClick={() => { refreshModQueue(); setIsModQueueOpen(true); }}
-                  className="w-full py-2 px-3 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 text-amber-800 dark:text-amber-400 border border-amber-500/30 text-xs font-bold flex items-center justify-between cursor-pointer transition"
+                  type="button"
+                  onClick={togglePomodoro}
+                  className={`px-3 py-1.5 rounded-xl font-extrabold text-xs flex items-center gap-1 cursor-pointer transition ${
+                    isPomodoroActive ? 'bg-amber-500 text-white hover:bg-amber-600' : 'bg-emerald-500 text-white hover:bg-emerald-600'
+                  }`}
                 >
-                  <div className="flex items-center gap-1.5">
-                    <ShieldAlert className="w-3.5 h-3.5" />
-                    <span>Mod Queue & Audit</span>
-                  </div>
-                  {flaggedQueue.length > 0 && (
-                    <span className="w-5 h-5 rounded-full bg-rose-500 text-white text-[10px] font-mono flex items-center justify-center font-bold">
-                      {flaggedQueue.length}
-                    </span>
-                  )}
+                  {isPomodoroActive ? <Pause className="w-3 h-3" /> : <Play className="w-3 h-3" />}
+                  <span>{isPomodoroActive ? 'Pause' : 'Focus'}</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={resetPomodoro}
+                  className="p-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-slate-300 cursor-pointer transition"
+                  title="Reset 25-min timer"
+                >
+                  <RotateCcw className="w-3 h-3" />
                 </button>
               </div>
-            )}
+            </div>
+            <p className="text-[10px] text-slate-300/80">
+              25-min sprint for GATE AG PYQ numerical solving with offline harmonic drone.
+            </p>
           </div>
 
           {/* Quick Guidance Card */}
@@ -505,15 +747,16 @@ export default function CommunityChatHub({ currentStudent, onRequireAuth }) {
               <Sparkles className="w-3.5 h-3.5 text-emerald-500" />
               <span>Study Tips & Guidelines</span>
             </div>
-            <div>💡 Use <strong>$E=mc^2$</strong> syntax for instant LaTeX rendering.</div>
-            <div>📸 Click the paperclip to attach working diagrams & schematics.</div>
+            <div>💡 Use <strong>$E=mc^2$</strong> syntax for instant live LaTeX preview.</div>
+            <div>📸 Click the paperclip to attach working diagrams & schematics (WebP).</div>
+            <div>📊 Click poll icon to run doubt consensus with live percentage bars.</div>
             <div>⚡ Verified solvers & faculty mentors earn badges for step-by-step help.</div>
           </div>
 
         </div>
 
         {/* Right Main Feed: Discord-like Interactive Stream */}
-        <div className="lg:col-span-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl flex flex-col h-[70vh] sm:h-[640px] shadow-xs overflow-hidden">
+        <div className="lg:col-span-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl flex flex-col h-[70vh] sm:h-[640px] shadow-xs overflow-hidden min-w-0">
           
           {/* Channel Header with Search Bar */}
           <div className="p-3.5 sm:p-4 bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shrink-0">
@@ -558,6 +801,35 @@ export default function CommunityChatHub({ currentStudent, onRequireAuth }) {
             </div>
           </div>
 
+          {/* Pinned Channel Formula Sheet & Rules Banner */}
+          {PINNED_BANNERS[activeChannel] && (
+            <div className="bg-gradient-to-r from-indigo-50/90 via-emerald-50/70 to-indigo-50/90 dark:from-indigo-950/40 dark:via-slate-900 dark:to-indigo-950/40 border-b border-indigo-100 dark:border-indigo-900/40 px-3.5 py-2 flex items-center justify-between gap-2 text-xs shrink-0">
+              <div className="flex items-center gap-2 min-w-0 flex-1">
+                <Pin className="w-3.5 h-3.5 text-indigo-600 dark:text-indigo-400 shrink-0" />
+                <div className="min-w-0 flex-1 overflow-x-auto scrollbar-none">
+                  <span className="font-extrabold text-slate-900 dark:text-white mr-2">
+                    {PINNED_BANNERS[activeChannel].title}:
+                  </span>
+                  {isPinnedBannerExpanded ? (
+                    <span className="text-slate-700 dark:text-slate-300 font-medium">
+                      <MathRenderer content={PINNED_BANNERS[activeChannel].text} />
+                    </span>
+                  ) : (
+                    <span className="text-slate-400 italic">Click to expand formula cheat-sheet</span>
+                  )}
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setIsPinnedBannerExpanded(!isPinnedBannerExpanded)}
+                className="p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 cursor-pointer shrink-0"
+                title={isPinnedBannerExpanded ? 'Collapse pin' : 'Expand pin'}
+              >
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform ${isPinnedBannerExpanded ? 'rotate-180' : ''}`} />
+              </button>
+            </div>
+          )}
+
           {/* Action Notice (Deleted / Banned / Flagged feedback) */}
           {actionNotice && (
             <div className="p-2.5 bg-emerald-50 dark:bg-emerald-950/60 border-b border-emerald-200 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 text-xs font-bold flex items-center gap-2 animate-in fade-in shrink-0">
@@ -567,7 +839,7 @@ export default function CommunityChatHub({ currentStudent, onRequireAuth }) {
           )}
 
           {/* Interactive Messages Stream */}
-          <div ref={messagesContainerRef} className="flex-1 p-4 space-y-3 overflow-y-auto">
+          <div ref={messagesContainerRef} className="flex-1 p-3 sm:p-4 space-y-3 overflow-y-auto min-w-0">
             {channelMessages.length === 0 ? (
               <div className="h-full flex flex-col items-center justify-center text-center text-slate-400 text-xs space-y-2">
                 <MessageSquare className="w-8 h-8 opacity-40" />
@@ -580,11 +852,12 @@ export default function CommunityChatHub({ currentStudent, onRequireAuth }) {
                 const isFaculty = msg.role === 'faculty' || msg.role === 'mentor' || (msg.sender && (msg.sender.startsWith('Dr.') || msg.sender.startsWith('Prof.') || msg.sender.startsWith('Er.')));
                 const isSolver = msg.role === 'solver';
                 const isAdmin = msg.role === 'admin';
+                const isPoll = msg.type === 'poll';
 
                 return (
                   <div 
                     key={msg.id} 
-                    className={`group relative p-3 rounded-2xl border transition-all text-xs space-y-2 ${
+                    className={`group relative p-3 rounded-2xl border transition-all text-xs space-y-2 min-w-0 overflow-hidden break-words ${
                       isFaculty
                         ? 'bg-indigo-50/40 dark:bg-indigo-950/20 border-indigo-200/60 dark:border-indigo-800/40'
                         : (isSolver 
@@ -605,26 +878,30 @@ export default function CommunityChatHub({ currentStudent, onRequireAuth }) {
                       </button>
 
                       {/* Reply Button */}
-                      <button
-                        onClick={() => setReplyingTo(msg)}
-                        className="p-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-500 hover:text-emerald-600 transition cursor-pointer"
-                        title="Reply in thread"
-                      >
-                        <CornerDownRight className="w-3.5 h-3.5" />
-                      </button>
+                      {!isPoll && (
+                        <button
+                          onClick={() => setReplyingTo(msg)}
+                          className="p-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-500 hover:text-emerald-600 transition cursor-pointer"
+                          title="Reply in thread"
+                        >
+                          <CornerDownRight className="w-3.5 h-3.5" />
+                        </button>
+                      )}
 
                       {/* Copy Message / LaTeX */}
-                      <button
-                        onClick={() => handleCopyMessage(msg.id, msg.text)}
-                        className="p-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-500 hover:text-emerald-600 transition cursor-pointer"
-                        title="Copy text / LaTeX"
-                      >
-                        {copiedMsgId === msg.id ? (
-                          <Check className="w-3.5 h-3.5 text-emerald-500" />
-                        ) : (
-                          <Copy className="w-3.5 h-3.5" />
-                        )}
-                      </button>
+                      {!isPoll && (
+                        <button
+                          onClick={() => handleCopyMessage(msg.id, msg.text)}
+                          className="p-1 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-500 hover:text-emerald-600 transition cursor-pointer"
+                          title="Copy text / LaTeX"
+                        >
+                          {copiedMsgId === msg.id ? (
+                            <Check className="w-3.5 h-3.5 text-emerald-500" />
+                          ) : (
+                            <Copy className="w-3.5 h-3.5" />
+                          )}
+                        </button>
+                      )}
 
                       {/* Student: Report */}
                       {!hasModPerks && msg.sender !== currentStudent?.full_name && (
@@ -777,10 +1054,54 @@ export default function CommunityChatHub({ currentStudent, onRequireAuth }) {
                       </div>
                     )}
 
-                    {/* Message Text with KaTeX Math Rendering */}
-                    <div className="text-slate-900 dark:text-slate-100 font-medium leading-relaxed break-words">
-                      <MathRenderer content={msg.text} />
-                    </div>
+                    {/* Poll Content OR Message Text */}
+                    {isPoll && msg.pollData ? (
+                      <div className="p-3.5 rounded-2xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 space-y-3 my-1">
+                        <div className="flex items-center gap-2 font-extrabold text-xs text-slate-900 dark:text-white">
+                          <BarChart2 className="w-4 h-4 text-emerald-500" />
+                          <span>{msg.pollData.question}</span>
+                        </div>
+                        <div className="space-y-2">
+                          {msg.pollData.options?.map((opt, optIdx) => {
+                            const totalVotes = msg.pollData.options.reduce((acc, o) => acc + (o.votes || 0), 0);
+                            const pct = totalVotes > 0 ? Math.round(((opt.votes || 0) / totalVotes) * 100) : 0;
+                            const voterKey = currentStudent?.id || currentStudent?.username || 'me';
+                            const userVotedThis = msg.pollData.voters?.[voterKey] === optIdx;
+
+                            return (
+                              <button
+                                key={optIdx}
+                                type="button"
+                                onClick={() => handleVotePoll(msg.id, optIdx)}
+                                className={`w-full relative overflow-hidden text-left p-2.5 rounded-xl border text-xs font-semibold transition cursor-pointer flex items-center justify-between ${
+                                  userVotedThis 
+                                    ? 'border-emerald-500 bg-emerald-50/50 dark:bg-emerald-950/40 text-emerald-900 dark:text-emerald-200' 
+                                    : 'border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/60 hover:border-emerald-300 text-slate-800 dark:text-slate-200'
+                                }`}
+                              >
+                                <div 
+                                  className="absolute left-0 top-0 bottom-0 bg-emerald-500/15 dark:bg-emerald-500/20 transition-all duration-500 pointer-events-none"
+                                  style={{ width: `${pct}%` }}
+                                />
+                                <span className="relative z-10">{opt.text}</span>
+                                <div className="relative z-10 flex items-center gap-2 font-mono text-[11px]">
+                                  {userVotedThis && <span className="text-emerald-600 font-bold">✓</span>}
+                                  <span>{pct}% ({opt.votes || 0})</span>
+                                </div>
+                              </button>
+                            );
+                          })}
+                        </div>
+                        <div className="text-[10px] text-slate-400 font-mono flex items-center justify-between pt-1 border-t border-slate-100 dark:border-slate-800">
+                          <span>{msg.pollData.options?.reduce((a, o) => a + (o.votes || 0), 0)} Total Votes</span>
+                          <span>Click option to cast vote</span>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="text-slate-900 dark:text-slate-100 font-medium leading-relaxed break-words overflow-x-auto max-w-full scrollbar-none">
+                        <MathRenderer content={msg.text} />
+                      </div>
+                    )}
 
                     {/* Interactive Reaction Pills */}
                     <div className="pt-1 flex items-center gap-1.5 flex-wrap">
@@ -870,6 +1191,18 @@ export default function CommunityChatHub({ currentStudent, onRequireAuth }) {
                   </div>
                 )}
 
+                {/* Real-time Live Math Preview Bubble */}
+                {inputText.includes('$') && (
+                  <div className="p-2 rounded-xl bg-indigo-50/90 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800/80 flex items-center gap-2 text-xs text-indigo-900 dark:text-indigo-200 animate-in fade-in">
+                    <span className="text-[10px] font-extrabold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 shrink-0">
+                      Live KaTeX:
+                    </span>
+                    <div className="truncate font-medium">
+                      <MathRenderer content={inputText} />
+                    </div>
+                  </div>
+                )}
+
                 {/* Error Banner */}
                 {moderationError && (
                   <div className="p-2.5 rounded-xl bg-rose-50 dark:bg-rose-950/60 border border-rose-200 text-rose-700 dark:text-rose-300 text-xs font-bold flex items-center gap-2 animate-in fade-in">
@@ -912,9 +1245,19 @@ export default function CommunityChatHub({ currentStudent, onRequireAuth }) {
                     type="button"
                     onClick={() => fileInputRef.current?.click()}
                     className="p-2.5 rounded-xl bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 transition cursor-pointer shrink-0"
-                    title="Attach Diagram / Working Photo"
+                    title="Attach Diagram / Working Photo (WebP)"
                   >
                     <Paperclip className="w-4 h-4" />
+                  </button>
+
+                  {/* Launch Poll Button */}
+                  <button
+                    type="button"
+                    onClick={() => setIsPollModalOpen(true)}
+                    className="p-2.5 rounded-xl bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 transition cursor-pointer shrink-0"
+                    title="Create a study poll / doubt survey"
+                  >
+                    <BarChart2 className="w-4 h-4" />
                   </button>
 
                   {/* Toggle Math Ribbon Button */}
@@ -959,6 +1302,102 @@ export default function CommunityChatHub({ currentStudent, onRequireAuth }) {
         </div>
 
       </div>
+
+      {/* Poll Creation Modal */}
+      {isPollModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-md animate-in fade-in duration-200">
+          <div 
+            className="w-full max-w-md rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl p-6 space-y-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-3">
+              <div className="flex items-center gap-2">
+                <BarChart2 className="w-5 h-5 text-emerald-500" />
+                <h3 className="text-sm font-extrabold uppercase tracking-wider text-slate-900 dark:text-white">
+                  Launch Study Doubt Poll
+                </h3>
+              </div>
+              <button onClick={() => setIsPollModalOpen(false)} className="p-1 rounded-lg text-slate-400 hover:text-slate-600 cursor-pointer">
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <form onSubmit={handleCreatePollSubmit} className="space-y-3 text-xs">
+              <div>
+                <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
+                  Poll Question / Doubt
+                </label>
+                <input
+                  type="text"
+                  required
+                  placeholder="e.g. Which method gives higher accuracy for infiltration?"
+                  value={pollQuestion}
+                  onChange={(e) => setPollQuestion(e.target.value)}
+                  className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2 text-slate-900 dark:text-white outline-none focus:ring-2 focus:ring-emerald-500"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <label className="block font-bold text-slate-700 dark:text-slate-300">
+                  Options
+                </label>
+                {pollOptions.map((opt, idx) => (
+                  <div key={idx} className="flex items-center gap-2">
+                    <span className="font-mono text-xs text-slate-400 w-4">{idx + 1}.</span>
+                    <input
+                      type="text"
+                      required={idx < 2}
+                      placeholder={`Option ${idx + 1}`}
+                      value={opt}
+                      onChange={(e) => {
+                        const next = [...pollOptions];
+                        next[idx] = e.target.value;
+                        setPollOptions(next);
+                      }}
+                      className="flex-1 bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-1.5 text-slate-900 dark:text-white outline-none focus:ring-1 focus:ring-emerald-500"
+                    />
+                    {pollOptions.length > 2 && (
+                      <button
+                        type="button"
+                        onClick={() => setPollOptions(pollOptions.filter((_, i) => i !== idx))}
+                        className="text-slate-400 hover:text-rose-500 p-1 cursor-pointer"
+                      >
+                        <X className="w-3.5 h-3.5" />
+                      </button>
+                    )}
+                  </div>
+                ))}
+
+                {pollOptions.length < 4 && (
+                  <button
+                    type="button"
+                    onClick={() => setPollOptions([...pollOptions, ''])}
+                    className="text-[11px] font-bold text-emerald-600 dark:text-emerald-400 hover:underline cursor-pointer"
+                  >
+                    + Add Option
+                  </button>
+                )}
+              </div>
+
+              <div className="pt-3 border-t border-slate-100 dark:border-slate-800 flex justify-end gap-2">
+                <button
+                  type="button"
+                  onClick={() => setIsPollModalOpen(false)}
+                  className="px-4 py-2 rounded-xl text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 font-bold cursor-pointer"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  className="px-5 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl font-bold cursor-pointer shadow-xs"
+                >
+                  Publish Poll
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
 
       {/* Moderation Queue & Audit Log Modal for Solvers & Admins */}
       {isModQueueOpen && (

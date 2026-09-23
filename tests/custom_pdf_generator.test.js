@@ -91,9 +91,16 @@ test('Custom Question Paper & PDF Generator Test Suite', async (t) => {
     assert.ok(html.includes('Q.1'), 'Must have Q.1 badge');
     assert.ok(html.includes('Q.2'), 'Must have Q.2 badge');
     assert.ok(html.includes('Q.3'), 'Must have Q.3 badge');
-    assert.ok(html.includes('tag-type">MCQ<'), 'Must tag MCQ');
-    assert.ok(html.includes('tag-type">NAT<'), 'Must tag NAT');
-    assert.ok(html.includes('tag-type">MSQ<'), 'Must tag MSQ');
+    // By default, question metadata tags are omitted for clean, space-efficient exam layout
+    assert.equal(html.includes('<div class="q-meta">'), false, 'Must omit q-meta tags when includeQuestionMetadata is false');
+
+    const htmlWithMeta = generateQuestionPaperHtml(sampleQuestions, {
+      includeQuestionMetadata: true
+    });
+    assert.ok(htmlWithMeta.includes('<div class="q-meta">'), 'Must render q-meta tags when includeQuestionMetadata is true');
+    assert.ok(htmlWithMeta.includes('tag-type">MCQ<'), 'Must tag MCQ');
+    assert.ok(htmlWithMeta.includes('tag-type">NAT<'), 'Must tag NAT');
+    assert.ok(htmlWithMeta.includes('tag-type">MSQ<'), 'Must tag MSQ');
   });
 
   await t.test('renders Answer Key and Detailed Solutions appendix when enabled', () => {
@@ -165,6 +172,122 @@ test('Custom Question Paper & PDF Generator Test Suite', async (t) => {
     assert.ok(html.includes('11.11'), 'Must include question derivation inline');
     // In study_guide mode, the bottom duplicate solutions block should be omitted
     assert.equal(html.includes('DETAILED STEP-BY-STEP EXPLANATIONS & DERIVATIONS'), false, 'Should omit bottom duplicate solutions in study_guide mode');
+  });
+
+  await t.test('renders candidate blank header box and supports toggling', () => {
+    const htmlWithBox = generateQuestionPaperHtml(sampleQuestions, {
+      includeCandidateBox: true,
+      studentName: 'Priya Sharma'
+    });
+
+    assert.ok(htmlWithBox.includes('<div class="candidate-box">'), 'Must render candidate box container');
+    assert.ok(htmlWithBox.includes('Candidate Name:'), 'Must include Candidate Name line');
+    assert.ok(htmlWithBox.includes('Roll No. / ID:'), 'Must include Roll No line');
+    assert.ok(htmlWithBox.includes('Class / Institute:'), 'Must include Class line');
+    assert.ok(htmlWithBox.includes('Invigilator Sign:'), 'Must include Invigilator Sign line');
+    assert.ok(htmlWithBox.includes('Priya Sharma'), 'Must include pre-filled student name');
+
+    const htmlWithoutBox = generateQuestionPaperHtml(sampleQuestions, {
+      includeCandidateBox: false
+    });
+    assert.equal(htmlWithoutBox.includes('<div class="candidate-box">'), false, 'Must omit candidate box when disabled');
+  });
+
+  await t.test('supports custom paper size, orientation and 2-column compact layout', () => {
+    const html = generateQuestionPaperHtml(sampleQuestions, {
+      paperSize: 'legal',
+      orientation: 'landscape',
+      columnLayout: '2-col'
+    });
+
+    assert.ok(html.includes('size: legal landscape;'), 'Must apply legal landscape to @page CSS');
+    assert.ok(html.includes('questions-list two-column'), 'Must apply two-column class to questions list');
+    assert.ok(html.includes('column-count: 2;'), 'Must have CSS rule for 2 columns');
+  });
+
+  await t.test('renders dedicated rough workspace section at end and omits per-question rough boxes', () => {
+    const htmlWithRough = generateQuestionPaperHtml(sampleQuestions, {
+      includeRoughWork: true
+    });
+
+    assert.ok(htmlWithRough.includes('SPACE FOR ROUGH WORK'), 'Must contain dedicated rough work section');
+    assert.ok(htmlWithRough.includes('<div class="rough-workspace-box">'), 'Must render rough workspace box container');
+    assert.ok(htmlWithRough.includes('page-bottom-rough-space'), 'Must render consistent rough workspace on question sheet');
+    assert.equal(htmlWithRough.includes('<div class="rough-work-box">'), false, 'Must NOT render per-question rough work boxes');
+
+    const htmlWithoutRough = generateQuestionPaperHtml(sampleQuestions, {
+      includeRoughWork: false
+    });
+    assert.equal(htmlWithoutRough.includes('<div class="rough-workspace-box">'), false, 'Must omit rough workspace when disabled');
+    assert.ok(htmlWithoutRough.includes('page-bottom-rough-space'), 'Must still render consistent rough workspace on question page');
+  });
+
+  await t.test('guarantees Questions, Answer Key, and Solutions each start on distinct pages', () => {
+    const html = generateQuestionPaperHtml(sampleQuestions, {
+      includeAnswerKey: true,
+      includeSolutions: true,
+      includeRoughWork: true
+    });
+
+    assert.ok(html.includes('break-before: page !important;'), 'Must enforce CSS break-before: page for distinct pages');
+    assert.ok(html.includes('page-break-before: always !important;'), 'Must enforce CSS page-break-before: always');
+    assert.ok(html.includes('<div class="page-break-before distinct-section">\n        <div class="section-divider">\n          <h2 class="section-title">ANSWER KEY APPENDIX</h2>'), 'Answer key must start on distinct page');
+    assert.ok(html.includes('<div class="page-break-before distinct-section">\n        <div class="section-divider">\n          <h2 class="section-title">DETAILED STEP-BY-STEP EXPLANATIONS & DERIVATIONS</h2>'), 'Solutions must start on distinct page');
+  });
+
+  await t.test('supports individual selection of total questions section-wise and topic-wise', () => {
+    const extendedPool = [
+      { id: 'FM_1', section: 'Section 2: Farm Machinery', topic: 'Tillage', marks: 1, type: 'MCQ', question: 'FM Q1' },
+      { id: 'FM_2', section: 'Section 2: Farm Machinery', topic: 'Tillage', marks: 2, type: 'MCQ', question: 'FM Q2' },
+      { id: 'FM_3', section: 'Section 2: Farm Machinery', topic: 'Plant Protection', marks: 1, type: 'MCQ', question: 'FM Q3' },
+      { id: 'SWCE_1', section: 'Section 4: Soil and Water Conservation Engineering', topic: 'Hydrology', marks: 2, type: 'NAT', question: 'SWCE Q1' },
+      { id: 'SWCE_2', section: 'Section 4: Soil and Water Conservation Engineering', topic: 'Hydrology', marks: 2, type: 'NAT', question: 'SWCE Q2' },
+      { id: 'EM_1', section: 'Section 1: Engineering Mathematics', topic: 'Linear Algebra', marks: 1, type: 'MCQ', question: 'EM Q1' },
+      { id: 'EM_2', section: 'Section 1: Engineering Mathematics', topic: 'Calculus', marks: 2, type: 'MCQ', question: 'EM Q2' }
+    ];
+
+    // Simulate section-wise quota: 1 from FM, 2 from SWCE, 1 from EM = 4 Qs
+    const sectionQuotas = {
+      'Section 2: Farm Machinery': 1,
+      'Section 4: Soil and Water Conservation Engineering': 2,
+      'Section 1: Engineering Mathematics': 1
+    };
+
+    const sectionPicked = [];
+    Object.keys(sectionQuotas).forEach(sec => {
+      const matching = extendedPool.filter(q => q.section === sec);
+      sectionPicked.push(...matching.slice(0, sectionQuotas[sec]));
+    });
+
+    assert.equal(sectionPicked.length, 4, 'Must pick exactly 4 questions via section-wise quota');
+    assert.equal(sectionPicked.filter(q => q.section === 'Section 2: Farm Machinery').length, 1);
+    assert.equal(sectionPicked.filter(q => q.section === 'Section 4: Soil and Water Conservation Engineering').length, 2);
+    assert.equal(sectionPicked.filter(q => q.section === 'Section 1: Engineering Mathematics').length, 1);
+
+    // Simulate topic-wise quota: 2 from Tillage, 1 from Hydrology = 3 Qs
+    const topicQuotas = {
+      'Tillage': 2,
+      'Hydrology': 1
+    };
+
+    const topicPicked = [];
+    Object.keys(topicQuotas).forEach(top => {
+      const matching = extendedPool.filter(q => q.topic === top);
+      topicPicked.push(...matching.slice(0, topicQuotas[top]));
+    });
+
+    assert.equal(topicPicked.length, 3, 'Must pick exactly 3 questions via topic-wise quota');
+    assert.equal(topicPicked.filter(q => q.topic === 'Tillage').length, 2);
+    assert.equal(topicPicked.filter(q => q.topic === 'Hydrology').length, 1);
+
+    // Render HTML from sectionPicked
+    const html = generateQuestionPaperHtml(sectionPicked, {
+      title: 'Section Quota Practice Worksheet',
+      includeAnswerKey: true
+    });
+    assert.ok(html.includes('Total Questions:</span> <span class="meta-val">4</span>'));
+    assert.ok(html.includes('FM Q1'));
+    assert.ok(html.includes('SWCE Q1'));
   });
 
   await t.test('verifies all 18 custom mock papers have 100% clean solutions without prompt artifacts', async () => {

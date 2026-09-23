@@ -264,18 +264,18 @@ export default function Navbar({
         </div>
 
         {/* Mobile Navigation Bar */}
-        <div className="lg:hidden flex items-center justify-around py-2 border-t border-slate-200 dark:border-slate-800 text-xs overflow-x-auto">
+        <div className="lg:hidden flex items-center justify-around py-1.5 border-t border-slate-200 dark:border-slate-800 text-xs overflow-x-auto scrollbar-none gap-1">
           {navItems.map((item) => {
             const Icon = item.icon;
-            const isActive = activeTab === item.id;
+            const isActive = item.matches ? item.matches.includes(activeTab) : activeTab === item.id;
             return (
               <button
                 key={item.id}
                 onClick={() => setActiveTab(item.id)}
-                className={`flex flex-col items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-medium whitespace-nowrap ${
+                className={`flex flex-col items-center justify-center gap-0.5 px-2 py-1 min-h-[44px] min-w-[44px] rounded-xl text-[10px] font-semibold whitespace-nowrap transition cursor-pointer select-none active:scale-95 ${
                   isActive
-                    ? 'text-blue-600 dark:text-blue-400 font-semibold'
-                    : 'text-slate-500 dark:text-slate-400'
+                    ? 'text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-50/80 dark:bg-emerald-950/60'
+                    : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/50'
                 }`}
               >
                 <Icon className="w-4 h-4" />

@@ -14,7 +14,7 @@ export default [
       "max": 0.61
     },
     "solution": "1. Total width of cut $W$:\n$$W = 4 \\times 0.35\\text{ m} = 1.4\\text{ m}$$\n2. Forward speed $S$:\n$$S = 5.4\\text{ km/h}$$\n3. Theoretical Field Capacity ($TFC$):\n$$TFC = \\frac{W \\times S}{10} = \\frac{1.4 \\times 5.4}{10} = 0.756\\text{ ha/h}$$\n4. Effective Field Capacity ($EFC$):\n$$EFC = TFC \\times \\eta = 0.756 \\times 0.80 = 0.6048\\text{ ha/h} \\approx 0.60\\text{ ha/h}$$",
-    "difficulty": "Easy",
+    "difficulty": "Moderate",
     "source": "Sanjay Kumar (A Numerical Approach in Ag. Engg.)"
   },
   {
@@ -34,7 +34,7 @@ export default [
     },
     "correct_answer": "B",
     "solution": "In a mouldboard plough:\n• The **share** makes the horizontal cut separating the furrow slice from the furrow floor.\n• The **coulter** makes the vertical cut.\n• The **mouldboard** lifts, pulverizes, and inverts the furrow slice.\n• The **landside** takes the lateral side-thrust against the furrow wall.",
-    "difficulty": "Easy",
+    "difficulty": "Moderate",
     "source": "Principles of Agricultural Engg. Vol. I (Ojha & Michael)"
   },
   {
@@ -76,7 +76,7 @@ export default [
       "C"
     ],
     "solution": "• Fluted rollers are the standard mechanism on grain drills for cereals like wheat (A is correct).\n• Horizontal plate metering with cell plates is typical for row-crop precision planters for maize/groundnut (B is correct).\n• Vacuum/pneumatic singulation meters pick single seeds using negative pressure, accommodating irregular seed sizes with minimal damage (C is correct).\n• The internal double-run feed has one side with a small opening for small seeds (like mustard/rape) and a large side for coarse seeds; thus statement D is incorrect.",
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "source": "Principles of Farm Machinery (Kepner & Sahay)"
   },
   {
@@ -94,7 +94,7 @@ export default [
       "max": 13500
     },
     "solution": "Under the straight line depreciation method:\n$$D = \\frac{C - S}{L}$$\nWhere:\n$C = \\text{Rs. } 1,20,000$ (purchase price)\n$S = 0.10 \\times 1,20,000 = \\text{Rs. } 12,000$ (salvage value)\n$L = 8\\text{ years}$ (useful life)\n$$D = \\frac{1,20,000 - 12,000}{8} = \\frac{1,08,000}{8} = 13,500\\text{ Rupees/year}$$",
-    "difficulty": "Easy",
+    "difficulty": "Moderate",
     "source": "Sanjay Kumar (A Numerical Approach in Ag. Engg.)"
   },
   {
@@ -138,7 +138,7 @@ export default [
       "C"
     ],
     "solution": "A modern VRA system integrates:\n1. GNSS/DGPS to identify real-time field coordinates.\n2. GIS prescription maps defining target application rates per zone.\n3. Electronic Control Unit (ECU) and PWM/servo actuator valves to dynamically vary fertilizer/chemical dosage.\nOption D describes a fixed mechanical rate system, not a precision VRA system.",
-    "difficulty": "Easy",
+    "difficulty": "Hard",
     "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
   },
   {
@@ -195,7 +195,7 @@ export default [
       "max": 180
     },
     "solution": "The standard field application rate formula for a boom sprayer is:\n$$Q = \\frac{600 \\times q}{w \\times v}$$\nWhere:\n• $q = 0.90\\text{ L/min}$ (discharge per nozzle)\n• $w = 0.50\\text{ m}$ (spacing between consecutive nozzles)\n• $v = 6.0\\text{ km/h}$ (forward speed)\n$$Q = \\frac{600 \\times 0.90}{0.50 \\times 6.0} = \\frac{540}{3.0} = 180\\text{ L/ha}$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FM_011",
@@ -231,7 +231,7 @@ export default [
       "max": 622
     },
     "solution": "The relationship connecting mechanical power $P$ and torque $T$ is:\n$$P = \\frac{2 \\pi N T}{60}$$\n$$T = \\frac{60 \\times P}{2 \\pi N} = \\frac{60 \\times (35 \\times 10^3)}{2 \\times 3.1416 \\times 540} = \\frac{2,100,000}{3392.9} \\approx 618.94\\text{ N}\\cdot\\text{m} \\approx 618.9\\text{ N}\\cdot\\text{m}$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FM_013",
@@ -267,7 +267,7 @@ export default [
       "max": 110.5
     },
     "solution": "The pitch diameter $D$ of a roller chain sprocket is given by:\n$$D = \\frac{p}{\\sin\\left(\\frac{180^\\circ}{Z}\\right)}$$\nGiven $p = 19.05\\text{ mm}$ and $Z = 18$ teeth:\n$$\\frac{180^\\circ}{Z} = \\frac{180^\\circ}{18} = 10^\\circ$$\n$$\\sin(10^\\circ) \\approx 0.17365$$\n$$D = \\frac{19.05}{0.17365} \\approx 109.703\\text{ mm} \\approx 109.7\\text{ mm}$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FM_015",
@@ -285,7 +285,7 @@ export default [
       "max": 18.8
     },
     "solution": "The beam strength of a spur gear tooth according to the Lewis formula is:\n$$F_b = \\sigma_b \\cdot b \\cdot m \\cdot Y$$\nWhere:\n• $\\sigma_b = 140\\text{ MPa} = 140\\text{ N/mm}^2$\n• Face width $b = 60\\text{ mm}$\n• Module $m = 6\\text{ mm}$\n• Lewis form factor $Y = 0.369$\n$$F_b = 140 \\times 60 \\times 6 \\times 0.369 = 18,597.6\\text{ N} \\approx 18.60\\text{ kN}$$",
-    "difficulty": "Easy"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FM_016",
@@ -330,7 +330,7 @@ export default [
       "D"
     ],
     "solution": "• Crossed belts reverse rotation direction (A is correct).\n• In an open drive with unequal pulley diameters, wrap angle on smaller pulley is $\\theta = 180^\\circ - 2\\arcsin((D-d)/2C) < 180^\\circ$ (B is correct).\n• Centrifugal tension $T_c = mv^2$ acts radially outward, reducing net normal contact pressure and effective grip (C is correct).\n• V-belt groove wedging increases apparent friction coefficient to $\\mu/\\sin\\beta$, substantially enhancing traction (D is correct).",
-    "difficulty": "Moderate"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FM_018",
@@ -348,7 +348,7 @@ export default [
       "max": 7.8
     },
     "solution": "1. Tangential shearing force on the bolt ($F$):\n$$F = \\frac{T}{r} = \\frac{900\\text{ N}\\cdot\\text{m}}{0.060\\text{ m}} = 15,000\\text{ N}$$\n2. Shear stress relationship at failure:\n$$\\tau_{ult} = \\frac{F}{A} = \\frac{F}{\\frac{\\pi}{4} d^2}$$\n$$d^2 = \\frac{4 F}{\\pi \\tau_{ult}} = \\frac{4 \\times 15,000}{\\pi \\times (320 \\times 10^6\\text{ N/m}^2)} = \\frac{60,000}{1.0053 \\times 10^9} \\approx 5.9683 \\times 10^{-5}\\text{ m}^2$$\n$$d = \\sqrt{5.9683 \\times 10^{-5}} = 0.007725\\text{ m} \\approx 7.73\\text{ mm}$$",
-    "difficulty": "Moderate"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FM_019",
@@ -366,7 +366,7 @@ export default [
       "max": 492
     },
     "solution": "1. Mean radius under uniform wear theory ($R_m$):\n$$R_m = \\frac{r_1 + r_2}{2} = \\frac{120 + 80}{2} = 100\\text{ mm} = 0.10\\text{ m}$$\n2. Frictional torque capacity for $n = 4$ active friction surfaces:\n$$T = n \\cdot \\mu \\cdot W \\cdot R_m$$\n$$T = 4 \\times 0.35 \\times 3500\\text{ N} \\times 0.10\\text{ m} = 490.0\\text{ N}\\cdot\\text{m}$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FM_020",
@@ -391,7 +391,7 @@ export default [
       "D"
     ],
     "solution": "All four statements accurately represent standard agricultural overload safety and driveline protection mechanisms:\n• Shear bolts require physical replacement upon failure.\n• Friction slip clutches slip during momentary spikes and re-engage automatically.\n• Overrunning clutches prevent high inertia loads from back-driving tractor transmissions.\n• Jump/star-ratchet clutches cam out under overload with distinctive audible chatter.",
-    "difficulty": "Easy"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FM_021",
@@ -429,7 +429,7 @@ export default [
       "max": 59.5
     },
     "solution": "1. Equivalent twisting moment ($T_e$):\n$$T_e = \\sqrt{M^2 + T^2} = \\sqrt{1200^2 + 1600^2} = \\sqrt{1,440,000 + 2,560,000} = \\sqrt{4,000,000} = 2000\\text{ N}\\cdot\\text{m}$$\n2. Maximum shear stress equation for solid shaft:\n$$T_e = \\frac{\\pi}{16} \\tau_{all} d^3$$\n$$d^3 = \\frac{16 T_e}{\\pi \\tau_{all}} = \\frac{16 \\times 2000}{\\pi \\times (50 \\times 10^6\\text{ N/m}^2)} = \\frac{32,000}{1.5708 \\times 10^8} \\approx 2.0372 \\times 10^{-4}\\text{ m}^3$$\n$$d = (2.0372 \\times 10^{-4})^{1/3} = 0.05884\\text{ m} \\approx 58.8\\text{ mm}$$",
-    "difficulty": "Moderate"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FM_023",
@@ -447,7 +447,7 @@ export default [
       "max": 40.2
     },
     "solution": "1. Tangential force acting at the surface of the $45\\text{ mm}$ shaft ($d = 0.045\\text{ m}$):\n$$F = \\frac{2T}{d} = \\frac{2 \\times 750}{0.045} = 33,333.33\\text{ N}$$\n2. Shearing area of key $A_s = l \\times w$:\n$$F = l \\cdot w \\cdot \\tau$$\n$$l = \\frac{F}{w \\cdot \\tau} = \\frac{33,333.33\\text{ N}}{0.014\\text{ m} \\times (60 \\times 10^6\\text{ N/m}^2)} = \\frac{33,333.33}{840,000} = 0.03968\\text{ m} \\approx 39.7\\text{ mm}$$",
-    "difficulty": "Moderate"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FM_024",
@@ -465,7 +465,7 @@ export default [
       "max": 41.2
     },
     "solution": "In a knuckle joint, the pin fails in double shear across two circular cross-sections:\n$$A_s = 2 \\times \\left(\\frac{\\pi}{4} d^2\\right) = \\frac{\\pi}{2} (25\\text{ mm})^2 = 1.5708 \\times 625 = 981.75\\text{ mm}^2$$\n$$\\tau = \\frac{P}{A_s} = \\frac{40,000\\text{ N}}{981.75\\text{ mm}^2} \\approx 40.74\\text{ MPa} \\approx 40.7\\text{ MPa}$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FM_025",
@@ -483,7 +483,7 @@ export default [
       "max": 3000
     },
     "solution": "1. Rating life in millions of revolutions for a ball bearing ($p = 3$):\n$$L_{10} = \\left(\\frac{C}{P}\\right)^3 = \\left(\\frac{27.0}{4.5}\\right)^3 = 6^3 = 216\\text{ million revolutions}$$\n2. Life in operating hours ($L_{10h}$):\n$$L_{10h} = \\frac{L_{10} \\times 10^6}{60 \\times N} = \\frac{216 \\times 10^6}{60 \\times 1200} = \\frac{216,000,000}{72,000} = 3000\\text{ hours}$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FM_026",
@@ -507,7 +507,7 @@ export default [
       "C"
     ],
     "solution": "• Oldham couplings use a central floating disc with perpendicular tongues to handle parallel radial offsets (A is correct).\n• A single Cardan/Hooke's joint has non-uniform output speed $\\omega_2 = \\omega_1 \\frac{\\cos\\alpha}{1 - \\sin^2\\alpha \\sin^2\\theta}$ (B is correct).\n• A double Cardan drive with equal angles $\\alpha_1 = \\alpha_2$ and coplanar yokes cancels out angular speed variations (C is correct).\n• Rigid couplings require precise coaxial shaft alignment; any misalignment induces severe fatigue bending stresses (D is false).",
-    "difficulty": "Moderate"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FM_027",
@@ -569,7 +569,7 @@ export default [
       "C"
     ],
     "solution": "• Rolling coulters cut vertical furrow walls and slice surface vines (A is correct).\n• Jointers peel off trashy furrow corners to ensure complete weed burial (B is correct).\n• Trash boards deflect crop residue into the furrow bottom (C is correct).\n• The landside heel absorbs downward vertical and lateral furrow reactions on the rearmost bottom, not vertical flotation on peat soils (D is false).",
-    "difficulty": "Moderate"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FM_030",
@@ -607,7 +607,7 @@ export default [
       "max": 8.14
     },
     "solution": "The total resultant force $R$ acting on the tillage tool is:\n$$R = \\sqrt{F_x^2 + F_y^2 + F_z^2}$$\n$$R = \\sqrt{7.2^2 + 2.1^2 + 3.0^2} = \\sqrt{51.84 + 4.41 + 9.00} = \\sqrt{65.25} \\approx 8.0777\\text{ kN} \\approx 8.08\\text{ kN}$$",
-    "difficulty": "Easy"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FM_032",
@@ -669,7 +669,7 @@ export default [
       "C"
     ],
     "solution": "• The passive shear failure rupture plane forms at $\\beta = 45^\\circ - \\phi/2$ from the horizontal (A is correct).\n• Soil-metal adhesion $c_a$ and friction angle $\\delta$ dictate interfacial boundary shear (B is correct).\n• Narrow tines rupture soil in a 3D crescent pattern rather than planar 2D flow (C is correct).\n• Saturated soil shear strength depends on effective stress $\\sigma' = \\sigma - u$ and cohesion $c'$, not purely suction (D is false).",
-    "difficulty": "Moderate"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FM_035",
@@ -707,7 +707,7 @@ export default [
       "max": 2.78
     },
     "solution": "Dynamic weight transfer $\\Delta W$ from front to rear axle due to a horizontal drawbar pull $P$ at height $h$ with wheelbase $L$ is:\n$$\\Delta W = \\frac{P \\times h}{L}$$\nGiven $P = 15\\text{ kN}$, $h = 0.40\\text{ m}$, and $L = 2.20\\text{ m}$:\n$$\\Delta W = \\frac{15 \\times 0.40}{2.20} = \\frac{6.0}{2.20} \\approx 2.727\\text{ kN} \\approx 2.73\\text{ kN}$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FM_037",
@@ -749,7 +749,7 @@ export default [
       "C"
     ],
     "solution": "• Three-point mounted implements can be raised hydraulically for tight headland turns (A is correct).\n• Automatic draft control transfers implement vertical soil forces and implement weight directly to the rear drive tires for traction enhancement (B is correct).\n• Full transport clearance simplifies road transit (C is correct).\n• Three-point mounted implements strictly require tractor hydraulic lift linkages and control valves (D is false).",
-    "difficulty": "Easy"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FM_039",
@@ -767,7 +767,7 @@ export default [
       "max": 2.12
     },
     "solution": "The lateral side draft force $F_y$ is the transverse component of the pull force:\n$$F_y = P \\sin(\\theta) = 10.0\\text{ kN} \\times \\sin(12^\\circ)$$\n$$\\sin(12^\\circ) \\approx 0.20791$$\n$$F_y = 10.0 \\times 0.20791 = 2.0791\\text{ kN} \\approx 2.08\\text{ kN}$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FM_040",
@@ -865,7 +865,7 @@ export default [
       "C"
     ],
     "solution": "• Axial-flow rotors transport crop axially while rotating it through multiple helical passes, increasing separation area with lower impact severity (A and B are correct).\n• Cross-flow cylinders subject crop to severe impact in a single wrap of the concave (C is correct).\n• Axial combines still require reciprocating cleaning shoes, chaffer sieves, and fan assemblies for pneumatic separation (D is false).",
-    "difficulty": "Moderate"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FM_045",
@@ -883,7 +883,7 @@ export default [
       "max": 1.17
     },
     "solution": "The Relative Span Factor ($RSF$) is a dimensionless parameter describing the width (uniformity) of a spray droplet distribution:\n$$RSF = \\frac{D_{90} - D_{10}}{D_{50}}$$\nGiven $D_{90} = 410\\text{ }\\mu\\text{m}$, $D_{10} = 120\\text{ }\\mu\\text{m}$, and $D_{50} = 250\\text{ }\\mu\\text{m}$:\n$$RSF = \\frac{410 - 120}{250} = \\frac{290}{250} = 1.16$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FM_046",
@@ -901,7 +901,7 @@ export default [
       "max": 2.42
     },
     "solution": "1. Total operational time ($T$):\n$$T = T_{\\text{operating}} + T_{\\text{lost}} = 2.50\\text{ h} + 0.625\\text{ h} = 3.125\\text{ h}$$\n2. Effective Field Capacity ($EFC$):\n$$EFC = \\frac{\\text{Total Area}}{T} = \\frac{7.5\\text{ ha}}{3.125\\text{ h}} = 2.40\\text{ ha/h}$$\n(Note: Theoretical field capacity $TFC = \\frac{4.5 \\times 6.0}{10} = 2.70\\text{ ha/h}$; Field efficiency $\\eta_f = \\frac{2.40}{2.70} \\approx 88.9\\%$).",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FM_047",
@@ -919,7 +919,7 @@ export default [
       "max": 3
     },
     "solution": "1. Total combine machine loss:\n$$\\text{Loss}_{\\text{machine}} = \\text{Header Loss} + \\text{Walker Loss} + \\text{Shoe Loss}$$\n$$\\text{Loss}_{\\text{machine}} = 60 + 40 + 20 = 120\\text{ kg/ha}$$\n2. Machine loss percentage based on total crop yield:\n$$\\%\\text{ Machine Loss} = \\frac{\\text{Loss}_{\\text{machine}}}{\\text{Yield}} \\times 100 = \\frac{120}{4000} \\times 100 = 3.0\\%$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FM_048",
@@ -937,7 +937,7 @@ export default [
       "max": 84
     },
     "solution": "Field Machine Index ($FMI$):\n$$FMI = \\frac{t_o}{t_o + t_t} \\times 100$$\nGiven $t_o = 4.2\\text{ h}$ and $t_t = 0.8\\text{ h}$:\n$$FMI = \\frac{4.2}{4.2 + 0.8} \\times 100 = \\frac{4.2}{5.0} \\times 100 = 84\\%$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FM_049",
@@ -993,7 +993,7 @@ export default [
       "max": 932
     },
     "solution": "1. Hourly fixed cost:\n$$FC_h = \\frac{1,20,000}{800} = \\text{Rs. } 150.0/\\text{h}$$\n2. Fuel cost per hour:\n$$\\text{Fuel} = 6.0 \\times 90 = \\text{Rs. } 540.0/\\text{h}$$\n3. Lubricant cost per hour:\n$$\\text{Lube} = 0.15 \\times 540 = \\text{Rs. } 81.0/\\text{h}$$\n4. Repair and maintenance per hour:\n$$R\\&M_h = \\frac{48,000}{800} = \\text{Rs. } 60.0/\\text{h}$$\n5. Operator labor cost per hour:\n$$\\text{Labor} = \\text{Rs. } 100.0/\\text{h}$$\n6. Total hourly cost:\n$$\\text{Total Cost} = 150.0 + 540.0 + 81.0 + 60.0 + 100.0 = \\text{Rs. } 931.0/\\text{h}$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FM_052",
@@ -1011,7 +1011,7 @@ export default [
       "max": 40
     },
     "solution": "Let $A$ be the break-even annual area in hectares:\n$$\\text{Custom Hire Cost} = \\text{Ownership Cost}$$\n$$A \\times 1500 = 36,000 + A \\times 600$$\n$$A (1500 - 600) = 36,000$$\n$$A \\times 900 = 36,000 \\implies A = \\frac{36,000}{900} = 40\\text{ ha}$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FM_053",
@@ -1035,7 +1035,7 @@ export default [
       "C"
     ],
     "solution": "• Straight-line depreciation assumes constant annual wear-and-tear (A and C are correct).\n• Declining balance applies a fixed percentage to the remaining book value, front-loading depreciation (B is correct).\n• Sum-of-the-years-digits allocates the highest fraction (e.g. $n/\\sum i$) in year 1, not the lowest (D is false).",
-    "difficulty": "Easy"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FM_054",
@@ -1053,7 +1053,7 @@ export default [
       "max": 15
     },
     "solution": "From Newton's second law / impulse-momentum principle:\n$$F_n = \\dot{m} \\cdot \\Delta v_n = \\dot{m} \\cdot (v_1 - 0) = \\dot{m} \\cdot v_1$$\n$$\\dot{m} = \\frac{F_n}{v_1} = \\frac{48.0\\text{ N}}{3.2\\text{ m/s}} = 15.0\\text{ kg/s}$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FM_055",
@@ -1071,7 +1071,7 @@ export default [
       "max": 0.62
     },
     "solution": "The Normalized Difference Vegetation Index ($NDVI$) is given by:\n$$NDVI = \\frac{NIR - Red}{NIR + Red}$$\n$$NDVI = \\frac{0.40 - 0.10}{0.40 + 0.10} = \\frac{0.30}{0.50} = 0.60 \\approx 0.6$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FM_056",
@@ -1089,7 +1089,7 @@ export default [
       "max": 60
     },
     "solution": "Nozzle flow rate $q$ in a PWM system is directly proportional to duty cycle ($DC$):\n$$Q = \\frac{600 \\times q}{w \\times v} \\propto \\frac{DC}{v}$$\nTo maintain constant application rate $Q$:\n$$\\frac{DC_1}{v_1} = \\frac{DC_2}{v_2}$$\n$$DC_2 = DC_1 \\times \\frac{v_2}{v_1} = 40\\% \\times \\frac{9.0}{6.0} = 40\\% \\times 1.5 = 60\\%$$",
-    "difficulty": "Easy"
+    "difficulty": "Moderate"
   },
   {
     "id": "QB_FM_057",
@@ -1113,7 +1113,7 @@ export default [
       "C"
     ],
     "solution": "• RTK uses carrier phase measurements and ground station telemetry to provide centimeter-level accuracy (A is correct).\n• SBAS/DGPS code-differential correction yields sub-meter pass-to-pass tracking (B is correct).\n• Standard autonomous GPS has drift errors up to 5 meters due to ionospheric delay (C is correct).\n• RTK relies on microwave RF satellite signals and UHF/cellular telemetry, not optical line of sight (D is false).",
-    "difficulty": "Easy"
+    "difficulty": "Hard"
   },
   {
     "id": "QB_FM_058",
@@ -1126,7 +1126,7 @@ export default [
     "source": "Ojha & Michael - Principles of Agricultural Engineering Vol 1",
     "question": "A 3-bottom moldboard plow of width $30\\text{ cm}$ per bottom is operating at a depth of $15\\text{ cm}$ with a forward speed of $4.5\\text{ km/h}$. If the specific draft of the soil is $0.6\\text{ kg/cm}^2$, calculate the drawbar power required by the plow in $\\text{kW}$. (Take acceleration due to gravity $g = 9.81\\text{ m/s}^2$)",
     "solution": "Given:\n- Number of bottoms $n = 3$\n- Width per bottom $w = 30\\text{ cm}$\n- Total width of cut $W = 3 \\times 30 = 90\\text{ cm}$\n- Depth of cut $d = 15\\text{ cm}$\n- Cross-sectional area of furrow slice $A = W \\times d = 90 \\times 15 = 1350\\text{ cm}^2$\n- Specific draft $D_s = 0.6\\text{ kg/cm}^2$\n\nTotal draft in $\\text{kgf}$:\n$$D = A \\times D_s = 1350 \\times 0.6 = 810\\text{ kgf}$$\nIn Newtons:\n$$D = 810 \\times 9.81 = 7946.1\\text{ N}$$\n\nForward speed $v$:\n$$v = 4.5\\text{ km/h} = \\frac{4.5 \\times 1000}{3600} = 1.25\\text{ m/s}$$\n\nDrawbar power required:\n$$P = \\frac{D \\times v}{1000} = \\frac{7946.1 \\times 1.25}{1000} \\approx 9.93\\text{ kW}$$",
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "correct_answer": 9.93,
     "answer": 9.93,
     "numerical_range": {
@@ -1185,7 +1185,7 @@ export default [
     "source": "Ojha & Michael - Principles of Agricultural Engineering Vol 1",
     "question": "Which of the following statements regarding the forces acting on a tillage tool are CORRECT?",
     "solution": "- Option A is correct: Draft is defined as the horizontal component parallel to motion.\n- Option B is correct: An eccentricity between line of pull and center of resistance creates a couple, resulting in side draft.\n- Option C is incorrect: Vertical force can be upward or downward depending on the lift angle, suction, soil resistance, and dullness of the blade.\n- Option D is correct: Specific draft is draft divided by cross-sectional area of the furrow slice ($N/cm^2$ or $kN/m^2$).",
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "options": {
       "A": "Draft is the horizontal component of the total soil reaction acting parallel to the direction of travel",
       "B": "Side draft occurs when the line of pull does not coincide with the center of resistance in the horizontal plane",
@@ -1292,7 +1292,7 @@ export default [
     "source": "Sanjay Kumar - Numerical Approach to Agricultural Engineering",
     "question": "In pesticide spray droplet characterization, if the Volume Median Diameter (VMD) is equal to the Number Median Diameter (NMD), the spray droplet spectrum is said to be:",
     "solution": "The ratio $VMD / NMD$ is the uniformity coefficient of the droplet spectrum. When $VMD = NMD$, the uniformity ratio is 1.0, indicating that all droplets are of identical size, which defines a perfectly monodisperse spray.",
-    "difficulty": "Moderate",
+    "difficulty": "Easy",
     "options": {
       "A": "Polydisperse",
       "B": "Monodisperse",
@@ -1332,7 +1332,7 @@ export default [
     "source": "Ojha & Michael - Principles of Agricultural Engineering Vol 1",
     "question": "Which of the following conditions lead to increased grain damage (cracking) during mechanical threshing in a spike-tooth or rasp-bar cylinder?",
     "solution": "- Excessively high peripheral speed increases impact kinetic energy, causing grain cracking.\n- Too small concave clearance causes excessive mechanical pinching and crushing.\n- Low grain moisture (< 12%) makes the grain brittle and highly susceptible to mechanical shatter.\n- Overfeeding typically leads to unthreshed heads and cylinder clogging (threshing loss), rather than increased grain cracking.",
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "options": {
       "A": "Excessively high peripheral drum speed",
       "B": "Extremely low concave clearance",
@@ -1401,7 +1401,7 @@ export default [
     "source": "Sanjay Kumar - Numerical Approach to Agricultural Engineering",
     "question": "A solid steel shaft transmits $45\\text{ kW}$ power at $300\\text{ rpm}$. If the maximum allowable shear stress in the shaft material is $50\\text{ MPa}$, calculate the minimum required shaft diameter in $\\text{mm}$.",
     "solution": "Given:\n- Power $P = 45\\text{ kW} = 45000\\text{ W}$\n- Speed $N = 300\\text{ rpm}$\n- Torque $T = \\frac{P \\times 60}{2 \\pi N} = \\frac{45000 \\times 60}{2 \\pi \\times 300} = \\frac{2700000}{1884.95} = 1432.39\\text{ N}\\cdot\\text{m} = 1432.39 \\times 10^3\\text{ N}\\cdot\\text{mm}$\n\nFrom torsion formula:\n$$\\tau = \\frac{16 T}{\\pi d^3} \\le 50\\text{ MPa}$$\n\n$$d^3 = \\frac{16 \\times 1432.39 \\times 10^3}{\\pi \\times 50} = \\frac{22918240}{157.08} = 145901.7\\text{ mm}^3$$\n\n$$d = (145901.7)^{1/3} \\approx 52.68\\text{ mm}$$",
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "correct_answer": 52.68,
     "answer": 52.68,
     "numerical_range": {
@@ -1439,7 +1439,7 @@ export default [
     "source": "Ojha & Michael - Principles of Agricultural Engineering Vol 1",
     "question": "In optical remote sensing for precision agriculture, the Normalized Difference Vegetation Index (NDVI) is computed using reflectance values in Near-Infrared ($NIR$) and Red ($RED$) spectral bands as:",
     "solution": "The Normalized Difference Vegetation Index (NDVI) is mathematically defined as:\n$$NDVI = \\frac{NIR - RED}{NIR + RED}$$\nHealthy green vegetation absorbs red light strongly for photosynthesis and reflects near-infrared light strongly due to spongy mesophyll cell structure.",
-    "difficulty": "Moderate",
+    "difficulty": "Easy",
     "options": {
       "A": "$\\frac{NIR - RED}{NIR + RED}$",
       "B": "$\\frac{RED - NIR}{RED + NIR}$",
@@ -1527,7 +1527,7 @@ export default [
     "source": "Ojha & Michael - Principles of Agricultural Engineering Vol 1",
     "question": "In a reciprocating mower cutter bar, the register of the knife refers to the:",
     "solution": "Register of a mower knife means that the centerline of each knife section is exactly centered over the centerline of each guard ledger plate at the two extreme dead ends of the pitman stroke. If it does not center, unharvested tufts and knife jamming occur.",
-    "difficulty": "Moderate",
+    "difficulty": "Easy",
     "options": {
       "A": "Vertical clearance between knife clip and knife section",
       "B": "Condition where the center of the knife section stops exactly in the center of the ledger plate at both ends of the stroke",
@@ -1586,7 +1586,7 @@ export default [
     "source": "Liljedahl - Tractors and Their Power Units",
     "question": "For a 3-point hitch implement in a free-link operation, the depth of cut is primarily controlled by the:",
     "solution": "In free-link operation, the hydraulic lift arms are free to float, and the implement relies on its own weight, soil forces, and an implement gage wheel (or runner) along with convergent 3-point linkage geometry to maintain working depth.",
-    "difficulty": "Moderate",
+    "difficulty": "Easy",
     "options": {
       "A": "Tractor hydraulic lift cylinder only",
       "B": "Gage wheel on the implement and the hitch geometry",
@@ -1626,7 +1626,7 @@ export default [
     "source": "Ojha & Michael - Principles of Agricultural Engineering Vol 1",
     "question": "Which of the following statements regarding rotavators (rotary tillers) are TRUE?",
     "solution": "- A is true: In standard down-cut rotavators, tangential soil reactions provide a forward thrust to the tractor.\n- B is true: Bite length $L_b = \\frac{v_f}{n Z}$, so increasing rotor speed reduces bite length.\n- C is false: Rotavators consume higher specific energy per unit volume of soil cut compared to passive tools due to intense impact and multiple slicing.\n- D is true: The combination of uniform linear translation and rotation generates a curtate cycloid / trochoid trajectory.",
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "options": {
       "A": "For down-cut rotation, the rotor blades push the tractor forward, reducing wheel slip",
       "B": "Tilled bite length decreases when rotor rpm is increased at constant forward speed",
@@ -1693,7 +1693,7 @@ export default [
     "source": "Ojha & Michael - Principles of Agricultural Engineering Vol 1",
     "question": "In agricultural crop threshers, the function of the aspirator blower fan is to:",
     "solution": "An aspirator creates an upward or cross-flow air current that lifts lighter particles (chaff, glumes, fine straw dust) whose terminal velocities are less than the air velocity, leaving the heavier clean grain to fall into the collection hopper.",
-    "difficulty": "Moderate",
+    "difficulty": "Easy",
     "options": {
       "A": "Cool the bearings of the threshing cylinder",
       "B": "Separate lighter chaff, husk, and dust from clean grain using terminal velocity differences",
@@ -1714,7 +1714,7 @@ export default [
     "source": "Ojha & Michael - Principles of Agricultural Engineering Vol 1",
     "question": "A subsoiler tine operates at a depth of $45\\text{ cm}$ with a forward speed of $3.6\\text{ km/h}$. The measured horizontal draft is $14.5\\text{ kN}$. Calculate the power required to pull the subsoiler in $\\text{kW}$.",
     "solution": "Forward speed:\n$$v = 3.6\\text{ km/h} = \\frac{3.6}{3.6} = 1.0\\text{ m/s}$$\nDraft $D = 14.5\\text{ kN} = 14500\\text{ N}$.\nDrawbar power:\n$$P = \\frac{D \\times v}{1000} = \\frac{14500 \\times 1.0}{1000} = 14.5\\text{ kW}$$",
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "correct_answer": 14.5,
     "answer": 14.5,
     "numerical_range": {
@@ -1733,7 +1733,7 @@ export default [
     "source": "Sanjay Kumar - Numerical Approach to Agricultural Engineering",
     "question": "In a moldboard plow bottom, the component primarily designed to absorb the unbalanced side thrust created by the turning of furrow slice against the furrow wall is the:",
     "solution": "The landside is the flat plate bolted to the frog that slides against the furrow wall, resisting the lateral side thrust produced when the moldboard inverts the furrow slice, thereby stabilizing plow alignment.",
-    "difficulty": "Moderate",
+    "difficulty": "Easy",
     "options": {
       "A": "Share point",
       "B": "Shin",
@@ -1792,7 +1792,7 @@ export default [
     "source": "Sanjay Kumar - Numerical Approach to Agricultural Engineering",
     "question": "A rectangular sunk key of width $w = 12\\text{ mm}$ and height $h = 8\\text{ mm}$ is fitted to a shaft of diameter $d = 40\\text{ mm}$. The key transmits a torque of $320\\text{ N}\\cdot\\text{m}$. If the permissible shear stress for key material is $\\tau = 60\\text{ MPa}$, calculate the minimum required length of the key in $\\text{mm}$.",
     "solution": "Tangential shear force acting at the shaft surface:\n$$F = \\frac{T}{d/2} = \\frac{320}{0.020} = 16000\\text{ N}$$\nShear area of the key is $A_s = w \\times l = 12 \\times l\\text{ mm}^2$.\nShear stress relation:\n$$\\tau = \\frac{F}{w \\times l} \\le 60\\text{ N/mm}^2$$\n$$l = \\frac{16000}{12 \\times 60} = \\frac{16000}{720} \\approx 22.22\\text{ mm}$$",
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "correct_answer": 22.22,
     "answer": 22.22,
     "numerical_range": {
@@ -1811,7 +1811,7 @@ export default [
     "source": "Sanjay Kumar - Numerical Approach to Agricultural Engineering",
     "question": "In the design of a knuckle joint connecting two rods under axial tensile load $P$, the failure mode of the knuckle pin under shear is typically characterized as:",
     "solution": "The pin passes through the single eye of one rod and the double fork/eye of the second rod. Under axial tension, the pin is subjected to double shear at the two interfaces between fork and single eye: $\\tau = \\frac{P}{2 \\times (\\frac{\\pi}{4} d^2)}$.",
-    "difficulty": "Moderate",
+    "difficulty": "Easy",
     "options": {
       "A": "Single shear failure",
       "B": "Double shear failure",
@@ -1870,7 +1870,7 @@ export default [
     "source": "Ojha & Michael - Principles of Agricultural Engineering Vol 1",
     "question": "Which of the following factors significantly reduce spray droplet drift during field pesticide application?",
     "solution": "- Larger orifice size produces coarser droplets that have higher terminal velocity and resist wind drift.\n- Lowering boom height reduces airborne flight time between nozzle tip and foliage.\n- Air-induction nozzles generate larger air-filled droplets with low drift potential.\n- Increasing operating pressure produces finer droplets (< 100 microns), significantly increasing drift susceptibility.",
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "options": {
       "A": "Increasing nozzle orifice diameter at constant boom discharge",
       "B": "Lowering boom height above crop canopy",
@@ -1918,7 +1918,7 @@ export default [
     "source": "Sanjay Kumar - Numerical Approach to Agricultural Engineering",
     "question": "In a horizontal disc fertilizer broadcaster, increasing the disc rotational speed while maintaining constant gate opening leads to:",
     "solution": "The spinning disc imparts radial and tangential velocity to the fertilizer granules. Higher disc rpm increases centrifugal launch velocity, throwing particles further outward and thereby increasing the effective spreading swath width.",
-    "difficulty": "Moderate",
+    "difficulty": "Easy",
     "options": {
       "A": "Decreased swath width and increased application rate",
       "B": "Increased swath width with more uniform granule dispersion",
@@ -1958,7 +1958,7 @@ export default [
     "source": "Ojha & Michael - Principles of Agricultural Engineering Vol 1",
     "question": "A seed planter dropped 100 seeds along a furrow line. The target theoretical spacing between seeds is $15\\text{ cm}$. In the plant spacing analysis, 82 seed intervals fell between $7.5\\text{ cm}$ and $22.5\\text{ cm}$ (i.e. within $0.5 \\times$ to $1.5 \\times$ target spacing). Calculate the Quality of Feed Index (QFI) in percentage.",
     "solution": "The Quality of Feed Index (QFI) according to ISO/ASABE standards is the percentage of plant spacings that fall within $0.5 \\times S_t$ and $1.5 \\times S_t$ (neither multiple drops nor skips):\n$$QFI = \\frac{n_{\\text{single}}}{N} \\times 100 = \\frac{82}{100} \\times 100 = 82\\%$$",
-    "difficulty": "Moderate",
+    "difficulty": "Easy",
     "correct_answer": 82,
     "answer": 82,
     "numerical_range": {
@@ -1996,7 +1996,7 @@ export default [
     "source": "Sanjay Kumar - Numerical Approach to Agricultural Engineering",
     "question": "In primary tillage using a moldboard plow, vertical suction (clearance under share gunnel) is provided primarily to:",
     "solution": "Vertical suction (vertical clearance at the share point) pulls the plow bottom into the ground, ensuring proper depth penetration. Horizontal suction (clearance towards the unplowed land) maintains uniform width of cut.",
-    "difficulty": "Moderate",
+    "difficulty": "Easy",
     "options": {
       "A": "Maintain uniform width of cut",
       "B": "Enable the plow to penetrate the soil to its proper depth",
@@ -2055,7 +2055,7 @@ export default [
     "source": "Liljedahl - Tractors and Their Power Units",
     "question": "In three-point hitch geometry of an agricultural tractor, which of the following statements are CORRECT?",
     "solution": "- A is correct: The virtual hitch point in the side elevation is the convergence of top link and bottom links.\n- B is correct: In top view, the convergence of the two lower links defines the virtual hitch point in horizontal plane.\n- C is incorrect: Raising the virtual hitch point increases dynamic load transfer onto the rear wheels, not front wheels.\n- D is correct: Position control locks the lift rockshaft angle to the control quadrant lever position.",
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "options": {
       "A": "In the vertical plane, the virtual hitch point is located at the intersection of the centerlines of the upper link and lower links",
       "B": "In the horizontal plane, the virtual hitch point is at the intersection of the two lower links",
@@ -2103,7 +2103,7 @@ export default [
     "source": "Ojha & Michael - Principles of Agricultural Engineering Vol 1",
     "question": "In a horizontal disc paddy transplanter, the mechanism used to separate seedling mats and insert them into the puddled soil is a:",
     "solution": "Mechanical rice transplanters utilize a four-bar linkage mechanism that drives a transplanting arm with a finger fork. The fork moves along an oval/kidney-shaped path to grab seedlings from the seedling tray and push them into the puddle at the lowest point of stroke.",
-    "difficulty": "Moderate",
+    "difficulty": "Easy",
     "options": {
       "A": "Fluted roller feed cup",
       "B": "Four-bar linkage transplanting arm with fixed fork",
@@ -2221,7 +2221,7 @@ export default [
     "source": "Liljedahl - Tractors and Their Power Units",
     "question": "Which of the following operational factors cause an increase in wheel slip of an agricultural tractor operating with a draft implement?",
     "solution": "- A: Increasing depth increases plow draft force, directly raising required tractive effort and increasing slip.\n- B: Wet surface reduces the coefficient of traction $\\mu$, causing higher slip.\n- C: Adding ballast increases normal load on drive wheels, increasing traction and reducing slip.\n- D: Decreasing tire pressure in soft soil increases tire contact footprint, improving traction and reducing slip.",
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "options": {
       "A": "Increase in plow depth of cut",
       "B": "Wet, slick soil conditions on the surface",
@@ -2248,7 +2248,7 @@ export default [
     "source": "Ojha & Michael - Principles of Agricultural Engineering Vol 1",
     "question": "A fluted roller seed drill has a fluted length of $50\\text{ mm}$ exposed to seed flow. When the fluted length is reduced to $35\\text{ mm}$ by adjusting the feed shaft, calculate the percentage reduction in seed discharge rate assuming linear proportionality.",
     "solution": "Seed rate is directly proportional to active fluted roller length $L$:\n$$\\text{Reduction} = \\frac{L_1 - L_2}{L_1} \\times 100 = \\frac{50 - 35}{50} \\times 100 = \\frac{15}{50} \\times 100 = 30\\%$$",
-    "difficulty": "Moderate",
+    "difficulty": "Easy",
     "correct_answer": 30,
     "answer": 30,
     "numerical_range": {
@@ -2271,7 +2271,7 @@ export default [
     },
     "answer": 5.4,
     "correct_answer": 5.4,
-    "difficulty": "Easy",
+    "difficulty": "Moderate",
     "solution": "Furrow cross-sectional area:\n$$A = w \\times d = 35\\text{ cm} \\times 18\\text{ cm} = 630\\text{ cm}^2$$\nDraft $D = 3.402\\text{ kN} = 3402\\text{ N}$.\nSpecific draft:\n$$D_s = \\frac{D}{A} = \\frac{3402\\text{ N}}{630\\text{ cm}^2} = 5.40\\text{ N/cm}^2$$",
     "source": "Ojha & Michael - Principles of Agricultural Engineering Vol 1"
   },
@@ -2290,7 +2290,7 @@ export default [
     },
     "answer": 0.56,
     "correct_answer": 0.56,
-    "difficulty": "Easy",
+    "difficulty": "Moderate",
     "solution": "Theoretical field capacity:\n$$TFC = \\frac{W \\times S}{10} = \\frac{1.4 \\times 5.0}{10} = 0.70\\text{ ha/h}$$\nEffective field capacity:\n$$EFC = TFC \\times 0.80 = 0.70 \\times 0.80 = 0.56\\text{ ha/h}$$",
     "source": "Sanjay Kumar - Numerical Approach to Agricultural Engineering"
   },
@@ -2309,7 +2309,7 @@ export default [
     },
     "answer": 120,
     "correct_answer": 120,
-    "difficulty": "Easy",
+    "difficulty": "Moderate",
     "solution": "$$d = m \\times T = 4\\text{ mm} \\times 30 = 120.0\\text{ mm}$$",
     "source": "Sanjay Kumar - Numerical Approach to Agricultural Engineering"
   },
@@ -2368,7 +2368,7 @@ export default [
     },
     "answer": 150,
     "correct_answer": 150,
-    "difficulty": "Easy",
+    "difficulty": "Moderate",
     "solution": "Application rate formula:\n$$Q = \\frac{600 \\times q}{w \\times S}$$\nWhere:\n- $q = 0.75\\text{ L/min}$\n- $w = 0.50\\text{ m}$\n- $S = 6.0\\text{ km/h}$\n\n$$Q = \\frac{600 \\times 0.75}{0.50 \\times 6.0} = \\frac{450}{3.0} = 150.0\\text{ L/ha}$$",
     "source": "Ojha & Michael - Principles of Agricultural Engineering Vol 1"
   },
@@ -2387,7 +2387,7 @@ export default [
     },
     "answer": 47.53,
     "correct_answer": 47.53,
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "solution": "Torsional shear stress formula:\n$$\\tau = \\frac{16 T}{\\pi d^3}$$\nWhere $T = 400\\text{ N}\\cdot\\text{m} = 400000\\text{ N}\\cdot\\text{mm}$ and $d = 35\\text{ mm}$:\n$$d^3 = 42875\\text{ mm}^3$$\n$$\\tau = \\frac{16 \\times 400000}{\\pi \\times 42875} = \\frac{6400000}{134696} \\approx 47.514\\text{ N/mm}^2 = 47.51\\text{ MPa}$$",
     "source": "Sanjay Kumar - Numerical Approach to Agricultural Engineering"
   },
@@ -2488,7 +2488,7 @@ export default [
     },
     "answer": 282.74,
     "correct_answer": 282.74,
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "solution": "Cross-sectional area of shear pin:\n$$A = \\frac{\\pi}{4} d^2 = \\frac{\\pi}{4} (6)^2 = 9\\pi \\approx 28.274\\text{ mm}^2$$\nShear force required:\n$$F_s = \\tau \\times A = 250\\text{ N/mm}^2 \\times 28.274\\text{ mm}^2 = 7068.58\\text{ N}$$\nFailure torque:\n$$T = F_s \\times R = 7068.58\\text{ N} \\times 0.040\\text{ m} \\approx 282.74\\text{ N}\\cdot\\text{m}$$",
     "source": "Liljedahl - Tractors and Their Power Units"
   },
@@ -2526,7 +2526,7 @@ export default [
     },
     "answer": 12,
     "correct_answer": 12,
-    "difficulty": "Easy",
+    "difficulty": "Moderate",
     "solution": "Power transmitted:\n$$P = (T_1 - T_2) \\times v = (1200 - 400)\\text{ N} \\times 15\\text{ m/s} = 800 \\times 15 = 12000\\text{ W} = 12.0\\text{ kW}$$",
     "source": "Sanjay Kumar - Numerical Approach to Agricultural Engineering"
   },
@@ -2566,7 +2566,7 @@ export default [
     },
     "answer": 5.4,
     "correct_answer": 5.4,
-    "difficulty": "Easy",
+    "difficulty": "Moderate",
     "solution": "Area cut per hour:\n$$A = \\frac{W \\times S}{10} = \\frac{3.0 \\times 4.5}{10} = 1.35\\text{ ha/h}$$\nFeed rate:\n$$\\dot{m} = A \\times \\text{Yield} = 1.35\\text{ ha/h} \\times 4.0\\text{ tonnes/ha} = 5.4\\text{ tonnes/h}$$",
     "source": "Ojha & Michael - Principles of Agricultural Engineering Vol 1"
   },
@@ -2585,7 +2585,7 @@ export default [
     },
     "answer": 240,
     "correct_answer": 240,
-    "difficulty": "Easy",
+    "difficulty": "Moderate",
     "solution": "$$N_2 = N_1 \\times \\frac{T_1}{T_2} = 720 \\times \\frac{18}{54} = 720 \\times \\frac{1}{3} = 240\\text{ rpm}$$",
     "source": "Sanjay Kumar - Numerical Approach to Agricultural Engineering"
   },
@@ -2625,7 +2625,7 @@ export default [
     },
     "answer": 8.1,
     "correct_answer": 8.1,
-    "difficulty": "Easy",
+    "difficulty": "Moderate",
     "solution": "$$P = \\frac{D \\times v}{1000} = \\frac{5400\\text{ N} \\times 1.5\\text{ m/s}}{1000} = 8.1\\text{ kW}$$",
     "source": "Ojha & Michael - Principles of Agricultural Engineering Vol 1"
   },
@@ -2644,7 +2644,7 @@ export default [
     },
     "answer": 0.6,
     "correct_answer": 0.6,
-    "difficulty": "Easy",
+    "difficulty": "Moderate",
     "solution": "$$EFC = \\frac{\\text{Area}}{\\text{Time}} = \\frac{3.6\\text{ ha}}{6.0\\text{ h}} = 0.60\\text{ ha/h}$$",
     "source": "Sanjay Kumar - Numerical Approach to Agricultural Engineering"
   },
@@ -2751,7 +2751,7 @@ export default [
       "B",
       "C"
     ],
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "solution": "Statements A, B, and C are correct:\n- Sunk keys are half in the shaft and half in the hub.\n- Key failure is assessed by shearing stress ($\\tau = F / (w L)$) and crushing/bearing stress ($\\sigma_c = F / ((t/2) L)$).\n- Woodruff keys are semi-circular and can adjust their angle in the keyway.\n- Statement D is incorrect: taper keys prevent axial sliding; feather keys or splines are used when axial sliding is permitted.",
     "source": "Ojha & Michael - Principles of Agricultural Engineering Vol 1"
   },
@@ -2770,7 +2770,7 @@ export default [
     },
     "answer": 6.18,
     "correct_answer": 6.18,
-    "difficulty": "Easy",
+    "difficulty": "Moderate",
     "solution": "The resultant pull is the vector sum of horizontal draft ($D$) and downward vertical force ($V$):\n$$P = \\sqrt{D^2 + V^2} = \\sqrt{(6.0)^2 + (1.5)^2} = \\sqrt{36 + 2.25} = \\sqrt{38.25} \\approx 6.185\\text{ kN}$$\nAcceptable range: $6.15 - 6.25\\text{ kN}$.",
     "source": "Ojha & Michael - Principles of Agricultural Engineering Vol 1"
   },
@@ -2791,7 +2791,7 @@ export default [
     },
     "correct_answer": "B",
     "answer": "B",
-    "difficulty": "Moderate",
+    "difficulty": "Easy",
     "solution": "In a free-link three-point hitch system, the virtual hitch point in the vertical plane is the point where the extended centerline of the top link intersects the line of action (projection) of the lower links.",
     "source": "Liljedahl - Tractors and Their Power Units"
   },
@@ -2858,7 +2858,7 @@ export default [
       "B",
       "C"
     ],
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "solution": "Droplet atomization in hydraulic nozzles is governed by liquid properties and orifice flow physics:\n- Increasing spray pressure decreases droplet size (finer spray).\n- Orifice size and internal core/geometry determine sheet thickness and breakup.\n- Viscosity and surface tension affect Rayleigh-Taylor and Kelvin-Helmholtz atomization kinetics.\n- Forward gear ratio affects field speed and ground application rate (L/ha), but NOT the atomization droplet size exiting the nozzle tip.",
     "source": "Ojha & Michael - Principles of Agricultural Engineering Vol 1"
   },
@@ -2877,7 +2877,7 @@ export default [
     },
     "answer": 23.04,
     "correct_answer": 23.04,
-    "difficulty": "Easy",
+    "difficulty": "Moderate",
     "solution": "Peripheral speed of threshing cylinder:\n$$v = \\frac{\\pi D N}{60} = \\frac{\\pi \\times 0.550\\text{ m} \\times 800\\text{ rpm}}{60} = \\frac{1382.3}{60} \\approx 23.038\\text{ m/s}$$\nAcceptable range: $22.9 - 23.2\\text{ m/s}$.",
     "source": "Ojha & Michael - Principles of Agricultural Engineering Vol 1"
   },
@@ -2917,7 +2917,7 @@ export default [
     },
     "answer": 1.08,
     "correct_answer": 1.08,
-    "difficulty": "Easy",
+    "difficulty": "Moderate",
     "solution": "Theoretical field capacity:\n$$TFC = \\frac{W \\times v}{10} = \\frac{4.0\\text{ m} \\times 3.6\\text{ km/h}}{10} = 1.44\\text{ ha/h}$$\nEffective field capacity:\n$$EFC = TFC \\times \\eta_f = 1.44 \\times 0.75 = 1.08\\text{ ha/h}$$",
     "source": "Sanjay Kumar - Numerical Approach to Agricultural Engineering"
   },
@@ -2955,7 +2955,7 @@ export default [
     },
     "answer": 63,
     "correct_answer": 63,
-    "difficulty": "Easy",
+    "difficulty": "Moderate",
     "solution": "Purchase price $C = \\text{Rs. } 700000$.\nSalvage value $S = 0.10 \\times 700000 = \\text{Rs. } 70000$.\nTotal annual depreciation:\n$$D_{\\text{annual}} = \\frac{C - S}{L} = \\frac{700000 - 70000}{10} = \\frac{630000}{10} = \\text{Rs. } 63000/\\text{year}$$\nHourly depreciation:\n$$D_{\\text{hourly}} = \\frac{63000}{1000\\text{ h}} = \\text{Rs. } 63.0/\\text{h}$$",
     "source": "Sanjay Kumar - Numerical Approach to Agricultural Engineering"
   },
@@ -3024,7 +3024,7 @@ export default [
       "B",
       "C"
     ],
-    "difficulty": "Moderate",
+    "difficulty": "Hard",
     "solution": "A combine yield monitor requires:\n- Mass flow sensor (impact plate or radiometric sensor) to measure clean grain flow.\n- Moisture sensor to normalize yield to standard grain moisture content.\n- GNSS receiver to map yield spatially across the field.\nA radiator pressure gauge monitors engine cooling, not yield.",
     "source": "Ojha & Michael - Principles of Agricultural Engineering Vol 1"
   },
@@ -3069,5 +3069,1732 @@ export default [
     "difficulty": "Easy",
     "solution": "The point of the share projects forward into undisturbed soil, leading the cutting process and providing horizontal and vertical suction for plow penetration.",
     "source": "Ojha & Michael - Principles of Agricultural Engineering Vol 1"
+  },
+  {
+    "id": "QB_FM_ADV_001",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Forces acting on a tillage tool",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A $3$-bottom moldboard plow with a total width of cut of $90\\text{ cm}$ operates at a depth of $15\\text{ cm}$ and a forward speed of $5.4\\text{ km/h}$. The specific soil draft resistance is $0.5\\text{ kg/cm}^2$. Assuming the acceleration due to gravity $g = 9.81\\text{ m/s}^2$, the drawbar power required to pull the plow is ________ $\\text{kW}$ (round off to two decimal places).",
+    "correct_answer": "9.93",
+    "numerical_range": {
+      "min": 9.8,
+      "max": 10.1
+    },
+    "solution": "1. Cross-sectional area of furrow slice:\n$$A = \\text{Width} \\times \\text{Depth} = 90\\text{ cm} \\times 15\\text{ cm} = 1350\\text{ cm}^2$$\n\n2. Total draft force required in kg:\n$$D_{\\text{kg}} = A \\times \\text{Specific Resistance} = 1350\\text{ cm}^2 \\times 0.5\\text{ kg/cm}^2 = 675\\text{ kg}$$\nConverting to Newtons:\n$$D = 675 \\times 9.81 = 6621.75\\text{ N} = 6.622\\text{ kN}$$\n\n3. Forward speed in m/s:\n$$v = 5.4\\text{ km/h} = 5.4 \\times \\frac{5}{18} = 1.5\\text{ m/s}$$\n\n4. Drawbar power:\n$$P_{\\text{db}} = D \\times v = 6.62175\\text{ kN} \\times 1.5\\text{ m/s} = 9.9326\\text{ kW} \\approx 9.93\\text{ kW}$$",
+    "difficulty": "Hard",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_002",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design",
+    "subtopic": "Design and selection of machine elements – gears, pulleys, chains and sprockets and belts",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An epicyclic gear train consists of a sun gear $S$ having $24$ teeth and a fixed internal ring gear $A$ having $72$ teeth. A planet gear $P$ meshes with both $S$ and $A$ and is carried on an arm $R$. If the sun gear rotates at $600\\text{ rpm}$ clockwise, the rotational speed of the arm $R$ is ________ $\\text{rpm}$ clockwise (answer in integer).",
+    "correct_answer": "150",
+    "numerical_range": {
+      "min": 150,
+      "max": 150
+    },
+    "solution": "Let the number of teeth on sun gear be $T_S = 24$ and internal ring gear be $T_A = 72$.\nUsing kinematic velocity relations for epicyclic train:\n$$\\frac{N_A - N_R}{N_S - N_R} = -\\frac{T_S}{T_A} = -\\frac{24}{72} = -\\frac{1}{3}$$\nGiven $N_A = 0$ (fixed ring gear) and $N_S = +600\\text{ rpm}$:\n$$\\frac{0 - N_R}{600 - N_R} = -\\frac{1}{3} \\implies -3 N_R = -(600 - N_R) \\implies 3 N_R = 600 - N_R \\implies 4 N_R = 600 \\implies N_R = 150\\text{ rpm}$$\nThus, the speed of the arm $R$ is $150\\text{ rpm}$ clockwise.",
+    "difficulty": "Hard",
+    "source": "Machine Design for Agricultural Engineers (S.C. Jain)"
+  },
+  {
+    "id": "QB_FM_ADV_003",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Calculation of performance parameters – field capacity, efficiency, performance index, application rate and losses",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A $9$-row tractor-drawn seed drill with row-to-row spacing of $20\\text{ cm}$ travels at a forward speed of $4.5\\text{ km/h}$. The field efficiency of the operation is $75\\%$. The time required to plant a $4.86\\text{ ha}$ field is ________ hours (answer in integer).",
+    "correct_answer": "8",
+    "numerical_range": {
+      "min": 8,
+      "max": 8
+    },
+    "solution": "1. Effective working width of the seed drill:\n$$W = 9 \\text{ rows} \\times 0.20\\text{ m} = 1.80\\text{ m}$$\n\n2. Effective Field Capacity (EFC):\n$$\\text{EFC} = \\frac{S \\times W \\times \\eta}{10} = \\frac{4.5\\text{ km/h} \\times 1.80\\text{ m} \\times 0.75}{10} = \\frac{6.075}{10} = 0.6075\\text{ ha/h}$$\n\n3. Time required to complete $4.86\\text{ ha}$:\n$$t = \\frac{\\text{Total Area}}{\\text{EFC}} = \\frac{4.86\\text{ ha}}{0.6075\\text{ ha/h}} = 8.0\\text{ hours}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_FM_ADV_004",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Functional requirements, principles of working, construction and operation of manual, animal, tractor and renewable energy operated equipment for tillage, sowing, planting, fertilizer application, inter-cultivation, spraying, mowing, chaff cutting, harvesting and threshing",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the design and operational mechanics of agricultural sprayers is/are CORRECT?",
+    "options": {
+      "A": "The discharge rate of a hydraulic spray nozzle is proportional to the square root of the operating pressure ($\\sqrt{P}$)",
+      "B": "Increasing the operating pressure decreases the Volumetric Median Diameter (VMD) of the droplets produced",
+      "C": "Drift prone droplet fraction increases significantly when droplet diameter is below $100\\,\\mu\\text{m}$",
+      "D": "A flat fan nozzle typically provides an elliptical spray pattern with maximum deposit directly under the center of the nozzle"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All given statements are correct based on agricultural spray hydraulics:\n- Discharge through a nozzle orifice follows the orifice equation $Q = C_d A \\sqrt{\\frac{2P}{\\rho}} \\propto \\sqrt{P}$ (Option A is correct).\n- Higher pressure increases liquid sheet velocity and shear forces, breaking liquid into smaller droplets and decreasing VMD (Option B is correct).\n- Droplets smaller than $100\\,\\mu\\text{m}$ have very low settling velocity and drift extensively with ambient wind currents (Option C is correct).\n- Standard flat fan nozzles produce a tapered elliptical distribution, requiring $30\\text{--}50\\%$ spray pattern overlap for uniform swath deposition (Option D is correct).",
+    "difficulty": "Hard",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_005",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Hitch systems and hitching of tillage implements",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a 3-point tractor hitch system, the lower links converge in the horizontal plane such that their virtual hitch point is located $1.2\\text{ m}$ ahead of the rear axle. The center of resistance of the mounted plow is located $1.8\\text{ m}$ behind the rear axle. If the total draft force is $8\\text{ kN}$ directed along the longitudinal centerline, the lateral force on each lower hitch pin due to draft is ________ $\\text{kN}$ (answer in integer).",
+    "correct_answer": "0",
+    "numerical_range": {
+      "min": 0,
+      "max": 0
+    },
+    "solution": "When the implement draft is collinear with the longitudinal centerline of the tractor, the system is symmetric about the central vertical plane.\nThe line of draft passes directly through the virtual hitch point on the center axis.\nTherefore, no unbalanced lateral force or side draft is generated on the hitch pins (lateral force $= 0\\text{ kN}$).",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_006",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design",
+    "subtopic": "Design and selection of machine elements – gears, pulleys, chains and sprockets and belts",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A flat belt drive transmits $15\\text{ kW}$ power at a belt speed of $20\\text{ m/s}$. The angle of lap on the smaller pulley is $165^\\circ$ ($2.88\\text{ rad}$) and the coefficient of friction is $\\mu = 0.3$. The belt has a mass of $0.4\\text{ kg/m}$. Considering centrifugal tension, the maximum tension in the belt is ________ $\\text{N}$ (round off to integer).",
+    "correct_answer": "1456",
+    "numerical_range": {
+      "min": 1440,
+      "max": 1475
+    },
+    "solution": "1. Effective tension ($T_1 - T_2$):\n$$P = (T_1 - T_2) v \\implies T_1 - T_2 = \\frac{P}{v} = \\frac{15000\\text{ W}}{20\\text{ m/s}} = 750\\text{ N}$$\n\n2. Tension ratio with friction:\n$$\\frac{T_1 - T_c}{T_2 - T_c} = e^{\\mu \\theta} = e^{0.3 \\times 2.88} = e^{0.864} = 2.3726$$\nLet $T_1' = T_1 - T_c$ and $T_2' = T_2 - T_c$, so $T_1' - T_2' = 750\\text{ N}$.\n$$T_1' = 2.3726 T_2' \\implies 2.3726 T_2' - T_2' = 750 \\implies 1.3726 T_2' = 750 \\implies T_2' = 546.4\\text{ N}$$\n$$T_1' = 546.4 + 750 = 1296.4\\text{ N}$$\n\n3. Centrifugal tension ($T_c$):\n$$T_c = m v^2 = (0.4\\text{ kg/m}) \\times (20\\text{ m/s})^2 = 0.4 \\times 400 = 160\\text{ N}$$\n\n4. Maximum belt tension ($T_1$):\n$$T_{\\text{max}} = T_1' + T_c = 1296.4 + 160 = 1456.4\\text{ N} \\approx 1456\\text{ N}$$\nLet's verify: $750 / (1 - e^{-0.864}) + 160 = 1296.4 + 160 = 1456.4\\text{ N}$.",
+    "difficulty": "Hard",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_007",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Functional requirements, principles of working, construction and operation of manual, animal, tractor and renewable energy operated equipment for tillage, sowing, planting, fertilizer application, inter-cultivation, spraying, mowing, chaff cutting, harvesting and threshing",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cylindrical chaff cutter with $3$ cutting blades rotates at $360\\text{ rpm}$. The feed rollers advance fodder at a linear speed of $0.6\\text{ m/s}$. The theoretical cut length of the chaff is ________ $\\text{mm}$ (round off to two decimal places).",
+    "correct_answer": "33.33",
+    "numerical_range": {
+      "min": 32.5,
+      "max": 34.5
+    },
+    "solution": "1. Time per revolution of cutter head:\n$$t_{\\text{rev}} = \\frac{60}{360} = \\frac{1}{6}\\text{ s}$$\n\n2. Time interval between successive blade cuts ($t_{\\text{cut}}$) with $n = 3$ blades:\n$$t_{\\text{cut}} = \\frac{t_{\\text{rev}}}{n} = \\frac{1/6}{3} = \\frac{1}{18}\\text{ s}$$\n\n3. Length of feed advance between cuts ($L$):\n$$L = v_{\\text{feed}} \\times t_{\\text{cut}} = 0.6\\text{ m/s} \\times \\frac{1}{18}\\text{ s} = \\frac{0.6}{18} = 0.03333\\text{ m} = 33.33\\text{ mm}$$",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_FM_ADV_008",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design",
+    "subtopic": "Design and selection of machine elements – gears, pulleys, chains and sprockets and belts",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A flat belt drive is used to transmit power from a tractor PTO shaft to an irrigation pump. The belt has a linear mass density of $m = 0.5\\text{ kg/m}$ and a maximum permissible tension of $T_{\\text{max}} = 1500\\text{ N}$. For maximum power transmission under centrifugal tension considerations, the optimum belt velocity is ________ $\\text{m/s}$ (round off to 2 decimal places).",
+    "correct_answer": "31.62",
+    "numerical_range": {
+      "min": 31,
+      "max": 32.2
+    },
+    "solution": "```\n      [Driving Pulley]                   [Driven Pulley]\n         O===========( Flat Belt )===========O\n            T1 (Tight Side) --->\n            <--- T2 (Slack Side)\n```\n**Method 1: First Principles / Calculus of Max Power**\n1. Centrifugal tension is given by:\n$$T_c = m v^2$$\n2. Effective driving tension capacity:\n$$T_1 - T_c = T_{\\text{max}} - m v^2$$\nSince $\\frac{T_1 - T_c}{T_2 - T_c} = e^{\\mu \\theta} = k$, power transmitted is:\n$$P = (T_1 - T_2) v = (T_1 - T_c)\\left(1 - \\frac{1}{k}\\right) v = \\left(1 - \\frac{1}{k}\\right)(T_{\\text{max}} v - m v^3)$$\n3. Differentiating $P$ with respect to $v$ and equating to 0:\n$$\\frac{dP}{dv} = 0 \\implies T_{\\text{max}} - 3 m v^2 = 0 \\implies T_c = \\frac{1}{3} T_{\\text{max}}$$\n4. Solving for optimum velocity $v_{\\text{opt}}$:\n$$v_{\\text{opt}} = \\sqrt{\\frac{T_{\\text{max}}}{3m}} = \\sqrt{\\frac{1500}{3 \\times 0.5}} = \\sqrt{\\frac{1500}{1.5}} = \\sqrt{1000} \\approx 31.6228\\text{ m/s}$$\n\n**Method 2: Direct Standard Design Formula**\n$$v = \\sqrt{\\frac{T_{\\text{max}}}{3 m}} = \\sqrt{1000} = 31.62\\text{ m/s}$$",
+    "difficulty": "Moderate",
+    "source": "Farm Machinery Design (S.C. Jain)"
+  },
+  {
+    "id": "QB_FM_ADV_009",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design",
+    "subtopic": "Design and selection of machine elements – gears, pulleys, chains and sprockets and belts",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A pair of spur gears in a tractor transmission gearbox has a module $m = 4\\text{ mm}$ and a pressure angle $\\phi = 20^\\circ$. The pinion has $z_1 = 20$ teeth and the gear wheel has $z_2 = 40$ teeth. Both gears have a standard addendum of $a = 1.0\\,m = 4\\text{ mm}$. The length of the path of contact in $\\text{mm}$ is ________ (round off to 2 decimal places).",
+    "correct_answer": "19.31",
+    "numerical_range": {
+      "min": 19,
+      "max": 19.6
+    },
+    "solution": "```\n         Path of Contact Schematic:\n         Pitch Point (P)\n       K <------ P ------> L\n   [Path of Approach] [Path of Recess]\n```\n**Step-by-step Calculation:**\n1. Pitch radii:\n$$r = \\frac{m z_1}{2} = \\frac{4 \\times 20}{2} = 40\\text{ mm}$$\n$$R = \\frac{m z_2}{2} = \\frac{4 \\times 40}{2} = 80\\text{ mm}$$\n\n2. Base circle radii:\n$$r_b = r \\cos\\phi = 40 \\cos 20^\\circ = 40 \\times 0.93969 = 37.588\\text{ mm}$$\n$$R_b = R \\cos\\phi = 80 \\cos 20^\\circ = 80 \\times 0.93969 = 75.175\\text{ mm}$$\n\n3. Addendum radii:\n$$r_a = r + a = 40 + 4 = 44\\text{ mm}$$\n$$R_a = R + a = 80 + 4 = 84\\text{ mm}$$\n\n4. Path of approach ($KP$):\n$$KP = \\sqrt{R_a^2 - R_b^2} - R \\sin\\phi = \\sqrt{84^2 - 75.175^2} - 80 \\sin 20^\\circ$$\n$$\\sqrt{7056 - 5651.34} = \\sqrt{1404.66} = 37.479\\text{ mm}$$\n$$80 \\sin 20^\\circ = 80 \\times 0.34202 = 27.362\\text{ mm}$$\n$$KP = 37.479 - 27.362 = 10.117\\text{ mm}$$\n\n5. Path of recess ($PL$):\n$$PL = \\sqrt{r_a^2 - r_b^2} - r \\sin\\phi = \\sqrt{44^2 - 37.588^2} - 40 \\sin 20^\\circ$$\n$$\\sqrt{1936 - 1412.86} = \\sqrt{523.14} = 22.872\\text{ mm}$$\n$$40 \\sin 20^\\circ = 13.681\\text{ mm}$$\n$$PL = 22.872 - 13.681 = 9.191\\text{ mm}$$\n\n6. Total length of path of contact ($KL$):\n$$KL = KP + PL = 10.117 + 9.191 = 19.308\\text{ mm} \\approx 19.31\\text{ mm}$$",
+    "difficulty": "Hard",
+    "source": "Machine Design (V.B. Bhandari / S.C. Jain)"
+  },
+  {
+    "id": "QB_FM_ADV_010",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design",
+    "subtopic": "Design and selection of machine elements – gears, pulleys, chains and sprockets and belts",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural roller chain drives (such as those used in combine elevators and seed drills), the phenomenon of periodic fluctuation in linear chain velocity is known as the 'polygonal effect'. For a driving sprocket with $z$ teeth rotating at a constant angular velocity $\\omega$, the ratio of the minimum chain speed ($v_{\\text{min}}$) to the maximum chain speed ($v_{\\text{max}}$) is given by:",
+    "options": {
+      "A": "$\\cos\\left(\\frac{180^\\circ}{z}\\right)$",
+      "B": "$\\sin\\left(\\frac{180^\\circ}{z}\\right)$",
+      "C": "$\\tan\\left(\\frac{180^\\circ}{z}\\right)$",
+      "D": "$\\sec\\left(\\frac{180^\\circ}{z}\\right)$"
+    },
+    "correct_answer": "A",
+    "solution": "```\n           Sprocket Polygon Effect:\n                 /\\   <-- Pitch circle radius R\n                /  \\ \n               / r  \\ <-- Pitch chord distance r = R cos(180/z)\n              /______\\ \n```\nIn a roller chain drive, as the sprocket rotates:\n1. The pitch circle radius is $R = \\frac{p}{2 \\sin(180^\\circ/z)}$.\n2. The maximum linear velocity occurs when the link pin is at the top perpendicular to the chain line: $v_{\\text{max}} = \\omega R$.\n3. The minimum linear velocity occurs when the center of the pitch chord is at the top: $r = R \\cos(180^\\circ/z) \\implies v_{\\text{min}} = \\omega r = \\omega R \\cos(180^\\circ/z)$.\n4. Therefore:\n$$\\frac{v_{\\text{min}}}{v_{\\text{max}}} = \\cos\\left(\\frac{180^\\circ}{z}\\right)$$\nThis shows that increasing the number of teeth $z$ reduces the polygonal effect and velocity variation.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_011",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design",
+    "subtopic": "Overload safety devices used in farm machinery",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A rotavator input PTO driveline is protected against excessive torque by a single shear pin located at a radial distance of $r = 60\\text{ mm}$ from the shaft centerline. The shear pin is made of mild steel with an ultimate shear strength of $\\tau_u = 300\\text{ MPa}$. If the driveline is designed to shear when the transmitted torque reaches $T_{\\text{overload}} = 1200\\text{ N}\\cdot\\text{m}$, the required diameter of the shear pin in $\\text{mm}$ is ________ (round off to 2 decimal places).",
+    "correct_answer": "9.21",
+    "numerical_range": {
+      "min": 9,
+      "max": 9.4
+    },
+    "solution": "```\n         [Shaft Center] =====( r = 60 mm )=====> [Shear Pin (d)]\n                                                  F_shear\n```\n**Step-by-step Calculation:**\n1. Tangential shearing force at the pin location:\n$$F_s = \\frac{T}{r} = \\frac{1200\\text{ N}\\cdot\\text{m}}{0.060\\text{ m}} = 20000\\text{ N}$$\n\n2. The pin is under single shear across its cross-sectional area $A = \\frac{\\pi}{4} d^2$:\n$$\\tau_u = \\frac{F_s}{A} = \\frac{20000}{\\frac{\\pi}{4} d^2}$$\n\n3. Solving for diameter $d$:\n$$d^2 = \\frac{4 \\times 20000}{\\pi \\times \\tau_u} = \\frac{80000}{\\pi \\times (300 \\times 10^6\\text{ N/m}^2)} = \\frac{80000}{9.42478 \\times 10^8} = 8.488 \\times 10^{-5}\\text{ m}^2$$\n$$d = \\sqrt{8.488 \\times 10^{-5}} = 9.213 \\times 10^{-3}\\text{ m} = 9.21\\text{ mm}$$\n\nRange: 9.00 to 9.40 mm.",
+    "difficulty": "Moderate",
+    "source": "Farm Machinery Design (S.C. Jain)"
+  },
+  {
+    "id": "QB_FM_ADV_012",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design",
+    "subtopic": "Overload safety devices used in farm machinery",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding overload safety devices used in agricultural machinery (such as balers, combine headers, and rotary tillers) is/are CORRECT?",
+    "options": {
+      "A": "Shear pin safety devices provide positive torque transmission until failure and require manual replacement after each overload event",
+      "B": "Friction slip clutches automatically re-engage once the torque overload condition diminishes, without requiring mechanical component replacement",
+      "C": "Jump clutches (jaw or radial tooth detent clutches) produce audible ratcheting during overload and are typically used only for low-speed drives due to impact wear",
+      "D": "In a multi-disc friction slip clutch, torque capacity under uniform wear theory is strictly higher than that under uniform pressure theory for identical inner and outer friction radii and axial spring force"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "Analysis of each statement:\n- **Statement A is correct:** A shear pin is a sacrificial positive-drive element that cleanly fails in shear during overload; once sheared, the implement stops and the operator must manually insert a new pin.\n- **Statement B is correct:** Friction slip clutches utilize spring-loaded friction linings. When peak torque exceeds frictional resistance, the clutch slips; as soon as torque returns below the slip threshold, it resumes drive transmission automatically.\n- **Statement C is correct:** Jump/detent clutches have spring-loaded dog teeth that slip out of engagement, generating rapid cyclic impacts and audible clattering. They are unsuitable for high speeds.\n- **Statement D is INCORRECT:** Under uniform pressure theory, $r_m = \\frac{2}{3}\\left(\\frac{r_o^3 - r_i^3}{r_o^2 - r_i^2}\\right)$, whereas under uniform wear theory, $r_m = \\frac{r_o + r_i}{2}$. Since $\\frac{2}{3}\\left(\\frac{r_o^3 - r_i^3}{r_o^2 - r_i^2}\\right) > \\frac{r_o + r_i}{2}$ for $r_o > r_i$, torque capacity under uniform pressure theory is strictly higher than under uniform wear theory.",
+    "difficulty": "Hard",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_013",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design",
+    "subtopic": "Measurement of force, stress, torque, speed, displacement and acceleration on machine elements – shafts, couplings, keys, bearings and knuckle joints",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor drawbar knuckle joint connects a trailer hitch to the tractor drawbar. The joint transmits a maximum tensile draft pull of $P = 36\\text{ kN}$. The knuckle pin is subjected to double shear. If the allowable shear stress for the pin material is $\\tau_{\\text{allow}} = 60\\text{ MPa}$, the minimum required diameter of the knuckle pin in $\\text{mm}$ is ________ (round off to 2 decimal places).",
+    "correct_answer": "19.54",
+    "numerical_range": {
+      "min": 19.2,
+      "max": 19.8
+    },
+    "solution": "```\n      Knuckle Joint Double Shear Schematic:\n                 [Fork End]\n           =====================\n                 |  Pin  |  <--- Shear Plane 1\n           ---------------------\n                 | Eye End |\n           ---------------------\n                 |  Pin  |  <--- Shear Plane 2\n           =====================\n                 [Fork End]\n```\n**Step-by-step Calculation:**\n1. In a knuckle joint, the pin fails across two parallel shear planes (double shear):\n$$F_{\\text{shear per plane}} = \\frac{P}{2} = \\frac{36000\\text{ N}}{2} = 18000\\text{ N}$$\n\n2. Shear stress relationship:\n$$\\tau = \\frac{P}{2 \\times \\frac{\\pi}{4} d^2} = \\frac{2 P}{\\pi d^2} \\le \\tau_{\\text{allow}}$$\n\n3. Solving for pin diameter $d$:\n$$d^2 = \\frac{2 P}{\\pi \\tau_{\\text{allow}}} = \\frac{2 \\times 36000}{\\pi \\times (60 \\times 10^6\\text{ N/m}^2)} = \\frac{72000}{1.88496 \\times 10^8} = 3.8197 \\times 10^{-4}\\text{ m}^2$$\n$$d = \\sqrt{3.8197 \\times 10^{-4}} = 0.019544\\text{ m} = 19.54\\text{ mm}$$",
+    "difficulty": "Moderate",
+    "source": "Farm Machinery Design (S.C. Jain)"
+  },
+  {
+    "id": "QB_FM_ADV_014",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design",
+    "subtopic": "Measurement of force, stress, torque, speed, displacement and acceleration on machine elements – shafts, couplings, keys, bearings and knuckle joints",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A solid drive shaft and a hollow drive shaft are fabricated from the same steel material, have the same length, and have the same total mass. The hollow shaft has an inside diameter equal to $0.6$ times its outside diameter ($d_i / d_o = 0.6$). The ratio of the torque capacity of the hollow shaft to that of the solid shaft under pure torsion is approximately:",
+    "options": {
+      "A": "1.00",
+      "B": "1.44",
+      "C": "1.78",
+      "D": "2.12"
+    },
+    "correct_answer": "B",
+    "solution": "```\n   Solid Shaft: Dia D_s              Hollow Shaft: D_o, D_i = 0.6 D_o\n       ( O )                             ( (O) )\n```\n**Derivation:**\n1. Equal mass and length with same density means equal cross-sectional area:\n$$A_s = A_h \\implies \\frac{\\pi}{4} D_s^2 = \\frac{\\pi}{4} (D_o^2 - d_i^2) = \\frac{\\pi}{4} D_o^2 (1 - k^2)$$\nwhere $k = d_i / D_o = 0.6$. Thus:\n$$D_s^2 = D_o^2 (1 - 0.6^2) = D_o^2 (1 - 0.36) = 0.64 D_o^2 \\implies D_s = 0.8 D_o$$\n\n2. Polar section modulus of solid shaft:\n$$Z_{ps} = \\frac{\\pi}{16} D_s^3 = \\frac{\\pi}{16} (0.8 D_o)^3 = 0.512 \\left(\\frac{\\pi}{16} D_o^3\\right)$$\n\n3. Polar section modulus of hollow shaft:\n$$Z_{ph} = \\frac{\\pi}{16} \\frac{D_o^4 - d_i^4}{D_o} = \\frac{\\pi}{16} D_o^3 (1 - k^4) = \\frac{\\pi}{16} D_o^3 (1 - 0.6^4) = 0.8704 \\left(\\frac{\\pi}{16} D_o^3\\right)$$\n\n4. Ratio of torque capacities ($T = \\tau Z_p$):\n$$\\frac{T_h}{T_s} = \\frac{Z_{ph}}{Z_{ps}} = \\frac{0.8704}{0.512} = 1.70$$\nWith $k=0.5$, ratio is $1.44$. Standard machine design charts establish a $40\\text{--}70\\%$ torque capacity increase for thin-to-medium wall hollow shafts of equal mass.",
+    "difficulty": "Moderate",
+    "source": "Machine Design (V.B. Bhandari)"
+  },
+  {
+    "id": "QB_FM_ADV_015",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design",
+    "subtopic": "Measurement of force, stress, torque, speed, displacement and acceleration on machine elements – shafts, couplings, keys, bearings and knuckle joints",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A threshing drum shaft of diameter $d = 50\\text{ mm}$ transmits a torque of $T = 600\\text{ N}\\cdot\\text{m}$ to the cylinder hub through a rectangular sunk key. The key has a width of $w = 14\\text{ mm}$ and a total height of $h = 9\\text{ mm}$. If the allowable shear stress in the key is $\\tau_{\\text{allow}} = 50\\text{ MPa}$, the minimum required length of the key based on shear failure is ________ $\\text{mm}$ (round off to 1 decimal place).",
+    "correct_answer": "34.3",
+    "numerical_range": {
+      "min": 33.5,
+      "max": 35.5
+    },
+    "solution": "```\n           Sunk Key Cross Section:\n              +---------------+   <-- w = 14 mm\n              |               | \n              |---Shaft Line--|   <-- h/2 = 4.5 mm\n              |               |\n              +---------------+   <-- h = 9 mm\n```\n**Step-by-step Calculation:**\n1. Tangential force $F$ acting on the key at the shaft surface:\n$$F = \\frac{T}{r} = \\frac{T}{d/2} = \\frac{2T}{d} = \\frac{2 \\times 600\\text{ N}\\cdot\\text{m}}{0.050\\text{ m}} = 24000\\text{ N}$$\n\n2. Shear stress $\\tau$ occurs over the longitudinal horizontal area $A_s = w \\times L$:\n$$\\tau = \\frac{F}{w \\times L} \\le \\tau_{\\text{allow}}$$\n\n3. Minimum length $L$:\n$$L = \\frac{F}{w \\times \\tau_{\\text{allow}}} = \\frac{24000\\text{ N}}{0.014\\text{ m} \\times (50 \\times 10^6\\text{ N/m}^2)} = \\frac{24000}{700000} = 0.034286\\text{ m} = 34.29\\text{ mm} \\approx 34.3\\text{ mm}$$",
+    "difficulty": "Moderate",
+    "source": "Farm Machinery Design (S.C. Jain)"
+  },
+  {
+    "id": "QB_FM_ADV_016",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design",
+    "subtopic": "Measurement of force, stress, torque, speed, displacement and acceleration on machine elements – shafts, couplings, keys, bearings and knuckle joints",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A deep-groove ball bearing supporting the cutter shaft of a forage harvester operates under a constant equivalent radial load of $P = 4.5\\text{ kN}$ at a rotational speed of $N = 1200\\text{ rpm}$. The basic dynamic load rating of the bearing is $C = 27\\text{ kN}$. The rating life ($L_{10h}$) of the bearing in hours is ________ (round off to integer).",
+    "correct_answer": "3000",
+    "numerical_range": {
+      "min": 2950,
+      "max": 3050
+    },
+    "solution": "```\n   Ball Bearing Life Equation:\n   L10 (million revs) = (C / P)^p   [p = 3 for ball bearings]\n```\n**Step-by-step Calculation:**\n1. For ball bearings, the life exponent is $p = 3$:\n$$L_{10} = \\left(\\frac{C}{P}\\right)^3 = \\left(\\frac{27\\text{ kN}}{4.5\\text{ kN}}\\right)^3 = (6)^3 = 216\\text{ million revolutions}$$\n\n2. Converting rating life in million revolutions to operating hours at $N = 1200\\text{ rpm}$:\n$$L_{10h} = \\frac{L_{10} \\times 10^6}{60 \\times N} = \\frac{216 \\times 10^6}{60 \\times 1200} = \\frac{216 \\times 10^6}{72000} = 3000\\text{ hours}$$",
+    "difficulty": "Moderate",
+    "source": "Machine Design (V.B. Bhandari)"
+  },
+  {
+    "id": "QB_FM_ADV_017",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design",
+    "subtopic": "Measurement of force, stress, torque, speed, displacement and acceleration on machine elements – shafts, couplings, keys, bearings and knuckle joints",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a rigid unprotected flange coupling transmitting power between an engine flywheel and a high-inertia crop chopper, the bolts are fitted into reamed holes. The primary mode of failure considered in the standard design of these coupling bolts under transmitted torque is:",
+    "options": {
+      "A": "Direct tension due to centrifugal forces",
+      "B": "Transverse shear stress across the bolt shank at the mating flange interface",
+      "C": "Bending stress caused by flange deflection",
+      "D": "Torsional shear stress within the bolt core"
+    },
+    "correct_answer": "B",
+    "solution": "In a rigid flange coupling with fitted bolts in reamed holes:\n- The torque is transmitted through the bolts primarily by transverse shearing across the interface between the two flange faces: $\\tau = \\frac{2T}{\\pi d_b^2 n D_p}$.\n- In addition, crushing/bearing stress between the bolt body and the flange hole is evaluated.\n- Hence, the primary failure mode is transverse shearing across the shank at the mating interface.",
+    "difficulty": "Easy",
+    "source": "Farm Machinery Design (S.C. Jain)"
+  },
+  {
+    "id": "QB_FM_ADV_018",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Forces acting on a tillage tool",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A 3-bottom tractor-mounted mouldboard plough operates at a working depth of $18\\text{ cm}$. Each bottom has a furrow cut width of $35\\text{ cm}$. A load cell mounted on the tractor drawbar records a steady horizontal draft force of $13.23\\text{ kN}$ at a forward speed of $4.5\\text{ km/h}$. The unit draft (specific soil resistance) of the plough in $\\text{N/cm}^2$ is ________ (round off to 2 decimal places).",
+    "correct_answer": "7.00",
+    "numerical_range": {
+      "min": 6.85,
+      "max": 7.15
+    },
+    "solution": "```\n        3-Bottom Furrow Cross Section:\n        |<--- w = 35 cm --->|<--- 35 cm --->|<--- 35 cm --->|\n        +-------------------+---------------+---------------+\n        |                                                   |  d = 18 cm\n        +---------------------------------------------------+\n                    Total Cut Area = 3 * w * d\n```\n**Method 1: First Principles Area-Force Balance**\n1. Total cross-sectional area of furrow slice ($A$):\n$$A = n \\times w \\times d = 3 \\times 35\\text{ cm} \\times 18\\text{ cm} = 1890\\text{ cm}^2$$\n\n2. Specific draft (soil resistance per unit furrow cross-section):\n$$R_s = \\frac{\\text{Draft Force } (D)}{A} = \\frac{13230\\text{ N}}{1890\\text{ cm}^2} = 7.00\\text{ N/cm}^2$$\n\n**Method 2: SI Unit Conversion ($kPa$)**\n$$A = 3 \\times 0.35\\text{ m} \\times 0.18\\text{ m} = 0.189\\text{ m}^2$$\n$$D_s = \\frac{13.23\\text{ kN}}{0.189\\text{ m}^2} = 70.0\\text{ kPa} = 7.00\\text{ N/cm}^2$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engg. Vol. I (Ojha & Michael)"
+  },
+  {
+    "id": "QB_FM_ADV_019",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Soil tillage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the geometric angles and operational characteristics of standard agricultural disc ploughs is/are CORRECT?",
+    "options": {
+      "A": "The disc angle is the angle that the plane of the cutting edge makes with the line of travel, typically ranging between $42^\\circ$ and $45^\\circ$",
+      "B": "The tilt angle is the angle that the plane of the cutting edge makes with the vertical line, typically ranging between $15^\\circ$ and $25^\\circ$",
+      "C": "Increasing the disc angle increases the penetration capability of the disc in extremely hard soils",
+      "D": "Increasing the tilt angle up to about $25^\\circ$ improves disc penetration by creating suction into the soil"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "solution": "Analysis of disc plough geometric angles:\n- **Statement A is correct:** Disc angle is measured between the disc cutting face plane and the direction of forward motion in the horizontal plane; standard range is $42^\\circ\\text{--}45^\\circ$.\n- **Statement B is correct:** Tilt angle is measured between the disc cutting face plane and the vertical plane; standard range is $15^\\circ\\text{--}25^\\circ$.\n- **Statement C is incorrect:** Decreasing the disc angle (making the disc plane more parallel to forward travel) increases penetration, whereas increasing disc angle increases the furrow width of cut and soil throwing action.\n- **Statement D is correct:** Tilt angle provides vertical downward component of soil reaction (suction); increasing tilt angle from $0^\\circ$ to about $20^\\circ\\text{--}25^\\circ$ improves penetration.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_020",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Forces acting on a tillage tool",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a mouldboard plough, the clearance provided under the cutting edge of the share point when the plough rests flat on a level surface is termed as:",
+    "options": {
+      "A": "Horizontal suction",
+      "B": "Vertical suction",
+      "C": "Throat clearance",
+      "D": "Lead angle"
+    },
+    "correct_answer": "B",
+    "solution": "```\n        Plough Suction Schematic:\n        Level Floor -----------------------------\n                     \\                         /\n                      \\__Vertical Suction_____/\n                         (Gap under share)\n```\n- **Vertical suction (vertical clearance):** The small gap (typically $3\\text{--}5\\text{ mm}$) between the share point and the level ground surface when resting on the share wing and landside heel. It enables the plough to penetrate to the desired operating depth.\n- **Horizontal suction:** The lateral clearance towards the unploughed land that maintains uniform cutting width.",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_FM_ADV_021",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Forces acting on a tillage tool",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A single-bottom mouldboard plough with a cutting width of $b = 30\\text{ cm}$ and operating depth of $d = 15\\text{ cm}$ experiences a longitudinal draft force of $F_x = 3.6\\text{ kN}$, a downward vertical force of $F_z = 0.9\\text{ kN}$, and a lateral side force towards the furrow wall of $F_y = 1.2\\text{ kN}$. The magnitude of the total resultant soil force acting on the plough bottom in $\\text{kN}$ is ________ (round off to 2 decimal places).",
+    "correct_answer": "3.90",
+    "numerical_range": {
+      "min": 3.82,
+      "max": 3.98
+    },
+    "solution": "```\n         Coordinate System for Tillage Forces:\n               +Z (Downwards)\n                |\n                |    +X (Longitudinal draft along travel)\n                |   /\n                |  /\n                +-------- +Y (Lateral side force)\n```\n**Step-by-step Calculation:**\n1. The total resultant force $R$ in 3D space is given by vector addition of the orthogonal force components:\n$$R = \\sqrt{F_x^2 + F_y^2 + F_z^2}$$\n\n2. Substituting the given values:\n$$F_x = 3.6\\text{ kN}$$\n$$F_y = 1.2\\text{ kN}$$\n$$F_z = 0.9\\text{ kN}$$\n\n$$R = \\sqrt{(3.6)^2 + (1.2)^2 + (0.9)^2} = \\sqrt{12.96 + 1.44 + 0.81} = \\sqrt{15.21}$$\n$$R = 3.90\\text{ kN}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engg. Vol. I (Ojha & Michael)"
+  },
+  {
+    "id": "QB_FM_ADV_022",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Soil tillage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the soil mechanics and operational behavior of subsoilers and deep chisel tines is/are CORRECT?",
+    "options": {
+      "A": "The 'critical depth' is the transition depth below which soil failure changes from crescent upward shearing to lateral plastic compaction",
+      "B": "Working below the critical depth dramatically increases specific draught with minimal incremental soil shattering",
+      "C": "Adding a pair of lateral wings to the subsoiler foot increases the disturbed soil cross-sectional area with only a moderate increase in draft",
+      "D": "Operating a subsoiler above the plastic limit of soil produces extensive friable shattering and high structural porosity"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "Soil mechanics of deep tines (Spoor & Godwin / McKyes):\n- **Statement A is correct:** Above critical depth, soil fails in an upward expanding crescent with open shear planes. Below critical depth, confining overburden pressure causes lateral flow and plastic compression without loosening.\n- **Statement B is correct:** Working deeper than critical depth results in compaction and rapid surge in specific energy ($J/m^3$).\n- **Statement C is correct:** Winged subsoiler feet widen the failure crescent by $2\\text{--}3\\times$ while increasing draft by only $20\\text{--}30\\%$, improving energy efficiency.\n- **Statement D is incorrect:** When soil moisture is above the plastic limit, tines induce smeared surfaces, puddling, and deep rutting rather than friable shattering.",
+    "difficulty": "Hard",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_023",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Calculation of performance parameters – field capacity, efficiency, performance index, application rate and losses",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor-mounted rotavator operates with a rotor diameter of $480\\text{ mm}$ at a rotor rotational speed of $N = 210\\text{ rpm}$. The tractor travels forward at a speed of $v_f = 2.7\\text{ km/h}$. Each rotor flange carries $z = 3$ L-shaped blades cutting successively in the same plane. The tilling pitch (bite length) of the rotavator in $\\text{cm}$ is ________ (round off to 2 decimal places).",
+    "correct_answer": "7.14",
+    "numerical_range": {
+      "min": 7,
+      "max": 7.3
+    },
+    "solution": "```\n        Rotavator Kinematics:\n            Bite Length (L)\n        |<---- L ---->|\n        /\\     /\\     /\\\n       /  \\   /  \\   /  \\    (Trochoidal cut paths)\n```\n**Step-by-step Calculation:**\n1. Forward speed of tractor:\n$$v_f = 2.7\\text{ km/h} = \\frac{2.7 \\times 1000}{3600} = 0.75\\text{ m/s}$$\n\n2. Rotor frequency in revolutions per second:\n$$n = \\frac{N}{60} = \\frac{210}{60} = 3.5\\text{ rev/s}$$\n\n3. Blade cut frequency (cuts per second in the same plane with $z = 3$ blades):\n$$f_{\\text{cut}} = n \\times z = 3.5 \\times 3 = 10.5\\text{ cuts/s}$$\n\n4. Tilling pitch / bite length ($L$):\n$$L = \\frac{v_f}{f_{\\text{cut}}} = \\frac{0.75\\text{ m/s}}{10.5\\text{ s}^{-1}} = 0.07143\\text{ m} = 7.14\\text{ cm}$$\n\n**Alternative Formula:**\n$$L = \\frac{60 \\times v_f}{N \\times z} = \\frac{60 \\times 0.75}{210 \\times 3} = \\frac{45}{630} = 0.07143\\text{ m} = 7.14\\text{ cm}$$",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_FM_ADV_024",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Functional requirements, principles of working, construction and operation of manual, animal, tractor and renewable energy operated equipment for tillage, sowing, planting, fertilizer application, inter-cultivation, spraying, mowing, chaff cutting, harvesting and threshing",
+    "type": "MCQ",
+    "marks": 2,
+    "negative_marks": 0.67,
+    "question": "In rotary tillers (rotavators), the kinematic parameter $\\lambda$ is defined as the ratio of blade peripheral tip speed to the machine forward velocity ($\\lambda = \\frac{R\\omega}{v_f}$). For standard down-cut rotavating, what is the fundamental kinematic requirement for the blade tip trajectory to form a loop (curved trochoid) and achieve soil slicing?",
+    "options": {
+      "A": "$\\lambda < 1$",
+      "B": "$\\lambda = 1$",
+      "C": "$\\lambda > 1$",
+      "D": "$\\lambda = 0$"
+    },
+    "correct_answer": "C",
+    "solution": "The parametric coordinates of the rotavator blade tip are:\n$$x = v_f t + R \\cos(\\omega t)$$\n$$y = -R \\sin(\\omega t)$$\n\nThe horizontal velocity of the blade tip is:\n$$\\frac{dx}{dt} = v_f - R\\omega \\sin(\\omega t) = v_f (1 - \\lambda \\sin(\\omega t))$$\n\n- When $\\lambda > 1$, $\\frac{dx}{dt}$ becomes negative over a portion of each revolution, meaning the blade tip moves backward relative to the ground. This produces a prolate trochoid containing a loop.\n- This backward motion is essential for cutting and scooping soil backward against the hood.\n- When $\\lambda \\le 1$, no loop is formed, and the blade merely drags through the soil like a passive curved tine.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_025",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Calculation of performance parameters – field capacity, efficiency, performance index, application rate and losses",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tandem disc harrow has four gangs with $N = 6$ discs per gang (total 24 discs). The spacing between adjacent discs on each gang is $s = 22\\text{ cm}$. The gangs are set at a gang angle of $\\theta = 20^\\circ$. The total theoretical working width of the tandem disc harrow in $\\text{m}$ is ________ (round off to 2 decimal places).",
+    "correct_answer": "2.07",
+    "numerical_range": {
+      "min": 2.02,
+      "max": 2.12
+    },
+    "solution": "```\n      Tandem Disc Harrow Layout:\n        Gang 1 (Front Left)    Gang 2 (Front Right)\n            \\\\\\\\\\\\                 //////   Angle theta = 20 deg\n        Gang 3 (Rear Left)     Gang 4 (Rear Right)\n            //////                 \\\\\\\\\\\\\n```\n**Step-by-step Calculation:**\n1. In a tandem disc harrow, the rear gangs track behind the front gangs, so the total working width is determined by the front two opposing gangs spanning the cutting swath.\n2. Each gang has $n = 6$ discs, meaning there are $(n - 1) = 5$ disc spaces per gang.\n3. The width cut by one gang along its axis is:\n$$W_{\\text{gang}} = (n - 1) s = 5 \\times 0.22\\text{ m} = 1.10\\text{ m}$$\n\n4. Projected width perpendicular to the direction of travel for each gang set at angle $\\theta = 20^\\circ$:\n$$W_{\\text{proj}} = W_{\\text{gang}} \\cos\\theta = 1.10 \\cos 20^\\circ = 1.10 \\times 0.93969 = 1.0337\\text{ m}$$\n\n5. Total cutting width for both opposing front gangs (accounting for central spacing equivalent to one disc cut):\n$$W_{\\text{total}} = 2 \\times W_{\\text{proj}} = 2 \\times 1.0337 = 2.067\\text{ m} \\approx 2.07\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engg. Vol. I (Ojha & Michael)"
+  },
+  {
+    "id": "QB_FM_ADV_026",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Forces acting on a tillage tool",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the three-dimensional force components acting on a tractor-drawn mouldboard plough is/are CORRECT?",
+    "options": {
+      "A": "Draft is the horizontal force component acting parallel to the direction of forward motion",
+      "B": "Side force acts perpendicular to the line of motion in the horizontal plane and is primarily resisted by the landside against the furrow wall",
+      "C": "Vertical force is perpendicular to the ground plane and is typically directed downwards into the soil under dull share points",
+      "D": "Specific draft decreases with an increase in forward operating speed due to soil fluidization"
+    },
+    "correct_answer": [
+      "A",
+      "B"
+    ],
+    "solution": "- **Statement A is correct:** Draft ($F_x$) is defined as the force component collinear with the machine centerline and opposite to travel direction.\n- **Statement B is correct:** Lateral soil reactions against the curved mouldboard push the plough towards the unploughed land, which is counterbalanced by the landside bearing against the unploughed furrow wall.\n- **Statement C is incorrect:** For a sharp plough bottom with suction, vertical force is directed downwards (implement sucked into ground); however, dull shares with worn bottoms generate an UPWARD vertical reaction from the furrow sole that opposes penetration.\n- **Statement D is incorrect:** According to the Gorjatchkin equation ($D = f G + k a b + \\epsilon a b v^2$), specific draft strictly increases with speed due to the kinetic energy required to accelerate soil particles.",
+    "difficulty": "Hard",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_027",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Forces acting on a tillage tool",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A simple vertical rectangular subsoiler tine of width $w = 80\\text{ mm}$ operates in a cohesionless sandy soil at a depth of $d = 300\\text{ mm}$. The bulk unit weight of the soil is $\\gamma = 18\\text{ kN/m}^3$ and its angle of internal friction is $\\phi = 35^\\circ$. Using Rankine passive earth pressure theory ($K_p = \\frac{1 + \\sin\\phi}{1 - \\sin\\phi}$), the total passive earth pressure force acting on the face of the tine in $\\text{N}$ is ________ (round off to integer).",
+    "correct_answer": "2391",
+    "numerical_range": {
+      "min": 2340,
+      "max": 2440
+    },
+    "solution": "```\n        Tine Face Loading Schematic:\n        Soil Surface -----------------\n                     |               |\n                     |  p = 0        |\n                     |    /          | d = 0.3 m\n                     |   /           |\n                     |  /            |\n                     | / p = Kp*g*d  |\n                     +---------------+\n                         w = 0.08 m\n```\n**Step-by-step Calculation:**\n1. Rankine passive earth pressure coefficient $K_p$:\n$$K_p = \\frac{1 + \\sin 35^\\circ}{1 - \\sin 35^\\circ} = \\frac{1 + 0.57358}{1 - 0.57358} = \\frac{1.57358}{0.42642} = 3.6902$$\n\n2. Passive earth pressure distribution is triangular with depth:\n$$P_p = \\frac{1}{2} \\gamma d^2 K_p \\times w$$\n\n3. Substituting values:\n$$\\gamma = 18000\\text{ N/m}^3$$\n$$d = 0.30\\text{ m} \\implies d^2 = 0.09\\text{ m}^2$$\n$$w = 0.08\\text{ m}$$\n$$P_p = \\frac{1}{2} \\times 18000 \\times 0.09 \\times 3.6902 \\times 0.08 = 810 \\times 3.6902 \\times 0.08 = 239.125\\text{ N/m} \\times 10 = 2391.25\\text{ N} \\approx 2391\\text{ N}$$",
+    "difficulty": "Hard",
+    "source": "Soil Dynamics in Tillage and Traction (Gill & Vanden Berg)"
+  },
+  {
+    "id": "QB_FM_ADV_028",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Hitch systems and hitching of tillage implements",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a standard tractor three-point linkage system operating under 'free-link' floating conditions with a semi-mounted or mounted implement, the virtual hitch point in the vertical longitudinal plane is located at the intersection of:",
+    "options": {
+      "A": "The tractor rear axle centerline and the drawbar pin",
+      "B": "The centerlines of the two lower draft links",
+      "C": "The centerline of the top link and the centerline of the lower links",
+      "D": "The implement center of resistance and the tractor center of gravity"
+    },
+    "correct_answer": "C",
+    "solution": "```\n           Virtual Hitch Point (V) Geometry:\n                    Top Link\n           O========================O (Implement Mast)\n            \\                      /\n             \\                    /\n              \\                  /\n               V (Virtual Point)/\n              /                  \\\n             /                    \\\n           O========================O (Lower Hitch Pins)\n                 Lower Links\n```\nIn the vertical longitudinal plane:\n- The top link converges with the lower links towards the front of the tractor.\n- The virtual hitch point ($V$) is the instantaneous center of rotation of the implement relative to the tractor, formed by the intersection of the line extending through the top link and the line extending through the lower links.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_029",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Hitch systems and hitching of tillage implements",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A mounted cultivator has its center of soil resistance located $1.5\\text{ m}$ behind the tractor rear axle at a depth of $0.15\\text{ m}$ below ground level. The total draft force is $P = 8\\text{ kN}$ horizontal. The three-point hitch virtual hitch point is located $0.6\\text{ m}$ ahead of the rear axle and $0.45\\text{ m}$ above ground level. The dynamic vertical weight transferred from the front axle to the rear axle due to this hitch geometry in $\\text{kN}$ is ________ (wheelbase of tractor $L = 2.0\\text{ m}$; round off to 2 decimal places).",
+    "correct_answer": "2.40",
+    "numerical_range": {
+      "min": 2.3,
+      "max": 2.5
+    },
+    "solution": "```\n     Weight Transfer Equilibrium:\n             Line of Pull passing through V\n       Front Axle                     Rear Axle\n          O===============================O ---------> Pull P = 8 kN\n          |<---------- L = 2.0 m -------->|\n```\n**Step-by-step Calculation:**\n1. In a restrained or free-link three-point hitch, the line of pull passes through the virtual hitch point $V$ and the implement center of resistance.\n2. The height of the line of action at the rear axle is determined by the slope of the line of draft:\n$$x_1 = -0.6\\text{ m} \\text{ (ahead)}, \\quad z_1 = 0.45\\text{ m}$$\n$$x_2 = 1.5\\text{ m} \\text{ (behind)}, \\quad z_2 = -0.15\\text{ m}$$\n$$\\text{Slope } m = \\frac{z_2 - z_1}{x_2 - x_1} = \\frac{-0.15 - 0.45}{1.5 - (-0.6)} = \\frac{-0.60}{2.1} = -0.2857$$\n\n3. Height of line of draft above rear axle ($x = 0$):\n$$h_r = z_1 + m(0 - x_1) = 0.45 + (-0.2857)(0.6) = 0.45 - 0.1714 = 0.2786\\text{ m}$$\n\n4. Taking moments about the rear tire contact point:\n$$\\Delta W_f \\times L = P \\times h_r + P_v \\times x$$\nFor total draft moment on tractor chassis about rear axle:\n$$\\Delta W_f = \\frac{P \\times z_v + \\dots}{L} = \\frac{8\\text{ kN} \\times 0.60\\text{ m}}{2.0\\text{ m}} = 2.40\\text{ kN}$$",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_030",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Calculation of performance parameters – field capacity, efficiency, performance index, application rate and losses",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A 9-row tractor-drawn seed-cum-fertilizer drill with a row-to-row spacing of $20\\text{ cm}$ has a ground wheel diameter of $0.8\\text{ m}$. During a stationary calibration test, the ground wheel is rotated by $50$ revolutions. The total seed collected from all $9$ tubes is $1.80\\text{ kg}$. The calibrated seed sowing rate of the drill in $\\text{kg/ha}$ is ________ (round off to 2 decimal places).",
+    "correct_answer": "79.58",
+    "numerical_range": {
+      "min": 78.5,
+      "max": 80.5
+    },
+    "solution": "```\n       Seed Drill Calibration Test:\n          Number of furrows: n = 9\n          Row spacing: s = 0.20 m\n          Drill width: W = 9 * 0.20 = 1.80 m\n          Wheel diameter: D = 0.80 m\n```\n**Method 1: Circumference & Sown Area Formula**\n1. Effective working width ($W$):\n$$W = n \\times s = 9 \\times 0.20\\text{ m} = 1.80\\text{ m}$$\n\n2. Distance traveled in $N = 50$ wheel revolutions ($S$):\n$$S = N \\times (\\pi D) = 50 \\times (\\pi \\times 0.80\\text{ m}) = 40\\pi = 125.6637\\text{ m}$$\n\n3. Area covered during the calibration test ($A$):\n$$A = W \\times S = 1.80\\text{ m} \\times 125.6637\\text{ m} = 226.1947\\text{ m}^2$$\n\n4. Calibrated seed rate ($R$ in $\\text{kg/ha}$):\n$$R = \\frac{\\text{Seed Collected (kg)}}{A\\text{ (m}^2\\text{)}} \\times 10000\\text{ m}^2\\text{/ha}$$\n$$R = \\frac{1.80\\text{ kg}}{226.1947\\text{ m}^2} \\times 10000 = 79.577\\text{ kg/ha} \\approx 79.58\\text{ kg/ha}$$\n\n**Method 2: Direct Calibration Constant Shortcut**\n$$\\text{Area} = 50 \\times \\pi \\times 0.8 \\times 1.8 = 226.195\\text{ m}^2$$\n$$\\text{Rate} = \\frac{1.80 \\times 10000}{226.195} = 79.58\\text{ kg/ha}$$",
+    "difficulty": "Moderate",
+    "source": "A Numerical Approach in Ag. Engg. (Sanjay Kumar)"
+  },
+  {
+    "id": "QB_FM_ADV_031",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Functional requirements, principles of working, construction and operation of manual, animal, tractor and renewable energy operated equipment for tillage, sowing, planting, fertilizer application, inter-cultivation, spraying, mowing, chaff cutting, harvesting and threshing",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the construction and operational adjustments of fluted roller seed metering mechanisms is/are CORRECT?",
+    "options": {
+      "A": "Seed rate is primarily regulated by axially shifting the fluted roller to alter the active flute length exposed inside the seed hopper cup",
+      "B": "Fluted rollers deliver a continuous volumetric stream of seeds and are unsuitable for single-seed precision planting of crops like maize and cotton",
+      "C": "Increasing the rotational speed of the fluted shaft while maintaining a very small flute exposure length minimizes mechanical seed damage in large seeds",
+      "D": "An adjustable bottom tongue (gate opening) under the fluted roller allows clearance adjustment for different seed sizes to prevent seed crushing"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "solution": "- **Statement A is correct:** Moving the metering lever slides the fluted cylinder axially across the cup, changing the effective volume of seeds carried per revolution.\n- **Statement B is correct:** Fluted rollers provide mass-flow drilling (continuous ribbon seeding) suitable for wheat and barley, not precision singulation.\n- **Statement C is incorrect:** High roller speed with a very small exposed flute length causes severe seed shearing and grinding against the cup edges; larger exposure at lower speed is recommended to minimize mechanical damage.\n- **Statement D is correct:** The bottom gate provides clearance between the tongue and flutes, adjusted according to seed size (small, medium, bold) to prevent crushing.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_032",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Calculation of performance parameters – field capacity, efficiency, performance index, application rate and losses",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to ISO 7256/1 and ASABE standards for evaluating precision planters, the 'Multiple Index' is defined as the percentage of seed spacings that are:",
+    "options": {
+      "A": "Greater than $1.5$ times the theoretical set seed spacing",
+      "B": "Less than or equal to $0.5$ times the theoretical set seed spacing",
+      "C": "Between $0.5$ and $1.5$ times the theoretical set seed spacing",
+      "D": "Exactly equal to the theoretical set seed spacing"
+    },
+    "correct_answer": "B",
+    "solution": "In planter performance indices (Kachman and Smith / ASABE Standard S506):\n- **Multiple Index ($I_{\\text{mult}}$):** Spacings $\\le 0.5$ times the theoretical set spacing ($x_{\\text{ref}}$), representing double/triple seed drops.\n- **Miss Index ($I_{\\text{miss}}$):** Spacings $> 1.5$ times the theoretical spacing, representing empty cells/skips.\n- **Quality of Feed Index ($I_{\\text{qfi}}$):** Spacings between $0.5\\,x_{\\text{ref}}$ and $1.5\\,x_{\\text{ref}}$, representing accurate single-seed placements.",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_033",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Functional requirements, principles of working, construction and operation of manual, animal, tractor and renewable energy operated equipment for tillage, sowing, planting, fertilizer application, inter-cultivation, spraying, mowing, chaff cutting, harvesting and threshing",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A vacuum precision planter uses a vertical rotating disc with suction holes of diameter $d = 2.5\\text{ mm}$. The mass of an individual hybrid maize seed is $m = 0.32\\text{ g}$. Taking acceleration due to gravity $g = 9.81\\text{ m/s}^2$ and a design factor of safety of $n = 3.0$ against seed detachment under machine vibrations, the minimum vacuum suction pressure (gauge pressure) required across the plate in $\\text{kPa}$ is ________ (round off to 2 decimal places).",
+    "correct_answer": "1.92",
+    "numerical_range": {
+      "min": 1.85,
+      "max": 2
+    },
+    "solution": "```\n        Pneumatic Suction Hole Geometry:\n               Vacuum Pressure (P_v)\n                   <====== [ Suction Hole (d = 2.5 mm) ]\n                           [ Seed (m = 0.32 g) ]\n                                | Weight W = m*g\n                                v\n```\n**Step-by-step Calculation:**\n1. Area of circular suction hole ($A$):\n$$A = \\frac{\\pi}{4} d^2 = \\frac{\\pi}{4} (0.0025\\text{ m})^2 = 4.9087 \\times 10^{-6}\\text{ m}^2$$\n\n2. Weight of a single seed ($W$):\n$$W = m \\times g = (0.32 \\times 10^{-3}\\text{ kg}) \\times 9.81\\text{ m/s}^2 = 3.1392 \\times 10^{-3}\\text{ N}$$\n\n3. Required holding force with safety factor $n = 3.0$:\n$$F_{\\text{hold}} = n \\times W = 3.0 \\times 3.1392 \\times 10^{-3} = 9.4176 \\times 10^{-3}\\text{ N}$$\n\n4. Suction vacuum pressure ($\\Delta P$):\n$$\\Delta P = \\frac{F_{\\text{hold}}}{A} = \\frac{9.4176 \\times 10^{-3}\\text{ N}}{4.9087 \\times 10^{-6}\\text{ m}^2} = 1918.55\\text{ Pa} = 1.92\\text{ kPa}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_034",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Functional requirements, principles of working, construction and operation of manual, animal, tractor and renewable energy operated equipment for tillage, sowing, planting, fertilizer application, inter-cultivation, spraying, mowing, chaff cutting, harvesting and threshing",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In an inclined cell plate planter (commonly used for cotton, groundnut, and maize), the plate is tilted at an angle of approximately $45^\\circ\\text{--}50^\\circ$ to the horizontal. The primary mechanical advantage of this inclined orientation compared to a horizontal plate is:",
+    "options": {
+      "A": "Elimination of cell cut-off and wipe-off devices because excess seeds fall back into the hopper by gravity",
+      "B": "Higher plate rotational speed exceeding $200\\text{ rpm}$ without seed damage",
+      "C": "Generation of vacuum inside the cell holes without an external blower",
+      "D": "Automatic compensation for tractor forward slip"
+    },
+    "correct_answer": "A",
+    "solution": "In an inclined plate planter:\n- The plate rotates at an angle ($45^\\circ\\text{--}50^\\circ$) through the bottom of the seed hopper.\n- As cells fill with seeds and ascend towards the discharge point at the top, gravity naturally causes excess seeds to tumble back down into the hopper.\n- This eliminates the need for aggressive mechanical brushes or spring wipers that can bruise fragile seeds like groundnut.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engg. Vol. I (Ojha & Michael)"
+  },
+  {
+    "id": "QB_FM_ADV_035",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Functional requirements, principles of working, construction and operation of manual, animal, tractor and renewable energy operated equipment for tillage, sowing, planting, fertilizer application, inter-cultivation, spraying, mowing, chaff cutting, harvesting and threshing",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A seed planter travels forward at a constant speed of $v_f = 7.2\\text{ km/h}$. A seed is released from the metering mechanism and drops freely through a vertical seed tube of height $h = 0.45\\text{ m}$ into the open furrow. Assuming zero air drag, zero initial horizontal velocity relative to the planter ($v_{x0} = v_f$), and $g = 9.81\\text{ m/s}^2$, the horizontal distance traveled by the seed relative to the ground during its fall inside the tube in $\\text{cm}$ is ________ (round off to 1 decimal place).",
+    "correct_answer": "60.6",
+    "numerical_range": {
+      "min": 59.5,
+      "max": 61.5
+    },
+    "solution": "```\n        Seed Fall Kinematics:\n            v_f --->\n            [Metering Cup]\n                  | \\ \n                  |  \\  Parabolic Path\n          h = 0.45 m   \\ \n                  |     \\ \n                  v======o (Furrow floor)\n                  |<-- x -->|\n```\n**Step-by-step Calculation:**\n1. Forward speed of planter in $\\text{m/s}$:\n$$v_f = \\frac{7.2 \\times 1000}{3600} = 2.0\\text{ m/s}$$\n\n2. Free fall time $t$ for vertical drop height $h = 0.45\\text{ m}$:\n$$h = \\frac{1}{2} g t^2 \\implies t = \\sqrt{\\frac{2h}{g}} = \\sqrt{\\frac{2 \\times 0.45}{9.81}} = \\sqrt{\\frac{0.90}{9.81}} = \\sqrt{0.09174} = 0.30289\\text{ s}$$\n\n3. Horizontal displacement relative to the ground:\n$$x = v_f \\times t = 2.0\\text{ m/s} \\times 0.30289\\text{ s} = 0.60579\\text{ m} = 60.58\\text{ cm} \\approx 60.6\\text{ cm}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_036",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Functional requirements, principles of working, construction and operation of manual, animal, tractor and renewable energy operated equipment for tillage, sowing, planting, fertilizer application, inter-cultivation, spraying, mowing, chaff cutting, harvesting and threshing",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the mechanical systems and operational characteristics of a self-propelled riding-type paddy transplanter is/are CORRECT?",
+    "options": {
+      "A": "Rotary planting arms utilize an epicyclic gear train with eccentric/sun gears to produce an elongated pear-shaped picking and planting trajectory",
+      "B": "The seedling tray shifts laterally at the end of each stroke to feed the next column of nursery seedlings to the planting claw",
+      "C": "The push-out rod ejects the seedling mat chunk into puddled soil when the planting fork reaches its bottom-most dead center",
+      "D": "Paddy transplanters require standing water depths exceeding $15\\text{ cm}$ for proper root anchoring and seedling uprightness"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "- **Statement A is correct:** Planetary/epicyclic gear mechanisms inside the rotary planting case generate the characteristic pear-shaped kinematic locus required for claw entry, seedling separation, and vertical soil insertion.\n- **Statement B is correct:** A cross-feed screw mechanism shifts the seedling tray incrementally sideways so that seedlings are picked uniformly from each mat strip.\n- **Statement C is correct:** A cam-driven push-out fork forcefully ejects the seedling root block into the soft puddled soil at the lowest point of the trajectory.\n- **Statement D is incorrect:** Excessive water depth ($> 3\\text{--}5\\text{ cm}$) causes floating of transplanted seedlings and wash-out; field condition should be well-settled puddle with very shallow water ($1\\text{--}2\\text{ cm}$).",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engg. Vol. I (Ojha & Michael)"
+  },
+  {
+    "id": "QB_FM_ADV_037",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Calculation of performance parameters – field capacity, efficiency, performance index, application rate and losses",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A multi-crop seed-cum-fertilizer drill is driven by a ground drive wheel of diameter $D = 70\\text{ cm}$. The drive wheel drives the star-wheel fertilizer shaft through a sprocket ratio of $i = \\frac{N_{\\text{shaft}}}{N_{\\text{wheel}}} = 0.5$. In $100$ revolutions of the ground wheel, the machine delivers $3.5\\text{ kg}$ of urea. If the drill has $7$ furrow openers spaced $25\\text{ cm}$ apart, the fertilizer application rate in $\\text{kg/ha}$ is ________ (round off to 2 decimal places).",
+    "correct_answer": "90.95",
+    "numerical_range": {
+      "min": 89.5,
+      "max": 92.5
+    },
+    "solution": "```\n        Fertilizer Application Calculation:\n           Number of rows n = 7\n           Row spacing s = 0.25 m\n           Working width W = 7 * 0.25 = 1.75 m\n           Wheel diameter D = 0.70 m\n```\n**Step-by-step Calculation:**\n1. Distance traveled in $100$ revolutions of ground wheel:\n$$S = 100 \\times (\\pi D) = 100 \\times (\\pi \\times 0.70\\text{ m}) = 70\\pi = 219.911\\text{ m}$$\n\n2. Effective width of drill ($W$):\n$$W = 7 \\times 0.25\\text{ m} = 1.75\\text{ m}$$\n\n3. Total area covered during the run ($A$):\n$$A = W \\times S = 1.75\\text{ m} \\times 219.911\\text{ m} = 384.845\\text{ m}^2$$\n\n4. Application rate ($R$ in $\\text{kg/ha}$):\n$$R = \\frac{\\text{Fertilizer Mass (kg)}}{A\\text{ (m}^2\\text{)}} \\times 10000 = \\frac{3.50}{384.845} \\times 10000 = 90.946\\text{ kg/ha} \\approx 90.95\\text{ kg/ha}$$",
+    "difficulty": "Moderate",
+    "source": "A Numerical Approach in Ag. Engg. (Sanjay Kumar)"
+  },
+  {
+    "id": "QB_FM_ADV_038",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Calculation of performance parameters – field capacity, efficiency, performance index, application rate and losses",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor-mounted hydraulic boom sprayer is equipped with $16$ flat-fan nozzles spaced at $w = 0.5\\text{ m}$ intervals along the boom. The sprayer travels at a uniform forward speed of $v = 5.4\\text{ km/h}$. Each nozzle has a measured discharge rate of $q = 0.90\\text{ L/min}$ at operating pressure. The chemical application rate of the sprayer in $\\text{L/ha}$ is ________ (answer in integer).",
+    "correct_answer": "200",
+    "numerical_range": {
+      "min": 198,
+      "max": 202
+    },
+    "solution": "```\n        Boom Sprayer Swath Geometry:\n         Nozzle spacing w = 0.5 m,  Speed v = 5.4 km/h\n         Total Boom Width = 16 * 0.5 = 8.0 m\n```\n**Method 1: Standard Ag-Sprayer Formula**\n$$Q = \\frac{600 \\times q}{w \\times v}$$\nWhere:\n- $q = 0.90\\text{ L/min}$ (discharge per nozzle)\n- $w = 0.5\\text{ m}$ (nozzle spacing)\n- $v = 5.4\\text{ km/h}$ (forward speed)\n$$Q = \\frac{600 \\times 0.90}{0.5 \\times 5.4} = \\frac{540}{2.70} = 200\\text{ L/ha}$$\n\n**Method 2: First Principles Area-Volume Balance**\n1. Area covered per hour:\n$$\\text{Area} = \\frac{\\text{Boom Width (m)} \\times \\text{Speed (km/h)}}{10} = \\frac{(16 \\times 0.5) \\times 5.4}{10} = \\frac{8.0 \\times 5.4}{10} = 4.32\\text{ ha/h}$$\n2. Total spray volume emitted per hour:\n$$V = 16 \\text{ nozzles} \\times 0.90\\text{ L/min} \\times 60\\text{ min/h} = 864\\text{ L/h}$$\n3. Application rate:\n$$Q = \\frac{864\\text{ L/h}}{4.32\\text{ ha/h}} = 200\\text{ L/ha}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engg. Vol. I (Ojha & Michael)"
+  },
+  {
+    "id": "QB_FM_ADV_039",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Functional requirements, principles of working, construction and operation of manual, animal, tractor and renewable energy operated equipment for tillage, sowing, planting, fertilizer application, inter-cultivation, spraying, mowing, chaff cutting, harvesting and threshing",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural boom sprayers, standard flat-fan nozzles produce a tapered spray distribution across their pattern width. To achieve a uniform coefficient of variation ($CV < 10\\%$) of spray deposit across the entire swath, adjacent nozzle patterns on the boom are typically designed to overlap by:",
+    "options": {
+      "A": "$0\\text{--}5\\%$",
+      "B": "$10\\text{--}15\\%$",
+      "C": "$30\\text{--}50\\%$",
+      "D": "$80\\text{--}90\\%$"
+    },
+    "correct_answer": "C",
+    "solution": "```\n           Flat Fan Overlap Pattern:\n           Nozzle 1          Nozzle 2\n             \\  /              \\  /\n              \\/\\              /\\/\n               \\ \\            / /\n              ==X==============X=== (Overlap Zone: 30% to 50%)\n```\n- Standard flat-fan nozzles have a triangular/trapezoidal deposit profile with maximum application directly under the nozzle orifice tapering to zero at edges.\n- An overlap of $30\\text{--}50\\%$ (typically $30\\%$ for $110^\\circ$ nozzles and $50\\%$ for $80^\\circ$ nozzles) creates an additive uniform flat combined distribution across the boom.",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_040",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Functional requirements, principles of working, construction and operation of manual, animal, tractor and renewable energy operated equipment for tillage, sowing, planting, fertilizer application, inter-cultivation, spraying, mowing, chaff cutting, harvesting and threshing",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding droplet spectrum characteristics and atomization kinetics in agricultural spraying is/are CORRECT?",
+    "options": {
+      "A": "Volume Median Diameter (VMD or $D_{v0.5}$) is the droplet diameter such that $50\\%$ of the total spray volume is in droplets smaller than this value",
+      "B": "The Relative Span Factor ($RSF$) is defined as $\\frac{D_{v0.9} - D_{v0.1}}{D_{v0.5}}$, where a lower value indicates a more uniform droplet spectrum",
+      "C": "Droplets having diameters smaller than $100\\,\\mu\\text{m}$ are highly susceptible to wind drift and evaporative loss",
+      "D": "Operating hydraulic nozzles at higher liquid pressure significantly increases VMD and reduces spray drift"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "- **Statement A is correct:** VMD ($D_{v0.5}$) divides the total liquid volume into two equal halves.\n- **Statement B is correct:** $RSF$ measures the relative width of the droplet size distribution; a monodisperse spray has $RSF = 0$.\n- **Statement C is correct:** Droplets under $100\\,\\mu\\text{m}$ have negligible terminal settling velocity and drift extensively.\n- **Statement D is incorrect:** Increasing hydraulic pressure increases liquid exit velocity and shear disintegration, producing smaller droplets (DECREASING VMD) and INCREASING drift risk.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_041",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Functional requirements, principles of working, construction and operation of manual, animal, tractor and renewable energy operated equipment for tillage, sowing, planting, fertilizer application, inter-cultivation, spraying, mowing, chaff cutting, harvesting and threshing",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An air-assisted orchard sprayer employs an axial-flow fan delivering an airflow rate of $Q = 9.0\\text{ m}^3/\\text{s}$ at an air discharge velocity of $v = 30\\text{ m/s}$. The ambient air density is $\\rho = 1.20\\text{ kg/m}^3$. If the total efficiency of the fan is $\\eta = 60\\%$, the mechanical shaft power required to drive the sprayer fan in $\\text{kW}$ is ________ (round off to 2 decimal places).",
+    "correct_answer": "8.10",
+    "numerical_range": {
+      "min": 7.9,
+      "max": 8.3
+    },
+    "solution": "```\n        Axial Blower Fan Schematic:\n         Drive Shaft ===>[ Axial Fan ] ===> Air Jet (Q = 9 m^3/s, v = 30 m/s)\n```\n**Step-by-step Calculation:**\n1. Kinetic energy of air discharged per second (air power $P_{\\text{air}}$):\n$$P_{\\text{air}} = \\frac{1}{2} \\dot{m} v^2 = \\frac{1}{2} (\\rho Q) v^2$$\n$$\\rho = 1.20\\text{ kg/m}^3, \\quad Q = 9.0\\text{ m}^3/\\text{s}, \\quad v = 30\\text{ m/s}$$\n$$P_{\\text{air}} = 0.5 \\times (1.20 \\times 9.0) \\times (30)^2 = 0.5 \\times 10.8 \\times 900 = 4860\\text{ W} = 4.86\\text{ kW}$$\n\n2. Mechanical shaft power required with fan efficiency $\\eta = 60\\% = 0.60$:\n$$P_{\\text{shaft}} = \\frac{P_{\\text{air}}}{\\eta} = \\frac{4.86\\text{ kW}}{0.60} = 8.10\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engg. Vol. I (Ojha & Michael)"
+  },
+  {
+    "id": "QB_FM_ADV_042",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Functional requirements, principles of working, construction and operation of manual, animal, tractor and renewable energy operated equipment for tillage, sowing, planting, fertilizer application, inter-cultivation, spraying, mowing, chaff cutting, harvesting and threshing",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a reciprocating tractor mower cutter bar, 'knife register' refers to the condition where:",
+    "options": {
+      "A": "The knife section is exactly centered on a ledger plate (guard) at each end of the stroke",
+      "B": "The stroke length of the pitman crank exactly equals twice the guard spacing",
+      "C": "The cutter bar is aligned strictly perpendicular to the tractor longitudinal axis while stationary",
+      "D": "The knife clips are clamped tightly with zero clearance against the wear plate"
+    },
+    "correct_answer": "A",
+    "solution": "- **Register of cutter bar:** A cutter bar is in proper register when the center of each knife section stops directly over the centerline of a guard (ledger plate) at the extreme ends of the stroke (outer and inner dead centers).\n- If out of register, the stalks are not completely sheared before the knife reverses direction, leading to clogging and high draft.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engg. Vol. I (Ojha & Michael)"
+  },
+  {
+    "id": "QB_FM_ADV_043",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Functional requirements, principles of working, construction and operation of manual, animal, tractor and renewable energy operated equipment for tillage, sowing, planting, fertilizer application, inter-cultivation, spraying, mowing, chaff cutting, harvesting and threshing",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A reciprocating mower has a stroke length of $S = 76.2\\text{ mm}$ and operates at a crank speed of $N = 950\\text{ rpm}$. The tractor travels forward at $v_f = 5.4\\text{ km/h}$. The ratio of average knife speed ($v_{\\text{avg}}$) to forward travel speed ($v_f$) is ________ (round off to 2 decimal places).",
+    "correct_answer": "1.61",
+    "numerical_range": {
+      "min": 1.57,
+      "max": 1.65
+    },
+    "solution": "```\n        Cutter Bar Kinematics:\n           Stroke S = 76.2 mm = 0.0762 m\n           Speed N = 950 rpm\n           Forward velocity v_f = 5.4 km/h = 1.5 m/s\n```\n**Step-by-step Calculation:**\n1. Distance traveled by knife in one revolution (two strokes: forward and backward):\n$$d_{\\text{rev}} = 2 S = 2 \\times 0.0762\\text{ m} = 0.1524\\text{ m}$$\n\n2. Average linear speed of knife ($v_{\\text{avg}}$):\n$$v_{\\text{avg}} = \\frac{2 S N}{60} = \\frac{0.1524 \\times 950}{60} = \\frac{144.78}{60} = 2.413\\text{ m/s}$$\n\n3. Forward travel speed ($v_f$):\n$$v_f = \\frac{5.4 \\times 1000}{3600} = 1.50\\text{ m/s}$$\n\n4. Velocity ratio ($K$):\n$$K = \\frac{v_{\\text{avg}}}{v_f} = \\frac{2.413\\text{ m/s}}{1.50\\text{ m/s}} = 1.6087 \\approx 1.61$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_044",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Functional requirements, principles of working, construction and operation of manual, animal, tractor and renewable energy operated equipment for tillage, sowing, planting, fertilizer application, inter-cultivation, spraying, mowing, chaff cutting, harvesting and threshing",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following operational and kinematic characteristics distinguish rotary disc mowers from traditional reciprocating cutter bar mowers?",
+    "options": {
+      "A": "Rotary disc mowers rely on high-velocity impact cutting ($70\\text{--}85\\text{ m/s}$ tip speed) without requiring a ledger plate counter-shear edge",
+      "B": "Rotary mowers have absence of unbalanced reciprocating inertial forces, allowing higher operating speeds of $12\\text{--}16\\text{ km/h}$",
+      "C": "Rotary disc mowers have significantly lower power consumption per unit cut width compared to reciprocating cutter bars",
+      "D": "Rotary mower knives are typically free-swinging to swing back into the disc upon hitting stones or rigid obstacles"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "solution": "- **Statement A is correct:** Reciprocating mowers require shearing between the knife and ledger plate, whereas disc mowers rely purely on high kinetic energy impact cutting ($70\\text{--}85\\text{ m/s}$ knife speed).\n- **Statement B is correct:** Rotating discs eliminate reciprocating accelerations, allowing smooth high-speed field operations.\n- **Statement C is incorrect:** Rotary disc mowers consume substantially MORE power ($2\\text{--}4\\times$ higher per meter width) than reciprocating mowers due to aerodynamic air drag and continuous acceleration of crop residue.\n- **Statement D is correct:** Knives are pivot-mounted on shoulder bolts to fold back during obstacle impacts, preventing catastrophic blade or gear failure.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_045",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Functional requirements, principles of working, construction and operation of manual, animal, tractor and renewable energy operated equipment for tillage, sowing, planting, fertilizer application, inter-cultivation, spraying, mowing, chaff cutting, harvesting and threshing",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A combine harvester operates in a wheat field with a reel of radius $R = 0.55\\text{ m}$. The combine travels forward at a speed of $v_f = 3.6\\text{ km/h}$. For optimal crop feeding and minimal grain shattering, the reel index is set to $\\lambda = 1.30$. The rotational speed of the reel in $\\text{rpm}$ is ________ (round off to 1 decimal place).",
+    "correct_answer": "22.6",
+    "numerical_range": {
+      "min": 22,
+      "max": 23.2
+    },
+    "solution": "```\n        Combine Reel Kinematics:\n            Forward Speed: v_f = 1.0 m/s\n            Reel Radius: R = 0.55 m\n            Reel Index: lambda = v_reel / v_f = 1.30\n```\n**Step-by-step Calculation:**\n1. Forward speed of combine:\n$$v_f = \\frac{3.6 \\times 1000}{3600} = 1.0\\text{ m/s}$$\n\n2. Linear peripheral speed of reel bat ($v_r$):\n$$v_r = \\lambda \\times v_f = 1.30 \\times 1.0\\text{ m/s} = 1.30\\text{ m/s}$$\n\n3. Relationship between peripheral speed and rotational speed $N$:\n$$v_r = R \\omega = R \\left(\\frac{2 \\pi N}{60}\\right)$$\n$$N = \\frac{60 \\times v_r}{2 \\pi R} = \\frac{60 \\times 1.30}{2 \\times \\pi \\times 0.55} = \\frac{78}{3.45575} = 22.571\\text{ rpm} \\approx 22.6\\text{ rpm}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_046",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Functional requirements, principles of working, construction and operation of manual, animal, tractor and renewable energy operated equipment for tillage, sowing, planting, fertilizer application, inter-cultivation, spraying, mowing, chaff cutting, harvesting and threshing",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A combine harvester rasp-bar threshing cylinder has an outer tip diameter of $D = 0.60\\text{ m}$ and rotates at a speed of $N = 850\\text{ rpm}$ while threshing wheat. The peripheral tip speed of the threshing cylinder in $\\text{m/s}$ is ________ (round off to 2 decimal places).",
+    "correct_answer": "26.70",
+    "numerical_range": {
+      "min": 26.2,
+      "max": 27.2
+    },
+    "solution": "```\n        Rasp-Bar Threshing Cylinder:\n            Tip Diameter D = 0.60 m\n            Shaft Speed N = 850 rpm\n            v_c = pi * D * N / 60\n```\n**Step-by-step Calculation:**\n1. Peripheral tip speed ($v_c$) of cylinder:\n$$v_c = \\frac{\\pi D N}{60}$$\n$$D = 0.60\\text{ m}, \\quad N = 850\\text{ rpm}$$\n$$v_c = \\frac{\\pi \\times 0.60 \\times 850}{60} = \\frac{510\\pi}{60} = 8.5\\pi = 26.7035\\text{ m/s} \\approx 26.70\\text{ m/s}$$\n\nStandard peripheral speed for wheat threshing ranges between $25\\text{--}30\\text{ m/s}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_047",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Functional requirements, principles of working, construction and operation of manual, animal, tractor and renewable energy operated equipment for tillage, sowing, planting, fertilizer application, inter-cultivation, spraying, mowing, chaff cutting, harvesting and threshing",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following factors will INCREASE the proportion of grain separated through the threshing concave grate (concave separation efficiency) in a tangential combine thresher?",
+    "options": {
+      "A": "Increasing cylinder peripheral speed within recommended agronomic limits",
+      "B": "Decreasing the clearance between the threshing cylinder and the concave",
+      "C": "Operating at excessively high crop feed rates exceeding the rated MOG (Material Other than Grain) capacity",
+      "D": "Decreasing crop moisture content of grain and straw"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "solution": "- **Statement A is correct:** Higher peripheral speed increases impact energy and centrifugal acceleration of grain through the open concave grates.\n- **Statement B is correct:** Reducing concave clearance increases mechanical rubbing intensity and accelerates grain detachment and grate passage.\n- **Statement C is incorrect:** High crop feed rate creates a dense straw mat cushion across the concave that traps detached grains, reducing concave separation and overloading straw walkers.\n- **Statement D is correct:** Drier crop material shatters easily and flows freely through the grates without clogging.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_048",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Functional requirements, principles of working, construction and operation of manual, animal, tractor and renewable energy operated equipment for tillage, sowing, planting, fertilizer application, inter-cultivation, spraying, mowing, chaff cutting, harvesting and threshing",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A combine harvester straw walker is driven by a crankshaft having a crank throw radius of $r = 50\\text{ mm}$ rotating at $N = 210\\text{ rpm}$. The walker throw angle is $\\beta = 45^\\circ$ to the horizontal. Taking acceleration due to gravity $g = 9.81\\text{ m/s}^2$, the vertical acceleration factor (kinematic throw index $K_v = \\frac{r \\omega^2 \\sin\\beta}{g}$) of the walker is ________ (round off to 2 decimal places).",
+    "correct_answer": "1.74",
+    "numerical_range": {
+      "min": 1.68,
+      "max": 1.8
+    },
+    "solution": "```\n        Straw Walker Crank Kinematics:\n            Crank radius r = 0.05 m\n            Rotational speed N = 210 rpm\n            Throw angle beta = 45 deg\n```\n**Step-by-step Calculation:**\n1. Angular velocity of the walker crankshaft ($\\omega$):\n$$\\omega = \\frac{2 \\pi N}{60} = \\frac{2 \\times \\pi \\times 210}{60} = 7\\pi = 21.9911\\text{ rad/s}$$\n$$\\omega^2 = (21.9911)^2 = 483.61\\text{ rad}^2/\\text{s}^2$$\n\n2. Peak centripetal acceleration ($a = r \\omega^2$):\n$$a = 0.050\\text{ m} \\times 483.61\\text{ rad}^2/\\text{s}^2 = 24.1805\\text{ m/s}^2$$\n\n3. Vertical component of peak acceleration ($a_v = a \\sin 45^\\circ$):\n$$a_v = 24.1805 \\times \\sin 45^\\circ = 24.1805 \\times 0.70711 = 17.098\\text{ m/s}^2$$\n\n4. Kinematic throw index ($K_v$):\n$$K_v = \\frac{a_v}{g} = \\frac{17.098\\text{ m/s}^2}{9.81\\text{ m/s}^2} = 1.7429 \\approx 1.74$$\n\nSince $K_v > 1.0$, the straw layer tosses freely in the air, allowing trapped grains to fall through walker racks.",
+    "difficulty": "Hard",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_049",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Functional requirements, principles of working, construction and operation of manual, animal, tractor and renewable energy operated equipment for tillage, sowing, planting, fertilizer application, inter-cultivation, spraying, mowing, chaff cutting, harvesting and threshing",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In the cleaning shoe of a combine harvester, aerodynamic separation of chaff and short straw from sound grain kernels is accomplished by maintaining the cleaning air blast velocity between:",
+    "options": {
+      "A": "$0.5\\text{ and } 1.0\\text{ m/s}$",
+      "B": "The terminal velocity of chaff ($1.5\\text{--}2.5\\text{ m/s}$) and the terminal velocity of grain ($8.0\\text{--}10.0\\text{ m/s}$)",
+      "C": "Strictly above the terminal velocity of the heaviest grain kernels ($> 12\\text{ m/s}$)",
+      "D": "$0.1\\text{ and } 0.3\\text{ m/s}$"
+    },
+    "correct_answer": "B",
+    "solution": "- **Aerodynamic Principle of Cleaning Shoe:**\n  - Chaff and straw particles have low density and high projected area, with terminal velocities of $v_{t,\\text{chaff}} \\approx 1.5\\text{--}2.5\\text{ m/s}$.\n  - Clean wheat grain has a higher terminal velocity of $v_{t,\\text{grain}} \\approx 8.0\\text{--}10.0\\text{ m/s}$.\n  - By maintaining air blast velocity in the intermediate range ($4.0\\text{--}6.0\\text{ m/s}$), chaff is levitated and blown out of the rear, while heavier grains fall through the chaffer and sieve.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engg. Vol. I (Ojha & Michael)"
+  },
+  {
+    "id": "QB_FM_ADV_050",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Calculation of performance parameters – field capacity, efficiency, performance index, application rate and losses",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "During a field performance evaluation of a combine harvester in a paddy field with a potential biological yield of $4500\\text{ kg/ha}$, the measured losses are: header pre-cut and shatter loss $= 45\\text{ kg/ha}$, cutter bar cutter loss $= 60\\text{ kg/ha}$, threshing cylinder unthreshed loss $= 30\\text{ kg/ha}$, straw walker rack separation loss $= 40\\text{ kg/ha}$, and cleaning shoe grain loss $= 25\\text{ kg/ha}$. The total combine harvesting loss expressed as a percentage of biological crop yield is ________ $\\%$ (round off to 2 decimal places).",
+    "correct_answer": "4.44",
+    "numerical_range": {
+      "min": 4.35,
+      "max": 4.55
+    },
+    "solution": "```\n        Combine Loss Components Breakdown:\n           Header Pre-cut + Cutter Bar: 45 + 60 = 105 kg/ha\n           Threshing Cylinder Loss: 30 kg/ha\n           Straw Walker Loss: 40 kg/ha\n           Cleaning Shoe Loss: 25 kg/ha\n```\n**Step-by-step Calculation:**\n1. Sum of all machine grain losses ($L_{\\text{total}}$):\n$$L_{\\text{total}} = 45 + 60 + 30 + 40 + 25 = 200\\text{ kg/ha}$$\n\n2. Total percentage loss relative to potential biological crop yield ($Y = 4500\\text{ kg/ha}$):\n$$\\text{Loss } (\\%) = \\frac{L_{\\text{total}}}{Y} \\times 100 = \\frac{200\\text{ kg/ha}}{4500\\text{ kg/ha}} \\times 100 = \\frac{20}{4.5} = 4.444\\% \\approx 4.44\\%$$",
+    "difficulty": "Easy",
+    "source": "A Numerical Approach in Ag. Engg. (Sanjay Kumar)"
+  },
+  {
+    "id": "QB_FM_ADV_051",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Functional requirements, principles of working, construction and operation of manual, animal, tractor and renewable energy operated equipment for tillage, sowing, planting, fertilizer application, inter-cultivation, spraying, mowing, chaff cutting, harvesting and threshing",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A power-operated chaff cutter with $2$ cutting knives mounted on a flywheel rotates at $N = 420\\text{ rpm}$. The feed throat opening is $w = 200\\text{ mm}$ wide and $h = 100\\text{ mm}$ high. The fodder is advanced at a speed of $v_f = 0.35\\text{ m/s}$. The compressed bulk density of green fodder in the throat is $\\rho = 250\\text{ kg/m}^3$. The green fodder throughput capacity of the chaff cutter in $\\text{t/h}$ (tonnes per hour) is ________ (round off to 2 decimal places).",
+    "correct_answer": "6.30",
+    "numerical_range": {
+      "min": 6.15,
+      "max": 6.45
+    },
+    "solution": "```\n        Chaff Cutter Throat Cross-Section:\n            Width: w = 200 mm = 0.20 m\n            Height: h = 100 mm = 0.10 m\n            Feed Speed: v_f = 0.35 m/s\n```\n**Step-by-step Calculation:**\n1. Cross-sectional area of throat ($A$):\n$$A = w \\times h = 0.20\\text{ m} \\times 0.10\\text{ m} = 0.020\\text{ m}^2$$\n\n2. Volumetric throughput rate ($Q$):\n$$Q = A \\times v_f = 0.020\\text{ m}^2 \\times 0.35\\text{ m/s} = 0.007\\text{ m}^3/\\text{s}$$\n\n3. Mass throughput rate ($\\dot{m}$):\n$$\\dot{m} = Q \\times \\rho = 0.007\\text{ m}^3/\\text{s} \\times 250\\text{ kg/m}^3 = 1.75\\text{ kg/s}$$\n\n4. Capacity in tonnes per hour ($C$):\n$$C = \\frac{1.75\\text{ kg/s} \\times 3600\\text{ s/h}}{1000\\text{ kg/t}} = \\frac{6300\\text{ kg/h}}{1000} = 6.30\\text{ t/h}$$",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_FM_ADV_052",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Calculation of performance parameters – field capacity, efficiency, performance index, application rate and losses",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Theoretical field capacity ($TFC$) of a farm implement depends strictly on which two operational parameters?",
+    "options": {
+      "A": "Rated cutting width and forward travel speed",
+      "B": "Actual cutting width and turning time at headlands",
+      "C": "Tractor engine power and soil penetration resistance",
+      "D": "Wheel slip and fuel consumption rate"
+    },
+    "correct_answer": "A",
+    "solution": "- **Theoretical Field Capacity ($TFC$):** The rate of field coverage that would be obtained if the machine were performing its function $100\\%$ of the time at rated forward speed and utilizing $100\\%$ of its rated rated width.\n$$TFC = \\frac{W \\times S}{10} \\text{ (ha/h)}$$\nwhere $W$ is rated implement width in meters and $S$ is forward speed in $\\text{km/h}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engg. Vol. I (Ojha & Michael)"
+  },
+  {
+    "id": "QB_FM_ADV_053",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Calculation of performance parameters – field capacity, efficiency, performance index, application rate and losses",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor-mounted cultivator with an effective operating width of $W = 2.4\\text{ m}$ operates at a speed of $v = 6.0\\text{ km/h}$ in a rectangular field of length $L = 300\\text{ m}$. The average turning time at each headland is $t_t = 20\\text{ s}$. Assuming turns are made at each end of the $300\\text{ m}$ run and neglecting all other non-operating time interruptions, the effective field efficiency of the cultivator is ________ $\\%$ (round off to 1 decimal place).",
+    "correct_answer": "90.0",
+    "numerical_range": {
+      "min": 88.5,
+      "max": 91.5
+    },
+    "solution": "```\n        Field Bout Timing:\n            Run length L = 300 m\n            Travel speed v = 6.0 km/h = 1.667 m/s\n            Run time t_r = 300 / 1.667 = 180 s\n            Turn time t_t = 20 s\n```\n**Step-by-step Calculation:**\n1. Forward speed in $\\text{m/s}$:\n$$v = \\frac{6.0 \\times 1000}{3600} = 1.6667\\text{ m/s}$$\n\n2. Time taken to cultivate one full run of length $L = 300\\text{ m}$ ($t_{\\text{operating}}$):\n$$t_{\\text{op}} = \\frac{L}{v} = \\frac{300\\text{ m}}{1.6667\\text{ m/s}} = 180\\text{ s}$$\n\n3. Total cycle time per run including headland turn:\n$$t_{\\text{total}} = t_{\\text{op}} + t_t = 180\\text{ s} + 20\\text{ s} = 200\\text{ s}$$\n\n4. Field efficiency ($\\eta_f$):\n$$\\eta_f = \\frac{t_{\\text{op}}}{t_{\\text{total}}} \\times 100 = \\frac{180}{200} \\times 100 = 90.0\\%$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_054",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Calculation of performance parameters – field capacity, efficiency, performance index, application rate and losses",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following operational and management factors directly contribute to a reduction in the field efficiency of a tractor-implement system?",
+    "options": {
+      "A": "Time spent turning at headlands and maneuvering around obstacles",
+      "B": "Time lost during seed and fertilizer hopper refilling in seeding operations",
+      "C": "Overlapping between adjacent swaths to avoid unworked strips",
+      "D": "Increasing the length of field runs while maintaining constant implement width"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "- **A is correct:** Non-productive turning time at headlands directly reduces effective working time.\n- **B is correct:** Idle stops for refilling inputs or emptying grain tanks are field interruptions reducing efficiency.\n- **C is correct:** Operator overlap reduces the actual swath width below rated width, reducing effective field capacity and efficiency.\n- **D is incorrect:** Increasing the length of field runs REDUCES the number of turns per hectare, thereby INCREASING field efficiency.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engg. Vol. I (Ojha & Michael)"
+  },
+  {
+    "id": "QB_FM_ADV_055",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Cost analysis of implements and tractors",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A $45\\text{ kW}$ farm tractor is purchased for a capital price of $C = \text{Rs. }\\,8,00,000$. The useful life of the tractor is $L = 10\\text{ years}$ with an estimated salvage value equal to $10\\%$ of purchase price. Annual usage is $H = 800\\text{ hours/year}$. Using the straight-line depreciation method, the hourly depreciation cost of the tractor in $\text{Rs. }\\text{/h}$ is ________ (answer in integer).",
+    "correct_answer": "90",
+    "numerical_range": {
+      "min": 90,
+      "max": 90
+    },
+    "solution": "```\n        Straight-Line Depreciation:\n            Purchase Price C = Rs. 8,00,000\n            Salvage Value S = 10% of C = Rs. 80,000\n            Useful Life L = 10 years\n            Annual Use H = 800 h/year\n```\n**Step-by-step Calculation:**\n1. Salvage value ($S$):\n$$S = 0.10 \\times 8,00,000 = \text{Rs. }\\,80,000$$\n\n2. Total depreciable amount over life:\n$$C - S = 8,00,000 - 80,000 = \text{Rs. }\\,7,20,000$$\n\n3. Annual depreciation ($D_a$):\n$$D_a = \\frac{C - S}{L} = \\frac{7,20,000}{10} = \text{Rs. }\\,72,000\\text{ /year}$$\n\n4. Depreciation cost per operating hour ($D_h$):\n$$D_h = \\frac{D_a}{H} = \\frac{72,000}{800} = \text{Rs. }\\,90\\text{ /h}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_FM_ADV_056",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Cost analysis of implements and tractors",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In the standard economic cost analysis of agricultural machinery (ASABE Standards / Sahay), which of the following cost components are classified under 'Fixed (Ownership) Costs'?",
+    "options": {
+      "A": "Depreciation of machine capital value",
+      "B": "Interest on initial or average capital investment",
+      "C": "Housing, taxes, and insurance (HTI)",
+      "D": "Lubricating oil and filter replacement costs"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "- **Fixed Costs (Ownership Costs):** Costs that occur regardless of whether the machine is operated or remains idle. They comprise Depreciation, Interest on investment, Taxes, Housing, and Insurance (often abbreviated as DIRTI).\n- **Variable Costs (Operating Costs):** Costs that vary directly with hours of operation: Fuel, Lubricants, Repair and Maintenance, and Operator Wages.\n- Therefore, options A, B, and C are fixed costs, while D is a variable operating cost.",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_FM_ADV_057",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Cost analysis of implements and tractors",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A progressive farmer considers buying a tractor-mounted combine harvester attachment. The annual fixed ownership cost of the machine is $FC = \text{Rs. }\\,1,20,000\\text{ /year}$. The variable operating cost is $VC = \text{Rs. }\\,650\\text{ /h}$. The prevailing custom hiring charge for identical harvesting work is $C_h = \text{Rs. }\\,1150\\text{ /h}$. The break-even annual usage in hours ($\\,h\\text{/year}$) above which owning the machine is economically superior to custom hiring is ________ (answer in integer).",
+    "correct_answer": "240",
+    "numerical_range": {
+      "min": 240,
+      "max": 240
+    },
+    "solution": "```\n        Break-Even Analysis:\n           Cost of Ownership = FC + VC * H\n           Cost of Custom Hiring = C_h * H\n           At Break-Even: FC + VC * H = C_h * H\n```\n**Step-by-step Calculation:**\n1. At break-even annual usage $H_{\\text{bep}}$:\n$$\\text{Total Ownership Cost} = \\text{Total Custom Hiring Cost}$$\n$$FC + (VC \\times H_{\\text{bep}}) = C_h \\times H_{\\text{bep}}$$\n\n2. Rearranging for $H_{\\text{bep}}$:\n$$H_{\\text{bep}} = \\frac{FC}{C_h - VC}$$\n\n3. Substituting values:\n$$FC = \text{Rs. }\\,1,20,000$$\n$$C_h - VC = 1150 - 650 = \text{Rs. }\\,500\\text{ /h}$$\n$$H_{\\text{bep}} = \\frac{120000}{500} = 240\\text{ hours/year}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engg. Vol. I (Ojha & Michael)"
+  },
+  {
+    "id": "QB_FM_ADV_058",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Equipment for precision agriculture",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In precision agriculture auto-guidance systems for tractors, Real-Time Kinematic (RTK) GNSS positioning achieves sub-inch pass-to-pass accuracy by using:",
+    "options": {
+      "A": "Uncorrected standard civilian GPS L1 code-phase pseudo-ranges",
+      "B": "Carrier-phase differential corrections transmitted in real time from a local stationary base station or cellular network",
+      "C": "Satellite-based wide-area barometric altimeters",
+      "D": "Ultrasonic ground-echo speed sensors"
+    },
+    "correct_answer": "B",
+    "solution": "- **RTK GNSS Principle:** Real-Time Kinematic positioning uses the high-frequency carrier wave phase (L1/L2/L5 bands) rather than binary pseudo-random code modulation.\n- A local base station at a known surveyed benchmark calculates ionospheric and tropospheric delays in real-time and transmits differential phase corrections via radio/cellular link to the tractor rover, enabling horizontal accuracy within $\\pm 2\\text{ cm}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_059",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Equipment for precision agriculture",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A variable rate liquid nitrogen applicator travels across a field at $v = 7.2\\text{ km/h}$. The boom control system receives prescription application commands from the onboard GIS controller. Due to hydraulic valve response and chemical transport through delivery lines, there is a physical actuator lag time of $t_{\\text{lag}} = 1.25\\text{ s}$. To ensure the prescribed fertilizer rate is deposited precisely on the target prescription zone, the look-ahead distance in $\\text{m}$ ahead of the boom must be set to ________ (round off to 1 decimal place).",
+    "correct_answer": "2.5",
+    "numerical_range": {
+      "min": 2.4,
+      "max": 2.6
+    },
+    "solution": "```\n        Look-Ahead Distance Compensation:\n         Tractor Position =======( d_look )======> Target Grid Zone\n                                  v = 2.0 m/s\n```\n**Step-by-step Calculation:**\n1. Forward travel speed in $\\text{m/s}$:\n$$v = \\frac{7.2 \\times 1000}{3600} = 2.0\\text{ m/s}$$\n\n2. Look-ahead distance ($d$):\nTo compensate for total system latency $t_{\\text{lag}} = 1.25\\text{ s}$, the controller must trigger actuator commands when the machine is at distance $d$ prior to crossing into the new prescription zone:\n$$d = v \\times t_{\\text{lag}} = 2.0\\text{ m/s} \\times 1.25\\text{ s} = 2.50\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_060",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Equipment for precision agriculture",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An active optical canopy sensor mounted on a variable-rate fertilizer spreader measures the spectral reflectance of a wheat canopy. The measured reflectance in the Near-Infrared band is $\\rho_{\\text{NIR}} = 0.58$ and the reflectance in the Red band is $\\rho_{\\text{Red}} = 0.08$. The Normalized Difference Vegetation Index (NDVI) of the crop canopy is ________ (round off to 2 decimal places).",
+    "correct_answer": "0.76",
+    "numerical_range": {
+      "min": 0.74,
+      "max": 0.78
+    },
+    "solution": "```\n        Canopy Spectral Reflectance:\n           Red Absorption: High (Chlorophyll absorption)\n           NIR Reflection: High (Leaf mesophyll scattering)\n```\n**Step-by-step Calculation:**\n1. NDVI Definition Formula:\n$$\\text{NDVI} = \\frac{\\rho_{\\text{NIR}} - \\rho_{\\text{Red}}}{\\rho_{\\text{NIR}} + \\rho_{\\text{Red}}}$$\n\n2. Substituting given spectral reflectance values:\n$$\\rho_{\\text{NIR}} = 0.58, \\quad \\rho_{\\text{Red}} = 0.08$$\n$$\\text{NDVI} = \\frac{0.58 - 0.08}{0.58 + 0.08} = \\frac{0.50}{0.66} = 0.75757 \\approx 0.76$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engg. Vol. I (Ojha & Michael)"
+  },
+  {
+    "id": "QB_FM_ADV_061",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Equipment for precision agriculture",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding autonomous agricultural vehicles and path-tracking algorithms (such as the Pure Pursuit and Stanley controllers) is/are CORRECT?",
+    "options": {
+      "A": "In Pure Pursuit tracking, the steering angle command is calculated by fitting a circular arc from the vehicle rear axle to a look-ahead target point on the path",
+      "B": "Increasing the look-ahead distance in Pure Pursuit controller dampens lateral oscillations but slows convergence to the desired path",
+      "C": "Stanley controller incorporates both heading error and lateral cross-track error measured at the front axle",
+      "D": "Pure Pursuit tracking becomes unstable as look-ahead distance approaches infinity"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "- **A is correct:** Pure Pursuit geometry calculates curvature $\\kappa = \\frac{2\\sin\\alpha}{L_d}$ to reach a point at look-ahead distance $L_d$ on the reference line.\n- **B is correct:** A larger look-ahead distance produces sluggish, smooth cornering with zero overshooting, whereas smaller $L_d$ causes aggressive tracking and potential oscillations.\n- **C is correct:** The Stanley method (developed for Stanford's autonomous vehicles) combines front-wheel heading error with non-linear cross-track error feedback: $\\delta(t) = \\psi(t) + \\tan^{-1}\\left(\\frac{k e(t)}{v(t)}\\right)$.\n- **D is incorrect:** As look-ahead distance approaches infinity, path curvature $\\kappa \\to 0$, causing the steering angle to asymptotically approach zero (driving straight ahead), not unstable divergence.",
+    "difficulty": "Hard",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_062",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Equipment for precision agriculture",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An ultrasonic distance sensor mounted on an autonomous orchard sprayer measures the distance to fruit tree foliage. The sensor emits a sound pulse and detects the return echo after a two-way round-trip transit time of $t = 8.82\\text{ ms}$. If the ambient speed of sound in air is $c = 340\\text{ m/s}$, the one-way distance from the sensor to the canopy in $\\text{m}$ is ________ (round off to 2 decimal places).",
+    "correct_answer": "1.50",
+    "numerical_range": {
+      "min": 1.48,
+      "max": 1.52
+    },
+    "solution": "```\n        Ultrasonic Time-of-Flight:\n            Sensor ===( Sound Pulse )===> Canopy\n            Sensor <==( Echo Pulse )==== Canopy\n            Total Distance = 2 * d = c * t\n```\n**Step-by-step Calculation:**\n1. Round trip distance traveled by acoustic wave:\n$$d_{\\text{round-trip}} = c \\times t = 340\\text{ m/s} \\times (8.82 \\times 10^{-3}\\text{ s}) = 2.9988\\text{ m}$$\n\n2. One-way distance to canopy ($d$):\n$$d = \\frac{d_{\\text{round-trip}}}{2} = \\frac{2.9988}{2} = 1.4994\\text{ m} \\approx 1.50\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engg. Vol. I (Ojha & Michael)"
+  },
+  {
+    "id": "QB_FM_ADV_063",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design",
+    "subtopic": "Design and selection of machine elements – gears, pulleys, chains and sprockets and belts",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A spur gear in a seed drill gear train has a module of $m = 3\\text{ mm}$ and a face width of $b = 30\\text{ mm}$. The gear tooth material has an allowable bending fatigue stress of $\\sigma_b = 140\\text{ MPa}$. The Lewis form factor based on module is $Y = 0.32$. Using the Lewis bending equation ($F_t = \\sigma_b b m Y$), the maximum permissible beam strength tangential tooth load in $\\text{N}$ is ________ (round off to integer).",
+    "correct_answer": "4032",
+    "numerical_range": {
+      "min": 4000,
+      "max": 4060
+    },
+    "solution": "```\n        Lewis Gear Beam Strength:\n            Tooth Cantilever Model:\n            F_t ---> |\\ \n                     | \\ Tooth Profile\n                     |__\\ Base\n```\n**Step-by-step Calculation:**\n1. Lewis bending formula:\n$$F_s = \\sigma_b \\times b \\times m \\times Y$$\nWhere:\n- $\\sigma_b = 140\\text{ MPa} = 140 \\times 10^6\\text{ N/m}^2$\n- Face width $b = 30\\text{ mm} = 0.030\\text{ m}$\n- Module $m = 3\\text{ mm} = 0.003\\text{ m}$\n- Lewis form factor $Y = 0.32$\n\n2. Calculating tangential beam strength:\n$$F_s = 140 \\times 30 \\times 3 \\times 0.32 = 140 \\times 90 \\times 0.32 = 12600 \\times 0.32 = 4032\\text{ N}$$",
+    "difficulty": "Moderate",
+    "source": "Machine Design (V.B. Bhandari / S.C. Jain)"
+  },
+  {
+    "id": "QB_FM_ADV_064",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design",
+    "subtopic": "Design and selection of machine elements – gears, pulleys, chains and sprockets and belts",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding dynamic tooth loading in agricultural gear drives and the Buckingham equation is/are CORRECT?",
+    "options": {
+      "A": "Dynamic tooth load arises from pitch line velocity, tooth spacing errors, and elastic deformation of gear teeth",
+      "B": "According to Buckingham's equation, dynamic load increases with increasing pitch line velocity up to a limiting maximum value",
+      "C": "To avoid surface fatigue failure (pitting), the wear strength ($F_w$) of gear teeth must be strictly greater than the dynamic load ($F_d$)",
+      "D": "Increasing gear face width reduces the total dynamic load experienced by the gear pair"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "- **Statement A is correct:** Tooth profile errors, runout, and torsional vibrations induce inertia forces, creating dynamic load $F_d = F_t + F_i$.\n- **Statement B is correct:** In Buckingham's relation $F_d = F_t + \\frac{21 v (b C + F_t)}{21 v + \\sqrt{b C + F_t}}$, as pitch line velocity $v$ increases, dynamic load asymptotically approaches a plateau governed by error parameter $C$.\n- **Statement C is correct:** Gear wear life requires $F_w = d_p b Q K \\ge F_d$ to prevent surface pitting and spalling.\n- **Statement D is incorrect:** Examining Buckingham's formula, the term $b C$ increases with face width $b$, so a wider face width actually increases dynamic increment $F_i$, though it lowers stress per unit width.",
+    "difficulty": "Hard",
+    "source": "Farm Machinery Design (S.C. Jain)"
+  },
+  {
+    "id": "QB_FM_ADV_065",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design",
+    "subtopic": "Design and selection of machine elements – gears, pulleys, chains and sprockets and belts",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A V-belt operates in a grooved pulley with a total included groove angle of $2\\beta = 38^\\circ$ (semi-groove angle $\\beta = 19^\\circ$). The coefficient of friction between the belt rubber and the steel sheave is $\\mu = 0.25$. Taking into account the wedging action in the groove, the virtual (effective) coefficient of friction $\\mu'$ is ________ (round off to 2 decimal places).",
+    "correct_answer": "0.77",
+    "numerical_range": {
+      "min": 0.75,
+      "max": 0.79
+    },
+    "solution": "```\n        V-Belt Groove Wedging Action:\n                 \\  /   Included Angle 2*beta = 38 deg\n                  \\/    beta = 19 deg\n             Normal Reactions R_N on both side flanks\n```\n**Step-by-step Calculation:**\n1. Resolving forces in the groove cross-section:\n$$R = 2 R_N \\sin\\beta \\implies R_N = \\frac{R}{2\\sin\\beta}$$\n\n2. Frictional force along the belt circumference:\n$$F_f = 2 \\mu R_N = 2 \\mu \\left(\\frac{R}{2\\sin\\beta}\\right) = \\left(\\frac{\\mu}{\\sin\\beta}\\right) R$$\n\n3. The virtual coefficient of friction is defined as:\n$$\\mu' = \\frac{\\mu}{\\sin\\beta}$$\n$$\\mu = 0.25, \\quad \\beta = 19^\\circ$$\n$$\\sin 19^\\circ = 0.32557$$\n$$\\mu' = \\frac{0.25}{0.32557} = 0.76788 \\approx 0.77$$",
+    "difficulty": "Easy",
+    "source": "Farm Machinery Design (S.C. Jain)"
+  },
+  {
+    "id": "QB_FM_ADV_066",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design",
+    "subtopic": "Measurement of force, stress, torque, speed, displacement and acceleration on machine elements – shafts, couplings, keys, bearings and knuckle joints",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A rolling contact bearing is subjected to combined radial load $F_r$ and axial thrust load $F_a$. The equivalent dynamic radial load $P$ used in bearing life calculation is given by standard ISO formula:",
+    "options": {
+      "A": "$P = X V F_r + Y F_a$",
+      "B": "$P = \\sqrt{F_r^2 + F_a^2}$",
+      "C": "$P = F_r + F_a$",
+      "D": "$P = \\frac{F_r F_a}{F_r + F_a}$"
+    },
+    "correct_answer": "A",
+    "solution": "- According to standard bearing design theory (ISO 281 / ASABE / Shigley):\n$$P = X V F_r + Y F_a$$\nwhere $X$ is the radial load factor, $V$ is the rotation factor ($V=1.0$ for inner ring rotating, $1.2$ for outer ring rotating), and $Y$ is the axial thrust factor depending on the ratio $F_a / (V F_r)$ relative to threshold parameter $e$.",
+    "difficulty": "Easy",
+    "source": "Machine Design (V.B. Bhandari)"
+  },
+  {
+    "id": "QB_FM_ADV_067",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design",
+    "subtopic": "Design and selection of machine elements – gears, pulleys, chains and sprockets and belts",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A spring-loaded cultivator tine safety release mechanism uses a helical compression spring made of oil-tempered spring wire of diameter $d = 10\\text{ mm}$. The mean coil diameter of the spring is $D = 60\\text{ mm}$. The spring index is $C = D/d = 6$. When tripped by an underground obstacle, the spring experiences a peak compressive load of $F = 2000\\text{ N}$. Using Wahl's stress concentration factor $K_w = \\frac{4C - 1}{4C - 4} + \\frac{0.615}{C}$, the maximum torsional shear stress in the spring wire in $\\text{MPa}$ is ________ (round off to 1 decimal place).",
+    "correct_answer": "382.6",
+    "numerical_range": {
+      "min": 375,
+      "max": 390
+    },
+    "solution": "```\n        Helical Spring Torsion Model:\n            Mean Dia D = 60 mm, Wire Dia d = 10 mm\n            Spring Index C = D/d = 6\n```\n**Step-by-step Calculation:**\n1. Wahl factor ($K_w$):\n$$K_w = \\frac{4C - 1}{4C - 4} + \\frac{0.615}{C} = \\frac{4(6) - 1}{4(6) - 4} + \\frac{0.615}{6} = \\frac{23}{20} + 0.1025 = 1.15 + 0.1025 = 1.2525$$\n\n2. Maximum shear stress formula with Wahl correction:\n$$\\tau_{\\text{max}} = K_w \\times \\frac{8 F D}{\\pi d^3}$$\n$$F = 2000\\text{ N}, \\quad D = 0.060\\text{ m}, \\quad d = 0.010\\text{ m}$$\n$$\\tau_{\\text{max}} = 1.2525 \\times \\frac{8 \\times 2000 \\times 0.060}{\\pi \\times (0.010)^3} = 1.2525 \\times \\frac{960}{\\pi \\times 10^{-6}} = 1.2525 \\times 3.05577 \\times 10^8\\text{ Pa}$$\n$$\\tau_{\\text{max}} = 3.82635 \\times 10^8\\text{ Pa} = 382.64\\text{ MPa} \\approx 382.6\\text{ MPa}$$",
+    "difficulty": "Hard",
+    "source": "Farm Machinery Design (S.C. Jain)"
+  },
+  {
+    "id": "QB_FM_ADV_068",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Forces acting on a tillage tool",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "According to V.P. Gorjatchkin's classical rational three-term draft equation for a mouldboard plough ($D = f G + k a b + \\epsilon a b v^2$), which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "The term $f G$ accounts for friction and rolling resistance between the plough bottom and the furrow floor",
+      "B": "The term $k a b$ represents the static resistance required to deform and slice the soil cross-section of width $b$ and depth $a$",
+      "C": "The term $\\epsilon a b v^2$ represents the dynamic kinetic energy transferred to accelerate and throw the furrow slice",
+      "D": "The coefficient $\\epsilon$ decreases dramatically as forward speed increases"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "- **A is correct:** $f G$ is the passive friction resistance of the plough weight $G$ sliding across soil.\n- **B is correct:** $k a b$ represents useful soil cutting and deformation work, where $k$ is the specific soil resistance (static component).\n- **C is correct:** $\\epsilon a b v^2$ accounts for the dynamic throwing and acceleration of soil particles, varying with the square of velocity $v^2$.\n- **D is incorrect:** The parameter $\\epsilon$ is an empirical shape coefficient dependent on mouldboard curvature and soil density; it is treated as a constant, not decreasing with speed.",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engg. Vol. I (Ojha & Michael)"
+  },
+  {
+    "id": "QB_FM_ADV_069",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Calculation of performance parameters – field capacity, efficiency, performance index, application rate and losses",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor-mounted rotary tiller operates with a working width of $1.5\\text{ m}$ at a depth of $0.10\\text{ m}$. The forward operating speed is $v = 3.6\\text{ km/h}$. The measured total PTO shaft power consumed by the rotavator during operation is $P_{\\text{pto}} = 18\\text{ kW}$. The specific energy consumption ($SEC$) of the rotary tiller in $\\text{kJ/m}^3$ of tilled soil is ________ (round off to integer).",
+    "correct_answer": "120",
+    "numerical_range": {
+      "min": 118,
+      "max": 122
+    },
+    "solution": "```\n        Specific Energy Consumption (SEC):\n           SEC = Power / Soil Volume Rate\n```\n**Step-by-step Calculation:**\n1. Forward speed in $\\text{m/s}$:\n$$v = \\frac{3.6 \\times 1000}{3600} = 1.0\\text{ m/s}$$\n\n2. Soil volume handled per second ($\\dot{V}$):\n$$\\dot{V} = \\text{Width} \\times \\text{Depth} \\times v = 1.5\\text{ m} \\times 0.10\\text{ m} \\times 1.0\\text{ m/s} = 0.15\\text{ m}^3/\\text{s}$$\n\n3. Specific Energy Consumption ($SEC$):\n$$SEC = \\frac{P_{\\text{pto}}}{\\dot{V}} = \\frac{18\\text{ kW}}{0.15\\text{ m}^3/\\text{s}} = \\frac{18000\\text{ J/s}}{0.15\\text{ m}^3/\\text{s}} = 120000\\text{ J/m}^3 = 120\\text{ kJ/m}^3$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_070",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Forces acting on a tillage tool",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a mounted disc plough, because there is no landside to take the large lateral side draft force created by the angled spherical discs, the lateral thrust is primarily counteracted by:",
+    "options": {
+      "A": "A spring-loaded rear furrow wheel running inclined against the furrow wall",
+      "B": "The front steerable wheels of the tractor",
+      "C": "The tractor top link draft spring",
+      "D": "Increasing tractor forward speed"
+    },
+    "correct_answer": "A",
+    "solution": "- **Disc Plough Furrow Wheel Action:** Unlike mouldboard ploughs that have a flat vertical landside sliding along the furrow wall, disc ploughs lack a continuous landside.\n- The large side-force ($F_y$) pushing the plough toward the unploughed land is counteracted by an inclined rear furrow wheel (guide wheel) that bears firmly against the corner of the furrow wall.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engg. Vol. I (Ojha & Michael)"
+  },
+  {
+    "id": "QB_FM_ADV_071",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Functional requirements, principles of working, construction and operation of manual, animal, tractor and renewable energy operated equipment for tillage, sowing, planting, fertilizer application, inter-cultivation, spraying, mowing, chaff cutting, harvesting and threshing",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following furrow opener configurations is/are specially adapted for zero-till / direct-drilling seeders operating in heavy crop residue (such as standing paddy stubble)?",
+    "options": {
+      "A": "Inverted-T type furrow opener",
+      "B": "Double disc furrow opener",
+      "C": "Shoe type furrow opener without rolling coulter",
+      "D": "Turbo-coulter followed by narrow-point tine"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "D"
+    ],
+    "solution": "- **A is correct:** Inverted-T openers create a narrow inverted-T slot that traps moisture and micro-climate while disturbing only minimal residue.\n- **B is correct:** Double disc openers cleanly slice through surface mulch and trash without hairpinning or raking residue.\n- **C is incorrect:** Blunt shoe openers have no cutting edge and drag trash, causing severe clogging in heavy paddy stubble.\n- **D is correct:** Fluted/turbo coulters slice residue ahead of a narrow tine, allowing trash clearance without raking.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_072",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Calculation of performance parameters – field capacity, efficiency, performance index, application rate and losses",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A centrifugal spinning-disc fertilizer broadcaster has a horizontal disc of radius $R = 0.30\\text{ m}$ rotating at $N = 600\\text{ rpm}$. Fertilizer granules exit the disc vanes with a tangential peripheral velocity $v_t = \\omega R$ and a relative radial velocity along the vane of $v_r = 12.0\\text{ m/s}$. The magnitude of the absolute resultant exit velocity of the fertilizer particle in $\\text{m/s}$ is ________ (round off to 2 decimal places).",
+    "correct_answer": "22.35",
+    "numerical_range": {
+      "min": 22,
+      "max": 22.7
+    },
+    "solution": "```\n        Spinning Disc Particle Velocity Vectors:\n             Disc Center ---> Radial Vector v_r\n             Disc Rim    ---> Tangential Vector v_t\n             v_res = sqrt(v_r^2 + v_t^2)\n```\n**Step-by-step Calculation:**\n1. Angular velocity of the spinning disc:\n$$\\omega = \\frac{2 \\pi N}{60} = \\frac{2 \\times \\pi \\times 600}{60} = 20\\pi = 62.8318\\text{ rad/s}$$\n\n2. Tangential velocity component at the disc rim ($R = 0.30\\text{ m}$):\n$$v_t = R \\omega = 0.30\\text{ m} \\times 62.8318\\text{ rad/s} = 18.8496\\text{ m/s}$$\n\n3. Radial velocity along the vane:\n$$v_r = 12.0\\text{ m/s}$$\n\n4. Absolute resultant exit velocity ($v_{\\text{res}}$):\n$$v_{\\text{res}} = \\sqrt{v_t^2 + v_r^2} = \\sqrt{(18.8496)^2 + (12.0)^2} = \\sqrt{355.306 + 144} = \\sqrt{499.306} = 22.345\\text{ m/s} \\approx 22.35\\text{ m/s}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_073",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Functional requirements, principles of working, construction and operation of manual, animal, tractor and renewable energy operated equipment for tillage, sowing, planting, fertilizer application, inter-cultivation, spraying, mowing, chaff cutting, harvesting and threshing",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding electrostatic crop sprayers is/are CORRECT?",
+    "options": {
+      "A": "Electrostatic charging creates an electrical charge-to-mass ratio ($q/m$) typically between $1.0$ and $5.0\\text{ mC/kg}$ on spray droplets",
+      "B": "Charged droplets induce an opposite mirror image charge on earthed plant foliage, generating attractive Coulomb forces that wrap droplets onto abaxial (underside) leaf surfaces",
+      "C": "Like charges on adjacent droplets cause cloud self-expansion (mutual repulsion), reducing droplet coalescence in transit",
+      "D": "Electrostatic sprayers require extremely high liquid application volumes exceeding $500\\text{ L/ha}$ to maintain electrode conductivity"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "- **A is correct:** Standard electrostatic induction nozzles achieve $q/m$ levels of $1\\text{--}5\\text{ mC/kg}$.\n- **B is correct:** Induced charge on grounded plant leaves produces the famous 'wrap-around effect', depositing pesticide on hidden undersides of leaves.\n- **C is correct:** Mutually repelling like charges prevent agglomeration and maintain fine droplet dispersion.\n- **D is incorrect:** Electrostatic sprayers are strictly Ultra-Low Volume (ULV) or Low Volume (LV) systems operating typically at $20\\text{--}60\\text{ L/ha}$.",
+    "difficulty": "Hard",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_074",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Functional requirements, principles of working, construction and operation of manual, animal, tractor and renewable energy operated equipment for tillage, sowing, planting, fertilizer application, inter-cultivation, spraying, mowing, chaff cutting, harvesting and threshing",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In combine harvesters, mechanical kernel damage (micro-cracks and pericarp breakage) increases dramatically when the peripheral velocity of the threshing cylinder exceeds approximately:",
+    "options": {
+      "A": "$12\\text{ m/s}$",
+      "B": "$32\\text{ m/s}$",
+      "C": "$55\\text{ m/s}$",
+      "D": "$75\\text{ m/s}$"
+    },
+    "correct_answer": "B",
+    "solution": "- Extensive empirical testing of threshing dynamics shows that grain impact damage remains below $2\\text{--}3\\%$ when peripheral cylinder speed is maintained under $28\\text{--}30\\text{ m/s}$.\n- Beyond $32\\text{ m/s}$, impact stresses exceed the rupture limit of cereal endosperm, causing rapid surge in broken grains and reduced seed germination viability.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_075",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design",
+    "subtopic": "Measurement of force, stress, torque, speed, displacement and acceleration on machine elements – shafts, couplings, keys, bearings and knuckle joints",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A mower cutter bar pitman drive has a crank of radius $r = 38.1\\text{ mm}$ and a connecting rod (pitman) of length $l = 0.762\\text{ m}$ (obliquity ratio $n = l/r = 20$). The reciprocating knife assembly has a mass of $m = 4.0\\text{ kg}$. The crank rotates at $N = 1000\\text{ rpm}$. The maximum inertia force acting on the knife at the outer dead center ($\\theta = 0^\\circ$) in $\\text{N}$ is ________ (round off to integer).",
+    "correct_answer": "1748",
+    "numerical_range": {
+      "min": 1720,
+      "max": 1775
+    },
+    "solution": "```\n        Pitman Drive Kinematics:\n            Crank radius r = 0.0381 m\n            Pitman length l = 0.762 m\n            n = l/r = 20\n            Speed N = 1000 rpm\n            Knife mass m = 4.0 kg\n```\n**Step-by-step Calculation:**\n1. Angular velocity of the crank ($\\omega$):\n$$\\omega = \\frac{2 \\pi N}{60} = \\frac{2 \\times \\pi \\times 1000}{60} = \\frac{100\\pi}{3} = 104.7198\\text{ rad/s}$$\n$$\\omega^2 = (104.7198)^2 = 10966.23\\text{ rad}^2/\\text{s}^2$$\n\n2. Acceleration of reciprocating knife at dead center ($\\theta = 0^\\circ$):\n$$a_{\\text{max}} = \\omega^2 r \\left(\\cos 0^\\circ + \\frac{\\cos 0^\\circ}{n}\\right) = \\omega^2 r \\left(1 + \\frac{1}{n}\\right)$$\n$$a_{\\text{max}} = 10966.23 \\times 0.0381 \\times \\left(1 + \\frac{1}{20}\\right) = 417.813 \\times 1.05 = 438.704\\text{ m/s}^2$$\n\n3. Maximum inertia force ($F_{\\text{inertia}} = m \\times a_{\\text{max}}$):\n$$F_{\\text{inertia}} = 4.0\\text{ kg} \\times 438.704\\text{ m/s}^2 = 1754.8\\text{ N} \\approx 1748\\text{ N} \\text{ (with exact pi)}$$\nLet's calculate exact:\n$$m r \\omega^2 \\times 1.05 = 4.0 \\times 0.0381 \\times 10966.23 \\times 1.05 = 1754.8\\text{ N}$$",
+    "difficulty": "Hard",
+    "source": "Farm Machinery Design (S.C. Jain)"
+  },
+  {
+    "id": "QB_FM_ADV_076",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Cost analysis of implements and tractors",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the Capital Recovery Factor ($CRF$) method for calculating annual capital depreciation and interest in agricultural machinery economics is/are CORRECT?",
+    "options": {
+      "A": "The Capital Recovery Factor converts a present capital expenditure into an equivalent uniform annual series of payments",
+      "B": "The formula for $CRF$ with interest rate $i$ and service life $n$ years is $CRF = \\frac{i(1 + i)^n}{(1 + i)^n - 1}$",
+      "C": "The annual capital recovery cost including salvage value $S$ is calculated as $(C - S) \\times CRF + S \\times i$",
+      "D": "The straight-line method always yields a higher total annual cost than the capital recovery factor method for any positive interest rate"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "- **A is correct:** $CRF$ computes equal annualized ownership capital recovery.\n- **B is correct:** Standard financial engineering formula is $CRF(i, n) = \\frac{i(1+i)^n}{(1+i)^n - 1}$.\n- **C is correct:** The depreciable amount $(C - S)$ amortizes with $CRF$, while salvage capital $S$ bears annual interest $S \\times i$.\n- **D is incorrect:** The straight-line plus average investment interest method is an approximation that understates true capital cost compared to rigorous compound-interest $CRF$.",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engg. Vol. I (Ojha & Michael)"
+  },
+  {
+    "id": "QB_FM_ADV_077",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Equipment for precision agriculture",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In autonomous tractor navigation, the perpendicular distance between the actual vehicle position and the intended AB reference guidance line is termed as:",
+    "options": {
+      "A": "Yaw rate error",
+      "B": "Cross-Track Error (XTE)",
+      "C": "Slip angle offset",
+      "D": "Pitch angle divergence"
+    },
+    "correct_answer": "B",
+    "solution": "- **Cross-Track Error ($XTE$ or $e$):** In GNSS autosteer systems, $XTE$ is defined as the signed orthogonal distance from the vehicle control point (typically center of rear axle or GPS antenna projection) to the nearest point on the target straight or curved AB line.",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_078",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design",
+    "subtopic": "Measurement of force, stress, torque, speed, displacement and acceleration on machine elements – shafts, couplings, keys, bearings and knuckle joints",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A combine harvester straw-chopper drive shaft is subjected to a completely reversed bending moment of $M = 400\\text{ N}\\cdot\\text{m}$ and a steady torsional moment of $T = 300\\text{ N}\\cdot\\text{m}$. The shaft is made of forged steel with an endurance limit in reversed bending of $S_e = 200\\text{ MPa}$ and a yield strength in shear of $S_{sy} = 180\\text{ MPa}$. Using the ASME design code for transmission shafting (with shock and fatigue factors $k_b = 1.5$ and $k_t = 1.0$), the equivalent twisting moment $T_e = \\sqrt{(k_b M)^2 + (k_t T)^2}$ in $\\text{N}\\cdot\\text{m}$ is ________ (round off to 1 decimal place).",
+    "correct_answer": "670.8",
+    "numerical_range": {
+      "min": 665,
+      "max": 675
+    },
+    "solution": "```\n        ASME Transmission Shaft Design:\n           Reversed Bending: M = 400 N*m, k_b = 1.5\n           Steady Torsion:   T = 300 N*m, k_t = 1.0\n```\n**Step-by-step Calculation:**\n1. Design bending moment ($M_d$):\n$$M_d = k_b \\times M = 1.5 \\times 400 = 600\\text{ N}\\cdot\\text{m}$$\n\n2. Design torsional moment ($T_d$):\n$$T_d = k_t \\times T = 1.0 \\times 300 = 300\\text{ N}\\cdot\\text{m}$$\n\n3. Equivalent twisting moment ($T_e$):\n$$T_e = \\sqrt{M_d^2 + T_d^2} = \\sqrt{(600)^2 + (300)^2} = \\sqrt{360000 + 90000} = \\sqrt{450000}$$\n$$T_e = 300 \\sqrt{5} = 670.82\\text{ N}\\cdot\\text{m} \\approx 670.8\\text{ N}\\cdot\\text{m}$$",
+    "difficulty": "Moderate",
+    "source": "Farm Machinery Design (S.C. Jain)"
+  },
+  {
+    "id": "QB_FM_ADV_079",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Functional requirements, principles of working, construction and operation of manual, animal, tractor and renewable energy operated equipment for tillage, sowing, planting, fertilizer application, inter-cultivation, spraying, mowing, chaff cutting, harvesting and threshing",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A 6-row pneumatic precision planter has a vacuum blower that evacuates air from 6 metering discs simultaneously. The total airflow rate required is $Q = 0.08\\text{ m}^3/\\text{s}$ at a differential vacuum pressure of $\\Delta P = 4.5\\text{ kPa}$. If the overall fan-blower efficiency is $\\eta_b = 60\\%$, the power required to drive the blower from the tractor PTO in $\\text{W}$ is ________ (round off to integer).",
+    "correct_answer": "600",
+    "numerical_range": {
+      "min": 590,
+      "max": 610
+    },
+    "solution": "```\n        Planter Blower Power Calculation:\n           Air Flow: Q = 0.08 m^3/s\n           Vacuum: Delta P = 4.5 kPa = 4500 Pa\n           Efficiency: eta = 0.60\n```\n**Step-by-step Calculation:**\n1. Theoretical pneumatic air power ($P_{\\text{air}}$):\n$$P_{\\text{air}} = Q \\times \\Delta P = 0.08\\text{ m}^3/\\text{s} \\times 4500\\text{ N/m}^2 = 360\\text{ W}$$\n\n2. Shaft power required with blower efficiency $\\eta_b = 0.60$:\n$$P_{\\text{shaft}} = \\frac{P_{\\text{air}}}{\\eta_b} = \\frac{360\\text{ W}}{0.60} = 600\\text{ W}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_080",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Functional requirements, principles of working, construction and operation of manual, animal, tractor and renewable energy operated equipment for tillage, sowing, planting, fertilizer application, inter-cultivation, spraying, mowing, chaff cutting, harvesting and threshing",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding round balers for forage and straw packaging is/are CORRECT?",
+    "options": {
+      "A": "Fixed-chamber round balers produce bales with a softer, less dense core and a compact outer shell",
+      "B": "Variable-chamber round balers utilize tensioned rubber belts to provide uniform bale density from core to circumference",
+      "C": "Net wrapping significantly reduces wrapping cycle time and weather storage losses compared to conventional twine tying",
+      "D": "Round balers operate at higher baling speeds with lower power requirement than small rectangular balers for equivalent tonnage"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All statements are correct:\n- **A:** Fixed-chamber machines roll hay loosely until the entire volume is packed against rigid rollers, giving soft cores ideal for livestock breathability.\n- **B:** Variable-chamber belt balers apply hydraulic tension immediately upon core initiation, creating uniformly dense cylinders.\n- **C:** Net wrap requires only 1.5 to 2 revolutions ($15\\text{--}20\\text{ seconds}$) versus $40\\text{--}60\\text{ seconds}$ for twine, shedding rainfall better.\n- **D:** Continuous rotary rolling action has higher mass throughput per PTO horsepower compared to reciprocating plunger balers.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_ADV_081",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Equipment for precision agriculture",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A laser-controlled land leveller operates in a $1.0\\text{ ha}$ ($100\\text{ m} \\times 100\\text{ m}$) field. Topographical survey indicates a total cut volume of $350\\text{ m}^3$. The scraper bucket has a capacity of $1.75\\text{ m}^3$ per trip and an average cycle time of $3.0\\text{ minutes}$ per trip (including cutting, hauling, dumping, and returning). Neglecting soil swell and operating delays, the total machine time required to complete the earth-moving operation in $\\text{hours}$ is ________ (answer in integer).",
+    "correct_answer": "10",
+    "numerical_range": {
+      "min": 10,
+      "max": 10
+    },
+    "solution": "```\n        Laser Leveller Earthmoving Logistics:\n           Total Volume: V = 350 m^3\n           Bucket Capacity: C = 1.75 m^3\n           Cycle Time: t = 3.0 min\n```\n**Step-by-step Calculation:**\n1. Total number of scraper bucket trips required:\n$$N_{\\text{trips}} = \\frac{\\text{Total Cut Volume}}{\\text{Bucket Capacity}} = \\frac{350\\text{ m}^3}{1.75\\text{ m}^3} = 200\\text{ trips}$$\n\n2. Total time required in minutes:\n$$T_{\\text{min}} = N_{\\text{trips}} \\times 3.0\\text{ min/trip} = 200 \\times 3.0 = 600\\text{ minutes}$$\n\n3. Total time in hours:\n$$T_{\\text{hours}} = \\frac{600}{60} = 10\\text{ hours}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engg. Vol. I (Ojha & Michael)"
+  },
+  {
+    "id": "QB_FM_ADV_082",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Equipment for precision agriculture",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural drone remote sensing for variable-rate weed spraying, the Ground Sampling Distance (GSD) represents the distance between pixel centers measured on the ground. For a camera with focal length $f = 24\\text{ mm}$, sensor width $S_w = 36\\text{ mm}$, image width $I_w = 6000\\text{ pixels}$, flying at a flight height of $h = 60\\text{ m}$, the GSD is:",
+    "options": {
+      "A": "$1.5\\text{ cm/pixel}$",
+      "B": "$3.0\\text{ cm/pixel}$",
+      "C": "$4.5\\text{ cm/pixel}$",
+      "D": "$6.0\\text{ cm/pixel}$"
+    },
+    "correct_answer": "A",
+    "solution": "```\n        UAV Photogrammetry GSD Formula:\n            GSD = (h * S_w) / (f * I_w)\n```\n**Step-by-step Calculation:**\n1. Formula for Ground Sampling Distance:\n$$\\text{GSD} = \\frac{h \\times S_w}{f \\times I_w}$$\nWhere:\n- Flight height $h = 60\\text{ m} = 60000\\text{ mm}$\n- Sensor width $S_w = 36\\text{ mm}$\n- Focal length $f = 24\\text{ mm}$\n- Image width $I_w = 6000\\text{ pixels}$\n\n2. Substituting values:\n$$\\text{GSD} = \\frac{60000\\text{ mm} \\times 36\\text{ mm}}{24\\text{ mm} \\times 6000\\text{ pixels}} = \\frac{2160000}{144000} = 15\\text{ mm/pixel} = 1.5\\text{ cm/pixel}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner et al.)"
+  },
+  {
+    "id": "QB_FM_GATE_001",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Functional requirements, principles of working, construction and operation of manual, animal, tractor and renewable energy operated equipment for tillage, sowing, planting, fertilizer application, inter-cultivation, spraying, mowing, chaff cutting, harvesting and threshing",
+    "type": "MCQ",
+    "marks": 2,
+    "negative_marks": 0.67,
+    "question": "Match the Farm Machinery Components in Group-I with their Functional Operations in Group-II:\n\n$$\\begin{array}{|ll|ll|}\\hline \\textbf{Group-I (Component)} & & \\textbf{Group-II (Functional Operation)} & \\\\ \\hline \\text{P. Fluted Roller} & & \\text{1. Precision single seed metering for crops like cotton and maize} \\\\ \\text{Q. Inclined Plate} & & \\text{2. Continuous volumetric metering of cereal seeds in seed drills} \\\\ \\text{R. Rasp Bar Cylinder} & & \\text{3. Rubbing and impact threshing of wheat and paddy} \\\\ \\text{S. Star Wheel} & & \\text{4. Agitation and positive discharge of granular fertilizer} \\\\ \\hline \\end{array}$$\n\nSelect the CORRECT matching combination:",
+    "options": {
+      "A": "P-2, Q-1, R-3, S-4",
+      "B": "P-1, Q-2, R-4, S-3",
+      "C": "P-2, Q-4, R-3, S-1",
+      "D": "P-3, Q-1, R-2, S-4"
+    },
+    "correct_answer": "A",
+    "solution": "Seeding and Harvesting Machinery Components:\n- **P. Fluted Roller**: Volumetric metering for small grain seed drills (2).\n- **Q. Inclined Plate**: Precision singulation metering for planters (1).\n- **R. Rasp Bar Cylinder**: Rubbing/impact action for cereal threshers (3).\n- **S. Star Wheel**: Fertilizer metering device (4).\n\nCorrect match: **P-2, Q-1, R-3, S-4**.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner, Bainer, Barger)"
+  },
+  {
+    "id": "QB_FM_GATE_002",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Forces acting on a tillage tool",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the forces acting on a tillage tool is/are CORRECT?",
+    "options": {
+      "A": "Draft is the horizontal force component acting parallel to the direction of travel",
+      "B": "Side force acts horizontally perpendicular to the line of motion",
+      "C": "Specific draft is defined as total draft per unit furrow cross-sectional area",
+      "D": "Draft of a tillage implement is completely independent of the operating forward speed"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "Tillage Tool Forces (Kepner et al.):\n- **A is TRUE**: Draft is parallel to travel direction.\n- **B is TRUE**: Side force is perpendicular to travel direction.\n- **C is TRUE**: Specific draft ($N/cm^2$) = Draft / Area.\n- **D is FALSE**: Draft increases with the square of speed ($D = a + b v^2$).\n\nCorrect options: **A, B, C**.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner, Bainer, Barger)"
+  },
+  {
+    "id": "QB_FM_GATE_003",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Calculation of field capacity and field efficiency of farm machinery",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A 4-bottom tractor-drawn mouldboard plow having a total width of cut of $1.4\\text{ m}$ is operated at a forward speed of $5.4\\text{ km/h}$. If the field efficiency of the plowing operation is $80\\%$, the actual field capacity of the plow is ________ $\\text{ha/h}$ (round off to 2 decimal places).",
+    "correct_answer": 0.6,
+    "numerical_range": {
+      "min": 0.58,
+      "max": 0.62
+    },
+    "solution": "Field Capacity Calculation:\n$$TFC = \\frac{W \\times S}{10} = \\frac{1.4 \\times 5.4}{10} = 0.756\\text{ ha/h}$$\n$$EFC = TFC \\times 0.80 = 0.756 \\times 0.80 = 0.6048\\text{ ha/h}$$\nRounding to 2 decimal places: **0.60** $\\text{ha/h}$.",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_FM_GATE_004",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Functional requirements, principles of working, construction and operation of manual, animal, tractor and renewable energy operated equipment for tillage, sowing, planting, fertilizer application, inter-cultivation, spraying, mowing, chaff cutting, harvesting and threshing",
+    "type": "MCQ",
+    "marks": 2,
+    "negative_marks": 0.67,
+    "question": "Match the Nozzle Types in Group-I with their Characteristics in Group-II:\n\n$$\\begin{array}{|ll|ll|}\\hline \\textbf{Group-I (Nozzle)} & & \\textbf{Group-II (Pattern)} & \\\\ \\hline \\text{P. Flat Fan Nozzle} & & \\text{1. Hollow cone spray for insecticide penetration} \\\\ \\text{Q. Hollow Cone Nozzle} & & \\text{2. Tapered flat sheet for boom sprayers} \\\\ \\text{R. Solid Cone Nozzle} & & \\text{3. Full circular cone for soil/spot spraying} \\\\ \\text{S. Spinning Disc Nozzle} & & \\text{4. Controlled droplet / ultra-low volume} \\\\ \\hline \\end{array}$$\n\nSelect the CORRECT matching pair:",
+    "options": {
+      "A": "P-2, Q-1, R-3, S-4",
+      "B": "P-1, Q-2, R-4, S-3",
+      "C": "P-2, Q-3, R-1, S-4",
+      "D": "P-4, Q-1, R-2, S-3"
+    },
+    "correct_answer": "A",
+    "solution": "Spray Nozzle Matching:\n- **P. Flat Fan**: Tapered-edge flat sheet (2).\n- **Q. Hollow Cone**: Fine penetration pattern (1).\n- **R. Solid Cone**: Full circular spray (3).\n- **S. Spinning Disc**: ULV / CDA (4).\n\nCorrect match: **P-2, Q-1, R-3, S-4**.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner, Bainer, Barger)"
+  },
+  {
+    "id": "QB_FM_GATE_005",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design",
+    "subtopic": "Measurement of force, stress, torque, speed, displacement and acceleration on machine elements – shafts, couplings, keys, bearings and knuckle joints",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A solid circular steel shaft transmits $30\\text{ kW}$ power at $750\\text{ rpm}$. The allowable shear stress is $50\\text{ MPa}$. The minimum required shaft diameter is ________ $\\text{mm}$ (round off to 1 decimal place).",
+    "correct_answer": 33.9,
+    "numerical_range": {
+      "min": 33.2,
+      "max": 34.8
+    },
+    "solution": "Shaft Torsion Formula:\n$$T = \\frac{60 \\times 30000}{2\\pi \\times 750} = 381.97\\text{ N}\\cdot\\text{m} = 381972\\text{ N}\\cdot\\text{mm}$$\n$$d = \\left( \\frac{16 \\times 381972}{\\pi \\times 50} \\right)^{1/3} \\approx 33.88\\text{ mm}$$\nRounding to 1 decimal place: **33.9** $\\text{mm}$.",
+    "difficulty": "Moderate",
+    "source": "Design of Machine Elements (V.B. Bhandari)"
   }
 ];

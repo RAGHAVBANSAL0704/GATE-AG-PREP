@@ -1,11 +1,14 @@
 import { supabase, isSupabaseConfigured } from './supabaseClient.js';
 import { validateCleanInput } from '../utils/profanityFilter.js';
 import { syncPendingTestAttempts, associateGuestAttemptsWithStudent } from './testAttemptService.js';
+import { syncStudentCloudData } from './studentProgressSyncService.js';
 import { recordLiveAction } from './liveStatisticsService.js';
 
-const LOCAL_STORAGE_SESSION_KEY = 'gate_ag_prep_session_token';
-const LOCAL_STORAGE_USERS_KEY = 'gate_ag_prep_mock_users';
-const LOCAL_STORAGE_REMEMBER_KEY = 'gate_ag_prep_remembered_id';
+
+export const LOCAL_STORAGE_SESSION_KEY = 'gate_ag_prep_session_token';
+export const LOCAL_STORAGE_USERS_KEY = 'gate_ag_prep_mock_users';
+export const LOCAL_STORAGE_REMEMBER_KEY = 'gate_ag_prep_remembered_id';
+export const LOCAL_STORAGE_REMEMBER_CREDENTIALS_KEY = 'gate_ag_prep_remembered_credentials';
 
 // Helper: Sanitize Mobile Number
 export function sanitizeMobileNumber(input) {
@@ -84,6 +87,11 @@ export async function syncAllUserDataToBackend() {
 
     // 3. Sync local offline test attempts safely via idempotent upsert
     await syncPendingTestAttempts();
+
+    // 4. Two-way sync student cloud progress & mistake vault across devices
+    if (student) {
+      await syncStudentCloudData(student);
+    }
   } catch (e) {
     console.warn("Backend user data sync warning:", e);
   }
@@ -538,6 +546,9 @@ export async function registerStudent(formData) {
       });
     } catch (e) {}
 
+    const rawPassword = studentPayload.password_plain || (typeof formatDOBPassword === 'function' ? formatDOBPassword(studentPayload.dob) : '');
+    saveRememberedCredentials(cleanUsername || studentPayload.admission_no || cleanEmail, rawPassword, newStudent);
+
     return { success: true, student: newStudent };
   }
 
@@ -580,6 +591,9 @@ export async function registerStudent(formData) {
     student: mockUser,
     savedAt: Date.now()
   }));
+
+  const rawLocalPassword = studentPayload.password_plain || (typeof formatDOBPassword === 'function' ? formatDOBPassword(studentPayload.dob) : '');
+  saveRememberedCredentials(cleanUsername || studentPayload.admission_no || cleanEmail, rawLocalPassword, mockUser);
 
   try {
     recordLiveAction({
@@ -758,6 +772,8 @@ export async function registerFaculty(formData) {
         savedAt: Date.now()
       }));
 
+      saveRememberedCredentials(cleanUsername || cleanEmail, facultyPayload.password_plain, newFaculty);
+
       return { success: true, student: newFaculty };
     }
   }
@@ -801,6 +817,8 @@ export async function registerFaculty(formData) {
     savedAt: Date.now()
   }));
 
+  saveRememberedCredentials(cleanUsername || cleanEmail, facultyPayload.password_plain, mockFaculty);
+
   return { success: true, student: mockFaculty };
 }
 
@@ -816,9 +834,9 @@ export async function loginStudent(identifierInput, passwordInput, rememberMe = 
   const cleanAdmNo = cleanId.toUpperCase();
 
   if (rememberMe) {
-    localStorage.setItem(LOCAL_STORAGE_REMEMBER_KEY, cleanId);
+    saveRememberedCredentials(cleanId, passwordInput, null);
   } else {
-    localStorage.removeItem(LOCAL_STORAGE_REMEMBER_KEY);
+    clearRememberedCredentials();
   }
 
   if (isSupabaseConfigured && supabase) {
@@ -907,6 +925,15 @@ export async function loginStudent(identifierInput, passwordInput, rememberMe = 
       savedAt: Date.now()
     }));
 
+    if (rememberMe) {
+      saveRememberedCredentials(cleanId, passwordInput, safeStudent);
+    }
+
+    // Asynchronously pull and hydrate student's cross-device progress, test attempts, and mistake vault
+    try {
+      syncStudentCloudData(safeStudent).catch(() => {});
+    } catch (e) {}
+
     // Associate any unassigned guest test attempts with this student and sync to database
     try {
       associateGuestAttemptsWithStudent(safeStudent);
@@ -968,6 +995,10 @@ export async function loginStudent(identifierInput, passwordInput, rememberMe = 
     student: safeStudent,
     savedAt: Date.now()
   }));
+
+  if (rememberMe) {
+    saveRememberedCredentials(cleanId, passwordInput, safeStudent);
+  }
 
   try {
     recordLiveAction({
@@ -1378,8 +1409,72 @@ export function logoutStudent() {
   localStorage.removeItem(LOCAL_STORAGE_SESSION_KEY);
 }
 
+/**
+ * Save remembered user credentials (identifier, password, profile info) for instant subsequent logins
+ */
+export function saveRememberedCredentials(identifier, password, student = null) {
+  try {
+    if (typeof localStorage === 'undefined') return;
+    const cleanId = (identifier || '').trim();
+    const cleanPwd = (password || '').trim();
+    if (cleanId) {
+      localStorage.setItem(LOCAL_STORAGE_REMEMBER_KEY, cleanId);
+    }
+    if (cleanId) {
+      const creds = {
+        identifier: cleanId,
+        password: cleanPwd || '',
+        savedAt: Date.now(),
+        fullName: student?.full_name || student?.display_name || '',
+        collegeName: student?.college_name || '',
+        admissionNo: student?.admission_no || '',
+        role: student?.role || (student?.is_faculty ? 'faculty' : 'student')
+      };
+      localStorage.setItem(LOCAL_STORAGE_REMEMBER_CREDENTIALS_KEY, JSON.stringify(creds));
+    }
+  } catch (e) {}
+}
+
+/**
+ * Remove remembered credentials and stored identifier
+ */
+export function clearRememberedCredentials() {
+  try {
+    if (typeof localStorage === 'undefined') return;
+    localStorage.removeItem(LOCAL_STORAGE_REMEMBER_KEY);
+    localStorage.removeItem(LOCAL_STORAGE_REMEMBER_CREDENTIALS_KEY);
+  } catch (e) {}
+}
+
+/**
+ * Retrieve saved remembered credentials (identifier & password)
+ */
+export function getRememberedCredentials() {
+  try {
+    if (typeof localStorage === 'undefined') return null;
+    const raw = localStorage.getItem(LOCAL_STORAGE_REMEMBER_CREDENTIALS_KEY);
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      if (parsed && (parsed.identifier || parsed.password)) {
+        return parsed;
+      }
+    }
+  } catch (e) {}
+  return null;
+}
+
+/**
+ * Retrieve saved remembered identifier (username, email, or admission no)
+ */
 export function getRememberedIdentifier() {
-  return localStorage.getItem(LOCAL_STORAGE_REMEMBER_KEY) || '';
+  try {
+    if (typeof localStorage === 'undefined') return '';
+    const creds = getRememberedCredentials();
+    if (creds?.identifier) return creds.identifier;
+    return localStorage.getItem(LOCAL_STORAGE_REMEMBER_KEY) || '';
+  } catch (e) {
+    return '';
+  }
 }
 
 /**

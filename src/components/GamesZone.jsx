@@ -748,12 +748,20 @@ function AgriSnakeGame({ onRewardXP }) {
 
   const dirRef = useRef([0, -1]);
   const nextDirRef = useRef([0, -1]);
+  const foodRef = useRef([4, 4]);
+  const highScoreRef = useRef(highScore);
+
+  useEffect(() => {
+    highScoreRef.current = highScore;
+  }, [highScore]);
 
   const resetGame = () => {
     dirRef.current = [0, -1];
     nextDirRef.current = [0, -1];
+    const initialFood = [Math.floor(Math.random() * 14) + 1, Math.floor(Math.random() * 14) + 1];
+    foodRef.current = initialFood;
+    setFood(initialFood);
     setSnake([[8, 8], [8, 9], [8, 10]]);
-    setFood([Math.floor(Math.random() * 14) + 1, Math.floor(Math.random() * 14) + 1]);
     setScore(0);
     setIsGameOver(false);
     setIsPlaying(true);
@@ -803,20 +811,23 @@ function AgriSnakeGame({ onRewardXP }) {
         }
 
         const next = [head, ...prev];
+        const currentFood = foodRef.current;
 
         // Eat food
-        if (head[0] === food[0] && head[1] === food[1]) {
+        if (head[0] === currentFood[0] && head[1] === currentFood[1]) {
           soundFX.playScore();
           onRewardXP?.(10);
           setScore(s => {
             const ns = s + 10;
-            if (ns > highScore) {
+            if (ns > highScoreRef.current) {
               setHighScore(ns);
               try { localStorage.setItem('joy_snake_high', ns.toString()); } catch (e) {}
             }
             return ns;
           });
-          setFood([Math.floor(Math.random() * 14) + 1, Math.floor(Math.random() * 14) + 1]);
+          const nextFood = [Math.floor(Math.random() * 14) + 1, Math.floor(Math.random() * 14) + 1];
+          foodRef.current = nextFood;
+          setFood(nextFood);
         } else {
           next.pop();
         }
@@ -826,7 +837,7 @@ function AgriSnakeGame({ onRewardXP }) {
     }, 120);
 
     return () => clearInterval(timer);
-  }, [isPlaying, isGameOver, food, highScore, onRewardXP]);
+  }, [isPlaying, isGameOver, onRewardXP]);
 
   return (
     <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 p-5 space-y-4 max-w-md mx-auto shadow-lg text-center">

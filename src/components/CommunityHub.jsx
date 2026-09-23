@@ -10,6 +10,8 @@ export default function CommunityHub({
   currentStudent,
   questions = [],
   mockPapers = [],
+  selectedQuestionForDiscussion = null,
+  onClearSelectedQuestion,
   onOpenCalc,
   onToggleBookmark,
   onRequireAuth
@@ -127,6 +129,8 @@ export default function CommunityHub({
         {(currentSubTab === 'qa' || currentSubTab === 'discussions') && (
           <CommunityDiscussions 
             currentStudent={currentStudent} 
+            selectedQuestionForDiscussion={selectedQuestionForDiscussion}
+            onClearSelectedQuestion={onClearSelectedQuestion}
             onRequireAuth={onRequireAuth} 
           />
         )}

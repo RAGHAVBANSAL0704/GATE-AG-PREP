@@ -70,24 +70,24 @@ export default function LiveStatisticsBoard({ onNavigate, onStartMock, onOpenPra
     setRefreshing(false);
   };
 
-  const registeredCount = stats?.totalRegisteredStudents || 1;
-  const onlineCount = stats?.activeOnlineStudents || 1;
-  const questionsSolved = stats?.totalQuestionsSolved || 0;
-  const correctCount = stats?.totalCorrectSolved || 0;
-  const loginsCount = stats?.totalSessionLogins || 1;
-  const mockTestsCompleted = stats?.totalMockTestsCompleted || 0;
-  const accuracy = stats?.overallAccuracy || 76.4;
-  const avgScore = stats?.avgScore || 58.4;
-  const highestScore = stats?.highestScore || 84.5;
+  const registeredCount = stats?.totalRegisteredStudents ?? 0;
+  const onlineCount = stats?.activeOnlineStudents ?? 0;
+  const questionsSolved = stats?.totalQuestionsSolved ?? 0;
+  const correctCount = stats?.totalCorrectSolved ?? 0;
+  const loginsCount = stats?.totalSessionLogins ?? 0;
+  const mockTestsCompleted = stats?.totalMockTestsCompleted ?? 0;
+  const accuracy = stats?.overallAccuracy ?? 0;
+  const avgScore = stats?.avgScore ?? 0;
+  const highestScore = stats?.highestScore ?? 0;
   const colleges = stats?.colleges || [];
   const sections = stats?.sectionDistribution || {};
   const scoreDist = stats?.scoreDistribution || [];
   const qTypeStats = stats?.questionTypeStats || {};
   const hourlyTraffic = stats?.studyTrafficHourly || [];
-  const devices = stats?.deviceBreakdown || { mobile: 56, desktop: 40, tablet: 4 };
+  const devices = stats?.deviceBreakdown || { mobile: 0, desktop: 0, tablet: 0 };
 
   const totalSectionQuestions = useMemo(() => {
-    return Object.values(sections).reduce((acc, curr) => acc + curr, 0) || 1;
+    return Object.values(sections).reduce((acc, curr) => acc + curr, 0) || 0;
   }, [sections]);
 
   return (
@@ -288,43 +288,49 @@ export default function LiveStatisticsBoard({ onNavigate, onStartMock, onOpenPra
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 pt-2">
-          {colleges.map((col, index) => (
-            <div 
-              key={col.name}
-              className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200/80 dark:border-slate-800 flex items-center justify-between gap-3 hover:border-emerald-500/40 transition"
-            >
-              <div className="flex items-center gap-3 min-w-0">
-                <div className={`w-8 h-8 rounded-xl font-mono text-xs font-black flex items-center justify-center shrink-0 ${
-                  index === 0 
-                    ? 'bg-amber-500 text-slate-950 shadow-md' 
-                    : index === 1 
-                    ? 'bg-slate-300 dark:bg-slate-700 text-slate-900 dark:text-white' 
-                    : index === 2 
-                    ? 'bg-amber-700 text-white' 
-                    : 'bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400'
-                }`}>
-                  #{index + 1}
-                </div>
-                <div className="min-w-0">
-                  <h3 className="text-xs font-bold text-slate-900 dark:text-white truncate">
-                    {col.name}
-                  </h3>
-                  <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 truncate">
-                    {col.name.includes('HAU') ? 'Home Nodal Center (COAET)' : 'Participating National Institute'}
-                  </p>
-                </div>
-              </div>
-
-              <div className="text-right shrink-0">
-                <div className="text-sm font-black text-emerald-600 dark:text-emerald-400 font-mono">
-                  {col.students}
-                </div>
-                <span className="text-[10px] uppercase font-bold text-slate-400">
-                  Aspirants
-                </span>
-              </div>
+          {colleges.length === 0 ? (
+            <div className="col-span-full p-6 text-center text-xs text-slate-500 dark:text-slate-400 bg-slate-50 dark:bg-slate-950/60 rounded-2xl border border-dashed border-slate-200 dark:border-slate-800">
+              No institution activity recorded yet.
             </div>
-          ))}
+          ) : (
+            colleges.map((col, index) => (
+              <div 
+                key={col.name}
+                className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200/80 dark:border-slate-800 flex items-center justify-between gap-3 hover:border-emerald-500/40 transition"
+              >
+                <div className="flex items-center gap-3 min-w-0">
+                  <div className={`w-8 h-8 rounded-xl font-mono text-xs font-black flex items-center justify-center shrink-0 ${
+                    index === 0 
+                      ? 'bg-amber-500 text-slate-950 shadow-md' 
+                      : index === 1 
+                      ? 'bg-slate-300 dark:bg-slate-700 text-slate-900 dark:text-white' 
+                      : index === 2 
+                      ? 'bg-amber-700 text-white' 
+                      : 'bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400'
+                  }`}>
+                    #{index + 1}
+                  </div>
+                  <div className="min-w-0">
+                    <h3 className="text-xs font-bold text-slate-900 dark:text-white truncate">
+                      {col.name}
+                    </h3>
+                    <p className="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5 truncate">
+                      {col.name.includes('HAU') ? 'Home Nodal Center (COAET)' : 'Participating National Institute'}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="text-right shrink-0">
+                  <div className="text-sm font-black text-emerald-600 dark:text-emerald-400 font-mono">
+                    {col.students}
+                  </div>
+                  <span className="text-[10px] uppercase font-bold text-slate-400">
+                    Aspirants
+                  </span>
+                </div>
+              </div>
+            ))
+          )}
         </div>
       </div>
 
@@ -362,7 +368,7 @@ export default function LiveStatisticsBoard({ onNavigate, onStartMock, onOpenPra
                   <div className="w-full h-2.5 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden">
                     <div 
                       className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 transition-all duration-500"
-                      style={{ width: `${Math.max(5, pct)}%` }}
+                      style={{ width: `${pct}%` }}
                     ></div>
                   </div>
                 </div>

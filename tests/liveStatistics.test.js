@@ -27,19 +27,28 @@ describe('Real-Time Live Statistics & Telemetry Subsystem', () => {
     localStorage.clear();
   });
 
-  test('fetches real platform statistics with valid initial baseline and counts', async () => {
-    const stats = await fetchLivePlatformStats();
+  test('fetches real platform statistics with zero baseline when no data exists', async () => {
+    const stats = await fetchLivePlatformStats(true);
 
     assert.ok(stats, 'Stats object must be defined');
     assert.strictEqual(typeof stats.totalRegisteredStudents, 'number');
-    assert.ok(stats.totalRegisteredStudents >= 1, 'Registered students count must be >= 1');
     assert.strictEqual(typeof stats.totalQuestionsSolved, 'number');
     assert.strictEqual(typeof stats.totalSessionLogins, 'number');
-    assert.ok(stats.totalSessionLogins >= 1, 'Total session logins must be >= 1');
     assert.strictEqual(typeof stats.overallAccuracy, 'number');
+    assert.strictEqual(stats.totalMockTestsCompleted, 0);
+    assert.strictEqual(stats.avgScore, 0);
+    assert.strictEqual(stats.highestScore, 0);
+    assert.ok(Array.isArray(stats.scoreDistribution), 'scoreDistribution must be an array');
+    assert.strictEqual(stats.scoreDistribution.length, 4);
+    
+    // Each tier must have count 0 and percentage 0
+    stats.scoreDistribution.forEach(tier => {
+      assert.strictEqual(tier.count, 0, `Tier ${tier.label} count must be 0`);
+      assert.strictEqual(tier.percentage, 0, `Tier ${tier.label} percentage must be 0`);
+    });
+
     assert.ok(Array.isArray(stats.colleges), 'Colleges must be an array');
     assert.ok(Array.isArray(stats.liveActivityFeed), 'Live activity feed must be an array');
-    assert.ok(stats.liveActivityFeed.length > 0, 'Live activity feed must have baseline entries');
   });
 
   test('records a new live activity event and updates feed with real details', () => {
@@ -76,32 +85,67 @@ describe('Real-Time Live Statistics & Telemetry Subsystem', () => {
     assert.ok(stats.totalSessionLogins >= 2, 'Total session logins should reflect the new login event');
   });
 
-  test('aggregates question counts and test attempts from localStorage correctly', async () => {
-    // Mock 2 local test attempts
+  test('aggregates question counts and test attempts from localStorage correctly and computes accurate AIR tiers', async () => {
+    // Mock 4 attempts spanning each tier
     const mockAttempts = [
       {
-        client_attempt_id: 'att_test_1',
-        student_name: 'Aspirant 1',
-        correct_count: 35,
-        incorrect_count: 10,
-        score: 45.0,
-        paper_title: 'GATE AG 2026'
+        client_attempt_id: 'att_top_tier',
+        student_name: 'Topper Aspirant',
+        correct_count: 50,
+        incorrect_count: 5,
+        score: 75.0,
+        paper_title: 'GATE AG 2026 Mock 1'
       },
       {
-        client_attempt_id: 'att_test_2',
-        student_name: 'Aspirant 2',
+        client_attempt_id: 'att_comp_tier',
+        student_name: 'Competitive Aspirant',
         correct_count: 40,
-        incorrect_count: 5,
+        incorrect_count: 10,
         score: 55.0,
-        paper_title: 'Farm Machinery Practice Test'
+        paper_title: 'GATE AG 2026 Mock 2'
+      },
+      {
+        client_attempt_id: 'att_dev_tier',
+        student_name: 'Developing Aspirant',
+        correct_count: 30,
+        incorrect_count: 15,
+        score: 38.0,
+        paper_title: 'GATE AG 2026 Mock 3'
+      },
+      {
+        client_attempt_id: 'att_rev_tier',
+        student_name: 'Revision Aspirant',
+        correct_count: 15,
+        incorrect_count: 25,
+        score: 18.0,
+        paper_title: 'GATE AG 2026 Mock 4'
       }
     ];
 
     localStorage.setItem('gate_ag_prep_test_attempts', JSON.stringify(mockAttempts));
 
-    const stats = await fetchLivePlatformStats();
-    assert.ok(stats.totalQuestionsSolved >= (35 + 10 + 40 + 5), 'Total questions solved should aggregate all attempts');
-    assert.ok(stats.totalMockTestsCompleted >= 2, 'Total mock tests completed should be >= 2');
+    const stats = await fetchLivePlatformStats(true);
+    assert.strictEqual(stats.totalMockTestsCompleted, 4);
+    assert.strictEqual(stats.highestScore, 75.0);
+    assert.strictEqual(stats.avgScore, (75 + 55 + 38 + 18) / 4); // 46.5
+    
+    // Each of the 4 tiers should have count: 1 and percentage: 25.0%
+    const topTier = stats.scoreDistribution.find(t => t.label.includes('Top Tier'));
+    const compTier = stats.scoreDistribution.find(t => t.label.includes('Competitive Zone'));
+    const devTier = stats.scoreDistribution.find(t => t.label.includes('Developing Zone'));
+    const revTier = stats.scoreDistribution.find(t => t.label.includes('Needs Revision'));
+
+    assert.strictEqual(topTier.count, 1);
+    assert.strictEqual(topTier.percentage, 25.0);
+
+    assert.strictEqual(compTier.count, 1);
+    assert.strictEqual(compTier.percentage, 25.0);
+
+    assert.strictEqual(devTier.count, 1);
+    assert.strictEqual(devTier.percentage, 25.0);
+
+    assert.strictEqual(revTier.count, 1);
+    assert.strictEqual(revTier.percentage, 25.0);
   });
 
   test('formatLiveRelativeTime properly formats timestamps', () => {

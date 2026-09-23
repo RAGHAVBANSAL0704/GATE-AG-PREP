@@ -18,6 +18,7 @@ export default function PracticeHub({
   onOpenCalc,
   onEditQuestion,
   onStartCustomTest,
+  onDiscussQuestion,
   currentStudent,
   onRequireAuth,
   mistakeFilterIds,
@@ -39,10 +40,10 @@ export default function PracticeHub({
   };
 
   const subTabs = [
-    { id: 'qbank', label: 'Question Bank (Topic-wise)', icon: Database },
-    { id: 'practice', label: 'PYQ Pool (Past Papers)', icon: Layers },
-    { id: 'custompractice', label: 'Custom Pool (Mock Papers)', icon: Sparkles },
-    { id: 'customtest', label: 'Custom Speed Test', icon: Sliders },
+    { id: 'qbank', label: 'Question Bank (1,915 Qs)', icon: Database },
+    { id: 'practice', label: 'PYQ Pool (1,324 Qs)', icon: Layers },
+    { id: 'custompractice', label: 'Custom Pool (3,250 Qs)', icon: Sparkles },
+    { id: 'customtest', label: 'Custom Speed Test (6,489 Qs)', icon: Sliders },
   ];
 
   const allCustomQuestions = useMemo(() => {
@@ -70,8 +71,8 @@ export default function PracticeHub({
               <h1 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
                 Practice Hub
               </h1>
-              <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5 font-medium">
-                <strong className="text-emerald-600 dark:text-emerald-400">Question Bank</strong>: 1,200+ Topic-wise Qs • <strong className="text-blue-600 dark:text-blue-400">PYQ Pool</strong>: Solved Official Past Papers • <strong className="text-purple-600 dark:text-purple-400">Custom Pool</strong>: Curated Mocks
+              <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5 font-medium">
+                <strong className="text-emerald-600 dark:text-emerald-400">Question Bank</strong>: 1,915 Topic-wise Qs • <strong className="text-blue-600 dark:text-blue-400">PYQ Pool</strong>: 1,324 Official PYQs (2007–2026) • <strong className="text-purple-600 dark:text-purple-400">Custom Pool</strong>: 3,250 Mocks (50 Full Papers)
               </p>
             </div>
           </div>
@@ -85,7 +86,7 @@ export default function PracticeHub({
                 <button
                   key={tab.id}
                   onClick={() => handleTabClick(tab.id)}
-                  className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold transition whitespace-nowrap ${
+                  className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-bold transition whitespace-nowrap cursor-pointer ${
                     isActive
                       ? 'bg-blue-600 text-white shadow-xs font-extrabold'
                       : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
@@ -105,19 +106,20 @@ export default function PracticeHub({
         {(currentSubTab === 'qbank' || currentSubTab === 'questionbank') && (
           <Suspense fallback={
             <div className="p-12 text-center text-slate-500 dark:text-slate-400 font-semibold bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800">
-              Loading Autonomous Question Bank...
+              Loading Autonomous Question Bank (1,915 Questions)...
             </div>
           }>
             <QuestionBankView
               poolType="qbank"
               poolTitle="Autonomous Question Bank"
-              poolSubtitle="Modular repository of high-yield questions categorized across all 8 official GATE AG sections."
-              badgeLabel="Topic & Subtopic Wise"
+              poolSubtitle="Modular repository of 1,915 high-yield questions categorized across all 8 official GATE AG sections."
+              badgeLabel="1,915 Topic-Wise Qs"
               badgeColor="emerald"
               storageKey="gate_ag_qbank_progress"
               onOpenCalc={onOpenCalc}
               bookmarks={bookmarks}
               onToggleBookmark={onToggleBookmark}
+              onDiscussQuestion={onDiscussQuestion}
               currentStudent={currentStudent}
               onRequireAuth={onRequireAuth}
               mistakeFilterIds={mistakeFilterIds}
@@ -128,7 +130,7 @@ export default function PracticeHub({
         {currentSubTab === 'practice' && (
           <Suspense fallback={
             <div className="p-12 text-center text-slate-500 dark:text-slate-400 font-semibold bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800">
-              Loading Official GATE AG PYQ Practice Pool...
+              Loading Official GATE AG PYQ Practice Pool (1,324 Questions)...
             </div>
           }>
             <QuestionBankView
@@ -136,13 +138,14 @@ export default function PracticeHub({
               questionsData={questions}
               poolTitle="Official GATE AG PYQ Practice Pool"
               poolSubtitle="1,324 official GATE Agricultural Engineering past paper questions (2007–2026) organized section-wise, topic-wise, and subtopic-wise with real-time per-question timer."
-              badgeLabel="Official GATE PYQ Pool (2007–2026)"
+              badgeLabel="1,324 Official PYQs (2007–2026)"
               badgeColor="blue"
               storageKey="gate_ag_pyq_progress"
               initialSection={practiceSection}
               onOpenCalc={onOpenCalc}
               bookmarks={bookmarks}
               onToggleBookmark={onToggleBookmark}
+              onDiscussQuestion={onDiscussQuestion}
               currentStudent={currentStudent}
               onRequireAuth={onRequireAuth}
               mistakeFilterIds={mistakeFilterIds}
@@ -153,7 +156,7 @@ export default function PracticeHub({
         {currentSubTab === 'custompractice' && (
           <Suspense fallback={
             <div className="p-12 text-center text-slate-500 dark:text-slate-400 font-semibold bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800">
-              Loading Custom Mock Questions Practice Pool...
+              Loading Custom Mock Questions Practice Pool (3,250 Questions)...
             </div>
           }>
             <QuestionBankView
@@ -161,12 +164,13 @@ export default function PracticeHub({
               questionsData={allCustomQuestions}
               poolTitle="Custom Mock Questions Practice Pool"
               poolSubtitle="3,250 curated questions across all 50 full-length GATE AG mock papers with section, topic, and subtopic breakdown."
-              badgeLabel="Custom Mock Pool (50 Full-Length Mocks)"
+              badgeLabel="3,250 Mocks (50 Full Papers)"
               badgeColor="purple"
               storageKey="gate_ag_custom_progress"
               onOpenCalc={onOpenCalc}
               bookmarks={bookmarks}
               onToggleBookmark={onToggleBookmark}
+              onDiscussQuestion={onDiscussQuestion}
               currentStudent={currentStudent}
               onRequireAuth={onRequireAuth}
               mistakeFilterIds={mistakeFilterIds}
@@ -178,8 +182,12 @@ export default function PracticeHub({
           <CustomTestCreator
             questions={questions}
             mockPapers={mockPapers}
+            customMockPapers={customMockPapers}
+            allCustomQuestions={allCustomQuestions}
             onStartCustomTest={onStartCustomTest}
             onOpenCalc={onOpenCalc}
+            currentStudent={currentStudent}
+            onRequireAuth={onRequireAuth}
           />
         )}
       </div>

@@ -36,62 +36,11 @@ export function getActiveSessionStudent() {
 }
 
 /**
- * Baseline representative live activity logs
- */
-const DEFAULT_INITIAL_ACTIVITIES = [
-  {
-    id: 'act_init_1',
-    type: 'question_solved',
-    studentName: 'Aman Sharma',
-    collegeName: 'COAET CCS HAU Hisar',
-    details: 'Solved 10 Soil & Water Conservation Engineering numericals with 100% accuracy',
-    timestamp: Date.now() - 2 * 60 * 1000,
-    section: 'Soil & Water Conservation'
-  },
-  {
-    id: 'act_init_2',
-    type: 'mock_completed',
-    studentName: 'Pooja Verma',
-    collegeName: 'GBPUAT Pantnagar',
-    details: 'Completed Official GATE 2026 CBT Mock Test (Score: 71.33 / 100.00)',
-    timestamp: Date.now() - 5 * 60 * 1000,
-    section: 'CBT Mock 2026'
-  },
-  {
-    id: 'act_init_3',
-    type: 'session_login',
-    studentName: 'Er. Rohit Nain',
-    collegeName: 'COAET CCS HAU Hisar',
-    details: 'Logged into GATE AG Portal from Hisar Campus',
-    timestamp: Date.now() - 9 * 60 * 1000,
-    section: 'Authentication'
-  },
-  {
-    id: 'act_init_4',
-    type: 'question_solved',
-    studentName: 'Kavita Sundaram',
-    collegeName: 'TNAU Coimbatore',
-    details: 'Solved 15 Farm Machinery & Power numericals',
-    timestamp: Date.now() - 14 * 60 * 1000,
-    section: 'Farm Machinery'
-  },
-  {
-    id: 'act_init_5',
-    type: 'mock_completed',
-    studentName: 'Vikas Deshmukh',
-    collegeName: 'MPKV Rahuri',
-    details: 'Submitted Custom Speed Practice Test (Score: 42.00 / 50.00)',
-    timestamp: Date.now() - 22 * 60 * 1000,
-    section: 'Custom Speed Test'
-  }
-];
-
-/**
- * Get locally stored live activity feed
+ * Get locally stored live activity feed (purely authentic recorded events)
  */
 export function getLocalLiveActivityFeed() {
   try {
-    if (typeof localStorage === 'undefined') return DEFAULT_INITIAL_ACTIVITIES;
+    if (typeof localStorage === 'undefined') return [];
     const raw = localStorage.getItem(LOCAL_STORAGE_LIVE_ACTIVITY_KEY);
     if (raw) {
       const parsed = JSON.parse(raw);
@@ -100,7 +49,7 @@ export function getLocalLiveActivityFeed() {
       }
     }
   } catch (e) {}
-  return DEFAULT_INITIAL_ACTIVITIES;
+  return [];
 }
 
 /**
@@ -168,18 +117,30 @@ export function recordLiveAction({
   return newEvent;
 }
 
+let cachedPlatformStats = null;
+let lastPlatformStatsFetchTime = 0;
+const STATS_CACHE_TTL_MS = 60 * 1000; // 1 minute in-memory cache
+const isTestEnv = typeof process !== 'undefined' && (process.env?.NODE_ENV === 'test' || process.env?.NODE_TEST_CONTEXT);
+
 /**
  * Fetch true comprehensive platform statistics from Supabase and Local Storage
  */
-export async function fetchLivePlatformStats() {
+export async function fetchLivePlatformStats(forceRefresh = false) {
+  const now = Date.now();
+  if (!isTestEnv && !forceRefresh && cachedPlatformStats && (now - lastPlatformStatsFetchTime < STATS_CACHE_TTL_MS)) {
+    return cachedPlatformStats;
+  }
+
   let dbStudentsCount = 0;
   let dbAttemptsCount = 0;
   let dbQuestionsSolved = 0;
-  let dbTotalLogins = 0;
   let dbCorrectCount = 0;
   let dbTotalScore = 0;
-  let collegeMap = {};
-  let sectionMap = {
+  let dbTotalLogins = 0;
+  let dbAttemptsList = [];
+
+  const collegeMap = {};
+  const sectionMap = {
     'Farm Machinery & Power (FMPE)': 0,
     'Soil & Water Conservation (SWCE)': 0,
     'Processing & Food Engg (PFE)': 0,
@@ -191,29 +152,29 @@ export async function fetchLivePlatformStats() {
 
   let isOnlineBackend = false;
 
-  // 1. Fetch real Supabase tables data if online
-  if (isSupabaseConfigured && supabase) {
+  // 1. Try querying real backend if Supabase is connected
+  if (supabase) {
     try {
-      // Query students
-      const { data: students, error: studentErr } = await supabase
-        .from('students')
-        .select('id, full_name, college_name, student_type, created_at');
-
-      if (!studentErr && Array.isArray(students)) {
-        dbStudentsCount = students.length;
-        isOnlineBackend = true;
-        students.forEach(s => {
-          const col = s.college_name || (s.student_type === 'hau' ? 'COAET CCS HAU Hisar' : 'External Agricultural Institute');
-          collegeMap[col] = (collegeMap[col] || 0) + 1;
-        });
-      }
+      // Query profiles/students count
+      try {
+        const { count, error: countErr } = await supabase
+          .from('profiles')
+          .select('id', { count: 'exact', head: true });
+        
+        if (!countErr && count !== null) {
+          dbStudentsCount = count;
+        }
+      } catch (e) {}
 
       // Query test attempts
       const { data: attempts, error: attErr } = await supabase
         .from('test_attempts')
-        .select('id, score, correct_count, incorrect_count, total_questions, paper_title, test_type, submitted_at');
+        .select('id, score, correct_count, incorrect_count, total_questions, paper_title, test_type, submitted_at')
+        .order('submitted_at', { ascending: false })
+        .limit(100);
 
       if (!attErr && Array.isArray(attempts)) {
+        dbAttemptsList = attempts;
         dbAttemptsCount = attempts.length;
         attempts.forEach(a => {
           const correct = Number(a.correct_count || 0);
@@ -260,6 +221,7 @@ export async function fetchLivePlatformStats() {
         }
       } catch (e) {}
 
+      isOnlineBackend = true;
     } catch (err) {
       console.warn('Supabase live telemetry fetch warning:', err);
     }
@@ -316,84 +278,201 @@ export async function fetchLivePlatformStats() {
     }
   } catch (e) {}
 
-  // 3. Compute Real Integrated Totals
+  // 3. Compute Real Integrated Totals & Deduplicated Attempt Metrics
   const activeStudent = getActiveSessionStudent();
-  const currentPresenceCount = Math.max(1, activePresenceUsers.size);
+  const currentPresenceCount = activePresenceUsers.size > 0 ? activePresenceUsers.size : (activeStudent ? 1 : 0);
 
-  const totalRegisteredStudents = Math.max(
-    dbStudentsCount > 0 ? dbStudentsCount : (localUsersCount > 0 ? localUsersCount : 1),
-    1
-  );
+  const totalRegisteredStudents = dbStudentsCount > 0 
+    ? dbStudentsCount 
+    : (localUsersCount > 0 ? localUsersCount : (activeStudent ? 1 : 0));
 
-  const totalMockTestsCompleted = Math.max(dbAttemptsCount, localAttemptsCount);
+  // Collect all real attempt scores across cloud and local storage without duplication
+  const allAttemptScores = [];
+  const seenAttemptIds = new Set();
+  let countMcq = 0, correctMcq = 0;
+  let countNat = 0, correctNat = 0;
+  let countMsq = 0, correctMsq = 0;
+  let hourBuckets = [0, 0, 0, 0]; // [06-10, 10-14, 14-18, 18-23/06]
+  let totalHourEvents = 0;
+  let mobileCount = 0, desktopCount = 0, tabletCount = 0;
+
+  const rawLocal = typeof localStorage !== 'undefined' ? localStorage.getItem(LOCAL_STORAGE_TEST_ATTEMPTS_KEY) : null;
+  const parsedLocalAttempts = rawLocal ? JSON.parse(rawLocal) : [];
+  const allMergedAttempts = [
+    ...(Array.isArray(dbAttemptsList) ? dbAttemptsList : []),
+    ...(Array.isArray(parsedLocalAttempts) ? parsedLocalAttempts : [])
+  ];
+
+  let tierTopCount = 0;   // >= 70 Marks (AIR < 10 Tier)
+  let tierCompCount = 0;  // 50 to 69.99 Marks (AIR < 50 Tier)
+  let tierDevCount = 0;   // 30 to 49.99 Marks (Developing / Cutoff Tier)
+  let tierRevCount = 0;   // < 30 Marks (Needs Revision Tier)
+
+  allMergedAttempts.forEach(a => {
+    const aid = a.client_attempt_id || a.id || (a.submitted_at ? `${a.submitted_at}_${a.paper_title}` : null);
+    if (aid && seenAttemptIds.has(aid)) return;
+    if (aid) seenAttemptIds.add(aid);
+
+    const score = Number(a.score);
+    if (!isNaN(score)) {
+      allAttemptScores.push(score);
+      if (score >= 70) {
+        tierTopCount++;
+      } else if (score >= 50) {
+        tierCompCount++;
+      } else if (score >= 30) {
+        tierDevCount++;
+      } else {
+        tierRevCount++;
+      }
+    }
+
+    // Process question type telemetry if present
+    if (Array.isArray(a.question_responses)) {
+      a.question_responses.forEach(qr => {
+        const type = (qr.type || qr.qtype || '').toUpperCase();
+        const isCorrect = Boolean(qr.is_correct ?? qr.ok ?? (qr.status === 'CORRECT'));
+        if (type.includes('MCQ')) {
+          countMcq++;
+          if (isCorrect) correctMcq++;
+        } else if (type.includes('NAT')) {
+          countNat++;
+          if (isCorrect) correctNat++;
+        } else if (type.includes('MSQ')) {
+          countMsq++;
+          if (isCorrect) correctMsq++;
+        }
+      });
+    }
+
+    // Hour distribution from timestamp
+    if (a.submitted_at) {
+      try {
+        const h = new Date(a.submitted_at).getHours();
+        totalHourEvents++;
+        if (h >= 6 && h < 10) hourBuckets[0]++;
+        else if (h >= 10 && h < 14) hourBuckets[1]++;
+        else if (h >= 14 && h < 18) hourBuckets[2]++;
+        else hourBuckets[3]++;
+      } catch (e) {}
+    }
+  });
+
+  const totalMockTestsCompleted = allAttemptScores.length;
   const totalQuestionsSolved = Math.max(dbQuestionsSolved, localQuestionsSolved);
   const totalCorrectSolved = Math.max(dbCorrectCount, localCorrectCount);
   
-  const totalSessionLogins = Math.max(
-    dbTotalLogins,
-    localLoginsCount,
-    totalRegisteredStudents * 2,
-    1
-  );
+  const totalSessionLogins = dbTotalLogins > 0 
+    ? dbTotalLogins 
+    : (localLoginsCount > 0 ? localLoginsCount : (activeStudent ? 1 : 0));
 
   const overallAccuracy = totalQuestionsSolved > 0 
     ? Number(((totalCorrectSolved / totalQuestionsSolved) * 100).toFixed(1))
-    : 76.4;
+    : 0;
 
   const avgScore = totalMockTestsCompleted > 0
-    ? Number((dbTotalScore / totalMockTestsCompleted).toFixed(2))
-    : 58.4;
+    ? Number((allAttemptScores.reduce((sum, val) => sum + val, 0) / totalMockTestsCompleted).toFixed(2))
+    : 0;
 
-  const highestScore = Math.max(82.67, avgScore + 18.2);
+  const highestScore = allAttemptScores.length > 0 
+    ? Math.max(...allAttemptScores) 
+    : 0;
 
-  // Score distribution metrics
+  // 100% Authentic Score distribution metrics (zero if no attempts)
   const scoreDistribution = [
-    { label: 'Top Tier (70–100 Marks)', percentage: 18, count: Math.max(1, Math.round(totalMockTestsCompleted * 0.18)), color: 'emerald' },
-    { label: 'Competitive Zone (50–70 Marks)', percentage: 46, count: Math.max(2, Math.round(totalMockTestsCompleted * 0.46)), color: 'teal' },
-    { label: 'Developing Zone (30–50 Marks)', percentage: 26, count: Math.max(1, Math.round(totalMockTestsCompleted * 0.26)), color: 'amber' },
-    { label: 'Needs Revision (< 30 Marks)', percentage: 10, count: Math.max(1, Math.round(totalMockTestsCompleted * 0.10)), color: 'rose' }
+    { 
+      label: 'Top Tier (70–100 Marks)', 
+      percentage: totalMockTestsCompleted > 0 ? Number(((tierTopCount / totalMockTestsCompleted) * 100).toFixed(1)) : 0, 
+      count: tierTopCount, 
+      color: 'emerald' 
+    },
+    { 
+      label: 'Competitive Zone (50–70 Marks)', 
+      percentage: totalMockTestsCompleted > 0 ? Number(((tierCompCount / totalMockTestsCompleted) * 100).toFixed(1)) : 0, 
+      count: tierCompCount, 
+      color: 'teal' 
+    },
+    { 
+      label: 'Developing Zone (30–50 Marks)', 
+      percentage: totalMockTestsCompleted > 0 ? Number(((tierDevCount / totalMockTestsCompleted) * 100).toFixed(1)) : 0, 
+      count: tierDevCount, 
+      color: 'amber' 
+    },
+    { 
+      label: 'Needs Revision (< 30 Marks)', 
+      percentage: totalMockTestsCompleted > 0 ? Number(((tierRevCount / totalMockTestsCompleted) * 100).toFixed(1)) : 0, 
+      count: tierRevCount, 
+      color: 'rose' 
+    }
   ];
 
-  // Question type analytics
+  // Question type analytics calculated from actual responses or 0
+  const totalTypedQuestions = countMcq + countNat + countMsq;
   const questionTypeStats = {
-    mcq: { label: 'Multiple Choice (MCQ)', count: Math.round(totalQuestionsSolved * 0.55), accuracy: 78.4, negativeRisk: 'High (-0.33 / -0.66)' },
-    nat: { label: 'Numerical Answer (NAT)', count: Math.round(totalQuestionsSolved * 0.33), accuracy: 71.8, negativeRisk: 'None (0 Marks)' },
-    msq: { label: 'Multiple Select (MSQ)', count: Math.round(totalQuestionsSolved * 0.12), accuracy: 62.5, negativeRisk: 'None (Exact match)' }
+    mcq: { 
+      label: 'Multiple Choice (MCQ)', 
+      count: countMcq, 
+      accuracy: countMcq > 0 ? Number(((correctMcq / countMcq) * 100).toFixed(1)) : 0, 
+      negativeRisk: 'High (-0.33 / -0.66)' 
+    },
+    nat: { 
+      label: 'Numerical Answer (NAT)', 
+      count: countNat, 
+      accuracy: countNat > 0 ? Number(((correctNat / countNat) * 100).toFixed(1)) : 0, 
+      negativeRisk: 'None (0 Marks)' 
+    },
+    msq: { 
+      label: 'Multiple Select (MSQ)', 
+      count: countMsq, 
+      accuracy: countMsq > 0 ? Number(((correctMsq / countMsq) * 100).toFixed(1)) : 0, 
+      negativeRisk: 'None (Exact match)' 
+    }
   };
 
   // Hourly traffic analytics
   const studyTrafficHourly = [
-    { time: '06:00 - 10:00', label: 'Morning Revision', activePercent: 32, icon: 'Sun' },
-    { time: '10:00 - 14:00', label: 'Campus Practice', activePercent: 22, icon: 'Building2' },
-    { time: '14:00 - 18:00', label: 'Afternoon Speed Tests', activePercent: 18, icon: 'Zap' },
-    { time: '18:00 - 23:00', label: 'Prime Night Mock Tests', activePercent: 28, icon: 'Moon' }
+    { 
+      time: '06:00 - 10:00', 
+      label: 'Morning Revision', 
+      activePercent: totalHourEvents > 0 ? Math.round((hourBuckets[0] / totalHourEvents) * 100) : 0, 
+      icon: 'Sun' 
+    },
+    { 
+      time: '10:00 - 14:00', 
+      label: 'Campus Practice', 
+      activePercent: totalHourEvents > 0 ? Math.round((hourBuckets[1] / totalHourEvents) * 100) : 0, 
+      icon: 'Building2' 
+    },
+    { 
+      time: '14:00 - 18:00', 
+      label: 'Afternoon Speed Tests', 
+      activePercent: totalHourEvents > 0 ? Math.round((hourBuckets[2] / totalHourEvents) * 100) : 0, 
+      icon: 'Zap' 
+    },
+    { 
+      time: '18:00 - 23:00', 
+      label: 'Prime Night Mock Tests', 
+      activePercent: totalHourEvents > 0 ? Math.round((hourBuckets[3] / totalHourEvents) * 100) : 0, 
+      icon: 'Moon' 
+    }
   ];
 
-  // Device telemetry
+  // Device telemetry based on active device
+  const isMobileClient = typeof navigator !== 'undefined' && /Mobi|Android|iPhone/i.test(navigator.userAgent);
+  const isTabletClient = typeof navigator !== 'undefined' && /iPad|Tablet/i.test(navigator.userAgent);
   const deviceBreakdown = {
-    mobile: 56,
-    desktop: 40,
-    tablet: 4
+    mobile: isMobileClient ? 100 : 0,
+    desktop: (!isMobileClient && !isTabletClient) ? 100 : 0,
+    tablet: isTabletClient ? 100 : 0
   };
-
-  // Format active colleges list sorted by student count
-  const defaultColleges = [
-    { name: 'COAET CCS HAU Hisar', students: Math.max(1, collegeMap['COAET CCS HAU Hisar'] || 0) },
-    { name: 'GBPUAT Pantnagar', students: collegeMap['GBPUAT Pantnagar'] || 0 },
-    { name: 'IIT Kharagpur (AgFE)', students: collegeMap['IIT Kharagpur (AgFE)'] || 0 },
-    { name: 'PAU Ludhiana (COAE&T)', students: collegeMap['PAU Ludhiana (COAE&T)'] || 0 },
-    { name: 'TNAU Coimbatore (AEC&RI)', students: collegeMap['TNAU Coimbatore (AEC&RI)'] || 0 },
-    { name: 'MPKV Rahuri (Dr ASCAET)', students: collegeMap['MPKV Rahuri (Dr ASCAET)'] || 0 },
-    { name: 'ICAR-CIAE Bhopal', students: collegeMap['ICAR-CIAE Bhopal'] || 0 }
-  ];
 
   const sortedColleges = Object.keys(collegeMap).length > 0
     ? Object.entries(collegeMap).map(([name, count]) => ({ name, students: count })).sort((a, b) => b.students - a.students)
-    : defaultColleges;
+    : (activeStudent?.college_name ? [{ name: activeStudent.college_name, students: 1 }] : []);
 
   const liveFeed = getLocalLiveActivityFeed();
 
-  return {
+  cachedPlatformStats = {
     timestamp: Date.now(),
     connectionStatus: isOnlineBackend ? 'connected' : 'local_fallback',
     activeOnlineStudents: currentPresenceCount,
@@ -414,6 +493,9 @@ export async function fetchLivePlatformStats() {
     liveActivityFeed: liveFeed,
     activeStudent
   };
+  lastPlatformStatsFetchTime = Date.now();
+
+  return cachedPlatformStats;
 }
 
 /**
@@ -424,9 +506,9 @@ export function subscribeToLiveStats(onStatsUpdate) {
 
   let pollInterval = null;
 
-  const refreshAndNotify = async () => {
+  const refreshAndNotify = async (force = false) => {
     try {
-      const stats = await fetchLivePlatformStats();
+      const stats = await fetchLivePlatformStats(force);
       if (typeof onStatsUpdate === 'function') {
         onStatsUpdate(stats);
       }
@@ -434,12 +516,12 @@ export function subscribeToLiveStats(onStatsUpdate) {
   };
 
   // Initial immediate fetch
-  refreshAndNotify();
+  refreshAndNotify(false);
 
   // 1. Cross-Tab BroadcastChannel Listener
   const handleLocalTelemetryMessage = (event) => {
     if (event.data?.type === 'LIVE_ACTIVITY_EVENT' || event.data?.type === 'LIVE_STATS_REFRESH') {
-      refreshAndNotify();
+      refreshAndNotify(true);
     }
   };
 
@@ -454,16 +536,16 @@ export function subscribeToLiveStats(onStatsUpdate) {
       supabaseStatsChannel = supabase
         .channel('gate_ag_telemetry_live')
         .on('broadcast', { event: 'live_action_event' }, () => {
-          refreshAndNotify();
+          refreshAndNotify(true);
         })
         .on('postgres_changes', { event: '*', schema: 'public', table: 'test_attempts' }, () => {
-          refreshAndNotify();
+          refreshAndNotify(true);
         })
         .on('postgres_changes', { event: '*', schema: 'public', table: 'students' }, () => {
-          refreshAndNotify();
+          refreshAndNotify(true);
         })
         .on('postgres_changes', { event: '*', schema: 'public', table: 'device_sessions' }, () => {
-          refreshAndNotify();
+          refreshAndNotify(true);
         })
         .subscribe();
 
@@ -484,15 +566,15 @@ export function subscribeToLiveStats(onStatsUpdate) {
           Object.keys(state).forEach(key => {
             activePresenceUsers.set(key, state[key]);
           });
-          refreshAndNotify();
+          refreshAndNotify(false);
         })
         .on('presence', { event: 'join' }, ({ key, newPresences }) => {
           activePresenceUsers.set(key, newPresences);
-          refreshAndNotify();
+          refreshAndNotify(false);
         })
         .on('presence', { event: 'leave' }, ({ key }) => {
           activePresenceUsers.delete(key);
-          refreshAndNotify();
+          refreshAndNotify(false);
         })
         .subscribe(async (status) => {
           if (status === 'SUBSCRIBED') {
@@ -511,8 +593,8 @@ export function subscribeToLiveStats(onStatsUpdate) {
     }
   }
 
-  // 3. Heartbeat Polling Interval (every 15s)
-  pollInterval = setInterval(refreshAndNotify, 15000);
+  // 3. Heartbeat Polling Interval (every 5 minutes / 300,000ms as relaxed fallback)
+  pollInterval = setInterval(() => refreshAndNotify(true), 300000);
 
   return () => {
     if (pollInterval) clearInterval(pollInterval);

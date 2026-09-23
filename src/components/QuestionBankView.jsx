@@ -42,12 +42,15 @@ import MathRenderer from './MathRenderer';
 import QuestionReportModal from './QuestionReportModal';
 import { evaluateQuestion } from '../utils/scoring.js';
 import { awardStudentXP } from '../services/leaderboardService.js';
+import { recordQuestionOutcomes } from '../services/mistakeVaultService.js';
+import { recordLiveAction } from '../services/liveStatisticsService.js';
 import { 
   ALL_QUESTION_BANK_QUESTIONS, 
   getQuestionBankStats 
 } from '../data/question_bank/index.js';
 import { GATE_AG_SYLLABUS } from '../data/syllabus.js';
 import { normalizeSectionTitle } from '../utils/syllabusTaxonomy.js';
+
 
 const SECTION_ICON_MAP = {
   'Calculator': Calculator,
@@ -120,12 +123,14 @@ export function computePoolStats(questionsList) {
   const sectionTopicSubtopics = {};
 
   questionsList.forEach(q => {
-    if (q.type === 'MCQ') mcqCount++;
-    else if (q.type === 'MSQ') msqCount++;
-    else if (q.type === 'NAT') natCount++;
+    const qType = (q.type || 'MCQ').toUpperCase();
+    if (qType === 'MCQ') mcqCount++;
+    else if (qType === 'MSQ') msqCount++;
+    else if (qType === 'NAT') natCount++;
 
-    if (q.marks === 1) oneMarkCount++;
-    else if (q.marks === 2) twoMarkCount++;
+    const qMarks = Number(q.marks) || 1;
+    if (qMarks === 1) oneMarkCount++;
+    else if (qMarks === 2) twoMarkCount++;
 
     if (q.year) yearsSet.add(String(q.year));
     if (q.paperTitle) papersSet.add(q.paperTitle);
@@ -211,8 +216,8 @@ export function computePoolStats(questionsList) {
 export default function QuestionBankView({
   questionsData = null,
   poolTitle = 'Autonomous Question Bank',
-  poolSubtitle = 'Modular repository of high-yield questions categorized across all 8 official GATE AG sections.',
-  badgeLabel = 'Topic & Subtopic Wise',
+  poolSubtitle = 'Modular repository of 1,915 high-yield questions categorized across all 8 official GATE AG sections.',
+  badgeLabel = '1,915 Topic-Wise Qs',
   badgeColor = 'emerald', // 'emerald' | 'blue' | 'purple'
   poolType = 'qbank', // 'qbank' | 'pyq' | 'custom'
   storageKey = 'gate_ag_qbank_progress',
@@ -221,6 +226,7 @@ export default function QuestionBankView({
   onOpenCalc,
   bookmarks = [],
   onToggleBookmark,
+  onDiscussQuestion,
   currentStudent,
   onRequireAuth
 }) {
@@ -602,6 +608,28 @@ export default function QuestionBankView({
         lastAttemptedAt: new Date().toISOString()
       }
     }));
+
+    // Record to Mistake Vault & User Stats for cross-device sync
+    try {
+      recordQuestionOutcomes({
+        attempted: [currentQ.id],
+        correct: evalResult.isCorrect ? [currentQ.id] : [],
+        incorrect: !evalResult.isCorrect ? [currentQ.id] : [],
+        source: poolTitle || 'Practice Pool'
+      });
+    } catch (e) {}
+
+    // Broadcast live telemetry activity
+    try {
+      recordLiveAction({
+        type: 'question_solved',
+        studentName: currentStudent?.full_name || currentStudent?.username || 'GATE AG Aspirant',
+        collegeName: currentStudent?.college_name || 'COAET CCS HAU Hisar',
+        section: currentQ.section || 'Practice Session',
+        score: evalResult.marksAwarded,
+        details: `${evalResult.isCorrect ? 'Correctly solved' : 'Attempted'} numerical in ${currentQ.section || 'Agricultural Engineering'}`
+      });
+    } catch (e) {}
   };
 
   const handleResetCurrent = () => {
@@ -623,9 +651,9 @@ export default function QuestionBankView({
     });
   };
 
-  // Calculate student mastery statistics across question bank
+  // Calculate student mastery statistics across question pool
   const userProgressStats = useMemo(() => {
-    const totalBank = ALL_QUESTION_BANK_QUESTIONS.length;
+    const totalBank = (poolQuestions || []).length;
     let attempted = 0;
     let correct = 0;
     let totalXpEarned = 0;
@@ -642,9 +670,9 @@ export default function QuestionBankView({
       correct,
       totalXpEarned: Number(totalXpEarned.toFixed(1)),
       accuracy: attempted > 0 ? Math.round((correct / attempted) * 100) : 0,
-      pctComplete: Math.round((attempted / totalBank) * 100)
+      pctComplete: Math.round((attempted / (totalBank || 1)) * 100)
     };
-  }, [qbankProgress]);
+  }, [poolQuestions, qbankProgress]);
 
   return (
     <div className="space-y-6 animate-in fade-in duration-200">
@@ -1191,6 +1219,18 @@ export default function QuestionBankView({
                       title="Open Scientific Calculator"
                     >
                       <Calculator className="w-4 h-4" />
+                    </button>
+                  )}
+
+                  {onDiscussQuestion && (
+                    <button
+                      type="button"
+                      onClick={() => onDiscussQuestion(currentQ)}
+                      className="px-2 py-1 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 hover:bg-emerald-100 dark:hover:bg-emerald-900/60 text-emerald-700 dark:text-emerald-300 font-bold text-xs flex items-center gap-1 transition border border-emerald-200 dark:border-emerald-800"
+                      title="Discuss this numerical in Community Hub"
+                    >
+                      <MessageSquare className="w-3.5 h-3.5" />
+                      <span className="hidden sm:inline">Discuss</span>
                     </button>
                   )}
 
