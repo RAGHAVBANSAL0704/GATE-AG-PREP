@@ -87,6 +87,9 @@ export function mergeIncomingLiveEvent(event) {
   } catch (e) {}
 }
 
+// Rate-limiting throttle for live action broadcasts
+let lastBroadcastTimes = {};
+
 /**
  * Record a new live activity event and broadcast it across devices & tabs
  */
@@ -99,17 +102,25 @@ export function recordLiveAction({
   score = null,
   section = 'General'
 }) {
+  const now = Date.now();
+  // Throttle duplicate broadcasts of the exact same event type within 800ms
+  const lastTime = lastBroadcastTimes[type] || 0;
+  if (now - lastTime < 800 && type !== 'mock_completed' && type !== 'session_login') {
+    return;
+  }
+  lastBroadcastTimes[type] = now;
+
   const currentFeed = getLocalLiveActivityFeed();
   const newEvent = {
-    id: 'act_' + Date.now() + '_' + Math.random().toString(36).substring(2, 7),
+    id: 'act_' + now + '_' + Math.random().toString(36).substring(2, 7),
     type,
-    studentName: studentName || 'GATE AG Aspirant',
-    collegeName: collegeName || 'COAET CCS HAU Hisar',
-    details: details || `Active session activity recorded in ${section}`,
-    count: Number(count) || 1,
+    studentName: (studentName || 'GATE AG Aspirant').slice(0, 100),
+    collegeName: (collegeName || 'COAET CCS HAU Hisar').slice(0, 100),
+    details: (details || `Active session activity recorded in ${section}`).slice(0, 250),
+    count: Math.min(100, Math.max(1, Number(count) || 1)),
     score: score !== null ? Number(score) : null,
-    section,
-    timestamp: Date.now()
+    section: (section || 'General').slice(0, 80),
+    timestamp: now
   };
 
   // Prepend and limit to latest 50 activities

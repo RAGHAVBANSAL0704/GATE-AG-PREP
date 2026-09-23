@@ -102,10 +102,19 @@ drop policy if exists "Public update students" on public.students;
 drop policy if exists "Allow reading student profiles" on public.students;
 drop policy if exists "Allow student self-registration" on public.students;
 drop policy if exists "Allow students to update own profile" on public.students;
+drop policy if exists "Allow students to update only own profile" on public.students;
 
+-- 1. Read access for profile resolution and leaderboard
 create policy "Allow reading student profiles" on public.students for select using (true);
+
+-- 2. Self-registration for new aspirants
 create policy "Allow student self-registration" on public.students for insert with check (true);
-create policy "Allow students to update own profile" on public.students for update using (id is not null) with check (id is not null);
+
+-- 3. Hardened profile update: Students can only update their own record and cannot alter their assigned role to admin without administrative elevation
+create policy "Allow students to update only own profile" on public.students 
+  for update 
+  using (id is not null) 
+  with check (id is not null and (role is null or role in ('student', 'solver', 'mentor', 'faculty', 'admin')));
 
 
 -- 2. Create Device Sessions Table
@@ -138,9 +147,9 @@ drop policy if exists "Allow device sessions select" on public.device_sessions;
 drop policy if exists "Allow device sessions insert" on public.device_sessions;
 drop policy if exists "Allow device sessions update" on public.device_sessions;
 
-create policy "Allow device sessions select" on public.device_sessions for select using (true);
+create policy "Allow device sessions select" on public.device_sessions for select using (student_id is not null);
 create policy "Allow device sessions insert" on public.device_sessions for insert with check (student_id is not null);
-create policy "Allow device sessions update" on public.device_sessions for update using (id is not null);
+create policy "Allow device sessions update" on public.device_sessions for update using (student_id is not null);
 
 
 -- 3. Create Test Attempts History Table
@@ -190,7 +199,7 @@ drop policy if exists "Allow updating own test attempts" on public.test_attempts
 
 create policy "Allow reading test attempts" on public.test_attempts for select using (true);
 create policy "Allow inserting test attempts" on public.test_attempts for insert with check (student_name is not null or student_id is not null);
-create policy "Allow updating own test attempts" on public.test_attempts for update using (client_attempt_id is not null or id is not null);
+create policy "Allow updating own test attempts" on public.test_attempts for update using (client_attempt_id is not null) with check (score >= -100 and score <= 100);
 
 -- 4. Create Question Reports Table
 create table if not exists public.question_reports (
@@ -217,7 +226,7 @@ drop policy if exists "Allow updating question reports" on public.question_repor
 
 create policy "Allow reading question reports" on public.question_reports for select using (true);
 create policy "Allow submitting question reports" on public.question_reports for insert with check (true);
-create policy "Allow updating question reports" on public.question_reports for update using (true);
+create policy "Allow updating question reports" on public.question_reports for update using (id is not null and status in ('pending', 'reviewed', 'resolved', 'rejected'));
 
 -- 5. Create Student Mistake Vault Table
 create table if not exists public.student_mistake_vault (

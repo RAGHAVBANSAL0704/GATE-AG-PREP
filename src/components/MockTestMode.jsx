@@ -1893,9 +1893,13 @@ export default function MockTestMode({
           </div>
 
           <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
-            {/* Live Countdown Clock */}
-            <div className="cbt-timer px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg bg-[#003366] border border-blue-400/40 text-amber-300 font-mono font-black text-xs sm:text-sm flex items-center gap-1.5 shadow-inner">
-              <Clock className="w-3.5 h-3.5 animate-pulse shrink-0" />
+            {/* Live Countdown Clock with WCAG 2.2 Accessibility */}
+            <div 
+              role="timer" 
+              aria-label={`Exam time remaining: ${formatTimer(timeLeft)}`}
+              className="cbt-timer px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg bg-[#003366] border border-blue-400/40 text-amber-300 font-mono font-black text-xs sm:text-sm flex items-center gap-1.5 shadow-inner"
+            >
+              <Clock className="w-3.5 h-3.5 animate-pulse shrink-0" aria-hidden="true" />
               <span>{formatTimer(timeLeft)}</span>
             </div>
 

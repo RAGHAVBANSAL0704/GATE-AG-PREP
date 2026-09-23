@@ -20,26 +20,43 @@ export function generateUUID() {
 export async function saveTestAttempt(attemptData) {
   const clientAttemptId = attemptData.client_attempt_id || generateUUID();
 
+  const rawScore = Number(attemptData.score || 0);
+  const totalMarks = Math.max(1, Number(attemptData.total_marks || 100));
+  // In official GATE AG: Max score is totalMarks (100), lowest possible on full incorrect 1M/2M is -33.33
+  const validatedScore = Math.min(totalMarks, Math.max(-totalMarks, rawScore));
+
+  const totalQuestions = Math.max(1, Math.min(100, Number(attemptData.total_questions || 65)));
+  const correctCount = Math.max(0, Math.min(totalQuestions, Number(attemptData.correct_count || 0)));
+  const incorrectCount = Math.max(0, Math.min(totalQuestions - correctCount, Number(attemptData.incorrect_count || 0)));
+  const unattemptedCount = Math.max(0, totalQuestions - (correctCount + incorrectCount));
+
+  const rawPct = attemptData.percentage !== undefined ? Number(attemptData.percentage) : (validatedScore / totalMarks) * 100;
+  const validatedPercentage = Math.max(-100, Math.min(100, rawPct));
+
+  const totalAttempted = correctCount + incorrectCount;
+  const rawAccuracy = attemptData.accuracy_percentage !== undefined ? Number(attemptData.accuracy_percentage) : (totalAttempted > 0 ? (correctCount / totalAttempted) * 100 : 0);
+  const validatedAccuracy = Math.max(0, Math.min(100, rawAccuracy));
+
   const attemptPayload = {
     client_attempt_id: clientAttemptId,
     student_id: attemptData.student_id || null,
-    student_name: attemptData.student_name || 'Guest Student',
+    student_name: (attemptData.student_name || 'Guest Student').slice(0, 100),
     admission_no: attemptData.admission_no || null,
     email: attemptData.email || null,
     mobile_number: attemptData.mobile_number || null,
-    paper_title: attemptData.paper_title || 'CBT Practice Paper',
-    paper_year: attemptData.paper_year ? String(attemptData.paper_year) : null,
+    paper_title: (attemptData.paper_title || 'CBT Practice Paper').slice(0, 150),
+    paper_year: attemptData.paper_year ? String(attemptData.paper_year).slice(0, 10) : null,
     test_type: attemptData.test_type || 'cbt_mock',
-    score: Number(attemptData.score || 0),
-    total_marks: Number(attemptData.total_marks || 100),
-    percentage: Number(attemptData.percentage || 0),
-    accuracy_percentage: Number(attemptData.accuracy_percentage || 0),
-    correct_count: Number(attemptData.correct_count || 0),
-    incorrect_count: Number(attemptData.incorrect_count || 0),
-    unattempted_count: Number(attemptData.unattempted_count || 0),
-    total_questions: Number(attemptData.total_questions || 65),
-    time_spent_seconds: Number(attemptData.time_spent_seconds || 0),
-    question_responses: attemptData.question_responses || [],
+    score: Number(validatedScore.toFixed(2)),
+    total_marks: Number(totalMarks.toFixed(2)),
+    percentage: Number(validatedPercentage.toFixed(2)),
+    accuracy_percentage: Number(validatedAccuracy.toFixed(2)),
+    correct_count: correctCount,
+    incorrect_count: incorrectCount,
+    unattempted_count: unattemptedCount,
+    total_questions: totalQuestions,
+    time_spent_seconds: Math.max(0, Math.min(86400, Number(attemptData.time_spent_seconds || 0))),
+    question_responses: Array.isArray(attemptData.question_responses) ? attemptData.question_responses : [],
     submitted_at: attemptData.submitted_at || new Date().toISOString(),
     _syncedToBackend: false
   };

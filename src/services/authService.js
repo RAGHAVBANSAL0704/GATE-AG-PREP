@@ -1217,7 +1217,7 @@ export async function updateStudentProfile(studentId, updatedFields) {
     gate_target_year: !isFac ? (updatedFields.gate_target_year || currentStudent.gate_target_year || 'GATE 2027') : null,
     bio: updatedFields.bio !== undefined ? updatedFields.bio : (currentStudent.bio || null),
     is_faculty: isFac,
-    role: isFac ? 'faculty' : (updatedFields.role || 'student'),
+    role: isFac ? 'faculty' : (['admin', 'solver', 'mentor'].includes(updatedFields.role) && currentStudent.role !== updatedFields.role && currentStudent.role !== 'admin' ? (currentStudent.role || 'student') : (updatedFields.role || currentStudent.role || 'student')),
     student_type: updatedFields.student_type || currentStudent.student_type || (isFac ? 'faculty' : 'external'),
     display_name: isFac && (updatedFields.title_prefix || currentStudent.title_prefix) && (updatedFields.full_name || currentStudent.full_name)
       ? `${updatedFields.title_prefix || currentStudent.title_prefix || 'Dr.'} ${updatedFields.full_name || currentStudent.full_name}`.trim()
