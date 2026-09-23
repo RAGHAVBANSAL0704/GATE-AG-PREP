@@ -26,6 +26,7 @@ import MathRenderer from './MathRenderer';
 import initialConcepts from '../data/concepts.json';
 import { normalizeSectionTitle } from '../utils/syllabusTaxonomy.js';
 import InlineAIConceptExplainer from './InlineAIConceptExplainer';
+import { printConceptDocument, downloadConceptAsPlainText } from '../utils/conceptPdfExportService.js';
 
 export default function ImportantConcepts() {
   const [concepts] = useState(initialConcepts);
@@ -79,12 +80,13 @@ export default function ImportantConcepts() {
         if (normItemSec !== normalizeSectionTitle(selectedSection)) return false;
       }
 
-      if (searchTerm) {
-        const term = searchTerm.toLowerCase();
-        const matchTitle = (item.title || '').toLowerCase().includes(term);
-        const matchTopic = (item.topic || '').toLowerCase().includes(term);
-        const matchContent = (item.content || '').toLowerCase().includes(term);
-        if (!matchTitle && !matchTopic && !matchContent) return false;
+      const trimmedSearch = (searchTerm || '').trim().toLowerCase();
+      if (trimmedSearch) {
+        const matchTitle = (item.title || '').toLowerCase().includes(trimmedSearch);
+        const matchTopic = (item.topic || '').toLowerCase().includes(trimmedSearch);
+        const matchContent = (item.content || '').toLowerCase().includes(trimmedSearch);
+        const matchFormulas = (item.formulas || []).some(f => (f || '').toLowerCase().includes(trimmedSearch));
+        if (!matchTitle && !matchTopic && !matchContent && !matchFormulas) return false;
       }
 
       return true;
@@ -103,8 +105,8 @@ export default function ImportantConcepts() {
     } else if (readerTheme === 'sepia') {
       return 'bg-[#fbf0d9] text-[#433422] border-[#e8d7b8]';
     }
-    // Default paper theme
-    return 'bg-white text-slate-900 border-slate-200 dark:bg-slate-900 dark:text-white dark:border-slate-800';
+    // Default paper theme: clean white paper sheet in both light and dark application themes
+    return 'bg-white text-slate-900 border-slate-300';
   };
 
   return (
@@ -301,12 +303,15 @@ export default function ImportantConcepts() {
 
       {/* Online Document Reader Mode Modal */}
       {readerConcept && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-3 sm:p-6 animate-in fade-in duration-200">
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-3 sm:p-6 animate-in fade-in duration-200 reader-modal-overlay">
           
-          <div className={`w-full max-w-4xl max-h-[92vh] flex flex-col rounded-3xl border shadow-2xl overflow-hidden transition-all ${getReaderThemeStyles()}`}>
+          <div
+            data-reader-theme={readerTheme}
+            className={`w-full max-w-4xl max-h-[92vh] flex flex-col rounded-3xl border shadow-2xl overflow-hidden transition-all reader-mode-${readerTheme} reader-modal-container ${getReaderThemeStyles()}`}
+          >
             
             {/* Reader Controls Toolbar Header */}
-            <div className="px-6 py-4 border-b border-slate-200/40 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3 shrink-0 bg-slate-500/5 backdrop-blur-md">
+            <div className="px-6 py-4 border-b border-slate-200/40 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3 shrink-0 bg-slate-500/5 backdrop-blur-md reader-toolbar no-print">
               <div className="flex items-center gap-2">
                 <span className="p-2 rounded-xl bg-blue-600 text-white font-bold">
                   <BookMarked className="w-4 h-4" />
@@ -375,14 +380,24 @@ export default function ImportantConcepts() {
                   </button>
                 </div>
 
-                {/* Print / Save as PDF Button */}
+                {/* Print / Save as PDF Button (Isolated Clean Sheet) */}
                 <button
-                  onClick={() => window.print()}
+                  onClick={() => printConceptDocument(readerConcept)}
                   className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-extrabold transition shadow-xs cursor-pointer"
-                  title="Print or Save as PDF Cheatsheet"
+                  title="Print or Save as Clean Plain-Paper PDF (Zero UI Chrome)"
                 >
                   <Printer className="w-3.5 h-3.5" />
                   <span className="hidden sm:inline">Print / PDF</span>
+                </button>
+
+                {/* Download Clean Plain Text (.txt) Button */}
+                <button
+                  onClick={() => downloadConceptAsPlainText(readerConcept)}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-700 hover:bg-slate-600 text-white text-xs font-extrabold transition shadow-xs cursor-pointer"
+                  title="Download clean plain-text (.txt) notes without interface clutter"
+                >
+                  <FileText className="w-3.5 h-3.5" />
+                  <span className="hidden sm:inline">Plain TXT</span>
                 </button>
 
                 {/* Download DOCX if available */}
@@ -401,7 +416,7 @@ export default function ImportantConcepts() {
                 {/* Close Button */}
                 <button
                   onClick={() => setReaderConcept(null)}
-                  className="p-2 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 transition cursor-pointer"
+                  className="p-2 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 transition cursor-pointer text-slate-700 dark:text-slate-200"
                   title="Close Reader Mode"
                 >
                   <X className="w-4 h-4" />
@@ -410,7 +425,7 @@ export default function ImportantConcepts() {
             </div>
 
             {/* Document Content Workspace */}
-            <div className="flex-1 overflow-y-auto p-6 sm:p-10 space-y-6">
+            <div className="flex-1 overflow-y-auto p-6 sm:p-10 space-y-6 reader-content-workspace">
               
               <div className="max-w-3xl mx-auto space-y-6">
                 

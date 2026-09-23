@@ -3,6 +3,8 @@ import ImportantConcepts from './ImportantConcepts';
 import RevisionBank from './RevisionBank';
 import FormulaSheet from './FormulaSheet';
 import AgriSimulators from './AgriSimulators';
+import AgriUnitConverter from './AgriUnitConverter';
+import AgriFlowsheetExplorer from './AgriFlowsheetExplorer';
 import SpacedRepetitionFlashcards from './SpacedRepetitionFlashcards';
 import AIDiagnosticRadarHub from './AIDiagnosticRadarHub';
 import InlineAIConceptExplainer from './InlineAIConceptExplainer';
@@ -20,7 +22,9 @@ import {
   ExternalLink,
   Target,
   Layers,
-  ChevronRight
+  ChevronRight,
+  Scale,
+  Workflow
 } from 'lucide-react';
 import { executeUniversalSearch } from '../utils/universalSearchEngine.js';
 
@@ -82,12 +86,14 @@ export default function LearningHub({
   };
 
   const subTabs = [
-    { id: 'concepts', label: 'Core Concepts', icon: Lightbulb, color: 'text-blue-500 bg-blue-500/10 border-blue-500/20' },
-    { id: 'radar', label: 'AI Weak-Area Radar', icon: Sparkles, color: 'text-purple-500 bg-purple-500/10 border-purple-500/20' },
-    { id: 'simulators', label: 'Physics Simulators', icon: Cpu, color: 'text-emerald-500 bg-emerald-500/10 border-emerald-500/20' },
-    { id: 'flashcards', label: 'SM-2 Flashcards', icon: Brain, color: 'text-amber-500 bg-amber-500/10 border-amber-500/20' },
-    { id: 'revision', label: 'Revision Bank', icon: Bookmark, color: 'text-indigo-500 bg-indigo-500/10 border-indigo-500/20' },
-    { id: 'formulas', label: 'Formula Sheet', icon: FileText, color: 'text-cyan-500 bg-cyan-500/10 border-cyan-500/20' },
+    { id: 'concepts', label: 'Core Concepts', icon: Lightbulb, color: 'text-blue-500 bg-blue-500/10 border-blue-500/20', cluster: 'Study & References' },
+    { id: 'formulas', label: 'Formula Sheet', icon: FileText, color: 'text-cyan-500 bg-cyan-500/10 border-cyan-500/20', cluster: 'Study & References' },
+    { id: 'simulators', label: 'Physics Simulators', icon: Cpu, color: 'text-emerald-500 bg-emerald-500/10 border-emerald-500/20', cluster: 'Interactive Labs' },
+    { id: 'flowsheets', label: 'Flowsheet Explorer', icon: Workflow, color: 'text-teal-500 bg-teal-500/10 border-teal-500/20', cluster: 'Interactive Labs' },
+    { id: 'unitconverter', label: 'Unit Analyzer', icon: Scale, color: 'text-sky-500 bg-sky-500/10 border-sky-500/20', cluster: 'Interactive Labs' },
+    { id: 'flashcards', label: 'SM-2 Flashcards', icon: Brain, color: 'text-amber-500 bg-amber-500/10 border-amber-500/20', cluster: 'Adaptive Revision' },
+    { id: 'radar', label: 'AI Weak Radar', icon: Sparkles, color: 'text-purple-500 bg-purple-500/10 border-purple-500/20', cluster: 'Adaptive Revision' },
+    { id: 'revision', label: 'Revision Bank', icon: Bookmark, color: 'text-indigo-500 bg-indigo-500/10 border-indigo-500/20', cluster: 'Adaptive Revision' },
   ];
 
   // Execute 4-Way Universal Search
@@ -294,8 +300,8 @@ export default function LearningHub({
           </div>
         )}
 
-        {/* Fully Responsive Grid of Sub-Tabs */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 pt-2 border-t border-slate-100 dark:border-slate-800">
+        {/* Fully Responsive Grid of Sub-Tabs (Clustered 8-Tool Suite) */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2 pt-2 border-t border-slate-100 dark:border-slate-800">
           {subTabs.map((tab) => {
             const Icon = tab.icon;
             const isActive = currentSubTab === tab.id;
@@ -303,13 +309,13 @@ export default function LearningHub({
               <button
                 key={tab.id}
                 onClick={() => handleTabClick(tab.id)}
-                className={`w-full min-w-0 flex items-center justify-center sm:justify-start gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-2.5 rounded-2xl text-[11px] sm:text-xs font-extrabold transition border cursor-pointer ${
+                className={`w-full min-w-0 flex items-center justify-center sm:justify-start gap-1.5 sm:gap-2 px-2 sm:px-2.5 py-2.5 rounded-2xl text-[11px] sm:text-xs font-extrabold transition border cursor-pointer ${
                   isActive
                     ? 'bg-purple-600 text-white border-purple-600 shadow-md transform scale-[1.01]'
                     : 'bg-slate-50 dark:bg-slate-800/60 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700/60 hover:bg-slate-100 dark:hover:bg-slate-800'
                 }`}
               >
-                <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-white' : tab.color.split(' ')[0]}`} />
+                <Icon className={`w-3.5 h-3.5 shrink-0 ${isActive ? 'text-white' : tab.color.split(' ')[0]}`} />
                 <span className="truncate text-center sm:text-left">{tab.label}</span>
               </button>
             );
@@ -335,6 +341,14 @@ export default function LearningHub({
 
         {currentSubTab === 'simulators' && (
           <AgriSimulators />
+        )}
+
+        {currentSubTab === 'flowsheets' && (
+          <AgriFlowsheetExplorer />
+        )}
+
+        {currentSubTab === 'unitconverter' && (
+          <AgriUnitConverter />
         )}
 
         {currentSubTab === 'flashcards' && (

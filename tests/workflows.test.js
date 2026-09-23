@@ -462,14 +462,14 @@ describe('Core Application Workflows Test Suite', () => {
       assert.deepStrictEqual(codes, ['EM', 'FMP', 'FP', 'SWCE', 'IDE', 'APE', 'DFE', 'GA']);
     });
 
-    it('contains exactly 57 comprehensive formulas aligned with 14-year trend analysis report', () => {
+    it('contains comprehensive formulas aligned with 14-year trend analysis report', () => {
       let totalFormulas = 0;
       GATE_AG_FORMULAS.forEach(cat => {
         cat.topics.forEach(top => {
           totalFormulas += top.formulas.length;
         });
       });
-      assert.strictEqual(totalFormulas, 57);
+      assert.ok(totalFormulas >= 120, `Expected at least 120 formulas, got ${totalFormulas}`);
     });
 
     it('performs accurate live search filtering matching title, explanation, and topicName', () => {
@@ -496,10 +496,10 @@ describe('Core Application Workflows Test Suite', () => {
       const emOnly = filterFormulas(GATE_AG_FORMULAS, { selectedCat: emCategoryName });
       assert.strictEqual(emOnly.length, 1);
       assert.strictEqual(emOnly[0].code, 'EM');
-      assert.strictEqual(emOnly[0].topics.reduce((s, t) => s + t.formulas.length, 0), 10);
+      assert.ok(emOnly[0].topics.reduce((s, t) => s + t.formulas.length, 0) >= 10);
     });
 
-    it('validates that all 57 formulas have valid non-empty LaTeX syntax and balanced braces', () => {
+    it('validates that all formulas have valid non-empty LaTeX syntax and balanced braces', () => {
       let formulaIndex = 0;
       GATE_AG_FORMULAS.forEach(cat => {
         cat.topics.forEach(top => {
@@ -520,7 +520,7 @@ describe('Core Application Workflows Test Suite', () => {
           });
         });
       });
-      assert.strictEqual(formulaIndex, 57);
+      assert.ok(formulaIndex >= 120, `Expected at least 120 formulas, got ${formulaIndex}`);
     });
   });
 

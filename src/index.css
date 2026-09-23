@@ -614,6 +614,99 @@ html.dark .katex * {
   fill: #F8FAFC !important;
 }
 
+/* Reader Mode KaTeX Scoped Palette Contrast */
+[data-reader-theme="sepia"] .katex,
+[data-reader-theme="sepia"] .katex *,
+.reader-mode-sepia .katex,
+.reader-mode-sepia .katex *,
+html [data-reader-theme="sepia"] .katex,
+html [data-reader-theme="sepia"] .katex *,
+html.dark [data-reader-theme="sepia"] .katex,
+html.dark [data-reader-theme="sepia"] .katex *,
+html.dark .reader-mode-sepia .katex,
+html.dark .reader-mode-sepia .katex * {
+  color: #433422 !important;
+  fill: #433422 !important;
+}
+
+[data-reader-theme="paper"] .katex,
+[data-reader-theme="paper"] .katex *,
+.reader-mode-paper .katex,
+.reader-mode-paper .katex *,
+html [data-reader-theme="paper"] .katex,
+html [data-reader-theme="paper"] .katex *,
+html.dark [data-reader-theme="paper"] .katex,
+html.dark [data-reader-theme="paper"] .katex *,
+html.dark .reader-mode-paper .katex,
+html.dark .reader-mode-paper .katex * {
+  color: #0F172A !important;
+  fill: #0F172A !important;
+}
+
+[data-reader-theme="dark"] .katex,
+[data-reader-theme="dark"] .katex *,
+.reader-mode-dark .katex,
+.reader-mode-dark .katex *,
+html [data-reader-theme="dark"] .katex,
+html [data-reader-theme="dark"] .katex *,
+html:not(.dark) [data-reader-theme="dark"] .katex,
+html:not(.dark) [data-reader-theme="dark"] .katex *,
+html:not(.dark) .reader-mode-dark .katex,
+html:not(.dark) .reader-mode-dark .katex * {
+  color: #F8FAFC !important;
+  fill: #F8FAFC !important;
+}
+
+/* ==========================================================================
+   READER MODE SCOPED TYPOGRAPHY ENFORCEMENT ACROSS GLOBAL THEMES
+   ========================================================================== */
+
+/* Force crisp dark slate typography inside Paper Reader Mode across all themes */
+html.dark [data-reader-theme="paper"],
+html.dark .reader-mode-paper,
+html.dark [data-reader-theme="paper"] h1,
+html.dark [data-reader-theme="paper"] h2,
+html.dark [data-reader-theme="paper"] h3,
+html.dark [data-reader-theme="paper"] h4,
+html.dark [data-reader-theme="paper"] h5,
+html.dark [data-reader-theme="paper"] h6,
+html.dark [data-reader-theme="paper"] p,
+html.dark [data-reader-theme="paper"] li,
+html.dark [data-reader-theme="paper"].text-slate-900,
+html.dark .reader-mode-paper.text-slate-900,
+html.dark .reader-mode-paper h1,
+html.dark .reader-mode-paper h2,
+html.dark .reader-mode-paper h3,
+html.dark .reader-mode-paper h4,
+html.dark .reader-mode-paper h5,
+html.dark .reader-mode-paper h6,
+html.dark .reader-mode-paper p,
+html.dark .reader-mode-paper li {
+  color: #0F172A !important;
+}
+
+/* Force warm sepia typography inside Sepia Reader Mode across all themes */
+html.dark [data-reader-theme="sepia"],
+html.dark .reader-mode-sepia,
+html.dark [data-reader-theme="sepia"] h1,
+html.dark [data-reader-theme="sepia"] h2,
+html.dark [data-reader-theme="sepia"] h3,
+html.dark [data-reader-theme="sepia"] h4,
+html.dark [data-reader-theme="sepia"] h5,
+html.dark [data-reader-theme="sepia"] h6,
+html.dark [data-reader-theme="sepia"] p,
+html.dark [data-reader-theme="sepia"] li,
+html.dark .reader-mode-sepia h1,
+html.dark .reader-mode-sepia h2,
+html.dark .reader-mode-sepia h3,
+html.dark .reader-mode-sepia h4,
+html.dark .reader-mode-sepia h5,
+html.dark .reader-mode-sepia h6,
+html.dark .reader-mode-sepia p,
+html.dark .reader-mode-sepia li {
+  color: #433422 !important;
+}
+
 /* ==========================================================================
    TCS iON CBT SIMULATOR - BULLETPROOF ISOLATED LIGHT THEME ENFORCEMENT
    ========================================================================== */
@@ -755,5 +848,182 @@ html, body {
 [role="dialog"] {
   -webkit-overflow-scrolling: touch;
 }
+
+/* ==========================================================================
+   CLEAN ACADEMIC PRINT & PDF EXPORT STYLESHEET (ZERO UI CHROME)
+   ========================================================================== */
+
+@media print {
+  /* 1. Global Page Layout & Clean Plain-Paper Reset */
+  @page {
+    margin: 15mm 15mm 15mm 15mm;
+    size: auto;
+  }
+
+  *, *::before, *::after {
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    backdrop-filter: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  html, body {
+    background: #ffffff !important;
+    color: #111827 !important;
+    font-size: 11pt !important;
+    line-height: 1.55 !important;
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 2. Hide ALL application chrome, navigation, headers, sidebars, footers & buttons */
+  header,
+  nav,
+  aside,
+  footer,
+  .no-print,
+  [data-no-print="true"],
+  button,
+  input,
+  select,
+  textarea,
+  .btn,
+  .navbar,
+  .sidebar,
+  .card-3d-glow,
+  .floating-calc,
+  .command-palette,
+  .toast,
+  #banner,
+  .search-container {
+    display: none !important;
+  }
+
+  /* 3. Specialized Isolation for Reader Mode (ImportantConcepts.jsx) */
+  body:has(.reader-modal-overlay) header,
+  body:has(.reader-modal-overlay) nav,
+  body:has(.reader-modal-overlay) aside,
+  body:has(.reader-modal-overlay) footer,
+  body:has(.reader-modal-overlay) .card-3d:not(.reader-modal-container) {
+    display: none !important;
+  }
+
+  .reader-modal-overlay {
+    position: static !important;
+    inset: auto !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+    z-index: auto !important;
+  }
+
+  .reader-modal-container {
+    max-height: none !important;
+    height: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+    color: #111827 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .reader-toolbar {
+    display: none !important;
+  }
+
+  .reader-content-workspace {
+    overflow: visible !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-height: none !important;
+    height: auto !important;
+  }
+
+  /* 4. Clean Academic Plain-Text Typography & Headings */
+  .reader-modal-container h1,
+  .reader-modal-container h2,
+  .reader-modal-container h3,
+  .reader-modal-container h4,
+  h1, h2, h3, h4 {
+    color: #111827 !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  h1 {
+    font-size: 18pt !important;
+    font-weight: 800 !important;
+    margin-bottom: 6pt !important;
+    border-bottom: 1.5pt solid #111827 !important;
+    padding-bottom: 4pt !important;
+  }
+
+  h2 {
+    font-size: 13pt !important;
+    font-weight: 700 !important;
+    margin-top: 14pt !important;
+    margin-bottom: 4pt !important;
+    border-bottom: 0.5pt solid #9ca3af !important;
+    padding-bottom: 2pt !important;
+  }
+
+  p, li, span, div {
+    color: #1f2937 !important;
+  }
+
+  /* Mathematical Formula Rendering in Print */
+  .katex {
+    color: #000000 !important;
+    fill: #000000 !important;
+  }
+
+  .katex * {
+    color: #000000 !important;
+    fill: #000000 !important;
+  }
+
+  .katex-display {
+    margin: 8pt 0 !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    overflow-x: visible !important;
+  }
+
+  /* Formula cards & blocks on plain paper */
+  .formula-card,
+  [data-formula-card="true"] {
+    border: 0.5pt solid #e5e7eb !important;
+    border-radius: 4pt !important;
+    padding: 6pt 10pt !important;
+    margin: 6pt 0 !important;
+    background: #f9fafb !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Prevent awkward page breaks in the middle of lists and paragraphs */
+  p, blockquote, pre, ul, ol, table {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}
+
 
 

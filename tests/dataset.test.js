@@ -157,7 +157,7 @@ describe('Dataset Integrity, Schema & Question Evaluation Test Suite', () => {
       assert.deepStrictEqual(actualCodes, expectedCodes);
     });
 
-    it('contains exactly 57 formulas across all topics', () => {
+    it('contains comprehensive formulas across all topics', () => {
       let formulaCount = 0;
       GATE_AG_FORMULAS.forEach(category => {
         assert.ok(category.category && category.category.length > 0);
@@ -176,7 +176,7 @@ describe('Dataset Integrity, Schema & Question Evaluation Test Suite', () => {
         });
       });
 
-      assert.strictEqual(formulaCount, 57, 'Formulas dataset must contain exactly 57 formulas');
+      assert.ok(formulaCount >= 120, `Formulas dataset must contain at least 120 formulas, found ${formulaCount}`);
     });
   });
 

@@ -30,7 +30,9 @@ import {
   Clock,
   Printer,
   ChevronDown,
-  AlertTriangle
+  AlertTriangle,
+  Mic,
+  MicOff
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import { solveGeneralDoubt, getStoredApiKey, setStoredApiKey, hasApiKey } from '../services/geminiService';
@@ -189,6 +191,63 @@ Choose your solver mode and ask any numerical problem or doubt below!`
   const [showPyqPicker, setShowPyqPicker] = useState(false);
   const [showMathKeypad, setShowMathKeypad] = useState(false);
 
+  // Speech Recognition (Voice Doubt Input) State
+  const [isListening, setIsListening] = useState(false);
+  const recognitionRef = useRef(null);
+  const speechSupported = typeof window !== 'undefined' && Boolean(window.SpeechRecognition || window.webkitSpeechRecognition);
+
+  useEffect(() => {
+    if (!speechSupported) return;
+    try {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      const recognition = new SpeechRecognition();
+      recognition.continuous = true;
+      recognition.interimResults = true;
+      recognition.lang = 'en-US';
+
+      recognition.onresult = (event) => {
+        let transcript = '';
+        for (let i = event.resultIndex; i < event.results.length; i++) {
+          transcript += event.results[i][0].transcript;
+        }
+        if (transcript.trim()) {
+          setQuery(prev => (prev ? prev + ' ' : '') + transcript.trim());
+        }
+      };
+
+      recognition.onerror = () => {
+        setIsListening(false);
+      };
+
+      recognition.onend = () => {
+        setIsListening(false);
+      };
+
+      recognitionRef.current = recognition;
+    } catch (e) {}
+
+    return () => {
+      try {
+        if (recognitionRef.current) recognitionRef.current.stop();
+      } catch (e) {}
+    };
+  }, [speechSupported]);
+
+  const toggleSpeechRecognition = () => {
+    if (!recognitionRef.current) return;
+    if (isListening) {
+      recognitionRef.current.stop();
+      setIsListening(false);
+    } else {
+      try {
+        recognitionRef.current.start();
+        setIsListening(true);
+      } catch (e) {
+        setIsListening(false);
+      }
+    }
+  };
+
   const messagesContainerRef = useRef(null);
   const textareaRef = useRef(null);
 
@@ -287,6 +346,13 @@ Choose your solver mode and ask any numerical problem or doubt below!`
     const textToQuery = (promptToUse || query).trim();
     if ((!textToQuery && !imagePreview) || isLoading) return;
 
+    if (isListening && recognitionRef.current) {
+      try {
+        recognitionRef.current.stop();
+      } catch (e) {}
+      setIsListening(false);
+    }
+
     const userMessageId = `user_${Date.now()}`;
     const newUserMessage = {
       id: userMessageId,
@@ -305,6 +371,9 @@ Choose your solver mode and ask any numerical problem or doubt below!`
     if (fileInputRef.current) fileInputRef.current.value = '';
     setIsLoading(true);
 
+    const aiMessageId = `ai_${Date.now()}`;
+    let messageInitialized = false;
+
     try {
       let contextualPrompt = textToQuery;
       if (messages.length > 1) {
@@ -315,21 +384,53 @@ Choose your solver mode and ask any numerical problem or doubt below!`
       const res = await solveGeneralDoubt(contextualPrompt, {
         solverMode,
         imageBase64: activeImage,
-        imageMimeType: activeMime
+        imageMimeType: activeMime,
+        onChunk: (accumulated) => {
+          if (!messageInitialized) {
+            messageInitialized = true;
+            setIsLoading(false);
+            setMessages(prev => [
+              ...prev,
+              {
+                id: aiMessageId,
+                sender: 'ai',
+                text: accumulated,
+                isOffline: false,
+                sources: [],
+                solverMode,
+                timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+              }
+            ]);
+          } else {
+            setMessages(prev => prev.map(m => 
+              m.id === aiMessageId ? { ...m, text: accumulated } : m
+            ));
+          }
+        }
       });
       
-      const aiMessageId = `ai_${Date.now()}`;
-      const newAiMessage = {
-        id: aiMessageId,
-        sender: 'ai',
-        text: res.text || 'Unable to derive solution. Please retry or rephrase your question.',
-        isOffline: Boolean(res.isOffline),
-        sources: res.sources || [],
-        solverMode: res.solverMode || solverMode,
-        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-      };
-
-      setMessages(prev => [...prev, newAiMessage]);
+      if (!messageInitialized) {
+        const newAiMessage = {
+          id: aiMessageId,
+          sender: 'ai',
+          text: res.text || 'Unable to derive solution. Please retry or rephrase your question.',
+          isOffline: Boolean(res.isOffline),
+          sources: res.sources || [],
+          solverMode: res.solverMode || solverMode,
+          timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+        };
+        setMessages(prev => [...prev, newAiMessage]);
+      } else {
+        setMessages(prev => prev.map(m => 
+          m.id === aiMessageId ? {
+            ...m,
+            text: res.text || m.text,
+            isOffline: Boolean(res.isOffline),
+            sources: res.sources || [],
+            solverMode: res.solverMode || solverMode
+          } : m
+        ));
+      }
     } catch (e) {
       setMessages(prev => [
         ...prev,
@@ -699,6 +800,14 @@ Choose your solver mode and ask any numerical problem or doubt below!`
                   <div className="prose prose-sm dark:prose-invert max-w-none">
                     <MathRenderer text={m.text} className={`text-xs sm:text-sm leading-relaxed ${isUser ? 'text-white' : 'text-slate-800 dark:text-slate-200'}`} />
                   </div>
+
+                  {/* Grounded Formula Sources Badge */}
+                  {!isUser && m.sources && m.sources.length > 0 && (
+                    <div className="mt-3 pt-2.5 border-t border-slate-200 dark:border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px] font-semibold text-indigo-600 dark:text-indigo-400">
+                      <BookOpen className="w-3.5 h-3.5 shrink-0" />
+                      <span>Grounded in {m.sources.length} Official GATE AG Formula{m.sources.length > 1 ? 's' : ''}: {m.sources.map(s => s.title).join(', ')}</span>
+                    </div>
+                  )}
                 </div>
 
                 {isUser && (
@@ -759,7 +868,7 @@ Choose your solver mode and ask any numerical problem or doubt below!`
             <textarea
               ref={textareaRef}
               rows={3}
-              placeholder="Type your question, paste text, or press Ctrl+V / Cmd+V to paste a screenshot/diagram... (e.g. In a moldboard plow, calculate draft given width 30cm, depth 15cm, unit draft 0.6 kg/cm²...)"
+              placeholder="Type your question, paste text, use voice, or press Ctrl+V / Cmd+V to paste a diagram... (e.g. In a moldboard plow, calculate draft given width 30cm, depth 15cm, unit draft 0.6 kg/cm²...)"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               onKeyDown={(e) => {
@@ -768,11 +877,27 @@ Choose your solver mode and ask any numerical problem or doubt below!`
                   handleSolve();
                 }
               }}
-              className="w-full p-4 pr-36 text-xs bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800 rounded-2xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition leading-relaxed font-sans resize-none"
+              className="w-full p-4 pr-48 text-xs bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800 rounded-2xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition leading-relaxed font-sans resize-none"
             />
 
             {/* Input Action Buttons */}
             <div className="absolute right-3 bottom-3 flex items-center gap-1.5">
+              {speechSupported && (
+                <button
+                  type="button"
+                  onClick={toggleSpeechRecognition}
+                  className={`p-2 rounded-xl text-xs font-bold transition flex items-center gap-1 cursor-pointer ${
+                    isListening
+                      ? 'bg-rose-500 text-white animate-pulse shadow-md'
+                      : 'bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300'
+                  }`}
+                  title={isListening ? 'Listening... click to stop' : 'Voice Doubt Input (Speech-to-Text)'}
+                >
+                  {isListening ? <MicOff className="w-3.5 h-3.5" /> : <Mic className="w-3.5 h-3.5" />}
+                  <span className="hidden sm:inline">{isListening ? 'Listening' : 'Voice'}</span>
+                </button>
+              )}
+
               <input
                 type="file"
                 ref={fileInputRef}

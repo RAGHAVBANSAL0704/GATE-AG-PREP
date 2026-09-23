@@ -36,7 +36,11 @@ import {
   Shuffle,
   Hash,
   X,
-  Image as ImageIcon
+  Image as ImageIcon,
+  MessageSquare,
+  Lightbulb,
+  ShieldAlert,
+  Loader2
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import QuestionReportModal from './QuestionReportModal';
@@ -44,6 +48,7 @@ import { evaluateQuestion } from '../utils/scoring.js';
 import { awardStudentXP } from '../services/leaderboardService.js';
 import { recordQuestionOutcomes } from '../services/mistakeVaultService.js';
 import { recordLiveAction } from '../services/liveStatisticsService.js';
+import { getProgressiveHint, diagnoseStudentMistake } from '../services/geminiService.js';
 import { 
   ALL_QUESTION_BANK_QUESTIONS, 
   getQuestionBankStats 
@@ -157,32 +162,17 @@ export function computePoolStats(questionsList) {
 
   const syllabusSections = GATE_AG_SYLLABUS.map(sec => {
     const canonTitle = normalizeSectionTitle(sec.title);
-    const questionTopics = sectionTopicSubtopics[canonTitle] || {};
-    const officialTopics = (sec.topics || []).map(t => t.topic_name);
-    const combinedTopicNames = Array.from(new Set([
-      ...officialTopics,
-      ...Object.keys(questionTopics)
-    ])).filter(tName => {
-      const qCount = topicCounts[`${canonTitle}:::${tName}`] || 0;
-      return qCount > 0 || officialTopics.includes(tName);
-    });
+    const officialTopics = sec.topics || [];
 
-    const topics = combinedTopicNames.map(topName => {
+    const topics = officialTopics.map(topObj => {
+      const topName = topObj.topic_name;
       const topKey = `${canonTitle}:::${topName}`;
-      const officialObj = (sec.topics || []).find(t => t.topic_name === topName);
-      const subtopicsFound = Array.from(questionTopics[topName] || []);
-      const combinedSubtopics = Array.from(new Set([
-        ...(officialObj?.subtopics || []),
-        ...subtopicsFound
-      ])).filter(sName => {
-        const subKey = `${canonTitle}:::${topName}:::${sName}`;
-        return (subtopicCounts[subKey] || 0) > 0 || (officialObj?.subtopics || []).includes(sName);
-      });
+      const officialSubtopics = topObj.subtopics || [];
 
       return {
         topic_name: topName,
         questionCount: topicCounts[topKey] || 0,
-        subtopics: combinedSubtopics.length > 0 ? combinedSubtopics : ['General']
+        subtopics: officialSubtopics
       };
     });
 
@@ -260,6 +250,15 @@ export default function QuestionBankView({
   const [showSolutions, setShowSolutions] = useState({});
   const [peekedQuestions, setPeekedQuestions] = useState({});
   const [showPalette, setShowPalette] = useState(false);
+
+  // Progressive AI Hints state
+  const [activeHintLevel, setActiveHintLevel] = useState({}); // { [qId]: 0 | 1 | 2 | 3 }
+  const [hintsData, setHintsData] = useState({}); // { [qId]: { 1: string, 2: string, 3: string } }
+  const [hintLoading, setHintLoading] = useState({}); // { [qId]: boolean }
+
+  // 1-Click Forensic Mistake Diagnostic state
+  const [mistakeReport, setMistakeReport] = useState({}); // { [qId]: string }
+  const [mistakeLoading, setMistakeLoading] = useState({}); // { [qId]: boolean }
 
   // Per-Question Real-time Timer State { [qId]: elapsedSeconds }
   const [questionTimes, setQuestionTimes] = useState({});
@@ -446,9 +445,16 @@ export default function QuestionBankView({
 
   const currentQ = activeQuestions[currentIndex];
 
-  // Per-Question Active Cumulative Timer (ticks every second when question is open and timer unpaused)
+  const isCurrentQuestionCompleted = Boolean(
+    currentQ && (
+      checkedQuestions[currentQ.id] ||
+      qbankProgress[currentQ.id]?.attempted
+    )
+  );
+
+  // Per-Question Active Cumulative Timer (ticks every second when question is open, timer unpaused, and question unsubmitted)
   useEffect(() => {
-    if (activeView !== 'practice' || !currentQ || isTimerPaused) return;
+    if (activeView !== 'practice' || !currentQ || isTimerPaused || isCurrentQuestionCompleted) return;
 
     const timer = setInterval(() => {
       setQuestionTimes(prev => ({
@@ -458,7 +464,7 @@ export default function QuestionBankView({
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [activeView, currentQ?.id, isTimerPaused]);
+  }, [activeView, currentQ?.id, isTimerPaused, isCurrentQuestionCompleted]);
 
   const formatTimer = (totalSec = 0) => {
     const m = Math.floor(totalSec / 60);
@@ -649,6 +655,82 @@ export default function QuestionBankView({
       delete copy[currentQ.id];
       return copy;
     });
+    setQbankProgress(prev => {
+      const copy = { ...prev };
+      delete copy[currentQ.id];
+      return copy;
+    });
+    setQuestionTimes(prev => ({
+      ...prev,
+      [currentQ.id]: 0
+    }));
+    setActiveHintLevel(prev => {
+      const copy = { ...prev };
+      delete copy[currentQ.id];
+      return copy;
+    });
+    setMistakeReport(prev => {
+      const copy = { ...prev };
+      delete copy[currentQ.id];
+      return copy;
+    });
+  };
+
+  const handleRequestHint = async (q, targetLevel) => {
+    if (!q) return;
+    const qId = q.id;
+    if (activeHintLevel[qId] === targetLevel) {
+      setActiveHintLevel(prev => ({ ...prev, [qId]: 0 }));
+      return;
+    }
+
+    setActiveHintLevel(prev => ({ ...prev, [qId]: targetLevel }));
+
+    if (hintsData[qId]?.[targetLevel]) return;
+
+    setHintLoading(prev => ({ ...prev, [qId]: true }));
+    try {
+      const res = await getProgressiveHint(q, targetLevel);
+      setHintsData(prev => ({
+        ...prev,
+        [qId]: {
+          ...(prev[qId] || {}),
+          [targetLevel]: res.text
+        }
+      }));
+    } catch (e) {
+      setHintsData(prev => ({
+        ...prev,
+        [qId]: {
+          ...(prev[qId] || {}),
+          [targetLevel]: 'Identify the core principle and standard SI units.'
+        }
+      }));
+    } finally {
+      setHintLoading(prev => ({ ...prev, [qId]: false }));
+    }
+  };
+
+  const handleDiagnoseMistake = async (q) => {
+    if (!q) return;
+    const qId = q.id;
+    const studentAns = userAnswers[qId] || 'No answer recorded';
+
+    setMistakeLoading(prev => ({ ...prev, [qId]: true }));
+    try {
+      const res = await diagnoseStudentMistake(q, studentAns, false);
+      setMistakeReport(prev => ({
+        ...prev,
+        [qId]: res.text
+      }));
+    } catch (e) {
+      setMistakeReport(prev => ({
+        ...prev,
+        [qId]: 'Unable to analyze mistake at this time.'
+      }));
+    } finally {
+      setMistakeLoading(prev => ({ ...prev, [qId]: false }));
+    }
   };
 
   // Calculate student mastery statistics across question pool
@@ -1153,17 +1235,33 @@ export default function QuestionBankView({
                   </div>
 
                   {/* Real-time Per-Question Cumulative Timer */}
-                  <div className="flex items-center gap-1.5 ml-2 px-2.5 py-1 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-mono text-xs font-bold border border-slate-200/80 dark:border-slate-700/80">
-                    <Clock className={`w-3.5 h-3.5 ${isTimerPaused ? 'text-amber-500' : 'text-emerald-500 animate-pulse'}`} />
+                  <div className={`flex items-center gap-1.5 ml-2 px-2.5 py-1 rounded-xl font-mono text-xs font-bold border transition ${
+                    isCurrentQuestionCompleted
+                      ? 'bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800'
+                      : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200/80 dark:border-slate-700/80'
+                  }`}>
+                    <Clock className={`w-3.5 h-3.5 ${
+                      isCurrentQuestionCompleted
+                        ? 'text-emerald-600 dark:text-emerald-400'
+                        : isTimerPaused
+                          ? 'text-amber-500'
+                          : 'text-emerald-500 animate-pulse'
+                    }`} />
                     <span>{formatTimer(questionTimes[currentQ.id] || 0)}</span>
-                    <button
-                      type="button"
-                      onClick={() => setIsTimerPaused(prev => !prev)}
-                      className="p-0.5 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition ml-0.5"
-                      title={isTimerPaused ? "Resume Question Timer" : "Pause Question Timer"}
-                    >
-                      {isTimerPaused ? <Play className="w-3 h-3 text-emerald-500 fill-emerald-500" /> : <Pause className="w-3 h-3" />}
-                    </button>
+                    {isCurrentQuestionCompleted ? (
+                      <span className="text-[10px] font-sans font-extrabold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 ml-0.5" title="Timer stopped upon submission">
+                        Stopped
+                      </span>
+                    ) : (
+                      <button
+                        type="button"
+                        onClick={() => setIsTimerPaused(prev => !prev)}
+                        className="p-0.5 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition ml-0.5"
+                        title={isTimerPaused ? "Resume Question Timer" : "Pause Question Timer"}
+                      >
+                        {isTimerPaused ? <Play className="w-3 h-3 text-emerald-500 fill-emerald-500" /> : <Pause className="w-3 h-3" />}
+                      </button>
+                    )}
                   </div>
                 </div>
 
@@ -1415,7 +1513,37 @@ export default function QuestionBankView({
                   )}
                 </div>
 
-                <div className="flex items-center gap-2">
+                <div className="flex flex-wrap items-center gap-2">
+                  <button
+                    onClick={() => {
+                      const nextLevel = (activeHintLevel[currentQ.id] || 0) === 0 ? 1 : (activeHintLevel[currentQ.id] || 0);
+                      handleRequestHint(currentQ, nextLevel);
+                    }}
+                    className={`px-3.5 py-2 rounded-xl border text-xs font-bold transition flex items-center gap-1.5 ${
+                      activeHintLevel[currentQ.id]
+                        ? 'border-amber-400 bg-amber-50 dark:bg-amber-950/50 text-amber-700 dark:text-amber-300'
+                        : 'border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800'
+                    }`}
+                  >
+                    <Lightbulb className={`w-3.5 h-3.5 ${activeHintLevel[currentQ.id] ? 'text-amber-500 fill-amber-500' : 'text-amber-500'}`} />
+                    <span>{activeHintLevel[currentQ.id] ? `Hint (L${activeHintLevel[currentQ.id]})` : 'Need a Hint?'}</span>
+                  </button>
+
+                  {checkedQuestions[currentQ.id] && !qbankProgress[currentQ.id]?.isCorrect && (
+                    <button
+                      onClick={() => handleDiagnoseMistake(currentQ)}
+                      disabled={mistakeLoading[currentQ.id]}
+                      className="px-3.5 py-2 rounded-xl bg-rose-50 dark:bg-rose-950/60 border border-rose-200 dark:border-rose-800 text-rose-700 dark:text-rose-300 hover:bg-rose-100 dark:hover:bg-rose-900/60 text-xs font-bold transition flex items-center gap-1.5"
+                    >
+                      {mistakeLoading[currentQ.id] ? (
+                        <Loader2 className="w-3.5 h-3.5 animate-spin text-rose-500" />
+                      ) : (
+                        <ShieldAlert className="w-3.5 h-3.5 text-rose-500" />
+                      )}
+                      <span>Analyze My Mistake</span>
+                    </button>
+                  )}
+
                   <button
                     onClick={() => {
                       if (!checkedQuestions[currentQ.id]) {
@@ -1429,6 +1557,81 @@ export default function QuestionBankView({
                   </button>
                 </div>
               </div>
+
+              {/* Progressive AI Hints Drawer */}
+              {Boolean(activeHintLevel[currentQ.id]) && (
+                <div className="p-4 rounded-2xl bg-amber-50/70 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800/60 space-y-3 animate-in fade-in duration-200">
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <div className="flex items-center gap-2">
+                      <span className="p-1 rounded-lg bg-amber-500/20 text-amber-600 dark:text-amber-400">
+                        <Lightbulb className="w-4 h-4" />
+                      </span>
+                      <span className="text-xs font-bold text-amber-900 dark:text-amber-200">
+                        Progressive Concept Guidance
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      {[1, 2, 3].map((lvl) => (
+                        <button
+                          key={lvl}
+                          onClick={() => handleRequestHint(currentQ, lvl)}
+                          className={`px-2.5 py-1 rounded-lg text-[11px] font-bold transition ${
+                            activeHintLevel[currentQ.id] === lvl
+                              ? 'bg-amber-500 text-white shadow-xs'
+                              : 'bg-white/80 dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-amber-200/60 dark:border-amber-800/40 hover:bg-amber-100 dark:hover:bg-amber-900/40'
+                          }`}
+                        >
+                          Level {lvl} {lvl === 1 ? 'Concept' : lvl === 2 ? 'Formula' : 'Calculation'}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed pt-1">
+                    {hintLoading[currentQ.id] ? (
+                      <div className="flex items-center gap-2 py-2 text-xs text-amber-700 dark:text-amber-300 font-semibold">
+                        <Loader2 className="w-4 h-4 animate-spin text-amber-500" />
+                        <span>Retrieving high-yield hint grounded in official GATE AG formulas...</span>
+                      </div>
+                    ) : (
+                      <MathRenderer 
+                        text={hintsData[currentQ.id]?.[activeHintLevel[currentQ.id]] || 'Click Level 1, 2, or 3 to inspect progressive hints.'} 
+                      />
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {/* Forensic Mistake Diagnostic Report */}
+              {mistakeReport[currentQ.id] && (
+                <div className="p-5 rounded-2xl bg-rose-50/70 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-800/60 space-y-3 animate-in fade-in duration-200">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <span className="p-1 rounded-lg bg-rose-500/20 text-rose-600 dark:text-rose-400">
+                        <ShieldAlert className="w-4 h-4" />
+                      </span>
+                      <span className="text-xs font-bold text-rose-900 dark:text-rose-200">
+                        Forensic Mistake Diagnostic
+                      </span>
+                    </div>
+                    <button
+                      onClick={() => setMistakeReport(prev => {
+                        const copy = { ...prev };
+                        delete copy[currentQ.id];
+                        return copy;
+                      })}
+                      className="p-1 rounded-lg text-rose-400 hover:text-rose-600 transition"
+                      title="Dismiss diagnosis"
+                    >
+                      <X className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+
+                  <div className="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed pt-1">
+                    <MathRenderer text={mistakeReport[currentQ.id]} />
+                  </div>
+                </div>
+              )}
 
               {/* Solution Box (Step-by-step KaTeX) */}
               {showSolutions[currentQ.id] && (

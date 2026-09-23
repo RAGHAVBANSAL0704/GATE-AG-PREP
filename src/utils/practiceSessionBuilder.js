@@ -49,25 +49,18 @@ export function getSectionHierarchyStats(combinedPool, filters = {}) {
       subtopicCountMap[top][sub] = (subtopicCountMap[top][sub] || 0) + 1;
     });
 
-    // Compile topics list combining official syllabus topics and question topics
-    const officialTopicNames = (sec.topics || []).map(t => t.topic_name);
-    const allTopicNames = Array.from(new Set([
-      ...officialTopicNames,
-      ...Object.keys(topicCountMap)
-    ])).sort();
+    // Strict official syllabus topics
+    const officialTopics = sec.topics || [];
 
-    const topicsWithStats = allTopicNames.map(topName => {
-      const officialObj = (sec.topics || []).find(t => t.topic_name === topName);
-      const subtopicsList = Array.from(new Set([
-        ...(officialObj?.subtopics || []),
-        ...Object.keys(subtopicCountMap[topName] || {})
-      ])).sort();
+    const topicsWithStats = officialTopics.map(topObj => {
+      const topName = topObj.topic_name;
+      const officialSubtopics = topObj.subtopics || [];
 
       return {
         topic_name: topName,
         availableCount: topicCountMap[topName] || 0,
-        subtopics: officialObj?.subtopics || [],
-        subtopicsWithStats: subtopicsList.map(st => ({
+        subtopics: officialSubtopics,
+        subtopicsWithStats: officialSubtopics.map(st => ({
           subtopic_name: st,
           availableCount: subtopicCountMap[topName]?.[st] || 0
         }))

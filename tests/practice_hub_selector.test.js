@@ -192,6 +192,42 @@ describe('Practice Hub Selector & Question Timer Persistence Test Suite', () => 
       delete userAnswers['q-test-101'];
       assert.strictEqual(questionTimes['q-test-101'], 42, 'Clear response must not reset timer');
     });
+
+    it('stops per-question timer immediately upon answer check or submission and resets timer upon reset', () => {
+      let questionTimes = { 'q-test-202': 30 };
+      let checkedQuestions = {};
+      let qbankProgress = {};
+
+      const shouldTimerTick = (qId) => {
+        const isCompleted = Boolean(checkedQuestions[qId] || qbankProgress[qId]?.attempted);
+        return !isCompleted;
+      };
+
+      // Before checking answer: timer can tick
+      assert.strictEqual(shouldTimerTick('q-test-202'), true);
+      questionTimes['q-test-202'] += 1;
+      assert.strictEqual(questionTimes['q-test-202'], 31);
+
+      // User checks answer / submits
+      checkedQuestions['q-test-202'] = true;
+      qbankProgress['q-test-202'] = { attempted: true, isCorrect: true };
+
+      // After checking answer: timer MUST NOT tick
+      assert.strictEqual(shouldTimerTick('q-test-202'), false);
+      // Attempting to tick while completed leaves timer frozen
+      if (shouldTimerTick('q-test-202')) {
+        questionTimes['q-test-202'] += 1;
+      }
+      assert.strictEqual(questionTimes['q-test-202'], 31, 'Timer must freeze at 31s upon checking answer');
+
+      // User resets question to try again
+      delete checkedQuestions['q-test-202'];
+      delete qbankProgress['q-test-202'];
+      questionTimes['q-test-202'] = 0;
+
+      assert.strictEqual(shouldTimerTick('q-test-202'), true, 'Timer can run again after reset');
+      assert.strictEqual(questionTimes['q-test-202'], 0, 'Timer resets to 0s for fresh attempt');
+    });
   });
 
 });

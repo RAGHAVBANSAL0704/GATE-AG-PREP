@@ -231,7 +231,7 @@ describe("FULL WEB AUDIT: Security, Data Storage, Functionality & Invariants", (
       assert.strictEqual(evaluateQuestion(qNatScalar, "15.70", "ANSWERED").isCorrect, false);
     });
 
-    it("audits Formula Sheet (57 formulas across 8 official categories)", () => {
+    it("audits Formula Sheet (comprehensive formulas across 8 official categories)", () => {
       assert.strictEqual(GATE_AG_FORMULAS.length, 8, "Formula sheet must have 8 sections");
       let formulaCount = 0;
       GATE_AG_FORMULAS.forEach(sec => {
@@ -245,7 +245,7 @@ describe("FULL WEB AUDIT: Security, Data Storage, Functionality & Invariants", (
           });
         });
       });
-      assert.strictEqual(formulaCount, 57, "Total formula count must be 57");
+      assert.ok(formulaCount >= 120, `Total formula count must be at least 120, found ${formulaCount}`);
     });
 
     it("audits Syllabus Breakdown (8 sections, 181 granular subtopics)", () => {

@@ -1024,7 +1024,7 @@ export default function App() {
               />
             )}
 
-            {['learninghub', 'concepts', 'radar', 'simulators', 'flashcards', 'revision', 'formulas'].includes(activeTab) && (
+            {['learninghub', 'concepts', 'radar', 'simulators', 'flowsheets', 'unitconverter', 'flashcards', 'revision', 'formulas'].includes(activeTab) && (
               <LearningHub
                 activeSubTab={activeTab === 'learninghub' ? 'concepts' : activeTab}
                 onSubTabChange={(subTab) => setActiveTab(subTab)}

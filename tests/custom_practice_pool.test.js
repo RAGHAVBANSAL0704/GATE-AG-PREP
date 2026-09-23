@@ -164,7 +164,7 @@ describe('Custom Pool (50 Full-Length Mocks) Comprehensive Audit & Feature Parit
       },
       selectedSubtopicsMap: {
         'Section 8: General Aptitude': {
-          'Vocabulary': true
+          'Basic English Grammar & Vocabulary': true
         }
       },
       sectionAllocations: {
@@ -174,6 +174,6 @@ describe('Custom Pool (50 Full-Length Mocks) Comprehensive Audit & Feature Parit
 
     assert.ok(session.totalQuestions > 0, 'Should allocate questions for selected subtopic');
     assert.ok(session.totalQuestions <= 15);
-    assert.ok(session.questions.every(q => q.subtopic === 'Vocabulary'));
+    assert.ok(session.questions.every(q => q.subtopic === 'Basic English Grammar & Vocabulary'));
   });
 });
