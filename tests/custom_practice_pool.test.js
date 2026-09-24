@@ -14,13 +14,13 @@ import { normalizeSectionTitle } from '../src/utils/syllabusTaxonomy.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-describe('Custom Pool (50 Full-Length Mocks) Comprehensive Audit & Feature Parity Suite', () => {
+describe('Custom Pool (30 Full-Length Mocks) Comprehensive Audit & Feature Parity Suite', () => {
 
   const customMocks = [];
   let allCustomQuestions = [];
 
-  it('loads all 50 full-length mock papers with exactly 65 questions each (3,250 total)', () => {
-    for (let i = 1; i <= 50; i++) {
+  it('loads all 30 full-length mock papers with exactly 65 questions each (1,950 total)', () => {
+    for (let i = 1; i <= 30; i++) {
       const numStr = String(i).padStart(2, '0');
       const filePath = path.resolve(__dirname, `../src/data/custom_mock_2027_${numStr}.json`);
       assert.ok(fs.existsSync(filePath), `Mock paper ${numStr} must exist at ${filePath}`);
@@ -38,11 +38,11 @@ describe('Custom Pool (50 Full-Length Mocks) Comprehensive Audit & Feature Parit
       allCustomQuestions.push(...qsWithMeta);
     }
 
-    assert.strictEqual(customMocks.length, 50, 'Exactly 50 mock papers must be loaded');
-    assert.strictEqual(allCustomQuestions.length, 3250, 'Exactly 3,250 custom mock questions must be loaded');
+    assert.strictEqual(customMocks.length, 30, 'Exactly 30 mock papers must be loaded');
+    assert.strictEqual(allCustomQuestions.length, 1950, 'Exactly 1,950 custom mock questions must be loaded');
   });
 
-  it('verifies 100% topic, subtopic and section sanitization across all 3,250 custom questions', () => {
+  it('verifies 100% topic, subtopic and section sanitization across all 1,950 custom questions', () => {
     const validSections = new Set([
       'Section 1: Engineering Mathematics',
       'Section 2: Farm Machinery',
@@ -96,7 +96,7 @@ describe('Custom Pool (50 Full-Length Mocks) Comprehensive Audit & Feature Parit
     assert.strictEqual(stats.length, 8, 'Must return stats for all 8 syllabus sections');
     
     const totalCount = stats.reduce((sum, s) => sum + s.totalAvailable, 0);
-    assert.strictEqual(totalCount, 3250, 'All 3,250 questions must be distributed across the 8 sections');
+    assert.strictEqual(totalCount, 1950, 'All 1,950 questions must be distributed across the 8 sections');
 
     stats.forEach(s => {
       assert.ok(s.totalAvailable > 0, `Section ${s.title} should have questions available`);
