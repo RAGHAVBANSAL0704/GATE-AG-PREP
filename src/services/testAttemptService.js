@@ -1,6 +1,6 @@
 import { supabase, isSupabaseConfigured } from './supabaseClient.js';
 import { saveToIDB, getAllFromIDB } from '../utils/indexedDB.js';
-import { recordLiveAction } from './liveStatisticsService.js';
+import { recordLiveAction, triggerLiveStatsSync } from './liveStatisticsService.js';
 
 export const LOCAL_STORAGE_TEST_ATTEMPTS_KEY = 'gate_ag_prep_test_attempts';
 
@@ -96,6 +96,9 @@ export async function saveTestAttempt(attemptData) {
       localAttempts.unshift(attemptPayload);
     }
     localStorage.setItem(LOCAL_STORAGE_TEST_ATTEMPTS_KEY, JSON.stringify(localAttempts.slice(0, 100)));
+    try {
+      triggerLiveStatsSync();
+    } catch (e) {}
   } catch (err) {
     console.warn("Could not save test attempt to localStorage:", err);
   }

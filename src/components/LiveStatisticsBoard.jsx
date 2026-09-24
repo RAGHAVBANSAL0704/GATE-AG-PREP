@@ -268,8 +268,8 @@ export default function LiveStatisticsBoard({ onNavigate, onStartMock, onOpenPra
 
       </div>
 
-      {/* 2.5. REAL-TIME ACTIVE ASPIRANTS & MULTI-DEVICE TELEMETRY */}
-      {onlineAspirants.length > 0 && (
+      {/* 2.5. REAL-TIME TELEMETRY: ACTIVE NUMERIC CONCURRENT SESSIONS */}
+      {onlineCount > 0 && (
         <div className="bg-gradient-to-r from-emerald-500/10 via-teal-500/5 to-transparent dark:from-emerald-950/40 dark:via-slate-900/60 dark:to-transparent rounded-3xl border border-emerald-300/80 dark:border-emerald-500/30 p-5 sm:p-6 shadow-sm space-y-4">
           <div className="flex items-center justify-between flex-wrap gap-2">
             <div className="flex items-center gap-2.5">
@@ -279,56 +279,86 @@ export default function LiveStatisticsBoard({ onNavigate, onStartMock, onOpenPra
               </span>
               <div>
                 <h2 className="text-sm sm:text-base font-black text-slate-900 dark:text-white flex items-center gap-2">
-                  <span>Live Connected Aspirants Across Devices</span>
-                  <span className="px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-300 font-mono text-[11px] font-bold border border-emerald-200 dark:border-emerald-700">
-                    {onlineCount} Online
+                  <span>Live Active Sessions Telemetry</span>
+                  <span className="px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-300 font-mono text-[11px] font-bold border border-emerald-200 dark:border-emerald-700">
+                    {onlineCount} Online Active
                   </span>
                 </h2>
                 <p className="text-xs text-slate-600 dark:text-slate-400">
-                  Real-time active sessions synchronized via Supabase Realtime across multiple devices and browsers.
+                  Real-time active sessions synchronized via Supabase Realtime &amp; Multi-Tab Telemetry.
                 </p>
               </div>
             </div>
+
+            <div className="flex items-center gap-2">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-white dark:bg-slate-900 border border-emerald-200 dark:border-emerald-800 text-xs font-mono font-bold text-emerald-700 dark:text-emerald-300 shadow-2xs">
+                <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+                <span>Privacy Protected • Aggregate Metrics Only</span>
+              </span>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pt-1">
-            {onlineAspirants.map((user, idx) => (
-              <div 
-                key={user.presenceKey || user.userId || idx}
-                className="p-3.5 rounded-2xl bg-white dark:bg-slate-900/90 border border-emerald-200/80 dark:border-emerald-800/60 shadow-xs flex items-center justify-between gap-3 hover:border-emerald-500 transition"
-              >
-                <div className="flex items-center gap-3 min-w-0">
-                  <div className="w-9 h-9 rounded-xl bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 font-black text-xs flex items-center justify-center border border-emerald-300 dark:border-emerald-700 shrink-0">
-                    {(user.name || 'A').substring(0, 2).toUpperCase()}
-                  </div>
-                  <div className="min-w-0">
-                    <div className="flex items-center gap-1.5 flex-wrap">
-                      <span className="text-xs font-bold text-slate-900 dark:text-white truncate">
-                        {user.name}
-                      </span>
-                      {user.role === 'faculty' && (
-                        <span className="px-1.5 py-0.2 rounded bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 text-[9px] font-bold border border-purple-200 dark:border-purple-800">
-                          Faculty
-                        </span>
-                      )}
-                    </div>
-                    <p className="text-[11px] text-slate-500 dark:text-slate-400 truncate">
-                      {user.college}
-                    </p>
-                  </div>
+          {/* Numbers-Only Active Session Metric Cards */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-1">
+            <div className="p-3.5 rounded-2xl bg-white dark:bg-slate-900/90 border border-emerald-200/80 dark:border-emerald-800/60 shadow-xs flex items-center justify-between">
+              <div>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 block">
+                  Active Now
+                </span>
+                <div className="text-2xl font-black font-mono text-emerald-600 dark:text-emerald-400 mt-0.5">
+                  {onlineCount}
                 </div>
-
-                <div className="shrink-0 flex flex-col items-end gap-1">
-                  <span className="inline-flex items-center gap-1 text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                    Active Now
-                  </span>
-                  <span className="text-[9px] font-mono text-slate-400 dark:text-slate-500">
-                    {formatLiveRelativeTime(user.onlineAt)}
-                  </span>
-                </div>
+                <p className="text-[10px] text-slate-500 dark:text-slate-400">Concurrent Students</p>
               </div>
-            ))}
+              <div className="w-9 h-9 rounded-xl bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 flex items-center justify-center font-bold">
+                <Users className="w-4.5 h-4.5" />
+              </div>
+            </div>
+
+            <div className="p-3.5 rounded-2xl bg-white dark:bg-slate-900/90 border border-blue-200/80 dark:border-blue-800/60 shadow-xs flex items-center justify-between">
+              <div>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 block">
+                  Mobile Active
+                </span>
+                <div className="text-2xl font-black font-mono text-blue-600 dark:text-blue-400 mt-0.5">
+                  {devices.mobile}%
+                </div>
+                <p className="text-[10px] text-slate-500 dark:text-slate-400">PWA &amp; Handhelds</p>
+              </div>
+              <div className="w-9 h-9 rounded-xl bg-blue-100 dark:bg-blue-950/80 text-blue-800 dark:text-blue-300 flex items-center justify-center font-bold">
+                <Smartphone className="w-4.5 h-4.5" />
+              </div>
+            </div>
+
+            <div className="p-3.5 rounded-2xl bg-white dark:bg-slate-900/90 border border-purple-200/80 dark:border-purple-800/60 shadow-xs flex items-center justify-between">
+              <div>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 block">
+                  Desktop Active
+                </span>
+                <div className="text-2xl font-black font-mono text-purple-600 dark:text-purple-400 mt-0.5">
+                  {devices.desktop}%
+                </div>
+                <p className="text-[10px] text-slate-500 dark:text-slate-400">Workstation &amp; Web</p>
+              </div>
+              <div className="w-9 h-9 rounded-xl bg-purple-100 dark:bg-purple-950/80 text-purple-800 dark:text-purple-300 flex items-center justify-center font-bold">
+                <Laptop className="w-4.5 h-4.5" />
+              </div>
+            </div>
+
+            <div className="p-3.5 rounded-2xl bg-white dark:bg-slate-900/90 border border-amber-200/80 dark:border-amber-800/60 shadow-xs flex items-center justify-between">
+              <div>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 block">
+                  Active Hubs
+                </span>
+                <div className="text-2xl font-black font-mono text-amber-600 dark:text-amber-400 mt-0.5">
+                  {colleges.length}
+                </div>
+                <p className="text-[10px] text-slate-500 dark:text-slate-400">Institutions Online</p>
+              </div>
+              <div className="w-9 h-9 rounded-xl bg-amber-100 dark:bg-amber-950/80 text-amber-800 dark:text-amber-300 flex items-center justify-center font-bold">
+                <Building2 className="w-4.5 h-4.5" />
+              </div>
+            </div>
           </div>
         </div>
       )}

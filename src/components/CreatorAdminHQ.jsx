@@ -82,26 +82,7 @@ export default function CreatorAdminHQ({
     }
   }, [initialSubTab]);
 
-  const teamMembers = [
-    {
-      name: "Pankaj Goswami",
-      initials: "PG",
-      role: "UI/UX Co-Designer & Lead Question QA Engineer",
-      category: "Human Contributor",
-      badgeColor: "bg-purple-50 dark:bg-purple-950/60 text-purple-600 dark:text-purple-400 border-purple-200 dark:border-purple-800",
-      avatarGradient: "from-purple-600 to-indigo-600",
-      contractedSummary: "Co-designed intuitive UI/UX interface layouts, conducted forensic auditing across 20+ years of GATE AG question archives, and resolved numerical answer key typos and formula derivations."
-    },
-    {
-      name: "Sahid Iqbal",
-      initials: "SI",
-      role: "UI/UX Co-Designer & Data Collection Specialist",
-      category: "Human Contributor",
-      badgeColor: "bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 border-blue-200 dark:border-blue-800",
-      avatarGradient: "from-blue-600 to-cyan-600",
-      contractedSummary: "Refined visual component design across devices, curated data from official GATE AG archives, and verified option keys, MSQ multi-select answers, and NAT tolerance bounds."
-    }
-  ];
+  const teamMembers = [];
 
   const aiContributors = [
     {
@@ -365,45 +346,47 @@ export default function CreatorAdminHQ({
           </div>
 
           {/* About My Team Section - Single Section of Rows */}
-          <div className="space-y-4">
-            <div className="flex items-center justify-between">
-              <h2 className="text-base font-extrabold text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-2">
-                <Users className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
-                <span>Core Contributors & UI/UX Team</span>
-              </h2>
-              <span className="text-xs font-bold px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800">
-                Co-Designers & QA
-              </span>
-            </div>
+          {teamMembers.length > 0 && (
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <h2 className="text-base font-extrabold text-slate-900 dark:text-white uppercase tracking-wider flex items-center gap-2">
+                  <Users className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
+                  <span>Core Contributors & UI/UX Team</span>
+                </h2>
+                <span className="text-xs font-bold px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-800">
+                  Co-Designers & QA
+                </span>
+              </div>
 
-            <div className="card-3d rounded-3xl p-2 sm:p-3 border border-slate-200 dark:border-slate-800 divide-y divide-slate-100 dark:divide-slate-800/80 bg-white dark:bg-slate-900 shadow-sm">
-              {teamMembers.map((member) => (
-                <div 
-                  key={member.name}
-                  className="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-slate-50/70 dark:hover:bg-slate-800/40 rounded-2xl transition-all"
-                >
-                  <div className="flex items-center gap-3.5 min-w-0">
-                    <div className={`w-11 h-11 rounded-2xl bg-gradient-to-tr ${member.avatarGradient} text-white font-extrabold flex items-center justify-center text-sm shadow-md shrink-0`}>
-                      {member.initials}
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <h3 className="font-extrabold text-slate-900 dark:text-white text-sm sm:text-base">
-                          {member.name}
-                        </h3>
-                        <span className={`text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-md border ${member.badgeColor}`}>
-                          {member.role}
-                        </span>
+              <div className="card-3d rounded-3xl p-2 sm:p-3 border border-slate-200 dark:border-slate-800 divide-y divide-slate-100 dark:divide-slate-800/80 bg-white dark:bg-slate-900 shadow-sm">
+                {teamMembers.map((member) => (
+                  <div 
+                    key={member.name}
+                    className="p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-slate-50/70 dark:hover:bg-slate-800/40 rounded-2xl transition-all"
+                  >
+                    <div className="flex items-center gap-3.5 min-w-0">
+                      <div className={`w-11 h-11 rounded-2xl bg-gradient-to-tr ${member.avatarGradient} text-white font-extrabold flex items-center justify-center text-sm shadow-md shrink-0`}>
+                        {member.initials}
                       </div>
-                      <p className="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">
-                        {member.contractedSummary}
-                      </p>
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <h3 className="font-extrabold text-slate-900 dark:text-white text-sm sm:text-base">
+                            {member.name}
+                          </h3>
+                          <span className={`text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-md border ${member.badgeColor}`}>
+                            {member.role}
+                          </span>
+                        </div>
+                        <p className="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">
+                          {member.contractedSummary}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Acknowledgements & Institutional Contributions */}
           <div className="space-y-4">

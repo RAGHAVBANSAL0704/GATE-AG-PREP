@@ -5,6 +5,7 @@
  */
 
 import { supabase, isSupabaseConfigured } from './supabaseClient.js';
+import { triggerLiveStatsSync } from './liveStatisticsService.js';
 
 const MISTAKE_VAULT_PREFIX = 'gate_ag_mistake_vault';
 const LEGACY_MISTAKE_KEY = 'gate_ag_mistake_vault';
@@ -116,6 +117,7 @@ export function recordQuestionOutcomes({
       stats.correct = stats.correct.filter(id => !incorrect.includes(id));
 
       localStorage.setItem('gate_ag_user_stats', JSON.stringify(stats));
+      triggerLiveStatsSync();
     } catch (e) {}
 
     // Debounced async sync to Supabase if authenticated to prevent excessive database writes

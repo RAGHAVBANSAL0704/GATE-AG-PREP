@@ -6,6 +6,7 @@ const LOCAL_STORAGE_LIVE_ACTIVITY_KEY = 'gate_ag_live_activity_logs';
 const LOCAL_STORAGE_SESSION_KEY = 'gate_ag_prep_session_token';
 const LOCAL_STORAGE_USERS_KEY = 'gate_ag_prep_mock_users';
 const LOCAL_STORAGE_TOTAL_LOGINS_KEY = 'gate_ag_total_session_logins_count';
+const LOCAL_STORAGE_TAB_HEARTBEATS_KEY = 'gate_ag_active_tab_heartbeats';
 
 // Cross-Tab Broadcast Channel
 let localTelemetryBroadcast = null;
@@ -21,6 +22,76 @@ let supabasePresenceChannel = null;
 let activePresenceUsers = new Map();
 const statsSubscribers = new Set();
 let globalPresenceStudent = null;
+
+/**
+ * Register or refresh a local tab heartbeat for real-time presence synchronization
+ */
+export function registerLocalTabHeartbeat(student = null) {
+  if (typeof localStorage === 'undefined') return;
+  try {
+    const tabKey = getDevicePresenceKey(student);
+    const raw = localStorage.getItem(LOCAL_STORAGE_TAB_HEARTBEATS_KEY);
+    const heartbeats = raw ? JSON.parse(raw) : {};
+    const now = Date.now();
+    
+    // Prune stale heartbeats older than 20 seconds
+    const fresh = {};
+    Object.keys(heartbeats).forEach(k => {
+      if (heartbeats[k] && (now - heartbeats[k].timestamp < 20000)) {
+        fresh[k] = heartbeats[k];
+      }
+    });
+
+    fresh[tabKey] = {
+      timestamp: now,
+      studentId: student?.id || student?.admission_no || null,
+      name: student?.full_name || student?.username || 'Aspirant',
+      college: student?.college_name || 'COAET CCS HAU Hisar'
+    };
+
+    localStorage.setItem(LOCAL_STORAGE_TAB_HEARTBEATS_KEY, JSON.stringify(fresh));
+  } catch (e) {}
+}
+
+/**
+ * Unregister tab heartbeat when tab closes or navigates away
+ */
+export function unregisterLocalTabHeartbeat(student = null) {
+  if (typeof localStorage === 'undefined') return;
+  try {
+    const tabKey = getDevicePresenceKey(student);
+    const raw = localStorage.getItem(LOCAL_STORAGE_TAB_HEARTBEATS_KEY);
+    if (!raw) return;
+    const heartbeats = JSON.parse(raw);
+    delete heartbeats[tabKey];
+    localStorage.setItem(LOCAL_STORAGE_TAB_HEARTBEATS_KEY, JSON.stringify(heartbeats));
+    if (localTelemetryBroadcast) {
+      localTelemetryBroadcast.postMessage({ type: 'LIVE_STATS_REFRESH' });
+    }
+  } catch (e) {}
+}
+
+/**
+ * Count active local tabs within the last 20 seconds
+ */
+export function getActiveLocalTabCount() {
+  if (typeof localStorage === 'undefined') return 0;
+  try {
+    const raw = localStorage.getItem(LOCAL_STORAGE_TAB_HEARTBEATS_KEY);
+    if (!raw) return 0;
+    const heartbeats = JSON.parse(raw);
+    const now = Date.now();
+    let count = 0;
+    Object.keys(heartbeats).forEach(k => {
+      if (heartbeats[k] && (now - heartbeats[k].timestamp < 20000)) {
+        count++;
+      }
+    });
+    return count;
+  } catch (e) {
+    return 0;
+  }
+}
 
 /**
  * Generate or retrieve a persistent per-tab/device unique presence session key
@@ -180,15 +251,43 @@ export function recordLiveAction({
 
 let cachedPlatformStats = null;
 let lastPlatformStatsFetchTime = 0;
-const STATS_CACHE_TTL_MS = 60 * 1000; // 1 minute in-memory cache
+const STATS_CACHE_TTL_MS = 10 * 1000; // 10 seconds in-memory cache max fallback
 const isTestEnv = typeof process !== 'undefined' && (process.env?.NODE_ENV === 'test' || process.env?.NODE_TEST_CONTEXT);
+
+/**
+ * Invalidate cached telemetry metrics immediately
+ */
+export function invalidatePlatformStatsCache() {
+  cachedPlatformStats = null;
+  lastPlatformStatsFetchTime = 0;
+}
+
+/**
+ * Trigger immediate live statistics synchronization across tabs and devices
+ */
+export function triggerLiveStatsSync() {
+  invalidatePlatformStatsCache();
+  notifyAllStatsSubscribers(true);
+  if (localTelemetryBroadcast) {
+    try {
+      localTelemetryBroadcast.postMessage({ type: 'LIVE_STATS_REFRESH' });
+    } catch (e) {}
+  }
+  if (typeof window !== 'undefined') {
+    try {
+      window.dispatchEvent(new CustomEvent('gate_ag_stats_sync_event'));
+    } catch (e) {}
+  }
+}
 
 /**
  * Fetch true comprehensive platform statistics from Supabase and Local Storage
  */
 export async function fetchLivePlatformStats(forceRefresh = false) {
   const now = Date.now();
-  if (!isTestEnv && !forceRefresh && cachedPlatformStats && (now - lastPlatformStatsFetchTime < STATS_CACHE_TTL_MS)) {
+  if (forceRefresh) {
+    invalidatePlatformStatsCache();
+  } else if (!isTestEnv && cachedPlatformStats && (now - lastPlatformStatsFetchTime < STATS_CACHE_TTL_MS)) {
     return cachedPlatformStats;
   }
 
@@ -336,14 +435,64 @@ export async function fetchLivePlatformStats(forceRefresh = false) {
         }
       }
 
+      // Aggregate unique solved questions across all user stats and practice pools
+      const allUniqueAttempted = new Set();
+      const allUniqueCorrect = new Set();
+
+      try {
+        if (typeof localStorage.length === 'number') {
+          for (let i = 0; i < localStorage.length; i++) {
+            const k = localStorage.key(i);
+            if (k && (k === 'gate_ag_user_stats' || k.startsWith('gate_ag_user_stats_'))) {
+              try {
+                const val = JSON.parse(localStorage.getItem(k));
+                if (Array.isArray(val?.attempted)) {
+                  val.attempted.forEach(id => allUniqueAttempted.add(id));
+                }
+                if (Array.isArray(val?.correct)) {
+                  val.correct.forEach(id => allUniqueCorrect.add(id));
+                }
+              } catch (e) {}
+            }
+          }
+        }
+      } catch (e) {}
+
       const rawUserStats = localStorage.getItem('gate_ag_user_stats');
       if (rawUserStats) {
-        const parsedStats = JSON.parse(rawUserStats);
-        const attemptedLen = Array.isArray(parsedStats?.attempted) ? parsedStats.attempted.length : 0;
-        const correctLen = Array.isArray(parsedStats?.correct) ? parsedStats.correct.length : 0;
-        localQuestionsSolved = Math.max(localQuestionsSolved, attemptedLen);
-        localCorrectCount = Math.max(localCorrectCount, correctLen);
+        try {
+          const parsedStats = JSON.parse(rawUserStats);
+          if (Array.isArray(parsedStats?.attempted)) {
+            parsedStats.attempted.forEach(id => allUniqueAttempted.add(id));
+          }
+          if (Array.isArray(parsedStats?.correct)) {
+            parsedStats.correct.forEach(id => allUniqueCorrect.add(id));
+          }
+        } catch (e) {}
       }
+
+      // Check practice progress caches for solved question keys
+      try {
+        const pyqProg = JSON.parse(localStorage.getItem('gate_ag_pyq_progress') || '{}');
+        Object.keys(pyqProg).forEach(id => {
+          allUniqueAttempted.add(id);
+          if (pyqProg[id]?.isCorrect || pyqProg[id]?.status === 'CORRECT') {
+            allUniqueCorrect.add(id);
+          }
+        });
+      } catch (e) {}
+      try {
+        const customProg = JSON.parse(localStorage.getItem('gate_ag_custom_progress') || '{}');
+        Object.keys(customProg).forEach(id => {
+          allUniqueAttempted.add(id);
+          if (customProg[id]?.isCorrect || customProg[id]?.status === 'CORRECT') {
+            allUniqueCorrect.add(id);
+          }
+        });
+      } catch (e) {}
+
+      localQuestionsSolved = Math.max(localQuestionsSolved, allUniqueAttempted.size);
+      localCorrectCount = Math.max(localCorrectCount, allUniqueCorrect.size);
 
       const rawLogins = localStorage.getItem(LOCAL_STORAGE_TOTAL_LOGINS_KEY);
       if (rawLogins) {
@@ -355,7 +504,8 @@ export async function fetchLivePlatformStats(forceRefresh = false) {
   // 3. Compute Real Integrated Totals & Deduplicated Attempt Metrics
   const activeStudent = getActiveSessionStudent();
   const onlinePresenceSize = activePresenceUsers.size;
-  const currentPresenceCount = onlinePresenceSize > 0 ? onlinePresenceSize : (activeStudent ? 1 : 0);
+  const localTabCount = getActiveLocalTabCount();
+  const currentPresenceCount = Math.max(onlinePresenceSize, localTabCount, (activeStudent ? 1 : 0));
 
   const totalRegisteredStudents = Math.max(dbStudentsCount, localUsersCount, (activeStudent ? 1 : 0));
 
@@ -616,6 +766,22 @@ export function initGlobalPresence(student = null) {
     globalPresenceStudent = getActiveSessionStudent();
   }
 
+  // Register local tab heartbeat for multi-tab/offline presence
+  registerLocalTabHeartbeat(globalPresenceStudent);
+  if (!window.__gate_ag_tab_heartbeat_init) {
+    window.__gate_ag_tab_heartbeat_init = true;
+    const hbInterval = setInterval(() => {
+      registerLocalTabHeartbeat(globalPresenceStudent);
+    }, 7000);
+    if (hbInterval && typeof hbInterval.unref === 'function') {
+      hbInterval.unref();
+    }
+
+    window.addEventListener('beforeunload', () => {
+      unregisterLocalTabHeartbeat(globalPresenceStudent);
+    });
+  }
+
   // If Supabase is configured, initialize telemetry and presence channels
   if (isSupabaseConfigured && supabase) {
     if (!supabaseStatsChannel) {
@@ -655,7 +821,7 @@ export function initGlobalPresence(student = null) {
           Object.keys(state).forEach(key => {
             activePresenceUsers.set(key, state[key]);
           });
-          notifyAllStatsSubscribers(false);
+          notifyAllStatsSubscribers(true);
         } catch (e) {}
       };
 
@@ -663,11 +829,11 @@ export function initGlobalPresence(student = null) {
         .on('presence', { event: 'sync' }, syncPresences)
         .on('presence', { event: 'join' }, ({ key, newPresences }) => {
           activePresenceUsers.set(key, newPresences);
-          notifyAllStatsSubscribers(false);
+          notifyAllStatsSubscribers(true);
         })
         .on('presence', { event: 'leave' }, ({ key }) => {
           activePresenceUsers.delete(key);
-          notifyAllStatsSubscribers(false);
+          notifyAllStatsSubscribers(true);
         })
         .subscribe(async (status) => {
           if (status === 'SUBSCRIBED') {
@@ -689,14 +855,18 @@ export function initGlobalPresence(student = null) {
  */
 export async function updatePresenceStudent(student = null) {
   globalPresenceStudent = student;
+  registerLocalTabHeartbeat(student);
   await trackCurrentDevicePresence();
   notifyAllStatsSubscribers(true);
 }
 
 /**
- * Notify all subscribed UI components
+ * Notify all subscribed UI components with fresh telemetry
  */
-export function notifyAllStatsSubscribers(force = false) {
+export function notifyAllStatsSubscribers(force = true) {
+  if (force) {
+    invalidatePlatformStatsCache();
+  }
   fetchLivePlatformStats(force).then(stats => {
     statsSubscribers.forEach(cb => {
       try {
@@ -719,14 +889,14 @@ export function subscribeToLiveStats(onStatsUpdate) {
   // Ensure persistent global presence & telemetry are initiated
   initGlobalPresence();
 
-  // Immediate fetch to populate caller state
-  fetchLivePlatformStats(false).then(stats => {
+  // Immediate fresh fetch to populate caller state without stale cache
+  fetchLivePlatformStats(true).then(stats => {
     if (typeof onStatsUpdate === 'function') {
       onStatsUpdate(stats);
     }
   }).catch(() => {});
 
-  // Cross-Tab BroadcastChannel Listener
+  // 1. Cross-Tab BroadcastChannel Listener
   const handleLocalTelemetryMessage = (event) => {
     if (event.data?.type === 'LIVE_ACTIVITY_EVENT' || event.data?.type === 'LIVE_STATS_REFRESH') {
       notifyAllStatsSubscribers(true);
@@ -737,10 +907,41 @@ export function subscribeToLiveStats(onStatsUpdate) {
     localTelemetryBroadcast.addEventListener('message', handleLocalTelemetryMessage);
   }
 
-  // Polling interval (every 30 seconds for live board freshness)
+  // 2. Window Storage Event Listener (Cross-Tab Live Reactivity)
+  const handleStorageChange = (e) => {
+    if (!e || !e.key) return;
+    const key = e.key;
+    if (
+      key.startsWith('gate_ag_user_stats') ||
+      key === LOCAL_STORAGE_USERS_KEY ||
+      key === LOCAL_STORAGE_TEST_ATTEMPTS_KEY ||
+      key === LOCAL_STORAGE_SESSION_KEY ||
+      key === LOCAL_STORAGE_TOTAL_LOGINS_KEY ||
+      key === LOCAL_STORAGE_LIVE_ACTIVITY_KEY ||
+      key === LOCAL_STORAGE_TAB_HEARTBEATS_KEY ||
+      key === 'gate_ag_pyq_progress' ||
+      key === 'gate_ag_custom_progress'
+    ) {
+      notifyAllStatsSubscribers(true);
+    }
+  };
+
+  window.addEventListener('storage', handleStorageChange);
+
+  // 3. Custom Local Event Listener (Same-Tab Immediate Reactivity)
+  const handleLocalSyncEvent = () => {
+    notifyAllStatsSubscribers(true);
+  };
+
+  window.addEventListener('gate_ag_stats_sync_event', handleLocalSyncEvent);
+
+  // 4. Polling interval (every 10 seconds for live board freshness)
   const pollInterval = setInterval(() => {
     notifyAllStatsSubscribers(true);
-  }, 30000);
+  }, 10000);
+  if (pollInterval && typeof pollInterval.unref === 'function') {
+    pollInterval.unref();
+  }
 
   return () => {
     if (typeof onStatsUpdate === 'function') {
@@ -750,6 +951,8 @@ export function subscribeToLiveStats(onStatsUpdate) {
     if (localTelemetryBroadcast) {
       localTelemetryBroadcast.removeEventListener('message', handleLocalTelemetryMessage);
     }
+    window.removeEventListener('storage', handleStorageChange);
+    window.removeEventListener('gate_ag_stats_sync_event', handleLocalSyncEvent);
   };
 }
 

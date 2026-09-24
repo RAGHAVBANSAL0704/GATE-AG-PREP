@@ -55,6 +55,7 @@ const AuthModal = lazyWithRetry(() => import('./components/AuthModal'));
 const UserProfileModal = lazyWithRetry(() => import('./components/UserProfileModal'));
 const WelcomeModal = lazyWithRetry(() => import('./components/WelcomeModal'));
 const EngineersDayModal = lazyWithRetry(() => import('./components/EngineersDayModal'));
+const PortalAccuracyNoticeModal = lazyWithRetry(() => import('./components/PortalAccuracyNoticeModal'));
 
 function TabLoadingSkeleton() {
   return (
@@ -81,7 +82,7 @@ import { syncStudentCloudData, getStudentUserStatsKey } from './services/student
 import { saveAndBroadcastQuestion, subscribeToLiveQuestionSync } from './services/questionSyncService';
 import { recordQuestionOutcomes } from './services/mistakeVaultService';
 import { subscribeToLiveRoleSync } from './services/userRoleService';
-import { initGlobalPresence, updatePresenceStudent } from './services/liveStatisticsService';
+import { initGlobalPresence, updatePresenceStudent, triggerLiveStatsSync, recordLiveAction } from './services/liveStatisticsService';
 import { saveToIDB } from './utils/indexedDB';
 import { updatePageSEO } from './utils/seo';
 
@@ -210,6 +211,14 @@ export default function App() {
       if (localStorage.getItem('engineers_day_2026_dismissed') === 'true') return false;
       if (sessionStorage.getItem('engineers_day_2026_session_dismissed') === 'true') return false;
       return true;
+    } catch (e) {
+      return false;
+    }
+  });
+  const [showAccuracyNotice, setShowAccuracyNotice] = useState(() => {
+    try {
+      if (typeof localStorage === 'undefined') return false;
+      return localStorage.getItem('gate_ag_accuracy_notice_dismissed') !== 'true';
     } catch (e) {
       return false;
     }
@@ -861,6 +870,17 @@ export default function App() {
         testHistory: newHistory
       };
     });
+
+    try {
+      recordLiveAction({
+        type: 'question_solved',
+        studentName: currentStudent?.full_name || currentStudent?.username || 'GATE AG Aspirant',
+        collegeName: currentStudent?.college_name || 'COAET CCS HAU Hisar',
+        count: attemptedIds.length,
+        details: `Solved ${attemptedIds.length} questions in ${resultData.paperTitle || `Mock ${resultData.year || 'CBT'}`}`
+      });
+      triggerLiveStatsSync();
+    } catch (e) {}
   };
 
   return (
@@ -1190,6 +1210,17 @@ export default function App() {
             onExplore={() => {
               setShowEngineersDay(false);
               setActiveTab('practice');
+            }}
+          />
+        )}
+
+        {showAccuracyNotice && !isAuthModalOpen && (
+          <PortalAccuracyNoticeModal
+            isOpen={showAccuracyNotice && !isAuthModalOpen}
+            onClose={() => setShowAccuracyNotice(false)}
+            onContactAdmin={() => {
+              setShowAccuracyNotice(false);
+              setActiveTab('creator');
             }}
           />
         )}
