@@ -535,11 +535,11 @@ export default function ScientificCalculator({ isOpen, onClose }) {
         </div>
 
         {/* Feature Tabs & Mode Switch Strip */}
-        <div className="bg-slate-100/60 dark:bg-slate-900/90 px-3 py-1.5 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2 text-xs">
-          <div className="flex items-center gap-1">
+        <div className="bg-slate-100/60 dark:bg-slate-900/90 px-2 sm:px-3 py-1.5 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between gap-1.5 text-xs overflow-x-auto scrollbar-none">
+          <div className="flex items-center gap-1 shrink-0">
             <button
               onClick={() => setActiveTab('keypad')}
-              className={`px-2.5 py-1 rounded-lg font-bold text-[11px] transition cursor-pointer flex items-center gap-1 ${
+              className={`px-2 sm:px-2.5 py-1 rounded-lg font-bold text-[11px] transition cursor-pointer flex items-center gap-1 shrink-0 ${
                 activeTab === 'keypad'
                   ? 'bg-emerald-600 text-white shadow-xs'
                   : 'text-slate-600 dark:text-slate-400 hover:bg-slate-200/70 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white'
@@ -551,19 +551,20 @@ export default function ScientificCalculator({ isOpen, onClose }) {
 
             <button
               onClick={() => setActiveTab('constants')}
-              className={`px-2.5 py-1 rounded-lg font-bold text-[11px] transition cursor-pointer flex items-center gap-1 ${
+              className={`px-2 sm:px-2.5 py-1 rounded-lg font-bold text-[11px] transition cursor-pointer flex items-center gap-1 shrink-0 ${
                 activeTab === 'constants'
                   ? 'bg-emerald-600 text-white shadow-xs'
                   : 'text-slate-600 dark:text-slate-400 hover:bg-slate-200/70 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
               <BookOpen className="w-3 h-3" />
-              <span>AG Constants</span>
+              <span className="sm:hidden">Constants</span>
+              <span className="hidden sm:inline">AG Constants</span>
             </button>
 
             <button
               onClick={() => setActiveTab('history')}
-              className={`px-2.5 py-1 rounded-lg font-bold text-[11px] transition cursor-pointer flex items-center gap-1 ${
+              className={`px-2 sm:px-2.5 py-1 rounded-lg font-bold text-[11px] transition cursor-pointer flex items-center gap-1 shrink-0 ${
                 activeTab === 'history'
                   ? 'bg-emerald-600 text-white shadow-xs'
                   : 'text-slate-600 dark:text-slate-400 hover:bg-slate-200/70 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white'
@@ -582,7 +583,7 @@ export default function ScientificCalculator({ isOpen, onClose }) {
           {/* Mode Switch Toggle */}
           <button
             onClick={() => setIsExamMode(!isExamMode)}
-            className="flex items-center gap-1 px-2 py-0.5 rounded-lg text-[10px] font-bold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-200/60 dark:hover:bg-slate-800 transition cursor-pointer"
+            className="flex items-center gap-1 px-1.5 sm:px-2 py-0.5 rounded-lg text-[10px] font-bold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-200/60 dark:hover:bg-slate-800 transition cursor-pointer shrink-0"
             title={isExamMode ? 'Switch to Standard Expression Mode' : 'Switch to Official GATE Exam Mode (Chained Unary)'}
           >
             {isExamMode ? (

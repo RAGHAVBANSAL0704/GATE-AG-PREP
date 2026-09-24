@@ -11,8 +11,8 @@
 - **Backend & Storage**: Supabase JS Client v2 (Auth, Test Attempts, Solvers Leaderboard), LocalStorage & IndexedDB (Offline cache & sync queue).
 - **Test Infrastructure**: Native Node.js Test Runner (`node --test tests/**/*.test.js`), `node:assert/strict`.
 - **Verification Commands**:
-  - `npm test`: **668 tests across 119 suites (100% passing, 0 failures, exit code 0)** in ~1.2s.
-  - `npm run build`: Clean production bundle compiled into `dist/` in ~2.1s.
+  - `npm test`: **826 tests across 156 suites (100% passing, 0 failures, exit code 0)** in ~1.8s.
+  - `npm run build`: Clean production bundle compiled into `dist/` in ~2.8s.
 
 ```mermaid
 graph TD
@@ -104,9 +104,10 @@ graph TD
 
 ---
 
-## 4. Test Suite Coverage Summary (561 Tests across 93 Suites)
+## 4. Test Suite Coverage Summary (826 Tests across 156 Suites)
 
 Run via `npm test` (`node --test tests/**/*.test.js`):
+- `official_organizing_institutes.test.js` (6 tests): Validates official IIT/IISc organizing institute catalog (2007–2026), removal of static binary downloads from `public/downloads`, presence of all 50 mocks in code (`src/data`), and preservation of master DOCX files in `QUESTIONS/MOCK TESTS`.
 - `scoring.test.js` (31 tests): MCQ/MSQ/NAT evaluation, penalties, score rounding, AIR tiers.
 - `custom_mocks.test.js` (150 tests): Validates all 50 custom mocks (schema, 65 Qs, 100 Marks, 10 GA / 55 Tech, MCQ keys format).
 - `cbtStatePersistence.test.js` (4 tests): CBT state recovery, active timer adjustment, keypad input.
@@ -123,15 +124,16 @@ Run via `npm test` (`node --test tests/**/*.test.js`):
 - `user_roles_moderation.test.js` (8 tests): Roles, permissions, mutes, bans, audit log.
 - `visitor_mode.test.js` (3 tests): Guest flags, visitor permissions, auth gate.
 - `question_timer_performance.test.js` (14 tests): Pacing benchmarks, cumulative tracking.
-- *Additional Suites* (185+ tests): Calculator, CBT skins, command palette, concepts, PDF generator, radar diagnostics, feedback, forensics, AI doubt solver, question reports, dataset quality, notifications, roll number parser, XP sync.
+- *Additional Suites* (450+ tests): Calculator, CBT skins, command palette, concepts, PDF generator (`questionPdfExportService`), radar diagnostics, feedback, forensics, AI doubt solver, question reports, dataset quality, notifications, roll number parser, XP sync, SEO metadata.
 
 ---
 
 ## 5. Agent Directives for Maximum Token Efficiency
 
 1. **Rely on this Context**: Do not crawl or re-analyze raw data files (`questions.json`, `mock_papers.json`) or unchanged components unless modifying them directly.
-2. **Execute Verification**: Always run `npm test` after code changes; ensure 561/561 tests pass.
+2. **Execute Verification**: Always run `npm test` after code changes; ensure 826/826 tests pass.
 3. **Preserve Contracts**:
    - Palette state constants: `NOT_VISITED`, `NOT_ANSWERED`, `ANSWERED`, `MARKED`, `ANSWERED_MARKED`.
    - Maintain 100% offline functionality with graceful `localStorage` and `IndexedDB` fallback.
    - Maintain dual-theme contrast (`dark` and `light` only).
+   - All question papers and mock tests are stored as code/JSON (`src/data/`); downloadable PDFs are generated dynamically on-the-fly via `src/services/questionPdfExportService.js` in clean, ink-friendly plain text with KaTeX formulas.

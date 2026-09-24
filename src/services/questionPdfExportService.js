@@ -51,6 +51,46 @@ export function getQuestionSolution(q) {
   return `**Official Verified Answer:** **${ans}**`;
 }
 
+// Standard 4 PDF Export Modes
+export const PDF_EXPORT_MODES = [
+  {
+    id: 'only_questions',
+    label: 'Exam Mode (Questions Only)',
+    shortLabel: 'Only Questions',
+    description: 'Clean question paper without answers or solutions. Includes candidate details and rough workspace for real offline mock test practice.',
+    icon: 'FileQuestion',
+    badge: 'Exam Mode',
+    color: 'blue'
+  },
+  {
+    id: 'only_answers',
+    label: 'Solutions Only (Answer Key & Proofs)',
+    shortLabel: 'Only Answers',
+    description: 'Quick answer key table followed by full step-by-step mathematical derivations. Perfect for checking answers or marking.',
+    icon: 'KeyRound',
+    badge: 'Solutions Only',
+    color: 'emerald'
+  },
+  {
+    id: 'first_questions_then_answers',
+    label: 'First Questions, Then Answers',
+    shortLabel: 'Questions Then Answers',
+    description: 'Full question paper first (no spoilers), followed by complete Answer Key and step-by-step solutions at the end of the booklet.',
+    icon: 'FileText',
+    badge: 'Full Booklet',
+    color: 'indigo'
+  },
+  {
+    id: 'study_guide',
+    label: 'Study Guide (Question Then Answer)',
+    shortLabel: 'Question Then Answer',
+    description: 'Textbook / revision style: each question is followed immediately by its verified answer badge and detailed derivation.',
+    icon: 'BookOpen',
+    badge: 'Study Guide',
+    color: 'amber'
+  }
+];
+
 export function generateQuestionPaperHtml(questions = [], options = {}) {
   const {
     title = 'GATE AG Practice Worksheet',
@@ -63,19 +103,53 @@ export function generateQuestionPaperHtml(questions = [], options = {}) {
     includeCandidateBox = true,
     includeQuestionMetadata = false,
     paperCode = 'GATE-AG-CUSTOM',
-    layoutMode = 'worksheet', // 'worksheet' | 'study_guide'
+    layoutMode = 'worksheet', // 'only_questions' | 'only_answers' | 'first_questions_then_answers' | 'study_guide' | 'worksheet'
     paperSize = 'a4', // 'a4' | 'letter' | 'legal' | 'a3'
     orientation = 'portrait', // 'portrait' | 'landscape'
     columnLayout = '1-col', // '1-col' | '2-col'
     date = new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })
   } = options;
 
+  const mode = String(layoutMode || options.mode || 'worksheet').toLowerCase();
+  const isOnlyQuestions = mode === 'only_questions' || mode === 'exam_only' || mode === 'questions_only';
+  const isOnlyAnswers = mode === 'only_answers' || mode === 'solutions_only' || mode === 'answers_only';
+  const isQuestionsThenAnswers = mode === 'first_questions_then_answers' || mode === 'questions_then_answers' || mode === 'worksheet' || mode === 'exam_with_solutions';
+  const isStudyGuide = mode === 'study_guide' || mode === 'first_question_then_answer' || mode === 'inline_solutions';
+
+  // Mode-aware component rendering rules
+  const shouldRenderQuestionsList = !isOnlyAnswers && (options.includeQuestions !== false);
+  const shouldRenderInlineSolutions = isStudyGuide && includeSolutions;
+  const shouldRenderAnswerKey = isOnlyAnswers 
+    ? true 
+    : (isOnlyQuestions ? false : (options.includeAnswerKey !== undefined ? options.includeAnswerKey : true));
+  const shouldRenderSolutionsAppendix = isOnlyAnswers 
+    ? true 
+    : (isOnlyQuestions || isStudyGuide ? false : (options.includeSolutions !== undefined ? options.includeSolutions : true));
+  const shouldRenderCandidateBox = isOnlyAnswers 
+    ? false 
+    : (options.includeCandidateBox !== undefined ? options.includeCandidateBox : (isOnlyQuestions || isQuestionsThenAnswers));
+
   const totalMarks = questions.reduce((sum, q) => sum + (parseInt(q.marks) || 1), 0);
   const totalQuestions = questions.length;
   const estimatedTimeMin = Math.round(totalQuestions * 2.5);
 
+  let effectiveSubtitle = subtitle;
+  if (!effectiveSubtitle) {
+    if (isOnlyQuestions) {
+      effectiveSubtitle = 'Official Pattern Examination Paper • Question Booklet (Exam Mode)';
+    } else if (isOnlyAnswers) {
+      effectiveSubtitle = 'Official Verified Answer Key & Detailed Step-by-Step Derivations Manual';
+    } else if (isQuestionsThenAnswers) {
+      effectiveSubtitle = 'Complete Question Paper with Answer Key & Detailed Solutions Appendix';
+    } else if (isStudyGuide) {
+      effectiveSubtitle = 'Comprehensive Solved Paper • Question-by-Question Verified Derivations';
+    } else {
+      effectiveSubtitle = sections.length > 0 ? sections.join(', ') : 'Mixed Agricultural Engineering Practice Set';
+    }
+  }
+
   // Render Questions HTML
-  const questionsHtml = questions.map((q, idx) => {
+  const questionsHtml = shouldRenderQuestionsList ? questions.map((q, idx) => {
     const qNum = idx + 1;
     const qType = (q.type || 'MCQ').toUpperCase();
     const qMarks = q.marks || 1;
@@ -117,7 +191,7 @@ export function generateQuestionPaperHtml(questions = [], options = {}) {
     ` : '';
 
     let inlineSolutionHtml = '';
-    if (layoutMode === 'study_guide' && includeSolutions) {
+    if (shouldRenderInlineSolutions) {
       const rawSol = getQuestionSolution(q);
       const expHtml = renderMathToHtmlString(rawSol);
       const ans = getQuestionAnswer(q);
@@ -163,11 +237,11 @@ export function generateQuestionPaperHtml(questions = [], options = {}) {
         ${inlineSolutionHtml}
       </div>
     `;
-  }).join('');
+  }).join('') : '';
 
   // Candidate Fill-In Header Box
   let candidateBoxHtml = '';
-  if (includeCandidateBox) {
+  if (shouldRenderCandidateBox) {
     candidateBoxHtml = `
       <div class="candidate-box">
         <div class="candidate-row">
@@ -214,7 +288,7 @@ export function generateQuestionPaperHtml(questions = [], options = {}) {
 
   // Consistent Dedicated Rough Workspace Section (Full-page at end if enabled)
   let roughWorkSectionHtml = '';
-  if (includeRoughWork) {
+  if (includeRoughWork && shouldRenderQuestionsList) {
     roughWorkSectionHtml = `
       <div class="page-break-before distinct-section">
         <div class="section-divider">
@@ -229,9 +303,9 @@ export function generateQuestionPaperHtml(questions = [], options = {}) {
     `;
   }
 
-  // Render Answer Key Table (Starts on its own distinct page)
+  // Render Answer Key Table
   let answerKeyHtml = '';
-  if (includeAnswerKey && questions.length > 0) {
+  if (shouldRenderAnswerKey && questions.length > 0) {
     const rows = [];
     const chunkSize = 5;
     for (let i = 0; i < questions.length; i += chunkSize) {
@@ -247,8 +321,10 @@ export function generateQuestionPaperHtml(questions = [], options = {}) {
       `);
     }
 
+    const akBreakClass = isOnlyAnswers ? 'distinct-section' : 'page-break-before distinct-section';
+
     answerKeyHtml = `
-      <div class="page-break-before distinct-section">
+      <div class="${akBreakClass}">
         <div class="section-divider">
           <h2 class="section-title">ANSWER KEY APPENDIX</h2>
           <p class="section-subtitle">Official verified answer key (Exam Reference)</p>
@@ -272,11 +348,12 @@ export function generateQuestionPaperHtml(questions = [], options = {}) {
     `;
   }
 
-  // Render Step-by-Step Solutions (Starts on its own distinct page)
+  // Render Step-by-Step Solutions
   let solutionsHtml = '';
-  if (layoutMode !== 'study_guide' && includeSolutions && questions.length > 0) {
+  if (shouldRenderSolutionsAppendix && questions.length > 0) {
+    const solBreakClass = 'page-break-before distinct-section';
     solutionsHtml = `
-      <div class="page-break-before distinct-section">
+      <div class="${solBreakClass}">
         <div class="section-divider">
           <h2 class="section-title">DETAILED STEP-BY-STEP EXPLANATIONS & DERIVATIONS</h2>
           <p class="section-subtitle">Comprehensive mathematical proofs and textbook references</p>
@@ -287,6 +364,11 @@ export function generateQuestionPaperHtml(questions = [], options = {}) {
             const rawSol = getQuestionSolution(q);
             const expHtml = renderMathToHtmlString(rawSol);
             const ans = getQuestionAnswer(q);
+            const qPrompt = isOnlyAnswers && q.question ? `
+              <div class="solution-q-prompt">
+                <span class="sol-q-prompt-label">Question:</span> ${renderMathToHtmlString(q.question)}
+              </div>
+            ` : '';
 
             return `
               <div class="solution-card">
@@ -295,6 +377,7 @@ export function generateQuestionPaperHtml(questions = [], options = {}) {
                   <span class="sol-correct">Correct: <strong>${escapeHtml(ans)}</strong></span>
                   <span class="sol-meta">${escapeHtml(q.section || '')} • ${q.type || 'MCQ'} (${q.marks || 1}M)</span>
                 </div>
+                ${qPrompt}
                 <div class="solution-body">
                   ${expHtml}
                 </div>
@@ -784,6 +867,25 @@ export function generateQuestionPaperHtml(questions = [], options = {}) {
         .sol-correct { font-weight: 700; color: #111827; }
         .sol-meta { font-size: 7.5pt; color: #6b7280; }
 
+        .solution-q-prompt {
+          font-size: 8.5pt;
+          line-height: 1.35;
+          color: #374151;
+          background: #f8fafc;
+          border-left: 2.5px solid #94a3b8;
+          padding: 4px 8px;
+          margin-bottom: 5px;
+          border-radius: 3px;
+        }
+
+        .sol-q-prompt-label {
+          font-weight: 800;
+          color: #1e293b;
+          text-transform: uppercase;
+          font-size: 7.5pt;
+          margin-right: 4px;
+        }
+
         .solution-body {
           font-size: 8.5pt;
           line-height: 1.38;
@@ -849,7 +951,7 @@ export function generateQuestionPaperHtml(questions = [], options = {}) {
           <div style="flex: 1;">
             <div class="paper-brand">GATE AG PREP PORTAL</div>
             <div class="paper-title">${escapeHtml(title)}</div>
-            <div class="paper-sub">${escapeHtml(subtitle || (sections.length > 0 ? sections.join(', ') : 'Mixed Agricultural Engineering Practice Set'))}</div>
+            <div class="paper-sub">${escapeHtml(effectiveSubtitle)}</div>
             ${studentName ? `<div class="paper-sub" style="margin-top: 2px; font-weight: 700;">Student / Candidate: ${escapeHtml(studentName)}</div>` : ''}
           </div>
 
@@ -864,21 +966,32 @@ export function generateQuestionPaperHtml(questions = [], options = {}) {
 
         ${candidateBoxHtml}
 
-        <div class="instructions-box">
-          <strong>General Instructions:</strong>
-          <ul>
-            <li>Total Questions: <strong>${totalQuestions}</strong> | Total Marks: <strong>${totalMarks}.00</strong> | Maximum Time: <strong>${estimatedTimeMin} minutes</strong>.</li>
-            <li>For MCQ, choose single correct option. For MSQ, choose all correct options (no partial credit). For NAT, write numerical value.</li>
-          </ul>
-        </div>
+        ${isOnlyAnswers ? `
+          <div class="instructions-box">
+            <strong>Marking Scheme &amp; Solution Evaluation Guide:</strong>
+            <ul>
+              <li>Total Questions: <strong>${totalQuestions}</strong> | Total Marks: <strong>${totalMarks}.00</strong>.</li>
+              <li>MCQ: 1M (+1 / -0.33), 2M (+2 / -0.67). MSQ: Full marks for exact choice set match only (no negative). NAT: Numerical tolerance range.</li>
+            </ul>
+          </div>
+        ` : `
+          <div class="instructions-box">
+            <strong>General Instructions:</strong>
+            <ul>
+              <li>Total Questions: <strong>${totalQuestions}</strong> | Total Marks: <strong>${totalMarks}.00</strong> | Maximum Time: <strong>${estimatedTimeMin} minutes</strong>.</li>
+              <li>For MCQ, choose single correct option. For MSQ, choose all correct options (no partial credit). For NAT, write numerical value.</li>
+            </ul>
+          </div>
+        `}
 
-        <div class="questions-list ${columnLayout === '2-col' ? 'two-column' : ''}">
-          ${questionsHtml}
-        </div>
+        ${shouldRenderQuestionsList ? `
+          <div class="questions-list ${columnLayout === '2-col' ? 'two-column' : ''}">
+            ${questionsHtml}
+          </div>
+          ${questionPageRoughHtml}
+          ${roughWorkSectionHtml}
+        ` : ''}
 
-        ${questionPageRoughHtml}
-
-        ${roughWorkSectionHtml}
         ${answerKeyHtml}
         ${solutionsHtml}
 
@@ -922,49 +1035,48 @@ export function exportQuestionsToPdf(questions = [], options = {}) {
 
   const htmlContent = generateQuestionPaperHtml(questions, options);
 
+  // Strategy 1: Direct document.write in a blank popup window (Same-origin, trusted by Safari & Chrome)
   try {
-    // Strategy 1: Create a Blob URL and open window
+    const printWindow = window.open('', '_blank', 'width=1000,height=900,menubar=yes,toolbar=yes');
+    if (printWindow) {
+      printWindow.document.open();
+      printWindow.document.write(htmlContent);
+      printWindow.document.close();
+      printWindow.focus();
+      return true;
+    }
+  } catch (winErr) {
+    console.warn("Direct document write window open failed, trying blob URL:", winErr);
+  }
+
+  // Strategy 2: Blob URL window fallback
+  try {
     const blob = new Blob([htmlContent], { type: 'text/html;charset=utf-8' });
     const blobUrl = URL.createObjectURL(blob);
-
-    const printWindow = window.open(blobUrl, '_blank', 'width=1000,height=900,menubar=yes,toolbar=yes');
-    
-    if (printWindow) {
-      printWindow.focus();
-      // Revoke blob URL after reasonable time
+    const blobWindow = window.open(blobUrl, '_blank', 'width=1000,height=900,menubar=yes,toolbar=yes');
+    if (blobWindow) {
+      blobWindow.focus();
       setTimeout(() => URL.revokeObjectURL(blobUrl), 60000);
       return true;
     }
   } catch (blobErr) {
-    console.warn("Blob URL window open failed, trying direct document write fallback:", blobErr);
+    console.warn("Blob URL window open failed, trying hidden iframe fallback:", blobErr);
   }
 
-  // Strategy 2: Direct document.write fallback
-  try {
-    const fallbackWindow = window.open('', '_blank', 'width=1000,height=900');
-    if (fallbackWindow) {
-      fallbackWindow.document.open();
-      fallbackWindow.document.write(htmlContent);
-      fallbackWindow.document.close();
-      fallbackWindow.focus();
-      return true;
-    }
-  } catch (writeErr) {
-    console.warn("Direct document write window open failed:", writeErr);
-  }
-
-  // Strategy 3: Hidden iframe fallback for constrained popup environments
+  // Strategy 3: Hidden printable iframe fallback with active dimensions for popup-blocked environments
   try {
     let printIframe = document.getElementById('pdf-export-hidden-iframe');
     if (!printIframe) {
       printIframe = document.createElement('iframe');
       printIframe.id = 'pdf-export-hidden-iframe';
       printIframe.style.position = 'fixed';
-      printIframe.style.right = '0';
-      printIframe.style.bottom = '0';
-      printIframe.style.width = '0';
-      printIframe.style.height = '0';
-      printIframe.style.border = '0';
+      printIframe.style.top = '0';
+      printIframe.style.left = '0';
+      printIframe.style.width = '100%';
+      printIframe.style.height = '100%';
+      printIframe.style.opacity = '0';
+      printIframe.style.pointerEvents = 'none';
+      printIframe.style.zIndex = '-9999';
       document.body.appendChild(printIframe);
     }
 
@@ -980,7 +1092,7 @@ export function exportQuestionsToPdf(questions = [], options = {}) {
       } catch (iframePrintErr) {
         console.warn("Iframe print error:", iframePrintErr);
       }
-    }, 400);
+    }, 450);
 
     return true;
   } catch (iframeErr) {
@@ -1018,3 +1130,48 @@ export function downloadQuestionPaperHtmlFile(questions = [], options = {}) {
   setTimeout(() => URL.revokeObjectURL(url), 10000);
   return true;
 }
+
+/**
+ * One-Click Full Paper PDF Exporter (PYQs & Custom Mocks)
+ * Generates print-ready A4 document on the fly directly from question JSON data.
+ * 
+ * @param {Object|string} paperOrTitle - The mock paper object or title string
+ * @param {Array} questions - Array of question objects (65 standard questions)
+ * @param {'only_questions'|'only_answers'|'first_questions_then_answers'|'study_guide'|'worksheet'} mode - Export format
+ * @param {Object} extraOptions - Custom options (studentName, paperSize, columnLayout, etc.)
+ */
+export function exportPaperToPdf(paperOrTitle, questions = [], mode = 'study_guide', extraOptions = {}) {
+  if (!questions || questions.length === 0) {
+    alert("No questions available in this paper for export.");
+    return false;
+  }
+
+  const rawMode = String(mode || 'study_guide').toLowerCase();
+  let exportMode = 'study_guide';
+  if (rawMode === 'only_questions' || rawMode === 'exam_only' || rawMode === 'questions_only') {
+    exportMode = 'only_questions';
+  } else if (rawMode === 'only_answers' || rawMode === 'solutions_only' || rawMode === 'answers_only') {
+    exportMode = 'only_answers';
+  } else if (rawMode === 'first_questions_then_answers' || rawMode === 'worksheet' || rawMode === 'exam_with_solutions' || rawMode === 'questions_then_answers') {
+    exportMode = 'first_questions_then_answers';
+  } else if (rawMode === 'study_guide' || rawMode === 'first_question_then_answer' || rawMode === 'inline_solutions') {
+    exportMode = 'study_guide';
+  }
+
+  const title = typeof paperOrTitle === 'string' 
+    ? paperOrTitle 
+    : (paperOrTitle.title || `GATE AG ${paperOrTitle.year || ''} Paper`);
+  const year = typeof paperOrTitle === 'object' ? paperOrTitle.year : '';
+
+  return exportQuestionsToPdf(questions, {
+    title,
+    paperCode: year ? `GATE-AG-${year}` : 'GATE-AG-MOCK',
+    layoutMode: exportMode,
+    includeQuestionMetadata: true,
+    columnLayout: '1-col',
+    paperSize: 'a4',
+    orientation: 'portrait',
+    ...extraOptions
+  });
+}
+

@@ -5,59 +5,55 @@ import {
   Key, 
   FileCode, 
   Search, 
-  Sparkles,
-  Play,
-  Trash2,
-  Package,
-  Eye,
-  Archive,
-  X,
-  Loader2,
-  BookOpen,
-  CheckCircle2,
-  Check,
-  FileDown,
-  ShieldCheck,
-  Scale
+  Sparkles, 
+  Play, 
+  Trash2, 
+  Package, 
+  Eye, 
+  Archive, 
+  X, 
+  Loader2, 
+  BookOpen, 
+  CheckCircle2, 
+  Check, 
+  FileDown, 
+  ShieldCheck, 
+  Scale,
+  ExternalLink,
+  Building2,
+  Globe,
+  Info,
+  Printer
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
-import { downloadBulkZip } from '../utils/zipDownloader';
 import CustomPdfQuestionGenerator from './CustomPdfQuestionGenerator';
+import PdfExportOptionsModal from './PdfExportOptionsModal';
+import { exportPaperToPdf } from '../services/questionPdfExportService';
+import { 
+  OFFICIAL_GATE_PAPERS_META, 
+  CENTRAL_GATE_PORTALS, 
+  getOfficialGatePaperMeta 
+} from '../data/officialGatePapersMeta';
 
 export default function DownloadsHub({ questions = [], mockPapers = [], customMockPapers = [], onStartMock, onDeleteMock }) {
   const [vaultTab, setVaultTab] = useState('generator'); // 'generator' | 'official' | 'custom'
   const [searchTerm, setSearchTerm] = useState('');
   const [eraFilter, setEraFilter] = useState('all'); // 'all' | 'recent' | 'classic'
-  const [isZipping, setIsZipping] = useState(false);
   const [previewPaper, setPreviewPaper] = useState(null);
   const [previewSearch, setPreviewSearch] = useState('');
+  const [pdfModalPaper, setPdfModalPaper] = useState(null);
 
-  const yearsData = [
-    { year: '2026', paperPdf: '/downloads/question_papers/AG2026.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2026-FULL-SOLVED.docx' },
-    { year: '2025', paperPdf: '/downloads/question_papers/AG2025.pdf', keyPdf: '/downloads/answer_keys/AG25KEY.pdf', solvedDocx: '/downloads/solved_docx/2025-FULL-SOLVED.docx' },
-    { year: '2024', paperPdf: '/downloads/question_papers/AG2024.pdf', keyPdf: '/downloads/answer_keys/AG24KEY.pdf', solvedDocx: '/downloads/solved_docx/2024-FULL-SOLVED.docx' },
-    { year: '2023', paperPdf: '/downloads/question_papers/AG2023.pdf', keyPdf: '/downloads/answer_keys/AG23KEY.pdf', solvedDocx: '/downloads/solved_docx/2023-FULL-SOLVED.docx' },
-    { year: '2022', paperPdf: '/downloads/question_papers/AG2022.pdf', keyPdf: '/downloads/answer_keys/AG22KEY.pdf', solvedDocx: '/downloads/solved_docx/2022-FULL-SOLVED.docx' },
-    { year: '2021', paperPdf: '/downloads/question_papers/AG2021.pdf', keyPdf: '/downloads/answer_keys/AG21KEY.pdf', solvedDocx: '/downloads/solved_docx/2021-FULL-SOLVED.docx' },
-    { year: '2020', paperPdf: '/downloads/question_papers/AG2020.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2020-FULL-SOLVED.docx' },
-    { year: '2019', paperPdf: '/downloads/question_papers/AG2019.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2019-FULL-SOLVED.docx' },
-    { year: '2018', paperPdf: '/downloads/question_papers/AG2018.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2018-FULL-SOLVED.docx' },
-    { year: '2017', paperPdf: '/downloads/question_papers/AG2017.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2017-FULL-SOLVED.docx' },
-    { year: '2016', paperPdf: '/downloads/question_papers/AG2016.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2016-FULL-SOLVED.docx' },
-    { year: '2015', paperPdf: '/downloads/question_papers/AG2015.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2015-FULL-SOLVED.docx' },
-    { year: '2014', paperPdf: '/downloads/question_papers/AG2014.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2014-FULL-SOLVED.docx' },
-    { year: '2013', paperPdf: '/downloads/question_papers/AG2013.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2013-FULL-SOLVED.docx' },
-    { year: '2012', paperPdf: '/downloads/question_papers/AG2012.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2012-FULL-SOLVED.docx' },
-    { year: '2011', paperPdf: '/downloads/question_papers/AG2011.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2011-FULL-SOLVED.docx' },
-    { year: '2010', paperPdf: '/downloads/question_papers/AG2010.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2010-FULL-SOLVED.docx' },
-    { year: '2009', paperPdf: '/downloads/question_papers/AG2009.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2009-FULL-SOLVED.docx' },
-    { year: '2008', paperPdf: '/downloads/question_papers/AG2008.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2008-FULL-SOLVED.docx' },
-    { year: '2007', paperPdf: '/downloads/question_papers/AG2007.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2007-FULL-SOLVED.docx' },
-  ];
+  const yearsData = OFFICIAL_GATE_PAPERS_META;
 
   const filteredYears = yearsData.filter(item => {
     const yNum = parseInt(item.year);
-    if (searchTerm && !item.year.includes(searchTerm)) return false;
+    if (searchTerm) {
+      const term = searchTerm.toLowerCase();
+      const yearMatch = item.year.includes(term);
+      const instituteMatch = (item.institute || '').toLowerCase().includes(term);
+      const shortMatch = (item.instituteShort || '').toLowerCase().includes(term);
+      if (!yearMatch && !instituteMatch && !shortMatch) return false;
+    }
     if (eraFilter === 'recent' && yNum < 2016) return false;
     if (eraFilter === 'classic' && yNum > 2015) return false;
     return true;
@@ -82,68 +78,6 @@ export default function DownloadsHub({ questions = [], mockPapers = [], customMo
     return [];
   };
 
-  const getPaperDocxUrl = (paper, idx) => {
-    if (paper.docxUrl) return paper.docxUrl;
-    if (paper.file_url && paper.file_url.endsWith('.docx')) return paper.file_url;
-    const text = `${paper.id || ''} ${paper.title || ''}`;
-    const match = text.match(/MOCK[_\s]+(\d+)/i) || text.match(/Paper\s+(\d+)/i) || text.match(/(\d+)$/);
-    const num = match ? String(parseInt(match[1], 10)).padStart(2, '0') : String(idx + 1).padStart(2, '0');
-    return `/downloads/mock_tests/MOCK ${num} GATE AG.docx`;
-  };
-
-  // Bulk ZIP Handlers
-  const handleDownloadAllSolvedDocx = async () => {
-    setIsZipping(true);
-    try {
-      const filesToZip = yearsData
-        .filter(item => item.solvedDocx)
-        .map(item => ({
-          name: `${item.year}-FULL-SOLVED.docx`,
-          url: item.solvedDocx
-        }));
-      await downloadBulkZip(filesToZip, 'GATE_AG_All_Solved_Papers_2007_2026.zip');
-    } catch (err) {
-      console.error("Bulk zip failed", err);
-      alert("Could not build ZIP file. Try downloading files individually.");
-    } finally {
-      setIsZipping(false);
-    }
-  };
-
-  const handleDownloadAllPdfs = async () => {
-    setIsZipping(true);
-    try {
-      const filesToZip = yearsData
-        .filter(item => item.paperPdf)
-        .map(item => ({
-          name: `GATE_AG_${item.year}_Question_Paper.pdf`,
-          url: item.paperPdf
-        }));
-      await downloadBulkZip(filesToZip, 'GATE_AG_Official_Question_Papers_2007_2026.zip');
-    } catch (err) {
-      console.error("Bulk zip failed", err);
-      alert("Could not build ZIP file. Try downloading files individually.");
-    } finally {
-      setIsZipping(false);
-    }
-  };
-
-  const handleDownloadAllCustomMocksZip = async () => {
-    setIsZipping(true);
-    try {
-      const filesToZip = customMockPapers.map((paper, idx) => ({
-        name: `${(paper.title || `MOCK_${idx + 1}_GATE_AG`).replace(/[/\\?%*:|"<>]/g, '_')}.docx`,
-        url: getPaperDocxUrl(paper, idx)
-      }));
-      await downloadBulkZip(filesToZip, 'GATE_AG_Custom_Mock_Papers_All.zip');
-    } catch (err) {
-      console.error("Bulk custom mock zip failed", err);
-      alert("Could not build ZIP file. Try downloading files individually.");
-    } finally {
-      setIsZipping(false);
-    }
-  };
-
   return (
     <div className="space-y-6 animate-in fade-in duration-200">
       
@@ -156,10 +90,10 @@ export default function DownloadsHub({ questions = [], mockPapers = [], customMo
             </div>
             <div>
               <h1 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
-                PYQ Vault & Downloads
+                PYQ Vault &amp; PDF Generator
               </h1>
               <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5 font-medium">
-                Official GATE AG papers, answer keys, solved DOCX papers & custom mock DOCX archives.
+                Official organizing IIT/IISc repository links, on-demand clean A4 PDF export &amp; 50 custom full mocks.
               </p>
             </div>
           </div>
@@ -175,7 +109,7 @@ export default function DownloadsHub({ questions = [], mockPapers = [], customMo
               }`}
             >
               <FileDown className="w-4 h-4" />
-              <span>PDF Generator</span>
+              <span>Custom PDF Generator</span>
             </button>
 
             <button
@@ -186,8 +120,8 @@ export default function DownloadsHub({ questions = [], mockPapers = [], customMo
                   : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
-              <FileText className="w-4 h-4" />
-              <span>Official Papers ({filteredYears.length})</span>
+              <Building2 className="w-4 h-4" />
+              <span>Official IIT Papers ({filteredYears.length})</span>
             </button>
 
             <button
@@ -199,12 +133,12 @@ export default function DownloadsHub({ questions = [], mockPapers = [], customMo
               }`}
             >
               <Sparkles className="w-4 h-4 text-amber-400" />
-              <span>Custom Mocks ({customMockPapers.length})</span>
+              <span>Custom Full Mocks ({customMockPapers.length})</span>
             </button>
           </div>
         </div>
 
-        {/* Filter Toolbar for Official Papers & Bulk ZIP Downloads */}
+        {/* Filter Toolbar for Official Papers / Custom Mocks */}
         {vaultTab !== 'generator' && (
           <div className="flex flex-wrap items-center justify-between gap-3 pt-4 mt-4 border-t border-slate-100 dark:border-slate-800">
             {vaultTab === 'official' ? (
@@ -214,7 +148,7 @@ export default function DownloadsHub({ questions = [], mockPapers = [], customMo
                     <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-2.5" />
                     <input
                       type="text"
-                      placeholder="Search year (e.g. 2026, 2024)..."
+                      placeholder="Search year or IIT (e.g. 2026, Roorkee, IISc)..."
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
                       className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl pl-10 pr-3.5 py-2 text-xs text-slate-900 dark:text-slate-100 outline-none focus:ring-1 focus:ring-blue-500 font-medium"
@@ -224,7 +158,7 @@ export default function DownloadsHub({ questions = [], mockPapers = [], customMo
                   <div className="flex items-center gap-1 bg-slate-100 dark:bg-slate-950 p-1 rounded-xl border border-slate-200 dark:border-slate-800 text-xs font-bold shrink-0">
                     <button
                       onClick={() => setEraFilter('all')}
-                      className={`px-3 py-1 rounded-lg transition ${
+                      className={`px-3 py-1 rounded-lg transition cursor-pointer ${
                         eraFilter === 'all'
                           ? 'bg-blue-600 text-white shadow-xs font-extrabold'
                           : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
@@ -234,7 +168,7 @@ export default function DownloadsHub({ questions = [], mockPapers = [], customMo
                     </button>
                     <button
                       onClick={() => setEraFilter('recent')}
-                      className={`px-3 py-1 rounded-lg transition ${
+                      className={`px-3 py-1 rounded-lg transition cursor-pointer ${
                         eraFilter === 'recent'
                           ? 'bg-blue-600 text-white shadow-xs font-extrabold'
                           : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
@@ -244,7 +178,7 @@ export default function DownloadsHub({ questions = [], mockPapers = [], customMo
                     </button>
                     <button
                       onClick={() => setEraFilter('classic')}
-                      className={`px-3 py-1 rounded-lg transition ${
+                      className={`px-3 py-1 rounded-lg transition cursor-pointer ${
                         eraFilter === 'classic'
                           ? 'bg-blue-600 text-white shadow-xs font-extrabold'
                           : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
@@ -256,41 +190,39 @@ export default function DownloadsHub({ questions = [], mockPapers = [], customMo
                 </div>
 
                 <div className="flex items-center gap-2 flex-wrap">
-                  <button
-                    disabled={isZipping}
-                    onClick={handleDownloadAllSolvedDocx}
-                    className="px-3.5 py-2 rounded-xl bg-amber-600 hover:bg-amber-700 disabled:opacity-50 text-white text-xs font-bold transition flex items-center gap-2 shadow-xs active:scale-95 cursor-pointer"
-                    title="Package and download all solved DOCX papers in one ZIP"
+                  <a
+                    href="https://gate.iitkgp.ac.in/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3.5 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition flex items-center gap-1.5 shadow-xs cursor-pointer active:scale-95"
+                    title="Visit official GATE National Repository at IIT Kharagpur"
                   >
-                    {isZipping ? <Loader2 className="w-4 h-4 animate-spin" /> : <Archive className="w-4 h-4" />}
-                    <span>Download Solved DOCX (ZIP)</span>
-                  </button>
+                    <Globe className="w-3.5 h-3.5" />
+                    <span>NCB Central Archive</span>
+                    <ExternalLink className="w-3 h-3 opacity-80" />
+                  </a>
 
-                  <button
-                    disabled={isZipping}
-                    onClick={handleDownloadAllPdfs}
-                    className="px-3.5 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-white text-xs font-bold transition flex items-center gap-2 shadow-xs active:scale-95 cursor-pointer"
-                    title="Package and download all official question PDFs in one ZIP"
+                  <a
+                    href="https://gate.nptel.ac.in/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700 text-xs font-bold transition flex items-center gap-1.5 shadow-xs cursor-pointer active:scale-95"
+                    title="Visit official Ministry of Education / NPTEL GATE Portal"
                   >
-                    {isZipping ? <Loader2 className="w-4 h-4 animate-spin" /> : <Archive className="w-4 h-4" />}
-                    <span>Download PDFs (ZIP)</span>
-                  </button>
+                    <Building2 className="w-3.5 h-3.5 text-amber-500" />
+                    <span>NPTEL Portal</span>
+                    <ExternalLink className="w-3 h-3 opacity-80" />
+                  </a>
                 </div>
               </>
             ) : (
               <div className="flex items-center justify-between w-full">
                 <span className="text-xs text-slate-500 font-medium">
-                  Showing all {customMockPapers.length} custom mock test papers.
+                  Showing all {filteredCustomMocks.length} custom mock papers (Full 65 Qs • 100 Marks). Instant clean PDF export available.
                 </span>
-                <button
-                  disabled={isZipping}
-                  onClick={handleDownloadAllCustomMocksZip}
-                  className="px-3.5 py-2 rounded-xl bg-purple-600 hover:bg-purple-700 disabled:opacity-50 text-white text-xs font-bold transition flex items-center gap-2 shadow-xs active:scale-95 cursor-pointer"
-                  title={`Package and download all ${customMockPapers.length} custom mock DOCX papers in one ZIP`}
-                >
-                  {isZipping ? <Loader2 className="w-4 h-4 animate-spin" /> : <Archive className="w-4 h-4" />}
-                  <span>Download All Custom Mocks (ZIP)</span>
-                </button>
+                <span className="text-[11px] font-mono text-purple-600 dark:text-purple-400 font-bold bg-purple-50 dark:bg-purple-950/60 px-2.5 py-1 rounded-xl border border-purple-200 dark:border-purple-900">
+                  Direct Code-Generated PDFs
+                </span>
               </div>
             )}
           </div>
@@ -307,117 +239,149 @@ export default function DownloadsHub({ questions = [], mockPapers = [], customMo
       )}
 
       {vaultTab === 'official' && (
-        <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm">
-          {/* Fair Dealing Notice Banner */}
-          <div className="p-4 bg-slate-50 dark:bg-slate-950/80 border-b border-slate-200 dark:border-slate-800 flex items-start sm:items-center gap-3 text-xs text-slate-600 dark:text-slate-400">
-            <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5 sm:mt-0" />
-            <p className="text-[11px] leading-relaxed">
-              <span className="font-bold text-slate-800 dark:text-slate-200">Fair Dealing &amp; Educational Notice:</span> Official GATE question papers and keys are original publications of the organizing IITs/IISc on behalf of NCB-GATE, provided here free of charge for non-commercial student preparation under Section 52(1) of the Indian Copyright Act, 1957.
-            </p>
+        <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm space-y-0">
+          
+          {/* Copyright Compliance & Organizing Body Notice Banner */}
+          <div className="p-4 bg-blue-50/70 dark:bg-blue-950/30 border-b border-blue-200/80 dark:border-blue-900/60 flex items-start gap-3 text-xs text-slate-700 dark:text-slate-300">
+            <ShieldCheck className="w-5 h-5 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5" />
+            <div className="space-y-1">
+              <p className="text-xs font-extrabold text-slate-900 dark:text-white">
+                Official Organizing Institutes &amp; Transformative Educational PDFs
+              </p>
+              <p className="text-[11px] leading-relaxed text-slate-600 dark:text-slate-400">
+                Official GATE examination papers and keys are published by the respective <strong>Organizing Institutes (IITs &amp; IISc)</strong> on behalf of the National Coordination Board (NCB) – GATE. In adherence to copyright principles, raw question paper files are not hosted directly; verified links to official organizing portals are provided below. For self-study and preparation, click <strong>Solved PDF</strong> or <strong>Practice PDF</strong> to dynamically generate a clean, ink-efficient A4 document containing our verified solutions and derivations.
+              </p>
+            </div>
           </div>
 
+          {/* Central Repositories Quick Cards */}
+          <div className="p-4 border-b border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/40 grid grid-cols-1 md:grid-cols-2 gap-3">
+            {CENTRAL_GATE_PORTALS.map((portal) => (
+              <div 
+                key={portal.name} 
+                className="flex items-center justify-between p-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xs hover:border-blue-400 dark:hover:border-blue-600 transition"
+              >
+                <div className="space-y-1 pr-3">
+                  <div className="flex items-center gap-1.5">
+                    <Building2 className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 shrink-0" />
+                    <span className="font-extrabold text-xs text-slate-900 dark:text-white">{portal.name}</span>
+                    <span className="text-[9px] font-mono px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 font-bold">{portal.badge}</span>
+                  </div>
+                  <p className="text-[11px] text-slate-500 dark:text-slate-400 leading-tight">{portal.description}</p>
+                </div>
+                <a
+                  href={portal.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition flex items-center gap-1.5 shrink-0 shadow-2xs cursor-pointer active:scale-95"
+                >
+                  <span>Portal</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
+            ))}
+          </div>
+
+          {/* Year-by-Year Organizing Institute Directory Table */}
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse text-xs">
               <thead>
                 <tr className="bg-slate-50 dark:bg-slate-950 text-slate-500 dark:text-slate-400 uppercase font-bold text-[10px] tracking-wider border-b border-slate-200 dark:border-slate-800">
                   <th className="py-3.5 px-4 w-28">Year</th>
-                  <th className="py-3.5 px-4">Official Question Paper (PDF)</th>
-                  <th className="py-3.5 px-4">Official Answer Key (PDF)</th>
-                  <th className="py-3.5 px-4">Full Solved Paper (DOCX)</th>
-                  <th className="py-3.5 px-4 text-right">Actions</th>
+                  <th className="py-3.5 px-4">Organizing Institute</th>
+                  <th className="py-3.5 px-4">Official Portal</th>
+                  <th className="py-3.5 px-4">Instant PDF Downloads (From Code)</th>
+                  <th className="py-3.5 px-4 text-right">Interactive Review</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100 dark:divide-slate-800/60 text-slate-900 dark:text-slate-100 font-medium">
-                {filteredYears.map((item) => (
-                  <tr key={item.year} className="hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition">
-                    
-                    {/* Year */}
-                    <td className="py-3.5 px-4 font-mono font-extrabold text-blue-600 dark:text-blue-400 text-sm">
-                      GATE {item.year}
-                    </td>
+                {filteredYears.map((item) => {
+                  const qs = getOfficialPaperQuestions(item.year);
+                  return (
+                    <tr key={item.year} className="hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition">
+                      
+                      {/* Year */}
+                      <td className="py-3.5 px-4 font-mono font-extrabold text-blue-600 dark:text-blue-400 text-sm">
+                        GATE {item.year}
+                      </td>
 
-                    {/* Question Paper PDF */}
-                    <td className="py-3.5 px-4">
-                      {item.paperPdf ? (
+                      {/* Organizing Institute */}
+                      <td className="py-3.5 px-4">
+                        <div className="flex items-center gap-2.5">
+                          <div className="w-8 h-8 rounded-xl bg-blue-50 dark:bg-blue-950 border border-blue-200 dark:border-blue-900 text-blue-600 dark:text-blue-400 flex items-center justify-center font-mono text-[10px] font-black shrink-0">
+                            {item.instituteShort}
+                          </div>
+                          <div>
+                            <div className="font-bold text-slate-900 dark:text-white text-xs">
+                              {item.institute}
+                            </div>
+                            <span className="text-[10px] text-slate-500 dark:text-slate-400">
+                              NCB-GATE Organizing Body
+                            </span>
+                          </div>
+                        </div>
+                      </td>
+
+                      {/* Official Portal Direct Link */}
+                      <td className="py-3.5 px-4">
                         <a
-                          href={item.paperPdf}
-                          download={`GATE_AG_${item.year}_Question_Paper.pdf`}
+                          href={item.officialUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700 text-xs font-bold transition shadow-2xs group"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-600 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700 text-xs font-bold transition shadow-2xs group cursor-pointer"
+                          title={`Visit official ${item.institute} portal for GATE ${item.year}`}
                         >
-                          <FileText className="w-4 h-4 text-blue-500 group-hover:text-white shrink-0" />
-                          <span>AG{item.year}.pdf</span>
-                          <Download className="w-3.5 h-3.5 opacity-70 ml-0.5" />
+                          <Globe className="w-3.5 h-3.5 text-blue-500 group-hover:text-white shrink-0" />
+                          <span>Visit {item.instituteShort}</span>
+                          <ExternalLink className="w-3 h-3 opacity-70 group-hover:opacity-100 ml-0.5" />
                         </a>
-                      ) : (
-                        <span className="text-slate-400 text-[11px] font-mono">Pending</span>
-                      )}
-                    </td>
+                      </td>
 
-                    {/* Answer Key PDF */}
-                    <td className="py-3.5 px-4">
-                      {item.keyPdf ? (
-                        <a
-                          href={item.keyPdf}
-                          download={`GATE_AG_${item.year}_Answer_Key.pdf`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-emerald-600 hover:text-white dark:hover:bg-emerald-600 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700 text-xs font-bold transition shadow-2xs group"
+                      {/* Dynamic PDF Export Actions */}
+                      <td className="py-3.5 px-4">
+                        <button
+                          onClick={() => {
+                            setPdfModalPaper({
+                              paper: { year: item.year, title: `GATE ${item.year} Agricultural Engineering Paper` },
+                              questions: qs,
+                              defaultMode: 'study_guide'
+                            });
+                          }}
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-50 hover:bg-purple-600 hover:text-white dark:bg-purple-950/40 text-purple-900 dark:text-purple-300 border border-purple-200 dark:border-purple-900 text-xs font-bold transition shadow-2xs group cursor-pointer"
+                          title="Export PDF: Choose only questions, only answers, questions then answers, or study guide"
                         >
-                          <Key className="w-4 h-4 text-emerald-500 group-hover:text-white shrink-0" />
-                          <span>Answer Key</span>
-                          <Download className="w-3.5 h-3.5 opacity-70 ml-0.5" />
-                        </a>
-                      ) : (
-                        <span className="text-slate-400 text-[11px] font-mono">Pending</span>
-                      )}
-                    </td>
+                          <Printer className="w-3.5 h-3.5 text-purple-500 group-hover:text-white shrink-0" />
+                          <span>Export PDF</span>
+                        </button>
+                      </td>
 
-                    {/* Solved DOCX */}
-                    <td className="py-3.5 px-4">
-                      {item.solvedDocx ? (
-                        <a
-                          href={item.solvedDocx}
-                          download={`${item.year}-FULL-SOLVED.docx`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-amber-50 dark:bg-amber-950/40 hover:bg-amber-600 hover:text-white text-amber-900 dark:text-amber-300 border border-amber-200 dark:border-amber-900 text-xs font-bold transition shadow-2xs group"
+                      {/* In-App Interactive Review Action */}
+                      <td className="py-3.5 px-4 text-right">
+                        <button
+                          onClick={() => {
+                            setPreviewSearch('');
+                            setPreviewPaper({
+                              title: `GATE ${item.year} (${item.institute}) Derivations & Solutions`,
+                              year: item.year,
+                              isOfficial: true,
+                              institute: item.institute,
+                              instituteShort: item.instituteShort,
+                              officialUrl: item.officialUrl,
+                              questions: qs,
+                              summaryText: `Official GATE ${item.year} Agricultural Engineering Paper organized by ${item.institute}. Original PDFs & keys are officially hosted on the organizing institute portal. Step-by-step verified derivations and calculations are provided here for interactive self-study.`
+                            });
+                          }}
+                          className="px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-purple-600 hover:text-white transition font-bold text-xs inline-flex items-center gap-1.5 border border-slate-200 dark:border-slate-700 shadow-2xs cursor-pointer"
+                          title="Preview Paper Questions & Step-by-Step Derivations"
                         >
-                          <FileCode className="w-4 h-4 text-amber-500 group-hover:text-white shrink-0" />
-                          <span>{item.year}-FULL-SOLVED.docx</span>
-                          <Download className="w-3.5 h-3.5 opacity-70 ml-0.5" />
-                        </a>
-                      ) : (
-                        <span className="text-slate-400 text-[11px] font-mono">Pending</span>
-                      )}
-                    </td>
+                          <Eye className="w-4 h-4" />
+                          <span>Review</span>
+                        </button>
+                      </td>
 
-                    {/* Preview Action */}
-                    <td className="py-3.5 px-4 text-right">
-                      <button
-                        onClick={() => {
-                          const qs = getOfficialPaperQuestions(item.year);
-                          setPreviewSearch('');
-                          setPreviewPaper({
-                            title: `GATE ${item.year} Solved Paper`,
-                            year: item.year,
-                            docxUrl: item.solvedDocx,
-                            pdfUrl: item.paperPdf,
-                            questions: qs,
-                            summaryText: `Official GATE ${item.year} Agricultural Engineering Paper containing ${qs.length > 0 ? qs.length : 65} verified questions, answer keys, and step-by-step solved derivations.`
-                          });
-                        }}
-                        className="px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-purple-600 hover:text-white transition font-bold text-xs inline-flex items-center gap-1.5 border border-slate-200 dark:border-slate-700 shadow-2xs"
-                        title="Preview Paper Questions & Solved Derivations"
-                      >
-                        <Eye className="w-4 h-4" />
-                        <span>Preview</span>
-                      </button>
-                    </td>
-
-                  </tr>
-                ))}
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           </div>
@@ -458,47 +422,53 @@ export default function DownloadsHub({ questions = [], mockPapers = [], customMo
                     </h3>
                   </div>
 
-                  <div className="flex items-center gap-2 pt-3 border-t border-slate-100 dark:border-slate-800">
-                    <button
-                      onClick={() => {
-                        setPreviewSearch('');
-                        setPreviewPaper({
-                          title: paper.title,
-                          year: paper.year || '2027',
-                          docxUrl: getPaperDocxUrl(paper, idx),
-                          questions: paper.questions || [],
-                          summaryText: `Custom Full-Length Mock Paper containing ${paper.questions?.length || 65} questions with detailed step-by-step solutions.`
-                        });
-                      }}
-                      className="px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-purple-600 hover:text-white transition font-bold text-xs inline-flex items-center gap-1.5 border border-slate-200 dark:border-slate-700"
-                      title="Preview Mock Paper Questions & Solutions"
-                    >
-                      <Eye className="w-4 h-4" />
-                      <span>Preview</span>
-                    </button>
-
-                    <a
-                      href={getPaperDocxUrl(paper, idx)}
-                      download={`${(paper.title || 'MOCK_PAPER').replace(/\s+/g, '_')}.docx`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 py-2 rounded-xl bg-amber-50 dark:bg-amber-950/40 hover:bg-amber-600 hover:text-white text-amber-900 dark:text-amber-300 border border-amber-200 dark:border-amber-900 text-xs font-bold transition flex items-center justify-center gap-2 shadow-xs"
-                      title="Download Original Custom Mock Paper (.docx)"
-                    >
-                      <FileCode className="w-4 h-4 text-amber-500 shrink-0" />
-                      <span>Download (.docx)</span>
-                      <Download className="w-3.5 h-3.5 opacity-70 ml-0.5" />
-                    </a>
-
-                    {onDeleteMock && !paper.id?.startsWith('GATE_2027_MOCK_') && (
+                  <div className="flex flex-col gap-2 pt-3 border-t border-slate-100 dark:border-slate-800">
+                    <div className="flex items-center gap-2">
                       <button
-                        onClick={() => onDeleteMock(paper.id)}
-                        className="p-2 rounded-xl text-rose-500 hover:bg-rose-500/10 border border-rose-200 dark:border-rose-950 transition"
-                        title="Delete Custom Paper"
+                        onClick={() => {
+                          setPdfModalPaper({
+                            paper,
+                            questions: paper.questions || [],
+                            defaultMode: 'study_guide'
+                          });
+                        }}
+                        className="flex-1 py-2 px-2.5 rounded-xl bg-purple-50 dark:bg-purple-950/40 hover:bg-purple-600 hover:text-white text-purple-900 dark:text-purple-300 border border-purple-200 dark:border-purple-900 text-xs font-bold transition flex items-center justify-center gap-1.5 shadow-xs cursor-pointer"
+                        title="Export Mock Paper: Choose Exam Mode, Solutions Only, Questions then Answers, or Study Guide"
                       >
-                        <Trash2 className="w-4 h-4" />
+                        <Printer className="w-3.5 h-3.5 text-purple-500 shrink-0" />
+                        <span>Export PDF</span>
                       </button>
-                    )}
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={() => {
+                          setPreviewSearch('');
+                          setPreviewPaper({
+                            title: paper.title,
+                            year: paper.year || '2027',
+                            isOfficial: false,
+                            questions: paper.questions || [],
+                            summaryText: `Custom Full-Length Mock Paper containing ${paper.questions?.length || 65} questions with detailed step-by-step solutions.`
+                          });
+                        }}
+                        className="flex-1 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-purple-600 hover:text-white transition font-bold text-xs inline-flex items-center justify-center gap-1.5 border border-slate-200 dark:border-slate-700 cursor-pointer"
+                        title="Preview Mock Paper Questions & Solutions in-app"
+                      >
+                        <Eye className="w-3.5 h-3.5" />
+                        <span>Interactive Preview</span>
+                      </button>
+
+                      {onDeleteMock && !paper.id?.startsWith('GATE_2027_MOCK_') && (
+                        <button
+                          onClick={() => onDeleteMock(paper.id)}
+                          className="p-1.5 rounded-xl text-rose-500 hover:bg-rose-500/10 border border-rose-200 dark:border-rose-950 transition cursor-pointer"
+                          title="Delete Custom Paper"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </button>
+                      )}
+                    </div>
                   </div>
                 </div>
               ))}
@@ -509,7 +479,7 @@ export default function DownloadsHub({ questions = [], mockPapers = [], customMo
 
       {/* In-App Reader Preview Modal */}
       {previewPaper && (
-        <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-xs flex items-center justify-center p-3 sm:p-6 no-print">
+        <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-xs flex items-center justify-center p-3 sm:p-6 no-print font-sans">
           <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col overflow-hidden animate-in fade-in zoom-in duration-150">
             
             {/* Modal Title Bar */}
@@ -527,20 +497,38 @@ export default function DownloadsHub({ questions = [], mockPapers = [], customMo
               </div>
 
               <div className="flex items-center gap-2">
-                {previewPaper.docxUrl && (
+                {previewPaper.isOfficial ? (
                   <a
-                    href={previewPaper.docxUrl}
-                    download
-                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold transition shadow-xs"
+                    href={previewPaper.officialUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition shadow-xs cursor-pointer"
+                    title={`Visit official ${previewPaper.institute} portal`}
                   >
-                    <Download className="w-3.5 h-3.5" />
-                    <span>Download (.docx)</span>
+                    <Globe className="w-3.5 h-3.5" />
+                    <span>Official {previewPaper.instituteShort || previewPaper.institute} Portal</span>
+                    <ExternalLink className="w-3 h-3 ml-0.5" />
                   </a>
-                )}
+                ) : null}
+
+                <button
+                  onClick={() => {
+                    setPdfModalPaper({
+                      paper: previewPaper,
+                      questions: previewPaper.questions || [],
+                      defaultMode: 'study_guide'
+                    });
+                  }}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold transition shadow-xs cursor-pointer"
+                  title="Choose PDF format: Only Questions, Only Answers, Questions then Answers, or Study Guide"
+                >
+                  <Printer className="w-3.5 h-3.5" />
+                  <span>Export PDF</span>
+                </button>
 
                 <button
                   onClick={() => setPreviewPaper(null)}
-                  className="p-1.5 rounded-lg text-slate-400 hover:text-slate-900 dark:hover:text-white transition hover:bg-slate-200 dark:hover:bg-slate-700"
+                  className="p-1.5 rounded-lg text-slate-400 hover:text-slate-900 dark:hover:text-white transition hover:bg-slate-200 dark:hover:bg-slate-700 cursor-pointer"
                 >
                   <X className="w-5 h-5" />
                 </button>
@@ -554,11 +542,17 @@ export default function DownloadsHub({ questions = [], mockPapers = [], customMo
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 rounded-xl bg-purple-50/50 dark:bg-purple-950/20 border border-purple-200 dark:border-purple-900">
                 <div className="space-y-0.5 text-xs flex-1">
                   <span className="font-bold text-purple-700 dark:text-purple-300 uppercase tracking-wider text-[10px]">
-                    Document In-App Reader & Solutions
+                    Document In-App Reader &amp; Solutions
                   </span>
                   <p className="text-slate-700 dark:text-slate-300 font-medium">
                     {previewPaper.summaryText}
                   </p>
+                  {previewPaper.isOfficial && (
+                    <p className="text-[11px] text-blue-600 dark:text-blue-400 pt-1 font-semibold flex items-center gap-1">
+                      <Info className="w-3.5 h-3.5 shrink-0" />
+                      <span>Original papers are hosted on the organizing institute's website. Direct downloads are generated from code for copyright compliance.</span>
+                    </p>
+                  )}
                 </div>
 
                 {previewPaper.questions && previewPaper.questions.length > 0 && (
@@ -569,7 +563,7 @@ export default function DownloadsHub({ questions = [], mockPapers = [], customMo
                       placeholder="Search question / topic..."
                       value={previewSearch}
                       onChange={(e) => setPreviewSearch(e.target.value)}
-                      className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg pl-8 pr-3 py-1.5 text-xs text-slate-900 dark:text-slate-100 outline-none focus:ring-1 focus:ring-purple-500"
+                      className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg pl-8 pr-3 py-1.5 text-xs text-slate-900 dark:text-slate-100 outline-none focus:ring-1 focus:ring-purple-500 font-medium"
                     />
                   </div>
                 )}
@@ -677,10 +671,10 @@ export default function DownloadsHub({ questions = [], mockPapers = [], customMo
               ) : (
                 <div className="p-8 text-center text-slate-400 text-xs bg-slate-50 dark:bg-slate-950 rounded-xl space-y-2">
                   <p className="font-semibold text-slate-700 dark:text-slate-300">
-                    Full document is packaged and ready.
+                    Question derivations for this paper are loading.
                   </p>
                   <p>
-                    Download the original document above to access the full offline file.
+                    Please visit the official organizing institute portal linked above for the original paper.
                   </p>
                 </div>
               )}
@@ -689,6 +683,17 @@ export default function DownloadsHub({ questions = [], mockPapers = [], customMo
 
           </div>
         </div>
+      )}
+
+      {/* PDF Export Options Modal */}
+      {pdfModalPaper && (
+        <PdfExportOptionsModal
+          isOpen={Boolean(pdfModalPaper)}
+          onClose={() => setPdfModalPaper(null)}
+          paper={pdfModalPaper.paper}
+          questions={pdfModalPaper.questions}
+          defaultMode={pdfModalPaper.defaultMode}
+        />
       )}
 
     </div>

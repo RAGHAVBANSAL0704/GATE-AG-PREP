@@ -109,9 +109,9 @@ export default function FormulaSheet({ onOpenCalc }) {
               <FileText className="w-3.5 h-3.5" />
               <span>{totalFormulasCount} High-Yield GATE AG Formulas</span>
             </div>
-            <h2 className="text-xl font-extrabold text-slate-900 dark:text-white mt-1">
-              Formula Cheat Sheet
-            </h2>
+            <h1 className="text-xl font-extrabold text-slate-900 dark:text-white mt-1">
+              GATE Agricultural Engineering Formula Sheet
+            </h1>
           </div>
 
           <div className="flex flex-wrap items-center gap-2 sm:gap-3">

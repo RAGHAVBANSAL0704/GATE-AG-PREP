@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Bookmark, 
   AlertTriangle, 
@@ -43,6 +43,14 @@ export default function RevisionBank({
   const [submittedAnswers, setSubmittedAnswers] = useState({});
   const [refreshKey, setRefreshKey] = useState(0);
   const [reportingQuestion, setReportingQuestion] = useState(null);
+
+  useEffect(() => {
+    const handleProgressSynced = () => {
+      setRefreshKey(prev => prev + 1);
+    };
+    window.addEventListener('gate_ag_progress_synced', handleProgressSynced);
+    return () => window.removeEventListener('gate_ag_progress_synced', handleProgressSynced);
+  }, []);
 
   // Combine PYQ and Custom Mock questions
   const customQuestions = customMockPapers.flatMap(p => p.questions || []);

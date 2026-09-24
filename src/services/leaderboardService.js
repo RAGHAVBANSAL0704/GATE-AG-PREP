@@ -156,7 +156,7 @@ export async function awardStudentXP(studentIdOrEarned, maybeXpEarned) {
         .single();
 
       const currentXP = Number(student?.xp_points || 0);
-      const updatedDBXP = Number((Math.max(currentXP, newTotalXP)).toFixed(1));
+      const updatedDBXP = Number((Math.max(currentXP + xp, newTotalXP)).toFixed(1));
 
       await supabase
         .from('students')
@@ -196,13 +196,18 @@ export function subscribeToLiveAcademicXP(onXPUpdate) {
   }
 
   // 2. Supabase Realtime Multi-Device Listener
+  let channelInstance = null;
   if (isSupabaseConfigured && supabase) {
     try {
-      supabaseXPChannel = supabase
+      channelInstance = supabase
         .channel('gate_ag_xp_live')
         .on('broadcast', { event: 'xp_updated' }, (payload) => {
-          if (payload.payload && typeof onXPUpdate === 'function') {
-            onXPUpdate(payload.payload);
+          const data = payload?.payload || payload;
+          if (data && typeof onXPUpdate === 'function') {
+            onXPUpdate(data);
+          }
+          if (typeof window !== 'undefined' && data) {
+            window.dispatchEvent(new CustomEvent('gate_ag_xp_updated', { detail: data }));
           }
         })
         .subscribe();
@@ -213,8 +218,8 @@ export function subscribeToLiveAcademicXP(onXPUpdate) {
     if (localXPBroadcast) {
       localXPBroadcast.removeEventListener('message', handleLocalMessage);
     }
-    if (supabaseXPChannel && supabase) {
-      supabase.removeChannel(supabaseXPChannel);
+    if (channelInstance && supabase) {
+      supabase.removeChannel(channelInstance);
     }
   };
 }

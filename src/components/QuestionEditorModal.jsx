@@ -412,7 +412,7 @@ export default function QuestionEditorModal({ question, onSave, onClose }) {
               )}
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 w-full sm:w-auto">
               <button
                 type="button"
                 onClick={() => {
@@ -429,7 +429,7 @@ export default function QuestionEditorModal({ question, onSave, onClose }) {
                   downloadAnchor.click();
                   downloadAnchor.remove();
                 }}
-                className="px-4 py-2.5 rounded-xl border border-blue-200 dark:border-blue-900 bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 font-bold text-xs hover:bg-blue-600 hover:text-white transition"
+                className="w-full sm:w-auto px-4 py-2.5 rounded-xl border border-blue-200 dark:border-blue-900 bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 font-bold text-xs hover:bg-blue-600 hover:text-white transition text-center min-h-[42px]"
                 title="Download JSON backup to save permanently on disk"
               >
                 Download JSON Backup
@@ -438,14 +438,14 @@ export default function QuestionEditorModal({ question, onSave, onClose }) {
               <button
                 type="button"
                 onClick={onClose}
-                className="px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-bold text-xs hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+                className="w-full sm:w-auto px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-bold text-xs hover:bg-slate-100 dark:hover:bg-slate-800 transition text-center min-h-[42px]"
               >
                 Cancel
               </button>
 
               <button
                 type="submit"
-                className="flex items-center gap-2 px-6 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-extrabold text-xs shadow-md transition"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-extrabold text-xs shadow-md transition min-h-[42px]"
               >
                 <Save className="w-4 h-4" />
                 <span>Save Question Edits</span>

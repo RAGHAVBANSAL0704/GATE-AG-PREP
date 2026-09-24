@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>GATE AG Prep</ShortName>
+  <Description>Search GATE Agricultural Engineering questions and formulas</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Url type="text/html" template="https://gate-ag-prep.vercel.app/practice?q={searchTerms}"/>
+  <Image width="16" height="16" type="image/png">https://gate-ag-prep.vercel.app/icons/icon-192.png</Image>
+  <Image width="64" height="64" type="image/png">https://gate-ag-prep.vercel.app/icons/icon-512.png</Image>
+</OpenSearchDescription>

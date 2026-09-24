@@ -3,12 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
-    <title>GATE AG Prep Portal | Agricultural Engineering PYQ CBT, 50 Mock Tests & Formula Sheet</title>
+    <title>GATE AG Prep Portal | Agricultural Engineering PYQ CBT, 50 Mock Tests &amp; Formula Sheet</title>
     <meta name="description" content="Comprehensive offline-capable preparation portal for GATE Agricultural Engineering (AG) featuring 1,324+ official PYQs (2007-2026), 50 full-length CBT Mock Tests, Topic-wise Practice Pool, and Formula Sheet." />
     <meta name="keywords" content="GATE AG, GATE Agricultural Engineering, GATE AG 2027, GATE AG 2026, GATE AG PYQ, Agricultural Engineering mock test, CBT mock test, Farm Power and Machinery, Soil and Water Conservation Engineering, Agricultural Processing and Food Engineering, Dairy Engineering, GATE AG formula sheet, GATE AG syllabus, agricultural engineering question bank, TCS iON CBT practice" />
     
-    <!-- Canonical Link -->
+    <!-- Canonical & Regional Links -->
     <link rel="canonical" href="https://gate-ag-prep.vercel.app/" />
+    <link rel="alternate" hreflang="en-IN" href="https://gate-ag-prep.vercel.app/" />
+    <link rel="alternate" hreflang="x-default" href="https://gate-ag-prep.vercel.app/" />
 
     <!-- Google Search Console Site Verification -->
     <meta name="google-site-verification" content="TBctibshhsG2MW0zDe3_yProt0gyU-3MiWYF6TS_oN4" />
@@ -16,6 +18,7 @@
     <!-- Crawlers & Robots Directives -->
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
     <meta name="author" content="Raghav Bansal" />
     <meta name="publisher" content="Raghav Bansal Educational Network" />
     <meta name="geo.region" content="IN" />
@@ -24,10 +27,11 @@
     <!-- Open Graph / Facebook / LinkedIn / Discord -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="GATE AG Prep Portal" />
-    <meta property="og:title" content="GATE AG Prep Portal | Agricultural Engineering PYQ CBT, 50 Mock Tests & Formula Sheet" />
+    <meta property="og:title" content="GATE AG Prep Portal | Agricultural Engineering PYQ CBT, 50 Mock Tests &amp; Formula Sheet" />
     <meta property="og:description" content="Ace GATE Agricultural Engineering (AG) with 1,324+ official PYQs (2007-2026), 50 full-length CBT mock tests, formula sheets, simulators, and live analytics." />
     <meta property="og:url" content="https://gate-ag-prep.vercel.app/" />
     <meta property="og:image" content="https://gate-ag-prep.vercel.app/icons/icon-512.png" />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="512" />
     <meta property="og:image:height" content="512" />
     <meta property="og:image:alt" content="GATE AG Prep Portal - Agricultural Engineering Exam Preparation" />
@@ -37,9 +41,10 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@gateagprep" />
     <meta name="twitter:creator" content="@raghavbansal" />
-    <meta name="twitter:title" content="GATE AG Prep Portal | Agricultural Engineering PYQ CBT & 50 Mock Tests" />
+    <meta name="twitter:title" content="GATE AG Prep Portal | Agricultural Engineering PYQ CBT &amp; 50 Mock Tests" />
     <meta name="twitter:description" content="Practice 1,324+ official GATE AG PYQs, 50 full-length CBT mock tests, formula sheet, and interactive simulators for Agricultural Engineering." />
     <meta name="twitter:image" content="https://gate-ag-prep.vercel.app/icons/icon-512.png" />
+    <meta name="twitter:image:alt" content="GATE AG Prep Portal - Agricultural Engineering Exam Preparation" />
 
     <!-- Security Meta Tags -->
     <meta name="referrer" content="strict-origin-when-cross-origin" />
@@ -55,8 +60,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="GATE AG Prep" />
 
-    <!-- Web App Manifest -->
-    <link rel="manifest" href="./manifest.webmanifest" />
+    <!-- Web App Manifest & OpenSearch -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="search" type="application/opensearchdescription+xml" title="GATE AG Prep Search" href="/opensearch.xml" />
 
     <!-- Icons & Favicons -->
     <link rel="icon" type="image/svg+xml" href="./icons/icon.svg" />
@@ -65,12 +71,14 @@
     <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png" />
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts & Preconnect Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Schema.org JSON-LD Structured Data -->
+    <!-- Schema.org JSON-LD Structured Data with FAQPage, BreadcrumbList, WebSite, WebApplication & Course -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -81,11 +89,28 @@
           "url": "https://gate-ag-prep.vercel.app/",
           "name": "GATE AG Prep Portal",
           "description": "Comprehensive preparation portal for GATE Agricultural Engineering (AG) featuring 1,324+ official PYQs (2007-2026), 50 full-length CBT mock tests, and formula sheet.",
-          "inLanguage": "en-US",
+          "inLanguage": "en-IN",
+          "publisher": {
+            "@id": "https://gate-ag-prep.vercel.app/#organization"
+          },
           "potentialAction": {
             "@type": "SearchAction",
-            "target": "https://gate-ag-prep.vercel.app/#practice?q={search_term_string}",
+            "target": "https://gate-ag-prep.vercel.app/practice?q={search_term_string}",
             "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "EducationalOrganization",
+          "@id": "https://gate-ag-prep.vercel.app/#organization",
+          "name": "Raghav Bansal Educational Network",
+          "url": "https://gate-ag-prep.vercel.app/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://gate-ag-prep.vercel.app/icons/icon-512.png"
+          },
+          "founder": {
+            "@type": "Person",
+            "name": "Raghav Bansal"
           }
         },
         {
@@ -116,9 +141,7 @@
           "name": "GATE Agricultural Engineering (AG) Exam Preparation",
           "description": "Complete self-paced preparation program for GATE Agricultural Engineering covering Farm Power & Machinery, Soil & Water Conservation, Agricultural Processing, and Engineering Mathematics.",
           "provider": {
-            "@type": "Organization",
-            "name": "Raghav Bansal Educational Network",
-            "url": "https://gate-ag-prep.vercel.app/"
+            "@id": "https://gate-ag-prep.vercel.app/#organization"
           },
           "educationalCredentialAwarded": "GATE Agricultural Engineering Readiness",
           "hasCourseInstance": {
@@ -126,6 +149,143 @@
             "courseMode": "online",
             "courseWorkload": "PT180H"
           }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://gate-ag-prep.vercel.app/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://gate-ag-prep.vercel.app/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "CBT Mock Tests",
+              "item": "https://gate-ag-prep.vercel.app/mocktest"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Practice Question Bank",
+              "item": "https://gate-ag-prep.vercel.app/practicehub"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Formula Revision Sheet",
+              "item": "https://gate-ag-prep.vercel.app/formulas"
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "name": "Syllabus Tracker",
+              "item": "https://gate-ag-prep.vercel.app/syllabus"
+            },
+            {
+              "@type": "ListItem",
+              "position": 6,
+              "name": "Downloads Hub",
+              "item": "https://gate-ag-prep.vercel.app/downloads"
+            }
+          ]
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://gate-ag-prep.vercel.app/#sitenav",
+          "name": "GATE AG Preparation Modules",
+          "itemListElement": [
+            {
+              "@type": "SiteNavigationElement",
+              "position": 1,
+              "name": "Official CBT Mock Tests",
+              "url": "https://gate-ag-prep.vercel.app/mocktest"
+            },
+            {
+              "@type": "SiteNavigationElement",
+              "position": 2,
+              "name": "Topic-Wise Practice Pool",
+              "url": "https://gate-ag-prep.vercel.app/practice"
+            },
+            {
+              "@type": "SiteNavigationElement",
+              "position": 3,
+              "name": "Complete Formula Revision Sheet",
+              "url": "https://gate-ag-prep.vercel.app/formulas"
+            },
+            {
+              "@type": "SiteNavigationElement",
+              "position": 4,
+              "name": "181 Subtopic Syllabus Tracker",
+              "url": "https://gate-ag-prep.vercel.app/syllabus"
+            },
+            {
+              "@type": "SiteNavigationElement",
+              "position": 5,
+              "name": "Downloads Hub",
+              "url": "https://gate-ag-prep.vercel.app/downloads"
+            },
+            {
+              "@type": "SiteNavigationElement",
+              "position": 6,
+              "name": "Interactive Engineering Simulators",
+              "url": "https://gate-ag-prep.vercel.app/simulators"
+            },
+            {
+              "@type": "SiteNavigationElement",
+              "position": 7,
+              "name": "AI Agri-Engineering Tutor",
+              "url": "https://gate-ag-prep.vercel.app/ai_tutor"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://gate-ag-prep.vercel.app/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the official GATE Agricultural Engineering (AG) exam pattern and scoring scheme?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "GATE AG is a 3-hour (180 minutes) Computer-Based Test (CBT) consisting of 65 questions for 100 marks. General Aptitude comprises 10 questions (15 marks), and Technical Agricultural Engineering & Mathematics comprises 55 questions (85 marks). Question formats include Multiple Choice Questions (MCQ with negative marking: -1/3 for 1-mark and -2/3 for 2-mark questions), Multiple Select Questions (MSQ without negative marking), and Numerical Answer Type (NAT with official accepted intervals and no negative marking)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Where can I find verified GATE Agricultural Engineering (AG) previous year questions (PYQs) with solutions?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "GATE AG Prep Portal provides all 1,324 official GATE AG previous year questions spanning 2007 through 2026. Every question includes detailed step-by-step mathematical derivations, official answer keys, KaTeX formula formatting, and subject-wise categorization."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How many full-length CBT mock tests are provided on the GATE AG portal?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The portal includes 50 full-length CBT mock tests specially crafted according to the official GATE AG 65-question / 100-mark blueprint with TCS-iON palette states, in addition to 20 official past exam papers from 2007 to 2026."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What core subjects are covered in the GATE Agricultural Engineering syllabus?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The official syllabus encompasses 5 major sections: Farm Power and Machinery (AG-FM), Soil and Water Conservation Engineering (AG-SW), Agricultural Processing and Food Engineering (AG-AP), Engineering Mathematics (AG-EM), and General Aptitude (AG-GA), spanning 181 specific subtopics."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is GATE AG Prep Portal free to use and available offline?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, GATE AG Prep Portal is 100% free with zero fees. It is built as an offline-first Progressive Web App (PWA) with service worker caching and local IndexedDB data persistence, allowing aspirants to practice tests and revise formulas anywhere without an active internet connection."
+              }
+            }
+          ]
         }
       ]
     }
@@ -133,18 +293,82 @@
   </head>
   <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 antialiased min-h-screen selection:bg-blue-500 selection:text-white">
     <noscript>
-      <div style="padding: 2rem; max-width: 800px; margin: auto; font-family: sans-serif; line-height: 1.6;">
-        <h1>GATE AG Prep Portal | Agricultural Engineering Practice & PYQ CBT</h1>
-        <p>The premier full-stack preparation platform for <strong>GATE Agricultural Engineering (AG)</strong>.</p>
-        <h2>Key Preparation Resources</h2>
-        <ul>
-          <li><strong>1,324 Official GATE AG PYQs (2007–2026)</strong> with verified solutions and answer keys.</li>
-          <li><strong>50 Full-Length CBT Mock Tests</strong> following the official 65 questions / 100 marks GATE pattern.</li>
-          <li><strong>Comprehensive Formula Sheet</strong> for Farm Power, Soil & Water Conservation, and Food Processing.</li>
-          <li><strong>Interactive Simulators</strong> for tractor mechanics, soil hydrology, and psychrometrics.</li>
-          <li><strong>181 Subtopic Syllabus Tracker</strong> with trend weightage analysis.</li>
-        </ul>
-        <p>Please enable JavaScript to experience the full interactive Computer-Based Test (CBT) portal, calculators, and offline persistence.</p>
+      <div style="padding: 2.5rem 1.5rem; max-width: 900px; margin: auto; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #0f172a;">
+        <header style="border-bottom: 2px solid #e2e8f0; padding-bottom: 1.5rem; margin-bottom: 2rem;">
+          <h1 style="font-size: 2rem; font-weight: 800; color: #1e3a8a; margin: 0 0 0.5rem 0;">GATE AG Prep Portal | Agricultural Engineering Practice &amp; PYQ CBT</h1>
+          <p style="font-size: 1.1rem; color: #475569; margin: 0;">The premier full-stack, offline-capable preparation platform for <strong>GATE Agricultural Engineering (AG)</strong>.</p>
+        </header>
+
+        <section style="margin-bottom: 2rem;">
+          <h2 style="font-size: 1.4rem; font-weight: 700; color: #0f172a; margin-bottom: 0.75rem;">Key Examination &amp; Preparation Resources</h2>
+          <ul style="padding-left: 1.5rem; margin-bottom: 1rem;">
+            <li style="margin-bottom: 0.5rem;"><strong>1,324 Official GATE AG PYQs (2007–2026)</strong>: Completely verified with official master answer keys and detailed mathematical step-by-step solutions.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>50 Full-Length CBT Mock Tests</strong>: Exact replica of the official 65-question / 100-mark 3-hour GATE AG examination with General Aptitude (Q1–10) and Technical Sections (Q11–65).</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Comprehensive 8-Section Formula Sheet</strong>: Instant KaTeX-rendered equations covering Farm Power &amp; Machinery, Soil &amp; Water Conservation, Agricultural Processing, and Engineering Mathematics.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>181 Subtopic GATE AG Syllabus Tracker</strong>: Historical multi-year weightage heatmap and topic-level mastery metrics.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Interactive Simulation Lab</strong>: Hands-on hydraulic jump, psychrometrics, Darcy soil water flow, and tractor weight transfer simulators.</li>
+            <li style="margin-bottom: 0.5rem;"><strong>Offline-Ready PWA</strong>: 100% offline functionality with client-side caching and IndexedDB data persistence.</li>
+          </ul>
+        </section>
+
+        <section style="margin-bottom: 2rem;">
+          <h2 style="font-size: 1.4rem; font-weight: 700; color: #0f172a; margin-bottom: 0.75rem;">Official GATE Agricultural Engineering Examination Pattern</h2>
+          <table style="width: 100%; border-collapse: collapse; margin-top: 0.5rem; font-size: 0.95rem;">
+            <thead>
+              <tr style="background-color: #f1f5f9; text-align: left;">
+                <th style="padding: 0.75rem; border: 1px solid #cbd5e1;">Section</th>
+                <th style="padding: 0.75rem; border: 1px solid #cbd5e1;">Questions</th>
+                <th style="padding: 0.75rem; border: 1px solid #cbd5e1;">Marks</th>
+                <th style="padding: 0.75rem; border: 1px solid #cbd5e1;">Question Types</th>
+                <th style="padding: 0.75rem; border: 1px solid #cbd5e1;">Negative Marking</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 0.75rem; border: 1px solid #cbd5e1;">General Aptitude (GA)</td>
+                <td style="padding: 0.75rem; border: 1px solid #cbd5e1;">Q1 – Q10 (10 Qs)</td>
+                <td style="padding: 0.75rem; border: 1px solid #cbd5e1;">15 Marks</td>
+                <td style="padding: 0.75rem; border: 1px solid #cbd5e1;">MCQ, MSQ, NAT</td>
+                <td style="padding: 0.75rem; border: 1px solid #cbd5e1;">MCQ: -1/3 (1M), -2/3 (2M); MSQ &amp; NAT: Nil</td>
+              </tr>
+              <tr style="background-color: #f8fafc;">
+                <td style="padding: 0.75rem; border: 1px solid #cbd5e1;">Technical (AG &amp; Maths)</td>
+                <td style="padding: 0.75rem; border: 1px solid #cbd5e1;">Q11 – Q65 (55 Qs)</td>
+                <td style="padding: 0.75rem; border: 1px solid #cbd5e1;">85 Marks</td>
+                <td style="padding: 0.75rem; border: 1px solid #cbd5e1;">MCQ, MSQ, NAT</td>
+                <td style="padding: 0.75rem; border: 1px solid #cbd5e1;">MCQ: -1/3 (1M), -2/3 (2M); MSQ &amp; NAT: Nil</td>
+              </tr>
+              <tr style="font-weight: 700;">
+                <td style="padding: 0.75rem; border: 1px solid #cbd5e1;">Total</td>
+                <td style="padding: 0.75rem; border: 1px solid #cbd5e1;">65 Questions</td>
+                <td style="padding: 0.75rem; border: 1px solid #cbd5e1;">100 Marks</td>
+                <td style="padding: 0.75rem; border: 1px solid #cbd5e1;">Duration: 180 Mins</td>
+                <td style="padding: 0.75rem; border: 1px solid #cbd5e1;">TCS-iON CBT Engine</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section style="margin-bottom: 2rem;">
+          <h2 style="font-size: 1.4rem; font-weight: 700; color: #0f172a; margin-bottom: 0.75rem;">Frequently Asked Questions (FAQs)</h2>
+          <details style="margin-bottom: 0.75rem; padding: 0.75rem; background-color: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <summary style="font-weight: 600; cursor: pointer; color: #1e3a8a;">What is the syllabus for GATE Agricultural Engineering?</summary>
+            <p style="margin-top: 0.5rem; margin-bottom: 0;">The GATE AG syllabus spans Farm Power &amp; Machinery, Soil &amp; Water Conservation Engineering, Agricultural Processing and Food Engineering, Engineering Mathematics, and General Aptitude across 181 specific subtopics.</p>
+          </details>
+          <details style="margin-bottom: 0.75rem; padding: 0.75rem; background-color: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <summary style="font-weight: 600; cursor: pointer; color: #1e3a8a;">Is there negative marking for MSQ and NAT questions?</summary>
+            <p style="margin-top: 0.5rem; margin-bottom: 0;">No. There is strictly NO negative marking for Multiple Select Questions (MSQ) or Numerical Answer Type (NAT) questions. Negative marking (-1/3 for 1-mark and -2/3 for 2-mark) applies solely to Multiple Choice Questions (MCQ).</p>
+          </details>
+          <details style="margin-bottom: 0.75rem; padding: 0.75rem; background-color: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <summary style="font-weight: 600; cursor: pointer; color: #1e3a8a;">How can I access full-length mock tests offline?</summary>
+            <p style="margin-top: 0.5rem; margin-bottom: 0;">Simply install the Progressive Web App (PWA) onto your device or keep the portal open in your browser; all 50 full-length mock tests and 1,324 PYQs are cached locally for offline study.</p>
+          </details>
+        </section>
+
+        <footer style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; font-size: 0.85rem; color: #64748b;">
+          <p>Please enable JavaScript to launch the full interactive Computer-Based Test (CBT) portal, interactive calculators, live community telemetry, and audio feedback.</p>
+          <p>&copy; Raghav Bansal Educational Network. All Rights Reserved.</p>
+        </footer>
       </div>
     </noscript>
     <div id="root"></div>

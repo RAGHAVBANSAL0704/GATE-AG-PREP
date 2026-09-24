@@ -41,7 +41,12 @@ import {
   Eye,
   ShieldCheck,
   Search,
-  Check
+  Check,
+  ExternalLink,
+  Globe,
+  Building2,
+  FileDown,
+  Printer
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import { evaluateQuestion } from '../utils/scoring.js';
@@ -51,6 +56,9 @@ import { GATE_AG_FORMULAS } from '../data/formulas';
 import { downloadBulkZip } from '../utils/zipDownloader';
 import QuestionReportModal from './QuestionReportModal';
 import MockPaperAnalysisModal from './MockPaperAnalysisModal';
+import PdfExportOptionsModal from './PdfExportOptionsModal';
+import { getOfficialGatePaperMeta } from '../data/officialGatePapersMeta';
+import { exportPaperToPdf } from '../services/questionPdfExportService';
 
 export default function MockTestMode({ 
   mockPapers = [], 
@@ -69,6 +77,7 @@ export default function MockTestMode({
   const [hasAgreedDeclaration, setHasAgreedDeclaration] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState('English');
   const [testStarted, setTestStarted] = useState(false);
+  const [pdfModalPaper, setPdfModalPaper] = useState(null);
 
   // Test state
   const [paperQuestions, setPaperQuestions] = useState([]);
@@ -118,28 +127,9 @@ export default function MockTestMode({
   const [previewSearch, setPreviewSearch] = useState('');
   const [showBulkZipDropdown, setShowBulkZipDropdown] = useState(false);
 
-  const yearsData = [
-    { year: '2026', paperPdf: '/downloads/question_papers/AG2026.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2026-FULL-SOLVED.docx' },
-    { year: '2025', paperPdf: '/downloads/question_papers/AG2025.pdf', keyPdf: '/downloads/answer_keys/AG25KEY.pdf', solvedDocx: '/downloads/solved_docx/2025-FULL-SOLVED.docx' },
-    { year: '2024', paperPdf: '/downloads/question_papers/AG2024.pdf', keyPdf: '/downloads/answer_keys/AG24KEY.pdf', solvedDocx: '/downloads/solved_docx/2024-FULL-SOLVED.docx' },
-    { year: '2023', paperPdf: '/downloads/question_papers/AG2023.pdf', keyPdf: '/downloads/answer_keys/AG23KEY.pdf', solvedDocx: '/downloads/solved_docx/2023-FULL-SOLVED.docx' },
-    { year: '2022', paperPdf: '/downloads/question_papers/AG2022.pdf', keyPdf: '/downloads/answer_keys/AG22KEY.pdf', solvedDocx: '/downloads/solved_docx/2022-FULL-SOLVED.docx' },
-    { year: '2021', paperPdf: '/downloads/question_papers/AG2021.pdf', keyPdf: '/downloads/answer_keys/AG21KEY.pdf', solvedDocx: '/downloads/solved_docx/2021-FULL-SOLVED.docx' },
-    { year: '2020', paperPdf: '/downloads/question_papers/AG2020.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2020-FULL-SOLVED.docx' },
-    { year: '2019', paperPdf: '/downloads/question_papers/AG2019.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2019-FULL-SOLVED.docx' },
-    { year: '2018', paperPdf: '/downloads/question_papers/AG2018.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2018-FULL-SOLVED.docx' },
-    { year: '2017', paperPdf: '/downloads/question_papers/AG2017.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2017-FULL-SOLVED.docx' },
-    { year: '2016', paperPdf: '/downloads/question_papers/AG2016.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2016-FULL-SOLVED.docx' },
-    { year: '2015', paperPdf: '/downloads/question_papers/AG2015.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2015-FULL-SOLVED.docx' },
-    { year: '2014', paperPdf: '/downloads/question_papers/AG2014.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2014-FULL-SOLVED.docx' },
-    { year: '2013', paperPdf: '/downloads/question_papers/AG2013.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2013-FULL-SOLVED.docx' },
-    { year: '2012', paperPdf: '/downloads/question_papers/AG2012.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2012-FULL-SOLVED.docx' },
-    { year: '2011', paperPdf: '/downloads/question_papers/AG2011.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2011-FULL-SOLVED.docx' },
-    { year: '2010', paperPdf: '/downloads/question_papers/AG2010.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2010-FULL-SOLVED.docx' },
-    { year: '2009', paperPdf: '/downloads/question_papers/AG2009.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2009-FULL-SOLVED.docx' },
-    { year: '2008', paperPdf: '/downloads/question_papers/AG2008.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2008-FULL-SOLVED.docx' },
-    { year: '2007', paperPdf: '/downloads/question_papers/AG2007.pdf', keyPdf: null, solvedDocx: '/downloads/solved_docx/2007-FULL-SOLVED.docx' },
-  ];
+  const getOfficialDownloads = (year) => {
+    return getOfficialGatePaperMeta(year);
+  };
 
   const getOfficialPaperQuestions = (year) => {
     const yStr = String(year);
@@ -152,65 +142,38 @@ export default function MockTestMode({
     return [];
   };
 
-  const getPaperDocxUrl = (paper, idx) => {
-    if (paper.docxUrl) return paper.docxUrl;
-    if (paper.file_url && paper.file_url.endsWith('.docx')) return paper.file_url;
-    const text = `${paper.id || ''} ${paper.title || ''}`;
-    const match = text.match(/MOCK[_\s]+(\d+)/i) || text.match(/Paper\s+(\d+)/i) || text.match(/(\d+)$/);
-    const num = match ? String(parseInt(match[1], 10)).padStart(2, '0') : String(idx + 1).padStart(2, '0');
-    return `/downloads/mock_tests/MOCK ${num} GATE AG.docx`;
-  };
-
-  const handleDownloadAllSolvedDocx = async () => {
-    setIsZipping(true);
-    setShowBulkZipDropdown(false);
-    try {
-      const filesToZip = yearsData
-        .filter(item => item.solvedDocx)
-        .map(item => ({
-          name: `${item.year}-FULL-SOLVED.docx`,
-          url: item.solvedDocx
-        }));
-      await downloadBulkZip(filesToZip, 'GATE_AG_All_Solved_Papers_2007_2026.zip');
-    } catch (err) {
-      console.error("Bulk zip failed", err);
-      alert("Could not build ZIP file. Try downloading files individually.");
-    } finally {
-      setIsZipping(false);
-    }
-  };
-
-  const handleDownloadAllPdfs = async () => {
-    setIsZipping(true);
-    setShowBulkZipDropdown(false);
-    try {
-      const filesToZip = yearsData
-        .filter(item => item.paperPdf)
-        .map(item => ({
-          name: `GATE_AG_${item.year}_Question_Paper.pdf`,
-          url: item.paperPdf
-        }));
-      await downloadBulkZip(filesToZip, 'GATE_AG_Official_Question_Papers_2007_2026.zip');
-    } catch (err) {
-      console.error("Bulk zip failed", err);
-      alert("Could not build ZIP file. Try downloading files individually.");
-    } finally {
-      setIsZipping(false);
-    }
-  };
-
   const handleDownloadAllCustomMocksZip = async () => {
     setIsZipping(true);
     setShowBulkZipDropdown(false);
     try {
-      const filesToZip = customMockPapers.map((paper, idx) => ({
-        name: `${(paper.title || `MOCK_${idx + 1}_GATE_AG`).replace(/[/\\?%*:|"<>]/g, '_')}.docx`,
-        url: getPaperDocxUrl(paper, idx)
-      }));
-      await downloadBulkZip(filesToZip, 'GATE_AG_Custom_Mock_Papers_All.zip');
+      const filesToZip = customMockPapers.map((paper, idx) => {
+        const title = paper.title || `GATE 2027 Mock ${idx + 1}`;
+        let content = `================================================================================\n${title.toUpperCase()}\n================================================================================\nTotal Questions: ${paper.questions?.length || 65} | Max Marks: 100\nDuration: 180 Minutes\n\n`;
+        (paper.questions || []).forEach((q, qIdx) => {
+          content += `--------------------------------------------------------------------------------\n`;
+          content += `Q.${qIdx + 1} [${q.type || 'MCQ'} | Marks: ${q.marks || 1} | Section: ${q.section || 'General'}]\n`;
+          content += `${q.question || ''}\n\n`;
+          if (q.options && Object.keys(q.options).length > 0) {
+            Object.entries(q.options).forEach(([k, v]) => {
+              content += `  (${k}) ${v}\n`;
+            });
+            content += `\n`;
+          }
+          content += `Answer: ${q.correct_answer || q.answer || 'N/A'}\n`;
+          if (q.solution) {
+            content += `Solution:\n${q.solution}\n`;
+          }
+          content += `\n`;
+        });
+        return {
+          name: `${(paper.title || `MOCK_${idx + 1}_GATE_AG`).replace(/[/\\?%*:|"<>]/g, '_')}_SOLVED.txt`,
+          data: content
+        };
+      });
+      await downloadBulkZip(filesToZip, 'GATE_AG_50_Mocks_Solved_Text.zip');
     } catch (err) {
       console.error("Bulk custom mock zip failed", err);
-      alert("Could not build ZIP file. Try downloading files individually.");
+      alert("Could not build ZIP file. Try downloading individual papers via PDF.");
     } finally {
       setIsZipping(false);
     }
@@ -1158,7 +1121,7 @@ export default function MockTestMode({
     });
 
     const getOfficialDownloads = (year) => {
-      return yearsData.find(y => String(y.year) === String(year)) || {};
+      return getOfficialGatePaperMeta(year);
     };
 
     return (
@@ -1173,7 +1136,7 @@ export default function MockTestMode({
               </div>
               <div>
                 <h1 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
-                  PYQ &amp; Full Mock Tests
+                  GATE AG Official PYQ CBT &amp; 50 Full-Length Mock Tests
                 </h1>
                 <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
                   100% authentic GATE AG CBT platform simulator with virtual calculator, weightage insights, offline preview reader &amp; complete paper downloads.
@@ -1373,38 +1336,13 @@ export default function MockTestMode({
               <button
                 type="button"
                 disabled={isZipping}
-                onClick={() => setShowBulkZipDropdown(!showBulkZipDropdown)}
-                className="px-3.5 py-2 rounded-xl bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-200 text-xs font-bold transition flex items-center gap-2 shadow-xs cursor-pointer active:scale-95 disabled:opacity-50"
+                onClick={handleDownloadAllCustomMocksZip}
+                className="px-3.5 py-2 rounded-xl bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold transition flex items-center gap-2 shadow-xs cursor-pointer active:scale-95 disabled:opacity-50"
+                title="Download all 50 custom mock test papers in a single ZIP"
               >
                 {isZipping ? <Loader2 className="w-4 h-4 animate-spin" /> : <Archive className="w-4 h-4" />}
-                <span>Bulk ZIP Archives</span>
+                <span>Download 50 Mocks (ZIP)</span>
               </button>
-
-              {showBulkZipDropdown && (
-                <div className="absolute right-0 mt-2 w-64 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-xl p-2 z-20 space-y-1 animate-in fade-in zoom-in-95">
-                  <button
-                    onClick={handleDownloadAllSolvedDocx}
-                    className="w-full text-left px-3 py-2 rounded-xl text-xs font-bold text-amber-900 dark:text-amber-300 bg-amber-50/60 dark:bg-amber-950/40 hover:bg-amber-100 dark:hover:bg-amber-900/60 transition flex items-center gap-2 cursor-pointer"
-                  >
-                    <FileCode className="w-4 h-4 text-amber-500 shrink-0" />
-                    <span>Download Solved DOCX (ZIP)</span>
-                  </button>
-                  <button
-                    onClick={handleDownloadAllPdfs}
-                    className="w-full text-left px-3 py-2 rounded-xl text-xs font-bold text-blue-900 dark:text-blue-300 bg-blue-50/60 dark:bg-blue-950/40 hover:bg-blue-100 dark:hover:bg-blue-900/60 transition flex items-center gap-2 cursor-pointer"
-                  >
-                    <FileText className="w-4 h-4 text-blue-500 shrink-0" />
-                    <span>Download Official PDFs (ZIP)</span>
-                  </button>
-                  <button
-                    onClick={handleDownloadAllCustomMocksZip}
-                    className="w-full text-left px-3 py-2 rounded-xl text-xs font-bold text-purple-900 dark:text-purple-300 bg-purple-50/60 dark:bg-purple-950/40 hover:bg-purple-100 dark:hover:bg-purple-900/60 transition flex items-center gap-2 cursor-pointer"
-                  >
-                    <Sparkles className="w-4 h-4 text-purple-500 shrink-0" />
-                    <span>Download 50 Mocks (ZIP)</span>
-                  </button>
-                </div>
-              )}
             </div>
 
           </div>
@@ -1418,13 +1356,12 @@ export default function MockTestMode({
                   <span>Custom Full-Length Mock Papers ({filteredCustomPapers.length})</span>
                 </h2>
                 <span className="text-[11px] text-slate-400 font-mono">
-                  Full 65 Qs • 100 Marks • Complete DOCX files
+                  Full 65 Qs • 100 Marks • Instant Clean PDF Export
                 </span>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {filteredCustomPapers.map((paper, idx) => {
-                  const docxUrl = getPaperDocxUrl(paper, idx);
                   return (
                     <div
                       key={paper.id || idx}
@@ -1469,7 +1406,6 @@ export default function MockTestMode({
                               setPreviewPaper({
                                 title: paper.title,
                                 year: paper.year || '2027',
-                                docxUrl,
                                 questions: paper.questions || [],
                                 summaryText: `Custom Full-Length Mock Paper containing ${paper.questions?.length || 65} questions with complete step-by-step solutions.`
                               });
@@ -1482,7 +1418,7 @@ export default function MockTestMode({
                           </button>
                         </div>
 
-                        {/* Action buttons row 2: Start CBT & Download DOCX */}
+                        {/* Action buttons row 2: Start CBT & Solved PDF */}
                         <div className="grid grid-cols-2 gap-2">
                           <button
                             type="button"
@@ -1493,18 +1429,21 @@ export default function MockTestMode({
                             <span>Take CBT</span>
                           </button>
 
-                          <a
-                            href={docxUrl}
-                            download={`${(paper.title || 'MOCK_PAPER').replace(/\s+/g, '_')}.docx`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center justify-center gap-1.5 py-2 rounded-xl bg-amber-50 dark:bg-amber-950/40 hover:bg-amber-600 hover:text-white text-amber-900 dark:text-amber-300 border border-amber-200 dark:border-amber-900 text-xs font-bold transition shadow-xs group"
-                            title="Download Word Test Document (.docx)"
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setPdfModalPaper({
+                                paper,
+                                questions: paper.questions || [],
+                                defaultMode: 'study_guide'
+                              });
+                            }}
+                            className="flex items-center justify-center gap-1.5 py-2 rounded-xl bg-purple-50 dark:bg-purple-950/40 hover:bg-purple-600 hover:text-white text-purple-900 dark:text-purple-300 border border-purple-200 dark:border-purple-900 text-xs font-bold transition shadow-xs group cursor-pointer"
+                            title="Export PDF: Choose Only Questions, Only Answers, Questions then Answers, or Study Guide"
                           >
-                            <FileCode className="w-3.5 h-3.5 text-amber-500 group-hover:text-white shrink-0" />
-                            <span>DOCX</span>
-                            <Download className="w-3 h-3 opacity-70" />
-                          </a>
+                            <Printer className="w-3.5 h-3.5 text-purple-500 group-hover:text-white shrink-0" />
+                            <span>Export PDF</span>
+                          </button>
                         </div>
                       </div>
 
@@ -1523,7 +1462,7 @@ export default function MockTestMode({
               <div className="p-3.5 bg-slate-50 dark:bg-slate-950/80 border border-slate-200 dark:border-slate-800 rounded-2xl flex items-start sm:items-center gap-3 text-xs text-slate-600 dark:text-slate-400">
                 <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5 sm:mt-0" />
                 <p className="text-[11px] leading-relaxed">
-                  <span className="font-bold text-slate-800 dark:text-slate-200">Official Past Papers (2007–2026):</span> Complete past papers with authentic CBT exam simulation, original question PDFs, official answer keys &amp; fully solved DOCX derivations.
+                  <span className="font-bold text-slate-800 dark:text-slate-200">Official Past Papers (2007–2026):</span> Complete past papers with authentic CBT exam simulation, organizing institute portals, and instant code-generated clean PDF derivations.
                 </p>
               </div>
 
@@ -1582,12 +1521,14 @@ export default function MockTestMode({
                               onClick={() => {
                                 setPreviewSearch('');
                                 setPreviewPaper({
-                                  title: `GATE ${paper.year} Solved Paper`,
+                                  title: `GATE ${paper.year} (${dl.institute}) Review`,
                                   year: paper.year,
-                                  docxUrl: dl.solvedDocx,
-                                  pdfUrl: dl.paperPdf,
+                                  isOfficial: true,
+                                  institute: dl.institute,
+                                  instituteShort: dl.instituteShort,
+                                  officialUrl: dl.officialUrl,
                                   questions: paperQuestionsList,
-                                  summaryText: `Official GATE ${paper.year} Agricultural Engineering Paper containing ${paperQuestionsList.length > 0 ? paperQuestionsList.length : 65} verified questions, answer keys, and step-by-step solved derivations.`
+                                  summaryText: `Official GATE ${paper.year} Agricultural Engineering Paper organized by ${dl.institute}. Original question papers and answer keys are officially published by ${dl.institute}. Step-by-step verified derivations and calculation solutions are provided in-app for self-study and CBT practice.`
                                 });
                               }}
                               className="flex items-center justify-center gap-1.5 py-1.5 rounded-xl bg-white dark:bg-slate-900 hover:bg-purple-50 dark:hover:bg-purple-950/50 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 text-xs font-bold transition cursor-pointer"
@@ -1608,47 +1549,34 @@ export default function MockTestMode({
                             <span>Start CBT Exam</span>
                           </button>
 
-                          {/* Row 3: Download Buttons (PDF, Key, Solved DOCX) */}
-                          <div className="flex items-center gap-1 pt-1 border-t border-slate-200/60 dark:border-slate-800/80">
-                            {dl.paperPdf && (
-                              <a
-                                href={dl.paperPdf}
-                                download={`GATE_AG_${paper.year}_Question_Paper.pdf`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex-1 py-1 px-1.5 rounded-lg bg-white dark:bg-slate-900 hover:bg-blue-600 hover:text-white text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 text-[11px] font-bold transition flex items-center justify-center gap-1"
-                                title="Download Official Question Paper (PDF)"
-                              >
-                                <FileText className="w-3 h-3 text-blue-500" />
-                                <span>PDF</span>
-                              </a>
-                            )}
-                            {dl.keyPdf && (
-                              <a
-                                href={dl.keyPdf}
-                                download={`GATE_AG_${paper.year}_Answer_Key.pdf`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex-1 py-1 px-1.5 rounded-lg bg-white dark:bg-slate-900 hover:bg-emerald-600 hover:text-white text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 text-[11px] font-bold transition flex items-center justify-center gap-1"
-                                title="Download Official Answer Key (PDF)"
-                              >
-                                <Key className="w-3 h-3 text-emerald-500" />
-                                <span>Key</span>
-                              </a>
-                            )}
-                            {dl.solvedDocx && (
-                              <a
-                                href={dl.solvedDocx}
-                                download={`${paper.year}-FULL-SOLVED.docx`}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex-1 py-1 px-1.5 rounded-lg bg-amber-50 dark:bg-amber-950/40 hover:bg-amber-600 hover:text-white text-amber-900 dark:text-amber-300 border border-amber-200 dark:border-amber-900 text-[11px] font-bold transition flex items-center justify-center gap-1"
-                                title="Download Solved Word Paper (.docx)"
-                              >
-                                <FileCode className="w-3 h-3 text-amber-500" />
-                                <span>Solved</span>
-                              </a>
-                            )}
+                          {/* Row 3: Official Organizing Institute Link & Solved PDF */}
+                          <div className="grid grid-cols-2 gap-1.5 pt-1 border-t border-slate-200/60 dark:border-slate-800/80">
+                            <a
+                              href={dl.officialUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="py-1.5 px-2 rounded-xl bg-slate-100 hover:bg-blue-600 hover:text-white dark:bg-slate-900 dark:hover:bg-blue-600 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 text-[11px] font-bold transition flex items-center justify-center gap-1 shadow-2xs group cursor-pointer"
+                              title={`Visit official ${dl.institute} GATE portal`}
+                            >
+                              <Globe className="w-3 h-3 text-blue-500 group-hover:text-white shrink-0" />
+                              <span>{dl.instituteShort} Portal</span>
+                            </a>
+
+                            <button
+                              type="button"
+                              onClick={() => {
+                                setPdfModalPaper({
+                                  paper: { year: paper.year, title: `GATE ${paper.year} Agricultural Engineering Paper` },
+                                  questions: paperQuestionsList,
+                                  defaultMode: 'study_guide'
+                                });
+                              }}
+                              className="py-1.5 px-2 rounded-xl bg-purple-50 hover:bg-purple-600 hover:text-white dark:bg-purple-950/40 text-purple-900 dark:text-purple-300 border border-purple-200 dark:border-purple-900 text-[11px] font-bold transition flex items-center justify-center gap-1 shadow-2xs group cursor-pointer"
+                              title="Export PDF: Choose Only Questions, Only Answers, Questions then Answers, or Study Guide"
+                            >
+                              <Printer className="w-3 h-3 text-purple-500 group-hover:text-white shrink-0" />
+                              <span>Export PDF</span>
+                            </button>
                           </div>
                         </div>
                       ) : (
@@ -1702,16 +1630,34 @@ export default function MockTestMode({
                 </div>
 
                 <div className="flex items-center gap-2">
-                  {previewPaper.docxUrl && (
+                  {previewPaper.isOfficial && (
                     <a
-                      href={previewPaper.docxUrl}
-                      download
-                      className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold transition shadow-xs"
+                      href={previewPaper.officialUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold transition shadow-xs cursor-pointer"
+                      title={`Visit official ${previewPaper.institute} portal`}
                     >
-                      <Download className="w-3.5 h-3.5" />
-                      <span>Download (.docx)</span>
+                      <Globe className="w-3.5 h-3.5" />
+                      <span>Official {previewPaper.instituteShort || previewPaper.institute} Portal</span>
+                      <ExternalLink className="w-3 h-3 ml-0.5" />
                     </a>
                   )}
+
+                  <button
+                    onClick={() => {
+                      setPdfModalPaper({
+                        paper: previewPaper,
+                        questions: previewPaper.questions || [],
+                        defaultMode: 'study_guide'
+                      });
+                    }}
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-purple-600 hover:bg-purple-700 text-white text-xs font-bold transition shadow-xs cursor-pointer"
+                    title="Choose PDF format: Only Questions, Only Answers, Questions then Answers, or Study Guide"
+                  >
+                    <Printer className="w-3.5 h-3.5" />
+                    <span>Export PDF</span>
+                  </button>
 
                   <button
                     onClick={() => setPreviewPaper(null)}
@@ -1734,6 +1680,12 @@ export default function MockTestMode({
                     <p className="text-slate-700 dark:text-slate-300 font-medium">
                       {previewPaper.summaryText}
                     </p>
+                    {previewPaper.isOfficial && (
+                      <p className="text-[11px] text-blue-600 dark:text-blue-400 pt-1 font-semibold flex items-center gap-1">
+                        <Info className="w-3.5 h-3.5 shrink-0" />
+                        <span>Original papers are hosted on the organizing institute's website. Direct downloads are removed for copyright compliance.</span>
+                      </p>
+                    )}
                   </div>
 
                   {previewPaper.questions && previewPaper.questions.length > 0 && (
@@ -1865,6 +1817,17 @@ export default function MockTestMode({
 
             </div>
           </div>
+        )}
+
+        {/* PDF Export Options Modal */}
+        {pdfModalPaper && (
+          <PdfExportOptionsModal
+            isOpen={Boolean(pdfModalPaper)}
+            onClose={() => setPdfModalPaper(null)}
+            paper={pdfModalPaper.paper}
+            questions={pdfModalPaper.questions}
+            defaultMode={pdfModalPaper.defaultMode}
+          />
         )}
       </div>
     );
@@ -2264,18 +2227,24 @@ export default function MockTestMode({
               </div>
 
               {/* Bottom Actions Bar */}
-              <div className="bg-[#f0f4f8] px-3 sm:px-6 py-3 border-t border-slate-300 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
-                <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap order-2 sm:order-1">
+              <div className="bg-[#f0f4f8] px-3 sm:px-6 py-2.5 sm:py-3 border-t border-slate-300 flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-2.5">
+                {/* Secondary Row: Review, Clear, Palette */}
+                <div className="grid grid-cols-3 sm:flex sm:items-center gap-1.5 sm:gap-2 order-2 sm:order-1 w-full sm:w-auto">
                   <button
+                    type="button"
                     onClick={handleMarkForReviewAndNext}
-                    className="flex-1 sm:flex-initial px-3 sm:px-4 py-2.5 sm:py-2 rounded-xl bg-[#7B1FA2] hover:bg-[#6A1B9A] text-white font-bold text-xs transition shadow-xs cursor-pointer text-center whitespace-nowrap"
+                    className="px-2 sm:px-4 py-2 sm:py-2 rounded-xl bg-[#7B1FA2] hover:bg-[#6A1B9A] text-white font-bold text-xs transition shadow-xs cursor-pointer text-center flex items-center justify-center min-h-[40px] sm:min-h-[36px]"
+                    title="Mark question for review and move to next question"
                   >
-                    Mark for Review & Next
+                    <span className="sm:hidden">Review & Next</span>
+                    <span className="hidden sm:inline">Mark for Review & Next</span>
                   </button>
 
                   <button
+                    type="button"
                     onClick={handleClearResponse}
-                    className="px-3 sm:px-4 py-2.5 sm:py-2 rounded-xl bg-white hover:bg-slate-100 border border-slate-300 text-slate-800 font-bold text-xs transition shadow-xs cursor-pointer text-center"
+                    className="px-2 sm:px-4 py-2 sm:py-2 rounded-xl bg-white hover:bg-slate-100 border border-slate-300 text-slate-800 font-bold text-xs transition shadow-xs cursor-pointer text-center flex items-center justify-center min-h-[40px] sm:min-h-[36px]"
+                    title="Clear selected option or typed numerical answer"
                   >
                     Clear
                   </button>
@@ -2283,22 +2252,26 @@ export default function MockTestMode({
                   <button
                     type="button"
                     onClick={() => setShowMobilePalette(true)}
-                    className="lg:hidden px-3 py-2.5 sm:py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs transition shadow-xs flex items-center gap-1 cursor-pointer"
+                    className="lg:hidden px-2 sm:px-3 py-2 sm:py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs transition shadow-xs flex items-center justify-center gap-1 cursor-pointer min-h-[40px] sm:min-h-[36px]"
+                    title="Open question jump palette"
                   >
-                    <Grid className="w-3.5 h-3.5 text-emerald-300" />
+                    <Grid className="w-3.5 h-3.5 text-emerald-300 shrink-0" />
                     <span>Palette ({currentQIndex + 1}/{paperQuestions.length})</span>
                   </button>
                 </div>
 
-                <div className="flex items-center gap-2 order-1 sm:order-2">
+                {/* Primary Row: Save & Next, Submit */}
+                <div className="flex items-center gap-2 order-1 sm:order-2 w-full sm:w-auto">
                   <button
+                    type="button"
                     onClick={handleSaveAndNext}
-                    className="flex-1 sm:flex-initial px-5 sm:px-6 py-2.5 rounded-xl bg-[#0B4A8F] hover:bg-[#003366] text-white font-extrabold text-xs sm:text-sm transition shadow-md active:scale-95 cursor-pointer text-center"
+                    className="flex-1 sm:flex-initial px-4 sm:px-6 py-2.5 rounded-xl bg-[#0B4A8F] hover:bg-[#003366] text-white font-extrabold text-xs sm:text-sm transition shadow-md active:scale-95 cursor-pointer text-center min-h-[44px] flex items-center justify-center"
                   >
                     Save & Next →
                   </button>
 
                   <button
+                    type="button"
                     onClick={() => setShowSubmitModal(true)}
                     className="px-4 sm:px-5 py-2.5 rounded-xl bg-[#2E7D32] hover:bg-[#1B5E20] text-white font-extrabold text-xs sm:text-sm transition shadow-md active:scale-95 cursor-pointer text-center"
                   >
@@ -2526,16 +2499,18 @@ export default function MockTestMode({
               <div className="flex justify-between"><span>Not Visited:</span> <strong className="text-slate-700">{statusCounts.NOT_VISITED}</strong></div>
             </div>
 
-            <div className="flex items-center justify-end gap-2 pt-2">
+            <div className="flex flex-col-reverse sm:flex-row items-stretch sm:items-center justify-end gap-2 pt-2 w-full">
               <button
+                type="button"
                 onClick={() => setShowSubmitModal(false)}
-                className="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs cursor-pointer border border-slate-300"
+                className="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs cursor-pointer border border-slate-300 text-center min-h-[42px]"
               >
                 Continue Test
               </button>
               <button
+                type="button"
                 onClick={handleSubmitFinal}
-                className="px-5 py-2 rounded-xl bg-[#2E7D32] hover:bg-[#1B5E20] text-white font-extrabold text-xs shadow-md cursor-pointer"
+                className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-[#2E7D32] hover:bg-[#1B5E20] text-white font-extrabold text-xs shadow-md cursor-pointer text-center min-h-[42px]"
               >
                 Yes, Submit Final
               </button>
@@ -2820,18 +2795,18 @@ export default function MockTestMode({
               </div>
             </div>
 
-            <div className="flex items-center justify-end gap-3 pt-2">
+            <div className="flex flex-col-reverse sm:flex-row items-stretch sm:items-center justify-end gap-2.5 pt-2 w-full">
               <button
                 type="button"
                 onClick={() => setShowSaveMidwayModal(false)}
-                className="px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-bold transition cursor-pointer"
+                className="w-full sm:w-auto px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-bold transition cursor-pointer text-center min-h-[42px]"
               >
                 Continue Exam
               </button>
               <button
                 type="button"
                 onClick={handleSaveTestMidway}
-                className="px-6 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs font-extrabold transition shadow-md flex items-center gap-2 cursor-pointer active:scale-95"
+                className="w-full sm:w-auto px-5 sm:px-6 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs font-extrabold transition shadow-md flex items-center justify-center gap-2 cursor-pointer active:scale-95 min-h-[42px]"
               >
                 <Save className="w-4 h-4" />
                 <span>Save & Exit for Later</span>
@@ -2872,21 +2847,21 @@ export default function MockTestMode({
               </ul>
             </div>
 
-            <div className="flex items-center justify-end gap-3 pt-2">
+            <div className="flex flex-col-reverse sm:flex-row items-stretch sm:items-center justify-end gap-2.5 pt-2 w-full">
               <button
                 type="button"
                 onClick={() => setShowCancelExamModal(false)}
-                className="px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-bold transition cursor-pointer"
+                className="w-full sm:w-auto px-4 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-bold transition cursor-pointer text-center min-h-[42px]"
               >
                 Keep Taking Exam
               </button>
               <button
                 type="button"
                 onClick={handleCancelExam}
-                className="px-6 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-extrabold transition shadow-md flex items-center gap-2 cursor-pointer active:scale-95"
+                className="w-full sm:w-auto px-5 sm:px-6 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-extrabold transition shadow-md flex items-center justify-center gap-2 cursor-pointer active:scale-95 min-h-[42px]"
               >
-                <Trash2 className="w-4 h-4" />
-                <span>Yes, Cancel & Delete Everything</span>
+                <Trash2 className="w-4 h-4 shrink-0" />
+                <span><span className="sm:hidden">Cancel & Delete All</span><span className="hidden sm:inline">Yes, Cancel & Delete Everything</span></span>
               </button>
             </div>
           </div>
@@ -2905,6 +2880,17 @@ export default function MockTestMode({
           handleSelectPaperForInstructions(p);
         }}
       />
+
+      {/* PDF Export Options Modal */}
+      {pdfModalPaper && (
+        <PdfExportOptionsModal
+          isOpen={Boolean(pdfModalPaper)}
+          onClose={() => setPdfModalPaper(null)}
+          paper={pdfModalPaper.paper}
+          questions={pdfModalPaper.questions}
+          defaultMode={pdfModalPaper.defaultMode}
+        />
+      )}
 
     </div>
   );

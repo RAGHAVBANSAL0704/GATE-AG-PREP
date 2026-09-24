@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
 import { 
   Heart, 
-  HelpCircle, 
-  MessageSquare, 
-  BookOpen, 
-  Award, 
-  FileText, 
   Mail, 
   Linkedin, 
   Send,
@@ -13,14 +8,14 @@ import {
   ShieldCheck,
   Globe,
   Shield,
-  GraduationCap,
   ExternalLink,
   Scale,
   X,
-  Info
+  Info,
+  Award
 } from 'lucide-react';
 
-export default function Footer({ setActiveTab }) {
+export default function Footer() {
   const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -30,8 +25,8 @@ export default function Footer({ setActiveTab }) {
     <footer className="w-full bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 shadow-sm mt-10 py-6 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl 2xl:max-w-[1500px] mx-auto space-y-4">
         
-        {/* Main Sleek Bar */}
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
+        {/* Main Sleek Bar: Dedication, Socials, & Actions */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           
           {/* Dedication Pill */}
           <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 text-xs font-semibold shadow-2xs">
@@ -40,59 +35,14 @@ export default function Footer({ setActiveTab }) {
             <span>by <strong className="text-emerald-600 dark:text-emerald-400 font-bold">Raghav Bansal</strong> for his dear juniors</span>
           </div>
 
-          {/* Essential Quick Links */}
-          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs font-bold text-slate-700 dark:text-slate-300">
-            <button 
-              onClick={() => setActiveTab('practicehub')} 
-              className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer"
-            >
-              Practice
-            </button>
-            <span className="text-slate-300 dark:text-slate-700">•</span>
-            <button 
-              onClick={() => setActiveTab('mocktest')} 
-              className="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors cursor-pointer"
-            >
-              CBT Mocks
-            </button>
-            <span className="text-slate-300 dark:text-slate-700">•</span>
-            <button 
-              onClick={() => setActiveTab('syllabus')} 
-              className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer"
-            >
-              Syllabus
-            </button>
-            <span className="text-slate-300 dark:text-slate-700">•</span>
-            <button 
-              onClick={() => setActiveTab('support')} 
-              className="hover:text-rose-600 dark:hover:text-rose-400 transition-colors cursor-pointer"
-            >
-              Support & Contact
-            </button>
-            <span className="text-slate-300 dark:text-slate-700">•</span>
-            <button 
-              onClick={() => setActiveTab('feedback')} 
-              className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors cursor-pointer"
-            >
-              Feedback
-            </button>
-            <span className="text-slate-300 dark:text-slate-700">•</span>
-            <button 
-              onClick={() => setIsDisclaimerOpen(true)} 
-              className="hover:text-amber-600 dark:hover:text-amber-400 transition-colors cursor-pointer inline-flex items-center gap-1"
-            >
-              <Scale className="w-3 h-3" />
-              <span>Legal & Disclaimer</span>
-            </button>
-          </div>
-
-          {/* Social Icons & Back-to-Top */}
-          <div className="flex items-center gap-3">
+          {/* Social Handles, Legal Trigger & Back-to-Top */}
+          <div className="flex items-center gap-2.5">
             {/* Email */}
             <a 
               href="mailto:raghavbansal0704@gmail.com" 
               className="p-2 rounded-xl bg-slate-100 dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-800 hover:text-emerald-600 dark:hover:text-emerald-400 transition shadow-2xs"
               title="Email: raghavbansal0704@gmail.com"
+              aria-label="Email Raghav Bansal"
             >
               <Mail className="w-4 h-4" />
             </a>
@@ -103,7 +53,8 @@ export default function Footer({ setActiveTab }) {
               target="_blank" 
               rel="noopener noreferrer" 
               className="p-2 rounded-xl bg-slate-100 dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-800 hover:text-blue-600 dark:hover:text-blue-400 transition shadow-2xs"
-              title="LinkedIn Profile"
+              title="LinkedIn: Raghav Bansal"
+              aria-label="LinkedIn Profile"
             >
               <Linkedin className="w-4 h-4" />
             </a>
@@ -114,10 +65,22 @@ export default function Footer({ setActiveTab }) {
               target="_blank" 
               rel="noopener noreferrer" 
               className="p-2 rounded-xl bg-slate-100 dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-800 hover:text-cyan-600 dark:hover:text-cyan-400 transition shadow-2xs"
-              title="Telegram Community"
+              title="Telegram: @gate_ag_prep Community"
+              aria-label="Telegram Community"
             >
               <Send className="w-4 h-4" />
             </a>
+
+            {/* Legal Notice Modal Trigger */}
+            <button 
+              onClick={() => setIsDisclaimerOpen(true)} 
+              className="p-2 rounded-xl bg-slate-100 dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-800 hover:text-amber-600 dark:hover:text-amber-400 transition shadow-2xs flex items-center gap-1.5 text-xs font-bold cursor-pointer"
+              title="Legal Disclaimer & Copyright Fair Dealing"
+              aria-label="Legal Disclaimer"
+            >
+              <Scale className="w-4 h-4 text-amber-500" />
+              <span className="hidden md:inline">Legal</span>
+            </button>
 
             {/* Divider */}
             <div className="h-5 w-px bg-slate-200 dark:bg-slate-800" />
@@ -127,6 +90,7 @@ export default function Footer({ setActiveTab }) {
               onClick={scrollToTop}
               className="p-2 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 hover:bg-emerald-100 dark:hover:bg-emerald-900/60 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800 transition flex items-center gap-1.5 text-xs font-bold cursor-pointer shadow-2xs"
               title="Scroll to Top"
+              aria-label="Scroll to Top"
             >
               <ArrowUp className="w-3.5 h-3.5" />
               <span className="hidden sm:inline">Top</span>
@@ -154,19 +118,6 @@ export default function Footer({ setActiveTab }) {
               <span>NCC Prep Portal</span>
               <ExternalLink className="w-3 h-3 text-amber-600 dark:text-amber-400 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
             </a>
-
-            <button
-              type="button"
-              onClick={() => alert("COAET Student's Corner is currently under active testing and development. Access is temporarily disabled.")}
-              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-800/60 text-slate-500 dark:text-slate-400 border border-slate-200 dark:border-slate-700 font-bold transition shadow-2xs cursor-not-allowed opacity-80"
-              title="COAET Student's Corner is currently under testing and development"
-            >
-              <GraduationCap className="w-3.5 h-3.5 text-slate-400" />
-              <span>COAET Student's Corner (CCS HAU)</span>
-              <span className="text-[9px] font-extrabold uppercase px-1.5 py-0.2 rounded bg-amber-100 dark:bg-amber-950/80 text-amber-700 dark:text-amber-400 border border-amber-300 dark:border-amber-800">
-                Under Dev
-              </span>
-            </button>
           </div>
         </div>
 
@@ -264,7 +215,7 @@ export default function Footer({ setActiveTab }) {
                   </li>
                 </ul>
                 <p>
-                  The organizing IITs routinely release previous examination papers and keys into the public domain via their official portals for free candidate access.
+                  The organizing IITs routinely release previous examination papers and keys via their official portals for candidate access. In adherence to intellectual property standards and copyright compliance, this portal does not host or redistribute raw question paper PDFs or DOCX files, but instead provides direct links to the official organizing IIT/IISc portals.
                 </p>
               </div>
 

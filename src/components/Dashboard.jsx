@@ -226,6 +226,7 @@ export default function Dashboard({
 
   return (
     <div className="space-y-6 animate-in fade-in duration-200">
+      <h1 className="sr-only">GATE Agricultural Engineering (AG) Preparation Portal - 1,324 Official PYQs, 50 Mock Tests & Formula Sheet</h1>
       
       {/* Topmost National Sankalp Banner */}
       <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-orange-500/15 via-amber-500/20 to-emerald-500/15 dark:from-orange-950/40 dark:via-amber-950/50 dark:to-emerald-950/40 border-2 border-amber-500/50 dark:border-amber-400/60 shadow-md p-3.5 sm:p-4 text-center">

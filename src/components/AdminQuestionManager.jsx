@@ -54,6 +54,7 @@ const QUICK_LATEX_HELPERS = [
 ];
 
 export default function AdminQuestionManager({ 
+  initialStudioMode = 'custom-mocks',
   questions = [], 
   mockPapers = [],
   customMockPapers = [], 
@@ -61,7 +62,13 @@ export default function AdminQuestionManager({
   onSaveEditedQuestion,
   onOpenCalc 
 }) {
-  const [studioMode, setStudioMode] = useState('custom-mocks');
+  const [studioMode, setStudioMode] = useState(initialStudioMode);
+
+  useEffect(() => {
+    if (initialStudioMode) {
+      setStudioMode(initialStudioMode);
+    }
+  }, [initialStudioMode]);
   const [selectedPaperTitle, setSelectedPaperTitle] = useState('');
   const [selectedSectionFilter, setSelectedSectionFilter] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');

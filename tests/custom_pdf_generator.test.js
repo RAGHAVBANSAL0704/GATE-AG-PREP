@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { generateQuestionPaperHtml } from '../src/services/questionPdfExportService.js';
+import { generateQuestionPaperHtml, PDF_EXPORT_MODES } from '../src/services/questionPdfExportService.js';
 
 test('Custom Question Paper & PDF Generator Test Suite', async (t) => {
 
@@ -303,5 +303,74 @@ test('Custom Question Paper & PDF Generator Test Suite', async (t) => {
       });
     }
   });
+
+  await t.test('verifies PDF_EXPORT_MODES defines the 4 user selectable formats', () => {
+    assert.equal(PDF_EXPORT_MODES.length, 4);
+    const ids = PDF_EXPORT_MODES.map(m => m.id);
+    assert.deepEqual(ids, ['only_questions', 'only_answers', 'first_questions_then_answers', 'study_guide']);
+  });
+
+  await t.test('generates Exam Mode (only_questions) with questions and candidate box, but no answers or solutions', () => {
+    const html = generateQuestionPaperHtml(sampleQuestions, {
+      layoutMode: 'only_questions',
+      includeCandidateBox: true
+    });
+
+    // Contains questions and candidate box
+    assert.ok(html.includes('The draft of a 3-bottom mouldboard plough'), 'Must render question statement');
+    assert.ok(html.includes('<div class="candidate-box">'), 'Must include candidate info box in exam mode');
+    assert.ok(html.includes('Question Booklet (Exam Mode)'), 'Subtitle must indicate exam mode');
+
+    // Must NOT contain answer key or solutions
+    assert.equal(html.includes('ANSWER KEY APPENDIX'), false, 'Must omit Answer Key in only_questions mode');
+    assert.equal(html.includes('DETAILED STEP-BY-STEP EXPLANATIONS & DERIVATIONS'), false, 'Must omit solutions in only_questions mode');
+    assert.equal(html.includes('<div class="inline-solution-card">'), false, 'Must omit inline solutions in only_questions mode');
+  });
+
+  await t.test('generates Solutions Only (only_answers) with answer key and step-by-step proofs, but no blank question sheet', () => {
+    const html = generateQuestionPaperHtml(sampleQuestions, {
+      layoutMode: 'only_answers'
+    });
+
+    // Omits blank question sheet and candidate box
+    assert.equal(html.includes('<div class="questions-list'), false, 'Must omit standalone question sheet in only_answers mode');
+    assert.equal(html.includes('<div class="candidate-box">'), false, 'Must omit candidate box in only_answers mode');
+
+    // Contains Answer Key at top without extra page break
+    assert.ok(html.includes('ANSWER KEY APPENDIX'), 'Must include Answer Key appendix');
+    assert.ok(html.includes('<strong>C</strong>'), 'Must include correct answer key');
+
+    // Contains Detailed step-by-step solutions with question snippet
+    assert.ok(html.includes('DETAILED STEP-BY-STEP EXPLANATIONS & DERIVATIONS'), 'Must include detailed derivations');
+    assert.ok(html.includes('solution-q-prompt'), 'Must include question prompt snippet in solutions only mode');
+    assert.ok(html.includes('11.11'), 'Must include derivation steps');
+  });
+
+  await t.test('generates First Questions Then Answers (first_questions_then_answers) format', () => {
+    const html = generateQuestionPaperHtml(sampleQuestions, {
+      layoutMode: 'first_questions_then_answers',
+      includeCandidateBox: true
+    });
+
+    // Renders questions list
+    assert.ok(html.includes('<div class="questions-list'), 'Must render question list');
+    assert.equal(html.includes('<div class="inline-solution-card">'), false, 'Must not render inline solutions under questions');
+
+    // Renders both Answer Key and Solutions at end
+    assert.ok(html.includes('ANSWER KEY APPENDIX'), 'Must include Answer Key at end');
+    assert.ok(html.includes('DETAILED STEP-BY-STEP EXPLANATIONS & DERIVATIONS'), 'Must include solutions at end');
+  });
+
+  await t.test('generates Study Guide (study_guide) format with inline question-then-answer cards', () => {
+    const html = generateQuestionPaperHtml(sampleQuestions, {
+      layoutMode: 'study_guide'
+    });
+
+    // Contains inline solution under question
+    assert.ok(html.includes('inline-solution-card'), 'Must render inline solution cards');
+    assert.ok(html.includes('Verified Answer & Detailed Solution'), 'Must have inline solution header');
+    assert.equal(html.includes('DETAILED STEP-BY-STEP EXPLANATIONS & DERIVATIONS'), false, 'Must omit duplicate bottom solutions');
+  });
 });
+
 

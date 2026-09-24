@@ -1,7 +1,48 @@
 # https://www.robotstxt.org/robotstxt.html
+# Search Engine Crawlers & Indexing Directives for GATE AG Prep Portal
+
 User-agent: *
 Allow: /
 Disallow: /api/
 
-# Sitemap location
+# Explicit Bot Allow Directives
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+
+User-agent: Applebot
+Allow: /
+Disallow: /api/
+
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /api/
+
+User-agent: YandexBot
+Allow: /
+Disallow: /api/
+
+User-agent: Baiduspider
+Allow: /
+Disallow: /api/
+
+# AI Search & Citation Crawlers
+User-agent: GPTBot
+Allow: /
+Disallow: /api/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /api/
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /api/
+
+# Canonical Host & Sitemap location
+Host: gate-ag-prep.vercel.app
 Sitemap: https://gate-ag-prep.vercel.app/sitemap.xml

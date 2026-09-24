@@ -217,9 +217,9 @@ export default function Sidebar({
                   AG
                 </div>
                 <div className="block sm:hidden md:block">
-                  <h1 className="font-extrabold text-xs text-slate-900 dark:text-white tracking-tight leading-tight">
+                  <span className="font-extrabold text-xs text-slate-900 dark:text-white tracking-tight leading-tight block">
                     GATE AG Prep
-                  </h1>
+                  </span>
                   <p className="text-[10px] text-slate-400 font-medium">Portal 2026</p>
                 </div>
               </div>

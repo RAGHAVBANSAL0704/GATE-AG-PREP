@@ -47,6 +47,7 @@ import QuestionReportModal from './QuestionReportModal';
 import { evaluateQuestion } from '../utils/scoring.js';
 import { awardStudentXP } from '../services/leaderboardService.js';
 import { recordQuestionOutcomes } from '../services/mistakeVaultService.js';
+import { pushPracticeProgressUpdate } from '../services/studentProgressSyncService.js';
 import { recordLiveAction } from '../services/liveStatisticsService.js';
 import { getProgressiveHint, diagnoseStudentMistake } from '../services/geminiService.js';
 import { 
@@ -280,21 +281,71 @@ export default function QuestionBankView({
   const PALETTE_CHUNK_SIZE = 50;
   const [palettePage, setPalettePage] = useState(0);
 
-  // Persistent user attempt progress for Question Bank / Pool
+  // Persistent user attempt progress for Question Bank / Pool with account-scoping
+  const studentSid = currentStudent?.id || currentStudent?.admission_no || currentStudent?.email || null;
+  const effectiveStorageKey = studentSid ? `${storageKey}_${studentSid}` : storageKey;
+
   const [qbankProgress, setQbankProgress] = useState(() => {
     try {
-      const saved = localStorage.getItem(storageKey);
+      let saved = localStorage.getItem(effectiveStorageKey);
+      if (!saved && effectiveStorageKey !== storageKey) {
+        saved = localStorage.getItem(storageKey);
+        if (saved) {
+          localStorage.setItem(effectiveStorageKey, saved);
+        }
+      }
       return saved ? JSON.parse(saved) : {};
     } catch (e) {
       return {};
     }
   });
 
+  // Re-hydrate if student changes
   useEffect(() => {
     try {
-      localStorage.setItem(storageKey, JSON.stringify(qbankProgress));
+      const saved = localStorage.getItem(effectiveStorageKey) || (effectiveStorageKey !== storageKey ? localStorage.getItem(storageKey) : null);
+      if (saved) {
+        setQbankProgress(JSON.parse(saved));
+      }
     } catch (e) {}
-  }, [qbankProgress, storageKey]);
+  }, [effectiveStorageKey]);
+
+  // Persist progress to local storage
+  useEffect(() => {
+    try {
+      localStorage.setItem(effectiveStorageKey, JSON.stringify(qbankProgress));
+      if (effectiveStorageKey !== storageKey) {
+        localStorage.setItem(storageKey, JSON.stringify(qbankProgress));
+      }
+    } catch (e) {}
+  }, [qbankProgress, effectiveStorageKey, storageKey]);
+
+  // Reactive listener for background cloud progress syncs
+  useEffect(() => {
+    const handleProgressSynced = (e) => {
+      const syncedPractice = e?.detail?.practiceProgress;
+      if (syncedPractice && typeof syncedPractice === 'object') {
+        setQbankProgress(prev => {
+          const merged = { ...prev };
+          let changed = false;
+          Object.keys(syncedPractice).forEach(qid => {
+            const r = syncedPractice[qid];
+            const l = merged[qid];
+            if (!l) {
+              merged[qid] = r;
+              changed = true;
+            } else if ((r.xpAwarded || 0) > (l.xpAwarded || 0) || (r.isCorrect && !l.isCorrect) || (!l.attempted && r.attempted)) {
+              merged[qid] = { ...l, ...r };
+              changed = true;
+            }
+          });
+          return changed ? merged : prev;
+        });
+      }
+    };
+    window.addEventListener('gate_ag_progress_synced', handleProgressSynced);
+    return () => window.removeEventListener('gate_ag_progress_synced', handleProgressSynced);
+  }, []);
 
   useEffect(() => {
     if (initialSection && initialSection !== 'All' && initialSection !== 'All Sections' && initialSection !== 'ALL') {
@@ -579,7 +630,7 @@ export default function QuestionBankView({
     setCheckedQuestions(prev => ({ ...prev, [currentQ.id]: true }));
     setShowSolutions(prev => ({ ...prev, [currentQ.id]: true }));
 
-    // Award Academic XP (with strict Solution-Peek Zero-XP penalty)
+    // Award Academic XP strictly for unique question solving (once per question)
     const wasPeeked = Boolean(peekedQuestions[currentQ.id] || qbankProgress[currentQ.id]?.peeked);
     const prevXpAwarded = Number(qbankProgress[currentQ.id]?.xpAwarded || 0);
 
@@ -589,31 +640,40 @@ export default function QuestionBankView({
     if (wasPeeked) {
       newXpAwarded = 0;
     } else if (evalResult.isCorrect) {
+      // Unique question solving rule: Full marks (1.0 XP) awarded at most once per question
       deltaXp = Math.max(0, 1.0 - prevXpAwarded);
-      newXpAwarded = 1.0;
+      newXpAwarded = Math.max(prevXpAwarded, 1.0);
       if (deltaXp > 0) {
-        awardStudentXP(deltaXp);
+        awardStudentXP(deltaXp, currentStudent?.id);
       }
     } else {
+      // First attempt incorrect gives 0.5 XP participation; duplicate attempts give 0 XP
       if (prevXpAwarded === 0) {
         deltaXp = 0.5;
         newXpAwarded = 0.5;
-        awardStudentXP(0.5);
+        awardStudentXP(0.5, currentStudent?.id);
       }
     }
 
-    // Record persistent progress
+    const progressEntry = {
+      attempted: true,
+      isCorrect: evalResult.isCorrect,
+      marksAwarded: evalResult.marksAwarded,
+      peeked: wasPeeked,
+      xpAwarded: newXpAwarded,
+      lastAttemptedAt: new Date().toISOString()
+    };
+
+    // Record persistent progress locally
     setQbankProgress(prev => ({
       ...prev,
-      [currentQ.id]: {
-        attempted: true,
-        isCorrect: evalResult.isCorrect,
-        marksAwarded: evalResult.marksAwarded,
-        peeked: wasPeeked,
-        xpAwarded: newXpAwarded,
-        lastAttemptedAt: new Date().toISOString()
-      }
+      [currentQ.id]: progressEntry
     }));
+
+    // Push to unified cloud progress sync across all devices
+    try {
+      pushPracticeProgressUpdate(currentStudent, currentQ.id, progressEntry);
+    } catch (e) {}
 
     // Record to Mistake Vault & User Stats for cross-device sync
     try {
@@ -621,7 +681,8 @@ export default function QuestionBankView({
         attempted: [currentQ.id],
         correct: evalResult.isCorrect ? [currentQ.id] : [],
         incorrect: !evalResult.isCorrect ? [currentQ.id] : [],
-        source: poolTitle || 'Practice Pool'
+        source: poolTitle || 'Practice Pool',
+        studentId: currentStudent?.id || null
       });
     } catch (e) {}
 
@@ -1293,7 +1354,7 @@ export default function QuestionBankView({
                       title={`Textbook Source: ${currentQ.source}`}
                     >
                       <BookOpen className="w-3 h-3 text-amber-600 dark:text-amber-400" />
-                      <span className="truncate max-w-[140px] sm:max-w-[200px]">{currentQ.source}</span>
+                      <span className="truncate max-w-[90px] sm:max-w-[200px]">{currentQ.source}</span>
                     </span>
                   )}
 
@@ -1475,19 +1536,19 @@ export default function QuestionBankView({
               </div>
 
               {/* Action Buttons: Check Answer, Reset, Show Solution */}
-              <div className="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-slate-100 dark:border-slate-800">
-                <div className="flex items-center gap-2">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 pt-4 border-t border-slate-100 dark:border-slate-800">
+                <div className="flex items-center gap-2 w-full sm:w-auto">
                   <button
                     onClick={handleCheckAnswer}
                     disabled={userAnswers[currentQ.id] === undefined || userAnswers[currentQ.id] === ''}
-                    className="px-5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-white text-xs font-bold shadow-xs transition"
+                    className="flex-1 sm:flex-initial px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-white text-xs font-bold shadow-xs transition cursor-pointer text-center min-h-[40px]"
                   >
                     Check Answer
                   </button>
 
                   <button
                     onClick={handleResetCurrent}
-                    className="px-3.5 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-slate-900 text-xs font-bold transition flex items-center gap-1.5"
+                    className="px-3.5 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-slate-900 text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer min-h-[40px]"
                   >
                     <RotateCcw className="w-3.5 h-3.5" />
                     <span>Reset</span>
@@ -1496,51 +1557,51 @@ export default function QuestionBankView({
                   {/* XP Reward Badge */}
                   {checkedQuestions[currentQ.id] && qbankProgress[currentQ.id] && (
                     qbankProgress[currentQ.id].peeked ? (
-                      <span className="px-3 py-1.5 rounded-xl bg-amber-50 dark:bg-amber-950/80 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800 text-xs font-bold inline-flex items-center gap-1.5 animate-in fade-in">
+                      <span className="px-2.5 py-1.5 rounded-xl bg-amber-50 dark:bg-amber-950/80 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800 text-xs font-bold inline-flex items-center gap-1 animate-in fade-in ml-auto sm:ml-0">
                         <AlertTriangle className="w-3.5 h-3.5 text-amber-500 shrink-0" />
-                        <span>Solution Viewed (0 XP)</span>
+                        <span>0 XP</span>
                       </span>
                     ) : (
-                      <span className={`px-3 py-1.5 rounded-xl ${
+                      <span className={`px-2.5 py-1.5 rounded-xl ${
                         qbankProgress[currentQ.id].xpAwarded >= 1
                           ? 'bg-emerald-50 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800'
                           : 'bg-blue-50 dark:bg-blue-950/80 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-800'
-                      } text-xs font-bold inline-flex items-center gap-1.5 animate-in fade-in`}>
+                      } text-xs font-bold inline-flex items-center gap-1 animate-in fade-in ml-auto sm:ml-0`}>
                         <Zap className="w-3.5 h-3.5 text-amber-500 shrink-0" />
-                        <span>{qbankProgress[currentQ.id].xpAwarded >= 1 ? '+1.0 XP Earned 🎯' : '+0.5 XP Attempt Credit 💡'}</span>
+                        <span>{qbankProgress[currentQ.id].xpAwarded >= 1 ? '+1.0 XP' : '+0.5 XP'}</span>
                       </span>
                     )
                   )}
                 </div>
 
-                <div className="flex flex-wrap items-center gap-2">
+                <div className="flex items-center gap-2 flex-wrap sm:flex-nowrap w-full sm:w-auto">
                   <button
                     onClick={() => {
                       const nextLevel = (activeHintLevel[currentQ.id] || 0) === 0 ? 1 : (activeHintLevel[currentQ.id] || 0);
                       handleRequestHint(currentQ, nextLevel);
                     }}
-                    className={`px-3.5 py-2 rounded-xl border text-xs font-bold transition flex items-center gap-1.5 ${
+                    className={`flex-1 sm:flex-initial px-3 py-2 rounded-xl border text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer min-h-[40px] ${
                       activeHintLevel[currentQ.id]
                         ? 'border-amber-400 bg-amber-50 dark:bg-amber-950/50 text-amber-700 dark:text-amber-300'
                         : 'border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800'
                     }`}
                   >
                     <Lightbulb className={`w-3.5 h-3.5 ${activeHintLevel[currentQ.id] ? 'text-amber-500 fill-amber-500' : 'text-amber-500'}`} />
-                    <span>{activeHintLevel[currentQ.id] ? `Hint (L${activeHintLevel[currentQ.id]})` : 'Need a Hint?'}</span>
+                    <span>{activeHintLevel[currentQ.id] ? `Hint (L${activeHintLevel[currentQ.id]})` : 'Hint'}</span>
                   </button>
 
                   {checkedQuestions[currentQ.id] && !qbankProgress[currentQ.id]?.isCorrect && (
                     <button
                       onClick={() => handleDiagnoseMistake(currentQ)}
                       disabled={mistakeLoading[currentQ.id]}
-                      className="px-3.5 py-2 rounded-xl bg-rose-50 dark:bg-rose-950/60 border border-rose-200 dark:border-rose-800 text-rose-700 dark:text-rose-300 hover:bg-rose-100 dark:hover:bg-rose-900/60 text-xs font-bold transition flex items-center gap-1.5"
+                      className="flex-1 sm:flex-initial px-3 py-2 rounded-xl bg-rose-50 dark:bg-rose-950/60 border border-rose-200 dark:border-rose-800 text-rose-700 dark:text-rose-300 hover:bg-rose-100 dark:hover:bg-rose-900/60 text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer min-h-[40px]"
                     >
                       {mistakeLoading[currentQ.id] ? (
                         <Loader2 className="w-3.5 h-3.5 animate-spin text-rose-500" />
                       ) : (
                         <ShieldAlert className="w-3.5 h-3.5 text-rose-500" />
                       )}
-                      <span>Analyze My Mistake</span>
+                      <span><span className="sm:hidden">Mistake</span><span className="hidden sm:inline">Analyze My Mistake</span></span>
                     </button>
                   )}
 
@@ -1551,7 +1612,7 @@ export default function QuestionBankView({
                       }
                       setShowSolutions(prev => ({ ...prev, [currentQ.id]: !prev[currentQ.id] }));
                     }}
-                    className="px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 text-xs font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition"
+                    className="flex-1 sm:flex-initial px-3.5 py-2 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 text-xs font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition cursor-pointer text-center min-h-[40px]"
                   >
                     {showSolutions[currentQ.id] ? 'Hide Solution' : 'View Solution'}
                   </button>
@@ -1570,18 +1631,19 @@ export default function QuestionBankView({
                         Progressive Concept Guidance
                       </span>
                     </div>
-                    <div className="flex items-center gap-1">
+                    <div className="flex items-center gap-1 flex-wrap sm:flex-nowrap">
                       {[1, 2, 3].map((lvl) => (
                         <button
                           key={lvl}
                           onClick={() => handleRequestHint(currentQ, lvl)}
-                          className={`px-2.5 py-1 rounded-lg text-[11px] font-bold transition ${
+                          className={`px-2 sm:px-2.5 py-1 rounded-lg text-[11px] font-bold transition cursor-pointer ${
                             activeHintLevel[currentQ.id] === lvl
                               ? 'bg-amber-500 text-white shadow-xs'
                               : 'bg-white/80 dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-amber-200/60 dark:border-amber-800/40 hover:bg-amber-100 dark:hover:bg-amber-900/40'
                           }`}
                         >
-                          Level {lvl} {lvl === 1 ? 'Concept' : lvl === 2 ? 'Formula' : 'Calculation'}
+                          <span className="sm:hidden">L{lvl} {lvl === 1 ? 'Concept' : lvl === 2 ? 'Formula' : 'Calc'}</span>
+                          <span className="hidden sm:inline">Level {lvl} {lvl === 1 ? 'Concept' : lvl === 2 ? 'Formula' : 'Calculation'}</span>
                         </button>
                       ))}
                     </div>
@@ -1977,11 +2039,11 @@ export default function QuestionBankView({
                 Found <strong className="text-slate-900 dark:text-white font-bold">{customMatchingPool.length}</strong> matching questions • Practice will launch with <strong className="text-blue-600 dark:text-blue-400 font-bold">{Math.min(questionCountInput, customMatchingPool.length)}</strong> questions.
               </div>
 
-              <div className="flex items-center gap-2.5">
+              <div className="flex flex-col-reverse sm:flex-row items-stretch sm:items-center gap-2.5 w-full sm:w-auto">
                 <button
                   type="button"
                   onClick={() => setShowCustomModal(false)}
-                  className="px-4 py-2 rounded-xl text-xs font-bold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+                  className="w-full sm:w-auto px-4 py-2.5 rounded-xl text-xs font-bold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition text-center min-h-[42px]"
                 >
                   Cancel
                 </button>
@@ -1989,7 +2051,7 @@ export default function QuestionBankView({
                   type="button"
                   onClick={handleLaunchCustomSession}
                   disabled={customMatchingPool.length === 0}
-                  className="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 disabled:opacity-40 text-white text-xs font-bold shadow-xs transition inline-flex items-center gap-2"
+                  className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 disabled:opacity-40 text-white text-xs font-bold shadow-xs transition flex items-center justify-center gap-2 min-h-[42px]"
                 >
                   <span>Start Practice Session</span>
                   <ChevronRight className="w-4 h-4" />

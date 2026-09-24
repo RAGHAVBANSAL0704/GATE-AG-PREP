@@ -184,22 +184,22 @@ export default function QuestionReportModal({
             </div>
 
             {/* Dual Action Buttons */}
-            <div className="pt-3 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-2.5">
+            <div className="pt-3 border-t border-slate-100 dark:border-slate-800 flex flex-col-reverse sm:flex-row items-stretch sm:items-center justify-between gap-2.5 w-full">
               <button
                 type="button"
                 onClick={onClose}
-                className="w-full sm:w-auto px-4 py-2 rounded-xl text-xs font-bold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer"
+                className="w-full sm:w-auto px-4 py-2.5 rounded-xl text-xs font-bold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer text-center min-h-[42px]"
               >
                 Cancel
               </button>
 
-              <div className="w-full sm:w-auto flex items-center gap-2">
+              <div className="w-full sm:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
                 {/* WhatsApp Direct Action */}
                 <button
                   type="button"
                   onClick={handleWhatsAppSubmit}
                   disabled={isSubmitting}
-                  className="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-xs transition cursor-pointer"
+                  className="w-full sm:w-auto flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-xs transition cursor-pointer min-h-[42px]"
                   title="Direct report to Maintainer via WhatsApp"
                 >
                   <MessageCircle className="w-3.5 h-3.5" />
@@ -210,7 +210,7 @@ export default function QuestionReportModal({
                 <button
                   type="submit"
                   disabled={isSubmitting || !description.trim()}
-                  className="flex-1 sm:flex-initial flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl bg-rose-600 hover:bg-rose-500 disabled:opacity-50 text-white text-xs font-bold shadow-xs transition cursor-pointer"
+                  className="w-full sm:w-auto flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-500 disabled:opacity-50 text-white text-xs font-bold shadow-xs transition cursor-pointer min-h-[42px]"
                   title="Submit report into Admin Panel queue for in-portal triage"
                 >
                   <Send className="w-3.5 h-3.5" />

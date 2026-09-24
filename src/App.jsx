@@ -78,7 +78,13 @@ import {
   refreshCurrentStudentProfile 
 } from './services/authService';
 import { initAutoSyncOnReconnect } from './services/testAttemptService';
-import { syncStudentCloudData, getStudentUserStatsKey } from './services/studentProgressSyncService';
+import { 
+  syncStudentCloudData, 
+  getStudentUserStatsKey,
+  pushBookmarksUpdate,
+  subscribeToCloudProgressSync
+} from './services/studentProgressSyncService';
+import { subscribeToLiveAcademicXP } from './services/leaderboardService';
 import { saveAndBroadcastQuestion, subscribeToLiveQuestionSync } from './services/questionSyncService';
 import { recordQuestionOutcomes } from './services/mistakeVaultService';
 import { subscribeToLiveRoleSync } from './services/userRoleService';
@@ -143,8 +149,12 @@ import preloadedCustomMock50 from './data/custom_mock_2027_50.json';
 export default function App() {
   const [activeTab, setActiveTab] = useState(() => {
     try {
-      const hash = window.location.hash.replace(/^#\/?/, '');
+      const path = window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase();
+      const hash = window.location.hash.replace(/^#\/?/, '').toLowerCase();
       const validTabs = ['dashboard', 'livestats', 'telemetry', 'liveboard', 'practicehub', 'practice', 'custompractice', 'customtest', 'learninghub', 'concepts', 'simulators', 'flashcards', 'community', 'chat', 'qa', 'discussions', 'ai_tutor', 'aisolver', 'aitutor', 'revision', 'formulas', 'mocktest', 'games', 'admin', 'feedback', 'downloads', 'syllabus', 'creator', 'support', 'hq'];
+      if (validTabs.includes(path)) {
+        return path;
+      }
       if (validTabs.includes(hash)) {
         return hash;
       }
@@ -155,20 +165,46 @@ export default function App() {
   });
 
   useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash.replace(/^#\/?/, '');
-      const validTabs = ['dashboard', 'livestats', 'telemetry', 'liveboard', 'practicehub', 'practice', 'custompractice', 'customtest', 'learninghub', 'concepts', 'simulators', 'flashcards', 'community', 'chat', 'qa', 'discussions', 'ai_tutor', 'aisolver', 'aitutor', 'revision', 'formulas', 'mocktest', 'games', 'admin', 'feedback', 'downloads', 'syllabus', 'creator', 'support', 'hq'];
-      if (validTabs.includes(hash)) {
-        setActiveTab(hash);
+    const handleNavigationChange = () => {
+      try {
+        const path = window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase();
+        const hash = window.location.hash.replace(/^#\/?/, '').toLowerCase();
+        const validTabs = ['dashboard', 'livestats', 'telemetry', 'liveboard', 'practicehub', 'practice', 'custompractice', 'customtest', 'learninghub', 'concepts', 'simulators', 'flashcards', 'community', 'chat', 'qa', 'discussions', 'ai_tutor', 'aisolver', 'aitutor', 'revision', 'formulas', 'mocktest', 'games', 'admin', 'feedback', 'downloads', 'syllabus', 'creator', 'support', 'hq'];
+        if (validTabs.includes(path)) {
+          setActiveTab(path);
+        } else if (validTabs.includes(hash)) {
+          setActiveTab(hash);
+        } else if (!path && !hash) {
+          setActiveTab('dashboard');
+        }
+      } catch (e) {
+        // fallback
       }
     };
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    window.addEventListener('hashchange', handleNavigationChange);
+    window.addEventListener('popstate', handleNavigationChange);
+    return () => {
+      window.removeEventListener('hashchange', handleNavigationChange);
+      window.removeEventListener('popstate', handleNavigationChange);
+    };
   }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
     updatePageSEO(activeTab);
+    try {
+      if (typeof window !== 'undefined' && window.history) {
+        const path = window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase();
+        const hash = window.location.hash.replace(/^#\/?/, '').toLowerCase();
+        const targetPath = activeTab === 'dashboard' ? '/' : `/${activeTab}`;
+        const currentTarget = path || hash;
+        if (currentTarget !== activeTab && !(activeTab === 'dashboard' && !currentTarget)) {
+          window.history.replaceState({ tab: activeTab }, '', targetPath);
+        }
+      }
+    } catch (e) {
+      // ignore history errors in non-browser or sandboxed environments
+    }
   }, [activeTab]);
 
   useEffect(() => {
@@ -278,8 +314,12 @@ export default function App() {
     // Instantly hydrate full cloud test history, mistake vault and question progress across devices
     if (student) {
       syncStudentCloudData(student).then(result => {
-        if (result && result.userStats) {
-          setUserStats(result.userStats);
+        if (result) {
+          if (result.userStats) setUserStats(result.userStats);
+          if (Array.isArray(result.bookmarks)) setBookmarks(result.bookmarks);
+          if (typeof result.xpPoints === 'number') {
+            setCurrentStudent(prev => prev ? ({ ...prev, xp_points: result.xpPoints }) : prev);
+          }
         }
       }).catch(err => {
         console.warn('[App] Login progress hydration warning:', err);
@@ -303,8 +343,12 @@ export default function App() {
   useEffect(() => {
     if (!currentStudent) return;
     syncStudentCloudData(currentStudent, userStats).then(result => {
-      if (result && result.userStats) {
-        setUserStats(result.userStats);
+      if (result) {
+        if (result.userStats) setUserStats(result.userStats);
+        if (Array.isArray(result.bookmarks)) setBookmarks(result.bookmarks);
+        if (typeof result.xpPoints === 'number') {
+          setCurrentStudent(prev => prev ? ({ ...prev, xp_points: result.xpPoints }) : prev);
+        }
       }
     }).catch(err => {
       console.warn('[App] Session startup progress sync warning:', err);
@@ -317,10 +361,101 @@ export default function App() {
       if (e?.detail?.userStats) {
         setUserStats(e.detail.userStats);
       }
+      if (Array.isArray(e?.detail?.bookmarks)) {
+        setBookmarks(e.detail.bookmarks);
+      }
+      if (typeof e?.detail?.xpPoints === 'number') {
+        setCurrentStudent(prev => prev ? ({ ...prev, xp_points: e.detail.xpPoints }) : prev);
+      }
     };
     window.addEventListener('gate_ag_progress_synced', handleProgressSynced);
     return () => window.removeEventListener('gate_ag_progress_synced', handleProgressSynced);
   }, []);
+
+  // Real-Time Multi-Device Academic XP WebSocket Subscription
+  useEffect(() => {
+    if (!currentStudent?.id) return;
+    const unsubXP = subscribeToLiveAcademicXP((payload) => {
+      if (!payload || !payload.studentId) return;
+      const isTarget = 
+        payload.studentId === currentStudent.id ||
+        payload.studentId === currentStudent.admission_no ||
+        payload.studentId === currentStudent.email;
+
+      if (isTarget && typeof payload.xp_points === 'number') {
+        const freshXP = payload.xp_points;
+        setCurrentStudent(prev => {
+          if (!prev) return prev;
+          if (prev.xp_points === freshXP) return prev;
+          const updated = { ...prev, xp_points: freshXP };
+          try {
+            const rawSession = localStorage.getItem('gate_ag_prep_session_token');
+            if (rawSession) {
+              const session = JSON.parse(rawSession);
+              session.student = updated;
+              localStorage.setItem('gate_ag_prep_session_token', JSON.stringify(session));
+            }
+            localStorage.setItem('gate_ag_student_xp_data', String(freshXP));
+          } catch (e) {}
+          return updated;
+        });
+      }
+    });
+
+    return () => {
+      if (typeof unsubXP === 'function') unsubXP();
+    };
+  }, [currentStudent?.id, currentStudent?.admission_no, currentStudent?.email]);
+
+  // Real-Time Multi-Device Practice Progress & Bookmark WebSocket Subscription
+  useEffect(() => {
+    if (!currentStudent?.id) return;
+    const unsubProgress = subscribeToCloudProgressSync(currentStudent, () => {
+      syncStudentCloudData(currentStudent).then(result => {
+        if (result) {
+          if (result.userStats) setUserStats(result.userStats);
+          if (Array.isArray(result.bookmarks)) setBookmarks(result.bookmarks);
+          if (typeof result.xpPoints === 'number') {
+            setCurrentStudent(prev => prev ? ({ ...prev, xp_points: result.xpPoints }) : prev);
+          }
+        }
+      }).catch(() => {});
+    });
+
+    return () => {
+      if (typeof unsubProgress === 'function') unsubProgress();
+    };
+  }, [currentStudent?.id, currentStudent?.admission_no, currentStudent?.email]);
+
+  // Auto-sync on window focus / tab visibility (when switching from phone to Mac)
+  useEffect(() => {
+    if (!currentStudent?.id) return;
+    const handleReactivation = () => {
+      if (typeof document !== 'undefined' && document.visibilityState === 'visible') {
+        syncStudentCloudData(currentStudent).then(result => {
+          if (result) {
+            if (result.userStats) setUserStats(result.userStats);
+            if (Array.isArray(result.bookmarks)) setBookmarks(result.bookmarks);
+            if (typeof result.xpPoints === 'number') {
+              setCurrentStudent(prev => prev ? ({ ...prev, xp_points: result.xpPoints }) : prev);
+            }
+          }
+        }).catch(() => {});
+        refreshCurrentStudentProfile().then(refreshed => {
+          if (refreshed) {
+            setCurrentStudent(prev => prev ? ({ ...prev, ...refreshed }) : refreshed);
+          }
+        }).catch(() => {});
+      }
+    };
+
+    window.addEventListener('focus', handleReactivation);
+    document.addEventListener('visibilitychange', handleReactivation);
+    return () => {
+      window.removeEventListener('focus', handleReactivation);
+      document.removeEventListener('visibilitychange', handleReactivation);
+    };
+  }, [currentStudent?.id]);
 
   // Real-time live profile synchronization with Supabase backend (e.g. backend name/email/college changes)
   useEffect(() => {
@@ -700,11 +835,16 @@ export default function App() {
   }, [syllabusProgress, currentStudent?.id, currentStudent?.admission_no, currentStudent?.email]);
 
   const handleToggleBookmark = (qId) => {
+    let nextBookmarks;
     if (bookmarks.includes(qId)) {
-      setBookmarks(bookmarks.filter(id => id !== qId));
+      nextBookmarks = bookmarks.filter(id => id !== qId);
     } else {
-      setBookmarks([...bookmarks, qId]);
+      nextBookmarks = [...bookmarks, qId];
     }
+    setBookmarks(nextBookmarks);
+    try {
+      pushBookmarksUpdate(currentStudent, nextBookmarks);
+    } catch (e) {}
   };
 
   const handleUpdateSyllabusProgress = (key, status) => {
@@ -930,7 +1070,7 @@ export default function App() {
               </span>
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
               {canInstallPwa && (
                 <button
                   onClick={handleInstallPwa}
@@ -954,7 +1094,7 @@ export default function App() {
                 <ExternalLink className="w-2.5 h-2.5 text-slate-400 opacity-60 group-hover:opacity-100 transition-opacity" />
               </a>
 
-              <span className="text-slate-300 dark:text-slate-700">•</span>
+              <span className="hidden sm:inline text-slate-300 dark:text-slate-700">•</span>
 
               <button
                 type="button"
@@ -963,9 +1103,10 @@ export default function App() {
                 title="COAET Student's Corner is currently under testing & development"
               >
                 <GraduationCap className="w-3 h-3 text-slate-400 dark:text-slate-500" />
-                <span>COAET Student's Corner</span>
+                <span className="sm:hidden">COAET Corner</span>
+                <span className="hidden sm:inline">COAET Student's Corner</span>
                 <span className="text-[9px] font-extrabold uppercase px-1.5 py-0.2 rounded bg-amber-100 dark:bg-amber-950/80 text-amber-700 dark:text-amber-400 border border-amber-300 dark:border-amber-800">
-                  Under Dev
+                  Dev
                 </span>
               </button>
             </div>

@@ -94,9 +94,9 @@ export default function SyllabusTracker({ userProgress, onUpdateProgress, onStar
               <BookOpen className="w-3.5 h-3.5" />
               <span>Official GATE Agricultural Engineering (AG) Syllabus</span>
             </div>
-            <h2 className="text-xl font-bold text-slate-900 dark:text-white">
-              Syllabus Coverage & Mastery Tracker
-            </h2>
+            <h1 className="text-xl font-bold text-slate-900 dark:text-white">
+              Official GATE AG Syllabus Coverage & Mastery Tracker
+            </h1>
             <p className="text-xs text-slate-500 max-w-xl">
               Track your preparation across all 8 sections (7 official + General Aptitude). Click subtopics to cycle status: <span className="font-semibold text-slate-700 dark:text-slate-300">Not Started → Studied → Mastered</span>.
             </p>

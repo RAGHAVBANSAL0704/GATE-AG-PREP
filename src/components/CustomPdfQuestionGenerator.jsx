@@ -18,6 +18,8 @@ import {
   HelpCircle,
   FileCheck2,
   FileText,
+  FileQuestion,
+  KeyRound,
   RotateCcw,
   Tag,
   ChevronDown,
@@ -1353,36 +1355,66 @@ export default function CustomPdfQuestionGenerator({ questions = [], mockPapers 
             </div>
 
             <div className="space-y-3.5 text-xs">
-              {/* Worksheet vs Study Guide */}
+              {/* 4 Document Format Modes */}
               <div>
                 <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">
-                  Document Type
+                  Document Format &amp; Solution Layout
                 </label>
-                <div className="grid grid-cols-2 p-1 rounded-xl bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 gap-1">
+                <div className="grid grid-cols-2 gap-1.5 p-1 rounded-xl bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
                   <button
                     type="button"
-                    onClick={() => setLayoutMode('worksheet')}
-                    className={`py-1.5 rounded-lg font-bold transition flex items-center justify-center gap-1.5 cursor-pointer ${
-                      layoutMode === 'worksheet'
-                        ? 'bg-white dark:bg-slate-800 text-slate-900 dark:text-white shadow-xs'
+                    onClick={() => setLayoutMode('only_questions')}
+                    className={`py-2 px-2 rounded-lg font-bold transition flex items-center justify-center gap-1.5 cursor-pointer text-[11px] ${
+                      layoutMode === 'only_questions'
+                        ? 'bg-white dark:bg-slate-800 text-blue-600 dark:text-blue-400 shadow-xs'
                         : 'text-slate-500 hover:text-slate-900 dark:hover:text-white'
                     }`}
+                    title="Questions only without answers or solutions (Exam Mode)"
+                  >
+                    <FileQuestion className="w-3.5 h-3.5 shrink-0" />
+                    <span>Only Questions</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => setLayoutMode('only_answers')}
+                    className={`py-2 px-2 rounded-lg font-bold transition flex items-center justify-center gap-1.5 cursor-pointer text-[11px] ${
+                      layoutMode === 'only_answers'
+                        ? 'bg-white dark:bg-slate-800 text-emerald-600 dark:text-emerald-400 shadow-xs'
+                        : 'text-slate-500 hover:text-slate-900 dark:hover:text-white'
+                    }`}
+                    title="Answer key table & step-by-step derivations only"
+                  >
+                    <KeyRound className="w-3.5 h-3.5 shrink-0" />
+                    <span>Only Answers</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => setLayoutMode('first_questions_then_answers')}
+                    className={`py-2 px-2 rounded-lg font-bold transition flex items-center justify-center gap-1.5 cursor-pointer text-[11px] ${
+                      layoutMode === 'first_questions_then_answers' || layoutMode === 'worksheet'
+                        ? 'bg-white dark:bg-slate-800 text-indigo-600 dark:text-indigo-400 shadow-xs'
+                        : 'text-slate-500 hover:text-slate-900 dark:hover:text-white'
+                    }`}
+                    title="Complete question paper followed by answers and solutions at the end"
                   >
                     <FileText className="w-3.5 h-3.5 shrink-0" />
-                    <span>Exam Worksheet</span>
+                    <span>Questions Then Answers</span>
                   </button>
 
                   <button
                     type="button"
                     onClick={() => setLayoutMode('study_guide')}
-                    className={`py-1.5 rounded-lg font-bold transition flex items-center justify-center gap-1.5 cursor-pointer ${
+                    className={`py-2 px-2 rounded-lg font-bold transition flex items-center justify-center gap-1.5 cursor-pointer text-[11px] ${
                       layoutMode === 'study_guide'
-                        ? 'bg-white dark:bg-slate-800 text-slate-900 dark:text-white shadow-xs'
+                        ? 'bg-white dark:bg-slate-800 text-amber-600 dark:text-amber-400 shadow-xs'
                         : 'text-slate-500 hover:text-slate-900 dark:hover:text-white'
                     }`}
+                    title="Each question followed immediately by verified derivation"
                   >
-                    <Sparkles className="w-3.5 h-3.5 shrink-0" />
-                    <span>Study Guide</span>
+                    <BookOpen className="w-3.5 h-3.5 shrink-0" />
+                    <span>Question Then Answer</span>
                   </button>
                 </div>
               </div>

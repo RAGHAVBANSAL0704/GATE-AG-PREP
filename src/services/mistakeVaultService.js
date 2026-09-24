@@ -101,9 +101,10 @@ export function recordQuestionOutcomes({
       localStorage.setItem(LEGACY_MISTAKE_KEY, JSON.stringify(vault));
     }
 
-    // Also update legacy user stats for backward compatibility
+    // Also update account-scoped user stats as well as legacy user stats
     try {
-      const statsRaw = localStorage.getItem('gate_ag_user_stats');
+      const scopedKey = sid && sid !== 'default_student' ? `gate_ag_user_stats_${sid}` : 'gate_ag_user_stats';
+      const statsRaw = localStorage.getItem(scopedKey) || localStorage.getItem('gate_ag_user_stats');
       let stats = statsRaw ? JSON.parse(statsRaw) : { attempted: [], correct: [], testHistory: [] };
       if (!Array.isArray(stats.attempted)) stats.attempted = [];
       if (!Array.isArray(stats.correct)) stats.correct = [];
@@ -117,6 +118,9 @@ export function recordQuestionOutcomes({
       stats.correct = stats.correct.filter(id => !incorrect.includes(id));
 
       localStorage.setItem('gate_ag_user_stats', JSON.stringify(stats));
+      if (scopedKey !== 'gate_ag_user_stats') {
+        localStorage.setItem(scopedKey, JSON.stringify(stats));
+      }
       triggerLiveStatsSync();
     } catch (e) {}
 
@@ -133,28 +137,80 @@ export function recordQuestionOutcomes({
 }
 
 let vaultSyncTimers = new Map();
+let pendingVaultPayloads = new Map();
+
+export function flushPendingVaultSync(targetSid = null) {
+  const sidsToFlush = targetSid ? [targetSid] : Array.from(pendingVaultPayloads.keys());
+  sidsToFlush.forEach(sid => {
+    if (vaultSyncTimers.has(sid)) {
+      clearTimeout(vaultSyncTimers.get(sid));
+      vaultSyncTimers.delete(sid);
+    }
+    const payload = pendingVaultPayloads.get(sid);
+    if (payload && isSupabaseConfigured && supabase) {
+      pendingVaultPayloads.delete(sid);
+      supabase
+        .from('student_mistake_vault')
+        .upsert([payload], { onConflict: 'student_identifier' })
+        .then(({ error }) => {
+          if (!error) {
+            try {
+              const channel = supabase.channel('gate_ag_progress_live');
+              channel.send({
+                type: 'broadcast',
+                event: 'progress_updated',
+                payload: { studentId: sid, timestamp: Date.now() }
+              });
+            } catch (e) {}
+          }
+        })
+        .catch(() => {});
+    }
+  });
+}
+
+// Mobile lifecycle safety: flush pending syncs on blur / tab switch / screen lock
+if (typeof window !== 'undefined') {
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'hidden') {
+      flushPendingVaultSync();
+    }
+  });
+  window.addEventListener('beforeunload', () => {
+    flushPendingVaultSync();
+  });
+}
 
 function scheduleDebouncedVaultSync(sid, vault, now) {
   if (vaultSyncTimers.has(sid)) {
     clearTimeout(vaultSyncTimers.get(sid));
   }
 
+  // Preserve existing bookmarks & practice progress if stored locally
+  let bookmarks = [];
+  let practiceProgress = {};
+  try {
+    const rawBm = localStorage.getItem(`gate_ag_bookmarks_${sid}`) || localStorage.getItem('gate_ag_bookmarks');
+    if (rawBm) bookmarks = JSON.parse(rawBm);
+    const rawPrac = localStorage.getItem(`gate_ag_practice_progress_${sid}`) || localStorage.getItem(`gate_ag_pyq_progress_${sid}`);
+    if (rawPrac) practiceProgress = JSON.parse(rawPrac);
+  } catch (e) {}
+
+  pendingVaultPayloads.set(sid, {
+    student_identifier: sid,
+    vault_data: {
+      mistakes: vault,
+      bookmarks,
+      practiceProgress,
+      updated_at: now
+    },
+    updated_at: now
+  });
+
   const timer = setTimeout(() => {
     vaultSyncTimers.delete(sid);
-    try {
-      supabase
-        .from('student_mistake_vault')
-        .upsert([{
-          student_identifier: sid,
-          vault_data: vault,
-          updated_at: now
-        }], { onConflict: 'student_identifier' })
-        .then(({ error }) => {
-          if (error) console.warn('Mistake vault backend sync notice:', error.message);
-        })
-        .catch(() => {});
-    } catch (e) {}
-  }, 5000); // 5-second debounce window
+    flushPendingVaultSync(sid);
+  }, 1000); // Responsive 1-second debounce
 
   vaultSyncTimers.set(sid, timer);
 }

@@ -29,12 +29,15 @@ import {
   Radio,
   Globe,
   Shield,
-  Clock
+  Clock,
+  Activity
 } from 'lucide-react';
 import SupportPage from './SupportPage';
 import AdminQuestionManager from './AdminQuestionManager';
 import AdminUserRoleManager from './AdminUserRoleManager';
+import CreatorWebMonitor from './CreatorWebMonitor';
 import { isAdminUnlocked, setAdminUnlocked, verifyAdminPasscode } from '../services/questionSyncService.js';
+import { getAllQuestionReports } from '../services/questionReportService.js';
 
 export default function CreatorAdminHQ({ 
   initialSubTab = 'creator',
@@ -47,10 +50,22 @@ export default function CreatorAdminHQ({
   currentStudent 
 }) {
   const [activeSubTab, setActiveSubTab] = useState(initialSubTab);
+  const [adminStudioInitialMode, setAdminStudioInitialMode] = useState('custom-mocks');
+  const [pendingReportsCount, setPendingReportsCount] = useState(0);
   const [isAdminAuth, setIsAdminAuth] = useState(() => isAdminUnlocked(currentStudent));
   const [adminPasscode, setAdminPasscode] = useState('');
   const [passcodeError, setPasscodeError] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+
+  useEffect(() => {
+    let isMounted = true;
+    getAllQuestionReports().then(reports => {
+      if (!isMounted || !Array.isArray(reports)) return;
+      const pending = reports.filter(r => (r.status || 'pending').toLowerCase() === 'pending').length;
+      setPendingReportsCount(pending);
+    }).catch(() => {});
+    return () => { isMounted = false; };
+  }, [activeSubTab]);
 
   useEffect(() => {
     if (isAdminUnlocked(currentStudent)) {
@@ -168,7 +183,7 @@ export default function CreatorAdminHQ({
         </button>
 
         <button
-          onClick={() => setActiveSubTab('admin')}
+          onClick={() => { setActiveSubTab('admin'); setAdminStudioInitialMode('custom-mocks'); }}
           className={`flex-1 min-w-[140px] py-2.5 px-4 rounded-xl text-xs font-extrabold transition flex items-center justify-center gap-2 cursor-pointer ${
             activeSubTab === 'admin'
               ? 'bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 shadow-md'
@@ -177,6 +192,11 @@ export default function CreatorAdminHQ({
         >
           {isAdminAuth ? <ShieldCheck className="w-4 h-4 text-emerald-500" /> : <Lock className="w-4 h-4 text-amber-500" />}
           <span>Question Admin Studio</span>
+          {pendingReportsCount > 0 && (
+            <span className="px-1.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-500 text-white animate-pulse" title={`${pendingReportsCount} pending issue reports`}>
+              {pendingReportsCount}
+            </span>
+          )}
           {!isAdminAuth && <span className="text-[9px] px-1.5 py-0.2 rounded bg-amber-500/20 text-amber-600 dark:text-amber-400 font-mono">LOCKED</span>}
         </button>
 
@@ -190,6 +210,19 @@ export default function CreatorAdminHQ({
         >
           {isAdminAuth ? <Award className="w-4 h-4 text-white" /> : <Lock className="w-4 h-4 text-amber-500" />}
           <span>Roles & Contributors</span>
+          {!isAdminAuth && <span className="text-[9px] px-1.5 py-0.2 rounded bg-amber-500/20 text-amber-600 dark:text-amber-400 font-mono">LOCKED</span>}
+        </button>
+
+        <button
+          onClick={() => setActiveSubTab('monitor')}
+          className={`flex-1 min-w-[140px] py-2.5 px-4 rounded-xl text-xs font-extrabold transition flex items-center justify-center gap-2 cursor-pointer ${
+            activeSubTab === 'monitor'
+              ? 'bg-blue-600 text-white shadow-md'
+              : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800'
+          }`}
+        >
+          {isAdminAuth ? <Activity className="w-4 h-4 text-white" /> : <Lock className="w-4 h-4 text-amber-500" />}
+          <span>Web Monitor & Telemetry</span>
           {!isAdminAuth && <span className="text-[9px] px-1.5 py-0.2 rounded bg-amber-500/20 text-amber-600 dark:text-amber-400 font-mono">LOCKED</span>}
         </button>
       </div>
@@ -676,6 +709,7 @@ export default function CreatorAdminHQ({
             </div>
 
             <AdminQuestionManager
+              initialStudioMode={adminStudioInitialMode}
               questions={questions}
               mockPapers={mockPapers}
               customMockPapers={customMockPapers}
@@ -757,6 +791,83 @@ export default function CreatorAdminHQ({
             </div>
 
             <AdminUserRoleManager currentStudent={currentStudent} />
+          </div>
+        )
+      )}
+
+      {/* TAB 5: WEB MONITOR & TELEMETRY */}
+      {activeSubTab === 'monitor' && (
+        !isAdminAuth ? (
+          <div className="max-w-md mx-auto my-12 p-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-xl space-y-6 text-center animate-in zoom-in-95">
+            <div className="w-16 h-16 rounded-2xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-900 flex items-center justify-center mx-auto text-blue-600 dark:text-blue-400 shadow-inner">
+              <Lock className="w-8 h-8" />
+            </div>
+
+            <div className="space-y-1">
+              <h3 className="text-lg font-extrabold text-slate-900 dark:text-white">
+                Platform Telemetry & Monitor Locked
+              </h3>
+              <p className="text-xs text-slate-500 dark:text-slate-400">
+                Enter your administrative security passcode to view live active users, network latency, storage health, student account inspector, and system telemetry.
+              </p>
+            </div>
+
+            <form onSubmit={handleUnlockAdmin} className="space-y-4">
+              <div className="relative">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Enter Admin Passcode"
+                  value={adminPasscode}
+                  onChange={(e) => setAdminPasscode(e.target.value)}
+                  className="w-full px-4 py-3 bg-white dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded-2xl text-xs font-mono text-center tracking-widest text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 placeholder:opacity-100 outline-none focus:ring-2 focus:ring-blue-500 shadow-2xs"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"
+                >
+                  {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                </button>
+              </div>
+
+              {passcodeError && (
+                <div className="p-2.5 rounded-xl bg-rose-50 dark:bg-rose-950/60 border border-rose-200 dark:border-rose-900 text-rose-600 dark:text-rose-400 text-xs font-bold animate-in fade-in">
+                  {passcodeError}
+                </div>
+              )}
+
+              <button
+                type="submit"
+                className="w-full py-3 px-4 bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-xs rounded-2xl shadow-md transition flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <KeyRound className="w-4 h-4" />
+                <span>Unlock Telemetry Monitor</span>
+              </button>
+            </form>
+          </div>
+        ) : (
+          <div className="space-y-4 animate-in fade-in">
+            {/* Admin Live Sync & Lock Banner */}
+            <div className="bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-900 rounded-2xl p-3 sm:p-4 flex items-center justify-between gap-3 text-xs">
+              <div className="flex items-center gap-2 font-bold text-blue-800 dark:text-blue-300">
+                <span className="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse" />
+                <span>Live Telemetry Engine Active — Monitoring health, traffic, & data persistence.</span>
+              </div>
+
+              <button
+                onClick={handleLockAdmin}
+                className="px-3 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:bg-rose-50 hover:text-rose-600 text-slate-700 dark:text-slate-300 font-extrabold text-xs transition flex items-center gap-1.5 cursor-pointer shadow-xs"
+                title="Lock Studio"
+              >
+                <Lock className="w-3.5 h-3.5" />
+                <span>Lock Studio</span>
+              </button>
+            </div>
+
+            <CreatorWebMonitor 
+              onOpenQuestionStudio={() => { setAdminStudioInitialMode('reported-issues'); setActiveSubTab('admin'); }}
+              onOpenRoles={() => setActiveSubTab('roles')}
+            />
           </div>
         )
       )}
