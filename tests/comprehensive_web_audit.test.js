@@ -174,8 +174,8 @@ describe("FULL WEB AUDIT: Security, Data Storage, Functionality & Invariants", (
       assert.strictEqual(typeCounts.MCQ + typeCounts.MSQ + typeCounts.NAT, 1324);
     });
 
-    it("audits 50 Custom Mock Papers (3,250 questions, 65 Qs / 100M each)", () => {
-      for (let i = 1; i <= 50; i++) {
+    it("audits 30 Custom Mock Papers (1,950 questions, 65 Qs / 100M each)", () => {
+      for (let i = 1; i <= 30; i++) {
         const numStr = String(i).padStart(2, "0");
         const mockFile = path.resolve(projectRoot, `src/data/custom_mock_2027_${numStr}.json`);
         assert.ok(fs.existsSync(mockFile), `Mock file custom_mock_2027_${numStr}.json must exist`);

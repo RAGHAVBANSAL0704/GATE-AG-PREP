@@ -21,23 +21,23 @@
       "year": "2027",
       "qnum": 1,
       "section": "Section 8: General Aptitude",
-      "topic": "Verbal Aptitude",
-      "subtopic": "Basic English Grammar & Vocabulary",
+      "topic": "Quantitative Aptitude",
+      "subtopic": "Numerical Computation",
       "gate_section": "GA",
       "type": "MCQ",
       "marks": 1,
       "negative_marks": 0.3333333333333333,
-      "difficulty": "Hard",
-      "question": "Choose the word most nearly OPPOSITE in meaning to \"PARSIMONIOUS\".",
+      "question": "If $\\log_{10}(x) + \\log_{10}(x - 3) = 1$, the value of $x$ is:",
       "options": {
-        "A": "Frugal",
-        "B": "Lavish",
-        "C": "Meticulous",
-        "D": "Reticent"
+        "A": "5",
+        "B": "2",
+        "C": "-2",
+        "D": "10"
       },
-      "correct_answer": "B",
-      "solution": "\"Parsimonious\" means excessively unwilling to spend money or use resources (stingy). The opposite is \"lavish\" (extravagant, generous to excess).\nWhy the other options are wrong:\n(A) Frugal is a near-synonym of parsimonious, not its opposite.\n(C) Meticulous means extremely careful/precise; it is unrelated to spending behaviour.\n(D) Reticent means reserved in speech; it is unrelated in meaning to parsimonious.",
-      "isCustomUploaded": true
+      "correct_answer": "A",
+      "solution": "Using the logarithmic property $\\log_{10}(a) + \\log_{10}(b) = \\log_{10}(ab)$:\n$$\\log_{10}[x(x - 3)] = 1 \\implies x(x - 3) = 10^1 = 10$$\n$$x^2 - 3x - 10 = 0 \\implies (x - 5)(x + 2) = 0$$\nRoots are $x = 5$ or $x = -2$.\nSince the argument of a real logarithm must be strictly positive ($x > 3$), $x = -2$ is extraneous. Hence, $x = 5$.",
+      "isCustomUploaded": true,
+      "difficulty": "Moderate"
     },
     {
       "id": "GATE_2027_MOCK_26_Q02",
@@ -251,23 +251,23 @@
       "year": "2027",
       "qnum": 11,
       "section": "Section 1: Engineering Mathematics",
-      "topic": "Calculus",
-      "subtopic": "Limit, continuity and differentiability",
+      "topic": "Vector Calculus",
+      "subtopic": "Physical interpretations – line, surface and volume integrals",
       "gate_section": "AG",
       "type": "MCQ",
       "marks": 1,
       "negative_marks": 0.3333333333333333,
-      "difficulty": "Hard",
-      "question": "Evaluate: lim(x→0) [1 − cos(3x)] / x².",
+      "question": "The physical interpretation of the surface integral $\\iint_S \\vec{v} \\cdot \\hat{n} \\, dS$, where $\\vec{v}$ is the fluid velocity vector field and $\\hat{n}$ is the unit outward normal, represents the:",
       "options": {
-        "A": "4.5",
-        "B": "3",
-        "C": "9",
-        "D": "1.5"
+        "A": "Total volumetric flow rate (flux) of fluid crossing surface $S$",
+        "B": "Total kinetic energy of fluid enclosed by $S$",
+        "C": "Vorticity of fluid along the boundary of $S$",
+        "D": "Static pressure gradient acting across $S$"
       },
       "correct_answer": "A",
-      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Using 1 − cos(θ) ≈ θ²/2 for small θ, with θ = 3x: [1−cos(3x)]/x² → (9x²/2)/x² = 4.5.\nWhy the other options are wrong:\n(B) Uses the coefficient 'a' directly instead of a²/2 in the small-angle approximation.\n(C) Forgets to divide by 2 in the small-angle approximation, giving a²=9 instead of a²/2=4.5.\n(D) Uses a/2 instead of a²/2, a common substitution slip.",
-      "isCustomUploaded": true
+      "solution": "The dot product $\\vec{v} \\cdot \\hat{n}$ gives the normal component of fluid velocity across the surface element $dS$. Integrating over $S$ computes the net volumetric discharge rate $\\iint_S \\vec{v} \\cdot \\hat{n} \\, dS$ in $\\text{m}^3/\\text{s}$ passing through surface $S$.",
+      "isCustomUploaded": true,
+      "difficulty": "Easy"
     },
     {
       "id": "GATE_2027_MOCK_26_Q12",
@@ -297,23 +297,23 @@
       "year": "2027",
       "qnum": 13,
       "section": "Section 1: Engineering Mathematics",
-      "topic": "Linear Algebra",
-      "subtopic": "Linear and orthogonal transformations",
+      "topic": "Vector Calculus",
+      "subtopic": "Stokes, Gauss and Green's theorems",
       "gate_section": "AG",
       "type": "MCQ",
       "marks": 1,
       "negative_marks": 0.3333333333333333,
-      "difficulty": "Hard",
-      "question": "The rank of the matrix [[1,2,3],[2,4,6],[1,1,1]] is:",
+      "question": "Gauss's Divergence Theorem transforms:",
       "options": {
-        "A": "1",
-        "B": "2",
-        "C": "3",
-        "D": "0"
+        "A": "A line integral around a closed curve into a surface integral",
+        "B": "A surface integral over a closed surface into a volume integral",
+        "C": "A line integral into a volume integral",
+        "D": "A volume integral into a line integral"
       },
       "correct_answer": "B",
-      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Row 2 = 2×Row 1, so rows 1 and 2 are linearly dependent. Rows 1 and 3 are independent of each other. Hence rank = 2.\nWhy the other options are wrong:\n(A) Would require all three rows to be proportional, which is not the case here.\n(C) Would require all three rows to be linearly independent, but row 2 is dependent on row 1.\n(D) A zero matrix would have rank 0; this matrix is clearly non-zero.",
-      "isCustomUploaded": true
+      "solution": "Gauss's Divergence Theorem states:\n$$\\iint_S \\vec{F} \\cdot \\hat{n} \\, dS = \\iiint_V (\\nabla \\cdot \\vec{F}) \\, dV$$\nIt relates the outward flux of a vector field through a closed boundary surface $S$ to the volume integral of its divergence over the enclosed region $V$.",
+      "isCustomUploaded": true,
+      "difficulty": "Moderate"
     },
     {
       "id": "GATE_2027_MOCK_26_Q14",
@@ -730,23 +730,23 @@
       "year": "2027",
       "qnum": 34,
       "section": "Section 7: Dairy and Food Engineering",
-      "topic": "Preservation of Food",
-      "subtopic": "Preservation of food by cooling and freezing",
+      "topic": "Heat and Mass Transfer",
+      "subtopic": "Water activity, sorption and desorption isotherms",
       "gate_section": "AG",
       "type": "MCQ",
       "marks": 1,
       "negative_marks": 0.3333333333333333,
-      "difficulty": "Hard",
-      "question": "Pasteurization of milk primarily aims to:",
+      "question": "Most agricultural and starchy food products (such as grains, flours, and pulses) exhibit which type of BET moisture sorption isotherm classification?",
       "options": {
-        "A": "destroy pathogenic microorganisms while retaining nutritional and sensory quality",
-        "B": "sterilize the milk completely, destroying all microorganisms and spores",
-        "C": "increase shelf life indefinitely at room temperature",
-        "D": "concentrate the milk solids"
+        "A": "Type II (Sigmoidal S-shaped isotherm)",
+        "B": "Type I (Langmuir monolayer isotherm)",
+        "C": "Type III (Flory-Huggins solvent swelling isotherm)",
+        "D": "Type V (Capillary condensation on porous non-wetting adsorbents)"
       },
       "correct_answer": "A",
-      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Pasteurization is a mild heat treatment designed to destroy pathogenic organisms and reduce spoilage organisms while minimizing changes to nutritional value, flavour, and other sensory attributes.\nWhy the other options are wrong:\n(B) This describes sterilization, a much more intense heat process, not pasteurization.\n(C) Pasteurized milk still requires refrigeration; it does not have indefinite shelf life at room temperature.\n(D) Concentration is achieved by evaporation, not pasteurization.",
-      "isCustomUploaded": true
+      "solution": "Starchy and protein-rich agricultural food products exhibit Type II sigmoidal sorption isotherms. The curve shows an inflection representing the completion of a monomolecular water layer (Zone I), followed by multimolecular layer adsorption (Zone II), and capillary condensation of free water at high water activities (Zone III).",
+      "isCustomUploaded": true,
+      "difficulty": "Moderate"
     },
     {
       "id": "GATE_2027_MOCK_26_Q35",

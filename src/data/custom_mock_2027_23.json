@@ -548,23 +548,23 @@
       "year": "2027",
       "qnum": 25,
       "section": "Section 4: Soil and Water Conservation Engineering",
-      "topic": "Hydrology",
-      "subtopic": "Hydrological cycle and measurement of its components",
+      "topic": "Fluid Mechanics",
+      "subtopic": "Dimensional analysis – concepts of geometric dimensionless numbers",
       "gate_section": "AG",
       "type": "MCQ",
       "marks": 1,
       "negative_marks": 0.3333333333333333,
-      "difficulty": "Hard",
-      "question": "The time of concentration of a watershed is defined as the time required for",
+      "question": "In hydraulic similitude and model testing of open channels, spillways, and weirs, dynamic similarity is governed primarily by equality of the:",
       "options": {
-        "A": "the first drop of rain to reach the outlet",
-        "B": "water from the most hydraulically remote point in the watershed to reach the outlet",
-        "C": "the peak of the hydrograph to occur after the rainfall ceases",
-        "D": "the entire watershed area to become fully saturated"
+        "A": "Reynolds number",
+        "B": "Froude number",
+        "C": "Weber number",
+        "D": "Mach number"
       },
       "correct_answer": "B",
-      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Time of concentration (tc) is formally defined as the time required for runoff to travel from the hydraulically most distant point in the watershed (in terms of flow travel time, not necessarily straight-line distance) to the watershed outlet.\n(A) is incorrect because it describes the time of arrival of the very first raindrop's effect, not the full travel-time definition.\n(C) describes lag time / time to peak, which is a related but distinct hydrological concept.\n(D) describes a different, unrelated concept (infiltration saturation), not time of concentration.",
-      "isCustomUploaded": true
+      "solution": "In free-surface flows (such as spillways, open channels, and weirs), gravity is the predominant fluid force resisting inertia. Hence, the Froude number ($Fr = \\frac{V}{\\sqrt{g L}}$) governs the dynamic similitude.",
+      "isCustomUploaded": true,
+      "difficulty": "Easy"
     },
     {
       "id": "GATE_2027_MOCK_23_Q26",
@@ -636,17 +636,17 @@
       "type": "MCQ",
       "marks": 1,
       "negative_marks": 0.3333333333333333,
-      "difficulty": "Hard",
-      "question": "During the constant-rate period of drying, the rate of moisture removal is primarily controlled by",
+      "question": "In spray drying of heat-sensitive liquid foods such as milk and fruit juices, co-current airflow is predominantly chosen over counter-current airflow primarily because:",
       "options": {
-        "A": "internal moisture diffusion within the solid",
-        "B": "external heat and mass transfer conditions at the surface",
-        "C": "the equilibrium moisture content of the product",
-        "D": "the bound-water content of the material"
+        "A": "The hottest drying air contacts the wettest droplets, keeping droplet temperature low due to evaporative cooling",
+        "B": "It completely eliminates the need for cyclone separators",
+        "C": "Counter-current airflow produces zero exhaust humidity",
+        "D": "Co-current flow prevents any moisture evaporation in the upper chamber"
       },
-      "correct_answer": "B",
-      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): During the constant-rate period, a continuous film of free (unbound) water is present at the surface of the material, so the drying rate is governed by the external conditions of heat and mass transfer (air temperature, humidity, velocity) at the surface, not by internal resistance.\n(A) Internal moisture diffusion becomes the controlling mechanism only later, during the FALLING-rate period, once surface moisture is depleted.\n(C) Equilibrium moisture content marks the endpoint of drying, not the controlling mechanism of the constant-rate period.\n(D) Bound water becomes relevant during the falling-rate period, not the constant-rate period, which involves free surface water.",
-      "isCustomUploaded": true
+      "correct_answer": "A",
+      "solution": "In co-current spray drying, atomized droplets encounter the hottest drying air when their moisture content is highest. Rapid wet-bulb evaporation keeps droplet temperatures low, protecting heat-sensitive proteins, vitamins, and sugars from thermal denaturation.",
+      "isCustomUploaded": true,
+      "difficulty": "Easy"
     },
     {
       "id": "GATE_2027_MOCK_23_Q30",

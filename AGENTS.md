@@ -5,7 +5,7 @@ Refer to [`PROJECT_CONTEXT.md`](file:///Users/raghav/Desktop/GATE%20AG%20PREP%20
 ## 1. Absolute System Invariants & Guardrails
 - **Official PYQ Integrity**: `src/data/questions.json` contains strictly the 1,324 official GATE AG PYQs (2007–2026). NEVER append mock tests or custom questions to `questions.json`.
 - **Custom Mock Papers**: 50 full-length mocks reside in `src/data/custom_mock_2027_01.json` through `custom_mock_2027_50.json`, ingested in `allCustomMockPapers` in `src/App.jsx`. Master reference docx files reside in developer archive `QUESTIONS/MOCK TESTS/MOCK XX GATE AG.docx`. Static binary DOCX/PDF downloads have been removed from `public/downloads/` to safeguard against copyright infringement and optimize storage; papers are exported dynamically on-the-fly as clean, plain-text/print-optimized A4 PDFs via `questionPdfExportService.js`.
-- **Verification Commands**: `npm test` runs 826 tests across 156 suites (100% pass, exit 0). `npm run build` compiles Vite bundle into `dist/`.
+- **Verification Commands**: `npm test` runs 836 tests across 158 suites (100% pass, exit 0). `npm run build` compiles Vite bundle into `dist/`.
 - **Entry Points**: App (`src/App.jsx`), Scoring (`src/utils/scoring.js`, `tests/scoring.test.js`), Offline Sync (`src/services/testAttemptService.js`), SW (`public/sw.js`).
 - **CBT Palette States**: `NOT_VISITED`, `NOT_ANSWERED`, `ANSWERED`, `MARKED`, `ANSWERED_MARKED`.
 - **Offline Rule**: 100% offline functionality with graceful `localStorage` fallback.

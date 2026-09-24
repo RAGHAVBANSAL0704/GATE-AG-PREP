@@ -15,6 +15,10 @@ import { getMistakeVault, getVaultStorageKey, getEffectiveStudentId } from './mi
 export const LOCAL_STORAGE_USER_STATS_KEY = 'gate_ag_user_stats';
 export const LOCAL_STORAGE_BOOKMARKS_PREFIX = 'gate_ag_bookmarks';
 export const LOCAL_STORAGE_PRACTICE_PREFIX = 'gate_ag_practice_progress';
+export const LOCAL_STORAGE_SYLLABUS_PREFIX = 'gate_ag_progress';
+export const LOCAL_STORAGE_CONCEPT_BM_PREFIX = 'gate_ag_bookmarked_concepts';
+export const LOCAL_STORAGE_FARM_PREFIX = 'gate_ag_virtual_farm_state';
+export const LOCAL_STORAGE_ACTIVE_CBT_PREFIX = 'gate_ag_active_cbt_session';
 
 /**
  * Get account-scoped userStats key in localStorage
@@ -81,6 +85,62 @@ export function getLocalBookmarks(sid = null) {
     return raw ? JSON.parse(raw) : [];
   } catch (e) {
     return [];
+  }
+}
+
+/**
+ * Retrieve local account-scoped syllabus tracker progress
+ */
+export function getLocalSyllabusProgress(sid = null) {
+  const effectiveSid = getEffectiveStudentId(sid);
+  try {
+    const key = effectiveSid && effectiveSid !== 'default_student' ? `${LOCAL_STORAGE_SYLLABUS_PREFIX}_${effectiveSid}` : LOCAL_STORAGE_SYLLABUS_PREFIX;
+    const raw = typeof localStorage !== 'undefined' ? localStorage.getItem(key) || localStorage.getItem(LOCAL_STORAGE_SYLLABUS_PREFIX) : null;
+    return raw ? JSON.parse(raw) : {};
+  } catch (e) {
+    return {};
+  }
+}
+
+/**
+ * Retrieve local account-scoped concept bookmarks
+ */
+export function getLocalConceptBookmarks(sid = null) {
+  const effectiveSid = getEffectiveStudentId(sid);
+  try {
+    const key = effectiveSid && effectiveSid !== 'default_student' ? `${LOCAL_STORAGE_CONCEPT_BM_PREFIX}_${effectiveSid}` : LOCAL_STORAGE_CONCEPT_BM_PREFIX;
+    const raw = typeof localStorage !== 'undefined' ? localStorage.getItem(key) || localStorage.getItem(LOCAL_STORAGE_CONCEPT_BM_PREFIX) : null;
+    return raw ? JSON.parse(raw) : [];
+  } catch (e) {
+    return [];
+  }
+}
+
+/**
+ * Retrieve local account-scoped virtual farm state
+ */
+export function getLocalFarmState(sid = null) {
+  const effectiveSid = getEffectiveStudentId(sid);
+  try {
+    const key = effectiveSid && effectiveSid !== 'default_student' ? `${LOCAL_STORAGE_FARM_PREFIX}_${effectiveSid}` : LOCAL_STORAGE_FARM_PREFIX;
+    const raw = typeof localStorage !== 'undefined' ? localStorage.getItem(key) || localStorage.getItem(LOCAL_STORAGE_FARM_PREFIX) : null;
+    return raw ? JSON.parse(raw) : null;
+  } catch (e) {
+    return null;
+  }
+}
+
+/**
+ * Retrieve local account-scoped in-progress CBT mock session draft
+ */
+export function getLocalActiveCbtSession(sid = null) {
+  const effectiveSid = getEffectiveStudentId(sid);
+  try {
+    const key = effectiveSid && effectiveSid !== 'default_student' ? `${LOCAL_STORAGE_ACTIVE_CBT_PREFIX}_${effectiveSid}` : LOCAL_STORAGE_ACTIVE_CBT_PREFIX;
+    const raw = typeof localStorage !== 'undefined' ? localStorage.getItem(key) || localStorage.getItem(LOCAL_STORAGE_ACTIVE_CBT_PREFIX) : null;
+    return raw ? JSON.parse(raw) : null;
+  } catch (e) {
+    return null;
   }
 }
 
@@ -252,12 +312,20 @@ export async function fetchAndMergeMistakeVault(student) {
   const localVault = getMistakeVault(sid);
   const localBookmarks = getLocalBookmarks(sid);
   const localPractice = getLocalPracticeProgress(sid);
+  const localSyllabus = getLocalSyllabusProgress(sid);
+  const localConceptBookmarks = getLocalConceptBookmarks(sid);
+  const localFarm = getLocalFarmState(sid);
+  const localActiveCbt = getLocalActiveCbtSession(sid);
 
   if (!isSupabaseConfigured || !supabase || !sid || sid === 'default_student') {
     return {
       mistakes: localVault,
       bookmarks: localBookmarks,
-      practiceProgress: localPractice
+      practiceProgress: localPractice,
+      syllabusProgress: localSyllabus,
+      conceptBookmarks: localConceptBookmarks,
+      farmState: localFarm,
+      activeCbtSession: localActiveCbt
     };
   }
 
@@ -276,6 +344,10 @@ export async function fetchAndMergeMistakeVault(student) {
       const remoteMistakes = isEnhanced ? (remoteData.mistakes || {}) : remoteData;
       const remoteBookmarks = isEnhanced && Array.isArray(remoteData.bookmarks) ? remoteData.bookmarks : [];
       const remotePractice = isEnhanced && remoteData.practiceProgress && typeof remoteData.practiceProgress === 'object' ? remoteData.practiceProgress : {};
+      const remoteSyllabus = (isEnhanced && remoteData.syllabusProgress && typeof remoteData.syllabusProgress === 'object') ? remoteData.syllabusProgress : {};
+      const remoteConceptBookmarks = (isEnhanced && Array.isArray(remoteData.conceptBookmarks)) ? remoteData.conceptBookmarks : [];
+      const remoteFarm = (isEnhanced && remoteData.farmState && typeof remoteData.farmState === 'object') ? remoteData.farmState : null;
+      const remoteActiveCbt = (isEnhanced && remoteData.activeCbtSession && typeof remoteData.activeCbtSession === 'object') ? remoteData.activeCbtSession : null;
 
       // 1. Merge mistakes
       const mergedVault = { ...localVault };
@@ -311,6 +383,8 @@ export async function fetchAndMergeMistakeVault(student) {
           mergedPractice[qid] = r;
         } else {
           mergedPractice[qid] = {
+            ...l,
+            ...r,
             attempted: true,
             isCorrect: Boolean(l.isCorrect || r.isCorrect),
             marksAwarded: Math.max(Number(l.marksAwarded || 0), Number(r.marksAwarded || 0)),
@@ -322,6 +396,18 @@ export async function fetchAndMergeMistakeVault(student) {
           };
         }
       });
+
+      // 4. Merge syllabus progress
+      const mergedSyllabus = { ...localSyllabus, ...remoteSyllabus };
+
+      // 5. Merge concept bookmarks
+      const mergedConceptBookmarks = Array.from(new Set([...localConceptBookmarks, ...remoteConceptBookmarks]));
+
+      // 6. Merge farm state
+      const mergedFarm = remoteFarm ? { ...(localFarm || {}), ...remoteFarm } : localFarm;
+
+      // 7. Merge active CBT session
+      const mergedActiveCbt = remoteActiveCbt || localActiveCbt;
 
       // Save merged datasets locally
       if (typeof localStorage !== 'undefined') {
@@ -336,22 +422,52 @@ export async function fetchAndMergeMistakeVault(student) {
         localStorage.setItem(practiceKey, JSON.stringify(mergedPractice));
         localStorage.setItem(`gate_ag_pyq_progress_${sid}`, JSON.stringify(mergedPractice));
         localStorage.setItem(`gate_ag_qbank_progress_${sid}`, JSON.stringify(mergedPractice));
+
+        localStorage.setItem(`${LOCAL_STORAGE_SYLLABUS_PREFIX}_${sid}`, JSON.stringify(mergedSyllabus));
+        localStorage.setItem(LOCAL_STORAGE_SYLLABUS_PREFIX, JSON.stringify(mergedSyllabus));
+
+        localStorage.setItem(`${LOCAL_STORAGE_CONCEPT_BM_PREFIX}_${sid}`, JSON.stringify(mergedConceptBookmarks));
+        localStorage.setItem(LOCAL_STORAGE_CONCEPT_BM_PREFIX, JSON.stringify(mergedConceptBookmarks));
+
+        if (mergedFarm) {
+          localStorage.setItem(`${LOCAL_STORAGE_FARM_PREFIX}_${sid}`, JSON.stringify(mergedFarm));
+          localStorage.setItem(LOCAL_STORAGE_FARM_PREFIX, JSON.stringify(mergedFarm));
+        }
+
+        if (mergedActiveCbt) {
+          localStorage.setItem(`${LOCAL_STORAGE_ACTIVE_CBT_PREFIX}_${sid}`, JSON.stringify(mergedActiveCbt));
+          localStorage.setItem(LOCAL_STORAGE_ACTIVE_CBT_PREFIX, JSON.stringify(mergedActiveCbt));
+        }
       }
 
       // If local device had items not present in remote, sync merged payload back to cloud
       const hasLocalAdditions = 
         Object.keys(localVault).some(k => !remoteMistakes[k]) ||
         localBookmarks.some(k => !remoteBookmarks.includes(k)) ||
-        Object.keys(localPractice).some(k => !remotePractice[k]);
+        Object.keys(localPractice).some(k => !remotePractice[k]) ||
+        Object.keys(localSyllabus).some(k => !remoteSyllabus[k]) ||
+        localConceptBookmarks.some(k => !remoteConceptBookmarks.includes(k));
 
       if (hasLocalAdditions) {
-        scheduleUnifiedVaultSync(sid, mergedVault, mergedBookmarks, mergedPractice);
+        scheduleUnifiedVaultSync(sid, {
+          mistakes: mergedVault,
+          bookmarks: mergedBookmarks,
+          practiceProgress: mergedPractice,
+          syllabusProgress: mergedSyllabus,
+          conceptBookmarks: mergedConceptBookmarks,
+          farmState: mergedFarm,
+          activeCbtSession: mergedActiveCbt
+        });
       }
 
       return {
         mistakes: mergedVault,
         bookmarks: mergedBookmarks,
-        practiceProgress: mergedPractice
+        practiceProgress: mergedPractice,
+        syllabusProgress: mergedSyllabus,
+        conceptBookmarks: mergedConceptBookmarks,
+        farmState: mergedFarm,
+        activeCbtSession: mergedActiveCbt
       };
     }
   } catch (e) {
@@ -361,7 +477,11 @@ export async function fetchAndMergeMistakeVault(student) {
   return {
     mistakes: localVault,
     bookmarks: localBookmarks,
-    practiceProgress: localPractice
+    practiceProgress: localPractice,
+    syllabusProgress: localSyllabus,
+    conceptBookmarks: localConceptBookmarks,
+    farmState: localFarm,
+    activeCbtSession: localActiveCbt
   };
 }
 
@@ -369,14 +489,44 @@ let syncTimer = null;
 let pendingSid = null;
 let pendingPayload = null;
 
-function scheduleUnifiedVaultSync(sid, mistakes, bookmarks, practiceProgress) {
+export function scheduleUnifiedVaultSync(sid, mistakesOrOverrides, bookmarks, practiceProgress) {
   pendingSid = sid;
+
+  let overrides = {};
+  if (mistakesOrOverrides && typeof mistakesOrOverrides === 'object' && !Array.isArray(mistakesOrOverrides) && (
+    mistakesOrOverrides.mistakes !== undefined ||
+    mistakesOrOverrides.practiceProgress !== undefined ||
+    mistakesOrOverrides.syllabusProgress !== undefined ||
+    mistakesOrOverrides.conceptBookmarks !== undefined ||
+    mistakesOrOverrides.farmState !== undefined ||
+    mistakesOrOverrides.activeCbtSession !== undefined ||
+    mistakesOrOverrides.bookmarks !== undefined
+  )) {
+    overrides = mistakesOrOverrides;
+  } else {
+    if (mistakesOrOverrides) overrides.mistakes = mistakesOrOverrides;
+    if (bookmarks) overrides.bookmarks = bookmarks;
+    if (practiceProgress) overrides.practiceProgress = practiceProgress;
+  }
+
+  const currentMistakes = overrides.mistakes !== undefined ? overrides.mistakes : getMistakeVault(sid);
+  const currentBookmarks = overrides.bookmarks !== undefined ? overrides.bookmarks : getLocalBookmarks(sid);
+  const currentPractice = overrides.practiceProgress !== undefined ? overrides.practiceProgress : getLocalPracticeProgress(sid);
+  const currentSyllabus = overrides.syllabusProgress !== undefined ? overrides.syllabusProgress : getLocalSyllabusProgress(sid);
+  const currentConceptBm = overrides.conceptBookmarks !== undefined ? overrides.conceptBookmarks : getLocalConceptBookmarks(sid);
+  const currentFarm = overrides.farmState !== undefined ? overrides.farmState : getLocalFarmState(sid);
+  const currentActiveCbt = overrides.activeCbtSession !== undefined ? overrides.activeCbtSession : getLocalActiveCbtSession(sid);
+
   pendingPayload = {
     student_identifier: sid,
     vault_data: {
-      mistakes,
-      bookmarks,
-      practiceProgress,
+      mistakes: currentMistakes,
+      bookmarks: currentBookmarks,
+      practiceProgress: currentPractice,
+      syllabusProgress: currentSyllabus,
+      conceptBookmarks: currentConceptBm,
+      farmState: currentFarm,
+      activeCbtSession: currentActiveCbt,
       updated_at: new Date().toISOString()
     },
     updated_at: new Date().toISOString()
@@ -456,9 +606,14 @@ export function pushPracticeProgressUpdate(student, qid, progressEntry) {
     }
   } catch (e) {}
 
-  const localVault = getMistakeVault(sid);
-  const localBookmarks = getLocalBookmarks(sid);
-  scheduleUnifiedVaultSync(sid, localVault, localBookmarks, localPractice);
+  scheduleUnifiedVaultSync(sid, { practiceProgress: localPractice });
+
+  // Broadcast immediate local event for zero-latency UI reactivity
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new CustomEvent('gate_ag_practice_progress_updated', {
+      detail: { qid, qId: qid, progressEntry: localPractice[qid] }
+    }));
+  }
 }
 
 /**
@@ -477,9 +632,109 @@ export function pushBookmarksUpdate(student, bookmarks) {
     }
   } catch (e) {}
 
-  const localVault = getMistakeVault(sid);
-  const localPractice = getLocalPracticeProgress(sid);
-  scheduleUnifiedVaultSync(sid, localVault, bookmarks, localPractice);
+  scheduleUnifiedVaultSync(sid, { bookmarks });
+}
+
+/**
+ * Push updated syllabus tracker progress to cloud sync
+ */
+export function pushSyllabusProgressUpdate(student, syllabusProgress) {
+  if (!student || !syllabusProgress) return;
+  const sid = getEffectiveStudentId(student.id || student.admission_no || student.email || student.username);
+  if (!sid || sid === 'default_student') return;
+
+  try {
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem(`${LOCAL_STORAGE_SYLLABUS_PREFIX}_${sid}`, JSON.stringify(syllabusProgress));
+      localStorage.setItem(LOCAL_STORAGE_SYLLABUS_PREFIX, JSON.stringify(syllabusProgress));
+    }
+  } catch (e) {}
+
+  scheduleUnifiedVaultSync(sid, { syllabusProgress });
+
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new CustomEvent('gate_ag_syllabus_progress_updated', {
+      detail: { syllabusProgress }
+    }));
+  }
+}
+
+/**
+ * Push updated concept bookmarks to cloud sync
+ */
+export function pushConceptBookmarksUpdate(student, conceptBookmarks) {
+  if (!student || !Array.isArray(conceptBookmarks)) return;
+  const sid = getEffectiveStudentId(student.id || student.admission_no || student.email || student.username);
+  if (!sid || sid === 'default_student') return;
+
+  try {
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem(`${LOCAL_STORAGE_CONCEPT_BM_PREFIX}_${sid}`, JSON.stringify(conceptBookmarks));
+      localStorage.setItem(LOCAL_STORAGE_CONCEPT_BM_PREFIX, JSON.stringify(conceptBookmarks));
+    }
+  } catch (e) {}
+
+  scheduleUnifiedVaultSync(sid, { conceptBookmarks });
+
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new CustomEvent('gate_ag_concept_bookmarks_updated', {
+      detail: { conceptBookmarks }
+    }));
+  }
+}
+
+/**
+ * Push in-progress CBT mock session draft to cloud sync
+ */
+export function pushActiveCbtSessionUpdate(student, sessionData) {
+  if (!student || !sessionData) return;
+  const sid = getEffectiveStudentId(student.id || student.admission_no || student.email || student.username);
+  if (!sid || sid === 'default_student') return;
+
+  try {
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem(`${LOCAL_STORAGE_ACTIVE_CBT_PREFIX}_${sid}`, JSON.stringify(sessionData));
+      localStorage.setItem(LOCAL_STORAGE_ACTIVE_CBT_PREFIX, JSON.stringify(sessionData));
+    }
+  } catch (e) {}
+
+  scheduleUnifiedVaultSync(sid, { activeCbtSession: sessionData });
+}
+
+/**
+ * Clear in-progress CBT mock session draft upon test submission or discard
+ */
+export function clearActiveCbtSession(student) {
+  if (!student) return;
+  const sid = getEffectiveStudentId(student.id || student.admission_no || student.email || student.username);
+  if (!sid || sid === 'default_student') return;
+
+  try {
+    if (typeof localStorage !== 'undefined') {
+      localStorage.removeItem(`${LOCAL_STORAGE_ACTIVE_CBT_PREFIX}_${sid}`);
+      localStorage.removeItem(LOCAL_STORAGE_ACTIVE_CBT_PREFIX);
+    }
+  } catch (e) {}
+
+  scheduleUnifiedVaultSync(sid, { activeCbtSession: null });
+}
+
+/**
+ * Push virtual farm state to cloud sync
+ */
+export function pushFarmStateUpdate(student, farmState) {
+  if (!student || !farmState) return;
+  const sid = getEffectiveStudentId(student.id || student.admission_no || student.email || student.username);
+  if (!sid || sid === 'default_student') return;
+
+  try {
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem(`${LOCAL_STORAGE_FARM_PREFIX}_${sid}`, JSON.stringify(farmState));
+      localStorage.setItem(LOCAL_STORAGE_FARM_PREFIX, JSON.stringify(farmState));
+    }
+  } catch (e) {}
+
+  scheduleUnifiedVaultSync(sid, { farmState });
 }
 
 /**
@@ -603,6 +858,10 @@ export async function syncStudentCloudData(student, currentLocalStats = null) {
     const mistakes = cloudVaultData?.mistakes || cloudVaultData || {};
     const bookmarks = Array.isArray(cloudVaultData?.bookmarks) ? cloudVaultData.bookmarks : getLocalBookmarks(sid);
     const practiceProgress = cloudVaultData?.practiceProgress || getLocalPracticeProgress(sid);
+    const syllabusProgress = cloudVaultData?.syllabusProgress || getLocalSyllabusProgress(sid);
+    const conceptBookmarks = Array.isArray(cloudVaultData?.conceptBookmarks) ? cloudVaultData.conceptBookmarks : getLocalConceptBookmarks(sid);
+    const farmState = cloudVaultData?.farmState || getLocalFarmState(sid);
+    const activeCbtSession = cloudVaultData?.activeCbtSession || getLocalActiveCbtSession(sid);
 
     // 3. Dispatch global custom event for reactive UI updates across all components
     if (typeof window !== 'undefined') {
@@ -617,6 +876,10 @@ export async function syncStudentCloudData(student, currentLocalStats = null) {
           mistakeVault: mistakes,
           bookmarks,
           practiceProgress,
+          syllabusProgress,
+          conceptBookmarks,
+          farmState,
+          activeCbtSession,
           xpPoints: freshXP
         }
       }));
@@ -627,6 +890,10 @@ export async function syncStudentCloudData(student, currentLocalStats = null) {
       mistakeVault: mistakes,
       bookmarks,
       practiceProgress,
+      syllabusProgress,
+      conceptBookmarks,
+      farmState,
+      activeCbtSession,
       xpPoints: freshXP,
       synced: true
     };
@@ -637,6 +904,10 @@ export async function syncStudentCloudData(student, currentLocalStats = null) {
       mistakeVault: getMistakeVault(),
       bookmarks: getLocalBookmarks(),
       practiceProgress: getLocalPracticeProgress(),
+      syllabusProgress: getLocalSyllabusProgress(sid),
+      conceptBookmarks: getLocalConceptBookmarks(sid),
+      farmState: getLocalFarmState(sid),
+      activeCbtSession: getLocalActiveCbtSession(sid),
       xpPoints: null,
       synced: false
     };

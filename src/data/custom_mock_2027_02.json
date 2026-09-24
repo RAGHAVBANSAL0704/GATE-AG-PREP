@@ -67,23 +67,23 @@
       "year": "2027",
       "qnum": 3,
       "section": "Section 8: General Aptitude",
+      "topic": "Verbal Aptitude",
       "subtopic": "Basic English Grammar & Vocabulary",
       "gate_section": "GA",
       "type": "MCQ",
       "marks": 1,
       "negative_marks": 0.3333333333333333,
-      "question": "Select the grammatically correct sentence.",
+      "question": "Choose the most appropriate word to complete the sentence:\n\"Neither the project manager nor the field engineers ________ informed about the sudden postponement of the soil survey.\"",
       "options": {
-        "A": "Each of the students have submitted their assignment.",
-        "B": "Each of the students has submitted his or her assignment.",
-        "C": "Each of the student have submitted the assignment.",
-        "D": "Each of the students were submitting their assignment."
+        "A": "was",
+        "B": "were",
+        "C": "has",
+        "D": "is"
       },
       "correct_answer": "B",
-      "solution": "Q.3 Solution:• Correct Answer: B• Section: General Aptitude | Sub-topic: Verbal Ability — Grammar (Pronoun-Antecedent Agreement) | Type: MCQ | Marks: 1Q.3   Verbal Ability — Grammar (Pronoun-Antecedent Agreement)Type & Marks: MCQ — 1 markQuestion:Select the grammatically correct sentence.(A) Each of the students have submitted their assignment.(B) Each of the students has submitted his or her assignment.(C) Each of the student have submitted the assignment.(D) Each of the students were submitting their assignment.Answer: BDetailed Explanation:\"Each\" is a singular indefinite pronoun and always takes a singular verb (\"has\"), with the possessive matching in number as \"his or her\". Option (A) wrongly uses the plural verb \"have\" with the pronoun \"their\"; (C) has both a noun-number error (\"student\" should be \"students\") and a verb error; (D) uses the plural \"were\" and \"their\" against the singular \"each\".\n──────────────────────────────────────────────────",
+      "solution": "Subject-verb agreement rule with \"neither... nor\": when subjects of different numbers are joined by \"or\" or \"nor\", the verb agrees with the subject closest to it. Here, the closest subject is plural (\"field engineers\"), requiring the plural verb \"were\".",
       "isCustomUploaded": true,
-      "topic": "Verbal Aptitude",
-      "difficulty": "Hard"
+      "difficulty": "Easy"
     },
     {
       "id": "GATE_2027_MOCK_02_Q04",

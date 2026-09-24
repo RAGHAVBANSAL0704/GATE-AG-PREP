@@ -67,23 +67,23 @@
       "year": "2027",
       "qnum": 3,
       "section": "Section 8: General Aptitude",
-      "topic": "Verbal Aptitude",
-      "subtopic": "Basic English Grammar & Vocabulary",
+      "topic": "Analytical & Spatial Aptitude",
+      "subtopic": "Spatial Reasoning & 3D Representations",
       "gate_section": "GA",
       "type": "MCQ",
       "marks": 1,
       "negative_marks": 0.3333333333333333,
-      "difficulty": "Hard",
-      "question": "Choose the word most nearly OPPOSITE in meaning to “PARSIMONIOUS”.",
+      "question": "Premises:\n1. All certified seed drills require calibration prior to field sowing.\n2. Machine X does not require calibration prior to field sowing.\nWhat can be logically concluded regarding Machine X?",
       "options": {
-        "A": "Frugal",
-        "B": "Lavish",
-        "C": "Meticulous",
-        "D": "Reticent"
+        "A": "Machine X is a defective certified seed drill.",
+        "B": "Machine X is not a certified seed drill.",
+        "C": "Machine X is an automatic precision planter.",
+        "D": "Machine X operates without sowing seeds."
       },
       "correct_answer": "B",
-      "solution": "“Parsimonious” means excessively unwilling to spend money or use resources (stingy). Its opposite is “lavish”, meaning generously extravagant.\nWhy others are wrong: (A) “Frugal” is a near-synonym, not an opposite. (C) “Meticulous” (careful/precise) and (D) “Reticent” (reserved in speech) are unrelated in meaning to thrift.",
-      "isCustomUploaded": true
+      "solution": "This is a direct application of Modus Tollens (denying the consequent): If $P$ then $Q$. Not $Q$. Therefore, not $P$. Since Machine X does not require calibration, Machine X cannot be a certified seed drill.",
+      "isCustomUploaded": true,
+      "difficulty": "Easy"
     },
     {
       "id": "GATE_2027_MOCK_21_Q04",
@@ -251,23 +251,23 @@
       "year": "2027",
       "qnum": 11,
       "section": "Section 1: Engineering Mathematics",
-      "topic": "Calculus",
-      "subtopic": "Limit, continuity and differentiability",
+      "topic": "Vector Calculus",
+      "subtopic": "Scalar and vector point functions",
       "gate_section": "AG",
       "type": "MCQ",
       "marks": 1,
       "negative_marks": 0.3333333333333333,
-      "difficulty": "Hard",
-      "question": "Evaluate: lim(x→0) [ sin(3x) / tan(5x) ]",
+      "question": "A vector point function $\\vec{F}$ is called conservative (irrotational) in a simply connected domain if and only if:",
       "options": {
-        "A": "3/5",
-        "B": "5/3",
-        "C": "15",
-        "D": "1"
+        "A": "$\\nabla \\times \\vec{F} = \\vec{0}$",
+        "B": "$\\nabla \\cdot \\vec{F} = 0$",
+        "C": "$\\nabla^2 \\vec{F} = \\vec{0}$",
+        "D": "$\\vec{F} \\cdot d\\vec{r} = 0$ along any open curve"
       },
       "correct_answer": "A",
-      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): sin(3x)/tan(5x) = [sin(3x)/3x × 3x] / [tan(5x)/5x × 5x] = (3/5) × [sin(3x)/3x] / [tan(5x)/5x]. As x→0, sin(3x)/3x →1 and tan(5x)/5x →1, so the limit = 3/5.\nWhy others are wrong: (B) inverts the ratio 3/5. (C) results from multiplying instead of dividing the coefficients. (D) incorrectly assumes sin and tan cancel exactly regardless of coefficients.",
-      "isCustomUploaded": true
+      "solution": "A vector field $\\vec{F}$ is conservative if its curl vanishes everywhere ($\\nabla \\times \\vec{F} = \\vec{0}$). This is the necessary and sufficient condition for the existence of a single-valued scalar potential function $\\phi$ such that $\\vec{F} = \\nabla \\phi$, meaning line integrals are path-independent.",
+      "isCustomUploaded": true,
+      "difficulty": "Moderate"
     },
     {
       "id": "GATE_2027_MOCK_21_Q12",
@@ -725,23 +725,23 @@
       "year": "2027",
       "qnum": 34,
       "section": "Section 7: Dairy and Food Engineering",
-      "topic": "Preservation of Food",
-      "subtopic": "Preservation of food by cooling and freezing",
+      "topic": "Heat and Mass Transfer",
+      "subtopic": "Simultaneous heat and mass transfer in agricultural processing operations",
       "gate_section": "AG",
       "type": "MCQ",
       "marks": 1,
       "negative_marks": 0.3333333333333333,
-      "difficulty": "Hard",
-      "question": "Pasteurization of milk primarily aims to:",
+      "question": "The Lewis relation $\\frac{h_c}{k_y C_s} \\approx 1$ holds true for air-water vapour mixtures under normal ambient conditions primarily because:",
       "options": {
-        "A": "Sterilize milk completely, destroying all microorganisms including spores",
-        "B": "Destroy pathogenic microorganisms and reduce spoilage organisms while retaining nutritional and sensory quality",
-        "C": "Increase the fat content of milk",
-        "D": "Remove water content from milk"
+        "A": "The Lewis number $Le = \\frac{Sc}{Pr} = \\frac{\\alpha}{D_{AB}}$ is approximately equal to unity ($1.0$)",
+        "B": "The latent heat of vaporization of water is strictly zero",
+        "C": "Air has a higher thermal conductivity than pure liquid water",
+        "D": "Convective heat transfer occurs without any boundary layer formation"
       },
-      "correct_answer": "B",
-      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Pasteurization is a mild heat treatment designed to destroy pathogens and reduce spoilage-causing organisms, while minimizing changes to the nutritional and sensory quality of milk; it is not intended to be sterilizing.\nWhy others are wrong: (A) describes sterilization, which is a more severe process than pasteurization and does destroy spores, unlike pasteurization. (C) and (D) describe unrelated processes (standardization/concentration), not pasteurization.",
-      "isCustomUploaded": true
+      "correct_answer": "A",
+      "solution": "The Lewis relation arises from the Chilton-Colburn analogy for simultaneous heat and mass transfer. When $Le = \\frac{\\alpha}{D_{AB}} \\approx 1.0$, the thermal boundary layer and concentration boundary layer develop at identical rates, causing the wet-bulb temperature to coincide almost exactly with the adiabatic saturation temperature.",
+      "isCustomUploaded": true,
+      "difficulty": "Moderate"
     },
     {
       "id": "GATE_2027_MOCK_21_Q35",

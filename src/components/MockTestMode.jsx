@@ -59,6 +59,7 @@ import MockPaperAnalysisModal from './MockPaperAnalysisModal';
 import PdfExportOptionsModal from './PdfExportOptionsModal';
 import { getOfficialGatePaperMeta } from '../data/officialGatePapersMeta';
 import { exportPaperToPdf } from '../services/questionPdfExportService';
+import { pushActiveCbtSessionUpdate, clearActiveCbtSession } from '../services/studentProgressSyncService';
 
 export default function MockTestMode({ 
   mockPapers = [], 
@@ -240,6 +241,9 @@ export default function MockTestMode({
           isPaused: false
         };
         localStorage.setItem('gate_ag_active_cbt_session', JSON.stringify(sessionData));
+        if (currentStudent) {
+          try { pushActiveCbtSessionUpdate(currentStudent, sessionData); } catch (e) {}
+        }
       } catch (e) {
         console.warn('Failed to save CBT active session:', e);
       }
@@ -275,6 +279,9 @@ export default function MockTestMode({
             setRestoredSessionNotice(true);
           } else {
             localStorage.removeItem('gate_ag_active_cbt_session');
+            if (currentStudent) {
+              try { clearActiveCbtSession(currentStudent); } catch (e) {}
+            }
           }
         }
       }
@@ -357,6 +364,9 @@ export default function MockTestMode({
         isPaused: true
       };
       localStorage.setItem('gate_ag_active_cbt_session', JSON.stringify(sessionData));
+      if (currentStudent) {
+        try { pushActiveCbtSessionUpdate(currentStudent, sessionData); } catch (e) {}
+      }
       setPausedSession(sessionData);
       setIsTimerRunning(false);
       setTestStarted(false);
@@ -391,6 +401,9 @@ export default function MockTestMode({
         savedAt: Date.now()
       };
       localStorage.setItem('gate_ag_active_cbt_session', JSON.stringify(activeSession));
+      if (currentStudent) {
+        try { pushActiveCbtSessionUpdate(currentStudent, activeSession); } catch (e) {}
+      }
 
       setTestStarted(true);
       setIsTimerRunning(!sessionToResume.paperInstructions?.is_untimed);
@@ -406,6 +419,9 @@ export default function MockTestMode({
   const handleCancelExam = () => {
     try {
       localStorage.removeItem('gate_ag_active_cbt_session');
+      if (currentStudent) {
+        try { clearActiveCbtSession(currentStudent); } catch (e) {}
+      }
     } catch (e) {}
 
     setUserAnswers({});
@@ -440,6 +456,9 @@ export default function MockTestMode({
       if (!proceed) return;
       try {
         localStorage.removeItem('gate_ag_active_cbt_session');
+        if (currentStudent) {
+          try { clearActiveCbtSession(currentStudent); } catch (e) {}
+        }
       } catch (e) {}
       setPausedSession(null);
     }
@@ -745,6 +764,9 @@ export default function MockTestMode({
   const handleSubmitFinal = () => {
     try {
       localStorage.removeItem('gate_ag_active_cbt_session');
+      if (currentStudent) {
+        try { clearActiveCbtSession(currentStudent); } catch (e) {}
+      }
     } catch (e) {}
     setShowSubmitModal(false);
     setIsTimerRunning(false);

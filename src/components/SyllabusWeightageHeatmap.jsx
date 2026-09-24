@@ -182,9 +182,7 @@ const ERAS = [
 const MOCK_BATCHES = [
   { id: 'b1', label: 'Mocks 01–10', range: [1, 10] },
   { id: 'b2', label: 'Mocks 11–20', range: [11, 20] },
-  { id: 'b3', label: 'Mocks 21–30', range: [21, 30] },
-  { id: 'b4', label: 'Mocks 31–40', range: [31, 40] },
-  { id: 'b5', label: 'Mocks 41–50', range: [41, 50] }
+  { id: 'b3', label: 'Mocks 21–30', range: [21, 30] }
 ];
 
 export default function SyllabusWeightageHeatmap({ 
@@ -414,9 +412,9 @@ export default function SyllabusWeightageHeatmap({
     };
   }, [questions, eraConfig, eraYears, typeFilter]);
 
-  // Compute 50 Custom Mocks Heatmap & Section Stats
+  // Compute 30 Custom Mocks Heatmap & Section Stats
   const mockAnalysis = useMemo(() => {
-    const totalMocks = customMockPapers.length > 0 ? customMockPapers.length : 50;
+    const totalMocks = customMockPapers.length > 0 ? customMockPapers.length : 30;
     const officialSecs = getOfficialSections();
     const secMap = {};
 
@@ -434,7 +432,7 @@ export default function SyllabusWeightageHeatmap({
         mockQuestions: {},
         topicsMap: {}
       };
-      for (let m = 1; m <= 50; m++) {
+      for (let m = 1; m <= totalMocks; m++) {
         secMap[s.fullTitle].mockMarks[m] = 0;
         secMap[s.fullTitle].mockQuestions[m] = [];
       }
@@ -464,7 +462,7 @@ export default function SyllabusWeightageHeatmap({
           mockQuestions: {},
           topicsMap: {}
         };
-        for (let m = 1; m <= 50; m++) {
+        for (let m = 1; m <= totalMocks; m++) {
           secMap[secTitle].mockMarks[m] = 0;
           secMap[secTitle].mockQuestions[m] = [];
         }
@@ -511,7 +509,7 @@ export default function SyllabusWeightageHeatmap({
       else top.mcqCount++;
     });
 
-    const mockCountForAvg = totalMocks > 0 ? totalMocks : 50;
+    const mockCountForAvg = totalMocks > 0 ? totalMocks : 30;
     const matrixArray = Object.values(secMap).map(sec => {
       const avgMarks = (sec.totalMarks / mockCountForAvg).toFixed(1);
       const markPct = globalTotalMarks > 0 ? Math.round((sec.totalMarks / globalTotalMarks) * 100) : 0;
@@ -540,13 +538,13 @@ export default function SyllabusWeightageHeatmap({
     };
   }, [allMockQuestions, customMockPapers, typeFilter]);
 
-  // Compute Side-by-Side Comparative Audit Matrix (Official PYQ vs 50 Custom Mocks)
+  // Compute Side-by-Side Comparative Audit Matrix (Official PYQ vs 30 Custom Mocks)
   const comparativeAudit = useMemo(() => {
     const officialSecs = getOfficialSections();
     const pyqMap = pyqAnalysis.secMap;
     const mockMap = mockAnalysis.secMap;
     const pyqYears = 11; // Standard 2016-2026 CBT era baseline
-    const numMocks = mockAnalysis.overallStats.totalMocks || 50;
+    const numMocks = mockAnalysis.overallStats.totalMocks || 30;
 
     const rows = officialSecs.map(sec => {
       const sTitle = sec.fullTitle;
@@ -680,13 +678,13 @@ export default function SyllabusWeightageHeatmap({
           <div className="space-y-1.5">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 text-xs font-bold border border-emerald-200 dark:border-emerald-800">
               <Flame className="w-3.5 h-3.5 text-rose-500 fill-rose-500" />
-              <span>GATE AG Official PYQ Forensic Heatmap &amp; 50 Mocks Alignment Audit</span>
+              <span>GATE AG Official PYQ Forensic Heatmap &amp; 30 Mocks Alignment Audit</span>
             </div>
             <h1 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
               Syllabus Weightage &amp; Forensic Heatmap Matrix
             </h1>
             <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-3xl font-medium leading-relaxed">
-              Audited across 1,324 official PYQs (2007–2026) and 3,250 questions in the 50 Full-Length Custom Mock Series. Compare weightages, inspect multi-formula chains, and verify 100% harmonization with actual GATE standards.
+              Audited across 1,324 official PYQs (2007–2026) and 1,950 questions in the 30 Full-Length Custom Mock Series. Compare weightages, inspect multi-formula chains, and verify 100% harmonization with actual GATE standards.
             </p>
           </div>
 
@@ -701,7 +699,7 @@ export default function SyllabusWeightageHeatmap({
               }`}
             >
               <GitCompare className="w-3.5 h-3.5 text-emerald-400" />
-              <span>PYQ vs 50 Mocks Audit</span>
+              <span>PYQ vs 30 Mocks Audit</span>
             </button>
 
             <button
@@ -749,10 +747,10 @@ export default function SyllabusWeightageHeatmap({
               PYQs &amp; Mocks Audited
             </div>
             <div className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mt-1 font-mono">
-              4,574 <span className="text-xs font-semibold text-slate-500 font-sans">Questions</span>
+              3,274 <span className="text-xs font-semibold text-slate-500 font-sans">Questions</span>
             </div>
             <div className="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">
-              1,324 PYQs + 3,250 Mock Qs
+              1,324 PYQs + 1,950 Mock Qs
             </div>
           </div>
 
@@ -809,10 +807,10 @@ export default function SyllabusWeightageHeatmap({
                   <span>Verified Exam Blueprint Harmonization</span>
                 </div>
                 <h2 className="text-lg sm:text-xl font-extrabold text-slate-900 dark:text-white mt-1">
-                  Official CBT Baseline (2016–2026) vs 50 Custom Mocks (2027 Series)
+                  Official CBT Baseline (2016–2026) vs 30 Custom Mocks (2027 Series)
                 </h2>
                 <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-                  Comparison between 11 modern online CBT exam editions (704 questions) and the 50 full-length custom mock papers (3,250 questions).
+                  Comparison between 11 modern online CBT exam editions (704 questions) and the 30 full-length custom mock papers (1,950 questions).
                 </p>
               </div>
 
@@ -823,7 +821,7 @@ export default function SyllabusWeightageHeatmap({
                 </div>
                 <div className="text-slate-300 dark:text-slate-600 font-mono text-xl">&harr;</div>
                 <div className="p-3 rounded-2xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-900 text-center">
-                  <div className="text-[10px] uppercase font-bold text-blue-600 dark:text-blue-400">50 Mocks Avg</div>
+                  <div className="text-[10px] uppercase font-bold text-blue-600 dark:text-blue-400">30 Mocks Avg</div>
                   <div className="text-base font-black text-blue-700 dark:text-blue-300 font-mono">{comparativeAudit.totalMockMarks} Marks</div>
                 </div>
               </div>
@@ -839,7 +837,7 @@ export default function SyllabusWeightageHeatmap({
                       Official PYQ Avg
                     </th>
                     <th className="py-3 px-3 text-center text-blue-700 dark:text-blue-300 bg-blue-50/40 dark:bg-blue-950/20">
-                      50 Mocks Avg
+                      30 Mocks Avg
                     </th>
                     <th className="py-3 px-3 text-center text-emerald-700 dark:text-emerald-300">
                       Marks Delta (&Delta;)

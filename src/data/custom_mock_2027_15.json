@@ -44,23 +44,23 @@
       "year": "2027",
       "qnum": 2,
       "section": "Section 8: General Aptitude",
-      "topic": "Verbal Aptitude",
-      "subtopic": "Basic English Grammar & Vocabulary",
+      "topic": "Analytical & Spatial Aptitude",
+      "subtopic": "Spatial Reasoning & 3D Representations",
       "gate_section": "GA",
       "type": "MCQ",
       "marks": 1,
       "negative_marks": 0.3333333333333333,
-      "question": "Choose the correctly spelt word.",
+      "question": "If it is established as a true fact that \"No certified organic pesticide is chemically synthetic\", which of the following statements must be FALSE?",
       "options": {
-        "A": "Maintainance",
-        "B": "Maintenence",
-        "C": "Maintenance",
-        "D": "Maintanance"
+        "A": "Some chemically synthetic substances are not certified organic pesticides.",
+        "B": "All chemically synthetic substances are non-organic pesticides.",
+        "C": "Some certified organic pesticides are chemically synthetic.",
+        "D": "No chemically synthetic substance is a certified organic pesticide."
       },
       "correct_answer": "C",
-      "solution": "Answer: C\nExplanation:\n• The correct spelling is \"Maintenance\" — note the \"e\" after \"Maint\" and before \"nance\".\nWhy the other options are wrong:\n(A) Incorrectly inserts \"ai\" in the second syllable.\n(B) Incorrectly uses \"e\" where \"a\" is needed in the final syllable.\n(C) Correct.\n(D) Incorrectly uses \"a\" instead of \"e\" in the second syllable.",
+      "solution": "In formal logic (Square of Opposition), the universal negative proposition \"No S is P\" (E-type) and the particular affirmative proposition \"Some S is P\" (I-type) are strict contradictories. If \"No S is P\" is true, then \"Some S is P\" must be false.",
       "isCustomUploaded": true,
-      "difficulty": "Hard"
+      "difficulty": "Easy"
     },
     {
       "id": "GATE_2027_MOCK_15_Q03",

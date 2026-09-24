@@ -11,7 +11,7 @@
 - **Backend & Storage**: Supabase JS Client v2 (Auth, Test Attempts, Solvers Leaderboard), LocalStorage & IndexedDB (Offline cache & sync queue).
 - **Test Infrastructure**: Native Node.js Test Runner (`node --test tests/**/*.test.js`), `node:assert/strict`.
 - **Verification Commands**:
-  - `npm test`: **826 tests across 156 suites (100% passing, 0 failures, exit code 0)** in ~1.8s.
+  - `npm test`: **836 tests across 158 suites (100% passing, 0 failures, exit code 0)** in ~1.8s.
   - `npm run build`: Clean production bundle compiled into `dist/` in ~2.8s.
 
 ```mermaid
@@ -27,7 +27,7 @@ graph TD
     Sync --> IDB[IndexedDB gate_ag_prep_db Deep Storage]
     Sync --> Supabase[Supabase DB / Remote Backend]
     
-    App --> Datasets[1,324 PYQs + 3,250 Custom Mock Qs = 4,574 Total Qs]
+    App --> Datasets[1,324 PYQs + 3,250 Custom Mock Qs + 1,915 Q-Bank Items = 6,489 Total Qs]
 ```
 
 ---
@@ -99,12 +99,13 @@ graph TD
 | **Practice Pool** | `src/data/questions.json` | 1,324 questions | Strictly official PYQs (2007–2026) with explanatory solutions, MCQ/MSQ/NAT |
 | **Official Mock Papers** | `src/data/mock_papers.json` | 20 official papers | Full papers 2007 through 2026 (1,324 total questions, 180 min, 100 marks) |
 | **Custom Mock Papers** | `src/data/custom_mock_2027_XX.json` | 50 mock papers | 50 full-length mocks (3,250 questions, 65 Qs / 100 M each, 100% Hard Multi-Chain) |
+| **Autonomous Question Bank** | `src/data/question_bank/` | 1,915 questions | Curated topic-wise questions with LaTeX formulas and solutions across all 8 syllabus sections |
 | **Formulas** | `src/data/formulas.js` | 57 formulas in 8 categories | Validated LaTeX strings, balanced braces, categories: EM, FMP, FP, SWCE, IDE, APE, DFE, GA |
 | **Syllabus** | `src/data/syllabus.js` | 8 sections, 83 subtopics | Granular breakdown with official weightage mappings |
 
 ---
 
-## 4. Test Suite Coverage Summary (826 Tests across 156 Suites)
+## 4. Test Suite Coverage Summary (836 Tests across 158 Suites)
 
 Run via `npm test` (`node --test tests/**/*.test.js`):
 - `official_organizing_institutes.test.js` (6 tests): Validates official IIT/IISc organizing institute catalog (2007–2026), removal of static binary downloads from `public/downloads`, presence of all 50 mocks in code (`src/data`), and preservation of master DOCX files in `QUESTIONS/MOCK TESTS`.
@@ -115,7 +116,7 @@ Run via `npm test` (`node --test tests/**/*.test.js`):
 - `mistakeVaultIsolation.test.js` (5 tests): Multi-user mistake vault isolation and repeat error counters.
 - `workflows.test.js` (18 tests): Practice filters, CBT palette transitions, timer math, formula search.
 - `pwa.test.js` (16 tests): Manifest, SW 5-tier caching, offline navigation fallback, SW registration.
-- `dataset.test.js` & `schema.test.js` (31 tests): 1,324 questions schema, 20 official papers, taxonomy parity.
+- `dataset.test.js` & `schema.test.js` (34 tests): 1,324 questions schema, 20 official papers, taxonomy parity, 1,915 Q-Bank items, 6,489 grand total questions, documentation telemetry integrity.
 - `stress.test.js` (45 tests): Floating-point epsilon ($0.1 + 0.2$), delimiter normalizations, 0/0 accuracy safety.
 - `sync.test.js` (18 tests): UUID generation, offline queue, idempotent re-sync, deduplication.
 - `historyPersistence.test.js` (4 tests): Guest attempt claiming, IndexedDB & LocalStorage merged retrieval.
@@ -124,6 +125,7 @@ Run via `npm test` (`node --test tests/**/*.test.js`):
 - `user_roles_moderation.test.js` (8 tests): Roles, permissions, mutes, bans, audit log.
 - `visitor_mode.test.js` (3 tests): Guest flags, visitor permissions, auth gate.
 - `question_timer_performance.test.js` (14 tests): Pacing benchmarks, cumulative tracking.
+- `revision_bank.test.js` (2 tests): Audits React hook imports across all components and verifies event listener cleanup in RevisionBank.
 - *Additional Suites* (450+ tests): Calculator, CBT skins, command palette, concepts, PDF generator (`questionPdfExportService`), radar diagnostics, feedback, forensics, AI doubt solver, question reports, dataset quality, notifications, roll number parser, XP sync, SEO metadata.
 
 ---
@@ -131,7 +133,7 @@ Run via `npm test` (`node --test tests/**/*.test.js`):
 ## 5. Agent Directives for Maximum Token Efficiency
 
 1. **Rely on this Context**: Do not crawl or re-analyze raw data files (`questions.json`, `mock_papers.json`) or unchanged components unless modifying them directly.
-2. **Execute Verification**: Always run `npm test` after code changes; ensure 826/826 tests pass.
+2. **Execute Verification**: Always run `npm test` after code changes; ensure 836/836 tests pass.
 3. **Preserve Contracts**:
    - Palette state constants: `NOT_VISITED`, `NOT_ANSWERED`, `ANSWERED`, `MARKED`, `ANSWERED_MARKED`.
    - Maintain 100% offline functionality with graceful `localStorage` and `IndexedDB` fallback.

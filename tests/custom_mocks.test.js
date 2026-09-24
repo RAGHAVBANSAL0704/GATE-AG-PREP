@@ -4,7 +4,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 
 describe('Custom Mock Test Subsystem Tests', () => {
-  const mockFiles = Array.from({ length: 50 }, (_, i) => `custom_mock_2027_${String(i + 1).padStart(2, '0')}.json`);
+  const mockFiles = Array.from({ length: 30 }, (_, i) => `custom_mock_2027_${String(i + 1).padStart(2, '0')}.json`);
 
   mockFiles.forEach((filename, idx) => {
     const mockPath = join(process.cwd(), 'src', 'data', filename);
@@ -106,5 +106,83 @@ describe('Custom Mock Test Subsystem Tests', () => {
       });
     });
   });
-});
 
+  describe('Automated CI Invariants across 30 Elite Master Mocks', () => {
+    it('asserts exactly 0 cross-mock question duplicates (100% unique across all 30 mocks)', () => {
+      const seenQuestions = new Map();
+      const crossDuplicates = [];
+
+      mockFiles.forEach((filename, idx) => {
+        const mockPath = join(process.cwd(), 'src', 'data', filename);
+        const data = JSON.parse(readFileSync(mockPath, 'utf8'));
+
+        data.questions.forEach((q) => {
+          const normText = (q.question || '').toLowerCase().replace(/[^a-z0-9]/g, ' ').replace(/\s+/g, ' ').trim();
+          if (seenQuestions.has(normText)) {
+            crossDuplicates.push({
+              mock: idx + 1,
+              qnum: q.qnum,
+              id: q.id,
+              duplicateOf: seenQuestions.get(normText)
+            });
+          } else {
+            seenQuestions.set(normText, { mock: idx + 1, qnum: q.qnum, id: q.id });
+          }
+        });
+      });
+
+      assert.strictEqual(
+        crossDuplicates.length,
+        0,
+        `Expected 0 cross-mock duplicates, but found ${crossDuplicates.length}: ${JSON.stringify(crossDuplicates.slice(0, 5))}`
+      );
+      assert.strictEqual(seenQuestions.size, 30 * 65, 'Total unique questions across 30 mocks must be exactly 1,950');
+    });
+
+    it('asserts every mock paper contains questions from ALL 8 official syllabus sections', () => {
+      const canonicalSections = [
+        'Section 1: Engineering Mathematics',
+        'Section 2: Farm Machinery',
+        'Section 3: Farm Power',
+        'Section 4: Soil and Water Conservation Engineering',
+        'Section 5: Irrigation and Drainage Engineering',
+        'Section 6: Agricultural Process Engineering',
+        'Section 7: Dairy and Food Engineering',
+        'Section 8: General Aptitude'
+      ];
+
+      mockFiles.forEach((filename, idx) => {
+        const mockPath = join(process.cwd(), 'src', 'data', filename);
+        const data = JSON.parse(readFileSync(mockPath, 'utf8'));
+        const mockSections = new Set(data.questions.map(q => q.section));
+
+        canonicalSections.forEach((sec) => {
+          assert.ok(
+            mockSections.has(sec),
+            `Mock Paper ${idx + 1} (${filename}) is missing mandatory syllabus section: "${sec}"`
+          );
+        });
+      });
+    });
+
+    it('asserts every mock paper strictly equals 65 questions and 100.00 marks', () => {
+      mockFiles.forEach((filename, idx) => {
+        const mockPath = join(process.cwd(), 'src', 'data', filename);
+        const data = JSON.parse(readFileSync(mockPath, 'utf8'));
+
+        assert.strictEqual(
+          data.questions.length,
+          65,
+          `Mock Paper ${idx + 1} must contain strictly 65 questions, got ${data.questions.length}`
+        );
+
+        const totalMarks = data.questions.reduce((sum, q) => sum + Number(q.marks || 1), 0);
+        assert.strictEqual(
+          totalMarks,
+          100,
+          `Mock Paper ${idx + 1} total marks must strictly equal 100.00, got ${totalMarks}`
+        );
+      });
+    });
+  });
+});

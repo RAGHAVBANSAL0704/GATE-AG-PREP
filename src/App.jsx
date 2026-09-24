@@ -82,6 +82,7 @@ import {
   syncStudentCloudData, 
   getStudentUserStatsKey,
   pushBookmarksUpdate,
+  pushSyllabusProgressUpdate,
   subscribeToCloudProgressSync
 } from './services/studentProgressSyncService';
 import { subscribeToLiveAcademicXP } from './services/leaderboardService';
@@ -125,26 +126,6 @@ import preloadedCustomMock27 from './data/custom_mock_2027_27.json';
 import preloadedCustomMock28 from './data/custom_mock_2027_28.json';
 import preloadedCustomMock29 from './data/custom_mock_2027_29.json';
 import preloadedCustomMock30 from './data/custom_mock_2027_30.json';
-import preloadedCustomMock31 from './data/custom_mock_2027_31.json';
-import preloadedCustomMock32 from './data/custom_mock_2027_32.json';
-import preloadedCustomMock33 from './data/custom_mock_2027_33.json';
-import preloadedCustomMock34 from './data/custom_mock_2027_34.json';
-import preloadedCustomMock35 from './data/custom_mock_2027_35.json';
-import preloadedCustomMock36 from './data/custom_mock_2027_36.json';
-import preloadedCustomMock37 from './data/custom_mock_2027_37.json';
-import preloadedCustomMock38 from './data/custom_mock_2027_38.json';
-import preloadedCustomMock39 from './data/custom_mock_2027_39.json';
-import preloadedCustomMock40 from './data/custom_mock_2027_40.json';
-import preloadedCustomMock41 from './data/custom_mock_2027_41.json';
-import preloadedCustomMock42 from './data/custom_mock_2027_42.json';
-import preloadedCustomMock43 from './data/custom_mock_2027_43.json';
-import preloadedCustomMock44 from './data/custom_mock_2027_44.json';
-import preloadedCustomMock45 from './data/custom_mock_2027_45.json';
-import preloadedCustomMock46 from './data/custom_mock_2027_46.json';
-import preloadedCustomMock47 from './data/custom_mock_2027_47.json';
-import preloadedCustomMock48 from './data/custom_mock_2027_48.json';
-import preloadedCustomMock49 from './data/custom_mock_2027_49.json';
-import preloadedCustomMock50 from './data/custom_mock_2027_50.json';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState(() => {
@@ -363,6 +344,9 @@ export default function App() {
       }
       if (Array.isArray(e?.detail?.bookmarks)) {
         setBookmarks(e.detail.bookmarks);
+      }
+      if (e?.detail?.syllabusProgress && typeof e.detail.syllabusProgress === 'object') {
+        setSyllabusProgress(e.detail.syllabusProgress);
       }
       if (typeof e?.detail?.xpPoints === 'number') {
         setCurrentStudent(prev => prev ? ({ ...prev, xp_points: e.detail.xpPoints }) : prev);
@@ -666,26 +650,6 @@ export default function App() {
     preloadedCustomMock28,
     preloadedCustomMock29,
     preloadedCustomMock30,
-    preloadedCustomMock31,
-    preloadedCustomMock32,
-    preloadedCustomMock33,
-    preloadedCustomMock34,
-    preloadedCustomMock35,
-    preloadedCustomMock36,
-    preloadedCustomMock37,
-    preloadedCustomMock38,
-    preloadedCustomMock39,
-    preloadedCustomMock40,
-    preloadedCustomMock41,
-    preloadedCustomMock42,
-    preloadedCustomMock43,
-    preloadedCustomMock44,
-    preloadedCustomMock45,
-    preloadedCustomMock46,
-    preloadedCustomMock47,
-    preloadedCustomMock48,
-    preloadedCustomMock49,
-    preloadedCustomMock50,
     ...userUploadedMocks
   ], [userUploadedMocks]);
 
@@ -848,7 +812,11 @@ export default function App() {
   };
 
   const handleUpdateSyllabusProgress = (key, status) => {
-    setSyllabusProgress({ ...syllabusProgress, [key]: status });
+    const nextProgress = { ...syllabusProgress, [key]: status };
+    setSyllabusProgress(nextProgress);
+    try {
+      pushSyllabusProgressUpdate(currentStudent, nextProgress);
+    } catch (e) {}
   };
 
   const handleStartSectionPractice = (secName) => {

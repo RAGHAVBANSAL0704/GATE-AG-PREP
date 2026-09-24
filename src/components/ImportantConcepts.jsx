@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { 
   Lightbulb, 
   Search, 
@@ -27,6 +27,8 @@ import initialConcepts from '../data/concepts.json';
 import { normalizeSectionTitle } from '../utils/syllabusTaxonomy.js';
 import InlineAIConceptExplainer from './InlineAIConceptExplainer';
 import { printConceptDocument, downloadConceptAsPlainText } from '../utils/conceptPdfExportService.js';
+import { checkCurrentSession } from '../services/authService';
+import { getLocalConceptBookmarks, pushConceptBookmarksUpdate } from '../services/studentProgressSyncService';
 
 export default function ImportantConcepts() {
   const [concepts] = useState(initialConcepts);
@@ -37,23 +39,36 @@ export default function ImportantConcepts() {
   const [activeExplainingId, setActiveExplainingId] = useState(null);
   const [bookmarkedIds, setBookmarkedIds] = useState(() => {
     try {
-      const saved = localStorage.getItem('gate_ag_bookmarked_concepts');
-      return saved ? JSON.parse(saved) : [];
+      const activeStudent = checkCurrentSession();
+      const sid = activeStudent?.id || activeStudent?.admission_no || activeStudent?.email || 'guest';
+      return getLocalConceptBookmarks(sid);
     } catch (e) {
       return [];
     }
   });
   const [showBookmarkedOnly, setShowBookmarkedOnly] = useState(false);
 
+  // Real-Time Multi-Device Sync for Concept Bookmarks
+  useEffect(() => {
+    const handleSync = (e) => {
+      if (Array.isArray(e?.detail?.conceptBookmarks)) {
+        setBookmarkedIds(e.detail.conceptBookmarks);
+      }
+    };
+    window.addEventListener('gate_ag_progress_synced', handleSync);
+    return () => window.removeEventListener('gate_ag_progress_synced', handleSync);
+  }, []);
+
   // Reader Mode Customizations
   const [fontSize, setFontSize] = useState('text-sm'); // 'text-xs', 'text-sm', 'text-base', 'text-lg'
   const [readerTheme, setReaderTheme] = useState('paper'); // 'paper', 'dark', 'sepia'
 
   const handleToggleBookmark = (id) => {
+    const student = checkCurrentSession();
     setBookmarkedIds(prev => {
       const next = prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id];
       try {
-        localStorage.setItem('gate_ag_bookmarked_concepts', JSON.stringify(next));
+        pushConceptBookmarksUpdate(student, next);
       } catch (e) {}
       return next;
     });

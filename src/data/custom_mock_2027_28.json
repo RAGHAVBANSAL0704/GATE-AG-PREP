@@ -766,22 +766,22 @@
       "qnum": 34,
       "section": "Section 7: Dairy and Food Engineering",
       "topic": "Unit Operations in Dairy and Food Engineering",
-      "subtopic": "Pasteurization",
+      "subtopic": "Blanching",
       "gate_section": "AG",
       "type": "MCQ",
       "marks": 1,
       "negative_marks": 0.3333333333333333,
-      "difficulty": "Hard",
-      "question": "Ultra-High Temperature (UHT) processing of milk typically involves heating to about:",
+      "question": "In commercial fruit and vegetable processing, the adequacy of the thermal blanching process is routinely evaluated by testing for the inactivation of which heat-resistant enzyme?",
       "options": {
-        "A": "63°C for 30 minutes",
-        "B": "72°C for 15 seconds",
-        "C": "135–150°C for a few seconds",
-        "D": "100°C for 1 hour"
+        "A": "Peroxidase",
+        "B": "Alpha-amylase",
+        "C": "Lipase",
+        "D": "Invertase"
       },
-      "correct_answer": "C",
-      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): UHT processing uses a very high temperature (135–150°C) for a very short holding time (a few seconds) to achieve commercial sterility while minimizing heat damage, allowing ambient-temperature shelf storage. The other options describe LTLT and HTST pasteurization regimes, not UHT.",
-      "isCustomUploaded": true
+      "correct_answer": "A",
+      "solution": "Peroxidase is considered the most heat-stable enzyme naturally occurring in fruits and vegetables. Complete thermal inactivation of peroxidase (verified using guaiacol and hydrogen peroxide) guarantees that less heat-resistant deterioration enzymes (such as catalase and polyphenol oxidase) have also been inactivated.",
+      "isCustomUploaded": true,
+      "difficulty": "Moderate"
     },
     {
       "id": "GATE_2027_MOCK_28_Q35",

@@ -21,23 +21,23 @@
       "year": "2027",
       "qnum": 1,
       "section": "Section 8: General Aptitude",
-      "topic": "Verbal Aptitude",
-      "subtopic": "Basic English Grammar & Vocabulary",
+      "topic": "Analytical & Spatial Aptitude",
+      "subtopic": "Logic Deduction & Pattern Recognition",
       "gate_section": "GA",
       "type": "MCQ",
       "marks": 1,
       "negative_marks": 0.3333333333333333,
-      "difficulty": "Hard",
-      "question": "Choose the word that is most nearly OPPOSITE in meaning to 'INCHOATE'.",
+      "question": "Pointing to a portrait of a researcher, Ramesh stated: \"His father is the only son of my father.\" How is Ramesh related to the researcher in the portrait?",
       "options": {
-        "A": "Nascent",
-        "B": "Sophisticated and well-developed",
-        "C": "Formless",
-        "D": "Amorphous"
+        "A": "Brother",
+        "B": "Father",
+        "C": "Uncle",
+        "D": "Son"
       },
       "correct_answer": "B",
-      "solution": "'INCHOATE' means rudimentary and not fully formed. Its most appropriate opposite is 'Sophisticated and well-developed'. The other options (Nascent, Formless, Amorphous) represent synonyms or related meanings.",
-      "isCustomUploaded": true
+      "solution": "1. \"My father\" refers to Ramesh's father.\n2. Since Ramesh is male, \"the only son of my father\" refers to Ramesh himself.\n3. The statement therefore simplifies to: \"His father is Ramesh.\"\n4. Thus, Ramesh is the father of the researcher in the portrait.",
+      "isCustomUploaded": true,
+      "difficulty": "Easy"
     },
     {
       "id": "GATE_2027_MOCK_30_Q02",

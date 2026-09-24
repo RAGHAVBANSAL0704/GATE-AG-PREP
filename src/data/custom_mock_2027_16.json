@@ -50,17 +50,17 @@
       "type": "MCQ",
       "marks": 1,
       "negative_marks": 0.3333333333333333,
-      "question": "Choose the correctly spelt word.",
+      "question": "Select the correct passive voice transformation of the sentence:\n\"The agricultural engineer inspected the grain storage silos yesterday.\"",
       "options": {
-        "A": "Neccessary",
-        "B": "Necesary",
-        "C": "Necessary",
-        "D": "Neccesary"
+        "A": "The grain storage silos were inspected by the agricultural engineer yesterday.",
+        "B": "The grain storage silos have been inspected by the agricultural engineer yesterday.",
+        "C": "The grain storage silos had been inspected by the agricultural engineer yesterday.",
+        "D": "The grain storage silos are inspected by the agricultural engineer yesterday."
       },
-      "correct_answer": "C",
-      "solution": "Answer: C\nExplanation:\n• The correct spelling is \"Necessary\" — one \"c\" followed by double \"s\".\nWhy the other options are wrong:\n(A) Incorrectly doubles the \"c\".\n(B) Incorrectly uses a single \"s\".\n(C) Correct.\n(D) Incorrectly doubles the \"c\" while also using a single \"s\".",
+      "correct_answer": "A",
+      "solution": "The active sentence uses simple past tense (\"inspected\"). In the passive voice, simple past takes \"was/were + past participle\". Since \"silos\" is plural, \"were inspected\" is correct.",
       "isCustomUploaded": true,
-      "difficulty": "Hard"
+      "difficulty": "Easy"
     },
     {
       "id": "GATE_2027_MOCK_16_Q03",

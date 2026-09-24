@@ -837,23 +837,23 @@
       "year": "2027",
       "qnum": 38,
       "section": "Section 1: Engineering Mathematics",
-      "topic": "Linear Algebra",
-      "subtopic": "Linear and orthogonal transformations",
+      "topic": "Vector Calculus",
+      "subtopic": "Stokes, Gauss and Green's theorems",
       "gate_section": "AG",
       "type": "MCQ",
       "marks": 2,
       "negative_marks": 0.6666666666666666,
-      "difficulty": "Hard",
-      "question": "The eigenvalues of the matrix A = [[4, 1], [2, 3]] are:",
+      "question": "Green's theorem in the plane states that for a positively oriented, piecewise-smooth, simple closed curve $C$ bounding a region $R$:\n$$\\oint_C (M dx + N dy) = \\iint_R \\left(\\frac{\\partial N}{\\partial x} - \\frac{\\partial M}{\\partial y}\\right) dA$$\nEvaluating $\\oint_C (x^2 y \\, dx + x y^2 \\, dy)$ over any circle centered at the origin gives:",
       "options": {
-        "A": "2 and 3",
-        "B": "2 and 5",
-        "C": "3 and 4",
-        "D": "1 and 6"
+        "A": "0",
+        "B": "$\\pi$",
+        "C": "$2\\pi$",
+        "D": "$4\\pi$"
       },
-      "correct_answer": "B",
-      "solution": "Multi-Chain Solution Workflow:\n• Step 1 (Governing Principles & Inputs): Analyze parameters.\n• Step 2 (Chained Formulations): Substitute values into the primary governing relation.\n• Step 3 (Evaluation & Unit Conversion): Characteristic equation: (4−λ)(3−λ) − (1)(2) = 0 → λ² − 7λ + 10 = 0 → (λ−5)(λ−2) = 0, so λ = 5, 2. (A) uses the diagonal entries directly without solving the characteristic equation. (C) and (D) result from sign or arithmetic errors in expanding the determinant.",
-      "isCustomUploaded": true
+      "correct_answer": "A",
+      "solution": "Identify $M(x, y) = x^2 y$ and $N(x, y) = x y^2$.\nCompute partial derivatives:\n$$\\frac{\\partial N}{\\partial x} = y^2, \\quad \\frac{\\partial M}{\\partial y} = x^2$$\nBy Green's theorem:\n$$\\oint_C (M dx + N dy) = \\iint_R (y^2 - x^2) \\, dA$$\nBy symmetry over any region $R$ that is a disk centered at the origin (or in polar coordinates where $x = r\\cos\\theta, y = r\\sin\\theta$):\n$$\\int_0^{2\\pi} (\\sin^2\\theta - \\cos^2\\theta) d\\theta = \\int_0^{2\\pi} -\\cos(2\\theta) d\\theta = 0$$\nHence, the integral is strictly $0$.",
+      "isCustomUploaded": true,
+      "difficulty": "Moderate"
     },
     {
       "id": "GATE_2027_MOCK_19_Q39",

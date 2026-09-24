@@ -32,9 +32,14 @@ export const INITIAL_FARM_STATE = {
   ]
 };
 
-export function getFarmState() {
+import { checkCurrentSession } from './authService';
+import { pushFarmStateUpdate } from './studentProgressSyncService';
+
+export function getFarmState(student = null) {
   try {
-    const saved = localStorage.getItem(LOCAL_STORAGE_FARM_KEY);
+    const activeStudent = student || (typeof checkCurrentSession === 'function' ? checkCurrentSession() : null);
+    const sid = activeStudent?.id || activeStudent?.admission_no || activeStudent?.email || 'guest';
+    const saved = localStorage.getItem(`gate_ag_virtual_farm_state_${sid}`) || localStorage.getItem(LOCAL_STORAGE_FARM_KEY);
     if (saved) {
       const parsed = JSON.parse(saved);
       // Ensure new high-tier items are merged cleanly
@@ -57,9 +62,17 @@ export function getFarmState() {
   return INITIAL_FARM_STATE;
 }
 
-export function saveFarmState(state) {
+export function saveFarmState(state, student = null) {
   try {
+    const activeStudent = student || (typeof checkCurrentSession === 'function' ? checkCurrentSession() : null);
+    const sid = activeStudent?.id || activeStudent?.admission_no || activeStudent?.email || 'guest';
+    localStorage.setItem(`gate_ag_virtual_farm_state_${sid}`, JSON.stringify(state));
     localStorage.setItem(LOCAL_STORAGE_FARM_KEY, JSON.stringify(state));
+    if (activeStudent) {
+      try {
+        pushFarmStateUpdate(activeStudent, state);
+      } catch (e) {}
+    }
   } catch (e) {}
 }
 

@@ -48,7 +48,7 @@ const getQuestionDifficulty = (q) => {
 };
 
 export default function CustomPdfQuestionGenerator({ questions = [], mockPapers = [], customMockPapers = [] }) {
-  // Synchronized complete universe pool: Official PYQs + Custom Mocks 01-50 + Question Bank = 6,489 Qs
+  // Synchronized complete universe pool: Official PYQs + Custom Mocks 01-30 + Question Bank = 5,189 Qs
   const allPoolQuestions = useMemo(() => {
     const list = [];
 
@@ -673,14 +673,14 @@ export default function CustomPdfQuestionGenerator({ questions = [], mockPapers 
                 onClick={() => setSelectedSources(['pyq', 'mock', 'qb'])}
                 className="text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:underline cursor-pointer"
               >
-                Select All (6,489 Qs)
+                Select All (5,189 Qs)
               </button>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
               {[
                 { key: 'pyq', title: 'Official PYQs', sub: '2007–2026', count: questions.length || 1324 },
-                { key: 'mock', title: 'Mock Papers', sub: 'Mock 01 to 50', count: (customMockPapers || []).reduce((acc, p) => acc + (p.questions?.length || 65), 0) || 3250 },
+                { key: 'mock', title: 'Mock Papers', sub: 'Mock 01 to 30', count: (customMockPapers || []).reduce((acc, p) => acc + (p.questions?.length || 65), 0) || 1950 },
                 { key: 'qb', title: 'Question Bank', sub: '181 Subtopics', count: ALL_QUESTION_BANK_QUESTIONS.length || 1915 }
               ].map(p => {
                 const isChecked = selectedSources.includes(p.key);

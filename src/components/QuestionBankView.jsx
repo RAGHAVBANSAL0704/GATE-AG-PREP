@@ -655,12 +655,24 @@ export default function QuestionBankView({
       }
     }
 
+    const rawAns = userAnswers[currentQ.id];
     const progressEntry = {
+      qid: currentQ.id,
       attempted: true,
+      userAnswer: rawAns !== undefined ? rawAns : null,
       isCorrect: evalResult.isCorrect,
       marksAwarded: evalResult.marksAwarded,
+      marks: parseInt(currentQ.marks) || 1,
+      type: (currentQ.type || 'MCQ').toUpperCase().trim(),
+      section: currentQ.section || '',
+      topic: currentQ.topic || '',
+      subtopic: currentQ.subtopic || '',
+      year: currentQ.year || null,
       peeked: wasPeeked,
+      hintLevelUsed: activeHintLevel[currentQ.id] || 0,
+      timeSpentSeconds: Number(questionTimes[currentQ.id]) || 0,
       xpAwarded: newXpAwarded,
+      source: poolTitle || 'Practice Hub',
       lastAttemptedAt: new Date().toISOString()
     };
 
