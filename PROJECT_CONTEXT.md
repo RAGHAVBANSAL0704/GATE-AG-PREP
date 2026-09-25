@@ -27,7 +27,7 @@ graph TD
     Sync --> IDB[IndexedDB gate_ag_prep_db Deep Storage]
     Sync --> Supabase[Supabase DB / Remote Backend]
     
-    App --> Datasets[1,324 PYQs + 3,250 Custom Mock Qs + 1,915 Q-Bank Items = 6,489 Total Qs]
+    App --> Datasets[1,324 PYQs + 1,950 Custom Mock Qs + 1,915 Q-Bank Items = 5,189 Total Qs]
 ```
 
 ---
@@ -98,25 +98,25 @@ graph TD
 |---|---|---|---|
 | **Practice Pool** | `src/data/questions.json` | 1,324 questions | Strictly official PYQs (2007–2026) with explanatory solutions, MCQ/MSQ/NAT |
 | **Official Mock Papers** | `src/data/mock_papers.json` | 20 official papers | Full papers 2007 through 2026 (1,324 total questions, 180 min, 100 marks) |
-| **Custom Mock Papers** | `src/data/custom_mock_2027_XX.json` | 50 mock papers | 50 full-length mocks (3,250 questions, 65 Qs / 100 M each, 100% Hard Multi-Chain) |
+| **Custom Mock Papers** | `src/data/custom_mock_2027_XX.json` | 30 mock papers | 30 full-length mocks (1,950 questions, 65 Qs / 100 M each, 100% Hard Multi-Chain) |
 | **Autonomous Question Bank** | `src/data/question_bank/` | 1,915 questions | Curated topic-wise questions with LaTeX formulas and solutions across all 8 syllabus sections |
 | **Formulas** | `src/data/formulas.js` | 57 formulas in 8 categories | Validated LaTeX strings, balanced braces, categories: EM, FMP, FP, SWCE, IDE, APE, DFE, GA |
 | **Syllabus** | `src/data/syllabus.js` | 8 sections, 83 subtopics | Granular breakdown with official weightage mappings |
 
 ---
 
-## 4. Test Suite Coverage Summary (836 Tests across 158 Suites)
+## 4. Test Suite Coverage Summary (762 Tests across 158 Suites)
 
 Run via `npm test` (`node --test tests/**/*.test.js`):
-- `official_organizing_institutes.test.js` (6 tests): Validates official IIT/IISc organizing institute catalog (2007–2026), removal of static binary downloads from `public/downloads`, presence of all 50 mocks in code (`src/data`), and preservation of master DOCX files in `QUESTIONS/MOCK TESTS`.
+- `official_organizing_institutes.test.js` (6 tests): Validates official IIT/IISc organizing institute catalog (2007–2026), removal of static binary downloads from `public/downloads`, presence of all 30 mocks in code (`src/data`), and preservation of master DOCX files in `QUESTIONS/MOCK TESTS`.
 - `scoring.test.js` (31 tests): MCQ/MSQ/NAT evaluation, penalties, score rounding, AIR tiers.
-- `custom_mocks.test.js` (150 tests): Validates all 50 custom mocks (schema, 65 Qs, 100 Marks, 10 GA / 55 Tech, MCQ keys format).
+- `custom_mocks.test.js` (123 tests): Validates all 30 custom mocks (schema, 65 Qs, 100 Marks, 10 GA / 55 Tech, MCQ keys format, 0 cross-mock duplicates, 8 sections).
 - `cbtStatePersistence.test.js` (4 tests): CBT state recovery, active timer adjustment, keypad input.
 - `gateCompliance.test.js` (4 tests): GATE exam compliance, mark distribution, negative marking.
 - `mistakeVaultIsolation.test.js` (5 tests): Multi-user mistake vault isolation and repeat error counters.
 - `workflows.test.js` (18 tests): Practice filters, CBT palette transitions, timer math, formula search.
 - `pwa.test.js` (16 tests): Manifest, SW 5-tier caching, offline navigation fallback, SW registration.
-- `dataset.test.js` & `schema.test.js` (34 tests): 1,324 questions schema, 20 official papers, taxonomy parity, 1,915 Q-Bank items, 6,489 grand total questions, documentation telemetry integrity.
+- `dataset.test.js` & `schema.test.js` (34 tests): 1,324 questions schema, 20 official papers, taxonomy parity, 1,915 Q-Bank items, 5,189 grand total questions, documentation telemetry integrity.
 - `stress.test.js` (45 tests): Floating-point epsilon ($0.1 + 0.2$), delimiter normalizations, 0/0 accuracy safety.
 - `sync.test.js` (18 tests): UUID generation, offline queue, idempotent re-sync, deduplication.
 - `historyPersistence.test.js` (4 tests): Guest attempt claiming, IndexedDB & LocalStorage merged retrieval.

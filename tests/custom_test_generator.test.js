@@ -13,10 +13,10 @@ const __dirname = path.dirname(__filename);
 const questionsPath = path.resolve(__dirname, '../src/data/questions.json');
 const officialPyqs = JSON.parse(fs.readFileSync(questionsPath, 'utf8'));
 
-// Load all 50 custom mock files
+// Load all 30 custom mock files
 const customMocks = [];
 const allCustomMockQuestions = [];
-for (let i = 1; i <= 50; i++) {
+for (let i = 1; i <= 30; i++) {
   const numStr = String(i).padStart(2, '0');
   const filePath = path.resolve(__dirname, `../src/data/custom_mock_2027_${numStr}.json`);
   if (fs.existsSync(filePath)) {
@@ -108,7 +108,7 @@ function filterTestCandidatePool({
 
 describe('Full-Spectrum Custom Test Generator & Flexible Combination Test Suite', () => {
 
-  it('aggregates total master pool accurately (Q-Bank: 1,915 + PYQs: 1,324 + Mocks: 3,250 = 6,489 Qs)', () => {
+  it('aggregates total master pool accurately (Q-Bank: 1,915 + PYQs: 1,324 + Mocks: 1,950 = 5,189 Qs)', () => {
     const fullPool = filterTestCandidatePool({
       selectedPools: ['qbank', 'pyq', 'mocks'],
       selectedSections: [],
@@ -117,8 +117,8 @@ describe('Full-Spectrum Custom Test Generator & Flexible Combination Test Suite'
       selectedMarks: [1, 2]
     });
 
-    assert.strictEqual(fullPool.length, 1915 + 1324 + 3250);
-    assert.strictEqual(fullPool.length, 6489);
+    assert.strictEqual(fullPool.length, 1915 + 1324 + 1950);
+    assert.strictEqual(fullPool.length, 5189);
   });
 
   it('executes user combination: Question Bank Pool + Hard + NAT & MCQ', () => {

@@ -67,8 +67,8 @@ describe('Dataset Quality & Sanitization Invariant Tests', () => {
     });
   });
 
-  it('asserts quality invariants across all 50 Custom Mock Papers', () => {
-    for (let i = 1; i <= 50; i++) {
+  it('asserts quality invariants across all 30 Custom Mock Papers', () => {
+    for (let i = 1; i <= 30; i++) {
       const fn = `custom_mock_2027_${String(i).padStart(2, '0')}.json`;
       const fp = join(process.cwd(), 'src', 'data', fn);
       assert.equal(existsSync(fp), true, `${fn} must exist`);

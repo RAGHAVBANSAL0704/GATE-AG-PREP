@@ -223,10 +223,10 @@ describe('Challenger 2: Core Concepts Expansion Stress & Rigor Test Suite', () =
       });
     });
 
-    it('confirms all 50 custom mock test papers exist intact', () => {
+    it('confirms all 30 custom mock test papers exist intact', () => {
       const mockFiles = fs.readdirSync(path.resolve(projectRoot, 'src/data'))
         .filter(f => f.startsWith('custom_mock_2027_') && f.endsWith('.json'));
-      assert.strictEqual(mockFiles.length, 50, 'Must have exactly 50 custom mock papers');
+      assert.strictEqual(mockFiles.length, 30, 'Must have exactly 30 custom mock papers');
     });
   });
 

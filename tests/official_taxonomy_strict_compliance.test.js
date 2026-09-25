@@ -100,10 +100,10 @@ describe('Strict Official GATE AG Syllabus Taxonomy Compliance', () => {
     assert.strictEqual(totalQs, 1324);
   });
 
-  it('asserts 100% of all 3,250 questions across 50 Custom Mocks strictly belong to official syllabus taxonomy', () => {
+  it('asserts 100% of all 1,950 questions across 30 Custom Mocks strictly belong to official syllabus taxonomy', () => {
     let totalCustomQs = 0;
 
-    for (let i = 1; i <= 50; i++) {
+    for (let i = 1; i <= 30; i++) {
       const num = String(i).padStart(2, '0');
       const filePath = path.join(root, `src/data/custom_mock_2027_${num}.json`);
       assert.ok(fs.existsSync(filePath), `Mock ${num} must exist`);
@@ -128,7 +128,7 @@ describe('Strict Official GATE AG Syllabus Taxonomy Compliance', () => {
       });
     }
 
-    assert.strictEqual(totalCustomQs, 3250);
+    assert.strictEqual(totalCustomQs, 1950);
   });
 
   it('asserts 100% of all 1,915 questions in Question Bank strictly belong to official syllabus taxonomy', () => {

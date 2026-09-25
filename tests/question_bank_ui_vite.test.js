@@ -278,7 +278,7 @@ describe('Question Bank UI & Vite Code-Splitting Verification (Worker M7)', () =
       const pyqs = JSON.parse(readFileSync(pyqPath, 'utf8'));
       assert.strictEqual(pyqs.length, 1324, 'questions.json must contain strictly 1,324 PYQs');
 
-      for (let i = 1; i <= 50; i++) {
+      for (let i = 1; i <= 30; i++) {
         const pad = String(i).padStart(2, '0');
         const mockPath = join(cwd, 'src', 'data', `custom_mock_2027_${pad}.json`);
         assert.ok(existsSync(mockPath), `Mock file ${pad} must exist`);

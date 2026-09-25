@@ -87,9 +87,9 @@ test('Official Organizing Institutes & Copyright Compliance Test Suite', async (
     });
   });
 
-  await t.test('verifies all 50 custom mock test papers exist as code/JSON in src/data and docx archives in QUESTIONS/MOCK TESTS', () => {
+  await t.test('verifies all 30 custom mock test papers exist as code/JSON in src/data and docx archives in QUESTIONS/MOCK TESTS', () => {
     const srcDataDir = path.resolve(__dirname, '../src/data');
-    for (let i = 1; i <= 50; i++) {
+    for (let i = 1; i <= 30; i++) {
       const num = String(i).padStart(2, '0');
       const jsonFile = path.join(srcDataDir, `custom_mock_2027_${num}.json`);
       assert.strictEqual(fs.existsSync(jsonFile), true, `JSON mock file custom_mock_2027_${num}.json must exist in src/data`);
@@ -98,6 +98,6 @@ test('Official Organizing Institutes & Copyright Compliance Test Suite', async (
     const masterDocxDir = path.resolve(__dirname, '../QUESTIONS/MOCK TESTS');
     assert.strictEqual(fs.existsSync(masterDocxDir), true, 'QUESTIONS/MOCK TESTS master archive must exist');
     const docxFiles = fs.readdirSync(masterDocxDir).filter(f => f.endsWith('.docx'));
-    assert.ok(docxFiles.length >= 50, `Must contain all 50 master custom mock docx files, found ${docxFiles.length}`);
+    assert.ok(docxFiles.length >= 30, `Must contain master custom mock docx files, found ${docxFiles.length}`);
   });
 });

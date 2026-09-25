@@ -539,8 +539,8 @@ describe('Autonomous Question Bank Subsystem Comprehensive Verification', () => 
       );
     });
 
-    it('asserts all 50 custom mock files exist, are valid JSON, and have 65 questions totaling 100 marks', () => {
-      for (let i = 1; i <= 50; i++) {
+    it('asserts all 30 custom mock files exist, are valid JSON, and have 65 questions totaling 100 marks', () => {
+      for (let i = 1; i <= 30; i++) {
         const pad = String(i).padStart(2, '0');
         const filename = `custom_mock_2027_${pad}.json`;
         const mockPath = join(cwd, 'src', 'data', filename);
@@ -560,7 +560,7 @@ describe('Autonomous Question Bank Subsystem Comprehensive Verification', () => 
     });
 
     it('asserts each custom mock paper adheres to the 10 GA / 55 Technical section distribution', () => {
-      for (let i = 1; i <= 50; i++) {
+      for (let i = 1; i <= 30; i++) {
         const pad = String(i).padStart(2, '0');
         const mockPath = join(cwd, 'src', 'data', `custom_mock_2027_${pad}.json`);
         const data = JSON.parse(readFileSync(mockPath, 'utf8'));
@@ -577,8 +577,8 @@ describe('Autonomous Question Bank Subsystem Comprehensive Verification', () => 
       }
     });
 
-    it('asserts zero Question Bank (QB_) ID leakage across all 50 custom mock papers', () => {
-      for (let i = 1; i <= 50; i++) {
+    it('asserts zero Question Bank (QB_) ID leakage across all 30 custom mock papers', () => {
+      for (let i = 1; i <= 30; i++) {
         const pad = String(i).padStart(2, '0');
         const mockPath = join(cwd, 'src', 'data', `custom_mock_2027_${pad}.json`);
         const data = JSON.parse(readFileSync(mockPath, 'utf8'));
