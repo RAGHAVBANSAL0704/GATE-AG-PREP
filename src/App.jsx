@@ -75,8 +75,10 @@ import {
   checkCurrentSession, 
   logoutStudent, 
   subscribeToStudentProfileSync, 
-  refreshCurrentStudentProfile 
+  refreshCurrentStudentProfile,
+  syncSupabaseUserToStudent
 } from './services/authService';
+import { supabase, isSupabaseConfigured } from './services/supabaseClient';
 import { initAutoSyncOnReconnect } from './services/testAttemptService';
 import { 
   syncStudentCloudData, 
@@ -312,6 +314,54 @@ export default function App() {
       setWelcomeUser(student);
     }
   };
+
+  // Handle Supabase OAuth / Magic Link redirect sessions automatically
+  useEffect(() => {
+    if (!isSupabaseConfigured || !supabase) return;
+
+    let isMounted = true;
+
+    const checkAuthSession = async () => {
+      try {
+        const { data: { session } } = await supabase.auth.getSession();
+        if (session?.user && isMounted) {
+          const currentSid = currentStudent?.email || currentStudent?.id;
+          if (!currentSid || currentStudent?.email !== session.user.email) {
+            const student = await syncSupabaseUserToStudent(session.user);
+            if (student && isMounted) {
+              handleLoginSuccess(student);
+            }
+          }
+          if (typeof window !== 'undefined' && (window.location.hash.includes('access_token=') || window.location.search.includes('code='))) {
+            const cleanUrl = window.location.pathname;
+            window.history.replaceState(null, '', cleanUrl);
+          }
+        }
+      } catch (e) {
+        console.warn('[App] Supabase session check error:', e);
+      }
+    };
+
+    checkAuthSession();
+
+    const { data: authListener } = supabase.auth.onAuthStateChange(async (event, session) => {
+      if ((event === 'SIGNED_IN' || event === 'USER_UPDATED') && session?.user && isMounted) {
+        try {
+          const student = await syncSupabaseUserToStudent(session.user);
+          if (student && isMounted) {
+            handleLoginSuccess(student);
+          }
+        } catch (e) {
+          console.warn('[App] Supabase auth state change error:', e);
+        }
+      }
+    });
+
+    return () => {
+      isMounted = false;
+      authListener?.subscription?.unsubscribe();
+    };
+  }, []);
 
   // Persistent Global Presence Sync across all devices and tabs
   useEffect(() => {

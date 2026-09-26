@@ -1427,6 +1427,11 @@ export function checkCurrentSession() {
 
 export function logoutStudent() {
   localStorage.removeItem(LOCAL_STORAGE_SESSION_KEY);
+  if (isSupabaseConfigured && supabase) {
+    try {
+      supabase.auth.signOut().catch(() => {});
+    } catch (e) {}
+  }
 }
 
 /**
@@ -2041,4 +2046,265 @@ export const PRESET_DEMO_PROFILES = {
     xp_points: 1200
   }
 };
+
+/**
+ * -------------------------------------------------------------
+ * GOOGLE OAUTH & MAGIC EMAIL (OTP / LINK) AUTHENTICATION
+ * -------------------------------------------------------------
+ */
+
+/**
+ * Sign in or Sign up via Google OAuth (100% Free via Supabase Auth)
+ */
+export async function signInWithGoogle() {
+  if (!isSupabaseConfigured || !supabase) {
+    return { 
+      success: false, 
+      message: 'Cloud authentication is offline or unconfigured. Please check Supabase credentials.' 
+    };
+  }
+
+  try {
+    const redirectTo = typeof window !== 'undefined' ? window.location.origin : undefined;
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: {
+        redirectTo,
+        queryParams: {
+          access_type: 'offline',
+          prompt: 'select_account'
+        }
+      }
+    });
+
+    if (error) {
+      return { success: false, message: error.message };
+    }
+
+    return { success: true, data };
+  } catch (err) {
+    return { success: false, message: err.message || 'Failed to initiate Google Sign-In.' };
+  }
+}
+
+/**
+ * Send Passwordless Magic Link / 6-digit OTP code to student email
+ */
+export async function sendMagicLink(emailInput) {
+  if (!emailInput || !emailInput.trim()) {
+    return { success: false, message: 'Please enter your email address.' };
+  }
+
+  const cleanEmail = emailInput.trim().toLowerCase();
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(cleanEmail)) {
+    return { success: false, message: 'Please enter a valid email address (e.g. student@gmail.com).' };
+  }
+
+  if (!isSupabaseConfigured || !supabase) {
+    return { 
+      success: false, 
+      message: 'Cloud authentication is offline or unconfigured. Please check Supabase credentials.' 
+    };
+  }
+
+  try {
+    const redirectTo = typeof window !== 'undefined' ? window.location.origin : undefined;
+    const { data, error } = await supabase.auth.signInWithOtp({
+      email: cleanEmail,
+      options: {
+        emailRedirectTo: redirectTo,
+        shouldCreateUser: true
+      }
+    });
+
+    if (error) {
+      return { success: false, message: error.message };
+    }
+
+    return { 
+      success: true, 
+      message: `A sign-in link and 6-digit OTP code has been sent to ${cleanEmail}. Please check your inbox!` 
+    };
+  } catch (err) {
+    return { success: false, message: err.message || 'Failed to send Magic Link / OTP.' };
+  }
+}
+
+/**
+ * Verify 6-digit OTP token entered by user
+ */
+export async function verifyEmailOtp(emailInput, tokenInput, rolePreference = 'student') {
+  if (!emailInput || !emailInput.trim()) {
+    return { success: false, message: 'Please enter your email address.' };
+  }
+  if (!tokenInput || !tokenInput.trim()) {
+    return { success: false, message: 'Please enter the 6-digit OTP code received in your email.' };
+  }
+
+  const cleanEmail = emailInput.trim().toLowerCase();
+  const cleanToken = tokenInput.trim();
+
+  if (!isSupabaseConfigured || !supabase) {
+    return { success: false, message: 'Cloud authentication is offline or unconfigured.' };
+  }
+
+  try {
+    const { data, error } = await supabase.auth.verifyOtp({
+      email: cleanEmail,
+      token: cleanToken,
+      type: 'email'
+    });
+
+    if (error) {
+      return { success: false, message: error.message || 'Invalid or expired OTP code.' };
+    }
+
+    const authUser = data.user || data.session?.user;
+    if (!authUser) {
+      return { success: false, message: 'OTP verified, but user session could not be established.' };
+    }
+
+    const student = await syncSupabaseUserToStudent(authUser, rolePreference);
+    return { success: true, student };
+  } catch (err) {
+    return { success: false, message: err.message || 'OTP verification failed.' };
+  }
+}
+
+/**
+ * Synchronize Supabase Auth user (Google OAuth / Magic OTP) to GATE AG student profile
+ */
+export async function syncSupabaseUserToStudent(authUser, rolePreference = 'student') {
+  if (!authUser || !authUser.email) return null;
+  const email = authUser.email.toLowerCase().trim();
+
+  let student = null;
+
+  if (isSupabaseConfigured && supabase) {
+    try {
+      // 1. Check if student already exists by email
+      const { data: existing, error } = await supabase
+        .from('students')
+        .select('*')
+        .eq('email', email)
+        .maybeSingle();
+
+      if (!error && existing) {
+        student = existing;
+      } else {
+        // 2. New student via Google or Magic Link -> auto-provision profile
+        const fullName = authUser.user_metadata?.full_name || 
+                         authUser.user_metadata?.name || 
+                         email.split('@')[0];
+        const baseUsername = email.split('@')[0].replace(/[^a-z0-9_]/g, '') || 'aspirant';
+        const cleanUsername = `${baseUsername.slice(0, 15)}_${Math.random().toString(36).substring(2, 6)}`;
+        
+        const newPayload = {
+          ...(authUser.id ? { id: authUser.id } : {}),
+          student_type: 'external',
+          full_name: fullName,
+          username: cleanUsername,
+          email: email,
+          email_verified: true,
+          gender: 'Other',
+          dob: '2002-01-01',
+          current_year_sem: '3rd Year / 5th-6th Sem',
+          college_name: 'External Agricultural Institute',
+          role: rolePreference === 'faculty' ? 'faculty' : 'student',
+          is_faculty: rolePreference === 'faculty',
+          profile_updates_count: 0
+        };
+
+        const { data: inserted, error: insertErr } = await supabase
+          .from('students')
+          .insert([newPayload])
+          .select()
+          .maybeSingle();
+
+        if (!insertErr && inserted) {
+          student = inserted;
+        } else {
+          student = {
+            id: authUser.id || `std_${Date.now()}`,
+            ...newPayload
+          };
+        }
+      }
+    } catch (e) {
+      console.warn("Supabase user sync warning:", e);
+    }
+  }
+
+  // 3. Fallback to local session object if offline
+  if (!student) {
+    const fullName = authUser.user_metadata?.full_name || 
+                     authUser.user_metadata?.name || 
+                     email.split('@')[0];
+    student = {
+      id: authUser.id || `std_${Date.now()}`,
+      student_type: 'external',
+      full_name: fullName,
+      username: email.split('@')[0].replace(/[^a-z0-9_]/g, '') || 'aspirant',
+      email: email,
+      email_verified: true,
+      college_name: 'External Agricultural Institute',
+      role: rolePreference === 'faculty' ? 'faculty' : 'student',
+      is_faculty: rolePreference === 'faculty'
+    };
+  }
+
+  const safeStudent = { ...student };
+  delete safeStudent.password_plain;
+
+  // Restore XP points if any
+  if (safeStudent.xp_points !== undefined && safeStudent.xp_points !== null) {
+    const existingLocalXP = Number(localStorage.getItem('gate_ag_student_xp_data') || 0);
+    const mergedXP = Math.max(existingLocalXP, Number(safeStudent.xp_points));
+    localStorage.setItem('gate_ag_student_xp_data', String(mergedXP));
+    safeStudent.xp_points = mergedXP;
+  }
+  if (safeStudent.break_xp !== undefined && safeStudent.break_xp !== null) {
+    const existingLocalBreakXP = Number(localStorage.getItem('gate_ag_break_xp') || 0);
+    const mergedBreakXP = Math.max(existingLocalBreakXP, Number(safeStudent.break_xp));
+    localStorage.setItem('gate_ag_break_xp', String(mergedBreakXP));
+    safeStudent.break_xp = mergedBreakXP;
+  }
+
+  const deviceToken = 'dt_' + (typeof crypto !== 'undefined' && crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).substring(2));
+  
+  if (isSupabaseConfigured && supabase && safeStudent.id) {
+    try {
+      await supabase.from('device_sessions').insert([{
+        student_id: safeStudent.id,
+        device_token: deviceToken,
+        device_info: typeof navigator !== 'undefined' ? navigator.userAgent : 'Unknown'
+      }]);
+    } catch (e) {}
+  }
+
+  localStorage.setItem(LOCAL_STORAGE_SESSION_KEY, JSON.stringify({
+    token: deviceToken,
+    student: safeStudent,
+    savedAt: Date.now()
+  }));
+
+  saveRememberedCredentials(safeStudent.email, '', safeStudent);
+
+  try {
+    associateGuestAttemptsWithStudent(safeStudent);
+  } catch (e) {}
+
+  try {
+    recordLiveAction({
+      type: 'session_login',
+      studentName: safeStudent.full_name,
+      collegeName: safeStudent.college_name,
+      section: 'OAuth/Magic Auth',
+      details: `${safeStudent.full_name} logged in via Supabase Auth`
+    });
+  } catch (e) {}
+
+  return safeStudent;
+}
 

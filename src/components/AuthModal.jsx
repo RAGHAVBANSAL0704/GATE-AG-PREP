@@ -20,13 +20,19 @@ import {
   Sparkles,
   Copy,
   HelpCircle,
-  X
+  X,
+  KeyRound,
+  Send,
+  RefreshCw
 } from 'lucide-react';
 import { 
   registerStudent, 
   loginStudent, 
   registerFaculty,
   loginFaculty,
+  signInWithGoogle,
+  sendMagicLink,
+  verifyEmailOtp,
   getRememberedIdentifier, 
   getRememberedCredentials,
   clearRememberedCredentials,
@@ -41,6 +47,18 @@ import { parseAdmissionRollNumber } from '../utils/rollNumberParser.js';
 
 // Feature Flag: Preserved for future testing / preview environments
 const SHOW_QUICK_DEMO_PROFILES = false;
+
+// Standard Google G Brand Icon (Official Brand Colors)
+function GoogleBrandIcon({ className = "w-4 h-4 shrink-0" }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+      <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.8-2.4 3.66v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.15z" />
+      <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.34 24 12 24z" />
+      <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.16 0 9.97 0 12s.45 3.84 1.25 5.42l4.03-3.15z" />
+      <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.34 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z" />
+    </svg>
+  );
+}
 
 export const CATEGORIZED_UNIVERSITIES = [
   {
@@ -224,6 +242,16 @@ export default function AuthModal({
   const [successMsg, setSuccessMsg] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
+  // Google OAuth & Passwordless Magic Email State
+  const [isGoogleLoading, setIsGoogleLoading] = useState(false);
+  const [magicEmail, setMagicEmail] = useState('');
+  const [magicOtpCode, setMagicOtpCode] = useState('');
+  const [magicStep, setMagicStep] = useState('idle'); // 'idle' | 'sent'
+  const [isMagicLoading, setIsMagicLoading] = useState(false);
+  const [magicSuccessNotice, setMagicSuccessNotice] = useState('');
+  const [magicErrorNotice, setMagicErrorNotice] = useState('');
+  const [showMagicEmailSection, setShowMagicEmailSection] = useState(false);
+
   // Smart Roll Number / Admission Number Live Parser
   const parsedRollInfo = useMemo(() => {
     return parseAdmissionRollNumber(admissionNo, collegeName);
@@ -290,12 +318,95 @@ export default function AuthModal({
     setPrimaryTab(tab);
     setErrorMsg('');
     setSuccessMsg('');
+    setMagicErrorNotice('');
+    setMagicSuccessNotice('');
   };
 
   const switchPortal = (role) => {
     setPortalRole(role);
     setErrorMsg('');
     setSuccessMsg('');
+    setMagicErrorNotice('');
+    setMagicSuccessNotice('');
+  };
+
+  // Google OAuth Sign-In Handler
+  const handleGoogleAuth = async () => {
+    setErrorMsg('');
+    setSuccessMsg('');
+    setMagicErrorNotice('');
+    setMagicSuccessNotice('');
+    setIsGoogleLoading(true);
+
+    try {
+      const res = await signInWithGoogle();
+      if (!res.success) {
+        setErrorMsg(res.message || 'Unable to connect to Google Sign-In.');
+        setIsGoogleLoading(false);
+      }
+      // If success, Supabase client redirects the browser to accounts.google.com automatically
+    } catch (err) {
+      setErrorMsg('Google Sign-In failed to connect.');
+      setIsGoogleLoading(false);
+    }
+  };
+
+  // Magic Link / Email OTP Dispatch Handler
+  const handleSendMagic = async (e) => {
+    if (e) e.preventDefault();
+    setMagicErrorNotice('');
+    setMagicSuccessNotice('');
+
+    const targetEmail = magicEmail.trim() || email.trim() || (portalRole === 'faculty' ? facultyEmail.trim() : '');
+    if (!targetEmail) {
+      setMagicErrorNotice('Please enter your email address to receive the magic link / OTP code.');
+      return;
+    }
+
+    setIsMagicLoading(true);
+    try {
+      const res = await sendMagicLink(targetEmail);
+      if (res.success) {
+        setMagicStep('sent');
+        setMagicSuccessNotice(res.message || `Magic Link and 6-digit OTP code sent to ${targetEmail}!`);
+      } else {
+        setMagicErrorNotice(res.message || 'Failed to send Magic Link.');
+      }
+    } catch (err) {
+      setMagicErrorNotice('An error occurred while sending the magic link.');
+    } finally {
+      setIsMagicLoading(false);
+    }
+  };
+
+  // Verify Email OTP Code Handler
+  const handleVerifyMagicOtp = async (e) => {
+    if (e) e.preventDefault();
+    setMagicErrorNotice('');
+    setMagicSuccessNotice('');
+
+    const targetEmail = magicEmail.trim() || email.trim() || (portalRole === 'faculty' ? facultyEmail.trim() : '');
+    if (!magicOtpCode.trim()) {
+      setMagicErrorNotice('Please enter the 6-digit verification code.');
+      return;
+    }
+
+    setIsMagicLoading(true);
+    try {
+      const res = await verifyEmailOtp(targetEmail, magicOtpCode.trim(), portalRole);
+      if (res.success && res.student) {
+        setSuccessMsg(`Welcome, ${res.student.display_name || res.student.full_name || 'Aspirant'}! Logging in...`);
+        setTimeout(() => {
+          onLoginSuccess(res.student, true);
+        }, 400);
+      } else {
+        setMagicErrorNotice(res.message || 'Invalid or expired OTP code.');
+      }
+    } catch (err) {
+      setMagicErrorNotice('OTP verification failed. Please try again.');
+    } finally {
+      setIsMagicLoading(false);
+    }
   };
 
   // Student Sign Up Handler
@@ -636,133 +747,282 @@ export default function AuthModal({
           {/* LOGIN FORM (COMMON FOR BOTH STUDENT AND FACULTY)         */}
           {/* ======================================================== */}
           {primaryTab === 'login' && (
-            <form onSubmit={handleLogin} className="space-y-4">
-              {rememberedAccount && rememberedAccount.identifier === loginIdentifier && (
-                <div className="p-2.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 flex items-center justify-between text-xs animate-fadeIn">
-                  <div className="flex items-center gap-2 min-w-0">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                    <span className="text-slate-700 dark:text-slate-300 truncate text-[11px]">
-                      Saved credentials remembered for <strong className="text-slate-900 dark:text-white font-bold">{rememberedAccount.fullName || rememberedAccount.identifier}</strong>
-                    </span>
-                  </div>
-                  <button
-                    type="button"
-                    onClick={handleClearRemembered}
-                    className="text-[11px] font-bold text-slate-500 hover:text-rose-600 dark:hover:text-rose-400 underline shrink-0 ml-2 cursor-pointer"
-                    title="Clear remembered credentials on this device"
-                  >
-                    Forget
-                  </button>
-                </div>
-              )}
-              <div>
-                <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
-                  {portalRole === 'faculty' ? 'Faculty Email or Username' : 'Account Identifier'}
-                </label>
-                <div className="relative">
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
-                    {portalRole === 'faculty' ? <Mail className="w-4 h-4" /> : <User className="w-4 h-4" />}
-                  </div>
-                  <input
-                    type="text"
-                    required
-                    autoComplete="username"
-                    placeholder={portalRole === 'faculty' ? 'e.g. prof.name@university.edu or @prof_username' : 'Username, Admission No, or Email'}
-                    value={loginIdentifier}
-                    onChange={(e) => setLoginIdentifier(e.target.value)}
-                    className="w-full pl-9 pr-3.5 py-2.5 text-xs bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <div className="flex items-center justify-between mb-1.5">
-                  <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">
-                    Password
-                  </label>
-                  {portalRole === 'student' ? (
-                    <span className="text-[11px] text-slate-400">
-                      (Default: DOB DD/MM/YYYY)
-                    </span>
-                  ) : (
-                    <span className="text-[11px] text-indigo-500 dark:text-indigo-400 font-mono text-[10px]">
-                      Default: Faculty@2026
-                    </span>
-                  )}
-                </div>
-                <div className="relative">
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
-                    <Lock className="w-4 h-4" />
-                  </div>
-                  <input
-                    type={showLoginPassword ? "text" : "password"}
-                    required
-                    autoComplete="current-password"
-                    placeholder="Enter your password"
-                    value={loginPassword}
-                    onChange={(e) => setLoginPassword(e.target.value)}
-                    onKeyDown={handleKeyModifierCheck}
-                    onKeyUp={handleKeyModifierCheck}
-                    className="w-full pl-9 pr-10 py-2.5 text-xs bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
-                  />
-                  <button
-                    type="button"
-                    onClick={() => setShowLoginPassword(!showLoginPassword)}
-                    className="absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
-                    title={showLoginPassword ? "Hide password" : "Show password"}
-                  >
-                    {showLoginPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-                  </button>
-                </div>
-                {isCapsLockOn && (
-                  <div className="mt-1.5 px-2.5 py-1 rounded-lg bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 text-amber-700 dark:text-amber-300 text-[10px] font-bold flex items-center gap-1.5 animate-fadeIn">
-                    <AlertCircle className="w-3 h-3 text-amber-500" />
-                    <span>Caps Lock is ON</span>
+            <div className="space-y-4">
+              <form onSubmit={handleLogin} className="space-y-4">
+                {rememberedAccount && rememberedAccount.identifier === loginIdentifier && (
+                  <div className="p-2.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800/60 flex items-center justify-between text-xs animate-fadeIn">
+                    <div className="flex items-center gap-2 min-w-0">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                      <span className="text-slate-700 dark:text-slate-300 truncate text-[11px]">
+                        Saved credentials remembered for <strong className="text-slate-900 dark:text-white font-bold">{rememberedAccount.fullName || rememberedAccount.identifier}</strong>
+                      </span>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={handleClearRemembered}
+                      className="text-[11px] font-bold text-slate-500 hover:text-rose-600 dark:hover:text-rose-400 underline shrink-0 ml-2 cursor-pointer"
+                      title="Clear remembered credentials on this device"
+                    >
+                      Forget
+                    </button>
                   </div>
                 )}
-              </div>
+                <div>
+                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1.5">
+                    {portalRole === 'faculty' ? 'Faculty Email or Username' : 'Account Identifier'}
+                  </label>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+                      {portalRole === 'faculty' ? <Mail className="w-4 h-4" /> : <User className="w-4 h-4" />}
+                    </div>
+                    <input
+                      type="text"
+                      required
+                      autoComplete="username"
+                      placeholder={portalRole === 'faculty' ? 'e.g. prof.name@university.edu or @prof_username' : 'Username, Admission No, or Email'}
+                      value={loginIdentifier}
+                      onChange={(e) => setLoginIdentifier(e.target.value)}
+                      className="w-full pl-9 pr-3.5 py-2.5 text-xs bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
+                    />
+                  </div>
+                </div>
 
-              <div className="flex items-center justify-between text-xs pt-1 pb-1">
-                <label className="flex items-center gap-2 cursor-pointer text-slate-600 dark:text-slate-400">
-                  <input
-                    type="checkbox"
-                    checked={rememberMe}
-                    onChange={(e) => setRememberMe(e.target.checked)}
-                    className="w-4 h-4 rounded border-slate-300 dark:border-slate-700 text-indigo-600 focus:ring-0 cursor-pointer"
-                  />
-                  <span>Remember me</span>
-                </label>
+                <div>
+                  <div className="flex items-center justify-between mb-1.5">
+                    <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">
+                      Password
+                    </label>
+                    {portalRole === 'student' ? (
+                      <span className="text-[11px] text-slate-400">
+                        (Default: DOB DD/MM/YYYY)
+                      </span>
+                    ) : (
+                      <span className="text-[11px] text-indigo-500 dark:text-indigo-400 font-mono text-[10px]">
+                        Default: Faculty@2026
+                      </span>
+                    )}
+                  </div>
+                  <div className="relative">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+                      <Lock className="w-4 h-4" />
+                    </div>
+                    <input
+                      type={showLoginPassword ? "text" : "password"}
+                      required
+                      autoComplete="current-password"
+                      placeholder="Enter your password"
+                      value={loginPassword}
+                      onChange={(e) => setLoginPassword(e.target.value)}
+                      onKeyDown={handleKeyModifierCheck}
+                      onKeyUp={handleKeyModifierCheck}
+                      className="w-full pl-9 pr-10 py-2.5 text-xs bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setShowLoginPassword(!showLoginPassword)}
+                      className="absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
+                      title={showLoginPassword ? "Hide password" : "Show password"}
+                    >
+                      {showLoginPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                    </button>
+                  </div>
+                  {isCapsLockOn && (
+                    <div className="mt-1.5 px-2.5 py-1 rounded-lg bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/60 text-amber-700 dark:text-amber-300 text-[10px] font-bold flex items-center gap-1.5 animate-fadeIn">
+                      <AlertCircle className="w-3.5 h-3.5 text-amber-500" />
+                      <span>Caps Lock is ON</span>
+                    </div>
+                  )}
+                </div>
+
+                <div className="flex items-center justify-between text-xs pt-1 pb-1">
+                  <label className="flex items-center gap-2 cursor-pointer text-slate-600 dark:text-slate-400">
+                    <input
+                      type="checkbox"
+                      checked={rememberMe}
+                      onChange={(e) => setRememberMe(e.target.checked)}
+                      className="w-4 h-4 rounded border-slate-300 dark:border-slate-700 text-indigo-600 focus:ring-0 cursor-pointer"
+                    />
+                    <span>Remember me</span>
+                  </label>
+
+                  <button
+                    type="button"
+                    onClick={() => setShowForgotPasswordModal(true)}
+                    className="text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 hover:underline cursor-pointer"
+                  >
+                    Forgot Password?
+                  </button>
+                </div>
 
                 <button
-                  type="button"
-                  onClick={() => setShowForgotPasswordModal(true)}
-                  className="text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 hover:underline cursor-pointer"
+                  type="submit"
+                  disabled={isLoading}
+                  className={`w-full py-2.5 px-4 font-semibold text-xs rounded-xl shadow-sm transition-all flex items-center justify-center gap-2 disabled:opacity-50 mt-4 cursor-pointer text-white ${
+                    portalRole === 'faculty'
+                      ? 'bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 shadow-indigo-500/20'
+                      : 'bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 shadow-emerald-500/20'
+                  }`}
                 >
-                  Forgot Password?
+                  {isLoading ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      <span>Signing in...</span>
+                    </>
+                  ) : (
+                    <>
+                      <span>{portalRole === 'faculty' ? 'Sign In to Faculty Portal' : 'Sign In'}</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </>
+                  )}
                 </button>
+              </form>
+
+              {/* Divider between Password Login and Alternative 1-Click / Magic Auth */}
+              <div className="relative my-4">
+                <div className="absolute inset-0 flex items-center">
+                  <div className="w-full border-t border-slate-200 dark:border-slate-800" />
+                </div>
+                <div className="relative flex justify-center text-[10px] uppercase font-bold tracking-wider">
+                  <span className="bg-white dark:bg-slate-900 px-3 text-slate-400 dark:text-slate-500">
+                    Or sign in with
+                  </span>
+                </div>
               </div>
 
+              {/* Quick 1-Click Google OAuth */}
               <button
-                type="submit"
-                disabled={isLoading}
-                className={`w-full py-2.5 px-4 font-semibold text-xs rounded-xl shadow-sm transition-all flex items-center justify-center gap-2 disabled:opacity-50 mt-4 cursor-pointer text-white ${
-                  portalRole === 'faculty'
-                    ? 'bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 shadow-indigo-500/20'
-                    : 'bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 shadow-emerald-500/20'
-                }`}
+                type="button"
+                onClick={handleGoogleAuth}
+                disabled={isGoogleLoading || isLoading}
+                className="w-full py-2.5 px-4 bg-white hover:bg-slate-50 dark:bg-slate-800/90 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-100 border border-slate-300/80 dark:border-slate-700 rounded-xl font-semibold text-xs shadow-xs hover:shadow-sm transition-all flex items-center justify-center gap-2.5 cursor-pointer disabled:opacity-50 group"
               >
-                {isLoading ? (
+                {isGoogleLoading ? (
                   <>
-                    <Loader2 className="w-4 h-4 animate-spin" />
-                    <span>Signing in...</span>
+                    <Loader2 className="w-4 h-4 animate-spin text-slate-500" />
+                    <span>Connecting to Google...</span>
                   </>
                 ) : (
                   <>
-                    <span>{portalRole === 'faculty' ? 'Sign In to Faculty Portal' : 'Sign In'}</span>
-                    <ArrowRight className="w-4 h-4" />
+                    <GoogleBrandIcon className="w-4 h-4 shrink-0 transition-transform group-hover:scale-110" />
+                    <span>Continue with Google</span>
                   </>
                 )}
               </button>
+
+              {/* Passwordless Magic Email / OTP Section */}
+              <div className="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-950/40 p-3">
+                {!showMagicEmailSection ? (
+                  <button
+                    type="button"
+                    onClick={() => setShowMagicEmailSection(true)}
+                    className="w-full flex items-center justify-between text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition cursor-pointer"
+                  >
+                    <div className="flex items-center gap-2">
+                      <Mail className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                      <span>Sign in with Magic Link or Email OTP</span>
+                    </div>
+                    <span className="text-[10px] text-indigo-600 dark:text-indigo-400 font-bold">Passwordless ✨</span>
+                  </button>
+                ) : (
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-1.5 text-xs font-bold text-slate-800 dark:text-slate-200">
+                        <Mail className="w-3.5 h-3.5 text-emerald-500" />
+                        <span>Magic Email Link & 6-Digit OTP</span>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setShowMagicEmailSection(false);
+                          setMagicStep('idle');
+                          setMagicErrorNotice('');
+                          setMagicSuccessNotice('');
+                        }}
+                        className="text-[10px] text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 cursor-pointer"
+                      >
+                        Cancel
+                      </button>
+                    </div>
+
+                    {magicErrorNotice && (
+                      <div className="p-2 rounded-lg bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-900/50 text-rose-600 dark:text-rose-400 text-[11px] flex items-center gap-1.5">
+                        <AlertCircle className="w-3.5 h-3.5 shrink-0" />
+                        <span>{magicErrorNotice}</span>
+                      </div>
+                    )}
+
+                    {magicSuccessNotice && (
+                      <div className="p-2 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-900/50 text-emerald-700 dark:text-emerald-300 text-[11px] flex items-center gap-1.5">
+                        <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
+                        <span>{magicSuccessNotice}</span>
+                      </div>
+                    )}
+
+                    {magicStep !== 'sent' ? (
+                      <div className="flex gap-2">
+                        <input
+                          type="email"
+                          placeholder="student@example.com"
+                          value={magicEmail}
+                          onChange={(e) => setMagicEmail(e.target.value)}
+                          className="flex-1 px-3 py-2 text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-emerald-500"
+                        />
+                        <button
+                          type="button"
+                          onClick={handleSendMagic}
+                          disabled={isMagicLoading}
+                          className="px-3.5 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs rounded-lg shadow-sm flex items-center gap-1.5 disabled:opacity-50 cursor-pointer shrink-0"
+                        >
+                          {isMagicLoading ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Send className="w-3.5 h-3.5" />}
+                          <span>Send Code</span>
+                        </button>
+                      </div>
+                    ) : (
+                      <div className="space-y-2">
+                        <p className="text-[11px] text-slate-600 dark:text-slate-400 leading-tight">
+                          Click the link sent to <strong className="text-slate-900 dark:text-white">{magicEmail}</strong> or enter 6-digit OTP:
+                        </p>
+                        <div className="flex gap-2">
+                          <input
+                            type="text"
+                            maxLength={8}
+                            placeholder="e.g. 123456"
+                            value={magicOtpCode}
+                            onChange={(e) => setMagicOtpCode(e.target.value)}
+                            className="flex-1 px-3 py-2 text-xs text-center font-mono font-bold tracking-widest bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500"
+                          />
+                          <button
+                            type="button"
+                            onClick={handleVerifyMagicOtp}
+                            disabled={isMagicLoading}
+                            className="px-3.5 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs rounded-lg shadow-sm flex items-center gap-1.5 disabled:opacity-50 cursor-pointer shrink-0"
+                          >
+                            {isMagicLoading ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <KeyRound className="w-3.5 h-3.5" />}
+                            <span>Verify Code</span>
+                          </button>
+                        </div>
+                        <div className="flex items-center justify-between text-[10px] text-slate-400 pt-1">
+                          <button
+                            type="button"
+                            onClick={handleSendMagic}
+                            disabled={isMagicLoading}
+                            className="hover:underline flex items-center gap-1 text-slate-500 dark:text-slate-400 cursor-pointer"
+                          >
+                            <RefreshCw className="w-3 h-3" /> Resend Code
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => { setMagicStep('idle'); setMagicOtpCode(''); }}
+                            className="hover:underline text-slate-500 dark:text-slate-400 cursor-pointer"
+                          >
+                            Change Email
+                          </button>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
 
               {/* 1-Click Quick Demo Profiles (Hidden by default; retained in codebase for future invocation) */}
               {SHOW_QUICK_DEMO_PROFILES && (
@@ -808,7 +1068,7 @@ export default function AuthModal({
                   {portalRole === 'faculty' ? 'Register Faculty Profile' : 'Create one now'}
                 </button>
               </div>
-            </form>
+            </div>
           )}
 
           {/* ======================================================== */}
@@ -1015,7 +1275,8 @@ export default function AuthModal({
           {/* STUDENT REGISTRATION FORM                                */}
           {/* ======================================================== */}
           {primaryTab === 'signup' && portalRole === 'student' && (
-            <form onSubmit={handleStudentSignUp} className="space-y-4">
+            <div className="space-y-4">
+              <form onSubmit={handleStudentSignUp} className="space-y-4">
               {/* Category Mode Pills */}
               <div className="grid grid-cols-2 rounded-xl bg-slate-100 dark:bg-slate-950/60 p-1 border border-slate-200 dark:border-slate-800 gap-1">
                 <button
@@ -1312,6 +1573,155 @@ export default function AuthModal({
                 )}
               </button>
 
+              </form>
+
+              {/* Divider between Full Profile Registration and Alternative 1-Click / Magic Auth */}
+              <div className="relative my-4">
+                <div className="absolute inset-0 flex items-center">
+                  <div className="w-full border-t border-slate-200 dark:border-slate-800" />
+                </div>
+                <div className="relative flex justify-center text-[10px] uppercase font-bold tracking-wider">
+                  <span className="bg-white dark:bg-slate-900 px-3 text-slate-400 dark:text-slate-500">
+                    Or sign up with
+                  </span>
+                </div>
+              </div>
+
+              {/* Quick 1-Click Fast Sign Up with Google */}
+              <button
+                type="button"
+                onClick={handleGoogleAuth}
+                disabled={isGoogleLoading || isLoading}
+                className="w-full py-2.5 px-4 bg-white hover:bg-slate-50 dark:bg-slate-800/90 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-100 border border-slate-300/80 dark:border-slate-700 rounded-xl font-semibold text-xs shadow-xs hover:shadow-sm transition-all flex items-center justify-center gap-2.5 cursor-pointer disabled:opacity-50 group"
+              >
+                {isGoogleLoading ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin text-slate-500" />
+                    <span>Connecting to Google...</span>
+                  </>
+                ) : (
+                  <>
+                    <GoogleBrandIcon className="w-4 h-4 shrink-0 transition-transform group-hover:scale-110" />
+                    <span>Sign up with Google</span>
+                  </>
+                )}
+              </button>
+
+              {/* Passwordless Magic Email / OTP Quick Register */}
+              <div className="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-950/40 p-3">
+                {!showMagicEmailSection ? (
+                  <button
+                    type="button"
+                    onClick={() => setShowMagicEmailSection(true)}
+                    className="w-full flex items-center justify-between text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition cursor-pointer"
+                  >
+                    <div className="flex items-center gap-2">
+                      <Mail className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                      <span>Sign up with Magic Link or Email OTP</span>
+                    </div>
+                    <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold">Passwordless ✨</span>
+                  </button>
+                ) : (
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-1.5 text-xs font-bold text-slate-800 dark:text-slate-200">
+                        <Mail className="w-3.5 h-3.5 text-emerald-500" />
+                        <span>Magic Email Sign-Up</span>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setShowMagicEmailSection(false);
+                          setMagicStep('idle');
+                          setMagicErrorNotice('');
+                          setMagicSuccessNotice('');
+                        }}
+                        className="text-[10px] text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 cursor-pointer"
+                      >
+                        Cancel
+                      </button>
+                    </div>
+
+                    {magicErrorNotice && (
+                      <div className="p-2 rounded-lg bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-900/50 text-rose-600 dark:text-rose-400 text-[11px] flex items-center gap-1.5">
+                        <AlertCircle className="w-3.5 h-3.5 shrink-0" />
+                        <span>{magicErrorNotice}</span>
+                      </div>
+                    )}
+
+                    {magicSuccessNotice && (
+                      <div className="p-2 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-900/50 text-emerald-700 dark:text-emerald-300 text-[11px] flex items-center gap-1.5">
+                        <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
+                        <span>{magicSuccessNotice}</span>
+                      </div>
+                    )}
+
+                    {magicStep !== 'sent' ? (
+                      <div className="flex gap-2">
+                        <input
+                          type="email"
+                          placeholder="student@example.com"
+                          value={magicEmail}
+                          onChange={(e) => setMagicEmail(e.target.value)}
+                          className="flex-1 px-3 py-2 text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-emerald-500"
+                        />
+                        <button
+                          type="button"
+                          onClick={handleSendMagic}
+                          disabled={isMagicLoading}
+                          className="px-3.5 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs rounded-lg shadow-sm flex items-center gap-1.5 disabled:opacity-50 cursor-pointer shrink-0"
+                        >
+                          {isMagicLoading ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Send className="w-3.5 h-3.5" />}
+                          <span>Send Code</span>
+                        </button>
+                      </div>
+                    ) : (
+                      <div className="space-y-2">
+                        <p className="text-[11px] text-slate-600 dark:text-slate-400 leading-tight">
+                          Click the link sent to <strong className="text-slate-900 dark:text-white">{magicEmail}</strong> or enter 6-digit OTP:
+                        </p>
+                        <div className="flex gap-2">
+                          <input
+                            type="text"
+                            maxLength={8}
+                            placeholder="e.g. 123456"
+                            value={magicOtpCode}
+                            onChange={(e) => setMagicOtpCode(e.target.value)}
+                            className="flex-1 px-3 py-2 text-xs text-center font-mono font-bold tracking-widest bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-white focus:outline-none focus:border-emerald-500"
+                          />
+                          <button
+                            type="button"
+                            onClick={handleVerifyMagicOtp}
+                            disabled={isMagicLoading}
+                            className="px-3.5 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs rounded-lg shadow-sm flex items-center gap-1.5 disabled:opacity-50 cursor-pointer shrink-0"
+                          >
+                            {isMagicLoading ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <KeyRound className="w-3.5 h-3.5" />}
+                            <span>Verify Code</span>
+                          </button>
+                        </div>
+                        <div className="flex items-center justify-between text-[10px] text-slate-400 pt-1">
+                          <button
+                            type="button"
+                            onClick={handleSendMagic}
+                            disabled={isMagicLoading}
+                            className="hover:underline flex items-center gap-1 text-slate-500 dark:text-slate-400 cursor-pointer"
+                          >
+                            <RefreshCw className="w-3 h-3" /> Resend Code
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => { setMagicStep('idle'); setMagicOtpCode(''); }}
+                            className="hover:underline text-slate-500 dark:text-slate-400 cursor-pointer"
+                          >
+                            Change Email
+                          </button>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+
               <div className="text-center pt-2 text-xs text-slate-500 dark:text-slate-400">
                 Already have an account?{' '}
                 <button
@@ -1322,7 +1732,7 @@ export default function AuthModal({
                   Sign in
                 </button>
               </div>
-            </form>
+            </div>
           )}
 
           {/* Explore Portal as Guest / Visitor */}

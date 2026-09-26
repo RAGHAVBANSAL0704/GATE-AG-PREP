@@ -40,7 +40,11 @@ import {
   LOCAL_STORAGE_REMEMBER_CREDENTIALS_KEY,
   PRESET_SECURITY_QUESTIONS,
   FACULTY_SALUTATIONS,
-  AGRI_ENGG_DEPARTMENTS
+  AGRI_ENGG_DEPARTMENTS,
+  signInWithGoogle,
+  sendMagicLink,
+  verifyEmailOtp,
+  syncSupabaseUserToStudent
 } from '../src/services/authService.js';
 
 describe('Username Sign-Up & Authentication Unit Tests', () => {
@@ -569,4 +573,61 @@ describe('Faculty Authentication & Registration Unit Tests', () => {
     assert.equal(getRememberedIdentifier(), '');
   });
 
+  describe('Google OAuth & Magic Email Authentication Tests', () => {
+    test('signInWithGoogle handles unconfigured / offline environment gracefully', async () => {
+      const res = await signInWithGoogle();
+      assert.equal(res.success, false);
+      assert.match(res.message, /offline|unconfigured|credentials/i);
+    });
+
+    test('sendMagicLink validates missing and malformed email inputs', async () => {
+      const emptyRes = await sendMagicLink('');
+      assert.equal(emptyRes.success, false);
+      assert.match(emptyRes.message, /enter your email/i);
+
+      const invalidRes = await sendMagicLink('not-an-email');
+      assert.equal(invalidRes.success, false);
+      assert.match(invalidRes.message, /valid email/i);
+    });
+
+    test('sendMagicLink handles unconfigured environment gracefully for valid email', async () => {
+      const res = await sendMagicLink('student@example.com');
+      assert.equal(res.success, false);
+      assert.match(res.message, /offline|unconfigured/i);
+    });
+
+    test('verifyEmailOtp validates missing email and missing token inputs', async () => {
+      const emptyEmail = await verifyEmailOtp('', '123456');
+      assert.equal(emptyEmail.success, false);
+      assert.match(emptyEmail.message, /enter your email/i);
+
+      const emptyToken = await verifyEmailOtp('student@example.com', '');
+      assert.equal(emptyToken.success, false);
+      assert.match(emptyToken.message, /OTP code/i);
+    });
+
+    test('syncSupabaseUserToStudent provisions student session properly from auth object', async () => {
+      const mockAuthUser = {
+        id: 'supabase_usr_test_123',
+        email: 'test.aspirant@gmail.com',
+        user_metadata: {
+          full_name: 'Test Aspirant'
+        }
+      };
+
+      const student = await syncSupabaseUserToStudent(mockAuthUser, 'student');
+      assert.ok(student, 'Student should be returned from sync');
+      assert.equal(student.email, 'test.aspirant@gmail.com');
+      assert.equal(student.full_name, 'Test Aspirant');
+      assert.equal(student.email_verified, true);
+
+      // Verify session stored in localStorage
+      const sessionRaw = localStorage.getItem('gate_ag_prep_session_token');
+      assert.ok(sessionRaw, 'Session token should exist in localStorage');
+      const session = JSON.parse(sessionRaw);
+      assert.equal(session.student.email, 'test.aspirant@gmail.com');
+    });
+  });
+
 });
+
