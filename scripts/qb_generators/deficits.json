@@ -1,0 +1,2634 @@
+[
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Matrices and determinants",
+    "current_count": 11,
+    "needed": 4
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Linear and orthogonal transformations",
+    "current_count": 8,
+    "needed": 7
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Cayley\u2013Hamilton theorem",
+    "current_count": 8,
+    "needed": 7
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Eigen values and Eigen vectors",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Solutions of linear equations",
+    "current_count": 9,
+    "needed": 6
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Limit, continuity and differentiability",
+    "current_count": 9,
+    "needed": 6
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Partial derivatives",
+    "current_count": 6,
+    "needed": 9
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Homogeneous function \u2013 Euler's theorem on homogeneous functions",
+    "current_count": 9,
+    "needed": 6
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Total differentiation",
+    "current_count": 6,
+    "needed": 9
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Maxima and minima of function with several independent variables",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Sequences and series \u2013 infinite series, tests for convergence",
+    "current_count": 7,
+    "needed": 8
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Fourier, Taylor and MacLaurin series",
+    "current_count": 8,
+    "needed": 7
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Vector differentiation",
+    "current_count": 4,
+    "needed": 11
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Scalar and vector point functions",
+    "current_count": 6,
+    "needed": 9
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Vector differential operators \u2013 del, gradient",
+    "current_count": 5,
+    "needed": 10
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Divergence and curl",
+    "current_count": 9,
+    "needed": 6
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Physical interpretations \u2013 line, surface and volume integrals",
+    "current_count": 7,
+    "needed": 8
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Stokes, Gauss and Green's theorems",
+    "current_count": 9,
+    "needed": 6
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Linear and non-linear first order Ordinary Differential Equations (ODE)",
+    "current_count": 9,
+    "needed": 6
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Homogeneous differential equations",
+    "current_count": 6,
+    "needed": 9
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Higher order linear ODEs with constant coefficients",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Laplace transforms and their inverse",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Partial Differential Equations \u2013 Laplace, heat and wave equations",
+    "current_count": 8,
+    "needed": 7
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Mean, median, mode and standard deviation",
+    "current_count": 7,
+    "needed": 8
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Random variables",
+    "current_count": 9,
+    "needed": 6
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Poisson, normal and binomial distributions",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Correlation and regression analysis",
+    "current_count": 8,
+    "needed": 7
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods",
+    "subtopic": "Solutions of linear and non-linear algebraic equations",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods",
+    "subtopic": "Numerical integration \u2013 trapezoidal and Simpson's rule",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods",
+    "subtopic": "Numerical solutions of ODEs",
+    "current_count": 9,
+    "needed": 6
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Determinant properties",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Inverse of matrix",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Orthogonal matrices",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Eigenvalues and eigenvectors",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Cayley\u2013Hamilton theorem",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Powers of matrices",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Vector spaces and basis",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "L'Hospital's rule",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Indeterminate forms",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Rolle's and Mean value theorems",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 1,
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Euler's theorem on homogeneous functions",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 2,
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Cost analysis of implements and tractors",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 2,
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Hitch systems and hitching of tillage implements",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 2,
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design",
+    "subtopic": "Overload safety devices used in farm machinery",
+    "current_count": 8,
+    "needed": 7
+  },
+  {
+    "sec_num": 3,
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Engine components",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 3,
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Lubricants and their properties",
+    "current_count": 7,
+    "needed": 8
+  },
+  {
+    "sec_num": 3,
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Selection, operation, maintenance and repair of I.C. engines",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 3,
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Mechanics of tractor chassis",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 3,
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Traction theory",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 3,
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Power transmission systems \u2013 gear trains, differential, final drives and power take-off",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 3,
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Three point hitches \u2013 free link and restrained link operations",
+    "current_count": 7,
+    "needed": 8
+  },
+  {
+    "sec_num": 3,
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Tractor tests and performance",
+    "current_count": 7,
+    "needed": 8
+  },
+  {
+    "sec_num": 3,
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Type, selection, maintenance and repair of tractors and power tillers",
+    "current_count": 7,
+    "needed": 8
+  },
+  {
+    "sec_num": 3,
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Tractor clutches and brakes",
+    "current_count": 7,
+    "needed": 8
+  },
+  {
+    "sec_num": 3,
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Steering and hydraulic control systems used in tractors",
+    "current_count": 8,
+    "needed": 7
+  },
+  {
+    "sec_num": 3,
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Human engineering and safety considerations in design of tractor and agricultural implements",
+    "current_count": 7,
+    "needed": 8
+  },
+  {
+    "sec_num": 3,
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Power",
+    "subtopic": "Bio-fuels and their use in farm mechanization",
+    "current_count": 11,
+    "needed": 4
+  },
+  {
+    "sec_num": 3,
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Power",
+    "subtopic": "Sources of power on the farm \u2013 human, animal, mechanical, electrical, wind, solar and biomass",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil and Water Erosion",
+    "subtopic": "Soil loss estimation",
+    "current_count": 9,
+    "needed": 6
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil and Water Erosion",
+    "subtopic": "Gully control structures \u2013 drop, drop inlet and chute spillways",
+    "current_count": 11,
+    "needed": 4
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil and Water Erosion",
+    "subtopic": "Terraces and bunds",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil and Water Erosion",
+    "subtopic": "Mechanics of soil erosion \u2013 wind and water erosion",
+    "current_count": 5,
+    "needed": 10
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil and Water Erosion",
+    "subtopic": "Vegetative waterways",
+    "current_count": 5,
+    "needed": 10
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil and Water Erosion",
+    "subtopic": "Earthen dams",
+    "current_count": 5,
+    "needed": 10
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil and Water Erosion",
+    "subtopic": "Biological and engineering measures to control erosion",
+    "current_count": 3,
+    "needed": 12
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil and Water Erosion",
+    "subtopic": "Soil erosion types, factors affecting erosion",
+    "current_count": 2,
+    "needed": 13
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Fluid Mechanics",
+    "subtopic": "Ideal and real fluids, properties of fluids",
+    "current_count": 3,
+    "needed": 12
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Fluid Mechanics",
+    "subtopic": "Hydrostatic pressure and its measurement",
+    "current_count": 6,
+    "needed": 9
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Fluid Mechanics",
+    "subtopic": "Continuity equation, kinematics and dynamics of flow",
+    "current_count": 3,
+    "needed": 12
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Fluid Mechanics",
+    "subtopic": "Bernoulli's theorem",
+    "current_count": 2,
+    "needed": 13
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Fluid Mechanics",
+    "subtopic": "Laminar and turbulent flow in pipes, Darcy\u2013Weisbach and Hazen\u2013Williams equations",
+    "current_count": 6,
+    "needed": 9
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Fluid Mechanics",
+    "subtopic": "Flow through orifices, weirs and notches",
+    "current_count": 3,
+    "needed": 12
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Fluid Mechanics",
+    "subtopic": "Dimensional analysis \u2013 concepts of geometric dimensionless numbers",
+    "current_count": 3,
+    "needed": 12
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Hydrology",
+    "subtopic": "Runoff estimation",
+    "current_count": 7,
+    "needed": 8
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Hydrology",
+    "subtopic": "Hydrograph analysis, unit hydrograph theory and application",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Hydrology",
+    "subtopic": "Hydrological cycle and measurement of its components",
+    "current_count": 7,
+    "needed": 8
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Hydrology",
+    "subtopic": "Analysis of precipitation data",
+    "current_count": 5,
+    "needed": 10
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Hydrology",
+    "subtopic": "Infiltration \u2013 indices and equations",
+    "current_count": 4,
+    "needed": 11
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Hydrology",
+    "subtopic": "Flood routing, hydrological reservoir and channel routing",
+    "current_count": 5,
+    "needed": 10
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Hydrology",
+    "subtopic": "Stream flow measurement",
+    "current_count": 2,
+    "needed": 13
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Hydrology",
+    "subtopic": "Drought and its classification",
+    "current_count": 2,
+    "needed": 13
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Hydrology",
+    "subtopic": "Meteorological parameters and their measurement",
+    "current_count": 2,
+    "needed": 13
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil Mechanics",
+    "subtopic": "Fundamental definitions and relationships",
+    "current_count": 7,
+    "needed": 8
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil Mechanics",
+    "subtopic": "Index properties of soils",
+    "current_count": 5,
+    "needed": 10
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil Mechanics",
+    "subtopic": "Permeability and seepage analysis",
+    "current_count": 8,
+    "needed": 7
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil Mechanics",
+    "subtopic": "Shear strength",
+    "current_count": 5,
+    "needed": 10
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil Mechanics",
+    "subtopic": "Soil compaction and Proctor test",
+    "current_count": 6,
+    "needed": 9
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil Mechanics",
+    "subtopic": "Active and passive earth pressures",
+    "current_count": 4,
+    "needed": 11
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil Mechanics",
+    "subtopic": "Stability of slopes",
+    "current_count": 3,
+    "needed": 12
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil Mechanics",
+    "subtopic": "Terzaghi's one dimensional soil consolidation theory",
+    "current_count": 4,
+    "needed": 11
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil Mechanics",
+    "subtopic": "Engineering properties of soils",
+    "current_count": 3,
+    "needed": 12
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil Mechanics",
+    "subtopic": "Mohr's circle of stress",
+    "current_count": 3,
+    "needed": 12
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Surveying and Levelling",
+    "subtopic": "Contouring",
+    "current_count": 4,
+    "needed": 11
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Surveying and Levelling",
+    "subtopic": "Measurement of angles and bearings",
+    "current_count": 3,
+    "needed": 12
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Surveying and Levelling",
+    "subtopic": "Measurement of distance and area",
+    "current_count": 3,
+    "needed": 12
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Surveying and Levelling",
+    "subtopic": "Types of levelling",
+    "current_count": 8,
+    "needed": 7
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Surveying and Levelling",
+    "subtopic": "The Theodolite traversing",
+    "current_count": 5,
+    "needed": 10
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Surveying and Levelling",
+    "subtopic": "Computation of areas and volume",
+    "current_count": 4,
+    "needed": 11
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Surveying and Levelling",
+    "subtopic": "Plane table surveying",
+    "current_count": 2,
+    "needed": 13
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Surveying and Levelling",
+    "subtopic": "Total station, introduction to GPS survey",
+    "current_count": 2,
+    "needed": 13
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Surveying and Levelling",
+    "subtopic": "Instruments for surveying and levelling",
+    "current_count": 2,
+    "needed": 13
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Surveying and Levelling",
+    "subtopic": "Chain surveying, methods of traversing",
+    "current_count": 2,
+    "needed": 13
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Watershed Management",
+    "subtopic": "Watershed characterization and land use capability classification",
+    "current_count": 9,
+    "needed": 6
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Watershed Management",
+    "subtopic": "Water budgeting in watershed",
+    "current_count": 4,
+    "needed": 11
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Watershed Management",
+    "subtopic": "Check dams and farm ponds",
+    "current_count": 5,
+    "needed": 10
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Watershed Management",
+    "subtopic": "Rainwater harvesting",
+    "current_count": 4,
+    "needed": 11
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Fluid Statics, Pressure & Manometry",
+    "subtopic": "Hydrostatic pressure and center of pressure",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Fluid Statics, Pressure & Manometry",
+    "subtopic": "Differential manometer deflection",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Fluid Statics, Pressure & Manometry",
+    "subtopic": "Properties of fluid statics and buoyancy",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Dynamics of Flow & Bernoulli Equation",
+    "subtopic": "Venturimeter pressure differential",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Dynamics of Flow & Bernoulli Equation",
+    "subtopic": "Assumptions of Bernoulli equation",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Dynamics of Flow & Bernoulli Equation",
+    "subtopic": "Energy and momentum correction factors",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Pipe Flow, Darcy-Weisbach & Minor Losses",
+    "subtopic": "Friction head loss and Darcy-Weisbach equation",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Pipe Flow, Darcy-Weisbach & Minor Losses",
+    "subtopic": "Laminar flow friction factor vs Reynolds number",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Open Channel Hydraulics & Manning Equation",
+    "subtopic": "Most efficient hydraulic cross section",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Open Channel Hydraulics & Manning Equation",
+    "subtopic": "Manning discharge in rectangular channel",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Open Channel Hydraulics & Manning Equation",
+    "subtopic": "Conditions for most economical sections",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Specific Energy, Critical Flow & Hydraulic Jump",
+    "subtopic": "Critical depth in rectangular channel",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Specific Energy, Critical Flow & Hydraulic Jump",
+    "subtopic": "Hydraulic jump Belanger equation",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Specific Energy, Critical Flow & Hydraulic Jump",
+    "subtopic": "Characteristics of critical flow and hydraulic jump",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Flow Measurement: Weirs, Flumes & Orifices",
+    "subtopic": "90 degree V-notch weir discharge",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Flow Measurement: Weirs, Flumes & Orifices",
+    "subtopic": "Suppressed vs contracted weirs",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil Physical Properties & Phase Relationships",
+    "subtopic": "Porosity from void ratio",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil Physical Properties & Phase Relationships",
+    "subtopic": "Dry unit weight from moisture content and degree of saturation",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil Physical Properties & Phase Relationships",
+    "subtopic": "Phase relations in soil mechanics",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil Permeability, Seepage & Flow Nets",
+    "subtopic": "Seepage discharge under weir from flow net",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil Permeability, Seepage & Flow Nets",
+    "subtopic": "Critical hydraulic gradient and quicksand condition",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil Permeability, Seepage & Flow Nets",
+    "subtopic": "Properties of flow net",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil Shear Strength & Mohr-Coulomb Theory",
+    "subtopic": "Shear strength on failure plane",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil Shear Strength & Mohr-Coulomb Theory",
+    "subtopic": "Triaxial compression of cohesionless sand",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil Shear Strength & Mohr-Coulomb Theory",
+    "subtopic": "Direct shear vs triaxial test comparison",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil Compaction, Consolidation & Earth Pressures",
+    "subtopic": "Rankine active thrust on retaining wall",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Soil Compaction, Consolidation & Earth Pressures",
+    "subtopic": "Consolidation settlement formula",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Precipitation Analysis & Rain Gauges",
+    "subtopic": "Optimum number of rain gauges",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Precipitation Analysis & Rain Gauges",
+    "subtopic": "Double mass curve analysis",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Infiltration, Evaporation & Hydrologic Losses",
+    "subtopic": "Horton infiltration rate",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Infiltration, Evaporation & Hydrologic Losses",
+    "subtopic": "Phi-index and W-index definitions",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Runoff Estimation: Rational & SCS-CN Methods",
+    "subtopic": "Rational formula peak discharge",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Runoff Estimation: Rational & SCS-CN Methods",
+    "subtopic": "SCS-CN potential maximum retention",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Runoff Estimation: Rational & SCS-CN Methods",
+    "subtopic": "Antecedent moisture condition (AMC) classes",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Hydrograph Analysis & Unit Hydrograph Theory",
+    "subtopic": "Unit hydrograph runoff volume",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Hydrograph Analysis & Unit Hydrograph Theory",
+    "subtopic": "Flood peak from unit hydrograph",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Hydrograph Analysis & Unit Hydrograph Theory",
+    "subtopic": "Assumptions of unit hydrograph theory",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Flood Routing & Drought Analysis",
+    "subtopic": "Muskingum flood routing coefficient C0",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Flood Routing & Drought Analysis",
+    "subtopic": "Sum of Muskingum routing coefficients",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Water Erosion Mechanics & USLE",
+    "subtopic": "USLE annual soil loss estimation",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Water Erosion Mechanics & USLE",
+    "subtopic": "Kinetic energy of falling raindrops",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Water Erosion Mechanics & USLE",
+    "subtopic": "USLE parameters and units",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Gully Control Structures & Drop Spillways",
+    "subtopic": "Straight drop spillway inlet capacity",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Gully Control Structures & Drop Spillways",
+    "subtopic": "Temporary vs permanent gully control structures",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Terraces, Bunds & Vegetative Waterways",
+    "subtopic": "Horizontal spacing of contour bunds",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Terraces, Bunds & Vegetative Waterways",
+    "subtopic": "Broad-base vs narrow-base terrace",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Watershed Management & Rainwater Harvesting",
+    "subtopic": "Drainage density calculation",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Watershed Management & Rainwater Harvesting",
+    "subtopic": "Horton stream order and bifurcation ratio",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Surveying: Distance, Angles & Traversing",
+    "subtopic": "Traverse closing error magnitude",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Surveying: Distance, Angles & Traversing",
+    "subtopic": "Bowditch rule vs Transit rule",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Levelling, Contouring & Earthwork Volume",
+    "subtopic": "Reduced level using Height of Instrument",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 4,
+    "section": "Section 4: Soil and Water Conservation Engineering",
+    "topic": "Levelling, Contouring & Earthwork Volume",
+    "subtopic": "Prismoidal formula for earthwork volume",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relationship",
+    "subtopic": "Consumptive use and evapotranspiration",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relationship",
+    "subtopic": "Measurement of infiltration, soil moisture and irrigation water infiltration",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Groundwater occurrence",
+    "current_count": 8,
+    "needed": 7
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Groundwater movement; Darcy's Law",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Groundwater exploration techniques",
+    "current_count": 5,
+    "needed": 10
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Overview of groundwater recharge estimation and artificial recharge techniques",
+    "current_count": 4,
+    "needed": 11
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Drainage coefficient",
+    "current_count": 8,
+    "needed": 7
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Leaching requirement and salinity control",
+    "current_count": 8,
+    "needed": 7
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Irrigation and drainage water quality and reuse",
+    "current_count": 8,
+    "needed": 7
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Non-conventional drainage system",
+    "current_count": 5,
+    "needed": 10
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Types of wells",
+    "current_count": 3,
+    "needed": 12
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Design and construction of water wells",
+    "current_count": 7,
+    "needed": 8
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Steady flow through wells",
+    "current_count": 4,
+    "needed": 11
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Classification of pumps",
+    "current_count": 5,
+    "needed": 10
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Pump selection and installation",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Design and evaluation of irrigation methods",
+    "current_count": 7,
+    "needed": 8
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Irrigation efficiencies",
+    "current_count": 9,
+    "needed": 6
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Design of irrigation channels and underground pipelines",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Irrigation scheduling",
+    "current_count": 3,
+    "needed": 12
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Available water capacity and readily available moisture",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil water potentials and retention energy",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil moisture measuring instruments",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Crop evapotranspiration from pan evaporation",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "FAO Penman-Monteith method reference surface",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Factors affecting crop coefficient Kc curve",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Irrigation interval calculation",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Gross irrigation requirement from application efficiency",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Critical growth stages of major crops",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Maximum length of border strip",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Advance and recession curves",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Four phases of surface irrigation",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler precipitation application rate",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Christiansen Uniformity Coefficient formula",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler allowable pressure variation",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Drip emitter flow rate from pressure head",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Pressure compensating emitter exponent",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Advantages and filtration in drip irrigation",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Project irrigation efficiency calculation",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water storage efficiency definition",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water distribution efficiency formula",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey regime wetted perimeter",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey silt factor calculation",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey vs Kennedy regime canal theories",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Drainage coefficient discharge computation",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Random ditch vs parallel ditch drainage patterns",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Benefits of agricultural drainage",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt spacing for drains on impermeable barrier",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt equivalent depth d concept",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Steady vs unsteady subsurface drainage",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Leaching requirement calculation",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Sodium Adsorption Ratio (SAR)",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Classification of salt-affected soils",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Seepage velocity in porous media",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Aquifer, aquitard, aquiclude, and aquifuge",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Storativity and specific yield of aquifers",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Thiem formula discharge in confined aquifer",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Dupuit equation for unconfined aquifer",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Assumptions of Dupuit-Forchheimer theory",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Transmissivity from Cooper-Jacob drawdown per log cycle",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Condition of validity for Cooper-Jacob approximation",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Theis non-equilibrium equation characteristics",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Affinity law discharge scaling with speed",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Centrifugal pump specific speed",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Pump affinity laws scaling powers",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "NPSH Available calculation",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Cavitation prevention criterion",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 5,
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Remedial measures against pump cavitation",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Evaporation and Drying",
+    "subtopic": "Drying and milling of cereals, pulses and oilseeds",
+    "current_count": 11,
+    "needed": 4
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Evaporation and Drying",
+    "subtopic": "Psychrometry \u2013 properties of air-water vapour mixture",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Evaporation and Drying",
+    "subtopic": "Drying kinetics",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Evaporation and Drying",
+    "subtopic": "Concentration and drying of liquid foods \u2013 evaporators, tray, drum and spray dryers",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Evaporation and Drying",
+    "subtopic": "Osmotic dehydration and freeze drying",
+    "current_count": 7,
+    "needed": 8
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Evaporation and Drying",
+    "subtopic": "Hydrothermal treatments",
+    "current_count": 6,
+    "needed": 9
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Size Reduction and Material Handling",
+    "subtopic": "Size separation by screening",
+    "current_count": 5,
+    "needed": 10
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Size Reduction and Material Handling",
+    "subtopic": "Cleaning and grading",
+    "current_count": 6,
+    "needed": 9
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Size Reduction and Material Handling",
+    "subtopic": "Particle size analysis for comminuted solids",
+    "current_count": 7,
+    "needed": 8
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Size Reduction and Material Handling",
+    "subtopic": "Effectiveness of separation",
+    "current_count": 3,
+    "needed": 12
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Size Reduction and Material Handling",
+    "subtopic": "Centrifugal separation of solids, liquids and gases",
+    "current_count": 5,
+    "needed": 10
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Size Reduction and Material Handling",
+    "subtopic": "Filtration and membrane separation",
+    "current_count": 2,
+    "needed": 13
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Size Reduction and Material Handling",
+    "subtopic": "Homogenization",
+    "current_count": 2,
+    "needed": 13
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Storage Systems",
+    "subtopic": "Controlled and modified atmosphere storage",
+    "current_count": 7,
+    "needed": 8
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Storage Systems",
+    "subtopic": "Perishable food storage",
+    "current_count": 4,
+    "needed": 11
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Storage Systems",
+    "subtopic": "Packaging material and machines",
+    "current_count": 4,
+    "needed": 11
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Engineering Properties of Agriculture Produce",
+    "subtopic": "Physical properties",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Engineering Properties of Agriculture Produce",
+    "subtopic": "Thermal properties",
+    "current_count": 8,
+    "needed": 7
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Engineering Properties of Agriculture Produce",
+    "subtopic": "Frictional properties",
+    "current_count": 7,
+    "needed": 8
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Engineering Properties of Agriculture Produce",
+    "subtopic": "Rheological properties",
+    "current_count": 8,
+    "needed": 7
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Engineering Properties of Agriculture Produce",
+    "subtopic": "Electrical properties",
+    "current_count": 7,
+    "needed": 8
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Processing of Agriculture Produce",
+    "subtopic": "Processing of seeds, spices, fruits and vegetables",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Processing of Agriculture Produce",
+    "subtopic": "Value addition of agriculture produce",
+    "current_count": 8,
+    "needed": 7
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Physical & Geometric Properties of Agro-Produce",
+    "subtopic": "Grain sphericity calculation",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Physical & Geometric Properties of Agro-Produce",
+    "subtopic": "Grain bulk porosity from true and bulk density",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Physical & Geometric Properties of Agro-Produce",
+    "subtopic": "Angle of repose and frictional flowability",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Thermal, Optical & Electrical Properties of Grains",
+    "subtopic": "Siebel equation for specific heat",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Thermal, Optical & Electrical Properties of Grains",
+    "subtopic": "Dielectric properties of grains in microwave drying",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Thermal, Optical & Electrical Properties of Grains",
+    "subtopic": "Thermal conductivity and diffusivity definitions",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Frictional & Rheological Properties of Biological Materials",
+    "subtopic": "Maxwell model of viscoelasticity",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Frictional & Rheological Properties of Biological Materials",
+    "subtopic": "Angle of static friction calculation",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Frictional & Rheological Properties of Biological Materials",
+    "subtopic": "Creep and stress relaxation in food materials",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Psychrometry & Moist Air Thermodynamics",
+    "subtopic": "Humidity ratio from vapor pressure",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Psychrometry & Moist Air Thermodynamics",
+    "subtopic": "Moist air specific enthalpy calculation",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Psychrometry & Moist Air Thermodynamics",
+    "subtopic": "Sensible heating process on psychrometric chart",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Grain Drying Principles & Thin Layer Models",
+    "subtopic": "Mass of water removed during batch grain drying",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Grain Drying Principles & Thin Layer Models",
+    "subtopic": "Conversion of wet basis to dry basis moisture content",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Grain Drying Principles & Thin Layer Models",
+    "subtopic": "Thin layer drying models and falling rate period",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Commercial Dryers & Deep Bed Drying Systems",
+    "subtopic": "LSU dryer inverted V-ducts",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Commercial Dryers & Deep Bed Drying Systems",
+    "subtopic": "Deep bed drying zones",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Commercial Dryers & Deep Bed Drying Systems",
+    "subtopic": "Paddy tempering process in commercial drying",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Equilibrium Moisture Content & Sorption Isotherms",
+    "subtopic": "Moisture sorption hysteresis definition",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Equilibrium Moisture Content & Sorption Isotherms",
+    "subtopic": "BET classification of sorption isotherms",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Equilibrium Moisture Content & Sorption Isotherms",
+    "subtopic": "Henderson and Chung-Pfost isotherm models",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Evaporation & Liquid Food Concentration",
+    "subtopic": "Product rate and vapor evaporated in single effect evaporator",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Evaporation & Liquid Food Concentration",
+    "subtopic": "Steam economy of multiple effect evaporator",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Evaporation & Liquid Food Concentration",
+    "subtopic": "Boiling point elevation and Duhring rule",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Size Reduction Mechanics & Energy Laws",
+    "subtopic": "Rittinger law power scaling",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Size Reduction Mechanics & Energy Laws",
+    "subtopic": "Comparison of comminution laws applicability",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Size Reduction Mechanics & Energy Laws",
+    "subtopic": "Bond work index and differential equation of size reduction",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Particle Size Analysis & Fineness Modulus",
+    "subtopic": "Fineness modulus from sieve analysis",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Particle Size Analysis & Fineness Modulus",
+    "subtopic": "Average particle diameter from fineness modulus",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Particle Size Analysis & Fineness Modulus",
+    "subtopic": "Tyler standard sieve series progression",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Screening, Cleaning & Grading (Screen Effectiveness)",
+    "subtopic": "Overall screen effectiveness calculation",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Screening, Cleaning & Grading (Screen Effectiveness)",
+    "subtopic": "Terminal velocity separation in pneumatic aspirator",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Screening, Cleaning & Grading (Screen Effectiveness)",
+    "subtopic": "Specific gravity separator operating principles",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Material Handling: Belt, Screw & Bucket Conveyors",
+    "subtopic": "Belt conveyor volumetric and gravimetric capacity",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Material Handling: Belt, Screw & Bucket Conveyors",
+    "subtopic": "Centrifugal vs gravity discharge in bucket elevator",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Material Handling: Belt, Screw & Bucket Conveyors",
+    "subtopic": "Screw conveyor volumetric capacity factors",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Pneumatic Conveying & Fluidization of Solids",
+    "subtopic": "Saltation velocity definition",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Pneumatic Conveying & Fluidization of Solids",
+    "subtopic": "Dilute phase vs dense phase comparison",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Pneumatic Conveying & Fluidization of Solids",
+    "subtopic": "Minimum fluidization velocity Ergun equation",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Grain Storage: Silos, Bins & Pressure Distribution",
+    "subtopic": "Janssen silo pressure asymptote",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Grain Storage: Silos, Bins & Pressure Distribution",
+    "subtopic": "Maximum asymptotic vertical pressure in deep silo",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Grain Storage: Silos, Bins & Pressure Distribution",
+    "subtopic": "Shallow bin vs deep silo criteria",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Rice Milling, Parboiling & Pulse Processing",
+    "subtopic": "Head rice yield calculation",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Rice Milling, Parboiling & Pulse Processing",
+    "subtopic": "Biochemical changes during paddy parboiling",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 6,
+    "section": "Section 6: Agricultural Process Engineering",
+    "topic": "Rice Milling, Parboiling & Pulse Processing",
+    "subtopic": "Rubber roll sheller differential speed",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Preservation of Food",
+    "subtopic": "Refrigeration and cold storage basics and applications",
+    "current_count": 13,
+    "needed": 2
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat and Mass Transfer",
+    "subtopic": "Transient heat transfer in simple geometry",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat and Mass Transfer",
+    "subtopic": "Diffusive and convective mass transfer",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat and Mass Transfer",
+    "subtopic": "Simultaneous heat and mass transfer in agricultural processing operations",
+    "current_count": 2,
+    "needed": 13
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat and Mass Transfer",
+    "subtopic": "Material and energy balances in food processing systems",
+    "current_count": 10,
+    "needed": 5
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Unit Operations in Dairy and Food Engineering",
+    "subtopic": "Homogenization",
+    "current_count": 12,
+    "needed": 3
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation for cylindrical pipe",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation concept",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number calculation for spherical fruit",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Fourier number definition and Heisler charts",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Prandtl number physical significance",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Dittus-Boelter correlation exponents",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Wien displacement law and blackbody radiation",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Reciprocity and summation rules of view factors",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow vs parallel flow thermal comparison",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "NTU-Effectiveness method definitions",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Sherwood and Schmidt numbers physical meaning",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Chilton-Colburn j-factor mass-heat analogy",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Non-Newtonian food fluid classification",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Time-dependent rheology: Thixotropy vs Rheopexy",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "D-value change with temperature from z-value",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "Definitions of D, z, and F values",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Index organisms for milk pasteurization",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Components of HTST pasteurizer",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Cold point location in conduction vs convection heated cans",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Lethal rate calculation Bigelow method",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Two-stage homogenization mechanism",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Disc bowl cream separator separation zone",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank geometric shape factors P and R",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Freezing curves and ice crystal morphology",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Carnot COP upper bound",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Cooling load components in agricultural cold storage",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Modified Atmosphere Packaging gas functions",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 7,
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Glass transition temperature Tg and caking",
+    "current_count": 14,
+    "needed": 1
+  },
+  {
+    "sec_num": 8,
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal Aptitude",
+    "subtopic": "Reading Comprehension",
+    "current_count": 7,
+    "needed": 8
+  },
+  {
+    "sec_num": 8,
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal Aptitude",
+    "subtopic": "Critical Reasoning",
+    "current_count": 5,
+    "needed": 10
+  }
+]

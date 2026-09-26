@@ -5285,5 +5285,14350 @@ export default [
     "solution": "Wheel Slip:\n$$S = \\left(1 - \\frac{N_0}{N_L}\\right) \\times 100 = \\left(1 - \\frac{20}{25}\\right) \\times 100 = 20\\%$$\nHence, the wheel slip is **20** $\\%$.",
     "difficulty": "Easy",
     "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_001",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Air-standard Otto cycle efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "An internal combustion engine operating on the air-standard Otto cycle has a compression ratio of $r = 15$. Taking the adiabatic exponent $\\gamma = 1.4$, the air-standard thermal efficiency of the cycle is:",
+    "options": {
+      "A": "$66.15\\%$",
+      "B": "$60.65\\%$",
+      "C": "$72.35\\%$",
+      "D": "$49.61\\%$"
+    },
+    "correct_answer": "A",
+    "solution": "The air-standard efficiency of an Otto cycle is given by:\n$$\\eta_{th} = 1 - \\frac{1}{r^{\\gamma - 1}}$$\nGiven $r = 15$ and $\\gamma = 1.4$:\n$$\\eta_{th} = 1 - \\frac{1}{15^{0.4}} = 1 - \\frac{1}{2.9542} = 1 - 0.3385 = 0.6615$$\nIn percentage: $\\eta_{th} = 66.15\\%$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_002",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Air-standard Diesel cycle and cut-off ratio",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#3b82f6\"/></marker></defs><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><line x1=\"50\" y1=\"200\" x2=\"50\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><text x=\"365\" y=\"205\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">V</text><text x=\"45\" y=\"25\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">P</text><path d=\"M 320 180 Q 150 170 120 70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"120\" y1=\"70\" x2=\"190\" y2=\"70\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><path d=\"M 190 70 Q 240 120 320 150\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.5\"/><line x1=\"320\" y1=\"150\" x2=\"320\" y2=\"180\" stroke=\"#9333ea\" stroke-width=\"2.5\"/><circle cx=\"320\" cy=\"180\" r=\"4\" fill=\"#1e293b\"/><text x=\"328\" y=\"185\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">1</text><circle cx=\"120\" cy=\"70\" r=\"4\" fill=\"#1e293b\"/><text x=\"108\" y=\"65\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">2</text><circle cx=\"190\" cy=\"70\" r=\"4\" fill=\"#1e293b\"/><text x=\"190\" y=\"60\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">3</text><circle cx=\"320\" cy=\"150\" r=\"4\" fill=\"#1e293b\"/><text x=\"328\" y=\"148\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">4</text><text x=\"145\" y=\"55\" font-size=\"10\" fill=\"#dc2626\" font-weight=\"bold\">P = const (Qin)</text><text x=\"325\" y=\"168\" font-size=\"9\" fill=\"#9333ea\">V = const (Qout)</text><text x=\"170\" y=\"140\" font-size=\"10\" fill=\"#2563eb\">pV^γ = C</text></svg>",
+    "question": "An engine operates on the air-standard Diesel cycle shown in the accompanying P-V diagram with a compression ratio of $r = 16$ and a cut-off ratio of $\\rho = 2.0$. Taking $\\gamma = 1.4$, the air-standard thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "61.38",
+    "numerical_range": {
+      "min": 61.18,
+      "max": 61.58
+    },
+    "solution": "For an air-standard Diesel cycle:\n$$\\eta_{Diesel} = 1 - \\frac{1}{\\gamma r^{\\gamma - 1}} \\left[ \\frac{\\rho^\\gamma - 1}{\\rho - 1} \\right]$$\nSubstituting $r = 16$, $\\rho = 2.0$, and $\\gamma = 1.4$:\n$$\\rho^\\gamma = 2.0^{1.4} = 2.6390$$\n$$\\frac{\\rho^\\gamma - 1}{\\rho - 1} = \\frac{1.6390}{1.0} = 1.6390$$\n$$\\gamma r^{\\gamma - 1} = 1.4 \\times 16^{0.4} = 1.4 \\times 3.0314 = 4.2440$$\n$$\\eta_{Diesel} = 1 - \\frac{1.6390}{4.2440} = 1 - 0.3862 = 0.6138$$\nIn percentage: $61.38\\%$.",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_003",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Comparison of cycles for given compression ratio",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "When comparing the theoretical air-standard efficiencies of Otto, Diesel, and Dual cycles, which of the following statements is/are TRUE?",
+    "options": {
+      "A": "For the same compression ratio and heat input, $\\eta_{\\text{Otto}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Diesel}}$",
+      "B": "For the same maximum peak cylinder pressure and temperature, $\\eta_{\\text{Diesel}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Otto}}$",
+      "C": "In an Otto cycle, heat addition occurs strictly at constant volume",
+      "D": "In a Diesel cycle, heat addition occurs strictly at constant pressure"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. For the same compression ratio $r$, constant volume heat addition brings maximum temperature earlier, so Otto is highest. (A is true)\n2. When constrained by peak pressure and temperature (the real metallurgical limit), Diesel expands further and has highest efficiency. (B is true)\n3. Otto cycle features isochoric heat addition. (C is true)\n4. Diesel cycle features isobaric heat addition. (D is true)\nAll statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_004",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Air-standard Otto cycle efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "An internal combustion engine operating on the air-standard Otto cycle has a compression ratio of $r = 18$. Taking the adiabatic exponent $\\gamma = 1.4$, the air-standard thermal efficiency of the cycle is:",
+    "options": {
+      "A": "$68.53\\%$",
+      "B": "$63.03\\%$",
+      "C": "$74.73\\%$",
+      "D": "$51.40\\%$"
+    },
+    "correct_answer": "A",
+    "solution": "The air-standard efficiency of an Otto cycle is given by:\n$$\\eta_{th} = 1 - \\frac{1}{r^{\\gamma - 1}}$$\nGiven $r = 18$ and $\\gamma = 1.4$:\n$$\\eta_{th} = 1 - \\frac{1}{18^{0.4}} = 1 - \\frac{1}{3.1777} = 1 - 0.3147 = 0.6853$$\nIn percentage: $\\eta_{th} = 68.53\\%$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_005",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Air-standard Diesel cycle and cut-off ratio",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#3b82f6\"/></marker></defs><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><line x1=\"50\" y1=\"200\" x2=\"50\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><text x=\"365\" y=\"205\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">V</text><text x=\"45\" y=\"25\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">P</text><path d=\"M 320 180 Q 150 170 120 70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"120\" y1=\"70\" x2=\"190\" y2=\"70\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><path d=\"M 190 70 Q 240 120 320 150\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.5\"/><line x1=\"320\" y1=\"150\" x2=\"320\" y2=\"180\" stroke=\"#9333ea\" stroke-width=\"2.5\"/><circle cx=\"320\" cy=\"180\" r=\"4\" fill=\"#1e293b\"/><text x=\"328\" y=\"185\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">1</text><circle cx=\"120\" cy=\"70\" r=\"4\" fill=\"#1e293b\"/><text x=\"108\" y=\"65\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">2</text><circle cx=\"190\" cy=\"70\" r=\"4\" fill=\"#1e293b\"/><text x=\"190\" y=\"60\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">3</text><circle cx=\"320\" cy=\"150\" r=\"4\" fill=\"#1e293b\"/><text x=\"328\" y=\"148\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">4</text><text x=\"145\" y=\"55\" font-size=\"10\" fill=\"#dc2626\" font-weight=\"bold\">P = const (Qin)</text><text x=\"325\" y=\"168\" font-size=\"9\" fill=\"#9333ea\">V = const (Qout)</text><text x=\"170\" y=\"140\" font-size=\"10\" fill=\"#2563eb\">pV^γ = C</text></svg>",
+    "question": "An engine operates on the air-standard Diesel cycle shown in the accompanying P-V diagram with a compression ratio of $r = 16$ and a cut-off ratio of $\\rho = 2.0$. Taking $\\gamma = 1.4$, the air-standard thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "61.38",
+    "numerical_range": {
+      "min": 61.18,
+      "max": 61.58
+    },
+    "solution": "For an air-standard Diesel cycle:\n$$\\eta_{Diesel} = 1 - \\frac{1}{\\gamma r^{\\gamma - 1}} \\left[ \\frac{\\rho^\\gamma - 1}{\\rho - 1} \\right]$$\nSubstituting $r = 16$, $\\rho = 2.0$, and $\\gamma = 1.4$:\n$$\\rho^\\gamma = 2.0^{1.4} = 2.6390$$\n$$\\frac{\\rho^\\gamma - 1}{\\rho - 1} = \\frac{1.6390}{1.0} = 1.6390$$\n$$\\gamma r^{\\gamma - 1} = 1.4 \\times 16^{0.4} = 1.4 \\times 3.0314 = 4.2440$$\n$$\\eta_{Diesel} = 1 - \\frac{1.6390}{4.2440} = 1 - 0.3862 = 0.6138$$\nIn percentage: $61.38\\%$.",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_006",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Comparison of cycles for given compression ratio",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "When comparing the theoretical air-standard efficiencies of Otto, Diesel, and Dual cycles, which of the following statements is/are TRUE?",
+    "options": {
+      "A": "For the same compression ratio and heat input, $\\eta_{\\text{Otto}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Diesel}}$",
+      "B": "For the same maximum peak cylinder pressure and temperature, $\\eta_{\\text{Diesel}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Otto}}$",
+      "C": "In an Otto cycle, heat addition occurs strictly at constant volume",
+      "D": "In a Diesel cycle, heat addition occurs strictly at constant pressure"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. For the same compression ratio $r$, constant volume heat addition brings maximum temperature earlier, so Otto is highest. (A is true)\n2. When constrained by peak pressure and temperature (the real metallurgical limit), Diesel expands further and has highest efficiency. (B is true)\n3. Otto cycle features isochoric heat addition. (C is true)\n4. Diesel cycle features isobaric heat addition. (D is true)\nAll statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_007",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Air-standard Otto cycle efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "An internal combustion engine operating on the air-standard Otto cycle has a compression ratio of $r = 15$. Taking the adiabatic exponent $\\gamma = 1.4$, the air-standard thermal efficiency of the cycle is:",
+    "options": {
+      "A": "$66.15\\%$",
+      "B": "$60.65\\%$",
+      "C": "$72.35\\%$",
+      "D": "$49.61\\%$"
+    },
+    "correct_answer": "A",
+    "solution": "The air-standard efficiency of an Otto cycle is given by:\n$$\\eta_{th} = 1 - \\frac{1}{r^{\\gamma - 1}}$$\nGiven $r = 15$ and $\\gamma = 1.4$:\n$$\\eta_{th} = 1 - \\frac{1}{15^{0.4}} = 1 - \\frac{1}{2.9542} = 1 - 0.3385 = 0.6615$$\nIn percentage: $\\eta_{th} = 66.15\\%$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_008",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Air-standard Diesel cycle and cut-off ratio",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#3b82f6\"/></marker></defs><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><line x1=\"50\" y1=\"200\" x2=\"50\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><text x=\"365\" y=\"205\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">V</text><text x=\"45\" y=\"25\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">P</text><path d=\"M 320 180 Q 150 170 120 70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"120\" y1=\"70\" x2=\"190\" y2=\"70\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><path d=\"M 190 70 Q 240 120 320 150\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.5\"/><line x1=\"320\" y1=\"150\" x2=\"320\" y2=\"180\" stroke=\"#9333ea\" stroke-width=\"2.5\"/><circle cx=\"320\" cy=\"180\" r=\"4\" fill=\"#1e293b\"/><text x=\"328\" y=\"185\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">1</text><circle cx=\"120\" cy=\"70\" r=\"4\" fill=\"#1e293b\"/><text x=\"108\" y=\"65\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">2</text><circle cx=\"190\" cy=\"70\" r=\"4\" fill=\"#1e293b\"/><text x=\"190\" y=\"60\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">3</text><circle cx=\"320\" cy=\"150\" r=\"4\" fill=\"#1e293b\"/><text x=\"328\" y=\"148\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">4</text><text x=\"145\" y=\"55\" font-size=\"10\" fill=\"#dc2626\" font-weight=\"bold\">P = const (Qin)</text><text x=\"325\" y=\"168\" font-size=\"9\" fill=\"#9333ea\">V = const (Qout)</text><text x=\"170\" y=\"140\" font-size=\"10\" fill=\"#2563eb\">pV^γ = C</text></svg>",
+    "question": "An engine operates on the air-standard Diesel cycle shown in the accompanying P-V diagram with a compression ratio of $r = 16$ and a cut-off ratio of $\\rho = 2.0$. Taking $\\gamma = 1.4$, the air-standard thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "61.38",
+    "numerical_range": {
+      "min": 61.18,
+      "max": 61.58
+    },
+    "solution": "For an air-standard Diesel cycle:\n$$\\eta_{Diesel} = 1 - \\frac{1}{\\gamma r^{\\gamma - 1}} \\left[ \\frac{\\rho^\\gamma - 1}{\\rho - 1} \\right]$$\nSubstituting $r = 16$, $\\rho = 2.0$, and $\\gamma = 1.4$:\n$$\\rho^\\gamma = 2.0^{1.4} = 2.6390$$\n$$\\frac{\\rho^\\gamma - 1}{\\rho - 1} = \\frac{1.6390}{1.0} = 1.6390$$\n$$\\gamma r^{\\gamma - 1} = 1.4 \\times 16^{0.4} = 1.4 \\times 3.0314 = 4.2440$$\n$$\\eta_{Diesel} = 1 - \\frac{1.6390}{4.2440} = 1 - 0.3862 = 0.6138$$\nIn percentage: $61.38\\%$.",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_009",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Comparison of cycles for given compression ratio",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "When comparing the theoretical air-standard efficiencies of Otto, Diesel, and Dual cycles, which of the following statements is/are TRUE?",
+    "options": {
+      "A": "For the same compression ratio and heat input, $\\eta_{\\text{Otto}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Diesel}}$",
+      "B": "For the same maximum peak cylinder pressure and temperature, $\\eta_{\\text{Diesel}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Otto}}$",
+      "C": "In an Otto cycle, heat addition occurs strictly at constant volume",
+      "D": "In a Diesel cycle, heat addition occurs strictly at constant pressure"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. For the same compression ratio $r$, constant volume heat addition brings maximum temperature earlier, so Otto is highest. (A is true)\n2. When constrained by peak pressure and temperature (the real metallurgical limit), Diesel expands further and has highest efficiency. (B is true)\n3. Otto cycle features isochoric heat addition. (C is true)\n4. Diesel cycle features isobaric heat addition. (D is true)\nAll statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_010",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Air-standard Otto cycle efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "An internal combustion engine operating on the air-standard Otto cycle has a compression ratio of $r = 18$. Taking the adiabatic exponent $\\gamma = 1.4$, the air-standard thermal efficiency of the cycle is:",
+    "options": {
+      "A": "$68.53\\%$",
+      "B": "$63.03\\%$",
+      "C": "$74.73\\%$",
+      "D": "$51.40\\%$"
+    },
+    "correct_answer": "A",
+    "solution": "The air-standard efficiency of an Otto cycle is given by:\n$$\\eta_{th} = 1 - \\frac{1}{r^{\\gamma - 1}}$$\nGiven $r = 18$ and $\\gamma = 1.4$:\n$$\\eta_{th} = 1 - \\frac{1}{18^{0.4}} = 1 - \\frac{1}{3.1777} = 1 - 0.3147 = 0.6853$$\nIn percentage: $\\eta_{th} = 68.53\\%$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_011",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Air-standard Diesel cycle and cut-off ratio",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#3b82f6\"/></marker></defs><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><line x1=\"50\" y1=\"200\" x2=\"50\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><text x=\"365\" y=\"205\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">V</text><text x=\"45\" y=\"25\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">P</text><path d=\"M 320 180 Q 150 170 120 70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"120\" y1=\"70\" x2=\"190\" y2=\"70\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><path d=\"M 190 70 Q 240 120 320 150\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.5\"/><line x1=\"320\" y1=\"150\" x2=\"320\" y2=\"180\" stroke=\"#9333ea\" stroke-width=\"2.5\"/><circle cx=\"320\" cy=\"180\" r=\"4\" fill=\"#1e293b\"/><text x=\"328\" y=\"185\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">1</text><circle cx=\"120\" cy=\"70\" r=\"4\" fill=\"#1e293b\"/><text x=\"108\" y=\"65\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">2</text><circle cx=\"190\" cy=\"70\" r=\"4\" fill=\"#1e293b\"/><text x=\"190\" y=\"60\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">3</text><circle cx=\"320\" cy=\"150\" r=\"4\" fill=\"#1e293b\"/><text x=\"328\" y=\"148\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">4</text><text x=\"145\" y=\"55\" font-size=\"10\" fill=\"#dc2626\" font-weight=\"bold\">P = const (Qin)</text><text x=\"325\" y=\"168\" font-size=\"9\" fill=\"#9333ea\">V = const (Qout)</text><text x=\"170\" y=\"140\" font-size=\"10\" fill=\"#2563eb\">pV^γ = C</text></svg>",
+    "question": "An engine operates on the air-standard Diesel cycle shown in the accompanying P-V diagram with a compression ratio of $r = 16$ and a cut-off ratio of $\\rho = 2.0$. Taking $\\gamma = 1.4$, the air-standard thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "61.38",
+    "numerical_range": {
+      "min": 61.18,
+      "max": 61.58
+    },
+    "solution": "For an air-standard Diesel cycle:\n$$\\eta_{Diesel} = 1 - \\frac{1}{\\gamma r^{\\gamma - 1}} \\left[ \\frac{\\rho^\\gamma - 1}{\\rho - 1} \\right]$$\nSubstituting $r = 16$, $\\rho = 2.0$, and $\\gamma = 1.4$:\n$$\\rho^\\gamma = 2.0^{1.4} = 2.6390$$\n$$\\frac{\\rho^\\gamma - 1}{\\rho - 1} = \\frac{1.6390}{1.0} = 1.6390$$\n$$\\gamma r^{\\gamma - 1} = 1.4 \\times 16^{0.4} = 1.4 \\times 3.0314 = 4.2440$$\n$$\\eta_{Diesel} = 1 - \\frac{1.6390}{4.2440} = 1 - 0.3862 = 0.6138$$\nIn percentage: $61.38\\%$.",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_012",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Comparison of cycles for given compression ratio",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "When comparing the theoretical air-standard efficiencies of Otto, Diesel, and Dual cycles, which of the following statements is/are TRUE?",
+    "options": {
+      "A": "For the same compression ratio and heat input, $\\eta_{\\text{Otto}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Diesel}}$",
+      "B": "For the same maximum peak cylinder pressure and temperature, $\\eta_{\\text{Diesel}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Otto}}$",
+      "C": "In an Otto cycle, heat addition occurs strictly at constant volume",
+      "D": "In a Diesel cycle, heat addition occurs strictly at constant pressure"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. For the same compression ratio $r$, constant volume heat addition brings maximum temperature earlier, so Otto is highest. (A is true)\n2. When constrained by peak pressure and temperature (the real metallurgical limit), Diesel expands further and has highest efficiency. (B is true)\n3. Otto cycle features isochoric heat addition. (C is true)\n4. Diesel cycle features isobaric heat addition. (D is true)\nAll statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_013",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Air-standard Otto cycle efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "An internal combustion engine operating on the air-standard Otto cycle has a compression ratio of $r = 15$. Taking the adiabatic exponent $\\gamma = 1.4$, the air-standard thermal efficiency of the cycle is:",
+    "options": {
+      "A": "$66.15\\%$",
+      "B": "$60.65\\%$",
+      "C": "$72.35\\%$",
+      "D": "$49.61\\%$"
+    },
+    "correct_answer": "A",
+    "solution": "The air-standard efficiency of an Otto cycle is given by:\n$$\\eta_{th} = 1 - \\frac{1}{r^{\\gamma - 1}}$$\nGiven $r = 15$ and $\\gamma = 1.4$:\n$$\\eta_{th} = 1 - \\frac{1}{15^{0.4}} = 1 - \\frac{1}{2.9542} = 1 - 0.3385 = 0.6615$$\nIn percentage: $\\eta_{th} = 66.15\\%$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_014",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Air-standard Diesel cycle and cut-off ratio",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#3b82f6\"/></marker></defs><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><line x1=\"50\" y1=\"200\" x2=\"50\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><text x=\"365\" y=\"205\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">V</text><text x=\"45\" y=\"25\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">P</text><path d=\"M 320 180 Q 150 170 120 70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"120\" y1=\"70\" x2=\"190\" y2=\"70\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><path d=\"M 190 70 Q 240 120 320 150\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.5\"/><line x1=\"320\" y1=\"150\" x2=\"320\" y2=\"180\" stroke=\"#9333ea\" stroke-width=\"2.5\"/><circle cx=\"320\" cy=\"180\" r=\"4\" fill=\"#1e293b\"/><text x=\"328\" y=\"185\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">1</text><circle cx=\"120\" cy=\"70\" r=\"4\" fill=\"#1e293b\"/><text x=\"108\" y=\"65\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">2</text><circle cx=\"190\" cy=\"70\" r=\"4\" fill=\"#1e293b\"/><text x=\"190\" y=\"60\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">3</text><circle cx=\"320\" cy=\"150\" r=\"4\" fill=\"#1e293b\"/><text x=\"328\" y=\"148\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">4</text><text x=\"145\" y=\"55\" font-size=\"10\" fill=\"#dc2626\" font-weight=\"bold\">P = const (Qin)</text><text x=\"325\" y=\"168\" font-size=\"9\" fill=\"#9333ea\">V = const (Qout)</text><text x=\"170\" y=\"140\" font-size=\"10\" fill=\"#2563eb\">pV^γ = C</text></svg>",
+    "question": "An engine operates on the air-standard Diesel cycle shown in the accompanying P-V diagram with a compression ratio of $r = 16$ and a cut-off ratio of $\\rho = 2.0$. Taking $\\gamma = 1.4$, the air-standard thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "61.38",
+    "numerical_range": {
+      "min": 61.18,
+      "max": 61.58
+    },
+    "solution": "For an air-standard Diesel cycle:\n$$\\eta_{Diesel} = 1 - \\frac{1}{\\gamma r^{\\gamma - 1}} \\left[ \\frac{\\rho^\\gamma - 1}{\\rho - 1} \\right]$$\nSubstituting $r = 16$, $\\rho = 2.0$, and $\\gamma = 1.4$:\n$$\\rho^\\gamma = 2.0^{1.4} = 2.6390$$\n$$\\frac{\\rho^\\gamma - 1}{\\rho - 1} = \\frac{1.6390}{1.0} = 1.6390$$\n$$\\gamma r^{\\gamma - 1} = 1.4 \\times 16^{0.4} = 1.4 \\times 3.0314 = 4.2440$$\n$$\\eta_{Diesel} = 1 - \\frac{1.6390}{4.2440} = 1 - 0.3862 = 0.6138$$\nIn percentage: $61.38\\%$.",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_015",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Comparison of cycles for given compression ratio",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "When comparing the theoretical air-standard efficiencies of Otto, Diesel, and Dual cycles, which of the following statements is/are TRUE?",
+    "options": {
+      "A": "For the same compression ratio and heat input, $\\eta_{\\text{Otto}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Diesel}}$",
+      "B": "For the same maximum peak cylinder pressure and temperature, $\\eta_{\\text{Diesel}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Otto}}$",
+      "C": "In an Otto cycle, heat addition occurs strictly at constant volume",
+      "D": "In a Diesel cycle, heat addition occurs strictly at constant pressure"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. For the same compression ratio $r$, constant volume heat addition brings maximum temperature earlier, so Otto is highest. (A is true)\n2. When constrained by peak pressure and temperature (the real metallurgical limit), Diesel expands further and has highest efficiency. (B is true)\n3. Otto cycle features isochoric heat addition. (C is true)\n4. Diesel cycle features isobaric heat addition. (D is true)\nAll statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_016",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Air-standard Otto cycle efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "An internal combustion engine operating on the air-standard Otto cycle has a compression ratio of $r = 18$. Taking the adiabatic exponent $\\gamma = 1.4$, the air-standard thermal efficiency of the cycle is:",
+    "options": {
+      "A": "$68.53\\%$",
+      "B": "$63.03\\%$",
+      "C": "$74.73\\%$",
+      "D": "$51.40\\%$"
+    },
+    "correct_answer": "A",
+    "solution": "The air-standard efficiency of an Otto cycle is given by:\n$$\\eta_{th} = 1 - \\frac{1}{r^{\\gamma - 1}}$$\nGiven $r = 18$ and $\\gamma = 1.4$:\n$$\\eta_{th} = 1 - \\frac{1}{18^{0.4}} = 1 - \\frac{1}{3.1777} = 1 - 0.3147 = 0.6853$$\nIn percentage: $\\eta_{th} = 68.53\\%$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_017",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Air-standard Diesel cycle and cut-off ratio",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#3b82f6\"/></marker></defs><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><line x1=\"50\" y1=\"200\" x2=\"50\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><text x=\"365\" y=\"205\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">V</text><text x=\"45\" y=\"25\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">P</text><path d=\"M 320 180 Q 150 170 120 70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"120\" y1=\"70\" x2=\"190\" y2=\"70\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><path d=\"M 190 70 Q 240 120 320 150\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.5\"/><line x1=\"320\" y1=\"150\" x2=\"320\" y2=\"180\" stroke=\"#9333ea\" stroke-width=\"2.5\"/><circle cx=\"320\" cy=\"180\" r=\"4\" fill=\"#1e293b\"/><text x=\"328\" y=\"185\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">1</text><circle cx=\"120\" cy=\"70\" r=\"4\" fill=\"#1e293b\"/><text x=\"108\" y=\"65\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">2</text><circle cx=\"190\" cy=\"70\" r=\"4\" fill=\"#1e293b\"/><text x=\"190\" y=\"60\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">3</text><circle cx=\"320\" cy=\"150\" r=\"4\" fill=\"#1e293b\"/><text x=\"328\" y=\"148\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">4</text><text x=\"145\" y=\"55\" font-size=\"10\" fill=\"#dc2626\" font-weight=\"bold\">P = const (Qin)</text><text x=\"325\" y=\"168\" font-size=\"9\" fill=\"#9333ea\">V = const (Qout)</text><text x=\"170\" y=\"140\" font-size=\"10\" fill=\"#2563eb\">pV^γ = C</text></svg>",
+    "question": "An engine operates on the air-standard Diesel cycle shown in the accompanying P-V diagram with a compression ratio of $r = 16$ and a cut-off ratio of $\\rho = 2.0$. Taking $\\gamma = 1.4$, the air-standard thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "61.38",
+    "numerical_range": {
+      "min": 61.18,
+      "max": 61.58
+    },
+    "solution": "For an air-standard Diesel cycle:\n$$\\eta_{Diesel} = 1 - \\frac{1}{\\gamma r^{\\gamma - 1}} \\left[ \\frac{\\rho^\\gamma - 1}{\\rho - 1} \\right]$$\nSubstituting $r = 16$, $\\rho = 2.0$, and $\\gamma = 1.4$:\n$$\\rho^\\gamma = 2.0^{1.4} = 2.6390$$\n$$\\frac{\\rho^\\gamma - 1}{\\rho - 1} = \\frac{1.6390}{1.0} = 1.6390$$\n$$\\gamma r^{\\gamma - 1} = 1.4 \\times 16^{0.4} = 1.4 \\times 3.0314 = 4.2440$$\n$$\\eta_{Diesel} = 1 - \\frac{1.6390}{4.2440} = 1 - 0.3862 = 0.6138$$\nIn percentage: $61.38\\%$.",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_018",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Comparison of cycles for given compression ratio",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "When comparing the theoretical air-standard efficiencies of Otto, Diesel, and Dual cycles, which of the following statements is/are TRUE?",
+    "options": {
+      "A": "For the same compression ratio and heat input, $\\eta_{\\text{Otto}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Diesel}}$",
+      "B": "For the same maximum peak cylinder pressure and temperature, $\\eta_{\\text{Diesel}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Otto}}$",
+      "C": "In an Otto cycle, heat addition occurs strictly at constant volume",
+      "D": "In a Diesel cycle, heat addition occurs strictly at constant pressure"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. For the same compression ratio $r$, constant volume heat addition brings maximum temperature earlier, so Otto is highest. (A is true)\n2. When constrained by peak pressure and temperature (the real metallurgical limit), Diesel expands further and has highest efficiency. (B is true)\n3. Otto cycle features isochoric heat addition. (C is true)\n4. Diesel cycle features isobaric heat addition. (D is true)\nAll statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_019",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Air-standard Otto cycle efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "An internal combustion engine operating on the air-standard Otto cycle has a compression ratio of $r = 15$. Taking the adiabatic exponent $\\gamma = 1.4$, the air-standard thermal efficiency of the cycle is:",
+    "options": {
+      "A": "$66.15\\%$",
+      "B": "$60.65\\%$",
+      "C": "$72.35\\%$",
+      "D": "$49.61\\%$"
+    },
+    "correct_answer": "A",
+    "solution": "The air-standard efficiency of an Otto cycle is given by:\n$$\\eta_{th} = 1 - \\frac{1}{r^{\\gamma - 1}}$$\nGiven $r = 15$ and $\\gamma = 1.4$:\n$$\\eta_{th} = 1 - \\frac{1}{15^{0.4}} = 1 - \\frac{1}{2.9542} = 1 - 0.3385 = 0.6615$$\nIn percentage: $\\eta_{th} = 66.15\\%$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_020",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Air-standard Diesel cycle and cut-off ratio",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#3b82f6\"/></marker></defs><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><line x1=\"50\" y1=\"200\" x2=\"50\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><text x=\"365\" y=\"205\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">V</text><text x=\"45\" y=\"25\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">P</text><path d=\"M 320 180 Q 150 170 120 70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"120\" y1=\"70\" x2=\"190\" y2=\"70\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><path d=\"M 190 70 Q 240 120 320 150\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.5\"/><line x1=\"320\" y1=\"150\" x2=\"320\" y2=\"180\" stroke=\"#9333ea\" stroke-width=\"2.5\"/><circle cx=\"320\" cy=\"180\" r=\"4\" fill=\"#1e293b\"/><text x=\"328\" y=\"185\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">1</text><circle cx=\"120\" cy=\"70\" r=\"4\" fill=\"#1e293b\"/><text x=\"108\" y=\"65\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">2</text><circle cx=\"190\" cy=\"70\" r=\"4\" fill=\"#1e293b\"/><text x=\"190\" y=\"60\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">3</text><circle cx=\"320\" cy=\"150\" r=\"4\" fill=\"#1e293b\"/><text x=\"328\" y=\"148\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">4</text><text x=\"145\" y=\"55\" font-size=\"10\" fill=\"#dc2626\" font-weight=\"bold\">P = const (Qin)</text><text x=\"325\" y=\"168\" font-size=\"9\" fill=\"#9333ea\">V = const (Qout)</text><text x=\"170\" y=\"140\" font-size=\"10\" fill=\"#2563eb\">pV^γ = C</text></svg>",
+    "question": "An engine operates on the air-standard Diesel cycle shown in the accompanying P-V diagram with a compression ratio of $r = 16$ and a cut-off ratio of $\\rho = 2.0$. Taking $\\gamma = 1.4$, the air-standard thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "61.38",
+    "numerical_range": {
+      "min": 61.18,
+      "max": 61.58
+    },
+    "solution": "For an air-standard Diesel cycle:\n$$\\eta_{Diesel} = 1 - \\frac{1}{\\gamma r^{\\gamma - 1}} \\left[ \\frac{\\rho^\\gamma - 1}{\\rho - 1} \\right]$$\nSubstituting $r = 16$, $\\rho = 2.0$, and $\\gamma = 1.4$:\n$$\\rho^\\gamma = 2.0^{1.4} = 2.6390$$\n$$\\frac{\\rho^\\gamma - 1}{\\rho - 1} = \\frac{1.6390}{1.0} = 1.6390$$\n$$\\gamma r^{\\gamma - 1} = 1.4 \\times 16^{0.4} = 1.4 \\times 3.0314 = 4.2440$$\n$$\\eta_{Diesel} = 1 - \\frac{1.6390}{4.2440} = 1 - 0.3862 = 0.6138$$\nIn percentage: $61.38\\%$.",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_021",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Comparison of cycles for given compression ratio",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "When comparing the theoretical air-standard efficiencies of Otto, Diesel, and Dual cycles, which of the following statements is/are TRUE?",
+    "options": {
+      "A": "For the same compression ratio and heat input, $\\eta_{\\text{Otto}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Diesel}}$",
+      "B": "For the same maximum peak cylinder pressure and temperature, $\\eta_{\\text{Diesel}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Otto}}$",
+      "C": "In an Otto cycle, heat addition occurs strictly at constant volume",
+      "D": "In a Diesel cycle, heat addition occurs strictly at constant pressure"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. For the same compression ratio $r$, constant volume heat addition brings maximum temperature earlier, so Otto is highest. (A is true)\n2. When constrained by peak pressure and temperature (the real metallurgical limit), Diesel expands further and has highest efficiency. (B is true)\n3. Otto cycle features isochoric heat addition. (C is true)\n4. Diesel cycle features isobaric heat addition. (D is true)\nAll statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_022",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Air-standard Otto cycle efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "An internal combustion engine operating on the air-standard Otto cycle has a compression ratio of $r = 18$. Taking the adiabatic exponent $\\gamma = 1.4$, the air-standard thermal efficiency of the cycle is:",
+    "options": {
+      "A": "$68.53\\%$",
+      "B": "$63.03\\%$",
+      "C": "$74.73\\%$",
+      "D": "$51.40\\%$"
+    },
+    "correct_answer": "A",
+    "solution": "The air-standard efficiency of an Otto cycle is given by:\n$$\\eta_{th} = 1 - \\frac{1}{r^{\\gamma - 1}}$$\nGiven $r = 18$ and $\\gamma = 1.4$:\n$$\\eta_{th} = 1 - \\frac{1}{18^{0.4}} = 1 - \\frac{1}{3.1777} = 1 - 0.3147 = 0.6853$$\nIn percentage: $\\eta_{th} = 68.53\\%$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_023",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Air-standard Diesel cycle and cut-off ratio",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#3b82f6\"/></marker></defs><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><line x1=\"50\" y1=\"200\" x2=\"50\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><text x=\"365\" y=\"205\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">V</text><text x=\"45\" y=\"25\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">P</text><path d=\"M 320 180 Q 150 170 120 70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"120\" y1=\"70\" x2=\"190\" y2=\"70\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><path d=\"M 190 70 Q 240 120 320 150\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.5\"/><line x1=\"320\" y1=\"150\" x2=\"320\" y2=\"180\" stroke=\"#9333ea\" stroke-width=\"2.5\"/><circle cx=\"320\" cy=\"180\" r=\"4\" fill=\"#1e293b\"/><text x=\"328\" y=\"185\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">1</text><circle cx=\"120\" cy=\"70\" r=\"4\" fill=\"#1e293b\"/><text x=\"108\" y=\"65\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">2</text><circle cx=\"190\" cy=\"70\" r=\"4\" fill=\"#1e293b\"/><text x=\"190\" y=\"60\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">3</text><circle cx=\"320\" cy=\"150\" r=\"4\" fill=\"#1e293b\"/><text x=\"328\" y=\"148\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">4</text><text x=\"145\" y=\"55\" font-size=\"10\" fill=\"#dc2626\" font-weight=\"bold\">P = const (Qin)</text><text x=\"325\" y=\"168\" font-size=\"9\" fill=\"#9333ea\">V = const (Qout)</text><text x=\"170\" y=\"140\" font-size=\"10\" fill=\"#2563eb\">pV^γ = C</text></svg>",
+    "question": "An engine operates on the air-standard Diesel cycle shown in the accompanying P-V diagram with a compression ratio of $r = 16$ and a cut-off ratio of $\\rho = 2.0$. Taking $\\gamma = 1.4$, the air-standard thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "61.38",
+    "numerical_range": {
+      "min": 61.18,
+      "max": 61.58
+    },
+    "solution": "For an air-standard Diesel cycle:\n$$\\eta_{Diesel} = 1 - \\frac{1}{\\gamma r^{\\gamma - 1}} \\left[ \\frac{\\rho^\\gamma - 1}{\\rho - 1} \\right]$$\nSubstituting $r = 16$, $\\rho = 2.0$, and $\\gamma = 1.4$:\n$$\\rho^\\gamma = 2.0^{1.4} = 2.6390$$\n$$\\frac{\\rho^\\gamma - 1}{\\rho - 1} = \\frac{1.6390}{1.0} = 1.6390$$\n$$\\gamma r^{\\gamma - 1} = 1.4 \\times 16^{0.4} = 1.4 \\times 3.0314 = 4.2440$$\n$$\\eta_{Diesel} = 1 - \\frac{1.6390}{4.2440} = 1 - 0.3862 = 0.6138$$\nIn percentage: $61.38\\%$.",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_024",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Comparison of cycles for given compression ratio",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "When comparing the theoretical air-standard efficiencies of Otto, Diesel, and Dual cycles, which of the following statements is/are TRUE?",
+    "options": {
+      "A": "For the same compression ratio and heat input, $\\eta_{\\text{Otto}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Diesel}}$",
+      "B": "For the same maximum peak cylinder pressure and temperature, $\\eta_{\\text{Diesel}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Otto}}$",
+      "C": "In an Otto cycle, heat addition occurs strictly at constant volume",
+      "D": "In a Diesel cycle, heat addition occurs strictly at constant pressure"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. For the same compression ratio $r$, constant volume heat addition brings maximum temperature earlier, so Otto is highest. (A is true)\n2. When constrained by peak pressure and temperature (the real metallurgical limit), Diesel expands further and has highest efficiency. (B is true)\n3. Otto cycle features isochoric heat addition. (C is true)\n4. Diesel cycle features isobaric heat addition. (D is true)\nAll statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_025",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Air-standard Otto cycle efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "An internal combustion engine operating on the air-standard Otto cycle has a compression ratio of $r = 15$. Taking the adiabatic exponent $\\gamma = 1.4$, the air-standard thermal efficiency of the cycle is:",
+    "options": {
+      "A": "$66.15\\%$",
+      "B": "$60.65\\%$",
+      "C": "$72.35\\%$",
+      "D": "$49.61\\%$"
+    },
+    "correct_answer": "A",
+    "solution": "The air-standard efficiency of an Otto cycle is given by:\n$$\\eta_{th} = 1 - \\frac{1}{r^{\\gamma - 1}}$$\nGiven $r = 15$ and $\\gamma = 1.4$:\n$$\\eta_{th} = 1 - \\frac{1}{15^{0.4}} = 1 - \\frac{1}{2.9542} = 1 - 0.3385 = 0.6615$$\nIn percentage: $\\eta_{th} = 66.15\\%$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_026",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Air-standard Diesel cycle and cut-off ratio",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#3b82f6\"/></marker></defs><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><line x1=\"50\" y1=\"200\" x2=\"50\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><text x=\"365\" y=\"205\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">V</text><text x=\"45\" y=\"25\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">P</text><path d=\"M 320 180 Q 150 170 120 70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"120\" y1=\"70\" x2=\"190\" y2=\"70\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><path d=\"M 190 70 Q 240 120 320 150\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.5\"/><line x1=\"320\" y1=\"150\" x2=\"320\" y2=\"180\" stroke=\"#9333ea\" stroke-width=\"2.5\"/><circle cx=\"320\" cy=\"180\" r=\"4\" fill=\"#1e293b\"/><text x=\"328\" y=\"185\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">1</text><circle cx=\"120\" cy=\"70\" r=\"4\" fill=\"#1e293b\"/><text x=\"108\" y=\"65\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">2</text><circle cx=\"190\" cy=\"70\" r=\"4\" fill=\"#1e293b\"/><text x=\"190\" y=\"60\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">3</text><circle cx=\"320\" cy=\"150\" r=\"4\" fill=\"#1e293b\"/><text x=\"328\" y=\"148\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">4</text><text x=\"145\" y=\"55\" font-size=\"10\" fill=\"#dc2626\" font-weight=\"bold\">P = const (Qin)</text><text x=\"325\" y=\"168\" font-size=\"9\" fill=\"#9333ea\">V = const (Qout)</text><text x=\"170\" y=\"140\" font-size=\"10\" fill=\"#2563eb\">pV^γ = C</text></svg>",
+    "question": "An engine operates on the air-standard Diesel cycle shown in the accompanying P-V diagram with a compression ratio of $r = 16$ and a cut-off ratio of $\\rho = 2.0$. Taking $\\gamma = 1.4$, the air-standard thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "61.38",
+    "numerical_range": {
+      "min": 61.18,
+      "max": 61.58
+    },
+    "solution": "For an air-standard Diesel cycle:\n$$\\eta_{Diesel} = 1 - \\frac{1}{\\gamma r^{\\gamma - 1}} \\left[ \\frac{\\rho^\\gamma - 1}{\\rho - 1} \\right]$$\nSubstituting $r = 16$, $\\rho = 2.0$, and $\\gamma = 1.4$:\n$$\\rho^\\gamma = 2.0^{1.4} = 2.6390$$\n$$\\frac{\\rho^\\gamma - 1}{\\rho - 1} = \\frac{1.6390}{1.0} = 1.6390$$\n$$\\gamma r^{\\gamma - 1} = 1.4 \\times 16^{0.4} = 1.4 \\times 3.0314 = 4.2440$$\n$$\\eta_{Diesel} = 1 - \\frac{1.6390}{4.2440} = 1 - 0.3862 = 0.6138$$\nIn percentage: $61.38\\%$.",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_027",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Comparison of cycles for given compression ratio",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "When comparing the theoretical air-standard efficiencies of Otto, Diesel, and Dual cycles, which of the following statements is/are TRUE?",
+    "options": {
+      "A": "For the same compression ratio and heat input, $\\eta_{\\text{Otto}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Diesel}}$",
+      "B": "For the same maximum peak cylinder pressure and temperature, $\\eta_{\\text{Diesel}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Otto}}$",
+      "C": "In an Otto cycle, heat addition occurs strictly at constant volume",
+      "D": "In a Diesel cycle, heat addition occurs strictly at constant pressure"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. For the same compression ratio $r$, constant volume heat addition brings maximum temperature earlier, so Otto is highest. (A is true)\n2. When constrained by peak pressure and temperature (the real metallurgical limit), Diesel expands further and has highest efficiency. (B is true)\n3. Otto cycle features isochoric heat addition. (C is true)\n4. Diesel cycle features isobaric heat addition. (D is true)\nAll statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_028",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Air-standard Otto cycle efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "An internal combustion engine operating on the air-standard Otto cycle has a compression ratio of $r = 18$. Taking the adiabatic exponent $\\gamma = 1.4$, the air-standard thermal efficiency of the cycle is:",
+    "options": {
+      "A": "$68.53\\%$",
+      "B": "$63.03\\%$",
+      "C": "$74.73\\%$",
+      "D": "$51.40\\%$"
+    },
+    "correct_answer": "A",
+    "solution": "The air-standard efficiency of an Otto cycle is given by:\n$$\\eta_{th} = 1 - \\frac{1}{r^{\\gamma - 1}}$$\nGiven $r = 18$ and $\\gamma = 1.4$:\n$$\\eta_{th} = 1 - \\frac{1}{18^{0.4}} = 1 - \\frac{1}{3.1777} = 1 - 0.3147 = 0.6853$$\nIn percentage: $\\eta_{th} = 68.53\\%$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_029",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Air-standard Diesel cycle and cut-off ratio",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#3b82f6\"/></marker></defs><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><line x1=\"50\" y1=\"200\" x2=\"50\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><text x=\"365\" y=\"205\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">V</text><text x=\"45\" y=\"25\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">P</text><path d=\"M 320 180 Q 150 170 120 70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"120\" y1=\"70\" x2=\"190\" y2=\"70\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><path d=\"M 190 70 Q 240 120 320 150\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.5\"/><line x1=\"320\" y1=\"150\" x2=\"320\" y2=\"180\" stroke=\"#9333ea\" stroke-width=\"2.5\"/><circle cx=\"320\" cy=\"180\" r=\"4\" fill=\"#1e293b\"/><text x=\"328\" y=\"185\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">1</text><circle cx=\"120\" cy=\"70\" r=\"4\" fill=\"#1e293b\"/><text x=\"108\" y=\"65\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">2</text><circle cx=\"190\" cy=\"70\" r=\"4\" fill=\"#1e293b\"/><text x=\"190\" y=\"60\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">3</text><circle cx=\"320\" cy=\"150\" r=\"4\" fill=\"#1e293b\"/><text x=\"328\" y=\"148\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">4</text><text x=\"145\" y=\"55\" font-size=\"10\" fill=\"#dc2626\" font-weight=\"bold\">P = const (Qin)</text><text x=\"325\" y=\"168\" font-size=\"9\" fill=\"#9333ea\">V = const (Qout)</text><text x=\"170\" y=\"140\" font-size=\"10\" fill=\"#2563eb\">pV^γ = C</text></svg>",
+    "question": "An engine operates on the air-standard Diesel cycle shown in the accompanying P-V diagram with a compression ratio of $r = 16$ and a cut-off ratio of $\\rho = 2.0$. Taking $\\gamma = 1.4$, the air-standard thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "61.38",
+    "numerical_range": {
+      "min": 61.18,
+      "max": 61.58
+    },
+    "solution": "For an air-standard Diesel cycle:\n$$\\eta_{Diesel} = 1 - \\frac{1}{\\gamma r^{\\gamma - 1}} \\left[ \\frac{\\rho^\\gamma - 1}{\\rho - 1} \\right]$$\nSubstituting $r = 16$, $\\rho = 2.0$, and $\\gamma = 1.4$:\n$$\\rho^\\gamma = 2.0^{1.4} = 2.6390$$\n$$\\frac{\\rho^\\gamma - 1}{\\rho - 1} = \\frac{1.6390}{1.0} = 1.6390$$\n$$\\gamma r^{\\gamma - 1} = 1.4 \\times 16^{0.4} = 1.4 \\times 3.0314 = 4.2440$$\n$$\\eta_{Diesel} = 1 - \\frac{1.6390}{4.2440} = 1 - 0.3862 = 0.6138$$\nIn percentage: $61.38\\%$.",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_030",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Comparison of cycles for given compression ratio",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "When comparing the theoretical air-standard efficiencies of Otto, Diesel, and Dual cycles, which of the following statements is/are TRUE?",
+    "options": {
+      "A": "For the same compression ratio and heat input, $\\eta_{\\text{Otto}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Diesel}}$",
+      "B": "For the same maximum peak cylinder pressure and temperature, $\\eta_{\\text{Diesel}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Otto}}$",
+      "C": "In an Otto cycle, heat addition occurs strictly at constant volume",
+      "D": "In a Diesel cycle, heat addition occurs strictly at constant pressure"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. For the same compression ratio $r$, constant volume heat addition brings maximum temperature earlier, so Otto is highest. (A is true)\n2. When constrained by peak pressure and temperature (the real metallurgical limit), Diesel expands further and has highest efficiency. (B is true)\n3. Otto cycle features isochoric heat addition. (C is true)\n4. Diesel cycle features isobaric heat addition. (D is true)\nAll statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_031",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Air-standard Otto cycle efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "An internal combustion engine operating on the air-standard Otto cycle has a compression ratio of $r = 15$. Taking the adiabatic exponent $\\gamma = 1.4$, the air-standard thermal efficiency of the cycle is:",
+    "options": {
+      "A": "$66.15\\%$",
+      "B": "$60.65\\%$",
+      "C": "$72.35\\%$",
+      "D": "$49.61\\%$"
+    },
+    "correct_answer": "A",
+    "solution": "The air-standard efficiency of an Otto cycle is given by:\n$$\\eta_{th} = 1 - \\frac{1}{r^{\\gamma - 1}}$$\nGiven $r = 15$ and $\\gamma = 1.4$:\n$$\\eta_{th} = 1 - \\frac{1}{15^{0.4}} = 1 - \\frac{1}{2.9542} = 1 - 0.3385 = 0.6615$$\nIn percentage: $\\eta_{th} = 66.15\\%$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_032",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Air-standard Diesel cycle and cut-off ratio",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#3b82f6\"/></marker></defs><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><line x1=\"50\" y1=\"200\" x2=\"50\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><text x=\"365\" y=\"205\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">V</text><text x=\"45\" y=\"25\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">P</text><path d=\"M 320 180 Q 150 170 120 70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"120\" y1=\"70\" x2=\"190\" y2=\"70\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><path d=\"M 190 70 Q 240 120 320 150\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.5\"/><line x1=\"320\" y1=\"150\" x2=\"320\" y2=\"180\" stroke=\"#9333ea\" stroke-width=\"2.5\"/><circle cx=\"320\" cy=\"180\" r=\"4\" fill=\"#1e293b\"/><text x=\"328\" y=\"185\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">1</text><circle cx=\"120\" cy=\"70\" r=\"4\" fill=\"#1e293b\"/><text x=\"108\" y=\"65\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">2</text><circle cx=\"190\" cy=\"70\" r=\"4\" fill=\"#1e293b\"/><text x=\"190\" y=\"60\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">3</text><circle cx=\"320\" cy=\"150\" r=\"4\" fill=\"#1e293b\"/><text x=\"328\" y=\"148\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">4</text><text x=\"145\" y=\"55\" font-size=\"10\" fill=\"#dc2626\" font-weight=\"bold\">P = const (Qin)</text><text x=\"325\" y=\"168\" font-size=\"9\" fill=\"#9333ea\">V = const (Qout)</text><text x=\"170\" y=\"140\" font-size=\"10\" fill=\"#2563eb\">pV^γ = C</text></svg>",
+    "question": "An engine operates on the air-standard Diesel cycle shown in the accompanying P-V diagram with a compression ratio of $r = 16$ and a cut-off ratio of $\\rho = 2.0$. Taking $\\gamma = 1.4$, the air-standard thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "61.38",
+    "numerical_range": {
+      "min": 61.18,
+      "max": 61.58
+    },
+    "solution": "For an air-standard Diesel cycle:\n$$\\eta_{Diesel} = 1 - \\frac{1}{\\gamma r^{\\gamma - 1}} \\left[ \\frac{\\rho^\\gamma - 1}{\\rho - 1} \\right]$$\nSubstituting $r = 16$, $\\rho = 2.0$, and $\\gamma = 1.4$:\n$$\\rho^\\gamma = 2.0^{1.4} = 2.6390$$\n$$\\frac{\\rho^\\gamma - 1}{\\rho - 1} = \\frac{1.6390}{1.0} = 1.6390$$\n$$\\gamma r^{\\gamma - 1} = 1.4 \\times 16^{0.4} = 1.4 \\times 3.0314 = 4.2440$$\n$$\\eta_{Diesel} = 1 - \\frac{1.6390}{4.2440} = 1 - 0.3862 = 0.6138$$\nIn percentage: $61.38\\%$.",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_033",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Comparison of cycles for given compression ratio",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "When comparing the theoretical air-standard efficiencies of Otto, Diesel, and Dual cycles, which of the following statements is/are TRUE?",
+    "options": {
+      "A": "For the same compression ratio and heat input, $\\eta_{\\text{Otto}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Diesel}}$",
+      "B": "For the same maximum peak cylinder pressure and temperature, $\\eta_{\\text{Diesel}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Otto}}$",
+      "C": "In an Otto cycle, heat addition occurs strictly at constant volume",
+      "D": "In a Diesel cycle, heat addition occurs strictly at constant pressure"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. For the same compression ratio $r$, constant volume heat addition brings maximum temperature earlier, so Otto is highest. (A is true)\n2. When constrained by peak pressure and temperature (the real metallurgical limit), Diesel expands further and has highest efficiency. (B is true)\n3. Otto cycle features isochoric heat addition. (C is true)\n4. Diesel cycle features isobaric heat addition. (D is true)\nAll statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_034",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Air-standard Otto cycle efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "An internal combustion engine operating on the air-standard Otto cycle has a compression ratio of $r = 18$. Taking the adiabatic exponent $\\gamma = 1.4$, the air-standard thermal efficiency of the cycle is:",
+    "options": {
+      "A": "$68.53\\%$",
+      "B": "$63.03\\%$",
+      "C": "$74.73\\%$",
+      "D": "$51.40\\%$"
+    },
+    "correct_answer": "A",
+    "solution": "The air-standard efficiency of an Otto cycle is given by:\n$$\\eta_{th} = 1 - \\frac{1}{r^{\\gamma - 1}}$$\nGiven $r = 18$ and $\\gamma = 1.4$:\n$$\\eta_{th} = 1 - \\frac{1}{18^{0.4}} = 1 - \\frac{1}{3.1777} = 1 - 0.3147 = 0.6853$$\nIn percentage: $\\eta_{th} = 68.53\\%$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_035",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Air-standard Diesel cycle and cut-off ratio",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#3b82f6\"/></marker></defs><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><line x1=\"50\" y1=\"200\" x2=\"50\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><text x=\"365\" y=\"205\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">V</text><text x=\"45\" y=\"25\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">P</text><path d=\"M 320 180 Q 150 170 120 70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"120\" y1=\"70\" x2=\"190\" y2=\"70\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><path d=\"M 190 70 Q 240 120 320 150\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.5\"/><line x1=\"320\" y1=\"150\" x2=\"320\" y2=\"180\" stroke=\"#9333ea\" stroke-width=\"2.5\"/><circle cx=\"320\" cy=\"180\" r=\"4\" fill=\"#1e293b\"/><text x=\"328\" y=\"185\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">1</text><circle cx=\"120\" cy=\"70\" r=\"4\" fill=\"#1e293b\"/><text x=\"108\" y=\"65\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">2</text><circle cx=\"190\" cy=\"70\" r=\"4\" fill=\"#1e293b\"/><text x=\"190\" y=\"60\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">3</text><circle cx=\"320\" cy=\"150\" r=\"4\" fill=\"#1e293b\"/><text x=\"328\" y=\"148\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">4</text><text x=\"145\" y=\"55\" font-size=\"10\" fill=\"#dc2626\" font-weight=\"bold\">P = const (Qin)</text><text x=\"325\" y=\"168\" font-size=\"9\" fill=\"#9333ea\">V = const (Qout)</text><text x=\"170\" y=\"140\" font-size=\"10\" fill=\"#2563eb\">pV^γ = C</text></svg>",
+    "question": "An engine operates on the air-standard Diesel cycle shown in the accompanying P-V diagram with a compression ratio of $r = 16$ and a cut-off ratio of $\\rho = 2.0$. Taking $\\gamma = 1.4$, the air-standard thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "61.38",
+    "numerical_range": {
+      "min": 61.18,
+      "max": 61.58
+    },
+    "solution": "For an air-standard Diesel cycle:\n$$\\eta_{Diesel} = 1 - \\frac{1}{\\gamma r^{\\gamma - 1}} \\left[ \\frac{\\rho^\\gamma - 1}{\\rho - 1} \\right]$$\nSubstituting $r = 16$, $\\rho = 2.0$, and $\\gamma = 1.4$:\n$$\\rho^\\gamma = 2.0^{1.4} = 2.6390$$\n$$\\frac{\\rho^\\gamma - 1}{\\rho - 1} = \\frac{1.6390}{1.0} = 1.6390$$\n$$\\gamma r^{\\gamma - 1} = 1.4 \\times 16^{0.4} = 1.4 \\times 3.0314 = 4.2440$$\n$$\\eta_{Diesel} = 1 - \\frac{1.6390}{4.2440} = 1 - 0.3862 = 0.6138$$\nIn percentage: $61.38\\%$.",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_036",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Comparison of cycles for given compression ratio",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "When comparing the theoretical air-standard efficiencies of Otto, Diesel, and Dual cycles, which of the following statements is/are TRUE?",
+    "options": {
+      "A": "For the same compression ratio and heat input, $\\eta_{\\text{Otto}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Diesel}}$",
+      "B": "For the same maximum peak cylinder pressure and temperature, $\\eta_{\\text{Diesel}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Otto}}$",
+      "C": "In an Otto cycle, heat addition occurs strictly at constant volume",
+      "D": "In a Diesel cycle, heat addition occurs strictly at constant pressure"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. For the same compression ratio $r$, constant volume heat addition brings maximum temperature earlier, so Otto is highest. (A is true)\n2. When constrained by peak pressure and temperature (the real metallurgical limit), Diesel expands further and has highest efficiency. (B is true)\n3. Otto cycle features isochoric heat addition. (C is true)\n4. Diesel cycle features isobaric heat addition. (D is true)\nAll statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_037",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Air-standard Otto cycle efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "An internal combustion engine operating on the air-standard Otto cycle has a compression ratio of $r = 15$. Taking the adiabatic exponent $\\gamma = 1.4$, the air-standard thermal efficiency of the cycle is:",
+    "options": {
+      "A": "$66.15\\%$",
+      "B": "$60.65\\%$",
+      "C": "$72.35\\%$",
+      "D": "$49.61\\%$"
+    },
+    "correct_answer": "A",
+    "solution": "The air-standard efficiency of an Otto cycle is given by:\n$$\\eta_{th} = 1 - \\frac{1}{r^{\\gamma - 1}}$$\nGiven $r = 15$ and $\\gamma = 1.4$:\n$$\\eta_{th} = 1 - \\frac{1}{15^{0.4}} = 1 - \\frac{1}{2.9542} = 1 - 0.3385 = 0.6615$$\nIn percentage: $\\eta_{th} = 66.15\\%$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_038",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Air-standard Diesel cycle and cut-off ratio",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#3b82f6\"/></marker></defs><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><line x1=\"50\" y1=\"200\" x2=\"50\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><text x=\"365\" y=\"205\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">V</text><text x=\"45\" y=\"25\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">P</text><path d=\"M 320 180 Q 150 170 120 70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"120\" y1=\"70\" x2=\"190\" y2=\"70\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><path d=\"M 190 70 Q 240 120 320 150\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.5\"/><line x1=\"320\" y1=\"150\" x2=\"320\" y2=\"180\" stroke=\"#9333ea\" stroke-width=\"2.5\"/><circle cx=\"320\" cy=\"180\" r=\"4\" fill=\"#1e293b\"/><text x=\"328\" y=\"185\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">1</text><circle cx=\"120\" cy=\"70\" r=\"4\" fill=\"#1e293b\"/><text x=\"108\" y=\"65\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">2</text><circle cx=\"190\" cy=\"70\" r=\"4\" fill=\"#1e293b\"/><text x=\"190\" y=\"60\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">3</text><circle cx=\"320\" cy=\"150\" r=\"4\" fill=\"#1e293b\"/><text x=\"328\" y=\"148\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">4</text><text x=\"145\" y=\"55\" font-size=\"10\" fill=\"#dc2626\" font-weight=\"bold\">P = const (Qin)</text><text x=\"325\" y=\"168\" font-size=\"9\" fill=\"#9333ea\">V = const (Qout)</text><text x=\"170\" y=\"140\" font-size=\"10\" fill=\"#2563eb\">pV^γ = C</text></svg>",
+    "question": "An engine operates on the air-standard Diesel cycle shown in the accompanying P-V diagram with a compression ratio of $r = 16$ and a cut-off ratio of $\\rho = 2.0$. Taking $\\gamma = 1.4$, the air-standard thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "61.38",
+    "numerical_range": {
+      "min": 61.18,
+      "max": 61.58
+    },
+    "solution": "For an air-standard Diesel cycle:\n$$\\eta_{Diesel} = 1 - \\frac{1}{\\gamma r^{\\gamma - 1}} \\left[ \\frac{\\rho^\\gamma - 1}{\\rho - 1} \\right]$$\nSubstituting $r = 16$, $\\rho = 2.0$, and $\\gamma = 1.4$:\n$$\\rho^\\gamma = 2.0^{1.4} = 2.6390$$\n$$\\frac{\\rho^\\gamma - 1}{\\rho - 1} = \\frac{1.6390}{1.0} = 1.6390$$\n$$\\gamma r^{\\gamma - 1} = 1.4 \\times 16^{0.4} = 1.4 \\times 3.0314 = 4.2440$$\n$$\\eta_{Diesel} = 1 - \\frac{1.6390}{4.2440} = 1 - 0.3862 = 0.6138$$\nIn percentage: $61.38\\%$.",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_039",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Comparison of cycles for given compression ratio",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "When comparing the theoretical air-standard efficiencies of Otto, Diesel, and Dual cycles, which of the following statements is/are TRUE?",
+    "options": {
+      "A": "For the same compression ratio and heat input, $\\eta_{\\text{Otto}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Diesel}}$",
+      "B": "For the same maximum peak cylinder pressure and temperature, $\\eta_{\\text{Diesel}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Otto}}$",
+      "C": "In an Otto cycle, heat addition occurs strictly at constant volume",
+      "D": "In a Diesel cycle, heat addition occurs strictly at constant pressure"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. For the same compression ratio $r$, constant volume heat addition brings maximum temperature earlier, so Otto is highest. (A is true)\n2. When constrained by peak pressure and temperature (the real metallurgical limit), Diesel expands further and has highest efficiency. (B is true)\n3. Otto cycle features isochoric heat addition. (C is true)\n4. Diesel cycle features isobaric heat addition. (D is true)\nAll statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_040",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Air-standard Otto cycle efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "An internal combustion engine operating on the air-standard Otto cycle has a compression ratio of $r = 18$. Taking the adiabatic exponent $\\gamma = 1.4$, the air-standard thermal efficiency of the cycle is:",
+    "options": {
+      "A": "$68.53\\%$",
+      "B": "$63.03\\%$",
+      "C": "$74.73\\%$",
+      "D": "$51.40\\%$"
+    },
+    "correct_answer": "A",
+    "solution": "The air-standard efficiency of an Otto cycle is given by:\n$$\\eta_{th} = 1 - \\frac{1}{r^{\\gamma - 1}}$$\nGiven $r = 18$ and $\\gamma = 1.4$:\n$$\\eta_{th} = 1 - \\frac{1}{18^{0.4}} = 1 - \\frac{1}{3.1777} = 1 - 0.3147 = 0.6853$$\nIn percentage: $\\eta_{th} = 68.53\\%$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_041",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Air-standard Diesel cycle and cut-off ratio",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#3b82f6\"/></marker></defs><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><line x1=\"50\" y1=\"200\" x2=\"50\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><text x=\"365\" y=\"205\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">V</text><text x=\"45\" y=\"25\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">P</text><path d=\"M 320 180 Q 150 170 120 70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"120\" y1=\"70\" x2=\"190\" y2=\"70\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><path d=\"M 190 70 Q 240 120 320 150\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.5\"/><line x1=\"320\" y1=\"150\" x2=\"320\" y2=\"180\" stroke=\"#9333ea\" stroke-width=\"2.5\"/><circle cx=\"320\" cy=\"180\" r=\"4\" fill=\"#1e293b\"/><text x=\"328\" y=\"185\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">1</text><circle cx=\"120\" cy=\"70\" r=\"4\" fill=\"#1e293b\"/><text x=\"108\" y=\"65\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">2</text><circle cx=\"190\" cy=\"70\" r=\"4\" fill=\"#1e293b\"/><text x=\"190\" y=\"60\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">3</text><circle cx=\"320\" cy=\"150\" r=\"4\" fill=\"#1e293b\"/><text x=\"328\" y=\"148\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">4</text><text x=\"145\" y=\"55\" font-size=\"10\" fill=\"#dc2626\" font-weight=\"bold\">P = const (Qin)</text><text x=\"325\" y=\"168\" font-size=\"9\" fill=\"#9333ea\">V = const (Qout)</text><text x=\"170\" y=\"140\" font-size=\"10\" fill=\"#2563eb\">pV^γ = C</text></svg>",
+    "question": "An engine operates on the air-standard Diesel cycle shown in the accompanying P-V diagram with a compression ratio of $r = 16$ and a cut-off ratio of $\\rho = 2.0$. Taking $\\gamma = 1.4$, the air-standard thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "61.38",
+    "numerical_range": {
+      "min": 61.18,
+      "max": 61.58
+    },
+    "solution": "For an air-standard Diesel cycle:\n$$\\eta_{Diesel} = 1 - \\frac{1}{\\gamma r^{\\gamma - 1}} \\left[ \\frac{\\rho^\\gamma - 1}{\\rho - 1} \\right]$$\nSubstituting $r = 16$, $\\rho = 2.0$, and $\\gamma = 1.4$:\n$$\\rho^\\gamma = 2.0^{1.4} = 2.6390$$\n$$\\frac{\\rho^\\gamma - 1}{\\rho - 1} = \\frac{1.6390}{1.0} = 1.6390$$\n$$\\gamma r^{\\gamma - 1} = 1.4 \\times 16^{0.4} = 1.4 \\times 3.0314 = 4.2440$$\n$$\\eta_{Diesel} = 1 - \\frac{1.6390}{4.2440} = 1 - 0.3862 = 0.6138$$\nIn percentage: $61.38\\%$.",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_042",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Comparison of cycles for given compression ratio",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "When comparing the theoretical air-standard efficiencies of Otto, Diesel, and Dual cycles, which of the following statements is/are TRUE?",
+    "options": {
+      "A": "For the same compression ratio and heat input, $\\eta_{\\text{Otto}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Diesel}}$",
+      "B": "For the same maximum peak cylinder pressure and temperature, $\\eta_{\\text{Diesel}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Otto}}$",
+      "C": "In an Otto cycle, heat addition occurs strictly at constant volume",
+      "D": "In a Diesel cycle, heat addition occurs strictly at constant pressure"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. For the same compression ratio $r$, constant volume heat addition brings maximum temperature earlier, so Otto is highest. (A is true)\n2. When constrained by peak pressure and temperature (the real metallurgical limit), Diesel expands further and has highest efficiency. (B is true)\n3. Otto cycle features isochoric heat addition. (C is true)\n4. Diesel cycle features isobaric heat addition. (D is true)\nAll statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_043",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Air-standard Otto cycle efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "An internal combustion engine operating on the air-standard Otto cycle has a compression ratio of $r = 15$. Taking the adiabatic exponent $\\gamma = 1.4$, the air-standard thermal efficiency of the cycle is:",
+    "options": {
+      "A": "$66.15\\%$",
+      "B": "$60.65\\%$",
+      "C": "$72.35\\%$",
+      "D": "$49.61\\%$"
+    },
+    "correct_answer": "A",
+    "solution": "The air-standard efficiency of an Otto cycle is given by:\n$$\\eta_{th} = 1 - \\frac{1}{r^{\\gamma - 1}}$$\nGiven $r = 15$ and $\\gamma = 1.4$:\n$$\\eta_{th} = 1 - \\frac{1}{15^{0.4}} = 1 - \\frac{1}{2.9542} = 1 - 0.3385 = 0.6615$$\nIn percentage: $\\eta_{th} = 66.15\\%$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_044",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Air-standard Diesel cycle and cut-off ratio",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><defs><marker id=\"arrow\" viewBox=\"0 0 10 10\" refX=\"5\" refY=\"5\" markerWidth=\"6\" markerHeight=\"6\" orient=\"auto-start-reverse\"><path d=\"M 0 0 L 10 5 L 0 10 z\" fill=\"#3b82f6\"/></marker></defs><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"50\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><line x1=\"50\" y1=\"200\" x2=\"50\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"2\" marker-end=\"url(#arrow)\"/><text x=\"365\" y=\"205\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">V</text><text x=\"45\" y=\"25\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">P</text><path d=\"M 320 180 Q 150 170 120 70\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\"/><line x1=\"120\" y1=\"70\" x2=\"190\" y2=\"70\" stroke=\"#dc2626\" stroke-width=\"2.5\"/><path d=\"M 190 70 Q 240 120 320 150\" fill=\"none\" stroke=\"#16a34a\" stroke-width=\"2.5\"/><line x1=\"320\" y1=\"150\" x2=\"320\" y2=\"180\" stroke=\"#9333ea\" stroke-width=\"2.5\"/><circle cx=\"320\" cy=\"180\" r=\"4\" fill=\"#1e293b\"/><text x=\"328\" y=\"185\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">1</text><circle cx=\"120\" cy=\"70\" r=\"4\" fill=\"#1e293b\"/><text x=\"108\" y=\"65\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">2</text><circle cx=\"190\" cy=\"70\" r=\"4\" fill=\"#1e293b\"/><text x=\"190\" y=\"60\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">3</text><circle cx=\"320\" cy=\"150\" r=\"4\" fill=\"#1e293b\"/><text x=\"328\" y=\"148\" font-size=\"11\" font-weight=\"bold\" fill=\"#1e293b\">4</text><text x=\"145\" y=\"55\" font-size=\"10\" fill=\"#dc2626\" font-weight=\"bold\">P = const (Qin)</text><text x=\"325\" y=\"168\" font-size=\"9\" fill=\"#9333ea\">V = const (Qout)</text><text x=\"170\" y=\"140\" font-size=\"10\" fill=\"#2563eb\">pV^γ = C</text></svg>",
+    "question": "An engine operates on the air-standard Diesel cycle shown in the accompanying P-V diagram with a compression ratio of $r = 16$ and a cut-off ratio of $\\rho = 2.0$. Taking $\\gamma = 1.4$, the air-standard thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "61.38",
+    "numerical_range": {
+      "min": 61.18,
+      "max": 61.58
+    },
+    "solution": "For an air-standard Diesel cycle:\n$$\\eta_{Diesel} = 1 - \\frac{1}{\\gamma r^{\\gamma - 1}} \\left[ \\frac{\\rho^\\gamma - 1}{\\rho - 1} \\right]$$\nSubstituting $r = 16$, $\\rho = 2.0$, and $\\gamma = 1.4$:\n$$\\rho^\\gamma = 2.0^{1.4} = 2.6390$$\n$$\\frac{\\rho^\\gamma - 1}{\\rho - 1} = \\frac{1.6390}{1.0} = 1.6390$$\n$$\\gamma r^{\\gamma - 1} = 1.4 \\times 16^{0.4} = 1.4 \\times 3.0314 = 4.2440$$\n$$\\eta_{Diesel} = 1 - \\frac{1.6390}{4.2440} = 1 - 0.3862 = 0.6138$$\nIn percentage: $61.38\\%$.",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_CYC_045",
+    "section": "Section 3: Farm Power",
+    "topic": "Thermodynamic Air Cycles: Otto, Diesel & Dual",
+    "subtopic": "Comparison of cycles for given compression ratio",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "When comparing the theoretical air-standard efficiencies of Otto, Diesel, and Dual cycles, which of the following statements is/are TRUE?",
+    "options": {
+      "A": "For the same compression ratio and heat input, $\\eta_{\\text{Otto}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Diesel}}$",
+      "B": "For the same maximum peak cylinder pressure and temperature, $\\eta_{\\text{Diesel}} > \\eta_{\\text{Dual}} > \\eta_{\\text{Otto}}$",
+      "C": "In an Otto cycle, heat addition occurs strictly at constant volume",
+      "D": "In a Diesel cycle, heat addition occurs strictly at constant pressure"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. For the same compression ratio $r$, constant volume heat addition brings maximum temperature earlier, so Otto is highest. (A is true)\n2. When constrained by peak pressure and temperature (the real metallurgical limit), Diesel expands further and has highest efficiency. (B is true)\n3. Otto cycle features isochoric heat addition. (C is true)\n4. Diesel cycle features isobaric heat addition. (D is true)\nAll statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_001",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Mechanical efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine develops a brake power of $27.5\\text{ kW}$ while its frictional power losses are measured as $5.5\\text{ kW}$. The mechanical efficiency of the engine is:",
+    "options": {
+      "A": "$83.3\\%$",
+      "B": "$77.3\\%$",
+      "C": "$88.3\\%$",
+      "D": "$70.8\\%$"
+    },
+    "correct_answer": "A",
+    "solution": "Indicated power is the sum of brake power and friction power:\n$$\\text{IP} = \\text{BP} + \\text{FP} = 27.5 + 5.5 = 33.0\\text{ kW}$$\nMechanical efficiency is given by:\n$$\\eta_m = \\frac{\\text{BP}}{\\text{IP}} \\times 100 = \\frac{27.5}{33.0} \\times 100 = 83.3\\%$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_002",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Mean effective pressure and indicated power",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A $4\\text{-cylinder}$, four-stroke tractor diesel engine has a cylinder bore of $10\\text{ cm}$ and a stroke of $12\\text{ cm}$. When running at $2000\\text{ rpm}$, the mean effective pressure is $600\\text{ kPa}$. The indicated power developed by the engine is ________ $\\text{kW}$ (round off to two decimal places, take $\\pi = 3.1416$).",
+    "correct_answer": "37.70",
+    "numerical_range": {
+      "min": 37.5,
+      "max": 37.9
+    },
+    "solution": "For a multi-cylinder 4-stroke engine:\n$$\\text{IP} = \\frac{n \\cdot P_m \\cdot L \\cdot A \\cdot N}{60 \\times 2}$$\nWhere:\n- $n = 4$\n- $P_m = 600.0\\text{ kPa} = 600.0\\text{ kN/m}^2$\n- $L = 0.12\\text{ m}$\n- $A = \\frac{\\pi \\times 0.1^2}{4} = 0.007854\\text{ m}^2$\n- $N = 2000.0\\text{ rpm}$\n$$\\text{IP} = \\frac{4 \\times 600.0 \\times 0.12 \\times 0.007854 \\times 2000.0}{120} = 37.70\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_003",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Morse test for multi-cylinder engines",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding the Morse test used for determining indicated power of multi-cylinder I.C. engines, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "The engine is run at a constant rated speed throughout the test",
+      "B": "When one cylinder is cut out, the reduction in brake power equals the indicated power of that cut-out cylinder",
+      "C": "The frictional power of each cylinder is assumed to remain unchanged when that cylinder is cut out",
+      "D": "The Morse test is suitable for both multi-cylinder SI and CI engines"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Engine speed must be maintained constant using a governor or dynamometer adjustment. (A is correct)\n2. $\\text{IP}_k = \\text{BP}_{\\text{all}} - \\text{BP}_{\\text{without } k}$. (B is correct)\n3. Frictional and pumping losses are assumed constant at that invariant speed. (C is correct)\n4. By shorting spark plugs (SI) or cutting off fuel injection lines (CI), the test works on both engine classes. (D is correct)\nAll statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_004",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Mechanical efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine develops a brake power of $35.0\\text{ kW}$ while its frictional power losses are measured as $5.0\\text{ kW}$. The mechanical efficiency of the engine is:",
+    "options": {
+      "A": "$87.5\\%$",
+      "B": "$81.5\\%$",
+      "C": "$92.5\\%$",
+      "D": "$74.4\\%$"
+    },
+    "correct_answer": "A",
+    "solution": "Indicated power is the sum of brake power and friction power:\n$$\\text{IP} = \\text{BP} + \\text{FP} = 35.0 + 5.0 = 40.0\\text{ kW}$$\nMechanical efficiency is given by:\n$$\\eta_m = \\frac{\\text{BP}}{\\text{IP}} \\times 100 = \\frac{35.0}{40.0} \\times 100 = 87.5\\%$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_005",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Mean effective pressure and indicated power",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A $4\\text{-cylinder}$, four-stroke tractor diesel engine has a cylinder bore of $10\\text{ cm}$ and a stroke of $12\\text{ cm}$. When running at $2000\\text{ rpm}$, the mean effective pressure is $600\\text{ kPa}$. The indicated power developed by the engine is ________ $\\text{kW}$ (round off to two decimal places, take $\\pi = 3.1416$).",
+    "correct_answer": "37.70",
+    "numerical_range": {
+      "min": 37.5,
+      "max": 37.9
+    },
+    "solution": "For a multi-cylinder 4-stroke engine:\n$$\\text{IP} = \\frac{n \\cdot P_m \\cdot L \\cdot A \\cdot N}{60 \\times 2}$$\nWhere:\n- $n = 4$\n- $P_m = 600.0\\text{ kPa} = 600.0\\text{ kN/m}^2$\n- $L = 0.12\\text{ m}$\n- $A = \\frac{\\pi \\times 0.1^2}{4} = 0.007854\\text{ m}^2$\n- $N = 2000.0\\text{ rpm}$\n$$\\text{IP} = \\frac{4 \\times 600.0 \\times 0.12 \\times 0.007854 \\times 2000.0}{120} = 37.70\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_006",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Morse test for multi-cylinder engines",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding the Morse test used for determining indicated power of multi-cylinder I.C. engines, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "The engine is run at a constant rated speed throughout the test",
+      "B": "When one cylinder is cut out, the reduction in brake power equals the indicated power of that cut-out cylinder",
+      "C": "The frictional power of each cylinder is assumed to remain unchanged when that cylinder is cut out",
+      "D": "The Morse test is suitable for both multi-cylinder SI and CI engines"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Engine speed must be maintained constant using a governor or dynamometer adjustment. (A is correct)\n2. $\\text{IP}_k = \\text{BP}_{\\text{all}} - \\text{BP}_{\\text{without } k}$. (B is correct)\n3. Frictional and pumping losses are assumed constant at that invariant speed. (C is correct)\n4. By shorting spark plugs (SI) or cutting off fuel injection lines (CI), the test works on both engine classes. (D is correct)\nAll statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_007",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Mechanical efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine develops a brake power of $42.5\\text{ kW}$ while its frictional power losses are measured as $6.5\\text{ kW}$. The mechanical efficiency of the engine is:",
+    "options": {
+      "A": "$86.7\\%$",
+      "B": "$80.7\\%$",
+      "C": "$91.7\\%$",
+      "D": "$73.7\\%$"
+    },
+    "correct_answer": "A",
+    "solution": "Indicated power is the sum of brake power and friction power:\n$$\\text{IP} = \\text{BP} + \\text{FP} = 42.5 + 6.5 = 49.0\\text{ kW}$$\nMechanical efficiency is given by:\n$$\\eta_m = \\frac{\\text{BP}}{\\text{IP}} \\times 100 = \\frac{42.5}{49.0} \\times 100 = 86.7\\%$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_008",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Mean effective pressure and indicated power",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A $4\\text{-cylinder}$, four-stroke tractor diesel engine has a cylinder bore of $10\\text{ cm}$ and a stroke of $12\\text{ cm}$. When running at $2000\\text{ rpm}$, the mean effective pressure is $600\\text{ kPa}$. The indicated power developed by the engine is ________ $\\text{kW}$ (round off to two decimal places, take $\\pi = 3.1416$).",
+    "correct_answer": "37.70",
+    "numerical_range": {
+      "min": 37.5,
+      "max": 37.9
+    },
+    "solution": "For a multi-cylinder 4-stroke engine:\n$$\\text{IP} = \\frac{n \\cdot P_m \\cdot L \\cdot A \\cdot N}{60 \\times 2}$$\nWhere:\n- $n = 4$\n- $P_m = 600.0\\text{ kPa} = 600.0\\text{ kN/m}^2$\n- $L = 0.12\\text{ m}$\n- $A = \\frac{\\pi \\times 0.1^2}{4} = 0.007854\\text{ m}^2$\n- $N = 2000.0\\text{ rpm}$\n$$\\text{IP} = \\frac{4 \\times 600.0 \\times 0.12 \\times 0.007854 \\times 2000.0}{120} = 37.70\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_009",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Morse test for multi-cylinder engines",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding the Morse test used for determining indicated power of multi-cylinder I.C. engines, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "The engine is run at a constant rated speed throughout the test",
+      "B": "When one cylinder is cut out, the reduction in brake power equals the indicated power of that cut-out cylinder",
+      "C": "The frictional power of each cylinder is assumed to remain unchanged when that cylinder is cut out",
+      "D": "The Morse test is suitable for both multi-cylinder SI and CI engines"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Engine speed must be maintained constant using a governor or dynamometer adjustment. (A is correct)\n2. $\\text{IP}_k = \\text{BP}_{\\text{all}} - \\text{BP}_{\\text{without } k}$. (B is correct)\n3. Frictional and pumping losses are assumed constant at that invariant speed. (C is correct)\n4. By shorting spark plugs (SI) or cutting off fuel injection lines (CI), the test works on both engine classes. (D is correct)\nAll statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_010",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Mechanical efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine develops a brake power of $30.0\\text{ kW}$ while its frictional power losses are measured as $6.0\\text{ kW}$. The mechanical efficiency of the engine is:",
+    "options": {
+      "A": "$83.3\\%$",
+      "B": "$77.3\\%$",
+      "C": "$88.3\\%$",
+      "D": "$70.8\\%$"
+    },
+    "correct_answer": "A",
+    "solution": "Indicated power is the sum of brake power and friction power:\n$$\\text{IP} = \\text{BP} + \\text{FP} = 30.0 + 6.0 = 36.0\\text{ kW}$$\nMechanical efficiency is given by:\n$$\\eta_m = \\frac{\\text{BP}}{\\text{IP}} \\times 100 = \\frac{30.0}{36.0} \\times 100 = 83.3\\%$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_011",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Mean effective pressure and indicated power",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A $4\\text{-cylinder}$, four-stroke tractor diesel engine has a cylinder bore of $10\\text{ cm}$ and a stroke of $12\\text{ cm}$. When running at $2000\\text{ rpm}$, the mean effective pressure is $600\\text{ kPa}$. The indicated power developed by the engine is ________ $\\text{kW}$ (round off to two decimal places, take $\\pi = 3.1416$).",
+    "correct_answer": "37.70",
+    "numerical_range": {
+      "min": 37.5,
+      "max": 37.9
+    },
+    "solution": "For a multi-cylinder 4-stroke engine:\n$$\\text{IP} = \\frac{n \\cdot P_m \\cdot L \\cdot A \\cdot N}{60 \\times 2}$$\nWhere:\n- $n = 4$\n- $P_m = 600.0\\text{ kPa} = 600.0\\text{ kN/m}^2$\n- $L = 0.12\\text{ m}$\n- $A = \\frac{\\pi \\times 0.1^2}{4} = 0.007854\\text{ m}^2$\n- $N = 2000.0\\text{ rpm}$\n$$\\text{IP} = \\frac{4 \\times 600.0 \\times 0.12 \\times 0.007854 \\times 2000.0}{120} = 37.70\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_012",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Morse test for multi-cylinder engines",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding the Morse test used for determining indicated power of multi-cylinder I.C. engines, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "The engine is run at a constant rated speed throughout the test",
+      "B": "When one cylinder is cut out, the reduction in brake power equals the indicated power of that cut-out cylinder",
+      "C": "The frictional power of each cylinder is assumed to remain unchanged when that cylinder is cut out",
+      "D": "The Morse test is suitable for both multi-cylinder SI and CI engines"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Engine speed must be maintained constant using a governor or dynamometer adjustment. (A is correct)\n2. $\\text{IP}_k = \\text{BP}_{\\text{all}} - \\text{BP}_{\\text{without } k}$. (B is correct)\n3. Frictional and pumping losses are assumed constant at that invariant speed. (C is correct)\n4. By shorting spark plugs (SI) or cutting off fuel injection lines (CI), the test works on both engine classes. (D is correct)\nAll statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_013",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Mechanical efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine develops a brake power of $37.5\\text{ kW}$ while its frictional power losses are measured as $5.5\\text{ kW}$. The mechanical efficiency of the engine is:",
+    "options": {
+      "A": "$87.2\\%$",
+      "B": "$81.2\\%$",
+      "C": "$92.2\\%$",
+      "D": "$74.1\\%$"
+    },
+    "correct_answer": "A",
+    "solution": "Indicated power is the sum of brake power and friction power:\n$$\\text{IP} = \\text{BP} + \\text{FP} = 37.5 + 5.5 = 43.0\\text{ kW}$$\nMechanical efficiency is given by:\n$$\\eta_m = \\frac{\\text{BP}}{\\text{IP}} \\times 100 = \\frac{37.5}{43.0} \\times 100 = 87.2\\%$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_014",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Mean effective pressure and indicated power",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A $4\\text{-cylinder}$, four-stroke tractor diesel engine has a cylinder bore of $10\\text{ cm}$ and a stroke of $12\\text{ cm}$. When running at $2000\\text{ rpm}$, the mean effective pressure is $600\\text{ kPa}$. The indicated power developed by the engine is ________ $\\text{kW}$ (round off to two decimal places, take $\\pi = 3.1416$).",
+    "correct_answer": "37.70",
+    "numerical_range": {
+      "min": 37.5,
+      "max": 37.9
+    },
+    "solution": "For a multi-cylinder 4-stroke engine:\n$$\\text{IP} = \\frac{n \\cdot P_m \\cdot L \\cdot A \\cdot N}{60 \\times 2}$$\nWhere:\n- $n = 4$\n- $P_m = 600.0\\text{ kPa} = 600.0\\text{ kN/m}^2$\n- $L = 0.12\\text{ m}$\n- $A = \\frac{\\pi \\times 0.1^2}{4} = 0.007854\\text{ m}^2$\n- $N = 2000.0\\text{ rpm}$\n$$\\text{IP} = \\frac{4 \\times 600.0 \\times 0.12 \\times 0.007854 \\times 2000.0}{120} = 37.70\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_015",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Morse test for multi-cylinder engines",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding the Morse test used for determining indicated power of multi-cylinder I.C. engines, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "The engine is run at a constant rated speed throughout the test",
+      "B": "When one cylinder is cut out, the reduction in brake power equals the indicated power of that cut-out cylinder",
+      "C": "The frictional power of each cylinder is assumed to remain unchanged when that cylinder is cut out",
+      "D": "The Morse test is suitable for both multi-cylinder SI and CI engines"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Engine speed must be maintained constant using a governor or dynamometer adjustment. (A is correct)\n2. $\\text{IP}_k = \\text{BP}_{\\text{all}} - \\text{BP}_{\\text{without } k}$. (B is correct)\n3. Frictional and pumping losses are assumed constant at that invariant speed. (C is correct)\n4. By shorting spark plugs (SI) or cutting off fuel injection lines (CI), the test works on both engine classes. (D is correct)\nAll statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_016",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Mechanical efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine develops a brake power of $25.0\\text{ kW}$ while its frictional power losses are measured as $5.0\\text{ kW}$. The mechanical efficiency of the engine is:",
+    "options": {
+      "A": "$83.3\\%$",
+      "B": "$77.3\\%$",
+      "C": "$88.3\\%$",
+      "D": "$70.8\\%$"
+    },
+    "correct_answer": "A",
+    "solution": "Indicated power is the sum of brake power and friction power:\n$$\\text{IP} = \\text{BP} + \\text{FP} = 25.0 + 5.0 = 30.0\\text{ kW}$$\nMechanical efficiency is given by:\n$$\\eta_m = \\frac{\\text{BP}}{\\text{IP}} \\times 100 = \\frac{25.0}{30.0} \\times 100 = 83.3\\%$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_017",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Mean effective pressure and indicated power",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A $4\\text{-cylinder}$, four-stroke tractor diesel engine has a cylinder bore of $10\\text{ cm}$ and a stroke of $12\\text{ cm}$. When running at $2000\\text{ rpm}$, the mean effective pressure is $600\\text{ kPa}$. The indicated power developed by the engine is ________ $\\text{kW}$ (round off to two decimal places, take $\\pi = 3.1416$).",
+    "correct_answer": "37.70",
+    "numerical_range": {
+      "min": 37.5,
+      "max": 37.9
+    },
+    "solution": "For a multi-cylinder 4-stroke engine:\n$$\\text{IP} = \\frac{n \\cdot P_m \\cdot L \\cdot A \\cdot N}{60 \\times 2}$$\nWhere:\n- $n = 4$\n- $P_m = 600.0\\text{ kPa} = 600.0\\text{ kN/m}^2$\n- $L = 0.12\\text{ m}$\n- $A = \\frac{\\pi \\times 0.1^2}{4} = 0.007854\\text{ m}^2$\n- $N = 2000.0\\text{ rpm}$\n$$\\text{IP} = \\frac{4 \\times 600.0 \\times 0.12 \\times 0.007854 \\times 2000.0}{120} = 37.70\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_018",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Morse test for multi-cylinder engines",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding the Morse test used for determining indicated power of multi-cylinder I.C. engines, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "The engine is run at a constant rated speed throughout the test",
+      "B": "When one cylinder is cut out, the reduction in brake power equals the indicated power of that cut-out cylinder",
+      "C": "The frictional power of each cylinder is assumed to remain unchanged when that cylinder is cut out",
+      "D": "The Morse test is suitable for both multi-cylinder SI and CI engines"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Engine speed must be maintained constant using a governor or dynamometer adjustment. (A is correct)\n2. $\\text{IP}_k = \\text{BP}_{\\text{all}} - \\text{BP}_{\\text{without } k}$. (B is correct)\n3. Frictional and pumping losses are assumed constant at that invariant speed. (C is correct)\n4. By shorting spark plugs (SI) or cutting off fuel injection lines (CI), the test works on both engine classes. (D is correct)\nAll statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_019",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Mechanical efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine develops a brake power of $32.5\\text{ kW}$ while its frictional power losses are measured as $6.5\\text{ kW}$. The mechanical efficiency of the engine is:",
+    "options": {
+      "A": "$83.3\\%$",
+      "B": "$77.3\\%$",
+      "C": "$88.3\\%$",
+      "D": "$70.8\\%$"
+    },
+    "correct_answer": "A",
+    "solution": "Indicated power is the sum of brake power and friction power:\n$$\\text{IP} = \\text{BP} + \\text{FP} = 32.5 + 6.5 = 39.0\\text{ kW}$$\nMechanical efficiency is given by:\n$$\\eta_m = \\frac{\\text{BP}}{\\text{IP}} \\times 100 = \\frac{32.5}{39.0} \\times 100 = 83.3\\%$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_020",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Mean effective pressure and indicated power",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A $4\\text{-cylinder}$, four-stroke tractor diesel engine has a cylinder bore of $10\\text{ cm}$ and a stroke of $12\\text{ cm}$. When running at $2000\\text{ rpm}$, the mean effective pressure is $600\\text{ kPa}$. The indicated power developed by the engine is ________ $\\text{kW}$ (round off to two decimal places, take $\\pi = 3.1416$).",
+    "correct_answer": "37.70",
+    "numerical_range": {
+      "min": 37.5,
+      "max": 37.9
+    },
+    "solution": "For a multi-cylinder 4-stroke engine:\n$$\\text{IP} = \\frac{n \\cdot P_m \\cdot L \\cdot A \\cdot N}{60 \\times 2}$$\nWhere:\n- $n = 4$\n- $P_m = 600.0\\text{ kPa} = 600.0\\text{ kN/m}^2$\n- $L = 0.12\\text{ m}$\n- $A = \\frac{\\pi \\times 0.1^2}{4} = 0.007854\\text{ m}^2$\n- $N = 2000.0\\text{ rpm}$\n$$\\text{IP} = \\frac{4 \\times 600.0 \\times 0.12 \\times 0.007854 \\times 2000.0}{120} = 37.70\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_021",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Morse test for multi-cylinder engines",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding the Morse test used for determining indicated power of multi-cylinder I.C. engines, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "The engine is run at a constant rated speed throughout the test",
+      "B": "When one cylinder is cut out, the reduction in brake power equals the indicated power of that cut-out cylinder",
+      "C": "The frictional power of each cylinder is assumed to remain unchanged when that cylinder is cut out",
+      "D": "The Morse test is suitable for both multi-cylinder SI and CI engines"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Engine speed must be maintained constant using a governor or dynamometer adjustment. (A is correct)\n2. $\\text{IP}_k = \\text{BP}_{\\text{all}} - \\text{BP}_{\\text{without } k}$. (B is correct)\n3. Frictional and pumping losses are assumed constant at that invariant speed. (C is correct)\n4. By shorting spark plugs (SI) or cutting off fuel injection lines (CI), the test works on both engine classes. (D is correct)\nAll statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_022",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Mechanical efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine develops a brake power of $40.0\\text{ kW}$ while its frictional power losses are measured as $6.0\\text{ kW}$. The mechanical efficiency of the engine is:",
+    "options": {
+      "A": "$87.0\\%$",
+      "B": "$81.0\\%$",
+      "C": "$92.0\\%$",
+      "D": "$74.0\\%$"
+    },
+    "correct_answer": "A",
+    "solution": "Indicated power is the sum of brake power and friction power:\n$$\\text{IP} = \\text{BP} + \\text{FP} = 40.0 + 6.0 = 46.0\\text{ kW}$$\nMechanical efficiency is given by:\n$$\\eta_m = \\frac{\\text{BP}}{\\text{IP}} \\times 100 = \\frac{40.0}{46.0} \\times 100 = 87.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_023",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Mean effective pressure and indicated power",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A $4\\text{-cylinder}$, four-stroke tractor diesel engine has a cylinder bore of $10\\text{ cm}$ and a stroke of $12\\text{ cm}$. When running at $2000\\text{ rpm}$, the mean effective pressure is $600\\text{ kPa}$. The indicated power developed by the engine is ________ $\\text{kW}$ (round off to two decimal places, take $\\pi = 3.1416$).",
+    "correct_answer": "37.70",
+    "numerical_range": {
+      "min": 37.5,
+      "max": 37.9
+    },
+    "solution": "For a multi-cylinder 4-stroke engine:\n$$\\text{IP} = \\frac{n \\cdot P_m \\cdot L \\cdot A \\cdot N}{60 \\times 2}$$\nWhere:\n- $n = 4$\n- $P_m = 600.0\\text{ kPa} = 600.0\\text{ kN/m}^2$\n- $L = 0.12\\text{ m}$\n- $A = \\frac{\\pi \\times 0.1^2}{4} = 0.007854\\text{ m}^2$\n- $N = 2000.0\\text{ rpm}$\n$$\\text{IP} = \\frac{4 \\times 600.0 \\times 0.12 \\times 0.007854 \\times 2000.0}{120} = 37.70\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_024",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Morse test for multi-cylinder engines",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding the Morse test used for determining indicated power of multi-cylinder I.C. engines, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "The engine is run at a constant rated speed throughout the test",
+      "B": "When one cylinder is cut out, the reduction in brake power equals the indicated power of that cut-out cylinder",
+      "C": "The frictional power of each cylinder is assumed to remain unchanged when that cylinder is cut out",
+      "D": "The Morse test is suitable for both multi-cylinder SI and CI engines"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Engine speed must be maintained constant using a governor or dynamometer adjustment. (A is correct)\n2. $\\text{IP}_k = \\text{BP}_{\\text{all}} - \\text{BP}_{\\text{without } k}$. (B is correct)\n3. Frictional and pumping losses are assumed constant at that invariant speed. (C is correct)\n4. By shorting spark plugs (SI) or cutting off fuel injection lines (CI), the test works on both engine classes. (D is correct)\nAll statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_025",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Mechanical efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine develops a brake power of $27.5\\text{ kW}$ while its frictional power losses are measured as $5.5\\text{ kW}$. The mechanical efficiency of the engine is:",
+    "options": {
+      "A": "$83.3\\%$",
+      "B": "$77.3\\%$",
+      "C": "$88.3\\%$",
+      "D": "$70.8\\%$"
+    },
+    "correct_answer": "A",
+    "solution": "Indicated power is the sum of brake power and friction power:\n$$\\text{IP} = \\text{BP} + \\text{FP} = 27.5 + 5.5 = 33.0\\text{ kW}$$\nMechanical efficiency is given by:\n$$\\eta_m = \\frac{\\text{BP}}{\\text{IP}} \\times 100 = \\frac{27.5}{33.0} \\times 100 = 83.3\\%$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_026",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Mean effective pressure and indicated power",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A $4\\text{-cylinder}$, four-stroke tractor diesel engine has a cylinder bore of $10\\text{ cm}$ and a stroke of $12\\text{ cm}$. When running at $2000\\text{ rpm}$, the mean effective pressure is $600\\text{ kPa}$. The indicated power developed by the engine is ________ $\\text{kW}$ (round off to two decimal places, take $\\pi = 3.1416$).",
+    "correct_answer": "37.70",
+    "numerical_range": {
+      "min": 37.5,
+      "max": 37.9
+    },
+    "solution": "For a multi-cylinder 4-stroke engine:\n$$\\text{IP} = \\frac{n \\cdot P_m \\cdot L \\cdot A \\cdot N}{60 \\times 2}$$\nWhere:\n- $n = 4$\n- $P_m = 600.0\\text{ kPa} = 600.0\\text{ kN/m}^2$\n- $L = 0.12\\text{ m}$\n- $A = \\frac{\\pi \\times 0.1^2}{4} = 0.007854\\text{ m}^2$\n- $N = 2000.0\\text{ rpm}$\n$$\\text{IP} = \\frac{4 \\times 600.0 \\times 0.12 \\times 0.007854 \\times 2000.0}{120} = 37.70\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_027",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Morse test for multi-cylinder engines",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding the Morse test used for determining indicated power of multi-cylinder I.C. engines, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "The engine is run at a constant rated speed throughout the test",
+      "B": "When one cylinder is cut out, the reduction in brake power equals the indicated power of that cut-out cylinder",
+      "C": "The frictional power of each cylinder is assumed to remain unchanged when that cylinder is cut out",
+      "D": "The Morse test is suitable for both multi-cylinder SI and CI engines"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Engine speed must be maintained constant using a governor or dynamometer adjustment. (A is correct)\n2. $\\text{IP}_k = \\text{BP}_{\\text{all}} - \\text{BP}_{\\text{without } k}$. (B is correct)\n3. Frictional and pumping losses are assumed constant at that invariant speed. (C is correct)\n4. By shorting spark plugs (SI) or cutting off fuel injection lines (CI), the test works on both engine classes. (D is correct)\nAll statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_028",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Mechanical efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine develops a brake power of $35.0\\text{ kW}$ while its frictional power losses are measured as $5.0\\text{ kW}$. The mechanical efficiency of the engine is:",
+    "options": {
+      "A": "$87.5\\%$",
+      "B": "$81.5\\%$",
+      "C": "$92.5\\%$",
+      "D": "$74.4\\%$"
+    },
+    "correct_answer": "A",
+    "solution": "Indicated power is the sum of brake power and friction power:\n$$\\text{IP} = \\text{BP} + \\text{FP} = 35.0 + 5.0 = 40.0\\text{ kW}$$\nMechanical efficiency is given by:\n$$\\eta_m = \\frac{\\text{BP}}{\\text{IP}} \\times 100 = \\frac{35.0}{40.0} \\times 100 = 87.5\\%$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_029",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Mean effective pressure and indicated power",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A $4\\text{-cylinder}$, four-stroke tractor diesel engine has a cylinder bore of $10\\text{ cm}$ and a stroke of $12\\text{ cm}$. When running at $2000\\text{ rpm}$, the mean effective pressure is $600\\text{ kPa}$. The indicated power developed by the engine is ________ $\\text{kW}$ (round off to two decimal places, take $\\pi = 3.1416$).",
+    "correct_answer": "37.70",
+    "numerical_range": {
+      "min": 37.5,
+      "max": 37.9
+    },
+    "solution": "For a multi-cylinder 4-stroke engine:\n$$\\text{IP} = \\frac{n \\cdot P_m \\cdot L \\cdot A \\cdot N}{60 \\times 2}$$\nWhere:\n- $n = 4$\n- $P_m = 600.0\\text{ kPa} = 600.0\\text{ kN/m}^2$\n- $L = 0.12\\text{ m}$\n- $A = \\frac{\\pi \\times 0.1^2}{4} = 0.007854\\text{ m}^2$\n- $N = 2000.0\\text{ rpm}$\n$$\\text{IP} = \\frac{4 \\times 600.0 \\times 0.12 \\times 0.007854 \\times 2000.0}{120} = 37.70\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_030",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Morse test for multi-cylinder engines",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding the Morse test used for determining indicated power of multi-cylinder I.C. engines, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "The engine is run at a constant rated speed throughout the test",
+      "B": "When one cylinder is cut out, the reduction in brake power equals the indicated power of that cut-out cylinder",
+      "C": "The frictional power of each cylinder is assumed to remain unchanged when that cylinder is cut out",
+      "D": "The Morse test is suitable for both multi-cylinder SI and CI engines"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Engine speed must be maintained constant using a governor or dynamometer adjustment. (A is correct)\n2. $\\text{IP}_k = \\text{BP}_{\\text{all}} - \\text{BP}_{\\text{without } k}$. (B is correct)\n3. Frictional and pumping losses are assumed constant at that invariant speed. (C is correct)\n4. By shorting spark plugs (SI) or cutting off fuel injection lines (CI), the test works on both engine classes. (D is correct)\nAll statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_031",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Mechanical efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine develops a brake power of $42.5\\text{ kW}$ while its frictional power losses are measured as $6.5\\text{ kW}$. The mechanical efficiency of the engine is:",
+    "options": {
+      "A": "$86.7\\%$",
+      "B": "$80.7\\%$",
+      "C": "$91.7\\%$",
+      "D": "$73.7\\%$"
+    },
+    "correct_answer": "A",
+    "solution": "Indicated power is the sum of brake power and friction power:\n$$\\text{IP} = \\text{BP} + \\text{FP} = 42.5 + 6.5 = 49.0\\text{ kW}$$\nMechanical efficiency is given by:\n$$\\eta_m = \\frac{\\text{BP}}{\\text{IP}} \\times 100 = \\frac{42.5}{49.0} \\times 100 = 86.7\\%$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_032",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Mean effective pressure and indicated power",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A $4\\text{-cylinder}$, four-stroke tractor diesel engine has a cylinder bore of $10\\text{ cm}$ and a stroke of $12\\text{ cm}$. When running at $2000\\text{ rpm}$, the mean effective pressure is $600\\text{ kPa}$. The indicated power developed by the engine is ________ $\\text{kW}$ (round off to two decimal places, take $\\pi = 3.1416$).",
+    "correct_answer": "37.70",
+    "numerical_range": {
+      "min": 37.5,
+      "max": 37.9
+    },
+    "solution": "For a multi-cylinder 4-stroke engine:\n$$\\text{IP} = \\frac{n \\cdot P_m \\cdot L \\cdot A \\cdot N}{60 \\times 2}$$\nWhere:\n- $n = 4$\n- $P_m = 600.0\\text{ kPa} = 600.0\\text{ kN/m}^2$\n- $L = 0.12\\text{ m}$\n- $A = \\frac{\\pi \\times 0.1^2}{4} = 0.007854\\text{ m}^2$\n- $N = 2000.0\\text{ rpm}$\n$$\\text{IP} = \\frac{4 \\times 600.0 \\times 0.12 \\times 0.007854 \\times 2000.0}{120} = 37.70\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_033",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Morse test for multi-cylinder engines",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding the Morse test used for determining indicated power of multi-cylinder I.C. engines, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "The engine is run at a constant rated speed throughout the test",
+      "B": "When one cylinder is cut out, the reduction in brake power equals the indicated power of that cut-out cylinder",
+      "C": "The frictional power of each cylinder is assumed to remain unchanged when that cylinder is cut out",
+      "D": "The Morse test is suitable for both multi-cylinder SI and CI engines"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Engine speed must be maintained constant using a governor or dynamometer adjustment. (A is correct)\n2. $\\text{IP}_k = \\text{BP}_{\\text{all}} - \\text{BP}_{\\text{without } k}$. (B is correct)\n3. Frictional and pumping losses are assumed constant at that invariant speed. (C is correct)\n4. By shorting spark plugs (SI) or cutting off fuel injection lines (CI), the test works on both engine classes. (D is correct)\nAll statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_034",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Mechanical efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine develops a brake power of $30.0\\text{ kW}$ while its frictional power losses are measured as $6.0\\text{ kW}$. The mechanical efficiency of the engine is:",
+    "options": {
+      "A": "$83.3\\%$",
+      "B": "$77.3\\%$",
+      "C": "$88.3\\%$",
+      "D": "$70.8\\%$"
+    },
+    "correct_answer": "A",
+    "solution": "Indicated power is the sum of brake power and friction power:\n$$\\text{IP} = \\text{BP} + \\text{FP} = 30.0 + 6.0 = 36.0\\text{ kW}$$\nMechanical efficiency is given by:\n$$\\eta_m = \\frac{\\text{BP}}{\\text{IP}} \\times 100 = \\frac{30.0}{36.0} \\times 100 = 83.3\\%$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_035",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Mean effective pressure and indicated power",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A $4\\text{-cylinder}$, four-stroke tractor diesel engine has a cylinder bore of $10\\text{ cm}$ and a stroke of $12\\text{ cm}$. When running at $2000\\text{ rpm}$, the mean effective pressure is $600\\text{ kPa}$. The indicated power developed by the engine is ________ $\\text{kW}$ (round off to two decimal places, take $\\pi = 3.1416$).",
+    "correct_answer": "37.70",
+    "numerical_range": {
+      "min": 37.5,
+      "max": 37.9
+    },
+    "solution": "For a multi-cylinder 4-stroke engine:\n$$\\text{IP} = \\frac{n \\cdot P_m \\cdot L \\cdot A \\cdot N}{60 \\times 2}$$\nWhere:\n- $n = 4$\n- $P_m = 600.0\\text{ kPa} = 600.0\\text{ kN/m}^2$\n- $L = 0.12\\text{ m}$\n- $A = \\frac{\\pi \\times 0.1^2}{4} = 0.007854\\text{ m}^2$\n- $N = 2000.0\\text{ rpm}$\n$$\\text{IP} = \\frac{4 \\times 600.0 \\times 0.12 \\times 0.007854 \\times 2000.0}{120} = 37.70\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_036",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Morse test for multi-cylinder engines",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding the Morse test used for determining indicated power of multi-cylinder I.C. engines, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "The engine is run at a constant rated speed throughout the test",
+      "B": "When one cylinder is cut out, the reduction in brake power equals the indicated power of that cut-out cylinder",
+      "C": "The frictional power of each cylinder is assumed to remain unchanged when that cylinder is cut out",
+      "D": "The Morse test is suitable for both multi-cylinder SI and CI engines"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Engine speed must be maintained constant using a governor or dynamometer adjustment. (A is correct)\n2. $\\text{IP}_k = \\text{BP}_{\\text{all}} - \\text{BP}_{\\text{without } k}$. (B is correct)\n3. Frictional and pumping losses are assumed constant at that invariant speed. (C is correct)\n4. By shorting spark plugs (SI) or cutting off fuel injection lines (CI), the test works on both engine classes. (D is correct)\nAll statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_037",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Mechanical efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine develops a brake power of $37.5\\text{ kW}$ while its frictional power losses are measured as $5.5\\text{ kW}$. The mechanical efficiency of the engine is:",
+    "options": {
+      "A": "$87.2\\%$",
+      "B": "$81.2\\%$",
+      "C": "$92.2\\%$",
+      "D": "$74.1\\%$"
+    },
+    "correct_answer": "A",
+    "solution": "Indicated power is the sum of brake power and friction power:\n$$\\text{IP} = \\text{BP} + \\text{FP} = 37.5 + 5.5 = 43.0\\text{ kW}$$\nMechanical efficiency is given by:\n$$\\eta_m = \\frac{\\text{BP}}{\\text{IP}} \\times 100 = \\frac{37.5}{43.0} \\times 100 = 87.2\\%$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_038",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Mean effective pressure and indicated power",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A $4\\text{-cylinder}$, four-stroke tractor diesel engine has a cylinder bore of $10\\text{ cm}$ and a stroke of $12\\text{ cm}$. When running at $2000\\text{ rpm}$, the mean effective pressure is $600\\text{ kPa}$. The indicated power developed by the engine is ________ $\\text{kW}$ (round off to two decimal places, take $\\pi = 3.1416$).",
+    "correct_answer": "37.70",
+    "numerical_range": {
+      "min": 37.5,
+      "max": 37.9
+    },
+    "solution": "For a multi-cylinder 4-stroke engine:\n$$\\text{IP} = \\frac{n \\cdot P_m \\cdot L \\cdot A \\cdot N}{60 \\times 2}$$\nWhere:\n- $n = 4$\n- $P_m = 600.0\\text{ kPa} = 600.0\\text{ kN/m}^2$\n- $L = 0.12\\text{ m}$\n- $A = \\frac{\\pi \\times 0.1^2}{4} = 0.007854\\text{ m}^2$\n- $N = 2000.0\\text{ rpm}$\n$$\\text{IP} = \\frac{4 \\times 600.0 \\times 0.12 \\times 0.007854 \\times 2000.0}{120} = 37.70\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_039",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Morse test for multi-cylinder engines",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding the Morse test used for determining indicated power of multi-cylinder I.C. engines, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "The engine is run at a constant rated speed throughout the test",
+      "B": "When one cylinder is cut out, the reduction in brake power equals the indicated power of that cut-out cylinder",
+      "C": "The frictional power of each cylinder is assumed to remain unchanged when that cylinder is cut out",
+      "D": "The Morse test is suitable for both multi-cylinder SI and CI engines"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Engine speed must be maintained constant using a governor or dynamometer adjustment. (A is correct)\n2. $\\text{IP}_k = \\text{BP}_{\\text{all}} - \\text{BP}_{\\text{without } k}$. (B is correct)\n3. Frictional and pumping losses are assumed constant at that invariant speed. (C is correct)\n4. By shorting spark plugs (SI) or cutting off fuel injection lines (CI), the test works on both engine classes. (D is correct)\nAll statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_040",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Mechanical efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine develops a brake power of $25.0\\text{ kW}$ while its frictional power losses are measured as $5.0\\text{ kW}$. The mechanical efficiency of the engine is:",
+    "options": {
+      "A": "$83.3\\%$",
+      "B": "$77.3\\%$",
+      "C": "$88.3\\%$",
+      "D": "$70.8\\%$"
+    },
+    "correct_answer": "A",
+    "solution": "Indicated power is the sum of brake power and friction power:\n$$\\text{IP} = \\text{BP} + \\text{FP} = 25.0 + 5.0 = 30.0\\text{ kW}$$\nMechanical efficiency is given by:\n$$\\eta_m = \\frac{\\text{BP}}{\\text{IP}} \\times 100 = \\frac{25.0}{30.0} \\times 100 = 83.3\\%$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_041",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Mean effective pressure and indicated power",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A $4\\text{-cylinder}$, four-stroke tractor diesel engine has a cylinder bore of $10\\text{ cm}$ and a stroke of $12\\text{ cm}$. When running at $2000\\text{ rpm}$, the mean effective pressure is $600\\text{ kPa}$. The indicated power developed by the engine is ________ $\\text{kW}$ (round off to two decimal places, take $\\pi = 3.1416$).",
+    "correct_answer": "37.70",
+    "numerical_range": {
+      "min": 37.5,
+      "max": 37.9
+    },
+    "solution": "For a multi-cylinder 4-stroke engine:\n$$\\text{IP} = \\frac{n \\cdot P_m \\cdot L \\cdot A \\cdot N}{60 \\times 2}$$\nWhere:\n- $n = 4$\n- $P_m = 600.0\\text{ kPa} = 600.0\\text{ kN/m}^2$\n- $L = 0.12\\text{ m}$\n- $A = \\frac{\\pi \\times 0.1^2}{4} = 0.007854\\text{ m}^2$\n- $N = 2000.0\\text{ rpm}$\n$$\\text{IP} = \\frac{4 \\times 600.0 \\times 0.12 \\times 0.007854 \\times 2000.0}{120} = 37.70\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_042",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Morse test for multi-cylinder engines",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding the Morse test used for determining indicated power of multi-cylinder I.C. engines, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "The engine is run at a constant rated speed throughout the test",
+      "B": "When one cylinder is cut out, the reduction in brake power equals the indicated power of that cut-out cylinder",
+      "C": "The frictional power of each cylinder is assumed to remain unchanged when that cylinder is cut out",
+      "D": "The Morse test is suitable for both multi-cylinder SI and CI engines"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Engine speed must be maintained constant using a governor or dynamometer adjustment. (A is correct)\n2. $\\text{IP}_k = \\text{BP}_{\\text{all}} - \\text{BP}_{\\text{without } k}$. (B is correct)\n3. Frictional and pumping losses are assumed constant at that invariant speed. (C is correct)\n4. By shorting spark plugs (SI) or cutting off fuel injection lines (CI), the test works on both engine classes. (D is correct)\nAll statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_043",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Mechanical efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine develops a brake power of $32.5\\text{ kW}$ while its frictional power losses are measured as $6.5\\text{ kW}$. The mechanical efficiency of the engine is:",
+    "options": {
+      "A": "$83.3\\%$",
+      "B": "$77.3\\%$",
+      "C": "$88.3\\%$",
+      "D": "$70.8\\%$"
+    },
+    "correct_answer": "A",
+    "solution": "Indicated power is the sum of brake power and friction power:\n$$\\text{IP} = \\text{BP} + \\text{FP} = 32.5 + 6.5 = 39.0\\text{ kW}$$\nMechanical efficiency is given by:\n$$\\eta_m = \\frac{\\text{BP}}{\\text{IP}} \\times 100 = \\frac{32.5}{39.0} \\times 100 = 83.3\\%$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_044",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Mean effective pressure and indicated power",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A $4\\text{-cylinder}$, four-stroke tractor diesel engine has a cylinder bore of $10\\text{ cm}$ and a stroke of $12\\text{ cm}$. When running at $2000\\text{ rpm}$, the mean effective pressure is $600\\text{ kPa}$. The indicated power developed by the engine is ________ $\\text{kW}$ (round off to two decimal places, take $\\pi = 3.1416$).",
+    "correct_answer": "37.70",
+    "numerical_range": {
+      "min": 37.5,
+      "max": 37.9
+    },
+    "solution": "For a multi-cylinder 4-stroke engine:\n$$\\text{IP} = \\frac{n \\cdot P_m \\cdot L \\cdot A \\cdot N}{60 \\times 2}$$\nWhere:\n- $n = 4$\n- $P_m = 600.0\\text{ kPa} = 600.0\\text{ kN/m}^2$\n- $L = 0.12\\text{ m}$\n- $A = \\frac{\\pi \\times 0.1^2}{4} = 0.007854\\text{ m}^2$\n- $N = 2000.0\\text{ rpm}$\n$$\\text{IP} = \\frac{4 \\times 600.0 \\times 0.12 \\times 0.007854 \\times 2000.0}{120} = 37.70\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_PWR_045",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Power: Indicated, Brake & Friction Power",
+    "subtopic": "Morse test for multi-cylinder engines",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding the Morse test used for determining indicated power of multi-cylinder I.C. engines, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "The engine is run at a constant rated speed throughout the test",
+      "B": "When one cylinder is cut out, the reduction in brake power equals the indicated power of that cut-out cylinder",
+      "C": "The frictional power of each cylinder is assumed to remain unchanged when that cylinder is cut out",
+      "D": "The Morse test is suitable for both multi-cylinder SI and CI engines"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Engine speed must be maintained constant using a governor or dynamometer adjustment. (A is correct)\n2. $\\text{IP}_k = \\text{BP}_{\\text{all}} - \\text{BP}_{\\text{without } k}$. (B is correct)\n3. Frictional and pumping losses are assumed constant at that invariant speed. (C is correct)\n4. By shorting spark plugs (SI) or cutting off fuel injection lines (CI), the test works on both engine classes. (D is correct)\nAll statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_001",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Chassis Mechanics & Center of Gravity",
+    "subtopic": "Static weight distribution on front and rear axles",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor has a total weight of $19620\\text{ N}$ and a wheelbase of $2.0\\text{ m}$. Its center of gravity (CG) is located $0.8\\text{ m}$ ahead of the rear axle center. Under static level conditions, the vertical ground reaction on the front axle is:",
+    "options": {
+      "A": "$7848\\text{ N}$",
+      "B": "$10202\\text{ N}$",
+      "C": "$5494\\text{ N}$",
+      "D": "$12557\\text{ N}$"
+    },
+    "correct_answer": "A",
+    "solution": "Taking moments about the rear wheel ground contact point:\n$$\\sum M_{rear} = 0 \\implies R_f \\times \\text{WB} - W \\times x = 0$$\n$$R_f = \\frac{W \\times x}{\\text{WB}} = \\frac{19620 \\times 0.8}{2.0} = 7848\\text{ N}$$\nHence, the front axle reaction is $7848\\text{ N}$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_002",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Dynamic Weight Transfer & Stability",
+    "subtopic": "Dynamic weight transfer during pulling",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A two-wheel drive tractor weighs $25000\\text{ N}$ with a wheelbase of $2.2\\text{ m}$. Its CG is located $0.75\\text{ m}$ forward of the rear axle. A horizontal drawbar pull of $9000\\text{ N}$ is applied at a hitch height of $0.45\\text{ m}$ above the ground. The dynamic vertical load on the front axle during pulling is ________ $\\text{N}$ (round off to nearest integer).",
+    "correct_answer": "6681",
+    "numerical_range": {
+      "min": 6676.0,
+      "max": 6686.0
+    },
+    "solution": "1. Static front axle reaction:\n$$R_{fs} = \\frac{W \\cdot x_{cg}}{\\text{WB}} = \\frac{25000 \\times 0.75}{2.2} = 8522.7\\text{ N}$$\n2. Dynamic weight transfer from front to rear axle due to drawbar pull:\n$$\\Delta W = \\frac{P \\cdot h}{\\text{WB}} = \\frac{9000 \\times 0.45}{2.2} = 1840.9\\text{ N}$$\n3. Dynamic front axle load:\n$$R_{fd} = R_{fs} - \\Delta W = 8522.7 - 1840.9 = 6681.8\\text{ N} \\approx 6681\\text{ N}$$",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_003",
+    "section": "Section 3: Farm Power",
+    "topic": "Traction Mechanics, Wheel Slip & Rolling Resistance",
+    "subtopic": "Wheel slip and travel reduction calculation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding tractor traction mechanics and tire-soil interaction, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Travel reduction (wheel slip) $S$ is defined as $(v_0 - v_1) / v_0 \\times 100$, where $v_0$ is zero-load speed and $v_1$ is loaded speed",
+      "B": "Tractive efficiency peaks at an optimal wheel slip typically between $10\\%$ and $15\\%$ in firm agricultural soils",
+      "C": "Adding liquid ballast (calcium chloride solution) to rear drive tires increases gross traction by increasing vertical axle load",
+      "D": "Coefficient of rolling resistance increases with looser soil conditions and smaller wheel diameters"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Wheel slip is defined by the reduction in forward speed under load relative to zero-slip reference. (A is correct)\n2. Below 10% slip, motion resistance dominates; above 15% slip, slip losses dominate. Optimal tractive efficiency occurs at 10-15%. (B is correct)\n3. Liquid ballasting adds weight directly to tires without overloading the chassis, increasing traction. (C is correct)\n4. Sinkage in loose soil and high curvature of smaller wheels increase rolling resistance. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_004",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Chassis Mechanics & Center of Gravity",
+    "subtopic": "Static weight distribution on front and rear axles",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor has a total weight of $19620\\text{ N}$ and a wheelbase of $2.0\\text{ m}$. Its center of gravity (CG) is located $0.8\\text{ m}$ ahead of the rear axle center. Under static level conditions, the vertical ground reaction on the front axle is:",
+    "options": {
+      "A": "$7848\\text{ N}$",
+      "B": "$10202\\text{ N}$",
+      "C": "$5494\\text{ N}$",
+      "D": "$12557\\text{ N}$"
+    },
+    "correct_answer": "A",
+    "solution": "Taking moments about the rear wheel ground contact point:\n$$\\sum M_{rear} = 0 \\implies R_f \\times \\text{WB} - W \\times x = 0$$\n$$R_f = \\frac{W \\times x}{\\text{WB}} = \\frac{19620 \\times 0.8}{2.0} = 7848\\text{ N}$$\nHence, the front axle reaction is $7848\\text{ N}$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_005",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Dynamic Weight Transfer & Stability",
+    "subtopic": "Dynamic weight transfer during pulling",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A two-wheel drive tractor weighs $25000\\text{ N}$ with a wheelbase of $2.2\\text{ m}$. Its CG is located $0.75\\text{ m}$ forward of the rear axle. A horizontal drawbar pull of $10500\\text{ N}$ is applied at a hitch height of $0.45\\text{ m}$ above the ground. The dynamic vertical load on the front axle during pulling is ________ $\\text{N}$ (round off to nearest integer).",
+    "correct_answer": "6375",
+    "numerical_range": {
+      "min": 6370.0,
+      "max": 6380.0
+    },
+    "solution": "1. Static front axle reaction:\n$$R_{fs} = \\frac{W \\cdot x_{cg}}{\\text{WB}} = \\frac{25000 \\times 0.75}{2.2} = 8522.7\\text{ N}$$\n2. Dynamic weight transfer from front to rear axle due to drawbar pull:\n$$\\Delta W = \\frac{P \\cdot h}{\\text{WB}} = \\frac{10500 \\times 0.45}{2.2} = 2147.7\\text{ N}$$\n3. Dynamic front axle load:\n$$R_{fd} = R_{fs} - \\Delta W = 8522.7 - 2147.7 = 6375.0\\text{ N} \\approx 6375\\text{ N}$$",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_006",
+    "section": "Section 3: Farm Power",
+    "topic": "Traction Mechanics, Wheel Slip & Rolling Resistance",
+    "subtopic": "Wheel slip and travel reduction calculation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding tractor traction mechanics and tire-soil interaction, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Travel reduction (wheel slip) $S$ is defined as $(v_0 - v_1) / v_0 \\times 100$, where $v_0$ is zero-load speed and $v_1$ is loaded speed",
+      "B": "Tractive efficiency peaks at an optimal wheel slip typically between $10\\%$ and $15\\%$ in firm agricultural soils",
+      "C": "Adding liquid ballast (calcium chloride solution) to rear drive tires increases gross traction by increasing vertical axle load",
+      "D": "Coefficient of rolling resistance increases with looser soil conditions and smaller wheel diameters"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Wheel slip is defined by the reduction in forward speed under load relative to zero-slip reference. (A is correct)\n2. Below 10% slip, motion resistance dominates; above 15% slip, slip losses dominate. Optimal tractive efficiency occurs at 10-15%. (B is correct)\n3. Liquid ballasting adds weight directly to tires without overloading the chassis, increasing traction. (C is correct)\n4. Sinkage in loose soil and high curvature of smaller wheels increase rolling resistance. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_007",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Chassis Mechanics & Center of Gravity",
+    "subtopic": "Static weight distribution on front and rear axles",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor has a total weight of $19620\\text{ N}$ and a wheelbase of $2.0\\text{ m}$. Its center of gravity (CG) is located $0.8\\text{ m}$ ahead of the rear axle center. Under static level conditions, the vertical ground reaction on the front axle is:",
+    "options": {
+      "A": "$7848\\text{ N}$",
+      "B": "$10202\\text{ N}$",
+      "C": "$5494\\text{ N}$",
+      "D": "$12557\\text{ N}$"
+    },
+    "correct_answer": "A",
+    "solution": "Taking moments about the rear wheel ground contact point:\n$$\\sum M_{rear} = 0 \\implies R_f \\times \\text{WB} - W \\times x = 0$$\n$$R_f = \\frac{W \\times x}{\\text{WB}} = \\frac{19620 \\times 0.8}{2.0} = 7848\\text{ N}$$\nHence, the front axle reaction is $7848\\text{ N}$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_008",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Dynamic Weight Transfer & Stability",
+    "subtopic": "Dynamic weight transfer during pulling",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A two-wheel drive tractor weighs $25000\\text{ N}$ with a wheelbase of $2.2\\text{ m}$. Its CG is located $0.75\\text{ m}$ forward of the rear axle. A horizontal drawbar pull of $9000\\text{ N}$ is applied at a hitch height of $0.45\\text{ m}$ above the ground. The dynamic vertical load on the front axle during pulling is ________ $\\text{N}$ (round off to nearest integer).",
+    "correct_answer": "6681",
+    "numerical_range": {
+      "min": 6676.0,
+      "max": 6686.0
+    },
+    "solution": "1. Static front axle reaction:\n$$R_{fs} = \\frac{W \\cdot x_{cg}}{\\text{WB}} = \\frac{25000 \\times 0.75}{2.2} = 8522.7\\text{ N}$$\n2. Dynamic weight transfer from front to rear axle due to drawbar pull:\n$$\\Delta W = \\frac{P \\cdot h}{\\text{WB}} = \\frac{9000 \\times 0.45}{2.2} = 1840.9\\text{ N}$$\n3. Dynamic front axle load:\n$$R_{fd} = R_{fs} - \\Delta W = 8522.7 - 1840.9 = 6681.8\\text{ N} \\approx 6681\\text{ N}$$",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_009",
+    "section": "Section 3: Farm Power",
+    "topic": "Traction Mechanics, Wheel Slip & Rolling Resistance",
+    "subtopic": "Wheel slip and travel reduction calculation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding tractor traction mechanics and tire-soil interaction, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Travel reduction (wheel slip) $S$ is defined as $(v_0 - v_1) / v_0 \\times 100$, where $v_0$ is zero-load speed and $v_1$ is loaded speed",
+      "B": "Tractive efficiency peaks at an optimal wheel slip typically between $10\\%$ and $15\\%$ in firm agricultural soils",
+      "C": "Adding liquid ballast (calcium chloride solution) to rear drive tires increases gross traction by increasing vertical axle load",
+      "D": "Coefficient of rolling resistance increases with looser soil conditions and smaller wheel diameters"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Wheel slip is defined by the reduction in forward speed under load relative to zero-slip reference. (A is correct)\n2. Below 10% slip, motion resistance dominates; above 15% slip, slip losses dominate. Optimal tractive efficiency occurs at 10-15%. (B is correct)\n3. Liquid ballasting adds weight directly to tires without overloading the chassis, increasing traction. (C is correct)\n4. Sinkage in loose soil and high curvature of smaller wheels increase rolling resistance. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_010",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Chassis Mechanics & Center of Gravity",
+    "subtopic": "Static weight distribution on front and rear axles",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor has a total weight of $19620\\text{ N}$ and a wheelbase of $2.0\\text{ m}$. Its center of gravity (CG) is located $0.8\\text{ m}$ ahead of the rear axle center. Under static level conditions, the vertical ground reaction on the front axle is:",
+    "options": {
+      "A": "$7848\\text{ N}$",
+      "B": "$10202\\text{ N}$",
+      "C": "$5494\\text{ N}$",
+      "D": "$12557\\text{ N}$"
+    },
+    "correct_answer": "A",
+    "solution": "Taking moments about the rear wheel ground contact point:\n$$\\sum M_{rear} = 0 \\implies R_f \\times \\text{WB} - W \\times x = 0$$\n$$R_f = \\frac{W \\times x}{\\text{WB}} = \\frac{19620 \\times 0.8}{2.0} = 7848\\text{ N}$$\nHence, the front axle reaction is $7848\\text{ N}$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_011",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Dynamic Weight Transfer & Stability",
+    "subtopic": "Dynamic weight transfer during pulling",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A two-wheel drive tractor weighs $25000\\text{ N}$ with a wheelbase of $2.2\\text{ m}$. Its CG is located $0.75\\text{ m}$ forward of the rear axle. A horizontal drawbar pull of $10500\\text{ N}$ is applied at a hitch height of $0.45\\text{ m}$ above the ground. The dynamic vertical load on the front axle during pulling is ________ $\\text{N}$ (round off to nearest integer).",
+    "correct_answer": "6375",
+    "numerical_range": {
+      "min": 6370.0,
+      "max": 6380.0
+    },
+    "solution": "1. Static front axle reaction:\n$$R_{fs} = \\frac{W \\cdot x_{cg}}{\\text{WB}} = \\frac{25000 \\times 0.75}{2.2} = 8522.7\\text{ N}$$\n2. Dynamic weight transfer from front to rear axle due to drawbar pull:\n$$\\Delta W = \\frac{P \\cdot h}{\\text{WB}} = \\frac{10500 \\times 0.45}{2.2} = 2147.7\\text{ N}$$\n3. Dynamic front axle load:\n$$R_{fd} = R_{fs} - \\Delta W = 8522.7 - 2147.7 = 6375.0\\text{ N} \\approx 6375\\text{ N}$$",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_012",
+    "section": "Section 3: Farm Power",
+    "topic": "Traction Mechanics, Wheel Slip & Rolling Resistance",
+    "subtopic": "Wheel slip and travel reduction calculation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding tractor traction mechanics and tire-soil interaction, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Travel reduction (wheel slip) $S$ is defined as $(v_0 - v_1) / v_0 \\times 100$, where $v_0$ is zero-load speed and $v_1$ is loaded speed",
+      "B": "Tractive efficiency peaks at an optimal wheel slip typically between $10\\%$ and $15\\%$ in firm agricultural soils",
+      "C": "Adding liquid ballast (calcium chloride solution) to rear drive tires increases gross traction by increasing vertical axle load",
+      "D": "Coefficient of rolling resistance increases with looser soil conditions and smaller wheel diameters"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Wheel slip is defined by the reduction in forward speed under load relative to zero-slip reference. (A is correct)\n2. Below 10% slip, motion resistance dominates; above 15% slip, slip losses dominate. Optimal tractive efficiency occurs at 10-15%. (B is correct)\n3. Liquid ballasting adds weight directly to tires without overloading the chassis, increasing traction. (C is correct)\n4. Sinkage in loose soil and high curvature of smaller wheels increase rolling resistance. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_013",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Chassis Mechanics & Center of Gravity",
+    "subtopic": "Static weight distribution on front and rear axles",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor has a total weight of $19620\\text{ N}$ and a wheelbase of $2.0\\text{ m}$. Its center of gravity (CG) is located $0.8\\text{ m}$ ahead of the rear axle center. Under static level conditions, the vertical ground reaction on the front axle is:",
+    "options": {
+      "A": "$7848\\text{ N}$",
+      "B": "$10202\\text{ N}$",
+      "C": "$5494\\text{ N}$",
+      "D": "$12557\\text{ N}$"
+    },
+    "correct_answer": "A",
+    "solution": "Taking moments about the rear wheel ground contact point:\n$$\\sum M_{rear} = 0 \\implies R_f \\times \\text{WB} - W \\times x = 0$$\n$$R_f = \\frac{W \\times x}{\\text{WB}} = \\frac{19620 \\times 0.8}{2.0} = 7848\\text{ N}$$\nHence, the front axle reaction is $7848\\text{ N}$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_014",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Dynamic Weight Transfer & Stability",
+    "subtopic": "Dynamic weight transfer during pulling",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A two-wheel drive tractor weighs $25000\\text{ N}$ with a wheelbase of $2.2\\text{ m}$. Its CG is located $0.75\\text{ m}$ forward of the rear axle. A horizontal drawbar pull of $9000\\text{ N}$ is applied at a hitch height of $0.45\\text{ m}$ above the ground. The dynamic vertical load on the front axle during pulling is ________ $\\text{N}$ (round off to nearest integer).",
+    "correct_answer": "6681",
+    "numerical_range": {
+      "min": 6676.0,
+      "max": 6686.0
+    },
+    "solution": "1. Static front axle reaction:\n$$R_{fs} = \\frac{W \\cdot x_{cg}}{\\text{WB}} = \\frac{25000 \\times 0.75}{2.2} = 8522.7\\text{ N}$$\n2. Dynamic weight transfer from front to rear axle due to drawbar pull:\n$$\\Delta W = \\frac{P \\cdot h}{\\text{WB}} = \\frac{9000 \\times 0.45}{2.2} = 1840.9\\text{ N}$$\n3. Dynamic front axle load:\n$$R_{fd} = R_{fs} - \\Delta W = 8522.7 - 1840.9 = 6681.8\\text{ N} \\approx 6681\\text{ N}$$",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_015",
+    "section": "Section 3: Farm Power",
+    "topic": "Traction Mechanics, Wheel Slip & Rolling Resistance",
+    "subtopic": "Wheel slip and travel reduction calculation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding tractor traction mechanics and tire-soil interaction, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Travel reduction (wheel slip) $S$ is defined as $(v_0 - v_1) / v_0 \\times 100$, where $v_0$ is zero-load speed and $v_1$ is loaded speed",
+      "B": "Tractive efficiency peaks at an optimal wheel slip typically between $10\\%$ and $15\\%$ in firm agricultural soils",
+      "C": "Adding liquid ballast (calcium chloride solution) to rear drive tires increases gross traction by increasing vertical axle load",
+      "D": "Coefficient of rolling resistance increases with looser soil conditions and smaller wheel diameters"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Wheel slip is defined by the reduction in forward speed under load relative to zero-slip reference. (A is correct)\n2. Below 10% slip, motion resistance dominates; above 15% slip, slip losses dominate. Optimal tractive efficiency occurs at 10-15%. (B is correct)\n3. Liquid ballasting adds weight directly to tires without overloading the chassis, increasing traction. (C is correct)\n4. Sinkage in loose soil and high curvature of smaller wheels increase rolling resistance. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_016",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Chassis Mechanics & Center of Gravity",
+    "subtopic": "Static weight distribution on front and rear axles",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor has a total weight of $19620\\text{ N}$ and a wheelbase of $2.0\\text{ m}$. Its center of gravity (CG) is located $0.8\\text{ m}$ ahead of the rear axle center. Under static level conditions, the vertical ground reaction on the front axle is:",
+    "options": {
+      "A": "$7848\\text{ N}$",
+      "B": "$10202\\text{ N}$",
+      "C": "$5494\\text{ N}$",
+      "D": "$12557\\text{ N}$"
+    },
+    "correct_answer": "A",
+    "solution": "Taking moments about the rear wheel ground contact point:\n$$\\sum M_{rear} = 0 \\implies R_f \\times \\text{WB} - W \\times x = 0$$\n$$R_f = \\frac{W \\times x}{\\text{WB}} = \\frac{19620 \\times 0.8}{2.0} = 7848\\text{ N}$$\nHence, the front axle reaction is $7848\\text{ N}$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_017",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Dynamic Weight Transfer & Stability",
+    "subtopic": "Dynamic weight transfer during pulling",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A two-wheel drive tractor weighs $25000\\text{ N}$ with a wheelbase of $2.2\\text{ m}$. Its CG is located $0.75\\text{ m}$ forward of the rear axle. A horizontal drawbar pull of $10500\\text{ N}$ is applied at a hitch height of $0.45\\text{ m}$ above the ground. The dynamic vertical load on the front axle during pulling is ________ $\\text{N}$ (round off to nearest integer).",
+    "correct_answer": "6375",
+    "numerical_range": {
+      "min": 6370.0,
+      "max": 6380.0
+    },
+    "solution": "1. Static front axle reaction:\n$$R_{fs} = \\frac{W \\cdot x_{cg}}{\\text{WB}} = \\frac{25000 \\times 0.75}{2.2} = 8522.7\\text{ N}$$\n2. Dynamic weight transfer from front to rear axle due to drawbar pull:\n$$\\Delta W = \\frac{P \\cdot h}{\\text{WB}} = \\frac{10500 \\times 0.45}{2.2} = 2147.7\\text{ N}$$\n3. Dynamic front axle load:\n$$R_{fd} = R_{fs} - \\Delta W = 8522.7 - 2147.7 = 6375.0\\text{ N} \\approx 6375\\text{ N}$$",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_018",
+    "section": "Section 3: Farm Power",
+    "topic": "Traction Mechanics, Wheel Slip & Rolling Resistance",
+    "subtopic": "Wheel slip and travel reduction calculation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding tractor traction mechanics and tire-soil interaction, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Travel reduction (wheel slip) $S$ is defined as $(v_0 - v_1) / v_0 \\times 100$, where $v_0$ is zero-load speed and $v_1$ is loaded speed",
+      "B": "Tractive efficiency peaks at an optimal wheel slip typically between $10\\%$ and $15\\%$ in firm agricultural soils",
+      "C": "Adding liquid ballast (calcium chloride solution) to rear drive tires increases gross traction by increasing vertical axle load",
+      "D": "Coefficient of rolling resistance increases with looser soil conditions and smaller wheel diameters"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Wheel slip is defined by the reduction in forward speed under load relative to zero-slip reference. (A is correct)\n2. Below 10% slip, motion resistance dominates; above 15% slip, slip losses dominate. Optimal tractive efficiency occurs at 10-15%. (B is correct)\n3. Liquid ballasting adds weight directly to tires without overloading the chassis, increasing traction. (C is correct)\n4. Sinkage in loose soil and high curvature of smaller wheels increase rolling resistance. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_019",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Chassis Mechanics & Center of Gravity",
+    "subtopic": "Static weight distribution on front and rear axles",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor has a total weight of $19620\\text{ N}$ and a wheelbase of $2.0\\text{ m}$. Its center of gravity (CG) is located $0.8\\text{ m}$ ahead of the rear axle center. Under static level conditions, the vertical ground reaction on the front axle is:",
+    "options": {
+      "A": "$7848\\text{ N}$",
+      "B": "$10202\\text{ N}$",
+      "C": "$5494\\text{ N}$",
+      "D": "$12557\\text{ N}$"
+    },
+    "correct_answer": "A",
+    "solution": "Taking moments about the rear wheel ground contact point:\n$$\\sum M_{rear} = 0 \\implies R_f \\times \\text{WB} - W \\times x = 0$$\n$$R_f = \\frac{W \\times x}{\\text{WB}} = \\frac{19620 \\times 0.8}{2.0} = 7848\\text{ N}$$\nHence, the front axle reaction is $7848\\text{ N}$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_020",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Dynamic Weight Transfer & Stability",
+    "subtopic": "Dynamic weight transfer during pulling",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A two-wheel drive tractor weighs $25000\\text{ N}$ with a wheelbase of $2.2\\text{ m}$. Its CG is located $0.75\\text{ m}$ forward of the rear axle. A horizontal drawbar pull of $9000\\text{ N}$ is applied at a hitch height of $0.45\\text{ m}$ above the ground. The dynamic vertical load on the front axle during pulling is ________ $\\text{N}$ (round off to nearest integer).",
+    "correct_answer": "6681",
+    "numerical_range": {
+      "min": 6676.0,
+      "max": 6686.0
+    },
+    "solution": "1. Static front axle reaction:\n$$R_{fs} = \\frac{W \\cdot x_{cg}}{\\text{WB}} = \\frac{25000 \\times 0.75}{2.2} = 8522.7\\text{ N}$$\n2. Dynamic weight transfer from front to rear axle due to drawbar pull:\n$$\\Delta W = \\frac{P \\cdot h}{\\text{WB}} = \\frac{9000 \\times 0.45}{2.2} = 1840.9\\text{ N}$$\n3. Dynamic front axle load:\n$$R_{fd} = R_{fs} - \\Delta W = 8522.7 - 1840.9 = 6681.8\\text{ N} \\approx 6681\\text{ N}$$",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_021",
+    "section": "Section 3: Farm Power",
+    "topic": "Traction Mechanics, Wheel Slip & Rolling Resistance",
+    "subtopic": "Wheel slip and travel reduction calculation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding tractor traction mechanics and tire-soil interaction, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Travel reduction (wheel slip) $S$ is defined as $(v_0 - v_1) / v_0 \\times 100$, where $v_0$ is zero-load speed and $v_1$ is loaded speed",
+      "B": "Tractive efficiency peaks at an optimal wheel slip typically between $10\\%$ and $15\\%$ in firm agricultural soils",
+      "C": "Adding liquid ballast (calcium chloride solution) to rear drive tires increases gross traction by increasing vertical axle load",
+      "D": "Coefficient of rolling resistance increases with looser soil conditions and smaller wheel diameters"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Wheel slip is defined by the reduction in forward speed under load relative to zero-slip reference. (A is correct)\n2. Below 10% slip, motion resistance dominates; above 15% slip, slip losses dominate. Optimal tractive efficiency occurs at 10-15%. (B is correct)\n3. Liquid ballasting adds weight directly to tires without overloading the chassis, increasing traction. (C is correct)\n4. Sinkage in loose soil and high curvature of smaller wheels increase rolling resistance. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_022",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Chassis Mechanics & Center of Gravity",
+    "subtopic": "Static weight distribution on front and rear axles",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor has a total weight of $19620\\text{ N}$ and a wheelbase of $2.0\\text{ m}$. Its center of gravity (CG) is located $0.8\\text{ m}$ ahead of the rear axle center. Under static level conditions, the vertical ground reaction on the front axle is:",
+    "options": {
+      "A": "$7848\\text{ N}$",
+      "B": "$10202\\text{ N}$",
+      "C": "$5494\\text{ N}$",
+      "D": "$12557\\text{ N}$"
+    },
+    "correct_answer": "A",
+    "solution": "Taking moments about the rear wheel ground contact point:\n$$\\sum M_{rear} = 0 \\implies R_f \\times \\text{WB} - W \\times x = 0$$\n$$R_f = \\frac{W \\times x}{\\text{WB}} = \\frac{19620 \\times 0.8}{2.0} = 7848\\text{ N}$$\nHence, the front axle reaction is $7848\\text{ N}$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_023",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Dynamic Weight Transfer & Stability",
+    "subtopic": "Dynamic weight transfer during pulling",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A two-wheel drive tractor weighs $25000\\text{ N}$ with a wheelbase of $2.2\\text{ m}$. Its CG is located $0.75\\text{ m}$ forward of the rear axle. A horizontal drawbar pull of $10500\\text{ N}$ is applied at a hitch height of $0.45\\text{ m}$ above the ground. The dynamic vertical load on the front axle during pulling is ________ $\\text{N}$ (round off to nearest integer).",
+    "correct_answer": "6375",
+    "numerical_range": {
+      "min": 6370.0,
+      "max": 6380.0
+    },
+    "solution": "1. Static front axle reaction:\n$$R_{fs} = \\frac{W \\cdot x_{cg}}{\\text{WB}} = \\frac{25000 \\times 0.75}{2.2} = 8522.7\\text{ N}$$\n2. Dynamic weight transfer from front to rear axle due to drawbar pull:\n$$\\Delta W = \\frac{P \\cdot h}{\\text{WB}} = \\frac{10500 \\times 0.45}{2.2} = 2147.7\\text{ N}$$\n3. Dynamic front axle load:\n$$R_{fd} = R_{fs} - \\Delta W = 8522.7 - 2147.7 = 6375.0\\text{ N} \\approx 6375\\text{ N}$$",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_024",
+    "section": "Section 3: Farm Power",
+    "topic": "Traction Mechanics, Wheel Slip & Rolling Resistance",
+    "subtopic": "Wheel slip and travel reduction calculation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding tractor traction mechanics and tire-soil interaction, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Travel reduction (wheel slip) $S$ is defined as $(v_0 - v_1) / v_0 \\times 100$, where $v_0$ is zero-load speed and $v_1$ is loaded speed",
+      "B": "Tractive efficiency peaks at an optimal wheel slip typically between $10\\%$ and $15\\%$ in firm agricultural soils",
+      "C": "Adding liquid ballast (calcium chloride solution) to rear drive tires increases gross traction by increasing vertical axle load",
+      "D": "Coefficient of rolling resistance increases with looser soil conditions and smaller wheel diameters"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Wheel slip is defined by the reduction in forward speed under load relative to zero-slip reference. (A is correct)\n2. Below 10% slip, motion resistance dominates; above 15% slip, slip losses dominate. Optimal tractive efficiency occurs at 10-15%. (B is correct)\n3. Liquid ballasting adds weight directly to tires without overloading the chassis, increasing traction. (C is correct)\n4. Sinkage in loose soil and high curvature of smaller wheels increase rolling resistance. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_025",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Chassis Mechanics & Center of Gravity",
+    "subtopic": "Static weight distribution on front and rear axles",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor has a total weight of $19620\\text{ N}$ and a wheelbase of $2.0\\text{ m}$. Its center of gravity (CG) is located $0.8\\text{ m}$ ahead of the rear axle center. Under static level conditions, the vertical ground reaction on the front axle is:",
+    "options": {
+      "A": "$7848\\text{ N}$",
+      "B": "$10202\\text{ N}$",
+      "C": "$5494\\text{ N}$",
+      "D": "$12557\\text{ N}$"
+    },
+    "correct_answer": "A",
+    "solution": "Taking moments about the rear wheel ground contact point:\n$$\\sum M_{rear} = 0 \\implies R_f \\times \\text{WB} - W \\times x = 0$$\n$$R_f = \\frac{W \\times x}{\\text{WB}} = \\frac{19620 \\times 0.8}{2.0} = 7848\\text{ N}$$\nHence, the front axle reaction is $7848\\text{ N}$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_026",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Dynamic Weight Transfer & Stability",
+    "subtopic": "Dynamic weight transfer during pulling",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A two-wheel drive tractor weighs $25000\\text{ N}$ with a wheelbase of $2.2\\text{ m}$. Its CG is located $0.75\\text{ m}$ forward of the rear axle. A horizontal drawbar pull of $9000\\text{ N}$ is applied at a hitch height of $0.45\\text{ m}$ above the ground. The dynamic vertical load on the front axle during pulling is ________ $\\text{N}$ (round off to nearest integer).",
+    "correct_answer": "6681",
+    "numerical_range": {
+      "min": 6676.0,
+      "max": 6686.0
+    },
+    "solution": "1. Static front axle reaction:\n$$R_{fs} = \\frac{W \\cdot x_{cg}}{\\text{WB}} = \\frac{25000 \\times 0.75}{2.2} = 8522.7\\text{ N}$$\n2. Dynamic weight transfer from front to rear axle due to drawbar pull:\n$$\\Delta W = \\frac{P \\cdot h}{\\text{WB}} = \\frac{9000 \\times 0.45}{2.2} = 1840.9\\text{ N}$$\n3. Dynamic front axle load:\n$$R_{fd} = R_{fs} - \\Delta W = 8522.7 - 1840.9 = 6681.8\\text{ N} \\approx 6681\\text{ N}$$",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_027",
+    "section": "Section 3: Farm Power",
+    "topic": "Traction Mechanics, Wheel Slip & Rolling Resistance",
+    "subtopic": "Wheel slip and travel reduction calculation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding tractor traction mechanics and tire-soil interaction, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Travel reduction (wheel slip) $S$ is defined as $(v_0 - v_1) / v_0 \\times 100$, where $v_0$ is zero-load speed and $v_1$ is loaded speed",
+      "B": "Tractive efficiency peaks at an optimal wheel slip typically between $10\\%$ and $15\\%$ in firm agricultural soils",
+      "C": "Adding liquid ballast (calcium chloride solution) to rear drive tires increases gross traction by increasing vertical axle load",
+      "D": "Coefficient of rolling resistance increases with looser soil conditions and smaller wheel diameters"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Wheel slip is defined by the reduction in forward speed under load relative to zero-slip reference. (A is correct)\n2. Below 10% slip, motion resistance dominates; above 15% slip, slip losses dominate. Optimal tractive efficiency occurs at 10-15%. (B is correct)\n3. Liquid ballasting adds weight directly to tires without overloading the chassis, increasing traction. (C is correct)\n4. Sinkage in loose soil and high curvature of smaller wheels increase rolling resistance. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_028",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Chassis Mechanics & Center of Gravity",
+    "subtopic": "Static weight distribution on front and rear axles",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor has a total weight of $19620\\text{ N}$ and a wheelbase of $2.0\\text{ m}$. Its center of gravity (CG) is located $0.8\\text{ m}$ ahead of the rear axle center. Under static level conditions, the vertical ground reaction on the front axle is:",
+    "options": {
+      "A": "$7848\\text{ N}$",
+      "B": "$10202\\text{ N}$",
+      "C": "$5494\\text{ N}$",
+      "D": "$12557\\text{ N}$"
+    },
+    "correct_answer": "A",
+    "solution": "Taking moments about the rear wheel ground contact point:\n$$\\sum M_{rear} = 0 \\implies R_f \\times \\text{WB} - W \\times x = 0$$\n$$R_f = \\frac{W \\times x}{\\text{WB}} = \\frac{19620 \\times 0.8}{2.0} = 7848\\text{ N}$$\nHence, the front axle reaction is $7848\\text{ N}$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_029",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Dynamic Weight Transfer & Stability",
+    "subtopic": "Dynamic weight transfer during pulling",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A two-wheel drive tractor weighs $25000\\text{ N}$ with a wheelbase of $2.2\\text{ m}$. Its CG is located $0.75\\text{ m}$ forward of the rear axle. A horizontal drawbar pull of $10500\\text{ N}$ is applied at a hitch height of $0.45\\text{ m}$ above the ground. The dynamic vertical load on the front axle during pulling is ________ $\\text{N}$ (round off to nearest integer).",
+    "correct_answer": "6375",
+    "numerical_range": {
+      "min": 6370.0,
+      "max": 6380.0
+    },
+    "solution": "1. Static front axle reaction:\n$$R_{fs} = \\frac{W \\cdot x_{cg}}{\\text{WB}} = \\frac{25000 \\times 0.75}{2.2} = 8522.7\\text{ N}$$\n2. Dynamic weight transfer from front to rear axle due to drawbar pull:\n$$\\Delta W = \\frac{P \\cdot h}{\\text{WB}} = \\frac{10500 \\times 0.45}{2.2} = 2147.7\\text{ N}$$\n3. Dynamic front axle load:\n$$R_{fd} = R_{fs} - \\Delta W = 8522.7 - 2147.7 = 6375.0\\text{ N} \\approx 6375\\text{ N}$$",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_030",
+    "section": "Section 3: Farm Power",
+    "topic": "Traction Mechanics, Wheel Slip & Rolling Resistance",
+    "subtopic": "Wheel slip and travel reduction calculation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding tractor traction mechanics and tire-soil interaction, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Travel reduction (wheel slip) $S$ is defined as $(v_0 - v_1) / v_0 \\times 100$, where $v_0$ is zero-load speed and $v_1$ is loaded speed",
+      "B": "Tractive efficiency peaks at an optimal wheel slip typically between $10\\%$ and $15\\%$ in firm agricultural soils",
+      "C": "Adding liquid ballast (calcium chloride solution) to rear drive tires increases gross traction by increasing vertical axle load",
+      "D": "Coefficient of rolling resistance increases with looser soil conditions and smaller wheel diameters"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Wheel slip is defined by the reduction in forward speed under load relative to zero-slip reference. (A is correct)\n2. Below 10% slip, motion resistance dominates; above 15% slip, slip losses dominate. Optimal tractive efficiency occurs at 10-15%. (B is correct)\n3. Liquid ballasting adds weight directly to tires without overloading the chassis, increasing traction. (C is correct)\n4. Sinkage in loose soil and high curvature of smaller wheels increase rolling resistance. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_031",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Chassis Mechanics & Center of Gravity",
+    "subtopic": "Static weight distribution on front and rear axles",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor has a total weight of $19620\\text{ N}$ and a wheelbase of $2.0\\text{ m}$. Its center of gravity (CG) is located $0.8\\text{ m}$ ahead of the rear axle center. Under static level conditions, the vertical ground reaction on the front axle is:",
+    "options": {
+      "A": "$7848\\text{ N}$",
+      "B": "$10202\\text{ N}$",
+      "C": "$5494\\text{ N}$",
+      "D": "$12557\\text{ N}$"
+    },
+    "correct_answer": "A",
+    "solution": "Taking moments about the rear wheel ground contact point:\n$$\\sum M_{rear} = 0 \\implies R_f \\times \\text{WB} - W \\times x = 0$$\n$$R_f = \\frac{W \\times x}{\\text{WB}} = \\frac{19620 \\times 0.8}{2.0} = 7848\\text{ N}$$\nHence, the front axle reaction is $7848\\text{ N}$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_032",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Dynamic Weight Transfer & Stability",
+    "subtopic": "Dynamic weight transfer during pulling",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A two-wheel drive tractor weighs $25000\\text{ N}$ with a wheelbase of $2.2\\text{ m}$. Its CG is located $0.75\\text{ m}$ forward of the rear axle. A horizontal drawbar pull of $9000\\text{ N}$ is applied at a hitch height of $0.45\\text{ m}$ above the ground. The dynamic vertical load on the front axle during pulling is ________ $\\text{N}$ (round off to nearest integer).",
+    "correct_answer": "6681",
+    "numerical_range": {
+      "min": 6676.0,
+      "max": 6686.0
+    },
+    "solution": "1. Static front axle reaction:\n$$R_{fs} = \\frac{W \\cdot x_{cg}}{\\text{WB}} = \\frac{25000 \\times 0.75}{2.2} = 8522.7\\text{ N}$$\n2. Dynamic weight transfer from front to rear axle due to drawbar pull:\n$$\\Delta W = \\frac{P \\cdot h}{\\text{WB}} = \\frac{9000 \\times 0.45}{2.2} = 1840.9\\text{ N}$$\n3. Dynamic front axle load:\n$$R_{fd} = R_{fs} - \\Delta W = 8522.7 - 1840.9 = 6681.8\\text{ N} \\approx 6681\\text{ N}$$",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_033",
+    "section": "Section 3: Farm Power",
+    "topic": "Traction Mechanics, Wheel Slip & Rolling Resistance",
+    "subtopic": "Wheel slip and travel reduction calculation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding tractor traction mechanics and tire-soil interaction, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Travel reduction (wheel slip) $S$ is defined as $(v_0 - v_1) / v_0 \\times 100$, where $v_0$ is zero-load speed and $v_1$ is loaded speed",
+      "B": "Tractive efficiency peaks at an optimal wheel slip typically between $10\\%$ and $15\\%$ in firm agricultural soils",
+      "C": "Adding liquid ballast (calcium chloride solution) to rear drive tires increases gross traction by increasing vertical axle load",
+      "D": "Coefficient of rolling resistance increases with looser soil conditions and smaller wheel diameters"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Wheel slip is defined by the reduction in forward speed under load relative to zero-slip reference. (A is correct)\n2. Below 10% slip, motion resistance dominates; above 15% slip, slip losses dominate. Optimal tractive efficiency occurs at 10-15%. (B is correct)\n3. Liquid ballasting adds weight directly to tires without overloading the chassis, increasing traction. (C is correct)\n4. Sinkage in loose soil and high curvature of smaller wheels increase rolling resistance. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_034",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Chassis Mechanics & Center of Gravity",
+    "subtopic": "Static weight distribution on front and rear axles",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor has a total weight of $19620\\text{ N}$ and a wheelbase of $2.0\\text{ m}$. Its center of gravity (CG) is located $0.8\\text{ m}$ ahead of the rear axle center. Under static level conditions, the vertical ground reaction on the front axle is:",
+    "options": {
+      "A": "$7848\\text{ N}$",
+      "B": "$10202\\text{ N}$",
+      "C": "$5494\\text{ N}$",
+      "D": "$12557\\text{ N}$"
+    },
+    "correct_answer": "A",
+    "solution": "Taking moments about the rear wheel ground contact point:\n$$\\sum M_{rear} = 0 \\implies R_f \\times \\text{WB} - W \\times x = 0$$\n$$R_f = \\frac{W \\times x}{\\text{WB}} = \\frac{19620 \\times 0.8}{2.0} = 7848\\text{ N}$$\nHence, the front axle reaction is $7848\\text{ N}$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_035",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Dynamic Weight Transfer & Stability",
+    "subtopic": "Dynamic weight transfer during pulling",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A two-wheel drive tractor weighs $25000\\text{ N}$ with a wheelbase of $2.2\\text{ m}$. Its CG is located $0.75\\text{ m}$ forward of the rear axle. A horizontal drawbar pull of $10500\\text{ N}$ is applied at a hitch height of $0.45\\text{ m}$ above the ground. The dynamic vertical load on the front axle during pulling is ________ $\\text{N}$ (round off to nearest integer).",
+    "correct_answer": "6375",
+    "numerical_range": {
+      "min": 6370.0,
+      "max": 6380.0
+    },
+    "solution": "1. Static front axle reaction:\n$$R_{fs} = \\frac{W \\cdot x_{cg}}{\\text{WB}} = \\frac{25000 \\times 0.75}{2.2} = 8522.7\\text{ N}$$\n2. Dynamic weight transfer from front to rear axle due to drawbar pull:\n$$\\Delta W = \\frac{P \\cdot h}{\\text{WB}} = \\frac{10500 \\times 0.45}{2.2} = 2147.7\\text{ N}$$\n3. Dynamic front axle load:\n$$R_{fd} = R_{fs} - \\Delta W = 8522.7 - 2147.7 = 6375.0\\text{ N} \\approx 6375\\text{ N}$$",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_036",
+    "section": "Section 3: Farm Power",
+    "topic": "Traction Mechanics, Wheel Slip & Rolling Resistance",
+    "subtopic": "Wheel slip and travel reduction calculation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding tractor traction mechanics and tire-soil interaction, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Travel reduction (wheel slip) $S$ is defined as $(v_0 - v_1) / v_0 \\times 100$, where $v_0$ is zero-load speed and $v_1$ is loaded speed",
+      "B": "Tractive efficiency peaks at an optimal wheel slip typically between $10\\%$ and $15\\%$ in firm agricultural soils",
+      "C": "Adding liquid ballast (calcium chloride solution) to rear drive tires increases gross traction by increasing vertical axle load",
+      "D": "Coefficient of rolling resistance increases with looser soil conditions and smaller wheel diameters"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Wheel slip is defined by the reduction in forward speed under load relative to zero-slip reference. (A is correct)\n2. Below 10% slip, motion resistance dominates; above 15% slip, slip losses dominate. Optimal tractive efficiency occurs at 10-15%. (B is correct)\n3. Liquid ballasting adds weight directly to tires without overloading the chassis, increasing traction. (C is correct)\n4. Sinkage in loose soil and high curvature of smaller wheels increase rolling resistance. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_037",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Chassis Mechanics & Center of Gravity",
+    "subtopic": "Static weight distribution on front and rear axles",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor has a total weight of $19620\\text{ N}$ and a wheelbase of $2.0\\text{ m}$. Its center of gravity (CG) is located $0.8\\text{ m}$ ahead of the rear axle center. Under static level conditions, the vertical ground reaction on the front axle is:",
+    "options": {
+      "A": "$7848\\text{ N}$",
+      "B": "$10202\\text{ N}$",
+      "C": "$5494\\text{ N}$",
+      "D": "$12557\\text{ N}$"
+    },
+    "correct_answer": "A",
+    "solution": "Taking moments about the rear wheel ground contact point:\n$$\\sum M_{rear} = 0 \\implies R_f \\times \\text{WB} - W \\times x = 0$$\n$$R_f = \\frac{W \\times x}{\\text{WB}} = \\frac{19620 \\times 0.8}{2.0} = 7848\\text{ N}$$\nHence, the front axle reaction is $7848\\text{ N}$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_038",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Dynamic Weight Transfer & Stability",
+    "subtopic": "Dynamic weight transfer during pulling",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A two-wheel drive tractor weighs $25000\\text{ N}$ with a wheelbase of $2.2\\text{ m}$. Its CG is located $0.75\\text{ m}$ forward of the rear axle. A horizontal drawbar pull of $9000\\text{ N}$ is applied at a hitch height of $0.45\\text{ m}$ above the ground. The dynamic vertical load on the front axle during pulling is ________ $\\text{N}$ (round off to nearest integer).",
+    "correct_answer": "6681",
+    "numerical_range": {
+      "min": 6676.0,
+      "max": 6686.0
+    },
+    "solution": "1. Static front axle reaction:\n$$R_{fs} = \\frac{W \\cdot x_{cg}}{\\text{WB}} = \\frac{25000 \\times 0.75}{2.2} = 8522.7\\text{ N}$$\n2. Dynamic weight transfer from front to rear axle due to drawbar pull:\n$$\\Delta W = \\frac{P \\cdot h}{\\text{WB}} = \\frac{9000 \\times 0.45}{2.2} = 1840.9\\text{ N}$$\n3. Dynamic front axle load:\n$$R_{fd} = R_{fs} - \\Delta W = 8522.7 - 1840.9 = 6681.8\\text{ N} \\approx 6681\\text{ N}$$",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_039",
+    "section": "Section 3: Farm Power",
+    "topic": "Traction Mechanics, Wheel Slip & Rolling Resistance",
+    "subtopic": "Wheel slip and travel reduction calculation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding tractor traction mechanics and tire-soil interaction, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Travel reduction (wheel slip) $S$ is defined as $(v_0 - v_1) / v_0 \\times 100$, where $v_0$ is zero-load speed and $v_1$ is loaded speed",
+      "B": "Tractive efficiency peaks at an optimal wheel slip typically between $10\\%$ and $15\\%$ in firm agricultural soils",
+      "C": "Adding liquid ballast (calcium chloride solution) to rear drive tires increases gross traction by increasing vertical axle load",
+      "D": "Coefficient of rolling resistance increases with looser soil conditions and smaller wheel diameters"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Wheel slip is defined by the reduction in forward speed under load relative to zero-slip reference. (A is correct)\n2. Below 10% slip, motion resistance dominates; above 15% slip, slip losses dominate. Optimal tractive efficiency occurs at 10-15%. (B is correct)\n3. Liquid ballasting adds weight directly to tires without overloading the chassis, increasing traction. (C is correct)\n4. Sinkage in loose soil and high curvature of smaller wheels increase rolling resistance. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_040",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Chassis Mechanics & Center of Gravity",
+    "subtopic": "Static weight distribution on front and rear axles",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor has a total weight of $19620\\text{ N}$ and a wheelbase of $2.0\\text{ m}$. Its center of gravity (CG) is located $0.8\\text{ m}$ ahead of the rear axle center. Under static level conditions, the vertical ground reaction on the front axle is:",
+    "options": {
+      "A": "$7848\\text{ N}$",
+      "B": "$10202\\text{ N}$",
+      "C": "$5494\\text{ N}$",
+      "D": "$12557\\text{ N}$"
+    },
+    "correct_answer": "A",
+    "solution": "Taking moments about the rear wheel ground contact point:\n$$\\sum M_{rear} = 0 \\implies R_f \\times \\text{WB} - W \\times x = 0$$\n$$R_f = \\frac{W \\times x}{\\text{WB}} = \\frac{19620 \\times 0.8}{2.0} = 7848\\text{ N}$$\nHence, the front axle reaction is $7848\\text{ N}$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_041",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Dynamic Weight Transfer & Stability",
+    "subtopic": "Dynamic weight transfer during pulling",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A two-wheel drive tractor weighs $25000\\text{ N}$ with a wheelbase of $2.2\\text{ m}$. Its CG is located $0.75\\text{ m}$ forward of the rear axle. A horizontal drawbar pull of $10500\\text{ N}$ is applied at a hitch height of $0.45\\text{ m}$ above the ground. The dynamic vertical load on the front axle during pulling is ________ $\\text{N}$ (round off to nearest integer).",
+    "correct_answer": "6375",
+    "numerical_range": {
+      "min": 6370.0,
+      "max": 6380.0
+    },
+    "solution": "1. Static front axle reaction:\n$$R_{fs} = \\frac{W \\cdot x_{cg}}{\\text{WB}} = \\frac{25000 \\times 0.75}{2.2} = 8522.7\\text{ N}$$\n2. Dynamic weight transfer from front to rear axle due to drawbar pull:\n$$\\Delta W = \\frac{P \\cdot h}{\\text{WB}} = \\frac{10500 \\times 0.45}{2.2} = 2147.7\\text{ N}$$\n3. Dynamic front axle load:\n$$R_{fd} = R_{fs} - \\Delta W = 8522.7 - 2147.7 = 6375.0\\text{ N} \\approx 6375\\text{ N}$$",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_042",
+    "section": "Section 3: Farm Power",
+    "topic": "Traction Mechanics, Wheel Slip & Rolling Resistance",
+    "subtopic": "Wheel slip and travel reduction calculation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding tractor traction mechanics and tire-soil interaction, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Travel reduction (wheel slip) $S$ is defined as $(v_0 - v_1) / v_0 \\times 100$, where $v_0$ is zero-load speed and $v_1$ is loaded speed",
+      "B": "Tractive efficiency peaks at an optimal wheel slip typically between $10\\%$ and $15\\%$ in firm agricultural soils",
+      "C": "Adding liquid ballast (calcium chloride solution) to rear drive tires increases gross traction by increasing vertical axle load",
+      "D": "Coefficient of rolling resistance increases with looser soil conditions and smaller wheel diameters"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Wheel slip is defined by the reduction in forward speed under load relative to zero-slip reference. (A is correct)\n2. Below 10% slip, motion resistance dominates; above 15% slip, slip losses dominate. Optimal tractive efficiency occurs at 10-15%. (B is correct)\n3. Liquid ballasting adds weight directly to tires without overloading the chassis, increasing traction. (C is correct)\n4. Sinkage in loose soil and high curvature of smaller wheels increase rolling resistance. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_043",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Chassis Mechanics & Center of Gravity",
+    "subtopic": "Static weight distribution on front and rear axles",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor has a total weight of $19620\\text{ N}$ and a wheelbase of $2.0\\text{ m}$. Its center of gravity (CG) is located $0.8\\text{ m}$ ahead of the rear axle center. Under static level conditions, the vertical ground reaction on the front axle is:",
+    "options": {
+      "A": "$7848\\text{ N}$",
+      "B": "$10202\\text{ N}$",
+      "C": "$5494\\text{ N}$",
+      "D": "$12557\\text{ N}$"
+    },
+    "correct_answer": "A",
+    "solution": "Taking moments about the rear wheel ground contact point:\n$$\\sum M_{rear} = 0 \\implies R_f \\times \\text{WB} - W \\times x = 0$$\n$$R_f = \\frac{W \\times x}{\\text{WB}} = \\frac{19620 \\times 0.8}{2.0} = 7848\\text{ N}$$\nHence, the front axle reaction is $7848\\text{ N}$.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_044",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Dynamic Weight Transfer & Stability",
+    "subtopic": "Dynamic weight transfer during pulling",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A two-wheel drive tractor weighs $25000\\text{ N}$ with a wheelbase of $2.2\\text{ m}$. Its CG is located $0.75\\text{ m}$ forward of the rear axle. A horizontal drawbar pull of $9000\\text{ N}$ is applied at a hitch height of $0.45\\text{ m}$ above the ground. The dynamic vertical load on the front axle during pulling is ________ $\\text{N}$ (round off to nearest integer).",
+    "correct_answer": "6681",
+    "numerical_range": {
+      "min": 6676.0,
+      "max": 6686.0
+    },
+    "solution": "1. Static front axle reaction:\n$$R_{fs} = \\frac{W \\cdot x_{cg}}{\\text{WB}} = \\frac{25000 \\times 0.75}{2.2} = 8522.7\\text{ N}$$\n2. Dynamic weight transfer from front to rear axle due to drawbar pull:\n$$\\Delta W = \\frac{P \\cdot h}{\\text{WB}} = \\frac{9000 \\times 0.45}{2.2} = 1840.9\\text{ N}$$\n3. Dynamic front axle load:\n$$R_{fd} = R_{fs} - \\Delta W = 8522.7 - 1840.9 = 6681.8\\text{ N} \\approx 6681\\text{ N}$$",
+    "difficulty": "Hard",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_TRAC_045",
+    "section": "Section 3: Farm Power",
+    "topic": "Traction Mechanics, Wheel Slip & Rolling Resistance",
+    "subtopic": "Wheel slip and travel reduction calculation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding tractor traction mechanics and tire-soil interaction, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Travel reduction (wheel slip) $S$ is defined as $(v_0 - v_1) / v_0 \\times 100$, where $v_0$ is zero-load speed and $v_1$ is loaded speed",
+      "B": "Tractive efficiency peaks at an optimal wheel slip typically between $10\\%$ and $15\\%$ in firm agricultural soils",
+      "C": "Adding liquid ballast (calcium chloride solution) to rear drive tires increases gross traction by increasing vertical axle load",
+      "D": "Coefficient of rolling resistance increases with looser soil conditions and smaller wheel diameters"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Wheel slip is defined by the reduction in forward speed under load relative to zero-slip reference. (A is correct)\n2. Below 10% slip, motion resistance dominates; above 15% slip, slip losses dominate. Optimal tractive efficiency occurs at 10-15%. (B is correct)\n3. Liquid ballasting adds weight directly to tires without overloading the chassis, increasing traction. (C is correct)\n4. Sinkage in loose soil and high curvature of smaller wheels increase rolling resistance. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_001",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$203.1\\text{ g/kWh}$",
+      "B": "$253.9\\text{ g/kWh}$",
+      "C": "$162.5\\text{ g/kWh}$",
+      "D": "$304.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{6500}{32.0} = 203.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_002",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_003",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_004",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$210.5\\text{ g/kWh}$",
+      "B": "$263.1\\text{ g/kWh}$",
+      "C": "$168.4\\text{ g/kWh}$",
+      "D": "$315.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{8000}{38.0} = 210.5\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_005",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_006",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_007",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$191.2\\text{ g/kWh}$",
+      "B": "$239.0\\text{ g/kWh}$",
+      "C": "$153.0\\text{ g/kWh}$",
+      "D": "$286.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{6500}{34.0} = 191.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_008",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_009",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_010",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $30.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$266.7\\text{ g/kWh}$",
+      "B": "$333.4\\text{ g/kWh}$",
+      "C": "$213.4\\text{ g/kWh}$",
+      "D": "$400.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{30.0\\text{ kW}} = \\frac{8000}{30.0} = 266.7\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_011",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_012",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_013",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $36.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$180.6\\text{ g/kWh}$",
+      "B": "$225.8\\text{ g/kWh}$",
+      "C": "$144.5\\text{ g/kWh}$",
+      "D": "$270.9\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{36.0\\text{ kW}} = \\frac{6500}{36.0} = 180.6\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_014",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_015",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_016",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$250.0\\text{ g/kWh}$",
+      "B": "$312.5\\text{ g/kWh}$",
+      "C": "$200.0\\text{ g/kWh}$",
+      "D": "$375.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{8000}{32.0} = 250.0\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_017",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_018",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_019",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$171.1\\text{ g/kWh}$",
+      "B": "$213.9\\text{ g/kWh}$",
+      "C": "$136.9\\text{ g/kWh}$",
+      "D": "$256.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{6500}{38.0} = 171.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_020",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_021",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_022",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$235.3\\text{ g/kWh}$",
+      "B": "$294.1\\text{ g/kWh}$",
+      "C": "$188.2\\text{ g/kWh}$",
+      "D": "$353.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{8000}{34.0} = 235.3\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_023",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_024",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_025",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $30.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$216.7\\text{ g/kWh}$",
+      "B": "$270.9\\text{ g/kWh}$",
+      "C": "$173.4\\text{ g/kWh}$",
+      "D": "$325.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{30.0\\text{ kW}} = \\frac{6500}{30.0} = 216.7\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_026",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_027",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_028",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $36.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$222.2\\text{ g/kWh}$",
+      "B": "$277.8\\text{ g/kWh}$",
+      "C": "$177.8\\text{ g/kWh}$",
+      "D": "$333.3\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{36.0\\text{ kW}} = \\frac{8000}{36.0} = 222.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_029",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_030",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_031",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$203.1\\text{ g/kWh}$",
+      "B": "$253.9\\text{ g/kWh}$",
+      "C": "$162.5\\text{ g/kWh}$",
+      "D": "$304.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{6500}{32.0} = 203.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_032",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_033",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_034",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$210.5\\text{ g/kWh}$",
+      "B": "$263.1\\text{ g/kWh}$",
+      "C": "$168.4\\text{ g/kWh}$",
+      "D": "$315.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{8000}{38.0} = 210.5\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_035",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_036",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_037",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$191.2\\text{ g/kWh}$",
+      "B": "$239.0\\text{ g/kWh}$",
+      "C": "$153.0\\text{ g/kWh}$",
+      "D": "$286.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{6500}{34.0} = 191.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_038",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_039",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Fuels, Lubricants & Viscosity",
+    "subtopic": "Diesel and petrol properties (calorific value, density, flash point)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_040",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$203.1\\text{ g/kWh}$",
+      "B": "$253.9\\text{ g/kWh}$",
+      "C": "$162.5\\text{ g/kWh}$",
+      "D": "$304.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{6500}{32.0} = 203.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_041",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_042",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_043",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$210.5\\text{ g/kWh}$",
+      "B": "$263.1\\text{ g/kWh}$",
+      "C": "$168.4\\text{ g/kWh}$",
+      "D": "$315.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{8000}{38.0} = 210.5\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_044",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_045",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_046",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$191.2\\text{ g/kWh}$",
+      "B": "$239.0\\text{ g/kWh}$",
+      "C": "$153.0\\text{ g/kWh}$",
+      "D": "$286.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{6500}{34.0} = 191.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_047",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_048",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_049",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $30.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$266.7\\text{ g/kWh}$",
+      "B": "$333.4\\text{ g/kWh}$",
+      "C": "$213.4\\text{ g/kWh}$",
+      "D": "$400.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{30.0\\text{ kW}} = \\frac{8000}{30.0} = 266.7\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_050",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_051",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_052",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $36.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$180.6\\text{ g/kWh}$",
+      "B": "$225.8\\text{ g/kWh}$",
+      "C": "$144.5\\text{ g/kWh}$",
+      "D": "$270.9\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{36.0\\text{ kW}} = \\frac{6500}{36.0} = 180.6\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_053",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_054",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_055",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$250.0\\text{ g/kWh}$",
+      "B": "$312.5\\text{ g/kWh}$",
+      "C": "$200.0\\text{ g/kWh}$",
+      "D": "$375.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{8000}{32.0} = 250.0\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_056",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_057",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_058",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$171.1\\text{ g/kWh}$",
+      "B": "$213.9\\text{ g/kWh}$",
+      "C": "$136.9\\text{ g/kWh}$",
+      "D": "$256.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{6500}{38.0} = 171.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_059",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_060",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_061",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$235.3\\text{ g/kWh}$",
+      "B": "$294.1\\text{ g/kWh}$",
+      "C": "$188.2\\text{ g/kWh}$",
+      "D": "$353.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{8000}{34.0} = 235.3\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_062",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_063",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_064",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $30.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$216.7\\text{ g/kWh}$",
+      "B": "$270.9\\text{ g/kWh}$",
+      "C": "$173.4\\text{ g/kWh}$",
+      "D": "$325.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{30.0\\text{ kW}} = \\frac{6500}{30.0} = 216.7\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_065",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_066",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_067",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $36.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$222.2\\text{ g/kWh}$",
+      "B": "$277.8\\text{ g/kWh}$",
+      "C": "$177.8\\text{ g/kWh}$",
+      "D": "$333.3\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{36.0\\text{ kW}} = \\frac{8000}{36.0} = 222.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_068",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_069",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_070",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$203.1\\text{ g/kWh}$",
+      "B": "$253.9\\text{ g/kWh}$",
+      "C": "$162.5\\text{ g/kWh}$",
+      "D": "$304.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{6500}{32.0} = 203.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_071",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_072",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_073",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$210.5\\text{ g/kWh}$",
+      "B": "$263.1\\text{ g/kWh}$",
+      "C": "$168.4\\text{ g/kWh}$",
+      "D": "$315.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{8000}{38.0} = 210.5\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_074",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_075",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_076",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$191.2\\text{ g/kWh}$",
+      "B": "$239.0\\text{ g/kWh}$",
+      "C": "$153.0\\text{ g/kWh}$",
+      "D": "$286.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{6500}{34.0} = 191.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_077",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_078",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Cooling & Lubrication Systems",
+    "subtopic": "Radiator sizing and thermosiphon vs forced circulation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_079",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$203.1\\text{ g/kWh}$",
+      "B": "$253.9\\text{ g/kWh}$",
+      "C": "$162.5\\text{ g/kWh}$",
+      "D": "$304.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{6500}{32.0} = 203.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_080",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_081",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_082",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$210.5\\text{ g/kWh}$",
+      "B": "$263.1\\text{ g/kWh}$",
+      "C": "$168.4\\text{ g/kWh}$",
+      "D": "$315.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{8000}{38.0} = 210.5\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_083",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_084",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_085",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$191.2\\text{ g/kWh}$",
+      "B": "$239.0\\text{ g/kWh}$",
+      "C": "$153.0\\text{ g/kWh}$",
+      "D": "$286.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{6500}{34.0} = 191.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_086",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_087",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_088",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $30.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$266.7\\text{ g/kWh}$",
+      "B": "$333.4\\text{ g/kWh}$",
+      "C": "$213.4\\text{ g/kWh}$",
+      "D": "$400.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{30.0\\text{ kW}} = \\frac{8000}{30.0} = 266.7\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_089",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_090",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_091",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $36.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$180.6\\text{ g/kWh}$",
+      "B": "$225.8\\text{ g/kWh}$",
+      "C": "$144.5\\text{ g/kWh}$",
+      "D": "$270.9\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{36.0\\text{ kW}} = \\frac{6500}{36.0} = 180.6\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_092",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_093",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_094",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$250.0\\text{ g/kWh}$",
+      "B": "$312.5\\text{ g/kWh}$",
+      "C": "$200.0\\text{ g/kWh}$",
+      "D": "$375.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{8000}{32.0} = 250.0\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_095",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_096",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_097",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$171.1\\text{ g/kWh}$",
+      "B": "$213.9\\text{ g/kWh}$",
+      "C": "$136.9\\text{ g/kWh}$",
+      "D": "$256.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{6500}{38.0} = 171.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_098",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_099",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_100",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$235.3\\text{ g/kWh}$",
+      "B": "$294.1\\text{ g/kWh}$",
+      "C": "$188.2\\text{ g/kWh}$",
+      "D": "$353.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{8000}{34.0} = 235.3\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_101",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_102",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_103",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $30.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$216.7\\text{ g/kWh}$",
+      "B": "$270.9\\text{ g/kWh}$",
+      "C": "$173.4\\text{ g/kWh}$",
+      "D": "$325.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{30.0\\text{ kW}} = \\frac{6500}{30.0} = 216.7\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_104",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_105",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_106",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $36.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$222.2\\text{ g/kWh}$",
+      "B": "$277.8\\text{ g/kWh}$",
+      "C": "$177.8\\text{ g/kWh}$",
+      "D": "$333.3\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{36.0\\text{ kW}} = \\frac{8000}{36.0} = 222.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_107",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_108",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_109",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$203.1\\text{ g/kWh}$",
+      "B": "$253.9\\text{ g/kWh}$",
+      "C": "$162.5\\text{ g/kWh}$",
+      "D": "$304.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{6500}{32.0} = 203.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_110",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_111",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_112",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$210.5\\text{ g/kWh}$",
+      "B": "$263.1\\text{ g/kWh}$",
+      "C": "$168.4\\text{ g/kWh}$",
+      "D": "$315.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{8000}{38.0} = 210.5\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_113",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_114",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_115",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$191.2\\text{ g/kWh}$",
+      "B": "$239.0\\text{ g/kWh}$",
+      "C": "$153.0\\text{ g/kWh}$",
+      "D": "$286.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{6500}{34.0} = 191.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_116",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_117",
+    "section": "Section 3: Farm Power",
+    "topic": "Fuel Injection & Governor Systems",
+    "subtopic": "Inline and rotary fuel injection pumps",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_118",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$203.1\\text{ g/kWh}$",
+      "B": "$253.9\\text{ g/kWh}$",
+      "C": "$162.5\\text{ g/kWh}$",
+      "D": "$304.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{6500}{32.0} = 203.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_119",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_120",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_121",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$210.5\\text{ g/kWh}$",
+      "B": "$263.1\\text{ g/kWh}$",
+      "C": "$168.4\\text{ g/kWh}$",
+      "D": "$315.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{8000}{38.0} = 210.5\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_122",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_123",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_124",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$191.2\\text{ g/kWh}$",
+      "B": "$239.0\\text{ g/kWh}$",
+      "C": "$153.0\\text{ g/kWh}$",
+      "D": "$286.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{6500}{34.0} = 191.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_125",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_126",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_127",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $30.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$266.7\\text{ g/kWh}$",
+      "B": "$333.4\\text{ g/kWh}$",
+      "C": "$213.4\\text{ g/kWh}$",
+      "D": "$400.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{30.0\\text{ kW}} = \\frac{8000}{30.0} = 266.7\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_128",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_129",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_130",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $36.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$180.6\\text{ g/kWh}$",
+      "B": "$225.8\\text{ g/kWh}$",
+      "C": "$144.5\\text{ g/kWh}$",
+      "D": "$270.9\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{36.0\\text{ kW}} = \\frac{6500}{36.0} = 180.6\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_131",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_132",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_133",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$250.0\\text{ g/kWh}$",
+      "B": "$312.5\\text{ g/kWh}$",
+      "C": "$200.0\\text{ g/kWh}$",
+      "D": "$375.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{8000}{32.0} = 250.0\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_134",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_135",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_136",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$171.1\\text{ g/kWh}$",
+      "B": "$213.9\\text{ g/kWh}$",
+      "C": "$136.9\\text{ g/kWh}$",
+      "D": "$256.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{6500}{38.0} = 171.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_137",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_138",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_139",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$235.3\\text{ g/kWh}$",
+      "B": "$294.1\\text{ g/kWh}$",
+      "C": "$188.2\\text{ g/kWh}$",
+      "D": "$353.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{8000}{34.0} = 235.3\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_140",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_141",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_142",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $30.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$216.7\\text{ g/kWh}$",
+      "B": "$270.9\\text{ g/kWh}$",
+      "C": "$173.4\\text{ g/kWh}$",
+      "D": "$325.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{30.0\\text{ kW}} = \\frac{6500}{30.0} = 216.7\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_143",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_144",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_145",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $36.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$222.2\\text{ g/kWh}$",
+      "B": "$277.8\\text{ g/kWh}$",
+      "C": "$177.8\\text{ g/kWh}$",
+      "D": "$333.3\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{36.0\\text{ kW}} = \\frac{8000}{36.0} = 222.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_146",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_147",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_148",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$203.1\\text{ g/kWh}$",
+      "B": "$253.9\\text{ g/kWh}$",
+      "C": "$162.5\\text{ g/kWh}$",
+      "D": "$304.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{6500}{32.0} = 203.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_149",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_150",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_151",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$210.5\\text{ g/kWh}$",
+      "B": "$263.1\\text{ g/kWh}$",
+      "C": "$168.4\\text{ g/kWh}$",
+      "D": "$315.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{8000}{38.0} = 210.5\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_152",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_153",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_154",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$191.2\\text{ g/kWh}$",
+      "B": "$239.0\\text{ g/kWh}$",
+      "C": "$153.0\\text{ g/kWh}$",
+      "D": "$286.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{6500}{34.0} = 191.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_155",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_156",
+    "section": "Section 3: Farm Power",
+    "topic": "Valve Timing, Firing Order & Engine Kinematics",
+    "subtopic": "Four-stroke and two-stroke valve timing diagrams",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_157",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$203.1\\text{ g/kWh}$",
+      "B": "$253.9\\text{ g/kWh}$",
+      "C": "$162.5\\text{ g/kWh}$",
+      "D": "$304.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{6500}{32.0} = 203.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_158",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_159",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_160",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$210.5\\text{ g/kWh}$",
+      "B": "$263.1\\text{ g/kWh}$",
+      "C": "$168.4\\text{ g/kWh}$",
+      "D": "$315.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{8000}{38.0} = 210.5\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_161",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_162",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_163",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$191.2\\text{ g/kWh}$",
+      "B": "$239.0\\text{ g/kWh}$",
+      "C": "$153.0\\text{ g/kWh}$",
+      "D": "$286.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{6500}{34.0} = 191.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_164",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_165",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_166",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $30.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$266.7\\text{ g/kWh}$",
+      "B": "$333.4\\text{ g/kWh}$",
+      "C": "$213.4\\text{ g/kWh}$",
+      "D": "$400.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{30.0\\text{ kW}} = \\frac{8000}{30.0} = 266.7\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_167",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_168",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_169",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $36.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$180.6\\text{ g/kWh}$",
+      "B": "$225.8\\text{ g/kWh}$",
+      "C": "$144.5\\text{ g/kWh}$",
+      "D": "$270.9\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{36.0\\text{ kW}} = \\frac{6500}{36.0} = 180.6\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_170",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_171",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_172",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$250.0\\text{ g/kWh}$",
+      "B": "$312.5\\text{ g/kWh}$",
+      "C": "$200.0\\text{ g/kWh}$",
+      "D": "$375.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{8000}{32.0} = 250.0\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_173",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_174",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_175",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$171.1\\text{ g/kWh}$",
+      "B": "$213.9\\text{ g/kWh}$",
+      "C": "$136.9\\text{ g/kWh}$",
+      "D": "$256.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{6500}{38.0} = 171.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_176",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_177",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_178",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$235.3\\text{ g/kWh}$",
+      "B": "$294.1\\text{ g/kWh}$",
+      "C": "$188.2\\text{ g/kWh}$",
+      "D": "$353.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{8000}{34.0} = 235.3\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_179",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_180",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_181",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $30.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$216.7\\text{ g/kWh}$",
+      "B": "$270.9\\text{ g/kWh}$",
+      "C": "$173.4\\text{ g/kWh}$",
+      "D": "$325.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{30.0\\text{ kW}} = \\frac{6500}{30.0} = 216.7\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_182",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_183",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_184",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $36.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$222.2\\text{ g/kWh}$",
+      "B": "$277.8\\text{ g/kWh}$",
+      "C": "$177.8\\text{ g/kWh}$",
+      "D": "$333.3\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{36.0\\text{ kW}} = \\frac{8000}{36.0} = 222.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_185",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_186",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_187",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$203.1\\text{ g/kWh}$",
+      "B": "$253.9\\text{ g/kWh}$",
+      "C": "$162.5\\text{ g/kWh}$",
+      "D": "$304.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{6500}{32.0} = 203.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_188",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_189",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_190",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$210.5\\text{ g/kWh}$",
+      "B": "$263.1\\text{ g/kWh}$",
+      "C": "$168.4\\text{ g/kWh}$",
+      "D": "$315.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{8000}{38.0} = 210.5\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_191",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_192",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_193",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$191.2\\text{ g/kWh}$",
+      "B": "$239.0\\text{ g/kWh}$",
+      "C": "$153.0\\text{ g/kWh}$",
+      "D": "$286.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{6500}{34.0} = 191.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_194",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_195",
+    "section": "Section 3: Farm Power",
+    "topic": "Specific Fuel Consumption & Engine Efficiencies",
+    "subtopic": "Brake Specific Fuel Consumption (BSFC)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_196",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$203.1\\text{ g/kWh}$",
+      "B": "$253.9\\text{ g/kWh}$",
+      "C": "$162.5\\text{ g/kWh}$",
+      "D": "$304.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{6500}{32.0} = 203.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_197",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_198",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_199",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$210.5\\text{ g/kWh}$",
+      "B": "$263.1\\text{ g/kWh}$",
+      "C": "$168.4\\text{ g/kWh}$",
+      "D": "$315.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{8000}{38.0} = 210.5\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_200",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_201",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_202",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$191.2\\text{ g/kWh}$",
+      "B": "$239.0\\text{ g/kWh}$",
+      "C": "$153.0\\text{ g/kWh}$",
+      "D": "$286.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{6500}{34.0} = 191.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_203",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_204",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_205",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $30.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$266.7\\text{ g/kWh}$",
+      "B": "$333.4\\text{ g/kWh}$",
+      "C": "$213.4\\text{ g/kWh}$",
+      "D": "$400.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{30.0\\text{ kW}} = \\frac{8000}{30.0} = 266.7\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_206",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_207",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_208",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $36.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$180.6\\text{ g/kWh}$",
+      "B": "$225.8\\text{ g/kWh}$",
+      "C": "$144.5\\text{ g/kWh}$",
+      "D": "$270.9\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{36.0\\text{ kW}} = \\frac{6500}{36.0} = 180.6\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_209",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_210",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_211",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$250.0\\text{ g/kWh}$",
+      "B": "$312.5\\text{ g/kWh}$",
+      "C": "$200.0\\text{ g/kWh}$",
+      "D": "$375.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{8000}{32.0} = 250.0\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_212",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_213",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_214",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$171.1\\text{ g/kWh}$",
+      "B": "$213.9\\text{ g/kWh}$",
+      "C": "$136.9\\text{ g/kWh}$",
+      "D": "$256.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{6500}{38.0} = 171.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_215",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_216",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_217",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$235.3\\text{ g/kWh}$",
+      "B": "$294.1\\text{ g/kWh}$",
+      "C": "$188.2\\text{ g/kWh}$",
+      "D": "$353.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{8000}{34.0} = 235.3\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_218",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_219",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_220",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $30.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$216.7\\text{ g/kWh}$",
+      "B": "$270.9\\text{ g/kWh}$",
+      "C": "$173.4\\text{ g/kWh}$",
+      "D": "$325.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{30.0\\text{ kW}} = \\frac{6500}{30.0} = 216.7\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_221",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_222",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_223",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $36.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$222.2\\text{ g/kWh}$",
+      "B": "$277.8\\text{ g/kWh}$",
+      "C": "$177.8\\text{ g/kWh}$",
+      "D": "$333.3\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{36.0\\text{ kW}} = \\frac{8000}{36.0} = 222.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_224",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_225",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_226",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$203.1\\text{ g/kWh}$",
+      "B": "$253.9\\text{ g/kWh}$",
+      "C": "$162.5\\text{ g/kWh}$",
+      "D": "$304.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{6500}{32.0} = 203.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_227",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_228",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_229",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$210.5\\text{ g/kWh}$",
+      "B": "$263.1\\text{ g/kWh}$",
+      "C": "$168.4\\text{ g/kWh}$",
+      "D": "$315.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{8000}{38.0} = 210.5\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_230",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_231",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_232",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$191.2\\text{ g/kWh}$",
+      "B": "$239.0\\text{ g/kWh}$",
+      "C": "$153.0\\text{ g/kWh}$",
+      "D": "$286.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{6500}{34.0} = 191.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_233",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_234",
+    "section": "Section 3: Farm Power",
+    "topic": "Engine Heat Balance & Testing",
+    "subtopic": "Heat equivalent of brake power",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_235",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$203.1\\text{ g/kWh}$",
+      "B": "$253.9\\text{ g/kWh}$",
+      "C": "$162.5\\text{ g/kWh}$",
+      "D": "$304.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{6500}{32.0} = 203.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_236",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_237",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_238",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$210.5\\text{ g/kWh}$",
+      "B": "$263.1\\text{ g/kWh}$",
+      "C": "$168.4\\text{ g/kWh}$",
+      "D": "$315.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{8000}{38.0} = 210.5\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_239",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_240",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_241",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$191.2\\text{ g/kWh}$",
+      "B": "$239.0\\text{ g/kWh}$",
+      "C": "$153.0\\text{ g/kWh}$",
+      "D": "$286.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{6500}{34.0} = 191.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_242",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_243",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_244",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $30.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$266.7\\text{ g/kWh}$",
+      "B": "$333.4\\text{ g/kWh}$",
+      "C": "$213.4\\text{ g/kWh}$",
+      "D": "$400.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{30.0\\text{ kW}} = \\frac{8000}{30.0} = 266.7\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_245",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_246",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_247",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $36.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$180.6\\text{ g/kWh}$",
+      "B": "$225.8\\text{ g/kWh}$",
+      "C": "$144.5\\text{ g/kWh}$",
+      "D": "$270.9\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{36.0\\text{ kW}} = \\frac{6500}{36.0} = 180.6\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_248",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_249",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_250",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$250.0\\text{ g/kWh}$",
+      "B": "$312.5\\text{ g/kWh}$",
+      "C": "$200.0\\text{ g/kWh}$",
+      "D": "$375.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{8000}{32.0} = 250.0\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_251",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_252",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_253",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$171.1\\text{ g/kWh}$",
+      "B": "$213.9\\text{ g/kWh}$",
+      "C": "$136.9\\text{ g/kWh}$",
+      "D": "$256.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{6500}{38.0} = 171.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_254",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_255",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_256",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$235.3\\text{ g/kWh}$",
+      "B": "$294.1\\text{ g/kWh}$",
+      "C": "$188.2\\text{ g/kWh}$",
+      "D": "$353.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{8000}{34.0} = 235.3\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_257",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_258",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_259",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $30.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$216.7\\text{ g/kWh}$",
+      "B": "$270.9\\text{ g/kWh}$",
+      "C": "$173.4\\text{ g/kWh}$",
+      "D": "$325.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{30.0\\text{ kW}} = \\frac{6500}{30.0} = 216.7\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_260",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_261",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_262",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $36.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$222.2\\text{ g/kWh}$",
+      "B": "$277.8\\text{ g/kWh}$",
+      "C": "$177.8\\text{ g/kWh}$",
+      "D": "$333.3\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{36.0\\text{ kW}} = \\frac{8000}{36.0} = 222.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_263",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_264",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_265",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$203.1\\text{ g/kWh}$",
+      "B": "$253.9\\text{ g/kWh}$",
+      "C": "$162.5\\text{ g/kWh}$",
+      "D": "$304.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{6500}{32.0} = 203.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_266",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_267",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_268",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$210.5\\text{ g/kWh}$",
+      "B": "$263.1\\text{ g/kWh}$",
+      "C": "$168.4\\text{ g/kWh}$",
+      "D": "$315.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{8000}{38.0} = 210.5\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_269",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_270",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_271",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$191.2\\text{ g/kWh}$",
+      "B": "$239.0\\text{ g/kWh}$",
+      "C": "$153.0\\text{ g/kWh}$",
+      "D": "$286.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{6500}{34.0} = 191.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_272",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_273",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Clutches, Transmission & PTO",
+    "subtopic": "Single and dual plate friction clutches",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_274",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$203.1\\text{ g/kWh}$",
+      "B": "$253.9\\text{ g/kWh}$",
+      "C": "$162.5\\text{ g/kWh}$",
+      "D": "$304.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{6500}{32.0} = 203.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_275",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_276",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_277",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$210.5\\text{ g/kWh}$",
+      "B": "$263.1\\text{ g/kWh}$",
+      "C": "$168.4\\text{ g/kWh}$",
+      "D": "$315.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{8000}{38.0} = 210.5\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_278",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_279",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_280",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$191.2\\text{ g/kWh}$",
+      "B": "$239.0\\text{ g/kWh}$",
+      "C": "$153.0\\text{ g/kWh}$",
+      "D": "$286.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{6500}{34.0} = 191.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_281",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_282",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_283",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $30.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$266.7\\text{ g/kWh}$",
+      "B": "$333.4\\text{ g/kWh}$",
+      "C": "$213.4\\text{ g/kWh}$",
+      "D": "$400.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{30.0\\text{ kW}} = \\frac{8000}{30.0} = 266.7\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_284",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_285",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_286",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $36.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$180.6\\text{ g/kWh}$",
+      "B": "$225.8\\text{ g/kWh}$",
+      "C": "$144.5\\text{ g/kWh}$",
+      "D": "$270.9\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{36.0\\text{ kW}} = \\frac{6500}{36.0} = 180.6\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_287",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_288",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_289",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$250.0\\text{ g/kWh}$",
+      "B": "$312.5\\text{ g/kWh}$",
+      "C": "$200.0\\text{ g/kWh}$",
+      "D": "$375.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{8000}{32.0} = 250.0\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_290",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_291",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_292",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$171.1\\text{ g/kWh}$",
+      "B": "$213.9\\text{ g/kWh}$",
+      "C": "$136.9\\text{ g/kWh}$",
+      "D": "$256.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{6500}{38.0} = 171.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_293",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_294",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_295",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$235.3\\text{ g/kWh}$",
+      "B": "$294.1\\text{ g/kWh}$",
+      "C": "$188.2\\text{ g/kWh}$",
+      "D": "$353.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{8000}{34.0} = 235.3\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_296",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_297",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_298",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $30.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$216.7\\text{ g/kWh}$",
+      "B": "$270.9\\text{ g/kWh}$",
+      "C": "$173.4\\text{ g/kWh}$",
+      "D": "$325.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{30.0\\text{ kW}} = \\frac{6500}{30.0} = 216.7\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_299",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_300",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_301",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $36.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$222.2\\text{ g/kWh}$",
+      "B": "$277.8\\text{ g/kWh}$",
+      "C": "$177.8\\text{ g/kWh}$",
+      "D": "$333.3\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{36.0\\text{ kW}} = \\frac{8000}{36.0} = 222.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_302",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_303",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_304",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$203.1\\text{ g/kWh}$",
+      "B": "$253.9\\text{ g/kWh}$",
+      "C": "$162.5\\text{ g/kWh}$",
+      "D": "$304.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{6500}{32.0} = 203.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_305",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_306",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_307",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$210.5\\text{ g/kWh}$",
+      "B": "$263.1\\text{ g/kWh}$",
+      "C": "$168.4\\text{ g/kWh}$",
+      "D": "$315.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{8000}{38.0} = 210.5\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_308",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_309",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_310",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$191.2\\text{ g/kWh}$",
+      "B": "$239.0\\text{ g/kWh}$",
+      "C": "$153.0\\text{ g/kWh}$",
+      "D": "$286.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{6500}{34.0} = 191.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_311",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_312",
+    "section": "Section 3: Farm Power",
+    "topic": "Differential, Final Drive & Steering Systems",
+    "subtopic": "Differential gear operation and bevel gears",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_313",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$203.1\\text{ g/kWh}$",
+      "B": "$253.9\\text{ g/kWh}$",
+      "C": "$162.5\\text{ g/kWh}$",
+      "D": "$304.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{6500}{32.0} = 203.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_314",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_315",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_316",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$210.5\\text{ g/kWh}$",
+      "B": "$263.1\\text{ g/kWh}$",
+      "C": "$168.4\\text{ g/kWh}$",
+      "D": "$315.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{8000}{38.0} = 210.5\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_317",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_318",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_319",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$191.2\\text{ g/kWh}$",
+      "B": "$239.0\\text{ g/kWh}$",
+      "C": "$153.0\\text{ g/kWh}$",
+      "D": "$286.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{6500}{34.0} = 191.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_320",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_321",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_322",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $30.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$266.7\\text{ g/kWh}$",
+      "B": "$333.4\\text{ g/kWh}$",
+      "C": "$213.4\\text{ g/kWh}$",
+      "D": "$400.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{30.0\\text{ kW}} = \\frac{8000}{30.0} = 266.7\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_323",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_324",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_325",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $36.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$180.6\\text{ g/kWh}$",
+      "B": "$225.8\\text{ g/kWh}$",
+      "C": "$144.5\\text{ g/kWh}$",
+      "D": "$270.9\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{36.0\\text{ kW}} = \\frac{6500}{36.0} = 180.6\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_326",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_327",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_328",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$250.0\\text{ g/kWh}$",
+      "B": "$312.5\\text{ g/kWh}$",
+      "C": "$200.0\\text{ g/kWh}$",
+      "D": "$375.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{8000}{32.0} = 250.0\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_329",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_330",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_331",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$171.1\\text{ g/kWh}$",
+      "B": "$213.9\\text{ g/kWh}$",
+      "C": "$136.9\\text{ g/kWh}$",
+      "D": "$256.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{6500}{38.0} = 171.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_332",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_333",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_334",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$235.3\\text{ g/kWh}$",
+      "B": "$294.1\\text{ g/kWh}$",
+      "C": "$188.2\\text{ g/kWh}$",
+      "D": "$353.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{8000}{34.0} = 235.3\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_335",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_336",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_337",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $30.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$216.7\\text{ g/kWh}$",
+      "B": "$270.9\\text{ g/kWh}$",
+      "C": "$173.4\\text{ g/kWh}$",
+      "D": "$325.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{30.0\\text{ kW}} = \\frac{6500}{30.0} = 216.7\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_338",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_339",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_340",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $36.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$222.2\\text{ g/kWh}$",
+      "B": "$277.8\\text{ g/kWh}$",
+      "C": "$177.8\\text{ g/kWh}$",
+      "D": "$333.3\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{36.0\\text{ kW}} = \\frac{8000}{36.0} = 222.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_341",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_342",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_343",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$203.1\\text{ g/kWh}$",
+      "B": "$253.9\\text{ g/kWh}$",
+      "C": "$162.5\\text{ g/kWh}$",
+      "D": "$304.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{6500}{32.0} = 203.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_344",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_345",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_346",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$210.5\\text{ g/kWh}$",
+      "B": "$263.1\\text{ g/kWh}$",
+      "C": "$168.4\\text{ g/kWh}$",
+      "D": "$315.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{8000}{38.0} = 210.5\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_347",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_348",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_349",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$191.2\\text{ g/kWh}$",
+      "B": "$239.0\\text{ g/kWh}$",
+      "C": "$153.0\\text{ g/kWh}$",
+      "D": "$286.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{6500}{34.0} = 191.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_350",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_351",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractor Hydraulics & 3-Point Hitch Mechanics",
+    "subtopic": "Position control and draft control systems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_352",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$203.1\\text{ g/kWh}$",
+      "B": "$253.9\\text{ g/kWh}$",
+      "C": "$162.5\\text{ g/kWh}$",
+      "D": "$304.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{6500}{32.0} = 203.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_353",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_354",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_355",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$210.5\\text{ g/kWh}$",
+      "B": "$263.1\\text{ g/kWh}$",
+      "C": "$168.4\\text{ g/kWh}$",
+      "D": "$315.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{8000}{38.0} = 210.5\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_356",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_357",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_358",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$191.2\\text{ g/kWh}$",
+      "B": "$239.0\\text{ g/kWh}$",
+      "C": "$153.0\\text{ g/kWh}$",
+      "D": "$286.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{6500}{34.0} = 191.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_359",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_360",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_361",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $30.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$266.7\\text{ g/kWh}$",
+      "B": "$333.4\\text{ g/kWh}$",
+      "C": "$213.4\\text{ g/kWh}$",
+      "D": "$400.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{30.0\\text{ kW}} = \\frac{8000}{30.0} = 266.7\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_362",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_363",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_364",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $36.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$180.6\\text{ g/kWh}$",
+      "B": "$225.8\\text{ g/kWh}$",
+      "C": "$144.5\\text{ g/kWh}$",
+      "D": "$270.9\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{36.0\\text{ kW}} = \\frac{6500}{36.0} = 180.6\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_365",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_366",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_367",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$250.0\\text{ g/kWh}$",
+      "B": "$312.5\\text{ g/kWh}$",
+      "C": "$200.0\\text{ g/kWh}$",
+      "D": "$375.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{8000}{32.0} = 250.0\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_368",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_369",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_370",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$171.1\\text{ g/kWh}$",
+      "B": "$213.9\\text{ g/kWh}$",
+      "C": "$136.9\\text{ g/kWh}$",
+      "D": "$256.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{6500}{38.0} = 171.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_371",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_372",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_373",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$235.3\\text{ g/kWh}$",
+      "B": "$294.1\\text{ g/kWh}$",
+      "C": "$188.2\\text{ g/kWh}$",
+      "D": "$353.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{8000}{34.0} = 235.3\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_374",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_375",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_376",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $30.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$216.7\\text{ g/kWh}$",
+      "B": "$270.9\\text{ g/kWh}$",
+      "C": "$173.4\\text{ g/kWh}$",
+      "D": "$325.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{30.0\\text{ kW}} = \\frac{6500}{30.0} = 216.7\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_377",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_378",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_379",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $36.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$222.2\\text{ g/kWh}$",
+      "B": "$277.8\\text{ g/kWh}$",
+      "C": "$177.8\\text{ g/kWh}$",
+      "D": "$333.3\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{36.0\\text{ kW}} = \\frac{8000}{36.0} = 222.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_380",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_381",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_382",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$203.1\\text{ g/kWh}$",
+      "B": "$253.9\\text{ g/kWh}$",
+      "C": "$162.5\\text{ g/kWh}$",
+      "D": "$304.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{6500}{32.0} = 203.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_383",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_384",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_385",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$210.5\\text{ g/kWh}$",
+      "B": "$263.1\\text{ g/kWh}$",
+      "C": "$168.4\\text{ g/kWh}$",
+      "D": "$315.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{8000}{38.0} = 210.5\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_386",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_387",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_388",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$191.2\\text{ g/kWh}$",
+      "B": "$239.0\\text{ g/kWh}$",
+      "C": "$153.0\\text{ g/kWh}$",
+      "D": "$286.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{6500}{34.0} = 191.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_389",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_390",
+    "section": "Section 3: Farm Power",
+    "topic": "Power Tillers, Ergonomics & Safety",
+    "subtopic": "Operator vibration and noise exposure",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_391",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$203.1\\text{ g/kWh}$",
+      "B": "$253.9\\text{ g/kWh}$",
+      "C": "$162.5\\text{ g/kWh}$",
+      "D": "$304.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{6500}{32.0} = 203.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_392",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_393",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_394",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$210.5\\text{ g/kWh}$",
+      "B": "$263.1\\text{ g/kWh}$",
+      "C": "$168.4\\text{ g/kWh}$",
+      "D": "$315.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{8000}{38.0} = 210.5\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_395",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_396",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_397",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$191.2\\text{ g/kWh}$",
+      "B": "$239.0\\text{ g/kWh}$",
+      "C": "$153.0\\text{ g/kWh}$",
+      "D": "$286.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{6500}{34.0} = 191.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_398",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_399",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_400",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $30.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$266.7\\text{ g/kWh}$",
+      "B": "$333.4\\text{ g/kWh}$",
+      "C": "$213.4\\text{ g/kWh}$",
+      "D": "$400.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{30.0\\text{ kW}} = \\frac{8000}{30.0} = 266.7\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_401",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_402",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_403",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $36.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$180.6\\text{ g/kWh}$",
+      "B": "$225.8\\text{ g/kWh}$",
+      "C": "$144.5\\text{ g/kWh}$",
+      "D": "$270.9\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{36.0\\text{ kW}} = \\frac{6500}{36.0} = 180.6\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_404",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_405",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_406",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$250.0\\text{ g/kWh}$",
+      "B": "$312.5\\text{ g/kWh}$",
+      "C": "$200.0\\text{ g/kWh}$",
+      "D": "$375.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{8000}{32.0} = 250.0\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_407",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_408",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_409",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$171.1\\text{ g/kWh}$",
+      "B": "$213.9\\text{ g/kWh}$",
+      "C": "$136.9\\text{ g/kWh}$",
+      "D": "$256.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{6500}{38.0} = 171.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_410",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_411",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_412",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$235.3\\text{ g/kWh}$",
+      "B": "$294.1\\text{ g/kWh}$",
+      "C": "$188.2\\text{ g/kWh}$",
+      "D": "$353.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{8000}{34.0} = 235.3\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_413",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_414",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_415",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $30.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$216.7\\text{ g/kWh}$",
+      "B": "$270.9\\text{ g/kWh}$",
+      "C": "$173.4\\text{ g/kWh}$",
+      "D": "$325.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{30.0\\text{ kW}} = \\frac{6500}{30.0} = 216.7\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_416",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_417",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_418",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $36.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$222.2\\text{ g/kWh}$",
+      "B": "$277.8\\text{ g/kWh}$",
+      "C": "$177.8\\text{ g/kWh}$",
+      "D": "$333.3\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{36.0\\text{ kW}} = \\frac{8000}{36.0} = 222.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_419",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_420",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_421",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$203.1\\text{ g/kWh}$",
+      "B": "$253.9\\text{ g/kWh}$",
+      "C": "$162.5\\text{ g/kWh}$",
+      "D": "$304.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{6500}{32.0} = 203.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_422",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_423",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_424",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$210.5\\text{ g/kWh}$",
+      "B": "$263.1\\text{ g/kWh}$",
+      "C": "$168.4\\text{ g/kWh}$",
+      "D": "$315.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{8000}{38.0} = 210.5\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_425",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_426",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_427",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$191.2\\text{ g/kWh}$",
+      "B": "$239.0\\text{ g/kWh}$",
+      "C": "$153.0\\text{ g/kWh}$",
+      "D": "$286.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{6500}{34.0} = 191.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_428",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_429",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Farm Power & Renewable Energy",
+    "subtopic": "Solar PV and solar thermal systems on farms",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_430",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$203.1\\text{ g/kWh}$",
+      "B": "$253.9\\text{ g/kWh}$",
+      "C": "$162.5\\text{ g/kWh}$",
+      "D": "$304.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{6500}{32.0} = 203.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_431",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_432",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_433",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$210.5\\text{ g/kWh}$",
+      "B": "$263.1\\text{ g/kWh}$",
+      "C": "$168.4\\text{ g/kWh}$",
+      "D": "$315.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{8000}{38.0} = 210.5\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_434",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_435",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_436",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$191.2\\text{ g/kWh}$",
+      "B": "$239.0\\text{ g/kWh}$",
+      "C": "$153.0\\text{ g/kWh}$",
+      "D": "$286.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{6500}{34.0} = 191.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_437",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_438",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_439",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $30.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$266.7\\text{ g/kWh}$",
+      "B": "$333.4\\text{ g/kWh}$",
+      "C": "$213.4\\text{ g/kWh}$",
+      "D": "$400.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{30.0\\text{ kW}} = \\frac{8000}{30.0} = 266.7\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_440",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_441",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_442",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $36.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$180.6\\text{ g/kWh}$",
+      "B": "$225.8\\text{ g/kWh}$",
+      "C": "$144.5\\text{ g/kWh}$",
+      "D": "$270.9\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{36.0\\text{ kW}} = \\frac{6500}{36.0} = 180.6\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_443",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_444",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_445",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$250.0\\text{ g/kWh}$",
+      "B": "$312.5\\text{ g/kWh}$",
+      "C": "$200.0\\text{ g/kWh}$",
+      "D": "$375.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{8000}{32.0} = 250.0\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_446",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_447",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_448",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$171.1\\text{ g/kWh}$",
+      "B": "$213.9\\text{ g/kWh}$",
+      "C": "$136.9\\text{ g/kWh}$",
+      "D": "$256.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{6500}{38.0} = 171.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_449",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_450",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_451",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$235.3\\text{ g/kWh}$",
+      "B": "$294.1\\text{ g/kWh}$",
+      "C": "$188.2\\text{ g/kWh}$",
+      "D": "$353.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{8000}{34.0} = 235.3\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_452",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_453",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_454",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $30.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$216.7\\text{ g/kWh}$",
+      "B": "$270.9\\text{ g/kWh}$",
+      "C": "$173.4\\text{ g/kWh}$",
+      "D": "$325.0\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{30.0\\text{ kW}} = \\frac{6500}{30.0} = 216.7\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_455",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_456",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_457",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $36.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$222.2\\text{ g/kWh}$",
+      "B": "$277.8\\text{ g/kWh}$",
+      "C": "$177.8\\text{ g/kWh}$",
+      "D": "$333.3\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{36.0\\text{ kW}} = \\frac{8000}{36.0} = 222.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_458",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_459",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_460",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $32.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$203.1\\text{ g/kWh}$",
+      "B": "$253.9\\text{ g/kWh}$",
+      "C": "$162.5\\text{ g/kWh}$",
+      "D": "$304.6\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{32.0\\text{ kW}} = \\frac{6500}{32.0} = 203.1\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_461",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_462",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_463",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $38.0\\text{ kW}$ while consuming $8.0\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$210.5\\text{ g/kWh}$",
+      "B": "$263.1\\text{ g/kWh}$",
+      "C": "$168.4\\text{ g/kWh}$",
+      "D": "$315.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{8.0\\text{ kg/h} \\times 1000\\text{ g/kg}}{38.0\\text{ kW}} = \\frac{8000}{38.0} = 210.5\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_464",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_465",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_466",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor diesel engine delivers a brake power of $34.0\\text{ kW}$ while consuming $6.5\\text{ kg/h}$ of fuel. The Brake Specific Fuel Consumption (BSFC) of the engine is:",
+    "options": {
+      "A": "$191.2\\text{ g/kWh}$",
+      "B": "$239.0\\text{ g/kWh}$",
+      "C": "$153.0\\text{ g/kWh}$",
+      "D": "$286.8\\text{ g/kWh}$"
+    },
+    "correct_answer": "A",
+    "solution": "BSFC is defined as fuel mass consumption per unit of brake power delivered per hour:\n$$\\text{BSFC} = \\frac{\\dot{m}_f}{\\text{BP}} = \\frac{6.5\\text{ kg/h} \\times 1000\\text{ g/kg}}{34.0\\text{ kW}} = \\frac{6500}{34.0} = 191.2\\text{ g/kWh}$$",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_467",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A diesel engine consumes $8.0\\text{ kg/h}$ of diesel fuel with a lower heating value of $42000\\text{ kJ/kg}$. If the engine delivers a brake power of $35.0\\text{ kW}$, the brake thermal efficiency is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "37.50",
+    "numerical_range": {
+      "min": 37.3,
+      "max": 37.7
+    },
+    "solution": "1. Total heat energy input rate from fuel combustion:\n$$Q_{in} = \\frac{\\dot{m}_f \\times \\text{CV}}{3600} = \\frac{8.0 \\times 42000}{3600} = 93.33\\text{ kW}$$\n2. Brake thermal efficiency:\n$$\\eta_{bth} = \\frac{\\text{BP}}{Q_{in}} \\times 100 = \\frac{35.0}{93.33} \\times 100 = 37.50\\%$$",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_EXP_FP_GEN_468",
+    "section": "Section 3: Farm Power",
+    "topic": "Biofuels, Biogas & Producer Gas in Agriculture",
+    "subtopic": "Biodiesel transesterification and properties",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding tractor hydraulic 3-point hitch systems?",
+    "options": {
+      "A": "Position control maintains the implement at a constant depth relative to the tractor chassis regardless of soil resistance changes",
+      "B": "Draft control senses draught force changes and automatically raises or lowers the implement to maintain uniform tractor engine load",
+      "C": "The top link is typically subjected to compression during heavy ploughing with fully mounted implements",
+      "D": "In free-link operation, the implement depth is governed entirely by its own gauge wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Position control holds the rockshaft at a fixed angular position, fixing implement depth. (A is correct)\n2. Draft control senses top-link or lower-link deflection and adjusts depth dynamically to maintain constant draft. (B is correct)\n3. Soil resistance pushes back on the share bottom, creating a couple that pushes forward on the top link in compression. (C is correct)\n4. In floating/free-link mode, implement gauge wheels control the working depth. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl)"
+  },
+  {
+    "id": "QB_SUB_FP_CMP_001",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Engine components",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a multi-cylinder diesel engine cylinder head, the exhaust valve is typically made of austenitic silicon-chromium steel (silchrome) primarily because:",
+    "solution": "Exhaust valves endure peak flame temperatures (700–850°C) and corrosive exhaust gas products (SOx, NOx), requiring silchrome or nimonic alloys for high creep and hot-corrosion resistance.",
+    "difficulty": "Easy",
+    "source": "Internal Combustion Engines (V. Ganesan)",
+    "options": {
+      "A": "It operates in an intensely corrosive environment at temperatures exceeding 700°C",
+      "B": "It needs to have lower density than aluminum",
+      "C": "It acts as an electrical grounding electrode",
+      "D": "It conducts zero heat away from the combustion chamber"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_CMP_002",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Engine components",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A four-stroke single-cylinder diesel engine has a piston diameter of $100\\text{ mm}$ and stroke length of $120\\text{ mm}$. If the clearance volume is $50\\text{ cm}^3$, the compression ratio of the engine is:",
+    "solution": "Swept volume:\n$$V_s = \\frac{\\pi}{4} D^2 L = \\frac{\\pi}{4} (10)^2 \\times 12 = 942.48\\text{ cm}^3$$\nCompression ratio:\n$$r = \\frac{V_s + V_c}{V_c} = \\frac{942.48 + 50}{50} = \\frac{992.48}{50} = 19.85$$",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (Heywood)",
+    "answer": 19.85,
+    "answer_range": [
+      19.5,
+      20.2
+    ],
+    "correct_answer": "19.85",
+    "numerical_range": {
+      "min": 19.5,
+      "max": 20.2
+    }
+  },
+  {
+    "id": "QB_SUB_FP_CMP_003",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Engine components",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a multi-cylinder diesel engine cylinder head, the exhaust valve is typically made of austenitic silicon-chromium steel (silchrome) primarily because:",
+    "solution": "Exhaust valves endure peak flame temperatures (700–850°C) and corrosive exhaust gas products (SOx, NOx), requiring silchrome or nimonic alloys for high creep and hot-corrosion resistance.",
+    "difficulty": "Easy",
+    "source": "Internal Combustion Engines (V. Ganesan)",
+    "options": {
+      "A": "It operates in an intensely corrosive environment at temperatures exceeding 700°C",
+      "B": "It needs to have lower density than aluminum",
+      "C": "It acts as an electrical grounding electrode",
+      "D": "It conducts zero heat away from the combustion chamber"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_CMP_004",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Engine components",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A four-stroke single-cylinder diesel engine has a piston diameter of $100\\text{ mm}$ and stroke length of $120\\text{ mm}$. If the clearance volume is $50\\text{ cm}^3$, the compression ratio of the engine is:",
+    "solution": "Swept volume:\n$$V_s = \\frac{\\pi}{4} D^2 L = \\frac{\\pi}{4} (10)^2 \\times 12 = 942.48\\text{ cm}^3$$\nCompression ratio:\n$$r = \\frac{V_s + V_c}{V_c} = \\frac{942.48 + 50}{50} = \\frac{992.48}{50} = 19.85$$",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (Heywood)",
+    "answer": 19.85,
+    "answer_range": [
+      19.5,
+      20.2
+    ],
+    "correct_answer": "19.85",
+    "numerical_range": {
+      "min": 19.5,
+      "max": 20.2
+    }
+  },
+  {
+    "id": "QB_SUB_FP_CMP_005",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Engine components",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a multi-cylinder diesel engine cylinder head, the exhaust valve is typically made of austenitic silicon-chromium steel (silchrome) primarily because:",
+    "solution": "Exhaust valves endure peak flame temperatures (700–850°C) and corrosive exhaust gas products (SOx, NOx), requiring silchrome or nimonic alloys for high creep and hot-corrosion resistance.",
+    "difficulty": "Easy",
+    "source": "Internal Combustion Engines (V. Ganesan)",
+    "options": {
+      "A": "It operates in an intensely corrosive environment at temperatures exceeding 700°C",
+      "B": "It needs to have lower density than aluminum",
+      "C": "It acts as an electrical grounding electrode",
+      "D": "It conducts zero heat away from the combustion chamber"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_LUB_001",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Lubricants and their properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The 'Viscosity Index' (VI) of an engine lubricating oil indicates:",
+    "solution": "Viscosity Index measures the sensitivity of lubricant viscosity to temperature fluctuations. A higher VI signifies smaller change in viscosity across operating temperature spans.",
+    "difficulty": "Easy",
+    "source": "Automotive Lubricants and Lubrication (Wilfried J. Bartz)",
+    "options": {
+      "A": "The rate of change of viscosity with respect to temperature",
+      "B": "The absolute flash point of the lubricant",
+      "C": "The percentage of sulfur and ash additives",
+      "D": "The pour point below zero Celsius"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_LUB_002",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Lubricants and their properties",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In a multigrade diesel crankcase oil designated as SAE 15W-40, which of the following statements are CORRECT?",
+    "solution": "SAE 15W-40 meets cold cranking limits at winter temperatures (15W) and maintains protective film viscosity of SAE 40 at 100°C using polymeric viscosity index improvers.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Power Units (Liljedahl)",
+    "options": {
+      "A": "'15W' specifies the low-temperature dynamic viscosity and cold-crank capability at winter temperatures",
+      "B": "'40' specifies the high-temperature kinematic viscosity range at 100°C",
+      "C": "The oil behaves like an SAE 15 grade at 100°C",
+      "D": "Viscosity index improver polymer additives allow the multigrade performance"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "D"
+    ]
+  },
+  {
+    "id": "QB_SUB_FP_LUB_003",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Lubricants and their properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The temperature at which an engine lubricating oil ceases to flow when cooled under standardized laboratory test conditions is defined as the:",
+    "solution": "Pour point is the lowest temperature at which the oil remains pourable or fluid. Flash point is when combustible vapors ignite momentarily.",
+    "difficulty": "Easy",
+    "source": "Fuels and Lubricants (Mathur & Sharma)",
+    "options": {
+      "A": "Pour point",
+      "B": "Flash point",
+      "C": "Fire point",
+      "D": "Cloud point"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_LUB_004",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Lubricants and their properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The 'Viscosity Index' (VI) of an engine lubricating oil indicates:",
+    "solution": "Viscosity Index measures the sensitivity of lubricant viscosity to temperature fluctuations. A higher VI signifies smaller change in viscosity across operating temperature spans.",
+    "difficulty": "Easy",
+    "source": "Automotive Lubricants and Lubrication (Wilfried J. Bartz)",
+    "options": {
+      "A": "The rate of change of viscosity with respect to temperature",
+      "B": "The absolute flash point of the lubricant",
+      "C": "The percentage of sulfur and ash additives",
+      "D": "The pour point below zero Celsius"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_LUB_005",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Lubricants and their properties",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In a multigrade diesel crankcase oil designated as SAE 15W-40, which of the following statements are CORRECT?",
+    "solution": "SAE 15W-40 meets cold cranking limits at winter temperatures (15W) and maintains protective film viscosity of SAE 40 at 100°C using polymeric viscosity index improvers.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Power Units (Liljedahl)",
+    "options": {
+      "A": "'15W' specifies the low-temperature dynamic viscosity and cold-crank capability at winter temperatures",
+      "B": "'40' specifies the high-temperature kinematic viscosity range at 100°C",
+      "C": "The oil behaves like an SAE 15 grade at 100°C",
+      "D": "Viscosity index improver polymer additives allow the multigrade performance"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "D"
+    ]
+  },
+  {
+    "id": "QB_SUB_FP_LUB_006",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Lubricants and their properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The temperature at which an engine lubricating oil ceases to flow when cooled under standardized laboratory test conditions is defined as the:",
+    "solution": "Pour point is the lowest temperature at which the oil remains pourable or fluid. Flash point is when combustible vapors ignite momentarily.",
+    "difficulty": "Easy",
+    "source": "Fuels and Lubricants (Mathur & Sharma)",
+    "options": {
+      "A": "Pour point",
+      "B": "Flash point",
+      "C": "Fire point",
+      "D": "Cloud point"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_LUB_007",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Lubricants and their properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The 'Viscosity Index' (VI) of an engine lubricating oil indicates:",
+    "solution": "Viscosity Index measures the sensitivity of lubricant viscosity to temperature fluctuations. A higher VI signifies smaller change in viscosity across operating temperature spans.",
+    "difficulty": "Easy",
+    "source": "Automotive Lubricants and Lubrication (Wilfried J. Bartz)",
+    "options": {
+      "A": "The rate of change of viscosity with respect to temperature",
+      "B": "The absolute flash point of the lubricant",
+      "C": "The percentage of sulfur and ash additives",
+      "D": "The pour point below zero Celsius"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_LUB_008",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Lubricants and their properties",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In a multigrade diesel crankcase oil designated as SAE 15W-40, which of the following statements are CORRECT?",
+    "solution": "SAE 15W-40 meets cold cranking limits at winter temperatures (15W) and maintains protective film viscosity of SAE 40 at 100°C using polymeric viscosity index improvers.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Power Units (Liljedahl)",
+    "options": {
+      "A": "'15W' specifies the low-temperature dynamic viscosity and cold-crank capability at winter temperatures",
+      "B": "'40' specifies the high-temperature kinematic viscosity range at 100°C",
+      "C": "The oil behaves like an SAE 15 grade at 100°C",
+      "D": "Viscosity index improver polymer additives allow the multigrade performance"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "D"
+    ]
+  },
+  {
+    "id": "QB_SUB_FP_MNT_001",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Selection, operation, maintenance and repair of I.C. engines",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Air bleeding from the fuel delivery circuit of an agricultural tractor diesel engine is mandatory when:",
+    "solution": "Diesel fuel injection requires incompressible fluid delivery to attain ~200 bar nozzle opening pressure. Entrained air compresses and halts injection, stalling the engine.",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Sahay)",
+    "options": {
+      "A": "Air bubbles enter the fuel lines after fuel filter replacement or running out of diesel",
+      "B": "The crankcase lubricating oil level is high",
+      "C": "The radiator coolant expands into the overflow bottle",
+      "D": "The air cleaner oil bath is overfilled"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_MNT_002",
+    "section": "Section 3: Farm Power",
+    "topic": "Farm Power",
+    "subtopic": "Selection, operation, maintenance and repair of I.C. engines",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following maintenance procedures are standard practices for wet-type oil-bath tractor air cleaners?",
+    "solution": "Oil-bath air cleaners feature an oil cup and wire mesh matrix. Dry paper pleats belong to dry-type air filters.",
+    "difficulty": "Moderate",
+    "source": "Tractor Maintenance and Repair (Jain & Rai)",
+    "options": {
+      "A": "Flushing accumulated sediment from the bottom oil cup",
+      "B": "Refilling the cup with clean engine oil up to the indicated oil-level ring",
+      "C": "Washing the wire mesh filter element in diesel or solvent",
+      "D": "Blowing compressed air through a paper pleat element"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_FP_CHS_001",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Mechanics of tractor chassis",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A rear-wheel-drive 2WD tractor has a static rear-to-front weight ratio of 60:40 on a wheelbase of $L = 2.0\\text{ m}$. Total tractor mass is $2500\\text{ kg}$ ($W = 24.525\\text{ kN}$). The longitudinal distance of the center of gravity ahead of the rear axle centerline (in meters) is:",
+    "solution": "Taking moments about rear axle contact point at static equilibrium:\n$$W_f \\times L = W \\times x_g$$\nSince $W_f = 0.40 W$, $0.40 W \\times 2.0 = W \\times x_g \\implies x_g = 0.40 \\times 2.0 = 0.80\\text{ m}$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner et al.)",
+    "answer": 0.8,
+    "answer_range": [
+      0.78,
+      0.82
+    ],
+    "correct_answer": "0.8",
+    "numerical_range": {
+      "min": 0.78,
+      "max": 0.82
+    }
+  },
+  {
+    "id": "QB_SUB_FP_CHS_002",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Mechanics of tractor chassis",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "During heavy drawbar pull operation of a rear-wheel drive tractor, dynamic weight transfer causes:",
+    "solution": "Drawbar pull below axle height exerts a clockwise pitching moment that unloads the front wheels and increases normal reaction on the driving rear wheels, improving traction.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)",
+    "options": {
+      "A": "Rear axle vertical load to increase and front axle vertical load to decrease",
+      "B": "Front axle vertical load to increase and rear to decrease",
+      "C": "Total tractor weight to vanish",
+      "D": "No change in wheel normal reactions"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_CHS_003",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Mechanics of tractor chassis",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which parameters directly influence the longitudinal static and dynamic stability of an agricultural tractor against backward tipping?",
+    "solution": "Backward tipping stability limit: $R_f = \\frac{W x_g - P h_d - W z_g \\sin\\theta}{L} \\ge 0$. It depends strictly on $x_g$, $z_g$, drawbar height $h_d$, and wheelbase $L$.",
+    "difficulty": "Moderate",
+    "source": "Terramechanics and Off-Road Vehicle Engineering (J.Y. Wong)",
+    "options": {
+      "A": "Height of the center of gravity ($z_g$)",
+      "B": "Longitudinal position of the center of gravity ahead of rear axle ($x_g$)",
+      "C": "Height of the drawbar hitch point above ground",
+      "D": "Diameter of the tractor steering wheel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_FP_TRC_001",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Traction theory",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Bekker's soil sinkage equation $p = \\left(\\frac{k_c}{b} + k_\\phi\\right) z^n$, the parameter $b$ represents:",
+    "solution": "Bekker's pressure-sinkage formulation uses $b$ as the narrower contact dimension (plate width or tire contact width) to scale cohesive modulus $k_c$.",
+    "difficulty": "Easy",
+    "source": "Theory of Land Locomotion (M.G. Bekker)",
+    "options": {
+      "A": "The smaller dimension (width) of the rectangular contact plate",
+      "B": "The longitudinal wheel base of the vehicle",
+      "C": "The total weight of the tractor",
+      "D": "The moisture content of the soil"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_TRC_002",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Traction theory",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A pneumatic drive wheel travels a nominal distance of $25.0\\text{ m}$ under zero-load conditions for 5 revolutions. Under heavy load, the tractor travels only $20.0\\text{ m}$ for the same 5 revolutions. The wheel travel reduction (wheel slip, in percent) is:",
+    "solution": "Slip $S = \\frac{V_0 - V_a}{V_0} \\times 100 = \\frac{25.0 - 20.0}{25.0} \\times 100 = \\frac{5.0}{25.0} \\times 100 = 20.0\\%$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering (O.P. Singhal)",
+    "answer": 20.0,
+    "answer_range": [
+      19.5,
+      20.5
+    ],
+    "correct_answer": "20.0",
+    "numerical_range": {
+      "min": 19.5,
+      "max": 20.5
+    }
+  },
+  {
+    "id": "QB_SUB_FP_TRS_001",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Power transmission systems – gear trains, differential, final drives and power take-off",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The standard rotational speed and spline diameter for a Type 1 standard PTO shaft specified by ISO/ASAE is:",
+    "solution": "ASAE/ISO 500 standard defines Type 1 standard PTO as 540 ± 10 rpm with 6 splines and 34.9 mm (1-3/8 in) diameter.",
+    "difficulty": "Easy",
+    "source": "ASABE Standards / Liljedahl",
+    "options": {
+      "A": "540 rpm with 6 splines of 35 mm (1-3/8 inch) diameter",
+      "B": "1000 rpm with 21 splines of 45 mm diameter",
+      "C": "750 rpm with 8 splines",
+      "D": "540 rpm with 10 splines of 25 mm diameter"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_TRS_002",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Power transmission systems – gear trains, differential, final drives and power take-off",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In a tractor differential unit during a sharp turn, the crown wheel rotates at $120\\text{ rpm}$. If the inner drive wheel rotates at $90\\text{ rpm}$, the rotational speed of the outer drive wheel (in rpm) is:",
+    "solution": "Differential relationship:\n$$N_{\\text{ring}} = \\frac{N_1 + N_2}{2}$$\n$$120 = \\frac{90 + N_2}{2} \\implies 240 = 90 + N_2 \\implies N_2 = 150.0\\text{ rpm}$$",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Sahay)",
+    "answer": 150.0,
+    "answer_range": [
+      149.0,
+      151.0
+    ],
+    "correct_answer": "150.0",
+    "numerical_range": {
+      "min": 149.0,
+      "max": 151.0
+    }
+  },
+  {
+    "id": "QB_SUB_FP_HTC_001",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Three point hitches – free link and restrained link operations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a three-point linkage operating in 'restrained-link' mode, the working depth of the tillage tool is mechanically regulated by:",
+    "solution": "Restrained-link operation locks the relative depth using a ground gauge wheel or mechanical hydraulic cylinder depth stop.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)",
+    "options": {
+      "A": "A gauge wheel resting on the unplowed land surface or single-acting hydraulic cylinder stop",
+      "B": "The instantaneous virtual hitch point floating freely",
+      "C": "Draft sensing springs on the lower links exclusively",
+      "D": "Engine flywheel speed"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_HTC_002",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Three point hitches – free link and restrained link operations",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which categories of standard three-point hitches are classified by ISO 730 based on tractor PTO power ratings?",
+    "solution": "ISO 730 classifies agricultural 3-point hitches from Category 0 through Category 4 based on pin dimensions, mast height, and tractor power ratings.",
+    "difficulty": "Moderate",
+    "source": "ISO 730 Standard Guidelines",
+    "options": {
+      "A": "Category 1 (up to 48 kW / 65 hp)",
+      "B": "Category 2 (30 to 92 kW / 40 to 125 hp)",
+      "C": "Category 3 (60 to 185 kW / 80 to 250 hp)",
+      "D": "Category 0 (lawn/garden tractors under 15 kW)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  },
+  {
+    "id": "QB_SUB_FP_HTC_003",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Three point hitches – free link and restrained link operations",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "The lower hitch pin diameter for a standard Category 2 three-point linkage according to ISO 730 (in mm) is:",
+    "solution": "Category 1 has 22 mm lower pins, Category 2 has 28 mm (28.4 mm nominal) lower hitch pins, and Category 3 has 36.6 mm pins.",
+    "difficulty": "Moderate",
+    "source": "Farm Machinery Standards (ASABE/ISO)",
+    "answer": 28.0,
+    "answer_range": [
+      27.5,
+      28.7
+    ],
+    "correct_answer": "28.0",
+    "numerical_range": {
+      "min": 27.5,
+      "max": 28.7
+    }
+  },
+  {
+    "id": "QB_SUB_FP_HTC_004",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Three point hitches – free link and restrained link operations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a three-point linkage operating in 'restrained-link' mode, the working depth of the tillage tool is mechanically regulated by:",
+    "solution": "Restrained-link operation locks the relative depth using a ground gauge wheel or mechanical hydraulic cylinder depth stop.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)",
+    "options": {
+      "A": "A gauge wheel resting on the unplowed land surface or single-acting hydraulic cylinder stop",
+      "B": "The instantaneous virtual hitch point floating freely",
+      "C": "Draft sensing springs on the lower links exclusively",
+      "D": "Engine flywheel speed"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_HTC_005",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Three point hitches – free link and restrained link operations",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which categories of standard three-point hitches are classified by ISO 730 based on tractor PTO power ratings?",
+    "solution": "ISO 730 classifies agricultural 3-point hitches from Category 0 through Category 4 based on pin dimensions, mast height, and tractor power ratings.",
+    "difficulty": "Moderate",
+    "source": "ISO 730 Standard Guidelines",
+    "options": {
+      "A": "Category 1 (up to 48 kW / 65 hp)",
+      "B": "Category 2 (30 to 92 kW / 40 to 125 hp)",
+      "C": "Category 3 (60 to 185 kW / 80 to 250 hp)",
+      "D": "Category 0 (lawn/garden tractors under 15 kW)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  },
+  {
+    "id": "QB_SUB_FP_HTC_006",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Three point hitches – free link and restrained link operations",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "The lower hitch pin diameter for a standard Category 2 three-point linkage according to ISO 730 (in mm) is:",
+    "solution": "Category 1 has 22 mm lower pins, Category 2 has 28 mm (28.4 mm nominal) lower hitch pins, and Category 3 has 36.6 mm pins.",
+    "difficulty": "Moderate",
+    "source": "Farm Machinery Standards (ASABE/ISO)",
+    "answer": 28.0,
+    "answer_range": [
+      27.5,
+      28.7
+    ],
+    "correct_answer": "28.0",
+    "numerical_range": {
+      "min": 27.5,
+      "max": 28.7
+    }
+  },
+  {
+    "id": "QB_SUB_FP_HTC_007",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Three point hitches – free link and restrained link operations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a three-point linkage operating in 'restrained-link' mode, the working depth of the tillage tool is mechanically regulated by:",
+    "solution": "Restrained-link operation locks the relative depth using a ground gauge wheel or mechanical hydraulic cylinder depth stop.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl)",
+    "options": {
+      "A": "A gauge wheel resting on the unplowed land surface or single-acting hydraulic cylinder stop",
+      "B": "The instantaneous virtual hitch point floating freely",
+      "C": "Draft sensing springs on the lower links exclusively",
+      "D": "Engine flywheel speed"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_HTC_008",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Three point hitches – free link and restrained link operations",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which categories of standard three-point hitches are classified by ISO 730 based on tractor PTO power ratings?",
+    "solution": "ISO 730 classifies agricultural 3-point hitches from Category 0 through Category 4 based on pin dimensions, mast height, and tractor power ratings.",
+    "difficulty": "Moderate",
+    "source": "ISO 730 Standard Guidelines",
+    "options": {
+      "A": "Category 1 (up to 48 kW / 65 hp)",
+      "B": "Category 2 (30 to 92 kW / 40 to 125 hp)",
+      "C": "Category 3 (60 to 185 kW / 80 to 250 hp)",
+      "D": "Category 0 (lawn/garden tractors under 15 kW)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  },
+  {
+    "id": "QB_SUB_FP_TST_001",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Tractor tests and performance",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Nebraska Tractor Tests and OECD standard testing codes, tractor drawbar pull tests are officially conducted on:",
+    "solution": "Official standardized performance tests (Nebraska Tractor Tests, OECD Code 2) utilize a smooth, level concrete track to ensure absolute repeatability free of soil moisture variations.",
+    "difficulty": "Easy",
+    "source": "Nebraska Tractor Test Laboratory Standards",
+    "options": {
+      "A": "A level concrete or bitumen test track",
+      "B": "Soft, freshly puddled sandy clay loam",
+      "C": "A 30-degree incline grass field",
+      "D": "A loose gravel bed"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_TST_002",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Tractor tests and performance",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "During a tractor PTO dynamometer test, the torque recorded at $540\\text{ rpm}$ is $450\\text{ N}\\cdot\\text{m}$. The PTO power developed (in kW, rounded to 2 decimal places) is:",
+    "solution": "$$P = \\frac{2 \\pi N T}{60000} = \\frac{2 \\pi \\times 540 \\times 450}{60000} = \\frac{1526814}{60000} = 25.45\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)",
+    "answer": 25.45,
+    "answer_range": [
+      25.3,
+      25.6
+    ],
+    "correct_answer": "25.45",
+    "numerical_range": {
+      "min": 25.3,
+      "max": 25.6
+    }
+  },
+  {
+    "id": "QB_SUB_FP_TST_003",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Tractor tests and performance",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which standard performance parameters are evaluated during official tractor testing at the Central Farm Machinery Training & Testing Institute (CFMTTI), Budni?",
+    "solution": "All four are mandatory test modules under IS 12207 and OECD Code 2 at CFMTTI Budni.",
+    "difficulty": "Moderate",
+    "source": "Bureau of Indian Standards IS 12207",
+    "options": {
+      "A": "Maximum PTO power and specific fuel consumption (SFC)",
+      "B": "Drawbar pull and travel reduction (slip) on concrete track",
+      "C": "Hydraulic lift capacity throughout the full range of movement",
+      "D": "Turning circle radius with and without steering brakes"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  },
+  {
+    "id": "QB_SUB_FP_TST_004",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Tractor tests and performance",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Nebraska Tractor Tests and OECD standard testing codes, tractor drawbar pull tests are officially conducted on:",
+    "solution": "Official standardized performance tests (Nebraska Tractor Tests, OECD Code 2) utilize a smooth, level concrete track to ensure absolute repeatability free of soil moisture variations.",
+    "difficulty": "Easy",
+    "source": "Nebraska Tractor Test Laboratory Standards",
+    "options": {
+      "A": "A level concrete or bitumen test track",
+      "B": "Soft, freshly puddled sandy clay loam",
+      "C": "A 30-degree incline grass field",
+      "D": "A loose gravel bed"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_TST_005",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Tractor tests and performance",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "During a tractor PTO dynamometer test, the torque recorded at $540\\text{ rpm}$ is $450\\text{ N}\\cdot\\text{m}$. The PTO power developed (in kW, rounded to 2 decimal places) is:",
+    "solution": "$$P = \\frac{2 \\pi N T}{60000} = \\frac{2 \\pi \\times 540 \\times 450}{60000} = \\frac{1526814}{60000} = 25.45\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)",
+    "answer": 25.45,
+    "answer_range": [
+      25.3,
+      25.6
+    ],
+    "correct_answer": "25.45",
+    "numerical_range": {
+      "min": 25.3,
+      "max": 25.6
+    }
+  },
+  {
+    "id": "QB_SUB_FP_TST_006",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Tractor tests and performance",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which standard performance parameters are evaluated during official tractor testing at the Central Farm Machinery Training & Testing Institute (CFMTTI), Budni?",
+    "solution": "All four are mandatory test modules under IS 12207 and OECD Code 2 at CFMTTI Budni.",
+    "difficulty": "Moderate",
+    "source": "Bureau of Indian Standards IS 12207",
+    "options": {
+      "A": "Maximum PTO power and specific fuel consumption (SFC)",
+      "B": "Drawbar pull and travel reduction (slip) on concrete track",
+      "C": "Hydraulic lift capacity throughout the full range of movement",
+      "D": "Turning circle radius with and without steering brakes"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  },
+  {
+    "id": "QB_SUB_FP_TST_007",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Tractor tests and performance",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Nebraska Tractor Tests and OECD standard testing codes, tractor drawbar pull tests are officially conducted on:",
+    "solution": "Official standardized performance tests (Nebraska Tractor Tests, OECD Code 2) utilize a smooth, level concrete track to ensure absolute repeatability free of soil moisture variations.",
+    "difficulty": "Easy",
+    "source": "Nebraska Tractor Test Laboratory Standards",
+    "options": {
+      "A": "A level concrete or bitumen test track",
+      "B": "Soft, freshly puddled sandy clay loam",
+      "C": "A 30-degree incline grass field",
+      "D": "A loose gravel bed"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_TST_008",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Tractor tests and performance",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "During a tractor PTO dynamometer test, the torque recorded at $540\\text{ rpm}$ is $450\\text{ N}\\cdot\\text{m}$. The PTO power developed (in kW, rounded to 2 decimal places) is:",
+    "solution": "$$P = \\frac{2 \\pi N T}{60000} = \\frac{2 \\pi \\times 540 \\times 450}{60000} = \\frac{1526814}{60000} = 25.45\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (V. Ganesan)",
+    "answer": 25.45,
+    "answer_range": [
+      25.3,
+      25.6
+    ],
+    "correct_answer": "25.45",
+    "numerical_range": {
+      "min": 25.3,
+      "max": 25.6
+    }
+  },
+  {
+    "id": "QB_SUB_FP_SEL_001",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Type, selection, maintenance and repair of tractors and power tillers",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A walking-type power tiller (two-wheel tractor) is equipped with dog clutches on each wheel for:",
+    "solution": "Power tillers steer using left and right handlebar-mounted dog clutches that disconnect drive to one wheel, allowing the powered wheel to pivot the machine.",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Sahay)",
+    "options": {
+      "A": "Independent steering by disengaging drive power to either the left or right wheel",
+      "B": "Synchronizing engine valve timing",
+      "C": "Changing transmission forward speeds automatically",
+      "D": "Varying fuel injection pressure"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_SEL_002",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Type, selection, maintenance and repair of tractors and power tillers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which operations can be directly powered by the rotary tiller (rotavator) attachment of a power tiller?",
+    "solution": "Rotavators excel at puddling and secondary tilth but lack the draft capacity for deep subsoiling.",
+    "difficulty": "Moderate",
+    "source": "Farm Machinery Principles (Kepner)",
+    "options": {
+      "A": "Wetland puddling in paddy fields",
+      "B": "Secondary seedbed preparation in upland soils",
+      "C": "Inter-row weeding in wide-row orchards",
+      "D": "Deep subsoiling down to 80 cm depth"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_FP_SEL_003",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Type, selection, maintenance and repair of tractors and power tillers",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The primary reason power tillers use single-cylinder water-cooled diesel engines with evaporative hopper cooling is:",
+    "solution": "Hopper evaporative cooling operates by natural boiling and evaporation of water surrounding the cylinder jacket, eliminating radiators, water pumps, and thermostats.",
+    "difficulty": "Easy",
+    "source": "Small Farm Mechanization (FAO Bulletin)",
+    "options": {
+      "A": "Simplicity, low manufacturing cost, and self-contained operation without water pumps",
+      "B": "High supersonic exhaust velocity",
+      "C": "Zero need for cylinder lubrication",
+      "D": "Ability to run without combustion air"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_SEL_004",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Type, selection, maintenance and repair of tractors and power tillers",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A walking-type power tiller (two-wheel tractor) is equipped with dog clutches on each wheel for:",
+    "solution": "Power tillers steer using left and right handlebar-mounted dog clutches that disconnect drive to one wheel, allowing the powered wheel to pivot the machine.",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Sahay)",
+    "options": {
+      "A": "Independent steering by disengaging drive power to either the left or right wheel",
+      "B": "Synchronizing engine valve timing",
+      "C": "Changing transmission forward speeds automatically",
+      "D": "Varying fuel injection pressure"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_SEL_005",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Type, selection, maintenance and repair of tractors and power tillers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which operations can be directly powered by the rotary tiller (rotavator) attachment of a power tiller?",
+    "solution": "Rotavators excel at puddling and secondary tilth but lack the draft capacity for deep subsoiling.",
+    "difficulty": "Moderate",
+    "source": "Farm Machinery Principles (Kepner)",
+    "options": {
+      "A": "Wetland puddling in paddy fields",
+      "B": "Secondary seedbed preparation in upland soils",
+      "C": "Inter-row weeding in wide-row orchards",
+      "D": "Deep subsoiling down to 80 cm depth"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_FP_SEL_006",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Type, selection, maintenance and repair of tractors and power tillers",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The primary reason power tillers use single-cylinder water-cooled diesel engines with evaporative hopper cooling is:",
+    "solution": "Hopper evaporative cooling operates by natural boiling and evaporation of water surrounding the cylinder jacket, eliminating radiators, water pumps, and thermostats.",
+    "difficulty": "Easy",
+    "source": "Small Farm Mechanization (FAO Bulletin)",
+    "options": {
+      "A": "Simplicity, low manufacturing cost, and self-contained operation without water pumps",
+      "B": "High supersonic exhaust velocity",
+      "C": "Zero need for cylinder lubrication",
+      "D": "Ability to run without combustion air"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_SEL_007",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Type, selection, maintenance and repair of tractors and power tillers",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A walking-type power tiller (two-wheel tractor) is equipped with dog clutches on each wheel for:",
+    "solution": "Power tillers steer using left and right handlebar-mounted dog clutches that disconnect drive to one wheel, allowing the powered wheel to pivot the machine.",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Sahay)",
+    "options": {
+      "A": "Independent steering by disengaging drive power to either the left or right wheel",
+      "B": "Synchronizing engine valve timing",
+      "C": "Changing transmission forward speeds automatically",
+      "D": "Varying fuel injection pressure"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_SEL_008",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Type, selection, maintenance and repair of tractors and power tillers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which operations can be directly powered by the rotary tiller (rotavator) attachment of a power tiller?",
+    "solution": "Rotavators excel at puddling and secondary tilth but lack the draft capacity for deep subsoiling.",
+    "difficulty": "Moderate",
+    "source": "Farm Machinery Principles (Kepner)",
+    "options": {
+      "A": "Wetland puddling in paddy fields",
+      "B": "Secondary seedbed preparation in upland soils",
+      "C": "Inter-row weeding in wide-row orchards",
+      "D": "Deep subsoiling down to 80 cm depth"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_FP_BRK_001",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Tractor clutches and brakes",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A 'dual clutch' system in an agricultural tractor allows the operator to:",
+    "solution": "Dual stage clutches possess two friction discs: depressing pedal halfway stops forward drive while PTO remains driven; full depression stops both.",
+    "difficulty": "Easy",
+    "source": "Tractors and Power Units (Liljedahl)",
+    "options": {
+      "A": "Disengage the tractor drive transmission while keeping the independent PTO rotating continuously",
+      "B": "Engage both forward and reverse gears simultaneously",
+      "C": "Brake the left and right wheels at the same instant",
+      "D": "Double the engine horsepower output"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_BRK_002",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Tractor clutches and brakes",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A single plate dry clutch has inner radius $r_1 = 80\\text{ mm}$ and outer radius $r_2 = 120\\text{ mm}$. If the coefficient of friction is $\\mu = 0.35$ and axial spring force is $W = 3000\\text{ N}$, by uniform wear theory ($r_m = \\frac{r_1 + r_2}{2}$), the torque transmitting capacity for two friction surfaces (in N.m) is:",
+    "solution": "Mean radius:\n$$r_m = \\frac{80 + 120}{2} = 100\\text{ mm} = 0.10\\text{ m}$$\nTorque capacity with $n = 2$ surfaces:\n$$T = n \\mu W r_m = 2 \\times 0.35 \\times 3000 \\times 0.10 = 210.0\\text{ N}\\cdot\\text{m}$$",
+    "difficulty": "Moderate",
+    "source": "Design of Machine Elements (Bhandari)",
+    "answer": 210.0,
+    "answer_range": [
+      208.0,
+      212.0
+    ],
+    "correct_answer": "210.0",
+    "numerical_range": {
+      "min": 208.0,
+      "max": 212.0
+    }
+  },
+  {
+    "id": "QB_SUB_FP_BRK_003",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Tractor clutches and brakes",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which types of brakes are commonly employed in modern agricultural tractors?",
+    "solution": "Tractors widely utilize wet multi-plate disc brakes for thermal endurance and sealed operation, as well as dry caliper and expanding drum brakes.",
+    "difficulty": "Moderate",
+    "source": "Tractor Engineering (Liljedahl)",
+    "options": {
+      "A": "Oil-immersed multi-plate wet disc brakes",
+      "B": "Internal expanding shoe drum brakes",
+      "C": "Dry disc caliper brakes",
+      "D": "Regenerative aerodynamic air flaps"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_FP_BRK_004",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Tractor clutches and brakes",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A 'dual clutch' system in an agricultural tractor allows the operator to:",
+    "solution": "Dual stage clutches possess two friction discs: depressing pedal halfway stops forward drive while PTO remains driven; full depression stops both.",
+    "difficulty": "Easy",
+    "source": "Tractors and Power Units (Liljedahl)",
+    "options": {
+      "A": "Disengage the tractor drive transmission while keeping the independent PTO rotating continuously",
+      "B": "Engage both forward and reverse gears simultaneously",
+      "C": "Brake the left and right wheels at the same instant",
+      "D": "Double the engine horsepower output"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_BRK_005",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Tractor clutches and brakes",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A single plate dry clutch has inner radius $r_1 = 80\\text{ mm}$ and outer radius $r_2 = 120\\text{ mm}$. If the coefficient of friction is $\\mu = 0.35$ and axial spring force is $W = 3000\\text{ N}$, by uniform wear theory ($r_m = \\frac{r_1 + r_2}{2}$), the torque transmitting capacity for two friction surfaces (in N.m) is:",
+    "solution": "Mean radius:\n$$r_m = \\frac{80 + 120}{2} = 100\\text{ mm} = 0.10\\text{ m}$$\nTorque capacity with $n = 2$ surfaces:\n$$T = n \\mu W r_m = 2 \\times 0.35 \\times 3000 \\times 0.10 = 210.0\\text{ N}\\cdot\\text{m}$$",
+    "difficulty": "Moderate",
+    "source": "Design of Machine Elements (Bhandari)",
+    "answer": 210.0,
+    "answer_range": [
+      208.0,
+      212.0
+    ],
+    "correct_answer": "210.0",
+    "numerical_range": {
+      "min": 208.0,
+      "max": 212.0
+    }
+  },
+  {
+    "id": "QB_SUB_FP_BRK_006",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Tractor clutches and brakes",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which types of brakes are commonly employed in modern agricultural tractors?",
+    "solution": "Tractors widely utilize wet multi-plate disc brakes for thermal endurance and sealed operation, as well as dry caliper and expanding drum brakes.",
+    "difficulty": "Moderate",
+    "source": "Tractor Engineering (Liljedahl)",
+    "options": {
+      "A": "Oil-immersed multi-plate wet disc brakes",
+      "B": "Internal expanding shoe drum brakes",
+      "C": "Dry disc caliper brakes",
+      "D": "Regenerative aerodynamic air flaps"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_FP_BRK_007",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Tractor clutches and brakes",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A 'dual clutch' system in an agricultural tractor allows the operator to:",
+    "solution": "Dual stage clutches possess two friction discs: depressing pedal halfway stops forward drive while PTO remains driven; full depression stops both.",
+    "difficulty": "Easy",
+    "source": "Tractors and Power Units (Liljedahl)",
+    "options": {
+      "A": "Disengage the tractor drive transmission while keeping the independent PTO rotating continuously",
+      "B": "Engage both forward and reverse gears simultaneously",
+      "C": "Brake the left and right wheels at the same instant",
+      "D": "Double the engine horsepower output"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_BRK_008",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Tractor clutches and brakes",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A single plate dry clutch has inner radius $r_1 = 80\\text{ mm}$ and outer radius $r_2 = 120\\text{ mm}$. If the coefficient of friction is $\\mu = 0.35$ and axial spring force is $W = 3000\\text{ N}$, by uniform wear theory ($r_m = \\frac{r_1 + r_2}{2}$), the torque transmitting capacity for two friction surfaces (in N.m) is:",
+    "solution": "Mean radius:\n$$r_m = \\frac{80 + 120}{2} = 100\\text{ mm} = 0.10\\text{ m}$$\nTorque capacity with $n = 2$ surfaces:\n$$T = n \\mu W r_m = 2 \\times 0.35 \\times 3000 \\times 0.10 = 210.0\\text{ N}\\cdot\\text{m}$$",
+    "difficulty": "Moderate",
+    "source": "Design of Machine Elements (Bhandari)",
+    "answer": 210.0,
+    "answer_range": [
+      208.0,
+      212.0
+    ],
+    "correct_answer": "210.0",
+    "numerical_range": {
+      "min": 208.0,
+      "max": 212.0
+    }
+  },
+  {
+    "id": "QB_SUB_FP_HYD_001",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Steering and hydraulic control systems used in tractors",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a tractor hydraulic 3-point lift system, the relief valve is set to open when:",
+    "solution": "The main hydraulic relief valve protects the pump, valves, and ram cylinder against bursting pressures when lifting excessive loads.",
+    "difficulty": "Easy",
+    "source": "Hydraulic Systems for Tractors (Liljedahl)",
+    "options": {
+      "A": "System hydraulic pressure exceeds the maximum safe design threshold (typically 15–20 MPa)",
+      "B": "Oil temperature drops below 0°C",
+      "C": "The tractor shifts into reverse",
+      "D": "The engine reaches idle speed"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_HYD_002",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Steering and hydraulic control systems used in tractors",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A tractor hydraulic cylinder has a bore diameter of $70\\text{ mm}$. If the relief valve limits system pressure to $18\\text{ MPa}$, the maximum thrust force developed by the cylinder (in kN, rounded to 1 decimal place) is:",
+    "solution": "Piston area:\n$$A = \\frac{\\pi}{4} (0.070)^2 = 3.848 \\times 10^{-3}\\text{ m}^2$$\nForce:\n$$F = P \\times A = (18 \\times 10^6) \\times (3.848 \\times 10^{-3}) = 69272\\text{ N} = 69.3\\text{ kN}$$",
+    "difficulty": "Moderate",
+    "source": "Fluid Power Engineering (Esposito)",
+    "answer": 69.3,
+    "answer_range": [
+      68.5,
+      70.0
+    ],
+    "correct_answer": "69.3",
+    "numerical_range": {
+      "min": 68.5,
+      "max": 70.0
+    }
+  },
+  {
+    "id": "QB_SUB_FP_HYD_003",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Steering and hydraulic control systems used in tractors",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which features characterize a hydrostatic power steering system in modern farm tractors?",
+    "solution": "Hydrostatic steering uses an orbitrol hydraulic pump and ram cylinder, eliminating mechanical drag links.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Power Units (Liljedahl)",
+    "options": {
+      "A": "Elimination of direct mechanical linkage between steering wheel and front wheels",
+      "B": "Use of an orbital metering valve (orbitrol) and hydraulic double-acting ram cylinder",
+      "C": "Effortless steering even with heavy front-mounted loaders",
+      "D": "Automatic GPS autonomous guidance under all conditions"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_FP_HYD_004",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Steering and hydraulic control systems used in tractors",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a tractor hydraulic 3-point lift system, the relief valve is set to open when:",
+    "solution": "The main hydraulic relief valve protects the pump, valves, and ram cylinder against bursting pressures when lifting excessive loads.",
+    "difficulty": "Easy",
+    "source": "Hydraulic Systems for Tractors (Liljedahl)",
+    "options": {
+      "A": "System hydraulic pressure exceeds the maximum safe design threshold (typically 15–20 MPa)",
+      "B": "Oil temperature drops below 0°C",
+      "C": "The tractor shifts into reverse",
+      "D": "The engine reaches idle speed"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_HYD_005",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Steering and hydraulic control systems used in tractors",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A tractor hydraulic cylinder has a bore diameter of $70\\text{ mm}$. If the relief valve limits system pressure to $18\\text{ MPa}$, the maximum thrust force developed by the cylinder (in kN, rounded to 1 decimal place) is:",
+    "solution": "Piston area:\n$$A = \\frac{\\pi}{4} (0.070)^2 = 3.848 \\times 10^{-3}\\text{ m}^2$$\nForce:\n$$F = P \\times A = (18 \\times 10^6) \\times (3.848 \\times 10^{-3}) = 69272\\text{ N} = 69.3\\text{ kN}$$",
+    "difficulty": "Moderate",
+    "source": "Fluid Power Engineering (Esposito)",
+    "answer": 69.3,
+    "answer_range": [
+      68.5,
+      70.0
+    ],
+    "correct_answer": "69.3",
+    "numerical_range": {
+      "min": 68.5,
+      "max": 70.0
+    }
+  },
+  {
+    "id": "QB_SUB_FP_HYD_006",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Steering and hydraulic control systems used in tractors",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which features characterize a hydrostatic power steering system in modern farm tractors?",
+    "solution": "Hydrostatic steering uses an orbitrol hydraulic pump and ram cylinder, eliminating mechanical drag links.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Power Units (Liljedahl)",
+    "options": {
+      "A": "Elimination of direct mechanical linkage between steering wheel and front wheels",
+      "B": "Use of an orbital metering valve (orbitrol) and hydraulic double-acting ram cylinder",
+      "C": "Effortless steering even with heavy front-mounted loaders",
+      "D": "Automatic GPS autonomous guidance under all conditions"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_FP_HYD_007",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Steering and hydraulic control systems used in tractors",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a tractor hydraulic 3-point lift system, the relief valve is set to open when:",
+    "solution": "The main hydraulic relief valve protects the pump, valves, and ram cylinder against bursting pressures when lifting excessive loads.",
+    "difficulty": "Easy",
+    "source": "Hydraulic Systems for Tractors (Liljedahl)",
+    "options": {
+      "A": "System hydraulic pressure exceeds the maximum safe design threshold (typically 15–20 MPa)",
+      "B": "Oil temperature drops below 0°C",
+      "C": "The tractor shifts into reverse",
+      "D": "The engine reaches idle speed"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_ERG_001",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Human engineering and safety considerations in design of tractor and agricultural implements",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A Roll-Over Protective Structure (ROPS) on an agricultural tractor is primarily designed to:",
+    "solution": "ROPS absorbs rollover kinetic energy while maintaining a defined survival clearance zone around the seatbelted operator.",
+    "difficulty": "Easy",
+    "source": "Ergonomics in Agriculture (K.P. Tewari)",
+    "options": {
+      "A": "Preserve a protective deflection-limiting volume (survival zone) for the operator during a rollover",
+      "B": "Increase tractor engine torque output",
+      "C": "Shield the tractor hood from rain showers",
+      "D": "Eliminate tractor exhaust emissions"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_ERG_002",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Human engineering and safety considerations in design of tractor and agricultural implements",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which human factors and ergonomic parameters are vital in designing tractor operator workstations?",
+    "solution": "All four are core tenets of ASABE/ISO standards on tractor operator environment and occupational ergonomics.",
+    "difficulty": "Moderate",
+    "source": "Human Factors Engineering (Sanders & McCormick)",
+    "options": {
+      "A": "Hand reach envelope and sightlines according to 5th to 95th percentile anthropometric data",
+      "B": "Attenuation of Whole-Body Vibration (WBV) in the frequency range of 4–8 Hz",
+      "C": "Operator ear noise exposure below statutory 85 dB(A) TWA limits",
+      "D": "Color-coded control levers according to ISO safety standards"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  },
+  {
+    "id": "QB_SUB_FP_ERG_003",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Human engineering and safety considerations in design of tractor and agricultural implements",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The human body is most sensitive to vertical whole-body vibration in which resonant frequency band?",
+    "solution": "ISO 2631-1 identifies 4–8 Hz as the natural resonance band for human trunk and abdominal organs under vertical vibration.",
+    "difficulty": "Easy",
+    "source": "ISO 2631-1 Mechanical Vibration and Shock",
+    "options": {
+      "A": "4 to 8 Hz",
+      "B": "50 to 100 Hz",
+      "C": "0.1 to 0.5 Hz",
+      "D": "1000 to 2000 Hz"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_ERG_004",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Human engineering and safety considerations in design of tractor and agricultural implements",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A Roll-Over Protective Structure (ROPS) on an agricultural tractor is primarily designed to:",
+    "solution": "ROPS absorbs rollover kinetic energy while maintaining a defined survival clearance zone around the seatbelted operator.",
+    "difficulty": "Easy",
+    "source": "Ergonomics in Agriculture (K.P. Tewari)",
+    "options": {
+      "A": "Preserve a protective deflection-limiting volume (survival zone) for the operator during a rollover",
+      "B": "Increase tractor engine torque output",
+      "C": "Shield the tractor hood from rain showers",
+      "D": "Eliminate tractor exhaust emissions"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_ERG_005",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Human engineering and safety considerations in design of tractor and agricultural implements",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which human factors and ergonomic parameters are vital in designing tractor operator workstations?",
+    "solution": "All four are core tenets of ASABE/ISO standards on tractor operator environment and occupational ergonomics.",
+    "difficulty": "Moderate",
+    "source": "Human Factors Engineering (Sanders & McCormick)",
+    "options": {
+      "A": "Hand reach envelope and sightlines according to 5th to 95th percentile anthropometric data",
+      "B": "Attenuation of Whole-Body Vibration (WBV) in the frequency range of 4–8 Hz",
+      "C": "Operator ear noise exposure below statutory 85 dB(A) TWA limits",
+      "D": "Color-coded control levers according to ISO safety standards"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  },
+  {
+    "id": "QB_SUB_FP_ERG_006",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Human engineering and safety considerations in design of tractor and agricultural implements",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The human body is most sensitive to vertical whole-body vibration in which resonant frequency band?",
+    "solution": "ISO 2631-1 identifies 4–8 Hz as the natural resonance band for human trunk and abdominal organs under vertical vibration.",
+    "difficulty": "Easy",
+    "source": "ISO 2631-1 Mechanical Vibration and Shock",
+    "options": {
+      "A": "4 to 8 Hz",
+      "B": "50 to 100 Hz",
+      "C": "0.1 to 0.5 Hz",
+      "D": "1000 to 2000 Hz"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_ERG_007",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Human engineering and safety considerations in design of tractor and agricultural implements",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A Roll-Over Protective Structure (ROPS) on an agricultural tractor is primarily designed to:",
+    "solution": "ROPS absorbs rollover kinetic energy while maintaining a defined survival clearance zone around the seatbelted operator.",
+    "difficulty": "Easy",
+    "source": "Ergonomics in Agriculture (K.P. Tewari)",
+    "options": {
+      "A": "Preserve a protective deflection-limiting volume (survival zone) for the operator during a rollover",
+      "B": "Increase tractor engine torque output",
+      "C": "Shield the tractor hood from rain showers",
+      "D": "Eliminate tractor exhaust emissions"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_ERG_008",
+    "section": "Section 3: Farm Power",
+    "topic": "Tractors and Power Tillers",
+    "subtopic": "Human engineering and safety considerations in design of tractor and agricultural implements",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which human factors and ergonomic parameters are vital in designing tractor operator workstations?",
+    "solution": "All four are core tenets of ASABE/ISO standards on tractor operator environment and occupational ergonomics.",
+    "difficulty": "Moderate",
+    "source": "Human Factors Engineering (Sanders & McCormick)",
+    "options": {
+      "A": "Hand reach envelope and sightlines according to 5th to 95th percentile anthropometric data",
+      "B": "Attenuation of Whole-Body Vibration (WBV) in the frequency range of 4–8 Hz",
+      "C": "Operator ear noise exposure below statutory 85 dB(A) TWA limits",
+      "D": "Color-coded control levers according to ISO safety standards"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  },
+  {
+    "id": "QB_SUB_FP_BIO_001",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Power",
+    "subtopic": "Bio-fuels and their use in farm mechanization",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Transesterification of non-edible plant oils (e.g. Jatropha, Pongamia) with methanol in the presence of an alkaline catalyst produces:",
+    "solution": "Transesterification converts high-viscosity triglycerides with methanol into fatty acid methyl esters (biodiesel) and glycerol.",
+    "difficulty": "Easy",
+    "source": "Biofuels Engineering (S.P. Sukhatme)",
+    "options": {
+      "A": "Fatty Acid Methyl Esters (Biodiesel) and Glycerol byproduct",
+      "B": "Pure methane gas and tar",
+      "C": "Petroleum kerosene and asphalt",
+      "D": "Cellulose and glucose"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_BIO_002",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Power",
+    "subtopic": "Bio-fuels and their use in farm mechanization",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Compared to petroleum diesel, pure biodiesel (B100) exhibits which combustion and property characteristics?",
+    "solution": "Biodiesel contains ~11% fuel-bound oxygen, reducing soot. It has slightly lower energy density and higher flash point. However, its pour point is higher (worse cold-flow behavior).",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (Mathur & Sharma)",
+    "options": {
+      "A": "Higher oxygen content (~10–11% by weight), resulting in lower particulate emissions",
+      "B": "Slightly lower lower-heating value (calorific value by ~8–10%)",
+      "C": "Higher flash point, improving safety during storage and transport",
+      "D": "Lower cloud point and pour point than petroleum diesel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_FP_BIO_003",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Power",
+    "subtopic": "Bio-fuels and their use in farm mechanization",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Transesterification of non-edible plant oils (e.g. Jatropha, Pongamia) with methanol in the presence of an alkaline catalyst produces:",
+    "solution": "Transesterification converts high-viscosity triglycerides with methanol into fatty acid methyl esters (biodiesel) and glycerol.",
+    "difficulty": "Easy",
+    "source": "Biofuels Engineering (S.P. Sukhatme)",
+    "options": {
+      "A": "Fatty Acid Methyl Esters (Biodiesel) and Glycerol byproduct",
+      "B": "Pure methane gas and tar",
+      "C": "Petroleum kerosene and asphalt",
+      "D": "Cellulose and glucose"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_BIO_004",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Power",
+    "subtopic": "Bio-fuels and their use in farm mechanization",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Compared to petroleum diesel, pure biodiesel (B100) exhibits which combustion and property characteristics?",
+    "solution": "Biodiesel contains ~11% fuel-bound oxygen, reducing soot. It has slightly lower energy density and higher flash point. However, its pour point is higher (worse cold-flow behavior).",
+    "difficulty": "Moderate",
+    "source": "Internal Combustion Engines (Mathur & Sharma)",
+    "options": {
+      "A": "Higher oxygen content (~10–11% by weight), resulting in lower particulate emissions",
+      "B": "Slightly lower lower-heating value (calorific value by ~8–10%)",
+      "C": "Higher flash point, improving safety during storage and transport",
+      "D": "Lower cloud point and pour point than petroleum diesel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_FP_SRC_001",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Power",
+    "subtopic": "Sources of power on the farm – human, animal, mechanical, electrical, wind, solar and biomass",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The continuous power output capacity of an average healthy agricultural worker for sustained 8-hour field labor is approximately:",
+    "solution": "An average farm laborer delivers continuous sustained power of 0.1 hp (75 W), while a pair of standard bullocks produces approx. 1.0 hp (750 W).",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol I (Michael & Ojha)",
+    "options": {
+      "A": "0.1 hp (approx. 75 W)",
+      "B": "1.0 hp (746 W)",
+      "C": "0.01 hp (7.5 W)",
+      "D": "2.5 hp (1865 W)"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_FP_SRC_002",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Power",
+    "subtopic": "Sources of power on the farm – human, animal, mechanical, electrical, wind, solar and biomass",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A pair of bullocks exerts a steady forward draft force of $600\\text{ N}$ while pulling a moldboard plow at a speed of $3.6\\text{ km/h}$. The draft power developed by the bullock pair (in kW) is:",
+    "solution": "Velocity:\n$$v = 3.6\\text{ km/h} = \\frac{3.6}{3.6} = 1.0\\text{ m/s}$$\nPower:\n$$P = F \\times v = 600 \\times 1.0 = 600\\text{ W} = 0.60\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering (Michael & Ojha)",
+    "answer": 0.6,
+    "answer_range": [
+      0.58,
+      0.62
+    ],
+    "correct_answer": "0.6",
+    "numerical_range": {
+      "min": 0.58,
+      "max": 0.62
+    }
+  },
+  {
+    "id": "QB_SUB_FP_SRC_003",
+    "section": "Section 3: Farm Power",
+    "topic": "Sources of Power",
+    "subtopic": "Sources of power on the farm – human, animal, mechanical, electrical, wind, solar and biomass",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following farm power sources generate zero direct greenhouse gas emissions during on-field irrigation pumping?",
+    "solution": "Solar PV and wind pumping utilize renewable solar irradiance and aerodynamic kinetic energy with zero in-situ carbon emissions.",
+    "difficulty": "Moderate",
+    "source": "Renewable Energy Sources (Twidell & Weir)",
+    "options": {
+      "A": "Solar photovoltaic powered submersible pumping sets",
+      "B": "Wind turbine mechanical water pumping windpumps",
+      "C": "Single-cylinder diesel pump sets",
+      "D": "Kerosene run portable irrigation pumps"
+    },
+    "correct_answer": [
+      "A",
+      "B"
+    ]
   }
 ];

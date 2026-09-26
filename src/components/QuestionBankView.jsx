@@ -40,10 +40,14 @@ import {
   MessageSquare,
   Lightbulb,
   ShieldAlert,
-  Loader2
+  Loader2,
+  Maximize2,
+  Minimize2
 } from 'lucide-react';
 import MathRenderer from './MathRenderer';
 import QuestionReportModal from './QuestionReportModal';
+import DistractionFreePromptModal from './DistractionFreePromptModal';
+import { GATE_AG_FORMULAS } from '../data/formulas.js';
 import { evaluateQuestion } from '../utils/scoring.js';
 import { awardStudentXP } from '../services/leaderboardService.js';
 import { recordQuestionOutcomes } from '../services/mistakeVaultService.js';
@@ -165,17 +169,32 @@ export function computePoolStats(questionsList) {
     const canonTitle = normalizeSectionTitle(sec.title);
     const officialTopics = sec.topics || [];
 
-    const topics = officialTopics.map(topObj => {
+    const topicsMap = new Map();
+    officialTopics.forEach(topObj => {
       const topName = topObj.topic_name;
       const topKey = `${canonTitle}:::${topName}`;
-      const officialSubtopics = topObj.subtopics || [];
-
-      return {
+      topicsMap.set(topName, {
         topic_name: topName,
         questionCount: topicCounts[topKey] || 0,
-        subtopics: officialSubtopics
-      };
+        subtopics: topObj.subtopics || []
+      });
     });
+
+    // Also include any topics present in the question pool
+    if (sectionTopicSubtopics[canonTitle]) {
+      Object.keys(sectionTopicSubtopics[canonTitle]).forEach(topName => {
+        if (!topicsMap.has(topName)) {
+          const topKey = `${canonTitle}:::${topName}`;
+          topicsMap.set(topName, {
+            topic_name: topName,
+            questionCount: topicCounts[topKey] || 0,
+            subtopics: Array.from(sectionTopicSubtopics[canonTitle][topName] || [])
+          });
+        }
+      });
+    }
+
+    const topics = Array.from(topicsMap.values());
 
     return {
       id: sec.id,
@@ -207,12 +226,17 @@ export function computePoolStats(questionsList) {
 export default function QuestionBankView({
   questionsData = null,
   poolTitle = 'Autonomous Question Bank',
-  poolSubtitle = 'Modular repository of 1,915 high-yield questions categorized across all 8 official GATE AG sections.',
-  badgeLabel = '1,915 Topic-Wise Qs',
+  poolSubtitle = 'Modular repository of 8,297 high-yield questions categorized across all 8 official GATE AG sections.',
+  badgeLabel = '8,297 Topic-Wise Qs',
   badgeColor = 'emerald', // 'emerald' | 'blue' | 'purple'
   poolType = 'qbank', // 'qbank' | 'pyq' | 'custom'
   storageKey = 'gate_ag_qbank_progress',
   initialSection = null,
+  initialView = 'explorer',
+  initialScope = null,
+  isDistractionFree = false,
+  onDistractionFreeChange = null,
+  onExitArena = null,
   mistakeFilterIds = null,
   onOpenCalc,
   bookmarks = [],
@@ -225,16 +249,34 @@ export default function QuestionBankView({
   const poolQuestions = useMemo(() => questionsData || ALL_QUESTION_BANK_QUESTIONS, [questionsData]);
 
   // Explorer vs Practice Player mode
-  const [activeView, setActiveView] = useState('explorer'); // 'explorer' | 'practice'
+  const [activeView, setActiveView] = useState(initialView || 'explorer'); // 'explorer' | 'practice'
+  const [isDistractionFreeLocal, setIsDistractionFreeLocal] = useState(isDistractionFree);
+  const [showDistractionPrompt, setShowDistractionPrompt] = useState(false);
+  const [pendingPromptSession, setPendingPromptSession] = useState(null);
+  const [showFormulaSheetModal, setShowFormulaSheetModal] = useState(false);
+  const [selectedFormulaCat, setSelectedFormulaCat] = useState('All');
   const [expandedSections, setExpandedSections] = useState({});
   const [searchQuery, setSearchQuery] = useState('');
 
   // Selected Scope for Practice Player
-  const [activeScope, setActiveScope] = useState({
+  const [activeScope, setActiveScope] = useState(() => initialScope || {
     section: 'All',
     topic: 'All',
     subtopic: 'All'
   });
+
+  useEffect(() => {
+    setIsDistractionFreeLocal(isDistractionFree);
+  }, [isDistractionFree]);
+
+  useEffect(() => {
+    if (initialView === 'practice') {
+      if (initialScope) {
+        setActiveScope(initialScope);
+      }
+      setActiveView('practice');
+    }
+  }, [initialView, initialScope]);
 
   // Filters within Practice Player
   const [typeFilter, setTypeFilter] = useState('All'); // 'All' | 'MCQ' | 'MSQ' | 'NAT'
@@ -530,12 +572,48 @@ export default function QuestionBankView({
     }));
   };
 
-  const handleStartPractice = (section = 'All', topic = 'All', subtopic = 'All') => {
+  const toggleBrowserFullscreen = async () => {
+    try {
+      if (!document.fullscreenElement) {
+        if (document.documentElement.requestFullscreen) {
+          await document.documentElement.requestFullscreen();
+        }
+      } else {
+        if (document.exitFullscreen) {
+          await document.exitFullscreen();
+        }
+      }
+    } catch (e) {
+      console.warn('Fullscreen toggle error:', e);
+    }
+  };
+
+  const handleExitFocus = () => {
+    setIsDistractionFreeLocal(false);
+    onDistractionFreeChange?.(false);
+    setActiveView('explorer');
     setCustomSessionQuestions(null);
-    setActiveScope({ section, topic, subtopic });
-    setCurrentIndex(0);
-    setActiveView('practice');
-    setShowPalette(false);
+    if (onExitArena) {
+      onExitArena();
+    }
+  };
+
+  const handleStartPractice = (section = 'All', topic = 'All', subtopic = 'All') => {
+    const matchingCount = poolQuestions.filter(q => {
+      if (section !== 'All' && normalizeSectionTitle(q.section) !== normalizeSectionTitle(section)) return false;
+      if (topic !== 'All' && q.topic !== topic) return false;
+      if (subtopic !== 'All' && q.subtopic !== subtopic) return false;
+      return true;
+    }).length;
+
+    setPendingPromptSession({
+      section,
+      topic,
+      subtopic,
+      questionCount: matchingCount || poolQuestions.length,
+      isCustom: false
+    });
+    setShowDistractionPrompt(true);
   };
 
   const handleToggleTopic = (secTitle, topicName) => {
@@ -588,16 +666,55 @@ export default function QuestionBankView({
     const selected = pool.slice(0, count);
 
     const selectedCount = Object.values(selectedTopics).filter(Boolean).length;
-    setCustomSessionQuestions(selected);
-    setActiveScope({
+    setPendingPromptSession({
       section: 'Custom Multi-Topic Session',
       topic: selectedCount > 0 ? `${selectedCount} Topics Selected` : 'All Topics',
-      subtopic: `${selected.length} Questions (${shuffleQuestions ? 'Randomized' : 'Sequential'})`
+      subtopic: `${selected.length} Questions (${shuffleQuestions ? 'Randomized' : 'Sequential'})`,
+      questionCount: selected.length,
+      isCustom: true,
+      customQuestions: selected
     });
-    setCurrentIndex(0);
-    setActiveView('practice');
-    setShowCustomModal(false);
-    setShowPalette(false);
+    setShowDistractionPrompt(true);
+  };
+
+  const handleConfirmDistractionFree = () => {
+    setShowDistractionPrompt(false);
+    setIsDistractionFreeLocal(true);
+    onDistractionFreeChange?.(true);
+    executeStartPracticeSession(pendingPromptSession);
+  };
+
+  const handleConfirmStandardView = () => {
+    setShowDistractionPrompt(false);
+    setIsDistractionFreeLocal(false);
+    onDistractionFreeChange?.(false);
+    executeStartPracticeSession(pendingPromptSession);
+  };
+
+  const executeStartPracticeSession = (session) => {
+    if (!session) return;
+    if (session.isCustom) {
+      setCustomSessionQuestions(session.customQuestions);
+      setActiveScope({
+        section: session.section,
+        topic: session.topic,
+        subtopic: session.subtopic
+      });
+      setCurrentIndex(0);
+      setActiveView('practice');
+      setShowCustomModal(false);
+      setShowPalette(false);
+    } else {
+      setCustomSessionQuestions(null);
+      setActiveScope({
+        section: session.section,
+        topic: session.topic,
+        subtopic: session.subtopic
+      });
+      setCurrentIndex(0);
+      setActiveView('practice');
+      setShowPalette(false);
+    }
   };
 
   const handleSelectOption = (optKey) => {
@@ -832,74 +949,170 @@ export default function QuestionBankView({
   return (
     <div className="space-y-6 animate-in fade-in duration-200">
       
-      {/* Sleek Top Banner & View Switcher */}
-      <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-5 sm:p-6 shadow-xs">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-          <div className="flex items-center gap-4">
-            <div className={`w-12 h-12 rounded-2xl ${theme.iconBox} flex items-center justify-center shrink-0 shadow-xs`}>
-              <Database className="w-6 h-6" />
-            </div>
-            <div>
-              <div className="flex items-center gap-2">
-                <h1 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
-                  {poolTitle}
-                </h1>
-                <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase border ${theme.badgeBg}`}>
-                  {badgeLabel}
-                </span>
-              </div>
-              <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-                {poolSubtitle}
-              </p>
-            </div>
-          </div>
-
-          {/* Quick Mastery Counters */}
-          <div className="flex items-center gap-2 sm:gap-3 bg-slate-50 dark:bg-slate-950 p-2 rounded-2xl border border-slate-200 dark:border-slate-800">
-            <div className="px-3 py-1.5 text-center">
-              <span className="text-[10px] uppercase font-bold text-slate-400">Total Qs</span>
-              <p className="text-sm font-black text-slate-900 dark:text-white">{userProgressStats.totalBank}</p>
-            </div>
-            <div className="w-px h-8 bg-slate-200 dark:bg-slate-800" />
-            <div className="px-3 py-1.5 text-center">
-              <span className={`text-[10px] uppercase font-bold ${theme.textPrimary}`}>Solved</span>
-              <p className={`text-sm font-black ${theme.textPrimary}`}>{userProgressStats.attempted}</p>
-            </div>
-            <div className="w-px h-8 bg-slate-200 dark:bg-slate-800" />
-            <div className="px-3 py-1.5 text-center">
-              <span className="text-[10px] uppercase font-bold text-blue-600 dark:text-blue-400">Accuracy</span>
-              <p className="text-sm font-black text-blue-600 dark:text-blue-400">{userProgressStats.accuracy}%</p>
-            </div>
-            <div className="w-px h-8 bg-slate-200 dark:bg-slate-800" />
-            <div className="px-3 py-1.5 text-center">
-              <span className="text-[10px] uppercase font-bold text-amber-600 dark:text-amber-400">XP Earned</span>
-              <p className="text-sm font-black text-amber-600 dark:text-amber-400 font-mono">+{userProgressStats.totalXpEarned}</p>
-            </div>
-          </div>
-        </div>
-
-        {/* View Switcher Tabs if in practice mode */}
-        {activeView === 'practice' && (
-          <div className="mt-5 pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap items-center justify-between gap-2.5">
+      {/* Distraction-Free Top Bar (Sticky Focus Console) */}
+      {activeView === 'practice' && isDistractionFreeLocal ? (
+        <div className="sticky top-0 z-30 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-slate-200 dark:border-slate-800 rounded-2xl px-4 py-3 shadow-md flex flex-wrap items-center justify-between gap-3 animate-in slide-in-from-top-2 duration-200">
+          {/* Left: Exit button & Scope details */}
+          <div className="flex items-center gap-3">
             <button
-              onClick={() => {
-                setActiveView('explorer');
-                setCustomSessionQuestions(null);
-              }}
-              className={`inline-flex items-center gap-2 text-xs font-bold text-slate-600 dark:text-slate-400 ${theme.hoverTextPrimary} transition`}
+              onClick={handleExitFocus}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-bold transition cursor-pointer"
+              title="Exit Distraction-Free Practice Arena"
             >
-              <ArrowLeft className="w-4 h-4 shrink-0" />
-              <span>Back to Explorer</span>
+              <ArrowLeft className="w-3.5 h-3.5" />
+              <span>Exit Focus</span>
+            </button>
+            <div className="h-4 w-px bg-slate-200 dark:bg-slate-800 hidden sm:block" />
+            <div className="flex items-center gap-2">
+              <span className="text-[10px] uppercase tracking-wider font-black px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                Focus Arena
+              </span>
+              <span className="text-xs font-bold text-slate-900 dark:text-white truncate max-w-[180px] sm:max-w-xs" title={`${activeScope.section} • ${activeScope.topic}`}>
+                {activeScope.section} {activeScope.topic !== 'All' ? `• ${activeScope.topic}` : ''}
+              </span>
+            </div>
+          </div>
+
+          {/* Center: Question Counter & Progress */}
+          <div className="flex items-center gap-2 text-xs font-mono font-bold text-slate-700 dark:text-slate-300">
+            <span>Q {currentIndex + 1} / {activeQuestions.length}</span>
+            <div className="w-20 sm:w-32 h-2 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden">
+              <div 
+                className="h-full bg-emerald-500 transition-all duration-300 rounded-full" 
+                style={{ width: `${Math.round(((currentIndex + 1) / (activeQuestions.length || 1)) * 100)}%` }} 
+              />
+            </div>
+          </div>
+
+          {/* Right: Timer, Calculator, Formula Sheet, Palette, Fullscreen */}
+          <div className="flex items-center gap-2">
+            {/* Question Timer */}
+            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-xs font-mono font-bold text-slate-800 dark:text-slate-200">
+              <Clock className="w-3.5 h-3.5 text-blue-500" />
+              <span>{formatTimer(questionTimes[currentQ?.id] || 0)}</span>
+              <button 
+                onClick={() => setIsTimerPaused(p => !p)} 
+                className="ml-1 p-0.5 rounded hover:bg-slate-200 dark:hover:bg-slate-800 text-slate-500 cursor-pointer"
+                title={isTimerPaused ? "Resume Timer" : "Pause Timer"}
+              >
+                {isTimerPaused ? <Play className="w-3 h-3 text-emerald-500" /> : <Pause className="w-3 h-3 text-amber-500" />}
+              </button>
+            </div>
+
+            {/* Calculator */}
+            {onOpenCalc && (
+              <button
+                onClick={onOpenCalc}
+                className="p-2 rounded-xl bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition cursor-pointer"
+                title="Open GATE Virtual Calculator"
+              >
+                <Calculator className="w-4 h-4" />
+              </button>
+            )}
+
+            {/* Formulas */}
+            <button
+              onClick={() => setShowFormulaSheetModal(true)}
+              className="p-2 rounded-xl bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition cursor-pointer"
+              title="View GATE AG Formulas"
+            >
+              <BookOpen className="w-4 h-4" />
             </button>
 
-            <div className="text-xs font-semibold text-slate-500 dark:text-slate-400 truncate max-w-md">
-              <span className={`${theme.textPrimary} font-bold`}>{activeScope.section}</span>
-              {activeScope.topic !== 'All' && <span> • {activeScope.topic}</span>}
-              {activeScope.subtopic !== 'All' && <span> • {activeScope.subtopic}</span>}
+            {/* Question Palette Drawer */}
+            <button
+              onClick={() => setShowPalette(p => !p)}
+              className={`px-2.5 py-1.5 rounded-xl border text-xs font-bold transition flex items-center gap-1.5 cursor-pointer ${
+                showPalette 
+                  ? 'bg-emerald-600 text-white border-emerald-600' 
+                  : 'bg-slate-100 dark:bg-slate-950 border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800'
+              }`}
+              title="Toggle Question Palette"
+            >
+              <Layers className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">Palette</span>
+            </button>
+
+            {/* Fullscreen */}
+            <button
+              onClick={toggleBrowserFullscreen}
+              className="p-2 rounded-xl bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition cursor-pointer"
+              title="Toggle Fullscreen"
+            >
+              <Maximize2 className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+      ) : (
+        /* Sleek Top Banner & View Switcher */
+        <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-5 sm:p-6 shadow-xs">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div className="flex items-center gap-4">
+              <div className={`w-12 h-12 rounded-2xl ${theme.iconBox} flex items-center justify-center shrink-0 shadow-xs`}>
+                <Database className="w-6 h-6" />
+              </div>
+              <div>
+                <div className="flex items-center gap-2">
+                  <h1 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
+                    {poolTitle}
+                  </h1>
+                  <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase border ${theme.badgeBg}`}>
+                    {badgeLabel}
+                  </span>
+                </div>
+                <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                  {poolSubtitle}
+                </p>
+              </div>
+            </div>
+
+            {/* Quick Mastery Counters */}
+            <div className="flex items-center gap-2 sm:gap-3 bg-slate-50 dark:bg-slate-950 p-2 rounded-2xl border border-slate-200 dark:border-slate-800">
+              <div className="px-3 py-1.5 text-center">
+                <span className="text-[10px] uppercase font-bold text-slate-400">Total Qs</span>
+                <p className="text-sm font-black text-slate-900 dark:text-white">{userProgressStats.totalBank}</p>
+              </div>
+              <div className="w-px h-8 bg-slate-200 dark:bg-slate-800" />
+              <div className="px-3 py-1.5 text-center">
+                <span className={`text-[10px] uppercase font-bold ${theme.textPrimary}`}>Solved</span>
+                <p className={`text-sm font-black ${theme.textPrimary}`}>{userProgressStats.attempted}</p>
+              </div>
+              <div className="w-px h-8 bg-slate-200 dark:bg-slate-800" />
+              <div className="px-3 py-1.5 text-center">
+                <span className="text-[10px] uppercase font-bold text-blue-600 dark:text-blue-400">Accuracy</span>
+                <p className="text-sm font-black text-blue-600 dark:text-blue-400">{userProgressStats.accuracy}%</p>
+              </div>
+              <div className="w-px h-8 bg-slate-200 dark:bg-slate-800" />
+              <div className="px-3 py-1.5 text-center">
+                <span className="text-[10px] uppercase font-bold text-amber-600 dark:text-amber-400">XP Earned</span>
+                <p className="text-sm font-black text-amber-600 dark:text-amber-400 font-mono">+{userProgressStats.totalXpEarned}</p>
+              </div>
             </div>
           </div>
-        )}
-      </div>
+
+          {/* View Switcher Tabs if in practice mode */}
+          {activeView === 'practice' && (
+            <div className="mt-5 pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap items-center justify-between gap-2.5">
+              <button
+                onClick={() => {
+                  setActiveView('explorer');
+                  setCustomSessionQuestions(null);
+                }}
+                className={`inline-flex items-center gap-2 text-xs font-bold text-slate-600 dark:text-slate-400 ${theme.hoverTextPrimary} transition cursor-pointer`}
+              >
+                <ArrowLeft className="w-4 h-4 shrink-0" />
+                <span>Back to Explorer</span>
+              </button>
+
+              <div className="text-xs font-semibold text-slate-500 dark:text-slate-400 truncate max-w-md">
+                <span className={`${theme.textPrimary} font-bold`}>{activeScope.section}</span>
+                {activeScope.topic !== 'All' && <span> • {activeScope.topic}</span>}
+                {activeScope.subtopic !== 'All' && <span> • {activeScope.subtopic}</span>}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
 
       {/* ========================================================================= */}
       {/* VIEW A: SECTION & TOPIC HIERARCHY EXPLORER                                */}
@@ -1364,11 +1577,11 @@ export default function QuestionBankView({
                   )}
                   {currentQ.source && (
                     <span 
-                      className="px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 border border-amber-200/80 dark:border-amber-800/80 flex items-center gap-1" 
+                      className="px-2.5 py-1 rounded-lg text-xs font-semibold bg-amber-50 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300 border border-amber-200/80 dark:border-amber-800/80 flex items-center gap-1.5" 
                       title={`Textbook Source: ${currentQ.source}`}
                     >
-                      <BookOpen className="w-3 h-3 text-amber-600 dark:text-amber-400" />
-                      <span className="truncate max-w-[90px] sm:max-w-[200px]">{currentQ.source}</span>
+                      <BookOpen className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400 shrink-0" />
+                      <span className="font-medium whitespace-normal max-w-xs sm:max-w-md md:max-w-none">{currentQ.source}</span>
                     </span>
                   )}
 
@@ -1426,17 +1639,24 @@ export default function QuestionBankView({
               </div>
 
               {/* Question Image / Diagram if present */}
-              {(currentQ.image_url || currentQ.image) && (
+              {(currentQ.image_url || currentQ.image || currentQ.diagram_svg) && (
                 <div className="my-4 p-3 bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl inline-block max-w-full text-center">
                   <div className="text-[10px] font-bold uppercase tracking-wider text-blue-700 dark:text-blue-400 mb-2 flex items-center justify-center gap-1.5">
                     <ImageIcon className="w-3.5 h-3.5" />
                     <span>Question Figure / Diagram</span>
                   </div>
-                  <img 
-                    src={currentQ.image_url || currentQ.image} 
-                    alt={`Diagram for ${currentQ.id || currentQ.qnum || ''}`} 
-                    className="max-h-80 max-w-full mx-auto object-contain rounded-lg bg-white shadow-xs border border-slate-100 dark:border-slate-800"
-                  />
+                  {currentQ.diagram_svg ? (
+                    <div 
+                      className="max-h-80 max-w-full mx-auto flex items-center justify-center p-3 bg-white dark:bg-slate-950 rounded-lg border border-slate-200 dark:border-slate-800 overflow-x-auto" 
+                      dangerouslySetInnerHTML={{ __html: currentQ.diagram_svg }} 
+                    />
+                  ) : (
+                    <img 
+                      src={currentQ.image_url || currentQ.image} 
+                      alt={`Diagram for ${currentQ.id || currentQ.qnum || ''}`} 
+                      className="max-h-80 max-w-full mx-auto object-contain rounded-lg bg-white shadow-xs border border-slate-100 dark:border-slate-800"
+                    />
+                  )}
                 </div>
               )}
 
@@ -1502,19 +1722,27 @@ export default function QuestionBankView({
                       const correctList = Array.isArray(currentQ.correct_answer) ? currentQ.correct_answer : [currentQ.correct_answer];
                       const isCorrect = correctList.includes(optKey);
 
+                      let borderClass = 'border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/50 hover:border-emerald-500';
+                      if (isSelected) {
+                        borderClass = 'border-emerald-500 bg-emerald-50/50 dark:bg-emerald-950/30 ring-2 ring-emerald-500/20';
+                      }
+                      if (isChecked) {
+                        if (isCorrect) {
+                          borderClass = 'border-emerald-500 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-900 dark:text-emerald-100 ring-2 ring-emerald-500/30';
+                        } else if (isSelected && !isCorrect) {
+                          borderClass = 'border-rose-500 bg-rose-50 dark:bg-rose-950/40 text-rose-900 dark:text-rose-100 ring-2 ring-rose-500/30';
+                        }
+                      }
+
                       return (
                         <div
                           key={optKey}
                           onClick={() => !isChecked && handleSelectOption(optKey)}
-                          className={`p-4 rounded-2xl border text-sm flex items-start gap-3.5 transition cursor-pointer ${
-                            isSelected
-                              ? 'border-emerald-500 bg-emerald-50/50 dark:bg-emerald-950/30 ring-2 ring-emerald-500/20'
-                              : 'border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/50 hover:border-emerald-500'
-                          }`}
+                          className={`p-4 rounded-2xl border text-sm flex items-start gap-3.5 transition cursor-pointer ${borderClass}`}
                         >
                           <div className="mt-0.5">
                             {isSelected ? (
-                              <CheckSquare className="w-5 h-5 text-emerald-600" />
+                              <CheckSquare className={`w-5 h-5 ${isChecked && !isCorrect ? 'text-rose-600' : 'text-emerald-600'}`} />
                             ) : (
                               <Square className="w-5 h-5 text-slate-400" />
                             )}
@@ -1523,6 +1751,12 @@ export default function QuestionBankView({
                             <span className="font-bold mr-2 text-xs">{optKey}.</span>
                             <MathRenderer text={optVal} />
                           </div>
+                          {isChecked && isCorrect && (
+                            <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                          )}
+                          {isChecked && isSelected && !isCorrect && (
+                            <XCircle className="w-5 h-5 text-rose-600 shrink-0" />
+                          )}
                         </div>
                       );
                     })}
@@ -1731,6 +1965,13 @@ export default function QuestionBankView({
                   <div className="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed pt-1">
                     <MathRenderer text={currentQ.solution || 'No detailed solution text provided.'} />
                   </div>
+
+                  {currentQ.source && (
+                    <div className="pt-2.5 mt-2 border-t border-emerald-200/60 dark:border-emerald-800/40 flex items-center gap-2 text-xs text-emerald-900 dark:text-emerald-200">
+                      <BookOpen className="w-3.5 h-3.5 shrink-0 text-emerald-600 dark:text-emerald-400" />
+                      <span><strong>Authoritative Reference:</strong> {currentQ.source}</span>
+                    </div>
+                  )}
                 </div>
               )}
 
@@ -2073,6 +2314,109 @@ export default function QuestionBankView({
               </div>
             </div>
 
+          </div>
+        </div>
+      )}
+
+      {/* Distraction-Free Practice Launch Approval Prompt Modal */}
+      <DistractionFreePromptModal
+        isOpen={showDistractionPrompt}
+        mode="practice"
+        title="Distraction-Free Practice Arena"
+        subtitle="Agricultural Engineering Focus Practice Session"
+        scopeDetails={{
+          section: pendingPromptSession?.section,
+          topic: pendingPromptSession?.topic,
+          subtopic: pendingPromptSession?.subtopic !== 'All' ? pendingPromptSession?.subtopic : undefined,
+          questionCount: pendingPromptSession?.questionCount
+        }}
+        onConfirmDistractionFree={handleConfirmDistractionFree}
+        onConfirmStandard={handleConfirmStandardView}
+        onClose={() => {
+          setShowDistractionPrompt(false);
+          setPendingPromptSession(null);
+        }}
+        allowStandardView={true}
+      />
+
+      {/* GATE AG Formula Reference Sheet Modal */}
+      {showFormulaSheetModal && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-slate-950/70 backdrop-blur-xs animate-in fade-in duration-200"
+          role="dialog"
+          aria-modal="true"
+        >
+          <div 
+            className="w-full max-w-4xl max-h-[85vh] bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl flex flex-col overflow-hidden animate-in zoom-in-95 duration-200"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="px-6 py-4 bg-blue-700 dark:bg-blue-900 text-white flex items-center justify-between border-b border-blue-800">
+              <div className="flex items-center gap-2.5">
+                <BookOpen className="w-5 h-5 text-teal-300" />
+                <h3 className="font-extrabold text-sm uppercase text-white">GATE AG Formula Reference Sheet</h3>
+              </div>
+              <button 
+                onClick={() => setShowFormulaSheetModal(false)} 
+                className="text-white hover:text-blue-200 p-1 rounded-lg hover:bg-white/10 transition cursor-pointer"
+                aria-label="Close formula modal"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="p-3 bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 flex items-center gap-1.5 overflow-x-auto text-xs scrollbar-none">
+              {['All', ...GATE_AG_FORMULAS.map(c => c.category)].map(cat => (
+                <button
+                  key={cat}
+                  onClick={() => setSelectedFormulaCat(cat)}
+                  className={`px-3 py-1.5 rounded-xl font-bold whitespace-nowrap transition cursor-pointer ${
+                    selectedFormulaCat === cat
+                      ? 'bg-blue-600 text-white shadow-xs'
+                      : 'bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800'
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+
+            <div className="p-6 overflow-y-auto space-y-4 divide-y divide-slate-100 dark:divide-slate-800 bg-white dark:bg-slate-900">
+              {GATE_AG_FORMULAS
+                .filter(cat => selectedFormulaCat === 'All' || cat.category === selectedFormulaCat)
+                .map((catGroup, cIdx) => {
+                  const formulas = Array.isArray(catGroup.formulas)
+                    ? catGroup.formulas
+                    : (catGroup.topics || []).flatMap(t => (t.formulas || []).map(f => ({ ...f, topicName: t.topicName })));
+
+                  return (
+                    <div key={cIdx} className="pt-4 first:pt-0 space-y-3">
+                      <h4 className="text-xs font-black text-blue-600 dark:text-blue-400 uppercase tracking-wider">
+                        {catGroup.category}
+                      </h4>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        {formulas.map((f, fIdx) => (
+                          <div key={fIdx} className="p-3 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 space-y-1.5 text-xs">
+                            <div className="flex items-center justify-between gap-2">
+                              <span className="font-bold text-slate-900 dark:text-white">{f.title}</span>
+                              {f.topicName && (
+                                <span className="text-[10px] px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 font-medium shrink-0">
+                                  {f.topicName}
+                                </span>
+                              )}
+                            </div>
+                            <div className="p-2 rounded bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-x-auto">
+                              <MathRenderer content={`$$${f.formula}$$`} />
+                            </div>
+                            {f.explanation && (
+                              <p className="text-[11px] text-slate-600 dark:text-slate-400 leading-snug">{f.explanation}</p>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })}
+            </div>
           </div>
         </div>
       )}

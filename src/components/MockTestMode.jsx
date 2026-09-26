@@ -60,6 +60,7 @@ import PdfExportOptionsModal from './PdfExportOptionsModal';
 import { getOfficialGatePaperMeta } from '../data/officialGatePapersMeta';
 import { exportPaperToPdf } from '../services/questionPdfExportService';
 import { pushActiveCbtSessionUpdate, clearActiveCbtSession } from '../services/studentProgressSyncService';
+import DistractionFreePromptModal from './DistractionFreePromptModal';
 
 export default function MockTestMode({ 
   mockPapers = [], 
@@ -71,13 +72,16 @@ export default function MockTestMode({
   onFinishTest, 
   onEditQuestion, 
   currentStudent, 
-  onRequireAuth 
+  onRequireAuth,
+  isDistractionFree = false,
+  onDistractionFreeChange = null
 }) {
   const [selectedPaper, setSelectedPaper] = useState(null);
   const [showingPreExamInstructions, setShowingPreExamInstructions] = useState(false);
   const [hasAgreedDeclaration, setHasAgreedDeclaration] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState('English');
   const [testStarted, setTestStarted] = useState(false);
+  const [showCbtPromptModal, setShowCbtPromptModal] = useState(false);
   const [pdfModalPaper, setPdfModalPaper] = useState(null);
 
   // Test state
@@ -372,6 +376,7 @@ export default function MockTestMode({
       setTestStarted(false);
       setSelectedPaper(null);
       setShowSaveMidwayModal(false);
+      onDistractionFreeChange?.(false);
       setActionToast({
         type: 'success',
         message: `Exam "${selectedPaper.title || 'Official Paper'}" paused & saved midway! Your progress and remaining time are preserved. You can resume anytime from the dashboard.`
@@ -406,6 +411,7 @@ export default function MockTestMode({
       }
 
       setTestStarted(true);
+      onDistractionFreeChange?.(true);
       setIsTimerRunning(!sessionToResume.paperInstructions?.is_untimed);
       setRestoredSessionNotice(true);
       setPausedSession(null);
@@ -435,6 +441,7 @@ export default function MockTestMode({
     setPausedSession(null);
     setShowCancelExamModal(false);
     setShowSaveMidwayModal(false);
+    onDistractionFreeChange?.(false);
 
     setActionToast({
       type: 'info',
@@ -471,13 +478,18 @@ export default function MockTestMode({
     setShowingPreExamInstructions(true);
   };
 
-  // Step 2: User confirms declaration and clicks "I am ready to begin" -> Start Active Exam
+  // Step 2: User confirms declaration and clicks "I am ready to begin" -> Prompt approval modal for Distraction-Free CBT
   const handleStartExam = () => {
     if (!currentStudent && onRequireAuth) {
       onRequireAuth("Sign In or Register free to start timed CBT Mock Tests!");
       return;
     }
     if (!hasAgreedDeclaration) return;
+    setShowCbtPromptModal(true);
+  };
+
+  const executeStartExam = (enterDistractionFree = true) => {
+    setShowCbtPromptModal(false);
     setShowingPreExamInstructions(false);
 
     const initialStates = {};
@@ -501,6 +513,16 @@ export default function MockTestMode({
       setIsTimerRunning(true);
     }
     setTestStarted(true);
+    if (enterDistractionFree) {
+      onDistractionFreeChange?.(true);
+      try {
+        if (!document.fullscreenElement && document.documentElement.requestFullscreen) {
+          document.documentElement.requestFullscreen().catch(() => {});
+        }
+      } catch (e) {}
+    } else {
+      onDistractionFreeChange?.(false);
+    }
   };
 
   useEffect(() => {
@@ -875,6 +897,7 @@ export default function MockTestMode({
 
     setTestStarted(false);
     setSelectedPaper(null);
+    onDistractionFreeChange?.(false);
 
     if (typeof onFinishTest === 'function') {
       onFinishTest(attemptResult);
@@ -1110,6 +1133,24 @@ export default function MockTestMode({
             setAnalyzingPaper(null);
             handleSelectPaperForInstructions(p);
           }}
+        />
+
+        {/* CBT Distraction-Free Launch Approval Prompt Modal */}
+        <DistractionFreePromptModal
+          isOpen={showCbtPromptModal}
+          mode="cbt"
+          title="Launch Distraction-Free CBT Exam"
+          subtitle={selectedPaper?.title || `Official GATE ${selectedPaper?.year || 'CBT Exam'}`}
+          scopeDetails={{
+            section: 'General Aptitude & Technical',
+            paper: selectedPaper?.title,
+            questionCount: paperQuestions?.length || 65,
+            duration: `${paperInstructions?.duration_mins || 180} Minutes`
+          }}
+          onConfirmDistractionFree={() => executeStartExam(true)}
+          onConfirmStandard={() => executeStartExam(false)}
+          onClose={() => setShowCbtPromptModal(false)}
+          allowStandardView={true}
         />
 
       </div>
@@ -1862,7 +1903,11 @@ export default function MockTestMode({
   const rollNo = currentStudent?.admission_no || 'AG27S41094820';
 
   return (
-    <div className="tcs-cbt-container max-w-7xl mx-auto bg-[#f4f7f9] border border-slate-300 rounded-2xl shadow-xl overflow-hidden animate-in fade-in duration-200 text-slate-900 font-sans">
+    <div className={`tcs-cbt-container ${
+      isDistractionFree 
+        ? 'w-full min-h-screen bg-[#f4f7f9] text-slate-900 font-sans overflow-x-hidden flex flex-col shadow-2xl' 
+        : 'max-w-7xl mx-auto bg-[#f4f7f9] border border-slate-300 rounded-2xl shadow-xl overflow-hidden animate-in fade-in duration-200 text-slate-900 font-sans'
+    }`}>
       
       {/* Top Bar: Official TCS iON Blue Header */}
       <div className="cbt-top-bar bg-[#0B4A8F] text-white px-3 sm:px-6 py-2.5 sm:py-3 space-y-2 border-b-2 border-[#003366]">
@@ -2576,26 +2621,39 @@ export default function MockTestMode({
             <div className="p-6 overflow-y-auto space-y-4 divide-y divide-slate-200 bg-white">
               {GATE_AG_FORMULAS
                 .filter(cat => selectedFormulaCat === 'All' || cat.category === selectedFormulaCat)
-                .map((catGroup, cIdx) => (
-                  <div key={cIdx} className="pt-4 first:pt-0 space-y-3">
-                    <h4 className="text-xs font-black text-[#0B4A8F] uppercase tracking-wider">
-                      {catGroup.category}
-                    </h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                      {catGroup.formulas.map((f, fIdx) => (
-                        <div key={fIdx} className="p-3 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5 text-xs">
-                          <div className="font-bold text-slate-900">{f.title}</div>
-                          <div className="p-2 rounded bg-white border border-slate-200 overflow-x-auto">
-                            <MathRenderer content={`$$${f.formula}$$`} />
+                .map((catGroup, cIdx) => {
+                  const formulas = Array.isArray(catGroup.formulas)
+                    ? catGroup.formulas
+                    : (catGroup.topics || []).flatMap(t => (t.formulas || []).map(f => ({ ...f, topicName: t.topicName })));
+
+                  return (
+                    <div key={cIdx} className="pt-4 first:pt-0 space-y-3">
+                      <h4 className="text-xs font-black text-[#0B4A8F] uppercase tracking-wider">
+                        {catGroup.category}
+                      </h4>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        {formulas.map((f, fIdx) => (
+                          <div key={fIdx} className="p-3 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5 text-xs">
+                            <div className="flex items-center justify-between gap-2">
+                              <span className="font-bold text-slate-900">{f.title}</span>
+                              {f.topicName && (
+                                <span className="text-[10px] px-1.5 py-0.5 rounded bg-blue-100 text-blue-700 font-medium shrink-0">
+                                  {f.topicName}
+                                </span>
+                              )}
+                            </div>
+                            <div className="p-2 rounded bg-white border border-slate-200 overflow-x-auto">
+                              <MathRenderer content={`$$${f.formula}$$`} />
+                            </div>
+                            {f.explanation && (
+                              <p className="text-[11px] text-slate-600 leading-snug">{f.explanation}</p>
+                            )}
                           </div>
-                          {f.explanation && (
-                            <p className="text-[11px] text-slate-600 leading-snug">{f.explanation}</p>
-                          )}
-                        </div>
-                      ))}
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
             </div>
           </div>
         </div>
@@ -2913,6 +2971,24 @@ export default function MockTestMode({
           defaultMode={pdfModalPaper.defaultMode}
         />
       )}
+
+      {/* CBT Distraction-Free Launch Approval Prompt Modal */}
+      <DistractionFreePromptModal
+        isOpen={showCbtPromptModal}
+        mode="cbt"
+        title="Launch Distraction-Free CBT Exam"
+        subtitle={selectedPaper?.title || `Official GATE ${selectedPaper?.year || 'CBT Exam'}`}
+        scopeDetails={{
+          section: 'General Aptitude & Technical',
+          paper: selectedPaper?.title,
+          questionCount: paperQuestions?.length || 65,
+          duration: `${paperInstructions?.duration_mins || 180} Minutes`
+        }}
+        onConfirmDistractionFree={() => executeStartExam(true)}
+        onConfirmStandard={() => executeStartExam(false)}
+        onClose={() => setShowCbtPromptModal(false)}
+        allowStandardView={true}
+      />
 
     </div>
   );

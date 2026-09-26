@@ -48,7 +48,7 @@ const getQuestionDifficulty = (q) => {
 };
 
 export default function CustomPdfQuestionGenerator({ questions = [], mockPapers = [], customMockPapers = [] }) {
-  // Synchronized complete universe pool: Official PYQs + Custom Mocks 01-30 + Question Bank = 5,189 Qs
+  // Synchronized complete universe pool: Official PYQs + Custom Mocks 01-30 + Question Bank = 11,571 Qs
   const allPoolQuestions = useMemo(() => {
     const list = [];
 
@@ -61,7 +61,7 @@ export default function CustomPdfQuestionGenerator({ questions = [], mockPapers 
       });
     });
 
-    // 2. Full-Length Custom Mock Papers (Mock 01 to 50 = 3,250 questions)
+    // 2. Full-Length Custom Mock Papers (Mock 01 to 30 = 1,950 questions)
     (customMockPapers || []).forEach((p, pIdx) => {
       (p.questions || []).forEach((q, qIdx) => {
         list.push({
@@ -73,7 +73,7 @@ export default function CustomPdfQuestionGenerator({ questions = [], mockPapers 
       });
     });
 
-    // 3. Question Bank Pool (1,915 questions)
+    // 3. Question Bank Pool (8,297 questions)
     (ALL_QUESTION_BANK_QUESTIONS || []).forEach(q => {
       list.push({
         ...q,
@@ -572,7 +572,7 @@ export default function CustomPdfQuestionGenerator({ questions = [], mockPapers 
               Printable Question Paper Generator
             </h2>
             <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-              Generate standardized, space-efficient exam worksheets or solved study guides across official PYQs, 50 full mocks, and the 1,915 question bank.
+              Generate standardized, space-efficient exam worksheets or solved study guides across official PYQs, 30 full mocks, and the 8,297 question bank.
             </p>
           </div>
 
@@ -673,7 +673,7 @@ export default function CustomPdfQuestionGenerator({ questions = [], mockPapers 
                 onClick={() => setSelectedSources(['pyq', 'mock', 'qb'])}
                 className="text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:underline cursor-pointer"
               >
-                Select All (5,189 Qs)
+                Select All (11,571 Qs)
               </button>
             </div>
 
@@ -681,7 +681,7 @@ export default function CustomPdfQuestionGenerator({ questions = [], mockPapers 
               {[
                 { key: 'pyq', title: 'Official PYQs', sub: '2007–2026', count: questions.length || 1324 },
                 { key: 'mock', title: 'Mock Papers', sub: 'Mock 01 to 30', count: (customMockPapers || []).reduce((acc, p) => acc + (p.questions?.length || 65), 0) || 1950 },
-                { key: 'qb', title: 'Question Bank', sub: '181 Subtopics', count: ALL_QUESTION_BANK_QUESTIONS.length || 1915 }
+                { key: 'qb', title: 'Question Bank', sub: '181 Subtopics', count: ALL_QUESTION_BANK_QUESTIONS.length || 8297 }
               ].map(p => {
                 const isChecked = selectedSources.includes(p.key);
                 return (

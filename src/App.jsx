@@ -132,7 +132,7 @@ export default function App() {
     try {
       const path = window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase();
       const hash = window.location.hash.replace(/^#\/?/, '').toLowerCase();
-      const validTabs = ['dashboard', 'livestats', 'telemetry', 'liveboard', 'practicehub', 'practice', 'custompractice', 'customtest', 'learninghub', 'concepts', 'simulators', 'flashcards', 'community', 'chat', 'qa', 'discussions', 'ai_tutor', 'aisolver', 'aitutor', 'revision', 'formulas', 'mocktest', 'games', 'admin', 'feedback', 'downloads', 'syllabus', 'creator', 'support', 'hq'];
+      const validTabs = ['dashboard', 'livestats', 'telemetry', 'liveboard', 'practicehub', 'practice', 'custompractice', 'customtest', 'questionbank', 'qbank', 'learninghub', 'concepts', 'simulators', 'flashcards', 'community', 'chat', 'qa', 'discussions', 'ai_tutor', 'aisolver', 'aitutor', 'revision', 'formulas', 'mocktest', 'games', 'admin', 'feedback', 'downloads', 'syllabus', 'creator', 'support', 'hq'];
       if (validTabs.includes(path)) {
         return path;
       }
@@ -150,7 +150,7 @@ export default function App() {
       try {
         const path = window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase();
         const hash = window.location.hash.replace(/^#\/?/, '').toLowerCase();
-        const validTabs = ['dashboard', 'livestats', 'telemetry', 'liveboard', 'practicehub', 'practice', 'custompractice', 'customtest', 'learninghub', 'concepts', 'simulators', 'flashcards', 'community', 'chat', 'qa', 'discussions', 'ai_tutor', 'aisolver', 'aitutor', 'revision', 'formulas', 'mocktest', 'games', 'admin', 'feedback', 'downloads', 'syllabus', 'creator', 'support', 'hq'];
+        const validTabs = ['dashboard', 'livestats', 'telemetry', 'liveboard', 'practicehub', 'practice', 'custompractice', 'customtest', 'questionbank', 'qbank', 'learninghub', 'concepts', 'simulators', 'flashcards', 'community', 'chat', 'qa', 'discussions', 'ai_tutor', 'aisolver', 'aitutor', 'revision', 'formulas', 'mocktest', 'games', 'admin', 'feedback', 'downloads', 'syllabus', 'creator', 'support', 'hq'];
         if (validTabs.includes(path)) {
           setActiveTab(path);
         } else if (validTabs.includes(hash)) {
@@ -219,6 +219,7 @@ export default function App() {
     return true;
   });
   const [authModalReason, setAuthModalReason] = useState('');
+  const [isDistractionFree, setIsDistractionFree] = useState(false);
   const [welcomeUser, setWelcomeUser] = useState(null);
   const [showEngineersDay, setShowEngineersDay] = useState(() => {
     try {
@@ -1004,87 +1005,95 @@ export default function App() {
         />
       )}
 
-      {/* Single Unified Left Sidebar */}
-      <Sidebar
-        activeTab={activeTab}
-        setActiveTab={setActiveTab}
-        darkMode={darkMode}
-        setDarkMode={setDarkMode}
-        currentTheme={currentTheme}
-        setCurrentTheme={(t) => setDarkMode(t === 'obsidian-emerald' || t === 'dark')}
-        onOpenCalc={() => setIsCalcOpen(true)}
-        onOpenCommandPalette={() => setIsCommandPaletteOpen(true)}
-        currentStudent={currentStudent}
-        onOpenProfile={() => {
-          if (currentStudent) {
-            setIsProfileOpen(true);
-          } else {
-            handleOpenAuth();
-          }
-        }}
-        onLogout={handleLogout}
-      />
+      {/* Single Unified Left Sidebar (Hidden in Distraction-Free Mode) */}
+      {!isDistractionFree && (
+        <Sidebar
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+          darkMode={darkMode}
+          setDarkMode={setDarkMode}
+          currentTheme={currentTheme}
+          setCurrentTheme={(t) => setDarkMode(t === 'obsidian-emerald' || t === 'dark')}
+          onOpenCalc={() => setIsCalcOpen(true)}
+          onOpenCommandPalette={() => setIsCommandPaletteOpen(true)}
+          currentStudent={currentStudent}
+          onOpenProfile={() => {
+            if (currentStudent) {
+              setIsProfileOpen(true);
+            } else {
+              handleOpenAuth();
+            }
+          }}
+          onLogout={handleLogout}
+        />
+      )}
 
-      {/* Main Wide Canvas */}
+      {/* Main Canvas */}
       <div className="flex-1 flex flex-col min-w-0">
-        {/* Raghav Bansal Educational Network Top Strip */}
-        <div className="w-full bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 px-4 py-1.5 sm:px-6 lg:px-8 text-[11px] font-medium z-10 shrink-0 mt-14 sm:mt-0">
-          <div className="max-w-7xl 2xl:max-w-[1500px] mx-auto flex flex-wrap items-center justify-between gap-2">
-            <div className="flex items-center gap-2">
-              <Globe className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-              <span className="font-bold text-slate-800 dark:text-slate-200">Raghav Bansal Network:</span>
-              <span className="text-emerald-700 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.2 rounded border border-emerald-200 dark:border-emerald-800">
-                GATE AG Prep (Active)
-              </span>
-            </div>
-
-            <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
-              {canInstallPwa && (
-                <button
-                  onClick={handleInstallPwa}
-                  className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-[11px] shadow-xs transition cursor-pointer mr-1"
-                  title="Install GATE AG Prep on your phone or desktop for instant offline access"
-                >
-                  <Download className="w-3 h-3 text-white" />
-                  <span>Install App</span>
-                </button>
-              )}
-
-              <a
-                href="https://main-portal-ncc-01.vercel.app/#/home"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-slate-700 dark:text-slate-300 hover:text-amber-600 dark:hover:text-amber-400 font-bold transition group"
-                title="NCC Prep Portal by Raghav Bansal"
-              >
-                <Shield className="w-3 h-3 text-amber-500" />
-                <span>NCC Prep</span>
-                <ExternalLink className="w-2.5 h-2.5 text-slate-400 opacity-60 group-hover:opacity-100 transition-opacity" />
-              </a>
-
-              <span className="hidden sm:inline text-slate-300 dark:text-slate-700">•</span>
-
-              <button
-                type="button"
-                onClick={() => alert("COAET Student's Corner is currently under active testing and development. Access is temporarily disabled.")}
-                className="inline-flex items-center gap-1.5 text-slate-400 dark:text-slate-500 font-bold transition cursor-not-allowed opacity-80"
-                title="COAET Student's Corner is currently under testing & development"
-              >
-                <GraduationCap className="w-3 h-3 text-slate-400 dark:text-slate-500" />
-                <span className="sm:hidden">COAET Corner</span>
-                <span className="hidden sm:inline">COAET Student's Corner</span>
-                <span className="text-[9px] font-extrabold uppercase px-1.5 py-0.2 rounded bg-amber-100 dark:bg-amber-950/80 text-amber-700 dark:text-amber-400 border border-amber-300 dark:border-amber-800">
-                  Dev
+        {/* Raghav Bansal Educational Network Top Strip (Hidden in Distraction-Free Mode) */}
+        {!isDistractionFree && (
+          <div className="w-full bg-slate-50 dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 px-4 py-1.5 sm:px-6 lg:px-8 text-[11px] font-medium z-10 shrink-0 mt-14 sm:mt-0">
+            <div className="max-w-7xl 2xl:max-w-[1500px] mx-auto flex flex-wrap items-center justify-between gap-2">
+              <div className="flex items-center gap-2">
+                <Globe className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+                <span className="font-bold text-slate-800 dark:text-slate-200">Raghav Bansal Network:</span>
+                <span className="text-emerald-700 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.2 rounded border border-emerald-200 dark:border-emerald-800">
+                  GATE AG Prep (Active)
                 </span>
-              </button>
+              </div>
+
+              <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
+                {canInstallPwa && (
+                  <button
+                    onClick={handleInstallPwa}
+                    className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-[11px] shadow-xs transition cursor-pointer mr-1"
+                    title="Install GATE AG Prep on your phone or desktop for instant offline access"
+                  >
+                    <Download className="w-3 h-3 text-white" />
+                    <span>Install App</span>
+                  </button>
+                )}
+
+                <a
+                  href="https://main-portal-ncc-01.vercel.app/#/home"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-slate-700 dark:text-slate-300 hover:text-amber-600 dark:hover:text-amber-400 font-bold transition group"
+                  title="NCC Prep Portal by Raghav Bansal"
+                >
+                  <Shield className="w-3 h-3 text-amber-500" />
+                  <span>NCC Prep</span>
+                  <ExternalLink className="w-2.5 h-2.5 text-slate-400 opacity-60 group-hover:opacity-100 transition-opacity" />
+                </a>
+
+                <span className="hidden sm:inline text-slate-300 dark:text-slate-700">•</span>
+
+                <button
+                  type="button"
+                  onClick={() => alert("COAET Student's Corner is currently under active testing and development. Access is temporarily disabled.")}
+                  className="inline-flex items-center gap-1.5 text-slate-400 dark:text-slate-500 font-bold transition cursor-not-allowed opacity-80"
+                  title="COAET Student's Corner is currently under testing & development"
+                >
+                  <GraduationCap className="w-3 h-3 text-slate-400 dark:text-slate-500" />
+                  <span className="sm:hidden">COAET Corner</span>
+                  <span className="hidden sm:inline">COAET Student's Corner</span>
+                  <span className="text-[9px] font-extrabold uppercase px-1.5 py-0.2 rounded bg-amber-100 dark:bg-amber-950/80 text-amber-700 dark:text-amber-400 border border-amber-300 dark:border-amber-800">
+                    Dev
+                  </span>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
+        )}
 
-        <main className="flex-1 max-w-7xl 2xl:max-w-[1500px] w-full mx-auto px-3 sm:px-6 lg:px-8 pt-3 sm:pt-6 pb-24 sm:pb-8">
+        <main className={
+          isDistractionFree 
+            ? "flex-1 w-full min-h-screen p-0 m-0" 
+            : "flex-1 max-w-7xl 2xl:max-w-[1500px] w-full mx-auto px-3 sm:px-6 lg:px-8 pt-3 sm:pt-6 pb-24 sm:pb-8"
+        }>
           
           {/* Guest Visitor Mode Top Banner */}
-          {!currentStudent && (
+          {!isDistractionFree && !currentStudent && (
             <div className="mb-6 p-4 rounded-2xl bg-gradient-to-r from-emerald-500/10 via-teal-500/5 to-transparent border border-emerald-500/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-xs animate-fadeIn">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
@@ -1152,6 +1161,8 @@ export default function App() {
                 onRequireAuth={handleOpenAuth}
                 mistakeFilterIds={practiceMistakeFilter}
                 onClearMistakeFilter={() => setPracticeMistakeFilter(null)}
+                isDistractionFree={isDistractionFree}
+                onDistractionFreeChange={setIsDistractionFree}
               />
             )}
 
@@ -1200,6 +1211,8 @@ export default function App() {
                 onEditQuestion={(q) => setEditingQuestion(q)}
                 currentStudent={currentStudent}
                 onRequireAuth={handleOpenAuth}
+                isDistractionFree={isDistractionFree}
+                onDistractionFreeChange={setIsDistractionFree}
               />
             )}
 

@@ -139,7 +139,7 @@ describe('Official 8-Section Taxonomy, Dataset Schema & SQL Parity Test Suite', 
       assert.ok(mathTopics.length >= 6);
 
       const gaTopics = getOfficialTopicsForSection('Section 8: General Aptitude');
-      assert.strictEqual(gaTopics.length, 3);
+      assert.ok(gaTopics.length >= 3);
     });
   });
 

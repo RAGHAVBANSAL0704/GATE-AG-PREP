@@ -665,8 +665,8 @@ export default [
     "question": "A batch of $100000$ ($10^5$) cans of low-acid food, each initially containing $10^2$ spores of Clostridium botulinum, undergoes a commercial $12\\text{-D}$ thermal sterilization process. The probability of finding a non-sterile container in the entire batch (expected number of surviving spores in the whole batch) is ________ (answer in decimal).",
     "correct_answer": "0.00001",
     "numerical_range": {
-      "min": 0.000009,
-      "max": 0.000011
+      "min": 9e-06,
+      "max": 1.1e-05
     },
     "solution": "1. Initial total spore population across the batch of $10^5$ cans:\n$$N_0 = 10^5 \\times 10^2 = 10^7\\text{ spores}$$\n2. A $12\\text{-D}$ reduction reduces the population by $12$ log cycles ($10^{12}$ times):\n$$N = N_0 \\times 10^{-12} = 10^7 \\times 10^{-12} = 10^{-5} = 0.00001$$\nThis represents an expected failure rate of 1 non-sterile can in $100,000$ cans.",
     "difficulty": "Moderate"
@@ -4429,5 +4429,13764 @@ export default [
     "solution": "Thermal Death $z$-value Equation:\n$$\\log_{10}(D_1 / D_2) = \\frac{T_2 - T_1}{z} = \\frac{121.1 - 111.1}{10} = 1 \\implies \\frac{D_1}{1.2} = 10 \\implies D_1 = 12.0\\text{ min}$$\nHence, the $D$-value is **12** minutes.",
     "difficulty": "Easy",
     "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Conduction heat gain through cold room insulation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cold storage wall of surface area $A = 25\\text{ m}^2$ is insulated with polyurethane foam of thickness $L = 12\\text{ cm}$ and thermal conductivity $k = 0.04\\text{ W/(m}\\,\\text{K)}$. If the outer surface temperature is maintained at $35^\\circ\\text{C}$ and the inner surface at $4^\\circ\\text{C}$, the steady-state heat ingress through the wall is ________ $\\text{W}$ (round off to two decimal places).",
+    "correct_answer": "258.33",
+    "numerical_range": {
+      "min": 257.83,
+      "max": 258.83
+    },
+    "solution": "From Fourier's 1D steady conduction law:\n$$q = \\frac{k A (T_{out} - T_{in})}{L}$$\nGiven $k = 0.04\\text{ W/(m K)}$, $A = 25\\text{ m}^2$, $\\Delta T = 35 - 4 = 31^\\circ\\text{C}$, and $L = 0.12\\text{ m}$:\n$$q = \\frac{0.04 \\times 25 \\times 31}{0.12} = \\frac{31.00}{0.12} = 258.33\\text{ W}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation for cylindrical pipe",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A steam pipe in a dairy plant is to be covered with insulation having thermal conductivity $k = 0.05\\text{ W/(m}\\,\\text{K)}$. The outer convective heat transfer coefficient with ambient air is $h = 10.0\\text{ W/(m}^2\\,\\text{K)}$. The critical radius of insulation is ________ $\\text{mm}$ (round off to one decimal place).",
+    "correct_answer": "5.0",
+    "numerical_range": {
+      "min": 4.8,
+      "max": 5.2
+    },
+    "solution": "The critical radius of insulation for a circular cylinder is:\n$$r_c = \\frac{k}{h}$$\nGiven $k = 0.05\\text{ W/(m K)}$ and $h = 10.0\\text{ W/(m}^2\\text{ K)}$:\n$$r_c = \\frac{0.05}{10.0} = 0.0050\\text{ m} = 5.0\\text{ mm}$$",
+    "difficulty": "Easy",
+    "source": "Unit Operations in Food Processing (R.L. Earle)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_003",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation concept",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the critical radius of insulation ($r_c$) is/are TRUE?",
+    "options": {
+      "A": "For a circular cylinder, $r_c = k / h$, whereas for a sphere, $r_c = 2k / h$",
+      "B": "Adding insulation to a bare cylinder having outer radius $r_o < r_c$ initially increases the rate of heat loss until $r = r_c$",
+      "C": "For a plane flat wall, the concept of critical radius does not exist because surface area remains constant regardless of thickness",
+      "D": "Adding any insulation to a steam pipe always strictly decreases heat loss regardless of pipe diameter"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Cylindrical $r_c = k/h$; spherical $r_c = 2k/h$ (A is true).\n2. For $r_o < r_c$, the decrease in outer convective resistance ($1/hA$) outweighs added conductive resistance, peaking heat loss at $r = r_c$ (B is true).\n3. In plane walls, area is invariant with thickness, so adding insulation always monotonically increases thermal resistance (C is true).\n4. When $r_o < r_c$, insulation increases heat transfer; statement D is false.",
+    "difficulty": "Moderate",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_004",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Conduction heat gain through cold room insulation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cold storage wall of surface area $A = 25\\text{ m}^2$ is insulated with polyurethane foam of thickness $L = 18\\text{ cm}$ and thermal conductivity $k = 0.04\\text{ W/(m}\\,\\text{K)}$. If the outer surface temperature is maintained at $35^\\circ\\text{C}$ and the inner surface at $4^\\circ\\text{C}$, the steady-state heat ingress through the wall is ________ $\\text{W}$ (round off to two decimal places).",
+    "correct_answer": "172.22",
+    "numerical_range": {
+      "min": 171.72,
+      "max": 172.72
+    },
+    "solution": "From Fourier's 1D steady conduction law:\n$$q = \\frac{k A (T_{out} - T_{in})}{L}$$\nGiven $k = 0.04\\text{ W/(m K)}$, $A = 25\\text{ m}^2$, $\\Delta T = 35 - 4 = 31^\\circ\\text{C}$, and $L = 0.18\\text{ m}$:\n$$q = \\frac{0.04 \\times 25 \\times 31}{0.18} = \\frac{31.00}{0.18} = 172.22\\text{ W}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_005",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation for cylindrical pipe",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A steam pipe in a dairy plant is to be covered with insulation having thermal conductivity $k = 0.05\\text{ W/(m}\\,\\text{K)}$. The outer convective heat transfer coefficient with ambient air is $h = 10.0\\text{ W/(m}^2\\,\\text{K)}$. The critical radius of insulation is ________ $\\text{mm}$ (round off to one decimal place).",
+    "correct_answer": "5.0",
+    "numerical_range": {
+      "min": 4.8,
+      "max": 5.2
+    },
+    "solution": "The critical radius of insulation for a circular cylinder is:\n$$r_c = \\frac{k}{h}$$\nGiven $k = 0.05\\text{ W/(m K)}$ and $h = 10.0\\text{ W/(m}^2\\text{ K)}$:\n$$r_c = \\frac{0.05}{10.0} = 0.0050\\text{ m} = 5.0\\text{ mm}$$",
+    "difficulty": "Easy",
+    "source": "Unit Operations in Food Processing (R.L. Earle)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_006",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation concept",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the critical radius of insulation ($r_c$) is/are TRUE?",
+    "options": {
+      "A": "For a circular cylinder, $r_c = k / h$, whereas for a sphere, $r_c = 2k / h$",
+      "B": "Adding insulation to a bare cylinder having outer radius $r_o < r_c$ initially increases the rate of heat loss until $r = r_c$",
+      "C": "For a plane flat wall, the concept of critical radius does not exist because surface area remains constant regardless of thickness",
+      "D": "Adding any insulation to a steam pipe always strictly decreases heat loss regardless of pipe diameter"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Cylindrical $r_c = k/h$; spherical $r_c = 2k/h$ (A is true).\n2. For $r_o < r_c$, the decrease in outer convective resistance ($1/hA$) outweighs added conductive resistance, peaking heat loss at $r = r_c$ (B is true).\n3. In plane walls, area is invariant with thickness, so adding insulation always monotonically increases thermal resistance (C is true).\n4. When $r_o < r_c$, insulation increases heat transfer; statement D is false.",
+    "difficulty": "Moderate",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_007",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Conduction heat gain through cold room insulation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cold storage wall of surface area $A = 25\\text{ m}^2$ is insulated with polyurethane foam of thickness $L = 14\\text{ cm}$ and thermal conductivity $k = 0.04\\text{ W/(m}\\,\\text{K)}$. If the outer surface temperature is maintained at $35^\\circ\\text{C}$ and the inner surface at $4^\\circ\\text{C}$, the steady-state heat ingress through the wall is ________ $\\text{W}$ (round off to two decimal places).",
+    "correct_answer": "221.43",
+    "numerical_range": {
+      "min": 220.93,
+      "max": 221.93
+    },
+    "solution": "From Fourier's 1D steady conduction law:\n$$q = \\frac{k A (T_{out} - T_{in})}{L}$$\nGiven $k = 0.04\\text{ W/(m K)}$, $A = 25\\text{ m}^2$, $\\Delta T = 35 - 4 = 31^\\circ\\text{C}$, and $L = 0.14\\text{ m}$:\n$$q = \\frac{0.04 \\times 25 \\times 31}{0.14} = \\frac{31.00}{0.14} = 221.43\\text{ W}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_008",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation for cylindrical pipe",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A steam pipe in a dairy plant is to be covered with insulation having thermal conductivity $k = 0.05\\text{ W/(m}\\,\\text{K)}$. The outer convective heat transfer coefficient with ambient air is $h = 10.0\\text{ W/(m}^2\\,\\text{K)}$. The critical radius of insulation is ________ $\\text{mm}$ (round off to one decimal place).",
+    "correct_answer": "5.0",
+    "numerical_range": {
+      "min": 4.8,
+      "max": 5.2
+    },
+    "solution": "The critical radius of insulation for a circular cylinder is:\n$$r_c = \\frac{k}{h}$$\nGiven $k = 0.05\\text{ W/(m K)}$ and $h = 10.0\\text{ W/(m}^2\\text{ K)}$:\n$$r_c = \\frac{0.05}{10.0} = 0.0050\\text{ m} = 5.0\\text{ mm}$$",
+    "difficulty": "Easy",
+    "source": "Unit Operations in Food Processing (R.L. Earle)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_009",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation concept",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the critical radius of insulation ($r_c$) is/are TRUE?",
+    "options": {
+      "A": "For a circular cylinder, $r_c = k / h$, whereas for a sphere, $r_c = 2k / h$",
+      "B": "Adding insulation to a bare cylinder having outer radius $r_o < r_c$ initially increases the rate of heat loss until $r = r_c$",
+      "C": "For a plane flat wall, the concept of critical radius does not exist because surface area remains constant regardless of thickness",
+      "D": "Adding any insulation to a steam pipe always strictly decreases heat loss regardless of pipe diameter"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Cylindrical $r_c = k/h$; spherical $r_c = 2k/h$ (A is true).\n2. For $r_o < r_c$, the decrease in outer convective resistance ($1/hA$) outweighs added conductive resistance, peaking heat loss at $r = r_c$ (B is true).\n3. In plane walls, area is invariant with thickness, so adding insulation always monotonically increases thermal resistance (C is true).\n4. When $r_o < r_c$, insulation increases heat transfer; statement D is false.",
+    "difficulty": "Moderate",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_010",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Conduction heat gain through cold room insulation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cold storage wall of surface area $A = 25\\text{ m}^2$ is insulated with polyurethane foam of thickness $L = 10\\text{ cm}$ and thermal conductivity $k = 0.04\\text{ W/(m}\\,\\text{K)}$. If the outer surface temperature is maintained at $35^\\circ\\text{C}$ and the inner surface at $4^\\circ\\text{C}$, the steady-state heat ingress through the wall is ________ $\\text{W}$ (round off to two decimal places).",
+    "correct_answer": "310.00",
+    "numerical_range": {
+      "min": 309.5,
+      "max": 310.5
+    },
+    "solution": "From Fourier's 1D steady conduction law:\n$$q = \\frac{k A (T_{out} - T_{in})}{L}$$\nGiven $k = 0.04\\text{ W/(m K)}$, $A = 25\\text{ m}^2$, $\\Delta T = 35 - 4 = 31^\\circ\\text{C}$, and $L = 0.10\\text{ m}$:\n$$q = \\frac{0.04 \\times 25 \\times 31}{0.10} = \\frac{31.00}{0.10} = 310.00\\text{ W}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_011",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation for cylindrical pipe",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A steam pipe in a dairy plant is to be covered with insulation having thermal conductivity $k = 0.05\\text{ W/(m}\\,\\text{K)}$. The outer convective heat transfer coefficient with ambient air is $h = 10.0\\text{ W/(m}^2\\,\\text{K)}$. The critical radius of insulation is ________ $\\text{mm}$ (round off to one decimal place).",
+    "correct_answer": "5.0",
+    "numerical_range": {
+      "min": 4.8,
+      "max": 5.2
+    },
+    "solution": "The critical radius of insulation for a circular cylinder is:\n$$r_c = \\frac{k}{h}$$\nGiven $k = 0.05\\text{ W/(m K)}$ and $h = 10.0\\text{ W/(m}^2\\text{ K)}$:\n$$r_c = \\frac{0.05}{10.0} = 0.0050\\text{ m} = 5.0\\text{ mm}$$",
+    "difficulty": "Easy",
+    "source": "Unit Operations in Food Processing (R.L. Earle)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_012",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation concept",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the critical radius of insulation ($r_c$) is/are TRUE?",
+    "options": {
+      "A": "For a circular cylinder, $r_c = k / h$, whereas for a sphere, $r_c = 2k / h$",
+      "B": "Adding insulation to a bare cylinder having outer radius $r_o < r_c$ initially increases the rate of heat loss until $r = r_c$",
+      "C": "For a plane flat wall, the concept of critical radius does not exist because surface area remains constant regardless of thickness",
+      "D": "Adding any insulation to a steam pipe always strictly decreases heat loss regardless of pipe diameter"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Cylindrical $r_c = k/h$; spherical $r_c = 2k/h$ (A is true).\n2. For $r_o < r_c$, the decrease in outer convective resistance ($1/hA$) outweighs added conductive resistance, peaking heat loss at $r = r_c$ (B is true).\n3. In plane walls, area is invariant with thickness, so adding insulation always monotonically increases thermal resistance (C is true).\n4. When $r_o < r_c$, insulation increases heat transfer; statement D is false.",
+    "difficulty": "Moderate",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_013",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Conduction heat gain through cold room insulation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cold storage wall of surface area $A = 25\\text{ m}^2$ is insulated with polyurethane foam of thickness $L = 16\\text{ cm}$ and thermal conductivity $k = 0.04\\text{ W/(m}\\,\\text{K)}$. If the outer surface temperature is maintained at $35^\\circ\\text{C}$ and the inner surface at $4^\\circ\\text{C}$, the steady-state heat ingress through the wall is ________ $\\text{W}$ (round off to two decimal places).",
+    "correct_answer": "193.75",
+    "numerical_range": {
+      "min": 193.25,
+      "max": 194.25
+    },
+    "solution": "From Fourier's 1D steady conduction law:\n$$q = \\frac{k A (T_{out} - T_{in})}{L}$$\nGiven $k = 0.04\\text{ W/(m K)}$, $A = 25\\text{ m}^2$, $\\Delta T = 35 - 4 = 31^\\circ\\text{C}$, and $L = 0.16\\text{ m}$:\n$$q = \\frac{0.04 \\times 25 \\times 31}{0.16} = \\frac{31.00}{0.16} = 193.75\\text{ W}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_014",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation for cylindrical pipe",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A steam pipe in a dairy plant is to be covered with insulation having thermal conductivity $k = 0.05\\text{ W/(m}\\,\\text{K)}$. The outer convective heat transfer coefficient with ambient air is $h = 10.0\\text{ W/(m}^2\\,\\text{K)}$. The critical radius of insulation is ________ $\\text{mm}$ (round off to one decimal place).",
+    "correct_answer": "5.0",
+    "numerical_range": {
+      "min": 4.8,
+      "max": 5.2
+    },
+    "solution": "The critical radius of insulation for a circular cylinder is:\n$$r_c = \\frac{k}{h}$$\nGiven $k = 0.05\\text{ W/(m K)}$ and $h = 10.0\\text{ W/(m}^2\\text{ K)}$:\n$$r_c = \\frac{0.05}{10.0} = 0.0050\\text{ m} = 5.0\\text{ mm}$$",
+    "difficulty": "Easy",
+    "source": "Unit Operations in Food Processing (R.L. Earle)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_015",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation concept",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the critical radius of insulation ($r_c$) is/are TRUE?",
+    "options": {
+      "A": "For a circular cylinder, $r_c = k / h$, whereas for a sphere, $r_c = 2k / h$",
+      "B": "Adding insulation to a bare cylinder having outer radius $r_o < r_c$ initially increases the rate of heat loss until $r = r_c$",
+      "C": "For a plane flat wall, the concept of critical radius does not exist because surface area remains constant regardless of thickness",
+      "D": "Adding any insulation to a steam pipe always strictly decreases heat loss regardless of pipe diameter"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Cylindrical $r_c = k/h$; spherical $r_c = 2k/h$ (A is true).\n2. For $r_o < r_c$, the decrease in outer convective resistance ($1/hA$) outweighs added conductive resistance, peaking heat loss at $r = r_c$ (B is true).\n3. In plane walls, area is invariant with thickness, so adding insulation always monotonically increases thermal resistance (C is true).\n4. When $r_o < r_c$, insulation increases heat transfer; statement D is false.",
+    "difficulty": "Moderate",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_016",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Conduction heat gain through cold room insulation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cold storage wall of surface area $A = 25\\text{ m}^2$ is insulated with polyurethane foam of thickness $L = 12\\text{ cm}$ and thermal conductivity $k = 0.04\\text{ W/(m}\\,\\text{K)}$. If the outer surface temperature is maintained at $35^\\circ\\text{C}$ and the inner surface at $4^\\circ\\text{C}$, the steady-state heat ingress through the wall is ________ $\\text{W}$ (round off to two decimal places).",
+    "correct_answer": "258.33",
+    "numerical_range": {
+      "min": 257.83,
+      "max": 258.83
+    },
+    "solution": "From Fourier's 1D steady conduction law:\n$$q = \\frac{k A (T_{out} - T_{in})}{L}$$\nGiven $k = 0.04\\text{ W/(m K)}$, $A = 25\\text{ m}^2$, $\\Delta T = 35 - 4 = 31^\\circ\\text{C}$, and $L = 0.12\\text{ m}$:\n$$q = \\frac{0.04 \\times 25 \\times 31}{0.12} = \\frac{31.00}{0.12} = 258.33\\text{ W}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_017",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation for cylindrical pipe",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A steam pipe in a dairy plant is to be covered with insulation having thermal conductivity $k = 0.05\\text{ W/(m}\\,\\text{K)}$. The outer convective heat transfer coefficient with ambient air is $h = 10.0\\text{ W/(m}^2\\,\\text{K)}$. The critical radius of insulation is ________ $\\text{mm}$ (round off to one decimal place).",
+    "correct_answer": "5.0",
+    "numerical_range": {
+      "min": 4.8,
+      "max": 5.2
+    },
+    "solution": "The critical radius of insulation for a circular cylinder is:\n$$r_c = \\frac{k}{h}$$\nGiven $k = 0.05\\text{ W/(m K)}$ and $h = 10.0\\text{ W/(m}^2\\text{ K)}$:\n$$r_c = \\frac{0.05}{10.0} = 0.0050\\text{ m} = 5.0\\text{ mm}$$",
+    "difficulty": "Easy",
+    "source": "Unit Operations in Food Processing (R.L. Earle)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_018",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation concept",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the critical radius of insulation ($r_c$) is/are TRUE?",
+    "options": {
+      "A": "For a circular cylinder, $r_c = k / h$, whereas for a sphere, $r_c = 2k / h$",
+      "B": "Adding insulation to a bare cylinder having outer radius $r_o < r_c$ initially increases the rate of heat loss until $r = r_c$",
+      "C": "For a plane flat wall, the concept of critical radius does not exist because surface area remains constant regardless of thickness",
+      "D": "Adding any insulation to a steam pipe always strictly decreases heat loss regardless of pipe diameter"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Cylindrical $r_c = k/h$; spherical $r_c = 2k/h$ (A is true).\n2. For $r_o < r_c$, the decrease in outer convective resistance ($1/hA$) outweighs added conductive resistance, peaking heat loss at $r = r_c$ (B is true).\n3. In plane walls, area is invariant with thickness, so adding insulation always monotonically increases thermal resistance (C is true).\n4. When $r_o < r_c$, insulation increases heat transfer; statement D is false.",
+    "difficulty": "Moderate",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_019",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Conduction heat gain through cold room insulation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cold storage wall of surface area $A = 25\\text{ m}^2$ is insulated with polyurethane foam of thickness $L = 18\\text{ cm}$ and thermal conductivity $k = 0.04\\text{ W/(m}\\,\\text{K)}$. If the outer surface temperature is maintained at $35^\\circ\\text{C}$ and the inner surface at $4^\\circ\\text{C}$, the steady-state heat ingress through the wall is ________ $\\text{W}$ (round off to two decimal places).",
+    "correct_answer": "172.22",
+    "numerical_range": {
+      "min": 171.72,
+      "max": 172.72
+    },
+    "solution": "From Fourier's 1D steady conduction law:\n$$q = \\frac{k A (T_{out} - T_{in})}{L}$$\nGiven $k = 0.04\\text{ W/(m K)}$, $A = 25\\text{ m}^2$, $\\Delta T = 35 - 4 = 31^\\circ\\text{C}$, and $L = 0.18\\text{ m}$:\n$$q = \\frac{0.04 \\times 25 \\times 31}{0.18} = \\frac{31.00}{0.18} = 172.22\\text{ W}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_020",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation for cylindrical pipe",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A steam pipe in a dairy plant is to be covered with insulation having thermal conductivity $k = 0.05\\text{ W/(m}\\,\\text{K)}$. The outer convective heat transfer coefficient with ambient air is $h = 10.0\\text{ W/(m}^2\\,\\text{K)}$. The critical radius of insulation is ________ $\\text{mm}$ (round off to one decimal place).",
+    "correct_answer": "5.0",
+    "numerical_range": {
+      "min": 4.8,
+      "max": 5.2
+    },
+    "solution": "The critical radius of insulation for a circular cylinder is:\n$$r_c = \\frac{k}{h}$$\nGiven $k = 0.05\\text{ W/(m K)}$ and $h = 10.0\\text{ W/(m}^2\\text{ K)}$:\n$$r_c = \\frac{0.05}{10.0} = 0.0050\\text{ m} = 5.0\\text{ mm}$$",
+    "difficulty": "Easy",
+    "source": "Unit Operations in Food Processing (R.L. Earle)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_021",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation concept",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the critical radius of insulation ($r_c$) is/are TRUE?",
+    "options": {
+      "A": "For a circular cylinder, $r_c = k / h$, whereas for a sphere, $r_c = 2k / h$",
+      "B": "Adding insulation to a bare cylinder having outer radius $r_o < r_c$ initially increases the rate of heat loss until $r = r_c$",
+      "C": "For a plane flat wall, the concept of critical radius does not exist because surface area remains constant regardless of thickness",
+      "D": "Adding any insulation to a steam pipe always strictly decreases heat loss regardless of pipe diameter"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Cylindrical $r_c = k/h$; spherical $r_c = 2k/h$ (A is true).\n2. For $r_o < r_c$, the decrease in outer convective resistance ($1/hA$) outweighs added conductive resistance, peaking heat loss at $r = r_c$ (B is true).\n3. In plane walls, area is invariant with thickness, so adding insulation always monotonically increases thermal resistance (C is true).\n4. When $r_o < r_c$, insulation increases heat transfer; statement D is false.",
+    "difficulty": "Moderate",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_022",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Conduction heat gain through cold room insulation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cold storage wall of surface area $A = 25\\text{ m}^2$ is insulated with polyurethane foam of thickness $L = 14\\text{ cm}$ and thermal conductivity $k = 0.04\\text{ W/(m}\\,\\text{K)}$. If the outer surface temperature is maintained at $35^\\circ\\text{C}$ and the inner surface at $4^\\circ\\text{C}$, the steady-state heat ingress through the wall is ________ $\\text{W}$ (round off to two decimal places).",
+    "correct_answer": "221.43",
+    "numerical_range": {
+      "min": 220.93,
+      "max": 221.93
+    },
+    "solution": "From Fourier's 1D steady conduction law:\n$$q = \\frac{k A (T_{out} - T_{in})}{L}$$\nGiven $k = 0.04\\text{ W/(m K)}$, $A = 25\\text{ m}^2$, $\\Delta T = 35 - 4 = 31^\\circ\\text{C}$, and $L = 0.14\\text{ m}$:\n$$q = \\frac{0.04 \\times 25 \\times 31}{0.14} = \\frac{31.00}{0.14} = 221.43\\text{ W}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_023",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation for cylindrical pipe",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A steam pipe in a dairy plant is to be covered with insulation having thermal conductivity $k = 0.05\\text{ W/(m}\\,\\text{K)}$. The outer convective heat transfer coefficient with ambient air is $h = 10.0\\text{ W/(m}^2\\,\\text{K)}$. The critical radius of insulation is ________ $\\text{mm}$ (round off to one decimal place).",
+    "correct_answer": "5.0",
+    "numerical_range": {
+      "min": 4.8,
+      "max": 5.2
+    },
+    "solution": "The critical radius of insulation for a circular cylinder is:\n$$r_c = \\frac{k}{h}$$\nGiven $k = 0.05\\text{ W/(m K)}$ and $h = 10.0\\text{ W/(m}^2\\text{ K)}$:\n$$r_c = \\frac{0.05}{10.0} = 0.0050\\text{ m} = 5.0\\text{ mm}$$",
+    "difficulty": "Easy",
+    "source": "Unit Operations in Food Processing (R.L. Earle)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_024",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation concept",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the critical radius of insulation ($r_c$) is/are TRUE?",
+    "options": {
+      "A": "For a circular cylinder, $r_c = k / h$, whereas for a sphere, $r_c = 2k / h$",
+      "B": "Adding insulation to a bare cylinder having outer radius $r_o < r_c$ initially increases the rate of heat loss until $r = r_c$",
+      "C": "For a plane flat wall, the concept of critical radius does not exist because surface area remains constant regardless of thickness",
+      "D": "Adding any insulation to a steam pipe always strictly decreases heat loss regardless of pipe diameter"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Cylindrical $r_c = k/h$; spherical $r_c = 2k/h$ (A is true).\n2. For $r_o < r_c$, the decrease in outer convective resistance ($1/hA$) outweighs added conductive resistance, peaking heat loss at $r = r_c$ (B is true).\n3. In plane walls, area is invariant with thickness, so adding insulation always monotonically increases thermal resistance (C is true).\n4. When $r_o < r_c$, insulation increases heat transfer; statement D is false.",
+    "difficulty": "Moderate",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_025",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Conduction heat gain through cold room insulation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cold storage wall of surface area $A = 25\\text{ m}^2$ is insulated with polyurethane foam of thickness $L = 10\\text{ cm}$ and thermal conductivity $k = 0.04\\text{ W/(m}\\,\\text{K)}$. If the outer surface temperature is maintained at $35^\\circ\\text{C}$ and the inner surface at $4^\\circ\\text{C}$, the steady-state heat ingress through the wall is ________ $\\text{W}$ (round off to two decimal places).",
+    "correct_answer": "310.00",
+    "numerical_range": {
+      "min": 309.5,
+      "max": 310.5
+    },
+    "solution": "From Fourier's 1D steady conduction law:\n$$q = \\frac{k A (T_{out} - T_{in})}{L}$$\nGiven $k = 0.04\\text{ W/(m K)}$, $A = 25\\text{ m}^2$, $\\Delta T = 35 - 4 = 31^\\circ\\text{C}$, and $L = 0.10\\text{ m}$:\n$$q = \\frac{0.04 \\times 25 \\times 31}{0.10} = \\frac{31.00}{0.10} = 310.00\\text{ W}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_026",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation for cylindrical pipe",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A steam pipe in a dairy plant is to be covered with insulation having thermal conductivity $k = 0.05\\text{ W/(m}\\,\\text{K)}$. The outer convective heat transfer coefficient with ambient air is $h = 10.0\\text{ W/(m}^2\\,\\text{K)}$. The critical radius of insulation is ________ $\\text{mm}$ (round off to one decimal place).",
+    "correct_answer": "5.0",
+    "numerical_range": {
+      "min": 4.8,
+      "max": 5.2
+    },
+    "solution": "The critical radius of insulation for a circular cylinder is:\n$$r_c = \\frac{k}{h}$$\nGiven $k = 0.05\\text{ W/(m K)}$ and $h = 10.0\\text{ W/(m}^2\\text{ K)}$:\n$$r_c = \\frac{0.05}{10.0} = 0.0050\\text{ m} = 5.0\\text{ mm}$$",
+    "difficulty": "Easy",
+    "source": "Unit Operations in Food Processing (R.L. Earle)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_027",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation concept",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the critical radius of insulation ($r_c$) is/are TRUE?",
+    "options": {
+      "A": "For a circular cylinder, $r_c = k / h$, whereas for a sphere, $r_c = 2k / h$",
+      "B": "Adding insulation to a bare cylinder having outer radius $r_o < r_c$ initially increases the rate of heat loss until $r = r_c$",
+      "C": "For a plane flat wall, the concept of critical radius does not exist because surface area remains constant regardless of thickness",
+      "D": "Adding any insulation to a steam pipe always strictly decreases heat loss regardless of pipe diameter"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Cylindrical $r_c = k/h$; spherical $r_c = 2k/h$ (A is true).\n2. For $r_o < r_c$, the decrease in outer convective resistance ($1/hA$) outweighs added conductive resistance, peaking heat loss at $r = r_c$ (B is true).\n3. In plane walls, area is invariant with thickness, so adding insulation always monotonically increases thermal resistance (C is true).\n4. When $r_o < r_c$, insulation increases heat transfer; statement D is false.",
+    "difficulty": "Moderate",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_028",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Conduction heat gain through cold room insulation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cold storage wall of surface area $A = 25\\text{ m}^2$ is insulated with polyurethane foam of thickness $L = 16\\text{ cm}$ and thermal conductivity $k = 0.04\\text{ W/(m}\\,\\text{K)}$. If the outer surface temperature is maintained at $35^\\circ\\text{C}$ and the inner surface at $4^\\circ\\text{C}$, the steady-state heat ingress through the wall is ________ $\\text{W}$ (round off to two decimal places).",
+    "correct_answer": "193.75",
+    "numerical_range": {
+      "min": 193.25,
+      "max": 194.25
+    },
+    "solution": "From Fourier's 1D steady conduction law:\n$$q = \\frac{k A (T_{out} - T_{in})}{L}$$\nGiven $k = 0.04\\text{ W/(m K)}$, $A = 25\\text{ m}^2$, $\\Delta T = 35 - 4 = 31^\\circ\\text{C}$, and $L = 0.16\\text{ m}$:\n$$q = \\frac{0.04 \\times 25 \\times 31}{0.16} = \\frac{31.00}{0.16} = 193.75\\text{ W}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_029",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation for cylindrical pipe",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A steam pipe in a dairy plant is to be covered with insulation having thermal conductivity $k = 0.05\\text{ W/(m}\\,\\text{K)}$. The outer convective heat transfer coefficient with ambient air is $h = 10.0\\text{ W/(m}^2\\,\\text{K)}$. The critical radius of insulation is ________ $\\text{mm}$ (round off to one decimal place).",
+    "correct_answer": "5.0",
+    "numerical_range": {
+      "min": 4.8,
+      "max": 5.2
+    },
+    "solution": "The critical radius of insulation for a circular cylinder is:\n$$r_c = \\frac{k}{h}$$\nGiven $k = 0.05\\text{ W/(m K)}$ and $h = 10.0\\text{ W/(m}^2\\text{ K)}$:\n$$r_c = \\frac{0.05}{10.0} = 0.0050\\text{ m} = 5.0\\text{ mm}$$",
+    "difficulty": "Easy",
+    "source": "Unit Operations in Food Processing (R.L. Earle)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_030",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation concept",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the critical radius of insulation ($r_c$) is/are TRUE?",
+    "options": {
+      "A": "For a circular cylinder, $r_c = k / h$, whereas for a sphere, $r_c = 2k / h$",
+      "B": "Adding insulation to a bare cylinder having outer radius $r_o < r_c$ initially increases the rate of heat loss until $r = r_c$",
+      "C": "For a plane flat wall, the concept of critical radius does not exist because surface area remains constant regardless of thickness",
+      "D": "Adding any insulation to a steam pipe always strictly decreases heat loss regardless of pipe diameter"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Cylindrical $r_c = k/h$; spherical $r_c = 2k/h$ (A is true).\n2. For $r_o < r_c$, the decrease in outer convective resistance ($1/hA$) outweighs added conductive resistance, peaking heat loss at $r = r_c$ (B is true).\n3. In plane walls, area is invariant with thickness, so adding insulation always monotonically increases thermal resistance (C is true).\n4. When $r_o < r_c$, insulation increases heat transfer; statement D is false.",
+    "difficulty": "Moderate",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_031",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Conduction heat gain through cold room insulation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cold storage wall of surface area $A = 25\\text{ m}^2$ is insulated with polyurethane foam of thickness $L = 12\\text{ cm}$ and thermal conductivity $k = 0.04\\text{ W/(m}\\,\\text{K)}$. If the outer surface temperature is maintained at $35^\\circ\\text{C}$ and the inner surface at $4^\\circ\\text{C}$, the steady-state heat ingress through the wall is ________ $\\text{W}$ (round off to two decimal places).",
+    "correct_answer": "258.33",
+    "numerical_range": {
+      "min": 257.83,
+      "max": 258.83
+    },
+    "solution": "From Fourier's 1D steady conduction law:\n$$q = \\frac{k A (T_{out} - T_{in})}{L}$$\nGiven $k = 0.04\\text{ W/(m K)}$, $A = 25\\text{ m}^2$, $\\Delta T = 35 - 4 = 31^\\circ\\text{C}$, and $L = 0.12\\text{ m}$:\n$$q = \\frac{0.04 \\times 25 \\times 31}{0.12} = \\frac{31.00}{0.12} = 258.33\\text{ W}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_032",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation for cylindrical pipe",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A steam pipe in a dairy plant is to be covered with insulation having thermal conductivity $k = 0.05\\text{ W/(m}\\,\\text{K)}$. The outer convective heat transfer coefficient with ambient air is $h = 10.0\\text{ W/(m}^2\\,\\text{K)}$. The critical radius of insulation is ________ $\\text{mm}$ (round off to one decimal place).",
+    "correct_answer": "5.0",
+    "numerical_range": {
+      "min": 4.8,
+      "max": 5.2
+    },
+    "solution": "The critical radius of insulation for a circular cylinder is:\n$$r_c = \\frac{k}{h}$$\nGiven $k = 0.05\\text{ W/(m K)}$ and $h = 10.0\\text{ W/(m}^2\\text{ K)}$:\n$$r_c = \\frac{0.05}{10.0} = 0.0050\\text{ m} = 5.0\\text{ mm}$$",
+    "difficulty": "Easy",
+    "source": "Unit Operations in Food Processing (R.L. Earle)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_033",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation concept",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the critical radius of insulation ($r_c$) is/are TRUE?",
+    "options": {
+      "A": "For a circular cylinder, $r_c = k / h$, whereas for a sphere, $r_c = 2k / h$",
+      "B": "Adding insulation to a bare cylinder having outer radius $r_o < r_c$ initially increases the rate of heat loss until $r = r_c$",
+      "C": "For a plane flat wall, the concept of critical radius does not exist because surface area remains constant regardless of thickness",
+      "D": "Adding any insulation to a steam pipe always strictly decreases heat loss regardless of pipe diameter"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Cylindrical $r_c = k/h$; spherical $r_c = 2k/h$ (A is true).\n2. For $r_o < r_c$, the decrease in outer convective resistance ($1/hA$) outweighs added conductive resistance, peaking heat loss at $r = r_c$ (B is true).\n3. In plane walls, area is invariant with thickness, so adding insulation always monotonically increases thermal resistance (C is true).\n4. When $r_o < r_c$, insulation increases heat transfer; statement D is false.",
+    "difficulty": "Moderate",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_034",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Conduction heat gain through cold room insulation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cold storage wall of surface area $A = 25\\text{ m}^2$ is insulated with polyurethane foam of thickness $L = 18\\text{ cm}$ and thermal conductivity $k = 0.04\\text{ W/(m}\\,\\text{K)}$. If the outer surface temperature is maintained at $35^\\circ\\text{C}$ and the inner surface at $4^\\circ\\text{C}$, the steady-state heat ingress through the wall is ________ $\\text{W}$ (round off to two decimal places).",
+    "correct_answer": "172.22",
+    "numerical_range": {
+      "min": 171.72,
+      "max": 172.72
+    },
+    "solution": "From Fourier's 1D steady conduction law:\n$$q = \\frac{k A (T_{out} - T_{in})}{L}$$\nGiven $k = 0.04\\text{ W/(m K)}$, $A = 25\\text{ m}^2$, $\\Delta T = 35 - 4 = 31^\\circ\\text{C}$, and $L = 0.18\\text{ m}$:\n$$q = \\frac{0.04 \\times 25 \\times 31}{0.18} = \\frac{31.00}{0.18} = 172.22\\text{ W}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_035",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation for cylindrical pipe",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A steam pipe in a dairy plant is to be covered with insulation having thermal conductivity $k = 0.05\\text{ W/(m}\\,\\text{K)}$. The outer convective heat transfer coefficient with ambient air is $h = 10.0\\text{ W/(m}^2\\,\\text{K)}$. The critical radius of insulation is ________ $\\text{mm}$ (round off to one decimal place).",
+    "correct_answer": "5.0",
+    "numerical_range": {
+      "min": 4.8,
+      "max": 5.2
+    },
+    "solution": "The critical radius of insulation for a circular cylinder is:\n$$r_c = \\frac{k}{h}$$\nGiven $k = 0.05\\text{ W/(m K)}$ and $h = 10.0\\text{ W/(m}^2\\text{ K)}$:\n$$r_c = \\frac{0.05}{10.0} = 0.0050\\text{ m} = 5.0\\text{ mm}$$",
+    "difficulty": "Easy",
+    "source": "Unit Operations in Food Processing (R.L. Earle)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_036",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation concept",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the critical radius of insulation ($r_c$) is/are TRUE?",
+    "options": {
+      "A": "For a circular cylinder, $r_c = k / h$, whereas for a sphere, $r_c = 2k / h$",
+      "B": "Adding insulation to a bare cylinder having outer radius $r_o < r_c$ initially increases the rate of heat loss until $r = r_c$",
+      "C": "For a plane flat wall, the concept of critical radius does not exist because surface area remains constant regardless of thickness",
+      "D": "Adding any insulation to a steam pipe always strictly decreases heat loss regardless of pipe diameter"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Cylindrical $r_c = k/h$; spherical $r_c = 2k/h$ (A is true).\n2. For $r_o < r_c$, the decrease in outer convective resistance ($1/hA$) outweighs added conductive resistance, peaking heat loss at $r = r_c$ (B is true).\n3. In plane walls, area is invariant with thickness, so adding insulation always monotonically increases thermal resistance (C is true).\n4. When $r_o < r_c$, insulation increases heat transfer; statement D is false.",
+    "difficulty": "Moderate",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_037",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Conduction heat gain through cold room insulation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cold storage wall of surface area $A = 25\\text{ m}^2$ is insulated with polyurethane foam of thickness $L = 14\\text{ cm}$ and thermal conductivity $k = 0.04\\text{ W/(m}\\,\\text{K)}$. If the outer surface temperature is maintained at $35^\\circ\\text{C}$ and the inner surface at $4^\\circ\\text{C}$, the steady-state heat ingress through the wall is ________ $\\text{W}$ (round off to two decimal places).",
+    "correct_answer": "221.43",
+    "numerical_range": {
+      "min": 220.93,
+      "max": 221.93
+    },
+    "solution": "From Fourier's 1D steady conduction law:\n$$q = \\frac{k A (T_{out} - T_{in})}{L}$$\nGiven $k = 0.04\\text{ W/(m K)}$, $A = 25\\text{ m}^2$, $\\Delta T = 35 - 4 = 31^\\circ\\text{C}$, and $L = 0.14\\text{ m}$:\n$$q = \\frac{0.04 \\times 25 \\times 31}{0.14} = \\frac{31.00}{0.14} = 221.43\\text{ W}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_038",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation for cylindrical pipe",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A steam pipe in a dairy plant is to be covered with insulation having thermal conductivity $k = 0.05\\text{ W/(m}\\,\\text{K)}$. The outer convective heat transfer coefficient with ambient air is $h = 10.0\\text{ W/(m}^2\\,\\text{K)}$. The critical radius of insulation is ________ $\\text{mm}$ (round off to one decimal place).",
+    "correct_answer": "5.0",
+    "numerical_range": {
+      "min": 4.8,
+      "max": 5.2
+    },
+    "solution": "The critical radius of insulation for a circular cylinder is:\n$$r_c = \\frac{k}{h}$$\nGiven $k = 0.05\\text{ W/(m K)}$ and $h = 10.0\\text{ W/(m}^2\\text{ K)}$:\n$$r_c = \\frac{0.05}{10.0} = 0.0050\\text{ m} = 5.0\\text{ mm}$$",
+    "difficulty": "Easy",
+    "source": "Unit Operations in Food Processing (R.L. Earle)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_039",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation concept",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the critical radius of insulation ($r_c$) is/are TRUE?",
+    "options": {
+      "A": "For a circular cylinder, $r_c = k / h$, whereas for a sphere, $r_c = 2k / h$",
+      "B": "Adding insulation to a bare cylinder having outer radius $r_o < r_c$ initially increases the rate of heat loss until $r = r_c$",
+      "C": "For a plane flat wall, the concept of critical radius does not exist because surface area remains constant regardless of thickness",
+      "D": "Adding any insulation to a steam pipe always strictly decreases heat loss regardless of pipe diameter"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Cylindrical $r_c = k/h$; spherical $r_c = 2k/h$ (A is true).\n2. For $r_o < r_c$, the decrease in outer convective resistance ($1/hA$) outweighs added conductive resistance, peaking heat loss at $r = r_c$ (B is true).\n3. In plane walls, area is invariant with thickness, so adding insulation always monotonically increases thermal resistance (C is true).\n4. When $r_o < r_c$, insulation increases heat transfer; statement D is false.",
+    "difficulty": "Moderate",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_040",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Conduction heat gain through cold room insulation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cold storage wall of surface area $A = 25\\text{ m}^2$ is insulated with polyurethane foam of thickness $L = 10\\text{ cm}$ and thermal conductivity $k = 0.04\\text{ W/(m}\\,\\text{K)}$. If the outer surface temperature is maintained at $35^\\circ\\text{C}$ and the inner surface at $4^\\circ\\text{C}$, the steady-state heat ingress through the wall is ________ $\\text{W}$ (round off to two decimal places).",
+    "correct_answer": "310.00",
+    "numerical_range": {
+      "min": 309.5,
+      "max": 310.5
+    },
+    "solution": "From Fourier's 1D steady conduction law:\n$$q = \\frac{k A (T_{out} - T_{in})}{L}$$\nGiven $k = 0.04\\text{ W/(m K)}$, $A = 25\\text{ m}^2$, $\\Delta T = 35 - 4 = 31^\\circ\\text{C}$, and $L = 0.10\\text{ m}$:\n$$q = \\frac{0.04 \\times 25 \\times 31}{0.10} = \\frac{31.00}{0.10} = 310.00\\text{ W}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_041",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation for cylindrical pipe",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A steam pipe in a dairy plant is to be covered with insulation having thermal conductivity $k = 0.05\\text{ W/(m}\\,\\text{K)}$. The outer convective heat transfer coefficient with ambient air is $h = 10.0\\text{ W/(m}^2\\,\\text{K)}$. The critical radius of insulation is ________ $\\text{mm}$ (round off to one decimal place).",
+    "correct_answer": "5.0",
+    "numerical_range": {
+      "min": 4.8,
+      "max": 5.2
+    },
+    "solution": "The critical radius of insulation for a circular cylinder is:\n$$r_c = \\frac{k}{h}$$\nGiven $k = 0.05\\text{ W/(m K)}$ and $h = 10.0\\text{ W/(m}^2\\text{ K)}$:\n$$r_c = \\frac{0.05}{10.0} = 0.0050\\text{ m} = 5.0\\text{ mm}$$",
+    "difficulty": "Easy",
+    "source": "Unit Operations in Food Processing (R.L. Earle)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_042",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation concept",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the critical radius of insulation ($r_c$) is/are TRUE?",
+    "options": {
+      "A": "For a circular cylinder, $r_c = k / h$, whereas for a sphere, $r_c = 2k / h$",
+      "B": "Adding insulation to a bare cylinder having outer radius $r_o < r_c$ initially increases the rate of heat loss until $r = r_c$",
+      "C": "For a plane flat wall, the concept of critical radius does not exist because surface area remains constant regardless of thickness",
+      "D": "Adding any insulation to a steam pipe always strictly decreases heat loss regardless of pipe diameter"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Cylindrical $r_c = k/h$; spherical $r_c = 2k/h$ (A is true).\n2. For $r_o < r_c$, the decrease in outer convective resistance ($1/hA$) outweighs added conductive resistance, peaking heat loss at $r = r_c$ (B is true).\n3. In plane walls, area is invariant with thickness, so adding insulation always monotonically increases thermal resistance (C is true).\n4. When $r_o < r_c$, insulation increases heat transfer; statement D is false.",
+    "difficulty": "Moderate",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_CND_043",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Conduction heat gain through cold room insulation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cold storage wall of surface area $A = 25\\text{ m}^2$ is insulated with polyurethane foam of thickness $L = 16\\text{ cm}$ and thermal conductivity $k = 0.04\\text{ W/(m}\\,\\text{K)}$. If the outer surface temperature is maintained at $35^\\circ\\text{C}$ and the inner surface at $4^\\circ\\text{C}$, the steady-state heat ingress through the wall is ________ $\\text{W}$ (round off to two decimal places).",
+    "correct_answer": "193.75",
+    "numerical_range": {
+      "min": 193.25,
+      "max": 194.25
+    },
+    "solution": "From Fourier's 1D steady conduction law:\n$$q = \\frac{k A (T_{out} - T_{in})}{L}$$\nGiven $k = 0.04\\text{ W/(m K)}$, $A = 25\\text{ m}^2$, $\\Delta T = 35 - 4 = 31^\\circ\\text{C}$, and $L = 0.16\\text{ m}$:\n$$q = \\frac{0.04 \\times 25 \\times 31}{0.16} = \\frac{31.00}{0.16} = 193.75\\text{ W}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number validity for lumped capacity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The lumped capacity (lumped thermal capacitance) assumption of spatially uniform temperature inside a solid body during transient cooling/heating is strictly valid when the Biot number satisfies:",
+    "options": {
+      "A": "$Bi = \\frac{h L_c}{k} < 0.1$",
+      "B": "$Bi > 10.0$",
+      "C": "$Bi = 1.0$",
+      "D": "$Bi \\to \\infty$"
+    },
+    "correct_answer": "A",
+    "solution": "The Biot number $Bi = \\frac{h L_c}{k_{solid}}$ compares internal conductive thermal resistance to external convective boundary resistance. When $Bi < 0.1$, internal thermal gradients are under $5\\%$, validating the lumped isothermal assumption.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number calculation for spherical fruit",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A spherical fruit of radius $R = 30\\text{ mm}$ has a thermal conductivity $k = 0.5\\text{ W/(m}\\,\\text{K)}$. It is blast-chilled in air where the convective surface heat transfer coefficient is $h = 20.0\\text{ W/(m}^2\\,\\text{K)}$. Taking characteristic dimension $L_c = R/3$, the Biot number ($Bi$) for the fruit is ________ (round off to two decimal places).",
+    "correct_answer": "0.40",
+    "numerical_range": {
+      "min": 0.38,
+      "max": 0.42
+    },
+    "solution": "Characteristic length of a solid sphere:\n$$L_c = \\frac{V}{A} = \\frac{\\frac{4}{3} \\pi R^3}{4 \\pi R^2} = \\frac{R}{3} = \\frac{0.030}{3} = 0.0100\\text{ m}$$\nThe Biot number is:\n$$Bi = \\frac{h L_c}{k} = \\frac{20.0 \\times 0.0100}{0.5} = 0.400$$\nRounding to two decimal places: $0.40$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_003",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Fourier number definition and Heisler charts",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding transient heat conduction in foods is/are TRUE?",
+    "options": {
+      "A": "Fourier number is dimensionless time defined as $Fo = \\frac{\\alpha t}{L_c^2}$, where $\\alpha = \\frac{k}{\\rho c_p}$",
+      "B": "Heisler charts are analytical graphical solutions used when $Bi > 0.1$ and $Fo > 0.2$",
+      "C": "In lumped capacity analysis, the thermal time constant is $\\tau = \\frac{\\rho V c_p}{h A}$",
+      "D": "When $Bi \\to \\infty$, the surface of the body immediately reaches the ambient fluid temperature"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements are foundational principles of transient food engineering:\n1. $Fo = \\alpha t / L_c^2$ scales diffusion time (A).\n2. Heisler charts neglect higher Fourier terms when $Fo > 0.2$ (B).\n3. Temperature decay follows $\\exp(-t / \\tau)$ with time constant $\\tau = \\frac{\\rho V c_p}{h A}$ (C).\n4. $Bi \\to \\infty$ represents negligible surface convective resistance ($h \\to \\infty$), pinning surface to fluid temperature instantaneously (D).\nAll options A, B, C, D are correct.",
+    "difficulty": "Hard",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_004",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number validity for lumped capacity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The lumped capacity (lumped thermal capacitance) assumption of spatially uniform temperature inside a solid body during transient cooling/heating is strictly valid when the Biot number satisfies:",
+    "options": {
+      "A": "$Bi = \\frac{h L_c}{k} < 0.1$",
+      "B": "$Bi > 10.0$",
+      "C": "$Bi = 1.0$",
+      "D": "$Bi \\to \\infty$"
+    },
+    "correct_answer": "A",
+    "solution": "The Biot number $Bi = \\frac{h L_c}{k_{solid}}$ compares internal conductive thermal resistance to external convective boundary resistance. When $Bi < 0.1$, internal thermal gradients are under $5\\%$, validating the lumped isothermal assumption.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_005",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number calculation for spherical fruit",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A spherical fruit of radius $R = 30\\text{ mm}$ has a thermal conductivity $k = 0.5\\text{ W/(m}\\,\\text{K)}$. It is blast-chilled in air where the convective surface heat transfer coefficient is $h = 20.0\\text{ W/(m}^2\\,\\text{K)}$. Taking characteristic dimension $L_c = R/3$, the Biot number ($Bi$) for the fruit is ________ (round off to two decimal places).",
+    "correct_answer": "0.40",
+    "numerical_range": {
+      "min": 0.38,
+      "max": 0.42
+    },
+    "solution": "Characteristic length of a solid sphere:\n$$L_c = \\frac{V}{A} = \\frac{\\frac{4}{3} \\pi R^3}{4 \\pi R^2} = \\frac{R}{3} = \\frac{0.030}{3} = 0.0100\\text{ m}$$\nThe Biot number is:\n$$Bi = \\frac{h L_c}{k} = \\frac{20.0 \\times 0.0100}{0.5} = 0.400$$\nRounding to two decimal places: $0.40$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_006",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Fourier number definition and Heisler charts",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding transient heat conduction in foods is/are TRUE?",
+    "options": {
+      "A": "Fourier number is dimensionless time defined as $Fo = \\frac{\\alpha t}{L_c^2}$, where $\\alpha = \\frac{k}{\\rho c_p}$",
+      "B": "Heisler charts are analytical graphical solutions used when $Bi > 0.1$ and $Fo > 0.2$",
+      "C": "In lumped capacity analysis, the thermal time constant is $\\tau = \\frac{\\rho V c_p}{h A}$",
+      "D": "When $Bi \\to \\infty$, the surface of the body immediately reaches the ambient fluid temperature"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements are foundational principles of transient food engineering:\n1. $Fo = \\alpha t / L_c^2$ scales diffusion time (A).\n2. Heisler charts neglect higher Fourier terms when $Fo > 0.2$ (B).\n3. Temperature decay follows $\\exp(-t / \\tau)$ with time constant $\\tau = \\frac{\\rho V c_p}{h A}$ (C).\n4. $Bi \\to \\infty$ represents negligible surface convective resistance ($h \\to \\infty$), pinning surface to fluid temperature instantaneously (D).\nAll options A, B, C, D are correct.",
+    "difficulty": "Hard",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_007",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number validity for lumped capacity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The lumped capacity (lumped thermal capacitance) assumption of spatially uniform temperature inside a solid body during transient cooling/heating is strictly valid when the Biot number satisfies:",
+    "options": {
+      "A": "$Bi = \\frac{h L_c}{k} < 0.1$",
+      "B": "$Bi > 10.0$",
+      "C": "$Bi = 1.0$",
+      "D": "$Bi \\to \\infty$"
+    },
+    "correct_answer": "A",
+    "solution": "The Biot number $Bi = \\frac{h L_c}{k_{solid}}$ compares internal conductive thermal resistance to external convective boundary resistance. When $Bi < 0.1$, internal thermal gradients are under $5\\%$, validating the lumped isothermal assumption.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_008",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number calculation for spherical fruit",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A spherical fruit of radius $R = 30\\text{ mm}$ has a thermal conductivity $k = 0.5\\text{ W/(m}\\,\\text{K)}$. It is blast-chilled in air where the convective surface heat transfer coefficient is $h = 20.0\\text{ W/(m}^2\\,\\text{K)}$. Taking characteristic dimension $L_c = R/3$, the Biot number ($Bi$) for the fruit is ________ (round off to two decimal places).",
+    "correct_answer": "0.40",
+    "numerical_range": {
+      "min": 0.38,
+      "max": 0.42
+    },
+    "solution": "Characteristic length of a solid sphere:\n$$L_c = \\frac{V}{A} = \\frac{\\frac{4}{3} \\pi R^3}{4 \\pi R^2} = \\frac{R}{3} = \\frac{0.030}{3} = 0.0100\\text{ m}$$\nThe Biot number is:\n$$Bi = \\frac{h L_c}{k} = \\frac{20.0 \\times 0.0100}{0.5} = 0.400$$\nRounding to two decimal places: $0.40$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_009",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Fourier number definition and Heisler charts",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding transient heat conduction in foods is/are TRUE?",
+    "options": {
+      "A": "Fourier number is dimensionless time defined as $Fo = \\frac{\\alpha t}{L_c^2}$, where $\\alpha = \\frac{k}{\\rho c_p}$",
+      "B": "Heisler charts are analytical graphical solutions used when $Bi > 0.1$ and $Fo > 0.2$",
+      "C": "In lumped capacity analysis, the thermal time constant is $\\tau = \\frac{\\rho V c_p}{h A}$",
+      "D": "When $Bi \\to \\infty$, the surface of the body immediately reaches the ambient fluid temperature"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements are foundational principles of transient food engineering:\n1. $Fo = \\alpha t / L_c^2$ scales diffusion time (A).\n2. Heisler charts neglect higher Fourier terms when $Fo > 0.2$ (B).\n3. Temperature decay follows $\\exp(-t / \\tau)$ with time constant $\\tau = \\frac{\\rho V c_p}{h A}$ (C).\n4. $Bi \\to \\infty$ represents negligible surface convective resistance ($h \\to \\infty$), pinning surface to fluid temperature instantaneously (D).\nAll options A, B, C, D are correct.",
+    "difficulty": "Hard",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_010",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number validity for lumped capacity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The lumped capacity (lumped thermal capacitance) assumption of spatially uniform temperature inside a solid body during transient cooling/heating is strictly valid when the Biot number satisfies:",
+    "options": {
+      "A": "$Bi = \\frac{h L_c}{k} < 0.1$",
+      "B": "$Bi > 10.0$",
+      "C": "$Bi = 1.0$",
+      "D": "$Bi \\to \\infty$"
+    },
+    "correct_answer": "A",
+    "solution": "The Biot number $Bi = \\frac{h L_c}{k_{solid}}$ compares internal conductive thermal resistance to external convective boundary resistance. When $Bi < 0.1$, internal thermal gradients are under $5\\%$, validating the lumped isothermal assumption.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_011",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number calculation for spherical fruit",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A spherical fruit of radius $R = 30\\text{ mm}$ has a thermal conductivity $k = 0.5\\text{ W/(m}\\,\\text{K)}$. It is blast-chilled in air where the convective surface heat transfer coefficient is $h = 20.0\\text{ W/(m}^2\\,\\text{K)}$. Taking characteristic dimension $L_c = R/3$, the Biot number ($Bi$) for the fruit is ________ (round off to two decimal places).",
+    "correct_answer": "0.40",
+    "numerical_range": {
+      "min": 0.38,
+      "max": 0.42
+    },
+    "solution": "Characteristic length of a solid sphere:\n$$L_c = \\frac{V}{A} = \\frac{\\frac{4}{3} \\pi R^3}{4 \\pi R^2} = \\frac{R}{3} = \\frac{0.030}{3} = 0.0100\\text{ m}$$\nThe Biot number is:\n$$Bi = \\frac{h L_c}{k} = \\frac{20.0 \\times 0.0100}{0.5} = 0.400$$\nRounding to two decimal places: $0.40$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_012",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Fourier number definition and Heisler charts",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding transient heat conduction in foods is/are TRUE?",
+    "options": {
+      "A": "Fourier number is dimensionless time defined as $Fo = \\frac{\\alpha t}{L_c^2}$, where $\\alpha = \\frac{k}{\\rho c_p}$",
+      "B": "Heisler charts are analytical graphical solutions used when $Bi > 0.1$ and $Fo > 0.2$",
+      "C": "In lumped capacity analysis, the thermal time constant is $\\tau = \\frac{\\rho V c_p}{h A}$",
+      "D": "When $Bi \\to \\infty$, the surface of the body immediately reaches the ambient fluid temperature"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements are foundational principles of transient food engineering:\n1. $Fo = \\alpha t / L_c^2$ scales diffusion time (A).\n2. Heisler charts neglect higher Fourier terms when $Fo > 0.2$ (B).\n3. Temperature decay follows $\\exp(-t / \\tau)$ with time constant $\\tau = \\frac{\\rho V c_p}{h A}$ (C).\n4. $Bi \\to \\infty$ represents negligible surface convective resistance ($h \\to \\infty$), pinning surface to fluid temperature instantaneously (D).\nAll options A, B, C, D are correct.",
+    "difficulty": "Hard",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_013",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number validity for lumped capacity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The lumped capacity (lumped thermal capacitance) assumption of spatially uniform temperature inside a solid body during transient cooling/heating is strictly valid when the Biot number satisfies:",
+    "options": {
+      "A": "$Bi = \\frac{h L_c}{k} < 0.1$",
+      "B": "$Bi > 10.0$",
+      "C": "$Bi = 1.0$",
+      "D": "$Bi \\to \\infty$"
+    },
+    "correct_answer": "A",
+    "solution": "The Biot number $Bi = \\frac{h L_c}{k_{solid}}$ compares internal conductive thermal resistance to external convective boundary resistance. When $Bi < 0.1$, internal thermal gradients are under $5\\%$, validating the lumped isothermal assumption.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_014",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number calculation for spherical fruit",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A spherical fruit of radius $R = 30\\text{ mm}$ has a thermal conductivity $k = 0.5\\text{ W/(m}\\,\\text{K)}$. It is blast-chilled in air where the convective surface heat transfer coefficient is $h = 20.0\\text{ W/(m}^2\\,\\text{K)}$. Taking characteristic dimension $L_c = R/3$, the Biot number ($Bi$) for the fruit is ________ (round off to two decimal places).",
+    "correct_answer": "0.40",
+    "numerical_range": {
+      "min": 0.38,
+      "max": 0.42
+    },
+    "solution": "Characteristic length of a solid sphere:\n$$L_c = \\frac{V}{A} = \\frac{\\frac{4}{3} \\pi R^3}{4 \\pi R^2} = \\frac{R}{3} = \\frac{0.030}{3} = 0.0100\\text{ m}$$\nThe Biot number is:\n$$Bi = \\frac{h L_c}{k} = \\frac{20.0 \\times 0.0100}{0.5} = 0.400$$\nRounding to two decimal places: $0.40$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_015",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Fourier number definition and Heisler charts",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding transient heat conduction in foods is/are TRUE?",
+    "options": {
+      "A": "Fourier number is dimensionless time defined as $Fo = \\frac{\\alpha t}{L_c^2}$, where $\\alpha = \\frac{k}{\\rho c_p}$",
+      "B": "Heisler charts are analytical graphical solutions used when $Bi > 0.1$ and $Fo > 0.2$",
+      "C": "In lumped capacity analysis, the thermal time constant is $\\tau = \\frac{\\rho V c_p}{h A}$",
+      "D": "When $Bi \\to \\infty$, the surface of the body immediately reaches the ambient fluid temperature"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements are foundational principles of transient food engineering:\n1. $Fo = \\alpha t / L_c^2$ scales diffusion time (A).\n2. Heisler charts neglect higher Fourier terms when $Fo > 0.2$ (B).\n3. Temperature decay follows $\\exp(-t / \\tau)$ with time constant $\\tau = \\frac{\\rho V c_p}{h A}$ (C).\n4. $Bi \\to \\infty$ represents negligible surface convective resistance ($h \\to \\infty$), pinning surface to fluid temperature instantaneously (D).\nAll options A, B, C, D are correct.",
+    "difficulty": "Hard",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_016",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number validity for lumped capacity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The lumped capacity (lumped thermal capacitance) assumption of spatially uniform temperature inside a solid body during transient cooling/heating is strictly valid when the Biot number satisfies:",
+    "options": {
+      "A": "$Bi = \\frac{h L_c}{k} < 0.1$",
+      "B": "$Bi > 10.0$",
+      "C": "$Bi = 1.0$",
+      "D": "$Bi \\to \\infty$"
+    },
+    "correct_answer": "A",
+    "solution": "The Biot number $Bi = \\frac{h L_c}{k_{solid}}$ compares internal conductive thermal resistance to external convective boundary resistance. When $Bi < 0.1$, internal thermal gradients are under $5\\%$, validating the lumped isothermal assumption.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_017",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number calculation for spherical fruit",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A spherical fruit of radius $R = 30\\text{ mm}$ has a thermal conductivity $k = 0.5\\text{ W/(m}\\,\\text{K)}$. It is blast-chilled in air where the convective surface heat transfer coefficient is $h = 20.0\\text{ W/(m}^2\\,\\text{K)}$. Taking characteristic dimension $L_c = R/3$, the Biot number ($Bi$) for the fruit is ________ (round off to two decimal places).",
+    "correct_answer": "0.40",
+    "numerical_range": {
+      "min": 0.38,
+      "max": 0.42
+    },
+    "solution": "Characteristic length of a solid sphere:\n$$L_c = \\frac{V}{A} = \\frac{\\frac{4}{3} \\pi R^3}{4 \\pi R^2} = \\frac{R}{3} = \\frac{0.030}{3} = 0.0100\\text{ m}$$\nThe Biot number is:\n$$Bi = \\frac{h L_c}{k} = \\frac{20.0 \\times 0.0100}{0.5} = 0.400$$\nRounding to two decimal places: $0.40$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_018",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Fourier number definition and Heisler charts",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding transient heat conduction in foods is/are TRUE?",
+    "options": {
+      "A": "Fourier number is dimensionless time defined as $Fo = \\frac{\\alpha t}{L_c^2}$, where $\\alpha = \\frac{k}{\\rho c_p}$",
+      "B": "Heisler charts are analytical graphical solutions used when $Bi > 0.1$ and $Fo > 0.2$",
+      "C": "In lumped capacity analysis, the thermal time constant is $\\tau = \\frac{\\rho V c_p}{h A}$",
+      "D": "When $Bi \\to \\infty$, the surface of the body immediately reaches the ambient fluid temperature"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements are foundational principles of transient food engineering:\n1. $Fo = \\alpha t / L_c^2$ scales diffusion time (A).\n2. Heisler charts neglect higher Fourier terms when $Fo > 0.2$ (B).\n3. Temperature decay follows $\\exp(-t / \\tau)$ with time constant $\\tau = \\frac{\\rho V c_p}{h A}$ (C).\n4. $Bi \\to \\infty$ represents negligible surface convective resistance ($h \\to \\infty$), pinning surface to fluid temperature instantaneously (D).\nAll options A, B, C, D are correct.",
+    "difficulty": "Hard",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_019",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number validity for lumped capacity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The lumped capacity (lumped thermal capacitance) assumption of spatially uniform temperature inside a solid body during transient cooling/heating is strictly valid when the Biot number satisfies:",
+    "options": {
+      "A": "$Bi = \\frac{h L_c}{k} < 0.1$",
+      "B": "$Bi > 10.0$",
+      "C": "$Bi = 1.0$",
+      "D": "$Bi \\to \\infty$"
+    },
+    "correct_answer": "A",
+    "solution": "The Biot number $Bi = \\frac{h L_c}{k_{solid}}$ compares internal conductive thermal resistance to external convective boundary resistance. When $Bi < 0.1$, internal thermal gradients are under $5\\%$, validating the lumped isothermal assumption.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_020",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number calculation for spherical fruit",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A spherical fruit of radius $R = 30\\text{ mm}$ has a thermal conductivity $k = 0.5\\text{ W/(m}\\,\\text{K)}$. It is blast-chilled in air where the convective surface heat transfer coefficient is $h = 20.0\\text{ W/(m}^2\\,\\text{K)}$. Taking characteristic dimension $L_c = R/3$, the Biot number ($Bi$) for the fruit is ________ (round off to two decimal places).",
+    "correct_answer": "0.40",
+    "numerical_range": {
+      "min": 0.38,
+      "max": 0.42
+    },
+    "solution": "Characteristic length of a solid sphere:\n$$L_c = \\frac{V}{A} = \\frac{\\frac{4}{3} \\pi R^3}{4 \\pi R^2} = \\frac{R}{3} = \\frac{0.030}{3} = 0.0100\\text{ m}$$\nThe Biot number is:\n$$Bi = \\frac{h L_c}{k} = \\frac{20.0 \\times 0.0100}{0.5} = 0.400$$\nRounding to two decimal places: $0.40$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_021",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Fourier number definition and Heisler charts",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding transient heat conduction in foods is/are TRUE?",
+    "options": {
+      "A": "Fourier number is dimensionless time defined as $Fo = \\frac{\\alpha t}{L_c^2}$, where $\\alpha = \\frac{k}{\\rho c_p}$",
+      "B": "Heisler charts are analytical graphical solutions used when $Bi > 0.1$ and $Fo > 0.2$",
+      "C": "In lumped capacity analysis, the thermal time constant is $\\tau = \\frac{\\rho V c_p}{h A}$",
+      "D": "When $Bi \\to \\infty$, the surface of the body immediately reaches the ambient fluid temperature"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements are foundational principles of transient food engineering:\n1. $Fo = \\alpha t / L_c^2$ scales diffusion time (A).\n2. Heisler charts neglect higher Fourier terms when $Fo > 0.2$ (B).\n3. Temperature decay follows $\\exp(-t / \\tau)$ with time constant $\\tau = \\frac{\\rho V c_p}{h A}$ (C).\n4. $Bi \\to \\infty$ represents negligible surface convective resistance ($h \\to \\infty$), pinning surface to fluid temperature instantaneously (D).\nAll options A, B, C, D are correct.",
+    "difficulty": "Hard",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_022",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number validity for lumped capacity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The lumped capacity (lumped thermal capacitance) assumption of spatially uniform temperature inside a solid body during transient cooling/heating is strictly valid when the Biot number satisfies:",
+    "options": {
+      "A": "$Bi = \\frac{h L_c}{k} < 0.1$",
+      "B": "$Bi > 10.0$",
+      "C": "$Bi = 1.0$",
+      "D": "$Bi \\to \\infty$"
+    },
+    "correct_answer": "A",
+    "solution": "The Biot number $Bi = \\frac{h L_c}{k_{solid}}$ compares internal conductive thermal resistance to external convective boundary resistance. When $Bi < 0.1$, internal thermal gradients are under $5\\%$, validating the lumped isothermal assumption.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_023",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number calculation for spherical fruit",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A spherical fruit of radius $R = 30\\text{ mm}$ has a thermal conductivity $k = 0.5\\text{ W/(m}\\,\\text{K)}$. It is blast-chilled in air where the convective surface heat transfer coefficient is $h = 20.0\\text{ W/(m}^2\\,\\text{K)}$. Taking characteristic dimension $L_c = R/3$, the Biot number ($Bi$) for the fruit is ________ (round off to two decimal places).",
+    "correct_answer": "0.40",
+    "numerical_range": {
+      "min": 0.38,
+      "max": 0.42
+    },
+    "solution": "Characteristic length of a solid sphere:\n$$L_c = \\frac{V}{A} = \\frac{\\frac{4}{3} \\pi R^3}{4 \\pi R^2} = \\frac{R}{3} = \\frac{0.030}{3} = 0.0100\\text{ m}$$\nThe Biot number is:\n$$Bi = \\frac{h L_c}{k} = \\frac{20.0 \\times 0.0100}{0.5} = 0.400$$\nRounding to two decimal places: $0.40$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_024",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Fourier number definition and Heisler charts",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding transient heat conduction in foods is/are TRUE?",
+    "options": {
+      "A": "Fourier number is dimensionless time defined as $Fo = \\frac{\\alpha t}{L_c^2}$, where $\\alpha = \\frac{k}{\\rho c_p}$",
+      "B": "Heisler charts are analytical graphical solutions used when $Bi > 0.1$ and $Fo > 0.2$",
+      "C": "In lumped capacity analysis, the thermal time constant is $\\tau = \\frac{\\rho V c_p}{h A}$",
+      "D": "When $Bi \\to \\infty$, the surface of the body immediately reaches the ambient fluid temperature"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements are foundational principles of transient food engineering:\n1. $Fo = \\alpha t / L_c^2$ scales diffusion time (A).\n2. Heisler charts neglect higher Fourier terms when $Fo > 0.2$ (B).\n3. Temperature decay follows $\\exp(-t / \\tau)$ with time constant $\\tau = \\frac{\\rho V c_p}{h A}$ (C).\n4. $Bi \\to \\infty$ represents negligible surface convective resistance ($h \\to \\infty$), pinning surface to fluid temperature instantaneously (D).\nAll options A, B, C, D are correct.",
+    "difficulty": "Hard",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_025",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number validity for lumped capacity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The lumped capacity (lumped thermal capacitance) assumption of spatially uniform temperature inside a solid body during transient cooling/heating is strictly valid when the Biot number satisfies:",
+    "options": {
+      "A": "$Bi = \\frac{h L_c}{k} < 0.1$",
+      "B": "$Bi > 10.0$",
+      "C": "$Bi = 1.0$",
+      "D": "$Bi \\to \\infty$"
+    },
+    "correct_answer": "A",
+    "solution": "The Biot number $Bi = \\frac{h L_c}{k_{solid}}$ compares internal conductive thermal resistance to external convective boundary resistance. When $Bi < 0.1$, internal thermal gradients are under $5\\%$, validating the lumped isothermal assumption.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_026",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number calculation for spherical fruit",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A spherical fruit of radius $R = 30\\text{ mm}$ has a thermal conductivity $k = 0.5\\text{ W/(m}\\,\\text{K)}$. It is blast-chilled in air where the convective surface heat transfer coefficient is $h = 20.0\\text{ W/(m}^2\\,\\text{K)}$. Taking characteristic dimension $L_c = R/3$, the Biot number ($Bi$) for the fruit is ________ (round off to two decimal places).",
+    "correct_answer": "0.40",
+    "numerical_range": {
+      "min": 0.38,
+      "max": 0.42
+    },
+    "solution": "Characteristic length of a solid sphere:\n$$L_c = \\frac{V}{A} = \\frac{\\frac{4}{3} \\pi R^3}{4 \\pi R^2} = \\frac{R}{3} = \\frac{0.030}{3} = 0.0100\\text{ m}$$\nThe Biot number is:\n$$Bi = \\frac{h L_c}{k} = \\frac{20.0 \\times 0.0100}{0.5} = 0.400$$\nRounding to two decimal places: $0.40$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_027",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Fourier number definition and Heisler charts",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding transient heat conduction in foods is/are TRUE?",
+    "options": {
+      "A": "Fourier number is dimensionless time defined as $Fo = \\frac{\\alpha t}{L_c^2}$, where $\\alpha = \\frac{k}{\\rho c_p}$",
+      "B": "Heisler charts are analytical graphical solutions used when $Bi > 0.1$ and $Fo > 0.2$",
+      "C": "In lumped capacity analysis, the thermal time constant is $\\tau = \\frac{\\rho V c_p}{h A}$",
+      "D": "When $Bi \\to \\infty$, the surface of the body immediately reaches the ambient fluid temperature"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements are foundational principles of transient food engineering:\n1. $Fo = \\alpha t / L_c^2$ scales diffusion time (A).\n2. Heisler charts neglect higher Fourier terms when $Fo > 0.2$ (B).\n3. Temperature decay follows $\\exp(-t / \\tau)$ with time constant $\\tau = \\frac{\\rho V c_p}{h A}$ (C).\n4. $Bi \\to \\infty$ represents negligible surface convective resistance ($h \\to \\infty$), pinning surface to fluid temperature instantaneously (D).\nAll options A, B, C, D are correct.",
+    "difficulty": "Hard",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_028",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number validity for lumped capacity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The lumped capacity (lumped thermal capacitance) assumption of spatially uniform temperature inside a solid body during transient cooling/heating is strictly valid when the Biot number satisfies:",
+    "options": {
+      "A": "$Bi = \\frac{h L_c}{k} < 0.1$",
+      "B": "$Bi > 10.0$",
+      "C": "$Bi = 1.0$",
+      "D": "$Bi \\to \\infty$"
+    },
+    "correct_answer": "A",
+    "solution": "The Biot number $Bi = \\frac{h L_c}{k_{solid}}$ compares internal conductive thermal resistance to external convective boundary resistance. When $Bi < 0.1$, internal thermal gradients are under $5\\%$, validating the lumped isothermal assumption.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_029",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number calculation for spherical fruit",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A spherical fruit of radius $R = 30\\text{ mm}$ has a thermal conductivity $k = 0.5\\text{ W/(m}\\,\\text{K)}$. It is blast-chilled in air where the convective surface heat transfer coefficient is $h = 20.0\\text{ W/(m}^2\\,\\text{K)}$. Taking characteristic dimension $L_c = R/3$, the Biot number ($Bi$) for the fruit is ________ (round off to two decimal places).",
+    "correct_answer": "0.40",
+    "numerical_range": {
+      "min": 0.38,
+      "max": 0.42
+    },
+    "solution": "Characteristic length of a solid sphere:\n$$L_c = \\frac{V}{A} = \\frac{\\frac{4}{3} \\pi R^3}{4 \\pi R^2} = \\frac{R}{3} = \\frac{0.030}{3} = 0.0100\\text{ m}$$\nThe Biot number is:\n$$Bi = \\frac{h L_c}{k} = \\frac{20.0 \\times 0.0100}{0.5} = 0.400$$\nRounding to two decimal places: $0.40$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_030",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Fourier number definition and Heisler charts",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding transient heat conduction in foods is/are TRUE?",
+    "options": {
+      "A": "Fourier number is dimensionless time defined as $Fo = \\frac{\\alpha t}{L_c^2}$, where $\\alpha = \\frac{k}{\\rho c_p}$",
+      "B": "Heisler charts are analytical graphical solutions used when $Bi > 0.1$ and $Fo > 0.2$",
+      "C": "In lumped capacity analysis, the thermal time constant is $\\tau = \\frac{\\rho V c_p}{h A}$",
+      "D": "When $Bi \\to \\infty$, the surface of the body immediately reaches the ambient fluid temperature"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements are foundational principles of transient food engineering:\n1. $Fo = \\alpha t / L_c^2$ scales diffusion time (A).\n2. Heisler charts neglect higher Fourier terms when $Fo > 0.2$ (B).\n3. Temperature decay follows $\\exp(-t / \\tau)$ with time constant $\\tau = \\frac{\\rho V c_p}{h A}$ (C).\n4. $Bi \\to \\infty$ represents negligible surface convective resistance ($h \\to \\infty$), pinning surface to fluid temperature instantaneously (D).\nAll options A, B, C, D are correct.",
+    "difficulty": "Hard",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_031",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number validity for lumped capacity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The lumped capacity (lumped thermal capacitance) assumption of spatially uniform temperature inside a solid body during transient cooling/heating is strictly valid when the Biot number satisfies:",
+    "options": {
+      "A": "$Bi = \\frac{h L_c}{k} < 0.1$",
+      "B": "$Bi > 10.0$",
+      "C": "$Bi = 1.0$",
+      "D": "$Bi \\to \\infty$"
+    },
+    "correct_answer": "A",
+    "solution": "The Biot number $Bi = \\frac{h L_c}{k_{solid}}$ compares internal conductive thermal resistance to external convective boundary resistance. When $Bi < 0.1$, internal thermal gradients are under $5\\%$, validating the lumped isothermal assumption.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_032",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number calculation for spherical fruit",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A spherical fruit of radius $R = 30\\text{ mm}$ has a thermal conductivity $k = 0.5\\text{ W/(m}\\,\\text{K)}$. It is blast-chilled in air where the convective surface heat transfer coefficient is $h = 20.0\\text{ W/(m}^2\\,\\text{K)}$. Taking characteristic dimension $L_c = R/3$, the Biot number ($Bi$) for the fruit is ________ (round off to two decimal places).",
+    "correct_answer": "0.40",
+    "numerical_range": {
+      "min": 0.38,
+      "max": 0.42
+    },
+    "solution": "Characteristic length of a solid sphere:\n$$L_c = \\frac{V}{A} = \\frac{\\frac{4}{3} \\pi R^3}{4 \\pi R^2} = \\frac{R}{3} = \\frac{0.030}{3} = 0.0100\\text{ m}$$\nThe Biot number is:\n$$Bi = \\frac{h L_c}{k} = \\frac{20.0 \\times 0.0100}{0.5} = 0.400$$\nRounding to two decimal places: $0.40$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_033",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Fourier number definition and Heisler charts",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding transient heat conduction in foods is/are TRUE?",
+    "options": {
+      "A": "Fourier number is dimensionless time defined as $Fo = \\frac{\\alpha t}{L_c^2}$, where $\\alpha = \\frac{k}{\\rho c_p}$",
+      "B": "Heisler charts are analytical graphical solutions used when $Bi > 0.1$ and $Fo > 0.2$",
+      "C": "In lumped capacity analysis, the thermal time constant is $\\tau = \\frac{\\rho V c_p}{h A}$",
+      "D": "When $Bi \\to \\infty$, the surface of the body immediately reaches the ambient fluid temperature"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements are foundational principles of transient food engineering:\n1. $Fo = \\alpha t / L_c^2$ scales diffusion time (A).\n2. Heisler charts neglect higher Fourier terms when $Fo > 0.2$ (B).\n3. Temperature decay follows $\\exp(-t / \\tau)$ with time constant $\\tau = \\frac{\\rho V c_p}{h A}$ (C).\n4. $Bi \\to \\infty$ represents negligible surface convective resistance ($h \\to \\infty$), pinning surface to fluid temperature instantaneously (D).\nAll options A, B, C, D are correct.",
+    "difficulty": "Hard",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_034",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number validity for lumped capacity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The lumped capacity (lumped thermal capacitance) assumption of spatially uniform temperature inside a solid body during transient cooling/heating is strictly valid when the Biot number satisfies:",
+    "options": {
+      "A": "$Bi = \\frac{h L_c}{k} < 0.1$",
+      "B": "$Bi > 10.0$",
+      "C": "$Bi = 1.0$",
+      "D": "$Bi \\to \\infty$"
+    },
+    "correct_answer": "A",
+    "solution": "The Biot number $Bi = \\frac{h L_c}{k_{solid}}$ compares internal conductive thermal resistance to external convective boundary resistance. When $Bi < 0.1$, internal thermal gradients are under $5\\%$, validating the lumped isothermal assumption.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_035",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number calculation for spherical fruit",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A spherical fruit of radius $R = 30\\text{ mm}$ has a thermal conductivity $k = 0.5\\text{ W/(m}\\,\\text{K)}$. It is blast-chilled in air where the convective surface heat transfer coefficient is $h = 20.0\\text{ W/(m}^2\\,\\text{K)}$. Taking characteristic dimension $L_c = R/3$, the Biot number ($Bi$) for the fruit is ________ (round off to two decimal places).",
+    "correct_answer": "0.40",
+    "numerical_range": {
+      "min": 0.38,
+      "max": 0.42
+    },
+    "solution": "Characteristic length of a solid sphere:\n$$L_c = \\frac{V}{A} = \\frac{\\frac{4}{3} \\pi R^3}{4 \\pi R^2} = \\frac{R}{3} = \\frac{0.030}{3} = 0.0100\\text{ m}$$\nThe Biot number is:\n$$Bi = \\frac{h L_c}{k} = \\frac{20.0 \\times 0.0100}{0.5} = 0.400$$\nRounding to two decimal places: $0.40$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_036",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Fourier number definition and Heisler charts",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding transient heat conduction in foods is/are TRUE?",
+    "options": {
+      "A": "Fourier number is dimensionless time defined as $Fo = \\frac{\\alpha t}{L_c^2}$, where $\\alpha = \\frac{k}{\\rho c_p}$",
+      "B": "Heisler charts are analytical graphical solutions used when $Bi > 0.1$ and $Fo > 0.2$",
+      "C": "In lumped capacity analysis, the thermal time constant is $\\tau = \\frac{\\rho V c_p}{h A}$",
+      "D": "When $Bi \\to \\infty$, the surface of the body immediately reaches the ambient fluid temperature"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements are foundational principles of transient food engineering:\n1. $Fo = \\alpha t / L_c^2$ scales diffusion time (A).\n2. Heisler charts neglect higher Fourier terms when $Fo > 0.2$ (B).\n3. Temperature decay follows $\\exp(-t / \\tau)$ with time constant $\\tau = \\frac{\\rho V c_p}{h A}$ (C).\n4. $Bi \\to \\infty$ represents negligible surface convective resistance ($h \\to \\infty$), pinning surface to fluid temperature instantaneously (D).\nAll options A, B, C, D are correct.",
+    "difficulty": "Hard",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_037",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number validity for lumped capacity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The lumped capacity (lumped thermal capacitance) assumption of spatially uniform temperature inside a solid body during transient cooling/heating is strictly valid when the Biot number satisfies:",
+    "options": {
+      "A": "$Bi = \\frac{h L_c}{k} < 0.1$",
+      "B": "$Bi > 10.0$",
+      "C": "$Bi = 1.0$",
+      "D": "$Bi \\to \\infty$"
+    },
+    "correct_answer": "A",
+    "solution": "The Biot number $Bi = \\frac{h L_c}{k_{solid}}$ compares internal conductive thermal resistance to external convective boundary resistance. When $Bi < 0.1$, internal thermal gradients are under $5\\%$, validating the lumped isothermal assumption.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_038",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number calculation for spherical fruit",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A spherical fruit of radius $R = 30\\text{ mm}$ has a thermal conductivity $k = 0.5\\text{ W/(m}\\,\\text{K)}$. It is blast-chilled in air where the convective surface heat transfer coefficient is $h = 20.0\\text{ W/(m}^2\\,\\text{K)}$. Taking characteristic dimension $L_c = R/3$, the Biot number ($Bi$) for the fruit is ________ (round off to two decimal places).",
+    "correct_answer": "0.40",
+    "numerical_range": {
+      "min": 0.38,
+      "max": 0.42
+    },
+    "solution": "Characteristic length of a solid sphere:\n$$L_c = \\frac{V}{A} = \\frac{\\frac{4}{3} \\pi R^3}{4 \\pi R^2} = \\frac{R}{3} = \\frac{0.030}{3} = 0.0100\\text{ m}$$\nThe Biot number is:\n$$Bi = \\frac{h L_c}{k} = \\frac{20.0 \\times 0.0100}{0.5} = 0.400$$\nRounding to two decimal places: $0.40$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_039",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Fourier number definition and Heisler charts",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding transient heat conduction in foods is/are TRUE?",
+    "options": {
+      "A": "Fourier number is dimensionless time defined as $Fo = \\frac{\\alpha t}{L_c^2}$, where $\\alpha = \\frac{k}{\\rho c_p}$",
+      "B": "Heisler charts are analytical graphical solutions used when $Bi > 0.1$ and $Fo > 0.2$",
+      "C": "In lumped capacity analysis, the thermal time constant is $\\tau = \\frac{\\rho V c_p}{h A}$",
+      "D": "When $Bi \\to \\infty$, the surface of the body immediately reaches the ambient fluid temperature"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements are foundational principles of transient food engineering:\n1. $Fo = \\alpha t / L_c^2$ scales diffusion time (A).\n2. Heisler charts neglect higher Fourier terms when $Fo > 0.2$ (B).\n3. Temperature decay follows $\\exp(-t / \\tau)$ with time constant $\\tau = \\frac{\\rho V c_p}{h A}$ (C).\n4. $Bi \\to \\infty$ represents negligible surface convective resistance ($h \\to \\infty$), pinning surface to fluid temperature instantaneously (D).\nAll options A, B, C, D are correct.",
+    "difficulty": "Hard",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_040",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number validity for lumped capacity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The lumped capacity (lumped thermal capacitance) assumption of spatially uniform temperature inside a solid body during transient cooling/heating is strictly valid when the Biot number satisfies:",
+    "options": {
+      "A": "$Bi = \\frac{h L_c}{k} < 0.1$",
+      "B": "$Bi > 10.0$",
+      "C": "$Bi = 1.0$",
+      "D": "$Bi \\to \\infty$"
+    },
+    "correct_answer": "A",
+    "solution": "The Biot number $Bi = \\frac{h L_c}{k_{solid}}$ compares internal conductive thermal resistance to external convective boundary resistance. When $Bi < 0.1$, internal thermal gradients are under $5\\%$, validating the lumped isothermal assumption.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_041",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number calculation for spherical fruit",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A spherical fruit of radius $R = 30\\text{ mm}$ has a thermal conductivity $k = 0.5\\text{ W/(m}\\,\\text{K)}$. It is blast-chilled in air where the convective surface heat transfer coefficient is $h = 20.0\\text{ W/(m}^2\\,\\text{K)}$. Taking characteristic dimension $L_c = R/3$, the Biot number ($Bi$) for the fruit is ________ (round off to two decimal places).",
+    "correct_answer": "0.40",
+    "numerical_range": {
+      "min": 0.38,
+      "max": 0.42
+    },
+    "solution": "Characteristic length of a solid sphere:\n$$L_c = \\frac{V}{A} = \\frac{\\frac{4}{3} \\pi R^3}{4 \\pi R^2} = \\frac{R}{3} = \\frac{0.030}{3} = 0.0100\\text{ m}$$\nThe Biot number is:\n$$Bi = \\frac{h L_c}{k} = \\frac{20.0 \\times 0.0100}{0.5} = 0.400$$\nRounding to two decimal places: $0.40$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_042",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Fourier number definition and Heisler charts",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding transient heat conduction in foods is/are TRUE?",
+    "options": {
+      "A": "Fourier number is dimensionless time defined as $Fo = \\frac{\\alpha t}{L_c^2}$, where $\\alpha = \\frac{k}{\\rho c_p}$",
+      "B": "Heisler charts are analytical graphical solutions used when $Bi > 0.1$ and $Fo > 0.2$",
+      "C": "In lumped capacity analysis, the thermal time constant is $\\tau = \\frac{\\rho V c_p}{h A}$",
+      "D": "When $Bi \\to \\infty$, the surface of the body immediately reaches the ambient fluid temperature"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements are foundational principles of transient food engineering:\n1. $Fo = \\alpha t / L_c^2$ scales diffusion time (A).\n2. Heisler charts neglect higher Fourier terms when $Fo > 0.2$ (B).\n3. Temperature decay follows $\\exp(-t / \\tau)$ with time constant $\\tau = \\frac{\\rho V c_p}{h A}$ (C).\n4. $Bi \\to \\infty$ represents negligible surface convective resistance ($h \\to \\infty$), pinning surface to fluid temperature instantaneously (D).\nAll options A, B, C, D are correct.",
+    "difficulty": "Hard",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_TRS_043",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number validity for lumped capacity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The lumped capacity (lumped thermal capacitance) assumption of spatially uniform temperature inside a solid body during transient cooling/heating is strictly valid when the Biot number satisfies:",
+    "options": {
+      "A": "$Bi = \\frac{h L_c}{k} < 0.1$",
+      "B": "$Bi > 10.0$",
+      "C": "$Bi = 1.0$",
+      "D": "$Bi \\to \\infty$"
+    },
+    "correct_answer": "A",
+    "solution": "The Biot number $Bi = \\frac{h L_c}{k_{solid}}$ compares internal conductive thermal resistance to external convective boundary resistance. When $Bi < 0.1$, internal thermal gradients are under $5\\%$, validating the lumped isothermal assumption.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Convective heat transfer coefficient from Nusselt number",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Liquid milk flows inside a tubular pasteurizer tube of internal diameter $D = 50\\text{ mm}$. The thermal conductivity of milk is $k = 0.60\\text{ W/(m}\\,\\text{K)}$. If the flow conditions give a Nusselt number $Nu = 130$, the convective heat transfer coefficient $h$ is ________ $\\text{W/(m}^2\\,\\text{K)}$ (round off to one decimal place).",
+    "correct_answer": "1560.0",
+    "numerical_range": {
+      "min": 1559.0,
+      "max": 1561.0
+    },
+    "solution": "From the definition of Nusselt number:\n$$Nu = \\frac{h D}{k} \\implies h = \\frac{Nu \\cdot k}{D}$$\nGiven $Nu = 130$, $k = 0.60\\text{ W/(m K)}$, and $D = 0.05\\text{ m}$:\n$$h = \\frac{130 \\times 0.60}{0.05} = 1560.0\\text{ W/(m}^2\\text{ K)}$$",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Prandtl number physical significance",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Prandtl number ($Pr = \\frac{\\nu}{\\alpha} = \\frac{\\mu c_p}{k}$) represents the ratio of:",
+    "options": {
+      "A": "Momentum diffusivity (kinematic viscosity) to thermal diffusivity",
+      "B": "Inertial forces to viscous forces",
+      "C": "Convective heat transfer to pure conductive heat transfer",
+      "D": "Buoyancy forces to viscous forces"
+    },
+    "correct_answer": "A",
+    "solution": "The Prandtl number is a pure fluid property defined as $Pr = \\frac{\\nu}{\\alpha} = \\frac{\\mu / \\rho}{k / (\\rho c_p)} = \\frac{\\mu c_p}{k}$, representing the relative growth rates of velocity and thermal boundary layers.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_003",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Dittus-Boelter correlation exponents",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following conditions and parameters are valid for the Dittus-Boelter turbulent pipe flow correlation $Nu = 0.023 Re^{0.8} Pr^n$?",
+    "options": {
+      "A": "Fully developed turbulent flow with $Re > 10000$ and $0.6 \\le Pr \\le 160$",
+      "B": "The exponent is $n = 0.4$ when the fluid is being heated",
+      "C": "The exponent is $n = 0.3$ when the fluid is being cooled",
+      "D": "The correlation is applicable to creeping laminar flow ($Re < 100$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Valid for turbulent flow $Re > 10^4$ and moderate Prandtl range (A is true).\n2. Heating fluid: $n = 0.4$ (wall hotter than bulk fluid) (B is true).\n3. Cooling fluid: $n = 0.3$ (wall colder than bulk fluid) (C is true).\n4. For laminar flow ($Re < 2100$), $Nu = 3.66$ (constant wall temp) or $4.36$ (constant heat flux); Dittus-Boelter is completely invalid for laminar flow (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_004",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Convective heat transfer coefficient from Nusselt number",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Liquid milk flows inside a tubular pasteurizer tube of internal diameter $D = 50\\text{ mm}$. The thermal conductivity of milk is $k = 0.60\\text{ W/(m}\\,\\text{K)}$. If the flow conditions give a Nusselt number $Nu = 160$, the convective heat transfer coefficient $h$ is ________ $\\text{W/(m}^2\\,\\text{K)}$ (round off to one decimal place).",
+    "correct_answer": "1920.0",
+    "numerical_range": {
+      "min": 1919.0,
+      "max": 1921.0
+    },
+    "solution": "From the definition of Nusselt number:\n$$Nu = \\frac{h D}{k} \\implies h = \\frac{Nu \\cdot k}{D}$$\nGiven $Nu = 160$, $k = 0.60\\text{ W/(m K)}$, and $D = 0.05\\text{ m}$:\n$$h = \\frac{160 \\times 0.60}{0.05} = 1920.0\\text{ W/(m}^2\\text{ K)}$$",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_005",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Prandtl number physical significance",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Prandtl number ($Pr = \\frac{\\nu}{\\alpha} = \\frac{\\mu c_p}{k}$) represents the ratio of:",
+    "options": {
+      "A": "Momentum diffusivity (kinematic viscosity) to thermal diffusivity",
+      "B": "Inertial forces to viscous forces",
+      "C": "Convective heat transfer to pure conductive heat transfer",
+      "D": "Buoyancy forces to viscous forces"
+    },
+    "correct_answer": "A",
+    "solution": "The Prandtl number is a pure fluid property defined as $Pr = \\frac{\\nu}{\\alpha} = \\frac{\\mu / \\rho}{k / (\\rho c_p)} = \\frac{\\mu c_p}{k}$, representing the relative growth rates of velocity and thermal boundary layers.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_006",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Dittus-Boelter correlation exponents",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following conditions and parameters are valid for the Dittus-Boelter turbulent pipe flow correlation $Nu = 0.023 Re^{0.8} Pr^n$?",
+    "options": {
+      "A": "Fully developed turbulent flow with $Re > 10000$ and $0.6 \\le Pr \\le 160$",
+      "B": "The exponent is $n = 0.4$ when the fluid is being heated",
+      "C": "The exponent is $n = 0.3$ when the fluid is being cooled",
+      "D": "The correlation is applicable to creeping laminar flow ($Re < 100$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Valid for turbulent flow $Re > 10^4$ and moderate Prandtl range (A is true).\n2. Heating fluid: $n = 0.4$ (wall hotter than bulk fluid) (B is true).\n3. Cooling fluid: $n = 0.3$ (wall colder than bulk fluid) (C is true).\n4. For laminar flow ($Re < 2100$), $Nu = 3.66$ (constant wall temp) or $4.36$ (constant heat flux); Dittus-Boelter is completely invalid for laminar flow (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_007",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Convective heat transfer coefficient from Nusselt number",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Liquid milk flows inside a tubular pasteurizer tube of internal diameter $D = 50\\text{ mm}$. The thermal conductivity of milk is $k = 0.60\\text{ W/(m}\\,\\text{K)}$. If the flow conditions give a Nusselt number $Nu = 130$, the convective heat transfer coefficient $h$ is ________ $\\text{W/(m}^2\\,\\text{K)}$ (round off to one decimal place).",
+    "correct_answer": "1560.0",
+    "numerical_range": {
+      "min": 1559.0,
+      "max": 1561.0
+    },
+    "solution": "From the definition of Nusselt number:\n$$Nu = \\frac{h D}{k} \\implies h = \\frac{Nu \\cdot k}{D}$$\nGiven $Nu = 130$, $k = 0.60\\text{ W/(m K)}$, and $D = 0.05\\text{ m}$:\n$$h = \\frac{130 \\times 0.60}{0.05} = 1560.0\\text{ W/(m}^2\\text{ K)}$$",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_008",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Prandtl number physical significance",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Prandtl number ($Pr = \\frac{\\nu}{\\alpha} = \\frac{\\mu c_p}{k}$) represents the ratio of:",
+    "options": {
+      "A": "Momentum diffusivity (kinematic viscosity) to thermal diffusivity",
+      "B": "Inertial forces to viscous forces",
+      "C": "Convective heat transfer to pure conductive heat transfer",
+      "D": "Buoyancy forces to viscous forces"
+    },
+    "correct_answer": "A",
+    "solution": "The Prandtl number is a pure fluid property defined as $Pr = \\frac{\\nu}{\\alpha} = \\frac{\\mu / \\rho}{k / (\\rho c_p)} = \\frac{\\mu c_p}{k}$, representing the relative growth rates of velocity and thermal boundary layers.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_009",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Dittus-Boelter correlation exponents",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following conditions and parameters are valid for the Dittus-Boelter turbulent pipe flow correlation $Nu = 0.023 Re^{0.8} Pr^n$?",
+    "options": {
+      "A": "Fully developed turbulent flow with $Re > 10000$ and $0.6 \\le Pr \\le 160$",
+      "B": "The exponent is $n = 0.4$ when the fluid is being heated",
+      "C": "The exponent is $n = 0.3$ when the fluid is being cooled",
+      "D": "The correlation is applicable to creeping laminar flow ($Re < 100$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Valid for turbulent flow $Re > 10^4$ and moderate Prandtl range (A is true).\n2. Heating fluid: $n = 0.4$ (wall hotter than bulk fluid) (B is true).\n3. Cooling fluid: $n = 0.3$ (wall colder than bulk fluid) (C is true).\n4. For laminar flow ($Re < 2100$), $Nu = 3.66$ (constant wall temp) or $4.36$ (constant heat flux); Dittus-Boelter is completely invalid for laminar flow (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_010",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Convective heat transfer coefficient from Nusselt number",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Liquid milk flows inside a tubular pasteurizer tube of internal diameter $D = 50\\text{ mm}$. The thermal conductivity of milk is $k = 0.60\\text{ W/(m}\\,\\text{K)}$. If the flow conditions give a Nusselt number $Nu = 160$, the convective heat transfer coefficient $h$ is ________ $\\text{W/(m}^2\\,\\text{K)}$ (round off to one decimal place).",
+    "correct_answer": "1920.0",
+    "numerical_range": {
+      "min": 1919.0,
+      "max": 1921.0
+    },
+    "solution": "From the definition of Nusselt number:\n$$Nu = \\frac{h D}{k} \\implies h = \\frac{Nu \\cdot k}{D}$$\nGiven $Nu = 160$, $k = 0.60\\text{ W/(m K)}$, and $D = 0.05\\text{ m}$:\n$$h = \\frac{160 \\times 0.60}{0.05} = 1920.0\\text{ W/(m}^2\\text{ K)}$$",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_011",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Prandtl number physical significance",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Prandtl number ($Pr = \\frac{\\nu}{\\alpha} = \\frac{\\mu c_p}{k}$) represents the ratio of:",
+    "options": {
+      "A": "Momentum diffusivity (kinematic viscosity) to thermal diffusivity",
+      "B": "Inertial forces to viscous forces",
+      "C": "Convective heat transfer to pure conductive heat transfer",
+      "D": "Buoyancy forces to viscous forces"
+    },
+    "correct_answer": "A",
+    "solution": "The Prandtl number is a pure fluid property defined as $Pr = \\frac{\\nu}{\\alpha} = \\frac{\\mu / \\rho}{k / (\\rho c_p)} = \\frac{\\mu c_p}{k}$, representing the relative growth rates of velocity and thermal boundary layers.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_012",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Dittus-Boelter correlation exponents",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following conditions and parameters are valid for the Dittus-Boelter turbulent pipe flow correlation $Nu = 0.023 Re^{0.8} Pr^n$?",
+    "options": {
+      "A": "Fully developed turbulent flow with $Re > 10000$ and $0.6 \\le Pr \\le 160$",
+      "B": "The exponent is $n = 0.4$ when the fluid is being heated",
+      "C": "The exponent is $n = 0.3$ when the fluid is being cooled",
+      "D": "The correlation is applicable to creeping laminar flow ($Re < 100$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Valid for turbulent flow $Re > 10^4$ and moderate Prandtl range (A is true).\n2. Heating fluid: $n = 0.4$ (wall hotter than bulk fluid) (B is true).\n3. Cooling fluid: $n = 0.3$ (wall colder than bulk fluid) (C is true).\n4. For laminar flow ($Re < 2100$), $Nu = 3.66$ (constant wall temp) or $4.36$ (constant heat flux); Dittus-Boelter is completely invalid for laminar flow (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_013",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Convective heat transfer coefficient from Nusselt number",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Liquid milk flows inside a tubular pasteurizer tube of internal diameter $D = 50\\text{ mm}$. The thermal conductivity of milk is $k = 0.60\\text{ W/(m}\\,\\text{K)}$. If the flow conditions give a Nusselt number $Nu = 130$, the convective heat transfer coefficient $h$ is ________ $\\text{W/(m}^2\\,\\text{K)}$ (round off to one decimal place).",
+    "correct_answer": "1560.0",
+    "numerical_range": {
+      "min": 1559.0,
+      "max": 1561.0
+    },
+    "solution": "From the definition of Nusselt number:\n$$Nu = \\frac{h D}{k} \\implies h = \\frac{Nu \\cdot k}{D}$$\nGiven $Nu = 130$, $k = 0.60\\text{ W/(m K)}$, and $D = 0.05\\text{ m}$:\n$$h = \\frac{130 \\times 0.60}{0.05} = 1560.0\\text{ W/(m}^2\\text{ K)}$$",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_014",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Prandtl number physical significance",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Prandtl number ($Pr = \\frac{\\nu}{\\alpha} = \\frac{\\mu c_p}{k}$) represents the ratio of:",
+    "options": {
+      "A": "Momentum diffusivity (kinematic viscosity) to thermal diffusivity",
+      "B": "Inertial forces to viscous forces",
+      "C": "Convective heat transfer to pure conductive heat transfer",
+      "D": "Buoyancy forces to viscous forces"
+    },
+    "correct_answer": "A",
+    "solution": "The Prandtl number is a pure fluid property defined as $Pr = \\frac{\\nu}{\\alpha} = \\frac{\\mu / \\rho}{k / (\\rho c_p)} = \\frac{\\mu c_p}{k}$, representing the relative growth rates of velocity and thermal boundary layers.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_015",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Dittus-Boelter correlation exponents",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following conditions and parameters are valid for the Dittus-Boelter turbulent pipe flow correlation $Nu = 0.023 Re^{0.8} Pr^n$?",
+    "options": {
+      "A": "Fully developed turbulent flow with $Re > 10000$ and $0.6 \\le Pr \\le 160$",
+      "B": "The exponent is $n = 0.4$ when the fluid is being heated",
+      "C": "The exponent is $n = 0.3$ when the fluid is being cooled",
+      "D": "The correlation is applicable to creeping laminar flow ($Re < 100$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Valid for turbulent flow $Re > 10^4$ and moderate Prandtl range (A is true).\n2. Heating fluid: $n = 0.4$ (wall hotter than bulk fluid) (B is true).\n3. Cooling fluid: $n = 0.3$ (wall colder than bulk fluid) (C is true).\n4. For laminar flow ($Re < 2100$), $Nu = 3.66$ (constant wall temp) or $4.36$ (constant heat flux); Dittus-Boelter is completely invalid for laminar flow (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_016",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Convective heat transfer coefficient from Nusselt number",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Liquid milk flows inside a tubular pasteurizer tube of internal diameter $D = 50\\text{ mm}$. The thermal conductivity of milk is $k = 0.60\\text{ W/(m}\\,\\text{K)}$. If the flow conditions give a Nusselt number $Nu = 160$, the convective heat transfer coefficient $h$ is ________ $\\text{W/(m}^2\\,\\text{K)}$ (round off to one decimal place).",
+    "correct_answer": "1920.0",
+    "numerical_range": {
+      "min": 1919.0,
+      "max": 1921.0
+    },
+    "solution": "From the definition of Nusselt number:\n$$Nu = \\frac{h D}{k} \\implies h = \\frac{Nu \\cdot k}{D}$$\nGiven $Nu = 160$, $k = 0.60\\text{ W/(m K)}$, and $D = 0.05\\text{ m}$:\n$$h = \\frac{160 \\times 0.60}{0.05} = 1920.0\\text{ W/(m}^2\\text{ K)}$$",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_017",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Prandtl number physical significance",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Prandtl number ($Pr = \\frac{\\nu}{\\alpha} = \\frac{\\mu c_p}{k}$) represents the ratio of:",
+    "options": {
+      "A": "Momentum diffusivity (kinematic viscosity) to thermal diffusivity",
+      "B": "Inertial forces to viscous forces",
+      "C": "Convective heat transfer to pure conductive heat transfer",
+      "D": "Buoyancy forces to viscous forces"
+    },
+    "correct_answer": "A",
+    "solution": "The Prandtl number is a pure fluid property defined as $Pr = \\frac{\\nu}{\\alpha} = \\frac{\\mu / \\rho}{k / (\\rho c_p)} = \\frac{\\mu c_p}{k}$, representing the relative growth rates of velocity and thermal boundary layers.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_018",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Dittus-Boelter correlation exponents",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following conditions and parameters are valid for the Dittus-Boelter turbulent pipe flow correlation $Nu = 0.023 Re^{0.8} Pr^n$?",
+    "options": {
+      "A": "Fully developed turbulent flow with $Re > 10000$ and $0.6 \\le Pr \\le 160$",
+      "B": "The exponent is $n = 0.4$ when the fluid is being heated",
+      "C": "The exponent is $n = 0.3$ when the fluid is being cooled",
+      "D": "The correlation is applicable to creeping laminar flow ($Re < 100$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Valid for turbulent flow $Re > 10^4$ and moderate Prandtl range (A is true).\n2. Heating fluid: $n = 0.4$ (wall hotter than bulk fluid) (B is true).\n3. Cooling fluid: $n = 0.3$ (wall colder than bulk fluid) (C is true).\n4. For laminar flow ($Re < 2100$), $Nu = 3.66$ (constant wall temp) or $4.36$ (constant heat flux); Dittus-Boelter is completely invalid for laminar flow (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_019",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Convective heat transfer coefficient from Nusselt number",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Liquid milk flows inside a tubular pasteurizer tube of internal diameter $D = 50\\text{ mm}$. The thermal conductivity of milk is $k = 0.60\\text{ W/(m}\\,\\text{K)}$. If the flow conditions give a Nusselt number $Nu = 130$, the convective heat transfer coefficient $h$ is ________ $\\text{W/(m}^2\\,\\text{K)}$ (round off to one decimal place).",
+    "correct_answer": "1560.0",
+    "numerical_range": {
+      "min": 1559.0,
+      "max": 1561.0
+    },
+    "solution": "From the definition of Nusselt number:\n$$Nu = \\frac{h D}{k} \\implies h = \\frac{Nu \\cdot k}{D}$$\nGiven $Nu = 130$, $k = 0.60\\text{ W/(m K)}$, and $D = 0.05\\text{ m}$:\n$$h = \\frac{130 \\times 0.60}{0.05} = 1560.0\\text{ W/(m}^2\\text{ K)}$$",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_020",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Prandtl number physical significance",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Prandtl number ($Pr = \\frac{\\nu}{\\alpha} = \\frac{\\mu c_p}{k}$) represents the ratio of:",
+    "options": {
+      "A": "Momentum diffusivity (kinematic viscosity) to thermal diffusivity",
+      "B": "Inertial forces to viscous forces",
+      "C": "Convective heat transfer to pure conductive heat transfer",
+      "D": "Buoyancy forces to viscous forces"
+    },
+    "correct_answer": "A",
+    "solution": "The Prandtl number is a pure fluid property defined as $Pr = \\frac{\\nu}{\\alpha} = \\frac{\\mu / \\rho}{k / (\\rho c_p)} = \\frac{\\mu c_p}{k}$, representing the relative growth rates of velocity and thermal boundary layers.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_021",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Dittus-Boelter correlation exponents",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following conditions and parameters are valid for the Dittus-Boelter turbulent pipe flow correlation $Nu = 0.023 Re^{0.8} Pr^n$?",
+    "options": {
+      "A": "Fully developed turbulent flow with $Re > 10000$ and $0.6 \\le Pr \\le 160$",
+      "B": "The exponent is $n = 0.4$ when the fluid is being heated",
+      "C": "The exponent is $n = 0.3$ when the fluid is being cooled",
+      "D": "The correlation is applicable to creeping laminar flow ($Re < 100$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Valid for turbulent flow $Re > 10^4$ and moderate Prandtl range (A is true).\n2. Heating fluid: $n = 0.4$ (wall hotter than bulk fluid) (B is true).\n3. Cooling fluid: $n = 0.3$ (wall colder than bulk fluid) (C is true).\n4. For laminar flow ($Re < 2100$), $Nu = 3.66$ (constant wall temp) or $4.36$ (constant heat flux); Dittus-Boelter is completely invalid for laminar flow (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_022",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Convective heat transfer coefficient from Nusselt number",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Liquid milk flows inside a tubular pasteurizer tube of internal diameter $D = 50\\text{ mm}$. The thermal conductivity of milk is $k = 0.60\\text{ W/(m}\\,\\text{K)}$. If the flow conditions give a Nusselt number $Nu = 160$, the convective heat transfer coefficient $h$ is ________ $\\text{W/(m}^2\\,\\text{K)}$ (round off to one decimal place).",
+    "correct_answer": "1920.0",
+    "numerical_range": {
+      "min": 1919.0,
+      "max": 1921.0
+    },
+    "solution": "From the definition of Nusselt number:\n$$Nu = \\frac{h D}{k} \\implies h = \\frac{Nu \\cdot k}{D}$$\nGiven $Nu = 160$, $k = 0.60\\text{ W/(m K)}$, and $D = 0.05\\text{ m}$:\n$$h = \\frac{160 \\times 0.60}{0.05} = 1920.0\\text{ W/(m}^2\\text{ K)}$$",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_023",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Prandtl number physical significance",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Prandtl number ($Pr = \\frac{\\nu}{\\alpha} = \\frac{\\mu c_p}{k}$) represents the ratio of:",
+    "options": {
+      "A": "Momentum diffusivity (kinematic viscosity) to thermal diffusivity",
+      "B": "Inertial forces to viscous forces",
+      "C": "Convective heat transfer to pure conductive heat transfer",
+      "D": "Buoyancy forces to viscous forces"
+    },
+    "correct_answer": "A",
+    "solution": "The Prandtl number is a pure fluid property defined as $Pr = \\frac{\\nu}{\\alpha} = \\frac{\\mu / \\rho}{k / (\\rho c_p)} = \\frac{\\mu c_p}{k}$, representing the relative growth rates of velocity and thermal boundary layers.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_024",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Dittus-Boelter correlation exponents",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following conditions and parameters are valid for the Dittus-Boelter turbulent pipe flow correlation $Nu = 0.023 Re^{0.8} Pr^n$?",
+    "options": {
+      "A": "Fully developed turbulent flow with $Re > 10000$ and $0.6 \\le Pr \\le 160$",
+      "B": "The exponent is $n = 0.4$ when the fluid is being heated",
+      "C": "The exponent is $n = 0.3$ when the fluid is being cooled",
+      "D": "The correlation is applicable to creeping laminar flow ($Re < 100$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Valid for turbulent flow $Re > 10^4$ and moderate Prandtl range (A is true).\n2. Heating fluid: $n = 0.4$ (wall hotter than bulk fluid) (B is true).\n3. Cooling fluid: $n = 0.3$ (wall colder than bulk fluid) (C is true).\n4. For laminar flow ($Re < 2100$), $Nu = 3.66$ (constant wall temp) or $4.36$ (constant heat flux); Dittus-Boelter is completely invalid for laminar flow (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_025",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Convective heat transfer coefficient from Nusselt number",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Liquid milk flows inside a tubular pasteurizer tube of internal diameter $D = 50\\text{ mm}$. The thermal conductivity of milk is $k = 0.60\\text{ W/(m}\\,\\text{K)}$. If the flow conditions give a Nusselt number $Nu = 130$, the convective heat transfer coefficient $h$ is ________ $\\text{W/(m}^2\\,\\text{K)}$ (round off to one decimal place).",
+    "correct_answer": "1560.0",
+    "numerical_range": {
+      "min": 1559.0,
+      "max": 1561.0
+    },
+    "solution": "From the definition of Nusselt number:\n$$Nu = \\frac{h D}{k} \\implies h = \\frac{Nu \\cdot k}{D}$$\nGiven $Nu = 130$, $k = 0.60\\text{ W/(m K)}$, and $D = 0.05\\text{ m}$:\n$$h = \\frac{130 \\times 0.60}{0.05} = 1560.0\\text{ W/(m}^2\\text{ K)}$$",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_026",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Prandtl number physical significance",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Prandtl number ($Pr = \\frac{\\nu}{\\alpha} = \\frac{\\mu c_p}{k}$) represents the ratio of:",
+    "options": {
+      "A": "Momentum diffusivity (kinematic viscosity) to thermal diffusivity",
+      "B": "Inertial forces to viscous forces",
+      "C": "Convective heat transfer to pure conductive heat transfer",
+      "D": "Buoyancy forces to viscous forces"
+    },
+    "correct_answer": "A",
+    "solution": "The Prandtl number is a pure fluid property defined as $Pr = \\frac{\\nu}{\\alpha} = \\frac{\\mu / \\rho}{k / (\\rho c_p)} = \\frac{\\mu c_p}{k}$, representing the relative growth rates of velocity and thermal boundary layers.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_027",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Dittus-Boelter correlation exponents",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following conditions and parameters are valid for the Dittus-Boelter turbulent pipe flow correlation $Nu = 0.023 Re^{0.8} Pr^n$?",
+    "options": {
+      "A": "Fully developed turbulent flow with $Re > 10000$ and $0.6 \\le Pr \\le 160$",
+      "B": "The exponent is $n = 0.4$ when the fluid is being heated",
+      "C": "The exponent is $n = 0.3$ when the fluid is being cooled",
+      "D": "The correlation is applicable to creeping laminar flow ($Re < 100$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Valid for turbulent flow $Re > 10^4$ and moderate Prandtl range (A is true).\n2. Heating fluid: $n = 0.4$ (wall hotter than bulk fluid) (B is true).\n3. Cooling fluid: $n = 0.3$ (wall colder than bulk fluid) (C is true).\n4. For laminar flow ($Re < 2100$), $Nu = 3.66$ (constant wall temp) or $4.36$ (constant heat flux); Dittus-Boelter is completely invalid for laminar flow (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_028",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Convective heat transfer coefficient from Nusselt number",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Liquid milk flows inside a tubular pasteurizer tube of internal diameter $D = 50\\text{ mm}$. The thermal conductivity of milk is $k = 0.60\\text{ W/(m}\\,\\text{K)}$. If the flow conditions give a Nusselt number $Nu = 160$, the convective heat transfer coefficient $h$ is ________ $\\text{W/(m}^2\\,\\text{K)}$ (round off to one decimal place).",
+    "correct_answer": "1920.0",
+    "numerical_range": {
+      "min": 1919.0,
+      "max": 1921.0
+    },
+    "solution": "From the definition of Nusselt number:\n$$Nu = \\frac{h D}{k} \\implies h = \\frac{Nu \\cdot k}{D}$$\nGiven $Nu = 160$, $k = 0.60\\text{ W/(m K)}$, and $D = 0.05\\text{ m}$:\n$$h = \\frac{160 \\times 0.60}{0.05} = 1920.0\\text{ W/(m}^2\\text{ K)}$$",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_029",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Prandtl number physical significance",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Prandtl number ($Pr = \\frac{\\nu}{\\alpha} = \\frac{\\mu c_p}{k}$) represents the ratio of:",
+    "options": {
+      "A": "Momentum diffusivity (kinematic viscosity) to thermal diffusivity",
+      "B": "Inertial forces to viscous forces",
+      "C": "Convective heat transfer to pure conductive heat transfer",
+      "D": "Buoyancy forces to viscous forces"
+    },
+    "correct_answer": "A",
+    "solution": "The Prandtl number is a pure fluid property defined as $Pr = \\frac{\\nu}{\\alpha} = \\frac{\\mu / \\rho}{k / (\\rho c_p)} = \\frac{\\mu c_p}{k}$, representing the relative growth rates of velocity and thermal boundary layers.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_030",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Dittus-Boelter correlation exponents",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following conditions and parameters are valid for the Dittus-Boelter turbulent pipe flow correlation $Nu = 0.023 Re^{0.8} Pr^n$?",
+    "options": {
+      "A": "Fully developed turbulent flow with $Re > 10000$ and $0.6 \\le Pr \\le 160$",
+      "B": "The exponent is $n = 0.4$ when the fluid is being heated",
+      "C": "The exponent is $n = 0.3$ when the fluid is being cooled",
+      "D": "The correlation is applicable to creeping laminar flow ($Re < 100$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Valid for turbulent flow $Re > 10^4$ and moderate Prandtl range (A is true).\n2. Heating fluid: $n = 0.4$ (wall hotter than bulk fluid) (B is true).\n3. Cooling fluid: $n = 0.3$ (wall colder than bulk fluid) (C is true).\n4. For laminar flow ($Re < 2100$), $Nu = 3.66$ (constant wall temp) or $4.36$ (constant heat flux); Dittus-Boelter is completely invalid for laminar flow (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_031",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Convective heat transfer coefficient from Nusselt number",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Liquid milk flows inside a tubular pasteurizer tube of internal diameter $D = 50\\text{ mm}$. The thermal conductivity of milk is $k = 0.60\\text{ W/(m}\\,\\text{K)}$. If the flow conditions give a Nusselt number $Nu = 130$, the convective heat transfer coefficient $h$ is ________ $\\text{W/(m}^2\\,\\text{K)}$ (round off to one decimal place).",
+    "correct_answer": "1560.0",
+    "numerical_range": {
+      "min": 1559.0,
+      "max": 1561.0
+    },
+    "solution": "From the definition of Nusselt number:\n$$Nu = \\frac{h D}{k} \\implies h = \\frac{Nu \\cdot k}{D}$$\nGiven $Nu = 130$, $k = 0.60\\text{ W/(m K)}$, and $D = 0.05\\text{ m}$:\n$$h = \\frac{130 \\times 0.60}{0.05} = 1560.0\\text{ W/(m}^2\\text{ K)}$$",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_032",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Prandtl number physical significance",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Prandtl number ($Pr = \\frac{\\nu}{\\alpha} = \\frac{\\mu c_p}{k}$) represents the ratio of:",
+    "options": {
+      "A": "Momentum diffusivity (kinematic viscosity) to thermal diffusivity",
+      "B": "Inertial forces to viscous forces",
+      "C": "Convective heat transfer to pure conductive heat transfer",
+      "D": "Buoyancy forces to viscous forces"
+    },
+    "correct_answer": "A",
+    "solution": "The Prandtl number is a pure fluid property defined as $Pr = \\frac{\\nu}{\\alpha} = \\frac{\\mu / \\rho}{k / (\\rho c_p)} = \\frac{\\mu c_p}{k}$, representing the relative growth rates of velocity and thermal boundary layers.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_033",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Dittus-Boelter correlation exponents",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following conditions and parameters are valid for the Dittus-Boelter turbulent pipe flow correlation $Nu = 0.023 Re^{0.8} Pr^n$?",
+    "options": {
+      "A": "Fully developed turbulent flow with $Re > 10000$ and $0.6 \\le Pr \\le 160$",
+      "B": "The exponent is $n = 0.4$ when the fluid is being heated",
+      "C": "The exponent is $n = 0.3$ when the fluid is being cooled",
+      "D": "The correlation is applicable to creeping laminar flow ($Re < 100$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Valid for turbulent flow $Re > 10^4$ and moderate Prandtl range (A is true).\n2. Heating fluid: $n = 0.4$ (wall hotter than bulk fluid) (B is true).\n3. Cooling fluid: $n = 0.3$ (wall colder than bulk fluid) (C is true).\n4. For laminar flow ($Re < 2100$), $Nu = 3.66$ (constant wall temp) or $4.36$ (constant heat flux); Dittus-Boelter is completely invalid for laminar flow (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_034",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Convective heat transfer coefficient from Nusselt number",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Liquid milk flows inside a tubular pasteurizer tube of internal diameter $D = 50\\text{ mm}$. The thermal conductivity of milk is $k = 0.60\\text{ W/(m}\\,\\text{K)}$. If the flow conditions give a Nusselt number $Nu = 160$, the convective heat transfer coefficient $h$ is ________ $\\text{W/(m}^2\\,\\text{K)}$ (round off to one decimal place).",
+    "correct_answer": "1920.0",
+    "numerical_range": {
+      "min": 1919.0,
+      "max": 1921.0
+    },
+    "solution": "From the definition of Nusselt number:\n$$Nu = \\frac{h D}{k} \\implies h = \\frac{Nu \\cdot k}{D}$$\nGiven $Nu = 160$, $k = 0.60\\text{ W/(m K)}$, and $D = 0.05\\text{ m}$:\n$$h = \\frac{160 \\times 0.60}{0.05} = 1920.0\\text{ W/(m}^2\\text{ K)}$$",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_035",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Prandtl number physical significance",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Prandtl number ($Pr = \\frac{\\nu}{\\alpha} = \\frac{\\mu c_p}{k}$) represents the ratio of:",
+    "options": {
+      "A": "Momentum diffusivity (kinematic viscosity) to thermal diffusivity",
+      "B": "Inertial forces to viscous forces",
+      "C": "Convective heat transfer to pure conductive heat transfer",
+      "D": "Buoyancy forces to viscous forces"
+    },
+    "correct_answer": "A",
+    "solution": "The Prandtl number is a pure fluid property defined as $Pr = \\frac{\\nu}{\\alpha} = \\frac{\\mu / \\rho}{k / (\\rho c_p)} = \\frac{\\mu c_p}{k}$, representing the relative growth rates of velocity and thermal boundary layers.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_036",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Dittus-Boelter correlation exponents",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following conditions and parameters are valid for the Dittus-Boelter turbulent pipe flow correlation $Nu = 0.023 Re^{0.8} Pr^n$?",
+    "options": {
+      "A": "Fully developed turbulent flow with $Re > 10000$ and $0.6 \\le Pr \\le 160$",
+      "B": "The exponent is $n = 0.4$ when the fluid is being heated",
+      "C": "The exponent is $n = 0.3$ when the fluid is being cooled",
+      "D": "The correlation is applicable to creeping laminar flow ($Re < 100$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Valid for turbulent flow $Re > 10^4$ and moderate Prandtl range (A is true).\n2. Heating fluid: $n = 0.4$ (wall hotter than bulk fluid) (B is true).\n3. Cooling fluid: $n = 0.3$ (wall colder than bulk fluid) (C is true).\n4. For laminar flow ($Re < 2100$), $Nu = 3.66$ (constant wall temp) or $4.36$ (constant heat flux); Dittus-Boelter is completely invalid for laminar flow (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_037",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Convective heat transfer coefficient from Nusselt number",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Liquid milk flows inside a tubular pasteurizer tube of internal diameter $D = 50\\text{ mm}$. The thermal conductivity of milk is $k = 0.60\\text{ W/(m}\\,\\text{K)}$. If the flow conditions give a Nusselt number $Nu = 130$, the convective heat transfer coefficient $h$ is ________ $\\text{W/(m}^2\\,\\text{K)}$ (round off to one decimal place).",
+    "correct_answer": "1560.0",
+    "numerical_range": {
+      "min": 1559.0,
+      "max": 1561.0
+    },
+    "solution": "From the definition of Nusselt number:\n$$Nu = \\frac{h D}{k} \\implies h = \\frac{Nu \\cdot k}{D}$$\nGiven $Nu = 130$, $k = 0.60\\text{ W/(m K)}$, and $D = 0.05\\text{ m}$:\n$$h = \\frac{130 \\times 0.60}{0.05} = 1560.0\\text{ W/(m}^2\\text{ K)}$$",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_038",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Prandtl number physical significance",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Prandtl number ($Pr = \\frac{\\nu}{\\alpha} = \\frac{\\mu c_p}{k}$) represents the ratio of:",
+    "options": {
+      "A": "Momentum diffusivity (kinematic viscosity) to thermal diffusivity",
+      "B": "Inertial forces to viscous forces",
+      "C": "Convective heat transfer to pure conductive heat transfer",
+      "D": "Buoyancy forces to viscous forces"
+    },
+    "correct_answer": "A",
+    "solution": "The Prandtl number is a pure fluid property defined as $Pr = \\frac{\\nu}{\\alpha} = \\frac{\\mu / \\rho}{k / (\\rho c_p)} = \\frac{\\mu c_p}{k}$, representing the relative growth rates of velocity and thermal boundary layers.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_039",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Dittus-Boelter correlation exponents",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following conditions and parameters are valid for the Dittus-Boelter turbulent pipe flow correlation $Nu = 0.023 Re^{0.8} Pr^n$?",
+    "options": {
+      "A": "Fully developed turbulent flow with $Re > 10000$ and $0.6 \\le Pr \\le 160$",
+      "B": "The exponent is $n = 0.4$ when the fluid is being heated",
+      "C": "The exponent is $n = 0.3$ when the fluid is being cooled",
+      "D": "The correlation is applicable to creeping laminar flow ($Re < 100$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Valid for turbulent flow $Re > 10^4$ and moderate Prandtl range (A is true).\n2. Heating fluid: $n = 0.4$ (wall hotter than bulk fluid) (B is true).\n3. Cooling fluid: $n = 0.3$ (wall colder than bulk fluid) (C is true).\n4. For laminar flow ($Re < 2100$), $Nu = 3.66$ (constant wall temp) or $4.36$ (constant heat flux); Dittus-Boelter is completely invalid for laminar flow (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_040",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Convective heat transfer coefficient from Nusselt number",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Liquid milk flows inside a tubular pasteurizer tube of internal diameter $D = 50\\text{ mm}$. The thermal conductivity of milk is $k = 0.60\\text{ W/(m}\\,\\text{K)}$. If the flow conditions give a Nusselt number $Nu = 160$, the convective heat transfer coefficient $h$ is ________ $\\text{W/(m}^2\\,\\text{K)}$ (round off to one decimal place).",
+    "correct_answer": "1920.0",
+    "numerical_range": {
+      "min": 1919.0,
+      "max": 1921.0
+    },
+    "solution": "From the definition of Nusselt number:\n$$Nu = \\frac{h D}{k} \\implies h = \\frac{Nu \\cdot k}{D}$$\nGiven $Nu = 160$, $k = 0.60\\text{ W/(m K)}$, and $D = 0.05\\text{ m}$:\n$$h = \\frac{160 \\times 0.60}{0.05} = 1920.0\\text{ W/(m}^2\\text{ K)}$$",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_041",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Prandtl number physical significance",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Prandtl number ($Pr = \\frac{\\nu}{\\alpha} = \\frac{\\mu c_p}{k}$) represents the ratio of:",
+    "options": {
+      "A": "Momentum diffusivity (kinematic viscosity) to thermal diffusivity",
+      "B": "Inertial forces to viscous forces",
+      "C": "Convective heat transfer to pure conductive heat transfer",
+      "D": "Buoyancy forces to viscous forces"
+    },
+    "correct_answer": "A",
+    "solution": "The Prandtl number is a pure fluid property defined as $Pr = \\frac{\\nu}{\\alpha} = \\frac{\\mu / \\rho}{k / (\\rho c_p)} = \\frac{\\mu c_p}{k}$, representing the relative growth rates of velocity and thermal boundary layers.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_042",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Dittus-Boelter correlation exponents",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following conditions and parameters are valid for the Dittus-Boelter turbulent pipe flow correlation $Nu = 0.023 Re^{0.8} Pr^n$?",
+    "options": {
+      "A": "Fully developed turbulent flow with $Re > 10000$ and $0.6 \\le Pr \\le 160$",
+      "B": "The exponent is $n = 0.4$ when the fluid is being heated",
+      "C": "The exponent is $n = 0.3$ when the fluid is being cooled",
+      "D": "The correlation is applicable to creeping laminar flow ($Re < 100$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Valid for turbulent flow $Re > 10^4$ and moderate Prandtl range (A is true).\n2. Heating fluid: $n = 0.4$ (wall hotter than bulk fluid) (B is true).\n3. Cooling fluid: $n = 0.3$ (wall colder than bulk fluid) (C is true).\n4. For laminar flow ($Re < 2100$), $Nu = 3.66$ (constant wall temp) or $4.36$ (constant heat flux); Dittus-Boelter is completely invalid for laminar flow (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_CNV_043",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Convective heat transfer coefficient from Nusselt number",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Liquid milk flows inside a tubular pasteurizer tube of internal diameter $D = 50\\text{ mm}$. The thermal conductivity of milk is $k = 0.60\\text{ W/(m}\\,\\text{K)}$. If the flow conditions give a Nusselt number $Nu = 130$, the convective heat transfer coefficient $h$ is ________ $\\text{W/(m}^2\\,\\text{K)}$ (round off to one decimal place).",
+    "correct_answer": "1560.0",
+    "numerical_range": {
+      "min": 1559.0,
+      "max": 1561.0
+    },
+    "solution": "From the definition of Nusselt number:\n$$Nu = \\frac{h D}{k} \\implies h = \\frac{Nu \\cdot k}{D}$$\nGiven $Nu = 130$, $k = 0.60\\text{ W/(m K)}$, and $D = 0.05\\text{ m}$:\n$$h = \\frac{130 \\times 0.60}{0.05} = 1560.0\\text{ W/(m}^2\\text{ K)}$$",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Emissive power of food baking surface",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A baking oven radiant heating panel operates at a surface temperature of $T = 250^\\circ\\text{C}$ ($523.15\\text{ K}$) with a surface emissivity of $\\epsilon = 0.85$. Taking the Stefan-Boltzmann constant $\\sigma = 5.67 \\times 10^{-8}\\text{ W/(m}^2\\,\\text{K}^4\\text{)}$, the total emissive power of the panel is ________ $\\text{W/m}^2$ (round off to one decimal place).",
+    "correct_answer": "3610.0",
+    "numerical_range": {
+      "min": 3605.0,
+      "max": 3615.0
+    },
+    "solution": "From the Stefan-Boltzmann law for a gray surface:\n$$E = \\epsilon \\sigma T^4$$\nGiven $\\epsilon = 0.85$, $\\sigma = 5.67 \\times 10^{-8}\\text{ W/(m}^2\\text{ K}^4\\text{)}$, and $T = 523.15\\text{ K}$:\n$$E = 0.85 \\times (5.67 \\times 10^{-8}) \\times (523.15)^4 = 3610.0\\text{ W/m}^2$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Wien displacement law and blackbody radiation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to Wien's Displacement Law, the wavelength $\\lambda_{\\max}$ at which maximum spectral emissive power occurs is related to absolute temperature $T$ by:",
+    "options": {
+      "A": "$\\lambda_{\\max} T = 2898\\;\\mu\\text{m}\\cdot\\text{K} = \\text{constant}$",
+      "B": "$\\lambda_{\\max} / T = \\text{constant}$",
+      "C": "$\\lambda_{\\max} T^4 = \\text{constant}$",
+      "D": "$\\lambda_{\\max} = \\sigma T^2$"
+    },
+    "correct_answer": "A",
+    "solution": "Wien's displacement law states that the peak emission wavelength shifts inversely with absolute temperature: $\\lambda_{\\max} T = C \\approx 2.898 \\times 10^{-3}\\text{ m}\\cdot\\text{K} = 2898\\;\\mu\\text{m}\\cdot\\text{K}$.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_003",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Reciprocity and summation rules of view factors",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following view factor (shape factor) relationships is/are mathematically TRUE for diffuse-gray radiation exchange?",
+    "options": {
+      "A": "Reciprocity theorem: $A_i F_{ij} = A_j F_{ji}$",
+      "B": "Summation rule for an $N$-surface enclosure: $\\sum_{j=1}^N F_{ij} = 1$",
+      "C": "For a strictly flat or convex surface $i$, the self-view factor is zero ($F_{ii} = 0$)",
+      "D": "View factor depends strongly on surface temperature and emissivity"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Reciprocity $A_i F_{ij} = A_j F_{ji}$ balances radiation geometry (A is true).\n2. Enclosure summation conserves radiant energy: $\\sum F_{ij} = 1$ (B is true).\n3. Flat/convex planes cannot 'see' themselves, so $F_{ii} = 0$ (C is true).\n4. View factor $F_{ij}$ is purely geometric, depending only on orientation and distance, completely independent of temperature and emissivity (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_004",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Emissive power of food baking surface",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A baking oven radiant heating panel operates at a surface temperature of $T = 400^\\circ\\text{C}$ ($673.15\\text{ K}$) with a surface emissivity of $\\epsilon = 0.85$. Taking the Stefan-Boltzmann constant $\\sigma = 5.67 \\times 10^{-8}\\text{ W/(m}^2\\,\\text{K}^4\\text{)}$, the total emissive power of the panel is ________ $\\text{W/m}^2$ (round off to one decimal place).",
+    "correct_answer": "9895.8",
+    "numerical_range": {
+      "min": 9890.8,
+      "max": 9900.8
+    },
+    "solution": "From the Stefan-Boltzmann law for a gray surface:\n$$E = \\epsilon \\sigma T^4$$\nGiven $\\epsilon = 0.85$, $\\sigma = 5.67 \\times 10^{-8}\\text{ W/(m}^2\\text{ K}^4\\text{)}$, and $T = 673.15\\text{ K}$:\n$$E = 0.85 \\times (5.67 \\times 10^{-8}) \\times (673.15)^4 = 9895.8\\text{ W/m}^2$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_005",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Wien displacement law and blackbody radiation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to Wien's Displacement Law, the wavelength $\\lambda_{\\max}$ at which maximum spectral emissive power occurs is related to absolute temperature $T$ by:",
+    "options": {
+      "A": "$\\lambda_{\\max} T = 2898\\;\\mu\\text{m}\\cdot\\text{K} = \\text{constant}$",
+      "B": "$\\lambda_{\\max} / T = \\text{constant}$",
+      "C": "$\\lambda_{\\max} T^4 = \\text{constant}$",
+      "D": "$\\lambda_{\\max} = \\sigma T^2$"
+    },
+    "correct_answer": "A",
+    "solution": "Wien's displacement law states that the peak emission wavelength shifts inversely with absolute temperature: $\\lambda_{\\max} T = C \\approx 2.898 \\times 10^{-3}\\text{ m}\\cdot\\text{K} = 2898\\;\\mu\\text{m}\\cdot\\text{K}$.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_006",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Reciprocity and summation rules of view factors",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following view factor (shape factor) relationships is/are mathematically TRUE for diffuse-gray radiation exchange?",
+    "options": {
+      "A": "Reciprocity theorem: $A_i F_{ij} = A_j F_{ji}$",
+      "B": "Summation rule for an $N$-surface enclosure: $\\sum_{j=1}^N F_{ij} = 1$",
+      "C": "For a strictly flat or convex surface $i$, the self-view factor is zero ($F_{ii} = 0$)",
+      "D": "View factor depends strongly on surface temperature and emissivity"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Reciprocity $A_i F_{ij} = A_j F_{ji}$ balances radiation geometry (A is true).\n2. Enclosure summation conserves radiant energy: $\\sum F_{ij} = 1$ (B is true).\n3. Flat/convex planes cannot 'see' themselves, so $F_{ii} = 0$ (C is true).\n4. View factor $F_{ij}$ is purely geometric, depending only on orientation and distance, completely independent of temperature and emissivity (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_007",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Emissive power of food baking surface",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A baking oven radiant heating panel operates at a surface temperature of $T = 300^\\circ\\text{C}$ ($573.15\\text{ K}$) with a surface emissivity of $\\epsilon = 0.85$. Taking the Stefan-Boltzmann constant $\\sigma = 5.67 \\times 10^{-8}\\text{ W/(m}^2\\,\\text{K}^4\\text{)}$, the total emissive power of the panel is ________ $\\text{W/m}^2$ (round off to one decimal place).",
+    "correct_answer": "5200.9",
+    "numerical_range": {
+      "min": 5195.9,
+      "max": 5205.9
+    },
+    "solution": "From the Stefan-Boltzmann law for a gray surface:\n$$E = \\epsilon \\sigma T^4$$\nGiven $\\epsilon = 0.85$, $\\sigma = 5.67 \\times 10^{-8}\\text{ W/(m}^2\\text{ K}^4\\text{)}$, and $T = 573.15\\text{ K}$:\n$$E = 0.85 \\times (5.67 \\times 10^{-8}) \\times (573.15)^4 = 5200.9\\text{ W/m}^2$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_008",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Wien displacement law and blackbody radiation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to Wien's Displacement Law, the wavelength $\\lambda_{\\max}$ at which maximum spectral emissive power occurs is related to absolute temperature $T$ by:",
+    "options": {
+      "A": "$\\lambda_{\\max} T = 2898\\;\\mu\\text{m}\\cdot\\text{K} = \\text{constant}$",
+      "B": "$\\lambda_{\\max} / T = \\text{constant}$",
+      "C": "$\\lambda_{\\max} T^4 = \\text{constant}$",
+      "D": "$\\lambda_{\\max} = \\sigma T^2$"
+    },
+    "correct_answer": "A",
+    "solution": "Wien's displacement law states that the peak emission wavelength shifts inversely with absolute temperature: $\\lambda_{\\max} T = C \\approx 2.898 \\times 10^{-3}\\text{ m}\\cdot\\text{K} = 2898\\;\\mu\\text{m}\\cdot\\text{K}$.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_009",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Reciprocity and summation rules of view factors",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following view factor (shape factor) relationships is/are mathematically TRUE for diffuse-gray radiation exchange?",
+    "options": {
+      "A": "Reciprocity theorem: $A_i F_{ij} = A_j F_{ji}$",
+      "B": "Summation rule for an $N$-surface enclosure: $\\sum_{j=1}^N F_{ij} = 1$",
+      "C": "For a strictly flat or convex surface $i$, the self-view factor is zero ($F_{ii} = 0$)",
+      "D": "View factor depends strongly on surface temperature and emissivity"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Reciprocity $A_i F_{ij} = A_j F_{ji}$ balances radiation geometry (A is true).\n2. Enclosure summation conserves radiant energy: $\\sum F_{ij} = 1$ (B is true).\n3. Flat/convex planes cannot 'see' themselves, so $F_{ii} = 0$ (C is true).\n4. View factor $F_{ij}$ is purely geometric, depending only on orientation and distance, completely independent of temperature and emissivity (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_010",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Emissive power of food baking surface",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A baking oven radiant heating panel operates at a surface temperature of $T = 200^\\circ\\text{C}$ ($473.15\\text{ K}$) with a surface emissivity of $\\epsilon = 0.85$. Taking the Stefan-Boltzmann constant $\\sigma = 5.67 \\times 10^{-8}\\text{ W/(m}^2\\,\\text{K}^4\\text{)}$, the total emissive power of the panel is ________ $\\text{W/m}^2$ (round off to one decimal place).",
+    "correct_answer": "2415.4",
+    "numerical_range": {
+      "min": 2410.4,
+      "max": 2420.4
+    },
+    "solution": "From the Stefan-Boltzmann law for a gray surface:\n$$E = \\epsilon \\sigma T^4$$\nGiven $\\epsilon = 0.85$, $\\sigma = 5.67 \\times 10^{-8}\\text{ W/(m}^2\\text{ K}^4\\text{)}$, and $T = 473.15\\text{ K}$:\n$$E = 0.85 \\times (5.67 \\times 10^{-8}) \\times (473.15)^4 = 2415.4\\text{ W/m}^2$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_011",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Wien displacement law and blackbody radiation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to Wien's Displacement Law, the wavelength $\\lambda_{\\max}$ at which maximum spectral emissive power occurs is related to absolute temperature $T$ by:",
+    "options": {
+      "A": "$\\lambda_{\\max} T = 2898\\;\\mu\\text{m}\\cdot\\text{K} = \\text{constant}$",
+      "B": "$\\lambda_{\\max} / T = \\text{constant}$",
+      "C": "$\\lambda_{\\max} T^4 = \\text{constant}$",
+      "D": "$\\lambda_{\\max} = \\sigma T^2$"
+    },
+    "correct_answer": "A",
+    "solution": "Wien's displacement law states that the peak emission wavelength shifts inversely with absolute temperature: $\\lambda_{\\max} T = C \\approx 2.898 \\times 10^{-3}\\text{ m}\\cdot\\text{K} = 2898\\;\\mu\\text{m}\\cdot\\text{K}$.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_012",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Reciprocity and summation rules of view factors",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following view factor (shape factor) relationships is/are mathematically TRUE for diffuse-gray radiation exchange?",
+    "options": {
+      "A": "Reciprocity theorem: $A_i F_{ij} = A_j F_{ji}$",
+      "B": "Summation rule for an $N$-surface enclosure: $\\sum_{j=1}^N F_{ij} = 1$",
+      "C": "For a strictly flat or convex surface $i$, the self-view factor is zero ($F_{ii} = 0$)",
+      "D": "View factor depends strongly on surface temperature and emissivity"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Reciprocity $A_i F_{ij} = A_j F_{ji}$ balances radiation geometry (A is true).\n2. Enclosure summation conserves radiant energy: $\\sum F_{ij} = 1$ (B is true).\n3. Flat/convex planes cannot 'see' themselves, so $F_{ii} = 0$ (C is true).\n4. View factor $F_{ij}$ is purely geometric, depending only on orientation and distance, completely independent of temperature and emissivity (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_013",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Emissive power of food baking surface",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A baking oven radiant heating panel operates at a surface temperature of $T = 350^\\circ\\text{C}$ ($623.15\\text{ K}$) with a surface emissivity of $\\epsilon = 0.85$. Taking the Stefan-Boltzmann constant $\\sigma = 5.67 \\times 10^{-8}\\text{ W/(m}^2\\,\\text{K}^4\\text{)}$, the total emissive power of the panel is ________ $\\text{W/m}^2$ (round off to one decimal place).",
+    "correct_answer": "7267.3",
+    "numerical_range": {
+      "min": 7262.3,
+      "max": 7272.3
+    },
+    "solution": "From the Stefan-Boltzmann law for a gray surface:\n$$E = \\epsilon \\sigma T^4$$\nGiven $\\epsilon = 0.85$, $\\sigma = 5.67 \\times 10^{-8}\\text{ W/(m}^2\\text{ K}^4\\text{)}$, and $T = 623.15\\text{ K}$:\n$$E = 0.85 \\times (5.67 \\times 10^{-8}) \\times (623.15)^4 = 7267.3\\text{ W/m}^2$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_014",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Wien displacement law and blackbody radiation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to Wien's Displacement Law, the wavelength $\\lambda_{\\max}$ at which maximum spectral emissive power occurs is related to absolute temperature $T$ by:",
+    "options": {
+      "A": "$\\lambda_{\\max} T = 2898\\;\\mu\\text{m}\\cdot\\text{K} = \\text{constant}$",
+      "B": "$\\lambda_{\\max} / T = \\text{constant}$",
+      "C": "$\\lambda_{\\max} T^4 = \\text{constant}$",
+      "D": "$\\lambda_{\\max} = \\sigma T^2$"
+    },
+    "correct_answer": "A",
+    "solution": "Wien's displacement law states that the peak emission wavelength shifts inversely with absolute temperature: $\\lambda_{\\max} T = C \\approx 2.898 \\times 10^{-3}\\text{ m}\\cdot\\text{K} = 2898\\;\\mu\\text{m}\\cdot\\text{K}$.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_015",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Reciprocity and summation rules of view factors",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following view factor (shape factor) relationships is/are mathematically TRUE for diffuse-gray radiation exchange?",
+    "options": {
+      "A": "Reciprocity theorem: $A_i F_{ij} = A_j F_{ji}$",
+      "B": "Summation rule for an $N$-surface enclosure: $\\sum_{j=1}^N F_{ij} = 1$",
+      "C": "For a strictly flat or convex surface $i$, the self-view factor is zero ($F_{ii} = 0$)",
+      "D": "View factor depends strongly on surface temperature and emissivity"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Reciprocity $A_i F_{ij} = A_j F_{ji}$ balances radiation geometry (A is true).\n2. Enclosure summation conserves radiant energy: $\\sum F_{ij} = 1$ (B is true).\n3. Flat/convex planes cannot 'see' themselves, so $F_{ii} = 0$ (C is true).\n4. View factor $F_{ij}$ is purely geometric, depending only on orientation and distance, completely independent of temperature and emissivity (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_016",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Emissive power of food baking surface",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A baking oven radiant heating panel operates at a surface temperature of $T = 250^\\circ\\text{C}$ ($523.15\\text{ K}$) with a surface emissivity of $\\epsilon = 0.85$. Taking the Stefan-Boltzmann constant $\\sigma = 5.67 \\times 10^{-8}\\text{ W/(m}^2\\,\\text{K}^4\\text{)}$, the total emissive power of the panel is ________ $\\text{W/m}^2$ (round off to one decimal place).",
+    "correct_answer": "3610.0",
+    "numerical_range": {
+      "min": 3605.0,
+      "max": 3615.0
+    },
+    "solution": "From the Stefan-Boltzmann law for a gray surface:\n$$E = \\epsilon \\sigma T^4$$\nGiven $\\epsilon = 0.85$, $\\sigma = 5.67 \\times 10^{-8}\\text{ W/(m}^2\\text{ K}^4\\text{)}$, and $T = 523.15\\text{ K}$:\n$$E = 0.85 \\times (5.67 \\times 10^{-8}) \\times (523.15)^4 = 3610.0\\text{ W/m}^2$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_017",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Wien displacement law and blackbody radiation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to Wien's Displacement Law, the wavelength $\\lambda_{\\max}$ at which maximum spectral emissive power occurs is related to absolute temperature $T$ by:",
+    "options": {
+      "A": "$\\lambda_{\\max} T = 2898\\;\\mu\\text{m}\\cdot\\text{K} = \\text{constant}$",
+      "B": "$\\lambda_{\\max} / T = \\text{constant}$",
+      "C": "$\\lambda_{\\max} T^4 = \\text{constant}$",
+      "D": "$\\lambda_{\\max} = \\sigma T^2$"
+    },
+    "correct_answer": "A",
+    "solution": "Wien's displacement law states that the peak emission wavelength shifts inversely with absolute temperature: $\\lambda_{\\max} T = C \\approx 2.898 \\times 10^{-3}\\text{ m}\\cdot\\text{K} = 2898\\;\\mu\\text{m}\\cdot\\text{K}$.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_018",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Reciprocity and summation rules of view factors",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following view factor (shape factor) relationships is/are mathematically TRUE for diffuse-gray radiation exchange?",
+    "options": {
+      "A": "Reciprocity theorem: $A_i F_{ij} = A_j F_{ji}$",
+      "B": "Summation rule for an $N$-surface enclosure: $\\sum_{j=1}^N F_{ij} = 1$",
+      "C": "For a strictly flat or convex surface $i$, the self-view factor is zero ($F_{ii} = 0$)",
+      "D": "View factor depends strongly on surface temperature and emissivity"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Reciprocity $A_i F_{ij} = A_j F_{ji}$ balances radiation geometry (A is true).\n2. Enclosure summation conserves radiant energy: $\\sum F_{ij} = 1$ (B is true).\n3. Flat/convex planes cannot 'see' themselves, so $F_{ii} = 0$ (C is true).\n4. View factor $F_{ij}$ is purely geometric, depending only on orientation and distance, completely independent of temperature and emissivity (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_019",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Emissive power of food baking surface",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A baking oven radiant heating panel operates at a surface temperature of $T = 400^\\circ\\text{C}$ ($673.15\\text{ K}$) with a surface emissivity of $\\epsilon = 0.85$. Taking the Stefan-Boltzmann constant $\\sigma = 5.67 \\times 10^{-8}\\text{ W/(m}^2\\,\\text{K}^4\\text{)}$, the total emissive power of the panel is ________ $\\text{W/m}^2$ (round off to one decimal place).",
+    "correct_answer": "9895.8",
+    "numerical_range": {
+      "min": 9890.8,
+      "max": 9900.8
+    },
+    "solution": "From the Stefan-Boltzmann law for a gray surface:\n$$E = \\epsilon \\sigma T^4$$\nGiven $\\epsilon = 0.85$, $\\sigma = 5.67 \\times 10^{-8}\\text{ W/(m}^2\\text{ K}^4\\text{)}$, and $T = 673.15\\text{ K}$:\n$$E = 0.85 \\times (5.67 \\times 10^{-8}) \\times (673.15)^4 = 9895.8\\text{ W/m}^2$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_020",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Wien displacement law and blackbody radiation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to Wien's Displacement Law, the wavelength $\\lambda_{\\max}$ at which maximum spectral emissive power occurs is related to absolute temperature $T$ by:",
+    "options": {
+      "A": "$\\lambda_{\\max} T = 2898\\;\\mu\\text{m}\\cdot\\text{K} = \\text{constant}$",
+      "B": "$\\lambda_{\\max} / T = \\text{constant}$",
+      "C": "$\\lambda_{\\max} T^4 = \\text{constant}$",
+      "D": "$\\lambda_{\\max} = \\sigma T^2$"
+    },
+    "correct_answer": "A",
+    "solution": "Wien's displacement law states that the peak emission wavelength shifts inversely with absolute temperature: $\\lambda_{\\max} T = C \\approx 2.898 \\times 10^{-3}\\text{ m}\\cdot\\text{K} = 2898\\;\\mu\\text{m}\\cdot\\text{K}$.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_021",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Reciprocity and summation rules of view factors",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following view factor (shape factor) relationships is/are mathematically TRUE for diffuse-gray radiation exchange?",
+    "options": {
+      "A": "Reciprocity theorem: $A_i F_{ij} = A_j F_{ji}$",
+      "B": "Summation rule for an $N$-surface enclosure: $\\sum_{j=1}^N F_{ij} = 1$",
+      "C": "For a strictly flat or convex surface $i$, the self-view factor is zero ($F_{ii} = 0$)",
+      "D": "View factor depends strongly on surface temperature and emissivity"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Reciprocity $A_i F_{ij} = A_j F_{ji}$ balances radiation geometry (A is true).\n2. Enclosure summation conserves radiant energy: $\\sum F_{ij} = 1$ (B is true).\n3. Flat/convex planes cannot 'see' themselves, so $F_{ii} = 0$ (C is true).\n4. View factor $F_{ij}$ is purely geometric, depending only on orientation and distance, completely independent of temperature and emissivity (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_022",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Emissive power of food baking surface",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A baking oven radiant heating panel operates at a surface temperature of $T = 300^\\circ\\text{C}$ ($573.15\\text{ K}$) with a surface emissivity of $\\epsilon = 0.85$. Taking the Stefan-Boltzmann constant $\\sigma = 5.67 \\times 10^{-8}\\text{ W/(m}^2\\,\\text{K}^4\\text{)}$, the total emissive power of the panel is ________ $\\text{W/m}^2$ (round off to one decimal place).",
+    "correct_answer": "5200.9",
+    "numerical_range": {
+      "min": 5195.9,
+      "max": 5205.9
+    },
+    "solution": "From the Stefan-Boltzmann law for a gray surface:\n$$E = \\epsilon \\sigma T^4$$\nGiven $\\epsilon = 0.85$, $\\sigma = 5.67 \\times 10^{-8}\\text{ W/(m}^2\\text{ K}^4\\text{)}$, and $T = 573.15\\text{ K}$:\n$$E = 0.85 \\times (5.67 \\times 10^{-8}) \\times (573.15)^4 = 5200.9\\text{ W/m}^2$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_023",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Wien displacement law and blackbody radiation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to Wien's Displacement Law, the wavelength $\\lambda_{\\max}$ at which maximum spectral emissive power occurs is related to absolute temperature $T$ by:",
+    "options": {
+      "A": "$\\lambda_{\\max} T = 2898\\;\\mu\\text{m}\\cdot\\text{K} = \\text{constant}$",
+      "B": "$\\lambda_{\\max} / T = \\text{constant}$",
+      "C": "$\\lambda_{\\max} T^4 = \\text{constant}$",
+      "D": "$\\lambda_{\\max} = \\sigma T^2$"
+    },
+    "correct_answer": "A",
+    "solution": "Wien's displacement law states that the peak emission wavelength shifts inversely with absolute temperature: $\\lambda_{\\max} T = C \\approx 2.898 \\times 10^{-3}\\text{ m}\\cdot\\text{K} = 2898\\;\\mu\\text{m}\\cdot\\text{K}$.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_024",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Reciprocity and summation rules of view factors",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following view factor (shape factor) relationships is/are mathematically TRUE for diffuse-gray radiation exchange?",
+    "options": {
+      "A": "Reciprocity theorem: $A_i F_{ij} = A_j F_{ji}$",
+      "B": "Summation rule for an $N$-surface enclosure: $\\sum_{j=1}^N F_{ij} = 1$",
+      "C": "For a strictly flat or convex surface $i$, the self-view factor is zero ($F_{ii} = 0$)",
+      "D": "View factor depends strongly on surface temperature and emissivity"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Reciprocity $A_i F_{ij} = A_j F_{ji}$ balances radiation geometry (A is true).\n2. Enclosure summation conserves radiant energy: $\\sum F_{ij} = 1$ (B is true).\n3. Flat/convex planes cannot 'see' themselves, so $F_{ii} = 0$ (C is true).\n4. View factor $F_{ij}$ is purely geometric, depending only on orientation and distance, completely independent of temperature and emissivity (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_025",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Emissive power of food baking surface",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A baking oven radiant heating panel operates at a surface temperature of $T = 200^\\circ\\text{C}$ ($473.15\\text{ K}$) with a surface emissivity of $\\epsilon = 0.85$. Taking the Stefan-Boltzmann constant $\\sigma = 5.67 \\times 10^{-8}\\text{ W/(m}^2\\,\\text{K}^4\\text{)}$, the total emissive power of the panel is ________ $\\text{W/m}^2$ (round off to one decimal place).",
+    "correct_answer": "2415.4",
+    "numerical_range": {
+      "min": 2410.4,
+      "max": 2420.4
+    },
+    "solution": "From the Stefan-Boltzmann law for a gray surface:\n$$E = \\epsilon \\sigma T^4$$\nGiven $\\epsilon = 0.85$, $\\sigma = 5.67 \\times 10^{-8}\\text{ W/(m}^2\\text{ K}^4\\text{)}$, and $T = 473.15\\text{ K}$:\n$$E = 0.85 \\times (5.67 \\times 10^{-8}) \\times (473.15)^4 = 2415.4\\text{ W/m}^2$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_026",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Wien displacement law and blackbody radiation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to Wien's Displacement Law, the wavelength $\\lambda_{\\max}$ at which maximum spectral emissive power occurs is related to absolute temperature $T$ by:",
+    "options": {
+      "A": "$\\lambda_{\\max} T = 2898\\;\\mu\\text{m}\\cdot\\text{K} = \\text{constant}$",
+      "B": "$\\lambda_{\\max} / T = \\text{constant}$",
+      "C": "$\\lambda_{\\max} T^4 = \\text{constant}$",
+      "D": "$\\lambda_{\\max} = \\sigma T^2$"
+    },
+    "correct_answer": "A",
+    "solution": "Wien's displacement law states that the peak emission wavelength shifts inversely with absolute temperature: $\\lambda_{\\max} T = C \\approx 2.898 \\times 10^{-3}\\text{ m}\\cdot\\text{K} = 2898\\;\\mu\\text{m}\\cdot\\text{K}$.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_027",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Reciprocity and summation rules of view factors",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following view factor (shape factor) relationships is/are mathematically TRUE for diffuse-gray radiation exchange?",
+    "options": {
+      "A": "Reciprocity theorem: $A_i F_{ij} = A_j F_{ji}$",
+      "B": "Summation rule for an $N$-surface enclosure: $\\sum_{j=1}^N F_{ij} = 1$",
+      "C": "For a strictly flat or convex surface $i$, the self-view factor is zero ($F_{ii} = 0$)",
+      "D": "View factor depends strongly on surface temperature and emissivity"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Reciprocity $A_i F_{ij} = A_j F_{ji}$ balances radiation geometry (A is true).\n2. Enclosure summation conserves radiant energy: $\\sum F_{ij} = 1$ (B is true).\n3. Flat/convex planes cannot 'see' themselves, so $F_{ii} = 0$ (C is true).\n4. View factor $F_{ij}$ is purely geometric, depending only on orientation and distance, completely independent of temperature and emissivity (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_028",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Emissive power of food baking surface",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A baking oven radiant heating panel operates at a surface temperature of $T = 350^\\circ\\text{C}$ ($623.15\\text{ K}$) with a surface emissivity of $\\epsilon = 0.85$. Taking the Stefan-Boltzmann constant $\\sigma = 5.67 \\times 10^{-8}\\text{ W/(m}^2\\,\\text{K}^4\\text{)}$, the total emissive power of the panel is ________ $\\text{W/m}^2$ (round off to one decimal place).",
+    "correct_answer": "7267.3",
+    "numerical_range": {
+      "min": 7262.3,
+      "max": 7272.3
+    },
+    "solution": "From the Stefan-Boltzmann law for a gray surface:\n$$E = \\epsilon \\sigma T^4$$\nGiven $\\epsilon = 0.85$, $\\sigma = 5.67 \\times 10^{-8}\\text{ W/(m}^2\\text{ K}^4\\text{)}$, and $T = 623.15\\text{ K}$:\n$$E = 0.85 \\times (5.67 \\times 10^{-8}) \\times (623.15)^4 = 7267.3\\text{ W/m}^2$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_029",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Wien displacement law and blackbody radiation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to Wien's Displacement Law, the wavelength $\\lambda_{\\max}$ at which maximum spectral emissive power occurs is related to absolute temperature $T$ by:",
+    "options": {
+      "A": "$\\lambda_{\\max} T = 2898\\;\\mu\\text{m}\\cdot\\text{K} = \\text{constant}$",
+      "B": "$\\lambda_{\\max} / T = \\text{constant}$",
+      "C": "$\\lambda_{\\max} T^4 = \\text{constant}$",
+      "D": "$\\lambda_{\\max} = \\sigma T^2$"
+    },
+    "correct_answer": "A",
+    "solution": "Wien's displacement law states that the peak emission wavelength shifts inversely with absolute temperature: $\\lambda_{\\max} T = C \\approx 2.898 \\times 10^{-3}\\text{ m}\\cdot\\text{K} = 2898\\;\\mu\\text{m}\\cdot\\text{K}$.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_030",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Reciprocity and summation rules of view factors",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following view factor (shape factor) relationships is/are mathematically TRUE for diffuse-gray radiation exchange?",
+    "options": {
+      "A": "Reciprocity theorem: $A_i F_{ij} = A_j F_{ji}$",
+      "B": "Summation rule for an $N$-surface enclosure: $\\sum_{j=1}^N F_{ij} = 1$",
+      "C": "For a strictly flat or convex surface $i$, the self-view factor is zero ($F_{ii} = 0$)",
+      "D": "View factor depends strongly on surface temperature and emissivity"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Reciprocity $A_i F_{ij} = A_j F_{ji}$ balances radiation geometry (A is true).\n2. Enclosure summation conserves radiant energy: $\\sum F_{ij} = 1$ (B is true).\n3. Flat/convex planes cannot 'see' themselves, so $F_{ii} = 0$ (C is true).\n4. View factor $F_{ij}$ is purely geometric, depending only on orientation and distance, completely independent of temperature and emissivity (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_031",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Emissive power of food baking surface",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A baking oven radiant heating panel operates at a surface temperature of $T = 250^\\circ\\text{C}$ ($523.15\\text{ K}$) with a surface emissivity of $\\epsilon = 0.85$. Taking the Stefan-Boltzmann constant $\\sigma = 5.67 \\times 10^{-8}\\text{ W/(m}^2\\,\\text{K}^4\\text{)}$, the total emissive power of the panel is ________ $\\text{W/m}^2$ (round off to one decimal place).",
+    "correct_answer": "3610.0",
+    "numerical_range": {
+      "min": 3605.0,
+      "max": 3615.0
+    },
+    "solution": "From the Stefan-Boltzmann law for a gray surface:\n$$E = \\epsilon \\sigma T^4$$\nGiven $\\epsilon = 0.85$, $\\sigma = 5.67 \\times 10^{-8}\\text{ W/(m}^2\\text{ K}^4\\text{)}$, and $T = 523.15\\text{ K}$:\n$$E = 0.85 \\times (5.67 \\times 10^{-8}) \\times (523.15)^4 = 3610.0\\text{ W/m}^2$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_032",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Wien displacement law and blackbody radiation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to Wien's Displacement Law, the wavelength $\\lambda_{\\max}$ at which maximum spectral emissive power occurs is related to absolute temperature $T$ by:",
+    "options": {
+      "A": "$\\lambda_{\\max} T = 2898\\;\\mu\\text{m}\\cdot\\text{K} = \\text{constant}$",
+      "B": "$\\lambda_{\\max} / T = \\text{constant}$",
+      "C": "$\\lambda_{\\max} T^4 = \\text{constant}$",
+      "D": "$\\lambda_{\\max} = \\sigma T^2$"
+    },
+    "correct_answer": "A",
+    "solution": "Wien's displacement law states that the peak emission wavelength shifts inversely with absolute temperature: $\\lambda_{\\max} T = C \\approx 2.898 \\times 10^{-3}\\text{ m}\\cdot\\text{K} = 2898\\;\\mu\\text{m}\\cdot\\text{K}$.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_033",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Reciprocity and summation rules of view factors",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following view factor (shape factor) relationships is/are mathematically TRUE for diffuse-gray radiation exchange?",
+    "options": {
+      "A": "Reciprocity theorem: $A_i F_{ij} = A_j F_{ji}$",
+      "B": "Summation rule for an $N$-surface enclosure: $\\sum_{j=1}^N F_{ij} = 1$",
+      "C": "For a strictly flat or convex surface $i$, the self-view factor is zero ($F_{ii} = 0$)",
+      "D": "View factor depends strongly on surface temperature and emissivity"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Reciprocity $A_i F_{ij} = A_j F_{ji}$ balances radiation geometry (A is true).\n2. Enclosure summation conserves radiant energy: $\\sum F_{ij} = 1$ (B is true).\n3. Flat/convex planes cannot 'see' themselves, so $F_{ii} = 0$ (C is true).\n4. View factor $F_{ij}$ is purely geometric, depending only on orientation and distance, completely independent of temperature and emissivity (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_034",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Emissive power of food baking surface",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A baking oven radiant heating panel operates at a surface temperature of $T = 400^\\circ\\text{C}$ ($673.15\\text{ K}$) with a surface emissivity of $\\epsilon = 0.85$. Taking the Stefan-Boltzmann constant $\\sigma = 5.67 \\times 10^{-8}\\text{ W/(m}^2\\,\\text{K}^4\\text{)}$, the total emissive power of the panel is ________ $\\text{W/m}^2$ (round off to one decimal place).",
+    "correct_answer": "9895.8",
+    "numerical_range": {
+      "min": 9890.8,
+      "max": 9900.8
+    },
+    "solution": "From the Stefan-Boltzmann law for a gray surface:\n$$E = \\epsilon \\sigma T^4$$\nGiven $\\epsilon = 0.85$, $\\sigma = 5.67 \\times 10^{-8}\\text{ W/(m}^2\\text{ K}^4\\text{)}$, and $T = 673.15\\text{ K}$:\n$$E = 0.85 \\times (5.67 \\times 10^{-8}) \\times (673.15)^4 = 9895.8\\text{ W/m}^2$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_035",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Wien displacement law and blackbody radiation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to Wien's Displacement Law, the wavelength $\\lambda_{\\max}$ at which maximum spectral emissive power occurs is related to absolute temperature $T$ by:",
+    "options": {
+      "A": "$\\lambda_{\\max} T = 2898\\;\\mu\\text{m}\\cdot\\text{K} = \\text{constant}$",
+      "B": "$\\lambda_{\\max} / T = \\text{constant}$",
+      "C": "$\\lambda_{\\max} T^4 = \\text{constant}$",
+      "D": "$\\lambda_{\\max} = \\sigma T^2$"
+    },
+    "correct_answer": "A",
+    "solution": "Wien's displacement law states that the peak emission wavelength shifts inversely with absolute temperature: $\\lambda_{\\max} T = C \\approx 2.898 \\times 10^{-3}\\text{ m}\\cdot\\text{K} = 2898\\;\\mu\\text{m}\\cdot\\text{K}$.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_036",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Reciprocity and summation rules of view factors",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following view factor (shape factor) relationships is/are mathematically TRUE for diffuse-gray radiation exchange?",
+    "options": {
+      "A": "Reciprocity theorem: $A_i F_{ij} = A_j F_{ji}$",
+      "B": "Summation rule for an $N$-surface enclosure: $\\sum_{j=1}^N F_{ij} = 1$",
+      "C": "For a strictly flat or convex surface $i$, the self-view factor is zero ($F_{ii} = 0$)",
+      "D": "View factor depends strongly on surface temperature and emissivity"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Reciprocity $A_i F_{ij} = A_j F_{ji}$ balances radiation geometry (A is true).\n2. Enclosure summation conserves radiant energy: $\\sum F_{ij} = 1$ (B is true).\n3. Flat/convex planes cannot 'see' themselves, so $F_{ii} = 0$ (C is true).\n4. View factor $F_{ij}$ is purely geometric, depending only on orientation and distance, completely independent of temperature and emissivity (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_037",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Emissive power of food baking surface",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A baking oven radiant heating panel operates at a surface temperature of $T = 300^\\circ\\text{C}$ ($573.15\\text{ K}$) with a surface emissivity of $\\epsilon = 0.85$. Taking the Stefan-Boltzmann constant $\\sigma = 5.67 \\times 10^{-8}\\text{ W/(m}^2\\,\\text{K}^4\\text{)}$, the total emissive power of the panel is ________ $\\text{W/m}^2$ (round off to one decimal place).",
+    "correct_answer": "5200.9",
+    "numerical_range": {
+      "min": 5195.9,
+      "max": 5205.9
+    },
+    "solution": "From the Stefan-Boltzmann law for a gray surface:\n$$E = \\epsilon \\sigma T^4$$\nGiven $\\epsilon = 0.85$, $\\sigma = 5.67 \\times 10^{-8}\\text{ W/(m}^2\\text{ K}^4\\text{)}$, and $T = 573.15\\text{ K}$:\n$$E = 0.85 \\times (5.67 \\times 10^{-8}) \\times (573.15)^4 = 5200.9\\text{ W/m}^2$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_038",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Wien displacement law and blackbody radiation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to Wien's Displacement Law, the wavelength $\\lambda_{\\max}$ at which maximum spectral emissive power occurs is related to absolute temperature $T$ by:",
+    "options": {
+      "A": "$\\lambda_{\\max} T = 2898\\;\\mu\\text{m}\\cdot\\text{K} = \\text{constant}$",
+      "B": "$\\lambda_{\\max} / T = \\text{constant}$",
+      "C": "$\\lambda_{\\max} T^4 = \\text{constant}$",
+      "D": "$\\lambda_{\\max} = \\sigma T^2$"
+    },
+    "correct_answer": "A",
+    "solution": "Wien's displacement law states that the peak emission wavelength shifts inversely with absolute temperature: $\\lambda_{\\max} T = C \\approx 2.898 \\times 10^{-3}\\text{ m}\\cdot\\text{K} = 2898\\;\\mu\\text{m}\\cdot\\text{K}$.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_039",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Reciprocity and summation rules of view factors",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following view factor (shape factor) relationships is/are mathematically TRUE for diffuse-gray radiation exchange?",
+    "options": {
+      "A": "Reciprocity theorem: $A_i F_{ij} = A_j F_{ji}$",
+      "B": "Summation rule for an $N$-surface enclosure: $\\sum_{j=1}^N F_{ij} = 1$",
+      "C": "For a strictly flat or convex surface $i$, the self-view factor is zero ($F_{ii} = 0$)",
+      "D": "View factor depends strongly on surface temperature and emissivity"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Reciprocity $A_i F_{ij} = A_j F_{ji}$ balances radiation geometry (A is true).\n2. Enclosure summation conserves radiant energy: $\\sum F_{ij} = 1$ (B is true).\n3. Flat/convex planes cannot 'see' themselves, so $F_{ii} = 0$ (C is true).\n4. View factor $F_{ij}$ is purely geometric, depending only on orientation and distance, completely independent of temperature and emissivity (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_040",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Emissive power of food baking surface",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A baking oven radiant heating panel operates at a surface temperature of $T = 200^\\circ\\text{C}$ ($473.15\\text{ K}$) with a surface emissivity of $\\epsilon = 0.85$. Taking the Stefan-Boltzmann constant $\\sigma = 5.67 \\times 10^{-8}\\text{ W/(m}^2\\,\\text{K}^4\\text{)}$, the total emissive power of the panel is ________ $\\text{W/m}^2$ (round off to one decimal place).",
+    "correct_answer": "2415.4",
+    "numerical_range": {
+      "min": 2410.4,
+      "max": 2420.4
+    },
+    "solution": "From the Stefan-Boltzmann law for a gray surface:\n$$E = \\epsilon \\sigma T^4$$\nGiven $\\epsilon = 0.85$, $\\sigma = 5.67 \\times 10^{-8}\\text{ W/(m}^2\\text{ K}^4\\text{)}$, and $T = 473.15\\text{ K}$:\n$$E = 0.85 \\times (5.67 \\times 10^{-8}) \\times (473.15)^4 = 2415.4\\text{ W/m}^2$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_041",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Wien displacement law and blackbody radiation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to Wien's Displacement Law, the wavelength $\\lambda_{\\max}$ at which maximum spectral emissive power occurs is related to absolute temperature $T$ by:",
+    "options": {
+      "A": "$\\lambda_{\\max} T = 2898\\;\\mu\\text{m}\\cdot\\text{K} = \\text{constant}$",
+      "B": "$\\lambda_{\\max} / T = \\text{constant}$",
+      "C": "$\\lambda_{\\max} T^4 = \\text{constant}$",
+      "D": "$\\lambda_{\\max} = \\sigma T^2$"
+    },
+    "correct_answer": "A",
+    "solution": "Wien's displacement law states that the peak emission wavelength shifts inversely with absolute temperature: $\\lambda_{\\max} T = C \\approx 2.898 \\times 10^{-3}\\text{ m}\\cdot\\text{K} = 2898\\;\\mu\\text{m}\\cdot\\text{K}$.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_042",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Reciprocity and summation rules of view factors",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following view factor (shape factor) relationships is/are mathematically TRUE for diffuse-gray radiation exchange?",
+    "options": {
+      "A": "Reciprocity theorem: $A_i F_{ij} = A_j F_{ji}$",
+      "B": "Summation rule for an $N$-surface enclosure: $\\sum_{j=1}^N F_{ij} = 1$",
+      "C": "For a strictly flat or convex surface $i$, the self-view factor is zero ($F_{ii} = 0$)",
+      "D": "View factor depends strongly on surface temperature and emissivity"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Reciprocity $A_i F_{ij} = A_j F_{ji}$ balances radiation geometry (A is true).\n2. Enclosure summation conserves radiant energy: $\\sum F_{ij} = 1$ (B is true).\n3. Flat/convex planes cannot 'see' themselves, so $F_{ii} = 0$ (C is true).\n4. View factor $F_{ij}$ is purely geometric, depending only on orientation and distance, completely independent of temperature and emissivity (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RAD_043",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Emissive power of food baking surface",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A baking oven radiant heating panel operates at a surface temperature of $T = 350^\\circ\\text{C}$ ($623.15\\text{ K}$) with a surface emissivity of $\\epsilon = 0.85$. Taking the Stefan-Boltzmann constant $\\sigma = 5.67 \\times 10^{-8}\\text{ W/(m}^2\\,\\text{K}^4\\text{)}$, the total emissive power of the panel is ________ $\\text{W/m}^2$ (round off to one decimal place).",
+    "correct_answer": "7267.3",
+    "numerical_range": {
+      "min": 7262.3,
+      "max": 7272.3
+    },
+    "solution": "From the Stefan-Boltzmann law for a gray surface:\n$$E = \\epsilon \\sigma T^4$$\nGiven $\\epsilon = 0.85$, $\\sigma = 5.67 \\times 10^{-8}\\text{ W/(m}^2\\text{ K}^4\\text{)}$, and $T = 623.15\\text{ K}$:\n$$E = 0.85 \\times (5.67 \\times 10^{-8}) \\times (623.15)^4 = 7267.3\\text{ W/m}^2$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow heat exchanger LMTD calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"60\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"220\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Length / Area of Heat Exchanger (x)</text><text x=\"25\" y=\"25\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Temperature T (°C)</text><path d=\"M 80 60 L 340 120\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"75\" y=\"50\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,in</text><text x=\"345\" y=\"125\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,out</text><path d=\"M 340 180 L 80 110\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"345\" y=\"190\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,in</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,out</text><line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"105\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"85\" y=\"88\" font-size=\"9\" fill=\"#64748b\">ΔT_1</text><line x1=\"340\" y1=\"125\" x2=\"340\" y2=\"175\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"315\" y=\"155\" font-size=\"9\" fill=\"#64748b\">ΔT_2</text><text x=\"120\" y=\"145\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" class=\"dark:fill-white\">LMTD = (ΔT_1 - ΔT_2) / ln(ΔT_1 / ΔT_2)</text></svg>",
+    "question": "In a counterflow milk chiller shown in the temperature profile diagram, hot milk is cooled from $85^\\circ\\text{C}$ to $45^\\circ\\text{C}$ by chilled water entering at $20^\\circ\\text{C}$ and leaving at $42^\\circ\\text{C}$. The Logarithmic Mean Temperature Difference ($LMTD$) is ________ $^\\circ\\text{C}$ (round off to two decimal places).",
+    "correct_answer": "33.19",
+    "numerical_range": {
+      "min": 32.99,
+      "max": 33.39
+    },
+    "solution": "In a counterflow heat exchanger:\n$$\\Delta T_1 = T_{h,in} - T_{c,out} = 85 - 42 = 43^\\circ\\text{C}$$\n$$\\Delta T_2 = T_{h,out} - T_{c,in} = 45 - 20 = 25^\\circ\\text{C}$$\nLogarithmic Mean Temperature Difference:\n$$LMTD = \\frac{\\Delta T_1 - \\Delta T_2}{\\ln(\\Delta T_1 / \\Delta T_2)} = \\frac{43 - 25}{\\ln(43 / 25)} = \\frac{18}{0.5423} = 33.19^\\circ\\text{C}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow vs parallel flow thermal comparison",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the same hot and cold fluid inlet/outlet temperatures, a counterflow heat exchanger compared to a parallel flow heat exchanger:",
+    "options": {
+      "A": "Has a strictly higher LMTD, requiring less surface area for the same thermal duty",
+      "B": "Has a lower LMTD, requiring greater surface area",
+      "C": "Has identical LMTD with zero difference",
+      "D": "Cannot allow the exit cold fluid temperature to exceed exit hot fluid temperature"
+    },
+    "correct_answer": "A",
+    "solution": "Counterflow configuration maximizes the temperature difference along the entire length, yielding $LMTD_{\\text{counter}} > LMTD_{\\text{parallel}}$. Consequently, counterflow requires less surface area ($A = q / (U \\cdot LMTD)$) and allows cold fluid outlet temperature to exceed hot fluid outlet temperature.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_003",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "NTU-Effectiveness method definitions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"60\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"220\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Length / Area of Heat Exchanger (x)</text><text x=\"25\" y=\"25\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Temperature T (°C)</text><path d=\"M 80 60 L 340 120\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"75\" y=\"50\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,in</text><text x=\"345\" y=\"125\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,out</text><path d=\"M 340 180 L 80 110\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"345\" y=\"190\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,in</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,out</text><line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"105\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"85\" y=\"88\" font-size=\"9\" fill=\"#64748b\">ΔT_1</text><line x1=\"340\" y1=\"125\" x2=\"340\" y2=\"175\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"315\" y=\"155\" font-size=\"9\" fill=\"#64748b\">ΔT_2</text><text x=\"120\" y=\"145\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" class=\"dark:fill-white\">LMTD = (ΔT_1 - ΔT_2) / ln(ΔT_1 / ΔT_2)</text></svg>",
+    "question": "Which of the following statements regarding the Number of Transfer Units ($NTU$) method is/are TRUE?",
+    "options": {
+      "A": "The Number of Transfer Units is defined as $NTU = \\frac{U A}{C_{\\min}}$, where $C_{\\min} = (\\dot{m} c_p)_{\\min}$",
+      "B": "Heat exchanger effectiveness $\\epsilon = \\frac{q}{q_{\\max}} = \\frac{C_h (T_{h,in} - T_{h,out})}{C_{\\min} (T_{h,in} - T_{c,in})}$",
+      "C": "When one fluid undergoes phase change (boiling or condensation), $C_{\\max} \\to \\infty$ and capacity ratio $C_r = \\frac{C_{\\min}}{C_{\\max}} = 0$",
+      "D": "Effectiveness $\\epsilon$ can exceed $1.0$ in plate pasteurizers"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $NTU = U A / C_{\\min}$ measures heat exchanger physical size relative to heat capacity rate (A is true).\n2. Effectiveness $\\epsilon = q_{\\text{actual}} / q_{\\text{max}}$ (B is true).\n3. Evaporating/condensing fluid has infinite heat capacity rate, so $C_r = 0$ and $\\epsilon = 1 - e^{-NTU}$ for all flow configurations (C is true).\n4. By second law of thermodynamics, $\\epsilon \\le 1.0$ strictly; it can never exceed $1.0$ (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_004",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow heat exchanger LMTD calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"60\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"220\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Length / Area of Heat Exchanger (x)</text><text x=\"25\" y=\"25\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Temperature T (°C)</text><path d=\"M 80 60 L 340 120\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"75\" y=\"50\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,in</text><text x=\"345\" y=\"125\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,out</text><path d=\"M 340 180 L 80 110\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"345\" y=\"190\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,in</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,out</text><line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"105\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"85\" y=\"88\" font-size=\"9\" fill=\"#64748b\">ΔT_1</text><line x1=\"340\" y1=\"125\" x2=\"340\" y2=\"175\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"315\" y=\"155\" font-size=\"9\" fill=\"#64748b\">ΔT_2</text><text x=\"120\" y=\"145\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" class=\"dark:fill-white\">LMTD = (ΔT_1 - ΔT_2) / ln(ΔT_1 / ΔT_2)</text></svg>",
+    "question": "In a counterflow milk chiller shown in the temperature profile diagram, hot milk is cooled from $85^\\circ\\text{C}$ to $45^\\circ\\text{C}$ by chilled water entering at $20^\\circ\\text{C}$ and leaving at $40^\\circ\\text{C}$. The Logarithmic Mean Temperature Difference ($LMTD$) is ________ $^\\circ\\text{C}$ (round off to two decimal places).",
+    "correct_answer": "34.03",
+    "numerical_range": {
+      "min": 33.83,
+      "max": 34.23
+    },
+    "solution": "In a counterflow heat exchanger:\n$$\\Delta T_1 = T_{h,in} - T_{c,out} = 85 - 40 = 45^\\circ\\text{C}$$\n$$\\Delta T_2 = T_{h,out} - T_{c,in} = 45 - 20 = 25^\\circ\\text{C}$$\nLogarithmic Mean Temperature Difference:\n$$LMTD = \\frac{\\Delta T_1 - \\Delta T_2}{\\ln(\\Delta T_1 / \\Delta T_2)} = \\frac{45 - 25}{\\ln(45 / 25)} = \\frac{20}{0.5878} = 34.03^\\circ\\text{C}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_005",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow vs parallel flow thermal comparison",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the same hot and cold fluid inlet/outlet temperatures, a counterflow heat exchanger compared to a parallel flow heat exchanger:",
+    "options": {
+      "A": "Has a strictly higher LMTD, requiring less surface area for the same thermal duty",
+      "B": "Has a lower LMTD, requiring greater surface area",
+      "C": "Has identical LMTD with zero difference",
+      "D": "Cannot allow the exit cold fluid temperature to exceed exit hot fluid temperature"
+    },
+    "correct_answer": "A",
+    "solution": "Counterflow configuration maximizes the temperature difference along the entire length, yielding $LMTD_{\\text{counter}} > LMTD_{\\text{parallel}}$. Consequently, counterflow requires less surface area ($A = q / (U \\cdot LMTD)$) and allows cold fluid outlet temperature to exceed hot fluid outlet temperature.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_006",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "NTU-Effectiveness method definitions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"60\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"220\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Length / Area of Heat Exchanger (x)</text><text x=\"25\" y=\"25\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Temperature T (°C)</text><path d=\"M 80 60 L 340 120\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"75\" y=\"50\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,in</text><text x=\"345\" y=\"125\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,out</text><path d=\"M 340 180 L 80 110\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"345\" y=\"190\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,in</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,out</text><line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"105\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"85\" y=\"88\" font-size=\"9\" fill=\"#64748b\">ΔT_1</text><line x1=\"340\" y1=\"125\" x2=\"340\" y2=\"175\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"315\" y=\"155\" font-size=\"9\" fill=\"#64748b\">ΔT_2</text><text x=\"120\" y=\"145\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" class=\"dark:fill-white\">LMTD = (ΔT_1 - ΔT_2) / ln(ΔT_1 / ΔT_2)</text></svg>",
+    "question": "Which of the following statements regarding the Number of Transfer Units ($NTU$) method is/are TRUE?",
+    "options": {
+      "A": "The Number of Transfer Units is defined as $NTU = \\frac{U A}{C_{\\min}}$, where $C_{\\min} = (\\dot{m} c_p)_{\\min}$",
+      "B": "Heat exchanger effectiveness $\\epsilon = \\frac{q}{q_{\\max}} = \\frac{C_h (T_{h,in} - T_{h,out})}{C_{\\min} (T_{h,in} - T_{c,in})}$",
+      "C": "When one fluid undergoes phase change (boiling or condensation), $C_{\\max} \\to \\infty$ and capacity ratio $C_r = \\frac{C_{\\min}}{C_{\\max}} = 0$",
+      "D": "Effectiveness $\\epsilon$ can exceed $1.0$ in plate pasteurizers"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $NTU = U A / C_{\\min}$ measures heat exchanger physical size relative to heat capacity rate (A is true).\n2. Effectiveness $\\epsilon = q_{\\text{actual}} / q_{\\text{max}}$ (B is true).\n3. Evaporating/condensing fluid has infinite heat capacity rate, so $C_r = 0$ and $\\epsilon = 1 - e^{-NTU}$ for all flow configurations (C is true).\n4. By second law of thermodynamics, $\\epsilon \\le 1.0$ strictly; it can never exceed $1.0$ (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_007",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow heat exchanger LMTD calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"60\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"220\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Length / Area of Heat Exchanger (x)</text><text x=\"25\" y=\"25\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Temperature T (°C)</text><path d=\"M 80 60 L 340 120\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"75\" y=\"50\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,in</text><text x=\"345\" y=\"125\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,out</text><path d=\"M 340 180 L 80 110\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"345\" y=\"190\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,in</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,out</text><line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"105\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"85\" y=\"88\" font-size=\"9\" fill=\"#64748b\">ΔT_1</text><line x1=\"340\" y1=\"125\" x2=\"340\" y2=\"175\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"315\" y=\"155\" font-size=\"9\" fill=\"#64748b\">ΔT_2</text><text x=\"120\" y=\"145\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" class=\"dark:fill-white\">LMTD = (ΔT_1 - ΔT_2) / ln(ΔT_1 / ΔT_2)</text></svg>",
+    "question": "In a counterflow milk chiller shown in the temperature profile diagram, hot milk is cooled from $85^\\circ\\text{C}$ to $45^\\circ\\text{C}$ by chilled water entering at $20^\\circ\\text{C}$ and leaving at $46^\\circ\\text{C}$. The Logarithmic Mean Temperature Difference ($LMTD$) is ________ $^\\circ\\text{C}$ (round off to two decimal places).",
+    "correct_answer": "31.48",
+    "numerical_range": {
+      "min": 31.28,
+      "max": 31.68
+    },
+    "solution": "In a counterflow heat exchanger:\n$$\\Delta T_1 = T_{h,in} - T_{c,out} = 85 - 46 = 39^\\circ\\text{C}$$\n$$\\Delta T_2 = T_{h,out} - T_{c,in} = 45 - 20 = 25^\\circ\\text{C}$$\nLogarithmic Mean Temperature Difference:\n$$LMTD = \\frac{\\Delta T_1 - \\Delta T_2}{\\ln(\\Delta T_1 / \\Delta T_2)} = \\frac{39 - 25}{\\ln(39 / 25)} = \\frac{14}{0.4447} = 31.48^\\circ\\text{C}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_008",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow vs parallel flow thermal comparison",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the same hot and cold fluid inlet/outlet temperatures, a counterflow heat exchanger compared to a parallel flow heat exchanger:",
+    "options": {
+      "A": "Has a strictly higher LMTD, requiring less surface area for the same thermal duty",
+      "B": "Has a lower LMTD, requiring greater surface area",
+      "C": "Has identical LMTD with zero difference",
+      "D": "Cannot allow the exit cold fluid temperature to exceed exit hot fluid temperature"
+    },
+    "correct_answer": "A",
+    "solution": "Counterflow configuration maximizes the temperature difference along the entire length, yielding $LMTD_{\\text{counter}} > LMTD_{\\text{parallel}}$. Consequently, counterflow requires less surface area ($A = q / (U \\cdot LMTD)$) and allows cold fluid outlet temperature to exceed hot fluid outlet temperature.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_009",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "NTU-Effectiveness method definitions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"60\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"220\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Length / Area of Heat Exchanger (x)</text><text x=\"25\" y=\"25\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Temperature T (°C)</text><path d=\"M 80 60 L 340 120\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"75\" y=\"50\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,in</text><text x=\"345\" y=\"125\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,out</text><path d=\"M 340 180 L 80 110\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"345\" y=\"190\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,in</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,out</text><line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"105\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"85\" y=\"88\" font-size=\"9\" fill=\"#64748b\">ΔT_1</text><line x1=\"340\" y1=\"125\" x2=\"340\" y2=\"175\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"315\" y=\"155\" font-size=\"9\" fill=\"#64748b\">ΔT_2</text><text x=\"120\" y=\"145\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" class=\"dark:fill-white\">LMTD = (ΔT_1 - ΔT_2) / ln(ΔT_1 / ΔT_2)</text></svg>",
+    "question": "Which of the following statements regarding the Number of Transfer Units ($NTU$) method is/are TRUE?",
+    "options": {
+      "A": "The Number of Transfer Units is defined as $NTU = \\frac{U A}{C_{\\min}}$, where $C_{\\min} = (\\dot{m} c_p)_{\\min}$",
+      "B": "Heat exchanger effectiveness $\\epsilon = \\frac{q}{q_{\\max}} = \\frac{C_h (T_{h,in} - T_{h,out})}{C_{\\min} (T_{h,in} - T_{c,in})}$",
+      "C": "When one fluid undergoes phase change (boiling or condensation), $C_{\\max} \\to \\infty$ and capacity ratio $C_r = \\frac{C_{\\min}}{C_{\\max}} = 0$",
+      "D": "Effectiveness $\\epsilon$ can exceed $1.0$ in plate pasteurizers"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $NTU = U A / C_{\\min}$ measures heat exchanger physical size relative to heat capacity rate (A is true).\n2. Effectiveness $\\epsilon = q_{\\text{actual}} / q_{\\text{max}}$ (B is true).\n3. Evaporating/condensing fluid has infinite heat capacity rate, so $C_r = 0$ and $\\epsilon = 1 - e^{-NTU}$ for all flow configurations (C is true).\n4. By second law of thermodynamics, $\\epsilon \\le 1.0$ strictly; it can never exceed $1.0$ (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_010",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow heat exchanger LMTD calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"60\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"220\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Length / Area of Heat Exchanger (x)</text><text x=\"25\" y=\"25\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Temperature T (°C)</text><path d=\"M 80 60 L 340 120\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"75\" y=\"50\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,in</text><text x=\"345\" y=\"125\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,out</text><path d=\"M 340 180 L 80 110\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"345\" y=\"190\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,in</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,out</text><line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"105\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"85\" y=\"88\" font-size=\"9\" fill=\"#64748b\">ΔT_1</text><line x1=\"340\" y1=\"125\" x2=\"340\" y2=\"175\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"315\" y=\"155\" font-size=\"9\" fill=\"#64748b\">ΔT_2</text><text x=\"120\" y=\"145\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" class=\"dark:fill-white\">LMTD = (ΔT_1 - ΔT_2) / ln(ΔT_1 / ΔT_2)</text></svg>",
+    "question": "In a counterflow milk chiller shown in the temperature profile diagram, hot milk is cooled from $85^\\circ\\text{C}$ to $45^\\circ\\text{C}$ by chilled water entering at $20^\\circ\\text{C}$ and leaving at $44^\\circ\\text{C}$. The Logarithmic Mean Temperature Difference ($LMTD$) is ________ $^\\circ\\text{C}$ (round off to two decimal places).",
+    "correct_answer": "32.34",
+    "numerical_range": {
+      "min": 32.14,
+      "max": 32.54
+    },
+    "solution": "In a counterflow heat exchanger:\n$$\\Delta T_1 = T_{h,in} - T_{c,out} = 85 - 44 = 41^\\circ\\text{C}$$\n$$\\Delta T_2 = T_{h,out} - T_{c,in} = 45 - 20 = 25^\\circ\\text{C}$$\nLogarithmic Mean Temperature Difference:\n$$LMTD = \\frac{\\Delta T_1 - \\Delta T_2}{\\ln(\\Delta T_1 / \\Delta T_2)} = \\frac{41 - 25}{\\ln(41 / 25)} = \\frac{16}{0.4947} = 32.34^\\circ\\text{C}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_011",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow vs parallel flow thermal comparison",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the same hot and cold fluid inlet/outlet temperatures, a counterflow heat exchanger compared to a parallel flow heat exchanger:",
+    "options": {
+      "A": "Has a strictly higher LMTD, requiring less surface area for the same thermal duty",
+      "B": "Has a lower LMTD, requiring greater surface area",
+      "C": "Has identical LMTD with zero difference",
+      "D": "Cannot allow the exit cold fluid temperature to exceed exit hot fluid temperature"
+    },
+    "correct_answer": "A",
+    "solution": "Counterflow configuration maximizes the temperature difference along the entire length, yielding $LMTD_{\\text{counter}} > LMTD_{\\text{parallel}}$. Consequently, counterflow requires less surface area ($A = q / (U \\cdot LMTD)$) and allows cold fluid outlet temperature to exceed hot fluid outlet temperature.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_012",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "NTU-Effectiveness method definitions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"60\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"220\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Length / Area of Heat Exchanger (x)</text><text x=\"25\" y=\"25\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Temperature T (°C)</text><path d=\"M 80 60 L 340 120\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"75\" y=\"50\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,in</text><text x=\"345\" y=\"125\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,out</text><path d=\"M 340 180 L 80 110\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"345\" y=\"190\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,in</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,out</text><line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"105\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"85\" y=\"88\" font-size=\"9\" fill=\"#64748b\">ΔT_1</text><line x1=\"340\" y1=\"125\" x2=\"340\" y2=\"175\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"315\" y=\"155\" font-size=\"9\" fill=\"#64748b\">ΔT_2</text><text x=\"120\" y=\"145\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" class=\"dark:fill-white\">LMTD = (ΔT_1 - ΔT_2) / ln(ΔT_1 / ΔT_2)</text></svg>",
+    "question": "Which of the following statements regarding the Number of Transfer Units ($NTU$) method is/are TRUE?",
+    "options": {
+      "A": "The Number of Transfer Units is defined as $NTU = \\frac{U A}{C_{\\min}}$, where $C_{\\min} = (\\dot{m} c_p)_{\\min}$",
+      "B": "Heat exchanger effectiveness $\\epsilon = \\frac{q}{q_{\\max}} = \\frac{C_h (T_{h,in} - T_{h,out})}{C_{\\min} (T_{h,in} - T_{c,in})}$",
+      "C": "When one fluid undergoes phase change (boiling or condensation), $C_{\\max} \\to \\infty$ and capacity ratio $C_r = \\frac{C_{\\min}}{C_{\\max}} = 0$",
+      "D": "Effectiveness $\\epsilon$ can exceed $1.0$ in plate pasteurizers"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $NTU = U A / C_{\\min}$ measures heat exchanger physical size relative to heat capacity rate (A is true).\n2. Effectiveness $\\epsilon = q_{\\text{actual}} / q_{\\text{max}}$ (B is true).\n3. Evaporating/condensing fluid has infinite heat capacity rate, so $C_r = 0$ and $\\epsilon = 1 - e^{-NTU}$ for all flow configurations (C is true).\n4. By second law of thermodynamics, $\\epsilon \\le 1.0$ strictly; it can never exceed $1.0$ (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_013",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow heat exchanger LMTD calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"60\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"220\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Length / Area of Heat Exchanger (x)</text><text x=\"25\" y=\"25\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Temperature T (°C)</text><path d=\"M 80 60 L 340 120\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"75\" y=\"50\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,in</text><text x=\"345\" y=\"125\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,out</text><path d=\"M 340 180 L 80 110\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"345\" y=\"190\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,in</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,out</text><line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"105\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"85\" y=\"88\" font-size=\"9\" fill=\"#64748b\">ΔT_1</text><line x1=\"340\" y1=\"125\" x2=\"340\" y2=\"175\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"315\" y=\"155\" font-size=\"9\" fill=\"#64748b\">ΔT_2</text><text x=\"120\" y=\"145\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" class=\"dark:fill-white\">LMTD = (ΔT_1 - ΔT_2) / ln(ΔT_1 / ΔT_2)</text></svg>",
+    "question": "In a counterflow milk chiller shown in the temperature profile diagram, hot milk is cooled from $85^\\circ\\text{C}$ to $45^\\circ\\text{C}$ by chilled water entering at $20^\\circ\\text{C}$ and leaving at $42^\\circ\\text{C}$. The Logarithmic Mean Temperature Difference ($LMTD$) is ________ $^\\circ\\text{C}$ (round off to two decimal places).",
+    "correct_answer": "33.19",
+    "numerical_range": {
+      "min": 32.99,
+      "max": 33.39
+    },
+    "solution": "In a counterflow heat exchanger:\n$$\\Delta T_1 = T_{h,in} - T_{c,out} = 85 - 42 = 43^\\circ\\text{C}$$\n$$\\Delta T_2 = T_{h,out} - T_{c,in} = 45 - 20 = 25^\\circ\\text{C}$$\nLogarithmic Mean Temperature Difference:\n$$LMTD = \\frac{\\Delta T_1 - \\Delta T_2}{\\ln(\\Delta T_1 / \\Delta T_2)} = \\frac{43 - 25}{\\ln(43 / 25)} = \\frac{18}{0.5423} = 33.19^\\circ\\text{C}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_014",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow vs parallel flow thermal comparison",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the same hot and cold fluid inlet/outlet temperatures, a counterflow heat exchanger compared to a parallel flow heat exchanger:",
+    "options": {
+      "A": "Has a strictly higher LMTD, requiring less surface area for the same thermal duty",
+      "B": "Has a lower LMTD, requiring greater surface area",
+      "C": "Has identical LMTD with zero difference",
+      "D": "Cannot allow the exit cold fluid temperature to exceed exit hot fluid temperature"
+    },
+    "correct_answer": "A",
+    "solution": "Counterflow configuration maximizes the temperature difference along the entire length, yielding $LMTD_{\\text{counter}} > LMTD_{\\text{parallel}}$. Consequently, counterflow requires less surface area ($A = q / (U \\cdot LMTD)$) and allows cold fluid outlet temperature to exceed hot fluid outlet temperature.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_015",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "NTU-Effectiveness method definitions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"60\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"220\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Length / Area of Heat Exchanger (x)</text><text x=\"25\" y=\"25\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Temperature T (°C)</text><path d=\"M 80 60 L 340 120\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"75\" y=\"50\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,in</text><text x=\"345\" y=\"125\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,out</text><path d=\"M 340 180 L 80 110\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"345\" y=\"190\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,in</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,out</text><line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"105\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"85\" y=\"88\" font-size=\"9\" fill=\"#64748b\">ΔT_1</text><line x1=\"340\" y1=\"125\" x2=\"340\" y2=\"175\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"315\" y=\"155\" font-size=\"9\" fill=\"#64748b\">ΔT_2</text><text x=\"120\" y=\"145\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" class=\"dark:fill-white\">LMTD = (ΔT_1 - ΔT_2) / ln(ΔT_1 / ΔT_2)</text></svg>",
+    "question": "Which of the following statements regarding the Number of Transfer Units ($NTU$) method is/are TRUE?",
+    "options": {
+      "A": "The Number of Transfer Units is defined as $NTU = \\frac{U A}{C_{\\min}}$, where $C_{\\min} = (\\dot{m} c_p)_{\\min}$",
+      "B": "Heat exchanger effectiveness $\\epsilon = \\frac{q}{q_{\\max}} = \\frac{C_h (T_{h,in} - T_{h,out})}{C_{\\min} (T_{h,in} - T_{c,in})}$",
+      "C": "When one fluid undergoes phase change (boiling or condensation), $C_{\\max} \\to \\infty$ and capacity ratio $C_r = \\frac{C_{\\min}}{C_{\\max}} = 0$",
+      "D": "Effectiveness $\\epsilon$ can exceed $1.0$ in plate pasteurizers"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $NTU = U A / C_{\\min}$ measures heat exchanger physical size relative to heat capacity rate (A is true).\n2. Effectiveness $\\epsilon = q_{\\text{actual}} / q_{\\text{max}}$ (B is true).\n3. Evaporating/condensing fluid has infinite heat capacity rate, so $C_r = 0$ and $\\epsilon = 1 - e^{-NTU}$ for all flow configurations (C is true).\n4. By second law of thermodynamics, $\\epsilon \\le 1.0$ strictly; it can never exceed $1.0$ (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_016",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow heat exchanger LMTD calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"60\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"220\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Length / Area of Heat Exchanger (x)</text><text x=\"25\" y=\"25\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Temperature T (°C)</text><path d=\"M 80 60 L 340 120\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"75\" y=\"50\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,in</text><text x=\"345\" y=\"125\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,out</text><path d=\"M 340 180 L 80 110\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"345\" y=\"190\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,in</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,out</text><line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"105\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"85\" y=\"88\" font-size=\"9\" fill=\"#64748b\">ΔT_1</text><line x1=\"340\" y1=\"125\" x2=\"340\" y2=\"175\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"315\" y=\"155\" font-size=\"9\" fill=\"#64748b\">ΔT_2</text><text x=\"120\" y=\"145\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" class=\"dark:fill-white\">LMTD = (ΔT_1 - ΔT_2) / ln(ΔT_1 / ΔT_2)</text></svg>",
+    "question": "In a counterflow milk chiller shown in the temperature profile diagram, hot milk is cooled from $85^\\circ\\text{C}$ to $45^\\circ\\text{C}$ by chilled water entering at $20^\\circ\\text{C}$ and leaving at $40^\\circ\\text{C}$. The Logarithmic Mean Temperature Difference ($LMTD$) is ________ $^\\circ\\text{C}$ (round off to two decimal places).",
+    "correct_answer": "34.03",
+    "numerical_range": {
+      "min": 33.83,
+      "max": 34.23
+    },
+    "solution": "In a counterflow heat exchanger:\n$$\\Delta T_1 = T_{h,in} - T_{c,out} = 85 - 40 = 45^\\circ\\text{C}$$\n$$\\Delta T_2 = T_{h,out} - T_{c,in} = 45 - 20 = 25^\\circ\\text{C}$$\nLogarithmic Mean Temperature Difference:\n$$LMTD = \\frac{\\Delta T_1 - \\Delta T_2}{\\ln(\\Delta T_1 / \\Delta T_2)} = \\frac{45 - 25}{\\ln(45 / 25)} = \\frac{20}{0.5878} = 34.03^\\circ\\text{C}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_017",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow vs parallel flow thermal comparison",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the same hot and cold fluid inlet/outlet temperatures, a counterflow heat exchanger compared to a parallel flow heat exchanger:",
+    "options": {
+      "A": "Has a strictly higher LMTD, requiring less surface area for the same thermal duty",
+      "B": "Has a lower LMTD, requiring greater surface area",
+      "C": "Has identical LMTD with zero difference",
+      "D": "Cannot allow the exit cold fluid temperature to exceed exit hot fluid temperature"
+    },
+    "correct_answer": "A",
+    "solution": "Counterflow configuration maximizes the temperature difference along the entire length, yielding $LMTD_{\\text{counter}} > LMTD_{\\text{parallel}}$. Consequently, counterflow requires less surface area ($A = q / (U \\cdot LMTD)$) and allows cold fluid outlet temperature to exceed hot fluid outlet temperature.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_018",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "NTU-Effectiveness method definitions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"60\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"220\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Length / Area of Heat Exchanger (x)</text><text x=\"25\" y=\"25\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Temperature T (°C)</text><path d=\"M 80 60 L 340 120\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"75\" y=\"50\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,in</text><text x=\"345\" y=\"125\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,out</text><path d=\"M 340 180 L 80 110\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"345\" y=\"190\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,in</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,out</text><line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"105\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"85\" y=\"88\" font-size=\"9\" fill=\"#64748b\">ΔT_1</text><line x1=\"340\" y1=\"125\" x2=\"340\" y2=\"175\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"315\" y=\"155\" font-size=\"9\" fill=\"#64748b\">ΔT_2</text><text x=\"120\" y=\"145\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" class=\"dark:fill-white\">LMTD = (ΔT_1 - ΔT_2) / ln(ΔT_1 / ΔT_2)</text></svg>",
+    "question": "Which of the following statements regarding the Number of Transfer Units ($NTU$) method is/are TRUE?",
+    "options": {
+      "A": "The Number of Transfer Units is defined as $NTU = \\frac{U A}{C_{\\min}}$, where $C_{\\min} = (\\dot{m} c_p)_{\\min}$",
+      "B": "Heat exchanger effectiveness $\\epsilon = \\frac{q}{q_{\\max}} = \\frac{C_h (T_{h,in} - T_{h,out})}{C_{\\min} (T_{h,in} - T_{c,in})}$",
+      "C": "When one fluid undergoes phase change (boiling or condensation), $C_{\\max} \\to \\infty$ and capacity ratio $C_r = \\frac{C_{\\min}}{C_{\\max}} = 0$",
+      "D": "Effectiveness $\\epsilon$ can exceed $1.0$ in plate pasteurizers"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $NTU = U A / C_{\\min}$ measures heat exchanger physical size relative to heat capacity rate (A is true).\n2. Effectiveness $\\epsilon = q_{\\text{actual}} / q_{\\text{max}}$ (B is true).\n3. Evaporating/condensing fluid has infinite heat capacity rate, so $C_r = 0$ and $\\epsilon = 1 - e^{-NTU}$ for all flow configurations (C is true).\n4. By second law of thermodynamics, $\\epsilon \\le 1.0$ strictly; it can never exceed $1.0$ (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_019",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow heat exchanger LMTD calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"60\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"220\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Length / Area of Heat Exchanger (x)</text><text x=\"25\" y=\"25\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Temperature T (°C)</text><path d=\"M 80 60 L 340 120\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"75\" y=\"50\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,in</text><text x=\"345\" y=\"125\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,out</text><path d=\"M 340 180 L 80 110\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"345\" y=\"190\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,in</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,out</text><line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"105\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"85\" y=\"88\" font-size=\"9\" fill=\"#64748b\">ΔT_1</text><line x1=\"340\" y1=\"125\" x2=\"340\" y2=\"175\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"315\" y=\"155\" font-size=\"9\" fill=\"#64748b\">ΔT_2</text><text x=\"120\" y=\"145\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" class=\"dark:fill-white\">LMTD = (ΔT_1 - ΔT_2) / ln(ΔT_1 / ΔT_2)</text></svg>",
+    "question": "In a counterflow milk chiller shown in the temperature profile diagram, hot milk is cooled from $85^\\circ\\text{C}$ to $45^\\circ\\text{C}$ by chilled water entering at $20^\\circ\\text{C}$ and leaving at $46^\\circ\\text{C}$. The Logarithmic Mean Temperature Difference ($LMTD$) is ________ $^\\circ\\text{C}$ (round off to two decimal places).",
+    "correct_answer": "31.48",
+    "numerical_range": {
+      "min": 31.28,
+      "max": 31.68
+    },
+    "solution": "In a counterflow heat exchanger:\n$$\\Delta T_1 = T_{h,in} - T_{c,out} = 85 - 46 = 39^\\circ\\text{C}$$\n$$\\Delta T_2 = T_{h,out} - T_{c,in} = 45 - 20 = 25^\\circ\\text{C}$$\nLogarithmic Mean Temperature Difference:\n$$LMTD = \\frac{\\Delta T_1 - \\Delta T_2}{\\ln(\\Delta T_1 / \\Delta T_2)} = \\frac{39 - 25}{\\ln(39 / 25)} = \\frac{14}{0.4447} = 31.48^\\circ\\text{C}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_020",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow vs parallel flow thermal comparison",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the same hot and cold fluid inlet/outlet temperatures, a counterflow heat exchanger compared to a parallel flow heat exchanger:",
+    "options": {
+      "A": "Has a strictly higher LMTD, requiring less surface area for the same thermal duty",
+      "B": "Has a lower LMTD, requiring greater surface area",
+      "C": "Has identical LMTD with zero difference",
+      "D": "Cannot allow the exit cold fluid temperature to exceed exit hot fluid temperature"
+    },
+    "correct_answer": "A",
+    "solution": "Counterflow configuration maximizes the temperature difference along the entire length, yielding $LMTD_{\\text{counter}} > LMTD_{\\text{parallel}}$. Consequently, counterflow requires less surface area ($A = q / (U \\cdot LMTD)$) and allows cold fluid outlet temperature to exceed hot fluid outlet temperature.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_021",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "NTU-Effectiveness method definitions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"60\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"220\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Length / Area of Heat Exchanger (x)</text><text x=\"25\" y=\"25\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Temperature T (°C)</text><path d=\"M 80 60 L 340 120\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"75\" y=\"50\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,in</text><text x=\"345\" y=\"125\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,out</text><path d=\"M 340 180 L 80 110\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"345\" y=\"190\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,in</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,out</text><line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"105\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"85\" y=\"88\" font-size=\"9\" fill=\"#64748b\">ΔT_1</text><line x1=\"340\" y1=\"125\" x2=\"340\" y2=\"175\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"315\" y=\"155\" font-size=\"9\" fill=\"#64748b\">ΔT_2</text><text x=\"120\" y=\"145\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" class=\"dark:fill-white\">LMTD = (ΔT_1 - ΔT_2) / ln(ΔT_1 / ΔT_2)</text></svg>",
+    "question": "Which of the following statements regarding the Number of Transfer Units ($NTU$) method is/are TRUE?",
+    "options": {
+      "A": "The Number of Transfer Units is defined as $NTU = \\frac{U A}{C_{\\min}}$, where $C_{\\min} = (\\dot{m} c_p)_{\\min}$",
+      "B": "Heat exchanger effectiveness $\\epsilon = \\frac{q}{q_{\\max}} = \\frac{C_h (T_{h,in} - T_{h,out})}{C_{\\min} (T_{h,in} - T_{c,in})}$",
+      "C": "When one fluid undergoes phase change (boiling or condensation), $C_{\\max} \\to \\infty$ and capacity ratio $C_r = \\frac{C_{\\min}}{C_{\\max}} = 0$",
+      "D": "Effectiveness $\\epsilon$ can exceed $1.0$ in plate pasteurizers"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $NTU = U A / C_{\\min}$ measures heat exchanger physical size relative to heat capacity rate (A is true).\n2. Effectiveness $\\epsilon = q_{\\text{actual}} / q_{\\text{max}}$ (B is true).\n3. Evaporating/condensing fluid has infinite heat capacity rate, so $C_r = 0$ and $\\epsilon = 1 - e^{-NTU}$ for all flow configurations (C is true).\n4. By second law of thermodynamics, $\\epsilon \\le 1.0$ strictly; it can never exceed $1.0$ (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_022",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow heat exchanger LMTD calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"60\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"220\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Length / Area of Heat Exchanger (x)</text><text x=\"25\" y=\"25\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Temperature T (°C)</text><path d=\"M 80 60 L 340 120\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"75\" y=\"50\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,in</text><text x=\"345\" y=\"125\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,out</text><path d=\"M 340 180 L 80 110\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"345\" y=\"190\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,in</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,out</text><line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"105\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"85\" y=\"88\" font-size=\"9\" fill=\"#64748b\">ΔT_1</text><line x1=\"340\" y1=\"125\" x2=\"340\" y2=\"175\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"315\" y=\"155\" font-size=\"9\" fill=\"#64748b\">ΔT_2</text><text x=\"120\" y=\"145\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" class=\"dark:fill-white\">LMTD = (ΔT_1 - ΔT_2) / ln(ΔT_1 / ΔT_2)</text></svg>",
+    "question": "In a counterflow milk chiller shown in the temperature profile diagram, hot milk is cooled from $85^\\circ\\text{C}$ to $45^\\circ\\text{C}$ by chilled water entering at $20^\\circ\\text{C}$ and leaving at $44^\\circ\\text{C}$. The Logarithmic Mean Temperature Difference ($LMTD$) is ________ $^\\circ\\text{C}$ (round off to two decimal places).",
+    "correct_answer": "32.34",
+    "numerical_range": {
+      "min": 32.14,
+      "max": 32.54
+    },
+    "solution": "In a counterflow heat exchanger:\n$$\\Delta T_1 = T_{h,in} - T_{c,out} = 85 - 44 = 41^\\circ\\text{C}$$\n$$\\Delta T_2 = T_{h,out} - T_{c,in} = 45 - 20 = 25^\\circ\\text{C}$$\nLogarithmic Mean Temperature Difference:\n$$LMTD = \\frac{\\Delta T_1 - \\Delta T_2}{\\ln(\\Delta T_1 / \\Delta T_2)} = \\frac{41 - 25}{\\ln(41 / 25)} = \\frac{16}{0.4947} = 32.34^\\circ\\text{C}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_023",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow vs parallel flow thermal comparison",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the same hot and cold fluid inlet/outlet temperatures, a counterflow heat exchanger compared to a parallel flow heat exchanger:",
+    "options": {
+      "A": "Has a strictly higher LMTD, requiring less surface area for the same thermal duty",
+      "B": "Has a lower LMTD, requiring greater surface area",
+      "C": "Has identical LMTD with zero difference",
+      "D": "Cannot allow the exit cold fluid temperature to exceed exit hot fluid temperature"
+    },
+    "correct_answer": "A",
+    "solution": "Counterflow configuration maximizes the temperature difference along the entire length, yielding $LMTD_{\\text{counter}} > LMTD_{\\text{parallel}}$. Consequently, counterflow requires less surface area ($A = q / (U \\cdot LMTD)$) and allows cold fluid outlet temperature to exceed hot fluid outlet temperature.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_024",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "NTU-Effectiveness method definitions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"60\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"220\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Length / Area of Heat Exchanger (x)</text><text x=\"25\" y=\"25\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Temperature T (°C)</text><path d=\"M 80 60 L 340 120\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"75\" y=\"50\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,in</text><text x=\"345\" y=\"125\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,out</text><path d=\"M 340 180 L 80 110\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"345\" y=\"190\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,in</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,out</text><line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"105\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"85\" y=\"88\" font-size=\"9\" fill=\"#64748b\">ΔT_1</text><line x1=\"340\" y1=\"125\" x2=\"340\" y2=\"175\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"315\" y=\"155\" font-size=\"9\" fill=\"#64748b\">ΔT_2</text><text x=\"120\" y=\"145\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" class=\"dark:fill-white\">LMTD = (ΔT_1 - ΔT_2) / ln(ΔT_1 / ΔT_2)</text></svg>",
+    "question": "Which of the following statements regarding the Number of Transfer Units ($NTU$) method is/are TRUE?",
+    "options": {
+      "A": "The Number of Transfer Units is defined as $NTU = \\frac{U A}{C_{\\min}}$, where $C_{\\min} = (\\dot{m} c_p)_{\\min}$",
+      "B": "Heat exchanger effectiveness $\\epsilon = \\frac{q}{q_{\\max}} = \\frac{C_h (T_{h,in} - T_{h,out})}{C_{\\min} (T_{h,in} - T_{c,in})}$",
+      "C": "When one fluid undergoes phase change (boiling or condensation), $C_{\\max} \\to \\infty$ and capacity ratio $C_r = \\frac{C_{\\min}}{C_{\\max}} = 0$",
+      "D": "Effectiveness $\\epsilon$ can exceed $1.0$ in plate pasteurizers"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $NTU = U A / C_{\\min}$ measures heat exchanger physical size relative to heat capacity rate (A is true).\n2. Effectiveness $\\epsilon = q_{\\text{actual}} / q_{\\text{max}}$ (B is true).\n3. Evaporating/condensing fluid has infinite heat capacity rate, so $C_r = 0$ and $\\epsilon = 1 - e^{-NTU}$ for all flow configurations (C is true).\n4. By second law of thermodynamics, $\\epsilon \\le 1.0$ strictly; it can never exceed $1.0$ (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_025",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow heat exchanger LMTD calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"60\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"220\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Length / Area of Heat Exchanger (x)</text><text x=\"25\" y=\"25\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Temperature T (°C)</text><path d=\"M 80 60 L 340 120\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"75\" y=\"50\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,in</text><text x=\"345\" y=\"125\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,out</text><path d=\"M 340 180 L 80 110\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"345\" y=\"190\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,in</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,out</text><line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"105\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"85\" y=\"88\" font-size=\"9\" fill=\"#64748b\">ΔT_1</text><line x1=\"340\" y1=\"125\" x2=\"340\" y2=\"175\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"315\" y=\"155\" font-size=\"9\" fill=\"#64748b\">ΔT_2</text><text x=\"120\" y=\"145\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" class=\"dark:fill-white\">LMTD = (ΔT_1 - ΔT_2) / ln(ΔT_1 / ΔT_2)</text></svg>",
+    "question": "In a counterflow milk chiller shown in the temperature profile diagram, hot milk is cooled from $85^\\circ\\text{C}$ to $45^\\circ\\text{C}$ by chilled water entering at $20^\\circ\\text{C}$ and leaving at $42^\\circ\\text{C}$. The Logarithmic Mean Temperature Difference ($LMTD$) is ________ $^\\circ\\text{C}$ (round off to two decimal places).",
+    "correct_answer": "33.19",
+    "numerical_range": {
+      "min": 32.99,
+      "max": 33.39
+    },
+    "solution": "In a counterflow heat exchanger:\n$$\\Delta T_1 = T_{h,in} - T_{c,out} = 85 - 42 = 43^\\circ\\text{C}$$\n$$\\Delta T_2 = T_{h,out} - T_{c,in} = 45 - 20 = 25^\\circ\\text{C}$$\nLogarithmic Mean Temperature Difference:\n$$LMTD = \\frac{\\Delta T_1 - \\Delta T_2}{\\ln(\\Delta T_1 / \\Delta T_2)} = \\frac{43 - 25}{\\ln(43 / 25)} = \\frac{18}{0.5423} = 33.19^\\circ\\text{C}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_026",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow vs parallel flow thermal comparison",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the same hot and cold fluid inlet/outlet temperatures, a counterflow heat exchanger compared to a parallel flow heat exchanger:",
+    "options": {
+      "A": "Has a strictly higher LMTD, requiring less surface area for the same thermal duty",
+      "B": "Has a lower LMTD, requiring greater surface area",
+      "C": "Has identical LMTD with zero difference",
+      "D": "Cannot allow the exit cold fluid temperature to exceed exit hot fluid temperature"
+    },
+    "correct_answer": "A",
+    "solution": "Counterflow configuration maximizes the temperature difference along the entire length, yielding $LMTD_{\\text{counter}} > LMTD_{\\text{parallel}}$. Consequently, counterflow requires less surface area ($A = q / (U \\cdot LMTD)$) and allows cold fluid outlet temperature to exceed hot fluid outlet temperature.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_027",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "NTU-Effectiveness method definitions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"60\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"220\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Length / Area of Heat Exchanger (x)</text><text x=\"25\" y=\"25\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Temperature T (°C)</text><path d=\"M 80 60 L 340 120\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"75\" y=\"50\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,in</text><text x=\"345\" y=\"125\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,out</text><path d=\"M 340 180 L 80 110\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"345\" y=\"190\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,in</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,out</text><line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"105\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"85\" y=\"88\" font-size=\"9\" fill=\"#64748b\">ΔT_1</text><line x1=\"340\" y1=\"125\" x2=\"340\" y2=\"175\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"315\" y=\"155\" font-size=\"9\" fill=\"#64748b\">ΔT_2</text><text x=\"120\" y=\"145\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" class=\"dark:fill-white\">LMTD = (ΔT_1 - ΔT_2) / ln(ΔT_1 / ΔT_2)</text></svg>",
+    "question": "Which of the following statements regarding the Number of Transfer Units ($NTU$) method is/are TRUE?",
+    "options": {
+      "A": "The Number of Transfer Units is defined as $NTU = \\frac{U A}{C_{\\min}}$, where $C_{\\min} = (\\dot{m} c_p)_{\\min}$",
+      "B": "Heat exchanger effectiveness $\\epsilon = \\frac{q}{q_{\\max}} = \\frac{C_h (T_{h,in} - T_{h,out})}{C_{\\min} (T_{h,in} - T_{c,in})}$",
+      "C": "When one fluid undergoes phase change (boiling or condensation), $C_{\\max} \\to \\infty$ and capacity ratio $C_r = \\frac{C_{\\min}}{C_{\\max}} = 0$",
+      "D": "Effectiveness $\\epsilon$ can exceed $1.0$ in plate pasteurizers"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $NTU = U A / C_{\\min}$ measures heat exchanger physical size relative to heat capacity rate (A is true).\n2. Effectiveness $\\epsilon = q_{\\text{actual}} / q_{\\text{max}}$ (B is true).\n3. Evaporating/condensing fluid has infinite heat capacity rate, so $C_r = 0$ and $\\epsilon = 1 - e^{-NTU}$ for all flow configurations (C is true).\n4. By second law of thermodynamics, $\\epsilon \\le 1.0$ strictly; it can never exceed $1.0$ (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_028",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow heat exchanger LMTD calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"60\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"220\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Length / Area of Heat Exchanger (x)</text><text x=\"25\" y=\"25\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Temperature T (°C)</text><path d=\"M 80 60 L 340 120\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"75\" y=\"50\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,in</text><text x=\"345\" y=\"125\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,out</text><path d=\"M 340 180 L 80 110\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"345\" y=\"190\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,in</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,out</text><line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"105\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"85\" y=\"88\" font-size=\"9\" fill=\"#64748b\">ΔT_1</text><line x1=\"340\" y1=\"125\" x2=\"340\" y2=\"175\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"315\" y=\"155\" font-size=\"9\" fill=\"#64748b\">ΔT_2</text><text x=\"120\" y=\"145\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" class=\"dark:fill-white\">LMTD = (ΔT_1 - ΔT_2) / ln(ΔT_1 / ΔT_2)</text></svg>",
+    "question": "In a counterflow milk chiller shown in the temperature profile diagram, hot milk is cooled from $85^\\circ\\text{C}$ to $45^\\circ\\text{C}$ by chilled water entering at $20^\\circ\\text{C}$ and leaving at $40^\\circ\\text{C}$. The Logarithmic Mean Temperature Difference ($LMTD$) is ________ $^\\circ\\text{C}$ (round off to two decimal places).",
+    "correct_answer": "34.03",
+    "numerical_range": {
+      "min": 33.83,
+      "max": 34.23
+    },
+    "solution": "In a counterflow heat exchanger:\n$$\\Delta T_1 = T_{h,in} - T_{c,out} = 85 - 40 = 45^\\circ\\text{C}$$\n$$\\Delta T_2 = T_{h,out} - T_{c,in} = 45 - 20 = 25^\\circ\\text{C}$$\nLogarithmic Mean Temperature Difference:\n$$LMTD = \\frac{\\Delta T_1 - \\Delta T_2}{\\ln(\\Delta T_1 / \\Delta T_2)} = \\frac{45 - 25}{\\ln(45 / 25)} = \\frac{20}{0.5878} = 34.03^\\circ\\text{C}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_029",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow vs parallel flow thermal comparison",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the same hot and cold fluid inlet/outlet temperatures, a counterflow heat exchanger compared to a parallel flow heat exchanger:",
+    "options": {
+      "A": "Has a strictly higher LMTD, requiring less surface area for the same thermal duty",
+      "B": "Has a lower LMTD, requiring greater surface area",
+      "C": "Has identical LMTD with zero difference",
+      "D": "Cannot allow the exit cold fluid temperature to exceed exit hot fluid temperature"
+    },
+    "correct_answer": "A",
+    "solution": "Counterflow configuration maximizes the temperature difference along the entire length, yielding $LMTD_{\\text{counter}} > LMTD_{\\text{parallel}}$. Consequently, counterflow requires less surface area ($A = q / (U \\cdot LMTD)$) and allows cold fluid outlet temperature to exceed hot fluid outlet temperature.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_030",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "NTU-Effectiveness method definitions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"60\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"220\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Length / Area of Heat Exchanger (x)</text><text x=\"25\" y=\"25\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Temperature T (°C)</text><path d=\"M 80 60 L 340 120\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"75\" y=\"50\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,in</text><text x=\"345\" y=\"125\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,out</text><path d=\"M 340 180 L 80 110\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"345\" y=\"190\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,in</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,out</text><line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"105\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"85\" y=\"88\" font-size=\"9\" fill=\"#64748b\">ΔT_1</text><line x1=\"340\" y1=\"125\" x2=\"340\" y2=\"175\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"315\" y=\"155\" font-size=\"9\" fill=\"#64748b\">ΔT_2</text><text x=\"120\" y=\"145\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" class=\"dark:fill-white\">LMTD = (ΔT_1 - ΔT_2) / ln(ΔT_1 / ΔT_2)</text></svg>",
+    "question": "Which of the following statements regarding the Number of Transfer Units ($NTU$) method is/are TRUE?",
+    "options": {
+      "A": "The Number of Transfer Units is defined as $NTU = \\frac{U A}{C_{\\min}}$, where $C_{\\min} = (\\dot{m} c_p)_{\\min}$",
+      "B": "Heat exchanger effectiveness $\\epsilon = \\frac{q}{q_{\\max}} = \\frac{C_h (T_{h,in} - T_{h,out})}{C_{\\min} (T_{h,in} - T_{c,in})}$",
+      "C": "When one fluid undergoes phase change (boiling or condensation), $C_{\\max} \\to \\infty$ and capacity ratio $C_r = \\frac{C_{\\min}}{C_{\\max}} = 0$",
+      "D": "Effectiveness $\\epsilon$ can exceed $1.0$ in plate pasteurizers"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $NTU = U A / C_{\\min}$ measures heat exchanger physical size relative to heat capacity rate (A is true).\n2. Effectiveness $\\epsilon = q_{\\text{actual}} / q_{\\text{max}}$ (B is true).\n3. Evaporating/condensing fluid has infinite heat capacity rate, so $C_r = 0$ and $\\epsilon = 1 - e^{-NTU}$ for all flow configurations (C is true).\n4. By second law of thermodynamics, $\\epsilon \\le 1.0$ strictly; it can never exceed $1.0$ (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_031",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow heat exchanger LMTD calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"60\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"220\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Length / Area of Heat Exchanger (x)</text><text x=\"25\" y=\"25\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Temperature T (°C)</text><path d=\"M 80 60 L 340 120\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"75\" y=\"50\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,in</text><text x=\"345\" y=\"125\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,out</text><path d=\"M 340 180 L 80 110\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"345\" y=\"190\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,in</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,out</text><line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"105\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"85\" y=\"88\" font-size=\"9\" fill=\"#64748b\">ΔT_1</text><line x1=\"340\" y1=\"125\" x2=\"340\" y2=\"175\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"315\" y=\"155\" font-size=\"9\" fill=\"#64748b\">ΔT_2</text><text x=\"120\" y=\"145\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" class=\"dark:fill-white\">LMTD = (ΔT_1 - ΔT_2) / ln(ΔT_1 / ΔT_2)</text></svg>",
+    "question": "In a counterflow milk chiller shown in the temperature profile diagram, hot milk is cooled from $85^\\circ\\text{C}$ to $45^\\circ\\text{C}$ by chilled water entering at $20^\\circ\\text{C}$ and leaving at $46^\\circ\\text{C}$. The Logarithmic Mean Temperature Difference ($LMTD$) is ________ $^\\circ\\text{C}$ (round off to two decimal places).",
+    "correct_answer": "31.48",
+    "numerical_range": {
+      "min": 31.28,
+      "max": 31.68
+    },
+    "solution": "In a counterflow heat exchanger:\n$$\\Delta T_1 = T_{h,in} - T_{c,out} = 85 - 46 = 39^\\circ\\text{C}$$\n$$\\Delta T_2 = T_{h,out} - T_{c,in} = 45 - 20 = 25^\\circ\\text{C}$$\nLogarithmic Mean Temperature Difference:\n$$LMTD = \\frac{\\Delta T_1 - \\Delta T_2}{\\ln(\\Delta T_1 / \\Delta T_2)} = \\frac{39 - 25}{\\ln(39 / 25)} = \\frac{14}{0.4447} = 31.48^\\circ\\text{C}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_032",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow vs parallel flow thermal comparison",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the same hot and cold fluid inlet/outlet temperatures, a counterflow heat exchanger compared to a parallel flow heat exchanger:",
+    "options": {
+      "A": "Has a strictly higher LMTD, requiring less surface area for the same thermal duty",
+      "B": "Has a lower LMTD, requiring greater surface area",
+      "C": "Has identical LMTD with zero difference",
+      "D": "Cannot allow the exit cold fluid temperature to exceed exit hot fluid temperature"
+    },
+    "correct_answer": "A",
+    "solution": "Counterflow configuration maximizes the temperature difference along the entire length, yielding $LMTD_{\\text{counter}} > LMTD_{\\text{parallel}}$. Consequently, counterflow requires less surface area ($A = q / (U \\cdot LMTD)$) and allows cold fluid outlet temperature to exceed hot fluid outlet temperature.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_033",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "NTU-Effectiveness method definitions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"60\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"220\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Length / Area of Heat Exchanger (x)</text><text x=\"25\" y=\"25\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Temperature T (°C)</text><path d=\"M 80 60 L 340 120\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"75\" y=\"50\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,in</text><text x=\"345\" y=\"125\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,out</text><path d=\"M 340 180 L 80 110\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"345\" y=\"190\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,in</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,out</text><line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"105\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"85\" y=\"88\" font-size=\"9\" fill=\"#64748b\">ΔT_1</text><line x1=\"340\" y1=\"125\" x2=\"340\" y2=\"175\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"315\" y=\"155\" font-size=\"9\" fill=\"#64748b\">ΔT_2</text><text x=\"120\" y=\"145\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" class=\"dark:fill-white\">LMTD = (ΔT_1 - ΔT_2) / ln(ΔT_1 / ΔT_2)</text></svg>",
+    "question": "Which of the following statements regarding the Number of Transfer Units ($NTU$) method is/are TRUE?",
+    "options": {
+      "A": "The Number of Transfer Units is defined as $NTU = \\frac{U A}{C_{\\min}}$, where $C_{\\min} = (\\dot{m} c_p)_{\\min}$",
+      "B": "Heat exchanger effectiveness $\\epsilon = \\frac{q}{q_{\\max}} = \\frac{C_h (T_{h,in} - T_{h,out})}{C_{\\min} (T_{h,in} - T_{c,in})}$",
+      "C": "When one fluid undergoes phase change (boiling or condensation), $C_{\\max} \\to \\infty$ and capacity ratio $C_r = \\frac{C_{\\min}}{C_{\\max}} = 0$",
+      "D": "Effectiveness $\\epsilon$ can exceed $1.0$ in plate pasteurizers"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $NTU = U A / C_{\\min}$ measures heat exchanger physical size relative to heat capacity rate (A is true).\n2. Effectiveness $\\epsilon = q_{\\text{actual}} / q_{\\text{max}}$ (B is true).\n3. Evaporating/condensing fluid has infinite heat capacity rate, so $C_r = 0$ and $\\epsilon = 1 - e^{-NTU}$ for all flow configurations (C is true).\n4. By second law of thermodynamics, $\\epsilon \\le 1.0$ strictly; it can never exceed $1.0$ (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_034",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow heat exchanger LMTD calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"60\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"220\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Length / Area of Heat Exchanger (x)</text><text x=\"25\" y=\"25\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Temperature T (°C)</text><path d=\"M 80 60 L 340 120\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"75\" y=\"50\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,in</text><text x=\"345\" y=\"125\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,out</text><path d=\"M 340 180 L 80 110\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"345\" y=\"190\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,in</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,out</text><line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"105\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"85\" y=\"88\" font-size=\"9\" fill=\"#64748b\">ΔT_1</text><line x1=\"340\" y1=\"125\" x2=\"340\" y2=\"175\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"315\" y=\"155\" font-size=\"9\" fill=\"#64748b\">ΔT_2</text><text x=\"120\" y=\"145\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" class=\"dark:fill-white\">LMTD = (ΔT_1 - ΔT_2) / ln(ΔT_1 / ΔT_2)</text></svg>",
+    "question": "In a counterflow milk chiller shown in the temperature profile diagram, hot milk is cooled from $85^\\circ\\text{C}$ to $45^\\circ\\text{C}$ by chilled water entering at $20^\\circ\\text{C}$ and leaving at $44^\\circ\\text{C}$. The Logarithmic Mean Temperature Difference ($LMTD$) is ________ $^\\circ\\text{C}$ (round off to two decimal places).",
+    "correct_answer": "32.34",
+    "numerical_range": {
+      "min": 32.14,
+      "max": 32.54
+    },
+    "solution": "In a counterflow heat exchanger:\n$$\\Delta T_1 = T_{h,in} - T_{c,out} = 85 - 44 = 41^\\circ\\text{C}$$\n$$\\Delta T_2 = T_{h,out} - T_{c,in} = 45 - 20 = 25^\\circ\\text{C}$$\nLogarithmic Mean Temperature Difference:\n$$LMTD = \\frac{\\Delta T_1 - \\Delta T_2}{\\ln(\\Delta T_1 / \\Delta T_2)} = \\frac{41 - 25}{\\ln(41 / 25)} = \\frac{16}{0.4947} = 32.34^\\circ\\text{C}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_035",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow vs parallel flow thermal comparison",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the same hot and cold fluid inlet/outlet temperatures, a counterflow heat exchanger compared to a parallel flow heat exchanger:",
+    "options": {
+      "A": "Has a strictly higher LMTD, requiring less surface area for the same thermal duty",
+      "B": "Has a lower LMTD, requiring greater surface area",
+      "C": "Has identical LMTD with zero difference",
+      "D": "Cannot allow the exit cold fluid temperature to exceed exit hot fluid temperature"
+    },
+    "correct_answer": "A",
+    "solution": "Counterflow configuration maximizes the temperature difference along the entire length, yielding $LMTD_{\\text{counter}} > LMTD_{\\text{parallel}}$. Consequently, counterflow requires less surface area ($A = q / (U \\cdot LMTD)$) and allows cold fluid outlet temperature to exceed hot fluid outlet temperature.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_036",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "NTU-Effectiveness method definitions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"60\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"220\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Length / Area of Heat Exchanger (x)</text><text x=\"25\" y=\"25\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Temperature T (°C)</text><path d=\"M 80 60 L 340 120\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"75\" y=\"50\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,in</text><text x=\"345\" y=\"125\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,out</text><path d=\"M 340 180 L 80 110\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"345\" y=\"190\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,in</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,out</text><line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"105\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"85\" y=\"88\" font-size=\"9\" fill=\"#64748b\">ΔT_1</text><line x1=\"340\" y1=\"125\" x2=\"340\" y2=\"175\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"315\" y=\"155\" font-size=\"9\" fill=\"#64748b\">ΔT_2</text><text x=\"120\" y=\"145\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" class=\"dark:fill-white\">LMTD = (ΔT_1 - ΔT_2) / ln(ΔT_1 / ΔT_2)</text></svg>",
+    "question": "Which of the following statements regarding the Number of Transfer Units ($NTU$) method is/are TRUE?",
+    "options": {
+      "A": "The Number of Transfer Units is defined as $NTU = \\frac{U A}{C_{\\min}}$, where $C_{\\min} = (\\dot{m} c_p)_{\\min}$",
+      "B": "Heat exchanger effectiveness $\\epsilon = \\frac{q}{q_{\\max}} = \\frac{C_h (T_{h,in} - T_{h,out})}{C_{\\min} (T_{h,in} - T_{c,in})}$",
+      "C": "When one fluid undergoes phase change (boiling or condensation), $C_{\\max} \\to \\infty$ and capacity ratio $C_r = \\frac{C_{\\min}}{C_{\\max}} = 0$",
+      "D": "Effectiveness $\\epsilon$ can exceed $1.0$ in plate pasteurizers"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $NTU = U A / C_{\\min}$ measures heat exchanger physical size relative to heat capacity rate (A is true).\n2. Effectiveness $\\epsilon = q_{\\text{actual}} / q_{\\text{max}}$ (B is true).\n3. Evaporating/condensing fluid has infinite heat capacity rate, so $C_r = 0$ and $\\epsilon = 1 - e^{-NTU}$ for all flow configurations (C is true).\n4. By second law of thermodynamics, $\\epsilon \\le 1.0$ strictly; it can never exceed $1.0$ (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_037",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow heat exchanger LMTD calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"60\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"220\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Length / Area of Heat Exchanger (x)</text><text x=\"25\" y=\"25\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Temperature T (°C)</text><path d=\"M 80 60 L 340 120\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"75\" y=\"50\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,in</text><text x=\"345\" y=\"125\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,out</text><path d=\"M 340 180 L 80 110\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"345\" y=\"190\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,in</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,out</text><line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"105\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"85\" y=\"88\" font-size=\"9\" fill=\"#64748b\">ΔT_1</text><line x1=\"340\" y1=\"125\" x2=\"340\" y2=\"175\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"315\" y=\"155\" font-size=\"9\" fill=\"#64748b\">ΔT_2</text><text x=\"120\" y=\"145\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" class=\"dark:fill-white\">LMTD = (ΔT_1 - ΔT_2) / ln(ΔT_1 / ΔT_2)</text></svg>",
+    "question": "In a counterflow milk chiller shown in the temperature profile diagram, hot milk is cooled from $85^\\circ\\text{C}$ to $45^\\circ\\text{C}$ by chilled water entering at $20^\\circ\\text{C}$ and leaving at $42^\\circ\\text{C}$. The Logarithmic Mean Temperature Difference ($LMTD$) is ________ $^\\circ\\text{C}$ (round off to two decimal places).",
+    "correct_answer": "33.19",
+    "numerical_range": {
+      "min": 32.99,
+      "max": 33.39
+    },
+    "solution": "In a counterflow heat exchanger:\n$$\\Delta T_1 = T_{h,in} - T_{c,out} = 85 - 42 = 43^\\circ\\text{C}$$\n$$\\Delta T_2 = T_{h,out} - T_{c,in} = 45 - 20 = 25^\\circ\\text{C}$$\nLogarithmic Mean Temperature Difference:\n$$LMTD = \\frac{\\Delta T_1 - \\Delta T_2}{\\ln(\\Delta T_1 / \\Delta T_2)} = \\frac{43 - 25}{\\ln(43 / 25)} = \\frac{18}{0.5423} = 33.19^\\circ\\text{C}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_038",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow vs parallel flow thermal comparison",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the same hot and cold fluid inlet/outlet temperatures, a counterflow heat exchanger compared to a parallel flow heat exchanger:",
+    "options": {
+      "A": "Has a strictly higher LMTD, requiring less surface area for the same thermal duty",
+      "B": "Has a lower LMTD, requiring greater surface area",
+      "C": "Has identical LMTD with zero difference",
+      "D": "Cannot allow the exit cold fluid temperature to exceed exit hot fluid temperature"
+    },
+    "correct_answer": "A",
+    "solution": "Counterflow configuration maximizes the temperature difference along the entire length, yielding $LMTD_{\\text{counter}} > LMTD_{\\text{parallel}}$. Consequently, counterflow requires less surface area ($A = q / (U \\cdot LMTD)$) and allows cold fluid outlet temperature to exceed hot fluid outlet temperature.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_039",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "NTU-Effectiveness method definitions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"60\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"220\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Length / Area of Heat Exchanger (x)</text><text x=\"25\" y=\"25\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Temperature T (°C)</text><path d=\"M 80 60 L 340 120\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"75\" y=\"50\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,in</text><text x=\"345\" y=\"125\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,out</text><path d=\"M 340 180 L 80 110\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"345\" y=\"190\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,in</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,out</text><line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"105\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"85\" y=\"88\" font-size=\"9\" fill=\"#64748b\">ΔT_1</text><line x1=\"340\" y1=\"125\" x2=\"340\" y2=\"175\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"315\" y=\"155\" font-size=\"9\" fill=\"#64748b\">ΔT_2</text><text x=\"120\" y=\"145\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" class=\"dark:fill-white\">LMTD = (ΔT_1 - ΔT_2) / ln(ΔT_1 / ΔT_2)</text></svg>",
+    "question": "Which of the following statements regarding the Number of Transfer Units ($NTU$) method is/are TRUE?",
+    "options": {
+      "A": "The Number of Transfer Units is defined as $NTU = \\frac{U A}{C_{\\min}}$, where $C_{\\min} = (\\dot{m} c_p)_{\\min}$",
+      "B": "Heat exchanger effectiveness $\\epsilon = \\frac{q}{q_{\\max}} = \\frac{C_h (T_{h,in} - T_{h,out})}{C_{\\min} (T_{h,in} - T_{c,in})}$",
+      "C": "When one fluid undergoes phase change (boiling or condensation), $C_{\\max} \\to \\infty$ and capacity ratio $C_r = \\frac{C_{\\min}}{C_{\\max}} = 0$",
+      "D": "Effectiveness $\\epsilon$ can exceed $1.0$ in plate pasteurizers"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $NTU = U A / C_{\\min}$ measures heat exchanger physical size relative to heat capacity rate (A is true).\n2. Effectiveness $\\epsilon = q_{\\text{actual}} / q_{\\text{max}}$ (B is true).\n3. Evaporating/condensing fluid has infinite heat capacity rate, so $C_r = 0$ and $\\epsilon = 1 - e^{-NTU}$ for all flow configurations (C is true).\n4. By second law of thermodynamics, $\\epsilon \\le 1.0$ strictly; it can never exceed $1.0$ (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_040",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow heat exchanger LMTD calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"60\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"220\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Length / Area of Heat Exchanger (x)</text><text x=\"25\" y=\"25\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Temperature T (°C)</text><path d=\"M 80 60 L 340 120\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"75\" y=\"50\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,in</text><text x=\"345\" y=\"125\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,out</text><path d=\"M 340 180 L 80 110\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"345\" y=\"190\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,in</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,out</text><line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"105\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"85\" y=\"88\" font-size=\"9\" fill=\"#64748b\">ΔT_1</text><line x1=\"340\" y1=\"125\" x2=\"340\" y2=\"175\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"315\" y=\"155\" font-size=\"9\" fill=\"#64748b\">ΔT_2</text><text x=\"120\" y=\"145\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" class=\"dark:fill-white\">LMTD = (ΔT_1 - ΔT_2) / ln(ΔT_1 / ΔT_2)</text></svg>",
+    "question": "In a counterflow milk chiller shown in the temperature profile diagram, hot milk is cooled from $85^\\circ\\text{C}$ to $45^\\circ\\text{C}$ by chilled water entering at $20^\\circ\\text{C}$ and leaving at $40^\\circ\\text{C}$. The Logarithmic Mean Temperature Difference ($LMTD$) is ________ $^\\circ\\text{C}$ (round off to two decimal places).",
+    "correct_answer": "34.03",
+    "numerical_range": {
+      "min": 33.83,
+      "max": 34.23
+    },
+    "solution": "In a counterflow heat exchanger:\n$$\\Delta T_1 = T_{h,in} - T_{c,out} = 85 - 40 = 45^\\circ\\text{C}$$\n$$\\Delta T_2 = T_{h,out} - T_{c,in} = 45 - 20 = 25^\\circ\\text{C}$$\nLogarithmic Mean Temperature Difference:\n$$LMTD = \\frac{\\Delta T_1 - \\Delta T_2}{\\ln(\\Delta T_1 / \\Delta T_2)} = \\frac{45 - 25}{\\ln(45 / 25)} = \\frac{20}{0.5878} = 34.03^\\circ\\text{C}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_041",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow vs parallel flow thermal comparison",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the same hot and cold fluid inlet/outlet temperatures, a counterflow heat exchanger compared to a parallel flow heat exchanger:",
+    "options": {
+      "A": "Has a strictly higher LMTD, requiring less surface area for the same thermal duty",
+      "B": "Has a lower LMTD, requiring greater surface area",
+      "C": "Has identical LMTD with zero difference",
+      "D": "Cannot allow the exit cold fluid temperature to exceed exit hot fluid temperature"
+    },
+    "correct_answer": "A",
+    "solution": "Counterflow configuration maximizes the temperature difference along the entire length, yielding $LMTD_{\\text{counter}} > LMTD_{\\text{parallel}}$. Consequently, counterflow requires less surface area ($A = q / (U \\cdot LMTD)$) and allows cold fluid outlet temperature to exceed hot fluid outlet temperature.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_042",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "NTU-Effectiveness method definitions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"60\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"220\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Length / Area of Heat Exchanger (x)</text><text x=\"25\" y=\"25\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Temperature T (°C)</text><path d=\"M 80 60 L 340 120\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"75\" y=\"50\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,in</text><text x=\"345\" y=\"125\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,out</text><path d=\"M 340 180 L 80 110\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"345\" y=\"190\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,in</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,out</text><line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"105\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"85\" y=\"88\" font-size=\"9\" fill=\"#64748b\">ΔT_1</text><line x1=\"340\" y1=\"125\" x2=\"340\" y2=\"175\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"315\" y=\"155\" font-size=\"9\" fill=\"#64748b\">ΔT_2</text><text x=\"120\" y=\"145\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" class=\"dark:fill-white\">LMTD = (ΔT_1 - ΔT_2) / ln(ΔT_1 / ΔT_2)</text></svg>",
+    "question": "Which of the following statements regarding the Number of Transfer Units ($NTU$) method is/are TRUE?",
+    "options": {
+      "A": "The Number of Transfer Units is defined as $NTU = \\frac{U A}{C_{\\min}}$, where $C_{\\min} = (\\dot{m} c_p)_{\\min}$",
+      "B": "Heat exchanger effectiveness $\\epsilon = \\frac{q}{q_{\\max}} = \\frac{C_h (T_{h,in} - T_{h,out})}{C_{\\min} (T_{h,in} - T_{c,in})}$",
+      "C": "When one fluid undergoes phase change (boiling or condensation), $C_{\\max} \\to \\infty$ and capacity ratio $C_r = \\frac{C_{\\min}}{C_{\\max}} = 0$",
+      "D": "Effectiveness $\\epsilon$ can exceed $1.0$ in plate pasteurizers"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $NTU = U A / C_{\\min}$ measures heat exchanger physical size relative to heat capacity rate (A is true).\n2. Effectiveness $\\epsilon = q_{\\text{actual}} / q_{\\text{max}}$ (B is true).\n3. Evaporating/condensing fluid has infinite heat capacity rate, so $C_r = 0$ and $\\epsilon = 1 - e^{-NTU}$ for all flow configurations (C is true).\n4. By second law of thermodynamics, $\\epsilon \\le 1.0$ strictly; it can never exceed $1.0$ (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_HEX_043",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow heat exchanger LMTD calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><line x1=\"60\" y1=\"200\" x2=\"360\" y2=\"200\" stroke=\"#64748b\" stroke-width=\"1.5\"/><line x1=\"60\" y1=\"200\" x2=\"60\" y2=\"30\" stroke=\"#64748b\" stroke-width=\"1.5\"/><text x=\"180\" y=\"220\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Length / Area of Heat Exchanger (x)</text><text x=\"25\" y=\"25\" font-size=\"11\" font-family=\"sans-serif\" fill=\"#475569\" font-weight=\"bold\">Temperature T (°C)</text><path d=\"M 80 60 L 340 120\" stroke=\"#ef4444\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"75\" y=\"50\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,in</text><text x=\"345\" y=\"125\" font-size=\"10\" fill=\"#ef4444\" font-weight=\"bold\">T_h,out</text><path d=\"M 340 180 L 80 110\" stroke=\"#3b82f6\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"345\" y=\"190\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,in</text><text x=\"65\" y=\"115\" font-size=\"10\" fill=\"#3b82f6\" font-weight=\"bold\">T_c,out</text><line x1=\"80\" y1=\"65\" x2=\"80\" y2=\"105\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"85\" y=\"88\" font-size=\"9\" fill=\"#64748b\">ΔT_1</text><line x1=\"340\" y1=\"125\" x2=\"340\" y2=\"175\" stroke=\"#64748b\" stroke-dasharray=\"2,2\"/><text x=\"315\" y=\"155\" font-size=\"9\" fill=\"#64748b\">ΔT_2</text><text x=\"120\" y=\"145\" font-size=\"10\" font-weight=\"bold\" fill=\"#0f172a\" class=\"dark:fill-white\">LMTD = (ΔT_1 - ΔT_2) / ln(ΔT_1 / ΔT_2)</text></svg>",
+    "question": "In a counterflow milk chiller shown in the temperature profile diagram, hot milk is cooled from $85^\\circ\\text{C}$ to $45^\\circ\\text{C}$ by chilled water entering at $20^\\circ\\text{C}$ and leaving at $46^\\circ\\text{C}$. The Logarithmic Mean Temperature Difference ($LMTD$) is ________ $^\\circ\\text{C}$ (round off to two decimal places).",
+    "correct_answer": "31.48",
+    "numerical_range": {
+      "min": 31.28,
+      "max": 31.68
+    },
+    "solution": "In a counterflow heat exchanger:\n$$\\Delta T_1 = T_{h,in} - T_{c,out} = 85 - 46 = 39^\\circ\\text{C}$$\n$$\\Delta T_2 = T_{h,out} - T_{c,in} = 45 - 20 = 25^\\circ\\text{C}$$\nLogarithmic Mean Temperature Difference:\n$$LMTD = \\frac{\\Delta T_1 - \\Delta T_2}{\\ln(\\Delta T_1 / \\Delta T_2)} = \\frac{39 - 25}{\\ln(39 / 25)} = \\frac{14}{0.4447} = 31.48^\\circ\\text{C}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Steady molecular diffusion flux calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A solute diffuses through a stagnant edible packaging film of thickness $\\Delta z = 2\\text{ mm}$. The diffusion coefficient is $D_{AB} = 1.6 \\times 10^{-9}\\text{ m}^2/\\text{s}$. The concentration drop across the film is $\\Delta C = 80.0\\text{ mol/m}^3$. Under steady-state equimolar counter-diffusion, the mass diffusion flux is ________ $\\text{mol/(m}^2\\,\\text{s)}$ (round off to four decimal places).",
+    "correct_answer": "0.0001",
+    "numerical_range": {
+      "min": -0.0,
+      "max": 0.0002
+    },
+    "solution": "From Fick's first law of diffusion:\n$$J_A = D_{AB} \\frac{\\Delta C}{\\Delta z}$$\nGiven $D_{AB} = 1.6 \\times 10^{-9}\\text{ m}^2/\\text{s}$, $\\Delta C = 80.0\\text{ mol/m}^3$, and $\\Delta z = 0.002\\text{ m}$:\n$$J_A = (1.6 \\times 10^{-9}) \\times \\frac{80.0}{0.002} = 0.000064\\text{ mol/(m}^2\\text{ s)}$$\nRounding to four decimal places: $0.0001$.",
+    "difficulty": "Moderate",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Sherwood and Schmidt numbers physical meaning",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In mass transfer operations, the Schmidt number ($Sc = \\frac{\\nu}{D_{AB}}$) is the mass transfer analogue of the heat transfer:",
+    "options": {
+      "A": "Prandtl number ($Pr$)",
+      "B": "Nusselt number ($Nu$)",
+      "C": "Reynolds number ($Re$)",
+      "D": "Grashof number ($Gr$)"
+    },
+    "correct_answer": "A",
+    "solution": "By transport analogies:\n- Sherwood number ($Sh = k_c L / D_{AB}$) is the mass analogue of Nusselt number ($Nu = h L / k$).\n- Schmidt number ($Sc = \\nu / D_{AB}$) is the mass analogue of Prandtl number ($Pr = \\nu / \\alpha$).\n- Lewis number ($Le = Sc / Pr = \\alpha / D_{AB}$) compares thermal to mass diffusivity.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_003",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Chilton-Colburn j-factor mass-heat analogy",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following dimensionless numbers govern convective mass transfer from food surfaces to air?",
+    "options": {
+      "A": "Sherwood number $Sh = \\frac{k_c L}{D_{AB}}$ (ratio of convective mass transfer to molecular diffusion)",
+      "B": "Schmidt number $Sc = \\frac{\\mu}{\\rho D_{AB}}$ (ratio of momentum diffusivity to mass diffusivity)",
+      "C": "Peclet number for mass transfer $Pe_m = Re \\cdot Sc$",
+      "D": "Mach number representing sonic shock wave boundaries"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Sherwood number scales convective mass transfer (A).\n2. Schmidt number governs boundary layer thickness ratios (B).\n3. $Pe_m = Re \\cdot Sc$ characterizes advective vs diffusive mass transport (C).\n4. Food processing convective mass transfer occurs at low subsonic Mach numbers where compressibility shocks are irrelevant (D is false).",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_004",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Steady molecular diffusion flux calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A solute diffuses through a stagnant edible packaging film of thickness $\\Delta z = 2\\text{ mm}$. The diffusion coefficient is $D_{AB} = 1.6 \\times 10^{-9}\\text{ m}^2/\\text{s}$. The concentration drop across the film is $\\Delta C = 80.0\\text{ mol/m}^3$. Under steady-state equimolar counter-diffusion, the mass diffusion flux is ________ $\\text{mol/(m}^2\\,\\text{s)}$ (round off to four decimal places).",
+    "correct_answer": "0.0001",
+    "numerical_range": {
+      "min": -0.0,
+      "max": 0.0002
+    },
+    "solution": "From Fick's first law of diffusion:\n$$J_A = D_{AB} \\frac{\\Delta C}{\\Delta z}$$\nGiven $D_{AB} = 1.6 \\times 10^{-9}\\text{ m}^2/\\text{s}$, $\\Delta C = 80.0\\text{ mol/m}^3$, and $\\Delta z = 0.002\\text{ m}$:\n$$J_A = (1.6 \\times 10^{-9}) \\times \\frac{80.0}{0.002} = 0.000064\\text{ mol/(m}^2\\text{ s)}$$\nRounding to four decimal places: $0.0001$.",
+    "difficulty": "Moderate",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_005",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Sherwood and Schmidt numbers physical meaning",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In mass transfer operations, the Schmidt number ($Sc = \\frac{\\nu}{D_{AB}}$) is the mass transfer analogue of the heat transfer:",
+    "options": {
+      "A": "Prandtl number ($Pr$)",
+      "B": "Nusselt number ($Nu$)",
+      "C": "Reynolds number ($Re$)",
+      "D": "Grashof number ($Gr$)"
+    },
+    "correct_answer": "A",
+    "solution": "By transport analogies:\n- Sherwood number ($Sh = k_c L / D_{AB}$) is the mass analogue of Nusselt number ($Nu = h L / k$).\n- Schmidt number ($Sc = \\nu / D_{AB}$) is the mass analogue of Prandtl number ($Pr = \\nu / \\alpha$).\n- Lewis number ($Le = Sc / Pr = \\alpha / D_{AB}$) compares thermal to mass diffusivity.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_006",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Chilton-Colburn j-factor mass-heat analogy",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following dimensionless numbers govern convective mass transfer from food surfaces to air?",
+    "options": {
+      "A": "Sherwood number $Sh = \\frac{k_c L}{D_{AB}}$ (ratio of convective mass transfer to molecular diffusion)",
+      "B": "Schmidt number $Sc = \\frac{\\mu}{\\rho D_{AB}}$ (ratio of momentum diffusivity to mass diffusivity)",
+      "C": "Peclet number for mass transfer $Pe_m = Re \\cdot Sc$",
+      "D": "Mach number representing sonic shock wave boundaries"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Sherwood number scales convective mass transfer (A).\n2. Schmidt number governs boundary layer thickness ratios (B).\n3. $Pe_m = Re \\cdot Sc$ characterizes advective vs diffusive mass transport (C).\n4. Food processing convective mass transfer occurs at low subsonic Mach numbers where compressibility shocks are irrelevant (D is false).",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_007",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Steady molecular diffusion flux calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A solute diffuses through a stagnant edible packaging film of thickness $\\Delta z = 2\\text{ mm}$. The diffusion coefficient is $D_{AB} = 1.6 \\times 10^{-9}\\text{ m}^2/\\text{s}$. The concentration drop across the film is $\\Delta C = 80.0\\text{ mol/m}^3$. Under steady-state equimolar counter-diffusion, the mass diffusion flux is ________ $\\text{mol/(m}^2\\,\\text{s)}$ (round off to four decimal places).",
+    "correct_answer": "0.0001",
+    "numerical_range": {
+      "min": -0.0,
+      "max": 0.0002
+    },
+    "solution": "From Fick's first law of diffusion:\n$$J_A = D_{AB} \\frac{\\Delta C}{\\Delta z}$$\nGiven $D_{AB} = 1.6 \\times 10^{-9}\\text{ m}^2/\\text{s}$, $\\Delta C = 80.0\\text{ mol/m}^3$, and $\\Delta z = 0.002\\text{ m}$:\n$$J_A = (1.6 \\times 10^{-9}) \\times \\frac{80.0}{0.002} = 0.000064\\text{ mol/(m}^2\\text{ s)}$$\nRounding to four decimal places: $0.0001$.",
+    "difficulty": "Moderate",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_008",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Sherwood and Schmidt numbers physical meaning",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In mass transfer operations, the Schmidt number ($Sc = \\frac{\\nu}{D_{AB}}$) is the mass transfer analogue of the heat transfer:",
+    "options": {
+      "A": "Prandtl number ($Pr$)",
+      "B": "Nusselt number ($Nu$)",
+      "C": "Reynolds number ($Re$)",
+      "D": "Grashof number ($Gr$)"
+    },
+    "correct_answer": "A",
+    "solution": "By transport analogies:\n- Sherwood number ($Sh = k_c L / D_{AB}$) is the mass analogue of Nusselt number ($Nu = h L / k$).\n- Schmidt number ($Sc = \\nu / D_{AB}$) is the mass analogue of Prandtl number ($Pr = \\nu / \\alpha$).\n- Lewis number ($Le = Sc / Pr = \\alpha / D_{AB}$) compares thermal to mass diffusivity.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_009",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Chilton-Colburn j-factor mass-heat analogy",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following dimensionless numbers govern convective mass transfer from food surfaces to air?",
+    "options": {
+      "A": "Sherwood number $Sh = \\frac{k_c L}{D_{AB}}$ (ratio of convective mass transfer to molecular diffusion)",
+      "B": "Schmidt number $Sc = \\frac{\\mu}{\\rho D_{AB}}$ (ratio of momentum diffusivity to mass diffusivity)",
+      "C": "Peclet number for mass transfer $Pe_m = Re \\cdot Sc$",
+      "D": "Mach number representing sonic shock wave boundaries"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Sherwood number scales convective mass transfer (A).\n2. Schmidt number governs boundary layer thickness ratios (B).\n3. $Pe_m = Re \\cdot Sc$ characterizes advective vs diffusive mass transport (C).\n4. Food processing convective mass transfer occurs at low subsonic Mach numbers where compressibility shocks are irrelevant (D is false).",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_010",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Steady molecular diffusion flux calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A solute diffuses through a stagnant edible packaging film of thickness $\\Delta z = 2\\text{ mm}$. The diffusion coefficient is $D_{AB} = 1.6 \\times 10^{-9}\\text{ m}^2/\\text{s}$. The concentration drop across the film is $\\Delta C = 80.0\\text{ mol/m}^3$. Under steady-state equimolar counter-diffusion, the mass diffusion flux is ________ $\\text{mol/(m}^2\\,\\text{s)}$ (round off to four decimal places).",
+    "correct_answer": "0.0001",
+    "numerical_range": {
+      "min": -0.0,
+      "max": 0.0002
+    },
+    "solution": "From Fick's first law of diffusion:\n$$J_A = D_{AB} \\frac{\\Delta C}{\\Delta z}$$\nGiven $D_{AB} = 1.6 \\times 10^{-9}\\text{ m}^2/\\text{s}$, $\\Delta C = 80.0\\text{ mol/m}^3$, and $\\Delta z = 0.002\\text{ m}$:\n$$J_A = (1.6 \\times 10^{-9}) \\times \\frac{80.0}{0.002} = 0.000064\\text{ mol/(m}^2\\text{ s)}$$\nRounding to four decimal places: $0.0001$.",
+    "difficulty": "Moderate",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_011",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Sherwood and Schmidt numbers physical meaning",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In mass transfer operations, the Schmidt number ($Sc = \\frac{\\nu}{D_{AB}}$) is the mass transfer analogue of the heat transfer:",
+    "options": {
+      "A": "Prandtl number ($Pr$)",
+      "B": "Nusselt number ($Nu$)",
+      "C": "Reynolds number ($Re$)",
+      "D": "Grashof number ($Gr$)"
+    },
+    "correct_answer": "A",
+    "solution": "By transport analogies:\n- Sherwood number ($Sh = k_c L / D_{AB}$) is the mass analogue of Nusselt number ($Nu = h L / k$).\n- Schmidt number ($Sc = \\nu / D_{AB}$) is the mass analogue of Prandtl number ($Pr = \\nu / \\alpha$).\n- Lewis number ($Le = Sc / Pr = \\alpha / D_{AB}$) compares thermal to mass diffusivity.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_012",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Chilton-Colburn j-factor mass-heat analogy",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following dimensionless numbers govern convective mass transfer from food surfaces to air?",
+    "options": {
+      "A": "Sherwood number $Sh = \\frac{k_c L}{D_{AB}}$ (ratio of convective mass transfer to molecular diffusion)",
+      "B": "Schmidt number $Sc = \\frac{\\mu}{\\rho D_{AB}}$ (ratio of momentum diffusivity to mass diffusivity)",
+      "C": "Peclet number for mass transfer $Pe_m = Re \\cdot Sc$",
+      "D": "Mach number representing sonic shock wave boundaries"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Sherwood number scales convective mass transfer (A).\n2. Schmidt number governs boundary layer thickness ratios (B).\n3. $Pe_m = Re \\cdot Sc$ characterizes advective vs diffusive mass transport (C).\n4. Food processing convective mass transfer occurs at low subsonic Mach numbers where compressibility shocks are irrelevant (D is false).",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_013",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Steady molecular diffusion flux calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A solute diffuses through a stagnant edible packaging film of thickness $\\Delta z = 2\\text{ mm}$. The diffusion coefficient is $D_{AB} = 1.6 \\times 10^{-9}\\text{ m}^2/\\text{s}$. The concentration drop across the film is $\\Delta C = 80.0\\text{ mol/m}^3$. Under steady-state equimolar counter-diffusion, the mass diffusion flux is ________ $\\text{mol/(m}^2\\,\\text{s)}$ (round off to four decimal places).",
+    "correct_answer": "0.0001",
+    "numerical_range": {
+      "min": -0.0,
+      "max": 0.0002
+    },
+    "solution": "From Fick's first law of diffusion:\n$$J_A = D_{AB} \\frac{\\Delta C}{\\Delta z}$$\nGiven $D_{AB} = 1.6 \\times 10^{-9}\\text{ m}^2/\\text{s}$, $\\Delta C = 80.0\\text{ mol/m}^3$, and $\\Delta z = 0.002\\text{ m}$:\n$$J_A = (1.6 \\times 10^{-9}) \\times \\frac{80.0}{0.002} = 0.000064\\text{ mol/(m}^2\\text{ s)}$$\nRounding to four decimal places: $0.0001$.",
+    "difficulty": "Moderate",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_014",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Sherwood and Schmidt numbers physical meaning",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In mass transfer operations, the Schmidt number ($Sc = \\frac{\\nu}{D_{AB}}$) is the mass transfer analogue of the heat transfer:",
+    "options": {
+      "A": "Prandtl number ($Pr$)",
+      "B": "Nusselt number ($Nu$)",
+      "C": "Reynolds number ($Re$)",
+      "D": "Grashof number ($Gr$)"
+    },
+    "correct_answer": "A",
+    "solution": "By transport analogies:\n- Sherwood number ($Sh = k_c L / D_{AB}$) is the mass analogue of Nusselt number ($Nu = h L / k$).\n- Schmidt number ($Sc = \\nu / D_{AB}$) is the mass analogue of Prandtl number ($Pr = \\nu / \\alpha$).\n- Lewis number ($Le = Sc / Pr = \\alpha / D_{AB}$) compares thermal to mass diffusivity.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_015",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Chilton-Colburn j-factor mass-heat analogy",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following dimensionless numbers govern convective mass transfer from food surfaces to air?",
+    "options": {
+      "A": "Sherwood number $Sh = \\frac{k_c L}{D_{AB}}$ (ratio of convective mass transfer to molecular diffusion)",
+      "B": "Schmidt number $Sc = \\frac{\\mu}{\\rho D_{AB}}$ (ratio of momentum diffusivity to mass diffusivity)",
+      "C": "Peclet number for mass transfer $Pe_m = Re \\cdot Sc$",
+      "D": "Mach number representing sonic shock wave boundaries"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Sherwood number scales convective mass transfer (A).\n2. Schmidt number governs boundary layer thickness ratios (B).\n3. $Pe_m = Re \\cdot Sc$ characterizes advective vs diffusive mass transport (C).\n4. Food processing convective mass transfer occurs at low subsonic Mach numbers where compressibility shocks are irrelevant (D is false).",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_016",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Steady molecular diffusion flux calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A solute diffuses through a stagnant edible packaging film of thickness $\\Delta z = 2\\text{ mm}$. The diffusion coefficient is $D_{AB} = 1.6 \\times 10^{-9}\\text{ m}^2/\\text{s}$. The concentration drop across the film is $\\Delta C = 80.0\\text{ mol/m}^3$. Under steady-state equimolar counter-diffusion, the mass diffusion flux is ________ $\\text{mol/(m}^2\\,\\text{s)}$ (round off to four decimal places).",
+    "correct_answer": "0.0001",
+    "numerical_range": {
+      "min": -0.0,
+      "max": 0.0002
+    },
+    "solution": "From Fick's first law of diffusion:\n$$J_A = D_{AB} \\frac{\\Delta C}{\\Delta z}$$\nGiven $D_{AB} = 1.6 \\times 10^{-9}\\text{ m}^2/\\text{s}$, $\\Delta C = 80.0\\text{ mol/m}^3$, and $\\Delta z = 0.002\\text{ m}$:\n$$J_A = (1.6 \\times 10^{-9}) \\times \\frac{80.0}{0.002} = 0.000064\\text{ mol/(m}^2\\text{ s)}$$\nRounding to four decimal places: $0.0001$.",
+    "difficulty": "Moderate",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_017",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Sherwood and Schmidt numbers physical meaning",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In mass transfer operations, the Schmidt number ($Sc = \\frac{\\nu}{D_{AB}}$) is the mass transfer analogue of the heat transfer:",
+    "options": {
+      "A": "Prandtl number ($Pr$)",
+      "B": "Nusselt number ($Nu$)",
+      "C": "Reynolds number ($Re$)",
+      "D": "Grashof number ($Gr$)"
+    },
+    "correct_answer": "A",
+    "solution": "By transport analogies:\n- Sherwood number ($Sh = k_c L / D_{AB}$) is the mass analogue of Nusselt number ($Nu = h L / k$).\n- Schmidt number ($Sc = \\nu / D_{AB}$) is the mass analogue of Prandtl number ($Pr = \\nu / \\alpha$).\n- Lewis number ($Le = Sc / Pr = \\alpha / D_{AB}$) compares thermal to mass diffusivity.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_018",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Chilton-Colburn j-factor mass-heat analogy",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following dimensionless numbers govern convective mass transfer from food surfaces to air?",
+    "options": {
+      "A": "Sherwood number $Sh = \\frac{k_c L}{D_{AB}}$ (ratio of convective mass transfer to molecular diffusion)",
+      "B": "Schmidt number $Sc = \\frac{\\mu}{\\rho D_{AB}}$ (ratio of momentum diffusivity to mass diffusivity)",
+      "C": "Peclet number for mass transfer $Pe_m = Re \\cdot Sc$",
+      "D": "Mach number representing sonic shock wave boundaries"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Sherwood number scales convective mass transfer (A).\n2. Schmidt number governs boundary layer thickness ratios (B).\n3. $Pe_m = Re \\cdot Sc$ characterizes advective vs diffusive mass transport (C).\n4. Food processing convective mass transfer occurs at low subsonic Mach numbers where compressibility shocks are irrelevant (D is false).",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_019",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Steady molecular diffusion flux calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A solute diffuses through a stagnant edible packaging film of thickness $\\Delta z = 2\\text{ mm}$. The diffusion coefficient is $D_{AB} = 1.6 \\times 10^{-9}\\text{ m}^2/\\text{s}$. The concentration drop across the film is $\\Delta C = 80.0\\text{ mol/m}^3$. Under steady-state equimolar counter-diffusion, the mass diffusion flux is ________ $\\text{mol/(m}^2\\,\\text{s)}$ (round off to four decimal places).",
+    "correct_answer": "0.0001",
+    "numerical_range": {
+      "min": -0.0,
+      "max": 0.0002
+    },
+    "solution": "From Fick's first law of diffusion:\n$$J_A = D_{AB} \\frac{\\Delta C}{\\Delta z}$$\nGiven $D_{AB} = 1.6 \\times 10^{-9}\\text{ m}^2/\\text{s}$, $\\Delta C = 80.0\\text{ mol/m}^3$, and $\\Delta z = 0.002\\text{ m}$:\n$$J_A = (1.6 \\times 10^{-9}) \\times \\frac{80.0}{0.002} = 0.000064\\text{ mol/(m}^2\\text{ s)}$$\nRounding to four decimal places: $0.0001$.",
+    "difficulty": "Moderate",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_020",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Sherwood and Schmidt numbers physical meaning",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In mass transfer operations, the Schmidt number ($Sc = \\frac{\\nu}{D_{AB}}$) is the mass transfer analogue of the heat transfer:",
+    "options": {
+      "A": "Prandtl number ($Pr$)",
+      "B": "Nusselt number ($Nu$)",
+      "C": "Reynolds number ($Re$)",
+      "D": "Grashof number ($Gr$)"
+    },
+    "correct_answer": "A",
+    "solution": "By transport analogies:\n- Sherwood number ($Sh = k_c L / D_{AB}$) is the mass analogue of Nusselt number ($Nu = h L / k$).\n- Schmidt number ($Sc = \\nu / D_{AB}$) is the mass analogue of Prandtl number ($Pr = \\nu / \\alpha$).\n- Lewis number ($Le = Sc / Pr = \\alpha / D_{AB}$) compares thermal to mass diffusivity.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_021",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Chilton-Colburn j-factor mass-heat analogy",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following dimensionless numbers govern convective mass transfer from food surfaces to air?",
+    "options": {
+      "A": "Sherwood number $Sh = \\frac{k_c L}{D_{AB}}$ (ratio of convective mass transfer to molecular diffusion)",
+      "B": "Schmidt number $Sc = \\frac{\\mu}{\\rho D_{AB}}$ (ratio of momentum diffusivity to mass diffusivity)",
+      "C": "Peclet number for mass transfer $Pe_m = Re \\cdot Sc$",
+      "D": "Mach number representing sonic shock wave boundaries"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Sherwood number scales convective mass transfer (A).\n2. Schmidt number governs boundary layer thickness ratios (B).\n3. $Pe_m = Re \\cdot Sc$ characterizes advective vs diffusive mass transport (C).\n4. Food processing convective mass transfer occurs at low subsonic Mach numbers where compressibility shocks are irrelevant (D is false).",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_022",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Steady molecular diffusion flux calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A solute diffuses through a stagnant edible packaging film of thickness $\\Delta z = 2\\text{ mm}$. The diffusion coefficient is $D_{AB} = 1.6 \\times 10^{-9}\\text{ m}^2/\\text{s}$. The concentration drop across the film is $\\Delta C = 80.0\\text{ mol/m}^3$. Under steady-state equimolar counter-diffusion, the mass diffusion flux is ________ $\\text{mol/(m}^2\\,\\text{s)}$ (round off to four decimal places).",
+    "correct_answer": "0.0001",
+    "numerical_range": {
+      "min": -0.0,
+      "max": 0.0002
+    },
+    "solution": "From Fick's first law of diffusion:\n$$J_A = D_{AB} \\frac{\\Delta C}{\\Delta z}$$\nGiven $D_{AB} = 1.6 \\times 10^{-9}\\text{ m}^2/\\text{s}$, $\\Delta C = 80.0\\text{ mol/m}^3$, and $\\Delta z = 0.002\\text{ m}$:\n$$J_A = (1.6 \\times 10^{-9}) \\times \\frac{80.0}{0.002} = 0.000064\\text{ mol/(m}^2\\text{ s)}$$\nRounding to four decimal places: $0.0001$.",
+    "difficulty": "Moderate",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_023",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Sherwood and Schmidt numbers physical meaning",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In mass transfer operations, the Schmidt number ($Sc = \\frac{\\nu}{D_{AB}}$) is the mass transfer analogue of the heat transfer:",
+    "options": {
+      "A": "Prandtl number ($Pr$)",
+      "B": "Nusselt number ($Nu$)",
+      "C": "Reynolds number ($Re$)",
+      "D": "Grashof number ($Gr$)"
+    },
+    "correct_answer": "A",
+    "solution": "By transport analogies:\n- Sherwood number ($Sh = k_c L / D_{AB}$) is the mass analogue of Nusselt number ($Nu = h L / k$).\n- Schmidt number ($Sc = \\nu / D_{AB}$) is the mass analogue of Prandtl number ($Pr = \\nu / \\alpha$).\n- Lewis number ($Le = Sc / Pr = \\alpha / D_{AB}$) compares thermal to mass diffusivity.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_024",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Chilton-Colburn j-factor mass-heat analogy",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following dimensionless numbers govern convective mass transfer from food surfaces to air?",
+    "options": {
+      "A": "Sherwood number $Sh = \\frac{k_c L}{D_{AB}}$ (ratio of convective mass transfer to molecular diffusion)",
+      "B": "Schmidt number $Sc = \\frac{\\mu}{\\rho D_{AB}}$ (ratio of momentum diffusivity to mass diffusivity)",
+      "C": "Peclet number for mass transfer $Pe_m = Re \\cdot Sc$",
+      "D": "Mach number representing sonic shock wave boundaries"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Sherwood number scales convective mass transfer (A).\n2. Schmidt number governs boundary layer thickness ratios (B).\n3. $Pe_m = Re \\cdot Sc$ characterizes advective vs diffusive mass transport (C).\n4. Food processing convective mass transfer occurs at low subsonic Mach numbers where compressibility shocks are irrelevant (D is false).",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_025",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Steady molecular diffusion flux calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A solute diffuses through a stagnant edible packaging film of thickness $\\Delta z = 2\\text{ mm}$. The diffusion coefficient is $D_{AB} = 1.6 \\times 10^{-9}\\text{ m}^2/\\text{s}$. The concentration drop across the film is $\\Delta C = 80.0\\text{ mol/m}^3$. Under steady-state equimolar counter-diffusion, the mass diffusion flux is ________ $\\text{mol/(m}^2\\,\\text{s)}$ (round off to four decimal places).",
+    "correct_answer": "0.0001",
+    "numerical_range": {
+      "min": -0.0,
+      "max": 0.0002
+    },
+    "solution": "From Fick's first law of diffusion:\n$$J_A = D_{AB} \\frac{\\Delta C}{\\Delta z}$$\nGiven $D_{AB} = 1.6 \\times 10^{-9}\\text{ m}^2/\\text{s}$, $\\Delta C = 80.0\\text{ mol/m}^3$, and $\\Delta z = 0.002\\text{ m}$:\n$$J_A = (1.6 \\times 10^{-9}) \\times \\frac{80.0}{0.002} = 0.000064\\text{ mol/(m}^2\\text{ s)}$$\nRounding to four decimal places: $0.0001$.",
+    "difficulty": "Moderate",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_026",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Sherwood and Schmidt numbers physical meaning",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In mass transfer operations, the Schmidt number ($Sc = \\frac{\\nu}{D_{AB}}$) is the mass transfer analogue of the heat transfer:",
+    "options": {
+      "A": "Prandtl number ($Pr$)",
+      "B": "Nusselt number ($Nu$)",
+      "C": "Reynolds number ($Re$)",
+      "D": "Grashof number ($Gr$)"
+    },
+    "correct_answer": "A",
+    "solution": "By transport analogies:\n- Sherwood number ($Sh = k_c L / D_{AB}$) is the mass analogue of Nusselt number ($Nu = h L / k$).\n- Schmidt number ($Sc = \\nu / D_{AB}$) is the mass analogue of Prandtl number ($Pr = \\nu / \\alpha$).\n- Lewis number ($Le = Sc / Pr = \\alpha / D_{AB}$) compares thermal to mass diffusivity.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_027",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Chilton-Colburn j-factor mass-heat analogy",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following dimensionless numbers govern convective mass transfer from food surfaces to air?",
+    "options": {
+      "A": "Sherwood number $Sh = \\frac{k_c L}{D_{AB}}$ (ratio of convective mass transfer to molecular diffusion)",
+      "B": "Schmidt number $Sc = \\frac{\\mu}{\\rho D_{AB}}$ (ratio of momentum diffusivity to mass diffusivity)",
+      "C": "Peclet number for mass transfer $Pe_m = Re \\cdot Sc$",
+      "D": "Mach number representing sonic shock wave boundaries"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Sherwood number scales convective mass transfer (A).\n2. Schmidt number governs boundary layer thickness ratios (B).\n3. $Pe_m = Re \\cdot Sc$ characterizes advective vs diffusive mass transport (C).\n4. Food processing convective mass transfer occurs at low subsonic Mach numbers where compressibility shocks are irrelevant (D is false).",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_028",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Steady molecular diffusion flux calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A solute diffuses through a stagnant edible packaging film of thickness $\\Delta z = 2\\text{ mm}$. The diffusion coefficient is $D_{AB} = 1.6 \\times 10^{-9}\\text{ m}^2/\\text{s}$. The concentration drop across the film is $\\Delta C = 80.0\\text{ mol/m}^3$. Under steady-state equimolar counter-diffusion, the mass diffusion flux is ________ $\\text{mol/(m}^2\\,\\text{s)}$ (round off to four decimal places).",
+    "correct_answer": "0.0001",
+    "numerical_range": {
+      "min": -0.0,
+      "max": 0.0002
+    },
+    "solution": "From Fick's first law of diffusion:\n$$J_A = D_{AB} \\frac{\\Delta C}{\\Delta z}$$\nGiven $D_{AB} = 1.6 \\times 10^{-9}\\text{ m}^2/\\text{s}$, $\\Delta C = 80.0\\text{ mol/m}^3$, and $\\Delta z = 0.002\\text{ m}$:\n$$J_A = (1.6 \\times 10^{-9}) \\times \\frac{80.0}{0.002} = 0.000064\\text{ mol/(m}^2\\text{ s)}$$\nRounding to four decimal places: $0.0001$.",
+    "difficulty": "Moderate",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_029",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Sherwood and Schmidt numbers physical meaning",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In mass transfer operations, the Schmidt number ($Sc = \\frac{\\nu}{D_{AB}}$) is the mass transfer analogue of the heat transfer:",
+    "options": {
+      "A": "Prandtl number ($Pr$)",
+      "B": "Nusselt number ($Nu$)",
+      "C": "Reynolds number ($Re$)",
+      "D": "Grashof number ($Gr$)"
+    },
+    "correct_answer": "A",
+    "solution": "By transport analogies:\n- Sherwood number ($Sh = k_c L / D_{AB}$) is the mass analogue of Nusselt number ($Nu = h L / k$).\n- Schmidt number ($Sc = \\nu / D_{AB}$) is the mass analogue of Prandtl number ($Pr = \\nu / \\alpha$).\n- Lewis number ($Le = Sc / Pr = \\alpha / D_{AB}$) compares thermal to mass diffusivity.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_030",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Chilton-Colburn j-factor mass-heat analogy",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following dimensionless numbers govern convective mass transfer from food surfaces to air?",
+    "options": {
+      "A": "Sherwood number $Sh = \\frac{k_c L}{D_{AB}}$ (ratio of convective mass transfer to molecular diffusion)",
+      "B": "Schmidt number $Sc = \\frac{\\mu}{\\rho D_{AB}}$ (ratio of momentum diffusivity to mass diffusivity)",
+      "C": "Peclet number for mass transfer $Pe_m = Re \\cdot Sc$",
+      "D": "Mach number representing sonic shock wave boundaries"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Sherwood number scales convective mass transfer (A).\n2. Schmidt number governs boundary layer thickness ratios (B).\n3. $Pe_m = Re \\cdot Sc$ characterizes advective vs diffusive mass transport (C).\n4. Food processing convective mass transfer occurs at low subsonic Mach numbers where compressibility shocks are irrelevant (D is false).",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_031",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Steady molecular diffusion flux calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A solute diffuses through a stagnant edible packaging film of thickness $\\Delta z = 2\\text{ mm}$. The diffusion coefficient is $D_{AB} = 1.6 \\times 10^{-9}\\text{ m}^2/\\text{s}$. The concentration drop across the film is $\\Delta C = 80.0\\text{ mol/m}^3$. Under steady-state equimolar counter-diffusion, the mass diffusion flux is ________ $\\text{mol/(m}^2\\,\\text{s)}$ (round off to four decimal places).",
+    "correct_answer": "0.0001",
+    "numerical_range": {
+      "min": -0.0,
+      "max": 0.0002
+    },
+    "solution": "From Fick's first law of diffusion:\n$$J_A = D_{AB} \\frac{\\Delta C}{\\Delta z}$$\nGiven $D_{AB} = 1.6 \\times 10^{-9}\\text{ m}^2/\\text{s}$, $\\Delta C = 80.0\\text{ mol/m}^3$, and $\\Delta z = 0.002\\text{ m}$:\n$$J_A = (1.6 \\times 10^{-9}) \\times \\frac{80.0}{0.002} = 0.000064\\text{ mol/(m}^2\\text{ s)}$$\nRounding to four decimal places: $0.0001$.",
+    "difficulty": "Moderate",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_032",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Sherwood and Schmidt numbers physical meaning",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In mass transfer operations, the Schmidt number ($Sc = \\frac{\\nu}{D_{AB}}$) is the mass transfer analogue of the heat transfer:",
+    "options": {
+      "A": "Prandtl number ($Pr$)",
+      "B": "Nusselt number ($Nu$)",
+      "C": "Reynolds number ($Re$)",
+      "D": "Grashof number ($Gr$)"
+    },
+    "correct_answer": "A",
+    "solution": "By transport analogies:\n- Sherwood number ($Sh = k_c L / D_{AB}$) is the mass analogue of Nusselt number ($Nu = h L / k$).\n- Schmidt number ($Sc = \\nu / D_{AB}$) is the mass analogue of Prandtl number ($Pr = \\nu / \\alpha$).\n- Lewis number ($Le = Sc / Pr = \\alpha / D_{AB}$) compares thermal to mass diffusivity.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_033",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Chilton-Colburn j-factor mass-heat analogy",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following dimensionless numbers govern convective mass transfer from food surfaces to air?",
+    "options": {
+      "A": "Sherwood number $Sh = \\frac{k_c L}{D_{AB}}$ (ratio of convective mass transfer to molecular diffusion)",
+      "B": "Schmidt number $Sc = \\frac{\\mu}{\\rho D_{AB}}$ (ratio of momentum diffusivity to mass diffusivity)",
+      "C": "Peclet number for mass transfer $Pe_m = Re \\cdot Sc$",
+      "D": "Mach number representing sonic shock wave boundaries"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Sherwood number scales convective mass transfer (A).\n2. Schmidt number governs boundary layer thickness ratios (B).\n3. $Pe_m = Re \\cdot Sc$ characterizes advective vs diffusive mass transport (C).\n4. Food processing convective mass transfer occurs at low subsonic Mach numbers where compressibility shocks are irrelevant (D is false).",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_034",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Steady molecular diffusion flux calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A solute diffuses through a stagnant edible packaging film of thickness $\\Delta z = 2\\text{ mm}$. The diffusion coefficient is $D_{AB} = 1.6 \\times 10^{-9}\\text{ m}^2/\\text{s}$. The concentration drop across the film is $\\Delta C = 80.0\\text{ mol/m}^3$. Under steady-state equimolar counter-diffusion, the mass diffusion flux is ________ $\\text{mol/(m}^2\\,\\text{s)}$ (round off to four decimal places).",
+    "correct_answer": "0.0001",
+    "numerical_range": {
+      "min": -0.0,
+      "max": 0.0002
+    },
+    "solution": "From Fick's first law of diffusion:\n$$J_A = D_{AB} \\frac{\\Delta C}{\\Delta z}$$\nGiven $D_{AB} = 1.6 \\times 10^{-9}\\text{ m}^2/\\text{s}$, $\\Delta C = 80.0\\text{ mol/m}^3$, and $\\Delta z = 0.002\\text{ m}$:\n$$J_A = (1.6 \\times 10^{-9}) \\times \\frac{80.0}{0.002} = 0.000064\\text{ mol/(m}^2\\text{ s)}$$\nRounding to four decimal places: $0.0001$.",
+    "difficulty": "Moderate",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_035",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Sherwood and Schmidt numbers physical meaning",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In mass transfer operations, the Schmidt number ($Sc = \\frac{\\nu}{D_{AB}}$) is the mass transfer analogue of the heat transfer:",
+    "options": {
+      "A": "Prandtl number ($Pr$)",
+      "B": "Nusselt number ($Nu$)",
+      "C": "Reynolds number ($Re$)",
+      "D": "Grashof number ($Gr$)"
+    },
+    "correct_answer": "A",
+    "solution": "By transport analogies:\n- Sherwood number ($Sh = k_c L / D_{AB}$) is the mass analogue of Nusselt number ($Nu = h L / k$).\n- Schmidt number ($Sc = \\nu / D_{AB}$) is the mass analogue of Prandtl number ($Pr = \\nu / \\alpha$).\n- Lewis number ($Le = Sc / Pr = \\alpha / D_{AB}$) compares thermal to mass diffusivity.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_036",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Chilton-Colburn j-factor mass-heat analogy",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following dimensionless numbers govern convective mass transfer from food surfaces to air?",
+    "options": {
+      "A": "Sherwood number $Sh = \\frac{k_c L}{D_{AB}}$ (ratio of convective mass transfer to molecular diffusion)",
+      "B": "Schmidt number $Sc = \\frac{\\mu}{\\rho D_{AB}}$ (ratio of momentum diffusivity to mass diffusivity)",
+      "C": "Peclet number for mass transfer $Pe_m = Re \\cdot Sc$",
+      "D": "Mach number representing sonic shock wave boundaries"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Sherwood number scales convective mass transfer (A).\n2. Schmidt number governs boundary layer thickness ratios (B).\n3. $Pe_m = Re \\cdot Sc$ characterizes advective vs diffusive mass transport (C).\n4. Food processing convective mass transfer occurs at low subsonic Mach numbers where compressibility shocks are irrelevant (D is false).",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_037",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Steady molecular diffusion flux calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A solute diffuses through a stagnant edible packaging film of thickness $\\Delta z = 2\\text{ mm}$. The diffusion coefficient is $D_{AB} = 1.6 \\times 10^{-9}\\text{ m}^2/\\text{s}$. The concentration drop across the film is $\\Delta C = 80.0\\text{ mol/m}^3$. Under steady-state equimolar counter-diffusion, the mass diffusion flux is ________ $\\text{mol/(m}^2\\,\\text{s)}$ (round off to four decimal places).",
+    "correct_answer": "0.0001",
+    "numerical_range": {
+      "min": -0.0,
+      "max": 0.0002
+    },
+    "solution": "From Fick's first law of diffusion:\n$$J_A = D_{AB} \\frac{\\Delta C}{\\Delta z}$$\nGiven $D_{AB} = 1.6 \\times 10^{-9}\\text{ m}^2/\\text{s}$, $\\Delta C = 80.0\\text{ mol/m}^3$, and $\\Delta z = 0.002\\text{ m}$:\n$$J_A = (1.6 \\times 10^{-9}) \\times \\frac{80.0}{0.002} = 0.000064\\text{ mol/(m}^2\\text{ s)}$$\nRounding to four decimal places: $0.0001$.",
+    "difficulty": "Moderate",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_038",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Sherwood and Schmidt numbers physical meaning",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In mass transfer operations, the Schmidt number ($Sc = \\frac{\\nu}{D_{AB}}$) is the mass transfer analogue of the heat transfer:",
+    "options": {
+      "A": "Prandtl number ($Pr$)",
+      "B": "Nusselt number ($Nu$)",
+      "C": "Reynolds number ($Re$)",
+      "D": "Grashof number ($Gr$)"
+    },
+    "correct_answer": "A",
+    "solution": "By transport analogies:\n- Sherwood number ($Sh = k_c L / D_{AB}$) is the mass analogue of Nusselt number ($Nu = h L / k$).\n- Schmidt number ($Sc = \\nu / D_{AB}$) is the mass analogue of Prandtl number ($Pr = \\nu / \\alpha$).\n- Lewis number ($Le = Sc / Pr = \\alpha / D_{AB}$) compares thermal to mass diffusivity.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_039",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Chilton-Colburn j-factor mass-heat analogy",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following dimensionless numbers govern convective mass transfer from food surfaces to air?",
+    "options": {
+      "A": "Sherwood number $Sh = \\frac{k_c L}{D_{AB}}$ (ratio of convective mass transfer to molecular diffusion)",
+      "B": "Schmidt number $Sc = \\frac{\\mu}{\\rho D_{AB}}$ (ratio of momentum diffusivity to mass diffusivity)",
+      "C": "Peclet number for mass transfer $Pe_m = Re \\cdot Sc$",
+      "D": "Mach number representing sonic shock wave boundaries"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Sherwood number scales convective mass transfer (A).\n2. Schmidt number governs boundary layer thickness ratios (B).\n3. $Pe_m = Re \\cdot Sc$ characterizes advective vs diffusive mass transport (C).\n4. Food processing convective mass transfer occurs at low subsonic Mach numbers where compressibility shocks are irrelevant (D is false).",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_040",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Steady molecular diffusion flux calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A solute diffuses through a stagnant edible packaging film of thickness $\\Delta z = 2\\text{ mm}$. The diffusion coefficient is $D_{AB} = 1.6 \\times 10^{-9}\\text{ m}^2/\\text{s}$. The concentration drop across the film is $\\Delta C = 80.0\\text{ mol/m}^3$. Under steady-state equimolar counter-diffusion, the mass diffusion flux is ________ $\\text{mol/(m}^2\\,\\text{s)}$ (round off to four decimal places).",
+    "correct_answer": "0.0001",
+    "numerical_range": {
+      "min": -0.0,
+      "max": 0.0002
+    },
+    "solution": "From Fick's first law of diffusion:\n$$J_A = D_{AB} \\frac{\\Delta C}{\\Delta z}$$\nGiven $D_{AB} = 1.6 \\times 10^{-9}\\text{ m}^2/\\text{s}$, $\\Delta C = 80.0\\text{ mol/m}^3$, and $\\Delta z = 0.002\\text{ m}$:\n$$J_A = (1.6 \\times 10^{-9}) \\times \\frac{80.0}{0.002} = 0.000064\\text{ mol/(m}^2\\text{ s)}$$\nRounding to four decimal places: $0.0001$.",
+    "difficulty": "Moderate",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_041",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Sherwood and Schmidt numbers physical meaning",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In mass transfer operations, the Schmidt number ($Sc = \\frac{\\nu}{D_{AB}}$) is the mass transfer analogue of the heat transfer:",
+    "options": {
+      "A": "Prandtl number ($Pr$)",
+      "B": "Nusselt number ($Nu$)",
+      "C": "Reynolds number ($Re$)",
+      "D": "Grashof number ($Gr$)"
+    },
+    "correct_answer": "A",
+    "solution": "By transport analogies:\n- Sherwood number ($Sh = k_c L / D_{AB}$) is the mass analogue of Nusselt number ($Nu = h L / k$).\n- Schmidt number ($Sc = \\nu / D_{AB}$) is the mass analogue of Prandtl number ($Pr = \\nu / \\alpha$).\n- Lewis number ($Le = Sc / Pr = \\alpha / D_{AB}$) compares thermal to mass diffusivity.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_042",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Chilton-Colburn j-factor mass-heat analogy",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following dimensionless numbers govern convective mass transfer from food surfaces to air?",
+    "options": {
+      "A": "Sherwood number $Sh = \\frac{k_c L}{D_{AB}}$ (ratio of convective mass transfer to molecular diffusion)",
+      "B": "Schmidt number $Sc = \\frac{\\mu}{\\rho D_{AB}}$ (ratio of momentum diffusivity to mass diffusivity)",
+      "C": "Peclet number for mass transfer $Pe_m = Re \\cdot Sc$",
+      "D": "Mach number representing sonic shock wave boundaries"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Sherwood number scales convective mass transfer (A).\n2. Schmidt number governs boundary layer thickness ratios (B).\n3. $Pe_m = Re \\cdot Sc$ characterizes advective vs diffusive mass transport (C).\n4. Food processing convective mass transfer occurs at low subsonic Mach numbers where compressibility shocks are irrelevant (D is false).",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_MSS_043",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Steady molecular diffusion flux calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A solute diffuses through a stagnant edible packaging film of thickness $\\Delta z = 2\\text{ mm}$. The diffusion coefficient is $D_{AB} = 1.6 \\times 10^{-9}\\text{ m}^2/\\text{s}$. The concentration drop across the film is $\\Delta C = 80.0\\text{ mol/m}^3$. Under steady-state equimolar counter-diffusion, the mass diffusion flux is ________ $\\text{mol/(m}^2\\,\\text{s)}$ (round off to four decimal places).",
+    "correct_answer": "0.0001",
+    "numerical_range": {
+      "min": -0.0,
+      "max": 0.0002
+    },
+    "solution": "From Fick's first law of diffusion:\n$$J_A = D_{AB} \\frac{\\Delta C}{\\Delta z}$$\nGiven $D_{AB} = 1.6 \\times 10^{-9}\\text{ m}^2/\\text{s}$, $\\Delta C = 80.0\\text{ mol/m}^3$, and $\\Delta z = 0.002\\text{ m}$:\n$$J_A = (1.6 \\times 10^{-9}) \\times \\frac{80.0}{0.002} = 0.000064\\text{ mol/(m}^2\\text{ s)}$$\nRounding to four decimal places: $0.0001$.",
+    "difficulty": "Moderate",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Power law apparent viscosity calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A fruit puree follows the Ostwald-de Waele power law model: $\\tau = K \\dot{\\gamma}^n$. The consistency index is $K = 2.5\\text{ Pa}\\,\\text{s}^{0.4}$ and the flow behavior index is $n = 0.40$. At a shear rate of $\\dot{\\gamma} = 100\\text{ s}^{-1}$, the apparent viscosity $\\eta_{app}$ is ________ $\\text{Pa}\\,\\text{s}$ (round off to three decimal places).",
+    "correct_answer": "0.158",
+    "numerical_range": {
+      "min": 0.148,
+      "max": 0.168
+    },
+    "solution": "The shear stress is:\n$$\\tau = K \\dot{\\gamma}^n = 2.5 \\times (100)^{0.40} = 2.5 \\times 6.3096 = 15.77\\text{ Pa}$$\nThe apparent viscosity is defined as:\n$$\\eta_{app} = \\frac{\\tau}{\\dot{\\gamma}} = \\frac{15.77}{100} = 0.1577\\text{ Pa}\\,\\text{s}$$\nRounding to three decimal places: $0.158\\text{ Pa}\\,\\text{s}$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Non-Newtonian food fluid classification",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A liquid food that exhibits a finite yield stress $\\tau_0$ and a flow behavior index $n < 1$ (shear thinning behavior once flow commences) is classified as a:",
+    "options": {
+      "A": "Herschel-Bulkley fluid (e.g. tomato ketchup, minced meat paste)",
+      "B": "Bingham plastic (e.g. toothpaste with linear $n = 1$)",
+      "C": "Dilatant fluid ($n > 1$)",
+      "D": "Newtonian fluid"
+    },
+    "correct_answer": "A",
+    "solution": "The Herschel-Bulkley model is $\\tau = \\tau_0 + K \\dot{\\gamma}^n$. When $\\tau_0 > 0$ and $n < 1$, the fluid is yield-pseudoplastic (Herschel-Bulkley), characteristic of ketchup, mayonnaise, and purees.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_003",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Time-dependent rheology: Thixotropy vs Rheopexy",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding rheological behavior of food products is/are TRUE?",
+    "options": {
+      "A": "Thixotropic food materials show a reversible decrease in apparent viscosity over time under constant shear rate (e.g. yogurt, condensed milk)",
+      "B": "Rheopectic materials show an increase in viscosity over time under constant shear",
+      "C": "Pseudoplastic fluids ($n < 1$) display shear thinning where apparent viscosity decreases as shear rate increases",
+      "D": "In a Newtonian fluid, viscosity is dependent on the applied shear rate"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Thixotropy: time-dependent breakdown of structural networks under shear (A is true).\n2. Rheopexy: time-dependent shear thickening (B is true).\n3. Pseudoplastic: shear thinning with $n < 1$ (C is true).\n4. In Newtonian fluids, dynamic viscosity is strictly constant and independent of shear rate (D is false).",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_004",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Power law apparent viscosity calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A fruit puree follows the Ostwald-de Waele power law model: $\\tau = K \\dot{\\gamma}^n$. The consistency index is $K = 2.5\\text{ Pa}\\,\\text{s}^{0.4}$ and the flow behavior index is $n = 0.40$. At a shear rate of $\\dot{\\gamma} = 100\\text{ s}^{-1}$, the apparent viscosity $\\eta_{app}$ is ________ $\\text{Pa}\\,\\text{s}$ (round off to three decimal places).",
+    "correct_answer": "0.158",
+    "numerical_range": {
+      "min": 0.148,
+      "max": 0.168
+    },
+    "solution": "The shear stress is:\n$$\\tau = K \\dot{\\gamma}^n = 2.5 \\times (100)^{0.40} = 2.5 \\times 6.3096 = 15.77\\text{ Pa}$$\nThe apparent viscosity is defined as:\n$$\\eta_{app} = \\frac{\\tau}{\\dot{\\gamma}} = \\frac{15.77}{100} = 0.1577\\text{ Pa}\\,\\text{s}$$\nRounding to three decimal places: $0.158\\text{ Pa}\\,\\text{s}$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_005",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Non-Newtonian food fluid classification",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A liquid food that exhibits a finite yield stress $\\tau_0$ and a flow behavior index $n < 1$ (shear thinning behavior once flow commences) is classified as a:",
+    "options": {
+      "A": "Herschel-Bulkley fluid (e.g. tomato ketchup, minced meat paste)",
+      "B": "Bingham plastic (e.g. toothpaste with linear $n = 1$)",
+      "C": "Dilatant fluid ($n > 1$)",
+      "D": "Newtonian fluid"
+    },
+    "correct_answer": "A",
+    "solution": "The Herschel-Bulkley model is $\\tau = \\tau_0 + K \\dot{\\gamma}^n$. When $\\tau_0 > 0$ and $n < 1$, the fluid is yield-pseudoplastic (Herschel-Bulkley), characteristic of ketchup, mayonnaise, and purees.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_006",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Time-dependent rheology: Thixotropy vs Rheopexy",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding rheological behavior of food products is/are TRUE?",
+    "options": {
+      "A": "Thixotropic food materials show a reversible decrease in apparent viscosity over time under constant shear rate (e.g. yogurt, condensed milk)",
+      "B": "Rheopectic materials show an increase in viscosity over time under constant shear",
+      "C": "Pseudoplastic fluids ($n < 1$) display shear thinning where apparent viscosity decreases as shear rate increases",
+      "D": "In a Newtonian fluid, viscosity is dependent on the applied shear rate"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Thixotropy: time-dependent breakdown of structural networks under shear (A is true).\n2. Rheopexy: time-dependent shear thickening (B is true).\n3. Pseudoplastic: shear thinning with $n < 1$ (C is true).\n4. In Newtonian fluids, dynamic viscosity is strictly constant and independent of shear rate (D is false).",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_007",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Power law apparent viscosity calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A fruit puree follows the Ostwald-de Waele power law model: $\\tau = K \\dot{\\gamma}^n$. The consistency index is $K = 2.5\\text{ Pa}\\,\\text{s}^{0.4}$ and the flow behavior index is $n = 0.40$. At a shear rate of $\\dot{\\gamma} = 100\\text{ s}^{-1}$, the apparent viscosity $\\eta_{app}$ is ________ $\\text{Pa}\\,\\text{s}$ (round off to three decimal places).",
+    "correct_answer": "0.158",
+    "numerical_range": {
+      "min": 0.148,
+      "max": 0.168
+    },
+    "solution": "The shear stress is:\n$$\\tau = K \\dot{\\gamma}^n = 2.5 \\times (100)^{0.40} = 2.5 \\times 6.3096 = 15.77\\text{ Pa}$$\nThe apparent viscosity is defined as:\n$$\\eta_{app} = \\frac{\\tau}{\\dot{\\gamma}} = \\frac{15.77}{100} = 0.1577\\text{ Pa}\\,\\text{s}$$\nRounding to three decimal places: $0.158\\text{ Pa}\\,\\text{s}$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_008",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Non-Newtonian food fluid classification",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A liquid food that exhibits a finite yield stress $\\tau_0$ and a flow behavior index $n < 1$ (shear thinning behavior once flow commences) is classified as a:",
+    "options": {
+      "A": "Herschel-Bulkley fluid (e.g. tomato ketchup, minced meat paste)",
+      "B": "Bingham plastic (e.g. toothpaste with linear $n = 1$)",
+      "C": "Dilatant fluid ($n > 1$)",
+      "D": "Newtonian fluid"
+    },
+    "correct_answer": "A",
+    "solution": "The Herschel-Bulkley model is $\\tau = \\tau_0 + K \\dot{\\gamma}^n$. When $\\tau_0 > 0$ and $n < 1$, the fluid is yield-pseudoplastic (Herschel-Bulkley), characteristic of ketchup, mayonnaise, and purees.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_009",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Time-dependent rheology: Thixotropy vs Rheopexy",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding rheological behavior of food products is/are TRUE?",
+    "options": {
+      "A": "Thixotropic food materials show a reversible decrease in apparent viscosity over time under constant shear rate (e.g. yogurt, condensed milk)",
+      "B": "Rheopectic materials show an increase in viscosity over time under constant shear",
+      "C": "Pseudoplastic fluids ($n < 1$) display shear thinning where apparent viscosity decreases as shear rate increases",
+      "D": "In a Newtonian fluid, viscosity is dependent on the applied shear rate"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Thixotropy: time-dependent breakdown of structural networks under shear (A is true).\n2. Rheopexy: time-dependent shear thickening (B is true).\n3. Pseudoplastic: shear thinning with $n < 1$ (C is true).\n4. In Newtonian fluids, dynamic viscosity is strictly constant and independent of shear rate (D is false).",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_010",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Power law apparent viscosity calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A fruit puree follows the Ostwald-de Waele power law model: $\\tau = K \\dot{\\gamma}^n$. The consistency index is $K = 2.5\\text{ Pa}\\,\\text{s}^{0.4}$ and the flow behavior index is $n = 0.40$. At a shear rate of $\\dot{\\gamma} = 100\\text{ s}^{-1}$, the apparent viscosity $\\eta_{app}$ is ________ $\\text{Pa}\\,\\text{s}$ (round off to three decimal places).",
+    "correct_answer": "0.158",
+    "numerical_range": {
+      "min": 0.148,
+      "max": 0.168
+    },
+    "solution": "The shear stress is:\n$$\\tau = K \\dot{\\gamma}^n = 2.5 \\times (100)^{0.40} = 2.5 \\times 6.3096 = 15.77\\text{ Pa}$$\nThe apparent viscosity is defined as:\n$$\\eta_{app} = \\frac{\\tau}{\\dot{\\gamma}} = \\frac{15.77}{100} = 0.1577\\text{ Pa}\\,\\text{s}$$\nRounding to three decimal places: $0.158\\text{ Pa}\\,\\text{s}$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_011",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Non-Newtonian food fluid classification",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A liquid food that exhibits a finite yield stress $\\tau_0$ and a flow behavior index $n < 1$ (shear thinning behavior once flow commences) is classified as a:",
+    "options": {
+      "A": "Herschel-Bulkley fluid (e.g. tomato ketchup, minced meat paste)",
+      "B": "Bingham plastic (e.g. toothpaste with linear $n = 1$)",
+      "C": "Dilatant fluid ($n > 1$)",
+      "D": "Newtonian fluid"
+    },
+    "correct_answer": "A",
+    "solution": "The Herschel-Bulkley model is $\\tau = \\tau_0 + K \\dot{\\gamma}^n$. When $\\tau_0 > 0$ and $n < 1$, the fluid is yield-pseudoplastic (Herschel-Bulkley), characteristic of ketchup, mayonnaise, and purees.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_012",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Time-dependent rheology: Thixotropy vs Rheopexy",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding rheological behavior of food products is/are TRUE?",
+    "options": {
+      "A": "Thixotropic food materials show a reversible decrease in apparent viscosity over time under constant shear rate (e.g. yogurt, condensed milk)",
+      "B": "Rheopectic materials show an increase in viscosity over time under constant shear",
+      "C": "Pseudoplastic fluids ($n < 1$) display shear thinning where apparent viscosity decreases as shear rate increases",
+      "D": "In a Newtonian fluid, viscosity is dependent on the applied shear rate"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Thixotropy: time-dependent breakdown of structural networks under shear (A is true).\n2. Rheopexy: time-dependent shear thickening (B is true).\n3. Pseudoplastic: shear thinning with $n < 1$ (C is true).\n4. In Newtonian fluids, dynamic viscosity is strictly constant and independent of shear rate (D is false).",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_013",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Power law apparent viscosity calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A fruit puree follows the Ostwald-de Waele power law model: $\\tau = K \\dot{\\gamma}^n$. The consistency index is $K = 2.5\\text{ Pa}\\,\\text{s}^{0.4}$ and the flow behavior index is $n = 0.40$. At a shear rate of $\\dot{\\gamma} = 100\\text{ s}^{-1}$, the apparent viscosity $\\eta_{app}$ is ________ $\\text{Pa}\\,\\text{s}$ (round off to three decimal places).",
+    "correct_answer": "0.158",
+    "numerical_range": {
+      "min": 0.148,
+      "max": 0.168
+    },
+    "solution": "The shear stress is:\n$$\\tau = K \\dot{\\gamma}^n = 2.5 \\times (100)^{0.40} = 2.5 \\times 6.3096 = 15.77\\text{ Pa}$$\nThe apparent viscosity is defined as:\n$$\\eta_{app} = \\frac{\\tau}{\\dot{\\gamma}} = \\frac{15.77}{100} = 0.1577\\text{ Pa}\\,\\text{s}$$\nRounding to three decimal places: $0.158\\text{ Pa}\\,\\text{s}$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_014",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Non-Newtonian food fluid classification",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A liquid food that exhibits a finite yield stress $\\tau_0$ and a flow behavior index $n < 1$ (shear thinning behavior once flow commences) is classified as a:",
+    "options": {
+      "A": "Herschel-Bulkley fluid (e.g. tomato ketchup, minced meat paste)",
+      "B": "Bingham plastic (e.g. toothpaste with linear $n = 1$)",
+      "C": "Dilatant fluid ($n > 1$)",
+      "D": "Newtonian fluid"
+    },
+    "correct_answer": "A",
+    "solution": "The Herschel-Bulkley model is $\\tau = \\tau_0 + K \\dot{\\gamma}^n$. When $\\tau_0 > 0$ and $n < 1$, the fluid is yield-pseudoplastic (Herschel-Bulkley), characteristic of ketchup, mayonnaise, and purees.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_015",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Time-dependent rheology: Thixotropy vs Rheopexy",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding rheological behavior of food products is/are TRUE?",
+    "options": {
+      "A": "Thixotropic food materials show a reversible decrease in apparent viscosity over time under constant shear rate (e.g. yogurt, condensed milk)",
+      "B": "Rheopectic materials show an increase in viscosity over time under constant shear",
+      "C": "Pseudoplastic fluids ($n < 1$) display shear thinning where apparent viscosity decreases as shear rate increases",
+      "D": "In a Newtonian fluid, viscosity is dependent on the applied shear rate"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Thixotropy: time-dependent breakdown of structural networks under shear (A is true).\n2. Rheopexy: time-dependent shear thickening (B is true).\n3. Pseudoplastic: shear thinning with $n < 1$ (C is true).\n4. In Newtonian fluids, dynamic viscosity is strictly constant and independent of shear rate (D is false).",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_016",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Power law apparent viscosity calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A fruit puree follows the Ostwald-de Waele power law model: $\\tau = K \\dot{\\gamma}^n$. The consistency index is $K = 2.5\\text{ Pa}\\,\\text{s}^{0.4}$ and the flow behavior index is $n = 0.40$. At a shear rate of $\\dot{\\gamma} = 100\\text{ s}^{-1}$, the apparent viscosity $\\eta_{app}$ is ________ $\\text{Pa}\\,\\text{s}$ (round off to three decimal places).",
+    "correct_answer": "0.158",
+    "numerical_range": {
+      "min": 0.148,
+      "max": 0.168
+    },
+    "solution": "The shear stress is:\n$$\\tau = K \\dot{\\gamma}^n = 2.5 \\times (100)^{0.40} = 2.5 \\times 6.3096 = 15.77\\text{ Pa}$$\nThe apparent viscosity is defined as:\n$$\\eta_{app} = \\frac{\\tau}{\\dot{\\gamma}} = \\frac{15.77}{100} = 0.1577\\text{ Pa}\\,\\text{s}$$\nRounding to three decimal places: $0.158\\text{ Pa}\\,\\text{s}$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_017",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Non-Newtonian food fluid classification",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A liquid food that exhibits a finite yield stress $\\tau_0$ and a flow behavior index $n < 1$ (shear thinning behavior once flow commences) is classified as a:",
+    "options": {
+      "A": "Herschel-Bulkley fluid (e.g. tomato ketchup, minced meat paste)",
+      "B": "Bingham plastic (e.g. toothpaste with linear $n = 1$)",
+      "C": "Dilatant fluid ($n > 1$)",
+      "D": "Newtonian fluid"
+    },
+    "correct_answer": "A",
+    "solution": "The Herschel-Bulkley model is $\\tau = \\tau_0 + K \\dot{\\gamma}^n$. When $\\tau_0 > 0$ and $n < 1$, the fluid is yield-pseudoplastic (Herschel-Bulkley), characteristic of ketchup, mayonnaise, and purees.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_018",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Time-dependent rheology: Thixotropy vs Rheopexy",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding rheological behavior of food products is/are TRUE?",
+    "options": {
+      "A": "Thixotropic food materials show a reversible decrease in apparent viscosity over time under constant shear rate (e.g. yogurt, condensed milk)",
+      "B": "Rheopectic materials show an increase in viscosity over time under constant shear",
+      "C": "Pseudoplastic fluids ($n < 1$) display shear thinning where apparent viscosity decreases as shear rate increases",
+      "D": "In a Newtonian fluid, viscosity is dependent on the applied shear rate"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Thixotropy: time-dependent breakdown of structural networks under shear (A is true).\n2. Rheopexy: time-dependent shear thickening (B is true).\n3. Pseudoplastic: shear thinning with $n < 1$ (C is true).\n4. In Newtonian fluids, dynamic viscosity is strictly constant and independent of shear rate (D is false).",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_019",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Power law apparent viscosity calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A fruit puree follows the Ostwald-de Waele power law model: $\\tau = K \\dot{\\gamma}^n$. The consistency index is $K = 2.5\\text{ Pa}\\,\\text{s}^{0.4}$ and the flow behavior index is $n = 0.40$. At a shear rate of $\\dot{\\gamma} = 100\\text{ s}^{-1}$, the apparent viscosity $\\eta_{app}$ is ________ $\\text{Pa}\\,\\text{s}$ (round off to three decimal places).",
+    "correct_answer": "0.158",
+    "numerical_range": {
+      "min": 0.148,
+      "max": 0.168
+    },
+    "solution": "The shear stress is:\n$$\\tau = K \\dot{\\gamma}^n = 2.5 \\times (100)^{0.40} = 2.5 \\times 6.3096 = 15.77\\text{ Pa}$$\nThe apparent viscosity is defined as:\n$$\\eta_{app} = \\frac{\\tau}{\\dot{\\gamma}} = \\frac{15.77}{100} = 0.1577\\text{ Pa}\\,\\text{s}$$\nRounding to three decimal places: $0.158\\text{ Pa}\\,\\text{s}$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_020",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Non-Newtonian food fluid classification",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A liquid food that exhibits a finite yield stress $\\tau_0$ and a flow behavior index $n < 1$ (shear thinning behavior once flow commences) is classified as a:",
+    "options": {
+      "A": "Herschel-Bulkley fluid (e.g. tomato ketchup, minced meat paste)",
+      "B": "Bingham plastic (e.g. toothpaste with linear $n = 1$)",
+      "C": "Dilatant fluid ($n > 1$)",
+      "D": "Newtonian fluid"
+    },
+    "correct_answer": "A",
+    "solution": "The Herschel-Bulkley model is $\\tau = \\tau_0 + K \\dot{\\gamma}^n$. When $\\tau_0 > 0$ and $n < 1$, the fluid is yield-pseudoplastic (Herschel-Bulkley), characteristic of ketchup, mayonnaise, and purees.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_021",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Time-dependent rheology: Thixotropy vs Rheopexy",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding rheological behavior of food products is/are TRUE?",
+    "options": {
+      "A": "Thixotropic food materials show a reversible decrease in apparent viscosity over time under constant shear rate (e.g. yogurt, condensed milk)",
+      "B": "Rheopectic materials show an increase in viscosity over time under constant shear",
+      "C": "Pseudoplastic fluids ($n < 1$) display shear thinning where apparent viscosity decreases as shear rate increases",
+      "D": "In a Newtonian fluid, viscosity is dependent on the applied shear rate"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Thixotropy: time-dependent breakdown of structural networks under shear (A is true).\n2. Rheopexy: time-dependent shear thickening (B is true).\n3. Pseudoplastic: shear thinning with $n < 1$ (C is true).\n4. In Newtonian fluids, dynamic viscosity is strictly constant and independent of shear rate (D is false).",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_022",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Power law apparent viscosity calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A fruit puree follows the Ostwald-de Waele power law model: $\\tau = K \\dot{\\gamma}^n$. The consistency index is $K = 2.5\\text{ Pa}\\,\\text{s}^{0.4}$ and the flow behavior index is $n = 0.40$. At a shear rate of $\\dot{\\gamma} = 100\\text{ s}^{-1}$, the apparent viscosity $\\eta_{app}$ is ________ $\\text{Pa}\\,\\text{s}$ (round off to three decimal places).",
+    "correct_answer": "0.158",
+    "numerical_range": {
+      "min": 0.148,
+      "max": 0.168
+    },
+    "solution": "The shear stress is:\n$$\\tau = K \\dot{\\gamma}^n = 2.5 \\times (100)^{0.40} = 2.5 \\times 6.3096 = 15.77\\text{ Pa}$$\nThe apparent viscosity is defined as:\n$$\\eta_{app} = \\frac{\\tau}{\\dot{\\gamma}} = \\frac{15.77}{100} = 0.1577\\text{ Pa}\\,\\text{s}$$\nRounding to three decimal places: $0.158\\text{ Pa}\\,\\text{s}$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_023",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Non-Newtonian food fluid classification",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A liquid food that exhibits a finite yield stress $\\tau_0$ and a flow behavior index $n < 1$ (shear thinning behavior once flow commences) is classified as a:",
+    "options": {
+      "A": "Herschel-Bulkley fluid (e.g. tomato ketchup, minced meat paste)",
+      "B": "Bingham plastic (e.g. toothpaste with linear $n = 1$)",
+      "C": "Dilatant fluid ($n > 1$)",
+      "D": "Newtonian fluid"
+    },
+    "correct_answer": "A",
+    "solution": "The Herschel-Bulkley model is $\\tau = \\tau_0 + K \\dot{\\gamma}^n$. When $\\tau_0 > 0$ and $n < 1$, the fluid is yield-pseudoplastic (Herschel-Bulkley), characteristic of ketchup, mayonnaise, and purees.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_024",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Time-dependent rheology: Thixotropy vs Rheopexy",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding rheological behavior of food products is/are TRUE?",
+    "options": {
+      "A": "Thixotropic food materials show a reversible decrease in apparent viscosity over time under constant shear rate (e.g. yogurt, condensed milk)",
+      "B": "Rheopectic materials show an increase in viscosity over time under constant shear",
+      "C": "Pseudoplastic fluids ($n < 1$) display shear thinning where apparent viscosity decreases as shear rate increases",
+      "D": "In a Newtonian fluid, viscosity is dependent on the applied shear rate"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Thixotropy: time-dependent breakdown of structural networks under shear (A is true).\n2. Rheopexy: time-dependent shear thickening (B is true).\n3. Pseudoplastic: shear thinning with $n < 1$ (C is true).\n4. In Newtonian fluids, dynamic viscosity is strictly constant and independent of shear rate (D is false).",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_025",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Power law apparent viscosity calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A fruit puree follows the Ostwald-de Waele power law model: $\\tau = K \\dot{\\gamma}^n$. The consistency index is $K = 2.5\\text{ Pa}\\,\\text{s}^{0.4}$ and the flow behavior index is $n = 0.40$. At a shear rate of $\\dot{\\gamma} = 100\\text{ s}^{-1}$, the apparent viscosity $\\eta_{app}$ is ________ $\\text{Pa}\\,\\text{s}$ (round off to three decimal places).",
+    "correct_answer": "0.158",
+    "numerical_range": {
+      "min": 0.148,
+      "max": 0.168
+    },
+    "solution": "The shear stress is:\n$$\\tau = K \\dot{\\gamma}^n = 2.5 \\times (100)^{0.40} = 2.5 \\times 6.3096 = 15.77\\text{ Pa}$$\nThe apparent viscosity is defined as:\n$$\\eta_{app} = \\frac{\\tau}{\\dot{\\gamma}} = \\frac{15.77}{100} = 0.1577\\text{ Pa}\\,\\text{s}$$\nRounding to three decimal places: $0.158\\text{ Pa}\\,\\text{s}$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_026",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Non-Newtonian food fluid classification",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A liquid food that exhibits a finite yield stress $\\tau_0$ and a flow behavior index $n < 1$ (shear thinning behavior once flow commences) is classified as a:",
+    "options": {
+      "A": "Herschel-Bulkley fluid (e.g. tomato ketchup, minced meat paste)",
+      "B": "Bingham plastic (e.g. toothpaste with linear $n = 1$)",
+      "C": "Dilatant fluid ($n > 1$)",
+      "D": "Newtonian fluid"
+    },
+    "correct_answer": "A",
+    "solution": "The Herschel-Bulkley model is $\\tau = \\tau_0 + K \\dot{\\gamma}^n$. When $\\tau_0 > 0$ and $n < 1$, the fluid is yield-pseudoplastic (Herschel-Bulkley), characteristic of ketchup, mayonnaise, and purees.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_027",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Time-dependent rheology: Thixotropy vs Rheopexy",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding rheological behavior of food products is/are TRUE?",
+    "options": {
+      "A": "Thixotropic food materials show a reversible decrease in apparent viscosity over time under constant shear rate (e.g. yogurt, condensed milk)",
+      "B": "Rheopectic materials show an increase in viscosity over time under constant shear",
+      "C": "Pseudoplastic fluids ($n < 1$) display shear thinning where apparent viscosity decreases as shear rate increases",
+      "D": "In a Newtonian fluid, viscosity is dependent on the applied shear rate"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Thixotropy: time-dependent breakdown of structural networks under shear (A is true).\n2. Rheopexy: time-dependent shear thickening (B is true).\n3. Pseudoplastic: shear thinning with $n < 1$ (C is true).\n4. In Newtonian fluids, dynamic viscosity is strictly constant and independent of shear rate (D is false).",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_028",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Power law apparent viscosity calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A fruit puree follows the Ostwald-de Waele power law model: $\\tau = K \\dot{\\gamma}^n$. The consistency index is $K = 2.5\\text{ Pa}\\,\\text{s}^{0.4}$ and the flow behavior index is $n = 0.40$. At a shear rate of $\\dot{\\gamma} = 100\\text{ s}^{-1}$, the apparent viscosity $\\eta_{app}$ is ________ $\\text{Pa}\\,\\text{s}$ (round off to three decimal places).",
+    "correct_answer": "0.158",
+    "numerical_range": {
+      "min": 0.148,
+      "max": 0.168
+    },
+    "solution": "The shear stress is:\n$$\\tau = K \\dot{\\gamma}^n = 2.5 \\times (100)^{0.40} = 2.5 \\times 6.3096 = 15.77\\text{ Pa}$$\nThe apparent viscosity is defined as:\n$$\\eta_{app} = \\frac{\\tau}{\\dot{\\gamma}} = \\frac{15.77}{100} = 0.1577\\text{ Pa}\\,\\text{s}$$\nRounding to three decimal places: $0.158\\text{ Pa}\\,\\text{s}$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_029",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Non-Newtonian food fluid classification",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A liquid food that exhibits a finite yield stress $\\tau_0$ and a flow behavior index $n < 1$ (shear thinning behavior once flow commences) is classified as a:",
+    "options": {
+      "A": "Herschel-Bulkley fluid (e.g. tomato ketchup, minced meat paste)",
+      "B": "Bingham plastic (e.g. toothpaste with linear $n = 1$)",
+      "C": "Dilatant fluid ($n > 1$)",
+      "D": "Newtonian fluid"
+    },
+    "correct_answer": "A",
+    "solution": "The Herschel-Bulkley model is $\\tau = \\tau_0 + K \\dot{\\gamma}^n$. When $\\tau_0 > 0$ and $n < 1$, the fluid is yield-pseudoplastic (Herschel-Bulkley), characteristic of ketchup, mayonnaise, and purees.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_030",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Time-dependent rheology: Thixotropy vs Rheopexy",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding rheological behavior of food products is/are TRUE?",
+    "options": {
+      "A": "Thixotropic food materials show a reversible decrease in apparent viscosity over time under constant shear rate (e.g. yogurt, condensed milk)",
+      "B": "Rheopectic materials show an increase in viscosity over time under constant shear",
+      "C": "Pseudoplastic fluids ($n < 1$) display shear thinning where apparent viscosity decreases as shear rate increases",
+      "D": "In a Newtonian fluid, viscosity is dependent on the applied shear rate"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Thixotropy: time-dependent breakdown of structural networks under shear (A is true).\n2. Rheopexy: time-dependent shear thickening (B is true).\n3. Pseudoplastic: shear thinning with $n < 1$ (C is true).\n4. In Newtonian fluids, dynamic viscosity is strictly constant and independent of shear rate (D is false).",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_031",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Power law apparent viscosity calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A fruit puree follows the Ostwald-de Waele power law model: $\\tau = K \\dot{\\gamma}^n$. The consistency index is $K = 2.5\\text{ Pa}\\,\\text{s}^{0.4}$ and the flow behavior index is $n = 0.40$. At a shear rate of $\\dot{\\gamma} = 100\\text{ s}^{-1}$, the apparent viscosity $\\eta_{app}$ is ________ $\\text{Pa}\\,\\text{s}$ (round off to three decimal places).",
+    "correct_answer": "0.158",
+    "numerical_range": {
+      "min": 0.148,
+      "max": 0.168
+    },
+    "solution": "The shear stress is:\n$$\\tau = K \\dot{\\gamma}^n = 2.5 \\times (100)^{0.40} = 2.5 \\times 6.3096 = 15.77\\text{ Pa}$$\nThe apparent viscosity is defined as:\n$$\\eta_{app} = \\frac{\\tau}{\\dot{\\gamma}} = \\frac{15.77}{100} = 0.1577\\text{ Pa}\\,\\text{s}$$\nRounding to three decimal places: $0.158\\text{ Pa}\\,\\text{s}$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_032",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Non-Newtonian food fluid classification",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A liquid food that exhibits a finite yield stress $\\tau_0$ and a flow behavior index $n < 1$ (shear thinning behavior once flow commences) is classified as a:",
+    "options": {
+      "A": "Herschel-Bulkley fluid (e.g. tomato ketchup, minced meat paste)",
+      "B": "Bingham plastic (e.g. toothpaste with linear $n = 1$)",
+      "C": "Dilatant fluid ($n > 1$)",
+      "D": "Newtonian fluid"
+    },
+    "correct_answer": "A",
+    "solution": "The Herschel-Bulkley model is $\\tau = \\tau_0 + K \\dot{\\gamma}^n$. When $\\tau_0 > 0$ and $n < 1$, the fluid is yield-pseudoplastic (Herschel-Bulkley), characteristic of ketchup, mayonnaise, and purees.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_033",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Time-dependent rheology: Thixotropy vs Rheopexy",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding rheological behavior of food products is/are TRUE?",
+    "options": {
+      "A": "Thixotropic food materials show a reversible decrease in apparent viscosity over time under constant shear rate (e.g. yogurt, condensed milk)",
+      "B": "Rheopectic materials show an increase in viscosity over time under constant shear",
+      "C": "Pseudoplastic fluids ($n < 1$) display shear thinning where apparent viscosity decreases as shear rate increases",
+      "D": "In a Newtonian fluid, viscosity is dependent on the applied shear rate"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Thixotropy: time-dependent breakdown of structural networks under shear (A is true).\n2. Rheopexy: time-dependent shear thickening (B is true).\n3. Pseudoplastic: shear thinning with $n < 1$ (C is true).\n4. In Newtonian fluids, dynamic viscosity is strictly constant and independent of shear rate (D is false).",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_034",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Power law apparent viscosity calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A fruit puree follows the Ostwald-de Waele power law model: $\\tau = K \\dot{\\gamma}^n$. The consistency index is $K = 2.5\\text{ Pa}\\,\\text{s}^{0.4}$ and the flow behavior index is $n = 0.40$. At a shear rate of $\\dot{\\gamma} = 100\\text{ s}^{-1}$, the apparent viscosity $\\eta_{app}$ is ________ $\\text{Pa}\\,\\text{s}$ (round off to three decimal places).",
+    "correct_answer": "0.158",
+    "numerical_range": {
+      "min": 0.148,
+      "max": 0.168
+    },
+    "solution": "The shear stress is:\n$$\\tau = K \\dot{\\gamma}^n = 2.5 \\times (100)^{0.40} = 2.5 \\times 6.3096 = 15.77\\text{ Pa}$$\nThe apparent viscosity is defined as:\n$$\\eta_{app} = \\frac{\\tau}{\\dot{\\gamma}} = \\frac{15.77}{100} = 0.1577\\text{ Pa}\\,\\text{s}$$\nRounding to three decimal places: $0.158\\text{ Pa}\\,\\text{s}$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_035",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Non-Newtonian food fluid classification",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A liquid food that exhibits a finite yield stress $\\tau_0$ and a flow behavior index $n < 1$ (shear thinning behavior once flow commences) is classified as a:",
+    "options": {
+      "A": "Herschel-Bulkley fluid (e.g. tomato ketchup, minced meat paste)",
+      "B": "Bingham plastic (e.g. toothpaste with linear $n = 1$)",
+      "C": "Dilatant fluid ($n > 1$)",
+      "D": "Newtonian fluid"
+    },
+    "correct_answer": "A",
+    "solution": "The Herschel-Bulkley model is $\\tau = \\tau_0 + K \\dot{\\gamma}^n$. When $\\tau_0 > 0$ and $n < 1$, the fluid is yield-pseudoplastic (Herschel-Bulkley), characteristic of ketchup, mayonnaise, and purees.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_036",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Time-dependent rheology: Thixotropy vs Rheopexy",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding rheological behavior of food products is/are TRUE?",
+    "options": {
+      "A": "Thixotropic food materials show a reversible decrease in apparent viscosity over time under constant shear rate (e.g. yogurt, condensed milk)",
+      "B": "Rheopectic materials show an increase in viscosity over time under constant shear",
+      "C": "Pseudoplastic fluids ($n < 1$) display shear thinning where apparent viscosity decreases as shear rate increases",
+      "D": "In a Newtonian fluid, viscosity is dependent on the applied shear rate"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Thixotropy: time-dependent breakdown of structural networks under shear (A is true).\n2. Rheopexy: time-dependent shear thickening (B is true).\n3. Pseudoplastic: shear thinning with $n < 1$ (C is true).\n4. In Newtonian fluids, dynamic viscosity is strictly constant and independent of shear rate (D is false).",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_037",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Power law apparent viscosity calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A fruit puree follows the Ostwald-de Waele power law model: $\\tau = K \\dot{\\gamma}^n$. The consistency index is $K = 2.5\\text{ Pa}\\,\\text{s}^{0.4}$ and the flow behavior index is $n = 0.40$. At a shear rate of $\\dot{\\gamma} = 100\\text{ s}^{-1}$, the apparent viscosity $\\eta_{app}$ is ________ $\\text{Pa}\\,\\text{s}$ (round off to three decimal places).",
+    "correct_answer": "0.158",
+    "numerical_range": {
+      "min": 0.148,
+      "max": 0.168
+    },
+    "solution": "The shear stress is:\n$$\\tau = K \\dot{\\gamma}^n = 2.5 \\times (100)^{0.40} = 2.5 \\times 6.3096 = 15.77\\text{ Pa}$$\nThe apparent viscosity is defined as:\n$$\\eta_{app} = \\frac{\\tau}{\\dot{\\gamma}} = \\frac{15.77}{100} = 0.1577\\text{ Pa}\\,\\text{s}$$\nRounding to three decimal places: $0.158\\text{ Pa}\\,\\text{s}$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_038",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Non-Newtonian food fluid classification",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A liquid food that exhibits a finite yield stress $\\tau_0$ and a flow behavior index $n < 1$ (shear thinning behavior once flow commences) is classified as a:",
+    "options": {
+      "A": "Herschel-Bulkley fluid (e.g. tomato ketchup, minced meat paste)",
+      "B": "Bingham plastic (e.g. toothpaste with linear $n = 1$)",
+      "C": "Dilatant fluid ($n > 1$)",
+      "D": "Newtonian fluid"
+    },
+    "correct_answer": "A",
+    "solution": "The Herschel-Bulkley model is $\\tau = \\tau_0 + K \\dot{\\gamma}^n$. When $\\tau_0 > 0$ and $n < 1$, the fluid is yield-pseudoplastic (Herschel-Bulkley), characteristic of ketchup, mayonnaise, and purees.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_039",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Time-dependent rheology: Thixotropy vs Rheopexy",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding rheological behavior of food products is/are TRUE?",
+    "options": {
+      "A": "Thixotropic food materials show a reversible decrease in apparent viscosity over time under constant shear rate (e.g. yogurt, condensed milk)",
+      "B": "Rheopectic materials show an increase in viscosity over time under constant shear",
+      "C": "Pseudoplastic fluids ($n < 1$) display shear thinning where apparent viscosity decreases as shear rate increases",
+      "D": "In a Newtonian fluid, viscosity is dependent on the applied shear rate"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Thixotropy: time-dependent breakdown of structural networks under shear (A is true).\n2. Rheopexy: time-dependent shear thickening (B is true).\n3. Pseudoplastic: shear thinning with $n < 1$ (C is true).\n4. In Newtonian fluids, dynamic viscosity is strictly constant and independent of shear rate (D is false).",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_040",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Power law apparent viscosity calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A fruit puree follows the Ostwald-de Waele power law model: $\\tau = K \\dot{\\gamma}^n$. The consistency index is $K = 2.5\\text{ Pa}\\,\\text{s}^{0.4}$ and the flow behavior index is $n = 0.40$. At a shear rate of $\\dot{\\gamma} = 100\\text{ s}^{-1}$, the apparent viscosity $\\eta_{app}$ is ________ $\\text{Pa}\\,\\text{s}$ (round off to three decimal places).",
+    "correct_answer": "0.158",
+    "numerical_range": {
+      "min": 0.148,
+      "max": 0.168
+    },
+    "solution": "The shear stress is:\n$$\\tau = K \\dot{\\gamma}^n = 2.5 \\times (100)^{0.40} = 2.5 \\times 6.3096 = 15.77\\text{ Pa}$$\nThe apparent viscosity is defined as:\n$$\\eta_{app} = \\frac{\\tau}{\\dot{\\gamma}} = \\frac{15.77}{100} = 0.1577\\text{ Pa}\\,\\text{s}$$\nRounding to three decimal places: $0.158\\text{ Pa}\\,\\text{s}$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_041",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Non-Newtonian food fluid classification",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A liquid food that exhibits a finite yield stress $\\tau_0$ and a flow behavior index $n < 1$ (shear thinning behavior once flow commences) is classified as a:",
+    "options": {
+      "A": "Herschel-Bulkley fluid (e.g. tomato ketchup, minced meat paste)",
+      "B": "Bingham plastic (e.g. toothpaste with linear $n = 1$)",
+      "C": "Dilatant fluid ($n > 1$)",
+      "D": "Newtonian fluid"
+    },
+    "correct_answer": "A",
+    "solution": "The Herschel-Bulkley model is $\\tau = \\tau_0 + K \\dot{\\gamma}^n$. When $\\tau_0 > 0$ and $n < 1$, the fluid is yield-pseudoplastic (Herschel-Bulkley), characteristic of ketchup, mayonnaise, and purees.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_042",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Time-dependent rheology: Thixotropy vs Rheopexy",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding rheological behavior of food products is/are TRUE?",
+    "options": {
+      "A": "Thixotropic food materials show a reversible decrease in apparent viscosity over time under constant shear rate (e.g. yogurt, condensed milk)",
+      "B": "Rheopectic materials show an increase in viscosity over time under constant shear",
+      "C": "Pseudoplastic fluids ($n < 1$) display shear thinning where apparent viscosity decreases as shear rate increases",
+      "D": "In a Newtonian fluid, viscosity is dependent on the applied shear rate"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Thixotropy: time-dependent breakdown of structural networks under shear (A is true).\n2. Rheopexy: time-dependent shear thickening (B is true).\n3. Pseudoplastic: shear thinning with $n < 1$ (C is true).\n4. In Newtonian fluids, dynamic viscosity is strictly constant and independent of shear rate (D is false).",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_RHL_043",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Power law apparent viscosity calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A fruit puree follows the Ostwald-de Waele power law model: $\\tau = K \\dot{\\gamma}^n$. The consistency index is $K = 2.5\\text{ Pa}\\,\\text{s}^{0.4}$ and the flow behavior index is $n = 0.40$. At a shear rate of $\\dot{\\gamma} = 100\\text{ s}^{-1}$, the apparent viscosity $\\eta_{app}$ is ________ $\\text{Pa}\\,\\text{s}$ (round off to three decimal places).",
+    "correct_answer": "0.158",
+    "numerical_range": {
+      "min": 0.148,
+      "max": 0.168
+    },
+    "solution": "The shear stress is:\n$$\\tau = K \\dot{\\gamma}^n = 2.5 \\times (100)^{0.40} = 2.5 \\times 6.3096 = 15.77\\text{ Pa}$$\nThe apparent viscosity is defined as:\n$$\\eta_{app} = \\frac{\\tau}{\\dot{\\gamma}} = \\frac{15.77}{100} = 0.1577\\text{ Pa}\\,\\text{s}$$\nRounding to three decimal places: $0.158\\text{ Pa}\\,\\text{s}$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "12D process F0 calculation for Clostridium botulinum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In thermal sterilization of low-acid canned food, the decimal reduction time of *Clostridium botulinum* spores at $121.1^\\circ\\text{C}$ is $D_{121.1} = 0.25\\text{ min}$. The minimum thermal lethality time ($F_0$) required to achieve a commercial $12D$ sterility reduction is ________ $\\text{min}$ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.9,
+      "max": 3.1
+    },
+    "solution": "The $12D$ concept requires reducing the microbial spore population by $12$ decimal cycles ($12$ log reductions):\n$$F_0 = 12 \\times D_{121.1}$$\nGiven $D_{121.1} = 0.25\\text{ min}$:\n$$F_0 = 12 \\times 0.25 = 3.00\\text{ min}$$",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "D-value change with temperature from z-value",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A bacterial spore has a decimal reduction time of $D_1 = 15.0\\text{ min}$ at $T_1 = 111.1^\\circ\\text{C}$ and a thermal resistance constant $z = 10.0^\\circ\\text{C}$. The decimal reduction time $D_2$ at $T_2 = 121.1^\\circ\\text{C}$ is ________ $\\text{min}$ (round off to two decimal places).",
+    "correct_answer": "1.50",
+    "numerical_range": {
+      "min": 1.45,
+      "max": 1.55
+    },
+    "solution": "The relationship between $D$-value and temperature governed by $z$-value is:\n$$\\log_{10}\\left( \\frac{D_1}{D_2} \\right) = \\frac{T_2 - T_1}{z}$$\n$$\\frac{D_1}{D_2} = 10^{\\frac{T_2 - T_1}{z}} = 10^{\\frac{121.1 - 111.1}{10.0}} = 10^1 = 10$$\n$$D_2 = \\frac{D_1}{10} = \\frac{15.0}{10} = 1.50\\text{ min}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_003",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "Definitions of D, z, and F values",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding thermal death kinetics of microorganisms is/are TRUE?",
+    "options": {
+      "A": "The $D$-value is the heating time required at a given temperature to destroy $90\\%$ of the microbial population (one log reduction)",
+      "B": "The $z$-value is the temperature increase required to reduce the $D$-value by a factor of 10",
+      "C": "Thermal death of vegetative cells and bacterial spores follows first-order reaction kinetics: $\\ln(N/N_0) = -k t$",
+      "D": "Higher $z$-value indicates greater temperature sensitivity of the microorganism"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $D$-value = time for 1 log ($90\\%$) reduction: $D = t / \\log_{10}(N_0/N)$ (A is true).\n2. $z$-value = $\\Delta T$ for 1 log change in $D$: $z = (T_2 - T_1) / \\log_{10}(D_1/D_2)$ (B is true).\n3. Semi-log linear survival curves confirm first-order inactivation kinetics (C is true).\n4. A LOWER $z$-value means a smaller temperature rise causes a ten-fold drop in $D$, indicating HIGHER temperature sensitivity (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_004",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "12D process F0 calculation for Clostridium botulinum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In thermal sterilization of low-acid canned food, the decimal reduction time of *Clostridium botulinum* spores at $121.1^\\circ\\text{C}$ is $D_{121.1} = 0.20\\text{ min}$. The minimum thermal lethality time ($F_0$) required to achieve a commercial $12D$ sterility reduction is ________ $\\text{min}$ (round off to two decimal places).",
+    "correct_answer": "2.40",
+    "numerical_range": {
+      "min": 2.3,
+      "max": 2.5
+    },
+    "solution": "The $12D$ concept requires reducing the microbial spore population by $12$ decimal cycles ($12$ log reductions):\n$$F_0 = 12 \\times D_{121.1}$$\nGiven $D_{121.1} = 0.20\\text{ min}$:\n$$F_0 = 12 \\times 0.20 = 2.40\\text{ min}$$",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_005",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "D-value change with temperature from z-value",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A bacterial spore has a decimal reduction time of $D_1 = 15.0\\text{ min}$ at $T_1 = 111.1^\\circ\\text{C}$ and a thermal resistance constant $z = 10.0^\\circ\\text{C}$. The decimal reduction time $D_2$ at $T_2 = 121.1^\\circ\\text{C}$ is ________ $\\text{min}$ (round off to two decimal places).",
+    "correct_answer": "1.50",
+    "numerical_range": {
+      "min": 1.45,
+      "max": 1.55
+    },
+    "solution": "The relationship between $D$-value and temperature governed by $z$-value is:\n$$\\log_{10}\\left( \\frac{D_1}{D_2} \\right) = \\frac{T_2 - T_1}{z}$$\n$$\\frac{D_1}{D_2} = 10^{\\frac{T_2 - T_1}{z}} = 10^{\\frac{121.1 - 111.1}{10.0}} = 10^1 = 10$$\n$$D_2 = \\frac{D_1}{10} = \\frac{15.0}{10} = 1.50\\text{ min}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_006",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "Definitions of D, z, and F values",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding thermal death kinetics of microorganisms is/are TRUE?",
+    "options": {
+      "A": "The $D$-value is the heating time required at a given temperature to destroy $90\\%$ of the microbial population (one log reduction)",
+      "B": "The $z$-value is the temperature increase required to reduce the $D$-value by a factor of 10",
+      "C": "Thermal death of vegetative cells and bacterial spores follows first-order reaction kinetics: $\\ln(N/N_0) = -k t$",
+      "D": "Higher $z$-value indicates greater temperature sensitivity of the microorganism"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $D$-value = time for 1 log ($90\\%$) reduction: $D = t / \\log_{10}(N_0/N)$ (A is true).\n2. $z$-value = $\\Delta T$ for 1 log change in $D$: $z = (T_2 - T_1) / \\log_{10}(D_1/D_2)$ (B is true).\n3. Semi-log linear survival curves confirm first-order inactivation kinetics (C is true).\n4. A LOWER $z$-value means a smaller temperature rise causes a ten-fold drop in $D$, indicating HIGHER temperature sensitivity (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_007",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "12D process F0 calculation for Clostridium botulinum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In thermal sterilization of low-acid canned food, the decimal reduction time of *Clostridium botulinum* spores at $121.1^\\circ\\text{C}$ is $D_{121.1} = 0.35\\text{ min}$. The minimum thermal lethality time ($F_0$) required to achieve a commercial $12D$ sterility reduction is ________ $\\text{min}$ (round off to two decimal places).",
+    "correct_answer": "4.20",
+    "numerical_range": {
+      "min": 4.1,
+      "max": 4.3
+    },
+    "solution": "The $12D$ concept requires reducing the microbial spore population by $12$ decimal cycles ($12$ log reductions):\n$$F_0 = 12 \\times D_{121.1}$$\nGiven $D_{121.1} = 0.35\\text{ min}$:\n$$F_0 = 12 \\times 0.35 = 4.20\\text{ min}$$",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_008",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "D-value change with temperature from z-value",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A bacterial spore has a decimal reduction time of $D_1 = 15.0\\text{ min}$ at $T_1 = 111.1^\\circ\\text{C}$ and a thermal resistance constant $z = 10.0^\\circ\\text{C}$. The decimal reduction time $D_2$ at $T_2 = 121.1^\\circ\\text{C}$ is ________ $\\text{min}$ (round off to two decimal places).",
+    "correct_answer": "1.50",
+    "numerical_range": {
+      "min": 1.45,
+      "max": 1.55
+    },
+    "solution": "The relationship between $D$-value and temperature governed by $z$-value is:\n$$\\log_{10}\\left( \\frac{D_1}{D_2} \\right) = \\frac{T_2 - T_1}{z}$$\n$$\\frac{D_1}{D_2} = 10^{\\frac{T_2 - T_1}{z}} = 10^{\\frac{121.1 - 111.1}{10.0}} = 10^1 = 10$$\n$$D_2 = \\frac{D_1}{10} = \\frac{15.0}{10} = 1.50\\text{ min}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_009",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "Definitions of D, z, and F values",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding thermal death kinetics of microorganisms is/are TRUE?",
+    "options": {
+      "A": "The $D$-value is the heating time required at a given temperature to destroy $90\\%$ of the microbial population (one log reduction)",
+      "B": "The $z$-value is the temperature increase required to reduce the $D$-value by a factor of 10",
+      "C": "Thermal death of vegetative cells and bacterial spores follows first-order reaction kinetics: $\\ln(N/N_0) = -k t$",
+      "D": "Higher $z$-value indicates greater temperature sensitivity of the microorganism"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $D$-value = time for 1 log ($90\\%$) reduction: $D = t / \\log_{10}(N_0/N)$ (A is true).\n2. $z$-value = $\\Delta T$ for 1 log change in $D$: $z = (T_2 - T_1) / \\log_{10}(D_1/D_2)$ (B is true).\n3. Semi-log linear survival curves confirm first-order inactivation kinetics (C is true).\n4. A LOWER $z$-value means a smaller temperature rise causes a ten-fold drop in $D$, indicating HIGHER temperature sensitivity (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_010",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "12D process F0 calculation for Clostridium botulinum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In thermal sterilization of low-acid canned food, the decimal reduction time of *Clostridium botulinum* spores at $121.1^\\circ\\text{C}$ is $D_{121.1} = 0.30\\text{ min}$. The minimum thermal lethality time ($F_0$) required to achieve a commercial $12D$ sterility reduction is ________ $\\text{min}$ (round off to two decimal places).",
+    "correct_answer": "3.60",
+    "numerical_range": {
+      "min": 3.5,
+      "max": 3.7
+    },
+    "solution": "The $12D$ concept requires reducing the microbial spore population by $12$ decimal cycles ($12$ log reductions):\n$$F_0 = 12 \\times D_{121.1}$$\nGiven $D_{121.1} = 0.30\\text{ min}$:\n$$F_0 = 12 \\times 0.30 = 3.60\\text{ min}$$",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_011",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "D-value change with temperature from z-value",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A bacterial spore has a decimal reduction time of $D_1 = 15.0\\text{ min}$ at $T_1 = 111.1^\\circ\\text{C}$ and a thermal resistance constant $z = 10.0^\\circ\\text{C}$. The decimal reduction time $D_2$ at $T_2 = 121.1^\\circ\\text{C}$ is ________ $\\text{min}$ (round off to two decimal places).",
+    "correct_answer": "1.50",
+    "numerical_range": {
+      "min": 1.45,
+      "max": 1.55
+    },
+    "solution": "The relationship between $D$-value and temperature governed by $z$-value is:\n$$\\log_{10}\\left( \\frac{D_1}{D_2} \\right) = \\frac{T_2 - T_1}{z}$$\n$$\\frac{D_1}{D_2} = 10^{\\frac{T_2 - T_1}{z}} = 10^{\\frac{121.1 - 111.1}{10.0}} = 10^1 = 10$$\n$$D_2 = \\frac{D_1}{10} = \\frac{15.0}{10} = 1.50\\text{ min}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_012",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "Definitions of D, z, and F values",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding thermal death kinetics of microorganisms is/are TRUE?",
+    "options": {
+      "A": "The $D$-value is the heating time required at a given temperature to destroy $90\\%$ of the microbial population (one log reduction)",
+      "B": "The $z$-value is the temperature increase required to reduce the $D$-value by a factor of 10",
+      "C": "Thermal death of vegetative cells and bacterial spores follows first-order reaction kinetics: $\\ln(N/N_0) = -k t$",
+      "D": "Higher $z$-value indicates greater temperature sensitivity of the microorganism"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $D$-value = time for 1 log ($90\\%$) reduction: $D = t / \\log_{10}(N_0/N)$ (A is true).\n2. $z$-value = $\\Delta T$ for 1 log change in $D$: $z = (T_2 - T_1) / \\log_{10}(D_1/D_2)$ (B is true).\n3. Semi-log linear survival curves confirm first-order inactivation kinetics (C is true).\n4. A LOWER $z$-value means a smaller temperature rise causes a ten-fold drop in $D$, indicating HIGHER temperature sensitivity (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_013",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "12D process F0 calculation for Clostridium botulinum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In thermal sterilization of low-acid canned food, the decimal reduction time of *Clostridium botulinum* spores at $121.1^\\circ\\text{C}$ is $D_{121.1} = 0.25\\text{ min}$. The minimum thermal lethality time ($F_0$) required to achieve a commercial $12D$ sterility reduction is ________ $\\text{min}$ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.9,
+      "max": 3.1
+    },
+    "solution": "The $12D$ concept requires reducing the microbial spore population by $12$ decimal cycles ($12$ log reductions):\n$$F_0 = 12 \\times D_{121.1}$$\nGiven $D_{121.1} = 0.25\\text{ min}$:\n$$F_0 = 12 \\times 0.25 = 3.00\\text{ min}$$",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_014",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "D-value change with temperature from z-value",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A bacterial spore has a decimal reduction time of $D_1 = 15.0\\text{ min}$ at $T_1 = 111.1^\\circ\\text{C}$ and a thermal resistance constant $z = 10.0^\\circ\\text{C}$. The decimal reduction time $D_2$ at $T_2 = 121.1^\\circ\\text{C}$ is ________ $\\text{min}$ (round off to two decimal places).",
+    "correct_answer": "1.50",
+    "numerical_range": {
+      "min": 1.45,
+      "max": 1.55
+    },
+    "solution": "The relationship between $D$-value and temperature governed by $z$-value is:\n$$\\log_{10}\\left( \\frac{D_1}{D_2} \\right) = \\frac{T_2 - T_1}{z}$$\n$$\\frac{D_1}{D_2} = 10^{\\frac{T_2 - T_1}{z}} = 10^{\\frac{121.1 - 111.1}{10.0}} = 10^1 = 10$$\n$$D_2 = \\frac{D_1}{10} = \\frac{15.0}{10} = 1.50\\text{ min}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_015",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "Definitions of D, z, and F values",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding thermal death kinetics of microorganisms is/are TRUE?",
+    "options": {
+      "A": "The $D$-value is the heating time required at a given temperature to destroy $90\\%$ of the microbial population (one log reduction)",
+      "B": "The $z$-value is the temperature increase required to reduce the $D$-value by a factor of 10",
+      "C": "Thermal death of vegetative cells and bacterial spores follows first-order reaction kinetics: $\\ln(N/N_0) = -k t$",
+      "D": "Higher $z$-value indicates greater temperature sensitivity of the microorganism"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $D$-value = time for 1 log ($90\\%$) reduction: $D = t / \\log_{10}(N_0/N)$ (A is true).\n2. $z$-value = $\\Delta T$ for 1 log change in $D$: $z = (T_2 - T_1) / \\log_{10}(D_1/D_2)$ (B is true).\n3. Semi-log linear survival curves confirm first-order inactivation kinetics (C is true).\n4. A LOWER $z$-value means a smaller temperature rise causes a ten-fold drop in $D$, indicating HIGHER temperature sensitivity (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_016",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "12D process F0 calculation for Clostridium botulinum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In thermal sterilization of low-acid canned food, the decimal reduction time of *Clostridium botulinum* spores at $121.1^\\circ\\text{C}$ is $D_{121.1} = 0.20\\text{ min}$. The minimum thermal lethality time ($F_0$) required to achieve a commercial $12D$ sterility reduction is ________ $\\text{min}$ (round off to two decimal places).",
+    "correct_answer": "2.40",
+    "numerical_range": {
+      "min": 2.3,
+      "max": 2.5
+    },
+    "solution": "The $12D$ concept requires reducing the microbial spore population by $12$ decimal cycles ($12$ log reductions):\n$$F_0 = 12 \\times D_{121.1}$$\nGiven $D_{121.1} = 0.20\\text{ min}$:\n$$F_0 = 12 \\times 0.20 = 2.40\\text{ min}$$",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_017",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "D-value change with temperature from z-value",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A bacterial spore has a decimal reduction time of $D_1 = 15.0\\text{ min}$ at $T_1 = 111.1^\\circ\\text{C}$ and a thermal resistance constant $z = 10.0^\\circ\\text{C}$. The decimal reduction time $D_2$ at $T_2 = 121.1^\\circ\\text{C}$ is ________ $\\text{min}$ (round off to two decimal places).",
+    "correct_answer": "1.50",
+    "numerical_range": {
+      "min": 1.45,
+      "max": 1.55
+    },
+    "solution": "The relationship between $D$-value and temperature governed by $z$-value is:\n$$\\log_{10}\\left( \\frac{D_1}{D_2} \\right) = \\frac{T_2 - T_1}{z}$$\n$$\\frac{D_1}{D_2} = 10^{\\frac{T_2 - T_1}{z}} = 10^{\\frac{121.1 - 111.1}{10.0}} = 10^1 = 10$$\n$$D_2 = \\frac{D_1}{10} = \\frac{15.0}{10} = 1.50\\text{ min}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_018",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "Definitions of D, z, and F values",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding thermal death kinetics of microorganisms is/are TRUE?",
+    "options": {
+      "A": "The $D$-value is the heating time required at a given temperature to destroy $90\\%$ of the microbial population (one log reduction)",
+      "B": "The $z$-value is the temperature increase required to reduce the $D$-value by a factor of 10",
+      "C": "Thermal death of vegetative cells and bacterial spores follows first-order reaction kinetics: $\\ln(N/N_0) = -k t$",
+      "D": "Higher $z$-value indicates greater temperature sensitivity of the microorganism"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $D$-value = time for 1 log ($90\\%$) reduction: $D = t / \\log_{10}(N_0/N)$ (A is true).\n2. $z$-value = $\\Delta T$ for 1 log change in $D$: $z = (T_2 - T_1) / \\log_{10}(D_1/D_2)$ (B is true).\n3. Semi-log linear survival curves confirm first-order inactivation kinetics (C is true).\n4. A LOWER $z$-value means a smaller temperature rise causes a ten-fold drop in $D$, indicating HIGHER temperature sensitivity (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_019",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "12D process F0 calculation for Clostridium botulinum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In thermal sterilization of low-acid canned food, the decimal reduction time of *Clostridium botulinum* spores at $121.1^\\circ\\text{C}$ is $D_{121.1} = 0.35\\text{ min}$. The minimum thermal lethality time ($F_0$) required to achieve a commercial $12D$ sterility reduction is ________ $\\text{min}$ (round off to two decimal places).",
+    "correct_answer": "4.20",
+    "numerical_range": {
+      "min": 4.1,
+      "max": 4.3
+    },
+    "solution": "The $12D$ concept requires reducing the microbial spore population by $12$ decimal cycles ($12$ log reductions):\n$$F_0 = 12 \\times D_{121.1}$$\nGiven $D_{121.1} = 0.35\\text{ min}$:\n$$F_0 = 12 \\times 0.35 = 4.20\\text{ min}$$",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_020",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "D-value change with temperature from z-value",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A bacterial spore has a decimal reduction time of $D_1 = 15.0\\text{ min}$ at $T_1 = 111.1^\\circ\\text{C}$ and a thermal resistance constant $z = 10.0^\\circ\\text{C}$. The decimal reduction time $D_2$ at $T_2 = 121.1^\\circ\\text{C}$ is ________ $\\text{min}$ (round off to two decimal places).",
+    "correct_answer": "1.50",
+    "numerical_range": {
+      "min": 1.45,
+      "max": 1.55
+    },
+    "solution": "The relationship between $D$-value and temperature governed by $z$-value is:\n$$\\log_{10}\\left( \\frac{D_1}{D_2} \\right) = \\frac{T_2 - T_1}{z}$$\n$$\\frac{D_1}{D_2} = 10^{\\frac{T_2 - T_1}{z}} = 10^{\\frac{121.1 - 111.1}{10.0}} = 10^1 = 10$$\n$$D_2 = \\frac{D_1}{10} = \\frac{15.0}{10} = 1.50\\text{ min}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_021",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "Definitions of D, z, and F values",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding thermal death kinetics of microorganisms is/are TRUE?",
+    "options": {
+      "A": "The $D$-value is the heating time required at a given temperature to destroy $90\\%$ of the microbial population (one log reduction)",
+      "B": "The $z$-value is the temperature increase required to reduce the $D$-value by a factor of 10",
+      "C": "Thermal death of vegetative cells and bacterial spores follows first-order reaction kinetics: $\\ln(N/N_0) = -k t$",
+      "D": "Higher $z$-value indicates greater temperature sensitivity of the microorganism"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $D$-value = time for 1 log ($90\\%$) reduction: $D = t / \\log_{10}(N_0/N)$ (A is true).\n2. $z$-value = $\\Delta T$ for 1 log change in $D$: $z = (T_2 - T_1) / \\log_{10}(D_1/D_2)$ (B is true).\n3. Semi-log linear survival curves confirm first-order inactivation kinetics (C is true).\n4. A LOWER $z$-value means a smaller temperature rise causes a ten-fold drop in $D$, indicating HIGHER temperature sensitivity (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_022",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "12D process F0 calculation for Clostridium botulinum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In thermal sterilization of low-acid canned food, the decimal reduction time of *Clostridium botulinum* spores at $121.1^\\circ\\text{C}$ is $D_{121.1} = 0.30\\text{ min}$. The minimum thermal lethality time ($F_0$) required to achieve a commercial $12D$ sterility reduction is ________ $\\text{min}$ (round off to two decimal places).",
+    "correct_answer": "3.60",
+    "numerical_range": {
+      "min": 3.5,
+      "max": 3.7
+    },
+    "solution": "The $12D$ concept requires reducing the microbial spore population by $12$ decimal cycles ($12$ log reductions):\n$$F_0 = 12 \\times D_{121.1}$$\nGiven $D_{121.1} = 0.30\\text{ min}$:\n$$F_0 = 12 \\times 0.30 = 3.60\\text{ min}$$",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_023",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "D-value change with temperature from z-value",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A bacterial spore has a decimal reduction time of $D_1 = 15.0\\text{ min}$ at $T_1 = 111.1^\\circ\\text{C}$ and a thermal resistance constant $z = 10.0^\\circ\\text{C}$. The decimal reduction time $D_2$ at $T_2 = 121.1^\\circ\\text{C}$ is ________ $\\text{min}$ (round off to two decimal places).",
+    "correct_answer": "1.50",
+    "numerical_range": {
+      "min": 1.45,
+      "max": 1.55
+    },
+    "solution": "The relationship between $D$-value and temperature governed by $z$-value is:\n$$\\log_{10}\\left( \\frac{D_1}{D_2} \\right) = \\frac{T_2 - T_1}{z}$$\n$$\\frac{D_1}{D_2} = 10^{\\frac{T_2 - T_1}{z}} = 10^{\\frac{121.1 - 111.1}{10.0}} = 10^1 = 10$$\n$$D_2 = \\frac{D_1}{10} = \\frac{15.0}{10} = 1.50\\text{ min}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_024",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "Definitions of D, z, and F values",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding thermal death kinetics of microorganisms is/are TRUE?",
+    "options": {
+      "A": "The $D$-value is the heating time required at a given temperature to destroy $90\\%$ of the microbial population (one log reduction)",
+      "B": "The $z$-value is the temperature increase required to reduce the $D$-value by a factor of 10",
+      "C": "Thermal death of vegetative cells and bacterial spores follows first-order reaction kinetics: $\\ln(N/N_0) = -k t$",
+      "D": "Higher $z$-value indicates greater temperature sensitivity of the microorganism"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $D$-value = time for 1 log ($90\\%$) reduction: $D = t / \\log_{10}(N_0/N)$ (A is true).\n2. $z$-value = $\\Delta T$ for 1 log change in $D$: $z = (T_2 - T_1) / \\log_{10}(D_1/D_2)$ (B is true).\n3. Semi-log linear survival curves confirm first-order inactivation kinetics (C is true).\n4. A LOWER $z$-value means a smaller temperature rise causes a ten-fold drop in $D$, indicating HIGHER temperature sensitivity (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_025",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "12D process F0 calculation for Clostridium botulinum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In thermal sterilization of low-acid canned food, the decimal reduction time of *Clostridium botulinum* spores at $121.1^\\circ\\text{C}$ is $D_{121.1} = 0.25\\text{ min}$. The minimum thermal lethality time ($F_0$) required to achieve a commercial $12D$ sterility reduction is ________ $\\text{min}$ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.9,
+      "max": 3.1
+    },
+    "solution": "The $12D$ concept requires reducing the microbial spore population by $12$ decimal cycles ($12$ log reductions):\n$$F_0 = 12 \\times D_{121.1}$$\nGiven $D_{121.1} = 0.25\\text{ min}$:\n$$F_0 = 12 \\times 0.25 = 3.00\\text{ min}$$",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_026",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "D-value change with temperature from z-value",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A bacterial spore has a decimal reduction time of $D_1 = 15.0\\text{ min}$ at $T_1 = 111.1^\\circ\\text{C}$ and a thermal resistance constant $z = 10.0^\\circ\\text{C}$. The decimal reduction time $D_2$ at $T_2 = 121.1^\\circ\\text{C}$ is ________ $\\text{min}$ (round off to two decimal places).",
+    "correct_answer": "1.50",
+    "numerical_range": {
+      "min": 1.45,
+      "max": 1.55
+    },
+    "solution": "The relationship between $D$-value and temperature governed by $z$-value is:\n$$\\log_{10}\\left( \\frac{D_1}{D_2} \\right) = \\frac{T_2 - T_1}{z}$$\n$$\\frac{D_1}{D_2} = 10^{\\frac{T_2 - T_1}{z}} = 10^{\\frac{121.1 - 111.1}{10.0}} = 10^1 = 10$$\n$$D_2 = \\frac{D_1}{10} = \\frac{15.0}{10} = 1.50\\text{ min}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_027",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "Definitions of D, z, and F values",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding thermal death kinetics of microorganisms is/are TRUE?",
+    "options": {
+      "A": "The $D$-value is the heating time required at a given temperature to destroy $90\\%$ of the microbial population (one log reduction)",
+      "B": "The $z$-value is the temperature increase required to reduce the $D$-value by a factor of 10",
+      "C": "Thermal death of vegetative cells and bacterial spores follows first-order reaction kinetics: $\\ln(N/N_0) = -k t$",
+      "D": "Higher $z$-value indicates greater temperature sensitivity of the microorganism"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $D$-value = time for 1 log ($90\\%$) reduction: $D = t / \\log_{10}(N_0/N)$ (A is true).\n2. $z$-value = $\\Delta T$ for 1 log change in $D$: $z = (T_2 - T_1) / \\log_{10}(D_1/D_2)$ (B is true).\n3. Semi-log linear survival curves confirm first-order inactivation kinetics (C is true).\n4. A LOWER $z$-value means a smaller temperature rise causes a ten-fold drop in $D$, indicating HIGHER temperature sensitivity (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_028",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "12D process F0 calculation for Clostridium botulinum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In thermal sterilization of low-acid canned food, the decimal reduction time of *Clostridium botulinum* spores at $121.1^\\circ\\text{C}$ is $D_{121.1} = 0.20\\text{ min}$. The minimum thermal lethality time ($F_0$) required to achieve a commercial $12D$ sterility reduction is ________ $\\text{min}$ (round off to two decimal places).",
+    "correct_answer": "2.40",
+    "numerical_range": {
+      "min": 2.3,
+      "max": 2.5
+    },
+    "solution": "The $12D$ concept requires reducing the microbial spore population by $12$ decimal cycles ($12$ log reductions):\n$$F_0 = 12 \\times D_{121.1}$$\nGiven $D_{121.1} = 0.20\\text{ min}$:\n$$F_0 = 12 \\times 0.20 = 2.40\\text{ min}$$",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_029",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "D-value change with temperature from z-value",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A bacterial spore has a decimal reduction time of $D_1 = 15.0\\text{ min}$ at $T_1 = 111.1^\\circ\\text{C}$ and a thermal resistance constant $z = 10.0^\\circ\\text{C}$. The decimal reduction time $D_2$ at $T_2 = 121.1^\\circ\\text{C}$ is ________ $\\text{min}$ (round off to two decimal places).",
+    "correct_answer": "1.50",
+    "numerical_range": {
+      "min": 1.45,
+      "max": 1.55
+    },
+    "solution": "The relationship between $D$-value and temperature governed by $z$-value is:\n$$\\log_{10}\\left( \\frac{D_1}{D_2} \\right) = \\frac{T_2 - T_1}{z}$$\n$$\\frac{D_1}{D_2} = 10^{\\frac{T_2 - T_1}{z}} = 10^{\\frac{121.1 - 111.1}{10.0}} = 10^1 = 10$$\n$$D_2 = \\frac{D_1}{10} = \\frac{15.0}{10} = 1.50\\text{ min}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_030",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "Definitions of D, z, and F values",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding thermal death kinetics of microorganisms is/are TRUE?",
+    "options": {
+      "A": "The $D$-value is the heating time required at a given temperature to destroy $90\\%$ of the microbial population (one log reduction)",
+      "B": "The $z$-value is the temperature increase required to reduce the $D$-value by a factor of 10",
+      "C": "Thermal death of vegetative cells and bacterial spores follows first-order reaction kinetics: $\\ln(N/N_0) = -k t$",
+      "D": "Higher $z$-value indicates greater temperature sensitivity of the microorganism"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $D$-value = time for 1 log ($90\\%$) reduction: $D = t / \\log_{10}(N_0/N)$ (A is true).\n2. $z$-value = $\\Delta T$ for 1 log change in $D$: $z = (T_2 - T_1) / \\log_{10}(D_1/D_2)$ (B is true).\n3. Semi-log linear survival curves confirm first-order inactivation kinetics (C is true).\n4. A LOWER $z$-value means a smaller temperature rise causes a ten-fold drop in $D$, indicating HIGHER temperature sensitivity (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_031",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "12D process F0 calculation for Clostridium botulinum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In thermal sterilization of low-acid canned food, the decimal reduction time of *Clostridium botulinum* spores at $121.1^\\circ\\text{C}$ is $D_{121.1} = 0.35\\text{ min}$. The minimum thermal lethality time ($F_0$) required to achieve a commercial $12D$ sterility reduction is ________ $\\text{min}$ (round off to two decimal places).",
+    "correct_answer": "4.20",
+    "numerical_range": {
+      "min": 4.1,
+      "max": 4.3
+    },
+    "solution": "The $12D$ concept requires reducing the microbial spore population by $12$ decimal cycles ($12$ log reductions):\n$$F_0 = 12 \\times D_{121.1}$$\nGiven $D_{121.1} = 0.35\\text{ min}$:\n$$F_0 = 12 \\times 0.35 = 4.20\\text{ min}$$",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_032",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "D-value change with temperature from z-value",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A bacterial spore has a decimal reduction time of $D_1 = 15.0\\text{ min}$ at $T_1 = 111.1^\\circ\\text{C}$ and a thermal resistance constant $z = 10.0^\\circ\\text{C}$. The decimal reduction time $D_2$ at $T_2 = 121.1^\\circ\\text{C}$ is ________ $\\text{min}$ (round off to two decimal places).",
+    "correct_answer": "1.50",
+    "numerical_range": {
+      "min": 1.45,
+      "max": 1.55
+    },
+    "solution": "The relationship between $D$-value and temperature governed by $z$-value is:\n$$\\log_{10}\\left( \\frac{D_1}{D_2} \\right) = \\frac{T_2 - T_1}{z}$$\n$$\\frac{D_1}{D_2} = 10^{\\frac{T_2 - T_1}{z}} = 10^{\\frac{121.1 - 111.1}{10.0}} = 10^1 = 10$$\n$$D_2 = \\frac{D_1}{10} = \\frac{15.0}{10} = 1.50\\text{ min}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_033",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "Definitions of D, z, and F values",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding thermal death kinetics of microorganisms is/are TRUE?",
+    "options": {
+      "A": "The $D$-value is the heating time required at a given temperature to destroy $90\\%$ of the microbial population (one log reduction)",
+      "B": "The $z$-value is the temperature increase required to reduce the $D$-value by a factor of 10",
+      "C": "Thermal death of vegetative cells and bacterial spores follows first-order reaction kinetics: $\\ln(N/N_0) = -k t$",
+      "D": "Higher $z$-value indicates greater temperature sensitivity of the microorganism"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $D$-value = time for 1 log ($90\\%$) reduction: $D = t / \\log_{10}(N_0/N)$ (A is true).\n2. $z$-value = $\\Delta T$ for 1 log change in $D$: $z = (T_2 - T_1) / \\log_{10}(D_1/D_2)$ (B is true).\n3. Semi-log linear survival curves confirm first-order inactivation kinetics (C is true).\n4. A LOWER $z$-value means a smaller temperature rise causes a ten-fold drop in $D$, indicating HIGHER temperature sensitivity (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_034",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "12D process F0 calculation for Clostridium botulinum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In thermal sterilization of low-acid canned food, the decimal reduction time of *Clostridium botulinum* spores at $121.1^\\circ\\text{C}$ is $D_{121.1} = 0.30\\text{ min}$. The minimum thermal lethality time ($F_0$) required to achieve a commercial $12D$ sterility reduction is ________ $\\text{min}$ (round off to two decimal places).",
+    "correct_answer": "3.60",
+    "numerical_range": {
+      "min": 3.5,
+      "max": 3.7
+    },
+    "solution": "The $12D$ concept requires reducing the microbial spore population by $12$ decimal cycles ($12$ log reductions):\n$$F_0 = 12 \\times D_{121.1}$$\nGiven $D_{121.1} = 0.30\\text{ min}$:\n$$F_0 = 12 \\times 0.30 = 3.60\\text{ min}$$",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_035",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "D-value change with temperature from z-value",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A bacterial spore has a decimal reduction time of $D_1 = 15.0\\text{ min}$ at $T_1 = 111.1^\\circ\\text{C}$ and a thermal resistance constant $z = 10.0^\\circ\\text{C}$. The decimal reduction time $D_2$ at $T_2 = 121.1^\\circ\\text{C}$ is ________ $\\text{min}$ (round off to two decimal places).",
+    "correct_answer": "1.50",
+    "numerical_range": {
+      "min": 1.45,
+      "max": 1.55
+    },
+    "solution": "The relationship between $D$-value and temperature governed by $z$-value is:\n$$\\log_{10}\\left( \\frac{D_1}{D_2} \\right) = \\frac{T_2 - T_1}{z}$$\n$$\\frac{D_1}{D_2} = 10^{\\frac{T_2 - T_1}{z}} = 10^{\\frac{121.1 - 111.1}{10.0}} = 10^1 = 10$$\n$$D_2 = \\frac{D_1}{10} = \\frac{15.0}{10} = 1.50\\text{ min}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_036",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "Definitions of D, z, and F values",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding thermal death kinetics of microorganisms is/are TRUE?",
+    "options": {
+      "A": "The $D$-value is the heating time required at a given temperature to destroy $90\\%$ of the microbial population (one log reduction)",
+      "B": "The $z$-value is the temperature increase required to reduce the $D$-value by a factor of 10",
+      "C": "Thermal death of vegetative cells and bacterial spores follows first-order reaction kinetics: $\\ln(N/N_0) = -k t$",
+      "D": "Higher $z$-value indicates greater temperature sensitivity of the microorganism"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $D$-value = time for 1 log ($90\\%$) reduction: $D = t / \\log_{10}(N_0/N)$ (A is true).\n2. $z$-value = $\\Delta T$ for 1 log change in $D$: $z = (T_2 - T_1) / \\log_{10}(D_1/D_2)$ (B is true).\n3. Semi-log linear survival curves confirm first-order inactivation kinetics (C is true).\n4. A LOWER $z$-value means a smaller temperature rise causes a ten-fold drop in $D$, indicating HIGHER temperature sensitivity (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_037",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "12D process F0 calculation for Clostridium botulinum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In thermal sterilization of low-acid canned food, the decimal reduction time of *Clostridium botulinum* spores at $121.1^\\circ\\text{C}$ is $D_{121.1} = 0.25\\text{ min}$. The minimum thermal lethality time ($F_0$) required to achieve a commercial $12D$ sterility reduction is ________ $\\text{min}$ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.9,
+      "max": 3.1
+    },
+    "solution": "The $12D$ concept requires reducing the microbial spore population by $12$ decimal cycles ($12$ log reductions):\n$$F_0 = 12 \\times D_{121.1}$$\nGiven $D_{121.1} = 0.25\\text{ min}$:\n$$F_0 = 12 \\times 0.25 = 3.00\\text{ min}$$",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_038",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "D-value change with temperature from z-value",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A bacterial spore has a decimal reduction time of $D_1 = 15.0\\text{ min}$ at $T_1 = 111.1^\\circ\\text{C}$ and a thermal resistance constant $z = 10.0^\\circ\\text{C}$. The decimal reduction time $D_2$ at $T_2 = 121.1^\\circ\\text{C}$ is ________ $\\text{min}$ (round off to two decimal places).",
+    "correct_answer": "1.50",
+    "numerical_range": {
+      "min": 1.45,
+      "max": 1.55
+    },
+    "solution": "The relationship between $D$-value and temperature governed by $z$-value is:\n$$\\log_{10}\\left( \\frac{D_1}{D_2} \\right) = \\frac{T_2 - T_1}{z}$$\n$$\\frac{D_1}{D_2} = 10^{\\frac{T_2 - T_1}{z}} = 10^{\\frac{121.1 - 111.1}{10.0}} = 10^1 = 10$$\n$$D_2 = \\frac{D_1}{10} = \\frac{15.0}{10} = 1.50\\text{ min}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_039",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "Definitions of D, z, and F values",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding thermal death kinetics of microorganisms is/are TRUE?",
+    "options": {
+      "A": "The $D$-value is the heating time required at a given temperature to destroy $90\\%$ of the microbial population (one log reduction)",
+      "B": "The $z$-value is the temperature increase required to reduce the $D$-value by a factor of 10",
+      "C": "Thermal death of vegetative cells and bacterial spores follows first-order reaction kinetics: $\\ln(N/N_0) = -k t$",
+      "D": "Higher $z$-value indicates greater temperature sensitivity of the microorganism"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $D$-value = time for 1 log ($90\\%$) reduction: $D = t / \\log_{10}(N_0/N)$ (A is true).\n2. $z$-value = $\\Delta T$ for 1 log change in $D$: $z = (T_2 - T_1) / \\log_{10}(D_1/D_2)$ (B is true).\n3. Semi-log linear survival curves confirm first-order inactivation kinetics (C is true).\n4. A LOWER $z$-value means a smaller temperature rise causes a ten-fold drop in $D$, indicating HIGHER temperature sensitivity (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_040",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "12D process F0 calculation for Clostridium botulinum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In thermal sterilization of low-acid canned food, the decimal reduction time of *Clostridium botulinum* spores at $121.1^\\circ\\text{C}$ is $D_{121.1} = 0.20\\text{ min}$. The minimum thermal lethality time ($F_0$) required to achieve a commercial $12D$ sterility reduction is ________ $\\text{min}$ (round off to two decimal places).",
+    "correct_answer": "2.40",
+    "numerical_range": {
+      "min": 2.3,
+      "max": 2.5
+    },
+    "solution": "The $12D$ concept requires reducing the microbial spore population by $12$ decimal cycles ($12$ log reductions):\n$$F_0 = 12 \\times D_{121.1}$$\nGiven $D_{121.1} = 0.20\\text{ min}$:\n$$F_0 = 12 \\times 0.20 = 2.40\\text{ min}$$",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_041",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "D-value change with temperature from z-value",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A bacterial spore has a decimal reduction time of $D_1 = 15.0\\text{ min}$ at $T_1 = 111.1^\\circ\\text{C}$ and a thermal resistance constant $z = 10.0^\\circ\\text{C}$. The decimal reduction time $D_2$ at $T_2 = 121.1^\\circ\\text{C}$ is ________ $\\text{min}$ (round off to two decimal places).",
+    "correct_answer": "1.50",
+    "numerical_range": {
+      "min": 1.45,
+      "max": 1.55
+    },
+    "solution": "The relationship between $D$-value and temperature governed by $z$-value is:\n$$\\log_{10}\\left( \\frac{D_1}{D_2} \\right) = \\frac{T_2 - T_1}{z}$$\n$$\\frac{D_1}{D_2} = 10^{\\frac{T_2 - T_1}{z}} = 10^{\\frac{121.1 - 111.1}{10.0}} = 10^1 = 10$$\n$$D_2 = \\frac{D_1}{10} = \\frac{15.0}{10} = 1.50\\text{ min}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_042",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "Definitions of D, z, and F values",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding thermal death kinetics of microorganisms is/are TRUE?",
+    "options": {
+      "A": "The $D$-value is the heating time required at a given temperature to destroy $90\\%$ of the microbial population (one log reduction)",
+      "B": "The $z$-value is the temperature increase required to reduce the $D$-value by a factor of 10",
+      "C": "Thermal death of vegetative cells and bacterial spores follows first-order reaction kinetics: $\\ln(N/N_0) = -k t$",
+      "D": "Higher $z$-value indicates greater temperature sensitivity of the microorganism"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $D$-value = time for 1 log ($90\\%$) reduction: $D = t / \\log_{10}(N_0/N)$ (A is true).\n2. $z$-value = $\\Delta T$ for 1 log change in $D$: $z = (T_2 - T_1) / \\log_{10}(D_1/D_2)$ (B is true).\n3. Semi-log linear survival curves confirm first-order inactivation kinetics (C is true).\n4. A LOWER $z$-value means a smaller temperature rise causes a ten-fold drop in $D$, indicating HIGHER temperature sensitivity (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_MIC_043",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "12D process F0 calculation for Clostridium botulinum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In thermal sterilization of low-acid canned food, the decimal reduction time of *Clostridium botulinum* spores at $121.1^\\circ\\text{C}$ is $D_{121.1} = 0.35\\text{ min}$. The minimum thermal lethality time ($F_0$) required to achieve a commercial $12D$ sterility reduction is ________ $\\text{min}$ (round off to two decimal places).",
+    "correct_answer": "4.20",
+    "numerical_range": {
+      "min": 4.1,
+      "max": 4.3
+    },
+    "solution": "The $12D$ concept requires reducing the microbial spore population by $12$ decimal cycles ($12$ log reductions):\n$$F_0 = 12 \\times D_{121.1}$$\nGiven $D_{121.1} = 0.35\\text{ min}$:\n$$F_0 = 12 \\times 0.35 = 4.20\\text{ min}$$",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Regeneration efficiency in HTST pasteurizer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a continuous HTST plate pasteurizer, incoming raw cold milk at $5.0^\\circ\\text{C}$ is pre-heated in the regenerator section to $59.0^\\circ\\text{C}$ by outgoing pasteurized hot milk leaving the holding tube at $72.0^\\circ\\text{C}$. The regeneration efficiency of the pasteurizer is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "80.6",
+    "numerical_range": {
+      "min": 80.4,
+      "max": 80.8
+    },
+    "solution": "The regeneration efficiency $\\eta_{reg}$ is defined as:\n$$\\eta_{reg} = \\frac{T_{regen} - T_{raw}}{T_{past} - T_{raw}} \\times 100$$\nGiven $T_{raw} = 5.0^\\circ\\text{C}$, $T_{regen} = 59.0^\\circ\\text{C}$, and $T_{past} = 72.0^\\circ\\text{C}$:\n$$\\eta_{reg} = \\frac{59.0 - 5.0}{72.0 - 5.0} \\times 100 = \\frac{54.0}{67.0} \\times 100 = 80.6\\%$$",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Index organisms for milk pasteurization",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The official standard index microorganism used as the benchmark for establishing thermal time-temperature combinations in commercial milk pasteurization is:",
+    "options": {
+      "A": "*Coxiella burnetii* (rickettsia causing Q-fever)",
+      "B": "*Escherichia coli*",
+      "C": "*Saccharomyces cerevisiae*",
+      "D": "*Lactobacillus bulgaricus*"
+    },
+    "correct_answer": "A",
+    "solution": "*Coxiella burnetii* is the most heat-resistant non-spore-forming pathogenic organism found in raw milk. Thermal destruction of *Coxiella burnetii* (and inactivation of the alkaline phosphatase enzyme) guarantees complete destruction of *Mycobacterium tuberculosis* and all other milk-borne pathogens.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_003",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Components of HTST pasteurizer",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following sanitary and safety features are mandatory in a commercial continuous HTST milk pasteurization plant?",
+    "options": {
+      "A": "Flow Diversion Valve (FDV) that automatically diverts sub-pasteurized milk back to the balance tank if temperature drops below the legal limit ($71.7^\\circ\\text{C}$)",
+      "B": "Booster pump installed to ensure pasteurized milk is maintained at higher hydraulic pressure than raw milk in the regenerator section to prevent cross-contamination",
+      "C": "Holding tube sloped continuously upward toward the FDV at a minimum gradient of $2\\%$ ($1/50$) to prevent air entrapment",
+      "D": "Open wooden cooling towers directly exposing pasteurized milk to atmosphere"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. FDV diverts any under-temperature milk instantly (A is mandatory).\n2. Positive differential pressure prevents leakage from raw to pasteurized side across plates (B is mandatory).\n3. Sloped holding tube eliminates air pockets that could alter holding residence time (C is mandatory).\n4. Milk must flow strictly within hermetically sealed, sanitary stainless steel heat exchanger plates without ambient exposure (D is false).",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_004",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Regeneration efficiency in HTST pasteurizer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a continuous HTST plate pasteurizer, incoming raw cold milk at $5.0^\\circ\\text{C}$ is pre-heated in the regenerator section to $62.0^\\circ\\text{C}$ by outgoing pasteurized hot milk leaving the holding tube at $72.0^\\circ\\text{C}$. The regeneration efficiency of the pasteurizer is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "85.1",
+    "numerical_range": {
+      "min": 84.9,
+      "max": 85.3
+    },
+    "solution": "The regeneration efficiency $\\eta_{reg}$ is defined as:\n$$\\eta_{reg} = \\frac{T_{regen} - T_{raw}}{T_{past} - T_{raw}} \\times 100$$\nGiven $T_{raw} = 5.0^\\circ\\text{C}$, $T_{regen} = 62.0^\\circ\\text{C}$, and $T_{past} = 72.0^\\circ\\text{C}$:\n$$\\eta_{reg} = \\frac{62.0 - 5.0}{72.0 - 5.0} \\times 100 = \\frac{57.0}{67.0} \\times 100 = 85.1\\%$$",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_005",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Index organisms for milk pasteurization",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The official standard index microorganism used as the benchmark for establishing thermal time-temperature combinations in commercial milk pasteurization is:",
+    "options": {
+      "A": "*Coxiella burnetii* (rickettsia causing Q-fever)",
+      "B": "*Escherichia coli*",
+      "C": "*Saccharomyces cerevisiae*",
+      "D": "*Lactobacillus bulgaricus*"
+    },
+    "correct_answer": "A",
+    "solution": "*Coxiella burnetii* is the most heat-resistant non-spore-forming pathogenic organism found in raw milk. Thermal destruction of *Coxiella burnetii* (and inactivation of the alkaline phosphatase enzyme) guarantees complete destruction of *Mycobacterium tuberculosis* and all other milk-borne pathogens.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_006",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Components of HTST pasteurizer",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following sanitary and safety features are mandatory in a commercial continuous HTST milk pasteurization plant?",
+    "options": {
+      "A": "Flow Diversion Valve (FDV) that automatically diverts sub-pasteurized milk back to the balance tank if temperature drops below the legal limit ($71.7^\\circ\\text{C}$)",
+      "B": "Booster pump installed to ensure pasteurized milk is maintained at higher hydraulic pressure than raw milk in the regenerator section to prevent cross-contamination",
+      "C": "Holding tube sloped continuously upward toward the FDV at a minimum gradient of $2\\%$ ($1/50$) to prevent air entrapment",
+      "D": "Open wooden cooling towers directly exposing pasteurized milk to atmosphere"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. FDV diverts any under-temperature milk instantly (A is mandatory).\n2. Positive differential pressure prevents leakage from raw to pasteurized side across plates (B is mandatory).\n3. Sloped holding tube eliminates air pockets that could alter holding residence time (C is mandatory).\n4. Milk must flow strictly within hermetically sealed, sanitary stainless steel heat exchanger plates without ambient exposure (D is false).",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_007",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Regeneration efficiency in HTST pasteurizer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a continuous HTST plate pasteurizer, incoming raw cold milk at $5.0^\\circ\\text{C}$ is pre-heated in the regenerator section to $60.0^\\circ\\text{C}$ by outgoing pasteurized hot milk leaving the holding tube at $72.0^\\circ\\text{C}$. The regeneration efficiency of the pasteurizer is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "82.1",
+    "numerical_range": {
+      "min": 81.9,
+      "max": 82.3
+    },
+    "solution": "The regeneration efficiency $\\eta_{reg}$ is defined as:\n$$\\eta_{reg} = \\frac{T_{regen} - T_{raw}}{T_{past} - T_{raw}} \\times 100$$\nGiven $T_{raw} = 5.0^\\circ\\text{C}$, $T_{regen} = 60.0^\\circ\\text{C}$, and $T_{past} = 72.0^\\circ\\text{C}$:\n$$\\eta_{reg} = \\frac{60.0 - 5.0}{72.0 - 5.0} \\times 100 = \\frac{55.0}{67.0} \\times 100 = 82.1\\%$$",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_008",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Index organisms for milk pasteurization",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The official standard index microorganism used as the benchmark for establishing thermal time-temperature combinations in commercial milk pasteurization is:",
+    "options": {
+      "A": "*Coxiella burnetii* (rickettsia causing Q-fever)",
+      "B": "*Escherichia coli*",
+      "C": "*Saccharomyces cerevisiae*",
+      "D": "*Lactobacillus bulgaricus*"
+    },
+    "correct_answer": "A",
+    "solution": "*Coxiella burnetii* is the most heat-resistant non-spore-forming pathogenic organism found in raw milk. Thermal destruction of *Coxiella burnetii* (and inactivation of the alkaline phosphatase enzyme) guarantees complete destruction of *Mycobacterium tuberculosis* and all other milk-borne pathogens.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_009",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Components of HTST pasteurizer",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following sanitary and safety features are mandatory in a commercial continuous HTST milk pasteurization plant?",
+    "options": {
+      "A": "Flow Diversion Valve (FDV) that automatically diverts sub-pasteurized milk back to the balance tank if temperature drops below the legal limit ($71.7^\\circ\\text{C}$)",
+      "B": "Booster pump installed to ensure pasteurized milk is maintained at higher hydraulic pressure than raw milk in the regenerator section to prevent cross-contamination",
+      "C": "Holding tube sloped continuously upward toward the FDV at a minimum gradient of $2\\%$ ($1/50$) to prevent air entrapment",
+      "D": "Open wooden cooling towers directly exposing pasteurized milk to atmosphere"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. FDV diverts any under-temperature milk instantly (A is mandatory).\n2. Positive differential pressure prevents leakage from raw to pasteurized side across plates (B is mandatory).\n3. Sloped holding tube eliminates air pockets that could alter holding residence time (C is mandatory).\n4. Milk must flow strictly within hermetically sealed, sanitary stainless steel heat exchanger plates without ambient exposure (D is false).",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_010",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Regeneration efficiency in HTST pasteurizer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a continuous HTST plate pasteurizer, incoming raw cold milk at $5.0^\\circ\\text{C}$ is pre-heated in the regenerator section to $58.0^\\circ\\text{C}$ by outgoing pasteurized hot milk leaving the holding tube at $72.0^\\circ\\text{C}$. The regeneration efficiency of the pasteurizer is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "79.1",
+    "numerical_range": {
+      "min": 78.9,
+      "max": 79.3
+    },
+    "solution": "The regeneration efficiency $\\eta_{reg}$ is defined as:\n$$\\eta_{reg} = \\frac{T_{regen} - T_{raw}}{T_{past} - T_{raw}} \\times 100$$\nGiven $T_{raw} = 5.0^\\circ\\text{C}$, $T_{regen} = 58.0^\\circ\\text{C}$, and $T_{past} = 72.0^\\circ\\text{C}$:\n$$\\eta_{reg} = \\frac{58.0 - 5.0}{72.0 - 5.0} \\times 100 = \\frac{53.0}{67.0} \\times 100 = 79.1\\%$$",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_011",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Index organisms for milk pasteurization",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The official standard index microorganism used as the benchmark for establishing thermal time-temperature combinations in commercial milk pasteurization is:",
+    "options": {
+      "A": "*Coxiella burnetii* (rickettsia causing Q-fever)",
+      "B": "*Escherichia coli*",
+      "C": "*Saccharomyces cerevisiae*",
+      "D": "*Lactobacillus bulgaricus*"
+    },
+    "correct_answer": "A",
+    "solution": "*Coxiella burnetii* is the most heat-resistant non-spore-forming pathogenic organism found in raw milk. Thermal destruction of *Coxiella burnetii* (and inactivation of the alkaline phosphatase enzyme) guarantees complete destruction of *Mycobacterium tuberculosis* and all other milk-borne pathogens.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_012",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Components of HTST pasteurizer",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following sanitary and safety features are mandatory in a commercial continuous HTST milk pasteurization plant?",
+    "options": {
+      "A": "Flow Diversion Valve (FDV) that automatically diverts sub-pasteurized milk back to the balance tank if temperature drops below the legal limit ($71.7^\\circ\\text{C}$)",
+      "B": "Booster pump installed to ensure pasteurized milk is maintained at higher hydraulic pressure than raw milk in the regenerator section to prevent cross-contamination",
+      "C": "Holding tube sloped continuously upward toward the FDV at a minimum gradient of $2\\%$ ($1/50$) to prevent air entrapment",
+      "D": "Open wooden cooling towers directly exposing pasteurized milk to atmosphere"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. FDV diverts any under-temperature milk instantly (A is mandatory).\n2. Positive differential pressure prevents leakage from raw to pasteurized side across plates (B is mandatory).\n3. Sloped holding tube eliminates air pockets that could alter holding residence time (C is mandatory).\n4. Milk must flow strictly within hermetically sealed, sanitary stainless steel heat exchanger plates without ambient exposure (D is false).",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_013",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Regeneration efficiency in HTST pasteurizer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a continuous HTST plate pasteurizer, incoming raw cold milk at $5.0^\\circ\\text{C}$ is pre-heated in the regenerator section to $61.0^\\circ\\text{C}$ by outgoing pasteurized hot milk leaving the holding tube at $72.0^\\circ\\text{C}$. The regeneration efficiency of the pasteurizer is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "83.6",
+    "numerical_range": {
+      "min": 83.4,
+      "max": 83.8
+    },
+    "solution": "The regeneration efficiency $\\eta_{reg}$ is defined as:\n$$\\eta_{reg} = \\frac{T_{regen} - T_{raw}}{T_{past} - T_{raw}} \\times 100$$\nGiven $T_{raw} = 5.0^\\circ\\text{C}$, $T_{regen} = 61.0^\\circ\\text{C}$, and $T_{past} = 72.0^\\circ\\text{C}$:\n$$\\eta_{reg} = \\frac{61.0 - 5.0}{72.0 - 5.0} \\times 100 = \\frac{56.0}{67.0} \\times 100 = 83.6\\%$$",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_014",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Index organisms for milk pasteurization",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The official standard index microorganism used as the benchmark for establishing thermal time-temperature combinations in commercial milk pasteurization is:",
+    "options": {
+      "A": "*Coxiella burnetii* (rickettsia causing Q-fever)",
+      "B": "*Escherichia coli*",
+      "C": "*Saccharomyces cerevisiae*",
+      "D": "*Lactobacillus bulgaricus*"
+    },
+    "correct_answer": "A",
+    "solution": "*Coxiella burnetii* is the most heat-resistant non-spore-forming pathogenic organism found in raw milk. Thermal destruction of *Coxiella burnetii* (and inactivation of the alkaline phosphatase enzyme) guarantees complete destruction of *Mycobacterium tuberculosis* and all other milk-borne pathogens.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_015",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Components of HTST pasteurizer",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following sanitary and safety features are mandatory in a commercial continuous HTST milk pasteurization plant?",
+    "options": {
+      "A": "Flow Diversion Valve (FDV) that automatically diverts sub-pasteurized milk back to the balance tank if temperature drops below the legal limit ($71.7^\\circ\\text{C}$)",
+      "B": "Booster pump installed to ensure pasteurized milk is maintained at higher hydraulic pressure than raw milk in the regenerator section to prevent cross-contamination",
+      "C": "Holding tube sloped continuously upward toward the FDV at a minimum gradient of $2\\%$ ($1/50$) to prevent air entrapment",
+      "D": "Open wooden cooling towers directly exposing pasteurized milk to atmosphere"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. FDV diverts any under-temperature milk instantly (A is mandatory).\n2. Positive differential pressure prevents leakage from raw to pasteurized side across plates (B is mandatory).\n3. Sloped holding tube eliminates air pockets that could alter holding residence time (C is mandatory).\n4. Milk must flow strictly within hermetically sealed, sanitary stainless steel heat exchanger plates without ambient exposure (D is false).",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_016",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Regeneration efficiency in HTST pasteurizer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a continuous HTST plate pasteurizer, incoming raw cold milk at $5.0^\\circ\\text{C}$ is pre-heated in the regenerator section to $59.0^\\circ\\text{C}$ by outgoing pasteurized hot milk leaving the holding tube at $72.0^\\circ\\text{C}$. The regeneration efficiency of the pasteurizer is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "80.6",
+    "numerical_range": {
+      "min": 80.4,
+      "max": 80.8
+    },
+    "solution": "The regeneration efficiency $\\eta_{reg}$ is defined as:\n$$\\eta_{reg} = \\frac{T_{regen} - T_{raw}}{T_{past} - T_{raw}} \\times 100$$\nGiven $T_{raw} = 5.0^\\circ\\text{C}$, $T_{regen} = 59.0^\\circ\\text{C}$, and $T_{past} = 72.0^\\circ\\text{C}$:\n$$\\eta_{reg} = \\frac{59.0 - 5.0}{72.0 - 5.0} \\times 100 = \\frac{54.0}{67.0} \\times 100 = 80.6\\%$$",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_017",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Index organisms for milk pasteurization",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The official standard index microorganism used as the benchmark for establishing thermal time-temperature combinations in commercial milk pasteurization is:",
+    "options": {
+      "A": "*Coxiella burnetii* (rickettsia causing Q-fever)",
+      "B": "*Escherichia coli*",
+      "C": "*Saccharomyces cerevisiae*",
+      "D": "*Lactobacillus bulgaricus*"
+    },
+    "correct_answer": "A",
+    "solution": "*Coxiella burnetii* is the most heat-resistant non-spore-forming pathogenic organism found in raw milk. Thermal destruction of *Coxiella burnetii* (and inactivation of the alkaline phosphatase enzyme) guarantees complete destruction of *Mycobacterium tuberculosis* and all other milk-borne pathogens.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_018",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Components of HTST pasteurizer",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following sanitary and safety features are mandatory in a commercial continuous HTST milk pasteurization plant?",
+    "options": {
+      "A": "Flow Diversion Valve (FDV) that automatically diverts sub-pasteurized milk back to the balance tank if temperature drops below the legal limit ($71.7^\\circ\\text{C}$)",
+      "B": "Booster pump installed to ensure pasteurized milk is maintained at higher hydraulic pressure than raw milk in the regenerator section to prevent cross-contamination",
+      "C": "Holding tube sloped continuously upward toward the FDV at a minimum gradient of $2\\%$ ($1/50$) to prevent air entrapment",
+      "D": "Open wooden cooling towers directly exposing pasteurized milk to atmosphere"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. FDV diverts any under-temperature milk instantly (A is mandatory).\n2. Positive differential pressure prevents leakage from raw to pasteurized side across plates (B is mandatory).\n3. Sloped holding tube eliminates air pockets that could alter holding residence time (C is mandatory).\n4. Milk must flow strictly within hermetically sealed, sanitary stainless steel heat exchanger plates without ambient exposure (D is false).",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_019",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Regeneration efficiency in HTST pasteurizer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a continuous HTST plate pasteurizer, incoming raw cold milk at $5.0^\\circ\\text{C}$ is pre-heated in the regenerator section to $62.0^\\circ\\text{C}$ by outgoing pasteurized hot milk leaving the holding tube at $72.0^\\circ\\text{C}$. The regeneration efficiency of the pasteurizer is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "85.1",
+    "numerical_range": {
+      "min": 84.9,
+      "max": 85.3
+    },
+    "solution": "The regeneration efficiency $\\eta_{reg}$ is defined as:\n$$\\eta_{reg} = \\frac{T_{regen} - T_{raw}}{T_{past} - T_{raw}} \\times 100$$\nGiven $T_{raw} = 5.0^\\circ\\text{C}$, $T_{regen} = 62.0^\\circ\\text{C}$, and $T_{past} = 72.0^\\circ\\text{C}$:\n$$\\eta_{reg} = \\frac{62.0 - 5.0}{72.0 - 5.0} \\times 100 = \\frac{57.0}{67.0} \\times 100 = 85.1\\%$$",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_020",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Index organisms for milk pasteurization",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The official standard index microorganism used as the benchmark for establishing thermal time-temperature combinations in commercial milk pasteurization is:",
+    "options": {
+      "A": "*Coxiella burnetii* (rickettsia causing Q-fever)",
+      "B": "*Escherichia coli*",
+      "C": "*Saccharomyces cerevisiae*",
+      "D": "*Lactobacillus bulgaricus*"
+    },
+    "correct_answer": "A",
+    "solution": "*Coxiella burnetii* is the most heat-resistant non-spore-forming pathogenic organism found in raw milk. Thermal destruction of *Coxiella burnetii* (and inactivation of the alkaline phosphatase enzyme) guarantees complete destruction of *Mycobacterium tuberculosis* and all other milk-borne pathogens.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_021",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Components of HTST pasteurizer",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following sanitary and safety features are mandatory in a commercial continuous HTST milk pasteurization plant?",
+    "options": {
+      "A": "Flow Diversion Valve (FDV) that automatically diverts sub-pasteurized milk back to the balance tank if temperature drops below the legal limit ($71.7^\\circ\\text{C}$)",
+      "B": "Booster pump installed to ensure pasteurized milk is maintained at higher hydraulic pressure than raw milk in the regenerator section to prevent cross-contamination",
+      "C": "Holding tube sloped continuously upward toward the FDV at a minimum gradient of $2\\%$ ($1/50$) to prevent air entrapment",
+      "D": "Open wooden cooling towers directly exposing pasteurized milk to atmosphere"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. FDV diverts any under-temperature milk instantly (A is mandatory).\n2. Positive differential pressure prevents leakage from raw to pasteurized side across plates (B is mandatory).\n3. Sloped holding tube eliminates air pockets that could alter holding residence time (C is mandatory).\n4. Milk must flow strictly within hermetically sealed, sanitary stainless steel heat exchanger plates without ambient exposure (D is false).",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_022",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Regeneration efficiency in HTST pasteurizer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a continuous HTST plate pasteurizer, incoming raw cold milk at $5.0^\\circ\\text{C}$ is pre-heated in the regenerator section to $60.0^\\circ\\text{C}$ by outgoing pasteurized hot milk leaving the holding tube at $72.0^\\circ\\text{C}$. The regeneration efficiency of the pasteurizer is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "82.1",
+    "numerical_range": {
+      "min": 81.9,
+      "max": 82.3
+    },
+    "solution": "The regeneration efficiency $\\eta_{reg}$ is defined as:\n$$\\eta_{reg} = \\frac{T_{regen} - T_{raw}}{T_{past} - T_{raw}} \\times 100$$\nGiven $T_{raw} = 5.0^\\circ\\text{C}$, $T_{regen} = 60.0^\\circ\\text{C}$, and $T_{past} = 72.0^\\circ\\text{C}$:\n$$\\eta_{reg} = \\frac{60.0 - 5.0}{72.0 - 5.0} \\times 100 = \\frac{55.0}{67.0} \\times 100 = 82.1\\%$$",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_023",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Index organisms for milk pasteurization",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The official standard index microorganism used as the benchmark for establishing thermal time-temperature combinations in commercial milk pasteurization is:",
+    "options": {
+      "A": "*Coxiella burnetii* (rickettsia causing Q-fever)",
+      "B": "*Escherichia coli*",
+      "C": "*Saccharomyces cerevisiae*",
+      "D": "*Lactobacillus bulgaricus*"
+    },
+    "correct_answer": "A",
+    "solution": "*Coxiella burnetii* is the most heat-resistant non-spore-forming pathogenic organism found in raw milk. Thermal destruction of *Coxiella burnetii* (and inactivation of the alkaline phosphatase enzyme) guarantees complete destruction of *Mycobacterium tuberculosis* and all other milk-borne pathogens.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_024",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Components of HTST pasteurizer",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following sanitary and safety features are mandatory in a commercial continuous HTST milk pasteurization plant?",
+    "options": {
+      "A": "Flow Diversion Valve (FDV) that automatically diverts sub-pasteurized milk back to the balance tank if temperature drops below the legal limit ($71.7^\\circ\\text{C}$)",
+      "B": "Booster pump installed to ensure pasteurized milk is maintained at higher hydraulic pressure than raw milk in the regenerator section to prevent cross-contamination",
+      "C": "Holding tube sloped continuously upward toward the FDV at a minimum gradient of $2\\%$ ($1/50$) to prevent air entrapment",
+      "D": "Open wooden cooling towers directly exposing pasteurized milk to atmosphere"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. FDV diverts any under-temperature milk instantly (A is mandatory).\n2. Positive differential pressure prevents leakage from raw to pasteurized side across plates (B is mandatory).\n3. Sloped holding tube eliminates air pockets that could alter holding residence time (C is mandatory).\n4. Milk must flow strictly within hermetically sealed, sanitary stainless steel heat exchanger plates without ambient exposure (D is false).",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_025",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Regeneration efficiency in HTST pasteurizer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a continuous HTST plate pasteurizer, incoming raw cold milk at $5.0^\\circ\\text{C}$ is pre-heated in the regenerator section to $58.0^\\circ\\text{C}$ by outgoing pasteurized hot milk leaving the holding tube at $72.0^\\circ\\text{C}$. The regeneration efficiency of the pasteurizer is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "79.1",
+    "numerical_range": {
+      "min": 78.9,
+      "max": 79.3
+    },
+    "solution": "The regeneration efficiency $\\eta_{reg}$ is defined as:\n$$\\eta_{reg} = \\frac{T_{regen} - T_{raw}}{T_{past} - T_{raw}} \\times 100$$\nGiven $T_{raw} = 5.0^\\circ\\text{C}$, $T_{regen} = 58.0^\\circ\\text{C}$, and $T_{past} = 72.0^\\circ\\text{C}$:\n$$\\eta_{reg} = \\frac{58.0 - 5.0}{72.0 - 5.0} \\times 100 = \\frac{53.0}{67.0} \\times 100 = 79.1\\%$$",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_026",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Index organisms for milk pasteurization",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The official standard index microorganism used as the benchmark for establishing thermal time-temperature combinations in commercial milk pasteurization is:",
+    "options": {
+      "A": "*Coxiella burnetii* (rickettsia causing Q-fever)",
+      "B": "*Escherichia coli*",
+      "C": "*Saccharomyces cerevisiae*",
+      "D": "*Lactobacillus bulgaricus*"
+    },
+    "correct_answer": "A",
+    "solution": "*Coxiella burnetii* is the most heat-resistant non-spore-forming pathogenic organism found in raw milk. Thermal destruction of *Coxiella burnetii* (and inactivation of the alkaline phosphatase enzyme) guarantees complete destruction of *Mycobacterium tuberculosis* and all other milk-borne pathogens.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_027",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Components of HTST pasteurizer",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following sanitary and safety features are mandatory in a commercial continuous HTST milk pasteurization plant?",
+    "options": {
+      "A": "Flow Diversion Valve (FDV) that automatically diverts sub-pasteurized milk back to the balance tank if temperature drops below the legal limit ($71.7^\\circ\\text{C}$)",
+      "B": "Booster pump installed to ensure pasteurized milk is maintained at higher hydraulic pressure than raw milk in the regenerator section to prevent cross-contamination",
+      "C": "Holding tube sloped continuously upward toward the FDV at a minimum gradient of $2\\%$ ($1/50$) to prevent air entrapment",
+      "D": "Open wooden cooling towers directly exposing pasteurized milk to atmosphere"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. FDV diverts any under-temperature milk instantly (A is mandatory).\n2. Positive differential pressure prevents leakage from raw to pasteurized side across plates (B is mandatory).\n3. Sloped holding tube eliminates air pockets that could alter holding residence time (C is mandatory).\n4. Milk must flow strictly within hermetically sealed, sanitary stainless steel heat exchanger plates without ambient exposure (D is false).",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_028",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Regeneration efficiency in HTST pasteurizer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a continuous HTST plate pasteurizer, incoming raw cold milk at $5.0^\\circ\\text{C}$ is pre-heated in the regenerator section to $61.0^\\circ\\text{C}$ by outgoing pasteurized hot milk leaving the holding tube at $72.0^\\circ\\text{C}$. The regeneration efficiency of the pasteurizer is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "83.6",
+    "numerical_range": {
+      "min": 83.4,
+      "max": 83.8
+    },
+    "solution": "The regeneration efficiency $\\eta_{reg}$ is defined as:\n$$\\eta_{reg} = \\frac{T_{regen} - T_{raw}}{T_{past} - T_{raw}} \\times 100$$\nGiven $T_{raw} = 5.0^\\circ\\text{C}$, $T_{regen} = 61.0^\\circ\\text{C}$, and $T_{past} = 72.0^\\circ\\text{C}$:\n$$\\eta_{reg} = \\frac{61.0 - 5.0}{72.0 - 5.0} \\times 100 = \\frac{56.0}{67.0} \\times 100 = 83.6\\%$$",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_029",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Index organisms for milk pasteurization",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The official standard index microorganism used as the benchmark for establishing thermal time-temperature combinations in commercial milk pasteurization is:",
+    "options": {
+      "A": "*Coxiella burnetii* (rickettsia causing Q-fever)",
+      "B": "*Escherichia coli*",
+      "C": "*Saccharomyces cerevisiae*",
+      "D": "*Lactobacillus bulgaricus*"
+    },
+    "correct_answer": "A",
+    "solution": "*Coxiella burnetii* is the most heat-resistant non-spore-forming pathogenic organism found in raw milk. Thermal destruction of *Coxiella burnetii* (and inactivation of the alkaline phosphatase enzyme) guarantees complete destruction of *Mycobacterium tuberculosis* and all other milk-borne pathogens.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_030",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Components of HTST pasteurizer",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following sanitary and safety features are mandatory in a commercial continuous HTST milk pasteurization plant?",
+    "options": {
+      "A": "Flow Diversion Valve (FDV) that automatically diverts sub-pasteurized milk back to the balance tank if temperature drops below the legal limit ($71.7^\\circ\\text{C}$)",
+      "B": "Booster pump installed to ensure pasteurized milk is maintained at higher hydraulic pressure than raw milk in the regenerator section to prevent cross-contamination",
+      "C": "Holding tube sloped continuously upward toward the FDV at a minimum gradient of $2\\%$ ($1/50$) to prevent air entrapment",
+      "D": "Open wooden cooling towers directly exposing pasteurized milk to atmosphere"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. FDV diverts any under-temperature milk instantly (A is mandatory).\n2. Positive differential pressure prevents leakage from raw to pasteurized side across plates (B is mandatory).\n3. Sloped holding tube eliminates air pockets that could alter holding residence time (C is mandatory).\n4. Milk must flow strictly within hermetically sealed, sanitary stainless steel heat exchanger plates without ambient exposure (D is false).",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_031",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Regeneration efficiency in HTST pasteurizer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a continuous HTST plate pasteurizer, incoming raw cold milk at $5.0^\\circ\\text{C}$ is pre-heated in the regenerator section to $59.0^\\circ\\text{C}$ by outgoing pasteurized hot milk leaving the holding tube at $72.0^\\circ\\text{C}$. The regeneration efficiency of the pasteurizer is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "80.6",
+    "numerical_range": {
+      "min": 80.4,
+      "max": 80.8
+    },
+    "solution": "The regeneration efficiency $\\eta_{reg}$ is defined as:\n$$\\eta_{reg} = \\frac{T_{regen} - T_{raw}}{T_{past} - T_{raw}} \\times 100$$\nGiven $T_{raw} = 5.0^\\circ\\text{C}$, $T_{regen} = 59.0^\\circ\\text{C}$, and $T_{past} = 72.0^\\circ\\text{C}$:\n$$\\eta_{reg} = \\frac{59.0 - 5.0}{72.0 - 5.0} \\times 100 = \\frac{54.0}{67.0} \\times 100 = 80.6\\%$$",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_032",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Index organisms for milk pasteurization",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The official standard index microorganism used as the benchmark for establishing thermal time-temperature combinations in commercial milk pasteurization is:",
+    "options": {
+      "A": "*Coxiella burnetii* (rickettsia causing Q-fever)",
+      "B": "*Escherichia coli*",
+      "C": "*Saccharomyces cerevisiae*",
+      "D": "*Lactobacillus bulgaricus*"
+    },
+    "correct_answer": "A",
+    "solution": "*Coxiella burnetii* is the most heat-resistant non-spore-forming pathogenic organism found in raw milk. Thermal destruction of *Coxiella burnetii* (and inactivation of the alkaline phosphatase enzyme) guarantees complete destruction of *Mycobacterium tuberculosis* and all other milk-borne pathogens.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_033",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Components of HTST pasteurizer",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following sanitary and safety features are mandatory in a commercial continuous HTST milk pasteurization plant?",
+    "options": {
+      "A": "Flow Diversion Valve (FDV) that automatically diverts sub-pasteurized milk back to the balance tank if temperature drops below the legal limit ($71.7^\\circ\\text{C}$)",
+      "B": "Booster pump installed to ensure pasteurized milk is maintained at higher hydraulic pressure than raw milk in the regenerator section to prevent cross-contamination",
+      "C": "Holding tube sloped continuously upward toward the FDV at a minimum gradient of $2\\%$ ($1/50$) to prevent air entrapment",
+      "D": "Open wooden cooling towers directly exposing pasteurized milk to atmosphere"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. FDV diverts any under-temperature milk instantly (A is mandatory).\n2. Positive differential pressure prevents leakage from raw to pasteurized side across plates (B is mandatory).\n3. Sloped holding tube eliminates air pockets that could alter holding residence time (C is mandatory).\n4. Milk must flow strictly within hermetically sealed, sanitary stainless steel heat exchanger plates without ambient exposure (D is false).",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_034",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Regeneration efficiency in HTST pasteurizer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a continuous HTST plate pasteurizer, incoming raw cold milk at $5.0^\\circ\\text{C}$ is pre-heated in the regenerator section to $62.0^\\circ\\text{C}$ by outgoing pasteurized hot milk leaving the holding tube at $72.0^\\circ\\text{C}$. The regeneration efficiency of the pasteurizer is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "85.1",
+    "numerical_range": {
+      "min": 84.9,
+      "max": 85.3
+    },
+    "solution": "The regeneration efficiency $\\eta_{reg}$ is defined as:\n$$\\eta_{reg} = \\frac{T_{regen} - T_{raw}}{T_{past} - T_{raw}} \\times 100$$\nGiven $T_{raw} = 5.0^\\circ\\text{C}$, $T_{regen} = 62.0^\\circ\\text{C}$, and $T_{past} = 72.0^\\circ\\text{C}$:\n$$\\eta_{reg} = \\frac{62.0 - 5.0}{72.0 - 5.0} \\times 100 = \\frac{57.0}{67.0} \\times 100 = 85.1\\%$$",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_035",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Index organisms for milk pasteurization",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The official standard index microorganism used as the benchmark for establishing thermal time-temperature combinations in commercial milk pasteurization is:",
+    "options": {
+      "A": "*Coxiella burnetii* (rickettsia causing Q-fever)",
+      "B": "*Escherichia coli*",
+      "C": "*Saccharomyces cerevisiae*",
+      "D": "*Lactobacillus bulgaricus*"
+    },
+    "correct_answer": "A",
+    "solution": "*Coxiella burnetii* is the most heat-resistant non-spore-forming pathogenic organism found in raw milk. Thermal destruction of *Coxiella burnetii* (and inactivation of the alkaline phosphatase enzyme) guarantees complete destruction of *Mycobacterium tuberculosis* and all other milk-borne pathogens.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_036",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Components of HTST pasteurizer",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following sanitary and safety features are mandatory in a commercial continuous HTST milk pasteurization plant?",
+    "options": {
+      "A": "Flow Diversion Valve (FDV) that automatically diverts sub-pasteurized milk back to the balance tank if temperature drops below the legal limit ($71.7^\\circ\\text{C}$)",
+      "B": "Booster pump installed to ensure pasteurized milk is maintained at higher hydraulic pressure than raw milk in the regenerator section to prevent cross-contamination",
+      "C": "Holding tube sloped continuously upward toward the FDV at a minimum gradient of $2\\%$ ($1/50$) to prevent air entrapment",
+      "D": "Open wooden cooling towers directly exposing pasteurized milk to atmosphere"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. FDV diverts any under-temperature milk instantly (A is mandatory).\n2. Positive differential pressure prevents leakage from raw to pasteurized side across plates (B is mandatory).\n3. Sloped holding tube eliminates air pockets that could alter holding residence time (C is mandatory).\n4. Milk must flow strictly within hermetically sealed, sanitary stainless steel heat exchanger plates without ambient exposure (D is false).",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_037",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Regeneration efficiency in HTST pasteurizer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a continuous HTST plate pasteurizer, incoming raw cold milk at $5.0^\\circ\\text{C}$ is pre-heated in the regenerator section to $60.0^\\circ\\text{C}$ by outgoing pasteurized hot milk leaving the holding tube at $72.0^\\circ\\text{C}$. The regeneration efficiency of the pasteurizer is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "82.1",
+    "numerical_range": {
+      "min": 81.9,
+      "max": 82.3
+    },
+    "solution": "The regeneration efficiency $\\eta_{reg}$ is defined as:\n$$\\eta_{reg} = \\frac{T_{regen} - T_{raw}}{T_{past} - T_{raw}} \\times 100$$\nGiven $T_{raw} = 5.0^\\circ\\text{C}$, $T_{regen} = 60.0^\\circ\\text{C}$, and $T_{past} = 72.0^\\circ\\text{C}$:\n$$\\eta_{reg} = \\frac{60.0 - 5.0}{72.0 - 5.0} \\times 100 = \\frac{55.0}{67.0} \\times 100 = 82.1\\%$$",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_038",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Index organisms for milk pasteurization",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The official standard index microorganism used as the benchmark for establishing thermal time-temperature combinations in commercial milk pasteurization is:",
+    "options": {
+      "A": "*Coxiella burnetii* (rickettsia causing Q-fever)",
+      "B": "*Escherichia coli*",
+      "C": "*Saccharomyces cerevisiae*",
+      "D": "*Lactobacillus bulgaricus*"
+    },
+    "correct_answer": "A",
+    "solution": "*Coxiella burnetii* is the most heat-resistant non-spore-forming pathogenic organism found in raw milk. Thermal destruction of *Coxiella burnetii* (and inactivation of the alkaline phosphatase enzyme) guarantees complete destruction of *Mycobacterium tuberculosis* and all other milk-borne pathogens.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_039",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Components of HTST pasteurizer",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following sanitary and safety features are mandatory in a commercial continuous HTST milk pasteurization plant?",
+    "options": {
+      "A": "Flow Diversion Valve (FDV) that automatically diverts sub-pasteurized milk back to the balance tank if temperature drops below the legal limit ($71.7^\\circ\\text{C}$)",
+      "B": "Booster pump installed to ensure pasteurized milk is maintained at higher hydraulic pressure than raw milk in the regenerator section to prevent cross-contamination",
+      "C": "Holding tube sloped continuously upward toward the FDV at a minimum gradient of $2\\%$ ($1/50$) to prevent air entrapment",
+      "D": "Open wooden cooling towers directly exposing pasteurized milk to atmosphere"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. FDV diverts any under-temperature milk instantly (A is mandatory).\n2. Positive differential pressure prevents leakage from raw to pasteurized side across plates (B is mandatory).\n3. Sloped holding tube eliminates air pockets that could alter holding residence time (C is mandatory).\n4. Milk must flow strictly within hermetically sealed, sanitary stainless steel heat exchanger plates without ambient exposure (D is false).",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_040",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Regeneration efficiency in HTST pasteurizer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a continuous HTST plate pasteurizer, incoming raw cold milk at $5.0^\\circ\\text{C}$ is pre-heated in the regenerator section to $58.0^\\circ\\text{C}$ by outgoing pasteurized hot milk leaving the holding tube at $72.0^\\circ\\text{C}$. The regeneration efficiency of the pasteurizer is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "79.1",
+    "numerical_range": {
+      "min": 78.9,
+      "max": 79.3
+    },
+    "solution": "The regeneration efficiency $\\eta_{reg}$ is defined as:\n$$\\eta_{reg} = \\frac{T_{regen} - T_{raw}}{T_{past} - T_{raw}} \\times 100$$\nGiven $T_{raw} = 5.0^\\circ\\text{C}$, $T_{regen} = 58.0^\\circ\\text{C}$, and $T_{past} = 72.0^\\circ\\text{C}$:\n$$\\eta_{reg} = \\frac{58.0 - 5.0}{72.0 - 5.0} \\times 100 = \\frac{53.0}{67.0} \\times 100 = 79.1\\%$$",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_041",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Index organisms for milk pasteurization",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The official standard index microorganism used as the benchmark for establishing thermal time-temperature combinations in commercial milk pasteurization is:",
+    "options": {
+      "A": "*Coxiella burnetii* (rickettsia causing Q-fever)",
+      "B": "*Escherichia coli*",
+      "C": "*Saccharomyces cerevisiae*",
+      "D": "*Lactobacillus bulgaricus*"
+    },
+    "correct_answer": "A",
+    "solution": "*Coxiella burnetii* is the most heat-resistant non-spore-forming pathogenic organism found in raw milk. Thermal destruction of *Coxiella burnetii* (and inactivation of the alkaline phosphatase enzyme) guarantees complete destruction of *Mycobacterium tuberculosis* and all other milk-borne pathogens.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_042",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Components of HTST pasteurizer",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following sanitary and safety features are mandatory in a commercial continuous HTST milk pasteurization plant?",
+    "options": {
+      "A": "Flow Diversion Valve (FDV) that automatically diverts sub-pasteurized milk back to the balance tank if temperature drops below the legal limit ($71.7^\\circ\\text{C}$)",
+      "B": "Booster pump installed to ensure pasteurized milk is maintained at higher hydraulic pressure than raw milk in the regenerator section to prevent cross-contamination",
+      "C": "Holding tube sloped continuously upward toward the FDV at a minimum gradient of $2\\%$ ($1/50$) to prevent air entrapment",
+      "D": "Open wooden cooling towers directly exposing pasteurized milk to atmosphere"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. FDV diverts any under-temperature milk instantly (A is mandatory).\n2. Positive differential pressure prevents leakage from raw to pasteurized side across plates (B is mandatory).\n3. Sloped holding tube eliminates air pockets that could alter holding residence time (C is mandatory).\n4. Milk must flow strictly within hermetically sealed, sanitary stainless steel heat exchanger plates without ambient exposure (D is false).",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_PST_043",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Regeneration efficiency in HTST pasteurizer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a continuous HTST plate pasteurizer, incoming raw cold milk at $5.0^\\circ\\text{C}$ is pre-heated in the regenerator section to $61.0^\\circ\\text{C}$ by outgoing pasteurized hot milk leaving the holding tube at $72.0^\\circ\\text{C}$. The regeneration efficiency of the pasteurizer is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "83.6",
+    "numerical_range": {
+      "min": 83.4,
+      "max": 83.8
+    },
+    "solution": "The regeneration efficiency $\\eta_{reg}$ is defined as:\n$$\\eta_{reg} = \\frac{T_{regen} - T_{raw}}{T_{past} - T_{raw}} \\times 100$$\nGiven $T_{raw} = 5.0^\\circ\\text{C}$, $T_{regen} = 61.0^\\circ\\text{C}$, and $T_{past} = 72.0^\\circ\\text{C}$:\n$$\\eta_{reg} = \\frac{61.0 - 5.0}{72.0 - 5.0} \\times 100 = \\frac{56.0}{67.0} \\times 100 = 83.6\\%$$",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Reference temperature for F0 lethality value",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In thermal process engineering of canned foods, the standard reference sterilization lethality value $F_0$ is defined for an equivalent exposure at:",
+    "options": {
+      "A": "$121.1^\\circ\\text{C} \\;(250^\\circ\\text{F})$ with $z = 10^\\circ\\text{C} \\;(18^\\circ\\text{F})$",
+      "B": "$100.0^\\circ\\text{C}$ with $z = 5^\\circ\\text{C}$",
+      "C": "$72.0^\\circ\\text{C}$ with $z = 8^\\circ\\text{C}$",
+      "D": "$140.0^\\circ\\text{C}$ with $z = 20^\\circ\\text{C}$"
+    },
+    "correct_answer": "A",
+    "solution": "The standard unit of thermal lethality $F_0$ is normalized to saturated steam at $121.11^\\circ\\text{C}$ ($250^\\circ\\text{F}$) for an organism with temperature sensitivity $z = 10^\\circ\\text{C}$ ($18^\\circ\\text{F}$): $F_0 = \\int_0^t 10^{\\frac{T(t) - 121.1}{10}} dt$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Cold point location in conduction vs convection heated cans",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the 'slowest heating point' (cold point) in canned food sterilization is/are TRUE?",
+    "options": {
+      "A": "In solid conduction-heating foods (e.g. corned beef, pumpkin puree), the cold point is located at the geometric center of the can",
+      "B": "In liquid convection-heating foods (e.g. clear broth, thin juices), the cold point is located on the central vertical axis, approximately one-third to one-fifth of the height from the can bottom",
+      "C": "Thermal process lethality calculations must be based strictly on the time-temperature history of the cold point",
+      "D": "In broken-heating foods, convection persists uniformly until the end of the cooling cycle"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Conduction heating is symmetrical, locating cold point at geometric center (A is true).\n2. Convective boundary layers rise along warm side walls and plunge down the center, depressing cold point to near the bottom ($1/3$ to $1/5$ height) (B is true).\n3. Ensuring commercial sterility at the coldest point guarantees adequate sterility throughout the remainder of the container (C is true).\n4. In broken heating, starch gelatinizes or pectin dissolves mid-cycle, transitioning flow from rapid convection to slow conduction (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_003",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Lethal rate calculation Bigelow method",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A can of food held at $116.1^\\circ\\text{C}$ has a lethal rate $L = 10^{\\frac{T - 121.1}{z}}$. Taking $z = 10.0^\\circ\\text{C}$, the lethal rate $L$ at this temperature is ________ (round off to three decimal places).",
+    "correct_answer": "0.316",
+    "numerical_range": {
+      "min": 0.31,
+      "max": 0.322
+    },
+    "solution": "Lethal rate is:\n$$L = 10^{\\frac{T - 121.1}{z}} = 10^{\\frac{116.1 - 121.1}{10.0}} = 10^{\\frac{-5.0}{10.0}} = 10^{-0.5} = \\frac{1}{\\sqrt{10}} \\approx 0.3162$$\nRounding to three decimal places: $0.316$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_004",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Reference temperature for F0 lethality value",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In thermal process engineering of canned foods, the standard reference sterilization lethality value $F_0$ is defined for an equivalent exposure at:",
+    "options": {
+      "A": "$121.1^\\circ\\text{C} \\;(250^\\circ\\text{F})$ with $z = 10^\\circ\\text{C} \\;(18^\\circ\\text{F})$",
+      "B": "$100.0^\\circ\\text{C}$ with $z = 5^\\circ\\text{C}$",
+      "C": "$72.0^\\circ\\text{C}$ with $z = 8^\\circ\\text{C}$",
+      "D": "$140.0^\\circ\\text{C}$ with $z = 20^\\circ\\text{C}$"
+    },
+    "correct_answer": "A",
+    "solution": "The standard unit of thermal lethality $F_0$ is normalized to saturated steam at $121.11^\\circ\\text{C}$ ($250^\\circ\\text{F}$) for an organism with temperature sensitivity $z = 10^\\circ\\text{C}$ ($18^\\circ\\text{F}$): $F_0 = \\int_0^t 10^{\\frac{T(t) - 121.1}{10}} dt$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_005",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Cold point location in conduction vs convection heated cans",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the 'slowest heating point' (cold point) in canned food sterilization is/are TRUE?",
+    "options": {
+      "A": "In solid conduction-heating foods (e.g. corned beef, pumpkin puree), the cold point is located at the geometric center of the can",
+      "B": "In liquid convection-heating foods (e.g. clear broth, thin juices), the cold point is located on the central vertical axis, approximately one-third to one-fifth of the height from the can bottom",
+      "C": "Thermal process lethality calculations must be based strictly on the time-temperature history of the cold point",
+      "D": "In broken-heating foods, convection persists uniformly until the end of the cooling cycle"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Conduction heating is symmetrical, locating cold point at geometric center (A is true).\n2. Convective boundary layers rise along warm side walls and plunge down the center, depressing cold point to near the bottom ($1/3$ to $1/5$ height) (B is true).\n3. Ensuring commercial sterility at the coldest point guarantees adequate sterility throughout the remainder of the container (C is true).\n4. In broken heating, starch gelatinizes or pectin dissolves mid-cycle, transitioning flow from rapid convection to slow conduction (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_006",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Lethal rate calculation Bigelow method",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A can of food held at $116.1^\\circ\\text{C}$ has a lethal rate $L = 10^{\\frac{T - 121.1}{z}}$. Taking $z = 10.0^\\circ\\text{C}$, the lethal rate $L$ at this temperature is ________ (round off to three decimal places).",
+    "correct_answer": "0.316",
+    "numerical_range": {
+      "min": 0.31,
+      "max": 0.322
+    },
+    "solution": "Lethal rate is:\n$$L = 10^{\\frac{T - 121.1}{z}} = 10^{\\frac{116.1 - 121.1}{10.0}} = 10^{\\frac{-5.0}{10.0}} = 10^{-0.5} = \\frac{1}{\\sqrt{10}} \\approx 0.3162$$\nRounding to three decimal places: $0.316$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_007",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Reference temperature for F0 lethality value",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In thermal process engineering of canned foods, the standard reference sterilization lethality value $F_0$ is defined for an equivalent exposure at:",
+    "options": {
+      "A": "$121.1^\\circ\\text{C} \\;(250^\\circ\\text{F})$ with $z = 10^\\circ\\text{C} \\;(18^\\circ\\text{F})$",
+      "B": "$100.0^\\circ\\text{C}$ with $z = 5^\\circ\\text{C}$",
+      "C": "$72.0^\\circ\\text{C}$ with $z = 8^\\circ\\text{C}$",
+      "D": "$140.0^\\circ\\text{C}$ with $z = 20^\\circ\\text{C}$"
+    },
+    "correct_answer": "A",
+    "solution": "The standard unit of thermal lethality $F_0$ is normalized to saturated steam at $121.11^\\circ\\text{C}$ ($250^\\circ\\text{F}$) for an organism with temperature sensitivity $z = 10^\\circ\\text{C}$ ($18^\\circ\\text{F}$): $F_0 = \\int_0^t 10^{\\frac{T(t) - 121.1}{10}} dt$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_008",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Cold point location in conduction vs convection heated cans",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the 'slowest heating point' (cold point) in canned food sterilization is/are TRUE?",
+    "options": {
+      "A": "In solid conduction-heating foods (e.g. corned beef, pumpkin puree), the cold point is located at the geometric center of the can",
+      "B": "In liquid convection-heating foods (e.g. clear broth, thin juices), the cold point is located on the central vertical axis, approximately one-third to one-fifth of the height from the can bottom",
+      "C": "Thermal process lethality calculations must be based strictly on the time-temperature history of the cold point",
+      "D": "In broken-heating foods, convection persists uniformly until the end of the cooling cycle"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Conduction heating is symmetrical, locating cold point at geometric center (A is true).\n2. Convective boundary layers rise along warm side walls and plunge down the center, depressing cold point to near the bottom ($1/3$ to $1/5$ height) (B is true).\n3. Ensuring commercial sterility at the coldest point guarantees adequate sterility throughout the remainder of the container (C is true).\n4. In broken heating, starch gelatinizes or pectin dissolves mid-cycle, transitioning flow from rapid convection to slow conduction (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_009",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Lethal rate calculation Bigelow method",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A can of food held at $116.1^\\circ\\text{C}$ has a lethal rate $L = 10^{\\frac{T - 121.1}{z}}$. Taking $z = 10.0^\\circ\\text{C}$, the lethal rate $L$ at this temperature is ________ (round off to three decimal places).",
+    "correct_answer": "0.316",
+    "numerical_range": {
+      "min": 0.31,
+      "max": 0.322
+    },
+    "solution": "Lethal rate is:\n$$L = 10^{\\frac{T - 121.1}{z}} = 10^{\\frac{116.1 - 121.1}{10.0}} = 10^{\\frac{-5.0}{10.0}} = 10^{-0.5} = \\frac{1}{\\sqrt{10}} \\approx 0.3162$$\nRounding to three decimal places: $0.316$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_010",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Reference temperature for F0 lethality value",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In thermal process engineering of canned foods, the standard reference sterilization lethality value $F_0$ is defined for an equivalent exposure at:",
+    "options": {
+      "A": "$121.1^\\circ\\text{C} \\;(250^\\circ\\text{F})$ with $z = 10^\\circ\\text{C} \\;(18^\\circ\\text{F})$",
+      "B": "$100.0^\\circ\\text{C}$ with $z = 5^\\circ\\text{C}$",
+      "C": "$72.0^\\circ\\text{C}$ with $z = 8^\\circ\\text{C}$",
+      "D": "$140.0^\\circ\\text{C}$ with $z = 20^\\circ\\text{C}$"
+    },
+    "correct_answer": "A",
+    "solution": "The standard unit of thermal lethality $F_0$ is normalized to saturated steam at $121.11^\\circ\\text{C}$ ($250^\\circ\\text{F}$) for an organism with temperature sensitivity $z = 10^\\circ\\text{C}$ ($18^\\circ\\text{F}$): $F_0 = \\int_0^t 10^{\\frac{T(t) - 121.1}{10}} dt$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_011",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Cold point location in conduction vs convection heated cans",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the 'slowest heating point' (cold point) in canned food sterilization is/are TRUE?",
+    "options": {
+      "A": "In solid conduction-heating foods (e.g. corned beef, pumpkin puree), the cold point is located at the geometric center of the can",
+      "B": "In liquid convection-heating foods (e.g. clear broth, thin juices), the cold point is located on the central vertical axis, approximately one-third to one-fifth of the height from the can bottom",
+      "C": "Thermal process lethality calculations must be based strictly on the time-temperature history of the cold point",
+      "D": "In broken-heating foods, convection persists uniformly until the end of the cooling cycle"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Conduction heating is symmetrical, locating cold point at geometric center (A is true).\n2. Convective boundary layers rise along warm side walls and plunge down the center, depressing cold point to near the bottom ($1/3$ to $1/5$ height) (B is true).\n3. Ensuring commercial sterility at the coldest point guarantees adequate sterility throughout the remainder of the container (C is true).\n4. In broken heating, starch gelatinizes or pectin dissolves mid-cycle, transitioning flow from rapid convection to slow conduction (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_012",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Lethal rate calculation Bigelow method",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A can of food held at $116.1^\\circ\\text{C}$ has a lethal rate $L = 10^{\\frac{T - 121.1}{z}}$. Taking $z = 10.0^\\circ\\text{C}$, the lethal rate $L$ at this temperature is ________ (round off to three decimal places).",
+    "correct_answer": "0.316",
+    "numerical_range": {
+      "min": 0.31,
+      "max": 0.322
+    },
+    "solution": "Lethal rate is:\n$$L = 10^{\\frac{T - 121.1}{z}} = 10^{\\frac{116.1 - 121.1}{10.0}} = 10^{\\frac{-5.0}{10.0}} = 10^{-0.5} = \\frac{1}{\\sqrt{10}} \\approx 0.3162$$\nRounding to three decimal places: $0.316$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_013",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Reference temperature for F0 lethality value",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In thermal process engineering of canned foods, the standard reference sterilization lethality value $F_0$ is defined for an equivalent exposure at:",
+    "options": {
+      "A": "$121.1^\\circ\\text{C} \\;(250^\\circ\\text{F})$ with $z = 10^\\circ\\text{C} \\;(18^\\circ\\text{F})$",
+      "B": "$100.0^\\circ\\text{C}$ with $z = 5^\\circ\\text{C}$",
+      "C": "$72.0^\\circ\\text{C}$ with $z = 8^\\circ\\text{C}$",
+      "D": "$140.0^\\circ\\text{C}$ with $z = 20^\\circ\\text{C}$"
+    },
+    "correct_answer": "A",
+    "solution": "The standard unit of thermal lethality $F_0$ is normalized to saturated steam at $121.11^\\circ\\text{C}$ ($250^\\circ\\text{F}$) for an organism with temperature sensitivity $z = 10^\\circ\\text{C}$ ($18^\\circ\\text{F}$): $F_0 = \\int_0^t 10^{\\frac{T(t) - 121.1}{10}} dt$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_014",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Cold point location in conduction vs convection heated cans",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the 'slowest heating point' (cold point) in canned food sterilization is/are TRUE?",
+    "options": {
+      "A": "In solid conduction-heating foods (e.g. corned beef, pumpkin puree), the cold point is located at the geometric center of the can",
+      "B": "In liquid convection-heating foods (e.g. clear broth, thin juices), the cold point is located on the central vertical axis, approximately one-third to one-fifth of the height from the can bottom",
+      "C": "Thermal process lethality calculations must be based strictly on the time-temperature history of the cold point",
+      "D": "In broken-heating foods, convection persists uniformly until the end of the cooling cycle"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Conduction heating is symmetrical, locating cold point at geometric center (A is true).\n2. Convective boundary layers rise along warm side walls and plunge down the center, depressing cold point to near the bottom ($1/3$ to $1/5$ height) (B is true).\n3. Ensuring commercial sterility at the coldest point guarantees adequate sterility throughout the remainder of the container (C is true).\n4. In broken heating, starch gelatinizes or pectin dissolves mid-cycle, transitioning flow from rapid convection to slow conduction (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_015",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Lethal rate calculation Bigelow method",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A can of food held at $116.1^\\circ\\text{C}$ has a lethal rate $L = 10^{\\frac{T - 121.1}{z}}$. Taking $z = 10.0^\\circ\\text{C}$, the lethal rate $L$ at this temperature is ________ (round off to three decimal places).",
+    "correct_answer": "0.316",
+    "numerical_range": {
+      "min": 0.31,
+      "max": 0.322
+    },
+    "solution": "Lethal rate is:\n$$L = 10^{\\frac{T - 121.1}{z}} = 10^{\\frac{116.1 - 121.1}{10.0}} = 10^{\\frac{-5.0}{10.0}} = 10^{-0.5} = \\frac{1}{\\sqrt{10}} \\approx 0.3162$$\nRounding to three decimal places: $0.316$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_016",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Reference temperature for F0 lethality value",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In thermal process engineering of canned foods, the standard reference sterilization lethality value $F_0$ is defined for an equivalent exposure at:",
+    "options": {
+      "A": "$121.1^\\circ\\text{C} \\;(250^\\circ\\text{F})$ with $z = 10^\\circ\\text{C} \\;(18^\\circ\\text{F})$",
+      "B": "$100.0^\\circ\\text{C}$ with $z = 5^\\circ\\text{C}$",
+      "C": "$72.0^\\circ\\text{C}$ with $z = 8^\\circ\\text{C}$",
+      "D": "$140.0^\\circ\\text{C}$ with $z = 20^\\circ\\text{C}$"
+    },
+    "correct_answer": "A",
+    "solution": "The standard unit of thermal lethality $F_0$ is normalized to saturated steam at $121.11^\\circ\\text{C}$ ($250^\\circ\\text{F}$) for an organism with temperature sensitivity $z = 10^\\circ\\text{C}$ ($18^\\circ\\text{F}$): $F_0 = \\int_0^t 10^{\\frac{T(t) - 121.1}{10}} dt$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_017",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Cold point location in conduction vs convection heated cans",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the 'slowest heating point' (cold point) in canned food sterilization is/are TRUE?",
+    "options": {
+      "A": "In solid conduction-heating foods (e.g. corned beef, pumpkin puree), the cold point is located at the geometric center of the can",
+      "B": "In liquid convection-heating foods (e.g. clear broth, thin juices), the cold point is located on the central vertical axis, approximately one-third to one-fifth of the height from the can bottom",
+      "C": "Thermal process lethality calculations must be based strictly on the time-temperature history of the cold point",
+      "D": "In broken-heating foods, convection persists uniformly until the end of the cooling cycle"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Conduction heating is symmetrical, locating cold point at geometric center (A is true).\n2. Convective boundary layers rise along warm side walls and plunge down the center, depressing cold point to near the bottom ($1/3$ to $1/5$ height) (B is true).\n3. Ensuring commercial sterility at the coldest point guarantees adequate sterility throughout the remainder of the container (C is true).\n4. In broken heating, starch gelatinizes or pectin dissolves mid-cycle, transitioning flow from rapid convection to slow conduction (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_018",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Lethal rate calculation Bigelow method",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A can of food held at $116.1^\\circ\\text{C}$ has a lethal rate $L = 10^{\\frac{T - 121.1}{z}}$. Taking $z = 10.0^\\circ\\text{C}$, the lethal rate $L$ at this temperature is ________ (round off to three decimal places).",
+    "correct_answer": "0.316",
+    "numerical_range": {
+      "min": 0.31,
+      "max": 0.322
+    },
+    "solution": "Lethal rate is:\n$$L = 10^{\\frac{T - 121.1}{z}} = 10^{\\frac{116.1 - 121.1}{10.0}} = 10^{\\frac{-5.0}{10.0}} = 10^{-0.5} = \\frac{1}{\\sqrt{10}} \\approx 0.3162$$\nRounding to three decimal places: $0.316$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_019",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Reference temperature for F0 lethality value",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In thermal process engineering of canned foods, the standard reference sterilization lethality value $F_0$ is defined for an equivalent exposure at:",
+    "options": {
+      "A": "$121.1^\\circ\\text{C} \\;(250^\\circ\\text{F})$ with $z = 10^\\circ\\text{C} \\;(18^\\circ\\text{F})$",
+      "B": "$100.0^\\circ\\text{C}$ with $z = 5^\\circ\\text{C}$",
+      "C": "$72.0^\\circ\\text{C}$ with $z = 8^\\circ\\text{C}$",
+      "D": "$140.0^\\circ\\text{C}$ with $z = 20^\\circ\\text{C}$"
+    },
+    "correct_answer": "A",
+    "solution": "The standard unit of thermal lethality $F_0$ is normalized to saturated steam at $121.11^\\circ\\text{C}$ ($250^\\circ\\text{F}$) for an organism with temperature sensitivity $z = 10^\\circ\\text{C}$ ($18^\\circ\\text{F}$): $F_0 = \\int_0^t 10^{\\frac{T(t) - 121.1}{10}} dt$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_020",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Cold point location in conduction vs convection heated cans",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the 'slowest heating point' (cold point) in canned food sterilization is/are TRUE?",
+    "options": {
+      "A": "In solid conduction-heating foods (e.g. corned beef, pumpkin puree), the cold point is located at the geometric center of the can",
+      "B": "In liquid convection-heating foods (e.g. clear broth, thin juices), the cold point is located on the central vertical axis, approximately one-third to one-fifth of the height from the can bottom",
+      "C": "Thermal process lethality calculations must be based strictly on the time-temperature history of the cold point",
+      "D": "In broken-heating foods, convection persists uniformly until the end of the cooling cycle"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Conduction heating is symmetrical, locating cold point at geometric center (A is true).\n2. Convective boundary layers rise along warm side walls and plunge down the center, depressing cold point to near the bottom ($1/3$ to $1/5$ height) (B is true).\n3. Ensuring commercial sterility at the coldest point guarantees adequate sterility throughout the remainder of the container (C is true).\n4. In broken heating, starch gelatinizes or pectin dissolves mid-cycle, transitioning flow from rapid convection to slow conduction (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_021",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Lethal rate calculation Bigelow method",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A can of food held at $116.1^\\circ\\text{C}$ has a lethal rate $L = 10^{\\frac{T - 121.1}{z}}$. Taking $z = 10.0^\\circ\\text{C}$, the lethal rate $L$ at this temperature is ________ (round off to three decimal places).",
+    "correct_answer": "0.316",
+    "numerical_range": {
+      "min": 0.31,
+      "max": 0.322
+    },
+    "solution": "Lethal rate is:\n$$L = 10^{\\frac{T - 121.1}{z}} = 10^{\\frac{116.1 - 121.1}{10.0}} = 10^{\\frac{-5.0}{10.0}} = 10^{-0.5} = \\frac{1}{\\sqrt{10}} \\approx 0.3162$$\nRounding to three decimal places: $0.316$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_022",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Reference temperature for F0 lethality value",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In thermal process engineering of canned foods, the standard reference sterilization lethality value $F_0$ is defined for an equivalent exposure at:",
+    "options": {
+      "A": "$121.1^\\circ\\text{C} \\;(250^\\circ\\text{F})$ with $z = 10^\\circ\\text{C} \\;(18^\\circ\\text{F})$",
+      "B": "$100.0^\\circ\\text{C}$ with $z = 5^\\circ\\text{C}$",
+      "C": "$72.0^\\circ\\text{C}$ with $z = 8^\\circ\\text{C}$",
+      "D": "$140.0^\\circ\\text{C}$ with $z = 20^\\circ\\text{C}$"
+    },
+    "correct_answer": "A",
+    "solution": "The standard unit of thermal lethality $F_0$ is normalized to saturated steam at $121.11^\\circ\\text{C}$ ($250^\\circ\\text{F}$) for an organism with temperature sensitivity $z = 10^\\circ\\text{C}$ ($18^\\circ\\text{F}$): $F_0 = \\int_0^t 10^{\\frac{T(t) - 121.1}{10}} dt$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_023",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Cold point location in conduction vs convection heated cans",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the 'slowest heating point' (cold point) in canned food sterilization is/are TRUE?",
+    "options": {
+      "A": "In solid conduction-heating foods (e.g. corned beef, pumpkin puree), the cold point is located at the geometric center of the can",
+      "B": "In liquid convection-heating foods (e.g. clear broth, thin juices), the cold point is located on the central vertical axis, approximately one-third to one-fifth of the height from the can bottom",
+      "C": "Thermal process lethality calculations must be based strictly on the time-temperature history of the cold point",
+      "D": "In broken-heating foods, convection persists uniformly until the end of the cooling cycle"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Conduction heating is symmetrical, locating cold point at geometric center (A is true).\n2. Convective boundary layers rise along warm side walls and plunge down the center, depressing cold point to near the bottom ($1/3$ to $1/5$ height) (B is true).\n3. Ensuring commercial sterility at the coldest point guarantees adequate sterility throughout the remainder of the container (C is true).\n4. In broken heating, starch gelatinizes or pectin dissolves mid-cycle, transitioning flow from rapid convection to slow conduction (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_024",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Lethal rate calculation Bigelow method",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A can of food held at $116.1^\\circ\\text{C}$ has a lethal rate $L = 10^{\\frac{T - 121.1}{z}}$. Taking $z = 10.0^\\circ\\text{C}$, the lethal rate $L$ at this temperature is ________ (round off to three decimal places).",
+    "correct_answer": "0.316",
+    "numerical_range": {
+      "min": 0.31,
+      "max": 0.322
+    },
+    "solution": "Lethal rate is:\n$$L = 10^{\\frac{T - 121.1}{z}} = 10^{\\frac{116.1 - 121.1}{10.0}} = 10^{\\frac{-5.0}{10.0}} = 10^{-0.5} = \\frac{1}{\\sqrt{10}} \\approx 0.3162$$\nRounding to three decimal places: $0.316$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_025",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Reference temperature for F0 lethality value",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In thermal process engineering of canned foods, the standard reference sterilization lethality value $F_0$ is defined for an equivalent exposure at:",
+    "options": {
+      "A": "$121.1^\\circ\\text{C} \\;(250^\\circ\\text{F})$ with $z = 10^\\circ\\text{C} \\;(18^\\circ\\text{F})$",
+      "B": "$100.0^\\circ\\text{C}$ with $z = 5^\\circ\\text{C}$",
+      "C": "$72.0^\\circ\\text{C}$ with $z = 8^\\circ\\text{C}$",
+      "D": "$140.0^\\circ\\text{C}$ with $z = 20^\\circ\\text{C}$"
+    },
+    "correct_answer": "A",
+    "solution": "The standard unit of thermal lethality $F_0$ is normalized to saturated steam at $121.11^\\circ\\text{C}$ ($250^\\circ\\text{F}$) for an organism with temperature sensitivity $z = 10^\\circ\\text{C}$ ($18^\\circ\\text{F}$): $F_0 = \\int_0^t 10^{\\frac{T(t) - 121.1}{10}} dt$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_026",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Cold point location in conduction vs convection heated cans",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the 'slowest heating point' (cold point) in canned food sterilization is/are TRUE?",
+    "options": {
+      "A": "In solid conduction-heating foods (e.g. corned beef, pumpkin puree), the cold point is located at the geometric center of the can",
+      "B": "In liquid convection-heating foods (e.g. clear broth, thin juices), the cold point is located on the central vertical axis, approximately one-third to one-fifth of the height from the can bottom",
+      "C": "Thermal process lethality calculations must be based strictly on the time-temperature history of the cold point",
+      "D": "In broken-heating foods, convection persists uniformly until the end of the cooling cycle"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Conduction heating is symmetrical, locating cold point at geometric center (A is true).\n2. Convective boundary layers rise along warm side walls and plunge down the center, depressing cold point to near the bottom ($1/3$ to $1/5$ height) (B is true).\n3. Ensuring commercial sterility at the coldest point guarantees adequate sterility throughout the remainder of the container (C is true).\n4. In broken heating, starch gelatinizes or pectin dissolves mid-cycle, transitioning flow from rapid convection to slow conduction (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_027",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Lethal rate calculation Bigelow method",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A can of food held at $116.1^\\circ\\text{C}$ has a lethal rate $L = 10^{\\frac{T - 121.1}{z}}$. Taking $z = 10.0^\\circ\\text{C}$, the lethal rate $L$ at this temperature is ________ (round off to three decimal places).",
+    "correct_answer": "0.316",
+    "numerical_range": {
+      "min": 0.31,
+      "max": 0.322
+    },
+    "solution": "Lethal rate is:\n$$L = 10^{\\frac{T - 121.1}{z}} = 10^{\\frac{116.1 - 121.1}{10.0}} = 10^{\\frac{-5.0}{10.0}} = 10^{-0.5} = \\frac{1}{\\sqrt{10}} \\approx 0.3162$$\nRounding to three decimal places: $0.316$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_028",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Reference temperature for F0 lethality value",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In thermal process engineering of canned foods, the standard reference sterilization lethality value $F_0$ is defined for an equivalent exposure at:",
+    "options": {
+      "A": "$121.1^\\circ\\text{C} \\;(250^\\circ\\text{F})$ with $z = 10^\\circ\\text{C} \\;(18^\\circ\\text{F})$",
+      "B": "$100.0^\\circ\\text{C}$ with $z = 5^\\circ\\text{C}$",
+      "C": "$72.0^\\circ\\text{C}$ with $z = 8^\\circ\\text{C}$",
+      "D": "$140.0^\\circ\\text{C}$ with $z = 20^\\circ\\text{C}$"
+    },
+    "correct_answer": "A",
+    "solution": "The standard unit of thermal lethality $F_0$ is normalized to saturated steam at $121.11^\\circ\\text{C}$ ($250^\\circ\\text{F}$) for an organism with temperature sensitivity $z = 10^\\circ\\text{C}$ ($18^\\circ\\text{F}$): $F_0 = \\int_0^t 10^{\\frac{T(t) - 121.1}{10}} dt$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_029",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Cold point location in conduction vs convection heated cans",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the 'slowest heating point' (cold point) in canned food sterilization is/are TRUE?",
+    "options": {
+      "A": "In solid conduction-heating foods (e.g. corned beef, pumpkin puree), the cold point is located at the geometric center of the can",
+      "B": "In liquid convection-heating foods (e.g. clear broth, thin juices), the cold point is located on the central vertical axis, approximately one-third to one-fifth of the height from the can bottom",
+      "C": "Thermal process lethality calculations must be based strictly on the time-temperature history of the cold point",
+      "D": "In broken-heating foods, convection persists uniformly until the end of the cooling cycle"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Conduction heating is symmetrical, locating cold point at geometric center (A is true).\n2. Convective boundary layers rise along warm side walls and plunge down the center, depressing cold point to near the bottom ($1/3$ to $1/5$ height) (B is true).\n3. Ensuring commercial sterility at the coldest point guarantees adequate sterility throughout the remainder of the container (C is true).\n4. In broken heating, starch gelatinizes or pectin dissolves mid-cycle, transitioning flow from rapid convection to slow conduction (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_030",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Lethal rate calculation Bigelow method",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A can of food held at $116.1^\\circ\\text{C}$ has a lethal rate $L = 10^{\\frac{T - 121.1}{z}}$. Taking $z = 10.0^\\circ\\text{C}$, the lethal rate $L$ at this temperature is ________ (round off to three decimal places).",
+    "correct_answer": "0.316",
+    "numerical_range": {
+      "min": 0.31,
+      "max": 0.322
+    },
+    "solution": "Lethal rate is:\n$$L = 10^{\\frac{T - 121.1}{z}} = 10^{\\frac{116.1 - 121.1}{10.0}} = 10^{\\frac{-5.0}{10.0}} = 10^{-0.5} = \\frac{1}{\\sqrt{10}} \\approx 0.3162$$\nRounding to three decimal places: $0.316$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_031",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Reference temperature for F0 lethality value",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In thermal process engineering of canned foods, the standard reference sterilization lethality value $F_0$ is defined for an equivalent exposure at:",
+    "options": {
+      "A": "$121.1^\\circ\\text{C} \\;(250^\\circ\\text{F})$ with $z = 10^\\circ\\text{C} \\;(18^\\circ\\text{F})$",
+      "B": "$100.0^\\circ\\text{C}$ with $z = 5^\\circ\\text{C}$",
+      "C": "$72.0^\\circ\\text{C}$ with $z = 8^\\circ\\text{C}$",
+      "D": "$140.0^\\circ\\text{C}$ with $z = 20^\\circ\\text{C}$"
+    },
+    "correct_answer": "A",
+    "solution": "The standard unit of thermal lethality $F_0$ is normalized to saturated steam at $121.11^\\circ\\text{C}$ ($250^\\circ\\text{F}$) for an organism with temperature sensitivity $z = 10^\\circ\\text{C}$ ($18^\\circ\\text{F}$): $F_0 = \\int_0^t 10^{\\frac{T(t) - 121.1}{10}} dt$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_032",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Cold point location in conduction vs convection heated cans",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the 'slowest heating point' (cold point) in canned food sterilization is/are TRUE?",
+    "options": {
+      "A": "In solid conduction-heating foods (e.g. corned beef, pumpkin puree), the cold point is located at the geometric center of the can",
+      "B": "In liquid convection-heating foods (e.g. clear broth, thin juices), the cold point is located on the central vertical axis, approximately one-third to one-fifth of the height from the can bottom",
+      "C": "Thermal process lethality calculations must be based strictly on the time-temperature history of the cold point",
+      "D": "In broken-heating foods, convection persists uniformly until the end of the cooling cycle"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Conduction heating is symmetrical, locating cold point at geometric center (A is true).\n2. Convective boundary layers rise along warm side walls and plunge down the center, depressing cold point to near the bottom ($1/3$ to $1/5$ height) (B is true).\n3. Ensuring commercial sterility at the coldest point guarantees adequate sterility throughout the remainder of the container (C is true).\n4. In broken heating, starch gelatinizes or pectin dissolves mid-cycle, transitioning flow from rapid convection to slow conduction (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_033",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Lethal rate calculation Bigelow method",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A can of food held at $116.1^\\circ\\text{C}$ has a lethal rate $L = 10^{\\frac{T - 121.1}{z}}$. Taking $z = 10.0^\\circ\\text{C}$, the lethal rate $L$ at this temperature is ________ (round off to three decimal places).",
+    "correct_answer": "0.316",
+    "numerical_range": {
+      "min": 0.31,
+      "max": 0.322
+    },
+    "solution": "Lethal rate is:\n$$L = 10^{\\frac{T - 121.1}{z}} = 10^{\\frac{116.1 - 121.1}{10.0}} = 10^{\\frac{-5.0}{10.0}} = 10^{-0.5} = \\frac{1}{\\sqrt{10}} \\approx 0.3162$$\nRounding to three decimal places: $0.316$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_034",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Reference temperature for F0 lethality value",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In thermal process engineering of canned foods, the standard reference sterilization lethality value $F_0$ is defined for an equivalent exposure at:",
+    "options": {
+      "A": "$121.1^\\circ\\text{C} \\;(250^\\circ\\text{F})$ with $z = 10^\\circ\\text{C} \\;(18^\\circ\\text{F})$",
+      "B": "$100.0^\\circ\\text{C}$ with $z = 5^\\circ\\text{C}$",
+      "C": "$72.0^\\circ\\text{C}$ with $z = 8^\\circ\\text{C}$",
+      "D": "$140.0^\\circ\\text{C}$ with $z = 20^\\circ\\text{C}$"
+    },
+    "correct_answer": "A",
+    "solution": "The standard unit of thermal lethality $F_0$ is normalized to saturated steam at $121.11^\\circ\\text{C}$ ($250^\\circ\\text{F}$) for an organism with temperature sensitivity $z = 10^\\circ\\text{C}$ ($18^\\circ\\text{F}$): $F_0 = \\int_0^t 10^{\\frac{T(t) - 121.1}{10}} dt$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_035",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Cold point location in conduction vs convection heated cans",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the 'slowest heating point' (cold point) in canned food sterilization is/are TRUE?",
+    "options": {
+      "A": "In solid conduction-heating foods (e.g. corned beef, pumpkin puree), the cold point is located at the geometric center of the can",
+      "B": "In liquid convection-heating foods (e.g. clear broth, thin juices), the cold point is located on the central vertical axis, approximately one-third to one-fifth of the height from the can bottom",
+      "C": "Thermal process lethality calculations must be based strictly on the time-temperature history of the cold point",
+      "D": "In broken-heating foods, convection persists uniformly until the end of the cooling cycle"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Conduction heating is symmetrical, locating cold point at geometric center (A is true).\n2. Convective boundary layers rise along warm side walls and plunge down the center, depressing cold point to near the bottom ($1/3$ to $1/5$ height) (B is true).\n3. Ensuring commercial sterility at the coldest point guarantees adequate sterility throughout the remainder of the container (C is true).\n4. In broken heating, starch gelatinizes or pectin dissolves mid-cycle, transitioning flow from rapid convection to slow conduction (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_036",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Lethal rate calculation Bigelow method",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A can of food held at $116.1^\\circ\\text{C}$ has a lethal rate $L = 10^{\\frac{T - 121.1}{z}}$. Taking $z = 10.0^\\circ\\text{C}$, the lethal rate $L$ at this temperature is ________ (round off to three decimal places).",
+    "correct_answer": "0.316",
+    "numerical_range": {
+      "min": 0.31,
+      "max": 0.322
+    },
+    "solution": "Lethal rate is:\n$$L = 10^{\\frac{T - 121.1}{z}} = 10^{\\frac{116.1 - 121.1}{10.0}} = 10^{\\frac{-5.0}{10.0}} = 10^{-0.5} = \\frac{1}{\\sqrt{10}} \\approx 0.3162$$\nRounding to three decimal places: $0.316$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_037",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Reference temperature for F0 lethality value",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In thermal process engineering of canned foods, the standard reference sterilization lethality value $F_0$ is defined for an equivalent exposure at:",
+    "options": {
+      "A": "$121.1^\\circ\\text{C} \\;(250^\\circ\\text{F})$ with $z = 10^\\circ\\text{C} \\;(18^\\circ\\text{F})$",
+      "B": "$100.0^\\circ\\text{C}$ with $z = 5^\\circ\\text{C}$",
+      "C": "$72.0^\\circ\\text{C}$ with $z = 8^\\circ\\text{C}$",
+      "D": "$140.0^\\circ\\text{C}$ with $z = 20^\\circ\\text{C}$"
+    },
+    "correct_answer": "A",
+    "solution": "The standard unit of thermal lethality $F_0$ is normalized to saturated steam at $121.11^\\circ\\text{C}$ ($250^\\circ\\text{F}$) for an organism with temperature sensitivity $z = 10^\\circ\\text{C}$ ($18^\\circ\\text{F}$): $F_0 = \\int_0^t 10^{\\frac{T(t) - 121.1}{10}} dt$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_038",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Cold point location in conduction vs convection heated cans",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the 'slowest heating point' (cold point) in canned food sterilization is/are TRUE?",
+    "options": {
+      "A": "In solid conduction-heating foods (e.g. corned beef, pumpkin puree), the cold point is located at the geometric center of the can",
+      "B": "In liquid convection-heating foods (e.g. clear broth, thin juices), the cold point is located on the central vertical axis, approximately one-third to one-fifth of the height from the can bottom",
+      "C": "Thermal process lethality calculations must be based strictly on the time-temperature history of the cold point",
+      "D": "In broken-heating foods, convection persists uniformly until the end of the cooling cycle"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Conduction heating is symmetrical, locating cold point at geometric center (A is true).\n2. Convective boundary layers rise along warm side walls and plunge down the center, depressing cold point to near the bottom ($1/3$ to $1/5$ height) (B is true).\n3. Ensuring commercial sterility at the coldest point guarantees adequate sterility throughout the remainder of the container (C is true).\n4. In broken heating, starch gelatinizes or pectin dissolves mid-cycle, transitioning flow from rapid convection to slow conduction (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_039",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Lethal rate calculation Bigelow method",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A can of food held at $116.1^\\circ\\text{C}$ has a lethal rate $L = 10^{\\frac{T - 121.1}{z}}$. Taking $z = 10.0^\\circ\\text{C}$, the lethal rate $L$ at this temperature is ________ (round off to three decimal places).",
+    "correct_answer": "0.316",
+    "numerical_range": {
+      "min": 0.31,
+      "max": 0.322
+    },
+    "solution": "Lethal rate is:\n$$L = 10^{\\frac{T - 121.1}{z}} = 10^{\\frac{116.1 - 121.1}{10.0}} = 10^{\\frac{-5.0}{10.0}} = 10^{-0.5} = \\frac{1}{\\sqrt{10}} \\approx 0.3162$$\nRounding to three decimal places: $0.316$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_040",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Reference temperature for F0 lethality value",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In thermal process engineering of canned foods, the standard reference sterilization lethality value $F_0$ is defined for an equivalent exposure at:",
+    "options": {
+      "A": "$121.1^\\circ\\text{C} \\;(250^\\circ\\text{F})$ with $z = 10^\\circ\\text{C} \\;(18^\\circ\\text{F})$",
+      "B": "$100.0^\\circ\\text{C}$ with $z = 5^\\circ\\text{C}$",
+      "C": "$72.0^\\circ\\text{C}$ with $z = 8^\\circ\\text{C}$",
+      "D": "$140.0^\\circ\\text{C}$ with $z = 20^\\circ\\text{C}$"
+    },
+    "correct_answer": "A",
+    "solution": "The standard unit of thermal lethality $F_0$ is normalized to saturated steam at $121.11^\\circ\\text{C}$ ($250^\\circ\\text{F}$) for an organism with temperature sensitivity $z = 10^\\circ\\text{C}$ ($18^\\circ\\text{F}$): $F_0 = \\int_0^t 10^{\\frac{T(t) - 121.1}{10}} dt$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_041",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Cold point location in conduction vs convection heated cans",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the 'slowest heating point' (cold point) in canned food sterilization is/are TRUE?",
+    "options": {
+      "A": "In solid conduction-heating foods (e.g. corned beef, pumpkin puree), the cold point is located at the geometric center of the can",
+      "B": "In liquid convection-heating foods (e.g. clear broth, thin juices), the cold point is located on the central vertical axis, approximately one-third to one-fifth of the height from the can bottom",
+      "C": "Thermal process lethality calculations must be based strictly on the time-temperature history of the cold point",
+      "D": "In broken-heating foods, convection persists uniformly until the end of the cooling cycle"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Conduction heating is symmetrical, locating cold point at geometric center (A is true).\n2. Convective boundary layers rise along warm side walls and plunge down the center, depressing cold point to near the bottom ($1/3$ to $1/5$ height) (B is true).\n3. Ensuring commercial sterility at the coldest point guarantees adequate sterility throughout the remainder of the container (C is true).\n4. In broken heating, starch gelatinizes or pectin dissolves mid-cycle, transitioning flow from rapid convection to slow conduction (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_042",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Lethal rate calculation Bigelow method",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A can of food held at $116.1^\\circ\\text{C}$ has a lethal rate $L = 10^{\\frac{T - 121.1}{z}}$. Taking $z = 10.0^\\circ\\text{C}$, the lethal rate $L$ at this temperature is ________ (round off to three decimal places).",
+    "correct_answer": "0.316",
+    "numerical_range": {
+      "min": 0.31,
+      "max": 0.322
+    },
+    "solution": "Lethal rate is:\n$$L = 10^{\\frac{T - 121.1}{z}} = 10^{\\frac{116.1 - 121.1}{10.0}} = 10^{\\frac{-5.0}{10.0}} = 10^{-0.5} = \\frac{1}{\\sqrt{10}} \\approx 0.3162$$\nRounding to three decimal places: $0.316$.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_STR_043",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Reference temperature for F0 lethality value",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In thermal process engineering of canned foods, the standard reference sterilization lethality value $F_0$ is defined for an equivalent exposure at:",
+    "options": {
+      "A": "$121.1^\\circ\\text{C} \\;(250^\\circ\\text{F})$ with $z = 10^\\circ\\text{C} \\;(18^\\circ\\text{F})$",
+      "B": "$100.0^\\circ\\text{C}$ with $z = 5^\\circ\\text{C}$",
+      "C": "$72.0^\\circ\\text{C}$ with $z = 8^\\circ\\text{C}$",
+      "D": "$140.0^\\circ\\text{C}$ with $z = 20^\\circ\\text{C}$"
+    },
+    "correct_answer": "A",
+    "solution": "The standard unit of thermal lethality $F_0$ is normalized to saturated steam at $121.11^\\circ\\text{C}$ ($250^\\circ\\text{F}$) for an organism with temperature sensitivity $z = 10^\\circ\\text{C}$ ($18^\\circ\\text{F}$): $F_0 = \\int_0^t 10^{\\frac{T(t) - 121.1}{10}} dt$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Stokes law for fat globule creaming",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to Stokes' law for the upward creaming velocity of milk fat globules ($v = \\frac{d^2 (\\rho_s - \\rho_f) g}{18 \\mu}$), reducing fat globule diameter $d$ by half through homogenization reduces the creaming velocity by a factor of:",
+    "options": {
+      "A": "$4$ (creaming velocity is proportional to $d^2$)",
+      "B": "$2$",
+      "C": "$8$",
+      "D": "$16$"
+    },
+    "correct_answer": "A",
+    "solution": "In Stokes' law, creaming velocity varies directly with the square of the globule diameter ($v \\propto d^2$). Halving the diameter reduces the creaming rate by $(1/2)^2 = 1/4$, preventing gravity separation and milk fat rising.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Two-stage homogenization mechanism",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a two-stage high-pressure milk homogenizer, which of the following operational functions are performed by the respective stages?",
+    "options": {
+      "A": "First stage operates at high pressure ($15-20\\text{ MPa}$ / $150-200\\text{ bar}$) to shatter fat globules into sub-micron sizes via intense shear, cavitation, and turbulence",
+      "B": "Second stage operates at lower pressure ($3-5\\text{ MPa}$ / $30-50\\text{ bar}$) to break up fat globule clusters and clumps, ensuring uniform dispersion",
+      "C": "Homogenization increases milk viscosity and creates a richer, whiter appearance due to increased light scattering from smaller fat globules",
+      "D": "Homogenization completely eliminates the need for pasteurization"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. First stage shatters globules down from $4\\;\\mu\\text{m}$ to $< 1\\;\\mu\\text{m}$ (A is true).\n2. Second stage de-clusters aggregated globules (B is true).\n3. Greater number of micro-droplets scatters light efficiently, whitening the milk and increasing body (C is true).\n4. Homogenization is purely mechanical; milk must still be pasteurized to destroy pathogens and inactivate native lipases (D is false).",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_003",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Disc bowl cream separator separation zone",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a continuous disc-bowl centrifugal cream separator rotating at $5000-8000\\text{ rpm}$:",
+    "options": {
+      "A": "Dense skim milk is forced outward to the bowl periphery, while lighter fat globules travel inward along the conical disc surfaces toward the central cream outlet",
+      "B": "Fat globules are forced outward to the bowl periphery while skim milk remains in the center",
+      "C": "Sediment and sludge accumulate in the central shaft",
+      "D": "Separation occurs without centrifugal force"
+    },
+    "correct_answer": "A",
+    "solution": "Under intense centrifugal acceleration ($5000-7000\\text{ g}$), the denser aqueous phase (skim milk, $\\rho \\approx 1035\\text{ kg/m}^3$) is thrown outward to the periphery, while the lighter fat globules ($\\rho \\approx 930\\text{ kg/m}^3$) migrate inward along the conical disc stack toward the central cream core.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_004",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Stokes law for fat globule creaming",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to Stokes' law for the upward creaming velocity of milk fat globules ($v = \\frac{d^2 (\\rho_s - \\rho_f) g}{18 \\mu}$), reducing fat globule diameter $d$ by half through homogenization reduces the creaming velocity by a factor of:",
+    "options": {
+      "A": "$4$ (creaming velocity is proportional to $d^2$)",
+      "B": "$2$",
+      "C": "$8$",
+      "D": "$16$"
+    },
+    "correct_answer": "A",
+    "solution": "In Stokes' law, creaming velocity varies directly with the square of the globule diameter ($v \\propto d^2$). Halving the diameter reduces the creaming rate by $(1/2)^2 = 1/4$, preventing gravity separation and milk fat rising.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_005",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Two-stage homogenization mechanism",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a two-stage high-pressure milk homogenizer, which of the following operational functions are performed by the respective stages?",
+    "options": {
+      "A": "First stage operates at high pressure ($15-20\\text{ MPa}$ / $150-200\\text{ bar}$) to shatter fat globules into sub-micron sizes via intense shear, cavitation, and turbulence",
+      "B": "Second stage operates at lower pressure ($3-5\\text{ MPa}$ / $30-50\\text{ bar}$) to break up fat globule clusters and clumps, ensuring uniform dispersion",
+      "C": "Homogenization increases milk viscosity and creates a richer, whiter appearance due to increased light scattering from smaller fat globules",
+      "D": "Homogenization completely eliminates the need for pasteurization"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. First stage shatters globules down from $4\\;\\mu\\text{m}$ to $< 1\\;\\mu\\text{m}$ (A is true).\n2. Second stage de-clusters aggregated globules (B is true).\n3. Greater number of micro-droplets scatters light efficiently, whitening the milk and increasing body (C is true).\n4. Homogenization is purely mechanical; milk must still be pasteurized to destroy pathogens and inactivate native lipases (D is false).",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_006",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Disc bowl cream separator separation zone",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a continuous disc-bowl centrifugal cream separator rotating at $5000-8000\\text{ rpm}$:",
+    "options": {
+      "A": "Dense skim milk is forced outward to the bowl periphery, while lighter fat globules travel inward along the conical disc surfaces toward the central cream outlet",
+      "B": "Fat globules are forced outward to the bowl periphery while skim milk remains in the center",
+      "C": "Sediment and sludge accumulate in the central shaft",
+      "D": "Separation occurs without centrifugal force"
+    },
+    "correct_answer": "A",
+    "solution": "Under intense centrifugal acceleration ($5000-7000\\text{ g}$), the denser aqueous phase (skim milk, $\\rho \\approx 1035\\text{ kg/m}^3$) is thrown outward to the periphery, while the lighter fat globules ($\\rho \\approx 930\\text{ kg/m}^3$) migrate inward along the conical disc stack toward the central cream core.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_007",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Stokes law for fat globule creaming",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to Stokes' law for the upward creaming velocity of milk fat globules ($v = \\frac{d^2 (\\rho_s - \\rho_f) g}{18 \\mu}$), reducing fat globule diameter $d$ by half through homogenization reduces the creaming velocity by a factor of:",
+    "options": {
+      "A": "$4$ (creaming velocity is proportional to $d^2$)",
+      "B": "$2$",
+      "C": "$8$",
+      "D": "$16$"
+    },
+    "correct_answer": "A",
+    "solution": "In Stokes' law, creaming velocity varies directly with the square of the globule diameter ($v \\propto d^2$). Halving the diameter reduces the creaming rate by $(1/2)^2 = 1/4$, preventing gravity separation and milk fat rising.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_008",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Two-stage homogenization mechanism",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a two-stage high-pressure milk homogenizer, which of the following operational functions are performed by the respective stages?",
+    "options": {
+      "A": "First stage operates at high pressure ($15-20\\text{ MPa}$ / $150-200\\text{ bar}$) to shatter fat globules into sub-micron sizes via intense shear, cavitation, and turbulence",
+      "B": "Second stage operates at lower pressure ($3-5\\text{ MPa}$ / $30-50\\text{ bar}$) to break up fat globule clusters and clumps, ensuring uniform dispersion",
+      "C": "Homogenization increases milk viscosity and creates a richer, whiter appearance due to increased light scattering from smaller fat globules",
+      "D": "Homogenization completely eliminates the need for pasteurization"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. First stage shatters globules down from $4\\;\\mu\\text{m}$ to $< 1\\;\\mu\\text{m}$ (A is true).\n2. Second stage de-clusters aggregated globules (B is true).\n3. Greater number of micro-droplets scatters light efficiently, whitening the milk and increasing body (C is true).\n4. Homogenization is purely mechanical; milk must still be pasteurized to destroy pathogens and inactivate native lipases (D is false).",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_009",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Disc bowl cream separator separation zone",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a continuous disc-bowl centrifugal cream separator rotating at $5000-8000\\text{ rpm}$:",
+    "options": {
+      "A": "Dense skim milk is forced outward to the bowl periphery, while lighter fat globules travel inward along the conical disc surfaces toward the central cream outlet",
+      "B": "Fat globules are forced outward to the bowl periphery while skim milk remains in the center",
+      "C": "Sediment and sludge accumulate in the central shaft",
+      "D": "Separation occurs without centrifugal force"
+    },
+    "correct_answer": "A",
+    "solution": "Under intense centrifugal acceleration ($5000-7000\\text{ g}$), the denser aqueous phase (skim milk, $\\rho \\approx 1035\\text{ kg/m}^3$) is thrown outward to the periphery, while the lighter fat globules ($\\rho \\approx 930\\text{ kg/m}^3$) migrate inward along the conical disc stack toward the central cream core.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_010",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Stokes law for fat globule creaming",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to Stokes' law for the upward creaming velocity of milk fat globules ($v = \\frac{d^2 (\\rho_s - \\rho_f) g}{18 \\mu}$), reducing fat globule diameter $d$ by half through homogenization reduces the creaming velocity by a factor of:",
+    "options": {
+      "A": "$4$ (creaming velocity is proportional to $d^2$)",
+      "B": "$2$",
+      "C": "$8$",
+      "D": "$16$"
+    },
+    "correct_answer": "A",
+    "solution": "In Stokes' law, creaming velocity varies directly with the square of the globule diameter ($v \\propto d^2$). Halving the diameter reduces the creaming rate by $(1/2)^2 = 1/4$, preventing gravity separation and milk fat rising.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_011",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Two-stage homogenization mechanism",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a two-stage high-pressure milk homogenizer, which of the following operational functions are performed by the respective stages?",
+    "options": {
+      "A": "First stage operates at high pressure ($15-20\\text{ MPa}$ / $150-200\\text{ bar}$) to shatter fat globules into sub-micron sizes via intense shear, cavitation, and turbulence",
+      "B": "Second stage operates at lower pressure ($3-5\\text{ MPa}$ / $30-50\\text{ bar}$) to break up fat globule clusters and clumps, ensuring uniform dispersion",
+      "C": "Homogenization increases milk viscosity and creates a richer, whiter appearance due to increased light scattering from smaller fat globules",
+      "D": "Homogenization completely eliminates the need for pasteurization"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. First stage shatters globules down from $4\\;\\mu\\text{m}$ to $< 1\\;\\mu\\text{m}$ (A is true).\n2. Second stage de-clusters aggregated globules (B is true).\n3. Greater number of micro-droplets scatters light efficiently, whitening the milk and increasing body (C is true).\n4. Homogenization is purely mechanical; milk must still be pasteurized to destroy pathogens and inactivate native lipases (D is false).",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_012",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Disc bowl cream separator separation zone",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a continuous disc-bowl centrifugal cream separator rotating at $5000-8000\\text{ rpm}$:",
+    "options": {
+      "A": "Dense skim milk is forced outward to the bowl periphery, while lighter fat globules travel inward along the conical disc surfaces toward the central cream outlet",
+      "B": "Fat globules are forced outward to the bowl periphery while skim milk remains in the center",
+      "C": "Sediment and sludge accumulate in the central shaft",
+      "D": "Separation occurs without centrifugal force"
+    },
+    "correct_answer": "A",
+    "solution": "Under intense centrifugal acceleration ($5000-7000\\text{ g}$), the denser aqueous phase (skim milk, $\\rho \\approx 1035\\text{ kg/m}^3$) is thrown outward to the periphery, while the lighter fat globules ($\\rho \\approx 930\\text{ kg/m}^3$) migrate inward along the conical disc stack toward the central cream core.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_013",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Stokes law for fat globule creaming",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to Stokes' law for the upward creaming velocity of milk fat globules ($v = \\frac{d^2 (\\rho_s - \\rho_f) g}{18 \\mu}$), reducing fat globule diameter $d$ by half through homogenization reduces the creaming velocity by a factor of:",
+    "options": {
+      "A": "$4$ (creaming velocity is proportional to $d^2$)",
+      "B": "$2$",
+      "C": "$8$",
+      "D": "$16$"
+    },
+    "correct_answer": "A",
+    "solution": "In Stokes' law, creaming velocity varies directly with the square of the globule diameter ($v \\propto d^2$). Halving the diameter reduces the creaming rate by $(1/2)^2 = 1/4$, preventing gravity separation and milk fat rising.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_014",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Two-stage homogenization mechanism",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a two-stage high-pressure milk homogenizer, which of the following operational functions are performed by the respective stages?",
+    "options": {
+      "A": "First stage operates at high pressure ($15-20\\text{ MPa}$ / $150-200\\text{ bar}$) to shatter fat globules into sub-micron sizes via intense shear, cavitation, and turbulence",
+      "B": "Second stage operates at lower pressure ($3-5\\text{ MPa}$ / $30-50\\text{ bar}$) to break up fat globule clusters and clumps, ensuring uniform dispersion",
+      "C": "Homogenization increases milk viscosity and creates a richer, whiter appearance due to increased light scattering from smaller fat globules",
+      "D": "Homogenization completely eliminates the need for pasteurization"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. First stage shatters globules down from $4\\;\\mu\\text{m}$ to $< 1\\;\\mu\\text{m}$ (A is true).\n2. Second stage de-clusters aggregated globules (B is true).\n3. Greater number of micro-droplets scatters light efficiently, whitening the milk and increasing body (C is true).\n4. Homogenization is purely mechanical; milk must still be pasteurized to destroy pathogens and inactivate native lipases (D is false).",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_015",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Disc bowl cream separator separation zone",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a continuous disc-bowl centrifugal cream separator rotating at $5000-8000\\text{ rpm}$:",
+    "options": {
+      "A": "Dense skim milk is forced outward to the bowl periphery, while lighter fat globules travel inward along the conical disc surfaces toward the central cream outlet",
+      "B": "Fat globules are forced outward to the bowl periphery while skim milk remains in the center",
+      "C": "Sediment and sludge accumulate in the central shaft",
+      "D": "Separation occurs without centrifugal force"
+    },
+    "correct_answer": "A",
+    "solution": "Under intense centrifugal acceleration ($5000-7000\\text{ g}$), the denser aqueous phase (skim milk, $\\rho \\approx 1035\\text{ kg/m}^3$) is thrown outward to the periphery, while the lighter fat globules ($\\rho \\approx 930\\text{ kg/m}^3$) migrate inward along the conical disc stack toward the central cream core.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_016",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Stokes law for fat globule creaming",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to Stokes' law for the upward creaming velocity of milk fat globules ($v = \\frac{d^2 (\\rho_s - \\rho_f) g}{18 \\mu}$), reducing fat globule diameter $d$ by half through homogenization reduces the creaming velocity by a factor of:",
+    "options": {
+      "A": "$4$ (creaming velocity is proportional to $d^2$)",
+      "B": "$2$",
+      "C": "$8$",
+      "D": "$16$"
+    },
+    "correct_answer": "A",
+    "solution": "In Stokes' law, creaming velocity varies directly with the square of the globule diameter ($v \\propto d^2$). Halving the diameter reduces the creaming rate by $(1/2)^2 = 1/4$, preventing gravity separation and milk fat rising.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_017",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Two-stage homogenization mechanism",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a two-stage high-pressure milk homogenizer, which of the following operational functions are performed by the respective stages?",
+    "options": {
+      "A": "First stage operates at high pressure ($15-20\\text{ MPa}$ / $150-200\\text{ bar}$) to shatter fat globules into sub-micron sizes via intense shear, cavitation, and turbulence",
+      "B": "Second stage operates at lower pressure ($3-5\\text{ MPa}$ / $30-50\\text{ bar}$) to break up fat globule clusters and clumps, ensuring uniform dispersion",
+      "C": "Homogenization increases milk viscosity and creates a richer, whiter appearance due to increased light scattering from smaller fat globules",
+      "D": "Homogenization completely eliminates the need for pasteurization"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. First stage shatters globules down from $4\\;\\mu\\text{m}$ to $< 1\\;\\mu\\text{m}$ (A is true).\n2. Second stage de-clusters aggregated globules (B is true).\n3. Greater number of micro-droplets scatters light efficiently, whitening the milk and increasing body (C is true).\n4. Homogenization is purely mechanical; milk must still be pasteurized to destroy pathogens and inactivate native lipases (D is false).",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_018",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Disc bowl cream separator separation zone",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a continuous disc-bowl centrifugal cream separator rotating at $5000-8000\\text{ rpm}$:",
+    "options": {
+      "A": "Dense skim milk is forced outward to the bowl periphery, while lighter fat globules travel inward along the conical disc surfaces toward the central cream outlet",
+      "B": "Fat globules are forced outward to the bowl periphery while skim milk remains in the center",
+      "C": "Sediment and sludge accumulate in the central shaft",
+      "D": "Separation occurs without centrifugal force"
+    },
+    "correct_answer": "A",
+    "solution": "Under intense centrifugal acceleration ($5000-7000\\text{ g}$), the denser aqueous phase (skim milk, $\\rho \\approx 1035\\text{ kg/m}^3$) is thrown outward to the periphery, while the lighter fat globules ($\\rho \\approx 930\\text{ kg/m}^3$) migrate inward along the conical disc stack toward the central cream core.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_019",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Stokes law for fat globule creaming",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to Stokes' law for the upward creaming velocity of milk fat globules ($v = \\frac{d^2 (\\rho_s - \\rho_f) g}{18 \\mu}$), reducing fat globule diameter $d$ by half through homogenization reduces the creaming velocity by a factor of:",
+    "options": {
+      "A": "$4$ (creaming velocity is proportional to $d^2$)",
+      "B": "$2$",
+      "C": "$8$",
+      "D": "$16$"
+    },
+    "correct_answer": "A",
+    "solution": "In Stokes' law, creaming velocity varies directly with the square of the globule diameter ($v \\propto d^2$). Halving the diameter reduces the creaming rate by $(1/2)^2 = 1/4$, preventing gravity separation and milk fat rising.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_020",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Two-stage homogenization mechanism",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a two-stage high-pressure milk homogenizer, which of the following operational functions are performed by the respective stages?",
+    "options": {
+      "A": "First stage operates at high pressure ($15-20\\text{ MPa}$ / $150-200\\text{ bar}$) to shatter fat globules into sub-micron sizes via intense shear, cavitation, and turbulence",
+      "B": "Second stage operates at lower pressure ($3-5\\text{ MPa}$ / $30-50\\text{ bar}$) to break up fat globule clusters and clumps, ensuring uniform dispersion",
+      "C": "Homogenization increases milk viscosity and creates a richer, whiter appearance due to increased light scattering from smaller fat globules",
+      "D": "Homogenization completely eliminates the need for pasteurization"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. First stage shatters globules down from $4\\;\\mu\\text{m}$ to $< 1\\;\\mu\\text{m}$ (A is true).\n2. Second stage de-clusters aggregated globules (B is true).\n3. Greater number of micro-droplets scatters light efficiently, whitening the milk and increasing body (C is true).\n4. Homogenization is purely mechanical; milk must still be pasteurized to destroy pathogens and inactivate native lipases (D is false).",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_021",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Disc bowl cream separator separation zone",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a continuous disc-bowl centrifugal cream separator rotating at $5000-8000\\text{ rpm}$:",
+    "options": {
+      "A": "Dense skim milk is forced outward to the bowl periphery, while lighter fat globules travel inward along the conical disc surfaces toward the central cream outlet",
+      "B": "Fat globules are forced outward to the bowl periphery while skim milk remains in the center",
+      "C": "Sediment and sludge accumulate in the central shaft",
+      "D": "Separation occurs without centrifugal force"
+    },
+    "correct_answer": "A",
+    "solution": "Under intense centrifugal acceleration ($5000-7000\\text{ g}$), the denser aqueous phase (skim milk, $\\rho \\approx 1035\\text{ kg/m}^3$) is thrown outward to the periphery, while the lighter fat globules ($\\rho \\approx 930\\text{ kg/m}^3$) migrate inward along the conical disc stack toward the central cream core.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_022",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Stokes law for fat globule creaming",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to Stokes' law for the upward creaming velocity of milk fat globules ($v = \\frac{d^2 (\\rho_s - \\rho_f) g}{18 \\mu}$), reducing fat globule diameter $d$ by half through homogenization reduces the creaming velocity by a factor of:",
+    "options": {
+      "A": "$4$ (creaming velocity is proportional to $d^2$)",
+      "B": "$2$",
+      "C": "$8$",
+      "D": "$16$"
+    },
+    "correct_answer": "A",
+    "solution": "In Stokes' law, creaming velocity varies directly with the square of the globule diameter ($v \\propto d^2$). Halving the diameter reduces the creaming rate by $(1/2)^2 = 1/4$, preventing gravity separation and milk fat rising.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_023",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Two-stage homogenization mechanism",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a two-stage high-pressure milk homogenizer, which of the following operational functions are performed by the respective stages?",
+    "options": {
+      "A": "First stage operates at high pressure ($15-20\\text{ MPa}$ / $150-200\\text{ bar}$) to shatter fat globules into sub-micron sizes via intense shear, cavitation, and turbulence",
+      "B": "Second stage operates at lower pressure ($3-5\\text{ MPa}$ / $30-50\\text{ bar}$) to break up fat globule clusters and clumps, ensuring uniform dispersion",
+      "C": "Homogenization increases milk viscosity and creates a richer, whiter appearance due to increased light scattering from smaller fat globules",
+      "D": "Homogenization completely eliminates the need for pasteurization"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. First stage shatters globules down from $4\\;\\mu\\text{m}$ to $< 1\\;\\mu\\text{m}$ (A is true).\n2. Second stage de-clusters aggregated globules (B is true).\n3. Greater number of micro-droplets scatters light efficiently, whitening the milk and increasing body (C is true).\n4. Homogenization is purely mechanical; milk must still be pasteurized to destroy pathogens and inactivate native lipases (D is false).",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_024",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Disc bowl cream separator separation zone",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a continuous disc-bowl centrifugal cream separator rotating at $5000-8000\\text{ rpm}$:",
+    "options": {
+      "A": "Dense skim milk is forced outward to the bowl periphery, while lighter fat globules travel inward along the conical disc surfaces toward the central cream outlet",
+      "B": "Fat globules are forced outward to the bowl periphery while skim milk remains in the center",
+      "C": "Sediment and sludge accumulate in the central shaft",
+      "D": "Separation occurs without centrifugal force"
+    },
+    "correct_answer": "A",
+    "solution": "Under intense centrifugal acceleration ($5000-7000\\text{ g}$), the denser aqueous phase (skim milk, $\\rho \\approx 1035\\text{ kg/m}^3$) is thrown outward to the periphery, while the lighter fat globules ($\\rho \\approx 930\\text{ kg/m}^3$) migrate inward along the conical disc stack toward the central cream core.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_025",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Stokes law for fat globule creaming",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to Stokes' law for the upward creaming velocity of milk fat globules ($v = \\frac{d^2 (\\rho_s - \\rho_f) g}{18 \\mu}$), reducing fat globule diameter $d$ by half through homogenization reduces the creaming velocity by a factor of:",
+    "options": {
+      "A": "$4$ (creaming velocity is proportional to $d^2$)",
+      "B": "$2$",
+      "C": "$8$",
+      "D": "$16$"
+    },
+    "correct_answer": "A",
+    "solution": "In Stokes' law, creaming velocity varies directly with the square of the globule diameter ($v \\propto d^2$). Halving the diameter reduces the creaming rate by $(1/2)^2 = 1/4$, preventing gravity separation and milk fat rising.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_026",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Two-stage homogenization mechanism",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a two-stage high-pressure milk homogenizer, which of the following operational functions are performed by the respective stages?",
+    "options": {
+      "A": "First stage operates at high pressure ($15-20\\text{ MPa}$ / $150-200\\text{ bar}$) to shatter fat globules into sub-micron sizes via intense shear, cavitation, and turbulence",
+      "B": "Second stage operates at lower pressure ($3-5\\text{ MPa}$ / $30-50\\text{ bar}$) to break up fat globule clusters and clumps, ensuring uniform dispersion",
+      "C": "Homogenization increases milk viscosity and creates a richer, whiter appearance due to increased light scattering from smaller fat globules",
+      "D": "Homogenization completely eliminates the need for pasteurization"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. First stage shatters globules down from $4\\;\\mu\\text{m}$ to $< 1\\;\\mu\\text{m}$ (A is true).\n2. Second stage de-clusters aggregated globules (B is true).\n3. Greater number of micro-droplets scatters light efficiently, whitening the milk and increasing body (C is true).\n4. Homogenization is purely mechanical; milk must still be pasteurized to destroy pathogens and inactivate native lipases (D is false).",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_027",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Disc bowl cream separator separation zone",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a continuous disc-bowl centrifugal cream separator rotating at $5000-8000\\text{ rpm}$:",
+    "options": {
+      "A": "Dense skim milk is forced outward to the bowl periphery, while lighter fat globules travel inward along the conical disc surfaces toward the central cream outlet",
+      "B": "Fat globules are forced outward to the bowl periphery while skim milk remains in the center",
+      "C": "Sediment and sludge accumulate in the central shaft",
+      "D": "Separation occurs without centrifugal force"
+    },
+    "correct_answer": "A",
+    "solution": "Under intense centrifugal acceleration ($5000-7000\\text{ g}$), the denser aqueous phase (skim milk, $\\rho \\approx 1035\\text{ kg/m}^3$) is thrown outward to the periphery, while the lighter fat globules ($\\rho \\approx 930\\text{ kg/m}^3$) migrate inward along the conical disc stack toward the central cream core.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_028",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Stokes law for fat globule creaming",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to Stokes' law for the upward creaming velocity of milk fat globules ($v = \\frac{d^2 (\\rho_s - \\rho_f) g}{18 \\mu}$), reducing fat globule diameter $d$ by half through homogenization reduces the creaming velocity by a factor of:",
+    "options": {
+      "A": "$4$ (creaming velocity is proportional to $d^2$)",
+      "B": "$2$",
+      "C": "$8$",
+      "D": "$16$"
+    },
+    "correct_answer": "A",
+    "solution": "In Stokes' law, creaming velocity varies directly with the square of the globule diameter ($v \\propto d^2$). Halving the diameter reduces the creaming rate by $(1/2)^2 = 1/4$, preventing gravity separation and milk fat rising.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_029",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Two-stage homogenization mechanism",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a two-stage high-pressure milk homogenizer, which of the following operational functions are performed by the respective stages?",
+    "options": {
+      "A": "First stage operates at high pressure ($15-20\\text{ MPa}$ / $150-200\\text{ bar}$) to shatter fat globules into sub-micron sizes via intense shear, cavitation, and turbulence",
+      "B": "Second stage operates at lower pressure ($3-5\\text{ MPa}$ / $30-50\\text{ bar}$) to break up fat globule clusters and clumps, ensuring uniform dispersion",
+      "C": "Homogenization increases milk viscosity and creates a richer, whiter appearance due to increased light scattering from smaller fat globules",
+      "D": "Homogenization completely eliminates the need for pasteurization"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. First stage shatters globules down from $4\\;\\mu\\text{m}$ to $< 1\\;\\mu\\text{m}$ (A is true).\n2. Second stage de-clusters aggregated globules (B is true).\n3. Greater number of micro-droplets scatters light efficiently, whitening the milk and increasing body (C is true).\n4. Homogenization is purely mechanical; milk must still be pasteurized to destroy pathogens and inactivate native lipases (D is false).",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_030",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Disc bowl cream separator separation zone",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a continuous disc-bowl centrifugal cream separator rotating at $5000-8000\\text{ rpm}$:",
+    "options": {
+      "A": "Dense skim milk is forced outward to the bowl periphery, while lighter fat globules travel inward along the conical disc surfaces toward the central cream outlet",
+      "B": "Fat globules are forced outward to the bowl periphery while skim milk remains in the center",
+      "C": "Sediment and sludge accumulate in the central shaft",
+      "D": "Separation occurs without centrifugal force"
+    },
+    "correct_answer": "A",
+    "solution": "Under intense centrifugal acceleration ($5000-7000\\text{ g}$), the denser aqueous phase (skim milk, $\\rho \\approx 1035\\text{ kg/m}^3$) is thrown outward to the periphery, while the lighter fat globules ($\\rho \\approx 930\\text{ kg/m}^3$) migrate inward along the conical disc stack toward the central cream core.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_031",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Stokes law for fat globule creaming",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to Stokes' law for the upward creaming velocity of milk fat globules ($v = \\frac{d^2 (\\rho_s - \\rho_f) g}{18 \\mu}$), reducing fat globule diameter $d$ by half through homogenization reduces the creaming velocity by a factor of:",
+    "options": {
+      "A": "$4$ (creaming velocity is proportional to $d^2$)",
+      "B": "$2$",
+      "C": "$8$",
+      "D": "$16$"
+    },
+    "correct_answer": "A",
+    "solution": "In Stokes' law, creaming velocity varies directly with the square of the globule diameter ($v \\propto d^2$). Halving the diameter reduces the creaming rate by $(1/2)^2 = 1/4$, preventing gravity separation and milk fat rising.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_032",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Two-stage homogenization mechanism",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a two-stage high-pressure milk homogenizer, which of the following operational functions are performed by the respective stages?",
+    "options": {
+      "A": "First stage operates at high pressure ($15-20\\text{ MPa}$ / $150-200\\text{ bar}$) to shatter fat globules into sub-micron sizes via intense shear, cavitation, and turbulence",
+      "B": "Second stage operates at lower pressure ($3-5\\text{ MPa}$ / $30-50\\text{ bar}$) to break up fat globule clusters and clumps, ensuring uniform dispersion",
+      "C": "Homogenization increases milk viscosity and creates a richer, whiter appearance due to increased light scattering from smaller fat globules",
+      "D": "Homogenization completely eliminates the need for pasteurization"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. First stage shatters globules down from $4\\;\\mu\\text{m}$ to $< 1\\;\\mu\\text{m}$ (A is true).\n2. Second stage de-clusters aggregated globules (B is true).\n3. Greater number of micro-droplets scatters light efficiently, whitening the milk and increasing body (C is true).\n4. Homogenization is purely mechanical; milk must still be pasteurized to destroy pathogens and inactivate native lipases (D is false).",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_033",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Disc bowl cream separator separation zone",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a continuous disc-bowl centrifugal cream separator rotating at $5000-8000\\text{ rpm}$:",
+    "options": {
+      "A": "Dense skim milk is forced outward to the bowl periphery, while lighter fat globules travel inward along the conical disc surfaces toward the central cream outlet",
+      "B": "Fat globules are forced outward to the bowl periphery while skim milk remains in the center",
+      "C": "Sediment and sludge accumulate in the central shaft",
+      "D": "Separation occurs without centrifugal force"
+    },
+    "correct_answer": "A",
+    "solution": "Under intense centrifugal acceleration ($5000-7000\\text{ g}$), the denser aqueous phase (skim milk, $\\rho \\approx 1035\\text{ kg/m}^3$) is thrown outward to the periphery, while the lighter fat globules ($\\rho \\approx 930\\text{ kg/m}^3$) migrate inward along the conical disc stack toward the central cream core.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_034",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Stokes law for fat globule creaming",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to Stokes' law for the upward creaming velocity of milk fat globules ($v = \\frac{d^2 (\\rho_s - \\rho_f) g}{18 \\mu}$), reducing fat globule diameter $d$ by half through homogenization reduces the creaming velocity by a factor of:",
+    "options": {
+      "A": "$4$ (creaming velocity is proportional to $d^2$)",
+      "B": "$2$",
+      "C": "$8$",
+      "D": "$16$"
+    },
+    "correct_answer": "A",
+    "solution": "In Stokes' law, creaming velocity varies directly with the square of the globule diameter ($v \\propto d^2$). Halving the diameter reduces the creaming rate by $(1/2)^2 = 1/4$, preventing gravity separation and milk fat rising.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_035",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Two-stage homogenization mechanism",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a two-stage high-pressure milk homogenizer, which of the following operational functions are performed by the respective stages?",
+    "options": {
+      "A": "First stage operates at high pressure ($15-20\\text{ MPa}$ / $150-200\\text{ bar}$) to shatter fat globules into sub-micron sizes via intense shear, cavitation, and turbulence",
+      "B": "Second stage operates at lower pressure ($3-5\\text{ MPa}$ / $30-50\\text{ bar}$) to break up fat globule clusters and clumps, ensuring uniform dispersion",
+      "C": "Homogenization increases milk viscosity and creates a richer, whiter appearance due to increased light scattering from smaller fat globules",
+      "D": "Homogenization completely eliminates the need for pasteurization"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. First stage shatters globules down from $4\\;\\mu\\text{m}$ to $< 1\\;\\mu\\text{m}$ (A is true).\n2. Second stage de-clusters aggregated globules (B is true).\n3. Greater number of micro-droplets scatters light efficiently, whitening the milk and increasing body (C is true).\n4. Homogenization is purely mechanical; milk must still be pasteurized to destroy pathogens and inactivate native lipases (D is false).",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_036",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Disc bowl cream separator separation zone",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a continuous disc-bowl centrifugal cream separator rotating at $5000-8000\\text{ rpm}$:",
+    "options": {
+      "A": "Dense skim milk is forced outward to the bowl periphery, while lighter fat globules travel inward along the conical disc surfaces toward the central cream outlet",
+      "B": "Fat globules are forced outward to the bowl periphery while skim milk remains in the center",
+      "C": "Sediment and sludge accumulate in the central shaft",
+      "D": "Separation occurs without centrifugal force"
+    },
+    "correct_answer": "A",
+    "solution": "Under intense centrifugal acceleration ($5000-7000\\text{ g}$), the denser aqueous phase (skim milk, $\\rho \\approx 1035\\text{ kg/m}^3$) is thrown outward to the periphery, while the lighter fat globules ($\\rho \\approx 930\\text{ kg/m}^3$) migrate inward along the conical disc stack toward the central cream core.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_037",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Stokes law for fat globule creaming",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to Stokes' law for the upward creaming velocity of milk fat globules ($v = \\frac{d^2 (\\rho_s - \\rho_f) g}{18 \\mu}$), reducing fat globule diameter $d$ by half through homogenization reduces the creaming velocity by a factor of:",
+    "options": {
+      "A": "$4$ (creaming velocity is proportional to $d^2$)",
+      "B": "$2$",
+      "C": "$8$",
+      "D": "$16$"
+    },
+    "correct_answer": "A",
+    "solution": "In Stokes' law, creaming velocity varies directly with the square of the globule diameter ($v \\propto d^2$). Halving the diameter reduces the creaming rate by $(1/2)^2 = 1/4$, preventing gravity separation and milk fat rising.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_038",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Two-stage homogenization mechanism",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a two-stage high-pressure milk homogenizer, which of the following operational functions are performed by the respective stages?",
+    "options": {
+      "A": "First stage operates at high pressure ($15-20\\text{ MPa}$ / $150-200\\text{ bar}$) to shatter fat globules into sub-micron sizes via intense shear, cavitation, and turbulence",
+      "B": "Second stage operates at lower pressure ($3-5\\text{ MPa}$ / $30-50\\text{ bar}$) to break up fat globule clusters and clumps, ensuring uniform dispersion",
+      "C": "Homogenization increases milk viscosity and creates a richer, whiter appearance due to increased light scattering from smaller fat globules",
+      "D": "Homogenization completely eliminates the need for pasteurization"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. First stage shatters globules down from $4\\;\\mu\\text{m}$ to $< 1\\;\\mu\\text{m}$ (A is true).\n2. Second stage de-clusters aggregated globules (B is true).\n3. Greater number of micro-droplets scatters light efficiently, whitening the milk and increasing body (C is true).\n4. Homogenization is purely mechanical; milk must still be pasteurized to destroy pathogens and inactivate native lipases (D is false).",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_039",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Disc bowl cream separator separation zone",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a continuous disc-bowl centrifugal cream separator rotating at $5000-8000\\text{ rpm}$:",
+    "options": {
+      "A": "Dense skim milk is forced outward to the bowl periphery, while lighter fat globules travel inward along the conical disc surfaces toward the central cream outlet",
+      "B": "Fat globules are forced outward to the bowl periphery while skim milk remains in the center",
+      "C": "Sediment and sludge accumulate in the central shaft",
+      "D": "Separation occurs without centrifugal force"
+    },
+    "correct_answer": "A",
+    "solution": "Under intense centrifugal acceleration ($5000-7000\\text{ g}$), the denser aqueous phase (skim milk, $\\rho \\approx 1035\\text{ kg/m}^3$) is thrown outward to the periphery, while the lighter fat globules ($\\rho \\approx 930\\text{ kg/m}^3$) migrate inward along the conical disc stack toward the central cream core.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_040",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Stokes law for fat globule creaming",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to Stokes' law for the upward creaming velocity of milk fat globules ($v = \\frac{d^2 (\\rho_s - \\rho_f) g}{18 \\mu}$), reducing fat globule diameter $d$ by half through homogenization reduces the creaming velocity by a factor of:",
+    "options": {
+      "A": "$4$ (creaming velocity is proportional to $d^2$)",
+      "B": "$2$",
+      "C": "$8$",
+      "D": "$16$"
+    },
+    "correct_answer": "A",
+    "solution": "In Stokes' law, creaming velocity varies directly with the square of the globule diameter ($v \\propto d^2$). Halving the diameter reduces the creaming rate by $(1/2)^2 = 1/4$, preventing gravity separation and milk fat rising.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_041",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Two-stage homogenization mechanism",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a two-stage high-pressure milk homogenizer, which of the following operational functions are performed by the respective stages?",
+    "options": {
+      "A": "First stage operates at high pressure ($15-20\\text{ MPa}$ / $150-200\\text{ bar}$) to shatter fat globules into sub-micron sizes via intense shear, cavitation, and turbulence",
+      "B": "Second stage operates at lower pressure ($3-5\\text{ MPa}$ / $30-50\\text{ bar}$) to break up fat globule clusters and clumps, ensuring uniform dispersion",
+      "C": "Homogenization increases milk viscosity and creates a richer, whiter appearance due to increased light scattering from smaller fat globules",
+      "D": "Homogenization completely eliminates the need for pasteurization"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. First stage shatters globules down from $4\\;\\mu\\text{m}$ to $< 1\\;\\mu\\text{m}$ (A is true).\n2. Second stage de-clusters aggregated globules (B is true).\n3. Greater number of micro-droplets scatters light efficiently, whitening the milk and increasing body (C is true).\n4. Homogenization is purely mechanical; milk must still be pasteurized to destroy pathogens and inactivate native lipases (D is false).",
+    "difficulty": "Moderate",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_042",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Disc bowl cream separator separation zone",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a continuous disc-bowl centrifugal cream separator rotating at $5000-8000\\text{ rpm}$:",
+    "options": {
+      "A": "Dense skim milk is forced outward to the bowl periphery, while lighter fat globules travel inward along the conical disc surfaces toward the central cream outlet",
+      "B": "Fat globules are forced outward to the bowl periphery while skim milk remains in the center",
+      "C": "Sediment and sludge accumulate in the central shaft",
+      "D": "Separation occurs without centrifugal force"
+    },
+    "correct_answer": "A",
+    "solution": "Under intense centrifugal acceleration ($5000-7000\\text{ g}$), the denser aqueous phase (skim milk, $\\rho \\approx 1035\\text{ kg/m}^3$) is thrown outward to the periphery, while the lighter fat globules ($\\rho \\approx 930\\text{ kg/m}^3$) migrate inward along the conical disc stack toward the central cream core.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_EQP_043",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Stokes law for fat globule creaming",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to Stokes' law for the upward creaming velocity of milk fat globules ($v = \\frac{d^2 (\\rho_s - \\rho_f) g}{18 \\mu}$), reducing fat globule diameter $d$ by half through homogenization reduces the creaming velocity by a factor of:",
+    "options": {
+      "A": "$4$ (creaming velocity is proportional to $d^2$)",
+      "B": "$2$",
+      "C": "$8$",
+      "D": "$16$"
+    },
+    "correct_answer": "A",
+    "solution": "In Stokes' law, creaming velocity varies directly with the square of the globule diameter ($v \\propto d^2$). Halving the diameter reduces the creaming rate by $(1/2)^2 = 1/4$, preventing gravity separation and milk fat rising.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank equation freezing time calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A slab of meat of thickness $a = 5\\text{ cm}$ is frozen in an air-blast freezer where ambient air is at $-19^\\circ\\text{C}$ and the initial freezing point of meat is $-1^\\circ\\text{C}$ ($\\Delta T = 18^\\circ\\text{C}$). The density of frozen meat is $\\rho_f = 950\\text{ kg/m}^3$, latent heat of freezing is $\\lambda = 250\\text{ kJ/kg}$, frozen thermal conductivity is $k_f = 1.2\\text{ W/(m}\\,\\text{K)}$, and surface convective coefficient is $h = 25\\text{ W/(m}^2\\,\\text{K)}$. Using Plank's equation for an infinite slab ($P = 1/2$, $R = 1/8$), the freezing time is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.62",
+    "numerical_range": {
+      "min": 4.52,
+      "max": 4.72
+    },
+    "solution": "Plank's equation for freezing time of an infinite slab is:\n$$t_f = \\frac{\\rho_f \\lambda}{\\Delta T} \\left[ \\frac{a}{2 h} + \\frac{a^2}{8 k_f} \\right]$$\n$$\\frac{a}{2 h} = \\frac{0.05}{2 \\times 25.0} = 0.001000$$\n$$\\frac{a^2}{8 k_f} = \\frac{0.0025000000000000005}{8 \\times 1.2} = 0.000260$$\n$$t_f = \\frac{950 \\times 250000}{18} \\times (0.001000 + 0.000260) = 16630.5\\text{ seconds}$$\nConverting to hours:\n$$t_f = \\frac{16630.5}{3600} = 4.62\\text{ hours}$$",
+    "difficulty": "Hard",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank geometric shape factors P and R",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Plank's equation for food freezing time $t_f = \\frac{\\rho_f \\lambda}{\\Delta T} \\left[ \\frac{P a}{h} + \\frac{R a^2}{k_f} \\right]$, the shape factors $(P, R)$ for a sphere of diameter $a$ are:",
+    "options": {
+      "A": "$P = 1/6, \\; R = 1/24$",
+      "B": "$P = 1/2, \\; R = 1/8$",
+      "C": "$P = 1/4, \\; R = 1/16$",
+      "D": "$P = 1, \\; R = 1/4$"
+    },
+    "correct_answer": "A",
+    "solution": "Plank's geometric coefficients:\n- Infinite slab of thickness $a$: $P = 1/2, R = 1/8$\n- Infinite cylinder of diameter $a$: $P = 1/4, R = 1/16$\n- Sphere of diameter $a$: $P = 1/6, R = 1/24$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_003",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Freezing curves and ice crystal morphology",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding food freezing physics is/are TRUE?",
+    "options": {
+      "A": "Rapid freezing produces numerous small intracellular ice crystals, preserving cellular membrane integrity and minimizing drip loss upon thawing",
+      "B": "Slow freezing forms large extracellular ice crystals that rupture cell walls and cause extensive texture degradation",
+      "C": "Freezing point of foods is lower than $0^\\circ\\text{C}$ due to freezing point depression caused by dissolved solutes (sugars, salts)",
+      "D": "Thermal conductivity of ice is approximately 4 times higher than that of liquid water ($2.2\\text{ W/m K}$ vs $0.6\\text{ W/m K}$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements are core principles of food freezing science:\n1. Fast freezing yields tiny intracellular crystals (A).\n2. Slow freezing yields large intercellular crystals causing cell puncture (B).\n3. Solutes depress initial freezing points to $-0.5$ to $-3^\\circ\\text{C}$ (C).\n4. Ice has four-fold higher thermal conductivity than water ($2.22$ vs $0.59\\text{ W/m K}$), which is why frozen layers conduct heat faster (D).\nAll options A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_004",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank equation freezing time calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A slab of meat of thickness $a = 5\\text{ cm}$ is frozen in an air-blast freezer where ambient air is at $-19^\\circ\\text{C}$ and the initial freezing point of meat is $-1^\\circ\\text{C}$ ($\\Delta T = 18^\\circ\\text{C}$). The density of frozen meat is $\\rho_f = 950\\text{ kg/m}^3$, latent heat of freezing is $\\lambda = 250\\text{ kJ/kg}$, frozen thermal conductivity is $k_f = 1.2\\text{ W/(m}\\,\\text{K)}$, and surface convective coefficient is $h = 25\\text{ W/(m}^2\\,\\text{K)}$. Using Plank's equation for an infinite slab ($P = 1/2$, $R = 1/8$), the freezing time is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.62",
+    "numerical_range": {
+      "min": 4.52,
+      "max": 4.72
+    },
+    "solution": "Plank's equation for freezing time of an infinite slab is:\n$$t_f = \\frac{\\rho_f \\lambda}{\\Delta T} \\left[ \\frac{a}{2 h} + \\frac{a^2}{8 k_f} \\right]$$\n$$\\frac{a}{2 h} = \\frac{0.05}{2 \\times 25.0} = 0.001000$$\n$$\\frac{a^2}{8 k_f} = \\frac{0.0025000000000000005}{8 \\times 1.2} = 0.000260$$\n$$t_f = \\frac{950 \\times 250000}{18} \\times (0.001000 + 0.000260) = 16630.5\\text{ seconds}$$\nConverting to hours:\n$$t_f = \\frac{16630.5}{3600} = 4.62\\text{ hours}$$",
+    "difficulty": "Hard",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_005",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank geometric shape factors P and R",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Plank's equation for food freezing time $t_f = \\frac{\\rho_f \\lambda}{\\Delta T} \\left[ \\frac{P a}{h} + \\frac{R a^2}{k_f} \\right]$, the shape factors $(P, R)$ for a sphere of diameter $a$ are:",
+    "options": {
+      "A": "$P = 1/6, \\; R = 1/24$",
+      "B": "$P = 1/2, \\; R = 1/8$",
+      "C": "$P = 1/4, \\; R = 1/16$",
+      "D": "$P = 1, \\; R = 1/4$"
+    },
+    "correct_answer": "A",
+    "solution": "Plank's geometric coefficients:\n- Infinite slab of thickness $a$: $P = 1/2, R = 1/8$\n- Infinite cylinder of diameter $a$: $P = 1/4, R = 1/16$\n- Sphere of diameter $a$: $P = 1/6, R = 1/24$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_006",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Freezing curves and ice crystal morphology",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding food freezing physics is/are TRUE?",
+    "options": {
+      "A": "Rapid freezing produces numerous small intracellular ice crystals, preserving cellular membrane integrity and minimizing drip loss upon thawing",
+      "B": "Slow freezing forms large extracellular ice crystals that rupture cell walls and cause extensive texture degradation",
+      "C": "Freezing point of foods is lower than $0^\\circ\\text{C}$ due to freezing point depression caused by dissolved solutes (sugars, salts)",
+      "D": "Thermal conductivity of ice is approximately 4 times higher than that of liquid water ($2.2\\text{ W/m K}$ vs $0.6\\text{ W/m K}$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements are core principles of food freezing science:\n1. Fast freezing yields tiny intracellular crystals (A).\n2. Slow freezing yields large intercellular crystals causing cell puncture (B).\n3. Solutes depress initial freezing points to $-0.5$ to $-3^\\circ\\text{C}$ (C).\n4. Ice has four-fold higher thermal conductivity than water ($2.22$ vs $0.59\\text{ W/m K}$), which is why frozen layers conduct heat faster (D).\nAll options A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_007",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank equation freezing time calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A slab of meat of thickness $a = 5\\text{ cm}$ is frozen in an air-blast freezer where ambient air is at $-19^\\circ\\text{C}$ and the initial freezing point of meat is $-1^\\circ\\text{C}$ ($\\Delta T = 18^\\circ\\text{C}$). The density of frozen meat is $\\rho_f = 950\\text{ kg/m}^3$, latent heat of freezing is $\\lambda = 250\\text{ kJ/kg}$, frozen thermal conductivity is $k_f = 1.2\\text{ W/(m}\\,\\text{K)}$, and surface convective coefficient is $h = 25\\text{ W/(m}^2\\,\\text{K)}$. Using Plank's equation for an infinite slab ($P = 1/2$, $R = 1/8$), the freezing time is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.62",
+    "numerical_range": {
+      "min": 4.52,
+      "max": 4.72
+    },
+    "solution": "Plank's equation for freezing time of an infinite slab is:\n$$t_f = \\frac{\\rho_f \\lambda}{\\Delta T} \\left[ \\frac{a}{2 h} + \\frac{a^2}{8 k_f} \\right]$$\n$$\\frac{a}{2 h} = \\frac{0.05}{2 \\times 25.0} = 0.001000$$\n$$\\frac{a^2}{8 k_f} = \\frac{0.0025000000000000005}{8 \\times 1.2} = 0.000260$$\n$$t_f = \\frac{950 \\times 250000}{18} \\times (0.001000 + 0.000260) = 16630.5\\text{ seconds}$$\nConverting to hours:\n$$t_f = \\frac{16630.5}{3600} = 4.62\\text{ hours}$$",
+    "difficulty": "Hard",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_008",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank geometric shape factors P and R",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Plank's equation for food freezing time $t_f = \\frac{\\rho_f \\lambda}{\\Delta T} \\left[ \\frac{P a}{h} + \\frac{R a^2}{k_f} \\right]$, the shape factors $(P, R)$ for a sphere of diameter $a$ are:",
+    "options": {
+      "A": "$P = 1/6, \\; R = 1/24$",
+      "B": "$P = 1/2, \\; R = 1/8$",
+      "C": "$P = 1/4, \\; R = 1/16$",
+      "D": "$P = 1, \\; R = 1/4$"
+    },
+    "correct_answer": "A",
+    "solution": "Plank's geometric coefficients:\n- Infinite slab of thickness $a$: $P = 1/2, R = 1/8$\n- Infinite cylinder of diameter $a$: $P = 1/4, R = 1/16$\n- Sphere of diameter $a$: $P = 1/6, R = 1/24$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_009",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Freezing curves and ice crystal morphology",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding food freezing physics is/are TRUE?",
+    "options": {
+      "A": "Rapid freezing produces numerous small intracellular ice crystals, preserving cellular membrane integrity and minimizing drip loss upon thawing",
+      "B": "Slow freezing forms large extracellular ice crystals that rupture cell walls and cause extensive texture degradation",
+      "C": "Freezing point of foods is lower than $0^\\circ\\text{C}$ due to freezing point depression caused by dissolved solutes (sugars, salts)",
+      "D": "Thermal conductivity of ice is approximately 4 times higher than that of liquid water ($2.2\\text{ W/m K}$ vs $0.6\\text{ W/m K}$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements are core principles of food freezing science:\n1. Fast freezing yields tiny intracellular crystals (A).\n2. Slow freezing yields large intercellular crystals causing cell puncture (B).\n3. Solutes depress initial freezing points to $-0.5$ to $-3^\\circ\\text{C}$ (C).\n4. Ice has four-fold higher thermal conductivity than water ($2.22$ vs $0.59\\text{ W/m K}$), which is why frozen layers conduct heat faster (D).\nAll options A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_010",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank equation freezing time calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A slab of meat of thickness $a = 5\\text{ cm}$ is frozen in an air-blast freezer where ambient air is at $-19^\\circ\\text{C}$ and the initial freezing point of meat is $-1^\\circ\\text{C}$ ($\\Delta T = 18^\\circ\\text{C}$). The density of frozen meat is $\\rho_f = 950\\text{ kg/m}^3$, latent heat of freezing is $\\lambda = 250\\text{ kJ/kg}$, frozen thermal conductivity is $k_f = 1.2\\text{ W/(m}\\,\\text{K)}$, and surface convective coefficient is $h = 25\\text{ W/(m}^2\\,\\text{K)}$. Using Plank's equation for an infinite slab ($P = 1/2$, $R = 1/8$), the freezing time is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.62",
+    "numerical_range": {
+      "min": 4.52,
+      "max": 4.72
+    },
+    "solution": "Plank's equation for freezing time of an infinite slab is:\n$$t_f = \\frac{\\rho_f \\lambda}{\\Delta T} \\left[ \\frac{a}{2 h} + \\frac{a^2}{8 k_f} \\right]$$\n$$\\frac{a}{2 h} = \\frac{0.05}{2 \\times 25.0} = 0.001000$$\n$$\\frac{a^2}{8 k_f} = \\frac{0.0025000000000000005}{8 \\times 1.2} = 0.000260$$\n$$t_f = \\frac{950 \\times 250000}{18} \\times (0.001000 + 0.000260) = 16630.5\\text{ seconds}$$\nConverting to hours:\n$$t_f = \\frac{16630.5}{3600} = 4.62\\text{ hours}$$",
+    "difficulty": "Hard",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_011",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank geometric shape factors P and R",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Plank's equation for food freezing time $t_f = \\frac{\\rho_f \\lambda}{\\Delta T} \\left[ \\frac{P a}{h} + \\frac{R a^2}{k_f} \\right]$, the shape factors $(P, R)$ for a sphere of diameter $a$ are:",
+    "options": {
+      "A": "$P = 1/6, \\; R = 1/24$",
+      "B": "$P = 1/2, \\; R = 1/8$",
+      "C": "$P = 1/4, \\; R = 1/16$",
+      "D": "$P = 1, \\; R = 1/4$"
+    },
+    "correct_answer": "A",
+    "solution": "Plank's geometric coefficients:\n- Infinite slab of thickness $a$: $P = 1/2, R = 1/8$\n- Infinite cylinder of diameter $a$: $P = 1/4, R = 1/16$\n- Sphere of diameter $a$: $P = 1/6, R = 1/24$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_012",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Freezing curves and ice crystal morphology",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding food freezing physics is/are TRUE?",
+    "options": {
+      "A": "Rapid freezing produces numerous small intracellular ice crystals, preserving cellular membrane integrity and minimizing drip loss upon thawing",
+      "B": "Slow freezing forms large extracellular ice crystals that rupture cell walls and cause extensive texture degradation",
+      "C": "Freezing point of foods is lower than $0^\\circ\\text{C}$ due to freezing point depression caused by dissolved solutes (sugars, salts)",
+      "D": "Thermal conductivity of ice is approximately 4 times higher than that of liquid water ($2.2\\text{ W/m K}$ vs $0.6\\text{ W/m K}$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements are core principles of food freezing science:\n1. Fast freezing yields tiny intracellular crystals (A).\n2. Slow freezing yields large intercellular crystals causing cell puncture (B).\n3. Solutes depress initial freezing points to $-0.5$ to $-3^\\circ\\text{C}$ (C).\n4. Ice has four-fold higher thermal conductivity than water ($2.22$ vs $0.59\\text{ W/m K}$), which is why frozen layers conduct heat faster (D).\nAll options A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_013",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank equation freezing time calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A slab of meat of thickness $a = 5\\text{ cm}$ is frozen in an air-blast freezer where ambient air is at $-19^\\circ\\text{C}$ and the initial freezing point of meat is $-1^\\circ\\text{C}$ ($\\Delta T = 18^\\circ\\text{C}$). The density of frozen meat is $\\rho_f = 950\\text{ kg/m}^3$, latent heat of freezing is $\\lambda = 250\\text{ kJ/kg}$, frozen thermal conductivity is $k_f = 1.2\\text{ W/(m}\\,\\text{K)}$, and surface convective coefficient is $h = 25\\text{ W/(m}^2\\,\\text{K)}$. Using Plank's equation for an infinite slab ($P = 1/2$, $R = 1/8$), the freezing time is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.62",
+    "numerical_range": {
+      "min": 4.52,
+      "max": 4.72
+    },
+    "solution": "Plank's equation for freezing time of an infinite slab is:\n$$t_f = \\frac{\\rho_f \\lambda}{\\Delta T} \\left[ \\frac{a}{2 h} + \\frac{a^2}{8 k_f} \\right]$$\n$$\\frac{a}{2 h} = \\frac{0.05}{2 \\times 25.0} = 0.001000$$\n$$\\frac{a^2}{8 k_f} = \\frac{0.0025000000000000005}{8 \\times 1.2} = 0.000260$$\n$$t_f = \\frac{950 \\times 250000}{18} \\times (0.001000 + 0.000260) = 16630.5\\text{ seconds}$$\nConverting to hours:\n$$t_f = \\frac{16630.5}{3600} = 4.62\\text{ hours}$$",
+    "difficulty": "Hard",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_014",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank geometric shape factors P and R",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Plank's equation for food freezing time $t_f = \\frac{\\rho_f \\lambda}{\\Delta T} \\left[ \\frac{P a}{h} + \\frac{R a^2}{k_f} \\right]$, the shape factors $(P, R)$ for a sphere of diameter $a$ are:",
+    "options": {
+      "A": "$P = 1/6, \\; R = 1/24$",
+      "B": "$P = 1/2, \\; R = 1/8$",
+      "C": "$P = 1/4, \\; R = 1/16$",
+      "D": "$P = 1, \\; R = 1/4$"
+    },
+    "correct_answer": "A",
+    "solution": "Plank's geometric coefficients:\n- Infinite slab of thickness $a$: $P = 1/2, R = 1/8$\n- Infinite cylinder of diameter $a$: $P = 1/4, R = 1/16$\n- Sphere of diameter $a$: $P = 1/6, R = 1/24$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_015",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Freezing curves and ice crystal morphology",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding food freezing physics is/are TRUE?",
+    "options": {
+      "A": "Rapid freezing produces numerous small intracellular ice crystals, preserving cellular membrane integrity and minimizing drip loss upon thawing",
+      "B": "Slow freezing forms large extracellular ice crystals that rupture cell walls and cause extensive texture degradation",
+      "C": "Freezing point of foods is lower than $0^\\circ\\text{C}$ due to freezing point depression caused by dissolved solutes (sugars, salts)",
+      "D": "Thermal conductivity of ice is approximately 4 times higher than that of liquid water ($2.2\\text{ W/m K}$ vs $0.6\\text{ W/m K}$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements are core principles of food freezing science:\n1. Fast freezing yields tiny intracellular crystals (A).\n2. Slow freezing yields large intercellular crystals causing cell puncture (B).\n3. Solutes depress initial freezing points to $-0.5$ to $-3^\\circ\\text{C}$ (C).\n4. Ice has four-fold higher thermal conductivity than water ($2.22$ vs $0.59\\text{ W/m K}$), which is why frozen layers conduct heat faster (D).\nAll options A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_016",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank equation freezing time calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A slab of meat of thickness $a = 5\\text{ cm}$ is frozen in an air-blast freezer where ambient air is at $-19^\\circ\\text{C}$ and the initial freezing point of meat is $-1^\\circ\\text{C}$ ($\\Delta T = 18^\\circ\\text{C}$). The density of frozen meat is $\\rho_f = 950\\text{ kg/m}^3$, latent heat of freezing is $\\lambda = 250\\text{ kJ/kg}$, frozen thermal conductivity is $k_f = 1.2\\text{ W/(m}\\,\\text{K)}$, and surface convective coefficient is $h = 25\\text{ W/(m}^2\\,\\text{K)}$. Using Plank's equation for an infinite slab ($P = 1/2$, $R = 1/8$), the freezing time is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.62",
+    "numerical_range": {
+      "min": 4.52,
+      "max": 4.72
+    },
+    "solution": "Plank's equation for freezing time of an infinite slab is:\n$$t_f = \\frac{\\rho_f \\lambda}{\\Delta T} \\left[ \\frac{a}{2 h} + \\frac{a^2}{8 k_f} \\right]$$\n$$\\frac{a}{2 h} = \\frac{0.05}{2 \\times 25.0} = 0.001000$$\n$$\\frac{a^2}{8 k_f} = \\frac{0.0025000000000000005}{8 \\times 1.2} = 0.000260$$\n$$t_f = \\frac{950 \\times 250000}{18} \\times (0.001000 + 0.000260) = 16630.5\\text{ seconds}$$\nConverting to hours:\n$$t_f = \\frac{16630.5}{3600} = 4.62\\text{ hours}$$",
+    "difficulty": "Hard",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_017",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank geometric shape factors P and R",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Plank's equation for food freezing time $t_f = \\frac{\\rho_f \\lambda}{\\Delta T} \\left[ \\frac{P a}{h} + \\frac{R a^2}{k_f} \\right]$, the shape factors $(P, R)$ for a sphere of diameter $a$ are:",
+    "options": {
+      "A": "$P = 1/6, \\; R = 1/24$",
+      "B": "$P = 1/2, \\; R = 1/8$",
+      "C": "$P = 1/4, \\; R = 1/16$",
+      "D": "$P = 1, \\; R = 1/4$"
+    },
+    "correct_answer": "A",
+    "solution": "Plank's geometric coefficients:\n- Infinite slab of thickness $a$: $P = 1/2, R = 1/8$\n- Infinite cylinder of diameter $a$: $P = 1/4, R = 1/16$\n- Sphere of diameter $a$: $P = 1/6, R = 1/24$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_018",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Freezing curves and ice crystal morphology",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding food freezing physics is/are TRUE?",
+    "options": {
+      "A": "Rapid freezing produces numerous small intracellular ice crystals, preserving cellular membrane integrity and minimizing drip loss upon thawing",
+      "B": "Slow freezing forms large extracellular ice crystals that rupture cell walls and cause extensive texture degradation",
+      "C": "Freezing point of foods is lower than $0^\\circ\\text{C}$ due to freezing point depression caused by dissolved solutes (sugars, salts)",
+      "D": "Thermal conductivity of ice is approximately 4 times higher than that of liquid water ($2.2\\text{ W/m K}$ vs $0.6\\text{ W/m K}$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements are core principles of food freezing science:\n1. Fast freezing yields tiny intracellular crystals (A).\n2. Slow freezing yields large intercellular crystals causing cell puncture (B).\n3. Solutes depress initial freezing points to $-0.5$ to $-3^\\circ\\text{C}$ (C).\n4. Ice has four-fold higher thermal conductivity than water ($2.22$ vs $0.59\\text{ W/m K}$), which is why frozen layers conduct heat faster (D).\nAll options A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_019",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank equation freezing time calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A slab of meat of thickness $a = 5\\text{ cm}$ is frozen in an air-blast freezer where ambient air is at $-19^\\circ\\text{C}$ and the initial freezing point of meat is $-1^\\circ\\text{C}$ ($\\Delta T = 18^\\circ\\text{C}$). The density of frozen meat is $\\rho_f = 950\\text{ kg/m}^3$, latent heat of freezing is $\\lambda = 250\\text{ kJ/kg}$, frozen thermal conductivity is $k_f = 1.2\\text{ W/(m}\\,\\text{K)}$, and surface convective coefficient is $h = 25\\text{ W/(m}^2\\,\\text{K)}$. Using Plank's equation for an infinite slab ($P = 1/2$, $R = 1/8$), the freezing time is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.62",
+    "numerical_range": {
+      "min": 4.52,
+      "max": 4.72
+    },
+    "solution": "Plank's equation for freezing time of an infinite slab is:\n$$t_f = \\frac{\\rho_f \\lambda}{\\Delta T} \\left[ \\frac{a}{2 h} + \\frac{a^2}{8 k_f} \\right]$$\n$$\\frac{a}{2 h} = \\frac{0.05}{2 \\times 25.0} = 0.001000$$\n$$\\frac{a^2}{8 k_f} = \\frac{0.0025000000000000005}{8 \\times 1.2} = 0.000260$$\n$$t_f = \\frac{950 \\times 250000}{18} \\times (0.001000 + 0.000260) = 16630.5\\text{ seconds}$$\nConverting to hours:\n$$t_f = \\frac{16630.5}{3600} = 4.62\\text{ hours}$$",
+    "difficulty": "Hard",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_020",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank geometric shape factors P and R",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Plank's equation for food freezing time $t_f = \\frac{\\rho_f \\lambda}{\\Delta T} \\left[ \\frac{P a}{h} + \\frac{R a^2}{k_f} \\right]$, the shape factors $(P, R)$ for a sphere of diameter $a$ are:",
+    "options": {
+      "A": "$P = 1/6, \\; R = 1/24$",
+      "B": "$P = 1/2, \\; R = 1/8$",
+      "C": "$P = 1/4, \\; R = 1/16$",
+      "D": "$P = 1, \\; R = 1/4$"
+    },
+    "correct_answer": "A",
+    "solution": "Plank's geometric coefficients:\n- Infinite slab of thickness $a$: $P = 1/2, R = 1/8$\n- Infinite cylinder of diameter $a$: $P = 1/4, R = 1/16$\n- Sphere of diameter $a$: $P = 1/6, R = 1/24$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_021",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Freezing curves and ice crystal morphology",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding food freezing physics is/are TRUE?",
+    "options": {
+      "A": "Rapid freezing produces numerous small intracellular ice crystals, preserving cellular membrane integrity and minimizing drip loss upon thawing",
+      "B": "Slow freezing forms large extracellular ice crystals that rupture cell walls and cause extensive texture degradation",
+      "C": "Freezing point of foods is lower than $0^\\circ\\text{C}$ due to freezing point depression caused by dissolved solutes (sugars, salts)",
+      "D": "Thermal conductivity of ice is approximately 4 times higher than that of liquid water ($2.2\\text{ W/m K}$ vs $0.6\\text{ W/m K}$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements are core principles of food freezing science:\n1. Fast freezing yields tiny intracellular crystals (A).\n2. Slow freezing yields large intercellular crystals causing cell puncture (B).\n3. Solutes depress initial freezing points to $-0.5$ to $-3^\\circ\\text{C}$ (C).\n4. Ice has four-fold higher thermal conductivity than water ($2.22$ vs $0.59\\text{ W/m K}$), which is why frozen layers conduct heat faster (D).\nAll options A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_022",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank equation freezing time calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A slab of meat of thickness $a = 5\\text{ cm}$ is frozen in an air-blast freezer where ambient air is at $-19^\\circ\\text{C}$ and the initial freezing point of meat is $-1^\\circ\\text{C}$ ($\\Delta T = 18^\\circ\\text{C}$). The density of frozen meat is $\\rho_f = 950\\text{ kg/m}^3$, latent heat of freezing is $\\lambda = 250\\text{ kJ/kg}$, frozen thermal conductivity is $k_f = 1.2\\text{ W/(m}\\,\\text{K)}$, and surface convective coefficient is $h = 25\\text{ W/(m}^2\\,\\text{K)}$. Using Plank's equation for an infinite slab ($P = 1/2$, $R = 1/8$), the freezing time is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.62",
+    "numerical_range": {
+      "min": 4.52,
+      "max": 4.72
+    },
+    "solution": "Plank's equation for freezing time of an infinite slab is:\n$$t_f = \\frac{\\rho_f \\lambda}{\\Delta T} \\left[ \\frac{a}{2 h} + \\frac{a^2}{8 k_f} \\right]$$\n$$\\frac{a}{2 h} = \\frac{0.05}{2 \\times 25.0} = 0.001000$$\n$$\\frac{a^2}{8 k_f} = \\frac{0.0025000000000000005}{8 \\times 1.2} = 0.000260$$\n$$t_f = \\frac{950 \\times 250000}{18} \\times (0.001000 + 0.000260) = 16630.5\\text{ seconds}$$\nConverting to hours:\n$$t_f = \\frac{16630.5}{3600} = 4.62\\text{ hours}$$",
+    "difficulty": "Hard",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_023",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank geometric shape factors P and R",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Plank's equation for food freezing time $t_f = \\frac{\\rho_f \\lambda}{\\Delta T} \\left[ \\frac{P a}{h} + \\frac{R a^2}{k_f} \\right]$, the shape factors $(P, R)$ for a sphere of diameter $a$ are:",
+    "options": {
+      "A": "$P = 1/6, \\; R = 1/24$",
+      "B": "$P = 1/2, \\; R = 1/8$",
+      "C": "$P = 1/4, \\; R = 1/16$",
+      "D": "$P = 1, \\; R = 1/4$"
+    },
+    "correct_answer": "A",
+    "solution": "Plank's geometric coefficients:\n- Infinite slab of thickness $a$: $P = 1/2, R = 1/8$\n- Infinite cylinder of diameter $a$: $P = 1/4, R = 1/16$\n- Sphere of diameter $a$: $P = 1/6, R = 1/24$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_024",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Freezing curves and ice crystal morphology",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding food freezing physics is/are TRUE?",
+    "options": {
+      "A": "Rapid freezing produces numerous small intracellular ice crystals, preserving cellular membrane integrity and minimizing drip loss upon thawing",
+      "B": "Slow freezing forms large extracellular ice crystals that rupture cell walls and cause extensive texture degradation",
+      "C": "Freezing point of foods is lower than $0^\\circ\\text{C}$ due to freezing point depression caused by dissolved solutes (sugars, salts)",
+      "D": "Thermal conductivity of ice is approximately 4 times higher than that of liquid water ($2.2\\text{ W/m K}$ vs $0.6\\text{ W/m K}$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements are core principles of food freezing science:\n1. Fast freezing yields tiny intracellular crystals (A).\n2. Slow freezing yields large intercellular crystals causing cell puncture (B).\n3. Solutes depress initial freezing points to $-0.5$ to $-3^\\circ\\text{C}$ (C).\n4. Ice has four-fold higher thermal conductivity than water ($2.22$ vs $0.59\\text{ W/m K}$), which is why frozen layers conduct heat faster (D).\nAll options A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_025",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank equation freezing time calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A slab of meat of thickness $a = 5\\text{ cm}$ is frozen in an air-blast freezer where ambient air is at $-19^\\circ\\text{C}$ and the initial freezing point of meat is $-1^\\circ\\text{C}$ ($\\Delta T = 18^\\circ\\text{C}$). The density of frozen meat is $\\rho_f = 950\\text{ kg/m}^3$, latent heat of freezing is $\\lambda = 250\\text{ kJ/kg}$, frozen thermal conductivity is $k_f = 1.2\\text{ W/(m}\\,\\text{K)}$, and surface convective coefficient is $h = 25\\text{ W/(m}^2\\,\\text{K)}$. Using Plank's equation for an infinite slab ($P = 1/2$, $R = 1/8$), the freezing time is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.62",
+    "numerical_range": {
+      "min": 4.52,
+      "max": 4.72
+    },
+    "solution": "Plank's equation for freezing time of an infinite slab is:\n$$t_f = \\frac{\\rho_f \\lambda}{\\Delta T} \\left[ \\frac{a}{2 h} + \\frac{a^2}{8 k_f} \\right]$$\n$$\\frac{a}{2 h} = \\frac{0.05}{2 \\times 25.0} = 0.001000$$\n$$\\frac{a^2}{8 k_f} = \\frac{0.0025000000000000005}{8 \\times 1.2} = 0.000260$$\n$$t_f = \\frac{950 \\times 250000}{18} \\times (0.001000 + 0.000260) = 16630.5\\text{ seconds}$$\nConverting to hours:\n$$t_f = \\frac{16630.5}{3600} = 4.62\\text{ hours}$$",
+    "difficulty": "Hard",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_026",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank geometric shape factors P and R",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Plank's equation for food freezing time $t_f = \\frac{\\rho_f \\lambda}{\\Delta T} \\left[ \\frac{P a}{h} + \\frac{R a^2}{k_f} \\right]$, the shape factors $(P, R)$ for a sphere of diameter $a$ are:",
+    "options": {
+      "A": "$P = 1/6, \\; R = 1/24$",
+      "B": "$P = 1/2, \\; R = 1/8$",
+      "C": "$P = 1/4, \\; R = 1/16$",
+      "D": "$P = 1, \\; R = 1/4$"
+    },
+    "correct_answer": "A",
+    "solution": "Plank's geometric coefficients:\n- Infinite slab of thickness $a$: $P = 1/2, R = 1/8$\n- Infinite cylinder of diameter $a$: $P = 1/4, R = 1/16$\n- Sphere of diameter $a$: $P = 1/6, R = 1/24$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_027",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Freezing curves and ice crystal morphology",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding food freezing physics is/are TRUE?",
+    "options": {
+      "A": "Rapid freezing produces numerous small intracellular ice crystals, preserving cellular membrane integrity and minimizing drip loss upon thawing",
+      "B": "Slow freezing forms large extracellular ice crystals that rupture cell walls and cause extensive texture degradation",
+      "C": "Freezing point of foods is lower than $0^\\circ\\text{C}$ due to freezing point depression caused by dissolved solutes (sugars, salts)",
+      "D": "Thermal conductivity of ice is approximately 4 times higher than that of liquid water ($2.2\\text{ W/m K}$ vs $0.6\\text{ W/m K}$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements are core principles of food freezing science:\n1. Fast freezing yields tiny intracellular crystals (A).\n2. Slow freezing yields large intercellular crystals causing cell puncture (B).\n3. Solutes depress initial freezing points to $-0.5$ to $-3^\\circ\\text{C}$ (C).\n4. Ice has four-fold higher thermal conductivity than water ($2.22$ vs $0.59\\text{ W/m K}$), which is why frozen layers conduct heat faster (D).\nAll options A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_028",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank equation freezing time calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A slab of meat of thickness $a = 5\\text{ cm}$ is frozen in an air-blast freezer where ambient air is at $-19^\\circ\\text{C}$ and the initial freezing point of meat is $-1^\\circ\\text{C}$ ($\\Delta T = 18^\\circ\\text{C}$). The density of frozen meat is $\\rho_f = 950\\text{ kg/m}^3$, latent heat of freezing is $\\lambda = 250\\text{ kJ/kg}$, frozen thermal conductivity is $k_f = 1.2\\text{ W/(m}\\,\\text{K)}$, and surface convective coefficient is $h = 25\\text{ W/(m}^2\\,\\text{K)}$. Using Plank's equation for an infinite slab ($P = 1/2$, $R = 1/8$), the freezing time is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.62",
+    "numerical_range": {
+      "min": 4.52,
+      "max": 4.72
+    },
+    "solution": "Plank's equation for freezing time of an infinite slab is:\n$$t_f = \\frac{\\rho_f \\lambda}{\\Delta T} \\left[ \\frac{a}{2 h} + \\frac{a^2}{8 k_f} \\right]$$\n$$\\frac{a}{2 h} = \\frac{0.05}{2 \\times 25.0} = 0.001000$$\n$$\\frac{a^2}{8 k_f} = \\frac{0.0025000000000000005}{8 \\times 1.2} = 0.000260$$\n$$t_f = \\frac{950 \\times 250000}{18} \\times (0.001000 + 0.000260) = 16630.5\\text{ seconds}$$\nConverting to hours:\n$$t_f = \\frac{16630.5}{3600} = 4.62\\text{ hours}$$",
+    "difficulty": "Hard",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_029",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank geometric shape factors P and R",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Plank's equation for food freezing time $t_f = \\frac{\\rho_f \\lambda}{\\Delta T} \\left[ \\frac{P a}{h} + \\frac{R a^2}{k_f} \\right]$, the shape factors $(P, R)$ for a sphere of diameter $a$ are:",
+    "options": {
+      "A": "$P = 1/6, \\; R = 1/24$",
+      "B": "$P = 1/2, \\; R = 1/8$",
+      "C": "$P = 1/4, \\; R = 1/16$",
+      "D": "$P = 1, \\; R = 1/4$"
+    },
+    "correct_answer": "A",
+    "solution": "Plank's geometric coefficients:\n- Infinite slab of thickness $a$: $P = 1/2, R = 1/8$\n- Infinite cylinder of diameter $a$: $P = 1/4, R = 1/16$\n- Sphere of diameter $a$: $P = 1/6, R = 1/24$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_030",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Freezing curves and ice crystal morphology",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding food freezing physics is/are TRUE?",
+    "options": {
+      "A": "Rapid freezing produces numerous small intracellular ice crystals, preserving cellular membrane integrity and minimizing drip loss upon thawing",
+      "B": "Slow freezing forms large extracellular ice crystals that rupture cell walls and cause extensive texture degradation",
+      "C": "Freezing point of foods is lower than $0^\\circ\\text{C}$ due to freezing point depression caused by dissolved solutes (sugars, salts)",
+      "D": "Thermal conductivity of ice is approximately 4 times higher than that of liquid water ($2.2\\text{ W/m K}$ vs $0.6\\text{ W/m K}$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements are core principles of food freezing science:\n1. Fast freezing yields tiny intracellular crystals (A).\n2. Slow freezing yields large intercellular crystals causing cell puncture (B).\n3. Solutes depress initial freezing points to $-0.5$ to $-3^\\circ\\text{C}$ (C).\n4. Ice has four-fold higher thermal conductivity than water ($2.22$ vs $0.59\\text{ W/m K}$), which is why frozen layers conduct heat faster (D).\nAll options A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_031",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank equation freezing time calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A slab of meat of thickness $a = 5\\text{ cm}$ is frozen in an air-blast freezer where ambient air is at $-19^\\circ\\text{C}$ and the initial freezing point of meat is $-1^\\circ\\text{C}$ ($\\Delta T = 18^\\circ\\text{C}$). The density of frozen meat is $\\rho_f = 950\\text{ kg/m}^3$, latent heat of freezing is $\\lambda = 250\\text{ kJ/kg}$, frozen thermal conductivity is $k_f = 1.2\\text{ W/(m}\\,\\text{K)}$, and surface convective coefficient is $h = 25\\text{ W/(m}^2\\,\\text{K)}$. Using Plank's equation for an infinite slab ($P = 1/2$, $R = 1/8$), the freezing time is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.62",
+    "numerical_range": {
+      "min": 4.52,
+      "max": 4.72
+    },
+    "solution": "Plank's equation for freezing time of an infinite slab is:\n$$t_f = \\frac{\\rho_f \\lambda}{\\Delta T} \\left[ \\frac{a}{2 h} + \\frac{a^2}{8 k_f} \\right]$$\n$$\\frac{a}{2 h} = \\frac{0.05}{2 \\times 25.0} = 0.001000$$\n$$\\frac{a^2}{8 k_f} = \\frac{0.0025000000000000005}{8 \\times 1.2} = 0.000260$$\n$$t_f = \\frac{950 \\times 250000}{18} \\times (0.001000 + 0.000260) = 16630.5\\text{ seconds}$$\nConverting to hours:\n$$t_f = \\frac{16630.5}{3600} = 4.62\\text{ hours}$$",
+    "difficulty": "Hard",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_032",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank geometric shape factors P and R",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Plank's equation for food freezing time $t_f = \\frac{\\rho_f \\lambda}{\\Delta T} \\left[ \\frac{P a}{h} + \\frac{R a^2}{k_f} \\right]$, the shape factors $(P, R)$ for a sphere of diameter $a$ are:",
+    "options": {
+      "A": "$P = 1/6, \\; R = 1/24$",
+      "B": "$P = 1/2, \\; R = 1/8$",
+      "C": "$P = 1/4, \\; R = 1/16$",
+      "D": "$P = 1, \\; R = 1/4$"
+    },
+    "correct_answer": "A",
+    "solution": "Plank's geometric coefficients:\n- Infinite slab of thickness $a$: $P = 1/2, R = 1/8$\n- Infinite cylinder of diameter $a$: $P = 1/4, R = 1/16$\n- Sphere of diameter $a$: $P = 1/6, R = 1/24$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_033",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Freezing curves and ice crystal morphology",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding food freezing physics is/are TRUE?",
+    "options": {
+      "A": "Rapid freezing produces numerous small intracellular ice crystals, preserving cellular membrane integrity and minimizing drip loss upon thawing",
+      "B": "Slow freezing forms large extracellular ice crystals that rupture cell walls and cause extensive texture degradation",
+      "C": "Freezing point of foods is lower than $0^\\circ\\text{C}$ due to freezing point depression caused by dissolved solutes (sugars, salts)",
+      "D": "Thermal conductivity of ice is approximately 4 times higher than that of liquid water ($2.2\\text{ W/m K}$ vs $0.6\\text{ W/m K}$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements are core principles of food freezing science:\n1. Fast freezing yields tiny intracellular crystals (A).\n2. Slow freezing yields large intercellular crystals causing cell puncture (B).\n3. Solutes depress initial freezing points to $-0.5$ to $-3^\\circ\\text{C}$ (C).\n4. Ice has four-fold higher thermal conductivity than water ($2.22$ vs $0.59\\text{ W/m K}$), which is why frozen layers conduct heat faster (D).\nAll options A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_034",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank equation freezing time calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A slab of meat of thickness $a = 5\\text{ cm}$ is frozen in an air-blast freezer where ambient air is at $-19^\\circ\\text{C}$ and the initial freezing point of meat is $-1^\\circ\\text{C}$ ($\\Delta T = 18^\\circ\\text{C}$). The density of frozen meat is $\\rho_f = 950\\text{ kg/m}^3$, latent heat of freezing is $\\lambda = 250\\text{ kJ/kg}$, frozen thermal conductivity is $k_f = 1.2\\text{ W/(m}\\,\\text{K)}$, and surface convective coefficient is $h = 25\\text{ W/(m}^2\\,\\text{K)}$. Using Plank's equation for an infinite slab ($P = 1/2$, $R = 1/8$), the freezing time is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.62",
+    "numerical_range": {
+      "min": 4.52,
+      "max": 4.72
+    },
+    "solution": "Plank's equation for freezing time of an infinite slab is:\n$$t_f = \\frac{\\rho_f \\lambda}{\\Delta T} \\left[ \\frac{a}{2 h} + \\frac{a^2}{8 k_f} \\right]$$\n$$\\frac{a}{2 h} = \\frac{0.05}{2 \\times 25.0} = 0.001000$$\n$$\\frac{a^2}{8 k_f} = \\frac{0.0025000000000000005}{8 \\times 1.2} = 0.000260$$\n$$t_f = \\frac{950 \\times 250000}{18} \\times (0.001000 + 0.000260) = 16630.5\\text{ seconds}$$\nConverting to hours:\n$$t_f = \\frac{16630.5}{3600} = 4.62\\text{ hours}$$",
+    "difficulty": "Hard",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_035",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank geometric shape factors P and R",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Plank's equation for food freezing time $t_f = \\frac{\\rho_f \\lambda}{\\Delta T} \\left[ \\frac{P a}{h} + \\frac{R a^2}{k_f} \\right]$, the shape factors $(P, R)$ for a sphere of diameter $a$ are:",
+    "options": {
+      "A": "$P = 1/6, \\; R = 1/24$",
+      "B": "$P = 1/2, \\; R = 1/8$",
+      "C": "$P = 1/4, \\; R = 1/16$",
+      "D": "$P = 1, \\; R = 1/4$"
+    },
+    "correct_answer": "A",
+    "solution": "Plank's geometric coefficients:\n- Infinite slab of thickness $a$: $P = 1/2, R = 1/8$\n- Infinite cylinder of diameter $a$: $P = 1/4, R = 1/16$\n- Sphere of diameter $a$: $P = 1/6, R = 1/24$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_036",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Freezing curves and ice crystal morphology",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding food freezing physics is/are TRUE?",
+    "options": {
+      "A": "Rapid freezing produces numerous small intracellular ice crystals, preserving cellular membrane integrity and minimizing drip loss upon thawing",
+      "B": "Slow freezing forms large extracellular ice crystals that rupture cell walls and cause extensive texture degradation",
+      "C": "Freezing point of foods is lower than $0^\\circ\\text{C}$ due to freezing point depression caused by dissolved solutes (sugars, salts)",
+      "D": "Thermal conductivity of ice is approximately 4 times higher than that of liquid water ($2.2\\text{ W/m K}$ vs $0.6\\text{ W/m K}$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements are core principles of food freezing science:\n1. Fast freezing yields tiny intracellular crystals (A).\n2. Slow freezing yields large intercellular crystals causing cell puncture (B).\n3. Solutes depress initial freezing points to $-0.5$ to $-3^\\circ\\text{C}$ (C).\n4. Ice has four-fold higher thermal conductivity than water ($2.22$ vs $0.59\\text{ W/m K}$), which is why frozen layers conduct heat faster (D).\nAll options A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_037",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank equation freezing time calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A slab of meat of thickness $a = 5\\text{ cm}$ is frozen in an air-blast freezer where ambient air is at $-19^\\circ\\text{C}$ and the initial freezing point of meat is $-1^\\circ\\text{C}$ ($\\Delta T = 18^\\circ\\text{C}$). The density of frozen meat is $\\rho_f = 950\\text{ kg/m}^3$, latent heat of freezing is $\\lambda = 250\\text{ kJ/kg}$, frozen thermal conductivity is $k_f = 1.2\\text{ W/(m}\\,\\text{K)}$, and surface convective coefficient is $h = 25\\text{ W/(m}^2\\,\\text{K)}$. Using Plank's equation for an infinite slab ($P = 1/2$, $R = 1/8$), the freezing time is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.62",
+    "numerical_range": {
+      "min": 4.52,
+      "max": 4.72
+    },
+    "solution": "Plank's equation for freezing time of an infinite slab is:\n$$t_f = \\frac{\\rho_f \\lambda}{\\Delta T} \\left[ \\frac{a}{2 h} + \\frac{a^2}{8 k_f} \\right]$$\n$$\\frac{a}{2 h} = \\frac{0.05}{2 \\times 25.0} = 0.001000$$\n$$\\frac{a^2}{8 k_f} = \\frac{0.0025000000000000005}{8 \\times 1.2} = 0.000260$$\n$$t_f = \\frac{950 \\times 250000}{18} \\times (0.001000 + 0.000260) = 16630.5\\text{ seconds}$$\nConverting to hours:\n$$t_f = \\frac{16630.5}{3600} = 4.62\\text{ hours}$$",
+    "difficulty": "Hard",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_038",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank geometric shape factors P and R",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Plank's equation for food freezing time $t_f = \\frac{\\rho_f \\lambda}{\\Delta T} \\left[ \\frac{P a}{h} + \\frac{R a^2}{k_f} \\right]$, the shape factors $(P, R)$ for a sphere of diameter $a$ are:",
+    "options": {
+      "A": "$P = 1/6, \\; R = 1/24$",
+      "B": "$P = 1/2, \\; R = 1/8$",
+      "C": "$P = 1/4, \\; R = 1/16$",
+      "D": "$P = 1, \\; R = 1/4$"
+    },
+    "correct_answer": "A",
+    "solution": "Plank's geometric coefficients:\n- Infinite slab of thickness $a$: $P = 1/2, R = 1/8$\n- Infinite cylinder of diameter $a$: $P = 1/4, R = 1/16$\n- Sphere of diameter $a$: $P = 1/6, R = 1/24$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_039",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Freezing curves and ice crystal morphology",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding food freezing physics is/are TRUE?",
+    "options": {
+      "A": "Rapid freezing produces numerous small intracellular ice crystals, preserving cellular membrane integrity and minimizing drip loss upon thawing",
+      "B": "Slow freezing forms large extracellular ice crystals that rupture cell walls and cause extensive texture degradation",
+      "C": "Freezing point of foods is lower than $0^\\circ\\text{C}$ due to freezing point depression caused by dissolved solutes (sugars, salts)",
+      "D": "Thermal conductivity of ice is approximately 4 times higher than that of liquid water ($2.2\\text{ W/m K}$ vs $0.6\\text{ W/m K}$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements are core principles of food freezing science:\n1. Fast freezing yields tiny intracellular crystals (A).\n2. Slow freezing yields large intercellular crystals causing cell puncture (B).\n3. Solutes depress initial freezing points to $-0.5$ to $-3^\\circ\\text{C}$ (C).\n4. Ice has four-fold higher thermal conductivity than water ($2.22$ vs $0.59\\text{ W/m K}$), which is why frozen layers conduct heat faster (D).\nAll options A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_040",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank equation freezing time calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A slab of meat of thickness $a = 5\\text{ cm}$ is frozen in an air-blast freezer where ambient air is at $-19^\\circ\\text{C}$ and the initial freezing point of meat is $-1^\\circ\\text{C}$ ($\\Delta T = 18^\\circ\\text{C}$). The density of frozen meat is $\\rho_f = 950\\text{ kg/m}^3$, latent heat of freezing is $\\lambda = 250\\text{ kJ/kg}$, frozen thermal conductivity is $k_f = 1.2\\text{ W/(m}\\,\\text{K)}$, and surface convective coefficient is $h = 25\\text{ W/(m}^2\\,\\text{K)}$. Using Plank's equation for an infinite slab ($P = 1/2$, $R = 1/8$), the freezing time is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.62",
+    "numerical_range": {
+      "min": 4.52,
+      "max": 4.72
+    },
+    "solution": "Plank's equation for freezing time of an infinite slab is:\n$$t_f = \\frac{\\rho_f \\lambda}{\\Delta T} \\left[ \\frac{a}{2 h} + \\frac{a^2}{8 k_f} \\right]$$\n$$\\frac{a}{2 h} = \\frac{0.05}{2 \\times 25.0} = 0.001000$$\n$$\\frac{a^2}{8 k_f} = \\frac{0.0025000000000000005}{8 \\times 1.2} = 0.000260$$\n$$t_f = \\frac{950 \\times 250000}{18} \\times (0.001000 + 0.000260) = 16630.5\\text{ seconds}$$\nConverting to hours:\n$$t_f = \\frac{16630.5}{3600} = 4.62\\text{ hours}$$",
+    "difficulty": "Hard",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_041",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank geometric shape factors P and R",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Plank's equation for food freezing time $t_f = \\frac{\\rho_f \\lambda}{\\Delta T} \\left[ \\frac{P a}{h} + \\frac{R a^2}{k_f} \\right]$, the shape factors $(P, R)$ for a sphere of diameter $a$ are:",
+    "options": {
+      "A": "$P = 1/6, \\; R = 1/24$",
+      "B": "$P = 1/2, \\; R = 1/8$",
+      "C": "$P = 1/4, \\; R = 1/16$",
+      "D": "$P = 1, \\; R = 1/4$"
+    },
+    "correct_answer": "A",
+    "solution": "Plank's geometric coefficients:\n- Infinite slab of thickness $a$: $P = 1/2, R = 1/8$\n- Infinite cylinder of diameter $a$: $P = 1/4, R = 1/16$\n- Sphere of diameter $a$: $P = 1/6, R = 1/24$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_042",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Freezing curves and ice crystal morphology",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding food freezing physics is/are TRUE?",
+    "options": {
+      "A": "Rapid freezing produces numerous small intracellular ice crystals, preserving cellular membrane integrity and minimizing drip loss upon thawing",
+      "B": "Slow freezing forms large extracellular ice crystals that rupture cell walls and cause extensive texture degradation",
+      "C": "Freezing point of foods is lower than $0^\\circ\\text{C}$ due to freezing point depression caused by dissolved solutes (sugars, salts)",
+      "D": "Thermal conductivity of ice is approximately 4 times higher than that of liquid water ($2.2\\text{ W/m K}$ vs $0.6\\text{ W/m K}$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements are core principles of food freezing science:\n1. Fast freezing yields tiny intracellular crystals (A).\n2. Slow freezing yields large intercellular crystals causing cell puncture (B).\n3. Solutes depress initial freezing points to $-0.5$ to $-3^\\circ\\text{C}$ (C).\n4. Ice has four-fold higher thermal conductivity than water ($2.22$ vs $0.59\\text{ W/m K}$), which is why frozen layers conduct heat faster (D).\nAll options A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_FRZ_043",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank equation freezing time calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A slab of meat of thickness $a = 5\\text{ cm}$ is frozen in an air-blast freezer where ambient air is at $-19^\\circ\\text{C}$ and the initial freezing point of meat is $-1^\\circ\\text{C}$ ($\\Delta T = 18^\\circ\\text{C}$). The density of frozen meat is $\\rho_f = 950\\text{ kg/m}^3$, latent heat of freezing is $\\lambda = 250\\text{ kJ/kg}$, frozen thermal conductivity is $k_f = 1.2\\text{ W/(m}\\,\\text{K)}$, and surface convective coefficient is $h = 25\\text{ W/(m}^2\\,\\text{K)}$. Using Plank's equation for an infinite slab ($P = 1/2$, $R = 1/8$), the freezing time is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.62",
+    "numerical_range": {
+      "min": 4.52,
+      "max": 4.72
+    },
+    "solution": "Plank's equation for freezing time of an infinite slab is:\n$$t_f = \\frac{\\rho_f \\lambda}{\\Delta T} \\left[ \\frac{a}{2 h} + \\frac{a^2}{8 k_f} \\right]$$\n$$\\frac{a}{2 h} = \\frac{0.05}{2 \\times 25.0} = 0.001000$$\n$$\\frac{a^2}{8 k_f} = \\frac{0.0025000000000000005}{8 \\times 1.2} = 0.000260$$\n$$t_f = \\frac{950 \\times 250000}{18} \\times (0.001000 + 0.000260) = 16630.5\\text{ seconds}$$\nConverting to hours:\n$$t_f = \\frac{16630.5}{3600} = 4.62\\text{ hours}$$",
+    "difficulty": "Hard",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Refrigeration COP from enthalpy states",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cold storage vapor compression refrigeration system operates with refrigerant R-134a. The specific enthalpies at key cycle states are: evaporator outlet $h_1 = 390.0\\text{ kJ/kg}$, compressor outlet $h_2 = 425.0\\text{ kJ/kg}$, and condenser outlet (before throttling) $h_3 = h_4 = 240.0\\text{ kJ/kg}$. The Coefficient of Performance ($COP$) of the cycle is ________ (round off to two decimal places).",
+    "correct_answer": "4.29",
+    "numerical_range": {
+      "min": 4.24,
+      "max": 4.34
+    },
+    "solution": "The refrigerating effect ($RE$) is:\n$$RE = h_1 - h_4 = 390.0 - 240.0 = 150.0\\text{ kJ/kg}$$\nThe work of compression ($W$) is:\n$$W = h_2 - h_1 = 425.0 - 390.0 = 35.0\\text{ kJ/kg}$$\nThe Coefficient of Performance is:\n$$COP = \\frac{RE}{W} = \\frac{150.0}{35.0} = 4.29$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Carnot COP upper bound",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The theoretical maximum COP of a Carnot refrigeration cycle operating between an evaporator temperature $T_L$ and a condenser temperature $T_H$ (in Kelvin) is given by:",
+    "options": {
+      "A": "$COP_{\\text{Carnot}} = \\frac{T_L}{T_H - T_L}$",
+      "B": "$COP_{\\text{Carnot}} = \\frac{T_H - T_L}{T_L}$",
+      "C": "$COP_{\\text{Carnot}} = \\frac{T_H}{T_H - T_L}$",
+      "D": "$COP_{\\text{Carnot}} = \\frac{T_L}{T_H}$"
+    },
+    "correct_answer": "A",
+    "solution": "For an ideal reversed Carnot cycle, $COP = \\frac{Q_L}{W_{in}} = \\frac{T_L}{T_H - T_L}$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_003",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Cooling load components in agricultural cold storage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following heat sources contribute directly to the total refrigeration cooling load of an apple cold storage warehouse?",
+    "options": {
+      "A": "Transmission heat gain through walls, ceiling, and floor",
+      "B": "Respiration heat generated metabolically by living apple fruits",
+      "C": "Air infiltration load due to door openings during loading/unloading",
+      "D": "Sensible heat released by warehouse lighting, forklift motors, and operating personnel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four components comprise the standard ASHRAE cold storage cooling load:\n1. Transmission load (building envelope conduction)\n2. Product respiration load (vital metabolic heat)\n3. Infiltration load (ambient air ingress)\n4. Internal equipment/occupancy loads (lights, motors, people).\nAll options A, B, C, D are true.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_004",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Refrigeration COP from enthalpy states",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cold storage vapor compression refrigeration system operates with refrigerant R-134a. The specific enthalpies at key cycle states are: evaporator outlet $h_1 = 390.0\\text{ kJ/kg}$, compressor outlet $h_2 = 425.0\\text{ kJ/kg}$, and condenser outlet (before throttling) $h_3 = h_4 = 240.0\\text{ kJ/kg}$. The Coefficient of Performance ($COP$) of the cycle is ________ (round off to two decimal places).",
+    "correct_answer": "4.29",
+    "numerical_range": {
+      "min": 4.24,
+      "max": 4.34
+    },
+    "solution": "The refrigerating effect ($RE$) is:\n$$RE = h_1 - h_4 = 390.0 - 240.0 = 150.0\\text{ kJ/kg}$$\nThe work of compression ($W$) is:\n$$W = h_2 - h_1 = 425.0 - 390.0 = 35.0\\text{ kJ/kg}$$\nThe Coefficient of Performance is:\n$$COP = \\frac{RE}{W} = \\frac{150.0}{35.0} = 4.29$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_005",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Carnot COP upper bound",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The theoretical maximum COP of a Carnot refrigeration cycle operating between an evaporator temperature $T_L$ and a condenser temperature $T_H$ (in Kelvin) is given by:",
+    "options": {
+      "A": "$COP_{\\text{Carnot}} = \\frac{T_L}{T_H - T_L}$",
+      "B": "$COP_{\\text{Carnot}} = \\frac{T_H - T_L}{T_L}$",
+      "C": "$COP_{\\text{Carnot}} = \\frac{T_H}{T_H - T_L}$",
+      "D": "$COP_{\\text{Carnot}} = \\frac{T_L}{T_H}$"
+    },
+    "correct_answer": "A",
+    "solution": "For an ideal reversed Carnot cycle, $COP = \\frac{Q_L}{W_{in}} = \\frac{T_L}{T_H - T_L}$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_006",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Cooling load components in agricultural cold storage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following heat sources contribute directly to the total refrigeration cooling load of an apple cold storage warehouse?",
+    "options": {
+      "A": "Transmission heat gain through walls, ceiling, and floor",
+      "B": "Respiration heat generated metabolically by living apple fruits",
+      "C": "Air infiltration load due to door openings during loading/unloading",
+      "D": "Sensible heat released by warehouse lighting, forklift motors, and operating personnel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four components comprise the standard ASHRAE cold storage cooling load:\n1. Transmission load (building envelope conduction)\n2. Product respiration load (vital metabolic heat)\n3. Infiltration load (ambient air ingress)\n4. Internal equipment/occupancy loads (lights, motors, people).\nAll options A, B, C, D are true.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_007",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Refrigeration COP from enthalpy states",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cold storage vapor compression refrigeration system operates with refrigerant R-134a. The specific enthalpies at key cycle states are: evaporator outlet $h_1 = 390.0\\text{ kJ/kg}$, compressor outlet $h_2 = 425.0\\text{ kJ/kg}$, and condenser outlet (before throttling) $h_3 = h_4 = 240.0\\text{ kJ/kg}$. The Coefficient of Performance ($COP$) of the cycle is ________ (round off to two decimal places).",
+    "correct_answer": "4.29",
+    "numerical_range": {
+      "min": 4.24,
+      "max": 4.34
+    },
+    "solution": "The refrigerating effect ($RE$) is:\n$$RE = h_1 - h_4 = 390.0 - 240.0 = 150.0\\text{ kJ/kg}$$\nThe work of compression ($W$) is:\n$$W = h_2 - h_1 = 425.0 - 390.0 = 35.0\\text{ kJ/kg}$$\nThe Coefficient of Performance is:\n$$COP = \\frac{RE}{W} = \\frac{150.0}{35.0} = 4.29$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_008",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Carnot COP upper bound",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The theoretical maximum COP of a Carnot refrigeration cycle operating between an evaporator temperature $T_L$ and a condenser temperature $T_H$ (in Kelvin) is given by:",
+    "options": {
+      "A": "$COP_{\\text{Carnot}} = \\frac{T_L}{T_H - T_L}$",
+      "B": "$COP_{\\text{Carnot}} = \\frac{T_H - T_L}{T_L}$",
+      "C": "$COP_{\\text{Carnot}} = \\frac{T_H}{T_H - T_L}$",
+      "D": "$COP_{\\text{Carnot}} = \\frac{T_L}{T_H}$"
+    },
+    "correct_answer": "A",
+    "solution": "For an ideal reversed Carnot cycle, $COP = \\frac{Q_L}{W_{in}} = \\frac{T_L}{T_H - T_L}$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_009",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Cooling load components in agricultural cold storage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following heat sources contribute directly to the total refrigeration cooling load of an apple cold storage warehouse?",
+    "options": {
+      "A": "Transmission heat gain through walls, ceiling, and floor",
+      "B": "Respiration heat generated metabolically by living apple fruits",
+      "C": "Air infiltration load due to door openings during loading/unloading",
+      "D": "Sensible heat released by warehouse lighting, forklift motors, and operating personnel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four components comprise the standard ASHRAE cold storage cooling load:\n1. Transmission load (building envelope conduction)\n2. Product respiration load (vital metabolic heat)\n3. Infiltration load (ambient air ingress)\n4. Internal equipment/occupancy loads (lights, motors, people).\nAll options A, B, C, D are true.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_010",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Refrigeration COP from enthalpy states",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cold storage vapor compression refrigeration system operates with refrigerant R-134a. The specific enthalpies at key cycle states are: evaporator outlet $h_1 = 390.0\\text{ kJ/kg}$, compressor outlet $h_2 = 425.0\\text{ kJ/kg}$, and condenser outlet (before throttling) $h_3 = h_4 = 240.0\\text{ kJ/kg}$. The Coefficient of Performance ($COP$) of the cycle is ________ (round off to two decimal places).",
+    "correct_answer": "4.29",
+    "numerical_range": {
+      "min": 4.24,
+      "max": 4.34
+    },
+    "solution": "The refrigerating effect ($RE$) is:\n$$RE = h_1 - h_4 = 390.0 - 240.0 = 150.0\\text{ kJ/kg}$$\nThe work of compression ($W$) is:\n$$W = h_2 - h_1 = 425.0 - 390.0 = 35.0\\text{ kJ/kg}$$\nThe Coefficient of Performance is:\n$$COP = \\frac{RE}{W} = \\frac{150.0}{35.0} = 4.29$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_011",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Carnot COP upper bound",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The theoretical maximum COP of a Carnot refrigeration cycle operating between an evaporator temperature $T_L$ and a condenser temperature $T_H$ (in Kelvin) is given by:",
+    "options": {
+      "A": "$COP_{\\text{Carnot}} = \\frac{T_L}{T_H - T_L}$",
+      "B": "$COP_{\\text{Carnot}} = \\frac{T_H - T_L}{T_L}$",
+      "C": "$COP_{\\text{Carnot}} = \\frac{T_H}{T_H - T_L}$",
+      "D": "$COP_{\\text{Carnot}} = \\frac{T_L}{T_H}$"
+    },
+    "correct_answer": "A",
+    "solution": "For an ideal reversed Carnot cycle, $COP = \\frac{Q_L}{W_{in}} = \\frac{T_L}{T_H - T_L}$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_012",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Cooling load components in agricultural cold storage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following heat sources contribute directly to the total refrigeration cooling load of an apple cold storage warehouse?",
+    "options": {
+      "A": "Transmission heat gain through walls, ceiling, and floor",
+      "B": "Respiration heat generated metabolically by living apple fruits",
+      "C": "Air infiltration load due to door openings during loading/unloading",
+      "D": "Sensible heat released by warehouse lighting, forklift motors, and operating personnel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four components comprise the standard ASHRAE cold storage cooling load:\n1. Transmission load (building envelope conduction)\n2. Product respiration load (vital metabolic heat)\n3. Infiltration load (ambient air ingress)\n4. Internal equipment/occupancy loads (lights, motors, people).\nAll options A, B, C, D are true.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_013",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Refrigeration COP from enthalpy states",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cold storage vapor compression refrigeration system operates with refrigerant R-134a. The specific enthalpies at key cycle states are: evaporator outlet $h_1 = 390.0\\text{ kJ/kg}$, compressor outlet $h_2 = 425.0\\text{ kJ/kg}$, and condenser outlet (before throttling) $h_3 = h_4 = 240.0\\text{ kJ/kg}$. The Coefficient of Performance ($COP$) of the cycle is ________ (round off to two decimal places).",
+    "correct_answer": "4.29",
+    "numerical_range": {
+      "min": 4.24,
+      "max": 4.34
+    },
+    "solution": "The refrigerating effect ($RE$) is:\n$$RE = h_1 - h_4 = 390.0 - 240.0 = 150.0\\text{ kJ/kg}$$\nThe work of compression ($W$) is:\n$$W = h_2 - h_1 = 425.0 - 390.0 = 35.0\\text{ kJ/kg}$$\nThe Coefficient of Performance is:\n$$COP = \\frac{RE}{W} = \\frac{150.0}{35.0} = 4.29$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_014",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Carnot COP upper bound",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The theoretical maximum COP of a Carnot refrigeration cycle operating between an evaporator temperature $T_L$ and a condenser temperature $T_H$ (in Kelvin) is given by:",
+    "options": {
+      "A": "$COP_{\\text{Carnot}} = \\frac{T_L}{T_H - T_L}$",
+      "B": "$COP_{\\text{Carnot}} = \\frac{T_H - T_L}{T_L}$",
+      "C": "$COP_{\\text{Carnot}} = \\frac{T_H}{T_H - T_L}$",
+      "D": "$COP_{\\text{Carnot}} = \\frac{T_L}{T_H}$"
+    },
+    "correct_answer": "A",
+    "solution": "For an ideal reversed Carnot cycle, $COP = \\frac{Q_L}{W_{in}} = \\frac{T_L}{T_H - T_L}$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_015",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Cooling load components in agricultural cold storage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following heat sources contribute directly to the total refrigeration cooling load of an apple cold storage warehouse?",
+    "options": {
+      "A": "Transmission heat gain through walls, ceiling, and floor",
+      "B": "Respiration heat generated metabolically by living apple fruits",
+      "C": "Air infiltration load due to door openings during loading/unloading",
+      "D": "Sensible heat released by warehouse lighting, forklift motors, and operating personnel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four components comprise the standard ASHRAE cold storage cooling load:\n1. Transmission load (building envelope conduction)\n2. Product respiration load (vital metabolic heat)\n3. Infiltration load (ambient air ingress)\n4. Internal equipment/occupancy loads (lights, motors, people).\nAll options A, B, C, D are true.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_016",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Refrigeration COP from enthalpy states",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cold storage vapor compression refrigeration system operates with refrigerant R-134a. The specific enthalpies at key cycle states are: evaporator outlet $h_1 = 390.0\\text{ kJ/kg}$, compressor outlet $h_2 = 425.0\\text{ kJ/kg}$, and condenser outlet (before throttling) $h_3 = h_4 = 240.0\\text{ kJ/kg}$. The Coefficient of Performance ($COP$) of the cycle is ________ (round off to two decimal places).",
+    "correct_answer": "4.29",
+    "numerical_range": {
+      "min": 4.24,
+      "max": 4.34
+    },
+    "solution": "The refrigerating effect ($RE$) is:\n$$RE = h_1 - h_4 = 390.0 - 240.0 = 150.0\\text{ kJ/kg}$$\nThe work of compression ($W$) is:\n$$W = h_2 - h_1 = 425.0 - 390.0 = 35.0\\text{ kJ/kg}$$\nThe Coefficient of Performance is:\n$$COP = \\frac{RE}{W} = \\frac{150.0}{35.0} = 4.29$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_017",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Carnot COP upper bound",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The theoretical maximum COP of a Carnot refrigeration cycle operating between an evaporator temperature $T_L$ and a condenser temperature $T_H$ (in Kelvin) is given by:",
+    "options": {
+      "A": "$COP_{\\text{Carnot}} = \\frac{T_L}{T_H - T_L}$",
+      "B": "$COP_{\\text{Carnot}} = \\frac{T_H - T_L}{T_L}$",
+      "C": "$COP_{\\text{Carnot}} = \\frac{T_H}{T_H - T_L}$",
+      "D": "$COP_{\\text{Carnot}} = \\frac{T_L}{T_H}$"
+    },
+    "correct_answer": "A",
+    "solution": "For an ideal reversed Carnot cycle, $COP = \\frac{Q_L}{W_{in}} = \\frac{T_L}{T_H - T_L}$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_018",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Cooling load components in agricultural cold storage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following heat sources contribute directly to the total refrigeration cooling load of an apple cold storage warehouse?",
+    "options": {
+      "A": "Transmission heat gain through walls, ceiling, and floor",
+      "B": "Respiration heat generated metabolically by living apple fruits",
+      "C": "Air infiltration load due to door openings during loading/unloading",
+      "D": "Sensible heat released by warehouse lighting, forklift motors, and operating personnel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four components comprise the standard ASHRAE cold storage cooling load:\n1. Transmission load (building envelope conduction)\n2. Product respiration load (vital metabolic heat)\n3. Infiltration load (ambient air ingress)\n4. Internal equipment/occupancy loads (lights, motors, people).\nAll options A, B, C, D are true.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_019",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Refrigeration COP from enthalpy states",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cold storage vapor compression refrigeration system operates with refrigerant R-134a. The specific enthalpies at key cycle states are: evaporator outlet $h_1 = 390.0\\text{ kJ/kg}$, compressor outlet $h_2 = 425.0\\text{ kJ/kg}$, and condenser outlet (before throttling) $h_3 = h_4 = 240.0\\text{ kJ/kg}$. The Coefficient of Performance ($COP$) of the cycle is ________ (round off to two decimal places).",
+    "correct_answer": "4.29",
+    "numerical_range": {
+      "min": 4.24,
+      "max": 4.34
+    },
+    "solution": "The refrigerating effect ($RE$) is:\n$$RE = h_1 - h_4 = 390.0 - 240.0 = 150.0\\text{ kJ/kg}$$\nThe work of compression ($W$) is:\n$$W = h_2 - h_1 = 425.0 - 390.0 = 35.0\\text{ kJ/kg}$$\nThe Coefficient of Performance is:\n$$COP = \\frac{RE}{W} = \\frac{150.0}{35.0} = 4.29$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_020",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Carnot COP upper bound",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The theoretical maximum COP of a Carnot refrigeration cycle operating between an evaporator temperature $T_L$ and a condenser temperature $T_H$ (in Kelvin) is given by:",
+    "options": {
+      "A": "$COP_{\\text{Carnot}} = \\frac{T_L}{T_H - T_L}$",
+      "B": "$COP_{\\text{Carnot}} = \\frac{T_H - T_L}{T_L}$",
+      "C": "$COP_{\\text{Carnot}} = \\frac{T_H}{T_H - T_L}$",
+      "D": "$COP_{\\text{Carnot}} = \\frac{T_L}{T_H}$"
+    },
+    "correct_answer": "A",
+    "solution": "For an ideal reversed Carnot cycle, $COP = \\frac{Q_L}{W_{in}} = \\frac{T_L}{T_H - T_L}$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_021",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Cooling load components in agricultural cold storage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following heat sources contribute directly to the total refrigeration cooling load of an apple cold storage warehouse?",
+    "options": {
+      "A": "Transmission heat gain through walls, ceiling, and floor",
+      "B": "Respiration heat generated metabolically by living apple fruits",
+      "C": "Air infiltration load due to door openings during loading/unloading",
+      "D": "Sensible heat released by warehouse lighting, forklift motors, and operating personnel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four components comprise the standard ASHRAE cold storage cooling load:\n1. Transmission load (building envelope conduction)\n2. Product respiration load (vital metabolic heat)\n3. Infiltration load (ambient air ingress)\n4. Internal equipment/occupancy loads (lights, motors, people).\nAll options A, B, C, D are true.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_022",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Refrigeration COP from enthalpy states",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cold storage vapor compression refrigeration system operates with refrigerant R-134a. The specific enthalpies at key cycle states are: evaporator outlet $h_1 = 390.0\\text{ kJ/kg}$, compressor outlet $h_2 = 425.0\\text{ kJ/kg}$, and condenser outlet (before throttling) $h_3 = h_4 = 240.0\\text{ kJ/kg}$. The Coefficient of Performance ($COP$) of the cycle is ________ (round off to two decimal places).",
+    "correct_answer": "4.29",
+    "numerical_range": {
+      "min": 4.24,
+      "max": 4.34
+    },
+    "solution": "The refrigerating effect ($RE$) is:\n$$RE = h_1 - h_4 = 390.0 - 240.0 = 150.0\\text{ kJ/kg}$$\nThe work of compression ($W$) is:\n$$W = h_2 - h_1 = 425.0 - 390.0 = 35.0\\text{ kJ/kg}$$\nThe Coefficient of Performance is:\n$$COP = \\frac{RE}{W} = \\frac{150.0}{35.0} = 4.29$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_023",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Carnot COP upper bound",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The theoretical maximum COP of a Carnot refrigeration cycle operating between an evaporator temperature $T_L$ and a condenser temperature $T_H$ (in Kelvin) is given by:",
+    "options": {
+      "A": "$COP_{\\text{Carnot}} = \\frac{T_L}{T_H - T_L}$",
+      "B": "$COP_{\\text{Carnot}} = \\frac{T_H - T_L}{T_L}$",
+      "C": "$COP_{\\text{Carnot}} = \\frac{T_H}{T_H - T_L}$",
+      "D": "$COP_{\\text{Carnot}} = \\frac{T_L}{T_H}$"
+    },
+    "correct_answer": "A",
+    "solution": "For an ideal reversed Carnot cycle, $COP = \\frac{Q_L}{W_{in}} = \\frac{T_L}{T_H - T_L}$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_024",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Cooling load components in agricultural cold storage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following heat sources contribute directly to the total refrigeration cooling load of an apple cold storage warehouse?",
+    "options": {
+      "A": "Transmission heat gain through walls, ceiling, and floor",
+      "B": "Respiration heat generated metabolically by living apple fruits",
+      "C": "Air infiltration load due to door openings during loading/unloading",
+      "D": "Sensible heat released by warehouse lighting, forklift motors, and operating personnel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four components comprise the standard ASHRAE cold storage cooling load:\n1. Transmission load (building envelope conduction)\n2. Product respiration load (vital metabolic heat)\n3. Infiltration load (ambient air ingress)\n4. Internal equipment/occupancy loads (lights, motors, people).\nAll options A, B, C, D are true.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_025",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Refrigeration COP from enthalpy states",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cold storage vapor compression refrigeration system operates with refrigerant R-134a. The specific enthalpies at key cycle states are: evaporator outlet $h_1 = 390.0\\text{ kJ/kg}$, compressor outlet $h_2 = 425.0\\text{ kJ/kg}$, and condenser outlet (before throttling) $h_3 = h_4 = 240.0\\text{ kJ/kg}$. The Coefficient of Performance ($COP$) of the cycle is ________ (round off to two decimal places).",
+    "correct_answer": "4.29",
+    "numerical_range": {
+      "min": 4.24,
+      "max": 4.34
+    },
+    "solution": "The refrigerating effect ($RE$) is:\n$$RE = h_1 - h_4 = 390.0 - 240.0 = 150.0\\text{ kJ/kg}$$\nThe work of compression ($W$) is:\n$$W = h_2 - h_1 = 425.0 - 390.0 = 35.0\\text{ kJ/kg}$$\nThe Coefficient of Performance is:\n$$COP = \\frac{RE}{W} = \\frac{150.0}{35.0} = 4.29$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_026",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Carnot COP upper bound",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The theoretical maximum COP of a Carnot refrigeration cycle operating between an evaporator temperature $T_L$ and a condenser temperature $T_H$ (in Kelvin) is given by:",
+    "options": {
+      "A": "$COP_{\\text{Carnot}} = \\frac{T_L}{T_H - T_L}$",
+      "B": "$COP_{\\text{Carnot}} = \\frac{T_H - T_L}{T_L}$",
+      "C": "$COP_{\\text{Carnot}} = \\frac{T_H}{T_H - T_L}$",
+      "D": "$COP_{\\text{Carnot}} = \\frac{T_L}{T_H}$"
+    },
+    "correct_answer": "A",
+    "solution": "For an ideal reversed Carnot cycle, $COP = \\frac{Q_L}{W_{in}} = \\frac{T_L}{T_H - T_L}$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_027",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Cooling load components in agricultural cold storage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following heat sources contribute directly to the total refrigeration cooling load of an apple cold storage warehouse?",
+    "options": {
+      "A": "Transmission heat gain through walls, ceiling, and floor",
+      "B": "Respiration heat generated metabolically by living apple fruits",
+      "C": "Air infiltration load due to door openings during loading/unloading",
+      "D": "Sensible heat released by warehouse lighting, forklift motors, and operating personnel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four components comprise the standard ASHRAE cold storage cooling load:\n1. Transmission load (building envelope conduction)\n2. Product respiration load (vital metabolic heat)\n3. Infiltration load (ambient air ingress)\n4. Internal equipment/occupancy loads (lights, motors, people).\nAll options A, B, C, D are true.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_028",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Refrigeration COP from enthalpy states",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cold storage vapor compression refrigeration system operates with refrigerant R-134a. The specific enthalpies at key cycle states are: evaporator outlet $h_1 = 390.0\\text{ kJ/kg}$, compressor outlet $h_2 = 425.0\\text{ kJ/kg}$, and condenser outlet (before throttling) $h_3 = h_4 = 240.0\\text{ kJ/kg}$. The Coefficient of Performance ($COP$) of the cycle is ________ (round off to two decimal places).",
+    "correct_answer": "4.29",
+    "numerical_range": {
+      "min": 4.24,
+      "max": 4.34
+    },
+    "solution": "The refrigerating effect ($RE$) is:\n$$RE = h_1 - h_4 = 390.0 - 240.0 = 150.0\\text{ kJ/kg}$$\nThe work of compression ($W$) is:\n$$W = h_2 - h_1 = 425.0 - 390.0 = 35.0\\text{ kJ/kg}$$\nThe Coefficient of Performance is:\n$$COP = \\frac{RE}{W} = \\frac{150.0}{35.0} = 4.29$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_029",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Carnot COP upper bound",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The theoretical maximum COP of a Carnot refrigeration cycle operating between an evaporator temperature $T_L$ and a condenser temperature $T_H$ (in Kelvin) is given by:",
+    "options": {
+      "A": "$COP_{\\text{Carnot}} = \\frac{T_L}{T_H - T_L}$",
+      "B": "$COP_{\\text{Carnot}} = \\frac{T_H - T_L}{T_L}$",
+      "C": "$COP_{\\text{Carnot}} = \\frac{T_H}{T_H - T_L}$",
+      "D": "$COP_{\\text{Carnot}} = \\frac{T_L}{T_H}$"
+    },
+    "correct_answer": "A",
+    "solution": "For an ideal reversed Carnot cycle, $COP = \\frac{Q_L}{W_{in}} = \\frac{T_L}{T_H - T_L}$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_030",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Cooling load components in agricultural cold storage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following heat sources contribute directly to the total refrigeration cooling load of an apple cold storage warehouse?",
+    "options": {
+      "A": "Transmission heat gain through walls, ceiling, and floor",
+      "B": "Respiration heat generated metabolically by living apple fruits",
+      "C": "Air infiltration load due to door openings during loading/unloading",
+      "D": "Sensible heat released by warehouse lighting, forklift motors, and operating personnel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four components comprise the standard ASHRAE cold storage cooling load:\n1. Transmission load (building envelope conduction)\n2. Product respiration load (vital metabolic heat)\n3. Infiltration load (ambient air ingress)\n4. Internal equipment/occupancy loads (lights, motors, people).\nAll options A, B, C, D are true.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_031",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Refrigeration COP from enthalpy states",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cold storage vapor compression refrigeration system operates with refrigerant R-134a. The specific enthalpies at key cycle states are: evaporator outlet $h_1 = 390.0\\text{ kJ/kg}$, compressor outlet $h_2 = 425.0\\text{ kJ/kg}$, and condenser outlet (before throttling) $h_3 = h_4 = 240.0\\text{ kJ/kg}$. The Coefficient of Performance ($COP$) of the cycle is ________ (round off to two decimal places).",
+    "correct_answer": "4.29",
+    "numerical_range": {
+      "min": 4.24,
+      "max": 4.34
+    },
+    "solution": "The refrigerating effect ($RE$) is:\n$$RE = h_1 - h_4 = 390.0 - 240.0 = 150.0\\text{ kJ/kg}$$\nThe work of compression ($W$) is:\n$$W = h_2 - h_1 = 425.0 - 390.0 = 35.0\\text{ kJ/kg}$$\nThe Coefficient of Performance is:\n$$COP = \\frac{RE}{W} = \\frac{150.0}{35.0} = 4.29$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_032",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Carnot COP upper bound",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The theoretical maximum COP of a Carnot refrigeration cycle operating between an evaporator temperature $T_L$ and a condenser temperature $T_H$ (in Kelvin) is given by:",
+    "options": {
+      "A": "$COP_{\\text{Carnot}} = \\frac{T_L}{T_H - T_L}$",
+      "B": "$COP_{\\text{Carnot}} = \\frac{T_H - T_L}{T_L}$",
+      "C": "$COP_{\\text{Carnot}} = \\frac{T_H}{T_H - T_L}$",
+      "D": "$COP_{\\text{Carnot}} = \\frac{T_L}{T_H}$"
+    },
+    "correct_answer": "A",
+    "solution": "For an ideal reversed Carnot cycle, $COP = \\frac{Q_L}{W_{in}} = \\frac{T_L}{T_H - T_L}$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_033",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Cooling load components in agricultural cold storage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following heat sources contribute directly to the total refrigeration cooling load of an apple cold storage warehouse?",
+    "options": {
+      "A": "Transmission heat gain through walls, ceiling, and floor",
+      "B": "Respiration heat generated metabolically by living apple fruits",
+      "C": "Air infiltration load due to door openings during loading/unloading",
+      "D": "Sensible heat released by warehouse lighting, forklift motors, and operating personnel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four components comprise the standard ASHRAE cold storage cooling load:\n1. Transmission load (building envelope conduction)\n2. Product respiration load (vital metabolic heat)\n3. Infiltration load (ambient air ingress)\n4. Internal equipment/occupancy loads (lights, motors, people).\nAll options A, B, C, D are true.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_034",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Refrigeration COP from enthalpy states",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cold storage vapor compression refrigeration system operates with refrigerant R-134a. The specific enthalpies at key cycle states are: evaporator outlet $h_1 = 390.0\\text{ kJ/kg}$, compressor outlet $h_2 = 425.0\\text{ kJ/kg}$, and condenser outlet (before throttling) $h_3 = h_4 = 240.0\\text{ kJ/kg}$. The Coefficient of Performance ($COP$) of the cycle is ________ (round off to two decimal places).",
+    "correct_answer": "4.29",
+    "numerical_range": {
+      "min": 4.24,
+      "max": 4.34
+    },
+    "solution": "The refrigerating effect ($RE$) is:\n$$RE = h_1 - h_4 = 390.0 - 240.0 = 150.0\\text{ kJ/kg}$$\nThe work of compression ($W$) is:\n$$W = h_2 - h_1 = 425.0 - 390.0 = 35.0\\text{ kJ/kg}$$\nThe Coefficient of Performance is:\n$$COP = \\frac{RE}{W} = \\frac{150.0}{35.0} = 4.29$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_035",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Carnot COP upper bound",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The theoretical maximum COP of a Carnot refrigeration cycle operating between an evaporator temperature $T_L$ and a condenser temperature $T_H$ (in Kelvin) is given by:",
+    "options": {
+      "A": "$COP_{\\text{Carnot}} = \\frac{T_L}{T_H - T_L}$",
+      "B": "$COP_{\\text{Carnot}} = \\frac{T_H - T_L}{T_L}$",
+      "C": "$COP_{\\text{Carnot}} = \\frac{T_H}{T_H - T_L}$",
+      "D": "$COP_{\\text{Carnot}} = \\frac{T_L}{T_H}$"
+    },
+    "correct_answer": "A",
+    "solution": "For an ideal reversed Carnot cycle, $COP = \\frac{Q_L}{W_{in}} = \\frac{T_L}{T_H - T_L}$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_036",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Cooling load components in agricultural cold storage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following heat sources contribute directly to the total refrigeration cooling load of an apple cold storage warehouse?",
+    "options": {
+      "A": "Transmission heat gain through walls, ceiling, and floor",
+      "B": "Respiration heat generated metabolically by living apple fruits",
+      "C": "Air infiltration load due to door openings during loading/unloading",
+      "D": "Sensible heat released by warehouse lighting, forklift motors, and operating personnel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four components comprise the standard ASHRAE cold storage cooling load:\n1. Transmission load (building envelope conduction)\n2. Product respiration load (vital metabolic heat)\n3. Infiltration load (ambient air ingress)\n4. Internal equipment/occupancy loads (lights, motors, people).\nAll options A, B, C, D are true.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_037",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Refrigeration COP from enthalpy states",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cold storage vapor compression refrigeration system operates with refrigerant R-134a. The specific enthalpies at key cycle states are: evaporator outlet $h_1 = 390.0\\text{ kJ/kg}$, compressor outlet $h_2 = 425.0\\text{ kJ/kg}$, and condenser outlet (before throttling) $h_3 = h_4 = 240.0\\text{ kJ/kg}$. The Coefficient of Performance ($COP$) of the cycle is ________ (round off to two decimal places).",
+    "correct_answer": "4.29",
+    "numerical_range": {
+      "min": 4.24,
+      "max": 4.34
+    },
+    "solution": "The refrigerating effect ($RE$) is:\n$$RE = h_1 - h_4 = 390.0 - 240.0 = 150.0\\text{ kJ/kg}$$\nThe work of compression ($W$) is:\n$$W = h_2 - h_1 = 425.0 - 390.0 = 35.0\\text{ kJ/kg}$$\nThe Coefficient of Performance is:\n$$COP = \\frac{RE}{W} = \\frac{150.0}{35.0} = 4.29$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_038",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Carnot COP upper bound",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The theoretical maximum COP of a Carnot refrigeration cycle operating between an evaporator temperature $T_L$ and a condenser temperature $T_H$ (in Kelvin) is given by:",
+    "options": {
+      "A": "$COP_{\\text{Carnot}} = \\frac{T_L}{T_H - T_L}$",
+      "B": "$COP_{\\text{Carnot}} = \\frac{T_H - T_L}{T_L}$",
+      "C": "$COP_{\\text{Carnot}} = \\frac{T_H}{T_H - T_L}$",
+      "D": "$COP_{\\text{Carnot}} = \\frac{T_L}{T_H}$"
+    },
+    "correct_answer": "A",
+    "solution": "For an ideal reversed Carnot cycle, $COP = \\frac{Q_L}{W_{in}} = \\frac{T_L}{T_H - T_L}$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_039",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Cooling load components in agricultural cold storage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following heat sources contribute directly to the total refrigeration cooling load of an apple cold storage warehouse?",
+    "options": {
+      "A": "Transmission heat gain through walls, ceiling, and floor",
+      "B": "Respiration heat generated metabolically by living apple fruits",
+      "C": "Air infiltration load due to door openings during loading/unloading",
+      "D": "Sensible heat released by warehouse lighting, forklift motors, and operating personnel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four components comprise the standard ASHRAE cold storage cooling load:\n1. Transmission load (building envelope conduction)\n2. Product respiration load (vital metabolic heat)\n3. Infiltration load (ambient air ingress)\n4. Internal equipment/occupancy loads (lights, motors, people).\nAll options A, B, C, D are true.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_040",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Refrigeration COP from enthalpy states",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cold storage vapor compression refrigeration system operates with refrigerant R-134a. The specific enthalpies at key cycle states are: evaporator outlet $h_1 = 390.0\\text{ kJ/kg}$, compressor outlet $h_2 = 425.0\\text{ kJ/kg}$, and condenser outlet (before throttling) $h_3 = h_4 = 240.0\\text{ kJ/kg}$. The Coefficient of Performance ($COP$) of the cycle is ________ (round off to two decimal places).",
+    "correct_answer": "4.29",
+    "numerical_range": {
+      "min": 4.24,
+      "max": 4.34
+    },
+    "solution": "The refrigerating effect ($RE$) is:\n$$RE = h_1 - h_4 = 390.0 - 240.0 = 150.0\\text{ kJ/kg}$$\nThe work of compression ($W$) is:\n$$W = h_2 - h_1 = 425.0 - 390.0 = 35.0\\text{ kJ/kg}$$\nThe Coefficient of Performance is:\n$$COP = \\frac{RE}{W} = \\frac{150.0}{35.0} = 4.29$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_041",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Carnot COP upper bound",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The theoretical maximum COP of a Carnot refrigeration cycle operating between an evaporator temperature $T_L$ and a condenser temperature $T_H$ (in Kelvin) is given by:",
+    "options": {
+      "A": "$COP_{\\text{Carnot}} = \\frac{T_L}{T_H - T_L}$",
+      "B": "$COP_{\\text{Carnot}} = \\frac{T_H - T_L}{T_L}$",
+      "C": "$COP_{\\text{Carnot}} = \\frac{T_H}{T_H - T_L}$",
+      "D": "$COP_{\\text{Carnot}} = \\frac{T_L}{T_H}$"
+    },
+    "correct_answer": "A",
+    "solution": "For an ideal reversed Carnot cycle, $COP = \\frac{Q_L}{W_{in}} = \\frac{T_L}{T_H - T_L}$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_042",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Cooling load components in agricultural cold storage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following heat sources contribute directly to the total refrigeration cooling load of an apple cold storage warehouse?",
+    "options": {
+      "A": "Transmission heat gain through walls, ceiling, and floor",
+      "B": "Respiration heat generated metabolically by living apple fruits",
+      "C": "Air infiltration load due to door openings during loading/unloading",
+      "D": "Sensible heat released by warehouse lighting, forklift motors, and operating personnel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four components comprise the standard ASHRAE cold storage cooling load:\n1. Transmission load (building envelope conduction)\n2. Product respiration load (vital metabolic heat)\n3. Infiltration load (ambient air ingress)\n4. Internal equipment/occupancy loads (lights, motors, people).\nAll options A, B, C, D are true.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_REF_043",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Refrigeration COP from enthalpy states",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A cold storage vapor compression refrigeration system operates with refrigerant R-134a. The specific enthalpies at key cycle states are: evaporator outlet $h_1 = 390.0\\text{ kJ/kg}$, compressor outlet $h_2 = 425.0\\text{ kJ/kg}$, and condenser outlet (before throttling) $h_3 = h_4 = 240.0\\text{ kJ/kg}$. The Coefficient of Performance ($COP$) of the cycle is ________ (round off to two decimal places).",
+    "correct_answer": "4.29",
+    "numerical_range": {
+      "min": 4.24,
+      "max": 4.34
+    },
+    "solution": "The refrigerating effect ($RE$) is:\n$$RE = h_1 - h_4 = 390.0 - 240.0 = 150.0\\text{ kJ/kg}$$\nThe work of compression ($W$) is:\n$$W = h_2 - h_1 = 425.0 - 390.0 = 35.0\\text{ kJ/kg}$$\nThe Coefficient of Performance is:\n$$COP = \\frac{RE}{W} = \\frac{150.0}{35.0} = 4.29$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Absolute minimum water activity for microbial growth",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The absolute lower threshold of water activity ($a_w$) below which no known pathogenic or spoilage microorganism (including halophilic bacteria and xerophilic molds) can proliferate is approximately:",
+    "options": {
+      "A": "$0.60$",
+      "B": "$0.85$",
+      "C": "$0.75$",
+      "D": "$0.91$"
+    },
+    "correct_answer": "A",
+    "solution": "Microbial growth boundaries:\n- Normal bacteria: $a_w > 0.91$\n- Yeasts: $a_w > 0.88$\n- Ordinary molds: $a_w > 0.80$\n- Halophilic bacteria: $a_w > 0.75$\n- Xerophilic molds / osmophilic yeasts: $a_w > 0.61$.\nBelow $a_w = 0.60$, all microbial proliferation ceases completely.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Modified Atmosphere Packaging gas functions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In Modified Atmosphere Packaging (MAP) of fresh fruits and vegetables, what are the primary functional roles of the gas mixture components?",
+    "options": {
+      "A": "Reduced $\\text{O}_2$ ($2-5\\%$) depresses respiration rate and delays senescence without triggering anaerobic fermentation",
+      "B": "Elevated $\\text{CO}_2$ ($3-8\\%$) exerts fungistatic action and retards ethylene biosynthesis",
+      "C": "$\\text{N}_2$ acts as an inert balance gas to prevent package collapse and pillow the package",
+      "D": "Pure $100\\% \\text{CO}$ is routinely pumped to prevent oxidation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Controlled low oxygen slows respiration while preventing anaerobic off-flavors (A is true).\n2. Carbon dioxide inhibits mold growth and slows ripening (B is true).\n3. Nitrogen is inert filler preventing vacuum package cave-in (C is true).\n4. Carbon monoxide is toxic and never used in fresh horticultural produce packaging (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_003",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Glass transition temperature Tg and caking",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In dehydrated powdered food products (such as spray-dried milk powder and fruit juices), stickiness, caking, and collapse occur when storage temperature rises above:",
+    "options": {
+      "A": "Glass transition temperature ($T_g$)",
+      "B": "Boiling point of water",
+      "C": "Sublimation point of dry ice",
+      "D": "Critical point of carbon dioxide"
+    },
+    "correct_answer": "A",
+    "solution": "Amorphous food powders exist in a rigid, stable 'glassy' state below their glass transition temperature ($T_g$). When ambient temperature rises above $T_g$ (or when moisture absorption plasticizes and lowers $T_g$ below room temperature), the powder transforms into a mobile 'rubbery' state, leading to stickiness, inter-particle bridging, and caking.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_004",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Absolute minimum water activity for microbial growth",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The absolute lower threshold of water activity ($a_w$) below which no known pathogenic or spoilage microorganism (including halophilic bacteria and xerophilic molds) can proliferate is approximately:",
+    "options": {
+      "A": "$0.60$",
+      "B": "$0.85$",
+      "C": "$0.75$",
+      "D": "$0.91$"
+    },
+    "correct_answer": "A",
+    "solution": "Microbial growth boundaries:\n- Normal bacteria: $a_w > 0.91$\n- Yeasts: $a_w > 0.88$\n- Ordinary molds: $a_w > 0.80$\n- Halophilic bacteria: $a_w > 0.75$\n- Xerophilic molds / osmophilic yeasts: $a_w > 0.61$.\nBelow $a_w = 0.60$, all microbial proliferation ceases completely.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_005",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Modified Atmosphere Packaging gas functions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In Modified Atmosphere Packaging (MAP) of fresh fruits and vegetables, what are the primary functional roles of the gas mixture components?",
+    "options": {
+      "A": "Reduced $\\text{O}_2$ ($2-5\\%$) depresses respiration rate and delays senescence without triggering anaerobic fermentation",
+      "B": "Elevated $\\text{CO}_2$ ($3-8\\%$) exerts fungistatic action and retards ethylene biosynthesis",
+      "C": "$\\text{N}_2$ acts as an inert balance gas to prevent package collapse and pillow the package",
+      "D": "Pure $100\\% \\text{CO}$ is routinely pumped to prevent oxidation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Controlled low oxygen slows respiration while preventing anaerobic off-flavors (A is true).\n2. Carbon dioxide inhibits mold growth and slows ripening (B is true).\n3. Nitrogen is inert filler preventing vacuum package cave-in (C is true).\n4. Carbon monoxide is toxic and never used in fresh horticultural produce packaging (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_006",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Glass transition temperature Tg and caking",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In dehydrated powdered food products (such as spray-dried milk powder and fruit juices), stickiness, caking, and collapse occur when storage temperature rises above:",
+    "options": {
+      "A": "Glass transition temperature ($T_g$)",
+      "B": "Boiling point of water",
+      "C": "Sublimation point of dry ice",
+      "D": "Critical point of carbon dioxide"
+    },
+    "correct_answer": "A",
+    "solution": "Amorphous food powders exist in a rigid, stable 'glassy' state below their glass transition temperature ($T_g$). When ambient temperature rises above $T_g$ (or when moisture absorption plasticizes and lowers $T_g$ below room temperature), the powder transforms into a mobile 'rubbery' state, leading to stickiness, inter-particle bridging, and caking.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_007",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Absolute minimum water activity for microbial growth",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The absolute lower threshold of water activity ($a_w$) below which no known pathogenic or spoilage microorganism (including halophilic bacteria and xerophilic molds) can proliferate is approximately:",
+    "options": {
+      "A": "$0.60$",
+      "B": "$0.85$",
+      "C": "$0.75$",
+      "D": "$0.91$"
+    },
+    "correct_answer": "A",
+    "solution": "Microbial growth boundaries:\n- Normal bacteria: $a_w > 0.91$\n- Yeasts: $a_w > 0.88$\n- Ordinary molds: $a_w > 0.80$\n- Halophilic bacteria: $a_w > 0.75$\n- Xerophilic molds / osmophilic yeasts: $a_w > 0.61$.\nBelow $a_w = 0.60$, all microbial proliferation ceases completely.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_008",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Modified Atmosphere Packaging gas functions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In Modified Atmosphere Packaging (MAP) of fresh fruits and vegetables, what are the primary functional roles of the gas mixture components?",
+    "options": {
+      "A": "Reduced $\\text{O}_2$ ($2-5\\%$) depresses respiration rate and delays senescence without triggering anaerobic fermentation",
+      "B": "Elevated $\\text{CO}_2$ ($3-8\\%$) exerts fungistatic action and retards ethylene biosynthesis",
+      "C": "$\\text{N}_2$ acts as an inert balance gas to prevent package collapse and pillow the package",
+      "D": "Pure $100\\% \\text{CO}$ is routinely pumped to prevent oxidation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Controlled low oxygen slows respiration while preventing anaerobic off-flavors (A is true).\n2. Carbon dioxide inhibits mold growth and slows ripening (B is true).\n3. Nitrogen is inert filler preventing vacuum package cave-in (C is true).\n4. Carbon monoxide is toxic and never used in fresh horticultural produce packaging (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_009",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Glass transition temperature Tg and caking",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In dehydrated powdered food products (such as spray-dried milk powder and fruit juices), stickiness, caking, and collapse occur when storage temperature rises above:",
+    "options": {
+      "A": "Glass transition temperature ($T_g$)",
+      "B": "Boiling point of water",
+      "C": "Sublimation point of dry ice",
+      "D": "Critical point of carbon dioxide"
+    },
+    "correct_answer": "A",
+    "solution": "Amorphous food powders exist in a rigid, stable 'glassy' state below their glass transition temperature ($T_g$). When ambient temperature rises above $T_g$ (or when moisture absorption plasticizes and lowers $T_g$ below room temperature), the powder transforms into a mobile 'rubbery' state, leading to stickiness, inter-particle bridging, and caking.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_010",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Absolute minimum water activity for microbial growth",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The absolute lower threshold of water activity ($a_w$) below which no known pathogenic or spoilage microorganism (including halophilic bacteria and xerophilic molds) can proliferate is approximately:",
+    "options": {
+      "A": "$0.60$",
+      "B": "$0.85$",
+      "C": "$0.75$",
+      "D": "$0.91$"
+    },
+    "correct_answer": "A",
+    "solution": "Microbial growth boundaries:\n- Normal bacteria: $a_w > 0.91$\n- Yeasts: $a_w > 0.88$\n- Ordinary molds: $a_w > 0.80$\n- Halophilic bacteria: $a_w > 0.75$\n- Xerophilic molds / osmophilic yeasts: $a_w > 0.61$.\nBelow $a_w = 0.60$, all microbial proliferation ceases completely.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_011",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Modified Atmosphere Packaging gas functions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In Modified Atmosphere Packaging (MAP) of fresh fruits and vegetables, what are the primary functional roles of the gas mixture components?",
+    "options": {
+      "A": "Reduced $\\text{O}_2$ ($2-5\\%$) depresses respiration rate and delays senescence without triggering anaerobic fermentation",
+      "B": "Elevated $\\text{CO}_2$ ($3-8\\%$) exerts fungistatic action and retards ethylene biosynthesis",
+      "C": "$\\text{N}_2$ acts as an inert balance gas to prevent package collapse and pillow the package",
+      "D": "Pure $100\\% \\text{CO}$ is routinely pumped to prevent oxidation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Controlled low oxygen slows respiration while preventing anaerobic off-flavors (A is true).\n2. Carbon dioxide inhibits mold growth and slows ripening (B is true).\n3. Nitrogen is inert filler preventing vacuum package cave-in (C is true).\n4. Carbon monoxide is toxic and never used in fresh horticultural produce packaging (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_012",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Glass transition temperature Tg and caking",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In dehydrated powdered food products (such as spray-dried milk powder and fruit juices), stickiness, caking, and collapse occur when storage temperature rises above:",
+    "options": {
+      "A": "Glass transition temperature ($T_g$)",
+      "B": "Boiling point of water",
+      "C": "Sublimation point of dry ice",
+      "D": "Critical point of carbon dioxide"
+    },
+    "correct_answer": "A",
+    "solution": "Amorphous food powders exist in a rigid, stable 'glassy' state below their glass transition temperature ($T_g$). When ambient temperature rises above $T_g$ (or when moisture absorption plasticizes and lowers $T_g$ below room temperature), the powder transforms into a mobile 'rubbery' state, leading to stickiness, inter-particle bridging, and caking.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_013",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Absolute minimum water activity for microbial growth",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The absolute lower threshold of water activity ($a_w$) below which no known pathogenic or spoilage microorganism (including halophilic bacteria and xerophilic molds) can proliferate is approximately:",
+    "options": {
+      "A": "$0.60$",
+      "B": "$0.85$",
+      "C": "$0.75$",
+      "D": "$0.91$"
+    },
+    "correct_answer": "A",
+    "solution": "Microbial growth boundaries:\n- Normal bacteria: $a_w > 0.91$\n- Yeasts: $a_w > 0.88$\n- Ordinary molds: $a_w > 0.80$\n- Halophilic bacteria: $a_w > 0.75$\n- Xerophilic molds / osmophilic yeasts: $a_w > 0.61$.\nBelow $a_w = 0.60$, all microbial proliferation ceases completely.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_014",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Modified Atmosphere Packaging gas functions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In Modified Atmosphere Packaging (MAP) of fresh fruits and vegetables, what are the primary functional roles of the gas mixture components?",
+    "options": {
+      "A": "Reduced $\\text{O}_2$ ($2-5\\%$) depresses respiration rate and delays senescence without triggering anaerobic fermentation",
+      "B": "Elevated $\\text{CO}_2$ ($3-8\\%$) exerts fungistatic action and retards ethylene biosynthesis",
+      "C": "$\\text{N}_2$ acts as an inert balance gas to prevent package collapse and pillow the package",
+      "D": "Pure $100\\% \\text{CO}$ is routinely pumped to prevent oxidation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Controlled low oxygen slows respiration while preventing anaerobic off-flavors (A is true).\n2. Carbon dioxide inhibits mold growth and slows ripening (B is true).\n3. Nitrogen is inert filler preventing vacuum package cave-in (C is true).\n4. Carbon monoxide is toxic and never used in fresh horticultural produce packaging (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_015",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Glass transition temperature Tg and caking",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In dehydrated powdered food products (such as spray-dried milk powder and fruit juices), stickiness, caking, and collapse occur when storage temperature rises above:",
+    "options": {
+      "A": "Glass transition temperature ($T_g$)",
+      "B": "Boiling point of water",
+      "C": "Sublimation point of dry ice",
+      "D": "Critical point of carbon dioxide"
+    },
+    "correct_answer": "A",
+    "solution": "Amorphous food powders exist in a rigid, stable 'glassy' state below their glass transition temperature ($T_g$). When ambient temperature rises above $T_g$ (or when moisture absorption plasticizes and lowers $T_g$ below room temperature), the powder transforms into a mobile 'rubbery' state, leading to stickiness, inter-particle bridging, and caking.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_016",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Absolute minimum water activity for microbial growth",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The absolute lower threshold of water activity ($a_w$) below which no known pathogenic or spoilage microorganism (including halophilic bacteria and xerophilic molds) can proliferate is approximately:",
+    "options": {
+      "A": "$0.60$",
+      "B": "$0.85$",
+      "C": "$0.75$",
+      "D": "$0.91$"
+    },
+    "correct_answer": "A",
+    "solution": "Microbial growth boundaries:\n- Normal bacteria: $a_w > 0.91$\n- Yeasts: $a_w > 0.88$\n- Ordinary molds: $a_w > 0.80$\n- Halophilic bacteria: $a_w > 0.75$\n- Xerophilic molds / osmophilic yeasts: $a_w > 0.61$.\nBelow $a_w = 0.60$, all microbial proliferation ceases completely.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_017",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Modified Atmosphere Packaging gas functions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In Modified Atmosphere Packaging (MAP) of fresh fruits and vegetables, what are the primary functional roles of the gas mixture components?",
+    "options": {
+      "A": "Reduced $\\text{O}_2$ ($2-5\\%$) depresses respiration rate and delays senescence without triggering anaerobic fermentation",
+      "B": "Elevated $\\text{CO}_2$ ($3-8\\%$) exerts fungistatic action and retards ethylene biosynthesis",
+      "C": "$\\text{N}_2$ acts as an inert balance gas to prevent package collapse and pillow the package",
+      "D": "Pure $100\\% \\text{CO}$ is routinely pumped to prevent oxidation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Controlled low oxygen slows respiration while preventing anaerobic off-flavors (A is true).\n2. Carbon dioxide inhibits mold growth and slows ripening (B is true).\n3. Nitrogen is inert filler preventing vacuum package cave-in (C is true).\n4. Carbon monoxide is toxic and never used in fresh horticultural produce packaging (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_018",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Glass transition temperature Tg and caking",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In dehydrated powdered food products (such as spray-dried milk powder and fruit juices), stickiness, caking, and collapse occur when storage temperature rises above:",
+    "options": {
+      "A": "Glass transition temperature ($T_g$)",
+      "B": "Boiling point of water",
+      "C": "Sublimation point of dry ice",
+      "D": "Critical point of carbon dioxide"
+    },
+    "correct_answer": "A",
+    "solution": "Amorphous food powders exist in a rigid, stable 'glassy' state below their glass transition temperature ($T_g$). When ambient temperature rises above $T_g$ (or when moisture absorption plasticizes and lowers $T_g$ below room temperature), the powder transforms into a mobile 'rubbery' state, leading to stickiness, inter-particle bridging, and caking.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_019",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Absolute minimum water activity for microbial growth",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The absolute lower threshold of water activity ($a_w$) below which no known pathogenic or spoilage microorganism (including halophilic bacteria and xerophilic molds) can proliferate is approximately:",
+    "options": {
+      "A": "$0.60$",
+      "B": "$0.85$",
+      "C": "$0.75$",
+      "D": "$0.91$"
+    },
+    "correct_answer": "A",
+    "solution": "Microbial growth boundaries:\n- Normal bacteria: $a_w > 0.91$\n- Yeasts: $a_w > 0.88$\n- Ordinary molds: $a_w > 0.80$\n- Halophilic bacteria: $a_w > 0.75$\n- Xerophilic molds / osmophilic yeasts: $a_w > 0.61$.\nBelow $a_w = 0.60$, all microbial proliferation ceases completely.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_020",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Modified Atmosphere Packaging gas functions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In Modified Atmosphere Packaging (MAP) of fresh fruits and vegetables, what are the primary functional roles of the gas mixture components?",
+    "options": {
+      "A": "Reduced $\\text{O}_2$ ($2-5\\%$) depresses respiration rate and delays senescence without triggering anaerobic fermentation",
+      "B": "Elevated $\\text{CO}_2$ ($3-8\\%$) exerts fungistatic action and retards ethylene biosynthesis",
+      "C": "$\\text{N}_2$ acts as an inert balance gas to prevent package collapse and pillow the package",
+      "D": "Pure $100\\% \\text{CO}$ is routinely pumped to prevent oxidation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Controlled low oxygen slows respiration while preventing anaerobic off-flavors (A is true).\n2. Carbon dioxide inhibits mold growth and slows ripening (B is true).\n3. Nitrogen is inert filler preventing vacuum package cave-in (C is true).\n4. Carbon monoxide is toxic and never used in fresh horticultural produce packaging (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_021",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Glass transition temperature Tg and caking",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In dehydrated powdered food products (such as spray-dried milk powder and fruit juices), stickiness, caking, and collapse occur when storage temperature rises above:",
+    "options": {
+      "A": "Glass transition temperature ($T_g$)",
+      "B": "Boiling point of water",
+      "C": "Sublimation point of dry ice",
+      "D": "Critical point of carbon dioxide"
+    },
+    "correct_answer": "A",
+    "solution": "Amorphous food powders exist in a rigid, stable 'glassy' state below their glass transition temperature ($T_g$). When ambient temperature rises above $T_g$ (or when moisture absorption plasticizes and lowers $T_g$ below room temperature), the powder transforms into a mobile 'rubbery' state, leading to stickiness, inter-particle bridging, and caking.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_022",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Absolute minimum water activity for microbial growth",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The absolute lower threshold of water activity ($a_w$) below which no known pathogenic or spoilage microorganism (including halophilic bacteria and xerophilic molds) can proliferate is approximately:",
+    "options": {
+      "A": "$0.60$",
+      "B": "$0.85$",
+      "C": "$0.75$",
+      "D": "$0.91$"
+    },
+    "correct_answer": "A",
+    "solution": "Microbial growth boundaries:\n- Normal bacteria: $a_w > 0.91$\n- Yeasts: $a_w > 0.88$\n- Ordinary molds: $a_w > 0.80$\n- Halophilic bacteria: $a_w > 0.75$\n- Xerophilic molds / osmophilic yeasts: $a_w > 0.61$.\nBelow $a_w = 0.60$, all microbial proliferation ceases completely.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_023",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Modified Atmosphere Packaging gas functions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In Modified Atmosphere Packaging (MAP) of fresh fruits and vegetables, what are the primary functional roles of the gas mixture components?",
+    "options": {
+      "A": "Reduced $\\text{O}_2$ ($2-5\\%$) depresses respiration rate and delays senescence without triggering anaerobic fermentation",
+      "B": "Elevated $\\text{CO}_2$ ($3-8\\%$) exerts fungistatic action and retards ethylene biosynthesis",
+      "C": "$\\text{N}_2$ acts as an inert balance gas to prevent package collapse and pillow the package",
+      "D": "Pure $100\\% \\text{CO}$ is routinely pumped to prevent oxidation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Controlled low oxygen slows respiration while preventing anaerobic off-flavors (A is true).\n2. Carbon dioxide inhibits mold growth and slows ripening (B is true).\n3. Nitrogen is inert filler preventing vacuum package cave-in (C is true).\n4. Carbon monoxide is toxic and never used in fresh horticultural produce packaging (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_024",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Glass transition temperature Tg and caking",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In dehydrated powdered food products (such as spray-dried milk powder and fruit juices), stickiness, caking, and collapse occur when storage temperature rises above:",
+    "options": {
+      "A": "Glass transition temperature ($T_g$)",
+      "B": "Boiling point of water",
+      "C": "Sublimation point of dry ice",
+      "D": "Critical point of carbon dioxide"
+    },
+    "correct_answer": "A",
+    "solution": "Amorphous food powders exist in a rigid, stable 'glassy' state below their glass transition temperature ($T_g$). When ambient temperature rises above $T_g$ (or when moisture absorption plasticizes and lowers $T_g$ below room temperature), the powder transforms into a mobile 'rubbery' state, leading to stickiness, inter-particle bridging, and caking.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_025",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Absolute minimum water activity for microbial growth",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The absolute lower threshold of water activity ($a_w$) below which no known pathogenic or spoilage microorganism (including halophilic bacteria and xerophilic molds) can proliferate is approximately:",
+    "options": {
+      "A": "$0.60$",
+      "B": "$0.85$",
+      "C": "$0.75$",
+      "D": "$0.91$"
+    },
+    "correct_answer": "A",
+    "solution": "Microbial growth boundaries:\n- Normal bacteria: $a_w > 0.91$\n- Yeasts: $a_w > 0.88$\n- Ordinary molds: $a_w > 0.80$\n- Halophilic bacteria: $a_w > 0.75$\n- Xerophilic molds / osmophilic yeasts: $a_w > 0.61$.\nBelow $a_w = 0.60$, all microbial proliferation ceases completely.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_026",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Modified Atmosphere Packaging gas functions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In Modified Atmosphere Packaging (MAP) of fresh fruits and vegetables, what are the primary functional roles of the gas mixture components?",
+    "options": {
+      "A": "Reduced $\\text{O}_2$ ($2-5\\%$) depresses respiration rate and delays senescence without triggering anaerobic fermentation",
+      "B": "Elevated $\\text{CO}_2$ ($3-8\\%$) exerts fungistatic action and retards ethylene biosynthesis",
+      "C": "$\\text{N}_2$ acts as an inert balance gas to prevent package collapse and pillow the package",
+      "D": "Pure $100\\% \\text{CO}$ is routinely pumped to prevent oxidation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Controlled low oxygen slows respiration while preventing anaerobic off-flavors (A is true).\n2. Carbon dioxide inhibits mold growth and slows ripening (B is true).\n3. Nitrogen is inert filler preventing vacuum package cave-in (C is true).\n4. Carbon monoxide is toxic and never used in fresh horticultural produce packaging (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_027",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Glass transition temperature Tg and caking",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In dehydrated powdered food products (such as spray-dried milk powder and fruit juices), stickiness, caking, and collapse occur when storage temperature rises above:",
+    "options": {
+      "A": "Glass transition temperature ($T_g$)",
+      "B": "Boiling point of water",
+      "C": "Sublimation point of dry ice",
+      "D": "Critical point of carbon dioxide"
+    },
+    "correct_answer": "A",
+    "solution": "Amorphous food powders exist in a rigid, stable 'glassy' state below their glass transition temperature ($T_g$). When ambient temperature rises above $T_g$ (or when moisture absorption plasticizes and lowers $T_g$ below room temperature), the powder transforms into a mobile 'rubbery' state, leading to stickiness, inter-particle bridging, and caking.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_028",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Absolute minimum water activity for microbial growth",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The absolute lower threshold of water activity ($a_w$) below which no known pathogenic or spoilage microorganism (including halophilic bacteria and xerophilic molds) can proliferate is approximately:",
+    "options": {
+      "A": "$0.60$",
+      "B": "$0.85$",
+      "C": "$0.75$",
+      "D": "$0.91$"
+    },
+    "correct_answer": "A",
+    "solution": "Microbial growth boundaries:\n- Normal bacteria: $a_w > 0.91$\n- Yeasts: $a_w > 0.88$\n- Ordinary molds: $a_w > 0.80$\n- Halophilic bacteria: $a_w > 0.75$\n- Xerophilic molds / osmophilic yeasts: $a_w > 0.61$.\nBelow $a_w = 0.60$, all microbial proliferation ceases completely.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_029",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Modified Atmosphere Packaging gas functions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In Modified Atmosphere Packaging (MAP) of fresh fruits and vegetables, what are the primary functional roles of the gas mixture components?",
+    "options": {
+      "A": "Reduced $\\text{O}_2$ ($2-5\\%$) depresses respiration rate and delays senescence without triggering anaerobic fermentation",
+      "B": "Elevated $\\text{CO}_2$ ($3-8\\%$) exerts fungistatic action and retards ethylene biosynthesis",
+      "C": "$\\text{N}_2$ acts as an inert balance gas to prevent package collapse and pillow the package",
+      "D": "Pure $100\\% \\text{CO}$ is routinely pumped to prevent oxidation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Controlled low oxygen slows respiration while preventing anaerobic off-flavors (A is true).\n2. Carbon dioxide inhibits mold growth and slows ripening (B is true).\n3. Nitrogen is inert filler preventing vacuum package cave-in (C is true).\n4. Carbon monoxide is toxic and never used in fresh horticultural produce packaging (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_030",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Glass transition temperature Tg and caking",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In dehydrated powdered food products (such as spray-dried milk powder and fruit juices), stickiness, caking, and collapse occur when storage temperature rises above:",
+    "options": {
+      "A": "Glass transition temperature ($T_g$)",
+      "B": "Boiling point of water",
+      "C": "Sublimation point of dry ice",
+      "D": "Critical point of carbon dioxide"
+    },
+    "correct_answer": "A",
+    "solution": "Amorphous food powders exist in a rigid, stable 'glassy' state below their glass transition temperature ($T_g$). When ambient temperature rises above $T_g$ (or when moisture absorption plasticizes and lowers $T_g$ below room temperature), the powder transforms into a mobile 'rubbery' state, leading to stickiness, inter-particle bridging, and caking.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_031",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Absolute minimum water activity for microbial growth",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The absolute lower threshold of water activity ($a_w$) below which no known pathogenic or spoilage microorganism (including halophilic bacteria and xerophilic molds) can proliferate is approximately:",
+    "options": {
+      "A": "$0.60$",
+      "B": "$0.85$",
+      "C": "$0.75$",
+      "D": "$0.91$"
+    },
+    "correct_answer": "A",
+    "solution": "Microbial growth boundaries:\n- Normal bacteria: $a_w > 0.91$\n- Yeasts: $a_w > 0.88$\n- Ordinary molds: $a_w > 0.80$\n- Halophilic bacteria: $a_w > 0.75$\n- Xerophilic molds / osmophilic yeasts: $a_w > 0.61$.\nBelow $a_w = 0.60$, all microbial proliferation ceases completely.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_032",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Modified Atmosphere Packaging gas functions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In Modified Atmosphere Packaging (MAP) of fresh fruits and vegetables, what are the primary functional roles of the gas mixture components?",
+    "options": {
+      "A": "Reduced $\\text{O}_2$ ($2-5\\%$) depresses respiration rate and delays senescence without triggering anaerobic fermentation",
+      "B": "Elevated $\\text{CO}_2$ ($3-8\\%$) exerts fungistatic action and retards ethylene biosynthesis",
+      "C": "$\\text{N}_2$ acts as an inert balance gas to prevent package collapse and pillow the package",
+      "D": "Pure $100\\% \\text{CO}$ is routinely pumped to prevent oxidation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Controlled low oxygen slows respiration while preventing anaerobic off-flavors (A is true).\n2. Carbon dioxide inhibits mold growth and slows ripening (B is true).\n3. Nitrogen is inert filler preventing vacuum package cave-in (C is true).\n4. Carbon monoxide is toxic and never used in fresh horticultural produce packaging (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_033",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Glass transition temperature Tg and caking",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In dehydrated powdered food products (such as spray-dried milk powder and fruit juices), stickiness, caking, and collapse occur when storage temperature rises above:",
+    "options": {
+      "A": "Glass transition temperature ($T_g$)",
+      "B": "Boiling point of water",
+      "C": "Sublimation point of dry ice",
+      "D": "Critical point of carbon dioxide"
+    },
+    "correct_answer": "A",
+    "solution": "Amorphous food powders exist in a rigid, stable 'glassy' state below their glass transition temperature ($T_g$). When ambient temperature rises above $T_g$ (or when moisture absorption plasticizes and lowers $T_g$ below room temperature), the powder transforms into a mobile 'rubbery' state, leading to stickiness, inter-particle bridging, and caking.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_034",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Absolute minimum water activity for microbial growth",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The absolute lower threshold of water activity ($a_w$) below which no known pathogenic or spoilage microorganism (including halophilic bacteria and xerophilic molds) can proliferate is approximately:",
+    "options": {
+      "A": "$0.60$",
+      "B": "$0.85$",
+      "C": "$0.75$",
+      "D": "$0.91$"
+    },
+    "correct_answer": "A",
+    "solution": "Microbial growth boundaries:\n- Normal bacteria: $a_w > 0.91$\n- Yeasts: $a_w > 0.88$\n- Ordinary molds: $a_w > 0.80$\n- Halophilic bacteria: $a_w > 0.75$\n- Xerophilic molds / osmophilic yeasts: $a_w > 0.61$.\nBelow $a_w = 0.60$, all microbial proliferation ceases completely.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_035",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Modified Atmosphere Packaging gas functions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In Modified Atmosphere Packaging (MAP) of fresh fruits and vegetables, what are the primary functional roles of the gas mixture components?",
+    "options": {
+      "A": "Reduced $\\text{O}_2$ ($2-5\\%$) depresses respiration rate and delays senescence without triggering anaerobic fermentation",
+      "B": "Elevated $\\text{CO}_2$ ($3-8\\%$) exerts fungistatic action and retards ethylene biosynthesis",
+      "C": "$\\text{N}_2$ acts as an inert balance gas to prevent package collapse and pillow the package",
+      "D": "Pure $100\\% \\text{CO}$ is routinely pumped to prevent oxidation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Controlled low oxygen slows respiration while preventing anaerobic off-flavors (A is true).\n2. Carbon dioxide inhibits mold growth and slows ripening (B is true).\n3. Nitrogen is inert filler preventing vacuum package cave-in (C is true).\n4. Carbon monoxide is toxic and never used in fresh horticultural produce packaging (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_036",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Glass transition temperature Tg and caking",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In dehydrated powdered food products (such as spray-dried milk powder and fruit juices), stickiness, caking, and collapse occur when storage temperature rises above:",
+    "options": {
+      "A": "Glass transition temperature ($T_g$)",
+      "B": "Boiling point of water",
+      "C": "Sublimation point of dry ice",
+      "D": "Critical point of carbon dioxide"
+    },
+    "correct_answer": "A",
+    "solution": "Amorphous food powders exist in a rigid, stable 'glassy' state below their glass transition temperature ($T_g$). When ambient temperature rises above $T_g$ (or when moisture absorption plasticizes and lowers $T_g$ below room temperature), the powder transforms into a mobile 'rubbery' state, leading to stickiness, inter-particle bridging, and caking.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_037",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Absolute minimum water activity for microbial growth",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The absolute lower threshold of water activity ($a_w$) below which no known pathogenic or spoilage microorganism (including halophilic bacteria and xerophilic molds) can proliferate is approximately:",
+    "options": {
+      "A": "$0.60$",
+      "B": "$0.85$",
+      "C": "$0.75$",
+      "D": "$0.91$"
+    },
+    "correct_answer": "A",
+    "solution": "Microbial growth boundaries:\n- Normal bacteria: $a_w > 0.91$\n- Yeasts: $a_w > 0.88$\n- Ordinary molds: $a_w > 0.80$\n- Halophilic bacteria: $a_w > 0.75$\n- Xerophilic molds / osmophilic yeasts: $a_w > 0.61$.\nBelow $a_w = 0.60$, all microbial proliferation ceases completely.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_038",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Modified Atmosphere Packaging gas functions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In Modified Atmosphere Packaging (MAP) of fresh fruits and vegetables, what are the primary functional roles of the gas mixture components?",
+    "options": {
+      "A": "Reduced $\\text{O}_2$ ($2-5\\%$) depresses respiration rate and delays senescence without triggering anaerobic fermentation",
+      "B": "Elevated $\\text{CO}_2$ ($3-8\\%$) exerts fungistatic action and retards ethylene biosynthesis",
+      "C": "$\\text{N}_2$ acts as an inert balance gas to prevent package collapse and pillow the package",
+      "D": "Pure $100\\% \\text{CO}$ is routinely pumped to prevent oxidation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Controlled low oxygen slows respiration while preventing anaerobic off-flavors (A is true).\n2. Carbon dioxide inhibits mold growth and slows ripening (B is true).\n3. Nitrogen is inert filler preventing vacuum package cave-in (C is true).\n4. Carbon monoxide is toxic and never used in fresh horticultural produce packaging (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_039",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Glass transition temperature Tg and caking",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In dehydrated powdered food products (such as spray-dried milk powder and fruit juices), stickiness, caking, and collapse occur when storage temperature rises above:",
+    "options": {
+      "A": "Glass transition temperature ($T_g$)",
+      "B": "Boiling point of water",
+      "C": "Sublimation point of dry ice",
+      "D": "Critical point of carbon dioxide"
+    },
+    "correct_answer": "A",
+    "solution": "Amorphous food powders exist in a rigid, stable 'glassy' state below their glass transition temperature ($T_g$). When ambient temperature rises above $T_g$ (or when moisture absorption plasticizes and lowers $T_g$ below room temperature), the powder transforms into a mobile 'rubbery' state, leading to stickiness, inter-particle bridging, and caking.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_040",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Absolute minimum water activity for microbial growth",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The absolute lower threshold of water activity ($a_w$) below which no known pathogenic or spoilage microorganism (including halophilic bacteria and xerophilic molds) can proliferate is approximately:",
+    "options": {
+      "A": "$0.60$",
+      "B": "$0.85$",
+      "C": "$0.75$",
+      "D": "$0.91$"
+    },
+    "correct_answer": "A",
+    "solution": "Microbial growth boundaries:\n- Normal bacteria: $a_w > 0.91$\n- Yeasts: $a_w > 0.88$\n- Ordinary molds: $a_w > 0.80$\n- Halophilic bacteria: $a_w > 0.75$\n- Xerophilic molds / osmophilic yeasts: $a_w > 0.61$.\nBelow $a_w = 0.60$, all microbial proliferation ceases completely.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_041",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Modified Atmosphere Packaging gas functions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In Modified Atmosphere Packaging (MAP) of fresh fruits and vegetables, what are the primary functional roles of the gas mixture components?",
+    "options": {
+      "A": "Reduced $\\text{O}_2$ ($2-5\\%$) depresses respiration rate and delays senescence without triggering anaerobic fermentation",
+      "B": "Elevated $\\text{CO}_2$ ($3-8\\%$) exerts fungistatic action and retards ethylene biosynthesis",
+      "C": "$\\text{N}_2$ acts as an inert balance gas to prevent package collapse and pillow the package",
+      "D": "Pure $100\\% \\text{CO}$ is routinely pumped to prevent oxidation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Controlled low oxygen slows respiration while preventing anaerobic off-flavors (A is true).\n2. Carbon dioxide inhibits mold growth and slows ripening (B is true).\n3. Nitrogen is inert filler preventing vacuum package cave-in (C is true).\n4. Carbon monoxide is toxic and never used in fresh horticultural produce packaging (D is false).",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_042",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Glass transition temperature Tg and caking",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In dehydrated powdered food products (such as spray-dried milk powder and fruit juices), stickiness, caking, and collapse occur when storage temperature rises above:",
+    "options": {
+      "A": "Glass transition temperature ($T_g$)",
+      "B": "Boiling point of water",
+      "C": "Sublimation point of dry ice",
+      "D": "Critical point of carbon dioxide"
+    },
+    "correct_answer": "A",
+    "solution": "Amorphous food powders exist in a rigid, stable 'glassy' state below their glass transition temperature ($T_g$). When ambient temperature rises above $T_g$ (or when moisture absorption plasticizes and lowers $T_g$ below room temperature), the powder transforms into a mobile 'rubbery' state, leading to stickiness, inter-particle bridging, and caking.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_EXP_DFE_PKG_043",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Absolute minimum water activity for microbial growth",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The absolute lower threshold of water activity ($a_w$) below which no known pathogenic or spoilage microorganism (including halophilic bacteria and xerophilic molds) can proliferate is approximately:",
+    "options": {
+      "A": "$0.60$",
+      "B": "$0.85$",
+      "C": "$0.75$",
+      "D": "$0.91$"
+    },
+    "correct_answer": "A",
+    "solution": "Microbial growth boundaries:\n- Normal bacteria: $a_w > 0.91$\n- Yeasts: $a_w > 0.88$\n- Ordinary molds: $a_w > 0.80$\n- Halophilic bacteria: $a_w > 0.75$\n- Xerophilic molds / osmophilic yeasts: $a_w > 0.61$.\nBelow $a_w = 0.60$, all microbial proliferation ceases completely.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_SUB_DFE_SHM_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat and Mass Transfer",
+    "subtopic": "Simultaneous heat and mass transfer in agricultural processing operations",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "During convective air drying of sliced fruits, the thermal diffusivity of drying air is $\\alpha = 2.2e-05\\text{ m}^2\\text{/s}$. If the dimensionless Lewis number is $Le = 0.9$, calculate the mass diffusivity of water vapor in air, $D_{AB}$ (in $10^{-5}\\text{ m}^2\\text{/s}$, rounded to 2 decimal places):",
+    "answer": 2.44,
+    "answer_range": [
+      2.39,
+      2.49
+    ],
+    "solution": "The Lewis number $Le$ characterizes fluid flows where there is simultaneous heat and mass transfer by convection:\n$$Le = \\frac{\\alpha}{D_{AB}} = \\frac{Sc}{Pr}$$\nRearranging for mass diffusivity $D_{AB}$:\n$$D_{AB} = \\frac{\\alpha}{Le} = \\frac{2.2e-05}{0.9} = 0.0000244\\text{ m}^2\\text{/s} = 2.44 \\times 10^{-5}\\text{ m}^2\\text{/s}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)",
+    "correct_answer": "2.44",
+    "numerical_range": {
+      "min": 2.39,
+      "max": 2.49
+    }
+  },
+  {
+    "id": "QB_SUB_DFE_SHM_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat and Mass Transfer",
+    "subtopic": "Simultaneous heat and mass transfer in agricultural processing operations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In simultaneous heat and mass transfer during the constant-rate drying period of wet biological materials, the wet-bulb surface temperature remains steady because:",
+    "options": {
+      "A": "Convective heat transferred to the food surface from the surrounding air is exactly balanced by the latent heat of vaporization",
+      "B": "The thermal conductivity of the food material rises to infinity",
+      "C": "Moisture diffusion within the internal solid matrix encounters zero resistance",
+      "D": "The ambient air relative humidity approaches 100%"
+    },
+    "correct_answer": "A",
+    "solution": "During the constant-rate drying period, water evaporates from a continuous liquid film on the surface. The rate of convective sensible heat transfer $q = h A (T_a - T_s)$ precisely balances the latent heat required for vaporization $\\dot{m} \\lambda$, maintaining the surface at the constant wet-bulb temperature $T_s = T_{wb}$.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_SUB_DFE_SHM_003",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat and Mass Transfer",
+    "subtopic": "Simultaneous heat and mass transfer in agricultural processing operations",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following statements regarding simultaneous heat and mass transfer in food processing operations are CORRECT?",
+    "options": {
+      "A": "When Lewis number $Le = 1$, the thermal boundary layer thickness equals the concentration boundary layer thickness",
+      "B": "In convective air drying, the wet-bulb depression is the driving force for sensible heat transfer",
+      "C": "Freeze drying involves simultaneous sublimation mass transfer and sublimation heat transfer under high vacuum",
+      "D": "Mass transfer Biot number ($Bi_m = k_c L / D_{AB}$) compares internal mass transfer resistance to convective boundary layer resistance"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All statements are fundamental principles of coupled transport phenomena:\n- $Le = \\alpha / D_{AB} = 1 \\implies \\delta_t = \\delta_c$.\n- Sensible heat flux drives evaporation based on $(T_a - T_{wb})$.\n- Freeze drying operates below the triple point where ice sublimates directly into vapor driven by heat conduction through the dry layer.\n- Mass transfer Biot number compares internal diffusion resistance to external convective transfer.",
+    "difficulty": "Hard",
+    "source": "Food Process Engineering and Technology (Zeki Berk)"
+  },
+  {
+    "id": "QB_SUB_DFE_SHM_004",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat and Mass Transfer",
+    "subtopic": "Simultaneous heat and mass transfer in agricultural processing operations",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "During convective air drying of sliced fruits, the thermal diffusivity of drying air is $\\alpha = 2.2e-05\\text{ m}^2\\text{/s}$. If the dimensionless Lewis number is $Le = 0.85$, calculate the mass diffusivity of water vapor in air, $D_{AB}$ (in $10^{-5}\\text{ m}^2\\text{/s}$, rounded to 2 decimal places):",
+    "answer": 2.59,
+    "answer_range": [
+      2.54,
+      2.64
+    ],
+    "solution": "The Lewis number $Le$ characterizes fluid flows where there is simultaneous heat and mass transfer by convection:\n$$Le = \\frac{\\alpha}{D_{AB}} = \\frac{Sc}{Pr}$$\nRearranging for mass diffusivity $D_{AB}$:\n$$D_{AB} = \\frac{\\alpha}{Le} = \\frac{2.2e-05}{0.85} = 0.0000259\\text{ m}^2\\text{/s} = 2.59 \\times 10^{-5}\\text{ m}^2\\text{/s}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)",
+    "correct_answer": "2.59",
+    "numerical_range": {
+      "min": 2.54,
+      "max": 2.64
+    }
+  },
+  {
+    "id": "QB_SUB_DFE_SHM_005",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat and Mass Transfer",
+    "subtopic": "Simultaneous heat and mass transfer in agricultural processing operations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In simultaneous heat and mass transfer during the constant-rate drying period of wet biological materials, the wet-bulb surface temperature remains steady because:",
+    "options": {
+      "A": "Convective heat transferred to the food surface from the surrounding air is exactly balanced by the latent heat of vaporization",
+      "B": "The thermal conductivity of the food material rises to infinity",
+      "C": "Moisture diffusion within the internal solid matrix encounters zero resistance",
+      "D": "The ambient air relative humidity approaches 100%"
+    },
+    "correct_answer": "A",
+    "solution": "During the constant-rate drying period, water evaporates from a continuous liquid film on the surface. The rate of convective sensible heat transfer $q = h A (T_a - T_s)$ precisely balances the latent heat required for vaporization $\\dot{m} \\lambda$, maintaining the surface at the constant wet-bulb temperature $T_s = T_{wb}$.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_SUB_DFE_SHM_006",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat and Mass Transfer",
+    "subtopic": "Simultaneous heat and mass transfer in agricultural processing operations",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following statements regarding simultaneous heat and mass transfer in food processing operations are CORRECT?",
+    "options": {
+      "A": "When Lewis number $Le = 1$, the thermal boundary layer thickness equals the concentration boundary layer thickness",
+      "B": "In convective air drying, the wet-bulb depression is the driving force for sensible heat transfer",
+      "C": "Freeze drying involves simultaneous sublimation mass transfer and sublimation heat transfer under high vacuum",
+      "D": "Mass transfer Biot number ($Bi_m = k_c L / D_{AB}$) compares internal mass transfer resistance to convective boundary layer resistance"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All statements are fundamental principles of coupled transport phenomena:\n- $Le = \\alpha / D_{AB} = 1 \\implies \\delta_t = \\delta_c$.\n- Sensible heat flux drives evaporation based on $(T_a - T_{wb})$.\n- Freeze drying operates below the triple point where ice sublimates directly into vapor driven by heat conduction through the dry layer.\n- Mass transfer Biot number compares internal diffusion resistance to external convective transfer.",
+    "difficulty": "Hard",
+    "source": "Food Process Engineering and Technology (Zeki Berk)"
+  },
+  {
+    "id": "QB_SUB_DFE_SHM_007",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat and Mass Transfer",
+    "subtopic": "Simultaneous heat and mass transfer in agricultural processing operations",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "During convective air drying of sliced fruits, the thermal diffusivity of drying air is $\\alpha = 2.2e-05\\text{ m}^2\\text{/s}$. If the dimensionless Lewis number is $Le = 1.0$, calculate the mass diffusivity of water vapor in air, $D_{AB}$ (in $10^{-5}\\text{ m}^2\\text{/s}$, rounded to 2 decimal places):",
+    "answer": 2.2,
+    "answer_range": [
+      2.15,
+      2.25
+    ],
+    "solution": "The Lewis number $Le$ characterizes fluid flows where there is simultaneous heat and mass transfer by convection:\n$$Le = \\frac{\\alpha}{D_{AB}} = \\frac{Sc}{Pr}$$\nRearranging for mass diffusivity $D_{AB}$:\n$$D_{AB} = \\frac{\\alpha}{Le} = \\frac{2.2e-05}{1.0} = 0.0000220\\text{ m}^2\\text{/s} = 2.20 \\times 10^{-5}\\text{ m}^2\\text{/s}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)",
+    "correct_answer": "2.2",
+    "numerical_range": {
+      "min": 2.15,
+      "max": 2.25
+    }
+  },
+  {
+    "id": "QB_SUB_DFE_SHM_008",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat and Mass Transfer",
+    "subtopic": "Simultaneous heat and mass transfer in agricultural processing operations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In simultaneous heat and mass transfer during the constant-rate drying period of wet biological materials, the wet-bulb surface temperature remains steady because:",
+    "options": {
+      "A": "Convective heat transferred to the food surface from the surrounding air is exactly balanced by the latent heat of vaporization",
+      "B": "The thermal conductivity of the food material rises to infinity",
+      "C": "Moisture diffusion within the internal solid matrix encounters zero resistance",
+      "D": "The ambient air relative humidity approaches 100%"
+    },
+    "correct_answer": "A",
+    "solution": "During the constant-rate drying period, water evaporates from a continuous liquid film on the surface. The rate of convective sensible heat transfer $q = h A (T_a - T_s)$ precisely balances the latent heat required for vaporization $\\dot{m} \\lambda$, maintaining the surface at the constant wet-bulb temperature $T_s = T_{wb}$.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_SUB_DFE_SHM_009",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat and Mass Transfer",
+    "subtopic": "Simultaneous heat and mass transfer in agricultural processing operations",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following statements regarding simultaneous heat and mass transfer in food processing operations are CORRECT?",
+    "options": {
+      "A": "When Lewis number $Le = 1$, the thermal boundary layer thickness equals the concentration boundary layer thickness",
+      "B": "In convective air drying, the wet-bulb depression is the driving force for sensible heat transfer",
+      "C": "Freeze drying involves simultaneous sublimation mass transfer and sublimation heat transfer under high vacuum",
+      "D": "Mass transfer Biot number ($Bi_m = k_c L / D_{AB}$) compares internal mass transfer resistance to convective boundary layer resistance"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All statements are fundamental principles of coupled transport phenomena:\n- $Le = \\alpha / D_{AB} = 1 \\implies \\delta_t = \\delta_c$.\n- Sensible heat flux drives evaporation based on $(T_a - T_{wb})$.\n- Freeze drying operates below the triple point where ice sublimates directly into vapor driven by heat conduction through the dry layer.\n- Mass transfer Biot number compares internal diffusion resistance to external convective transfer.",
+    "difficulty": "Hard",
+    "source": "Food Process Engineering and Technology (Zeki Berk)"
+  },
+  {
+    "id": "QB_SUB_DFE_SHM_010",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat and Mass Transfer",
+    "subtopic": "Simultaneous heat and mass transfer in agricultural processing operations",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "During convective air drying of sliced fruits, the thermal diffusivity of drying air is $\\alpha = 2.2e-05\\text{ m}^2\\text{/s}$. If the dimensionless Lewis number is $Le = 0.95$, calculate the mass diffusivity of water vapor in air, $D_{AB}$ (in $10^{-5}\\text{ m}^2\\text{/s}$, rounded to 2 decimal places):",
+    "answer": 2.32,
+    "answer_range": [
+      2.27,
+      2.37
+    ],
+    "solution": "The Lewis number $Le$ characterizes fluid flows where there is simultaneous heat and mass transfer by convection:\n$$Le = \\frac{\\alpha}{D_{AB}} = \\frac{Sc}{Pr}$$\nRearranging for mass diffusivity $D_{AB}$:\n$$D_{AB} = \\frac{\\alpha}{Le} = \\frac{2.2e-05}{0.95} = 0.0000232\\text{ m}^2\\text{/s} = 2.32 \\times 10^{-5}\\text{ m}^2\\text{/s}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)",
+    "correct_answer": "2.32",
+    "numerical_range": {
+      "min": 2.27,
+      "max": 2.37
+    }
+  },
+  {
+    "id": "QB_SUB_DFE_SHM_011",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat and Mass Transfer",
+    "subtopic": "Simultaneous heat and mass transfer in agricultural processing operations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In simultaneous heat and mass transfer during the constant-rate drying period of wet biological materials, the wet-bulb surface temperature remains steady because:",
+    "options": {
+      "A": "Convective heat transferred to the food surface from the surrounding air is exactly balanced by the latent heat of vaporization",
+      "B": "The thermal conductivity of the food material rises to infinity",
+      "C": "Moisture diffusion within the internal solid matrix encounters zero resistance",
+      "D": "The ambient air relative humidity approaches 100%"
+    },
+    "correct_answer": "A",
+    "solution": "During the constant-rate drying period, water evaporates from a continuous liquid film on the surface. The rate of convective sensible heat transfer $q = h A (T_a - T_s)$ precisely balances the latent heat required for vaporization $\\dot{m} \\lambda$, maintaining the surface at the constant wet-bulb temperature $T_s = T_{wb}$.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_SUB_DFE_SHM_012",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat and Mass Transfer",
+    "subtopic": "Simultaneous heat and mass transfer in agricultural processing operations",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following statements regarding simultaneous heat and mass transfer in food processing operations are CORRECT?",
+    "options": {
+      "A": "When Lewis number $Le = 1$, the thermal boundary layer thickness equals the concentration boundary layer thickness",
+      "B": "In convective air drying, the wet-bulb depression is the driving force for sensible heat transfer",
+      "C": "Freeze drying involves simultaneous sublimation mass transfer and sublimation heat transfer under high vacuum",
+      "D": "Mass transfer Biot number ($Bi_m = k_c L / D_{AB}$) compares internal mass transfer resistance to convective boundary layer resistance"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All statements are fundamental principles of coupled transport phenomena:\n- $Le = \\alpha / D_{AB} = 1 \\implies \\delta_t = \\delta_c$.\n- Sensible heat flux drives evaporation based on $(T_a - T_{wb})$.\n- Freeze drying operates below the triple point where ice sublimates directly into vapor driven by heat conduction through the dry layer.\n- Mass transfer Biot number compares internal diffusion resistance to external convective transfer.",
+    "difficulty": "Hard",
+    "source": "Food Process Engineering and Technology (Zeki Berk)"
+  },
+  {
+    "id": "QB_SUB_DFE_SHM_013",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat and Mass Transfer",
+    "subtopic": "Simultaneous heat and mass transfer in agricultural processing operations",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "During convective air drying of sliced fruits, the thermal diffusivity of drying air is $\\alpha = 2.2e-05\\text{ m}^2\\text{/s}$. If the dimensionless Lewis number is $Le = 0.9$, calculate the mass diffusivity of water vapor in air, $D_{AB}$ (in $10^{-5}\\text{ m}^2\\text{/s}$, rounded to 2 decimal places):",
+    "answer": 2.44,
+    "answer_range": [
+      2.39,
+      2.49
+    ],
+    "solution": "The Lewis number $Le$ characterizes fluid flows where there is simultaneous heat and mass transfer by convection:\n$$Le = \\frac{\\alpha}{D_{AB}} = \\frac{Sc}{Pr}$$\nRearranging for mass diffusivity $D_{AB}$:\n$$D_{AB} = \\frac{\\alpha}{Le} = \\frac{2.2e-05}{0.9} = 0.0000244\\text{ m}^2\\text{/s} = 2.44 \\times 10^{-5}\\text{ m}^2\\text{/s}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)",
+    "correct_answer": "2.44",
+    "numerical_range": {
+      "min": 2.39,
+      "max": 2.49
+    }
+  },
+  {
+    "id": "QB_SUB_DFE_TRN_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat and Mass Transfer",
+    "subtopic": "Transient heat transfer in simple geometry",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A spherical fruit of radius $r = 25\\text{ mm}$ with thermal conductivity $k = 0.5\\text{ W/(m}\\cdot\\text{K)}$ is hydrocooled in chilled water with a convective heat transfer coefficient $h = 45.0\\text{ W/(m}^2\\cdot\\text{K)}$. Taking characteristic length as $L_c = r/3$, the Biot number ($Bi$) of the fruit is:",
+    "answer": 0.75,
+    "answer_range": [
+      0.73,
+      0.77
+    ],
+    "solution": "For a sphere, characteristic dimension $L_c = \\frac{V}{A} = \\frac{\\frac{4}{3}\\pi r^3}{4\\pi r^2} = \\frac{r}{3} = \\frac{0.025}{3} = 0.00833\\text{ m}$.\nBiot number:\n$$Bi = \\frac{h L_c}{k} = \\frac{45.0 \\times 0.00833}{0.5} = 0.750$$\nSince $Bi > 0.1$, internal thermal gradients are significant and lumped capacity is not valid.",
+    "difficulty": "Moderate",
+    "source": "Introduction to Food Engineering (Singh & Heldman)",
+    "correct_answer": "0.75",
+    "numerical_range": {
+      "min": 0.73,
+      "max": 0.77
+    }
+  },
+  {
+    "id": "QB_SUB_DFE_TRN_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat and Mass Transfer",
+    "subtopic": "Transient heat transfer in simple geometry",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For transient conduction in food materials modeled by Heisler charts, the lumped capacitance assumption is considered sufficiently accurate when the Biot number ($Bi$) satisfies:",
+    "options": {
+      "A": "$Bi < 0.1$",
+      "B": "$Bi > 10$",
+      "C": "$0.1 < Bi < 1.0$",
+      "D": "$Bi = \\infty$"
+    },
+    "correct_answer": "A",
+    "solution": "When $Bi = \\frac{h L_c}{k} < 0.1$, the internal conductive resistance of the food body is less than 10% of the surface convective resistance. Consequently, internal temperature gradients are negligible (< 5% error) and the temperature may be treated as spatially uniform throughout.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Heat and Mass Transfer (Incropera & DeWitt)"
+  },
+  {
+    "id": "QB_SUB_DFE_TRN_003",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat and Mass Transfer",
+    "subtopic": "Transient heat transfer in simple geometry",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A spherical fruit of radius $r = 25\\text{ mm}$ with thermal conductivity $k = 0.5\\text{ W/(m}\\cdot\\text{K)}$ is hydrocooled in chilled water with a convective heat transfer coefficient $h = 55.0\\text{ W/(m}^2\\cdot\\text{K)}$. Taking characteristic length as $L_c = r/3$, the Biot number ($Bi$) of the fruit is:",
+    "answer": 0.917,
+    "answer_range": [
+      0.9,
+      0.94
+    ],
+    "solution": "For a sphere, characteristic dimension $L_c = \\frac{V}{A} = \\frac{\\frac{4}{3}\\pi r^3}{4\\pi r^2} = \\frac{r}{3} = \\frac{0.025}{3} = 0.00833\\text{ m}$.\nBiot number:\n$$Bi = \\frac{h L_c}{k} = \\frac{55.0 \\times 0.00833}{0.5} = 0.917$$\nSince $Bi > 0.1$, internal thermal gradients are significant and lumped capacity is not valid.",
+    "difficulty": "Moderate",
+    "source": "Introduction to Food Engineering (Singh & Heldman)",
+    "correct_answer": "0.917",
+    "numerical_range": {
+      "min": 0.9,
+      "max": 0.94
+    }
+  },
+  {
+    "id": "QB_SUB_DFE_TRN_004",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat and Mass Transfer",
+    "subtopic": "Transient heat transfer in simple geometry",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For transient conduction in food materials modeled by Heisler charts, the lumped capacitance assumption is considered sufficiently accurate when the Biot number ($Bi$) satisfies:",
+    "options": {
+      "A": "$Bi < 0.1$",
+      "B": "$Bi > 10$",
+      "C": "$0.1 < Bi < 1.0$",
+      "D": "$Bi = \\infty$"
+    },
+    "correct_answer": "A",
+    "solution": "When $Bi = \\frac{h L_c}{k} < 0.1$, the internal conductive resistance of the food body is less than 10% of the surface convective resistance. Consequently, internal temperature gradients are negligible (< 5% error) and the temperature may be treated as spatially uniform throughout.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Heat and Mass Transfer (Incropera & DeWitt)"
+  },
+  {
+    "id": "QB_SUB_DFE_TRN_005",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat and Mass Transfer",
+    "subtopic": "Transient heat transfer in simple geometry",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A spherical fruit of radius $r = 25\\text{ mm}$ with thermal conductivity $k = 0.5\\text{ W/(m}\\cdot\\text{K)}$ is hydrocooled in chilled water with a convective heat transfer coefficient $h = 65.0\\text{ W/(m}^2\\cdot\\text{K)}$. Taking characteristic length as $L_c = r/3$, the Biot number ($Bi$) of the fruit is:",
+    "answer": 1.083,
+    "answer_range": [
+      1.06,
+      1.1
+    ],
+    "solution": "For a sphere, characteristic dimension $L_c = \\frac{V}{A} = \\frac{\\frac{4}{3}\\pi r^3}{4\\pi r^2} = \\frac{r}{3} = \\frac{0.025}{3} = 0.00833\\text{ m}$.\nBiot number:\n$$Bi = \\frac{h L_c}{k} = \\frac{65.0 \\times 0.00833}{0.5} = 1.083$$\nSince $Bi > 0.1$, internal thermal gradients are significant and lumped capacity is not valid.",
+    "difficulty": "Moderate",
+    "source": "Introduction to Food Engineering (Singh & Heldman)",
+    "correct_answer": "1.083",
+    "numerical_range": {
+      "min": 1.06,
+      "max": 1.1
+    }
+  },
+  {
+    "id": "QB_SUB_DFE_MEB_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat and Mass Transfer",
+    "subtopic": "Material and energy balances in food processing systems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A single-effect evaporator concentrates $1100\\text{ kg/h}$ of fruit juice containing $10\\%$ total solids to a final concentration of $50\\%$ total solids. The rate of water evaporated (in kg/h) is:",
+    "answer": 880.0,
+    "answer_range": [
+      878.0,
+      882.0
+    ],
+    "solution": "Overall solids balance:\n$$F \\times x_F = P \\times x_P$$\n$$1100 \\times 0.10 = P \\times 0.50 \\implies P = \\frac{110.0}{0.50} = 220.0\\text{ kg/h}$$\nTotal mass balance:\n$$F = P + W \\implies W = F - P = 1100 - 220.0 = 880.0\\text{ kg/h}$$",
+    "difficulty": "Easy",
+    "source": "Introduction to Food Engineering (Singh & Heldman)",
+    "correct_answer": "880.0",
+    "numerical_range": {
+      "min": 878.0,
+      "max": 882.0
+    }
+  },
+  {
+    "id": "QB_SUB_DFE_MEB_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat and Mass Transfer",
+    "subtopic": "Material and energy balances in food processing systems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a continuous steady-state food processing unit with no chemical reaction, the general mass conservation equation simplifies to:",
+    "options": {
+      "A": "$\\text{Input} = \\text{Output}$",
+      "B": "$\\text{Input} - \\text{Output} = \\text{Accumulation}$",
+      "C": "$\\text{Accumulation} = \\text{Generation}$",
+      "D": "$\\text{Output} = \\text{Generation} - \\text{Consumption}$"
+    },
+    "correct_answer": "A",
+    "solution": "General balance equation: $\\text{Input} - \\text{Output} + \\text{Generation} - \\text{Consumption} = \\text{Accumulation}$. At steady state, $\\text{Accumulation} = 0$, and with no reaction, $\\text{Generation} = \\text{Consumption} = 0$. Hence $\\text{Input} = \\text{Output}$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_SUB_DFE_MEB_003",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat and Mass Transfer",
+    "subtopic": "Material and energy balances in food processing systems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A single-effect evaporator concentrates $1300\\text{ kg/h}$ of fruit juice containing $10\\%$ total solids to a final concentration of $50\\%$ total solids. The rate of water evaporated (in kg/h) is:",
+    "answer": 1040.0,
+    "answer_range": [
+      1038.0,
+      1042.0
+    ],
+    "solution": "Overall solids balance:\n$$F \\times x_F = P \\times x_P$$\n$$1300 \\times 0.10 = P \\times 0.50 \\implies P = \\frac{130.0}{0.50} = 260.0\\text{ kg/h}$$\nTotal mass balance:\n$$F = P + W \\implies W = F - P = 1300 - 260.0 = 1040.0\\text{ kg/h}$$",
+    "difficulty": "Easy",
+    "source": "Introduction to Food Engineering (Singh & Heldman)",
+    "correct_answer": "1040.0",
+    "numerical_range": {
+      "min": 1038.0,
+      "max": 1042.0
+    }
+  },
+  {
+    "id": "QB_SUB_DFE_MEB_004",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat and Mass Transfer",
+    "subtopic": "Material and energy balances in food processing systems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a continuous steady-state food processing unit with no chemical reaction, the general mass conservation equation simplifies to:",
+    "options": {
+      "A": "$\\text{Input} = \\text{Output}$",
+      "B": "$\\text{Input} - \\text{Output} = \\text{Accumulation}$",
+      "C": "$\\text{Accumulation} = \\text{Generation}$",
+      "D": "$\\text{Output} = \\text{Generation} - \\text{Consumption}$"
+    },
+    "correct_answer": "A",
+    "solution": "General balance equation: $\\text{Input} - \\text{Output} + \\text{Generation} - \\text{Consumption} = \\text{Accumulation}$. At steady state, $\\text{Accumulation} = 0$, and with no reaction, $\\text{Generation} = \\text{Consumption} = 0$. Hence $\\text{Input} = \\text{Output}$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Food Process Engineering (R.T. Toledo)"
+  },
+  {
+    "id": "QB_SUB_DFE_MEB_005",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat and Mass Transfer",
+    "subtopic": "Material and energy balances in food processing systems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A single-effect evaporator concentrates $1500\\text{ kg/h}$ of fruit juice containing $10\\%$ total solids to a final concentration of $50\\%$ total solids. The rate of water evaporated (in kg/h) is:",
+    "answer": 1200.0,
+    "answer_range": [
+      1198.0,
+      1202.0
+    ],
+    "solution": "Overall solids balance:\n$$F \\times x_F = P \\times x_P$$\n$$1500 \\times 0.10 = P \\times 0.50 \\implies P = \\frac{150.0}{0.50} = 300.0\\text{ kg/h}$$\nTotal mass balance:\n$$F = P + W \\implies W = F - P = 1500 - 300.0 = 1200.0\\text{ kg/h}$$",
+    "difficulty": "Easy",
+    "source": "Introduction to Food Engineering (Singh & Heldman)",
+    "correct_answer": "1200.0",
+    "numerical_range": {
+      "min": 1198.0,
+      "max": 1202.0
+    }
+  },
+  {
+    "id": "QB_SUB_DFE_DCM_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat and Mass Transfer",
+    "subtopic": "Diffusive and convective mass transfer",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Fick's first law of molecular diffusion states that the molar flux $J_A$ is directly proportional to:",
+    "options": {
+      "A": "Concentration gradient $\\frac{dC_A}{dx}$",
+      "B": "Temperature gradient $\\frac{dT}{dx}$",
+      "C": "Velocity gradient $\\frac{du}{dy}$",
+      "D": "Pressure difference squared"
+    },
+    "correct_answer": "A",
+    "solution": "Fick's first law of diffusion: $J_A = -D_{AB} \\frac{dC_A}{dx}$, where molar flux is proportional to the concentration gradient of species A.",
+    "difficulty": "Easy",
+    "source": "Transport Processes and Separation Process Principles (Geankoplis)"
+  },
+  {
+    "id": "QB_SUB_DFE_DCM_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat and Mass Transfer",
+    "subtopic": "Diffusive and convective mass transfer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In convective mass transfer across a boundary layer, if the Sherwood number $Sh = 80$, the characteristic length $L = 0.04\\text{ m}$, and binary mass diffusivity $D_{AB} = 2.5 \\times 10^{-5}\\text{ m}^2\\text{/s}$, the convective mass transfer coefficient $k_c$ (in m/s) is:",
+    "answer": 0.05,
+    "answer_range": [
+      0.048,
+      0.052
+    ],
+    "solution": "Sherwood number definition:\n$$Sh = \\frac{k_c L}{D_{AB}}$$\n$$k_c = \\frac{Sh \\cdot D_{AB}}{L} = \\frac{80 \\times (2.5 \\times 10^{-5})}{0.04} = \\frac{2.0 \\times 10^{-3}}{0.04} = 0.05\\text{ m/s}$$",
+    "difficulty": "Moderate",
+    "source": "Mass Transfer Operations (Robert E. Treybal)",
+    "correct_answer": "0.05",
+    "numerical_range": {
+      "min": 0.048,
+      "max": 0.052
+    }
+  },
+  {
+    "id": "QB_SUB_DFE_DCM_003",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat and Mass Transfer",
+    "subtopic": "Diffusive and convective mass transfer",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following dimensionless numbers are directly involved in analyzing convective mass transfer?",
+    "options": {
+      "A": "Sherwood number ($Sh$)",
+      "B": "Schmidt number ($Sc$)",
+      "C": "Peclet number for mass transfer ($Pe_m$)",
+      "D": "Froude number ($Fr$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "$Sh$ is the dimensionless mass transfer coefficient, $Sc = \\nu / D_{AB}$ is the momentum-to-mass diffusivity ratio, and $Pe_m = Re \\times Sc$. Froude number ($Fr$) governs gravitational open channel water flow.",
+    "difficulty": "Moderate",
+    "source": "Transport Processes and Unit Operations (Christie J. Geankoplis)"
+  },
+  {
+    "id": "QB_SUB_DFE_HMG_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Unit Operations in Dairy and Food Engineering",
+    "subtopic": "Homogenization",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a two-stage dairy homogenizer, the secondary stage valve operating at lower pressure (typically 3–5 MPa) functions primarily to:",
+    "options": {
+      "A": "Disrupt fat globule clumps and clusters formed after the first stage valve",
+      "B": "Pasteurize the milk thermophilically",
+      "C": "Separate skim milk from heavy whipping cream",
+      "D": "Deaerate dissolved oxygen from the product stream"
+    },
+    "correct_answer": "A",
+    "solution": "The first high-pressure stage (15–20 MPa) breaks fat globules into sub-micron sizes, but these tiny globules tend to agglomerate into clusters. The second stage (3–5 MPa) provides gentle shearing to disperse these clusters into individual globules.",
+    "difficulty": "Moderate",
+    "source": "Dairy Technology (Sukumar De)"
+  },
+  {
+    "id": "QB_SUB_DFE_HMG_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Unit Operations in Dairy and Food Engineering",
+    "subtopic": "Homogenization",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Raw milk contains fat globules with an average diameter of $4.0\\ \\mu\\text{m}$. After high-pressure homogenization, the average diameter is reduced to $0.8\\ \\mu\\text{m}$. By Stokes' law, the creaming velocity of the fat globules is reduced by a factor of:",
+    "answer": 25.0,
+    "answer_range": [
+      24.5,
+      25.5
+    ],
+    "solution": "According to Stokes' law, terminal creaming velocity $v_t \\propto d^2$:\n$$\\frac{v_1}{v_2} = \\left(\\frac{d_1}{d_2}\\right)^2 = \\left(\\frac{4.0}{0.8}\\right)^2 = (5.0)^2 = 25.0$$\nThe creaming velocity decreases by a factor of 25, preventing gravity separation of cream during storage.",
+    "difficulty": "Easy",
+    "source": "Outlines of Dairy Technology (Sukumar De)",
+    "correct_answer": "25.0",
+    "numerical_range": {
+      "min": 24.5,
+      "max": 25.5
+    }
+  },
+  {
+    "id": "QB_SUB_DFE_HMG_003",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Unit Operations in Dairy and Food Engineering",
+    "subtopic": "Homogenization",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which physical phenomena contribute to the breakdown of fat globules inside a high-pressure homogenization valve?",
+    "options": {
+      "A": "Intense hydraulic shear in the narrow annular valve seat clearance",
+      "B": "Cavitation explosion resulting from localized static pressure dropping below milk vapor pressure",
+      "C": "High-velocity impact of the jet against the impact ring",
+      "D": "Nuclear magnetic resonance splitting"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "Fat globule disintegration occurs through three combined hydrodynamic effects: intense laminar/turbulent shear, cavitation bubble collapse, and high-velocity impingement against the ceramic/tungsten impact ring.",
+    "difficulty": "Moderate",
+    "source": "Dairy Engineering (Farrall)"
+  },
+  {
+    "id": "QB_SUB_DFE_REF_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Preservation of Food",
+    "subtopic": "Refrigeration and cold storage basics and applications",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A vapor compression refrigeration plant operating on R-134a extracts heat from an apple cold storage room at a rate of $70\\text{ kW}$. If the power consumed by the compressor is $20\\text{ kW}$, the Coefficient of Performance (COP) of the refrigeration system is:",
+    "answer": 3.5,
+    "answer_range": [
+      3.45,
+      3.55
+    ],
+    "solution": "Coefficient of Performance:\n$$\\text{COP} = \\frac{\\text{Refrigeration Effect } (Q_e)}{\\text{Work Input } (W_{\\text{comp}})} = \\frac{70}{20} = 3.50$$",
+    "difficulty": "Easy",
+    "source": "Refrigeration and Air Conditioning (C.P. Arora)",
+    "correct_answer": "3.5",
+    "numerical_range": {
+      "min": 3.45,
+      "max": 3.55
+    }
+  },
+  {
+    "id": "QB_SUB_DFE_REF_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Preservation of Food",
+    "subtopic": "Refrigeration and cold storage basics and applications",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In the design of agricultural cold stores, 'respiration heat' must be factored into the refrigeration load calculation for:",
+    "options": {
+      "A": "Living horticultural produce such as fresh apples, potatoes, and oranges",
+      "B": "Frozen carcass meat stored at $-18^\\circ\\text{C}$",
+      "C": "Processed butter and pasteurized packaged milk",
+      "D": "Refined vegetable oil drums"
+    },
+    "correct_answer": "A",
+    "solution": "Fresh fruits and vegetables are living biological tissues that continue aerobic respiration ($C_6H_{12}O_6 + 6O_2 \\to 6CO_2 + 6H_2O + \\text{Heat}$) post-harvest, generating significant respiration heat.",
+    "difficulty": "Easy",
+    "source": "Cold Storage Design and Maintenance (ASHRAE)"
+  },
+  {
+    "id": "QB_SUB_DFE_CON_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation for cylindrical pipe",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "An electrical steam pipe of outer radius $r_o = 25\\text{ mm}$ is covered with insulation of thermal conductivity $k = 0.15\\text{ W/(m}\\cdot\\text{K)}$. If the convective heat transfer coefficient with ambient air is $h = 5.0\\text{ W/(m}^2\\cdot\\text{K)}$, the critical radius of insulation (in mm) is:",
+    "solution": "Critical radius of insulation for a cylinder:\n$$r_{cr} = \\frac{k}{h} = \\frac{0.15}{5.0} = 0.03\\text{ m} = 30.0\\text{ mm}$$",
+    "difficulty": "Moderate",
+    "source": "Heat Transfer (J.P. Holman)",
+    "answer": 30.0,
+    "answer_range": [
+      29.5,
+      30.5
+    ],
+    "correct_answer": "30.0",
+    "numerical_range": {
+      "min": 29.5,
+      "max": 30.5
+    }
+  },
+  {
+    "id": "QB_SUB_DFE_CON_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Steady-State Conduction & Shape Factors",
+    "subtopic": "Critical radius of insulation concept",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Adding insulation to a bare cylinder will increase the total rate of heat loss as long as the outer radius of insulation is:",
+    "solution": "For cylindrical geometries, adding insulation increases conductive resistance but reduces external surface convective resistance. When $r < r_{cr} = k/h$, convective resistance decreases faster than conductive resistance increases, maximizing heat loss at $r = r_{cr}$.",
+    "difficulty": "Easy",
+    "source": "Fundamentals of Heat and Mass Transfer (Incropera)",
+    "options": {
+      "A": "Less than the critical radius $r_{cr} = k/h$",
+      "B": "Greater than the critical radius $r_{cr} = k/h$",
+      "C": "Equal to zero",
+      "D": "Infinite"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_DFE_TRC_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Biot number calculation for spherical fruit",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The physical significance of the Biot number ($Bi$) in heat conduction is the ratio of:",
+    "solution": "$Bi = \\frac{L_c / k}{1 / h} = \\frac{\\text{Internal conductive resistance}}{\\text{External convective resistance}}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Food Processing (Heldman & Singh)",
+    "options": {
+      "A": "Internal conductive resistance to surface convective resistance",
+      "B": "Buoyancy force to viscous force",
+      "C": "Inertial force to surface tension force",
+      "D": "Thermal boundary layer thickness to velocity boundary layer thickness"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_DFE_TRC_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Transient Heat Conduction & Lumped Capacity Analysis",
+    "subtopic": "Fourier number definition and Heisler charts",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "The Fourier number for transient heat conduction in a slab of thickness $2L = 0.06\\text{ m}$ (half-thickness $L = 0.03\\text{ m}$) with thermal diffusivity $\\alpha = 1.5 \\times 10^{-7}\\text{ m}^2\\text{/s}$ after an elapsed time of $t = 1800\\text{ s}$ is:",
+    "solution": "Fourier number:\n$$Fo = \\frac{\\alpha t}{L^2} = \\frac{(1.5 \\times 10^{-7}) \\times 1800}{(0.03)^2} = \\frac{2.7 \\times 10^{-4}}{9.0 \\times 10^{-4}} = 0.30$$",
+    "difficulty": "Moderate",
+    "source": "Heat Transfer (J.P. Holman)",
+    "answer": 0.3,
+    "answer_range": [
+      0.29,
+      0.31
+    ],
+    "correct_answer": "0.3",
+    "numerical_range": {
+      "min": 0.29,
+      "max": 0.31
+    }
+  },
+  {
+    "id": "QB_SUB_DFE_CNV_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Prandtl number physical significance",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Prandtl number ($Pr = \\nu / \\alpha$) physically compares:",
+    "solution": "$Pr = \\frac{\\nu}{\\alpha} = \\frac{\\mu c_p}{k}$, which represents the relative rate of momentum diffusion versus thermal diffusion in the fluid.",
+    "difficulty": "Easy",
+    "source": "Transport Phenomena (Bird, Stewart, Lightfoot)",
+    "options": {
+      "A": "Momentum diffusivity (kinematic viscosity) to thermal diffusivity",
+      "B": "Convective heat transfer to conductive heat transfer",
+      "C": "Inertial forces to gravitational forces",
+      "D": "Sensible heat to latent heat of vaporization"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_DFE_CNV_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Convective Heat Transfer & Dimensionless Numbers",
+    "subtopic": "Dittus-Boelter correlation exponents",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In the Dittus-Boelter equation $Nu = 0.023 Re^{0.8} Pr^n$ for fully developed turbulent flow in smooth pipes, the exponent $n$ takes the value:",
+    "solution": "Dittus-Boelter correlation: $n = 0.4$ when the fluid is being heated ($T_w > T_b$) and $n = 0.3$ when the fluid is being cooled ($T_w < T_b$).",
+    "difficulty": "Easy",
+    "source": "Heat Transfer (J.P. Holman)",
+    "options": {
+      "A": "$n = 0.4$ for heating of the fluid and $n = 0.3$ for cooling of the fluid",
+      "B": "$n = 0.3$ for heating and $n = 0.4$ for cooling",
+      "C": "$n = 0.5$ for both heating and cooling",
+      "D": "$n = 0.33$ regardless of heat flux direction"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_DFE_RAD_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Wien displacement law and blackbody radiation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "According to Wien's displacement law ($\\lambda_{\\text{max}} T = 2898\\ \\mu\\text{m}\\cdot\\text{K}$), the wavelength of maximum spectral emissive power from an infrared food heating lamp operating at $1449\\text{ K}$ (in $\\mu$m) is:",
+    "solution": "$$\\lambda_{\\text{max}} = \\frac{2898}{T} = \\frac{2898}{1449} = 2.00\\ \\mu\\text{m}$$",
+    "difficulty": "Moderate",
+    "source": "Fundamentals of Heat Transfer (Incropera)",
+    "answer": 2.0,
+    "answer_range": [
+      1.95,
+      2.05
+    ],
+    "correct_answer": "2.0",
+    "numerical_range": {
+      "min": 1.95,
+      "max": 2.05
+    }
+  },
+  {
+    "id": "QB_SUB_DFE_RAD_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Radiation Heat Transfer & Emissivity",
+    "subtopic": "Reciprocity and summation rules of view factors",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For diffuse, gray radiation exchange between two surfaces 1 and 2 of areas $A_1$ and $A_2$, the reciprocity theorem states:",
+    "solution": "The radiation reciprocity relation states $A_1 F_{12} = A_2 F_{21}$, valid for any two diffuse radiating surfaces.",
+    "difficulty": "Easy",
+    "source": "Principles of Heat Transfer (Frank Kreith)",
+    "options": {
+      "A": "$A_1 F_{12} = A_2 F_{21}$",
+      "B": "$F_{12} + F_{21} = 1$",
+      "C": "$A_1 F_{21} = A_2 F_{12}$",
+      "D": "$F_{12} = F_{21}$ for all geometry"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_DFE_HEX_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "Counterflow vs parallel flow thermal comparison",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For identical fluid mass flow rates, inlet temperatures, and overall heat transfer coefficient, a counterflow heat exchanger compared to a parallel flow heat exchanger:",
+    "solution": "Counterflow heat exchangers provide higher temperature driving force along the entire length, resulting in a strictly higher LMTD ($LMTD_{counter} > LMTD_{parallel}$) and smaller required surface area for identical thermal duties.",
+    "difficulty": "Easy",
+    "source": "Process Heat Transfer (D.Q. Kern)",
+    "options": {
+      "A": "Has a higher Log Mean Temperature Difference (LMTD) and requires smaller heat transfer surface area",
+      "B": "Has a lower LMTD and lower effectiveness",
+      "C": "Cannot achieve outlet cold temperature higher than outlet hot temperature",
+      "D": "Has zero thermal effectiveness"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_DFE_HEX_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Heat Exchangers: LMTD & NTU-Effectiveness Methods",
+    "subtopic": "NTU-Effectiveness method definitions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In a counterflow heat exchanger where heat capacity rates are balanced ($C_{\\text{min}} = C_{\\text{max}}$), if the number of transfer units is $NTU = 3.0$, the thermal effectiveness $\\varepsilon$ is:",
+    "solution": "When $C_r = 1.0$ in counterflow:\n$$\\varepsilon = \\frac{NTU}{1 + NTU} = \\frac{3.0}{1 + 3.0} = \\frac{3.0}{4.0} = 0.75$$",
+    "difficulty": "Moderate",
+    "source": "Compact Heat Exchangers (Kays & London)",
+    "answer": 0.75,
+    "answer_range": [
+      0.74,
+      0.76
+    ],
+    "correct_answer": "0.75",
+    "numerical_range": {
+      "min": 0.74,
+      "max": 0.76
+    }
+  },
+  {
+    "id": "QB_SUB_DFE_MSD_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Sherwood and Schmidt numbers physical meaning",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Schmidt number ($Sc$) in mass transfer is analogous to which dimensionless number in heat transfer?",
+    "solution": "Schmidt number $Sc = \\frac{\\nu}{D_{AB}}$ represents kinematic viscosity divided by mass diffusivity, directly analogous to Prandtl number $Pr = \\frac{\\nu}{\\alpha}$.",
+    "difficulty": "Easy",
+    "source": "Mass Transfer Operations (Treybal)",
+    "options": {
+      "A": "Prandtl number ($Pr$)",
+      "B": "Nusselt number ($Nu$)",
+      "C": "Reynolds number ($Re$)",
+      "D": "Grashof number ($Gr$)"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_DFE_MSD_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Mass Transfer, Fick's Law & Convective Diffusion",
+    "subtopic": "Chilton-Colburn j-factor mass-heat analogy",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Chilton-Colburn analogy relates heat and mass transfer via the $j$-factors as:",
+    "solution": "Chilton-Colburn analogy: $j_H = St_H Pr^{2/3} = j_D = St_m Sc^{2/3} = \\frac{f}{2}$, valid for turbulent pipe and flat plate boundary layers.",
+    "difficulty": "Easy",
+    "source": "Transport Phenomena (Bird et al.)",
+    "options": {
+      "A": "$j_H = j_D = \\frac{f}{2}$",
+      "B": "$j_H = 2 j_D$",
+      "C": "$j_H = j_D = Re$",
+      "D": "$j_D = \\frac{1}{Nu}$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_DFE_RHE_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Non-Newtonian food fluid classification",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "According to the Ostwald-de Waele power law model $\\tau = K \\dot{\\gamma}^n$, a pseudoplastic (shear-thinning) food fluid such as fruit puree or tomato ketchup has a flow behavior index of:",
+    "solution": "Pseudoplastic (shear-thinning) fluids have apparent viscosity that decreases with increasing shear rate, corresponding to $n < 1$. Dilatant (shear-thickening) fluids have $n > 1$.",
+    "difficulty": "Easy",
+    "source": "Food Rheology (Steffe)",
+    "options": {
+      "A": "$n < 1$",
+      "B": "$n = 1$",
+      "C": "$n > 1$",
+      "D": "$n = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_DFE_RHE_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Rheology & Non-Newtonian Flow",
+    "subtopic": "Time-dependent rheology: Thixotropy vs Rheopexy",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A food liquid whose apparent viscosity decreases continuously with time under constant shear rate and recovers upon resting exhibits:",
+    "solution": "Thixotropy is time-dependent shear-thinning behavior where viscosity breaks down under prolonged shear and reforms at rest.",
+    "difficulty": "Easy",
+    "source": "Rheology of Biological Materials (M.A. Rao)",
+    "options": {
+      "A": "Thixotropy",
+      "B": "Rheopexy",
+      "C": "Dilatancy",
+      "D": "Bingham plasticity"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_DFE_KNT_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "D-value change with temperature from z-value",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "The decimal reduction time ($D$-value) for an index spore is $12.0\\text{ min}$ at $110^\\circ\\text{C}$. If the thermal resistance constant is $z = 10^\\circ\\text{C}$, the $D$-value at $120^\\circ\\text{C}$ (in minutes) is:",
+    "solution": "Thermal destruction relation:\n$$\\log_{10}\\left(\\frac{D_1}{D_2}\\right) = \\frac{T_2 - T_1}{z}$$\n$$\\log_{10}\\left(\\frac{12.0}{D_2}\\right) = \\frac{120 - 110}{10} = 1.0 \\implies \\frac{12.0}{D_2} = 10 \\implies D_2 = 1.20\\text{ min}$$",
+    "difficulty": "Moderate",
+    "source": "Introduction to Food Engineering (Singh & Heldman)",
+    "answer": 1.2,
+    "answer_range": [
+      1.18,
+      1.22
+    ],
+    "correct_answer": "1.2",
+    "numerical_range": {
+      "min": 1.18,
+      "max": 1.22
+    }
+  },
+  {
+    "id": "QB_SUB_DFE_KNT_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Microbial Inactivation Kinetics: D-Value, z-Value & F-Value",
+    "subtopic": "Definitions of D, z, and F values",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The decimal reduction time ($D$-value) is defined as the time required at a given temperature to:",
+    "solution": "$D$-value is the heating time in minutes required to reduce the survivor count by 90% (a 1-log reduction).",
+    "difficulty": "Easy",
+    "source": "Food Process Engineering (Heldman & Singh)",
+    "options": {
+      "A": "Destroy 90% (one log cycle reduction) of the microbial population",
+      "B": "Destroy 100% of all bacterial spores completely",
+      "C": "Reduce spore count by a factor of 2",
+      "D": "Increase temperature by $10^\\circ\\text{C}$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_DFE_PAS_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Index organisms for milk pasteurization",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The standard index organism used to define the minimum thermal time-temperature standards for commercial milk pasteurization is:",
+    "solution": "Coxiella burnetii is the most heat-resistant non-spore-forming pathogen found in raw milk, requiring $71.7^\\circ\\text{C}$ for $15\\text{ s}$ (HTST) or $62.8^\\circ\\text{C}$ for $30\\text{ min}$ (LTLT).",
+    "difficulty": "Easy",
+    "source": "Milk and Milk Products (Clarence Eckles)",
+    "options": {
+      "A": "Coxiella burnetii",
+      "B": "Clostridium botulinum",
+      "C": "Bacillus stearothermophilus",
+      "D": "Escherichia coli"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_DFE_PAS_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Milk Pasteurization: HTST & Batch Systems",
+    "subtopic": "Components of HTST pasteurizer",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In an HTST pasteurizer, if milk temperature leaving the holding tube drops below the statutory legal setpoint, the Flow Diversion Valve (FDV):",
+    "solution": "The FDV senses outlet temperature and instantly diverts any under-processed milk back to the constant-level balance tank for reprocessing.",
+    "difficulty": "Easy",
+    "source": "Dairy Engineering (A.W. Farrall)",
+    "options": {
+      "A": "Diverts sub-pasteurized milk back to the raw milk balance tank",
+      "B": "Shuts off electrical supply to the entire dairy plant",
+      "C": "Injects culinary steam directly into the milk stream",
+      "D": "Directs sub-pasteurized milk straight to the retail bottling line"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_DFE_STE_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Cold point location in conduction vs convection heated cans",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a cylindrical can undergoing retort thermal sterilization, the 'cold point' (slowest heating zone) for a conduction-heating viscous food (like cream style corn) is situated at:",
+    "solution": "In pure conduction heating, heat penetrates uniformly from all external boundaries, making the geometric center the slowest heating point. In convection heating, liquid buoyant currents shift the cold point to roughly 1/3 to 1/5 from the bottom.",
+    "difficulty": "Easy",
+    "source": "Thermal Processing of Packaged Foods (Holdsworth & Simpson)",
+    "options": {
+      "A": "The geometric center of the can",
+      "B": "One-fifth of the height above the bottom along the vertical axis",
+      "C": "The top lid periphery",
+      "D": "The side wall of the can"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_DFE_STE_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Thermal Sterilization, Retort Processing & 12D Concept",
+    "subtopic": "Lethal rate calculation Bigelow method",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For Clostridium botulinum spores with reference temperature $T_{\\text{ref}} = 121.1^\\circ\\text{C}$ and $z = 10^\\circ\\text{C}$, the lethal rate $L$ at a retort temperature of $124.1^\\circ\\text{C}$ is:",
+    "solution": "Lethal rate formula:\n$$L = 10^{(T - T_{\\text{ref}})/z} = 10^{(124.1 - 121.1)/10} = 10^{3.0/10} = 10^{0.30103} = 2.00$$",
+    "difficulty": "Moderate",
+    "source": "Thermal Bacteriology (Stumbo)",
+    "answer": 2.0,
+    "answer_range": [
+      1.95,
+      2.05
+    ],
+    "correct_answer": "2.0",
+    "numerical_range": {
+      "min": 1.95,
+      "max": 2.05
+    }
+  },
+  {
+    "id": "QB_SUB_DFE_EQP_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Two-stage homogenization mechanism",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Why is homogenization universally carried out prior to UHT sterilization of milk?",
+    "solution": "Homogenization subdivides fat globules into < 1 micron droplets, stabilizing the emulsion against gravity creaming during 6–9 months of ambient shelf life.",
+    "difficulty": "Easy",
+    "source": "Dairy Processing Handbook (Tetra Pak)",
+    "options": {
+      "A": "To prevent fat separation and sediment formation during extended ambient shelf life",
+      "B": "To decrease milk protein content",
+      "C": "To freeze the water phase into fine crystals",
+      "D": "To increase microbial spore counts"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_DFE_EQP_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Dairy Processing Equipment: Homogenizers & Cream Separators",
+    "subtopic": "Disc bowl cream separator separation zone",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a continuous disc bowl cream separator, the conical disc stack enhances skimming efficiency primarily by:",
+    "solution": "The tightly spaced conical discs reduce the sedimentation distance to ~0.5–1 mm, allowing droplets to quickly coalesce along the underside of discs and slide toward the central axis.",
+    "difficulty": "Easy",
+    "source": "Dairy Engineering (Farrall)",
+    "options": {
+      "A": "Decreasing the settling distance for fat globules to a fraction of a millimeter",
+      "B": "Boiling the raw milk at high vacuum",
+      "C": "Adding heavy chemical emulsifiers into the bowl",
+      "D": "Lowering the angular velocity of the centrifuge bowl"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_DFE_FRZ_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Plank geometric shape factors P and R",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Plank's equation for freezing time ($t_F = \\frac{\\rho \\lambda}{\\Delta T} \\left[ \\frac{P a}{h} + \\frac{R a^2}{k} \\right]$), for an infinite slab of thickness $a$, the geometric constants $P$ and $R$ are respectively:",
+    "solution": "For an infinite slab freezing from two faces: $P = 1/2$ and $R = 1/8$. (For an infinite cylinder: $1/4$ and $1/16$; for a sphere: $1/6$ and $1/24$).",
+    "difficulty": "Easy",
+    "source": "Introduction to Food Engineering (Singh & Heldman)",
+    "options": {
+      "A": "$P = 1/2,\\ R = 1/8$",
+      "B": "$P = 1/4,\\ R = 1/16$",
+      "C": "$P = 1/6,\\ R = 1/24$",
+      "D": "$P = 1,\\ R = 1$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_DFE_FRZ_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Food Freezing, Plank's Equation & Freezing Time",
+    "subtopic": "Freezing curves and ice crystal morphology",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Rapid cryogenic freezing of biological tissues compared to slow blast freezing results in:",
+    "solution": "High freezing rates promote rapid supercooling and high nucleation rates, forming many microscopic intracellular ice crystals and preserving tissue texture upon thawing.",
+    "difficulty": "Easy",
+    "source": "Food Freezing Technology (Mallett)",
+    "options": {
+      "A": "Numerous small intracellular ice crystals causing minimal cellular membrane rupture",
+      "B": "Large extracellular ice crystals that puncture cell walls",
+      "C": "Higher drip loss upon thawing",
+      "D": "Complete denaturation of all vitamins"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_DFE_CYC_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Carnot COP upper bound",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "An ideal Carnot refrigerator operates between an evaporator temperature of $-23^\\circ\\text{C}$ ($250\\text{ K}$) and a condenser temperature of $27^\\circ\\text{C}$ ($300\\text{ K}$). The theoretical maximum COP of the refrigerator is:",
+    "solution": "$$\\text{COP}_{\\text{Carnot}} = \\frac{T_L}{T_H - T_L} = \\frac{250}{300 - 250} = \\frac{250}{50} = 5.00$$",
+    "difficulty": "Moderate",
+    "source": "Refrigeration and Air Conditioning (Arora)",
+    "answer": 5.0,
+    "answer_range": [
+      4.95,
+      5.05
+    ],
+    "correct_answer": "5.0",
+    "numerical_range": {
+      "min": 4.95,
+      "max": 5.05
+    }
+  },
+  {
+    "id": "QB_SUB_DFE_CYC_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Refrigeration Cycles, Refrigerants & Cold Storage Design",
+    "subtopic": "Cooling load components in agricultural cold storage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following components constitute the total heat load in an agricultural cold storage warehouse?",
+    "solution": "All four are recognized standard components of ASHRAE cold storage cooling load calculations.",
+    "difficulty": "Moderate",
+    "source": "ASHRAE Handbook of Refrigeration",
+    "options": {
+      "A": "Transmission load through insulated walls, floor, and roof",
+      "B": "Infiltration load from ambient air entering via open service doors",
+      "C": "Respiration heat generated by stored produce",
+      "D": "Internal heat from lighting, forklifts, and personnel"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  },
+  {
+    "id": "QB_SUB_DFE_AWP_001",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Modified Atmosphere Packaging gas functions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Modified Atmosphere Packaging (MAP) of fresh meat and horticultural foods, carbon dioxide ($CO_2$) is primarily included for its:",
+    "solution": "$CO_2$ dissolves in food surface moisture forming carbonic acid, lowering local pH and inhibiting aerobic spoilage bacteria and fungi.",
+    "difficulty": "Easy",
+    "source": "Food Packaging: Principles and Practice (Robertson)",
+    "options": {
+      "A": "Bacteriostatic and fungistatic antimicrobial activity",
+      "B": "Inert filler capacity to prevent package collapse",
+      "C": "Color enhancement of myoglobin pigment",
+      "D": "Catalytic oxidation of unsaturated fats"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_DFE_AWP_002",
+    "section": "Section 7: Dairy and Food Engineering",
+    "topic": "Water Activity & Food Packaging",
+    "subtopic": "Glass transition temperature Tg and caking",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Spray-dried fruit juice powders cake and become sticky during ambient storage when:",
+    "solution": "When temperature or moisture plasticization causes storage temperature to exceed the glass transition temperature ($T > T_g$), amorphous sugars transition from a glassy solid to a rubbery state, causing particle stickiness, caking, and collapse.",
+    "difficulty": "Easy",
+    "source": "Amorphous Food and Pharmaceutical Systems (Roos)",
+    "options": {
+      "A": "Storage temperature exceeds the glass transition temperature ($T > T_g$)",
+      "B": "Water activity is lower than 0.1",
+      "C": "Storage temperature is below $-40^\\circ\\text{C}$",
+      "D": "Relative humidity is 0%"
+    },
+    "correct_answer": "A"
   }
 ];

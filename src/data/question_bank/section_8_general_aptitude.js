@@ -4470,5 +4470,12124 @@ export default [
     "solution": "Compound Interest Growth:\n$$(1 + r)^5 = 2 \\implies [(1 + r)^5]^3 = 2^3 = 8 \\implies (1 + r)^{15} = 8$$\nThus, $t = 15\\text{ years}$.",
     "difficulty": "Easy",
     "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_001",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Equivalent single discount of successive discounts",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A retail store offers two successive discounts of $20\\%$ and $15\\%$ on the marked price of an agricultural implement. The equivalent single discount percentage is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "32.00",
+    "numerical_range": {
+      "min": 31.9,
+      "max": 32.1
+    },
+    "solution": "The equivalent single discount for two successive discounts $d_1$ and $d_2$ is:\n$$d_{eff} = d_1 + d_2 - \\frac{d_1 \\times d_2}{100}$$\nGiven $d_1 = 20\\%$ and $d_2 = 15\\%$:\n$$d_{eff} = 20 + 15 - \\frac{20 \\times 15}{100} = 35 - 3.00 = 32.00\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_002",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Marked price for target profit after discount",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An equipment dealer purchases an irrigation sprinkler at a cost price of $\\text{Rs. }600$. To allow a discount of $10\\%$ on the marked price while still earning a net profit of $20\\%$, the dealer must mark the price at $\\text{Rs. }$ ________ (round off to two decimal places).",
+    "correct_answer": "800.00",
+    "numerical_range": {
+      "min": 799.5,
+      "max": 800.5
+    },
+    "solution": "Selling price required for $20\\%$ profit:\n$$SP = CP \\times \\left(1 + \\frac{20}{100}\\right) = 600 \\times 1.20 = 720.00$$\nSince marked price after $10\\%$ discount equals $SP$:\n$$SP = MP \\times (1 - 0.10) \\implies MP = \\frac{SP}{0.90} = \\frac{720.00}{0.90} = 800.00$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_003",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Rule of alligation in mixtures",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In what ratio must two grain varieties costing $\\text{Rs. } 25/\\text{kg}$ and $\\text{Rs. } 40/\\text{kg}$ be blended together to produce a mixture worth $\\text{Rs. } 30/\\text{kg}$?",
+    "options": {
+      "A": "$2 : 1$",
+      "B": "$1 : 2$",
+      "C": "$3 : 2$",
+      "D": "$5 : 3$"
+    },
+    "correct_answer": "A",
+    "solution": "Applying the rule of alligation:\n$$\\frac{Q_{\\text{cheaper}}}{Q_{\\text{dearer}}} = \\frac{C_{\\text{dearer}} - M}{M - C_{\\text{cheaper}}} = \\frac{40 - 30}{30 - 25} = \\frac{10}{5} = \\frac{2}{1}$$\nHence, the required ratio is $2 : 1$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_004",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Equivalent single discount of successive discounts",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A retail store offers two successive discounts of $20\\%$ and $10\\%$ on the marked price of an agricultural implement. The equivalent single discount percentage is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "28.00",
+    "numerical_range": {
+      "min": 27.9,
+      "max": 28.1
+    },
+    "solution": "The equivalent single discount for two successive discounts $d_1$ and $d_2$ is:\n$$d_{eff} = d_1 + d_2 - \\frac{d_1 \\times d_2}{100}$$\nGiven $d_1 = 20\\%$ and $d_2 = 10\\%$:\n$$d_{eff} = 20 + 10 - \\frac{20 \\times 10}{100} = 30 - 2.00 = 28.00\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_005",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Marked price for target profit after discount",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An equipment dealer purchases an irrigation sprinkler at a cost price of $\\text{Rs. }500$. To allow a discount of $10\\%$ on the marked price while still earning a net profit of $20\\%$, the dealer must mark the price at $\\text{Rs. }$ ________ (round off to two decimal places).",
+    "correct_answer": "666.67",
+    "numerical_range": {
+      "min": 666.17,
+      "max": 667.17
+    },
+    "solution": "Selling price required for $20\\%$ profit:\n$$SP = CP \\times \\left(1 + \\frac{20}{100}\\right) = 500 \\times 1.20 = 600.00$$\nSince marked price after $10\\%$ discount equals $SP$:\n$$SP = MP \\times (1 - 0.10) \\implies MP = \\frac{SP}{0.90} = \\frac{600.00}{0.90} = 666.67$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_006",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Rule of alligation in mixtures",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In what ratio must two grain varieties costing $\\text{Rs. } 25/\\text{kg}$ and $\\text{Rs. } 40/\\text{kg}$ be blended together to produce a mixture worth $\\text{Rs. } 30/\\text{kg}$?",
+    "options": {
+      "A": "$2 : 1$",
+      "B": "$1 : 2$",
+      "C": "$3 : 2$",
+      "D": "$5 : 3$"
+    },
+    "correct_answer": "A",
+    "solution": "Applying the rule of alligation:\n$$\\frac{Q_{\\text{cheaper}}}{Q_{\\text{dearer}}} = \\frac{C_{\\text{dearer}} - M}{M - C_{\\text{cheaper}}} = \\frac{40 - 30}{30 - 25} = \\frac{10}{5} = \\frac{2}{1}$$\nHence, the required ratio is $2 : 1$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_007",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Equivalent single discount of successive discounts",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A retail store offers two successive discounts of $20\\%$ and $25\\%$ on the marked price of an agricultural implement. The equivalent single discount percentage is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "40.00",
+    "numerical_range": {
+      "min": 39.9,
+      "max": 40.1
+    },
+    "solution": "The equivalent single discount for two successive discounts $d_1$ and $d_2$ is:\n$$d_{eff} = d_1 + d_2 - \\frac{d_1 \\times d_2}{100}$$\nGiven $d_1 = 20\\%$ and $d_2 = 25\\%$:\n$$d_{eff} = 20 + 25 - \\frac{20 \\times 25}{100} = 45 - 5.00 = 40.00\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_008",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Marked price for target profit after discount",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An equipment dealer purchases an irrigation sprinkler at a cost price of $\\text{Rs. }650$. To allow a discount of $10\\%$ on the marked price while still earning a net profit of $20\\%$, the dealer must mark the price at $\\text{Rs. }$ ________ (round off to two decimal places).",
+    "correct_answer": "866.67",
+    "numerical_range": {
+      "min": 866.17,
+      "max": 867.17
+    },
+    "solution": "Selling price required for $20\\%$ profit:\n$$SP = CP \\times \\left(1 + \\frac{20}{100}\\right) = 650 \\times 1.20 = 780.00$$\nSince marked price after $10\\%$ discount equals $SP$:\n$$SP = MP \\times (1 - 0.10) \\implies MP = \\frac{SP}{0.90} = \\frac{780.00}{0.90} = 866.67$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_009",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Rule of alligation in mixtures",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In what ratio must two grain varieties costing $\\text{Rs. } 25/\\text{kg}$ and $\\text{Rs. } 40/\\text{kg}$ be blended together to produce a mixture worth $\\text{Rs. } 30/\\text{kg}$?",
+    "options": {
+      "A": "$2 : 1$",
+      "B": "$1 : 2$",
+      "C": "$3 : 2$",
+      "D": "$5 : 3$"
+    },
+    "correct_answer": "A",
+    "solution": "Applying the rule of alligation:\n$$\\frac{Q_{\\text{cheaper}}}{Q_{\\text{dearer}}} = \\frac{C_{\\text{dearer}} - M}{M - C_{\\text{cheaper}}} = \\frac{40 - 30}{30 - 25} = \\frac{10}{5} = \\frac{2}{1}$$\nHence, the required ratio is $2 : 1$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_010",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Equivalent single discount of successive discounts",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A retail store offers two successive discounts of $20\\%$ and $20\\%$ on the marked price of an agricultural implement. The equivalent single discount percentage is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "36.00",
+    "numerical_range": {
+      "min": 35.9,
+      "max": 36.1
+    },
+    "solution": "The equivalent single discount for two successive discounts $d_1$ and $d_2$ is:\n$$d_{eff} = d_1 + d_2 - \\frac{d_1 \\times d_2}{100}$$\nGiven $d_1 = 20\\%$ and $d_2 = 20\\%$:\n$$d_{eff} = 20 + 20 - \\frac{20 \\times 20}{100} = 40 - 4.00 = 36.00\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_011",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Marked price for target profit after discount",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An equipment dealer purchases an irrigation sprinkler at a cost price of $\\text{Rs. }550$. To allow a discount of $10\\%$ on the marked price while still earning a net profit of $20\\%$, the dealer must mark the price at $\\text{Rs. }$ ________ (round off to two decimal places).",
+    "correct_answer": "733.33",
+    "numerical_range": {
+      "min": 732.83,
+      "max": 733.83
+    },
+    "solution": "Selling price required for $20\\%$ profit:\n$$SP = CP \\times \\left(1 + \\frac{20}{100}\\right) = 550 \\times 1.20 = 660.00$$\nSince marked price after $10\\%$ discount equals $SP$:\n$$SP = MP \\times (1 - 0.10) \\implies MP = \\frac{SP}{0.90} = \\frac{660.00}{0.90} = 733.33$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_012",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Rule of alligation in mixtures",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In what ratio must two grain varieties costing $\\text{Rs. } 25/\\text{kg}$ and $\\text{Rs. } 40/\\text{kg}$ be blended together to produce a mixture worth $\\text{Rs. } 30/\\text{kg}$?",
+    "options": {
+      "A": "$2 : 1$",
+      "B": "$1 : 2$",
+      "C": "$3 : 2$",
+      "D": "$5 : 3$"
+    },
+    "correct_answer": "A",
+    "solution": "Applying the rule of alligation:\n$$\\frac{Q_{\\text{cheaper}}}{Q_{\\text{dearer}}} = \\frac{C_{\\text{dearer}} - M}{M - C_{\\text{cheaper}}} = \\frac{40 - 30}{30 - 25} = \\frac{10}{5} = \\frac{2}{1}$$\nHence, the required ratio is $2 : 1$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_013",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Equivalent single discount of successive discounts",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A retail store offers two successive discounts of $20\\%$ and $15\\%$ on the marked price of an agricultural implement. The equivalent single discount percentage is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "32.00",
+    "numerical_range": {
+      "min": 31.9,
+      "max": 32.1
+    },
+    "solution": "The equivalent single discount for two successive discounts $d_1$ and $d_2$ is:\n$$d_{eff} = d_1 + d_2 - \\frac{d_1 \\times d_2}{100}$$\nGiven $d_1 = 20\\%$ and $d_2 = 15\\%$:\n$$d_{eff} = 20 + 15 - \\frac{20 \\times 15}{100} = 35 - 3.00 = 32.00\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_014",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Marked price for target profit after discount",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An equipment dealer purchases an irrigation sprinkler at a cost price of $\\text{Rs. }700$. To allow a discount of $10\\%$ on the marked price while still earning a net profit of $20\\%$, the dealer must mark the price at $\\text{Rs. }$ ________ (round off to two decimal places).",
+    "correct_answer": "933.33",
+    "numerical_range": {
+      "min": 932.83,
+      "max": 933.83
+    },
+    "solution": "Selling price required for $20\\%$ profit:\n$$SP = CP \\times \\left(1 + \\frac{20}{100}\\right) = 700 \\times 1.20 = 840.00$$\nSince marked price after $10\\%$ discount equals $SP$:\n$$SP = MP \\times (1 - 0.10) \\implies MP = \\frac{SP}{0.90} = \\frac{840.00}{0.90} = 933.33$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_015",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Rule of alligation in mixtures",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In what ratio must two grain varieties costing $\\text{Rs. } 25/\\text{kg}$ and $\\text{Rs. } 40/\\text{kg}$ be blended together to produce a mixture worth $\\text{Rs. } 30/\\text{kg}$?",
+    "options": {
+      "A": "$2 : 1$",
+      "B": "$1 : 2$",
+      "C": "$3 : 2$",
+      "D": "$5 : 3$"
+    },
+    "correct_answer": "A",
+    "solution": "Applying the rule of alligation:\n$$\\frac{Q_{\\text{cheaper}}}{Q_{\\text{dearer}}} = \\frac{C_{\\text{dearer}} - M}{M - C_{\\text{cheaper}}} = \\frac{40 - 30}{30 - 25} = \\frac{10}{5} = \\frac{2}{1}$$\nHence, the required ratio is $2 : 1$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_016",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Equivalent single discount of successive discounts",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A retail store offers two successive discounts of $20\\%$ and $10\\%$ on the marked price of an agricultural implement. The equivalent single discount percentage is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "28.00",
+    "numerical_range": {
+      "min": 27.9,
+      "max": 28.1
+    },
+    "solution": "The equivalent single discount for two successive discounts $d_1$ and $d_2$ is:\n$$d_{eff} = d_1 + d_2 - \\frac{d_1 \\times d_2}{100}$$\nGiven $d_1 = 20\\%$ and $d_2 = 10\\%$:\n$$d_{eff} = 20 + 10 - \\frac{20 \\times 10}{100} = 30 - 2.00 = 28.00\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_017",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Marked price for target profit after discount",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An equipment dealer purchases an irrigation sprinkler at a cost price of $\\text{Rs. }600$. To allow a discount of $10\\%$ on the marked price while still earning a net profit of $20\\%$, the dealer must mark the price at $\\text{Rs. }$ ________ (round off to two decimal places).",
+    "correct_answer": "800.00",
+    "numerical_range": {
+      "min": 799.5,
+      "max": 800.5
+    },
+    "solution": "Selling price required for $20\\%$ profit:\n$$SP = CP \\times \\left(1 + \\frac{20}{100}\\right) = 600 \\times 1.20 = 720.00$$\nSince marked price after $10\\%$ discount equals $SP$:\n$$SP = MP \\times (1 - 0.10) \\implies MP = \\frac{SP}{0.90} = \\frac{720.00}{0.90} = 800.00$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_018",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Rule of alligation in mixtures",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In what ratio must two grain varieties costing $\\text{Rs. } 25/\\text{kg}$ and $\\text{Rs. } 40/\\text{kg}$ be blended together to produce a mixture worth $\\text{Rs. } 30/\\text{kg}$?",
+    "options": {
+      "A": "$2 : 1$",
+      "B": "$1 : 2$",
+      "C": "$3 : 2$",
+      "D": "$5 : 3$"
+    },
+    "correct_answer": "A",
+    "solution": "Applying the rule of alligation:\n$$\\frac{Q_{\\text{cheaper}}}{Q_{\\text{dearer}}} = \\frac{C_{\\text{dearer}} - M}{M - C_{\\text{cheaper}}} = \\frac{40 - 30}{30 - 25} = \\frac{10}{5} = \\frac{2}{1}$$\nHence, the required ratio is $2 : 1$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_019",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Equivalent single discount of successive discounts",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A retail store offers two successive discounts of $20\\%$ and $25\\%$ on the marked price of an agricultural implement. The equivalent single discount percentage is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "40.00",
+    "numerical_range": {
+      "min": 39.9,
+      "max": 40.1
+    },
+    "solution": "The equivalent single discount for two successive discounts $d_1$ and $d_2$ is:\n$$d_{eff} = d_1 + d_2 - \\frac{d_1 \\times d_2}{100}$$\nGiven $d_1 = 20\\%$ and $d_2 = 25\\%$:\n$$d_{eff} = 20 + 25 - \\frac{20 \\times 25}{100} = 45 - 5.00 = 40.00\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_020",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Marked price for target profit after discount",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An equipment dealer purchases an irrigation sprinkler at a cost price of $\\text{Rs. }500$. To allow a discount of $10\\%$ on the marked price while still earning a net profit of $20\\%$, the dealer must mark the price at $\\text{Rs. }$ ________ (round off to two decimal places).",
+    "correct_answer": "666.67",
+    "numerical_range": {
+      "min": 666.17,
+      "max": 667.17
+    },
+    "solution": "Selling price required for $20\\%$ profit:\n$$SP = CP \\times \\left(1 + \\frac{20}{100}\\right) = 500 \\times 1.20 = 600.00$$\nSince marked price after $10\\%$ discount equals $SP$:\n$$SP = MP \\times (1 - 0.10) \\implies MP = \\frac{SP}{0.90} = \\frac{600.00}{0.90} = 666.67$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_021",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Rule of alligation in mixtures",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In what ratio must two grain varieties costing $\\text{Rs. } 25/\\text{kg}$ and $\\text{Rs. } 40/\\text{kg}$ be blended together to produce a mixture worth $\\text{Rs. } 30/\\text{kg}$?",
+    "options": {
+      "A": "$2 : 1$",
+      "B": "$1 : 2$",
+      "C": "$3 : 2$",
+      "D": "$5 : 3$"
+    },
+    "correct_answer": "A",
+    "solution": "Applying the rule of alligation:\n$$\\frac{Q_{\\text{cheaper}}}{Q_{\\text{dearer}}} = \\frac{C_{\\text{dearer}} - M}{M - C_{\\text{cheaper}}} = \\frac{40 - 30}{30 - 25} = \\frac{10}{5} = \\frac{2}{1}$$\nHence, the required ratio is $2 : 1$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_022",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Equivalent single discount of successive discounts",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A retail store offers two successive discounts of $20\\%$ and $20\\%$ on the marked price of an agricultural implement. The equivalent single discount percentage is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "36.00",
+    "numerical_range": {
+      "min": 35.9,
+      "max": 36.1
+    },
+    "solution": "The equivalent single discount for two successive discounts $d_1$ and $d_2$ is:\n$$d_{eff} = d_1 + d_2 - \\frac{d_1 \\times d_2}{100}$$\nGiven $d_1 = 20\\%$ and $d_2 = 20\\%$:\n$$d_{eff} = 20 + 20 - \\frac{20 \\times 20}{100} = 40 - 4.00 = 36.00\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_023",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Marked price for target profit after discount",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An equipment dealer purchases an irrigation sprinkler at a cost price of $\\text{Rs. }650$. To allow a discount of $10\\%$ on the marked price while still earning a net profit of $20\\%$, the dealer must mark the price at $\\text{Rs. }$ ________ (round off to two decimal places).",
+    "correct_answer": "866.67",
+    "numerical_range": {
+      "min": 866.17,
+      "max": 867.17
+    },
+    "solution": "Selling price required for $20\\%$ profit:\n$$SP = CP \\times \\left(1 + \\frac{20}{100}\\right) = 650 \\times 1.20 = 780.00$$\nSince marked price after $10\\%$ discount equals $SP$:\n$$SP = MP \\times (1 - 0.10) \\implies MP = \\frac{SP}{0.90} = \\frac{780.00}{0.90} = 866.67$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_024",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Rule of alligation in mixtures",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In what ratio must two grain varieties costing $\\text{Rs. } 25/\\text{kg}$ and $\\text{Rs. } 40/\\text{kg}$ be blended together to produce a mixture worth $\\text{Rs. } 30/\\text{kg}$?",
+    "options": {
+      "A": "$2 : 1$",
+      "B": "$1 : 2$",
+      "C": "$3 : 2$",
+      "D": "$5 : 3$"
+    },
+    "correct_answer": "A",
+    "solution": "Applying the rule of alligation:\n$$\\frac{Q_{\\text{cheaper}}}{Q_{\\text{dearer}}} = \\frac{C_{\\text{dearer}} - M}{M - C_{\\text{cheaper}}} = \\frac{40 - 30}{30 - 25} = \\frac{10}{5} = \\frac{2}{1}$$\nHence, the required ratio is $2 : 1$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_025",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Equivalent single discount of successive discounts",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A retail store offers two successive discounts of $20\\%$ and $15\\%$ on the marked price of an agricultural implement. The equivalent single discount percentage is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "32.00",
+    "numerical_range": {
+      "min": 31.9,
+      "max": 32.1
+    },
+    "solution": "The equivalent single discount for two successive discounts $d_1$ and $d_2$ is:\n$$d_{eff} = d_1 + d_2 - \\frac{d_1 \\times d_2}{100}$$\nGiven $d_1 = 20\\%$ and $d_2 = 15\\%$:\n$$d_{eff} = 20 + 15 - \\frac{20 \\times 15}{100} = 35 - 3.00 = 32.00\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_026",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Marked price for target profit after discount",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An equipment dealer purchases an irrigation sprinkler at a cost price of $\\text{Rs. }550$. To allow a discount of $10\\%$ on the marked price while still earning a net profit of $20\\%$, the dealer must mark the price at $\\text{Rs. }$ ________ (round off to two decimal places).",
+    "correct_answer": "733.33",
+    "numerical_range": {
+      "min": 732.83,
+      "max": 733.83
+    },
+    "solution": "Selling price required for $20\\%$ profit:\n$$SP = CP \\times \\left(1 + \\frac{20}{100}\\right) = 550 \\times 1.20 = 660.00$$\nSince marked price after $10\\%$ discount equals $SP$:\n$$SP = MP \\times (1 - 0.10) \\implies MP = \\frac{SP}{0.90} = \\frac{660.00}{0.90} = 733.33$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_027",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Rule of alligation in mixtures",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In what ratio must two grain varieties costing $\\text{Rs. } 25/\\text{kg}$ and $\\text{Rs. } 40/\\text{kg}$ be blended together to produce a mixture worth $\\text{Rs. } 30/\\text{kg}$?",
+    "options": {
+      "A": "$2 : 1$",
+      "B": "$1 : 2$",
+      "C": "$3 : 2$",
+      "D": "$5 : 3$"
+    },
+    "correct_answer": "A",
+    "solution": "Applying the rule of alligation:\n$$\\frac{Q_{\\text{cheaper}}}{Q_{\\text{dearer}}} = \\frac{C_{\\text{dearer}} - M}{M - C_{\\text{cheaper}}} = \\frac{40 - 30}{30 - 25} = \\frac{10}{5} = \\frac{2}{1}$$\nHence, the required ratio is $2 : 1$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_028",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Equivalent single discount of successive discounts",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A retail store offers two successive discounts of $20\\%$ and $10\\%$ on the marked price of an agricultural implement. The equivalent single discount percentage is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "28.00",
+    "numerical_range": {
+      "min": 27.9,
+      "max": 28.1
+    },
+    "solution": "The equivalent single discount for two successive discounts $d_1$ and $d_2$ is:\n$$d_{eff} = d_1 + d_2 - \\frac{d_1 \\times d_2}{100}$$\nGiven $d_1 = 20\\%$ and $d_2 = 10\\%$:\n$$d_{eff} = 20 + 10 - \\frac{20 \\times 10}{100} = 30 - 2.00 = 28.00\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_029",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Marked price for target profit after discount",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An equipment dealer purchases an irrigation sprinkler at a cost price of $\\text{Rs. }700$. To allow a discount of $10\\%$ on the marked price while still earning a net profit of $20\\%$, the dealer must mark the price at $\\text{Rs. }$ ________ (round off to two decimal places).",
+    "correct_answer": "933.33",
+    "numerical_range": {
+      "min": 932.83,
+      "max": 933.83
+    },
+    "solution": "Selling price required for $20\\%$ profit:\n$$SP = CP \\times \\left(1 + \\frac{20}{100}\\right) = 700 \\times 1.20 = 840.00$$\nSince marked price after $10\\%$ discount equals $SP$:\n$$SP = MP \\times (1 - 0.10) \\implies MP = \\frac{SP}{0.90} = \\frac{840.00}{0.90} = 933.33$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_030",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Rule of alligation in mixtures",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In what ratio must two grain varieties costing $\\text{Rs. } 25/\\text{kg}$ and $\\text{Rs. } 40/\\text{kg}$ be blended together to produce a mixture worth $\\text{Rs. } 30/\\text{kg}$?",
+    "options": {
+      "A": "$2 : 1$",
+      "B": "$1 : 2$",
+      "C": "$3 : 2$",
+      "D": "$5 : 3$"
+    },
+    "correct_answer": "A",
+    "solution": "Applying the rule of alligation:\n$$\\frac{Q_{\\text{cheaper}}}{Q_{\\text{dearer}}} = \\frac{C_{\\text{dearer}} - M}{M - C_{\\text{cheaper}}} = \\frac{40 - 30}{30 - 25} = \\frac{10}{5} = \\frac{2}{1}$$\nHence, the required ratio is $2 : 1$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_031",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Equivalent single discount of successive discounts",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A retail store offers two successive discounts of $20\\%$ and $25\\%$ on the marked price of an agricultural implement. The equivalent single discount percentage is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "40.00",
+    "numerical_range": {
+      "min": 39.9,
+      "max": 40.1
+    },
+    "solution": "The equivalent single discount for two successive discounts $d_1$ and $d_2$ is:\n$$d_{eff} = d_1 + d_2 - \\frac{d_1 \\times d_2}{100}$$\nGiven $d_1 = 20\\%$ and $d_2 = 25\\%$:\n$$d_{eff} = 20 + 25 - \\frac{20 \\times 25}{100} = 45 - 5.00 = 40.00\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_032",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Marked price for target profit after discount",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An equipment dealer purchases an irrigation sprinkler at a cost price of $\\text{Rs. }600$. To allow a discount of $10\\%$ on the marked price while still earning a net profit of $20\\%$, the dealer must mark the price at $\\text{Rs. }$ ________ (round off to two decimal places).",
+    "correct_answer": "800.00",
+    "numerical_range": {
+      "min": 799.5,
+      "max": 800.5
+    },
+    "solution": "Selling price required for $20\\%$ profit:\n$$SP = CP \\times \\left(1 + \\frac{20}{100}\\right) = 600 \\times 1.20 = 720.00$$\nSince marked price after $10\\%$ discount equals $SP$:\n$$SP = MP \\times (1 - 0.10) \\implies MP = \\frac{SP}{0.90} = \\frac{720.00}{0.90} = 800.00$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_033",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Rule of alligation in mixtures",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In what ratio must two grain varieties costing $\\text{Rs. } 25/\\text{kg}$ and $\\text{Rs. } 40/\\text{kg}$ be blended together to produce a mixture worth $\\text{Rs. } 30/\\text{kg}$?",
+    "options": {
+      "A": "$2 : 1$",
+      "B": "$1 : 2$",
+      "C": "$3 : 2$",
+      "D": "$5 : 3$"
+    },
+    "correct_answer": "A",
+    "solution": "Applying the rule of alligation:\n$$\\frac{Q_{\\text{cheaper}}}{Q_{\\text{dearer}}} = \\frac{C_{\\text{dearer}} - M}{M - C_{\\text{cheaper}}} = \\frac{40 - 30}{30 - 25} = \\frac{10}{5} = \\frac{2}{1}$$\nHence, the required ratio is $2 : 1$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_034",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Equivalent single discount of successive discounts",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A retail store offers two successive discounts of $20\\%$ and $20\\%$ on the marked price of an agricultural implement. The equivalent single discount percentage is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "36.00",
+    "numerical_range": {
+      "min": 35.9,
+      "max": 36.1
+    },
+    "solution": "The equivalent single discount for two successive discounts $d_1$ and $d_2$ is:\n$$d_{eff} = d_1 + d_2 - \\frac{d_1 \\times d_2}{100}$$\nGiven $d_1 = 20\\%$ and $d_2 = 20\\%$:\n$$d_{eff} = 20 + 20 - \\frac{20 \\times 20}{100} = 40 - 4.00 = 36.00\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_035",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Marked price for target profit after discount",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An equipment dealer purchases an irrigation sprinkler at a cost price of $\\text{Rs. }500$. To allow a discount of $10\\%$ on the marked price while still earning a net profit of $20\\%$, the dealer must mark the price at $\\text{Rs. }$ ________ (round off to two decimal places).",
+    "correct_answer": "666.67",
+    "numerical_range": {
+      "min": 666.17,
+      "max": 667.17
+    },
+    "solution": "Selling price required for $20\\%$ profit:\n$$SP = CP \\times \\left(1 + \\frac{20}{100}\\right) = 500 \\times 1.20 = 600.00$$\nSince marked price after $10\\%$ discount equals $SP$:\n$$SP = MP \\times (1 - 0.10) \\implies MP = \\frac{SP}{0.90} = \\frac{600.00}{0.90} = 666.67$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_036",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Rule of alligation in mixtures",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In what ratio must two grain varieties costing $\\text{Rs. } 25/\\text{kg}$ and $\\text{Rs. } 40/\\text{kg}$ be blended together to produce a mixture worth $\\text{Rs. } 30/\\text{kg}$?",
+    "options": {
+      "A": "$2 : 1$",
+      "B": "$1 : 2$",
+      "C": "$3 : 2$",
+      "D": "$5 : 3$"
+    },
+    "correct_answer": "A",
+    "solution": "Applying the rule of alligation:\n$$\\frac{Q_{\\text{cheaper}}}{Q_{\\text{dearer}}} = \\frac{C_{\\text{dearer}} - M}{M - C_{\\text{cheaper}}} = \\frac{40 - 30}{30 - 25} = \\frac{10}{5} = \\frac{2}{1}$$\nHence, the required ratio is $2 : 1$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_037",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Equivalent single discount of successive discounts",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A retail store offers two successive discounts of $20\\%$ and $15\\%$ on the marked price of an agricultural implement. The equivalent single discount percentage is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "32.00",
+    "numerical_range": {
+      "min": 31.9,
+      "max": 32.1
+    },
+    "solution": "The equivalent single discount for two successive discounts $d_1$ and $d_2$ is:\n$$d_{eff} = d_1 + d_2 - \\frac{d_1 \\times d_2}{100}$$\nGiven $d_1 = 20\\%$ and $d_2 = 15\\%$:\n$$d_{eff} = 20 + 15 - \\frac{20 \\times 15}{100} = 35 - 3.00 = 32.00\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_038",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Marked price for target profit after discount",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An equipment dealer purchases an irrigation sprinkler at a cost price of $\\text{Rs. }650$. To allow a discount of $10\\%$ on the marked price while still earning a net profit of $20\\%$, the dealer must mark the price at $\\text{Rs. }$ ________ (round off to two decimal places).",
+    "correct_answer": "866.67",
+    "numerical_range": {
+      "min": 866.17,
+      "max": 867.17
+    },
+    "solution": "Selling price required for $20\\%$ profit:\n$$SP = CP \\times \\left(1 + \\frac{20}{100}\\right) = 650 \\times 1.20 = 780.00$$\nSince marked price after $10\\%$ discount equals $SP$:\n$$SP = MP \\times (1 - 0.10) \\implies MP = \\frac{SP}{0.90} = \\frac{780.00}{0.90} = 866.67$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_039",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Rule of alligation in mixtures",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In what ratio must two grain varieties costing $\\text{Rs. } 25/\\text{kg}$ and $\\text{Rs. } 40/\\text{kg}$ be blended together to produce a mixture worth $\\text{Rs. } 30/\\text{kg}$?",
+    "options": {
+      "A": "$2 : 1$",
+      "B": "$1 : 2$",
+      "C": "$3 : 2$",
+      "D": "$5 : 3$"
+    },
+    "correct_answer": "A",
+    "solution": "Applying the rule of alligation:\n$$\\frac{Q_{\\text{cheaper}}}{Q_{\\text{dearer}}} = \\frac{C_{\\text{dearer}} - M}{M - C_{\\text{cheaper}}} = \\frac{40 - 30}{30 - 25} = \\frac{10}{5} = \\frac{2}{1}$$\nHence, the required ratio is $2 : 1$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_040",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Equivalent single discount of successive discounts",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A retail store offers two successive discounts of $20\\%$ and $10\\%$ on the marked price of an agricultural implement. The equivalent single discount percentage is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "28.00",
+    "numerical_range": {
+      "min": 27.9,
+      "max": 28.1
+    },
+    "solution": "The equivalent single discount for two successive discounts $d_1$ and $d_2$ is:\n$$d_{eff} = d_1 + d_2 - \\frac{d_1 \\times d_2}{100}$$\nGiven $d_1 = 20\\%$ and $d_2 = 10\\%$:\n$$d_{eff} = 20 + 10 - \\frac{20 \\times 10}{100} = 30 - 2.00 = 28.00\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_041",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Marked price for target profit after discount",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An equipment dealer purchases an irrigation sprinkler at a cost price of $\\text{Rs. }550$. To allow a discount of $10\\%$ on the marked price while still earning a net profit of $20\\%$, the dealer must mark the price at $\\text{Rs. }$ ________ (round off to two decimal places).",
+    "correct_answer": "733.33",
+    "numerical_range": {
+      "min": 732.83,
+      "max": 733.83
+    },
+    "solution": "Selling price required for $20\\%$ profit:\n$$SP = CP \\times \\left(1 + \\frac{20}{100}\\right) = 550 \\times 1.20 = 660.00$$\nSince marked price after $10\\%$ discount equals $SP$:\n$$SP = MP \\times (1 - 0.10) \\implies MP = \\frac{SP}{0.90} = \\frac{660.00}{0.90} = 733.33$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_042",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Rule of alligation in mixtures",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In what ratio must two grain varieties costing $\\text{Rs. } 25/\\text{kg}$ and $\\text{Rs. } 40/\\text{kg}$ be blended together to produce a mixture worth $\\text{Rs. } 30/\\text{kg}$?",
+    "options": {
+      "A": "$2 : 1$",
+      "B": "$1 : 2$",
+      "C": "$3 : 2$",
+      "D": "$5 : 3$"
+    },
+    "correct_answer": "A",
+    "solution": "Applying the rule of alligation:\n$$\\frac{Q_{\\text{cheaper}}}{Q_{\\text{dearer}}} = \\frac{C_{\\text{dearer}} - M}{M - C_{\\text{cheaper}}} = \\frac{40 - 30}{30 - 25} = \\frac{10}{5} = \\frac{2}{1}$$\nHence, the required ratio is $2 : 1$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_043",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Equivalent single discount of successive discounts",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A retail store offers two successive discounts of $20\\%$ and $25\\%$ on the marked price of an agricultural implement. The equivalent single discount percentage is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "40.00",
+    "numerical_range": {
+      "min": 39.9,
+      "max": 40.1
+    },
+    "solution": "The equivalent single discount for two successive discounts $d_1$ and $d_2$ is:\n$$d_{eff} = d_1 + d_2 - \\frac{d_1 \\times d_2}{100}$$\nGiven $d_1 = 20\\%$ and $d_2 = 25\\%$:\n$$d_{eff} = 20 + 25 - \\frac{20 \\times 25}{100} = 45 - 5.00 = 40.00\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_044",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Marked price for target profit after discount",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An equipment dealer purchases an irrigation sprinkler at a cost price of $\\text{Rs. }700$. To allow a discount of $10\\%$ on the marked price while still earning a net profit of $20\\%$, the dealer must mark the price at $\\text{Rs. }$ ________ (round off to two decimal places).",
+    "correct_answer": "933.33",
+    "numerical_range": {
+      "min": 932.83,
+      "max": 933.83
+    },
+    "solution": "Selling price required for $20\\%$ profit:\n$$SP = CP \\times \\left(1 + \\frac{20}{100}\\right) = 700 \\times 1.20 = 840.00$$\nSince marked price after $10\\%$ discount equals $SP$:\n$$SP = MP \\times (1 - 0.10) \\implies MP = \\frac{SP}{0.90} = \\frac{840.00}{0.90} = 933.33$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_045",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Rule of alligation in mixtures",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In what ratio must two grain varieties costing $\\text{Rs. } 25/\\text{kg}$ and $\\text{Rs. } 40/\\text{kg}$ be blended together to produce a mixture worth $\\text{Rs. } 30/\\text{kg}$?",
+    "options": {
+      "A": "$2 : 1$",
+      "B": "$1 : 2$",
+      "C": "$3 : 2$",
+      "D": "$5 : 3$"
+    },
+    "correct_answer": "A",
+    "solution": "Applying the rule of alligation:\n$$\\frac{Q_{\\text{cheaper}}}{Q_{\\text{dearer}}} = \\frac{C_{\\text{dearer}} - M}{M - C_{\\text{cheaper}}} = \\frac{40 - 30}{30 - 25} = \\frac{10}{5} = \\frac{2}{1}$$\nHence, the required ratio is $2 : 1$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_046",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Equivalent single discount of successive discounts",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A retail store offers two successive discounts of $20\\%$ and $20\\%$ on the marked price of an agricultural implement. The equivalent single discount percentage is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "36.00",
+    "numerical_range": {
+      "min": 35.9,
+      "max": 36.1
+    },
+    "solution": "The equivalent single discount for two successive discounts $d_1$ and $d_2$ is:\n$$d_{eff} = d_1 + d_2 - \\frac{d_1 \\times d_2}{100}$$\nGiven $d_1 = 20\\%$ and $d_2 = 20\\%$:\n$$d_{eff} = 20 + 20 - \\frac{20 \\times 20}{100} = 40 - 4.00 = 36.00\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_047",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Marked price for target profit after discount",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An equipment dealer purchases an irrigation sprinkler at a cost price of $\\text{Rs. }600$. To allow a discount of $10\\%$ on the marked price while still earning a net profit of $20\\%$, the dealer must mark the price at $\\text{Rs. }$ ________ (round off to two decimal places).",
+    "correct_answer": "800.00",
+    "numerical_range": {
+      "min": 799.5,
+      "max": 800.5
+    },
+    "solution": "Selling price required for $20\\%$ profit:\n$$SP = CP \\times \\left(1 + \\frac{20}{100}\\right) = 600 \\times 1.20 = 720.00$$\nSince marked price after $10\\%$ discount equals $SP$:\n$$SP = MP \\times (1 - 0.10) \\implies MP = \\frac{SP}{0.90} = \\frac{720.00}{0.90} = 800.00$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_048",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Rule of alligation in mixtures",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In what ratio must two grain varieties costing $\\text{Rs. } 25/\\text{kg}$ and $\\text{Rs. } 40/\\text{kg}$ be blended together to produce a mixture worth $\\text{Rs. } 30/\\text{kg}$?",
+    "options": {
+      "A": "$2 : 1$",
+      "B": "$1 : 2$",
+      "C": "$3 : 2$",
+      "D": "$5 : 3$"
+    },
+    "correct_answer": "A",
+    "solution": "Applying the rule of alligation:\n$$\\frac{Q_{\\text{cheaper}}}{Q_{\\text{dearer}}} = \\frac{C_{\\text{dearer}} - M}{M - C_{\\text{cheaper}}} = \\frac{40 - 30}{30 - 25} = \\frac{10}{5} = \\frac{2}{1}$$\nHence, the required ratio is $2 : 1$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_049",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Equivalent single discount of successive discounts",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A retail store offers two successive discounts of $20\\%$ and $15\\%$ on the marked price of an agricultural implement. The equivalent single discount percentage is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "32.00",
+    "numerical_range": {
+      "min": 31.9,
+      "max": 32.1
+    },
+    "solution": "The equivalent single discount for two successive discounts $d_1$ and $d_2$ is:\n$$d_{eff} = d_1 + d_2 - \\frac{d_1 \\times d_2}{100}$$\nGiven $d_1 = 20\\%$ and $d_2 = 15\\%$:\n$$d_{eff} = 20 + 15 - \\frac{20 \\times 15}{100} = 35 - 3.00 = 32.00\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRC_050",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
+    "subtopic": "Marked price for target profit after discount",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An equipment dealer purchases an irrigation sprinkler at a cost price of $\\text{Rs. }500$. To allow a discount of $10\\%$ on the marked price while still earning a net profit of $20\\%$, the dealer must mark the price at $\\text{Rs. }$ ________ (round off to two decimal places).",
+    "correct_answer": "666.67",
+    "numerical_range": {
+      "min": 666.17,
+      "max": 667.17
+    },
+    "solution": "Selling price required for $20\\%$ profit:\n$$SP = CP \\times \\left(1 + \\frac{20}{100}\\right) = 500 \\times 1.20 = 600.00$$\nSince marked price after $10\\%$ discount equals $SP$:\n$$SP = MP \\times (1 - 0.10) \\implies MP = \\frac{SP}{0.90} = \\frac{600.00}{0.90} = 666.67$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_001",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Pipes and cisterns combined fill time",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Inlet pipe A can fill a water storage sump in $6\\text{ hours}$, while inlet pipe B can fill it in $12\\text{ hours}$. If both pipes are opened simultaneously into an empty sump, the time required to completely fill the sump is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.00",
+    "numerical_range": {
+      "min": 3.95,
+      "max": 4.05
+    },
+    "solution": "Combined filling rate of both pipes:\n$$\\text{Rate} = \\frac{1}{T_A} + \\frac{1}{T_B} = \\frac{1}{6} + \\frac{1}{12} = \\frac{2 + 1}{12} = \\frac{3}{12} = \\frac{1}{4}\\text{ per hour}$$\nTotal time to fill:\n$$T = 4.00\\text{ hours}$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_002",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Relative speed and overtaking time",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor moves at a uniform speed of $60\\text{ km/h}$. A maintenance pickup truck starts from the same origin $1\\text{ hour}$ later (giving the tractor a $50\\text{ km}$ initial lead) and travels along the same straight road at $90\\text{ km/h}$. The time taken by the pickup truck to overtake the tractor is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "1.67",
+    "numerical_range": {
+      "min": 1.62,
+      "max": 1.72
+    },
+    "solution": "The relative speed between the two vehicles moving in the same direction is:\n$$v_{rel} = v_2 - v_1 = 90 - 60 = 30\\text{ km/h}$$\nTime to close the initial distance gap $d = 50\\text{ km}$:\n$$t = \\frac{d}{v_{rel}} = \\frac{50}{30} = 1.67\\text{ hours}$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_003",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Average speed for round trip",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A vehicle travels from town A to town B at speed $u$, and returns back from town B to town A along the same route at speed $v$. The average speed for the entire round trip is:",
+    "options": {
+      "A": "$\\frac{2 u v}{u + v}$",
+      "B": "$\\frac{u + v}{2}$",
+      "C": "$\\sqrt{u v}$",
+      "D": "$\\frac{u v}{u + v}$"
+    },
+    "correct_answer": "A",
+    "solution": "Average speed is total distance divided by total time: $v_{\\text{avg}} = \\frac{2 D}{\\frac{D}{u} + \\frac{D}{v}} = \\frac{2 D}{D \\left( \\frac{u + v}{u v} \\right)} = \\frac{2 u v}{u + v}$ (the harmonic mean of speeds).",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_004",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Pipes and cisterns combined fill time",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Inlet pipe A can fill a water storage sump in $6\\text{ hours}$, while inlet pipe B can fill it in $12\\text{ hours}$. If both pipes are opened simultaneously into an empty sump, the time required to completely fill the sump is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.00",
+    "numerical_range": {
+      "min": 3.95,
+      "max": 4.05
+    },
+    "solution": "Combined filling rate of both pipes:\n$$\\text{Rate} = \\frac{1}{T_A} + \\frac{1}{T_B} = \\frac{1}{6} + \\frac{1}{12} = \\frac{2 + 1}{12} = \\frac{3}{12} = \\frac{1}{4}\\text{ per hour}$$\nTotal time to fill:\n$$T = 4.00\\text{ hours}$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_005",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Relative speed and overtaking time",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor moves at a uniform speed of $60\\text{ km/h}$. A maintenance pickup truck starts from the same origin $1\\text{ hour}$ later (giving the tractor a $50\\text{ km}$ initial lead) and travels along the same straight road at $90\\text{ km/h}$. The time taken by the pickup truck to overtake the tractor is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "1.67",
+    "numerical_range": {
+      "min": 1.62,
+      "max": 1.72
+    },
+    "solution": "The relative speed between the two vehicles moving in the same direction is:\n$$v_{rel} = v_2 - v_1 = 90 - 60 = 30\\text{ km/h}$$\nTime to close the initial distance gap $d = 50\\text{ km}$:\n$$t = \\frac{d}{v_{rel}} = \\frac{50}{30} = 1.67\\text{ hours}$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_006",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Average speed for round trip",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A vehicle travels from town A to town B at speed $u$, and returns back from town B to town A along the same route at speed $v$. The average speed for the entire round trip is:",
+    "options": {
+      "A": "$\\frac{2 u v}{u + v}$",
+      "B": "$\\frac{u + v}{2}$",
+      "C": "$\\sqrt{u v}$",
+      "D": "$\\frac{u v}{u + v}$"
+    },
+    "correct_answer": "A",
+    "solution": "Average speed is total distance divided by total time: $v_{\\text{avg}} = \\frac{2 D}{\\frac{D}{u} + \\frac{D}{v}} = \\frac{2 D}{D \\left( \\frac{u + v}{u v} \\right)} = \\frac{2 u v}{u + v}$ (the harmonic mean of speeds).",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_007",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Pipes and cisterns combined fill time",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Inlet pipe A can fill a water storage sump in $6\\text{ hours}$, while inlet pipe B can fill it in $12\\text{ hours}$. If both pipes are opened simultaneously into an empty sump, the time required to completely fill the sump is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.00",
+    "numerical_range": {
+      "min": 3.95,
+      "max": 4.05
+    },
+    "solution": "Combined filling rate of both pipes:\n$$\\text{Rate} = \\frac{1}{T_A} + \\frac{1}{T_B} = \\frac{1}{6} + \\frac{1}{12} = \\frac{2 + 1}{12} = \\frac{3}{12} = \\frac{1}{4}\\text{ per hour}$$\nTotal time to fill:\n$$T = 4.00\\text{ hours}$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_008",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Relative speed and overtaking time",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor moves at a uniform speed of $60\\text{ km/h}$. A maintenance pickup truck starts from the same origin $1\\text{ hour}$ later (giving the tractor a $50\\text{ km}$ initial lead) and travels along the same straight road at $90\\text{ km/h}$. The time taken by the pickup truck to overtake the tractor is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "1.67",
+    "numerical_range": {
+      "min": 1.62,
+      "max": 1.72
+    },
+    "solution": "The relative speed between the two vehicles moving in the same direction is:\n$$v_{rel} = v_2 - v_1 = 90 - 60 = 30\\text{ km/h}$$\nTime to close the initial distance gap $d = 50\\text{ km}$:\n$$t = \\frac{d}{v_{rel}} = \\frac{50}{30} = 1.67\\text{ hours}$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_009",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Average speed for round trip",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A vehicle travels from town A to town B at speed $u$, and returns back from town B to town A along the same route at speed $v$. The average speed for the entire round trip is:",
+    "options": {
+      "A": "$\\frac{2 u v}{u + v}$",
+      "B": "$\\frac{u + v}{2}$",
+      "C": "$\\sqrt{u v}$",
+      "D": "$\\frac{u v}{u + v}$"
+    },
+    "correct_answer": "A",
+    "solution": "Average speed is total distance divided by total time: $v_{\\text{avg}} = \\frac{2 D}{\\frac{D}{u} + \\frac{D}{v}} = \\frac{2 D}{D \\left( \\frac{u + v}{u v} \\right)} = \\frac{2 u v}{u + v}$ (the harmonic mean of speeds).",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_010",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Pipes and cisterns combined fill time",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Inlet pipe A can fill a water storage sump in $6\\text{ hours}$, while inlet pipe B can fill it in $12\\text{ hours}$. If both pipes are opened simultaneously into an empty sump, the time required to completely fill the sump is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.00",
+    "numerical_range": {
+      "min": 3.95,
+      "max": 4.05
+    },
+    "solution": "Combined filling rate of both pipes:\n$$\\text{Rate} = \\frac{1}{T_A} + \\frac{1}{T_B} = \\frac{1}{6} + \\frac{1}{12} = \\frac{2 + 1}{12} = \\frac{3}{12} = \\frac{1}{4}\\text{ per hour}$$\nTotal time to fill:\n$$T = 4.00\\text{ hours}$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_011",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Relative speed and overtaking time",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor moves at a uniform speed of $60\\text{ km/h}$. A maintenance pickup truck starts from the same origin $1\\text{ hour}$ later (giving the tractor a $50\\text{ km}$ initial lead) and travels along the same straight road at $90\\text{ km/h}$. The time taken by the pickup truck to overtake the tractor is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "1.67",
+    "numerical_range": {
+      "min": 1.62,
+      "max": 1.72
+    },
+    "solution": "The relative speed between the two vehicles moving in the same direction is:\n$$v_{rel} = v_2 - v_1 = 90 - 60 = 30\\text{ km/h}$$\nTime to close the initial distance gap $d = 50\\text{ km}$:\n$$t = \\frac{d}{v_{rel}} = \\frac{50}{30} = 1.67\\text{ hours}$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_012",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Average speed for round trip",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A vehicle travels from town A to town B at speed $u$, and returns back from town B to town A along the same route at speed $v$. The average speed for the entire round trip is:",
+    "options": {
+      "A": "$\\frac{2 u v}{u + v}$",
+      "B": "$\\frac{u + v}{2}$",
+      "C": "$\\sqrt{u v}$",
+      "D": "$\\frac{u v}{u + v}$"
+    },
+    "correct_answer": "A",
+    "solution": "Average speed is total distance divided by total time: $v_{\\text{avg}} = \\frac{2 D}{\\frac{D}{u} + \\frac{D}{v}} = \\frac{2 D}{D \\left( \\frac{u + v}{u v} \\right)} = \\frac{2 u v}{u + v}$ (the harmonic mean of speeds).",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_013",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Pipes and cisterns combined fill time",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Inlet pipe A can fill a water storage sump in $6\\text{ hours}$, while inlet pipe B can fill it in $12\\text{ hours}$. If both pipes are opened simultaneously into an empty sump, the time required to completely fill the sump is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.00",
+    "numerical_range": {
+      "min": 3.95,
+      "max": 4.05
+    },
+    "solution": "Combined filling rate of both pipes:\n$$\\text{Rate} = \\frac{1}{T_A} + \\frac{1}{T_B} = \\frac{1}{6} + \\frac{1}{12} = \\frac{2 + 1}{12} = \\frac{3}{12} = \\frac{1}{4}\\text{ per hour}$$\nTotal time to fill:\n$$T = 4.00\\text{ hours}$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_014",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Relative speed and overtaking time",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor moves at a uniform speed of $60\\text{ km/h}$. A maintenance pickup truck starts from the same origin $1\\text{ hour}$ later (giving the tractor a $50\\text{ km}$ initial lead) and travels along the same straight road at $90\\text{ km/h}$. The time taken by the pickup truck to overtake the tractor is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "1.67",
+    "numerical_range": {
+      "min": 1.62,
+      "max": 1.72
+    },
+    "solution": "The relative speed between the two vehicles moving in the same direction is:\n$$v_{rel} = v_2 - v_1 = 90 - 60 = 30\\text{ km/h}$$\nTime to close the initial distance gap $d = 50\\text{ km}$:\n$$t = \\frac{d}{v_{rel}} = \\frac{50}{30} = 1.67\\text{ hours}$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_015",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Average speed for round trip",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A vehicle travels from town A to town B at speed $u$, and returns back from town B to town A along the same route at speed $v$. The average speed for the entire round trip is:",
+    "options": {
+      "A": "$\\frac{2 u v}{u + v}$",
+      "B": "$\\frac{u + v}{2}$",
+      "C": "$\\sqrt{u v}$",
+      "D": "$\\frac{u v}{u + v}$"
+    },
+    "correct_answer": "A",
+    "solution": "Average speed is total distance divided by total time: $v_{\\text{avg}} = \\frac{2 D}{\\frac{D}{u} + \\frac{D}{v}} = \\frac{2 D}{D \\left( \\frac{u + v}{u v} \\right)} = \\frac{2 u v}{u + v}$ (the harmonic mean of speeds).",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_016",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Pipes and cisterns combined fill time",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Inlet pipe A can fill a water storage sump in $6\\text{ hours}$, while inlet pipe B can fill it in $12\\text{ hours}$. If both pipes are opened simultaneously into an empty sump, the time required to completely fill the sump is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.00",
+    "numerical_range": {
+      "min": 3.95,
+      "max": 4.05
+    },
+    "solution": "Combined filling rate of both pipes:\n$$\\text{Rate} = \\frac{1}{T_A} + \\frac{1}{T_B} = \\frac{1}{6} + \\frac{1}{12} = \\frac{2 + 1}{12} = \\frac{3}{12} = \\frac{1}{4}\\text{ per hour}$$\nTotal time to fill:\n$$T = 4.00\\text{ hours}$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_017",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Relative speed and overtaking time",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor moves at a uniform speed of $60\\text{ km/h}$. A maintenance pickup truck starts from the same origin $1\\text{ hour}$ later (giving the tractor a $50\\text{ km}$ initial lead) and travels along the same straight road at $90\\text{ km/h}$. The time taken by the pickup truck to overtake the tractor is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "1.67",
+    "numerical_range": {
+      "min": 1.62,
+      "max": 1.72
+    },
+    "solution": "The relative speed between the two vehicles moving in the same direction is:\n$$v_{rel} = v_2 - v_1 = 90 - 60 = 30\\text{ km/h}$$\nTime to close the initial distance gap $d = 50\\text{ km}$:\n$$t = \\frac{d}{v_{rel}} = \\frac{50}{30} = 1.67\\text{ hours}$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_018",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Average speed for round trip",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A vehicle travels from town A to town B at speed $u$, and returns back from town B to town A along the same route at speed $v$. The average speed for the entire round trip is:",
+    "options": {
+      "A": "$\\frac{2 u v}{u + v}$",
+      "B": "$\\frac{u + v}{2}$",
+      "C": "$\\sqrt{u v}$",
+      "D": "$\\frac{u v}{u + v}$"
+    },
+    "correct_answer": "A",
+    "solution": "Average speed is total distance divided by total time: $v_{\\text{avg}} = \\frac{2 D}{\\frac{D}{u} + \\frac{D}{v}} = \\frac{2 D}{D \\left( \\frac{u + v}{u v} \\right)} = \\frac{2 u v}{u + v}$ (the harmonic mean of speeds).",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_019",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Pipes and cisterns combined fill time",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Inlet pipe A can fill a water storage sump in $6\\text{ hours}$, while inlet pipe B can fill it in $12\\text{ hours}$. If both pipes are opened simultaneously into an empty sump, the time required to completely fill the sump is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.00",
+    "numerical_range": {
+      "min": 3.95,
+      "max": 4.05
+    },
+    "solution": "Combined filling rate of both pipes:\n$$\\text{Rate} = \\frac{1}{T_A} + \\frac{1}{T_B} = \\frac{1}{6} + \\frac{1}{12} = \\frac{2 + 1}{12} = \\frac{3}{12} = \\frac{1}{4}\\text{ per hour}$$\nTotal time to fill:\n$$T = 4.00\\text{ hours}$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_020",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Relative speed and overtaking time",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor moves at a uniform speed of $60\\text{ km/h}$. A maintenance pickup truck starts from the same origin $1\\text{ hour}$ later (giving the tractor a $50\\text{ km}$ initial lead) and travels along the same straight road at $90\\text{ km/h}$. The time taken by the pickup truck to overtake the tractor is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "1.67",
+    "numerical_range": {
+      "min": 1.62,
+      "max": 1.72
+    },
+    "solution": "The relative speed between the two vehicles moving in the same direction is:\n$$v_{rel} = v_2 - v_1 = 90 - 60 = 30\\text{ km/h}$$\nTime to close the initial distance gap $d = 50\\text{ km}$:\n$$t = \\frac{d}{v_{rel}} = \\frac{50}{30} = 1.67\\text{ hours}$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_021",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Average speed for round trip",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A vehicle travels from town A to town B at speed $u$, and returns back from town B to town A along the same route at speed $v$. The average speed for the entire round trip is:",
+    "options": {
+      "A": "$\\frac{2 u v}{u + v}$",
+      "B": "$\\frac{u + v}{2}$",
+      "C": "$\\sqrt{u v}$",
+      "D": "$\\frac{u v}{u + v}$"
+    },
+    "correct_answer": "A",
+    "solution": "Average speed is total distance divided by total time: $v_{\\text{avg}} = \\frac{2 D}{\\frac{D}{u} + \\frac{D}{v}} = \\frac{2 D}{D \\left( \\frac{u + v}{u v} \\right)} = \\frac{2 u v}{u + v}$ (the harmonic mean of speeds).",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_022",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Pipes and cisterns combined fill time",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Inlet pipe A can fill a water storage sump in $6\\text{ hours}$, while inlet pipe B can fill it in $12\\text{ hours}$. If both pipes are opened simultaneously into an empty sump, the time required to completely fill the sump is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.00",
+    "numerical_range": {
+      "min": 3.95,
+      "max": 4.05
+    },
+    "solution": "Combined filling rate of both pipes:\n$$\\text{Rate} = \\frac{1}{T_A} + \\frac{1}{T_B} = \\frac{1}{6} + \\frac{1}{12} = \\frac{2 + 1}{12} = \\frac{3}{12} = \\frac{1}{4}\\text{ per hour}$$\nTotal time to fill:\n$$T = 4.00\\text{ hours}$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_023",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Relative speed and overtaking time",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor moves at a uniform speed of $60\\text{ km/h}$. A maintenance pickup truck starts from the same origin $1\\text{ hour}$ later (giving the tractor a $50\\text{ km}$ initial lead) and travels along the same straight road at $90\\text{ km/h}$. The time taken by the pickup truck to overtake the tractor is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "1.67",
+    "numerical_range": {
+      "min": 1.62,
+      "max": 1.72
+    },
+    "solution": "The relative speed between the two vehicles moving in the same direction is:\n$$v_{rel} = v_2 - v_1 = 90 - 60 = 30\\text{ km/h}$$\nTime to close the initial distance gap $d = 50\\text{ km}$:\n$$t = \\frac{d}{v_{rel}} = \\frac{50}{30} = 1.67\\text{ hours}$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_024",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Average speed for round trip",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A vehicle travels from town A to town B at speed $u$, and returns back from town B to town A along the same route at speed $v$. The average speed for the entire round trip is:",
+    "options": {
+      "A": "$\\frac{2 u v}{u + v}$",
+      "B": "$\\frac{u + v}{2}$",
+      "C": "$\\sqrt{u v}$",
+      "D": "$\\frac{u v}{u + v}$"
+    },
+    "correct_answer": "A",
+    "solution": "Average speed is total distance divided by total time: $v_{\\text{avg}} = \\frac{2 D}{\\frac{D}{u} + \\frac{D}{v}} = \\frac{2 D}{D \\left( \\frac{u + v}{u v} \\right)} = \\frac{2 u v}{u + v}$ (the harmonic mean of speeds).",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_025",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Pipes and cisterns combined fill time",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Inlet pipe A can fill a water storage sump in $6\\text{ hours}$, while inlet pipe B can fill it in $12\\text{ hours}$. If both pipes are opened simultaneously into an empty sump, the time required to completely fill the sump is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.00",
+    "numerical_range": {
+      "min": 3.95,
+      "max": 4.05
+    },
+    "solution": "Combined filling rate of both pipes:\n$$\\text{Rate} = \\frac{1}{T_A} + \\frac{1}{T_B} = \\frac{1}{6} + \\frac{1}{12} = \\frac{2 + 1}{12} = \\frac{3}{12} = \\frac{1}{4}\\text{ per hour}$$\nTotal time to fill:\n$$T = 4.00\\text{ hours}$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_026",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Relative speed and overtaking time",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor moves at a uniform speed of $60\\text{ km/h}$. A maintenance pickup truck starts from the same origin $1\\text{ hour}$ later (giving the tractor a $50\\text{ km}$ initial lead) and travels along the same straight road at $90\\text{ km/h}$. The time taken by the pickup truck to overtake the tractor is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "1.67",
+    "numerical_range": {
+      "min": 1.62,
+      "max": 1.72
+    },
+    "solution": "The relative speed between the two vehicles moving in the same direction is:\n$$v_{rel} = v_2 - v_1 = 90 - 60 = 30\\text{ km/h}$$\nTime to close the initial distance gap $d = 50\\text{ km}$:\n$$t = \\frac{d}{v_{rel}} = \\frac{50}{30} = 1.67\\text{ hours}$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_027",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Average speed for round trip",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A vehicle travels from town A to town B at speed $u$, and returns back from town B to town A along the same route at speed $v$. The average speed for the entire round trip is:",
+    "options": {
+      "A": "$\\frac{2 u v}{u + v}$",
+      "B": "$\\frac{u + v}{2}$",
+      "C": "$\\sqrt{u v}$",
+      "D": "$\\frac{u v}{u + v}$"
+    },
+    "correct_answer": "A",
+    "solution": "Average speed is total distance divided by total time: $v_{\\text{avg}} = \\frac{2 D}{\\frac{D}{u} + \\frac{D}{v}} = \\frac{2 D}{D \\left( \\frac{u + v}{u v} \\right)} = \\frac{2 u v}{u + v}$ (the harmonic mean of speeds).",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_028",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Pipes and cisterns combined fill time",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Inlet pipe A can fill a water storage sump in $6\\text{ hours}$, while inlet pipe B can fill it in $12\\text{ hours}$. If both pipes are opened simultaneously into an empty sump, the time required to completely fill the sump is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.00",
+    "numerical_range": {
+      "min": 3.95,
+      "max": 4.05
+    },
+    "solution": "Combined filling rate of both pipes:\n$$\\text{Rate} = \\frac{1}{T_A} + \\frac{1}{T_B} = \\frac{1}{6} + \\frac{1}{12} = \\frac{2 + 1}{12} = \\frac{3}{12} = \\frac{1}{4}\\text{ per hour}$$\nTotal time to fill:\n$$T = 4.00\\text{ hours}$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_029",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Relative speed and overtaking time",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor moves at a uniform speed of $60\\text{ km/h}$. A maintenance pickup truck starts from the same origin $1\\text{ hour}$ later (giving the tractor a $50\\text{ km}$ initial lead) and travels along the same straight road at $90\\text{ km/h}$. The time taken by the pickup truck to overtake the tractor is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "1.67",
+    "numerical_range": {
+      "min": 1.62,
+      "max": 1.72
+    },
+    "solution": "The relative speed between the two vehicles moving in the same direction is:\n$$v_{rel} = v_2 - v_1 = 90 - 60 = 30\\text{ km/h}$$\nTime to close the initial distance gap $d = 50\\text{ km}$:\n$$t = \\frac{d}{v_{rel}} = \\frac{50}{30} = 1.67\\text{ hours}$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_030",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Average speed for round trip",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A vehicle travels from town A to town B at speed $u$, and returns back from town B to town A along the same route at speed $v$. The average speed for the entire round trip is:",
+    "options": {
+      "A": "$\\frac{2 u v}{u + v}$",
+      "B": "$\\frac{u + v}{2}$",
+      "C": "$\\sqrt{u v}$",
+      "D": "$\\frac{u v}{u + v}$"
+    },
+    "correct_answer": "A",
+    "solution": "Average speed is total distance divided by total time: $v_{\\text{avg}} = \\frac{2 D}{\\frac{D}{u} + \\frac{D}{v}} = \\frac{2 D}{D \\left( \\frac{u + v}{u v} \\right)} = \\frac{2 u v}{u + v}$ (the harmonic mean of speeds).",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_031",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Pipes and cisterns combined fill time",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Inlet pipe A can fill a water storage sump in $6\\text{ hours}$, while inlet pipe B can fill it in $12\\text{ hours}$. If both pipes are opened simultaneously into an empty sump, the time required to completely fill the sump is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.00",
+    "numerical_range": {
+      "min": 3.95,
+      "max": 4.05
+    },
+    "solution": "Combined filling rate of both pipes:\n$$\\text{Rate} = \\frac{1}{T_A} + \\frac{1}{T_B} = \\frac{1}{6} + \\frac{1}{12} = \\frac{2 + 1}{12} = \\frac{3}{12} = \\frac{1}{4}\\text{ per hour}$$\nTotal time to fill:\n$$T = 4.00\\text{ hours}$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_032",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Relative speed and overtaking time",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor moves at a uniform speed of $60\\text{ km/h}$. A maintenance pickup truck starts from the same origin $1\\text{ hour}$ later (giving the tractor a $50\\text{ km}$ initial lead) and travels along the same straight road at $90\\text{ km/h}$. The time taken by the pickup truck to overtake the tractor is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "1.67",
+    "numerical_range": {
+      "min": 1.62,
+      "max": 1.72
+    },
+    "solution": "The relative speed between the two vehicles moving in the same direction is:\n$$v_{rel} = v_2 - v_1 = 90 - 60 = 30\\text{ km/h}$$\nTime to close the initial distance gap $d = 50\\text{ km}$:\n$$t = \\frac{d}{v_{rel}} = \\frac{50}{30} = 1.67\\text{ hours}$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_033",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Average speed for round trip",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A vehicle travels from town A to town B at speed $u$, and returns back from town B to town A along the same route at speed $v$. The average speed for the entire round trip is:",
+    "options": {
+      "A": "$\\frac{2 u v}{u + v}$",
+      "B": "$\\frac{u + v}{2}$",
+      "C": "$\\sqrt{u v}$",
+      "D": "$\\frac{u v}{u + v}$"
+    },
+    "correct_answer": "A",
+    "solution": "Average speed is total distance divided by total time: $v_{\\text{avg}} = \\frac{2 D}{\\frac{D}{u} + \\frac{D}{v}} = \\frac{2 D}{D \\left( \\frac{u + v}{u v} \\right)} = \\frac{2 u v}{u + v}$ (the harmonic mean of speeds).",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_034",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Pipes and cisterns combined fill time",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Inlet pipe A can fill a water storage sump in $6\\text{ hours}$, while inlet pipe B can fill it in $12\\text{ hours}$. If both pipes are opened simultaneously into an empty sump, the time required to completely fill the sump is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.00",
+    "numerical_range": {
+      "min": 3.95,
+      "max": 4.05
+    },
+    "solution": "Combined filling rate of both pipes:\n$$\\text{Rate} = \\frac{1}{T_A} + \\frac{1}{T_B} = \\frac{1}{6} + \\frac{1}{12} = \\frac{2 + 1}{12} = \\frac{3}{12} = \\frac{1}{4}\\text{ per hour}$$\nTotal time to fill:\n$$T = 4.00\\text{ hours}$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_035",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Relative speed and overtaking time",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor moves at a uniform speed of $60\\text{ km/h}$. A maintenance pickup truck starts from the same origin $1\\text{ hour}$ later (giving the tractor a $50\\text{ km}$ initial lead) and travels along the same straight road at $90\\text{ km/h}$. The time taken by the pickup truck to overtake the tractor is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "1.67",
+    "numerical_range": {
+      "min": 1.62,
+      "max": 1.72
+    },
+    "solution": "The relative speed between the two vehicles moving in the same direction is:\n$$v_{rel} = v_2 - v_1 = 90 - 60 = 30\\text{ km/h}$$\nTime to close the initial distance gap $d = 50\\text{ km}$:\n$$t = \\frac{d}{v_{rel}} = \\frac{50}{30} = 1.67\\text{ hours}$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_036",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Average speed for round trip",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A vehicle travels from town A to town B at speed $u$, and returns back from town B to town A along the same route at speed $v$. The average speed for the entire round trip is:",
+    "options": {
+      "A": "$\\frac{2 u v}{u + v}$",
+      "B": "$\\frac{u + v}{2}$",
+      "C": "$\\sqrt{u v}$",
+      "D": "$\\frac{u v}{u + v}$"
+    },
+    "correct_answer": "A",
+    "solution": "Average speed is total distance divided by total time: $v_{\\text{avg}} = \\frac{2 D}{\\frac{D}{u} + \\frac{D}{v}} = \\frac{2 D}{D \\left( \\frac{u + v}{u v} \\right)} = \\frac{2 u v}{u + v}$ (the harmonic mean of speeds).",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_037",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Pipes and cisterns combined fill time",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Inlet pipe A can fill a water storage sump in $6\\text{ hours}$, while inlet pipe B can fill it in $12\\text{ hours}$. If both pipes are opened simultaneously into an empty sump, the time required to completely fill the sump is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.00",
+    "numerical_range": {
+      "min": 3.95,
+      "max": 4.05
+    },
+    "solution": "Combined filling rate of both pipes:\n$$\\text{Rate} = \\frac{1}{T_A} + \\frac{1}{T_B} = \\frac{1}{6} + \\frac{1}{12} = \\frac{2 + 1}{12} = \\frac{3}{12} = \\frac{1}{4}\\text{ per hour}$$\nTotal time to fill:\n$$T = 4.00\\text{ hours}$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_038",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Relative speed and overtaking time",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor moves at a uniform speed of $60\\text{ km/h}$. A maintenance pickup truck starts from the same origin $1\\text{ hour}$ later (giving the tractor a $50\\text{ km}$ initial lead) and travels along the same straight road at $90\\text{ km/h}$. The time taken by the pickup truck to overtake the tractor is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "1.67",
+    "numerical_range": {
+      "min": 1.62,
+      "max": 1.72
+    },
+    "solution": "The relative speed between the two vehicles moving in the same direction is:\n$$v_{rel} = v_2 - v_1 = 90 - 60 = 30\\text{ km/h}$$\nTime to close the initial distance gap $d = 50\\text{ km}$:\n$$t = \\frac{d}{v_{rel}} = \\frac{50}{30} = 1.67\\text{ hours}$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_039",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Average speed for round trip",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A vehicle travels from town A to town B at speed $u$, and returns back from town B to town A along the same route at speed $v$. The average speed for the entire round trip is:",
+    "options": {
+      "A": "$\\frac{2 u v}{u + v}$",
+      "B": "$\\frac{u + v}{2}$",
+      "C": "$\\sqrt{u v}$",
+      "D": "$\\frac{u v}{u + v}$"
+    },
+    "correct_answer": "A",
+    "solution": "Average speed is total distance divided by total time: $v_{\\text{avg}} = \\frac{2 D}{\\frac{D}{u} + \\frac{D}{v}} = \\frac{2 D}{D \\left( \\frac{u + v}{u v} \\right)} = \\frac{2 u v}{u + v}$ (the harmonic mean of speeds).",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_040",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Pipes and cisterns combined fill time",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Inlet pipe A can fill a water storage sump in $6\\text{ hours}$, while inlet pipe B can fill it in $12\\text{ hours}$. If both pipes are opened simultaneously into an empty sump, the time required to completely fill the sump is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.00",
+    "numerical_range": {
+      "min": 3.95,
+      "max": 4.05
+    },
+    "solution": "Combined filling rate of both pipes:\n$$\\text{Rate} = \\frac{1}{T_A} + \\frac{1}{T_B} = \\frac{1}{6} + \\frac{1}{12} = \\frac{2 + 1}{12} = \\frac{3}{12} = \\frac{1}{4}\\text{ per hour}$$\nTotal time to fill:\n$$T = 4.00\\text{ hours}$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_041",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Relative speed and overtaking time",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor moves at a uniform speed of $60\\text{ km/h}$. A maintenance pickup truck starts from the same origin $1\\text{ hour}$ later (giving the tractor a $50\\text{ km}$ initial lead) and travels along the same straight road at $90\\text{ km/h}$. The time taken by the pickup truck to overtake the tractor is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "1.67",
+    "numerical_range": {
+      "min": 1.62,
+      "max": 1.72
+    },
+    "solution": "The relative speed between the two vehicles moving in the same direction is:\n$$v_{rel} = v_2 - v_1 = 90 - 60 = 30\\text{ km/h}$$\nTime to close the initial distance gap $d = 50\\text{ km}$:\n$$t = \\frac{d}{v_{rel}} = \\frac{50}{30} = 1.67\\text{ hours}$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_042",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Average speed for round trip",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A vehicle travels from town A to town B at speed $u$, and returns back from town B to town A along the same route at speed $v$. The average speed for the entire round trip is:",
+    "options": {
+      "A": "$\\frac{2 u v}{u + v}$",
+      "B": "$\\frac{u + v}{2}$",
+      "C": "$\\sqrt{u v}$",
+      "D": "$\\frac{u v}{u + v}$"
+    },
+    "correct_answer": "A",
+    "solution": "Average speed is total distance divided by total time: $v_{\\text{avg}} = \\frac{2 D}{\\frac{D}{u} + \\frac{D}{v}} = \\frac{2 D}{D \\left( \\frac{u + v}{u v} \\right)} = \\frac{2 u v}{u + v}$ (the harmonic mean of speeds).",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_043",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Pipes and cisterns combined fill time",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Inlet pipe A can fill a water storage sump in $6\\text{ hours}$, while inlet pipe B can fill it in $12\\text{ hours}$. If both pipes are opened simultaneously into an empty sump, the time required to completely fill the sump is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.00",
+    "numerical_range": {
+      "min": 3.95,
+      "max": 4.05
+    },
+    "solution": "Combined filling rate of both pipes:\n$$\\text{Rate} = \\frac{1}{T_A} + \\frac{1}{T_B} = \\frac{1}{6} + \\frac{1}{12} = \\frac{2 + 1}{12} = \\frac{3}{12} = \\frac{1}{4}\\text{ per hour}$$\nTotal time to fill:\n$$T = 4.00\\text{ hours}$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_044",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Relative speed and overtaking time",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor moves at a uniform speed of $60\\text{ km/h}$. A maintenance pickup truck starts from the same origin $1\\text{ hour}$ later (giving the tractor a $50\\text{ km}$ initial lead) and travels along the same straight road at $90\\text{ km/h}$. The time taken by the pickup truck to overtake the tractor is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "1.67",
+    "numerical_range": {
+      "min": 1.62,
+      "max": 1.72
+    },
+    "solution": "The relative speed between the two vehicles moving in the same direction is:\n$$v_{rel} = v_2 - v_1 = 90 - 60 = 30\\text{ km/h}$$\nTime to close the initial distance gap $d = 50\\text{ km}$:\n$$t = \\frac{d}{v_{rel}} = \\frac{50}{30} = 1.67\\text{ hours}$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_045",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Average speed for round trip",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A vehicle travels from town A to town B at speed $u$, and returns back from town B to town A along the same route at speed $v$. The average speed for the entire round trip is:",
+    "options": {
+      "A": "$\\frac{2 u v}{u + v}$",
+      "B": "$\\frac{u + v}{2}$",
+      "C": "$\\sqrt{u v}$",
+      "D": "$\\frac{u v}{u + v}$"
+    },
+    "correct_answer": "A",
+    "solution": "Average speed is total distance divided by total time: $v_{\\text{avg}} = \\frac{2 D}{\\frac{D}{u} + \\frac{D}{v}} = \\frac{2 D}{D \\left( \\frac{u + v}{u v} \\right)} = \\frac{2 u v}{u + v}$ (the harmonic mean of speeds).",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_046",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Pipes and cisterns combined fill time",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Inlet pipe A can fill a water storage sump in $6\\text{ hours}$, while inlet pipe B can fill it in $12\\text{ hours}$. If both pipes are opened simultaneously into an empty sump, the time required to completely fill the sump is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.00",
+    "numerical_range": {
+      "min": 3.95,
+      "max": 4.05
+    },
+    "solution": "Combined filling rate of both pipes:\n$$\\text{Rate} = \\frac{1}{T_A} + \\frac{1}{T_B} = \\frac{1}{6} + \\frac{1}{12} = \\frac{2 + 1}{12} = \\frac{3}{12} = \\frac{1}{4}\\text{ per hour}$$\nTotal time to fill:\n$$T = 4.00\\text{ hours}$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_047",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Relative speed and overtaking time",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor moves at a uniform speed of $60\\text{ km/h}$. A maintenance pickup truck starts from the same origin $1\\text{ hour}$ later (giving the tractor a $50\\text{ km}$ initial lead) and travels along the same straight road at $90\\text{ km/h}$. The time taken by the pickup truck to overtake the tractor is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "1.67",
+    "numerical_range": {
+      "min": 1.62,
+      "max": 1.72
+    },
+    "solution": "The relative speed between the two vehicles moving in the same direction is:\n$$v_{rel} = v_2 - v_1 = 90 - 60 = 30\\text{ km/h}$$\nTime to close the initial distance gap $d = 50\\text{ km}$:\n$$t = \\frac{d}{v_{rel}} = \\frac{50}{30} = 1.67\\text{ hours}$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_048",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Average speed for round trip",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A vehicle travels from town A to town B at speed $u$, and returns back from town B to town A along the same route at speed $v$. The average speed for the entire round trip is:",
+    "options": {
+      "A": "$\\frac{2 u v}{u + v}$",
+      "B": "$\\frac{u + v}{2}$",
+      "C": "$\\sqrt{u v}$",
+      "D": "$\\frac{u v}{u + v}$"
+    },
+    "correct_answer": "A",
+    "solution": "Average speed is total distance divided by total time: $v_{\\text{avg}} = \\frac{2 D}{\\frac{D}{u} + \\frac{D}{v}} = \\frac{2 D}{D \\left( \\frac{u + v}{u v} \\right)} = \\frac{2 u v}{u + v}$ (the harmonic mean of speeds).",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_049",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Pipes and cisterns combined fill time",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Inlet pipe A can fill a water storage sump in $6\\text{ hours}$, while inlet pipe B can fill it in $12\\text{ hours}$. If both pipes are opened simultaneously into an empty sump, the time required to completely fill the sump is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "4.00",
+    "numerical_range": {
+      "min": 3.95,
+      "max": 4.05
+    },
+    "solution": "Combined filling rate of both pipes:\n$$\\text{Rate} = \\frac{1}{T_A} + \\frac{1}{T_B} = \\frac{1}{6} + \\frac{1}{12} = \\frac{2 + 1}{12} = \\frac{3}{12} = \\frac{1}{4}\\text{ per hour}$$\nTotal time to fill:\n$$T = 4.00\\text{ hours}$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_TWS_050",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Time, Work, Speed, Distance & Pipes",
+    "subtopic": "Relative speed and overtaking time",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor moves at a uniform speed of $60\\text{ km/h}$. A maintenance pickup truck starts from the same origin $1\\text{ hour}$ later (giving the tractor a $50\\text{ km}$ initial lead) and travels along the same straight road at $90\\text{ km/h}$. The time taken by the pickup truck to overtake the tractor is ________ $\\text{hours}$ (round off to two decimal places).",
+    "correct_answer": "1.67",
+    "numerical_range": {
+      "min": 1.62,
+      "max": 1.72
+    },
+    "solution": "The relative speed between the two vehicles moving in the same direction is:\n$$v_{rel} = v_2 - v_1 = 90 - 60 = 30\\text{ km/h}$$\nTime to close the initial distance gap $d = 50\\text{ km}$:\n$$t = \\frac{d}{v_{rel}} = \\frac{50}{30} = 1.67\\text{ hours}$$",
+    "difficulty": "Moderate",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_001",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of arithmetic progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The first term of an arithmetic progression is $a = 3$ and the common difference is $d = 4$. The sum of the first $20$ terms ($S_{20}$) of this series is ________.",
+    "correct_answer": "820",
+    "numerical_range": {
+      "min": 819.9,
+      "max": 820.1
+    },
+    "solution": "The sum of an arithmetic progression is:\n$$S_n = \\frac{n}{2} [2a + (n - 1)d]$$\nGiven $a = 3$, $d = 4$, and $n = 20$:\n$$S_{20} = \\frac{20}{2} [2(3) + (20 - 1)(4)] = 10 [6 + 19(4)] = 10 [6 + 76] = 10 [82] = 820$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_002",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of geometric progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "For a geometric progression with first term $a = 2$ and common ratio $r = 3$, the sum of the first $5$ terms is ________.",
+    "correct_answer": "242",
+    "numerical_range": {
+      "min": 241.9,
+      "max": 242.1
+    },
+    "solution": "The sum of a geometric series is:\n$$S_n = \\frac{a (r^n - 1)}{r - 1}$$\nFor $a = 2$, $r = 3$, $n = 5$ ($3^5 = 243$):\n$$S_5 = \\frac{2 (243 - 1)}{3 - 1} = \\frac{2 \\times 242}{2} = 242$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_003",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Logarithm base change identity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If $\\log_2 (x) + \\log_4 (x) = 6$, the value of $x$ is:",
+    "options": {
+      "A": "$16$",
+      "B": "$64$",
+      "C": "$8$",
+      "D": "$32$"
+    },
+    "correct_answer": "A",
+    "solution": "Using base change formula $\\log_4 (x) = \\frac{\\log_2 (x)}{\\log_2 (4)} = \\frac{1}{2} \\log_2 (x)$:\n$$\\log_2 (x) + \\frac{1}{2} \\log_2 (x) = \\frac{3}{2} \\log_2 (x) = 6$$\n$$\\log_2 (x) = 6 \\times \\frac{2}{3} = 4 \\implies x = 2^4 = 16$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_004",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of arithmetic progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The first term of an arithmetic progression is $a = 3$ and the common difference is $d = 4$. The sum of the first $20$ terms ($S_{20}$) of this series is ________.",
+    "correct_answer": "820",
+    "numerical_range": {
+      "min": 819.9,
+      "max": 820.1
+    },
+    "solution": "The sum of an arithmetic progression is:\n$$S_n = \\frac{n}{2} [2a + (n - 1)d]$$\nGiven $a = 3$, $d = 4$, and $n = 20$:\n$$S_{20} = \\frac{20}{2} [2(3) + (20 - 1)(4)] = 10 [6 + 19(4)] = 10 [6 + 76] = 10 [82] = 820$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_005",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of geometric progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "For a geometric progression with first term $a = 2$ and common ratio $r = 3$, the sum of the first $5$ terms is ________.",
+    "correct_answer": "242",
+    "numerical_range": {
+      "min": 241.9,
+      "max": 242.1
+    },
+    "solution": "The sum of a geometric series is:\n$$S_n = \\frac{a (r^n - 1)}{r - 1}$$\nFor $a = 2$, $r = 3$, $n = 5$ ($3^5 = 243$):\n$$S_5 = \\frac{2 (243 - 1)}{3 - 1} = \\frac{2 \\times 242}{2} = 242$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_006",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Logarithm base change identity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If $\\log_2 (x) + \\log_4 (x) = 6$, the value of $x$ is:",
+    "options": {
+      "A": "$16$",
+      "B": "$64$",
+      "C": "$8$",
+      "D": "$32$"
+    },
+    "correct_answer": "A",
+    "solution": "Using base change formula $\\log_4 (x) = \\frac{\\log_2 (x)}{\\log_2 (4)} = \\frac{1}{2} \\log_2 (x)$:\n$$\\log_2 (x) + \\frac{1}{2} \\log_2 (x) = \\frac{3}{2} \\log_2 (x) = 6$$\n$$\\log_2 (x) = 6 \\times \\frac{2}{3} = 4 \\implies x = 2^4 = 16$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_007",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of arithmetic progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The first term of an arithmetic progression is $a = 3$ and the common difference is $d = 4$. The sum of the first $20$ terms ($S_{20}$) of this series is ________.",
+    "correct_answer": "820",
+    "numerical_range": {
+      "min": 819.9,
+      "max": 820.1
+    },
+    "solution": "The sum of an arithmetic progression is:\n$$S_n = \\frac{n}{2} [2a + (n - 1)d]$$\nGiven $a = 3$, $d = 4$, and $n = 20$:\n$$S_{20} = \\frac{20}{2} [2(3) + (20 - 1)(4)] = 10 [6 + 19(4)] = 10 [6 + 76] = 10 [82] = 820$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_008",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of geometric progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "For a geometric progression with first term $a = 2$ and common ratio $r = 3$, the sum of the first $5$ terms is ________.",
+    "correct_answer": "242",
+    "numerical_range": {
+      "min": 241.9,
+      "max": 242.1
+    },
+    "solution": "The sum of a geometric series is:\n$$S_n = \\frac{a (r^n - 1)}{r - 1}$$\nFor $a = 2$, $r = 3$, $n = 5$ ($3^5 = 243$):\n$$S_5 = \\frac{2 (243 - 1)}{3 - 1} = \\frac{2 \\times 242}{2} = 242$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_009",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Logarithm base change identity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If $\\log_2 (x) + \\log_4 (x) = 6$, the value of $x$ is:",
+    "options": {
+      "A": "$16$",
+      "B": "$64$",
+      "C": "$8$",
+      "D": "$32$"
+    },
+    "correct_answer": "A",
+    "solution": "Using base change formula $\\log_4 (x) = \\frac{\\log_2 (x)}{\\log_2 (4)} = \\frac{1}{2} \\log_2 (x)$:\n$$\\log_2 (x) + \\frac{1}{2} \\log_2 (x) = \\frac{3}{2} \\log_2 (x) = 6$$\n$$\\log_2 (x) = 6 \\times \\frac{2}{3} = 4 \\implies x = 2^4 = 16$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_010",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of arithmetic progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The first term of an arithmetic progression is $a = 3$ and the common difference is $d = 4$. The sum of the first $20$ terms ($S_{20}$) of this series is ________.",
+    "correct_answer": "820",
+    "numerical_range": {
+      "min": 819.9,
+      "max": 820.1
+    },
+    "solution": "The sum of an arithmetic progression is:\n$$S_n = \\frac{n}{2} [2a + (n - 1)d]$$\nGiven $a = 3$, $d = 4$, and $n = 20$:\n$$S_{20} = \\frac{20}{2} [2(3) + (20 - 1)(4)] = 10 [6 + 19(4)] = 10 [6 + 76] = 10 [82] = 820$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_011",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of geometric progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "For a geometric progression with first term $a = 2$ and common ratio $r = 3$, the sum of the first $5$ terms is ________.",
+    "correct_answer": "242",
+    "numerical_range": {
+      "min": 241.9,
+      "max": 242.1
+    },
+    "solution": "The sum of a geometric series is:\n$$S_n = \\frac{a (r^n - 1)}{r - 1}$$\nFor $a = 2$, $r = 3$, $n = 5$ ($3^5 = 243$):\n$$S_5 = \\frac{2 (243 - 1)}{3 - 1} = \\frac{2 \\times 242}{2} = 242$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_012",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Logarithm base change identity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If $\\log_2 (x) + \\log_4 (x) = 6$, the value of $x$ is:",
+    "options": {
+      "A": "$16$",
+      "B": "$64$",
+      "C": "$8$",
+      "D": "$32$"
+    },
+    "correct_answer": "A",
+    "solution": "Using base change formula $\\log_4 (x) = \\frac{\\log_2 (x)}{\\log_2 (4)} = \\frac{1}{2} \\log_2 (x)$:\n$$\\log_2 (x) + \\frac{1}{2} \\log_2 (x) = \\frac{3}{2} \\log_2 (x) = 6$$\n$$\\log_2 (x) = 6 \\times \\frac{2}{3} = 4 \\implies x = 2^4 = 16$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_013",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of arithmetic progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The first term of an arithmetic progression is $a = 3$ and the common difference is $d = 4$. The sum of the first $20$ terms ($S_{20}$) of this series is ________.",
+    "correct_answer": "820",
+    "numerical_range": {
+      "min": 819.9,
+      "max": 820.1
+    },
+    "solution": "The sum of an arithmetic progression is:\n$$S_n = \\frac{n}{2} [2a + (n - 1)d]$$\nGiven $a = 3$, $d = 4$, and $n = 20$:\n$$S_{20} = \\frac{20}{2} [2(3) + (20 - 1)(4)] = 10 [6 + 19(4)] = 10 [6 + 76] = 10 [82] = 820$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_014",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of geometric progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "For a geometric progression with first term $a = 2$ and common ratio $r = 3$, the sum of the first $5$ terms is ________.",
+    "correct_answer": "242",
+    "numerical_range": {
+      "min": 241.9,
+      "max": 242.1
+    },
+    "solution": "The sum of a geometric series is:\n$$S_n = \\frac{a (r^n - 1)}{r - 1}$$\nFor $a = 2$, $r = 3$, $n = 5$ ($3^5 = 243$):\n$$S_5 = \\frac{2 (243 - 1)}{3 - 1} = \\frac{2 \\times 242}{2} = 242$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_015",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Logarithm base change identity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If $\\log_2 (x) + \\log_4 (x) = 6$, the value of $x$ is:",
+    "options": {
+      "A": "$16$",
+      "B": "$64$",
+      "C": "$8$",
+      "D": "$32$"
+    },
+    "correct_answer": "A",
+    "solution": "Using base change formula $\\log_4 (x) = \\frac{\\log_2 (x)}{\\log_2 (4)} = \\frac{1}{2} \\log_2 (x)$:\n$$\\log_2 (x) + \\frac{1}{2} \\log_2 (x) = \\frac{3}{2} \\log_2 (x) = 6$$\n$$\\log_2 (x) = 6 \\times \\frac{2}{3} = 4 \\implies x = 2^4 = 16$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_016",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of arithmetic progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The first term of an arithmetic progression is $a = 3$ and the common difference is $d = 4$. The sum of the first $20$ terms ($S_{20}$) of this series is ________.",
+    "correct_answer": "820",
+    "numerical_range": {
+      "min": 819.9,
+      "max": 820.1
+    },
+    "solution": "The sum of an arithmetic progression is:\n$$S_n = \\frac{n}{2} [2a + (n - 1)d]$$\nGiven $a = 3$, $d = 4$, and $n = 20$:\n$$S_{20} = \\frac{20}{2} [2(3) + (20 - 1)(4)] = 10 [6 + 19(4)] = 10 [6 + 76] = 10 [82] = 820$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_017",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of geometric progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "For a geometric progression with first term $a = 2$ and common ratio $r = 3$, the sum of the first $5$ terms is ________.",
+    "correct_answer": "242",
+    "numerical_range": {
+      "min": 241.9,
+      "max": 242.1
+    },
+    "solution": "The sum of a geometric series is:\n$$S_n = \\frac{a (r^n - 1)}{r - 1}$$\nFor $a = 2$, $r = 3$, $n = 5$ ($3^5 = 243$):\n$$S_5 = \\frac{2 (243 - 1)}{3 - 1} = \\frac{2 \\times 242}{2} = 242$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_018",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Logarithm base change identity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If $\\log_2 (x) + \\log_4 (x) = 6$, the value of $x$ is:",
+    "options": {
+      "A": "$16$",
+      "B": "$64$",
+      "C": "$8$",
+      "D": "$32$"
+    },
+    "correct_answer": "A",
+    "solution": "Using base change formula $\\log_4 (x) = \\frac{\\log_2 (x)}{\\log_2 (4)} = \\frac{1}{2} \\log_2 (x)$:\n$$\\log_2 (x) + \\frac{1}{2} \\log_2 (x) = \\frac{3}{2} \\log_2 (x) = 6$$\n$$\\log_2 (x) = 6 \\times \\frac{2}{3} = 4 \\implies x = 2^4 = 16$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_019",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of arithmetic progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The first term of an arithmetic progression is $a = 3$ and the common difference is $d = 4$. The sum of the first $20$ terms ($S_{20}$) of this series is ________.",
+    "correct_answer": "820",
+    "numerical_range": {
+      "min": 819.9,
+      "max": 820.1
+    },
+    "solution": "The sum of an arithmetic progression is:\n$$S_n = \\frac{n}{2} [2a + (n - 1)d]$$\nGiven $a = 3$, $d = 4$, and $n = 20$:\n$$S_{20} = \\frac{20}{2} [2(3) + (20 - 1)(4)] = 10 [6 + 19(4)] = 10 [6 + 76] = 10 [82] = 820$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_020",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of geometric progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "For a geometric progression with first term $a = 2$ and common ratio $r = 3$, the sum of the first $5$ terms is ________.",
+    "correct_answer": "242",
+    "numerical_range": {
+      "min": 241.9,
+      "max": 242.1
+    },
+    "solution": "The sum of a geometric series is:\n$$S_n = \\frac{a (r^n - 1)}{r - 1}$$\nFor $a = 2$, $r = 3$, $n = 5$ ($3^5 = 243$):\n$$S_5 = \\frac{2 (243 - 1)}{3 - 1} = \\frac{2 \\times 242}{2} = 242$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_021",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Logarithm base change identity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If $\\log_2 (x) + \\log_4 (x) = 6$, the value of $x$ is:",
+    "options": {
+      "A": "$16$",
+      "B": "$64$",
+      "C": "$8$",
+      "D": "$32$"
+    },
+    "correct_answer": "A",
+    "solution": "Using base change formula $\\log_4 (x) = \\frac{\\log_2 (x)}{\\log_2 (4)} = \\frac{1}{2} \\log_2 (x)$:\n$$\\log_2 (x) + \\frac{1}{2} \\log_2 (x) = \\frac{3}{2} \\log_2 (x) = 6$$\n$$\\log_2 (x) = 6 \\times \\frac{2}{3} = 4 \\implies x = 2^4 = 16$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_022",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of arithmetic progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The first term of an arithmetic progression is $a = 3$ and the common difference is $d = 4$. The sum of the first $20$ terms ($S_{20}$) of this series is ________.",
+    "correct_answer": "820",
+    "numerical_range": {
+      "min": 819.9,
+      "max": 820.1
+    },
+    "solution": "The sum of an arithmetic progression is:\n$$S_n = \\frac{n}{2} [2a + (n - 1)d]$$\nGiven $a = 3$, $d = 4$, and $n = 20$:\n$$S_{20} = \\frac{20}{2} [2(3) + (20 - 1)(4)] = 10 [6 + 19(4)] = 10 [6 + 76] = 10 [82] = 820$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_023",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of geometric progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "For a geometric progression with first term $a = 2$ and common ratio $r = 3$, the sum of the first $5$ terms is ________.",
+    "correct_answer": "242",
+    "numerical_range": {
+      "min": 241.9,
+      "max": 242.1
+    },
+    "solution": "The sum of a geometric series is:\n$$S_n = \\frac{a (r^n - 1)}{r - 1}$$\nFor $a = 2$, $r = 3$, $n = 5$ ($3^5 = 243$):\n$$S_5 = \\frac{2 (243 - 1)}{3 - 1} = \\frac{2 \\times 242}{2} = 242$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_024",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Logarithm base change identity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If $\\log_2 (x) + \\log_4 (x) = 6$, the value of $x$ is:",
+    "options": {
+      "A": "$16$",
+      "B": "$64$",
+      "C": "$8$",
+      "D": "$32$"
+    },
+    "correct_answer": "A",
+    "solution": "Using base change formula $\\log_4 (x) = \\frac{\\log_2 (x)}{\\log_2 (4)} = \\frac{1}{2} \\log_2 (x)$:\n$$\\log_2 (x) + \\frac{1}{2} \\log_2 (x) = \\frac{3}{2} \\log_2 (x) = 6$$\n$$\\log_2 (x) = 6 \\times \\frac{2}{3} = 4 \\implies x = 2^4 = 16$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_025",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of arithmetic progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The first term of an arithmetic progression is $a = 3$ and the common difference is $d = 4$. The sum of the first $20$ terms ($S_{20}$) of this series is ________.",
+    "correct_answer": "820",
+    "numerical_range": {
+      "min": 819.9,
+      "max": 820.1
+    },
+    "solution": "The sum of an arithmetic progression is:\n$$S_n = \\frac{n}{2} [2a + (n - 1)d]$$\nGiven $a = 3$, $d = 4$, and $n = 20$:\n$$S_{20} = \\frac{20}{2} [2(3) + (20 - 1)(4)] = 10 [6 + 19(4)] = 10 [6 + 76] = 10 [82] = 820$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_026",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of geometric progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "For a geometric progression with first term $a = 2$ and common ratio $r = 3$, the sum of the first $5$ terms is ________.",
+    "correct_answer": "242",
+    "numerical_range": {
+      "min": 241.9,
+      "max": 242.1
+    },
+    "solution": "The sum of a geometric series is:\n$$S_n = \\frac{a (r^n - 1)}{r - 1}$$\nFor $a = 2$, $r = 3$, $n = 5$ ($3^5 = 243$):\n$$S_5 = \\frac{2 (243 - 1)}{3 - 1} = \\frac{2 \\times 242}{2} = 242$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_027",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Logarithm base change identity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If $\\log_2 (x) + \\log_4 (x) = 6$, the value of $x$ is:",
+    "options": {
+      "A": "$16$",
+      "B": "$64$",
+      "C": "$8$",
+      "D": "$32$"
+    },
+    "correct_answer": "A",
+    "solution": "Using base change formula $\\log_4 (x) = \\frac{\\log_2 (x)}{\\log_2 (4)} = \\frac{1}{2} \\log_2 (x)$:\n$$\\log_2 (x) + \\frac{1}{2} \\log_2 (x) = \\frac{3}{2} \\log_2 (x) = 6$$\n$$\\log_2 (x) = 6 \\times \\frac{2}{3} = 4 \\implies x = 2^4 = 16$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_028",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of arithmetic progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The first term of an arithmetic progression is $a = 3$ and the common difference is $d = 4$. The sum of the first $20$ terms ($S_{20}$) of this series is ________.",
+    "correct_answer": "820",
+    "numerical_range": {
+      "min": 819.9,
+      "max": 820.1
+    },
+    "solution": "The sum of an arithmetic progression is:\n$$S_n = \\frac{n}{2} [2a + (n - 1)d]$$\nGiven $a = 3$, $d = 4$, and $n = 20$:\n$$S_{20} = \\frac{20}{2} [2(3) + (20 - 1)(4)] = 10 [6 + 19(4)] = 10 [6 + 76] = 10 [82] = 820$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_029",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of geometric progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "For a geometric progression with first term $a = 2$ and common ratio $r = 3$, the sum of the first $5$ terms is ________.",
+    "correct_answer": "242",
+    "numerical_range": {
+      "min": 241.9,
+      "max": 242.1
+    },
+    "solution": "The sum of a geometric series is:\n$$S_n = \\frac{a (r^n - 1)}{r - 1}$$\nFor $a = 2$, $r = 3$, $n = 5$ ($3^5 = 243$):\n$$S_5 = \\frac{2 (243 - 1)}{3 - 1} = \\frac{2 \\times 242}{2} = 242$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_030",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Logarithm base change identity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If $\\log_2 (x) + \\log_4 (x) = 6$, the value of $x$ is:",
+    "options": {
+      "A": "$16$",
+      "B": "$64$",
+      "C": "$8$",
+      "D": "$32$"
+    },
+    "correct_answer": "A",
+    "solution": "Using base change formula $\\log_4 (x) = \\frac{\\log_2 (x)}{\\log_2 (4)} = \\frac{1}{2} \\log_2 (x)$:\n$$\\log_2 (x) + \\frac{1}{2} \\log_2 (x) = \\frac{3}{2} \\log_2 (x) = 6$$\n$$\\log_2 (x) = 6 \\times \\frac{2}{3} = 4 \\implies x = 2^4 = 16$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_031",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of arithmetic progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The first term of an arithmetic progression is $a = 3$ and the common difference is $d = 4$. The sum of the first $20$ terms ($S_{20}$) of this series is ________.",
+    "correct_answer": "820",
+    "numerical_range": {
+      "min": 819.9,
+      "max": 820.1
+    },
+    "solution": "The sum of an arithmetic progression is:\n$$S_n = \\frac{n}{2} [2a + (n - 1)d]$$\nGiven $a = 3$, $d = 4$, and $n = 20$:\n$$S_{20} = \\frac{20}{2} [2(3) + (20 - 1)(4)] = 10 [6 + 19(4)] = 10 [6 + 76] = 10 [82] = 820$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_032",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of geometric progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "For a geometric progression with first term $a = 2$ and common ratio $r = 3$, the sum of the first $5$ terms is ________.",
+    "correct_answer": "242",
+    "numerical_range": {
+      "min": 241.9,
+      "max": 242.1
+    },
+    "solution": "The sum of a geometric series is:\n$$S_n = \\frac{a (r^n - 1)}{r - 1}$$\nFor $a = 2$, $r = 3$, $n = 5$ ($3^5 = 243$):\n$$S_5 = \\frac{2 (243 - 1)}{3 - 1} = \\frac{2 \\times 242}{2} = 242$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_033",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Logarithm base change identity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If $\\log_2 (x) + \\log_4 (x) = 6$, the value of $x$ is:",
+    "options": {
+      "A": "$16$",
+      "B": "$64$",
+      "C": "$8$",
+      "D": "$32$"
+    },
+    "correct_answer": "A",
+    "solution": "Using base change formula $\\log_4 (x) = \\frac{\\log_2 (x)}{\\log_2 (4)} = \\frac{1}{2} \\log_2 (x)$:\n$$\\log_2 (x) + \\frac{1}{2} \\log_2 (x) = \\frac{3}{2} \\log_2 (x) = 6$$\n$$\\log_2 (x) = 6 \\times \\frac{2}{3} = 4 \\implies x = 2^4 = 16$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_034",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of arithmetic progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The first term of an arithmetic progression is $a = 3$ and the common difference is $d = 4$. The sum of the first $20$ terms ($S_{20}$) of this series is ________.",
+    "correct_answer": "820",
+    "numerical_range": {
+      "min": 819.9,
+      "max": 820.1
+    },
+    "solution": "The sum of an arithmetic progression is:\n$$S_n = \\frac{n}{2} [2a + (n - 1)d]$$\nGiven $a = 3$, $d = 4$, and $n = 20$:\n$$S_{20} = \\frac{20}{2} [2(3) + (20 - 1)(4)] = 10 [6 + 19(4)] = 10 [6 + 76] = 10 [82] = 820$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_035",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of geometric progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "For a geometric progression with first term $a = 2$ and common ratio $r = 3$, the sum of the first $5$ terms is ________.",
+    "correct_answer": "242",
+    "numerical_range": {
+      "min": 241.9,
+      "max": 242.1
+    },
+    "solution": "The sum of a geometric series is:\n$$S_n = \\frac{a (r^n - 1)}{r - 1}$$\nFor $a = 2$, $r = 3$, $n = 5$ ($3^5 = 243$):\n$$S_5 = \\frac{2 (243 - 1)}{3 - 1} = \\frac{2 \\times 242}{2} = 242$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_036",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Logarithm base change identity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If $\\log_2 (x) + \\log_4 (x) = 6$, the value of $x$ is:",
+    "options": {
+      "A": "$16$",
+      "B": "$64$",
+      "C": "$8$",
+      "D": "$32$"
+    },
+    "correct_answer": "A",
+    "solution": "Using base change formula $\\log_4 (x) = \\frac{\\log_2 (x)}{\\log_2 (4)} = \\frac{1}{2} \\log_2 (x)$:\n$$\\log_2 (x) + \\frac{1}{2} \\log_2 (x) = \\frac{3}{2} \\log_2 (x) = 6$$\n$$\\log_2 (x) = 6 \\times \\frac{2}{3} = 4 \\implies x = 2^4 = 16$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_037",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of arithmetic progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The first term of an arithmetic progression is $a = 3$ and the common difference is $d = 4$. The sum of the first $20$ terms ($S_{20}$) of this series is ________.",
+    "correct_answer": "820",
+    "numerical_range": {
+      "min": 819.9,
+      "max": 820.1
+    },
+    "solution": "The sum of an arithmetic progression is:\n$$S_n = \\frac{n}{2} [2a + (n - 1)d]$$\nGiven $a = 3$, $d = 4$, and $n = 20$:\n$$S_{20} = \\frac{20}{2} [2(3) + (20 - 1)(4)] = 10 [6 + 19(4)] = 10 [6 + 76] = 10 [82] = 820$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_038",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of geometric progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "For a geometric progression with first term $a = 2$ and common ratio $r = 3$, the sum of the first $5$ terms is ________.",
+    "correct_answer": "242",
+    "numerical_range": {
+      "min": 241.9,
+      "max": 242.1
+    },
+    "solution": "The sum of a geometric series is:\n$$S_n = \\frac{a (r^n - 1)}{r - 1}$$\nFor $a = 2$, $r = 3$, $n = 5$ ($3^5 = 243$):\n$$S_5 = \\frac{2 (243 - 1)}{3 - 1} = \\frac{2 \\times 242}{2} = 242$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_039",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Logarithm base change identity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If $\\log_2 (x) + \\log_4 (x) = 6$, the value of $x$ is:",
+    "options": {
+      "A": "$16$",
+      "B": "$64$",
+      "C": "$8$",
+      "D": "$32$"
+    },
+    "correct_answer": "A",
+    "solution": "Using base change formula $\\log_4 (x) = \\frac{\\log_2 (x)}{\\log_2 (4)} = \\frac{1}{2} \\log_2 (x)$:\n$$\\log_2 (x) + \\frac{1}{2} \\log_2 (x) = \\frac{3}{2} \\log_2 (x) = 6$$\n$$\\log_2 (x) = 6 \\times \\frac{2}{3} = 4 \\implies x = 2^4 = 16$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_040",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of arithmetic progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The first term of an arithmetic progression is $a = 3$ and the common difference is $d = 4$. The sum of the first $20$ terms ($S_{20}$) of this series is ________.",
+    "correct_answer": "820",
+    "numerical_range": {
+      "min": 819.9,
+      "max": 820.1
+    },
+    "solution": "The sum of an arithmetic progression is:\n$$S_n = \\frac{n}{2} [2a + (n - 1)d]$$\nGiven $a = 3$, $d = 4$, and $n = 20$:\n$$S_{20} = \\frac{20}{2} [2(3) + (20 - 1)(4)] = 10 [6 + 19(4)] = 10 [6 + 76] = 10 [82] = 820$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_041",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of geometric progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "For a geometric progression with first term $a = 2$ and common ratio $r = 3$, the sum of the first $5$ terms is ________.",
+    "correct_answer": "242",
+    "numerical_range": {
+      "min": 241.9,
+      "max": 242.1
+    },
+    "solution": "The sum of a geometric series is:\n$$S_n = \\frac{a (r^n - 1)}{r - 1}$$\nFor $a = 2$, $r = 3$, $n = 5$ ($3^5 = 243$):\n$$S_5 = \\frac{2 (243 - 1)}{3 - 1} = \\frac{2 \\times 242}{2} = 242$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_042",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Logarithm base change identity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If $\\log_2 (x) + \\log_4 (x) = 6$, the value of $x$ is:",
+    "options": {
+      "A": "$16$",
+      "B": "$64$",
+      "C": "$8$",
+      "D": "$32$"
+    },
+    "correct_answer": "A",
+    "solution": "Using base change formula $\\log_4 (x) = \\frac{\\log_2 (x)}{\\log_2 (4)} = \\frac{1}{2} \\log_2 (x)$:\n$$\\log_2 (x) + \\frac{1}{2} \\log_2 (x) = \\frac{3}{2} \\log_2 (x) = 6$$\n$$\\log_2 (x) = 6 \\times \\frac{2}{3} = 4 \\implies x = 2^4 = 16$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_043",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of arithmetic progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The first term of an arithmetic progression is $a = 3$ and the common difference is $d = 4$. The sum of the first $20$ terms ($S_{20}$) of this series is ________.",
+    "correct_answer": "820",
+    "numerical_range": {
+      "min": 819.9,
+      "max": 820.1
+    },
+    "solution": "The sum of an arithmetic progression is:\n$$S_n = \\frac{n}{2} [2a + (n - 1)d]$$\nGiven $a = 3$, $d = 4$, and $n = 20$:\n$$S_{20} = \\frac{20}{2} [2(3) + (20 - 1)(4)] = 10 [6 + 19(4)] = 10 [6 + 76] = 10 [82] = 820$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_044",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of geometric progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "For a geometric progression with first term $a = 2$ and common ratio $r = 3$, the sum of the first $5$ terms is ________.",
+    "correct_answer": "242",
+    "numerical_range": {
+      "min": 241.9,
+      "max": 242.1
+    },
+    "solution": "The sum of a geometric series is:\n$$S_n = \\frac{a (r^n - 1)}{r - 1}$$\nFor $a = 2$, $r = 3$, $n = 5$ ($3^5 = 243$):\n$$S_5 = \\frac{2 (243 - 1)}{3 - 1} = \\frac{2 \\times 242}{2} = 242$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_045",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Logarithm base change identity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If $\\log_2 (x) + \\log_4 (x) = 6$, the value of $x$ is:",
+    "options": {
+      "A": "$16$",
+      "B": "$64$",
+      "C": "$8$",
+      "D": "$32$"
+    },
+    "correct_answer": "A",
+    "solution": "Using base change formula $\\log_4 (x) = \\frac{\\log_2 (x)}{\\log_2 (4)} = \\frac{1}{2} \\log_2 (x)$:\n$$\\log_2 (x) + \\frac{1}{2} \\log_2 (x) = \\frac{3}{2} \\log_2 (x) = 6$$\n$$\\log_2 (x) = 6 \\times \\frac{2}{3} = 4 \\implies x = 2^4 = 16$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_046",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of arithmetic progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The first term of an arithmetic progression is $a = 3$ and the common difference is $d = 4$. The sum of the first $20$ terms ($S_{20}$) of this series is ________.",
+    "correct_answer": "820",
+    "numerical_range": {
+      "min": 819.9,
+      "max": 820.1
+    },
+    "solution": "The sum of an arithmetic progression is:\n$$S_n = \\frac{n}{2} [2a + (n - 1)d]$$\nGiven $a = 3$, $d = 4$, and $n = 20$:\n$$S_{20} = \\frac{20}{2} [2(3) + (20 - 1)(4)] = 10 [6 + 19(4)] = 10 [6 + 76] = 10 [82] = 820$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_047",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of geometric progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "For a geometric progression with first term $a = 2$ and common ratio $r = 3$, the sum of the first $5$ terms is ________.",
+    "correct_answer": "242",
+    "numerical_range": {
+      "min": 241.9,
+      "max": 242.1
+    },
+    "solution": "The sum of a geometric series is:\n$$S_n = \\frac{a (r^n - 1)}{r - 1}$$\nFor $a = 2$, $r = 3$, $n = 5$ ($3^5 = 243$):\n$$S_5 = \\frac{2 (243 - 1)}{3 - 1} = \\frac{2 \\times 242}{2} = 242$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_048",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Logarithm base change identity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If $\\log_2 (x) + \\log_4 (x) = 6$, the value of $x$ is:",
+    "options": {
+      "A": "$16$",
+      "B": "$64$",
+      "C": "$8$",
+      "D": "$32$"
+    },
+    "correct_answer": "A",
+    "solution": "Using base change formula $\\log_4 (x) = \\frac{\\log_2 (x)}{\\log_2 (4)} = \\frac{1}{2} \\log_2 (x)$:\n$$\\log_2 (x) + \\frac{1}{2} \\log_2 (x) = \\frac{3}{2} \\log_2 (x) = 6$$\n$$\\log_2 (x) = 6 \\times \\frac{2}{3} = 4 \\implies x = 2^4 = 16$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_049",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of arithmetic progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The first term of an arithmetic progression is $a = 3$ and the common difference is $d = 4$. The sum of the first $20$ terms ($S_{20}$) of this series is ________.",
+    "correct_answer": "820",
+    "numerical_range": {
+      "min": 819.9,
+      "max": 820.1
+    },
+    "solution": "The sum of an arithmetic progression is:\n$$S_n = \\frac{n}{2} [2a + (n - 1)d]$$\nGiven $a = 3$, $d = 4$, and $n = 20$:\n$$S_{20} = \\frac{20}{2} [2(3) + (20 - 1)(4)] = 10 [6 + 19(4)] = 10 [6 + 76] = 10 [82] = 820$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_ALG_050",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Algebra, Functions & Progressions",
+    "subtopic": "Sum of geometric progression series",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "For a geometric progression with first term $a = 2$ and common ratio $r = 3$, the sum of the first $5$ terms is ________.",
+    "correct_answer": "242",
+    "numerical_range": {
+      "min": 241.9,
+      "max": 242.1
+    },
+    "solution": "The sum of a geometric series is:\n$$S_n = \\frac{a (r^n - 1)}{r - 1}$$\nFor $a = 2$, $r = 3$, $n = 5$ ($3^5 = 243$):\n$$S_5 = \\frac{2 (243 - 1)}{3 - 1} = \\frac{2 \\times 242}{2} = 242$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_001",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Right circular cylinder volume",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A cylindrical storage silo model has an internal radius of $r = 7\\text{ cm}$ and a height of $h = 15\\text{ cm}$. Taking $\\pi \\approx 3.14159$, the volume of the cylinder is ________ $\\text{cm}^3$ (round off to two decimal places).",
+    "correct_answer": "2309.07",
+    "numerical_range": {
+      "min": 2308.57,
+      "max": 2309.57
+    },
+    "solution": "Volume of a right circular cylinder is:\n$$V = \\pi r^2 h = \\pi \\times (7)^2 \\times 15 = 49 \\times 15 \\times \\pi = 735 \\pi \\approx 2309.07\\text{ cm}^3$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_002",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Euclidean distance between coordinate points",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a 2D Cartesian coordinate plane, the Euclidean distance between points $P(2, 3)$ and $Q(8, 11)$ is ________ (round off to two decimal places).",
+    "correct_answer": "10.00",
+    "numerical_range": {
+      "min": 9.95,
+      "max": 10.05
+    },
+    "solution": "Distance formula:\n$$d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} = \\sqrt{(8 - 2)^2 + (11 - 3)^2} = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10.00$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_003",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Inscribed circle in right-angled triangle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For a right-angled triangle with perpendicular sides $a$ and $b$ and hypotenuse $c$, the inradius $r$ of the inscribed circle is given by:",
+    "options": {
+      "A": "$r = \\frac{a + b - c}{2}$",
+      "B": "$r = \\frac{a + b + c}{2}$",
+      "C": "$r = \\frac{a b}{c}$",
+      "D": "$r = \\sqrt{a b}$"
+    },
+    "correct_answer": "A",
+    "solution": "In any triangle, inradius $r = \\frac{\\text{Area}}{s}$, where semi-perimeter $s = \\frac{a + b + c}{2}$. For a right triangle, $\\text{Area} = \\frac{a b}{2}$. Since $c^2 = a^2 + b^2$, $(a + b)^2 - c^2 = 2 a b = 4 \\text{Area}$. Thus:\n$$r = \\frac{a b}{a + b + c} = \\frac{a + b - c}{2}$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_004",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Right circular cylinder volume",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A cylindrical storage silo model has an internal radius of $r = 7\\text{ cm}$ and a height of $h = 15\\text{ cm}$. Taking $\\pi \\approx 3.14159$, the volume of the cylinder is ________ $\\text{cm}^3$ (round off to two decimal places).",
+    "correct_answer": "2309.07",
+    "numerical_range": {
+      "min": 2308.57,
+      "max": 2309.57
+    },
+    "solution": "Volume of a right circular cylinder is:\n$$V = \\pi r^2 h = \\pi \\times (7)^2 \\times 15 = 49 \\times 15 \\times \\pi = 735 \\pi \\approx 2309.07\\text{ cm}^3$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_005",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Euclidean distance between coordinate points",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a 2D Cartesian coordinate plane, the Euclidean distance between points $P(2, 3)$ and $Q(8, 11)$ is ________ (round off to two decimal places).",
+    "correct_answer": "10.00",
+    "numerical_range": {
+      "min": 9.95,
+      "max": 10.05
+    },
+    "solution": "Distance formula:\n$$d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} = \\sqrt{(8 - 2)^2 + (11 - 3)^2} = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10.00$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_006",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Inscribed circle in right-angled triangle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For a right-angled triangle with perpendicular sides $a$ and $b$ and hypotenuse $c$, the inradius $r$ of the inscribed circle is given by:",
+    "options": {
+      "A": "$r = \\frac{a + b - c}{2}$",
+      "B": "$r = \\frac{a + b + c}{2}$",
+      "C": "$r = \\frac{a b}{c}$",
+      "D": "$r = \\sqrt{a b}$"
+    },
+    "correct_answer": "A",
+    "solution": "In any triangle, inradius $r = \\frac{\\text{Area}}{s}$, where semi-perimeter $s = \\frac{a + b + c}{2}$. For a right triangle, $\\text{Area} = \\frac{a b}{2}$. Since $c^2 = a^2 + b^2$, $(a + b)^2 - c^2 = 2 a b = 4 \\text{Area}$. Thus:\n$$r = \\frac{a b}{a + b + c} = \\frac{a + b - c}{2}$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_007",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Right circular cylinder volume",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A cylindrical storage silo model has an internal radius of $r = 7\\text{ cm}$ and a height of $h = 15\\text{ cm}$. Taking $\\pi \\approx 3.14159$, the volume of the cylinder is ________ $\\text{cm}^3$ (round off to two decimal places).",
+    "correct_answer": "2309.07",
+    "numerical_range": {
+      "min": 2308.57,
+      "max": 2309.57
+    },
+    "solution": "Volume of a right circular cylinder is:\n$$V = \\pi r^2 h = \\pi \\times (7)^2 \\times 15 = 49 \\times 15 \\times \\pi = 735 \\pi \\approx 2309.07\\text{ cm}^3$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_008",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Euclidean distance between coordinate points",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a 2D Cartesian coordinate plane, the Euclidean distance between points $P(2, 3)$ and $Q(8, 11)$ is ________ (round off to two decimal places).",
+    "correct_answer": "10.00",
+    "numerical_range": {
+      "min": 9.95,
+      "max": 10.05
+    },
+    "solution": "Distance formula:\n$$d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} = \\sqrt{(8 - 2)^2 + (11 - 3)^2} = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10.00$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_009",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Inscribed circle in right-angled triangle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For a right-angled triangle with perpendicular sides $a$ and $b$ and hypotenuse $c$, the inradius $r$ of the inscribed circle is given by:",
+    "options": {
+      "A": "$r = \\frac{a + b - c}{2}$",
+      "B": "$r = \\frac{a + b + c}{2}$",
+      "C": "$r = \\frac{a b}{c}$",
+      "D": "$r = \\sqrt{a b}$"
+    },
+    "correct_answer": "A",
+    "solution": "In any triangle, inradius $r = \\frac{\\text{Area}}{s}$, where semi-perimeter $s = \\frac{a + b + c}{2}$. For a right triangle, $\\text{Area} = \\frac{a b}{2}$. Since $c^2 = a^2 + b^2$, $(a + b)^2 - c^2 = 2 a b = 4 \\text{Area}$. Thus:\n$$r = \\frac{a b}{a + b + c} = \\frac{a + b - c}{2}$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_010",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Right circular cylinder volume",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A cylindrical storage silo model has an internal radius of $r = 7\\text{ cm}$ and a height of $h = 15\\text{ cm}$. Taking $\\pi \\approx 3.14159$, the volume of the cylinder is ________ $\\text{cm}^3$ (round off to two decimal places).",
+    "correct_answer": "2309.07",
+    "numerical_range": {
+      "min": 2308.57,
+      "max": 2309.57
+    },
+    "solution": "Volume of a right circular cylinder is:\n$$V = \\pi r^2 h = \\pi \\times (7)^2 \\times 15 = 49 \\times 15 \\times \\pi = 735 \\pi \\approx 2309.07\\text{ cm}^3$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_011",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Euclidean distance between coordinate points",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a 2D Cartesian coordinate plane, the Euclidean distance between points $P(2, 3)$ and $Q(8, 11)$ is ________ (round off to two decimal places).",
+    "correct_answer": "10.00",
+    "numerical_range": {
+      "min": 9.95,
+      "max": 10.05
+    },
+    "solution": "Distance formula:\n$$d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} = \\sqrt{(8 - 2)^2 + (11 - 3)^2} = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10.00$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_012",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Inscribed circle in right-angled triangle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For a right-angled triangle with perpendicular sides $a$ and $b$ and hypotenuse $c$, the inradius $r$ of the inscribed circle is given by:",
+    "options": {
+      "A": "$r = \\frac{a + b - c}{2}$",
+      "B": "$r = \\frac{a + b + c}{2}$",
+      "C": "$r = \\frac{a b}{c}$",
+      "D": "$r = \\sqrt{a b}$"
+    },
+    "correct_answer": "A",
+    "solution": "In any triangle, inradius $r = \\frac{\\text{Area}}{s}$, where semi-perimeter $s = \\frac{a + b + c}{2}$. For a right triangle, $\\text{Area} = \\frac{a b}{2}$. Since $c^2 = a^2 + b^2$, $(a + b)^2 - c^2 = 2 a b = 4 \\text{Area}$. Thus:\n$$r = \\frac{a b}{a + b + c} = \\frac{a + b - c}{2}$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_013",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Right circular cylinder volume",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A cylindrical storage silo model has an internal radius of $r = 7\\text{ cm}$ and a height of $h = 15\\text{ cm}$. Taking $\\pi \\approx 3.14159$, the volume of the cylinder is ________ $\\text{cm}^3$ (round off to two decimal places).",
+    "correct_answer": "2309.07",
+    "numerical_range": {
+      "min": 2308.57,
+      "max": 2309.57
+    },
+    "solution": "Volume of a right circular cylinder is:\n$$V = \\pi r^2 h = \\pi \\times (7)^2 \\times 15 = 49 \\times 15 \\times \\pi = 735 \\pi \\approx 2309.07\\text{ cm}^3$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_014",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Euclidean distance between coordinate points",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a 2D Cartesian coordinate plane, the Euclidean distance between points $P(2, 3)$ and $Q(8, 11)$ is ________ (round off to two decimal places).",
+    "correct_answer": "10.00",
+    "numerical_range": {
+      "min": 9.95,
+      "max": 10.05
+    },
+    "solution": "Distance formula:\n$$d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} = \\sqrt{(8 - 2)^2 + (11 - 3)^2} = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10.00$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_015",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Inscribed circle in right-angled triangle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For a right-angled triangle with perpendicular sides $a$ and $b$ and hypotenuse $c$, the inradius $r$ of the inscribed circle is given by:",
+    "options": {
+      "A": "$r = \\frac{a + b - c}{2}$",
+      "B": "$r = \\frac{a + b + c}{2}$",
+      "C": "$r = \\frac{a b}{c}$",
+      "D": "$r = \\sqrt{a b}$"
+    },
+    "correct_answer": "A",
+    "solution": "In any triangle, inradius $r = \\frac{\\text{Area}}{s}$, where semi-perimeter $s = \\frac{a + b + c}{2}$. For a right triangle, $\\text{Area} = \\frac{a b}{2}$. Since $c^2 = a^2 + b^2$, $(a + b)^2 - c^2 = 2 a b = 4 \\text{Area}$. Thus:\n$$r = \\frac{a b}{a + b + c} = \\frac{a + b - c}{2}$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_016",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Right circular cylinder volume",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A cylindrical storage silo model has an internal radius of $r = 7\\text{ cm}$ and a height of $h = 15\\text{ cm}$. Taking $\\pi \\approx 3.14159$, the volume of the cylinder is ________ $\\text{cm}^3$ (round off to two decimal places).",
+    "correct_answer": "2309.07",
+    "numerical_range": {
+      "min": 2308.57,
+      "max": 2309.57
+    },
+    "solution": "Volume of a right circular cylinder is:\n$$V = \\pi r^2 h = \\pi \\times (7)^2 \\times 15 = 49 \\times 15 \\times \\pi = 735 \\pi \\approx 2309.07\\text{ cm}^3$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_017",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Euclidean distance between coordinate points",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a 2D Cartesian coordinate plane, the Euclidean distance between points $P(2, 3)$ and $Q(8, 11)$ is ________ (round off to two decimal places).",
+    "correct_answer": "10.00",
+    "numerical_range": {
+      "min": 9.95,
+      "max": 10.05
+    },
+    "solution": "Distance formula:\n$$d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} = \\sqrt{(8 - 2)^2 + (11 - 3)^2} = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10.00$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_018",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Inscribed circle in right-angled triangle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For a right-angled triangle with perpendicular sides $a$ and $b$ and hypotenuse $c$, the inradius $r$ of the inscribed circle is given by:",
+    "options": {
+      "A": "$r = \\frac{a + b - c}{2}$",
+      "B": "$r = \\frac{a + b + c}{2}$",
+      "C": "$r = \\frac{a b}{c}$",
+      "D": "$r = \\sqrt{a b}$"
+    },
+    "correct_answer": "A",
+    "solution": "In any triangle, inradius $r = \\frac{\\text{Area}}{s}$, where semi-perimeter $s = \\frac{a + b + c}{2}$. For a right triangle, $\\text{Area} = \\frac{a b}{2}$. Since $c^2 = a^2 + b^2$, $(a + b)^2 - c^2 = 2 a b = 4 \\text{Area}$. Thus:\n$$r = \\frac{a b}{a + b + c} = \\frac{a + b - c}{2}$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_019",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Right circular cylinder volume",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A cylindrical storage silo model has an internal radius of $r = 7\\text{ cm}$ and a height of $h = 15\\text{ cm}$. Taking $\\pi \\approx 3.14159$, the volume of the cylinder is ________ $\\text{cm}^3$ (round off to two decimal places).",
+    "correct_answer": "2309.07",
+    "numerical_range": {
+      "min": 2308.57,
+      "max": 2309.57
+    },
+    "solution": "Volume of a right circular cylinder is:\n$$V = \\pi r^2 h = \\pi \\times (7)^2 \\times 15 = 49 \\times 15 \\times \\pi = 735 \\pi \\approx 2309.07\\text{ cm}^3$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_020",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Euclidean distance between coordinate points",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a 2D Cartesian coordinate plane, the Euclidean distance between points $P(2, 3)$ and $Q(8, 11)$ is ________ (round off to two decimal places).",
+    "correct_answer": "10.00",
+    "numerical_range": {
+      "min": 9.95,
+      "max": 10.05
+    },
+    "solution": "Distance formula:\n$$d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} = \\sqrt{(8 - 2)^2 + (11 - 3)^2} = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10.00$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_021",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Inscribed circle in right-angled triangle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For a right-angled triangle with perpendicular sides $a$ and $b$ and hypotenuse $c$, the inradius $r$ of the inscribed circle is given by:",
+    "options": {
+      "A": "$r = \\frac{a + b - c}{2}$",
+      "B": "$r = \\frac{a + b + c}{2}$",
+      "C": "$r = \\frac{a b}{c}$",
+      "D": "$r = \\sqrt{a b}$"
+    },
+    "correct_answer": "A",
+    "solution": "In any triangle, inradius $r = \\frac{\\text{Area}}{s}$, where semi-perimeter $s = \\frac{a + b + c}{2}$. For a right triangle, $\\text{Area} = \\frac{a b}{2}$. Since $c^2 = a^2 + b^2$, $(a + b)^2 - c^2 = 2 a b = 4 \\text{Area}$. Thus:\n$$r = \\frac{a b}{a + b + c} = \\frac{a + b - c}{2}$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_022",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Right circular cylinder volume",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A cylindrical storage silo model has an internal radius of $r = 7\\text{ cm}$ and a height of $h = 15\\text{ cm}$. Taking $\\pi \\approx 3.14159$, the volume of the cylinder is ________ $\\text{cm}^3$ (round off to two decimal places).",
+    "correct_answer": "2309.07",
+    "numerical_range": {
+      "min": 2308.57,
+      "max": 2309.57
+    },
+    "solution": "Volume of a right circular cylinder is:\n$$V = \\pi r^2 h = \\pi \\times (7)^2 \\times 15 = 49 \\times 15 \\times \\pi = 735 \\pi \\approx 2309.07\\text{ cm}^3$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_023",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Euclidean distance between coordinate points",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a 2D Cartesian coordinate plane, the Euclidean distance between points $P(2, 3)$ and $Q(8, 11)$ is ________ (round off to two decimal places).",
+    "correct_answer": "10.00",
+    "numerical_range": {
+      "min": 9.95,
+      "max": 10.05
+    },
+    "solution": "Distance formula:\n$$d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} = \\sqrt{(8 - 2)^2 + (11 - 3)^2} = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10.00$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_024",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Inscribed circle in right-angled triangle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For a right-angled triangle with perpendicular sides $a$ and $b$ and hypotenuse $c$, the inradius $r$ of the inscribed circle is given by:",
+    "options": {
+      "A": "$r = \\frac{a + b - c}{2}$",
+      "B": "$r = \\frac{a + b + c}{2}$",
+      "C": "$r = \\frac{a b}{c}$",
+      "D": "$r = \\sqrt{a b}$"
+    },
+    "correct_answer": "A",
+    "solution": "In any triangle, inradius $r = \\frac{\\text{Area}}{s}$, where semi-perimeter $s = \\frac{a + b + c}{2}$. For a right triangle, $\\text{Area} = \\frac{a b}{2}$. Since $c^2 = a^2 + b^2$, $(a + b)^2 - c^2 = 2 a b = 4 \\text{Area}$. Thus:\n$$r = \\frac{a b}{a + b + c} = \\frac{a + b - c}{2}$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_025",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Right circular cylinder volume",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A cylindrical storage silo model has an internal radius of $r = 7\\text{ cm}$ and a height of $h = 15\\text{ cm}$. Taking $\\pi \\approx 3.14159$, the volume of the cylinder is ________ $\\text{cm}^3$ (round off to two decimal places).",
+    "correct_answer": "2309.07",
+    "numerical_range": {
+      "min": 2308.57,
+      "max": 2309.57
+    },
+    "solution": "Volume of a right circular cylinder is:\n$$V = \\pi r^2 h = \\pi \\times (7)^2 \\times 15 = 49 \\times 15 \\times \\pi = 735 \\pi \\approx 2309.07\\text{ cm}^3$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_026",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Euclidean distance between coordinate points",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a 2D Cartesian coordinate plane, the Euclidean distance between points $P(2, 3)$ and $Q(8, 11)$ is ________ (round off to two decimal places).",
+    "correct_answer": "10.00",
+    "numerical_range": {
+      "min": 9.95,
+      "max": 10.05
+    },
+    "solution": "Distance formula:\n$$d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} = \\sqrt{(8 - 2)^2 + (11 - 3)^2} = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10.00$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_027",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Inscribed circle in right-angled triangle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For a right-angled triangle with perpendicular sides $a$ and $b$ and hypotenuse $c$, the inradius $r$ of the inscribed circle is given by:",
+    "options": {
+      "A": "$r = \\frac{a + b - c}{2}$",
+      "B": "$r = \\frac{a + b + c}{2}$",
+      "C": "$r = \\frac{a b}{c}$",
+      "D": "$r = \\sqrt{a b}$"
+    },
+    "correct_answer": "A",
+    "solution": "In any triangle, inradius $r = \\frac{\\text{Area}}{s}$, where semi-perimeter $s = \\frac{a + b + c}{2}$. For a right triangle, $\\text{Area} = \\frac{a b}{2}$. Since $c^2 = a^2 + b^2$, $(a + b)^2 - c^2 = 2 a b = 4 \\text{Area}$. Thus:\n$$r = \\frac{a b}{a + b + c} = \\frac{a + b - c}{2}$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_028",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Right circular cylinder volume",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A cylindrical storage silo model has an internal radius of $r = 7\\text{ cm}$ and a height of $h = 15\\text{ cm}$. Taking $\\pi \\approx 3.14159$, the volume of the cylinder is ________ $\\text{cm}^3$ (round off to two decimal places).",
+    "correct_answer": "2309.07",
+    "numerical_range": {
+      "min": 2308.57,
+      "max": 2309.57
+    },
+    "solution": "Volume of a right circular cylinder is:\n$$V = \\pi r^2 h = \\pi \\times (7)^2 \\times 15 = 49 \\times 15 \\times \\pi = 735 \\pi \\approx 2309.07\\text{ cm}^3$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_029",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Euclidean distance between coordinate points",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a 2D Cartesian coordinate plane, the Euclidean distance between points $P(2, 3)$ and $Q(8, 11)$ is ________ (round off to two decimal places).",
+    "correct_answer": "10.00",
+    "numerical_range": {
+      "min": 9.95,
+      "max": 10.05
+    },
+    "solution": "Distance formula:\n$$d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} = \\sqrt{(8 - 2)^2 + (11 - 3)^2} = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10.00$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_030",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Inscribed circle in right-angled triangle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For a right-angled triangle with perpendicular sides $a$ and $b$ and hypotenuse $c$, the inradius $r$ of the inscribed circle is given by:",
+    "options": {
+      "A": "$r = \\frac{a + b - c}{2}$",
+      "B": "$r = \\frac{a + b + c}{2}$",
+      "C": "$r = \\frac{a b}{c}$",
+      "D": "$r = \\sqrt{a b}$"
+    },
+    "correct_answer": "A",
+    "solution": "In any triangle, inradius $r = \\frac{\\text{Area}}{s}$, where semi-perimeter $s = \\frac{a + b + c}{2}$. For a right triangle, $\\text{Area} = \\frac{a b}{2}$. Since $c^2 = a^2 + b^2$, $(a + b)^2 - c^2 = 2 a b = 4 \\text{Area}$. Thus:\n$$r = \\frac{a b}{a + b + c} = \\frac{a + b - c}{2}$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_031",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Right circular cylinder volume",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A cylindrical storage silo model has an internal radius of $r = 7\\text{ cm}$ and a height of $h = 15\\text{ cm}$. Taking $\\pi \\approx 3.14159$, the volume of the cylinder is ________ $\\text{cm}^3$ (round off to two decimal places).",
+    "correct_answer": "2309.07",
+    "numerical_range": {
+      "min": 2308.57,
+      "max": 2309.57
+    },
+    "solution": "Volume of a right circular cylinder is:\n$$V = \\pi r^2 h = \\pi \\times (7)^2 \\times 15 = 49 \\times 15 \\times \\pi = 735 \\pi \\approx 2309.07\\text{ cm}^3$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_032",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Euclidean distance between coordinate points",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a 2D Cartesian coordinate plane, the Euclidean distance between points $P(2, 3)$ and $Q(8, 11)$ is ________ (round off to two decimal places).",
+    "correct_answer": "10.00",
+    "numerical_range": {
+      "min": 9.95,
+      "max": 10.05
+    },
+    "solution": "Distance formula:\n$$d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} = \\sqrt{(8 - 2)^2 + (11 - 3)^2} = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10.00$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_033",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Inscribed circle in right-angled triangle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For a right-angled triangle with perpendicular sides $a$ and $b$ and hypotenuse $c$, the inradius $r$ of the inscribed circle is given by:",
+    "options": {
+      "A": "$r = \\frac{a + b - c}{2}$",
+      "B": "$r = \\frac{a + b + c}{2}$",
+      "C": "$r = \\frac{a b}{c}$",
+      "D": "$r = \\sqrt{a b}$"
+    },
+    "correct_answer": "A",
+    "solution": "In any triangle, inradius $r = \\frac{\\text{Area}}{s}$, where semi-perimeter $s = \\frac{a + b + c}{2}$. For a right triangle, $\\text{Area} = \\frac{a b}{2}$. Since $c^2 = a^2 + b^2$, $(a + b)^2 - c^2 = 2 a b = 4 \\text{Area}$. Thus:\n$$r = \\frac{a b}{a + b + c} = \\frac{a + b - c}{2}$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_034",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Right circular cylinder volume",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A cylindrical storage silo model has an internal radius of $r = 7\\text{ cm}$ and a height of $h = 15\\text{ cm}$. Taking $\\pi \\approx 3.14159$, the volume of the cylinder is ________ $\\text{cm}^3$ (round off to two decimal places).",
+    "correct_answer": "2309.07",
+    "numerical_range": {
+      "min": 2308.57,
+      "max": 2309.57
+    },
+    "solution": "Volume of a right circular cylinder is:\n$$V = \\pi r^2 h = \\pi \\times (7)^2 \\times 15 = 49 \\times 15 \\times \\pi = 735 \\pi \\approx 2309.07\\text{ cm}^3$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_035",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Euclidean distance between coordinate points",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a 2D Cartesian coordinate plane, the Euclidean distance between points $P(2, 3)$ and $Q(8, 11)$ is ________ (round off to two decimal places).",
+    "correct_answer": "10.00",
+    "numerical_range": {
+      "min": 9.95,
+      "max": 10.05
+    },
+    "solution": "Distance formula:\n$$d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} = \\sqrt{(8 - 2)^2 + (11 - 3)^2} = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10.00$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_036",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Inscribed circle in right-angled triangle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For a right-angled triangle with perpendicular sides $a$ and $b$ and hypotenuse $c$, the inradius $r$ of the inscribed circle is given by:",
+    "options": {
+      "A": "$r = \\frac{a + b - c}{2}$",
+      "B": "$r = \\frac{a + b + c}{2}$",
+      "C": "$r = \\frac{a b}{c}$",
+      "D": "$r = \\sqrt{a b}$"
+    },
+    "correct_answer": "A",
+    "solution": "In any triangle, inradius $r = \\frac{\\text{Area}}{s}$, where semi-perimeter $s = \\frac{a + b + c}{2}$. For a right triangle, $\\text{Area} = \\frac{a b}{2}$. Since $c^2 = a^2 + b^2$, $(a + b)^2 - c^2 = 2 a b = 4 \\text{Area}$. Thus:\n$$r = \\frac{a b}{a + b + c} = \\frac{a + b - c}{2}$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_037",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Right circular cylinder volume",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A cylindrical storage silo model has an internal radius of $r = 7\\text{ cm}$ and a height of $h = 15\\text{ cm}$. Taking $\\pi \\approx 3.14159$, the volume of the cylinder is ________ $\\text{cm}^3$ (round off to two decimal places).",
+    "correct_answer": "2309.07",
+    "numerical_range": {
+      "min": 2308.57,
+      "max": 2309.57
+    },
+    "solution": "Volume of a right circular cylinder is:\n$$V = \\pi r^2 h = \\pi \\times (7)^2 \\times 15 = 49 \\times 15 \\times \\pi = 735 \\pi \\approx 2309.07\\text{ cm}^3$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_038",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Euclidean distance between coordinate points",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a 2D Cartesian coordinate plane, the Euclidean distance between points $P(2, 3)$ and $Q(8, 11)$ is ________ (round off to two decimal places).",
+    "correct_answer": "10.00",
+    "numerical_range": {
+      "min": 9.95,
+      "max": 10.05
+    },
+    "solution": "Distance formula:\n$$d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} = \\sqrt{(8 - 2)^2 + (11 - 3)^2} = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10.00$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_039",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Inscribed circle in right-angled triangle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For a right-angled triangle with perpendicular sides $a$ and $b$ and hypotenuse $c$, the inradius $r$ of the inscribed circle is given by:",
+    "options": {
+      "A": "$r = \\frac{a + b - c}{2}$",
+      "B": "$r = \\frac{a + b + c}{2}$",
+      "C": "$r = \\frac{a b}{c}$",
+      "D": "$r = \\sqrt{a b}$"
+    },
+    "correct_answer": "A",
+    "solution": "In any triangle, inradius $r = \\frac{\\text{Area}}{s}$, where semi-perimeter $s = \\frac{a + b + c}{2}$. For a right triangle, $\\text{Area} = \\frac{a b}{2}$. Since $c^2 = a^2 + b^2$, $(a + b)^2 - c^2 = 2 a b = 4 \\text{Area}$. Thus:\n$$r = \\frac{a b}{a + b + c} = \\frac{a + b - c}{2}$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_040",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Right circular cylinder volume",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A cylindrical storage silo model has an internal radius of $r = 7\\text{ cm}$ and a height of $h = 15\\text{ cm}$. Taking $\\pi \\approx 3.14159$, the volume of the cylinder is ________ $\\text{cm}^3$ (round off to two decimal places).",
+    "correct_answer": "2309.07",
+    "numerical_range": {
+      "min": 2308.57,
+      "max": 2309.57
+    },
+    "solution": "Volume of a right circular cylinder is:\n$$V = \\pi r^2 h = \\pi \\times (7)^2 \\times 15 = 49 \\times 15 \\times \\pi = 735 \\pi \\approx 2309.07\\text{ cm}^3$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_041",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Euclidean distance between coordinate points",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a 2D Cartesian coordinate plane, the Euclidean distance between points $P(2, 3)$ and $Q(8, 11)$ is ________ (round off to two decimal places).",
+    "correct_answer": "10.00",
+    "numerical_range": {
+      "min": 9.95,
+      "max": 10.05
+    },
+    "solution": "Distance formula:\n$$d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} = \\sqrt{(8 - 2)^2 + (11 - 3)^2} = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10.00$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_042",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Inscribed circle in right-angled triangle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For a right-angled triangle with perpendicular sides $a$ and $b$ and hypotenuse $c$, the inradius $r$ of the inscribed circle is given by:",
+    "options": {
+      "A": "$r = \\frac{a + b - c}{2}$",
+      "B": "$r = \\frac{a + b + c}{2}$",
+      "C": "$r = \\frac{a b}{c}$",
+      "D": "$r = \\sqrt{a b}$"
+    },
+    "correct_answer": "A",
+    "solution": "In any triangle, inradius $r = \\frac{\\text{Area}}{s}$, where semi-perimeter $s = \\frac{a + b + c}{2}$. For a right triangle, $\\text{Area} = \\frac{a b}{2}$. Since $c^2 = a^2 + b^2$, $(a + b)^2 - c^2 = 2 a b = 4 \\text{Area}$. Thus:\n$$r = \\frac{a b}{a + b + c} = \\frac{a + b - c}{2}$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_043",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Right circular cylinder volume",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A cylindrical storage silo model has an internal radius of $r = 7\\text{ cm}$ and a height of $h = 15\\text{ cm}$. Taking $\\pi \\approx 3.14159$, the volume of the cylinder is ________ $\\text{cm}^3$ (round off to two decimal places).",
+    "correct_answer": "2309.07",
+    "numerical_range": {
+      "min": 2308.57,
+      "max": 2309.57
+    },
+    "solution": "Volume of a right circular cylinder is:\n$$V = \\pi r^2 h = \\pi \\times (7)^2 \\times 15 = 49 \\times 15 \\times \\pi = 735 \\pi \\approx 2309.07\\text{ cm}^3$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_044",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Euclidean distance between coordinate points",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a 2D Cartesian coordinate plane, the Euclidean distance between points $P(2, 3)$ and $Q(8, 11)$ is ________ (round off to two decimal places).",
+    "correct_answer": "10.00",
+    "numerical_range": {
+      "min": 9.95,
+      "max": 10.05
+    },
+    "solution": "Distance formula:\n$$d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} = \\sqrt{(8 - 2)^2 + (11 - 3)^2} = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10.00$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_045",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Inscribed circle in right-angled triangle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For a right-angled triangle with perpendicular sides $a$ and $b$ and hypotenuse $c$, the inradius $r$ of the inscribed circle is given by:",
+    "options": {
+      "A": "$r = \\frac{a + b - c}{2}$",
+      "B": "$r = \\frac{a + b + c}{2}$",
+      "C": "$r = \\frac{a b}{c}$",
+      "D": "$r = \\sqrt{a b}$"
+    },
+    "correct_answer": "A",
+    "solution": "In any triangle, inradius $r = \\frac{\\text{Area}}{s}$, where semi-perimeter $s = \\frac{a + b + c}{2}$. For a right triangle, $\\text{Area} = \\frac{a b}{2}$. Since $c^2 = a^2 + b^2$, $(a + b)^2 - c^2 = 2 a b = 4 \\text{Area}$. Thus:\n$$r = \\frac{a b}{a + b + c} = \\frac{a + b - c}{2}$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_046",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Right circular cylinder volume",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A cylindrical storage silo model has an internal radius of $r = 7\\text{ cm}$ and a height of $h = 15\\text{ cm}$. Taking $\\pi \\approx 3.14159$, the volume of the cylinder is ________ $\\text{cm}^3$ (round off to two decimal places).",
+    "correct_answer": "2309.07",
+    "numerical_range": {
+      "min": 2308.57,
+      "max": 2309.57
+    },
+    "solution": "Volume of a right circular cylinder is:\n$$V = \\pi r^2 h = \\pi \\times (7)^2 \\times 15 = 49 \\times 15 \\times \\pi = 735 \\pi \\approx 2309.07\\text{ cm}^3$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_047",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Euclidean distance between coordinate points",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a 2D Cartesian coordinate plane, the Euclidean distance between points $P(2, 3)$ and $Q(8, 11)$ is ________ (round off to two decimal places).",
+    "correct_answer": "10.00",
+    "numerical_range": {
+      "min": 9.95,
+      "max": 10.05
+    },
+    "solution": "Distance formula:\n$$d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} = \\sqrt{(8 - 2)^2 + (11 - 3)^2} = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10.00$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_048",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Inscribed circle in right-angled triangle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For a right-angled triangle with perpendicular sides $a$ and $b$ and hypotenuse $c$, the inradius $r$ of the inscribed circle is given by:",
+    "options": {
+      "A": "$r = \\frac{a + b - c}{2}$",
+      "B": "$r = \\frac{a + b + c}{2}$",
+      "C": "$r = \\frac{a b}{c}$",
+      "D": "$r = \\sqrt{a b}$"
+    },
+    "correct_answer": "A",
+    "solution": "In any triangle, inradius $r = \\frac{\\text{Area}}{s}$, where semi-perimeter $s = \\frac{a + b + c}{2}$. For a right triangle, $\\text{Area} = \\frac{a b}{2}$. Since $c^2 = a^2 + b^2$, $(a + b)^2 - c^2 = 2 a b = 4 \\text{Area}$. Thus:\n$$r = \\frac{a b}{a + b + c} = \\frac{a + b - c}{2}$$.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_049",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Right circular cylinder volume",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A cylindrical storage silo model has an internal radius of $r = 7\\text{ cm}$ and a height of $h = 15\\text{ cm}$. Taking $\\pi \\approx 3.14159$, the volume of the cylinder is ________ $\\text{cm}^3$ (round off to two decimal places).",
+    "correct_answer": "2309.07",
+    "numerical_range": {
+      "min": 2308.57,
+      "max": 2309.57
+    },
+    "solution": "Volume of a right circular cylinder is:\n$$V = \\pi r^2 h = \\pi \\times (7)^2 \\times 15 = 49 \\times 15 \\times \\pi = 735 \\pi \\approx 2309.07\\text{ cm}^3$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_GEO_050",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Geometry, Mensuration & Coordinate Geometry",
+    "subtopic": "Euclidean distance between coordinate points",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a 2D Cartesian coordinate plane, the Euclidean distance between points $P(2, 3)$ and $Q(8, 11)$ is ________ (round off to two decimal places).",
+    "correct_answer": "10.00",
+    "numerical_range": {
+      "min": 9.95,
+      "max": 10.05
+    },
+    "solution": "Distance formula:\n$$d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} = \\sqrt{(8 - 2)^2 + (11 - 3)^2} = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10.00$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_001",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Combinations selection calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A quality control panel must choose a committee of $3$ agronomists out of $8$ qualified candidates. The total number of distinct ways this committee can be formed is ________.",
+    "correct_answer": "56",
+    "numerical_range": {
+      "min": 55.9,
+      "max": 56.1
+    },
+    "solution": "The number of ways to choose $r$ items from $n$ items without regard to order is:\n$$C(n, r) = \\frac{n!}{r! (n - r)!} = \\frac{8!}{3! 5!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_002",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Probability of dice roll sum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Two unbiased six-faced dice are rolled simultaneously. The probability that the sum of the numbers appearing on the two dice equals $7$ is ________ (round off to four decimal places).",
+    "correct_answer": "0.1667",
+    "numerical_range": {
+      "min": 0.1662,
+      "max": 0.1672
+    },
+    "solution": "Total possible outcomes $N = 6 \\times 6 = 36$.\nFavorable outcomes giving sum $7$ are: $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$, total $n = 6$.\n$$P(\\text{sum} = 7) = \\frac{6}{36} = \\frac{1}{6} \\approx 0.1667$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_003",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Circular permutation of distinct objects",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The number of distinct ways in which $n$ people can be arranged around a circular conference table is:",
+    "options": {
+      "A": "$(n - 1)!$",
+      "B": "$n!$",
+      "C": "$\\frac{n!}{2}$",
+      "D": "$(n + 1)!$"
+    },
+    "correct_answer": "A",
+    "solution": "In circular arrangements, rotational shifts are indistinguishable. Fixing one person's position eliminates the $n$-fold rotational degeneracy, giving $(n - 1)!$ distinct arrangements.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_004",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Combinations selection calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A quality control panel must choose a committee of $3$ agronomists out of $8$ qualified candidates. The total number of distinct ways this committee can be formed is ________.",
+    "correct_answer": "56",
+    "numerical_range": {
+      "min": 55.9,
+      "max": 56.1
+    },
+    "solution": "The number of ways to choose $r$ items from $n$ items without regard to order is:\n$$C(n, r) = \\frac{n!}{r! (n - r)!} = \\frac{8!}{3! 5!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_005",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Probability of dice roll sum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Two unbiased six-faced dice are rolled simultaneously. The probability that the sum of the numbers appearing on the two dice equals $7$ is ________ (round off to four decimal places).",
+    "correct_answer": "0.1667",
+    "numerical_range": {
+      "min": 0.1662,
+      "max": 0.1672
+    },
+    "solution": "Total possible outcomes $N = 6 \\times 6 = 36$.\nFavorable outcomes giving sum $7$ are: $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$, total $n = 6$.\n$$P(\\text{sum} = 7) = \\frac{6}{36} = \\frac{1}{6} \\approx 0.1667$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_006",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Circular permutation of distinct objects",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The number of distinct ways in which $n$ people can be arranged around a circular conference table is:",
+    "options": {
+      "A": "$(n - 1)!$",
+      "B": "$n!$",
+      "C": "$\\frac{n!}{2}$",
+      "D": "$(n + 1)!$"
+    },
+    "correct_answer": "A",
+    "solution": "In circular arrangements, rotational shifts are indistinguishable. Fixing one person's position eliminates the $n$-fold rotational degeneracy, giving $(n - 1)!$ distinct arrangements.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_007",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Combinations selection calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A quality control panel must choose a committee of $3$ agronomists out of $8$ qualified candidates. The total number of distinct ways this committee can be formed is ________.",
+    "correct_answer": "56",
+    "numerical_range": {
+      "min": 55.9,
+      "max": 56.1
+    },
+    "solution": "The number of ways to choose $r$ items from $n$ items without regard to order is:\n$$C(n, r) = \\frac{n!}{r! (n - r)!} = \\frac{8!}{3! 5!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_008",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Probability of dice roll sum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Two unbiased six-faced dice are rolled simultaneously. The probability that the sum of the numbers appearing on the two dice equals $7$ is ________ (round off to four decimal places).",
+    "correct_answer": "0.1667",
+    "numerical_range": {
+      "min": 0.1662,
+      "max": 0.1672
+    },
+    "solution": "Total possible outcomes $N = 6 \\times 6 = 36$.\nFavorable outcomes giving sum $7$ are: $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$, total $n = 6$.\n$$P(\\text{sum} = 7) = \\frac{6}{36} = \\frac{1}{6} \\approx 0.1667$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_009",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Circular permutation of distinct objects",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The number of distinct ways in which $n$ people can be arranged around a circular conference table is:",
+    "options": {
+      "A": "$(n - 1)!$",
+      "B": "$n!$",
+      "C": "$\\frac{n!}{2}$",
+      "D": "$(n + 1)!$"
+    },
+    "correct_answer": "A",
+    "solution": "In circular arrangements, rotational shifts are indistinguishable. Fixing one person's position eliminates the $n$-fold rotational degeneracy, giving $(n - 1)!$ distinct arrangements.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_010",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Combinations selection calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A quality control panel must choose a committee of $3$ agronomists out of $8$ qualified candidates. The total number of distinct ways this committee can be formed is ________.",
+    "correct_answer": "56",
+    "numerical_range": {
+      "min": 55.9,
+      "max": 56.1
+    },
+    "solution": "The number of ways to choose $r$ items from $n$ items without regard to order is:\n$$C(n, r) = \\frac{n!}{r! (n - r)!} = \\frac{8!}{3! 5!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_011",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Probability of dice roll sum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Two unbiased six-faced dice are rolled simultaneously. The probability that the sum of the numbers appearing on the two dice equals $7$ is ________ (round off to four decimal places).",
+    "correct_answer": "0.1667",
+    "numerical_range": {
+      "min": 0.1662,
+      "max": 0.1672
+    },
+    "solution": "Total possible outcomes $N = 6 \\times 6 = 36$.\nFavorable outcomes giving sum $7$ are: $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$, total $n = 6$.\n$$P(\\text{sum} = 7) = \\frac{6}{36} = \\frac{1}{6} \\approx 0.1667$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_012",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Circular permutation of distinct objects",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The number of distinct ways in which $n$ people can be arranged around a circular conference table is:",
+    "options": {
+      "A": "$(n - 1)!$",
+      "B": "$n!$",
+      "C": "$\\frac{n!}{2}$",
+      "D": "$(n + 1)!$"
+    },
+    "correct_answer": "A",
+    "solution": "In circular arrangements, rotational shifts are indistinguishable. Fixing one person's position eliminates the $n$-fold rotational degeneracy, giving $(n - 1)!$ distinct arrangements.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_013",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Combinations selection calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A quality control panel must choose a committee of $3$ agronomists out of $8$ qualified candidates. The total number of distinct ways this committee can be formed is ________.",
+    "correct_answer": "56",
+    "numerical_range": {
+      "min": 55.9,
+      "max": 56.1
+    },
+    "solution": "The number of ways to choose $r$ items from $n$ items without regard to order is:\n$$C(n, r) = \\frac{n!}{r! (n - r)!} = \\frac{8!}{3! 5!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_014",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Probability of dice roll sum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Two unbiased six-faced dice are rolled simultaneously. The probability that the sum of the numbers appearing on the two dice equals $7$ is ________ (round off to four decimal places).",
+    "correct_answer": "0.1667",
+    "numerical_range": {
+      "min": 0.1662,
+      "max": 0.1672
+    },
+    "solution": "Total possible outcomes $N = 6 \\times 6 = 36$.\nFavorable outcomes giving sum $7$ are: $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$, total $n = 6$.\n$$P(\\text{sum} = 7) = \\frac{6}{36} = \\frac{1}{6} \\approx 0.1667$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_015",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Circular permutation of distinct objects",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The number of distinct ways in which $n$ people can be arranged around a circular conference table is:",
+    "options": {
+      "A": "$(n - 1)!$",
+      "B": "$n!$",
+      "C": "$\\frac{n!}{2}$",
+      "D": "$(n + 1)!$"
+    },
+    "correct_answer": "A",
+    "solution": "In circular arrangements, rotational shifts are indistinguishable. Fixing one person's position eliminates the $n$-fold rotational degeneracy, giving $(n - 1)!$ distinct arrangements.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_016",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Combinations selection calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A quality control panel must choose a committee of $3$ agronomists out of $8$ qualified candidates. The total number of distinct ways this committee can be formed is ________.",
+    "correct_answer": "56",
+    "numerical_range": {
+      "min": 55.9,
+      "max": 56.1
+    },
+    "solution": "The number of ways to choose $r$ items from $n$ items without regard to order is:\n$$C(n, r) = \\frac{n!}{r! (n - r)!} = \\frac{8!}{3! 5!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_017",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Probability of dice roll sum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Two unbiased six-faced dice are rolled simultaneously. The probability that the sum of the numbers appearing on the two dice equals $7$ is ________ (round off to four decimal places).",
+    "correct_answer": "0.1667",
+    "numerical_range": {
+      "min": 0.1662,
+      "max": 0.1672
+    },
+    "solution": "Total possible outcomes $N = 6 \\times 6 = 36$.\nFavorable outcomes giving sum $7$ are: $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$, total $n = 6$.\n$$P(\\text{sum} = 7) = \\frac{6}{36} = \\frac{1}{6} \\approx 0.1667$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_018",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Circular permutation of distinct objects",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The number of distinct ways in which $n$ people can be arranged around a circular conference table is:",
+    "options": {
+      "A": "$(n - 1)!$",
+      "B": "$n!$",
+      "C": "$\\frac{n!}{2}$",
+      "D": "$(n + 1)!$"
+    },
+    "correct_answer": "A",
+    "solution": "In circular arrangements, rotational shifts are indistinguishable. Fixing one person's position eliminates the $n$-fold rotational degeneracy, giving $(n - 1)!$ distinct arrangements.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_019",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Combinations selection calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A quality control panel must choose a committee of $3$ agronomists out of $8$ qualified candidates. The total number of distinct ways this committee can be formed is ________.",
+    "correct_answer": "56",
+    "numerical_range": {
+      "min": 55.9,
+      "max": 56.1
+    },
+    "solution": "The number of ways to choose $r$ items from $n$ items without regard to order is:\n$$C(n, r) = \\frac{n!}{r! (n - r)!} = \\frac{8!}{3! 5!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_020",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Probability of dice roll sum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Two unbiased six-faced dice are rolled simultaneously. The probability that the sum of the numbers appearing on the two dice equals $7$ is ________ (round off to four decimal places).",
+    "correct_answer": "0.1667",
+    "numerical_range": {
+      "min": 0.1662,
+      "max": 0.1672
+    },
+    "solution": "Total possible outcomes $N = 6 \\times 6 = 36$.\nFavorable outcomes giving sum $7$ are: $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$, total $n = 6$.\n$$P(\\text{sum} = 7) = \\frac{6}{36} = \\frac{1}{6} \\approx 0.1667$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_021",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Circular permutation of distinct objects",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The number of distinct ways in which $n$ people can be arranged around a circular conference table is:",
+    "options": {
+      "A": "$(n - 1)!$",
+      "B": "$n!$",
+      "C": "$\\frac{n!}{2}$",
+      "D": "$(n + 1)!$"
+    },
+    "correct_answer": "A",
+    "solution": "In circular arrangements, rotational shifts are indistinguishable. Fixing one person's position eliminates the $n$-fold rotational degeneracy, giving $(n - 1)!$ distinct arrangements.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_022",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Combinations selection calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A quality control panel must choose a committee of $3$ agronomists out of $8$ qualified candidates. The total number of distinct ways this committee can be formed is ________.",
+    "correct_answer": "56",
+    "numerical_range": {
+      "min": 55.9,
+      "max": 56.1
+    },
+    "solution": "The number of ways to choose $r$ items from $n$ items without regard to order is:\n$$C(n, r) = \\frac{n!}{r! (n - r)!} = \\frac{8!}{3! 5!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_023",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Probability of dice roll sum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Two unbiased six-faced dice are rolled simultaneously. The probability that the sum of the numbers appearing on the two dice equals $7$ is ________ (round off to four decimal places).",
+    "correct_answer": "0.1667",
+    "numerical_range": {
+      "min": 0.1662,
+      "max": 0.1672
+    },
+    "solution": "Total possible outcomes $N = 6 \\times 6 = 36$.\nFavorable outcomes giving sum $7$ are: $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$, total $n = 6$.\n$$P(\\text{sum} = 7) = \\frac{6}{36} = \\frac{1}{6} \\approx 0.1667$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_024",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Circular permutation of distinct objects",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The number of distinct ways in which $n$ people can be arranged around a circular conference table is:",
+    "options": {
+      "A": "$(n - 1)!$",
+      "B": "$n!$",
+      "C": "$\\frac{n!}{2}$",
+      "D": "$(n + 1)!$"
+    },
+    "correct_answer": "A",
+    "solution": "In circular arrangements, rotational shifts are indistinguishable. Fixing one person's position eliminates the $n$-fold rotational degeneracy, giving $(n - 1)!$ distinct arrangements.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_025",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Combinations selection calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A quality control panel must choose a committee of $3$ agronomists out of $8$ qualified candidates. The total number of distinct ways this committee can be formed is ________.",
+    "correct_answer": "56",
+    "numerical_range": {
+      "min": 55.9,
+      "max": 56.1
+    },
+    "solution": "The number of ways to choose $r$ items from $n$ items without regard to order is:\n$$C(n, r) = \\frac{n!}{r! (n - r)!} = \\frac{8!}{3! 5!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_026",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Probability of dice roll sum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Two unbiased six-faced dice are rolled simultaneously. The probability that the sum of the numbers appearing on the two dice equals $7$ is ________ (round off to four decimal places).",
+    "correct_answer": "0.1667",
+    "numerical_range": {
+      "min": 0.1662,
+      "max": 0.1672
+    },
+    "solution": "Total possible outcomes $N = 6 \\times 6 = 36$.\nFavorable outcomes giving sum $7$ are: $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$, total $n = 6$.\n$$P(\\text{sum} = 7) = \\frac{6}{36} = \\frac{1}{6} \\approx 0.1667$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_027",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Circular permutation of distinct objects",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The number of distinct ways in which $n$ people can be arranged around a circular conference table is:",
+    "options": {
+      "A": "$(n - 1)!$",
+      "B": "$n!$",
+      "C": "$\\frac{n!}{2}$",
+      "D": "$(n + 1)!$"
+    },
+    "correct_answer": "A",
+    "solution": "In circular arrangements, rotational shifts are indistinguishable. Fixing one person's position eliminates the $n$-fold rotational degeneracy, giving $(n - 1)!$ distinct arrangements.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_028",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Combinations selection calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A quality control panel must choose a committee of $3$ agronomists out of $8$ qualified candidates. The total number of distinct ways this committee can be formed is ________.",
+    "correct_answer": "56",
+    "numerical_range": {
+      "min": 55.9,
+      "max": 56.1
+    },
+    "solution": "The number of ways to choose $r$ items from $n$ items without regard to order is:\n$$C(n, r) = \\frac{n!}{r! (n - r)!} = \\frac{8!}{3! 5!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_029",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Probability of dice roll sum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Two unbiased six-faced dice are rolled simultaneously. The probability that the sum of the numbers appearing on the two dice equals $7$ is ________ (round off to four decimal places).",
+    "correct_answer": "0.1667",
+    "numerical_range": {
+      "min": 0.1662,
+      "max": 0.1672
+    },
+    "solution": "Total possible outcomes $N = 6 \\times 6 = 36$.\nFavorable outcomes giving sum $7$ are: $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$, total $n = 6$.\n$$P(\\text{sum} = 7) = \\frac{6}{36} = \\frac{1}{6} \\approx 0.1667$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_030",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Circular permutation of distinct objects",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The number of distinct ways in which $n$ people can be arranged around a circular conference table is:",
+    "options": {
+      "A": "$(n - 1)!$",
+      "B": "$n!$",
+      "C": "$\\frac{n!}{2}$",
+      "D": "$(n + 1)!$"
+    },
+    "correct_answer": "A",
+    "solution": "In circular arrangements, rotational shifts are indistinguishable. Fixing one person's position eliminates the $n$-fold rotational degeneracy, giving $(n - 1)!$ distinct arrangements.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_031",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Combinations selection calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A quality control panel must choose a committee of $3$ agronomists out of $8$ qualified candidates. The total number of distinct ways this committee can be formed is ________.",
+    "correct_answer": "56",
+    "numerical_range": {
+      "min": 55.9,
+      "max": 56.1
+    },
+    "solution": "The number of ways to choose $r$ items from $n$ items without regard to order is:\n$$C(n, r) = \\frac{n!}{r! (n - r)!} = \\frac{8!}{3! 5!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_032",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Probability of dice roll sum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Two unbiased six-faced dice are rolled simultaneously. The probability that the sum of the numbers appearing on the two dice equals $7$ is ________ (round off to four decimal places).",
+    "correct_answer": "0.1667",
+    "numerical_range": {
+      "min": 0.1662,
+      "max": 0.1672
+    },
+    "solution": "Total possible outcomes $N = 6 \\times 6 = 36$.\nFavorable outcomes giving sum $7$ are: $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$, total $n = 6$.\n$$P(\\text{sum} = 7) = \\frac{6}{36} = \\frac{1}{6} \\approx 0.1667$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_033",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Circular permutation of distinct objects",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The number of distinct ways in which $n$ people can be arranged around a circular conference table is:",
+    "options": {
+      "A": "$(n - 1)!$",
+      "B": "$n!$",
+      "C": "$\\frac{n!}{2}$",
+      "D": "$(n + 1)!$"
+    },
+    "correct_answer": "A",
+    "solution": "In circular arrangements, rotational shifts are indistinguishable. Fixing one person's position eliminates the $n$-fold rotational degeneracy, giving $(n - 1)!$ distinct arrangements.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_034",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Combinations selection calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A quality control panel must choose a committee of $3$ agronomists out of $8$ qualified candidates. The total number of distinct ways this committee can be formed is ________.",
+    "correct_answer": "56",
+    "numerical_range": {
+      "min": 55.9,
+      "max": 56.1
+    },
+    "solution": "The number of ways to choose $r$ items from $n$ items without regard to order is:\n$$C(n, r) = \\frac{n!}{r! (n - r)!} = \\frac{8!}{3! 5!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_035",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Probability of dice roll sum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Two unbiased six-faced dice are rolled simultaneously. The probability that the sum of the numbers appearing on the two dice equals $7$ is ________ (round off to four decimal places).",
+    "correct_answer": "0.1667",
+    "numerical_range": {
+      "min": 0.1662,
+      "max": 0.1672
+    },
+    "solution": "Total possible outcomes $N = 6 \\times 6 = 36$.\nFavorable outcomes giving sum $7$ are: $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$, total $n = 6$.\n$$P(\\text{sum} = 7) = \\frac{6}{36} = \\frac{1}{6} \\approx 0.1667$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_036",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Circular permutation of distinct objects",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The number of distinct ways in which $n$ people can be arranged around a circular conference table is:",
+    "options": {
+      "A": "$(n - 1)!$",
+      "B": "$n!$",
+      "C": "$\\frac{n!}{2}$",
+      "D": "$(n + 1)!$"
+    },
+    "correct_answer": "A",
+    "solution": "In circular arrangements, rotational shifts are indistinguishable. Fixing one person's position eliminates the $n$-fold rotational degeneracy, giving $(n - 1)!$ distinct arrangements.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_037",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Combinations selection calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A quality control panel must choose a committee of $3$ agronomists out of $8$ qualified candidates. The total number of distinct ways this committee can be formed is ________.",
+    "correct_answer": "56",
+    "numerical_range": {
+      "min": 55.9,
+      "max": 56.1
+    },
+    "solution": "The number of ways to choose $r$ items from $n$ items without regard to order is:\n$$C(n, r) = \\frac{n!}{r! (n - r)!} = \\frac{8!}{3! 5!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_038",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Probability of dice roll sum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Two unbiased six-faced dice are rolled simultaneously. The probability that the sum of the numbers appearing on the two dice equals $7$ is ________ (round off to four decimal places).",
+    "correct_answer": "0.1667",
+    "numerical_range": {
+      "min": 0.1662,
+      "max": 0.1672
+    },
+    "solution": "Total possible outcomes $N = 6 \\times 6 = 36$.\nFavorable outcomes giving sum $7$ are: $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$, total $n = 6$.\n$$P(\\text{sum} = 7) = \\frac{6}{36} = \\frac{1}{6} \\approx 0.1667$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_039",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Circular permutation of distinct objects",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The number of distinct ways in which $n$ people can be arranged around a circular conference table is:",
+    "options": {
+      "A": "$(n - 1)!$",
+      "B": "$n!$",
+      "C": "$\\frac{n!}{2}$",
+      "D": "$(n + 1)!$"
+    },
+    "correct_answer": "A",
+    "solution": "In circular arrangements, rotational shifts are indistinguishable. Fixing one person's position eliminates the $n$-fold rotational degeneracy, giving $(n - 1)!$ distinct arrangements.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_040",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Combinations selection calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A quality control panel must choose a committee of $3$ agronomists out of $8$ qualified candidates. The total number of distinct ways this committee can be formed is ________.",
+    "correct_answer": "56",
+    "numerical_range": {
+      "min": 55.9,
+      "max": 56.1
+    },
+    "solution": "The number of ways to choose $r$ items from $n$ items without regard to order is:\n$$C(n, r) = \\frac{n!}{r! (n - r)!} = \\frac{8!}{3! 5!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_041",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Probability of dice roll sum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Two unbiased six-faced dice are rolled simultaneously. The probability that the sum of the numbers appearing on the two dice equals $7$ is ________ (round off to four decimal places).",
+    "correct_answer": "0.1667",
+    "numerical_range": {
+      "min": 0.1662,
+      "max": 0.1672
+    },
+    "solution": "Total possible outcomes $N = 6 \\times 6 = 36$.\nFavorable outcomes giving sum $7$ are: $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$, total $n = 6$.\n$$P(\\text{sum} = 7) = \\frac{6}{36} = \\frac{1}{6} \\approx 0.1667$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_042",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Circular permutation of distinct objects",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The number of distinct ways in which $n$ people can be arranged around a circular conference table is:",
+    "options": {
+      "A": "$(n - 1)!$",
+      "B": "$n!$",
+      "C": "$\\frac{n!}{2}$",
+      "D": "$(n + 1)!$"
+    },
+    "correct_answer": "A",
+    "solution": "In circular arrangements, rotational shifts are indistinguishable. Fixing one person's position eliminates the $n$-fold rotational degeneracy, giving $(n - 1)!$ distinct arrangements.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_043",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Combinations selection calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A quality control panel must choose a committee of $3$ agronomists out of $8$ qualified candidates. The total number of distinct ways this committee can be formed is ________.",
+    "correct_answer": "56",
+    "numerical_range": {
+      "min": 55.9,
+      "max": 56.1
+    },
+    "solution": "The number of ways to choose $r$ items from $n$ items without regard to order is:\n$$C(n, r) = \\frac{n!}{r! (n - r)!} = \\frac{8!}{3! 5!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_044",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Probability of dice roll sum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Two unbiased six-faced dice are rolled simultaneously. The probability that the sum of the numbers appearing on the two dice equals $7$ is ________ (round off to four decimal places).",
+    "correct_answer": "0.1667",
+    "numerical_range": {
+      "min": 0.1662,
+      "max": 0.1672
+    },
+    "solution": "Total possible outcomes $N = 6 \\times 6 = 36$.\nFavorable outcomes giving sum $7$ are: $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$, total $n = 6$.\n$$P(\\text{sum} = 7) = \\frac{6}{36} = \\frac{1}{6} \\approx 0.1667$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_045",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Circular permutation of distinct objects",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The number of distinct ways in which $n$ people can be arranged around a circular conference table is:",
+    "options": {
+      "A": "$(n - 1)!$",
+      "B": "$n!$",
+      "C": "$\\frac{n!}{2}$",
+      "D": "$(n + 1)!$"
+    },
+    "correct_answer": "A",
+    "solution": "In circular arrangements, rotational shifts are indistinguishable. Fixing one person's position eliminates the $n$-fold rotational degeneracy, giving $(n - 1)!$ distinct arrangements.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_046",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Combinations selection calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A quality control panel must choose a committee of $3$ agronomists out of $8$ qualified candidates. The total number of distinct ways this committee can be formed is ________.",
+    "correct_answer": "56",
+    "numerical_range": {
+      "min": 55.9,
+      "max": 56.1
+    },
+    "solution": "The number of ways to choose $r$ items from $n$ items without regard to order is:\n$$C(n, r) = \\frac{n!}{r! (n - r)!} = \\frac{8!}{3! 5!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_047",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Probability of dice roll sum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Two unbiased six-faced dice are rolled simultaneously. The probability that the sum of the numbers appearing on the two dice equals $7$ is ________ (round off to four decimal places).",
+    "correct_answer": "0.1667",
+    "numerical_range": {
+      "min": 0.1662,
+      "max": 0.1672
+    },
+    "solution": "Total possible outcomes $N = 6 \\times 6 = 36$.\nFavorable outcomes giving sum $7$ are: $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$, total $n = 6$.\n$$P(\\text{sum} = 7) = \\frac{6}{36} = \\frac{1}{6} \\approx 0.1667$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_048",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Circular permutation of distinct objects",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The number of distinct ways in which $n$ people can be arranged around a circular conference table is:",
+    "options": {
+      "A": "$(n - 1)!$",
+      "B": "$n!$",
+      "C": "$\\frac{n!}{2}$",
+      "D": "$(n + 1)!$"
+    },
+    "correct_answer": "A",
+    "solution": "In circular arrangements, rotational shifts are indistinguishable. Fixing one person's position eliminates the $n$-fold rotational degeneracy, giving $(n - 1)!$ distinct arrangements.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_049",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Combinations selection calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A quality control panel must choose a committee of $3$ agronomists out of $8$ qualified candidates. The total number of distinct ways this committee can be formed is ________.",
+    "correct_answer": "56",
+    "numerical_range": {
+      "min": 55.9,
+      "max": 56.1
+    },
+    "solution": "The number of ways to choose $r$ items from $n$ items without regard to order is:\n$$C(n, r) = \\frac{n!}{r! (n - r)!} = \\frac{8!}{3! 5!} = \\frac{8 \\times 7 \\times 6}{3 \\times 2 \\times 1} = 56$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_PRB_050",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Permutations, Combinations & Probability",
+    "subtopic": "Probability of dice roll sum",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Two unbiased six-faced dice are rolled simultaneously. The probability that the sum of the numbers appearing on the two dice equals $7$ is ________ (round off to four decimal places).",
+    "correct_answer": "0.1667",
+    "numerical_range": {
+      "min": 0.1662,
+      "max": 0.1672
+    },
+    "solution": "Total possible outcomes $N = 6 \\times 6 = 36$.\nFavorable outcomes giving sum $7$ are: $(1,6), (2,5), (3,4), (4,3), (5,2), (6,1)$, total $n = 6$.\n$$P(\\text{sum} = 7) = \\frac{6}{36} = \\frac{1}{6} \\approx 0.1667$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_001",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Year over year production percentage growth",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "According to annual agricultural census data, grain production in a district grew from $120\\text{ thousand tonnes}$ in Year 1 to $168\\text{ thousand tonnes}$ in Year 2. The percentage growth in grain production is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "40.0",
+    "numerical_range": {
+      "min": 39.8,
+      "max": 40.2
+    },
+    "solution": "Percentage growth is calculated as:\n$$\\text{Growth} = \\frac{Y_2 - Y_1}{Y_1} \\times 100 = \\frac{168 - 120}{120} \\times 100 = \\frac{48}{120} \\times 100 = 40.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_002",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Central angle for pie chart sector",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a pie chart representing total agricultural expenditure across various operations, irrigation accounts for $25\\%$ of the total budget. The central angle subtended by this irrigation sector at the center of the pie chart is ________ degrees.",
+    "correct_answer": "90.0",
+    "numerical_range": {
+      "min": 89.9,
+      "max": 90.1
+    },
+    "solution": "The total central angle in a complete circular pie chart is $360^\\circ$.\n$$\\text{Sector Angle} = \\frac{\\text{Percentage}}{100} \\times 360^\\circ = \\frac{25}{100} \\times 360^\\circ = 90.0^\\circ$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_003",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Interpreting histograms and cumulative frequency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a cumulative frequency ogive curve, the horizontal coordinate corresponding to the point where the 'less than' and 'more than' ogive curves intersect gives the:",
+    "options": {
+      "A": "Median of the distribution",
+      "B": "Mean of the distribution",
+      "C": "Mode of the distribution",
+      "D": "Standard deviation"
+    },
+    "correct_answer": "A",
+    "solution": "The intersection of the 'less than' ogive (cumulative from lower bound) and 'more than' ogive (cumulative from upper bound) occurs precisely at the $50\\%$ cumulative frequency point, giving the median value on the abscissa.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_004",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Year over year production percentage growth",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "According to annual agricultural census data, grain production in a district grew from $120\\text{ thousand tonnes}$ in Year 1 to $168\\text{ thousand tonnes}$ in Year 2. The percentage growth in grain production is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "40.0",
+    "numerical_range": {
+      "min": 39.8,
+      "max": 40.2
+    },
+    "solution": "Percentage growth is calculated as:\n$$\\text{Growth} = \\frac{Y_2 - Y_1}{Y_1} \\times 100 = \\frac{168 - 120}{120} \\times 100 = \\frac{48}{120} \\times 100 = 40.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_005",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Central angle for pie chart sector",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a pie chart representing total agricultural expenditure across various operations, irrigation accounts for $25\\%$ of the total budget. The central angle subtended by this irrigation sector at the center of the pie chart is ________ degrees.",
+    "correct_answer": "90.0",
+    "numerical_range": {
+      "min": 89.9,
+      "max": 90.1
+    },
+    "solution": "The total central angle in a complete circular pie chart is $360^\\circ$.\n$$\\text{Sector Angle} = \\frac{\\text{Percentage}}{100} \\times 360^\\circ = \\frac{25}{100} \\times 360^\\circ = 90.0^\\circ$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_006",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Interpreting histograms and cumulative frequency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a cumulative frequency ogive curve, the horizontal coordinate corresponding to the point where the 'less than' and 'more than' ogive curves intersect gives the:",
+    "options": {
+      "A": "Median of the distribution",
+      "B": "Mean of the distribution",
+      "C": "Mode of the distribution",
+      "D": "Standard deviation"
+    },
+    "correct_answer": "A",
+    "solution": "The intersection of the 'less than' ogive (cumulative from lower bound) and 'more than' ogive (cumulative from upper bound) occurs precisely at the $50\\%$ cumulative frequency point, giving the median value on the abscissa.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_007",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Year over year production percentage growth",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "According to annual agricultural census data, grain production in a district grew from $120\\text{ thousand tonnes}$ in Year 1 to $168\\text{ thousand tonnes}$ in Year 2. The percentage growth in grain production is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "40.0",
+    "numerical_range": {
+      "min": 39.8,
+      "max": 40.2
+    },
+    "solution": "Percentage growth is calculated as:\n$$\\text{Growth} = \\frac{Y_2 - Y_1}{Y_1} \\times 100 = \\frac{168 - 120}{120} \\times 100 = \\frac{48}{120} \\times 100 = 40.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_008",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Central angle for pie chart sector",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a pie chart representing total agricultural expenditure across various operations, irrigation accounts for $25\\%$ of the total budget. The central angle subtended by this irrigation sector at the center of the pie chart is ________ degrees.",
+    "correct_answer": "90.0",
+    "numerical_range": {
+      "min": 89.9,
+      "max": 90.1
+    },
+    "solution": "The total central angle in a complete circular pie chart is $360^\\circ$.\n$$\\text{Sector Angle} = \\frac{\\text{Percentage}}{100} \\times 360^\\circ = \\frac{25}{100} \\times 360^\\circ = 90.0^\\circ$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_009",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Interpreting histograms and cumulative frequency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a cumulative frequency ogive curve, the horizontal coordinate corresponding to the point where the 'less than' and 'more than' ogive curves intersect gives the:",
+    "options": {
+      "A": "Median of the distribution",
+      "B": "Mean of the distribution",
+      "C": "Mode of the distribution",
+      "D": "Standard deviation"
+    },
+    "correct_answer": "A",
+    "solution": "The intersection of the 'less than' ogive (cumulative from lower bound) and 'more than' ogive (cumulative from upper bound) occurs precisely at the $50\\%$ cumulative frequency point, giving the median value on the abscissa.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_010",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Year over year production percentage growth",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "According to annual agricultural census data, grain production in a district grew from $120\\text{ thousand tonnes}$ in Year 1 to $168\\text{ thousand tonnes}$ in Year 2. The percentage growth in grain production is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "40.0",
+    "numerical_range": {
+      "min": 39.8,
+      "max": 40.2
+    },
+    "solution": "Percentage growth is calculated as:\n$$\\text{Growth} = \\frac{Y_2 - Y_1}{Y_1} \\times 100 = \\frac{168 - 120}{120} \\times 100 = \\frac{48}{120} \\times 100 = 40.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_011",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Central angle for pie chart sector",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a pie chart representing total agricultural expenditure across various operations, irrigation accounts for $25\\%$ of the total budget. The central angle subtended by this irrigation sector at the center of the pie chart is ________ degrees.",
+    "correct_answer": "90.0",
+    "numerical_range": {
+      "min": 89.9,
+      "max": 90.1
+    },
+    "solution": "The total central angle in a complete circular pie chart is $360^\\circ$.\n$$\\text{Sector Angle} = \\frac{\\text{Percentage}}{100} \\times 360^\\circ = \\frac{25}{100} \\times 360^\\circ = 90.0^\\circ$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_012",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Interpreting histograms and cumulative frequency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a cumulative frequency ogive curve, the horizontal coordinate corresponding to the point where the 'less than' and 'more than' ogive curves intersect gives the:",
+    "options": {
+      "A": "Median of the distribution",
+      "B": "Mean of the distribution",
+      "C": "Mode of the distribution",
+      "D": "Standard deviation"
+    },
+    "correct_answer": "A",
+    "solution": "The intersection of the 'less than' ogive (cumulative from lower bound) and 'more than' ogive (cumulative from upper bound) occurs precisely at the $50\\%$ cumulative frequency point, giving the median value on the abscissa.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_013",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Year over year production percentage growth",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "According to annual agricultural census data, grain production in a district grew from $120\\text{ thousand tonnes}$ in Year 1 to $168\\text{ thousand tonnes}$ in Year 2. The percentage growth in grain production is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "40.0",
+    "numerical_range": {
+      "min": 39.8,
+      "max": 40.2
+    },
+    "solution": "Percentage growth is calculated as:\n$$\\text{Growth} = \\frac{Y_2 - Y_1}{Y_1} \\times 100 = \\frac{168 - 120}{120} \\times 100 = \\frac{48}{120} \\times 100 = 40.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_014",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Central angle for pie chart sector",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a pie chart representing total agricultural expenditure across various operations, irrigation accounts for $25\\%$ of the total budget. The central angle subtended by this irrigation sector at the center of the pie chart is ________ degrees.",
+    "correct_answer": "90.0",
+    "numerical_range": {
+      "min": 89.9,
+      "max": 90.1
+    },
+    "solution": "The total central angle in a complete circular pie chart is $360^\\circ$.\n$$\\text{Sector Angle} = \\frac{\\text{Percentage}}{100} \\times 360^\\circ = \\frac{25}{100} \\times 360^\\circ = 90.0^\\circ$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_015",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Interpreting histograms and cumulative frequency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a cumulative frequency ogive curve, the horizontal coordinate corresponding to the point where the 'less than' and 'more than' ogive curves intersect gives the:",
+    "options": {
+      "A": "Median of the distribution",
+      "B": "Mean of the distribution",
+      "C": "Mode of the distribution",
+      "D": "Standard deviation"
+    },
+    "correct_answer": "A",
+    "solution": "The intersection of the 'less than' ogive (cumulative from lower bound) and 'more than' ogive (cumulative from upper bound) occurs precisely at the $50\\%$ cumulative frequency point, giving the median value on the abscissa.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_016",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Year over year production percentage growth",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "According to annual agricultural census data, grain production in a district grew from $120\\text{ thousand tonnes}$ in Year 1 to $168\\text{ thousand tonnes}$ in Year 2. The percentage growth in grain production is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "40.0",
+    "numerical_range": {
+      "min": 39.8,
+      "max": 40.2
+    },
+    "solution": "Percentage growth is calculated as:\n$$\\text{Growth} = \\frac{Y_2 - Y_1}{Y_1} \\times 100 = \\frac{168 - 120}{120} \\times 100 = \\frac{48}{120} \\times 100 = 40.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_017",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Central angle for pie chart sector",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a pie chart representing total agricultural expenditure across various operations, irrigation accounts for $25\\%$ of the total budget. The central angle subtended by this irrigation sector at the center of the pie chart is ________ degrees.",
+    "correct_answer": "90.0",
+    "numerical_range": {
+      "min": 89.9,
+      "max": 90.1
+    },
+    "solution": "The total central angle in a complete circular pie chart is $360^\\circ$.\n$$\\text{Sector Angle} = \\frac{\\text{Percentage}}{100} \\times 360^\\circ = \\frac{25}{100} \\times 360^\\circ = 90.0^\\circ$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_018",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Interpreting histograms and cumulative frequency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a cumulative frequency ogive curve, the horizontal coordinate corresponding to the point where the 'less than' and 'more than' ogive curves intersect gives the:",
+    "options": {
+      "A": "Median of the distribution",
+      "B": "Mean of the distribution",
+      "C": "Mode of the distribution",
+      "D": "Standard deviation"
+    },
+    "correct_answer": "A",
+    "solution": "The intersection of the 'less than' ogive (cumulative from lower bound) and 'more than' ogive (cumulative from upper bound) occurs precisely at the $50\\%$ cumulative frequency point, giving the median value on the abscissa.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_019",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Year over year production percentage growth",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "According to annual agricultural census data, grain production in a district grew from $120\\text{ thousand tonnes}$ in Year 1 to $168\\text{ thousand tonnes}$ in Year 2. The percentage growth in grain production is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "40.0",
+    "numerical_range": {
+      "min": 39.8,
+      "max": 40.2
+    },
+    "solution": "Percentage growth is calculated as:\n$$\\text{Growth} = \\frac{Y_2 - Y_1}{Y_1} \\times 100 = \\frac{168 - 120}{120} \\times 100 = \\frac{48}{120} \\times 100 = 40.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_020",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Central angle for pie chart sector",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a pie chart representing total agricultural expenditure across various operations, irrigation accounts for $25\\%$ of the total budget. The central angle subtended by this irrigation sector at the center of the pie chart is ________ degrees.",
+    "correct_answer": "90.0",
+    "numerical_range": {
+      "min": 89.9,
+      "max": 90.1
+    },
+    "solution": "The total central angle in a complete circular pie chart is $360^\\circ$.\n$$\\text{Sector Angle} = \\frac{\\text{Percentage}}{100} \\times 360^\\circ = \\frac{25}{100} \\times 360^\\circ = 90.0^\\circ$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_021",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Interpreting histograms and cumulative frequency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a cumulative frequency ogive curve, the horizontal coordinate corresponding to the point where the 'less than' and 'more than' ogive curves intersect gives the:",
+    "options": {
+      "A": "Median of the distribution",
+      "B": "Mean of the distribution",
+      "C": "Mode of the distribution",
+      "D": "Standard deviation"
+    },
+    "correct_answer": "A",
+    "solution": "The intersection of the 'less than' ogive (cumulative from lower bound) and 'more than' ogive (cumulative from upper bound) occurs precisely at the $50\\%$ cumulative frequency point, giving the median value on the abscissa.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_022",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Year over year production percentage growth",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "According to annual agricultural census data, grain production in a district grew from $120\\text{ thousand tonnes}$ in Year 1 to $168\\text{ thousand tonnes}$ in Year 2. The percentage growth in grain production is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "40.0",
+    "numerical_range": {
+      "min": 39.8,
+      "max": 40.2
+    },
+    "solution": "Percentage growth is calculated as:\n$$\\text{Growth} = \\frac{Y_2 - Y_1}{Y_1} \\times 100 = \\frac{168 - 120}{120} \\times 100 = \\frac{48}{120} \\times 100 = 40.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_023",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Central angle for pie chart sector",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a pie chart representing total agricultural expenditure across various operations, irrigation accounts for $25\\%$ of the total budget. The central angle subtended by this irrigation sector at the center of the pie chart is ________ degrees.",
+    "correct_answer": "90.0",
+    "numerical_range": {
+      "min": 89.9,
+      "max": 90.1
+    },
+    "solution": "The total central angle in a complete circular pie chart is $360^\\circ$.\n$$\\text{Sector Angle} = \\frac{\\text{Percentage}}{100} \\times 360^\\circ = \\frac{25}{100} \\times 360^\\circ = 90.0^\\circ$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_024",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Interpreting histograms and cumulative frequency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a cumulative frequency ogive curve, the horizontal coordinate corresponding to the point where the 'less than' and 'more than' ogive curves intersect gives the:",
+    "options": {
+      "A": "Median of the distribution",
+      "B": "Mean of the distribution",
+      "C": "Mode of the distribution",
+      "D": "Standard deviation"
+    },
+    "correct_answer": "A",
+    "solution": "The intersection of the 'less than' ogive (cumulative from lower bound) and 'more than' ogive (cumulative from upper bound) occurs precisely at the $50\\%$ cumulative frequency point, giving the median value on the abscissa.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_025",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Year over year production percentage growth",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "According to annual agricultural census data, grain production in a district grew from $120\\text{ thousand tonnes}$ in Year 1 to $168\\text{ thousand tonnes}$ in Year 2. The percentage growth in grain production is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "40.0",
+    "numerical_range": {
+      "min": 39.8,
+      "max": 40.2
+    },
+    "solution": "Percentage growth is calculated as:\n$$\\text{Growth} = \\frac{Y_2 - Y_1}{Y_1} \\times 100 = \\frac{168 - 120}{120} \\times 100 = \\frac{48}{120} \\times 100 = 40.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_026",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Central angle for pie chart sector",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a pie chart representing total agricultural expenditure across various operations, irrigation accounts for $25\\%$ of the total budget. The central angle subtended by this irrigation sector at the center of the pie chart is ________ degrees.",
+    "correct_answer": "90.0",
+    "numerical_range": {
+      "min": 89.9,
+      "max": 90.1
+    },
+    "solution": "The total central angle in a complete circular pie chart is $360^\\circ$.\n$$\\text{Sector Angle} = \\frac{\\text{Percentage}}{100} \\times 360^\\circ = \\frac{25}{100} \\times 360^\\circ = 90.0^\\circ$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_027",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Interpreting histograms and cumulative frequency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a cumulative frequency ogive curve, the horizontal coordinate corresponding to the point where the 'less than' and 'more than' ogive curves intersect gives the:",
+    "options": {
+      "A": "Median of the distribution",
+      "B": "Mean of the distribution",
+      "C": "Mode of the distribution",
+      "D": "Standard deviation"
+    },
+    "correct_answer": "A",
+    "solution": "The intersection of the 'less than' ogive (cumulative from lower bound) and 'more than' ogive (cumulative from upper bound) occurs precisely at the $50\\%$ cumulative frequency point, giving the median value on the abscissa.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_028",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Year over year production percentage growth",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "According to annual agricultural census data, grain production in a district grew from $120\\text{ thousand tonnes}$ in Year 1 to $168\\text{ thousand tonnes}$ in Year 2. The percentage growth in grain production is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "40.0",
+    "numerical_range": {
+      "min": 39.8,
+      "max": 40.2
+    },
+    "solution": "Percentage growth is calculated as:\n$$\\text{Growth} = \\frac{Y_2 - Y_1}{Y_1} \\times 100 = \\frac{168 - 120}{120} \\times 100 = \\frac{48}{120} \\times 100 = 40.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_029",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Central angle for pie chart sector",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a pie chart representing total agricultural expenditure across various operations, irrigation accounts for $25\\%$ of the total budget. The central angle subtended by this irrigation sector at the center of the pie chart is ________ degrees.",
+    "correct_answer": "90.0",
+    "numerical_range": {
+      "min": 89.9,
+      "max": 90.1
+    },
+    "solution": "The total central angle in a complete circular pie chart is $360^\\circ$.\n$$\\text{Sector Angle} = \\frac{\\text{Percentage}}{100} \\times 360^\\circ = \\frac{25}{100} \\times 360^\\circ = 90.0^\\circ$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_030",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Interpreting histograms and cumulative frequency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a cumulative frequency ogive curve, the horizontal coordinate corresponding to the point where the 'less than' and 'more than' ogive curves intersect gives the:",
+    "options": {
+      "A": "Median of the distribution",
+      "B": "Mean of the distribution",
+      "C": "Mode of the distribution",
+      "D": "Standard deviation"
+    },
+    "correct_answer": "A",
+    "solution": "The intersection of the 'less than' ogive (cumulative from lower bound) and 'more than' ogive (cumulative from upper bound) occurs precisely at the $50\\%$ cumulative frequency point, giving the median value on the abscissa.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_031",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Year over year production percentage growth",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "According to annual agricultural census data, grain production in a district grew from $120\\text{ thousand tonnes}$ in Year 1 to $168\\text{ thousand tonnes}$ in Year 2. The percentage growth in grain production is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "40.0",
+    "numerical_range": {
+      "min": 39.8,
+      "max": 40.2
+    },
+    "solution": "Percentage growth is calculated as:\n$$\\text{Growth} = \\frac{Y_2 - Y_1}{Y_1} \\times 100 = \\frac{168 - 120}{120} \\times 100 = \\frac{48}{120} \\times 100 = 40.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_032",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Central angle for pie chart sector",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a pie chart representing total agricultural expenditure across various operations, irrigation accounts for $25\\%$ of the total budget. The central angle subtended by this irrigation sector at the center of the pie chart is ________ degrees.",
+    "correct_answer": "90.0",
+    "numerical_range": {
+      "min": 89.9,
+      "max": 90.1
+    },
+    "solution": "The total central angle in a complete circular pie chart is $360^\\circ$.\n$$\\text{Sector Angle} = \\frac{\\text{Percentage}}{100} \\times 360^\\circ = \\frac{25}{100} \\times 360^\\circ = 90.0^\\circ$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_033",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Interpreting histograms and cumulative frequency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a cumulative frequency ogive curve, the horizontal coordinate corresponding to the point where the 'less than' and 'more than' ogive curves intersect gives the:",
+    "options": {
+      "A": "Median of the distribution",
+      "B": "Mean of the distribution",
+      "C": "Mode of the distribution",
+      "D": "Standard deviation"
+    },
+    "correct_answer": "A",
+    "solution": "The intersection of the 'less than' ogive (cumulative from lower bound) and 'more than' ogive (cumulative from upper bound) occurs precisely at the $50\\%$ cumulative frequency point, giving the median value on the abscissa.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_034",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Year over year production percentage growth",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "According to annual agricultural census data, grain production in a district grew from $120\\text{ thousand tonnes}$ in Year 1 to $168\\text{ thousand tonnes}$ in Year 2. The percentage growth in grain production is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "40.0",
+    "numerical_range": {
+      "min": 39.8,
+      "max": 40.2
+    },
+    "solution": "Percentage growth is calculated as:\n$$\\text{Growth} = \\frac{Y_2 - Y_1}{Y_1} \\times 100 = \\frac{168 - 120}{120} \\times 100 = \\frac{48}{120} \\times 100 = 40.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_035",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Central angle for pie chart sector",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a pie chart representing total agricultural expenditure across various operations, irrigation accounts for $25\\%$ of the total budget. The central angle subtended by this irrigation sector at the center of the pie chart is ________ degrees.",
+    "correct_answer": "90.0",
+    "numerical_range": {
+      "min": 89.9,
+      "max": 90.1
+    },
+    "solution": "The total central angle in a complete circular pie chart is $360^\\circ$.\n$$\\text{Sector Angle} = \\frac{\\text{Percentage}}{100} \\times 360^\\circ = \\frac{25}{100} \\times 360^\\circ = 90.0^\\circ$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_036",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Interpreting histograms and cumulative frequency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a cumulative frequency ogive curve, the horizontal coordinate corresponding to the point where the 'less than' and 'more than' ogive curves intersect gives the:",
+    "options": {
+      "A": "Median of the distribution",
+      "B": "Mean of the distribution",
+      "C": "Mode of the distribution",
+      "D": "Standard deviation"
+    },
+    "correct_answer": "A",
+    "solution": "The intersection of the 'less than' ogive (cumulative from lower bound) and 'more than' ogive (cumulative from upper bound) occurs precisely at the $50\\%$ cumulative frequency point, giving the median value on the abscissa.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_037",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Year over year production percentage growth",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "According to annual agricultural census data, grain production in a district grew from $120\\text{ thousand tonnes}$ in Year 1 to $168\\text{ thousand tonnes}$ in Year 2. The percentage growth in grain production is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "40.0",
+    "numerical_range": {
+      "min": 39.8,
+      "max": 40.2
+    },
+    "solution": "Percentage growth is calculated as:\n$$\\text{Growth} = \\frac{Y_2 - Y_1}{Y_1} \\times 100 = \\frac{168 - 120}{120} \\times 100 = \\frac{48}{120} \\times 100 = 40.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_038",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Central angle for pie chart sector",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a pie chart representing total agricultural expenditure across various operations, irrigation accounts for $25\\%$ of the total budget. The central angle subtended by this irrigation sector at the center of the pie chart is ________ degrees.",
+    "correct_answer": "90.0",
+    "numerical_range": {
+      "min": 89.9,
+      "max": 90.1
+    },
+    "solution": "The total central angle in a complete circular pie chart is $360^\\circ$.\n$$\\text{Sector Angle} = \\frac{\\text{Percentage}}{100} \\times 360^\\circ = \\frac{25}{100} \\times 360^\\circ = 90.0^\\circ$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_039",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Interpreting histograms and cumulative frequency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a cumulative frequency ogive curve, the horizontal coordinate corresponding to the point where the 'less than' and 'more than' ogive curves intersect gives the:",
+    "options": {
+      "A": "Median of the distribution",
+      "B": "Mean of the distribution",
+      "C": "Mode of the distribution",
+      "D": "Standard deviation"
+    },
+    "correct_answer": "A",
+    "solution": "The intersection of the 'less than' ogive (cumulative from lower bound) and 'more than' ogive (cumulative from upper bound) occurs precisely at the $50\\%$ cumulative frequency point, giving the median value on the abscissa.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_040",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Year over year production percentage growth",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "According to annual agricultural census data, grain production in a district grew from $120\\text{ thousand tonnes}$ in Year 1 to $168\\text{ thousand tonnes}$ in Year 2. The percentage growth in grain production is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "40.0",
+    "numerical_range": {
+      "min": 39.8,
+      "max": 40.2
+    },
+    "solution": "Percentage growth is calculated as:\n$$\\text{Growth} = \\frac{Y_2 - Y_1}{Y_1} \\times 100 = \\frac{168 - 120}{120} \\times 100 = \\frac{48}{120} \\times 100 = 40.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_041",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Central angle for pie chart sector",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a pie chart representing total agricultural expenditure across various operations, irrigation accounts for $25\\%$ of the total budget. The central angle subtended by this irrigation sector at the center of the pie chart is ________ degrees.",
+    "correct_answer": "90.0",
+    "numerical_range": {
+      "min": 89.9,
+      "max": 90.1
+    },
+    "solution": "The total central angle in a complete circular pie chart is $360^\\circ$.\n$$\\text{Sector Angle} = \\frac{\\text{Percentage}}{100} \\times 360^\\circ = \\frac{25}{100} \\times 360^\\circ = 90.0^\\circ$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_042",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Interpreting histograms and cumulative frequency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a cumulative frequency ogive curve, the horizontal coordinate corresponding to the point where the 'less than' and 'more than' ogive curves intersect gives the:",
+    "options": {
+      "A": "Median of the distribution",
+      "B": "Mean of the distribution",
+      "C": "Mode of the distribution",
+      "D": "Standard deviation"
+    },
+    "correct_answer": "A",
+    "solution": "The intersection of the 'less than' ogive (cumulative from lower bound) and 'more than' ogive (cumulative from upper bound) occurs precisely at the $50\\%$ cumulative frequency point, giving the median value on the abscissa.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_043",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Year over year production percentage growth",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "According to annual agricultural census data, grain production in a district grew from $120\\text{ thousand tonnes}$ in Year 1 to $168\\text{ thousand tonnes}$ in Year 2. The percentage growth in grain production is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "40.0",
+    "numerical_range": {
+      "min": 39.8,
+      "max": 40.2
+    },
+    "solution": "Percentage growth is calculated as:\n$$\\text{Growth} = \\frac{Y_2 - Y_1}{Y_1} \\times 100 = \\frac{168 - 120}{120} \\times 100 = \\frac{48}{120} \\times 100 = 40.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_044",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Central angle for pie chart sector",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a pie chart representing total agricultural expenditure across various operations, irrigation accounts for $25\\%$ of the total budget. The central angle subtended by this irrigation sector at the center of the pie chart is ________ degrees.",
+    "correct_answer": "90.0",
+    "numerical_range": {
+      "min": 89.9,
+      "max": 90.1
+    },
+    "solution": "The total central angle in a complete circular pie chart is $360^\\circ$.\n$$\\text{Sector Angle} = \\frac{\\text{Percentage}}{100} \\times 360^\\circ = \\frac{25}{100} \\times 360^\\circ = 90.0^\\circ$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_045",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Interpreting histograms and cumulative frequency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a cumulative frequency ogive curve, the horizontal coordinate corresponding to the point where the 'less than' and 'more than' ogive curves intersect gives the:",
+    "options": {
+      "A": "Median of the distribution",
+      "B": "Mean of the distribution",
+      "C": "Mode of the distribution",
+      "D": "Standard deviation"
+    },
+    "correct_answer": "A",
+    "solution": "The intersection of the 'less than' ogive (cumulative from lower bound) and 'more than' ogive (cumulative from upper bound) occurs precisely at the $50\\%$ cumulative frequency point, giving the median value on the abscissa.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_046",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Year over year production percentage growth",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "According to annual agricultural census data, grain production in a district grew from $120\\text{ thousand tonnes}$ in Year 1 to $168\\text{ thousand tonnes}$ in Year 2. The percentage growth in grain production is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "40.0",
+    "numerical_range": {
+      "min": 39.8,
+      "max": 40.2
+    },
+    "solution": "Percentage growth is calculated as:\n$$\\text{Growth} = \\frac{Y_2 - Y_1}{Y_1} \\times 100 = \\frac{168 - 120}{120} \\times 100 = \\frac{48}{120} \\times 100 = 40.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_047",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Central angle for pie chart sector",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a pie chart representing total agricultural expenditure across various operations, irrigation accounts for $25\\%$ of the total budget. The central angle subtended by this irrigation sector at the center of the pie chart is ________ degrees.",
+    "correct_answer": "90.0",
+    "numerical_range": {
+      "min": 89.9,
+      "max": 90.1
+    },
+    "solution": "The total central angle in a complete circular pie chart is $360^\\circ$.\n$$\\text{Sector Angle} = \\frac{\\text{Percentage}}{100} \\times 360^\\circ = \\frac{25}{100} \\times 360^\\circ = 90.0^\\circ$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_048",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Interpreting histograms and cumulative frequency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a cumulative frequency ogive curve, the horizontal coordinate corresponding to the point where the 'less than' and 'more than' ogive curves intersect gives the:",
+    "options": {
+      "A": "Median of the distribution",
+      "B": "Mean of the distribution",
+      "C": "Mode of the distribution",
+      "D": "Standard deviation"
+    },
+    "correct_answer": "A",
+    "solution": "The intersection of the 'less than' ogive (cumulative from lower bound) and 'more than' ogive (cumulative from upper bound) occurs precisely at the $50\\%$ cumulative frequency point, giving the median value on the abscissa.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_049",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Year over year production percentage growth",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "According to annual agricultural census data, grain production in a district grew from $120\\text{ thousand tonnes}$ in Year 1 to $168\\text{ thousand tonnes}$ in Year 2. The percentage growth in grain production is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "40.0",
+    "numerical_range": {
+      "min": 39.8,
+      "max": 40.2
+    },
+    "solution": "Percentage growth is calculated as:\n$$\\text{Growth} = \\frac{Y_2 - Y_1}{Y_1} \\times 100 = \\frac{168 - 120}{120} \\times 100 = \\frac{48}{120} \\times 100 = 40.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DTI_050",
+    "section": "Section 8: General Aptitude",
+    "topic": "Quantitative: Data Interpretation (Tables, Bar & Pie Charts)",
+    "subtopic": "Central angle for pie chart sector",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "In a pie chart representing total agricultural expenditure across various operations, irrigation accounts for $25\\%$ of the total budget. The central angle subtended by this irrigation sector at the center of the pie chart is ________ degrees.",
+    "correct_answer": "90.0",
+    "numerical_range": {
+      "min": 89.9,
+      "max": 90.1
+    },
+    "solution": "The total central angle in a complete circular pie chart is $360^\\circ$.\n$$\\text{Sector Angle} = \\frac{\\text{Percentage}}{100} \\times 360^\\circ = \\frac{25}{100} \\times 360^\\circ = 90.0^\\circ$$",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_001",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Polynomial quadratic sequence prediction",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Find the missing number in the following sequence: $2, \\; 5, \\; 10, \\; 17, \\; 26$, ________.",
+    "correct_answer": "37",
+    "numerical_range": {
+      "min": 36.9,
+      "max": 37.1
+    },
+    "solution": "The sequence follows the pattern $T_n = n^2 + 1$:\n- $1^2 + 1 = 2$\n- $2^2 + 1 = 5$\n- $3^2 + 1 = 10$\n- $4^2 + 1 = 17$\n- $5^2 + 1 = 26$\n- For $n = 6$: $6^2 + 1 = 36 + 1 = 37$.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_002",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Letter shifting cipher code",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a certain code language, if 'PLANT' is coded as 'QMBOU' (each letter shifted by $+1$), how will 'GRAIN' be coded in that same system?",
+    "options": {
+      "A": "HSBJO",
+      "B": "FQZHM",
+      "C": "ITCKP",
+      "D": "HRBJO"
+    },
+    "correct_answer": "A",
+    "solution": "Each letter is shifted by $+1$ position forward in the English alphabet:\n- $\\text{G} \\to \\text{H}$\n- $\\text{R} \\to \\text{S}$\n- $\\text{A} \\to \\text{B}$\n- $\\text{I} \\to \\text{J}$\n- $\\text{N} \\to \\text{O}$\nThus, 'GRAIN' is coded as 'HSBJO'.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_003",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Difference of differences series pattern",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Identify the next number in the arithmetic series: $3, \\; 7, \\; 15, \\; 31, \\; 63$, ________.",
+    "correct_answer": "127",
+    "numerical_range": {
+      "min": 126.9,
+      "max": 127.1
+    },
+    "solution": "Pattern: each term is $T_{n+1} = 2 T_n + 1$ (or $T_n = 2^{n+1} - 1$):\n- $2(3) + 1 = 7$\n- $2(7) + 1 = 15$\n- $2(15) + 1 = 31$\n- $2(31) + 1 = 63$\n- Next term $= 2(63) + 1 = 126 + 1 = 127$.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_004",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Polynomial quadratic sequence prediction",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Find the missing number in the following sequence: $2, \\; 5, \\; 10, \\; 17, \\; 26$, ________.",
+    "correct_answer": "37",
+    "numerical_range": {
+      "min": 36.9,
+      "max": 37.1
+    },
+    "solution": "The sequence follows the pattern $T_n = n^2 + 1$:\n- $1^2 + 1 = 2$\n- $2^2 + 1 = 5$\n- $3^2 + 1 = 10$\n- $4^2 + 1 = 17$\n- $5^2 + 1 = 26$\n- For $n = 6$: $6^2 + 1 = 36 + 1 = 37$.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_005",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Letter shifting cipher code",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a certain code language, if 'PLANT' is coded as 'QMBOU' (each letter shifted by $+1$), how will 'GRAIN' be coded in that same system?",
+    "options": {
+      "A": "HSBJO",
+      "B": "FQZHM",
+      "C": "ITCKP",
+      "D": "HRBJO"
+    },
+    "correct_answer": "A",
+    "solution": "Each letter is shifted by $+1$ position forward in the English alphabet:\n- $\\text{G} \\to \\text{H}$\n- $\\text{R} \\to \\text{S}$\n- $\\text{A} \\to \\text{B}$\n- $\\text{I} \\to \\text{J}$\n- $\\text{N} \\to \\text{O}$\nThus, 'GRAIN' is coded as 'HSBJO'.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_006",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Difference of differences series pattern",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Identify the next number in the arithmetic series: $3, \\; 7, \\; 15, \\; 31, \\; 63$, ________.",
+    "correct_answer": "127",
+    "numerical_range": {
+      "min": 126.9,
+      "max": 127.1
+    },
+    "solution": "Pattern: each term is $T_{n+1} = 2 T_n + 1$ (or $T_n = 2^{n+1} - 1$):\n- $2(3) + 1 = 7$\n- $2(7) + 1 = 15$\n- $2(15) + 1 = 31$\n- $2(31) + 1 = 63$\n- Next term $= 2(63) + 1 = 126 + 1 = 127$.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_007",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Polynomial quadratic sequence prediction",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Find the missing number in the following sequence: $2, \\; 5, \\; 10, \\; 17, \\; 26$, ________.",
+    "correct_answer": "37",
+    "numerical_range": {
+      "min": 36.9,
+      "max": 37.1
+    },
+    "solution": "The sequence follows the pattern $T_n = n^2 + 1$:\n- $1^2 + 1 = 2$\n- $2^2 + 1 = 5$\n- $3^2 + 1 = 10$\n- $4^2 + 1 = 17$\n- $5^2 + 1 = 26$\n- For $n = 6$: $6^2 + 1 = 36 + 1 = 37$.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_008",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Letter shifting cipher code",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a certain code language, if 'PLANT' is coded as 'QMBOU' (each letter shifted by $+1$), how will 'GRAIN' be coded in that same system?",
+    "options": {
+      "A": "HSBJO",
+      "B": "FQZHM",
+      "C": "ITCKP",
+      "D": "HRBJO"
+    },
+    "correct_answer": "A",
+    "solution": "Each letter is shifted by $+1$ position forward in the English alphabet:\n- $\\text{G} \\to \\text{H}$\n- $\\text{R} \\to \\text{S}$\n- $\\text{A} \\to \\text{B}$\n- $\\text{I} \\to \\text{J}$\n- $\\text{N} \\to \\text{O}$\nThus, 'GRAIN' is coded as 'HSBJO'.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_009",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Difference of differences series pattern",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Identify the next number in the arithmetic series: $3, \\; 7, \\; 15, \\; 31, \\; 63$, ________.",
+    "correct_answer": "127",
+    "numerical_range": {
+      "min": 126.9,
+      "max": 127.1
+    },
+    "solution": "Pattern: each term is $T_{n+1} = 2 T_n + 1$ (or $T_n = 2^{n+1} - 1$):\n- $2(3) + 1 = 7$\n- $2(7) + 1 = 15$\n- $2(15) + 1 = 31$\n- $2(31) + 1 = 63$\n- Next term $= 2(63) + 1 = 126 + 1 = 127$.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_010",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Polynomial quadratic sequence prediction",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Find the missing number in the following sequence: $2, \\; 5, \\; 10, \\; 17, \\; 26$, ________.",
+    "correct_answer": "37",
+    "numerical_range": {
+      "min": 36.9,
+      "max": 37.1
+    },
+    "solution": "The sequence follows the pattern $T_n = n^2 + 1$:\n- $1^2 + 1 = 2$\n- $2^2 + 1 = 5$\n- $3^2 + 1 = 10$\n- $4^2 + 1 = 17$\n- $5^2 + 1 = 26$\n- For $n = 6$: $6^2 + 1 = 36 + 1 = 37$.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_011",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Letter shifting cipher code",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a certain code language, if 'PLANT' is coded as 'QMBOU' (each letter shifted by $+1$), how will 'GRAIN' be coded in that same system?",
+    "options": {
+      "A": "HSBJO",
+      "B": "FQZHM",
+      "C": "ITCKP",
+      "D": "HRBJO"
+    },
+    "correct_answer": "A",
+    "solution": "Each letter is shifted by $+1$ position forward in the English alphabet:\n- $\\text{G} \\to \\text{H}$\n- $\\text{R} \\to \\text{S}$\n- $\\text{A} \\to \\text{B}$\n- $\\text{I} \\to \\text{J}$\n- $\\text{N} \\to \\text{O}$\nThus, 'GRAIN' is coded as 'HSBJO'.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_012",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Difference of differences series pattern",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Identify the next number in the arithmetic series: $3, \\; 7, \\; 15, \\; 31, \\; 63$, ________.",
+    "correct_answer": "127",
+    "numerical_range": {
+      "min": 126.9,
+      "max": 127.1
+    },
+    "solution": "Pattern: each term is $T_{n+1} = 2 T_n + 1$ (or $T_n = 2^{n+1} - 1$):\n- $2(3) + 1 = 7$\n- $2(7) + 1 = 15$\n- $2(15) + 1 = 31$\n- $2(31) + 1 = 63$\n- Next term $= 2(63) + 1 = 126 + 1 = 127$.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_013",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Polynomial quadratic sequence prediction",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Find the missing number in the following sequence: $2, \\; 5, \\; 10, \\; 17, \\; 26$, ________.",
+    "correct_answer": "37",
+    "numerical_range": {
+      "min": 36.9,
+      "max": 37.1
+    },
+    "solution": "The sequence follows the pattern $T_n = n^2 + 1$:\n- $1^2 + 1 = 2$\n- $2^2 + 1 = 5$\n- $3^2 + 1 = 10$\n- $4^2 + 1 = 17$\n- $5^2 + 1 = 26$\n- For $n = 6$: $6^2 + 1 = 36 + 1 = 37$.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_014",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Letter shifting cipher code",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a certain code language, if 'PLANT' is coded as 'QMBOU' (each letter shifted by $+1$), how will 'GRAIN' be coded in that same system?",
+    "options": {
+      "A": "HSBJO",
+      "B": "FQZHM",
+      "C": "ITCKP",
+      "D": "HRBJO"
+    },
+    "correct_answer": "A",
+    "solution": "Each letter is shifted by $+1$ position forward in the English alphabet:\n- $\\text{G} \\to \\text{H}$\n- $\\text{R} \\to \\text{S}$\n- $\\text{A} \\to \\text{B}$\n- $\\text{I} \\to \\text{J}$\n- $\\text{N} \\to \\text{O}$\nThus, 'GRAIN' is coded as 'HSBJO'.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_015",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Difference of differences series pattern",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Identify the next number in the arithmetic series: $3, \\; 7, \\; 15, \\; 31, \\; 63$, ________.",
+    "correct_answer": "127",
+    "numerical_range": {
+      "min": 126.9,
+      "max": 127.1
+    },
+    "solution": "Pattern: each term is $T_{n+1} = 2 T_n + 1$ (or $T_n = 2^{n+1} - 1$):\n- $2(3) + 1 = 7$\n- $2(7) + 1 = 15$\n- $2(15) + 1 = 31$\n- $2(31) + 1 = 63$\n- Next term $= 2(63) + 1 = 126 + 1 = 127$.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_016",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Polynomial quadratic sequence prediction",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Find the missing number in the following sequence: $2, \\; 5, \\; 10, \\; 17, \\; 26$, ________.",
+    "correct_answer": "37",
+    "numerical_range": {
+      "min": 36.9,
+      "max": 37.1
+    },
+    "solution": "The sequence follows the pattern $T_n = n^2 + 1$:\n- $1^2 + 1 = 2$\n- $2^2 + 1 = 5$\n- $3^2 + 1 = 10$\n- $4^2 + 1 = 17$\n- $5^2 + 1 = 26$\n- For $n = 6$: $6^2 + 1 = 36 + 1 = 37$.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_017",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Letter shifting cipher code",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a certain code language, if 'PLANT' is coded as 'QMBOU' (each letter shifted by $+1$), how will 'GRAIN' be coded in that same system?",
+    "options": {
+      "A": "HSBJO",
+      "B": "FQZHM",
+      "C": "ITCKP",
+      "D": "HRBJO"
+    },
+    "correct_answer": "A",
+    "solution": "Each letter is shifted by $+1$ position forward in the English alphabet:\n- $\\text{G} \\to \\text{H}$\n- $\\text{R} \\to \\text{S}$\n- $\\text{A} \\to \\text{B}$\n- $\\text{I} \\to \\text{J}$\n- $\\text{N} \\to \\text{O}$\nThus, 'GRAIN' is coded as 'HSBJO'.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_018",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Difference of differences series pattern",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Identify the next number in the arithmetic series: $3, \\; 7, \\; 15, \\; 31, \\; 63$, ________.",
+    "correct_answer": "127",
+    "numerical_range": {
+      "min": 126.9,
+      "max": 127.1
+    },
+    "solution": "Pattern: each term is $T_{n+1} = 2 T_n + 1$ (or $T_n = 2^{n+1} - 1$):\n- $2(3) + 1 = 7$\n- $2(7) + 1 = 15$\n- $2(15) + 1 = 31$\n- $2(31) + 1 = 63$\n- Next term $= 2(63) + 1 = 126 + 1 = 127$.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_019",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Polynomial quadratic sequence prediction",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Find the missing number in the following sequence: $2, \\; 5, \\; 10, \\; 17, \\; 26$, ________.",
+    "correct_answer": "37",
+    "numerical_range": {
+      "min": 36.9,
+      "max": 37.1
+    },
+    "solution": "The sequence follows the pattern $T_n = n^2 + 1$:\n- $1^2 + 1 = 2$\n- $2^2 + 1 = 5$\n- $3^2 + 1 = 10$\n- $4^2 + 1 = 17$\n- $5^2 + 1 = 26$\n- For $n = 6$: $6^2 + 1 = 36 + 1 = 37$.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_020",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Letter shifting cipher code",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a certain code language, if 'PLANT' is coded as 'QMBOU' (each letter shifted by $+1$), how will 'GRAIN' be coded in that same system?",
+    "options": {
+      "A": "HSBJO",
+      "B": "FQZHM",
+      "C": "ITCKP",
+      "D": "HRBJO"
+    },
+    "correct_answer": "A",
+    "solution": "Each letter is shifted by $+1$ position forward in the English alphabet:\n- $\\text{G} \\to \\text{H}$\n- $\\text{R} \\to \\text{S}$\n- $\\text{A} \\to \\text{B}$\n- $\\text{I} \\to \\text{J}$\n- $\\text{N} \\to \\text{O}$\nThus, 'GRAIN' is coded as 'HSBJO'.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_021",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Difference of differences series pattern",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Identify the next number in the arithmetic series: $3, \\; 7, \\; 15, \\; 31, \\; 63$, ________.",
+    "correct_answer": "127",
+    "numerical_range": {
+      "min": 126.9,
+      "max": 127.1
+    },
+    "solution": "Pattern: each term is $T_{n+1} = 2 T_n + 1$ (or $T_n = 2^{n+1} - 1$):\n- $2(3) + 1 = 7$\n- $2(7) + 1 = 15$\n- $2(15) + 1 = 31$\n- $2(31) + 1 = 63$\n- Next term $= 2(63) + 1 = 126 + 1 = 127$.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_022",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Polynomial quadratic sequence prediction",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Find the missing number in the following sequence: $2, \\; 5, \\; 10, \\; 17, \\; 26$, ________.",
+    "correct_answer": "37",
+    "numerical_range": {
+      "min": 36.9,
+      "max": 37.1
+    },
+    "solution": "The sequence follows the pattern $T_n = n^2 + 1$:\n- $1^2 + 1 = 2$\n- $2^2 + 1 = 5$\n- $3^2 + 1 = 10$\n- $4^2 + 1 = 17$\n- $5^2 + 1 = 26$\n- For $n = 6$: $6^2 + 1 = 36 + 1 = 37$.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_023",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Letter shifting cipher code",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a certain code language, if 'PLANT' is coded as 'QMBOU' (each letter shifted by $+1$), how will 'GRAIN' be coded in that same system?",
+    "options": {
+      "A": "HSBJO",
+      "B": "FQZHM",
+      "C": "ITCKP",
+      "D": "HRBJO"
+    },
+    "correct_answer": "A",
+    "solution": "Each letter is shifted by $+1$ position forward in the English alphabet:\n- $\\text{G} \\to \\text{H}$\n- $\\text{R} \\to \\text{S}$\n- $\\text{A} \\to \\text{B}$\n- $\\text{I} \\to \\text{J}$\n- $\\text{N} \\to \\text{O}$\nThus, 'GRAIN' is coded as 'HSBJO'.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_024",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Difference of differences series pattern",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Identify the next number in the arithmetic series: $3, \\; 7, \\; 15, \\; 31, \\; 63$, ________.",
+    "correct_answer": "127",
+    "numerical_range": {
+      "min": 126.9,
+      "max": 127.1
+    },
+    "solution": "Pattern: each term is $T_{n+1} = 2 T_n + 1$ (or $T_n = 2^{n+1} - 1$):\n- $2(3) + 1 = 7$\n- $2(7) + 1 = 15$\n- $2(15) + 1 = 31$\n- $2(31) + 1 = 63$\n- Next term $= 2(63) + 1 = 126 + 1 = 127$.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_025",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Polynomial quadratic sequence prediction",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Find the missing number in the following sequence: $2, \\; 5, \\; 10, \\; 17, \\; 26$, ________.",
+    "correct_answer": "37",
+    "numerical_range": {
+      "min": 36.9,
+      "max": 37.1
+    },
+    "solution": "The sequence follows the pattern $T_n = n^2 + 1$:\n- $1^2 + 1 = 2$\n- $2^2 + 1 = 5$\n- $3^2 + 1 = 10$\n- $4^2 + 1 = 17$\n- $5^2 + 1 = 26$\n- For $n = 6$: $6^2 + 1 = 36 + 1 = 37$.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_026",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Letter shifting cipher code",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a certain code language, if 'PLANT' is coded as 'QMBOU' (each letter shifted by $+1$), how will 'GRAIN' be coded in that same system?",
+    "options": {
+      "A": "HSBJO",
+      "B": "FQZHM",
+      "C": "ITCKP",
+      "D": "HRBJO"
+    },
+    "correct_answer": "A",
+    "solution": "Each letter is shifted by $+1$ position forward in the English alphabet:\n- $\\text{G} \\to \\text{H}$\n- $\\text{R} \\to \\text{S}$\n- $\\text{A} \\to \\text{B}$\n- $\\text{I} \\to \\text{J}$\n- $\\text{N} \\to \\text{O}$\nThus, 'GRAIN' is coded as 'HSBJO'.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_027",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Difference of differences series pattern",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Identify the next number in the arithmetic series: $3, \\; 7, \\; 15, \\; 31, \\; 63$, ________.",
+    "correct_answer": "127",
+    "numerical_range": {
+      "min": 126.9,
+      "max": 127.1
+    },
+    "solution": "Pattern: each term is $T_{n+1} = 2 T_n + 1$ (or $T_n = 2^{n+1} - 1$):\n- $2(3) + 1 = 7$\n- $2(7) + 1 = 15$\n- $2(15) + 1 = 31$\n- $2(31) + 1 = 63$\n- Next term $= 2(63) + 1 = 126 + 1 = 127$.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_028",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Polynomial quadratic sequence prediction",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Find the missing number in the following sequence: $2, \\; 5, \\; 10, \\; 17, \\; 26$, ________.",
+    "correct_answer": "37",
+    "numerical_range": {
+      "min": 36.9,
+      "max": 37.1
+    },
+    "solution": "The sequence follows the pattern $T_n = n^2 + 1$:\n- $1^2 + 1 = 2$\n- $2^2 + 1 = 5$\n- $3^2 + 1 = 10$\n- $4^2 + 1 = 17$\n- $5^2 + 1 = 26$\n- For $n = 6$: $6^2 + 1 = 36 + 1 = 37$.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_029",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Letter shifting cipher code",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a certain code language, if 'PLANT' is coded as 'QMBOU' (each letter shifted by $+1$), how will 'GRAIN' be coded in that same system?",
+    "options": {
+      "A": "HSBJO",
+      "B": "FQZHM",
+      "C": "ITCKP",
+      "D": "HRBJO"
+    },
+    "correct_answer": "A",
+    "solution": "Each letter is shifted by $+1$ position forward in the English alphabet:\n- $\\text{G} \\to \\text{H}$\n- $\\text{R} \\to \\text{S}$\n- $\\text{A} \\to \\text{B}$\n- $\\text{I} \\to \\text{J}$\n- $\\text{N} \\to \\text{O}$\nThus, 'GRAIN' is coded as 'HSBJO'.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_030",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Difference of differences series pattern",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Identify the next number in the arithmetic series: $3, \\; 7, \\; 15, \\; 31, \\; 63$, ________.",
+    "correct_answer": "127",
+    "numerical_range": {
+      "min": 126.9,
+      "max": 127.1
+    },
+    "solution": "Pattern: each term is $T_{n+1} = 2 T_n + 1$ (or $T_n = 2^{n+1} - 1$):\n- $2(3) + 1 = 7$\n- $2(7) + 1 = 15$\n- $2(15) + 1 = 31$\n- $2(31) + 1 = 63$\n- Next term $= 2(63) + 1 = 126 + 1 = 127$.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_031",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Polynomial quadratic sequence prediction",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Find the missing number in the following sequence: $2, \\; 5, \\; 10, \\; 17, \\; 26$, ________.",
+    "correct_answer": "37",
+    "numerical_range": {
+      "min": 36.9,
+      "max": 37.1
+    },
+    "solution": "The sequence follows the pattern $T_n = n^2 + 1$:\n- $1^2 + 1 = 2$\n- $2^2 + 1 = 5$\n- $3^2 + 1 = 10$\n- $4^2 + 1 = 17$\n- $5^2 + 1 = 26$\n- For $n = 6$: $6^2 + 1 = 36 + 1 = 37$.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_032",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Letter shifting cipher code",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a certain code language, if 'PLANT' is coded as 'QMBOU' (each letter shifted by $+1$), how will 'GRAIN' be coded in that same system?",
+    "options": {
+      "A": "HSBJO",
+      "B": "FQZHM",
+      "C": "ITCKP",
+      "D": "HRBJO"
+    },
+    "correct_answer": "A",
+    "solution": "Each letter is shifted by $+1$ position forward in the English alphabet:\n- $\\text{G} \\to \\text{H}$\n- $\\text{R} \\to \\text{S}$\n- $\\text{A} \\to \\text{B}$\n- $\\text{I} \\to \\text{J}$\n- $\\text{N} \\to \\text{O}$\nThus, 'GRAIN' is coded as 'HSBJO'.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_033",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Difference of differences series pattern",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Identify the next number in the arithmetic series: $3, \\; 7, \\; 15, \\; 31, \\; 63$, ________.",
+    "correct_answer": "127",
+    "numerical_range": {
+      "min": 126.9,
+      "max": 127.1
+    },
+    "solution": "Pattern: each term is $T_{n+1} = 2 T_n + 1$ (or $T_n = 2^{n+1} - 1$):\n- $2(3) + 1 = 7$\n- $2(7) + 1 = 15$\n- $2(15) + 1 = 31$\n- $2(31) + 1 = 63$\n- Next term $= 2(63) + 1 = 126 + 1 = 127$.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_034",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Polynomial quadratic sequence prediction",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Find the missing number in the following sequence: $2, \\; 5, \\; 10, \\; 17, \\; 26$, ________.",
+    "correct_answer": "37",
+    "numerical_range": {
+      "min": 36.9,
+      "max": 37.1
+    },
+    "solution": "The sequence follows the pattern $T_n = n^2 + 1$:\n- $1^2 + 1 = 2$\n- $2^2 + 1 = 5$\n- $3^2 + 1 = 10$\n- $4^2 + 1 = 17$\n- $5^2 + 1 = 26$\n- For $n = 6$: $6^2 + 1 = 36 + 1 = 37$.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_035",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Letter shifting cipher code",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a certain code language, if 'PLANT' is coded as 'QMBOU' (each letter shifted by $+1$), how will 'GRAIN' be coded in that same system?",
+    "options": {
+      "A": "HSBJO",
+      "B": "FQZHM",
+      "C": "ITCKP",
+      "D": "HRBJO"
+    },
+    "correct_answer": "A",
+    "solution": "Each letter is shifted by $+1$ position forward in the English alphabet:\n- $\\text{G} \\to \\text{H}$\n- $\\text{R} \\to \\text{S}$\n- $\\text{A} \\to \\text{B}$\n- $\\text{I} \\to \\text{J}$\n- $\\text{N} \\to \\text{O}$\nThus, 'GRAIN' is coded as 'HSBJO'.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_036",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Difference of differences series pattern",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Identify the next number in the arithmetic series: $3, \\; 7, \\; 15, \\; 31, \\; 63$, ________.",
+    "correct_answer": "127",
+    "numerical_range": {
+      "min": 126.9,
+      "max": 127.1
+    },
+    "solution": "Pattern: each term is $T_{n+1} = 2 T_n + 1$ (or $T_n = 2^{n+1} - 1$):\n- $2(3) + 1 = 7$\n- $2(7) + 1 = 15$\n- $2(15) + 1 = 31$\n- $2(31) + 1 = 63$\n- Next term $= 2(63) + 1 = 126 + 1 = 127$.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_037",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Polynomial quadratic sequence prediction",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Find the missing number in the following sequence: $2, \\; 5, \\; 10, \\; 17, \\; 26$, ________.",
+    "correct_answer": "37",
+    "numerical_range": {
+      "min": 36.9,
+      "max": 37.1
+    },
+    "solution": "The sequence follows the pattern $T_n = n^2 + 1$:\n- $1^2 + 1 = 2$\n- $2^2 + 1 = 5$\n- $3^2 + 1 = 10$\n- $4^2 + 1 = 17$\n- $5^2 + 1 = 26$\n- For $n = 6$: $6^2 + 1 = 36 + 1 = 37$.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_038",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Letter shifting cipher code",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a certain code language, if 'PLANT' is coded as 'QMBOU' (each letter shifted by $+1$), how will 'GRAIN' be coded in that same system?",
+    "options": {
+      "A": "HSBJO",
+      "B": "FQZHM",
+      "C": "ITCKP",
+      "D": "HRBJO"
+    },
+    "correct_answer": "A",
+    "solution": "Each letter is shifted by $+1$ position forward in the English alphabet:\n- $\\text{G} \\to \\text{H}$\n- $\\text{R} \\to \\text{S}$\n- $\\text{A} \\to \\text{B}$\n- $\\text{I} \\to \\text{J}$\n- $\\text{N} \\to \\text{O}$\nThus, 'GRAIN' is coded as 'HSBJO'.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_039",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Difference of differences series pattern",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Identify the next number in the arithmetic series: $3, \\; 7, \\; 15, \\; 31, \\; 63$, ________.",
+    "correct_answer": "127",
+    "numerical_range": {
+      "min": 126.9,
+      "max": 127.1
+    },
+    "solution": "Pattern: each term is $T_{n+1} = 2 T_n + 1$ (or $T_n = 2^{n+1} - 1$):\n- $2(3) + 1 = 7$\n- $2(7) + 1 = 15$\n- $2(15) + 1 = 31$\n- $2(31) + 1 = 63$\n- Next term $= 2(63) + 1 = 126 + 1 = 127$.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_040",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Polynomial quadratic sequence prediction",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Find the missing number in the following sequence: $2, \\; 5, \\; 10, \\; 17, \\; 26$, ________.",
+    "correct_answer": "37",
+    "numerical_range": {
+      "min": 36.9,
+      "max": 37.1
+    },
+    "solution": "The sequence follows the pattern $T_n = n^2 + 1$:\n- $1^2 + 1 = 2$\n- $2^2 + 1 = 5$\n- $3^2 + 1 = 10$\n- $4^2 + 1 = 17$\n- $5^2 + 1 = 26$\n- For $n = 6$: $6^2 + 1 = 36 + 1 = 37$.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_041",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Letter shifting cipher code",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a certain code language, if 'PLANT' is coded as 'QMBOU' (each letter shifted by $+1$), how will 'GRAIN' be coded in that same system?",
+    "options": {
+      "A": "HSBJO",
+      "B": "FQZHM",
+      "C": "ITCKP",
+      "D": "HRBJO"
+    },
+    "correct_answer": "A",
+    "solution": "Each letter is shifted by $+1$ position forward in the English alphabet:\n- $\\text{G} \\to \\text{H}$\n- $\\text{R} \\to \\text{S}$\n- $\\text{A} \\to \\text{B}$\n- $\\text{I} \\to \\text{J}$\n- $\\text{N} \\to \\text{O}$\nThus, 'GRAIN' is coded as 'HSBJO'.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_042",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Difference of differences series pattern",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Identify the next number in the arithmetic series: $3, \\; 7, \\; 15, \\; 31, \\; 63$, ________.",
+    "correct_answer": "127",
+    "numerical_range": {
+      "min": 126.9,
+      "max": 127.1
+    },
+    "solution": "Pattern: each term is $T_{n+1} = 2 T_n + 1$ (or $T_n = 2^{n+1} - 1$):\n- $2(3) + 1 = 7$\n- $2(7) + 1 = 15$\n- $2(15) + 1 = 31$\n- $2(31) + 1 = 63$\n- Next term $= 2(63) + 1 = 126 + 1 = 127$.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_043",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Polynomial quadratic sequence prediction",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Find the missing number in the following sequence: $2, \\; 5, \\; 10, \\; 17, \\; 26$, ________.",
+    "correct_answer": "37",
+    "numerical_range": {
+      "min": 36.9,
+      "max": 37.1
+    },
+    "solution": "The sequence follows the pattern $T_n = n^2 + 1$:\n- $1^2 + 1 = 2$\n- $2^2 + 1 = 5$\n- $3^2 + 1 = 10$\n- $4^2 + 1 = 17$\n- $5^2 + 1 = 26$\n- For $n = 6$: $6^2 + 1 = 36 + 1 = 37$.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_044",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Letter shifting cipher code",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a certain code language, if 'PLANT' is coded as 'QMBOU' (each letter shifted by $+1$), how will 'GRAIN' be coded in that same system?",
+    "options": {
+      "A": "HSBJO",
+      "B": "FQZHM",
+      "C": "ITCKP",
+      "D": "HRBJO"
+    },
+    "correct_answer": "A",
+    "solution": "Each letter is shifted by $+1$ position forward in the English alphabet:\n- $\\text{G} \\to \\text{H}$\n- $\\text{R} \\to \\text{S}$\n- $\\text{A} \\to \\text{B}$\n- $\\text{I} \\to \\text{J}$\n- $\\text{N} \\to \\text{O}$\nThus, 'GRAIN' is coded as 'HSBJO'.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_045",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Difference of differences series pattern",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Identify the next number in the arithmetic series: $3, \\; 7, \\; 15, \\; 31, \\; 63$, ________.",
+    "correct_answer": "127",
+    "numerical_range": {
+      "min": 126.9,
+      "max": 127.1
+    },
+    "solution": "Pattern: each term is $T_{n+1} = 2 T_n + 1$ (or $T_n = 2^{n+1} - 1$):\n- $2(3) + 1 = 7$\n- $2(7) + 1 = 15$\n- $2(15) + 1 = 31$\n- $2(31) + 1 = 63$\n- Next term $= 2(63) + 1 = 126 + 1 = 127$.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_046",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Polynomial quadratic sequence prediction",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Find the missing number in the following sequence: $2, \\; 5, \\; 10, \\; 17, \\; 26$, ________.",
+    "correct_answer": "37",
+    "numerical_range": {
+      "min": 36.9,
+      "max": 37.1
+    },
+    "solution": "The sequence follows the pattern $T_n = n^2 + 1$:\n- $1^2 + 1 = 2$\n- $2^2 + 1 = 5$\n- $3^2 + 1 = 10$\n- $4^2 + 1 = 17$\n- $5^2 + 1 = 26$\n- For $n = 6$: $6^2 + 1 = 36 + 1 = 37$.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_047",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Letter shifting cipher code",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a certain code language, if 'PLANT' is coded as 'QMBOU' (each letter shifted by $+1$), how will 'GRAIN' be coded in that same system?",
+    "options": {
+      "A": "HSBJO",
+      "B": "FQZHM",
+      "C": "ITCKP",
+      "D": "HRBJO"
+    },
+    "correct_answer": "A",
+    "solution": "Each letter is shifted by $+1$ position forward in the English alphabet:\n- $\\text{G} \\to \\text{H}$\n- $\\text{R} \\to \\text{S}$\n- $\\text{A} \\to \\text{B}$\n- $\\text{I} \\to \\text{J}$\n- $\\text{N} \\to \\text{O}$\nThus, 'GRAIN' is coded as 'HSBJO'.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_048",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Difference of differences series pattern",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Identify the next number in the arithmetic series: $3, \\; 7, \\; 15, \\; 31, \\; 63$, ________.",
+    "correct_answer": "127",
+    "numerical_range": {
+      "min": 126.9,
+      "max": 127.1
+    },
+    "solution": "Pattern: each term is $T_{n+1} = 2 T_n + 1$ (or $T_n = 2^{n+1} - 1$):\n- $2(3) + 1 = 7$\n- $2(7) + 1 = 15$\n- $2(15) + 1 = 31$\n- $2(31) + 1 = 63$\n- Next term $= 2(63) + 1 = 126 + 1 = 127$.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_049",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Polynomial quadratic sequence prediction",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "Find the missing number in the following sequence: $2, \\; 5, \\; 10, \\; 17, \\; 26$, ________.",
+    "correct_answer": "37",
+    "numerical_range": {
+      "min": 36.9,
+      "max": 37.1
+    },
+    "solution": "The sequence follows the pattern $T_n = n^2 + 1$:\n- $1^2 + 1 = 2$\n- $2^2 + 1 = 5$\n- $3^2 + 1 = 10$\n- $4^2 + 1 = 17$\n- $5^2 + 1 = 26$\n- For $n = 6$: $6^2 + 1 = 36 + 1 = 37$.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SER_050",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Number Series, Letter Patterns & Codes",
+    "subtopic": "Letter shifting cipher code",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a certain code language, if 'PLANT' is coded as 'QMBOU' (each letter shifted by $+1$), how will 'GRAIN' be coded in that same system?",
+    "options": {
+      "A": "HSBJO",
+      "B": "FQZHM",
+      "C": "ITCKP",
+      "D": "HRBJO"
+    },
+    "correct_answer": "A",
+    "solution": "Each letter is shifted by $+1$ position forward in the English alphabet:\n- $\\text{G} \\to \\text{H}$\n- $\\text{R} \\to \\text{S}$\n- $\\text{A} \\to \\text{B}$\n- $\\text{I} \\to \\text{J}$\n- $\\text{N} \\to \\text{O}$\nThus, 'GRAIN' is coded as 'HSBJO'.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_001",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Universal affirmative syllogism deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. All tractors are agricultural machines.\n2. All agricultural machines are powered equipment.\nWhich of the following conclusions logically follows?",
+    "options": {
+      "A": "All tractors are powered equipment",
+      "B": "All powered equipment are tractors",
+      "C": "No tractors are powered equipment",
+      "D": "Some tractors are not machines"
+    },
+    "correct_answer": "A",
+    "solution": "By standard Barbara (AAA) syllogism:\n- Minor premise: All $A$ are $B$.\n- Major premise: All $B$ are $C$.\n- Valid conclusion: All $A$ are $C$ ('All tractors are powered equipment').",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_002",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Euler-Venn sets intersection analysis",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a survey of $100$ agricultural students:\n- $60$ study Farm Power ($P$)\n- $50$ study Soil Mechanics ($S$)\n- $30$ study both Farm Power and Soil Mechanics ($P \\cap S$)\nWhich of the following statements is/are TRUE?",
+    "options": {
+      "A": "The number of students studying only Farm Power is $30$",
+      "B": "The number of students studying only Soil Mechanics is $20$",
+      "C": "The total number of students studying at least one of the two subjects is $80$",
+      "D": "The number of students studying neither subject is $20$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Only $P = n(P) - n(P \\cap S) = 60 - 30 = 30$ (A is true).\n2. Only $S = n(S) - n(P \\cap S) = 50 - 30 = 20$ (B is true).\n3. $n(P \\cup S) = n(P) + n(S) - n(P \\cap S) = 60 + 50 - 30 = 80$ (C is true).\n4. Neither $= 100 - n(P \\cup S) = 100 - 80 = 20$ (D is true).\nAll statements A, B, C, D are correct.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_003",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Particular negative and universal negative premises",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. Some seeds are hybrid.\n2. No hybrid is sterile.\nWhich of the following conclusions is definitively VALID?",
+    "options": {
+      "A": "Some seeds are not sterile",
+      "B": "All seeds are sterile",
+      "C": "No seed is fertile",
+      "D": "All hybrids are seeds"
+    },
+    "correct_answer": "A",
+    "solution": "From 'Some seeds are hybrid' and 'No hybrid is sterile', the subset of seeds that are hybrid cannot be sterile. Therefore, 'Some seeds are not sterile' is definitively true.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_004",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Universal affirmative syllogism deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. All tractors are agricultural machines.\n2. All agricultural machines are powered equipment.\nWhich of the following conclusions logically follows?",
+    "options": {
+      "A": "All tractors are powered equipment",
+      "B": "All powered equipment are tractors",
+      "C": "No tractors are powered equipment",
+      "D": "Some tractors are not machines"
+    },
+    "correct_answer": "A",
+    "solution": "By standard Barbara (AAA) syllogism:\n- Minor premise: All $A$ are $B$.\n- Major premise: All $B$ are $C$.\n- Valid conclusion: All $A$ are $C$ ('All tractors are powered equipment').",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_005",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Euler-Venn sets intersection analysis",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a survey of $100$ agricultural students:\n- $60$ study Farm Power ($P$)\n- $50$ study Soil Mechanics ($S$)\n- $30$ study both Farm Power and Soil Mechanics ($P \\cap S$)\nWhich of the following statements is/are TRUE?",
+    "options": {
+      "A": "The number of students studying only Farm Power is $30$",
+      "B": "The number of students studying only Soil Mechanics is $20$",
+      "C": "The total number of students studying at least one of the two subjects is $80$",
+      "D": "The number of students studying neither subject is $20$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Only $P = n(P) - n(P \\cap S) = 60 - 30 = 30$ (A is true).\n2. Only $S = n(S) - n(P \\cap S) = 50 - 30 = 20$ (B is true).\n3. $n(P \\cup S) = n(P) + n(S) - n(P \\cap S) = 60 + 50 - 30 = 80$ (C is true).\n4. Neither $= 100 - n(P \\cup S) = 100 - 80 = 20$ (D is true).\nAll statements A, B, C, D are correct.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_006",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Particular negative and universal negative premises",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. Some seeds are hybrid.\n2. No hybrid is sterile.\nWhich of the following conclusions is definitively VALID?",
+    "options": {
+      "A": "Some seeds are not sterile",
+      "B": "All seeds are sterile",
+      "C": "No seed is fertile",
+      "D": "All hybrids are seeds"
+    },
+    "correct_answer": "A",
+    "solution": "From 'Some seeds are hybrid' and 'No hybrid is sterile', the subset of seeds that are hybrid cannot be sterile. Therefore, 'Some seeds are not sterile' is definitively true.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_007",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Universal affirmative syllogism deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. All tractors are agricultural machines.\n2. All agricultural machines are powered equipment.\nWhich of the following conclusions logically follows?",
+    "options": {
+      "A": "All tractors are powered equipment",
+      "B": "All powered equipment are tractors",
+      "C": "No tractors are powered equipment",
+      "D": "Some tractors are not machines"
+    },
+    "correct_answer": "A",
+    "solution": "By standard Barbara (AAA) syllogism:\n- Minor premise: All $A$ are $B$.\n- Major premise: All $B$ are $C$.\n- Valid conclusion: All $A$ are $C$ ('All tractors are powered equipment').",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_008",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Euler-Venn sets intersection analysis",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a survey of $100$ agricultural students:\n- $60$ study Farm Power ($P$)\n- $50$ study Soil Mechanics ($S$)\n- $30$ study both Farm Power and Soil Mechanics ($P \\cap S$)\nWhich of the following statements is/are TRUE?",
+    "options": {
+      "A": "The number of students studying only Farm Power is $30$",
+      "B": "The number of students studying only Soil Mechanics is $20$",
+      "C": "The total number of students studying at least one of the two subjects is $80$",
+      "D": "The number of students studying neither subject is $20$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Only $P = n(P) - n(P \\cap S) = 60 - 30 = 30$ (A is true).\n2. Only $S = n(S) - n(P \\cap S) = 50 - 30 = 20$ (B is true).\n3. $n(P \\cup S) = n(P) + n(S) - n(P \\cap S) = 60 + 50 - 30 = 80$ (C is true).\n4. Neither $= 100 - n(P \\cup S) = 100 - 80 = 20$ (D is true).\nAll statements A, B, C, D are correct.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_009",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Particular negative and universal negative premises",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. Some seeds are hybrid.\n2. No hybrid is sterile.\nWhich of the following conclusions is definitively VALID?",
+    "options": {
+      "A": "Some seeds are not sterile",
+      "B": "All seeds are sterile",
+      "C": "No seed is fertile",
+      "D": "All hybrids are seeds"
+    },
+    "correct_answer": "A",
+    "solution": "From 'Some seeds are hybrid' and 'No hybrid is sterile', the subset of seeds that are hybrid cannot be sterile. Therefore, 'Some seeds are not sterile' is definitively true.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_010",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Universal affirmative syllogism deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. All tractors are agricultural machines.\n2. All agricultural machines are powered equipment.\nWhich of the following conclusions logically follows?",
+    "options": {
+      "A": "All tractors are powered equipment",
+      "B": "All powered equipment are tractors",
+      "C": "No tractors are powered equipment",
+      "D": "Some tractors are not machines"
+    },
+    "correct_answer": "A",
+    "solution": "By standard Barbara (AAA) syllogism:\n- Minor premise: All $A$ are $B$.\n- Major premise: All $B$ are $C$.\n- Valid conclusion: All $A$ are $C$ ('All tractors are powered equipment').",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_011",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Euler-Venn sets intersection analysis",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a survey of $100$ agricultural students:\n- $60$ study Farm Power ($P$)\n- $50$ study Soil Mechanics ($S$)\n- $30$ study both Farm Power and Soil Mechanics ($P \\cap S$)\nWhich of the following statements is/are TRUE?",
+    "options": {
+      "A": "The number of students studying only Farm Power is $30$",
+      "B": "The number of students studying only Soil Mechanics is $20$",
+      "C": "The total number of students studying at least one of the two subjects is $80$",
+      "D": "The number of students studying neither subject is $20$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Only $P = n(P) - n(P \\cap S) = 60 - 30 = 30$ (A is true).\n2. Only $S = n(S) - n(P \\cap S) = 50 - 30 = 20$ (B is true).\n3. $n(P \\cup S) = n(P) + n(S) - n(P \\cap S) = 60 + 50 - 30 = 80$ (C is true).\n4. Neither $= 100 - n(P \\cup S) = 100 - 80 = 20$ (D is true).\nAll statements A, B, C, D are correct.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_012",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Particular negative and universal negative premises",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. Some seeds are hybrid.\n2. No hybrid is sterile.\nWhich of the following conclusions is definitively VALID?",
+    "options": {
+      "A": "Some seeds are not sterile",
+      "B": "All seeds are sterile",
+      "C": "No seed is fertile",
+      "D": "All hybrids are seeds"
+    },
+    "correct_answer": "A",
+    "solution": "From 'Some seeds are hybrid' and 'No hybrid is sterile', the subset of seeds that are hybrid cannot be sterile. Therefore, 'Some seeds are not sterile' is definitively true.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_013",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Universal affirmative syllogism deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. All tractors are agricultural machines.\n2. All agricultural machines are powered equipment.\nWhich of the following conclusions logically follows?",
+    "options": {
+      "A": "All tractors are powered equipment",
+      "B": "All powered equipment are tractors",
+      "C": "No tractors are powered equipment",
+      "D": "Some tractors are not machines"
+    },
+    "correct_answer": "A",
+    "solution": "By standard Barbara (AAA) syllogism:\n- Minor premise: All $A$ are $B$.\n- Major premise: All $B$ are $C$.\n- Valid conclusion: All $A$ are $C$ ('All tractors are powered equipment').",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_014",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Euler-Venn sets intersection analysis",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a survey of $100$ agricultural students:\n- $60$ study Farm Power ($P$)\n- $50$ study Soil Mechanics ($S$)\n- $30$ study both Farm Power and Soil Mechanics ($P \\cap S$)\nWhich of the following statements is/are TRUE?",
+    "options": {
+      "A": "The number of students studying only Farm Power is $30$",
+      "B": "The number of students studying only Soil Mechanics is $20$",
+      "C": "The total number of students studying at least one of the two subjects is $80$",
+      "D": "The number of students studying neither subject is $20$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Only $P = n(P) - n(P \\cap S) = 60 - 30 = 30$ (A is true).\n2. Only $S = n(S) - n(P \\cap S) = 50 - 30 = 20$ (B is true).\n3. $n(P \\cup S) = n(P) + n(S) - n(P \\cap S) = 60 + 50 - 30 = 80$ (C is true).\n4. Neither $= 100 - n(P \\cup S) = 100 - 80 = 20$ (D is true).\nAll statements A, B, C, D are correct.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_015",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Particular negative and universal negative premises",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. Some seeds are hybrid.\n2. No hybrid is sterile.\nWhich of the following conclusions is definitively VALID?",
+    "options": {
+      "A": "Some seeds are not sterile",
+      "B": "All seeds are sterile",
+      "C": "No seed is fertile",
+      "D": "All hybrids are seeds"
+    },
+    "correct_answer": "A",
+    "solution": "From 'Some seeds are hybrid' and 'No hybrid is sterile', the subset of seeds that are hybrid cannot be sterile. Therefore, 'Some seeds are not sterile' is definitively true.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_016",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Universal affirmative syllogism deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. All tractors are agricultural machines.\n2. All agricultural machines are powered equipment.\nWhich of the following conclusions logically follows?",
+    "options": {
+      "A": "All tractors are powered equipment",
+      "B": "All powered equipment are tractors",
+      "C": "No tractors are powered equipment",
+      "D": "Some tractors are not machines"
+    },
+    "correct_answer": "A",
+    "solution": "By standard Barbara (AAA) syllogism:\n- Minor premise: All $A$ are $B$.\n- Major premise: All $B$ are $C$.\n- Valid conclusion: All $A$ are $C$ ('All tractors are powered equipment').",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_017",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Euler-Venn sets intersection analysis",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a survey of $100$ agricultural students:\n- $60$ study Farm Power ($P$)\n- $50$ study Soil Mechanics ($S$)\n- $30$ study both Farm Power and Soil Mechanics ($P \\cap S$)\nWhich of the following statements is/are TRUE?",
+    "options": {
+      "A": "The number of students studying only Farm Power is $30$",
+      "B": "The number of students studying only Soil Mechanics is $20$",
+      "C": "The total number of students studying at least one of the two subjects is $80$",
+      "D": "The number of students studying neither subject is $20$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Only $P = n(P) - n(P \\cap S) = 60 - 30 = 30$ (A is true).\n2. Only $S = n(S) - n(P \\cap S) = 50 - 30 = 20$ (B is true).\n3. $n(P \\cup S) = n(P) + n(S) - n(P \\cap S) = 60 + 50 - 30 = 80$ (C is true).\n4. Neither $= 100 - n(P \\cup S) = 100 - 80 = 20$ (D is true).\nAll statements A, B, C, D are correct.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_018",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Particular negative and universal negative premises",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. Some seeds are hybrid.\n2. No hybrid is sterile.\nWhich of the following conclusions is definitively VALID?",
+    "options": {
+      "A": "Some seeds are not sterile",
+      "B": "All seeds are sterile",
+      "C": "No seed is fertile",
+      "D": "All hybrids are seeds"
+    },
+    "correct_answer": "A",
+    "solution": "From 'Some seeds are hybrid' and 'No hybrid is sterile', the subset of seeds that are hybrid cannot be sterile. Therefore, 'Some seeds are not sterile' is definitively true.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_019",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Universal affirmative syllogism deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. All tractors are agricultural machines.\n2. All agricultural machines are powered equipment.\nWhich of the following conclusions logically follows?",
+    "options": {
+      "A": "All tractors are powered equipment",
+      "B": "All powered equipment are tractors",
+      "C": "No tractors are powered equipment",
+      "D": "Some tractors are not machines"
+    },
+    "correct_answer": "A",
+    "solution": "By standard Barbara (AAA) syllogism:\n- Minor premise: All $A$ are $B$.\n- Major premise: All $B$ are $C$.\n- Valid conclusion: All $A$ are $C$ ('All tractors are powered equipment').",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_020",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Euler-Venn sets intersection analysis",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a survey of $100$ agricultural students:\n- $60$ study Farm Power ($P$)\n- $50$ study Soil Mechanics ($S$)\n- $30$ study both Farm Power and Soil Mechanics ($P \\cap S$)\nWhich of the following statements is/are TRUE?",
+    "options": {
+      "A": "The number of students studying only Farm Power is $30$",
+      "B": "The number of students studying only Soil Mechanics is $20$",
+      "C": "The total number of students studying at least one of the two subjects is $80$",
+      "D": "The number of students studying neither subject is $20$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Only $P = n(P) - n(P \\cap S) = 60 - 30 = 30$ (A is true).\n2. Only $S = n(S) - n(P \\cap S) = 50 - 30 = 20$ (B is true).\n3. $n(P \\cup S) = n(P) + n(S) - n(P \\cap S) = 60 + 50 - 30 = 80$ (C is true).\n4. Neither $= 100 - n(P \\cup S) = 100 - 80 = 20$ (D is true).\nAll statements A, B, C, D are correct.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_021",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Particular negative and universal negative premises",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. Some seeds are hybrid.\n2. No hybrid is sterile.\nWhich of the following conclusions is definitively VALID?",
+    "options": {
+      "A": "Some seeds are not sterile",
+      "B": "All seeds are sterile",
+      "C": "No seed is fertile",
+      "D": "All hybrids are seeds"
+    },
+    "correct_answer": "A",
+    "solution": "From 'Some seeds are hybrid' and 'No hybrid is sterile', the subset of seeds that are hybrid cannot be sterile. Therefore, 'Some seeds are not sterile' is definitively true.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_022",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Universal affirmative syllogism deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. All tractors are agricultural machines.\n2. All agricultural machines are powered equipment.\nWhich of the following conclusions logically follows?",
+    "options": {
+      "A": "All tractors are powered equipment",
+      "B": "All powered equipment are tractors",
+      "C": "No tractors are powered equipment",
+      "D": "Some tractors are not machines"
+    },
+    "correct_answer": "A",
+    "solution": "By standard Barbara (AAA) syllogism:\n- Minor premise: All $A$ are $B$.\n- Major premise: All $B$ are $C$.\n- Valid conclusion: All $A$ are $C$ ('All tractors are powered equipment').",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_023",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Euler-Venn sets intersection analysis",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a survey of $100$ agricultural students:\n- $60$ study Farm Power ($P$)\n- $50$ study Soil Mechanics ($S$)\n- $30$ study both Farm Power and Soil Mechanics ($P \\cap S$)\nWhich of the following statements is/are TRUE?",
+    "options": {
+      "A": "The number of students studying only Farm Power is $30$",
+      "B": "The number of students studying only Soil Mechanics is $20$",
+      "C": "The total number of students studying at least one of the two subjects is $80$",
+      "D": "The number of students studying neither subject is $20$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Only $P = n(P) - n(P \\cap S) = 60 - 30 = 30$ (A is true).\n2. Only $S = n(S) - n(P \\cap S) = 50 - 30 = 20$ (B is true).\n3. $n(P \\cup S) = n(P) + n(S) - n(P \\cap S) = 60 + 50 - 30 = 80$ (C is true).\n4. Neither $= 100 - n(P \\cup S) = 100 - 80 = 20$ (D is true).\nAll statements A, B, C, D are correct.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_024",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Particular negative and universal negative premises",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. Some seeds are hybrid.\n2. No hybrid is sterile.\nWhich of the following conclusions is definitively VALID?",
+    "options": {
+      "A": "Some seeds are not sterile",
+      "B": "All seeds are sterile",
+      "C": "No seed is fertile",
+      "D": "All hybrids are seeds"
+    },
+    "correct_answer": "A",
+    "solution": "From 'Some seeds are hybrid' and 'No hybrid is sterile', the subset of seeds that are hybrid cannot be sterile. Therefore, 'Some seeds are not sterile' is definitively true.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_025",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Universal affirmative syllogism deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. All tractors are agricultural machines.\n2. All agricultural machines are powered equipment.\nWhich of the following conclusions logically follows?",
+    "options": {
+      "A": "All tractors are powered equipment",
+      "B": "All powered equipment are tractors",
+      "C": "No tractors are powered equipment",
+      "D": "Some tractors are not machines"
+    },
+    "correct_answer": "A",
+    "solution": "By standard Barbara (AAA) syllogism:\n- Minor premise: All $A$ are $B$.\n- Major premise: All $B$ are $C$.\n- Valid conclusion: All $A$ are $C$ ('All tractors are powered equipment').",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_026",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Euler-Venn sets intersection analysis",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a survey of $100$ agricultural students:\n- $60$ study Farm Power ($P$)\n- $50$ study Soil Mechanics ($S$)\n- $30$ study both Farm Power and Soil Mechanics ($P \\cap S$)\nWhich of the following statements is/are TRUE?",
+    "options": {
+      "A": "The number of students studying only Farm Power is $30$",
+      "B": "The number of students studying only Soil Mechanics is $20$",
+      "C": "The total number of students studying at least one of the two subjects is $80$",
+      "D": "The number of students studying neither subject is $20$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Only $P = n(P) - n(P \\cap S) = 60 - 30 = 30$ (A is true).\n2. Only $S = n(S) - n(P \\cap S) = 50 - 30 = 20$ (B is true).\n3. $n(P \\cup S) = n(P) + n(S) - n(P \\cap S) = 60 + 50 - 30 = 80$ (C is true).\n4. Neither $= 100 - n(P \\cup S) = 100 - 80 = 20$ (D is true).\nAll statements A, B, C, D are correct.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_027",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Particular negative and universal negative premises",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. Some seeds are hybrid.\n2. No hybrid is sterile.\nWhich of the following conclusions is definitively VALID?",
+    "options": {
+      "A": "Some seeds are not sterile",
+      "B": "All seeds are sterile",
+      "C": "No seed is fertile",
+      "D": "All hybrids are seeds"
+    },
+    "correct_answer": "A",
+    "solution": "From 'Some seeds are hybrid' and 'No hybrid is sterile', the subset of seeds that are hybrid cannot be sterile. Therefore, 'Some seeds are not sterile' is definitively true.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_028",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Universal affirmative syllogism deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. All tractors are agricultural machines.\n2. All agricultural machines are powered equipment.\nWhich of the following conclusions logically follows?",
+    "options": {
+      "A": "All tractors are powered equipment",
+      "B": "All powered equipment are tractors",
+      "C": "No tractors are powered equipment",
+      "D": "Some tractors are not machines"
+    },
+    "correct_answer": "A",
+    "solution": "By standard Barbara (AAA) syllogism:\n- Minor premise: All $A$ are $B$.\n- Major premise: All $B$ are $C$.\n- Valid conclusion: All $A$ are $C$ ('All tractors are powered equipment').",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_029",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Euler-Venn sets intersection analysis",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a survey of $100$ agricultural students:\n- $60$ study Farm Power ($P$)\n- $50$ study Soil Mechanics ($S$)\n- $30$ study both Farm Power and Soil Mechanics ($P \\cap S$)\nWhich of the following statements is/are TRUE?",
+    "options": {
+      "A": "The number of students studying only Farm Power is $30$",
+      "B": "The number of students studying only Soil Mechanics is $20$",
+      "C": "The total number of students studying at least one of the two subjects is $80$",
+      "D": "The number of students studying neither subject is $20$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Only $P = n(P) - n(P \\cap S) = 60 - 30 = 30$ (A is true).\n2. Only $S = n(S) - n(P \\cap S) = 50 - 30 = 20$ (B is true).\n3. $n(P \\cup S) = n(P) + n(S) - n(P \\cap S) = 60 + 50 - 30 = 80$ (C is true).\n4. Neither $= 100 - n(P \\cup S) = 100 - 80 = 20$ (D is true).\nAll statements A, B, C, D are correct.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_030",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Particular negative and universal negative premises",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. Some seeds are hybrid.\n2. No hybrid is sterile.\nWhich of the following conclusions is definitively VALID?",
+    "options": {
+      "A": "Some seeds are not sterile",
+      "B": "All seeds are sterile",
+      "C": "No seed is fertile",
+      "D": "All hybrids are seeds"
+    },
+    "correct_answer": "A",
+    "solution": "From 'Some seeds are hybrid' and 'No hybrid is sterile', the subset of seeds that are hybrid cannot be sterile. Therefore, 'Some seeds are not sterile' is definitively true.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_031",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Universal affirmative syllogism deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. All tractors are agricultural machines.\n2. All agricultural machines are powered equipment.\nWhich of the following conclusions logically follows?",
+    "options": {
+      "A": "All tractors are powered equipment",
+      "B": "All powered equipment are tractors",
+      "C": "No tractors are powered equipment",
+      "D": "Some tractors are not machines"
+    },
+    "correct_answer": "A",
+    "solution": "By standard Barbara (AAA) syllogism:\n- Minor premise: All $A$ are $B$.\n- Major premise: All $B$ are $C$.\n- Valid conclusion: All $A$ are $C$ ('All tractors are powered equipment').",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_032",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Euler-Venn sets intersection analysis",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a survey of $100$ agricultural students:\n- $60$ study Farm Power ($P$)\n- $50$ study Soil Mechanics ($S$)\n- $30$ study both Farm Power and Soil Mechanics ($P \\cap S$)\nWhich of the following statements is/are TRUE?",
+    "options": {
+      "A": "The number of students studying only Farm Power is $30$",
+      "B": "The number of students studying only Soil Mechanics is $20$",
+      "C": "The total number of students studying at least one of the two subjects is $80$",
+      "D": "The number of students studying neither subject is $20$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Only $P = n(P) - n(P \\cap S) = 60 - 30 = 30$ (A is true).\n2. Only $S = n(S) - n(P \\cap S) = 50 - 30 = 20$ (B is true).\n3. $n(P \\cup S) = n(P) + n(S) - n(P \\cap S) = 60 + 50 - 30 = 80$ (C is true).\n4. Neither $= 100 - n(P \\cup S) = 100 - 80 = 20$ (D is true).\nAll statements A, B, C, D are correct.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_033",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Particular negative and universal negative premises",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. Some seeds are hybrid.\n2. No hybrid is sterile.\nWhich of the following conclusions is definitively VALID?",
+    "options": {
+      "A": "Some seeds are not sterile",
+      "B": "All seeds are sterile",
+      "C": "No seed is fertile",
+      "D": "All hybrids are seeds"
+    },
+    "correct_answer": "A",
+    "solution": "From 'Some seeds are hybrid' and 'No hybrid is sterile', the subset of seeds that are hybrid cannot be sterile. Therefore, 'Some seeds are not sterile' is definitively true.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_034",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Universal affirmative syllogism deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. All tractors are agricultural machines.\n2. All agricultural machines are powered equipment.\nWhich of the following conclusions logically follows?",
+    "options": {
+      "A": "All tractors are powered equipment",
+      "B": "All powered equipment are tractors",
+      "C": "No tractors are powered equipment",
+      "D": "Some tractors are not machines"
+    },
+    "correct_answer": "A",
+    "solution": "By standard Barbara (AAA) syllogism:\n- Minor premise: All $A$ are $B$.\n- Major premise: All $B$ are $C$.\n- Valid conclusion: All $A$ are $C$ ('All tractors are powered equipment').",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_035",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Euler-Venn sets intersection analysis",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a survey of $100$ agricultural students:\n- $60$ study Farm Power ($P$)\n- $50$ study Soil Mechanics ($S$)\n- $30$ study both Farm Power and Soil Mechanics ($P \\cap S$)\nWhich of the following statements is/are TRUE?",
+    "options": {
+      "A": "The number of students studying only Farm Power is $30$",
+      "B": "The number of students studying only Soil Mechanics is $20$",
+      "C": "The total number of students studying at least one of the two subjects is $80$",
+      "D": "The number of students studying neither subject is $20$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Only $P = n(P) - n(P \\cap S) = 60 - 30 = 30$ (A is true).\n2. Only $S = n(S) - n(P \\cap S) = 50 - 30 = 20$ (B is true).\n3. $n(P \\cup S) = n(P) + n(S) - n(P \\cap S) = 60 + 50 - 30 = 80$ (C is true).\n4. Neither $= 100 - n(P \\cup S) = 100 - 80 = 20$ (D is true).\nAll statements A, B, C, D are correct.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_036",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Particular negative and universal negative premises",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. Some seeds are hybrid.\n2. No hybrid is sterile.\nWhich of the following conclusions is definitively VALID?",
+    "options": {
+      "A": "Some seeds are not sterile",
+      "B": "All seeds are sterile",
+      "C": "No seed is fertile",
+      "D": "All hybrids are seeds"
+    },
+    "correct_answer": "A",
+    "solution": "From 'Some seeds are hybrid' and 'No hybrid is sterile', the subset of seeds that are hybrid cannot be sterile. Therefore, 'Some seeds are not sterile' is definitively true.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_037",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Universal affirmative syllogism deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. All tractors are agricultural machines.\n2. All agricultural machines are powered equipment.\nWhich of the following conclusions logically follows?",
+    "options": {
+      "A": "All tractors are powered equipment",
+      "B": "All powered equipment are tractors",
+      "C": "No tractors are powered equipment",
+      "D": "Some tractors are not machines"
+    },
+    "correct_answer": "A",
+    "solution": "By standard Barbara (AAA) syllogism:\n- Minor premise: All $A$ are $B$.\n- Major premise: All $B$ are $C$.\n- Valid conclusion: All $A$ are $C$ ('All tractors are powered equipment').",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_038",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Euler-Venn sets intersection analysis",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a survey of $100$ agricultural students:\n- $60$ study Farm Power ($P$)\n- $50$ study Soil Mechanics ($S$)\n- $30$ study both Farm Power and Soil Mechanics ($P \\cap S$)\nWhich of the following statements is/are TRUE?",
+    "options": {
+      "A": "The number of students studying only Farm Power is $30$",
+      "B": "The number of students studying only Soil Mechanics is $20$",
+      "C": "The total number of students studying at least one of the two subjects is $80$",
+      "D": "The number of students studying neither subject is $20$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Only $P = n(P) - n(P \\cap S) = 60 - 30 = 30$ (A is true).\n2. Only $S = n(S) - n(P \\cap S) = 50 - 30 = 20$ (B is true).\n3. $n(P \\cup S) = n(P) + n(S) - n(P \\cap S) = 60 + 50 - 30 = 80$ (C is true).\n4. Neither $= 100 - n(P \\cup S) = 100 - 80 = 20$ (D is true).\nAll statements A, B, C, D are correct.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_039",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Particular negative and universal negative premises",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. Some seeds are hybrid.\n2. No hybrid is sterile.\nWhich of the following conclusions is definitively VALID?",
+    "options": {
+      "A": "Some seeds are not sterile",
+      "B": "All seeds are sterile",
+      "C": "No seed is fertile",
+      "D": "All hybrids are seeds"
+    },
+    "correct_answer": "A",
+    "solution": "From 'Some seeds are hybrid' and 'No hybrid is sterile', the subset of seeds that are hybrid cannot be sterile. Therefore, 'Some seeds are not sterile' is definitively true.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_040",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Universal affirmative syllogism deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. All tractors are agricultural machines.\n2. All agricultural machines are powered equipment.\nWhich of the following conclusions logically follows?",
+    "options": {
+      "A": "All tractors are powered equipment",
+      "B": "All powered equipment are tractors",
+      "C": "No tractors are powered equipment",
+      "D": "Some tractors are not machines"
+    },
+    "correct_answer": "A",
+    "solution": "By standard Barbara (AAA) syllogism:\n- Minor premise: All $A$ are $B$.\n- Major premise: All $B$ are $C$.\n- Valid conclusion: All $A$ are $C$ ('All tractors are powered equipment').",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_041",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Euler-Venn sets intersection analysis",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a survey of $100$ agricultural students:\n- $60$ study Farm Power ($P$)\n- $50$ study Soil Mechanics ($S$)\n- $30$ study both Farm Power and Soil Mechanics ($P \\cap S$)\nWhich of the following statements is/are TRUE?",
+    "options": {
+      "A": "The number of students studying only Farm Power is $30$",
+      "B": "The number of students studying only Soil Mechanics is $20$",
+      "C": "The total number of students studying at least one of the two subjects is $80$",
+      "D": "The number of students studying neither subject is $20$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Only $P = n(P) - n(P \\cap S) = 60 - 30 = 30$ (A is true).\n2. Only $S = n(S) - n(P \\cap S) = 50 - 30 = 20$ (B is true).\n3. $n(P \\cup S) = n(P) + n(S) - n(P \\cap S) = 60 + 50 - 30 = 80$ (C is true).\n4. Neither $= 100 - n(P \\cup S) = 100 - 80 = 20$ (D is true).\nAll statements A, B, C, D are correct.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_042",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Particular negative and universal negative premises",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. Some seeds are hybrid.\n2. No hybrid is sterile.\nWhich of the following conclusions is definitively VALID?",
+    "options": {
+      "A": "Some seeds are not sterile",
+      "B": "All seeds are sterile",
+      "C": "No seed is fertile",
+      "D": "All hybrids are seeds"
+    },
+    "correct_answer": "A",
+    "solution": "From 'Some seeds are hybrid' and 'No hybrid is sterile', the subset of seeds that are hybrid cannot be sterile. Therefore, 'Some seeds are not sterile' is definitively true.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_043",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Universal affirmative syllogism deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. All tractors are agricultural machines.\n2. All agricultural machines are powered equipment.\nWhich of the following conclusions logically follows?",
+    "options": {
+      "A": "All tractors are powered equipment",
+      "B": "All powered equipment are tractors",
+      "C": "No tractors are powered equipment",
+      "D": "Some tractors are not machines"
+    },
+    "correct_answer": "A",
+    "solution": "By standard Barbara (AAA) syllogism:\n- Minor premise: All $A$ are $B$.\n- Major premise: All $B$ are $C$.\n- Valid conclusion: All $A$ are $C$ ('All tractors are powered equipment').",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_044",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Euler-Venn sets intersection analysis",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a survey of $100$ agricultural students:\n- $60$ study Farm Power ($P$)\n- $50$ study Soil Mechanics ($S$)\n- $30$ study both Farm Power and Soil Mechanics ($P \\cap S$)\nWhich of the following statements is/are TRUE?",
+    "options": {
+      "A": "The number of students studying only Farm Power is $30$",
+      "B": "The number of students studying only Soil Mechanics is $20$",
+      "C": "The total number of students studying at least one of the two subjects is $80$",
+      "D": "The number of students studying neither subject is $20$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Only $P = n(P) - n(P \\cap S) = 60 - 30 = 30$ (A is true).\n2. Only $S = n(S) - n(P \\cap S) = 50 - 30 = 20$ (B is true).\n3. $n(P \\cup S) = n(P) + n(S) - n(P \\cap S) = 60 + 50 - 30 = 80$ (C is true).\n4. Neither $= 100 - n(P \\cup S) = 100 - 80 = 20$ (D is true).\nAll statements A, B, C, D are correct.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_045",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Particular negative and universal negative premises",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. Some seeds are hybrid.\n2. No hybrid is sterile.\nWhich of the following conclusions is definitively VALID?",
+    "options": {
+      "A": "Some seeds are not sterile",
+      "B": "All seeds are sterile",
+      "C": "No seed is fertile",
+      "D": "All hybrids are seeds"
+    },
+    "correct_answer": "A",
+    "solution": "From 'Some seeds are hybrid' and 'No hybrid is sterile', the subset of seeds that are hybrid cannot be sterile. Therefore, 'Some seeds are not sterile' is definitively true.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_046",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Universal affirmative syllogism deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. All tractors are agricultural machines.\n2. All agricultural machines are powered equipment.\nWhich of the following conclusions logically follows?",
+    "options": {
+      "A": "All tractors are powered equipment",
+      "B": "All powered equipment are tractors",
+      "C": "No tractors are powered equipment",
+      "D": "Some tractors are not machines"
+    },
+    "correct_answer": "A",
+    "solution": "By standard Barbara (AAA) syllogism:\n- Minor premise: All $A$ are $B$.\n- Major premise: All $B$ are $C$.\n- Valid conclusion: All $A$ are $C$ ('All tractors are powered equipment').",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_047",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Euler-Venn sets intersection analysis",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a survey of $100$ agricultural students:\n- $60$ study Farm Power ($P$)\n- $50$ study Soil Mechanics ($S$)\n- $30$ study both Farm Power and Soil Mechanics ($P \\cap S$)\nWhich of the following statements is/are TRUE?",
+    "options": {
+      "A": "The number of students studying only Farm Power is $30$",
+      "B": "The number of students studying only Soil Mechanics is $20$",
+      "C": "The total number of students studying at least one of the two subjects is $80$",
+      "D": "The number of students studying neither subject is $20$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Only $P = n(P) - n(P \\cap S) = 60 - 30 = 30$ (A is true).\n2. Only $S = n(S) - n(P \\cap S) = 50 - 30 = 20$ (B is true).\n3. $n(P \\cup S) = n(P) + n(S) - n(P \\cap S) = 60 + 50 - 30 = 80$ (C is true).\n4. Neither $= 100 - n(P \\cup S) = 100 - 80 = 20$ (D is true).\nAll statements A, B, C, D are correct.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_048",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Particular negative and universal negative premises",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. Some seeds are hybrid.\n2. No hybrid is sterile.\nWhich of the following conclusions is definitively VALID?",
+    "options": {
+      "A": "Some seeds are not sterile",
+      "B": "All seeds are sterile",
+      "C": "No seed is fertile",
+      "D": "All hybrids are seeds"
+    },
+    "correct_answer": "A",
+    "solution": "From 'Some seeds are hybrid' and 'No hybrid is sterile', the subset of seeds that are hybrid cannot be sterile. Therefore, 'Some seeds are not sterile' is definitively true.",
+    "difficulty": "Moderate",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_049",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Universal affirmative syllogism deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Given the premises:\n1. All tractors are agricultural machines.\n2. All agricultural machines are powered equipment.\nWhich of the following conclusions logically follows?",
+    "options": {
+      "A": "All tractors are powered equipment",
+      "B": "All powered equipment are tractors",
+      "C": "No tractors are powered equipment",
+      "D": "Some tractors are not machines"
+    },
+    "correct_answer": "A",
+    "solution": "By standard Barbara (AAA) syllogism:\n- Minor premise: All $A$ are $B$.\n- Major premise: All $B$ are $C$.\n- Valid conclusion: All $A$ are $C$ ('All tractors are powered equipment').",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SYL_050",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Syllogisms, Deduction & Venn Diagrams",
+    "subtopic": "Euler-Venn sets intersection analysis",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In a survey of $100$ agricultural students:\n- $60$ study Farm Power ($P$)\n- $50$ study Soil Mechanics ($S$)\n- $30$ study both Farm Power and Soil Mechanics ($P \\cap S$)\nWhich of the following statements is/are TRUE?",
+    "options": {
+      "A": "The number of students studying only Farm Power is $30$",
+      "B": "The number of students studying only Soil Mechanics is $20$",
+      "C": "The total number of students studying at least one of the two subjects is $80$",
+      "D": "The number of students studying neither subject is $20$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Only $P = n(P) - n(P \\cap S) = 60 - 30 = 30$ (A is true).\n2. Only $S = n(S) - n(P \\cap S) = 50 - 30 = 20$ (B is true).\n3. $n(P \\cup S) = n(P) + n(S) - n(P \\cap S) = 60 + 50 - 30 = 80$ (C is true).\n4. Neither $= 100 - n(P \\cup S) = 100 - 80 = 20$ (D is true).\nAll statements A, B, C, D are correct.",
+    "difficulty": "Easy",
+    "source": "Quantitative Aptitude for Competitive Examinations (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_001",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Direction sense Pythagoras displacement",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A surveyor starts from point O and walks $12\\text{ m}$ North. He then turns right (facing East) and walks $5\\text{ m}$. The shortest straight-line distance from his current position back to starting point O is ________ $\\text{m}$.",
+    "correct_answer": "13.0",
+    "numerical_range": {
+      "min": 12.9,
+      "max": 13.1
+    },
+    "solution": "By Pythagoras theorem on the right-angled triangle formed by North ($12\\text{ m}$) and East ($5\\text{ m}$) legs:\n$$d = \\sqrt{12^2 + 5^2} = \\sqrt{144 + 25} = \\sqrt{169} = 13.0\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_002",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Family blood relation deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Pointing to a photograph, a woman says: 'He is the son of the only daughter of my father.' How is the man in the photograph related to the woman?",
+    "options": {
+      "A": "Son",
+      "B": "Brother",
+      "C": "Father",
+      "D": "Uncle"
+    },
+    "correct_answer": "A",
+    "solution": "'The only daughter of my father' is the woman herself. Therefore, 'the son of the only daughter of my father' is her own son.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_003",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Linear seating arrangement constraints",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Five researchers (A, B, C, D, E) sit in a row facing North. B is sitting immediately between A and C. E is to the immediate right of C. D is at the extreme left end. Who is sitting in the exact middle of the row?",
+    "options": {
+      "A": "B",
+      "B": "A",
+      "C": "C",
+      "D": "E"
+    },
+    "correct_answer": "A",
+    "solution": "Arranging from left to right:\n- D is at extreme left: [D, _, _, _, _]\n- A, B, C sit consecutively with B between A and C, and E is immediately right of C: [D, A, B, C, E].\nThe exact middle position (3rd of 5) is occupied by B.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_004",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Direction sense Pythagoras displacement",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A surveyor starts from point O and walks $12\\text{ m}$ North. He then turns right (facing East) and walks $5\\text{ m}$. The shortest straight-line distance from his current position back to starting point O is ________ $\\text{m}$.",
+    "correct_answer": "13.0",
+    "numerical_range": {
+      "min": 12.9,
+      "max": 13.1
+    },
+    "solution": "By Pythagoras theorem on the right-angled triangle formed by North ($12\\text{ m}$) and East ($5\\text{ m}$) legs:\n$$d = \\sqrt{12^2 + 5^2} = \\sqrt{144 + 25} = \\sqrt{169} = 13.0\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_005",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Family blood relation deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Pointing to a photograph, a woman says: 'He is the son of the only daughter of my father.' How is the man in the photograph related to the woman?",
+    "options": {
+      "A": "Son",
+      "B": "Brother",
+      "C": "Father",
+      "D": "Uncle"
+    },
+    "correct_answer": "A",
+    "solution": "'The only daughter of my father' is the woman herself. Therefore, 'the son of the only daughter of my father' is her own son.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_006",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Linear seating arrangement constraints",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Five researchers (A, B, C, D, E) sit in a row facing North. B is sitting immediately between A and C. E is to the immediate right of C. D is at the extreme left end. Who is sitting in the exact middle of the row?",
+    "options": {
+      "A": "B",
+      "B": "A",
+      "C": "C",
+      "D": "E"
+    },
+    "correct_answer": "A",
+    "solution": "Arranging from left to right:\n- D is at extreme left: [D, _, _, _, _]\n- A, B, C sit consecutively with B between A and C, and E is immediately right of C: [D, A, B, C, E].\nThe exact middle position (3rd of 5) is occupied by B.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_007",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Direction sense Pythagoras displacement",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A surveyor starts from point O and walks $12\\text{ m}$ North. He then turns right (facing East) and walks $5\\text{ m}$. The shortest straight-line distance from his current position back to starting point O is ________ $\\text{m}$.",
+    "correct_answer": "13.0",
+    "numerical_range": {
+      "min": 12.9,
+      "max": 13.1
+    },
+    "solution": "By Pythagoras theorem on the right-angled triangle formed by North ($12\\text{ m}$) and East ($5\\text{ m}$) legs:\n$$d = \\sqrt{12^2 + 5^2} = \\sqrt{144 + 25} = \\sqrt{169} = 13.0\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_008",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Family blood relation deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Pointing to a photograph, a woman says: 'He is the son of the only daughter of my father.' How is the man in the photograph related to the woman?",
+    "options": {
+      "A": "Son",
+      "B": "Brother",
+      "C": "Father",
+      "D": "Uncle"
+    },
+    "correct_answer": "A",
+    "solution": "'The only daughter of my father' is the woman herself. Therefore, 'the son of the only daughter of my father' is her own son.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_009",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Linear seating arrangement constraints",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Five researchers (A, B, C, D, E) sit in a row facing North. B is sitting immediately between A and C. E is to the immediate right of C. D is at the extreme left end. Who is sitting in the exact middle of the row?",
+    "options": {
+      "A": "B",
+      "B": "A",
+      "C": "C",
+      "D": "E"
+    },
+    "correct_answer": "A",
+    "solution": "Arranging from left to right:\n- D is at extreme left: [D, _, _, _, _]\n- A, B, C sit consecutively with B between A and C, and E is immediately right of C: [D, A, B, C, E].\nThe exact middle position (3rd of 5) is occupied by B.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_010",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Direction sense Pythagoras displacement",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A surveyor starts from point O and walks $12\\text{ m}$ North. He then turns right (facing East) and walks $5\\text{ m}$. The shortest straight-line distance from his current position back to starting point O is ________ $\\text{m}$.",
+    "correct_answer": "13.0",
+    "numerical_range": {
+      "min": 12.9,
+      "max": 13.1
+    },
+    "solution": "By Pythagoras theorem on the right-angled triangle formed by North ($12\\text{ m}$) and East ($5\\text{ m}$) legs:\n$$d = \\sqrt{12^2 + 5^2} = \\sqrt{144 + 25} = \\sqrt{169} = 13.0\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_011",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Family blood relation deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Pointing to a photograph, a woman says: 'He is the son of the only daughter of my father.' How is the man in the photograph related to the woman?",
+    "options": {
+      "A": "Son",
+      "B": "Brother",
+      "C": "Father",
+      "D": "Uncle"
+    },
+    "correct_answer": "A",
+    "solution": "'The only daughter of my father' is the woman herself. Therefore, 'the son of the only daughter of my father' is her own son.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_012",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Linear seating arrangement constraints",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Five researchers (A, B, C, D, E) sit in a row facing North. B is sitting immediately between A and C. E is to the immediate right of C. D is at the extreme left end. Who is sitting in the exact middle of the row?",
+    "options": {
+      "A": "B",
+      "B": "A",
+      "C": "C",
+      "D": "E"
+    },
+    "correct_answer": "A",
+    "solution": "Arranging from left to right:\n- D is at extreme left: [D, _, _, _, _]\n- A, B, C sit consecutively with B between A and C, and E is immediately right of C: [D, A, B, C, E].\nThe exact middle position (3rd of 5) is occupied by B.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_013",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Direction sense Pythagoras displacement",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A surveyor starts from point O and walks $12\\text{ m}$ North. He then turns right (facing East) and walks $5\\text{ m}$. The shortest straight-line distance from his current position back to starting point O is ________ $\\text{m}$.",
+    "correct_answer": "13.0",
+    "numerical_range": {
+      "min": 12.9,
+      "max": 13.1
+    },
+    "solution": "By Pythagoras theorem on the right-angled triangle formed by North ($12\\text{ m}$) and East ($5\\text{ m}$) legs:\n$$d = \\sqrt{12^2 + 5^2} = \\sqrt{144 + 25} = \\sqrt{169} = 13.0\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_014",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Family blood relation deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Pointing to a photograph, a woman says: 'He is the son of the only daughter of my father.' How is the man in the photograph related to the woman?",
+    "options": {
+      "A": "Son",
+      "B": "Brother",
+      "C": "Father",
+      "D": "Uncle"
+    },
+    "correct_answer": "A",
+    "solution": "'The only daughter of my father' is the woman herself. Therefore, 'the son of the only daughter of my father' is her own son.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_015",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Linear seating arrangement constraints",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Five researchers (A, B, C, D, E) sit in a row facing North. B is sitting immediately between A and C. E is to the immediate right of C. D is at the extreme left end. Who is sitting in the exact middle of the row?",
+    "options": {
+      "A": "B",
+      "B": "A",
+      "C": "C",
+      "D": "E"
+    },
+    "correct_answer": "A",
+    "solution": "Arranging from left to right:\n- D is at extreme left: [D, _, _, _, _]\n- A, B, C sit consecutively with B between A and C, and E is immediately right of C: [D, A, B, C, E].\nThe exact middle position (3rd of 5) is occupied by B.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_016",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Direction sense Pythagoras displacement",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A surveyor starts from point O and walks $12\\text{ m}$ North. He then turns right (facing East) and walks $5\\text{ m}$. The shortest straight-line distance from his current position back to starting point O is ________ $\\text{m}$.",
+    "correct_answer": "13.0",
+    "numerical_range": {
+      "min": 12.9,
+      "max": 13.1
+    },
+    "solution": "By Pythagoras theorem on the right-angled triangle formed by North ($12\\text{ m}$) and East ($5\\text{ m}$) legs:\n$$d = \\sqrt{12^2 + 5^2} = \\sqrt{144 + 25} = \\sqrt{169} = 13.0\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_017",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Family blood relation deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Pointing to a photograph, a woman says: 'He is the son of the only daughter of my father.' How is the man in the photograph related to the woman?",
+    "options": {
+      "A": "Son",
+      "B": "Brother",
+      "C": "Father",
+      "D": "Uncle"
+    },
+    "correct_answer": "A",
+    "solution": "'The only daughter of my father' is the woman herself. Therefore, 'the son of the only daughter of my father' is her own son.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_018",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Linear seating arrangement constraints",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Five researchers (A, B, C, D, E) sit in a row facing North. B is sitting immediately between A and C. E is to the immediate right of C. D is at the extreme left end. Who is sitting in the exact middle of the row?",
+    "options": {
+      "A": "B",
+      "B": "A",
+      "C": "C",
+      "D": "E"
+    },
+    "correct_answer": "A",
+    "solution": "Arranging from left to right:\n- D is at extreme left: [D, _, _, _, _]\n- A, B, C sit consecutively with B between A and C, and E is immediately right of C: [D, A, B, C, E].\nThe exact middle position (3rd of 5) is occupied by B.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_019",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Direction sense Pythagoras displacement",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A surveyor starts from point O and walks $12\\text{ m}$ North. He then turns right (facing East) and walks $5\\text{ m}$. The shortest straight-line distance from his current position back to starting point O is ________ $\\text{m}$.",
+    "correct_answer": "13.0",
+    "numerical_range": {
+      "min": 12.9,
+      "max": 13.1
+    },
+    "solution": "By Pythagoras theorem on the right-angled triangle formed by North ($12\\text{ m}$) and East ($5\\text{ m}$) legs:\n$$d = \\sqrt{12^2 + 5^2} = \\sqrt{144 + 25} = \\sqrt{169} = 13.0\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_020",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Family blood relation deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Pointing to a photograph, a woman says: 'He is the son of the only daughter of my father.' How is the man in the photograph related to the woman?",
+    "options": {
+      "A": "Son",
+      "B": "Brother",
+      "C": "Father",
+      "D": "Uncle"
+    },
+    "correct_answer": "A",
+    "solution": "'The only daughter of my father' is the woman herself. Therefore, 'the son of the only daughter of my father' is her own son.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_021",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Linear seating arrangement constraints",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Five researchers (A, B, C, D, E) sit in a row facing North. B is sitting immediately between A and C. E is to the immediate right of C. D is at the extreme left end. Who is sitting in the exact middle of the row?",
+    "options": {
+      "A": "B",
+      "B": "A",
+      "C": "C",
+      "D": "E"
+    },
+    "correct_answer": "A",
+    "solution": "Arranging from left to right:\n- D is at extreme left: [D, _, _, _, _]\n- A, B, C sit consecutively with B between A and C, and E is immediately right of C: [D, A, B, C, E].\nThe exact middle position (3rd of 5) is occupied by B.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_022",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Direction sense Pythagoras displacement",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A surveyor starts from point O and walks $12\\text{ m}$ North. He then turns right (facing East) and walks $5\\text{ m}$. The shortest straight-line distance from his current position back to starting point O is ________ $\\text{m}$.",
+    "correct_answer": "13.0",
+    "numerical_range": {
+      "min": 12.9,
+      "max": 13.1
+    },
+    "solution": "By Pythagoras theorem on the right-angled triangle formed by North ($12\\text{ m}$) and East ($5\\text{ m}$) legs:\n$$d = \\sqrt{12^2 + 5^2} = \\sqrt{144 + 25} = \\sqrt{169} = 13.0\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_023",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Family blood relation deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Pointing to a photograph, a woman says: 'He is the son of the only daughter of my father.' How is the man in the photograph related to the woman?",
+    "options": {
+      "A": "Son",
+      "B": "Brother",
+      "C": "Father",
+      "D": "Uncle"
+    },
+    "correct_answer": "A",
+    "solution": "'The only daughter of my father' is the woman herself. Therefore, 'the son of the only daughter of my father' is her own son.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_024",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Linear seating arrangement constraints",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Five researchers (A, B, C, D, E) sit in a row facing North. B is sitting immediately between A and C. E is to the immediate right of C. D is at the extreme left end. Who is sitting in the exact middle of the row?",
+    "options": {
+      "A": "B",
+      "B": "A",
+      "C": "C",
+      "D": "E"
+    },
+    "correct_answer": "A",
+    "solution": "Arranging from left to right:\n- D is at extreme left: [D, _, _, _, _]\n- A, B, C sit consecutively with B between A and C, and E is immediately right of C: [D, A, B, C, E].\nThe exact middle position (3rd of 5) is occupied by B.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_025",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Direction sense Pythagoras displacement",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A surveyor starts from point O and walks $12\\text{ m}$ North. He then turns right (facing East) and walks $5\\text{ m}$. The shortest straight-line distance from his current position back to starting point O is ________ $\\text{m}$.",
+    "correct_answer": "13.0",
+    "numerical_range": {
+      "min": 12.9,
+      "max": 13.1
+    },
+    "solution": "By Pythagoras theorem on the right-angled triangle formed by North ($12\\text{ m}$) and East ($5\\text{ m}$) legs:\n$$d = \\sqrt{12^2 + 5^2} = \\sqrt{144 + 25} = \\sqrt{169} = 13.0\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_026",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Family blood relation deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Pointing to a photograph, a woman says: 'He is the son of the only daughter of my father.' How is the man in the photograph related to the woman?",
+    "options": {
+      "A": "Son",
+      "B": "Brother",
+      "C": "Father",
+      "D": "Uncle"
+    },
+    "correct_answer": "A",
+    "solution": "'The only daughter of my father' is the woman herself. Therefore, 'the son of the only daughter of my father' is her own son.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_027",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Linear seating arrangement constraints",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Five researchers (A, B, C, D, E) sit in a row facing North. B is sitting immediately between A and C. E is to the immediate right of C. D is at the extreme left end. Who is sitting in the exact middle of the row?",
+    "options": {
+      "A": "B",
+      "B": "A",
+      "C": "C",
+      "D": "E"
+    },
+    "correct_answer": "A",
+    "solution": "Arranging from left to right:\n- D is at extreme left: [D, _, _, _, _]\n- A, B, C sit consecutively with B between A and C, and E is immediately right of C: [D, A, B, C, E].\nThe exact middle position (3rd of 5) is occupied by B.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_028",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Direction sense Pythagoras displacement",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A surveyor starts from point O and walks $12\\text{ m}$ North. He then turns right (facing East) and walks $5\\text{ m}$. The shortest straight-line distance from his current position back to starting point O is ________ $\\text{m}$.",
+    "correct_answer": "13.0",
+    "numerical_range": {
+      "min": 12.9,
+      "max": 13.1
+    },
+    "solution": "By Pythagoras theorem on the right-angled triangle formed by North ($12\\text{ m}$) and East ($5\\text{ m}$) legs:\n$$d = \\sqrt{12^2 + 5^2} = \\sqrt{144 + 25} = \\sqrt{169} = 13.0\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_029",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Family blood relation deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Pointing to a photograph, a woman says: 'He is the son of the only daughter of my father.' How is the man in the photograph related to the woman?",
+    "options": {
+      "A": "Son",
+      "B": "Brother",
+      "C": "Father",
+      "D": "Uncle"
+    },
+    "correct_answer": "A",
+    "solution": "'The only daughter of my father' is the woman herself. Therefore, 'the son of the only daughter of my father' is her own son.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_030",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Linear seating arrangement constraints",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Five researchers (A, B, C, D, E) sit in a row facing North. B is sitting immediately between A and C. E is to the immediate right of C. D is at the extreme left end. Who is sitting in the exact middle of the row?",
+    "options": {
+      "A": "B",
+      "B": "A",
+      "C": "C",
+      "D": "E"
+    },
+    "correct_answer": "A",
+    "solution": "Arranging from left to right:\n- D is at extreme left: [D, _, _, _, _]\n- A, B, C sit consecutively with B between A and C, and E is immediately right of C: [D, A, B, C, E].\nThe exact middle position (3rd of 5) is occupied by B.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_031",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Direction sense Pythagoras displacement",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A surveyor starts from point O and walks $12\\text{ m}$ North. He then turns right (facing East) and walks $5\\text{ m}$. The shortest straight-line distance from his current position back to starting point O is ________ $\\text{m}$.",
+    "correct_answer": "13.0",
+    "numerical_range": {
+      "min": 12.9,
+      "max": 13.1
+    },
+    "solution": "By Pythagoras theorem on the right-angled triangle formed by North ($12\\text{ m}$) and East ($5\\text{ m}$) legs:\n$$d = \\sqrt{12^2 + 5^2} = \\sqrt{144 + 25} = \\sqrt{169} = 13.0\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_032",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Family blood relation deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Pointing to a photograph, a woman says: 'He is the son of the only daughter of my father.' How is the man in the photograph related to the woman?",
+    "options": {
+      "A": "Son",
+      "B": "Brother",
+      "C": "Father",
+      "D": "Uncle"
+    },
+    "correct_answer": "A",
+    "solution": "'The only daughter of my father' is the woman herself. Therefore, 'the son of the only daughter of my father' is her own son.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_033",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Linear seating arrangement constraints",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Five researchers (A, B, C, D, E) sit in a row facing North. B is sitting immediately between A and C. E is to the immediate right of C. D is at the extreme left end. Who is sitting in the exact middle of the row?",
+    "options": {
+      "A": "B",
+      "B": "A",
+      "C": "C",
+      "D": "E"
+    },
+    "correct_answer": "A",
+    "solution": "Arranging from left to right:\n- D is at extreme left: [D, _, _, _, _]\n- A, B, C sit consecutively with B between A and C, and E is immediately right of C: [D, A, B, C, E].\nThe exact middle position (3rd of 5) is occupied by B.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_034",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Direction sense Pythagoras displacement",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A surveyor starts from point O and walks $12\\text{ m}$ North. He then turns right (facing East) and walks $5\\text{ m}$. The shortest straight-line distance from his current position back to starting point O is ________ $\\text{m}$.",
+    "correct_answer": "13.0",
+    "numerical_range": {
+      "min": 12.9,
+      "max": 13.1
+    },
+    "solution": "By Pythagoras theorem on the right-angled triangle formed by North ($12\\text{ m}$) and East ($5\\text{ m}$) legs:\n$$d = \\sqrt{12^2 + 5^2} = \\sqrt{144 + 25} = \\sqrt{169} = 13.0\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_035",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Family blood relation deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Pointing to a photograph, a woman says: 'He is the son of the only daughter of my father.' How is the man in the photograph related to the woman?",
+    "options": {
+      "A": "Son",
+      "B": "Brother",
+      "C": "Father",
+      "D": "Uncle"
+    },
+    "correct_answer": "A",
+    "solution": "'The only daughter of my father' is the woman herself. Therefore, 'the son of the only daughter of my father' is her own son.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_036",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Linear seating arrangement constraints",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Five researchers (A, B, C, D, E) sit in a row facing North. B is sitting immediately between A and C. E is to the immediate right of C. D is at the extreme left end. Who is sitting in the exact middle of the row?",
+    "options": {
+      "A": "B",
+      "B": "A",
+      "C": "C",
+      "D": "E"
+    },
+    "correct_answer": "A",
+    "solution": "Arranging from left to right:\n- D is at extreme left: [D, _, _, _, _]\n- A, B, C sit consecutively with B between A and C, and E is immediately right of C: [D, A, B, C, E].\nThe exact middle position (3rd of 5) is occupied by B.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_037",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Direction sense Pythagoras displacement",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A surveyor starts from point O and walks $12\\text{ m}$ North. He then turns right (facing East) and walks $5\\text{ m}$. The shortest straight-line distance from his current position back to starting point O is ________ $\\text{m}$.",
+    "correct_answer": "13.0",
+    "numerical_range": {
+      "min": 12.9,
+      "max": 13.1
+    },
+    "solution": "By Pythagoras theorem on the right-angled triangle formed by North ($12\\text{ m}$) and East ($5\\text{ m}$) legs:\n$$d = \\sqrt{12^2 + 5^2} = \\sqrt{144 + 25} = \\sqrt{169} = 13.0\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_038",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Family blood relation deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Pointing to a photograph, a woman says: 'He is the son of the only daughter of my father.' How is the man in the photograph related to the woman?",
+    "options": {
+      "A": "Son",
+      "B": "Brother",
+      "C": "Father",
+      "D": "Uncle"
+    },
+    "correct_answer": "A",
+    "solution": "'The only daughter of my father' is the woman herself. Therefore, 'the son of the only daughter of my father' is her own son.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_039",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Linear seating arrangement constraints",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Five researchers (A, B, C, D, E) sit in a row facing North. B is sitting immediately between A and C. E is to the immediate right of C. D is at the extreme left end. Who is sitting in the exact middle of the row?",
+    "options": {
+      "A": "B",
+      "B": "A",
+      "C": "C",
+      "D": "E"
+    },
+    "correct_answer": "A",
+    "solution": "Arranging from left to right:\n- D is at extreme left: [D, _, _, _, _]\n- A, B, C sit consecutively with B between A and C, and E is immediately right of C: [D, A, B, C, E].\nThe exact middle position (3rd of 5) is occupied by B.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_040",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Direction sense Pythagoras displacement",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A surveyor starts from point O and walks $12\\text{ m}$ North. He then turns right (facing East) and walks $5\\text{ m}$. The shortest straight-line distance from his current position back to starting point O is ________ $\\text{m}$.",
+    "correct_answer": "13.0",
+    "numerical_range": {
+      "min": 12.9,
+      "max": 13.1
+    },
+    "solution": "By Pythagoras theorem on the right-angled triangle formed by North ($12\\text{ m}$) and East ($5\\text{ m}$) legs:\n$$d = \\sqrt{12^2 + 5^2} = \\sqrt{144 + 25} = \\sqrt{169} = 13.0\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_041",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Family blood relation deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Pointing to a photograph, a woman says: 'He is the son of the only daughter of my father.' How is the man in the photograph related to the woman?",
+    "options": {
+      "A": "Son",
+      "B": "Brother",
+      "C": "Father",
+      "D": "Uncle"
+    },
+    "correct_answer": "A",
+    "solution": "'The only daughter of my father' is the woman herself. Therefore, 'the son of the only daughter of my father' is her own son.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_042",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Linear seating arrangement constraints",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Five researchers (A, B, C, D, E) sit in a row facing North. B is sitting immediately between A and C. E is to the immediate right of C. D is at the extreme left end. Who is sitting in the exact middle of the row?",
+    "options": {
+      "A": "B",
+      "B": "A",
+      "C": "C",
+      "D": "E"
+    },
+    "correct_answer": "A",
+    "solution": "Arranging from left to right:\n- D is at extreme left: [D, _, _, _, _]\n- A, B, C sit consecutively with B between A and C, and E is immediately right of C: [D, A, B, C, E].\nThe exact middle position (3rd of 5) is occupied by B.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_043",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Direction sense Pythagoras displacement",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A surveyor starts from point O and walks $12\\text{ m}$ North. He then turns right (facing East) and walks $5\\text{ m}$. The shortest straight-line distance from his current position back to starting point O is ________ $\\text{m}$.",
+    "correct_answer": "13.0",
+    "numerical_range": {
+      "min": 12.9,
+      "max": 13.1
+    },
+    "solution": "By Pythagoras theorem on the right-angled triangle formed by North ($12\\text{ m}$) and East ($5\\text{ m}$) legs:\n$$d = \\sqrt{12^2 + 5^2} = \\sqrt{144 + 25} = \\sqrt{169} = 13.0\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_044",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Family blood relation deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Pointing to a photograph, a woman says: 'He is the son of the only daughter of my father.' How is the man in the photograph related to the woman?",
+    "options": {
+      "A": "Son",
+      "B": "Brother",
+      "C": "Father",
+      "D": "Uncle"
+    },
+    "correct_answer": "A",
+    "solution": "'The only daughter of my father' is the woman herself. Therefore, 'the son of the only daughter of my father' is her own son.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_045",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Linear seating arrangement constraints",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Five researchers (A, B, C, D, E) sit in a row facing North. B is sitting immediately between A and C. E is to the immediate right of C. D is at the extreme left end. Who is sitting in the exact middle of the row?",
+    "options": {
+      "A": "B",
+      "B": "A",
+      "C": "C",
+      "D": "E"
+    },
+    "correct_answer": "A",
+    "solution": "Arranging from left to right:\n- D is at extreme left: [D, _, _, _, _]\n- A, B, C sit consecutively with B between A and C, and E is immediately right of C: [D, A, B, C, E].\nThe exact middle position (3rd of 5) is occupied by B.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_046",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Direction sense Pythagoras displacement",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A surveyor starts from point O and walks $12\\text{ m}$ North. He then turns right (facing East) and walks $5\\text{ m}$. The shortest straight-line distance from his current position back to starting point O is ________ $\\text{m}$.",
+    "correct_answer": "13.0",
+    "numerical_range": {
+      "min": 12.9,
+      "max": 13.1
+    },
+    "solution": "By Pythagoras theorem on the right-angled triangle formed by North ($12\\text{ m}$) and East ($5\\text{ m}$) legs:\n$$d = \\sqrt{12^2 + 5^2} = \\sqrt{144 + 25} = \\sqrt{169} = 13.0\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_047",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Family blood relation deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Pointing to a photograph, a woman says: 'He is the son of the only daughter of my father.' How is the man in the photograph related to the woman?",
+    "options": {
+      "A": "Son",
+      "B": "Brother",
+      "C": "Father",
+      "D": "Uncle"
+    },
+    "correct_answer": "A",
+    "solution": "'The only daughter of my father' is the woman herself. Therefore, 'the son of the only daughter of my father' is her own son.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_048",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Linear seating arrangement constraints",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Five researchers (A, B, C, D, E) sit in a row facing North. B is sitting immediately between A and C. E is to the immediate right of C. D is at the extreme left end. Who is sitting in the exact middle of the row?",
+    "options": {
+      "A": "B",
+      "B": "A",
+      "C": "C",
+      "D": "E"
+    },
+    "correct_answer": "A",
+    "solution": "Arranging from left to right:\n- D is at extreme left: [D, _, _, _, _]\n- A, B, C sit consecutively with B between A and C, and E is immediately right of C: [D, A, B, C, E].\nThe exact middle position (3rd of 5) is occupied by B.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_049",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Direction sense Pythagoras displacement",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A surveyor starts from point O and walks $12\\text{ m}$ North. He then turns right (facing East) and walks $5\\text{ m}$. The shortest straight-line distance from his current position back to starting point O is ________ $\\text{m}$.",
+    "correct_answer": "13.0",
+    "numerical_range": {
+      "min": 12.9,
+      "max": 13.1
+    },
+    "solution": "By Pythagoras theorem on the right-angled triangle formed by North ($12\\text{ m}$) and East ($5\\text{ m}$) legs:\n$$d = \\sqrt{12^2 + 5^2} = \\sqrt{144 + 25} = \\sqrt{169} = 13.0\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_DIR_050",
+    "section": "Section 8: General Aptitude",
+    "topic": "Analytical: Blood Relations, Direction Sense & Seating Arrangements",
+    "subtopic": "Family blood relation deduction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Pointing to a photograph, a woman says: 'He is the son of the only daughter of my father.' How is the man in the photograph related to the woman?",
+    "options": {
+      "A": "Son",
+      "B": "Brother",
+      "C": "Father",
+      "D": "Uncle"
+    },
+    "correct_answer": "A",
+    "solution": "'The only daughter of my father' is the woman herself. Therefore, 'the son of the only daughter of my father' is her own son.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal and Non-Verbal Reasoning (R.S. Aggarwal)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_001",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face in unfolded cube net",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "The accompanying diagram shows the unfolded net of a six-faced cube with faces numbered 1 to 6. When this net is folded into a 3D cube, which face will be strictly OPPOSITE to face 2?",
+    "options": {
+      "A": "Face 4",
+      "B": "Face 3",
+      "C": "Face 1",
+      "D": "Face 5"
+    },
+    "correct_answer": "A",
+    "solution": "In a continuous 4-in-a-line row of an unfolded cube net, alternating faces are opposite to each other:\n- Face 1 is opposite to Face 3\n- Face 2 is opposite to Face 4\n- The two projecting lateral tabs (Face 5 and Face 6) fold to become top and bottom opposite faces.\nHence, Face 2 is opposite to Face 4.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_002",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Orthographic first-angle projection rules",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In first-angle orthographic engineering projection, which of the following standard view relationships is/are TRUE?",
+    "options": {
+      "A": "The top view (plan) is projected vertically below the front view (elevation)",
+      "B": "The left-side view is projected to the right of the front view",
+      "C": "The object is conceived as lying between the observer and the projection planes",
+      "D": "The bottom view is placed directly below the plan view"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. In first-angle projection, top view is placed below front view (A is true).\n2. View from left is projected onto right plane (to the right of front view) (B is true).\n3. Object is placed between observer and projection plane (C is true).\n4. Bottom view is drawn ABOVE the front view, not below the plan view (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_003",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face pair in cube net tabs",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "Referring to the standard cube net shown in the diagram, which face is strictly opposite to Face 5?",
+    "options": {
+      "A": "Face 6",
+      "B": "Face 2",
+      "C": "Face 3",
+      "D": "Face 4"
+    },
+    "correct_answer": "A",
+    "solution": "In the standard Latin cross or T-shaped net of a cube, the two opposite tab extensions (numbered 5 and 6) fold perpendicular to the central strip to form the top and bottom lids of the cube, making Face 5 and Face 6 mutually opposite.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_004",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face in unfolded cube net",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "The accompanying diagram shows the unfolded net of a six-faced cube with faces numbered 1 to 6. When this net is folded into a 3D cube, which face will be strictly OPPOSITE to face 2?",
+    "options": {
+      "A": "Face 4",
+      "B": "Face 3",
+      "C": "Face 1",
+      "D": "Face 5"
+    },
+    "correct_answer": "A",
+    "solution": "In a continuous 4-in-a-line row of an unfolded cube net, alternating faces are opposite to each other:\n- Face 1 is opposite to Face 3\n- Face 2 is opposite to Face 4\n- The two projecting lateral tabs (Face 5 and Face 6) fold to become top and bottom opposite faces.\nHence, Face 2 is opposite to Face 4.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_005",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Orthographic first-angle projection rules",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In first-angle orthographic engineering projection, which of the following standard view relationships is/are TRUE?",
+    "options": {
+      "A": "The top view (plan) is projected vertically below the front view (elevation)",
+      "B": "The left-side view is projected to the right of the front view",
+      "C": "The object is conceived as lying between the observer and the projection planes",
+      "D": "The bottom view is placed directly below the plan view"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. In first-angle projection, top view is placed below front view (A is true).\n2. View from left is projected onto right plane (to the right of front view) (B is true).\n3. Object is placed between observer and projection plane (C is true).\n4. Bottom view is drawn ABOVE the front view, not below the plan view (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_006",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face pair in cube net tabs",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "Referring to the standard cube net shown in the diagram, which face is strictly opposite to Face 5?",
+    "options": {
+      "A": "Face 6",
+      "B": "Face 2",
+      "C": "Face 3",
+      "D": "Face 4"
+    },
+    "correct_answer": "A",
+    "solution": "In the standard Latin cross or T-shaped net of a cube, the two opposite tab extensions (numbered 5 and 6) fold perpendicular to the central strip to form the top and bottom lids of the cube, making Face 5 and Face 6 mutually opposite.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_007",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face in unfolded cube net",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "The accompanying diagram shows the unfolded net of a six-faced cube with faces numbered 1 to 6. When this net is folded into a 3D cube, which face will be strictly OPPOSITE to face 2?",
+    "options": {
+      "A": "Face 4",
+      "B": "Face 3",
+      "C": "Face 1",
+      "D": "Face 5"
+    },
+    "correct_answer": "A",
+    "solution": "In a continuous 4-in-a-line row of an unfolded cube net, alternating faces are opposite to each other:\n- Face 1 is opposite to Face 3\n- Face 2 is opposite to Face 4\n- The two projecting lateral tabs (Face 5 and Face 6) fold to become top and bottom opposite faces.\nHence, Face 2 is opposite to Face 4.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_008",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Orthographic first-angle projection rules",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In first-angle orthographic engineering projection, which of the following standard view relationships is/are TRUE?",
+    "options": {
+      "A": "The top view (plan) is projected vertically below the front view (elevation)",
+      "B": "The left-side view is projected to the right of the front view",
+      "C": "The object is conceived as lying between the observer and the projection planes",
+      "D": "The bottom view is placed directly below the plan view"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. In first-angle projection, top view is placed below front view (A is true).\n2. View from left is projected onto right plane (to the right of front view) (B is true).\n3. Object is placed between observer and projection plane (C is true).\n4. Bottom view is drawn ABOVE the front view, not below the plan view (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_009",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face pair in cube net tabs",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "Referring to the standard cube net shown in the diagram, which face is strictly opposite to Face 5?",
+    "options": {
+      "A": "Face 6",
+      "B": "Face 2",
+      "C": "Face 3",
+      "D": "Face 4"
+    },
+    "correct_answer": "A",
+    "solution": "In the standard Latin cross or T-shaped net of a cube, the two opposite tab extensions (numbered 5 and 6) fold perpendicular to the central strip to form the top and bottom lids of the cube, making Face 5 and Face 6 mutually opposite.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_010",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face in unfolded cube net",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "The accompanying diagram shows the unfolded net of a six-faced cube with faces numbered 1 to 6. When this net is folded into a 3D cube, which face will be strictly OPPOSITE to face 2?",
+    "options": {
+      "A": "Face 4",
+      "B": "Face 3",
+      "C": "Face 1",
+      "D": "Face 5"
+    },
+    "correct_answer": "A",
+    "solution": "In a continuous 4-in-a-line row of an unfolded cube net, alternating faces are opposite to each other:\n- Face 1 is opposite to Face 3\n- Face 2 is opposite to Face 4\n- The two projecting lateral tabs (Face 5 and Face 6) fold to become top and bottom opposite faces.\nHence, Face 2 is opposite to Face 4.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_011",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Orthographic first-angle projection rules",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In first-angle orthographic engineering projection, which of the following standard view relationships is/are TRUE?",
+    "options": {
+      "A": "The top view (plan) is projected vertically below the front view (elevation)",
+      "B": "The left-side view is projected to the right of the front view",
+      "C": "The object is conceived as lying between the observer and the projection planes",
+      "D": "The bottom view is placed directly below the plan view"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. In first-angle projection, top view is placed below front view (A is true).\n2. View from left is projected onto right plane (to the right of front view) (B is true).\n3. Object is placed between observer and projection plane (C is true).\n4. Bottom view is drawn ABOVE the front view, not below the plan view (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_012",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face pair in cube net tabs",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "Referring to the standard cube net shown in the diagram, which face is strictly opposite to Face 5?",
+    "options": {
+      "A": "Face 6",
+      "B": "Face 2",
+      "C": "Face 3",
+      "D": "Face 4"
+    },
+    "correct_answer": "A",
+    "solution": "In the standard Latin cross or T-shaped net of a cube, the two opposite tab extensions (numbered 5 and 6) fold perpendicular to the central strip to form the top and bottom lids of the cube, making Face 5 and Face 6 mutually opposite.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_013",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face in unfolded cube net",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "The accompanying diagram shows the unfolded net of a six-faced cube with faces numbered 1 to 6. When this net is folded into a 3D cube, which face will be strictly OPPOSITE to face 2?",
+    "options": {
+      "A": "Face 4",
+      "B": "Face 3",
+      "C": "Face 1",
+      "D": "Face 5"
+    },
+    "correct_answer": "A",
+    "solution": "In a continuous 4-in-a-line row of an unfolded cube net, alternating faces are opposite to each other:\n- Face 1 is opposite to Face 3\n- Face 2 is opposite to Face 4\n- The two projecting lateral tabs (Face 5 and Face 6) fold to become top and bottom opposite faces.\nHence, Face 2 is opposite to Face 4.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_014",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Orthographic first-angle projection rules",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In first-angle orthographic engineering projection, which of the following standard view relationships is/are TRUE?",
+    "options": {
+      "A": "The top view (plan) is projected vertically below the front view (elevation)",
+      "B": "The left-side view is projected to the right of the front view",
+      "C": "The object is conceived as lying between the observer and the projection planes",
+      "D": "The bottom view is placed directly below the plan view"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. In first-angle projection, top view is placed below front view (A is true).\n2. View from left is projected onto right plane (to the right of front view) (B is true).\n3. Object is placed between observer and projection plane (C is true).\n4. Bottom view is drawn ABOVE the front view, not below the plan view (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_015",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face pair in cube net tabs",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "Referring to the standard cube net shown in the diagram, which face is strictly opposite to Face 5?",
+    "options": {
+      "A": "Face 6",
+      "B": "Face 2",
+      "C": "Face 3",
+      "D": "Face 4"
+    },
+    "correct_answer": "A",
+    "solution": "In the standard Latin cross or T-shaped net of a cube, the two opposite tab extensions (numbered 5 and 6) fold perpendicular to the central strip to form the top and bottom lids of the cube, making Face 5 and Face 6 mutually opposite.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_016",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face in unfolded cube net",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "The accompanying diagram shows the unfolded net of a six-faced cube with faces numbered 1 to 6. When this net is folded into a 3D cube, which face will be strictly OPPOSITE to face 2?",
+    "options": {
+      "A": "Face 4",
+      "B": "Face 3",
+      "C": "Face 1",
+      "D": "Face 5"
+    },
+    "correct_answer": "A",
+    "solution": "In a continuous 4-in-a-line row of an unfolded cube net, alternating faces are opposite to each other:\n- Face 1 is opposite to Face 3\n- Face 2 is opposite to Face 4\n- The two projecting lateral tabs (Face 5 and Face 6) fold to become top and bottom opposite faces.\nHence, Face 2 is opposite to Face 4.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_017",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Orthographic first-angle projection rules",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In first-angle orthographic engineering projection, which of the following standard view relationships is/are TRUE?",
+    "options": {
+      "A": "The top view (plan) is projected vertically below the front view (elevation)",
+      "B": "The left-side view is projected to the right of the front view",
+      "C": "The object is conceived as lying between the observer and the projection planes",
+      "D": "The bottom view is placed directly below the plan view"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. In first-angle projection, top view is placed below front view (A is true).\n2. View from left is projected onto right plane (to the right of front view) (B is true).\n3. Object is placed between observer and projection plane (C is true).\n4. Bottom view is drawn ABOVE the front view, not below the plan view (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_018",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face pair in cube net tabs",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "Referring to the standard cube net shown in the diagram, which face is strictly opposite to Face 5?",
+    "options": {
+      "A": "Face 6",
+      "B": "Face 2",
+      "C": "Face 3",
+      "D": "Face 4"
+    },
+    "correct_answer": "A",
+    "solution": "In the standard Latin cross or T-shaped net of a cube, the two opposite tab extensions (numbered 5 and 6) fold perpendicular to the central strip to form the top and bottom lids of the cube, making Face 5 and Face 6 mutually opposite.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_019",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face in unfolded cube net",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "The accompanying diagram shows the unfolded net of a six-faced cube with faces numbered 1 to 6. When this net is folded into a 3D cube, which face will be strictly OPPOSITE to face 2?",
+    "options": {
+      "A": "Face 4",
+      "B": "Face 3",
+      "C": "Face 1",
+      "D": "Face 5"
+    },
+    "correct_answer": "A",
+    "solution": "In a continuous 4-in-a-line row of an unfolded cube net, alternating faces are opposite to each other:\n- Face 1 is opposite to Face 3\n- Face 2 is opposite to Face 4\n- The two projecting lateral tabs (Face 5 and Face 6) fold to become top and bottom opposite faces.\nHence, Face 2 is opposite to Face 4.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_020",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Orthographic first-angle projection rules",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In first-angle orthographic engineering projection, which of the following standard view relationships is/are TRUE?",
+    "options": {
+      "A": "The top view (plan) is projected vertically below the front view (elevation)",
+      "B": "The left-side view is projected to the right of the front view",
+      "C": "The object is conceived as lying between the observer and the projection planes",
+      "D": "The bottom view is placed directly below the plan view"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. In first-angle projection, top view is placed below front view (A is true).\n2. View from left is projected onto right plane (to the right of front view) (B is true).\n3. Object is placed between observer and projection plane (C is true).\n4. Bottom view is drawn ABOVE the front view, not below the plan view (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_021",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face pair in cube net tabs",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "Referring to the standard cube net shown in the diagram, which face is strictly opposite to Face 5?",
+    "options": {
+      "A": "Face 6",
+      "B": "Face 2",
+      "C": "Face 3",
+      "D": "Face 4"
+    },
+    "correct_answer": "A",
+    "solution": "In the standard Latin cross or T-shaped net of a cube, the two opposite tab extensions (numbered 5 and 6) fold perpendicular to the central strip to form the top and bottom lids of the cube, making Face 5 and Face 6 mutually opposite.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_022",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face in unfolded cube net",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "The accompanying diagram shows the unfolded net of a six-faced cube with faces numbered 1 to 6. When this net is folded into a 3D cube, which face will be strictly OPPOSITE to face 2?",
+    "options": {
+      "A": "Face 4",
+      "B": "Face 3",
+      "C": "Face 1",
+      "D": "Face 5"
+    },
+    "correct_answer": "A",
+    "solution": "In a continuous 4-in-a-line row of an unfolded cube net, alternating faces are opposite to each other:\n- Face 1 is opposite to Face 3\n- Face 2 is opposite to Face 4\n- The two projecting lateral tabs (Face 5 and Face 6) fold to become top and bottom opposite faces.\nHence, Face 2 is opposite to Face 4.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_023",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Orthographic first-angle projection rules",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In first-angle orthographic engineering projection, which of the following standard view relationships is/are TRUE?",
+    "options": {
+      "A": "The top view (plan) is projected vertically below the front view (elevation)",
+      "B": "The left-side view is projected to the right of the front view",
+      "C": "The object is conceived as lying between the observer and the projection planes",
+      "D": "The bottom view is placed directly below the plan view"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. In first-angle projection, top view is placed below front view (A is true).\n2. View from left is projected onto right plane (to the right of front view) (B is true).\n3. Object is placed between observer and projection plane (C is true).\n4. Bottom view is drawn ABOVE the front view, not below the plan view (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_024",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face pair in cube net tabs",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "Referring to the standard cube net shown in the diagram, which face is strictly opposite to Face 5?",
+    "options": {
+      "A": "Face 6",
+      "B": "Face 2",
+      "C": "Face 3",
+      "D": "Face 4"
+    },
+    "correct_answer": "A",
+    "solution": "In the standard Latin cross or T-shaped net of a cube, the two opposite tab extensions (numbered 5 and 6) fold perpendicular to the central strip to form the top and bottom lids of the cube, making Face 5 and Face 6 mutually opposite.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_025",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face in unfolded cube net",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "The accompanying diagram shows the unfolded net of a six-faced cube with faces numbered 1 to 6. When this net is folded into a 3D cube, which face will be strictly OPPOSITE to face 2?",
+    "options": {
+      "A": "Face 4",
+      "B": "Face 3",
+      "C": "Face 1",
+      "D": "Face 5"
+    },
+    "correct_answer": "A",
+    "solution": "In a continuous 4-in-a-line row of an unfolded cube net, alternating faces are opposite to each other:\n- Face 1 is opposite to Face 3\n- Face 2 is opposite to Face 4\n- The two projecting lateral tabs (Face 5 and Face 6) fold to become top and bottom opposite faces.\nHence, Face 2 is opposite to Face 4.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_026",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Orthographic first-angle projection rules",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In first-angle orthographic engineering projection, which of the following standard view relationships is/are TRUE?",
+    "options": {
+      "A": "The top view (plan) is projected vertically below the front view (elevation)",
+      "B": "The left-side view is projected to the right of the front view",
+      "C": "The object is conceived as lying between the observer and the projection planes",
+      "D": "The bottom view is placed directly below the plan view"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. In first-angle projection, top view is placed below front view (A is true).\n2. View from left is projected onto right plane (to the right of front view) (B is true).\n3. Object is placed between observer and projection plane (C is true).\n4. Bottom view is drawn ABOVE the front view, not below the plan view (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_027",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face pair in cube net tabs",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "Referring to the standard cube net shown in the diagram, which face is strictly opposite to Face 5?",
+    "options": {
+      "A": "Face 6",
+      "B": "Face 2",
+      "C": "Face 3",
+      "D": "Face 4"
+    },
+    "correct_answer": "A",
+    "solution": "In the standard Latin cross or T-shaped net of a cube, the two opposite tab extensions (numbered 5 and 6) fold perpendicular to the central strip to form the top and bottom lids of the cube, making Face 5 and Face 6 mutually opposite.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_028",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face in unfolded cube net",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "The accompanying diagram shows the unfolded net of a six-faced cube with faces numbered 1 to 6. When this net is folded into a 3D cube, which face will be strictly OPPOSITE to face 2?",
+    "options": {
+      "A": "Face 4",
+      "B": "Face 3",
+      "C": "Face 1",
+      "D": "Face 5"
+    },
+    "correct_answer": "A",
+    "solution": "In a continuous 4-in-a-line row of an unfolded cube net, alternating faces are opposite to each other:\n- Face 1 is opposite to Face 3\n- Face 2 is opposite to Face 4\n- The two projecting lateral tabs (Face 5 and Face 6) fold to become top and bottom opposite faces.\nHence, Face 2 is opposite to Face 4.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_029",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Orthographic first-angle projection rules",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In first-angle orthographic engineering projection, which of the following standard view relationships is/are TRUE?",
+    "options": {
+      "A": "The top view (plan) is projected vertically below the front view (elevation)",
+      "B": "The left-side view is projected to the right of the front view",
+      "C": "The object is conceived as lying between the observer and the projection planes",
+      "D": "The bottom view is placed directly below the plan view"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. In first-angle projection, top view is placed below front view (A is true).\n2. View from left is projected onto right plane (to the right of front view) (B is true).\n3. Object is placed between observer and projection plane (C is true).\n4. Bottom view is drawn ABOVE the front view, not below the plan view (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_030",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face pair in cube net tabs",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "Referring to the standard cube net shown in the diagram, which face is strictly opposite to Face 5?",
+    "options": {
+      "A": "Face 6",
+      "B": "Face 2",
+      "C": "Face 3",
+      "D": "Face 4"
+    },
+    "correct_answer": "A",
+    "solution": "In the standard Latin cross or T-shaped net of a cube, the two opposite tab extensions (numbered 5 and 6) fold perpendicular to the central strip to form the top and bottom lids of the cube, making Face 5 and Face 6 mutually opposite.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_031",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face in unfolded cube net",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "The accompanying diagram shows the unfolded net of a six-faced cube with faces numbered 1 to 6. When this net is folded into a 3D cube, which face will be strictly OPPOSITE to face 2?",
+    "options": {
+      "A": "Face 4",
+      "B": "Face 3",
+      "C": "Face 1",
+      "D": "Face 5"
+    },
+    "correct_answer": "A",
+    "solution": "In a continuous 4-in-a-line row of an unfolded cube net, alternating faces are opposite to each other:\n- Face 1 is opposite to Face 3\n- Face 2 is opposite to Face 4\n- The two projecting lateral tabs (Face 5 and Face 6) fold to become top and bottom opposite faces.\nHence, Face 2 is opposite to Face 4.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_032",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Orthographic first-angle projection rules",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In first-angle orthographic engineering projection, which of the following standard view relationships is/are TRUE?",
+    "options": {
+      "A": "The top view (plan) is projected vertically below the front view (elevation)",
+      "B": "The left-side view is projected to the right of the front view",
+      "C": "The object is conceived as lying between the observer and the projection planes",
+      "D": "The bottom view is placed directly below the plan view"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. In first-angle projection, top view is placed below front view (A is true).\n2. View from left is projected onto right plane (to the right of front view) (B is true).\n3. Object is placed between observer and projection plane (C is true).\n4. Bottom view is drawn ABOVE the front view, not below the plan view (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_033",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face pair in cube net tabs",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "Referring to the standard cube net shown in the diagram, which face is strictly opposite to Face 5?",
+    "options": {
+      "A": "Face 6",
+      "B": "Face 2",
+      "C": "Face 3",
+      "D": "Face 4"
+    },
+    "correct_answer": "A",
+    "solution": "In the standard Latin cross or T-shaped net of a cube, the two opposite tab extensions (numbered 5 and 6) fold perpendicular to the central strip to form the top and bottom lids of the cube, making Face 5 and Face 6 mutually opposite.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_034",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face in unfolded cube net",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "The accompanying diagram shows the unfolded net of a six-faced cube with faces numbered 1 to 6. When this net is folded into a 3D cube, which face will be strictly OPPOSITE to face 2?",
+    "options": {
+      "A": "Face 4",
+      "B": "Face 3",
+      "C": "Face 1",
+      "D": "Face 5"
+    },
+    "correct_answer": "A",
+    "solution": "In a continuous 4-in-a-line row of an unfolded cube net, alternating faces are opposite to each other:\n- Face 1 is opposite to Face 3\n- Face 2 is opposite to Face 4\n- The two projecting lateral tabs (Face 5 and Face 6) fold to become top and bottom opposite faces.\nHence, Face 2 is opposite to Face 4.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_035",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Orthographic first-angle projection rules",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In first-angle orthographic engineering projection, which of the following standard view relationships is/are TRUE?",
+    "options": {
+      "A": "The top view (plan) is projected vertically below the front view (elevation)",
+      "B": "The left-side view is projected to the right of the front view",
+      "C": "The object is conceived as lying between the observer and the projection planes",
+      "D": "The bottom view is placed directly below the plan view"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. In first-angle projection, top view is placed below front view (A is true).\n2. View from left is projected onto right plane (to the right of front view) (B is true).\n3. Object is placed between observer and projection plane (C is true).\n4. Bottom view is drawn ABOVE the front view, not below the plan view (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_036",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face pair in cube net tabs",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "Referring to the standard cube net shown in the diagram, which face is strictly opposite to Face 5?",
+    "options": {
+      "A": "Face 6",
+      "B": "Face 2",
+      "C": "Face 3",
+      "D": "Face 4"
+    },
+    "correct_answer": "A",
+    "solution": "In the standard Latin cross or T-shaped net of a cube, the two opposite tab extensions (numbered 5 and 6) fold perpendicular to the central strip to form the top and bottom lids of the cube, making Face 5 and Face 6 mutually opposite.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_037",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face in unfolded cube net",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "The accompanying diagram shows the unfolded net of a six-faced cube with faces numbered 1 to 6. When this net is folded into a 3D cube, which face will be strictly OPPOSITE to face 2?",
+    "options": {
+      "A": "Face 4",
+      "B": "Face 3",
+      "C": "Face 1",
+      "D": "Face 5"
+    },
+    "correct_answer": "A",
+    "solution": "In a continuous 4-in-a-line row of an unfolded cube net, alternating faces are opposite to each other:\n- Face 1 is opposite to Face 3\n- Face 2 is opposite to Face 4\n- The two projecting lateral tabs (Face 5 and Face 6) fold to become top and bottom opposite faces.\nHence, Face 2 is opposite to Face 4.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_038",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Orthographic first-angle projection rules",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In first-angle orthographic engineering projection, which of the following standard view relationships is/are TRUE?",
+    "options": {
+      "A": "The top view (plan) is projected vertically below the front view (elevation)",
+      "B": "The left-side view is projected to the right of the front view",
+      "C": "The object is conceived as lying between the observer and the projection planes",
+      "D": "The bottom view is placed directly below the plan view"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. In first-angle projection, top view is placed below front view (A is true).\n2. View from left is projected onto right plane (to the right of front view) (B is true).\n3. Object is placed between observer and projection plane (C is true).\n4. Bottom view is drawn ABOVE the front view, not below the plan view (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_039",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face pair in cube net tabs",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "Referring to the standard cube net shown in the diagram, which face is strictly opposite to Face 5?",
+    "options": {
+      "A": "Face 6",
+      "B": "Face 2",
+      "C": "Face 3",
+      "D": "Face 4"
+    },
+    "correct_answer": "A",
+    "solution": "In the standard Latin cross or T-shaped net of a cube, the two opposite tab extensions (numbered 5 and 6) fold perpendicular to the central strip to form the top and bottom lids of the cube, making Face 5 and Face 6 mutually opposite.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_040",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face in unfolded cube net",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "The accompanying diagram shows the unfolded net of a six-faced cube with faces numbered 1 to 6. When this net is folded into a 3D cube, which face will be strictly OPPOSITE to face 2?",
+    "options": {
+      "A": "Face 4",
+      "B": "Face 3",
+      "C": "Face 1",
+      "D": "Face 5"
+    },
+    "correct_answer": "A",
+    "solution": "In a continuous 4-in-a-line row of an unfolded cube net, alternating faces are opposite to each other:\n- Face 1 is opposite to Face 3\n- Face 2 is opposite to Face 4\n- The two projecting lateral tabs (Face 5 and Face 6) fold to become top and bottom opposite faces.\nHence, Face 2 is opposite to Face 4.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_041",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Orthographic first-angle projection rules",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In first-angle orthographic engineering projection, which of the following standard view relationships is/are TRUE?",
+    "options": {
+      "A": "The top view (plan) is projected vertically below the front view (elevation)",
+      "B": "The left-side view is projected to the right of the front view",
+      "C": "The object is conceived as lying between the observer and the projection planes",
+      "D": "The bottom view is placed directly below the plan view"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. In first-angle projection, top view is placed below front view (A is true).\n2. View from left is projected onto right plane (to the right of front view) (B is true).\n3. Object is placed between observer and projection plane (C is true).\n4. Bottom view is drawn ABOVE the front view, not below the plan view (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_042",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face pair in cube net tabs",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "Referring to the standard cube net shown in the diagram, which face is strictly opposite to Face 5?",
+    "options": {
+      "A": "Face 6",
+      "B": "Face 2",
+      "C": "Face 3",
+      "D": "Face 4"
+    },
+    "correct_answer": "A",
+    "solution": "In the standard Latin cross or T-shaped net of a cube, the two opposite tab extensions (numbered 5 and 6) fold perpendicular to the central strip to form the top and bottom lids of the cube, making Face 5 and Face 6 mutually opposite.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_043",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face in unfolded cube net",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "The accompanying diagram shows the unfolded net of a six-faced cube with faces numbered 1 to 6. When this net is folded into a 3D cube, which face will be strictly OPPOSITE to face 2?",
+    "options": {
+      "A": "Face 4",
+      "B": "Face 3",
+      "C": "Face 1",
+      "D": "Face 5"
+    },
+    "correct_answer": "A",
+    "solution": "In a continuous 4-in-a-line row of an unfolded cube net, alternating faces are opposite to each other:\n- Face 1 is opposite to Face 3\n- Face 2 is opposite to Face 4\n- The two projecting lateral tabs (Face 5 and Face 6) fold to become top and bottom opposite faces.\nHence, Face 2 is opposite to Face 4.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_044",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Orthographic first-angle projection rules",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In first-angle orthographic engineering projection, which of the following standard view relationships is/are TRUE?",
+    "options": {
+      "A": "The top view (plan) is projected vertically below the front view (elevation)",
+      "B": "The left-side view is projected to the right of the front view",
+      "C": "The object is conceived as lying between the observer and the projection planes",
+      "D": "The bottom view is placed directly below the plan view"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. In first-angle projection, top view is placed below front view (A is true).\n2. View from left is projected onto right plane (to the right of front view) (B is true).\n3. Object is placed between observer and projection plane (C is true).\n4. Bottom view is drawn ABOVE the front view, not below the plan view (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_045",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face pair in cube net tabs",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "Referring to the standard cube net shown in the diagram, which face is strictly opposite to Face 5?",
+    "options": {
+      "A": "Face 6",
+      "B": "Face 2",
+      "C": "Face 3",
+      "D": "Face 4"
+    },
+    "correct_answer": "A",
+    "solution": "In the standard Latin cross or T-shaped net of a cube, the two opposite tab extensions (numbered 5 and 6) fold perpendicular to the central strip to form the top and bottom lids of the cube, making Face 5 and Face 6 mutually opposite.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_046",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face in unfolded cube net",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "The accompanying diagram shows the unfolded net of a six-faced cube with faces numbered 1 to 6. When this net is folded into a 3D cube, which face will be strictly OPPOSITE to face 2?",
+    "options": {
+      "A": "Face 4",
+      "B": "Face 3",
+      "C": "Face 1",
+      "D": "Face 5"
+    },
+    "correct_answer": "A",
+    "solution": "In a continuous 4-in-a-line row of an unfolded cube net, alternating faces are opposite to each other:\n- Face 1 is opposite to Face 3\n- Face 2 is opposite to Face 4\n- The two projecting lateral tabs (Face 5 and Face 6) fold to become top and bottom opposite faces.\nHence, Face 2 is opposite to Face 4.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_047",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Orthographic first-angle projection rules",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In first-angle orthographic engineering projection, which of the following standard view relationships is/are TRUE?",
+    "options": {
+      "A": "The top view (plan) is projected vertically below the front view (elevation)",
+      "B": "The left-side view is projected to the right of the front view",
+      "C": "The object is conceived as lying between the observer and the projection planes",
+      "D": "The bottom view is placed directly below the plan view"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. In first-angle projection, top view is placed below front view (A is true).\n2. View from left is projected onto right plane (to the right of front view) (B is true).\n3. Object is placed between observer and projection plane (C is true).\n4. Bottom view is drawn ABOVE the front view, not below the plan view (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_048",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face pair in cube net tabs",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "Referring to the standard cube net shown in the diagram, which face is strictly opposite to Face 5?",
+    "options": {
+      "A": "Face 6",
+      "B": "Face 2",
+      "C": "Face 3",
+      "D": "Face 4"
+    },
+    "correct_answer": "A",
+    "solution": "In the standard Latin cross or T-shaped net of a cube, the two opposite tab extensions (numbered 5 and 6) fold perpendicular to the central strip to form the top and bottom lids of the cube, making Face 5 and Face 6 mutually opposite.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_049",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Opposite face in unfolded cube net",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "diagram_svg": "<svg viewBox=\"0 0 400 240\" xmlns=\"http://www.w3.org/2000/svg\" class=\"w-full max-w-[380px] h-auto mx-auto\"><rect width=\"400\" height=\"240\" rx=\"8\" fill=\"#f8fafc\" class=\"dark:fill-slate-900\" stroke=\"#e2e8f0\" class=\"dark:stroke-slate-800\"/><g fill=\"#ffffff\" class=\"dark:fill-slate-800\" stroke=\"#2563eb\" stroke-width=\"2\"><rect x=\"70\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"220\" y=\"80\" width=\"50\" height=\"50\"/><rect x=\"120\" y=\"30\" width=\"50\" height=\"50\"/><rect x=\"170\" y=\"130\" width=\"50\" height=\"50\"/></g><g font-size=\"16\" font-family=\"sans-serif\" font-weight=\"bold\" fill=\"#1e293b\" class=\"dark:fill-white\" text-anchor=\"middle\" dominant-baseline=\"central\"><text x=\"95\" y=\"105\">1</text><text x=\"145\" y=\"105\">2</text><text x=\"195\" y=\"105\">3</text><text x=\"245\" y=\"105\">4</text><text x=\"145\" y=\"55\">5</text><text x=\"195\" y=\"155\">6</text></g><text x=\"200\" y=\"210\" font-size=\"12\" font-family=\"sans-serif\" fill=\"#64748b\" text-anchor=\"middle\">Unfolded Net of a Standard Cube</text></svg>",
+    "question": "The accompanying diagram shows the unfolded net of a six-faced cube with faces numbered 1 to 6. When this net is folded into a 3D cube, which face will be strictly OPPOSITE to face 2?",
+    "options": {
+      "A": "Face 4",
+      "B": "Face 3",
+      "C": "Face 1",
+      "D": "Face 5"
+    },
+    "correct_answer": "A",
+    "solution": "In a continuous 4-in-a-line row of an unfolded cube net, alternating faces are opposite to each other:\n- Face 1 is opposite to Face 3\n- Face 2 is opposite to Face 4\n- The two projecting lateral tabs (Face 5 and Face 6) fold to become top and bottom opposite faces.\nHence, Face 2 is opposite to Face 4.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_SPT_050",
+    "section": "Section 8: General Aptitude",
+    "topic": "Spatial: 2D/3D Paper Folding, Assembly & Projections",
+    "subtopic": "Orthographic first-angle projection rules",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In first-angle orthographic engineering projection, which of the following standard view relationships is/are TRUE?",
+    "options": {
+      "A": "The top view (plan) is projected vertically below the front view (elevation)",
+      "B": "The left-side view is projected to the right of the front view",
+      "C": "The object is conceived as lying between the observer and the projection planes",
+      "D": "The bottom view is placed directly below the plan view"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. In first-angle projection, top view is placed below front view (A is true).\n2. View from left is projected onto right plane (to the right of front view) (B is true).\n3. Object is placed between observer and projection plane (C is true).\n4. Bottom view is drawn ABOVE the front view, not below the plan view (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_001",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Subject-verb agreement with collective and conjunction phrases",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the grammatically correct option to complete the sentence:\n\"The professor, along with her research scholars, ________ attending the international agricultural symposium today.\"",
+    "options": {
+      "A": "is",
+      "B": "are",
+      "C": "were",
+      "D": "have been"
+    },
+    "correct_answer": "A",
+    "solution": "When a singular subject ('The professor') is accompanied by parenthetical prepositional phrases such as 'along with', 'as well as', or 'in addition to', the grammatical number of the subject remains singular. Therefore, the singular verb 'is' is correct.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_002",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Third conditional counterfactual construction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the correct phrase to complete the conditional sentence:\n\"If the monsoon rains ________ on schedule, the Kharif harvest would have been significantly higher.\"",
+    "options": {
+      "A": "had arrived",
+      "B": "would arrive",
+      "C": "have arrived",
+      "D": "would have arrived"
+    },
+    "correct_answer": "A",
+    "solution": "In the third conditional (counterfactual past), the 'if'-clause requires the past perfect tense ('had arrived') to pair with the main clause 'would have + past participle' ('would have been').",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_003",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Vocabulary: Antonym of ubiquitous",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following words is the most direct ANTONYM of the word 'UBIQUITOUS'?",
+    "options": {
+      "A": "Rare / Scarce",
+      "B": "Omnipresent",
+      "C": "Pervasive",
+      "D": "Abundant"
+    },
+    "correct_answer": "A",
+    "solution": "'Ubiquitous' means present, appearing, or found everywhere (synonyms: omnipresent, pervasive). Its direct antonym is 'rare', 'scarce', or 'infrequent'.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_004",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Subject-verb agreement with collective and conjunction phrases",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the grammatically correct option to complete the sentence:\n\"The professor, along with her research scholars, ________ attending the international agricultural symposium today.\"",
+    "options": {
+      "A": "is",
+      "B": "are",
+      "C": "were",
+      "D": "have been"
+    },
+    "correct_answer": "A",
+    "solution": "When a singular subject ('The professor') is accompanied by parenthetical prepositional phrases such as 'along with', 'as well as', or 'in addition to', the grammatical number of the subject remains singular. Therefore, the singular verb 'is' is correct.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_005",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Third conditional counterfactual construction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the correct phrase to complete the conditional sentence:\n\"If the monsoon rains ________ on schedule, the Kharif harvest would have been significantly higher.\"",
+    "options": {
+      "A": "had arrived",
+      "B": "would arrive",
+      "C": "have arrived",
+      "D": "would have arrived"
+    },
+    "correct_answer": "A",
+    "solution": "In the third conditional (counterfactual past), the 'if'-clause requires the past perfect tense ('had arrived') to pair with the main clause 'would have + past participle' ('would have been').",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_006",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Vocabulary: Antonym of ubiquitous",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following words is the most direct ANTONYM of the word 'UBIQUITOUS'?",
+    "options": {
+      "A": "Rare / Scarce",
+      "B": "Omnipresent",
+      "C": "Pervasive",
+      "D": "Abundant"
+    },
+    "correct_answer": "A",
+    "solution": "'Ubiquitous' means present, appearing, or found everywhere (synonyms: omnipresent, pervasive). Its direct antonym is 'rare', 'scarce', or 'infrequent'.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_007",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Subject-verb agreement with collective and conjunction phrases",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the grammatically correct option to complete the sentence:\n\"The professor, along with her research scholars, ________ attending the international agricultural symposium today.\"",
+    "options": {
+      "A": "is",
+      "B": "are",
+      "C": "were",
+      "D": "have been"
+    },
+    "correct_answer": "A",
+    "solution": "When a singular subject ('The professor') is accompanied by parenthetical prepositional phrases such as 'along with', 'as well as', or 'in addition to', the grammatical number of the subject remains singular. Therefore, the singular verb 'is' is correct.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_008",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Third conditional counterfactual construction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the correct phrase to complete the conditional sentence:\n\"If the monsoon rains ________ on schedule, the Kharif harvest would have been significantly higher.\"",
+    "options": {
+      "A": "had arrived",
+      "B": "would arrive",
+      "C": "have arrived",
+      "D": "would have arrived"
+    },
+    "correct_answer": "A",
+    "solution": "In the third conditional (counterfactual past), the 'if'-clause requires the past perfect tense ('had arrived') to pair with the main clause 'would have + past participle' ('would have been').",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_009",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Vocabulary: Antonym of ubiquitous",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following words is the most direct ANTONYM of the word 'UBIQUITOUS'?",
+    "options": {
+      "A": "Rare / Scarce",
+      "B": "Omnipresent",
+      "C": "Pervasive",
+      "D": "Abundant"
+    },
+    "correct_answer": "A",
+    "solution": "'Ubiquitous' means present, appearing, or found everywhere (synonyms: omnipresent, pervasive). Its direct antonym is 'rare', 'scarce', or 'infrequent'.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_010",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Subject-verb agreement with collective and conjunction phrases",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the grammatically correct option to complete the sentence:\n\"The professor, along with her research scholars, ________ attending the international agricultural symposium today.\"",
+    "options": {
+      "A": "is",
+      "B": "are",
+      "C": "were",
+      "D": "have been"
+    },
+    "correct_answer": "A",
+    "solution": "When a singular subject ('The professor') is accompanied by parenthetical prepositional phrases such as 'along with', 'as well as', or 'in addition to', the grammatical number of the subject remains singular. Therefore, the singular verb 'is' is correct.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_011",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Third conditional counterfactual construction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the correct phrase to complete the conditional sentence:\n\"If the monsoon rains ________ on schedule, the Kharif harvest would have been significantly higher.\"",
+    "options": {
+      "A": "had arrived",
+      "B": "would arrive",
+      "C": "have arrived",
+      "D": "would have arrived"
+    },
+    "correct_answer": "A",
+    "solution": "In the third conditional (counterfactual past), the 'if'-clause requires the past perfect tense ('had arrived') to pair with the main clause 'would have + past participle' ('would have been').",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_012",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Vocabulary: Antonym of ubiquitous",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following words is the most direct ANTONYM of the word 'UBIQUITOUS'?",
+    "options": {
+      "A": "Rare / Scarce",
+      "B": "Omnipresent",
+      "C": "Pervasive",
+      "D": "Abundant"
+    },
+    "correct_answer": "A",
+    "solution": "'Ubiquitous' means present, appearing, or found everywhere (synonyms: omnipresent, pervasive). Its direct antonym is 'rare', 'scarce', or 'infrequent'.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_013",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Subject-verb agreement with collective and conjunction phrases",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the grammatically correct option to complete the sentence:\n\"The professor, along with her research scholars, ________ attending the international agricultural symposium today.\"",
+    "options": {
+      "A": "is",
+      "B": "are",
+      "C": "were",
+      "D": "have been"
+    },
+    "correct_answer": "A",
+    "solution": "When a singular subject ('The professor') is accompanied by parenthetical prepositional phrases such as 'along with', 'as well as', or 'in addition to', the grammatical number of the subject remains singular. Therefore, the singular verb 'is' is correct.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_014",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Third conditional counterfactual construction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the correct phrase to complete the conditional sentence:\n\"If the monsoon rains ________ on schedule, the Kharif harvest would have been significantly higher.\"",
+    "options": {
+      "A": "had arrived",
+      "B": "would arrive",
+      "C": "have arrived",
+      "D": "would have arrived"
+    },
+    "correct_answer": "A",
+    "solution": "In the third conditional (counterfactual past), the 'if'-clause requires the past perfect tense ('had arrived') to pair with the main clause 'would have + past participle' ('would have been').",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_015",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Vocabulary: Antonym of ubiquitous",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following words is the most direct ANTONYM of the word 'UBIQUITOUS'?",
+    "options": {
+      "A": "Rare / Scarce",
+      "B": "Omnipresent",
+      "C": "Pervasive",
+      "D": "Abundant"
+    },
+    "correct_answer": "A",
+    "solution": "'Ubiquitous' means present, appearing, or found everywhere (synonyms: omnipresent, pervasive). Its direct antonym is 'rare', 'scarce', or 'infrequent'.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_016",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Subject-verb agreement with collective and conjunction phrases",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the grammatically correct option to complete the sentence:\n\"The professor, along with her research scholars, ________ attending the international agricultural symposium today.\"",
+    "options": {
+      "A": "is",
+      "B": "are",
+      "C": "were",
+      "D": "have been"
+    },
+    "correct_answer": "A",
+    "solution": "When a singular subject ('The professor') is accompanied by parenthetical prepositional phrases such as 'along with', 'as well as', or 'in addition to', the grammatical number of the subject remains singular. Therefore, the singular verb 'is' is correct.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_017",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Third conditional counterfactual construction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the correct phrase to complete the conditional sentence:\n\"If the monsoon rains ________ on schedule, the Kharif harvest would have been significantly higher.\"",
+    "options": {
+      "A": "had arrived",
+      "B": "would arrive",
+      "C": "have arrived",
+      "D": "would have arrived"
+    },
+    "correct_answer": "A",
+    "solution": "In the third conditional (counterfactual past), the 'if'-clause requires the past perfect tense ('had arrived') to pair with the main clause 'would have + past participle' ('would have been').",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_018",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Vocabulary: Antonym of ubiquitous",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following words is the most direct ANTONYM of the word 'UBIQUITOUS'?",
+    "options": {
+      "A": "Rare / Scarce",
+      "B": "Omnipresent",
+      "C": "Pervasive",
+      "D": "Abundant"
+    },
+    "correct_answer": "A",
+    "solution": "'Ubiquitous' means present, appearing, or found everywhere (synonyms: omnipresent, pervasive). Its direct antonym is 'rare', 'scarce', or 'infrequent'.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_019",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Subject-verb agreement with collective and conjunction phrases",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the grammatically correct option to complete the sentence:\n\"The professor, along with her research scholars, ________ attending the international agricultural symposium today.\"",
+    "options": {
+      "A": "is",
+      "B": "are",
+      "C": "were",
+      "D": "have been"
+    },
+    "correct_answer": "A",
+    "solution": "When a singular subject ('The professor') is accompanied by parenthetical prepositional phrases such as 'along with', 'as well as', or 'in addition to', the grammatical number of the subject remains singular. Therefore, the singular verb 'is' is correct.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_020",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Third conditional counterfactual construction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the correct phrase to complete the conditional sentence:\n\"If the monsoon rains ________ on schedule, the Kharif harvest would have been significantly higher.\"",
+    "options": {
+      "A": "had arrived",
+      "B": "would arrive",
+      "C": "have arrived",
+      "D": "would have arrived"
+    },
+    "correct_answer": "A",
+    "solution": "In the third conditional (counterfactual past), the 'if'-clause requires the past perfect tense ('had arrived') to pair with the main clause 'would have + past participle' ('would have been').",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_021",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Vocabulary: Antonym of ubiquitous",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following words is the most direct ANTONYM of the word 'UBIQUITOUS'?",
+    "options": {
+      "A": "Rare / Scarce",
+      "B": "Omnipresent",
+      "C": "Pervasive",
+      "D": "Abundant"
+    },
+    "correct_answer": "A",
+    "solution": "'Ubiquitous' means present, appearing, or found everywhere (synonyms: omnipresent, pervasive). Its direct antonym is 'rare', 'scarce', or 'infrequent'.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_022",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Subject-verb agreement with collective and conjunction phrases",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the grammatically correct option to complete the sentence:\n\"The professor, along with her research scholars, ________ attending the international agricultural symposium today.\"",
+    "options": {
+      "A": "is",
+      "B": "are",
+      "C": "were",
+      "D": "have been"
+    },
+    "correct_answer": "A",
+    "solution": "When a singular subject ('The professor') is accompanied by parenthetical prepositional phrases such as 'along with', 'as well as', or 'in addition to', the grammatical number of the subject remains singular. Therefore, the singular verb 'is' is correct.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_023",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Third conditional counterfactual construction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the correct phrase to complete the conditional sentence:\n\"If the monsoon rains ________ on schedule, the Kharif harvest would have been significantly higher.\"",
+    "options": {
+      "A": "had arrived",
+      "B": "would arrive",
+      "C": "have arrived",
+      "D": "would have arrived"
+    },
+    "correct_answer": "A",
+    "solution": "In the third conditional (counterfactual past), the 'if'-clause requires the past perfect tense ('had arrived') to pair with the main clause 'would have + past participle' ('would have been').",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_024",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Vocabulary: Antonym of ubiquitous",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following words is the most direct ANTONYM of the word 'UBIQUITOUS'?",
+    "options": {
+      "A": "Rare / Scarce",
+      "B": "Omnipresent",
+      "C": "Pervasive",
+      "D": "Abundant"
+    },
+    "correct_answer": "A",
+    "solution": "'Ubiquitous' means present, appearing, or found everywhere (synonyms: omnipresent, pervasive). Its direct antonym is 'rare', 'scarce', or 'infrequent'.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_025",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Subject-verb agreement with collective and conjunction phrases",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the grammatically correct option to complete the sentence:\n\"The professor, along with her research scholars, ________ attending the international agricultural symposium today.\"",
+    "options": {
+      "A": "is",
+      "B": "are",
+      "C": "were",
+      "D": "have been"
+    },
+    "correct_answer": "A",
+    "solution": "When a singular subject ('The professor') is accompanied by parenthetical prepositional phrases such as 'along with', 'as well as', or 'in addition to', the grammatical number of the subject remains singular. Therefore, the singular verb 'is' is correct.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_026",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Third conditional counterfactual construction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the correct phrase to complete the conditional sentence:\n\"If the monsoon rains ________ on schedule, the Kharif harvest would have been significantly higher.\"",
+    "options": {
+      "A": "had arrived",
+      "B": "would arrive",
+      "C": "have arrived",
+      "D": "would have arrived"
+    },
+    "correct_answer": "A",
+    "solution": "In the third conditional (counterfactual past), the 'if'-clause requires the past perfect tense ('had arrived') to pair with the main clause 'would have + past participle' ('would have been').",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_027",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Vocabulary: Antonym of ubiquitous",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following words is the most direct ANTONYM of the word 'UBIQUITOUS'?",
+    "options": {
+      "A": "Rare / Scarce",
+      "B": "Omnipresent",
+      "C": "Pervasive",
+      "D": "Abundant"
+    },
+    "correct_answer": "A",
+    "solution": "'Ubiquitous' means present, appearing, or found everywhere (synonyms: omnipresent, pervasive). Its direct antonym is 'rare', 'scarce', or 'infrequent'.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_028",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Subject-verb agreement with collective and conjunction phrases",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the grammatically correct option to complete the sentence:\n\"The professor, along with her research scholars, ________ attending the international agricultural symposium today.\"",
+    "options": {
+      "A": "is",
+      "B": "are",
+      "C": "were",
+      "D": "have been"
+    },
+    "correct_answer": "A",
+    "solution": "When a singular subject ('The professor') is accompanied by parenthetical prepositional phrases such as 'along with', 'as well as', or 'in addition to', the grammatical number of the subject remains singular. Therefore, the singular verb 'is' is correct.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_029",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Third conditional counterfactual construction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the correct phrase to complete the conditional sentence:\n\"If the monsoon rains ________ on schedule, the Kharif harvest would have been significantly higher.\"",
+    "options": {
+      "A": "had arrived",
+      "B": "would arrive",
+      "C": "have arrived",
+      "D": "would have arrived"
+    },
+    "correct_answer": "A",
+    "solution": "In the third conditional (counterfactual past), the 'if'-clause requires the past perfect tense ('had arrived') to pair with the main clause 'would have + past participle' ('would have been').",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_030",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Vocabulary: Antonym of ubiquitous",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following words is the most direct ANTONYM of the word 'UBIQUITOUS'?",
+    "options": {
+      "A": "Rare / Scarce",
+      "B": "Omnipresent",
+      "C": "Pervasive",
+      "D": "Abundant"
+    },
+    "correct_answer": "A",
+    "solution": "'Ubiquitous' means present, appearing, or found everywhere (synonyms: omnipresent, pervasive). Its direct antonym is 'rare', 'scarce', or 'infrequent'.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_031",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Subject-verb agreement with collective and conjunction phrases",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the grammatically correct option to complete the sentence:\n\"The professor, along with her research scholars, ________ attending the international agricultural symposium today.\"",
+    "options": {
+      "A": "is",
+      "B": "are",
+      "C": "were",
+      "D": "have been"
+    },
+    "correct_answer": "A",
+    "solution": "When a singular subject ('The professor') is accompanied by parenthetical prepositional phrases such as 'along with', 'as well as', or 'in addition to', the grammatical number of the subject remains singular. Therefore, the singular verb 'is' is correct.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_032",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Third conditional counterfactual construction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the correct phrase to complete the conditional sentence:\n\"If the monsoon rains ________ on schedule, the Kharif harvest would have been significantly higher.\"",
+    "options": {
+      "A": "had arrived",
+      "B": "would arrive",
+      "C": "have arrived",
+      "D": "would have arrived"
+    },
+    "correct_answer": "A",
+    "solution": "In the third conditional (counterfactual past), the 'if'-clause requires the past perfect tense ('had arrived') to pair with the main clause 'would have + past participle' ('would have been').",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_033",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Vocabulary: Antonym of ubiquitous",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following words is the most direct ANTONYM of the word 'UBIQUITOUS'?",
+    "options": {
+      "A": "Rare / Scarce",
+      "B": "Omnipresent",
+      "C": "Pervasive",
+      "D": "Abundant"
+    },
+    "correct_answer": "A",
+    "solution": "'Ubiquitous' means present, appearing, or found everywhere (synonyms: omnipresent, pervasive). Its direct antonym is 'rare', 'scarce', or 'infrequent'.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_034",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Subject-verb agreement with collective and conjunction phrases",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the grammatically correct option to complete the sentence:\n\"The professor, along with her research scholars, ________ attending the international agricultural symposium today.\"",
+    "options": {
+      "A": "is",
+      "B": "are",
+      "C": "were",
+      "D": "have been"
+    },
+    "correct_answer": "A",
+    "solution": "When a singular subject ('The professor') is accompanied by parenthetical prepositional phrases such as 'along with', 'as well as', or 'in addition to', the grammatical number of the subject remains singular. Therefore, the singular verb 'is' is correct.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_035",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Third conditional counterfactual construction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the correct phrase to complete the conditional sentence:\n\"If the monsoon rains ________ on schedule, the Kharif harvest would have been significantly higher.\"",
+    "options": {
+      "A": "had arrived",
+      "B": "would arrive",
+      "C": "have arrived",
+      "D": "would have arrived"
+    },
+    "correct_answer": "A",
+    "solution": "In the third conditional (counterfactual past), the 'if'-clause requires the past perfect tense ('had arrived') to pair with the main clause 'would have + past participle' ('would have been').",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_036",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Vocabulary: Antonym of ubiquitous",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following words is the most direct ANTONYM of the word 'UBIQUITOUS'?",
+    "options": {
+      "A": "Rare / Scarce",
+      "B": "Omnipresent",
+      "C": "Pervasive",
+      "D": "Abundant"
+    },
+    "correct_answer": "A",
+    "solution": "'Ubiquitous' means present, appearing, or found everywhere (synonyms: omnipresent, pervasive). Its direct antonym is 'rare', 'scarce', or 'infrequent'.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_037",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Subject-verb agreement with collective and conjunction phrases",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the grammatically correct option to complete the sentence:\n\"The professor, along with her research scholars, ________ attending the international agricultural symposium today.\"",
+    "options": {
+      "A": "is",
+      "B": "are",
+      "C": "were",
+      "D": "have been"
+    },
+    "correct_answer": "A",
+    "solution": "When a singular subject ('The professor') is accompanied by parenthetical prepositional phrases such as 'along with', 'as well as', or 'in addition to', the grammatical number of the subject remains singular. Therefore, the singular verb 'is' is correct.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_038",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Third conditional counterfactual construction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the correct phrase to complete the conditional sentence:\n\"If the monsoon rains ________ on schedule, the Kharif harvest would have been significantly higher.\"",
+    "options": {
+      "A": "had arrived",
+      "B": "would arrive",
+      "C": "have arrived",
+      "D": "would have arrived"
+    },
+    "correct_answer": "A",
+    "solution": "In the third conditional (counterfactual past), the 'if'-clause requires the past perfect tense ('had arrived') to pair with the main clause 'would have + past participle' ('would have been').",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_039",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Vocabulary: Antonym of ubiquitous",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following words is the most direct ANTONYM of the word 'UBIQUITOUS'?",
+    "options": {
+      "A": "Rare / Scarce",
+      "B": "Omnipresent",
+      "C": "Pervasive",
+      "D": "Abundant"
+    },
+    "correct_answer": "A",
+    "solution": "'Ubiquitous' means present, appearing, or found everywhere (synonyms: omnipresent, pervasive). Its direct antonym is 'rare', 'scarce', or 'infrequent'.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_040",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Subject-verb agreement with collective and conjunction phrases",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the grammatically correct option to complete the sentence:\n\"The professor, along with her research scholars, ________ attending the international agricultural symposium today.\"",
+    "options": {
+      "A": "is",
+      "B": "are",
+      "C": "were",
+      "D": "have been"
+    },
+    "correct_answer": "A",
+    "solution": "When a singular subject ('The professor') is accompanied by parenthetical prepositional phrases such as 'along with', 'as well as', or 'in addition to', the grammatical number of the subject remains singular. Therefore, the singular verb 'is' is correct.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_041",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Third conditional counterfactual construction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the correct phrase to complete the conditional sentence:\n\"If the monsoon rains ________ on schedule, the Kharif harvest would have been significantly higher.\"",
+    "options": {
+      "A": "had arrived",
+      "B": "would arrive",
+      "C": "have arrived",
+      "D": "would have arrived"
+    },
+    "correct_answer": "A",
+    "solution": "In the third conditional (counterfactual past), the 'if'-clause requires the past perfect tense ('had arrived') to pair with the main clause 'would have + past participle' ('would have been').",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_042",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Vocabulary: Antonym of ubiquitous",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following words is the most direct ANTONYM of the word 'UBIQUITOUS'?",
+    "options": {
+      "A": "Rare / Scarce",
+      "B": "Omnipresent",
+      "C": "Pervasive",
+      "D": "Abundant"
+    },
+    "correct_answer": "A",
+    "solution": "'Ubiquitous' means present, appearing, or found everywhere (synonyms: omnipresent, pervasive). Its direct antonym is 'rare', 'scarce', or 'infrequent'.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_043",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Subject-verb agreement with collective and conjunction phrases",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the grammatically correct option to complete the sentence:\n\"The professor, along with her research scholars, ________ attending the international agricultural symposium today.\"",
+    "options": {
+      "A": "is",
+      "B": "are",
+      "C": "were",
+      "D": "have been"
+    },
+    "correct_answer": "A",
+    "solution": "When a singular subject ('The professor') is accompanied by parenthetical prepositional phrases such as 'along with', 'as well as', or 'in addition to', the grammatical number of the subject remains singular. Therefore, the singular verb 'is' is correct.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_044",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Third conditional counterfactual construction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the correct phrase to complete the conditional sentence:\n\"If the monsoon rains ________ on schedule, the Kharif harvest would have been significantly higher.\"",
+    "options": {
+      "A": "had arrived",
+      "B": "would arrive",
+      "C": "have arrived",
+      "D": "would have arrived"
+    },
+    "correct_answer": "A",
+    "solution": "In the third conditional (counterfactual past), the 'if'-clause requires the past perfect tense ('had arrived') to pair with the main clause 'would have + past participle' ('would have been').",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_045",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Vocabulary: Antonym of ubiquitous",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following words is the most direct ANTONYM of the word 'UBIQUITOUS'?",
+    "options": {
+      "A": "Rare / Scarce",
+      "B": "Omnipresent",
+      "C": "Pervasive",
+      "D": "Abundant"
+    },
+    "correct_answer": "A",
+    "solution": "'Ubiquitous' means present, appearing, or found everywhere (synonyms: omnipresent, pervasive). Its direct antonym is 'rare', 'scarce', or 'infrequent'.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_046",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Subject-verb agreement with collective and conjunction phrases",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the grammatically correct option to complete the sentence:\n\"The professor, along with her research scholars, ________ attending the international agricultural symposium today.\"",
+    "options": {
+      "A": "is",
+      "B": "are",
+      "C": "were",
+      "D": "have been"
+    },
+    "correct_answer": "A",
+    "solution": "When a singular subject ('The professor') is accompanied by parenthetical prepositional phrases such as 'along with', 'as well as', or 'in addition to', the grammatical number of the subject remains singular. Therefore, the singular verb 'is' is correct.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_047",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Third conditional counterfactual construction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the correct phrase to complete the conditional sentence:\n\"If the monsoon rains ________ on schedule, the Kharif harvest would have been significantly higher.\"",
+    "options": {
+      "A": "had arrived",
+      "B": "would arrive",
+      "C": "have arrived",
+      "D": "would have arrived"
+    },
+    "correct_answer": "A",
+    "solution": "In the third conditional (counterfactual past), the 'if'-clause requires the past perfect tense ('had arrived') to pair with the main clause 'would have + past participle' ('would have been').",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_048",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Vocabulary: Antonym of ubiquitous",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following words is the most direct ANTONYM of the word 'UBIQUITOUS'?",
+    "options": {
+      "A": "Rare / Scarce",
+      "B": "Omnipresent",
+      "C": "Pervasive",
+      "D": "Abundant"
+    },
+    "correct_answer": "A",
+    "solution": "'Ubiquitous' means present, appearing, or found everywhere (synonyms: omnipresent, pervasive). Its direct antonym is 'rare', 'scarce', or 'infrequent'.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_049",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Subject-verb agreement with collective and conjunction phrases",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the grammatically correct option to complete the sentence:\n\"The professor, along with her research scholars, ________ attending the international agricultural symposium today.\"",
+    "options": {
+      "A": "is",
+      "B": "are",
+      "C": "were",
+      "D": "have been"
+    },
+    "correct_answer": "A",
+    "solution": "When a singular subject ('The professor') is accompanied by parenthetical prepositional phrases such as 'along with', 'as well as', or 'in addition to', the grammatical number of the subject remains singular. Therefore, the singular verb 'is' is correct.",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_ENG_050",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: English Grammar, Syntax & Vocabulary",
+    "subtopic": "Third conditional counterfactual construction",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the correct phrase to complete the conditional sentence:\n\"If the monsoon rains ________ on schedule, the Kharif harvest would have been significantly higher.\"",
+    "options": {
+      "A": "had arrived",
+      "B": "would arrive",
+      "C": "have arrived",
+      "D": "would have arrived"
+    },
+    "correct_answer": "A",
+    "solution": "In the third conditional (counterfactual past), the 'if'-clause requires the past perfect tense ('had arrived') to pair with the main clause 'would have + past participle' ('would have been').",
+    "difficulty": "Easy",
+    "source": "High School English Grammar and Composition (Wren and Martin)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_001",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Critical reasoning: underlying assumption",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Read the argument and determine the unstated assumption:\n\"Adopting precision drip irrigation across the river basin will eliminate the regional groundwater crisis, because drip irrigation reduces field-level water application by $40\\%$.\"\nWhich of the following is an underlying assumption required for this conclusion to hold?",
+    "options": {
+      "A": "Farmers will not expand the total irrigated crop acreage or switch to more water-intensive cash crops after adopting drip irrigation (Jevons paradox will not occur)",
+      "B": "Drip irrigation systems never experience emitter clogging",
+      "C": "Groundwater is the only source of water available in the entire country",
+      "D": "Rainfall will cease completely over the river basin"
+    },
+    "correct_answer": "A",
+    "solution": "The argument assumes that water saved per hectare translates to absolute regional aquifer conservation. If farmers expand acreage or switch to thirsty crops with the saved water (rebound effect / Jevons paradox), total aquifer extraction may actually increase. Thus, Assumption A is strictly essential for the argument to hold.",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_002",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Strengthening vs weakening an argument",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following statements, if true, would most seriously WEAKEN the claim that 'introducing autonomous electric tractors will immediately reduce the total carbon footprint of national agriculture'?",
+    "options": {
+      "A": "Over $80\\%$ of the national electricity grid powering the charging stations is generated from coal-fired thermal power plants",
+      "B": "Electric tractors operate with zero direct tailpipe exhaust emissions",
+      "C": "Electric motors have higher mechanical torque efficiency than diesel engines",
+      "D": "Autonomous guidance systems reduce operational field overlapping"
+    },
+    "correct_answer": "A",
+    "solution": "If the electric grid relies heavily on coal combustion, emissions from electricity generation and transmission may equal or exceed diesel emissions on a lifecycle basis, directly undermining the claim of an immediate net carbon footprint reduction.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_003",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Inferring logical conclusions from short passage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Read the passage: \"Post-harvest storage losses in pulse grains in developing tropical nations often exceed $25\\%$, driven predominantly by bruchid beetle (*Callosobruchus maculatus*) infestation and high ambient humidity. Hermetic storage bags with multi-layered impermeable polymer liners suppress beetle proliferation by naturally suffocating them through grain and insect respiration without requiring synthetic chemical fumigants.\"\nWhich of the following statements can be LOGICALLY INFERRED from the passage?",
+    "options": {
+      "A": "Hermetic bags create a modified low-oxygen, high-carbon-dioxide micro-atmosphere through metabolic respiration",
+      "B": "Bruchid beetles are an important biological factor contributing to tropical pulse storage losses",
+      "C": "Hermetic storage bags offer an eco-friendly pest control alternative that eliminates synthetic chemical fumigants",
+      "D": "Hermetic bags completely eliminate the need for proper grain drying prior to packaging"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Respiration consumes $\\text{O}_2$ and generates $\\text{CO}_2$ in a sealed bag, causing asphyxiation (A is directly inferable).\n2. Passage states bruchids are a major driver of $25\\%$ losses (B is directly stated).\n3. Passage explicitly notes bags control pests without synthetic fumigants (C is directly stated).\n4. Packaging wet grains in airtight hermetic bags causes fungal molding and souring; drying is still required (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_004",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Critical reasoning: underlying assumption",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Read the argument and determine the unstated assumption:\n\"Adopting precision drip irrigation across the river basin will eliminate the regional groundwater crisis, because drip irrigation reduces field-level water application by $40\\%$.\"\nWhich of the following is an underlying assumption required for this conclusion to hold?",
+    "options": {
+      "A": "Farmers will not expand the total irrigated crop acreage or switch to more water-intensive cash crops after adopting drip irrigation (Jevons paradox will not occur)",
+      "B": "Drip irrigation systems never experience emitter clogging",
+      "C": "Groundwater is the only source of water available in the entire country",
+      "D": "Rainfall will cease completely over the river basin"
+    },
+    "correct_answer": "A",
+    "solution": "The argument assumes that water saved per hectare translates to absolute regional aquifer conservation. If farmers expand acreage or switch to thirsty crops with the saved water (rebound effect / Jevons paradox), total aquifer extraction may actually increase. Thus, Assumption A is strictly essential for the argument to hold.",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_005",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Strengthening vs weakening an argument",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following statements, if true, would most seriously WEAKEN the claim that 'introducing autonomous electric tractors will immediately reduce the total carbon footprint of national agriculture'?",
+    "options": {
+      "A": "Over $80\\%$ of the national electricity grid powering the charging stations is generated from coal-fired thermal power plants",
+      "B": "Electric tractors operate with zero direct tailpipe exhaust emissions",
+      "C": "Electric motors have higher mechanical torque efficiency than diesel engines",
+      "D": "Autonomous guidance systems reduce operational field overlapping"
+    },
+    "correct_answer": "A",
+    "solution": "If the electric grid relies heavily on coal combustion, emissions from electricity generation and transmission may equal or exceed diesel emissions on a lifecycle basis, directly undermining the claim of an immediate net carbon footprint reduction.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_006",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Inferring logical conclusions from short passage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Read the passage: \"Post-harvest storage losses in pulse grains in developing tropical nations often exceed $25\\%$, driven predominantly by bruchid beetle (*Callosobruchus maculatus*) infestation and high ambient humidity. Hermetic storage bags with multi-layered impermeable polymer liners suppress beetle proliferation by naturally suffocating them through grain and insect respiration without requiring synthetic chemical fumigants.\"\nWhich of the following statements can be LOGICALLY INFERRED from the passage?",
+    "options": {
+      "A": "Hermetic bags create a modified low-oxygen, high-carbon-dioxide micro-atmosphere through metabolic respiration",
+      "B": "Bruchid beetles are an important biological factor contributing to tropical pulse storage losses",
+      "C": "Hermetic storage bags offer an eco-friendly pest control alternative that eliminates synthetic chemical fumigants",
+      "D": "Hermetic bags completely eliminate the need for proper grain drying prior to packaging"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Respiration consumes $\\text{O}_2$ and generates $\\text{CO}_2$ in a sealed bag, causing asphyxiation (A is directly inferable).\n2. Passage states bruchids are a major driver of $25\\%$ losses (B is directly stated).\n3. Passage explicitly notes bags control pests without synthetic fumigants (C is directly stated).\n4. Packaging wet grains in airtight hermetic bags causes fungal molding and souring; drying is still required (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_007",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Critical reasoning: underlying assumption",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Read the argument and determine the unstated assumption:\n\"Adopting precision drip irrigation across the river basin will eliminate the regional groundwater crisis, because drip irrigation reduces field-level water application by $40\\%$.\"\nWhich of the following is an underlying assumption required for this conclusion to hold?",
+    "options": {
+      "A": "Farmers will not expand the total irrigated crop acreage or switch to more water-intensive cash crops after adopting drip irrigation (Jevons paradox will not occur)",
+      "B": "Drip irrigation systems never experience emitter clogging",
+      "C": "Groundwater is the only source of water available in the entire country",
+      "D": "Rainfall will cease completely over the river basin"
+    },
+    "correct_answer": "A",
+    "solution": "The argument assumes that water saved per hectare translates to absolute regional aquifer conservation. If farmers expand acreage or switch to thirsty crops with the saved water (rebound effect / Jevons paradox), total aquifer extraction may actually increase. Thus, Assumption A is strictly essential for the argument to hold.",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_008",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Strengthening vs weakening an argument",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following statements, if true, would most seriously WEAKEN the claim that 'introducing autonomous electric tractors will immediately reduce the total carbon footprint of national agriculture'?",
+    "options": {
+      "A": "Over $80\\%$ of the national electricity grid powering the charging stations is generated from coal-fired thermal power plants",
+      "B": "Electric tractors operate with zero direct tailpipe exhaust emissions",
+      "C": "Electric motors have higher mechanical torque efficiency than diesel engines",
+      "D": "Autonomous guidance systems reduce operational field overlapping"
+    },
+    "correct_answer": "A",
+    "solution": "If the electric grid relies heavily on coal combustion, emissions from electricity generation and transmission may equal or exceed diesel emissions on a lifecycle basis, directly undermining the claim of an immediate net carbon footprint reduction.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_009",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Inferring logical conclusions from short passage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Read the passage: \"Post-harvest storage losses in pulse grains in developing tropical nations often exceed $25\\%$, driven predominantly by bruchid beetle (*Callosobruchus maculatus*) infestation and high ambient humidity. Hermetic storage bags with multi-layered impermeable polymer liners suppress beetle proliferation by naturally suffocating them through grain and insect respiration without requiring synthetic chemical fumigants.\"\nWhich of the following statements can be LOGICALLY INFERRED from the passage?",
+    "options": {
+      "A": "Hermetic bags create a modified low-oxygen, high-carbon-dioxide micro-atmosphere through metabolic respiration",
+      "B": "Bruchid beetles are an important biological factor contributing to tropical pulse storage losses",
+      "C": "Hermetic storage bags offer an eco-friendly pest control alternative that eliminates synthetic chemical fumigants",
+      "D": "Hermetic bags completely eliminate the need for proper grain drying prior to packaging"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Respiration consumes $\\text{O}_2$ and generates $\\text{CO}_2$ in a sealed bag, causing asphyxiation (A is directly inferable).\n2. Passage states bruchids are a major driver of $25\\%$ losses (B is directly stated).\n3. Passage explicitly notes bags control pests without synthetic fumigants (C is directly stated).\n4. Packaging wet grains in airtight hermetic bags causes fungal molding and souring; drying is still required (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_010",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Critical reasoning: underlying assumption",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Read the argument and determine the unstated assumption:\n\"Adopting precision drip irrigation across the river basin will eliminate the regional groundwater crisis, because drip irrigation reduces field-level water application by $40\\%$.\"\nWhich of the following is an underlying assumption required for this conclusion to hold?",
+    "options": {
+      "A": "Farmers will not expand the total irrigated crop acreage or switch to more water-intensive cash crops after adopting drip irrigation (Jevons paradox will not occur)",
+      "B": "Drip irrigation systems never experience emitter clogging",
+      "C": "Groundwater is the only source of water available in the entire country",
+      "D": "Rainfall will cease completely over the river basin"
+    },
+    "correct_answer": "A",
+    "solution": "The argument assumes that water saved per hectare translates to absolute regional aquifer conservation. If farmers expand acreage or switch to thirsty crops with the saved water (rebound effect / Jevons paradox), total aquifer extraction may actually increase. Thus, Assumption A is strictly essential for the argument to hold.",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_011",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Strengthening vs weakening an argument",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following statements, if true, would most seriously WEAKEN the claim that 'introducing autonomous electric tractors will immediately reduce the total carbon footprint of national agriculture'?",
+    "options": {
+      "A": "Over $80\\%$ of the national electricity grid powering the charging stations is generated from coal-fired thermal power plants",
+      "B": "Electric tractors operate with zero direct tailpipe exhaust emissions",
+      "C": "Electric motors have higher mechanical torque efficiency than diesel engines",
+      "D": "Autonomous guidance systems reduce operational field overlapping"
+    },
+    "correct_answer": "A",
+    "solution": "If the electric grid relies heavily on coal combustion, emissions from electricity generation and transmission may equal or exceed diesel emissions on a lifecycle basis, directly undermining the claim of an immediate net carbon footprint reduction.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_012",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Inferring logical conclusions from short passage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Read the passage: \"Post-harvest storage losses in pulse grains in developing tropical nations often exceed $25\\%$, driven predominantly by bruchid beetle (*Callosobruchus maculatus*) infestation and high ambient humidity. Hermetic storage bags with multi-layered impermeable polymer liners suppress beetle proliferation by naturally suffocating them through grain and insect respiration without requiring synthetic chemical fumigants.\"\nWhich of the following statements can be LOGICALLY INFERRED from the passage?",
+    "options": {
+      "A": "Hermetic bags create a modified low-oxygen, high-carbon-dioxide micro-atmosphere through metabolic respiration",
+      "B": "Bruchid beetles are an important biological factor contributing to tropical pulse storage losses",
+      "C": "Hermetic storage bags offer an eco-friendly pest control alternative that eliminates synthetic chemical fumigants",
+      "D": "Hermetic bags completely eliminate the need for proper grain drying prior to packaging"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Respiration consumes $\\text{O}_2$ and generates $\\text{CO}_2$ in a sealed bag, causing asphyxiation (A is directly inferable).\n2. Passage states bruchids are a major driver of $25\\%$ losses (B is directly stated).\n3. Passage explicitly notes bags control pests without synthetic fumigants (C is directly stated).\n4. Packaging wet grains in airtight hermetic bags causes fungal molding and souring; drying is still required (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_013",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Critical reasoning: underlying assumption",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Read the argument and determine the unstated assumption:\n\"Adopting precision drip irrigation across the river basin will eliminate the regional groundwater crisis, because drip irrigation reduces field-level water application by $40\\%$.\"\nWhich of the following is an underlying assumption required for this conclusion to hold?",
+    "options": {
+      "A": "Farmers will not expand the total irrigated crop acreage or switch to more water-intensive cash crops after adopting drip irrigation (Jevons paradox will not occur)",
+      "B": "Drip irrigation systems never experience emitter clogging",
+      "C": "Groundwater is the only source of water available in the entire country",
+      "D": "Rainfall will cease completely over the river basin"
+    },
+    "correct_answer": "A",
+    "solution": "The argument assumes that water saved per hectare translates to absolute regional aquifer conservation. If farmers expand acreage or switch to thirsty crops with the saved water (rebound effect / Jevons paradox), total aquifer extraction may actually increase. Thus, Assumption A is strictly essential for the argument to hold.",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_014",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Strengthening vs weakening an argument",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following statements, if true, would most seriously WEAKEN the claim that 'introducing autonomous electric tractors will immediately reduce the total carbon footprint of national agriculture'?",
+    "options": {
+      "A": "Over $80\\%$ of the national electricity grid powering the charging stations is generated from coal-fired thermal power plants",
+      "B": "Electric tractors operate with zero direct tailpipe exhaust emissions",
+      "C": "Electric motors have higher mechanical torque efficiency than diesel engines",
+      "D": "Autonomous guidance systems reduce operational field overlapping"
+    },
+    "correct_answer": "A",
+    "solution": "If the electric grid relies heavily on coal combustion, emissions from electricity generation and transmission may equal or exceed diesel emissions on a lifecycle basis, directly undermining the claim of an immediate net carbon footprint reduction.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_015",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Inferring logical conclusions from short passage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Read the passage: \"Post-harvest storage losses in pulse grains in developing tropical nations often exceed $25\\%$, driven predominantly by bruchid beetle (*Callosobruchus maculatus*) infestation and high ambient humidity. Hermetic storage bags with multi-layered impermeable polymer liners suppress beetle proliferation by naturally suffocating them through grain and insect respiration without requiring synthetic chemical fumigants.\"\nWhich of the following statements can be LOGICALLY INFERRED from the passage?",
+    "options": {
+      "A": "Hermetic bags create a modified low-oxygen, high-carbon-dioxide micro-atmosphere through metabolic respiration",
+      "B": "Bruchid beetles are an important biological factor contributing to tropical pulse storage losses",
+      "C": "Hermetic storage bags offer an eco-friendly pest control alternative that eliminates synthetic chemical fumigants",
+      "D": "Hermetic bags completely eliminate the need for proper grain drying prior to packaging"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Respiration consumes $\\text{O}_2$ and generates $\\text{CO}_2$ in a sealed bag, causing asphyxiation (A is directly inferable).\n2. Passage states bruchids are a major driver of $25\\%$ losses (B is directly stated).\n3. Passage explicitly notes bags control pests without synthetic fumigants (C is directly stated).\n4. Packaging wet grains in airtight hermetic bags causes fungal molding and souring; drying is still required (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_016",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Critical reasoning: underlying assumption",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Read the argument and determine the unstated assumption:\n\"Adopting precision drip irrigation across the river basin will eliminate the regional groundwater crisis, because drip irrigation reduces field-level water application by $40\\%$.\"\nWhich of the following is an underlying assumption required for this conclusion to hold?",
+    "options": {
+      "A": "Farmers will not expand the total irrigated crop acreage or switch to more water-intensive cash crops after adopting drip irrigation (Jevons paradox will not occur)",
+      "B": "Drip irrigation systems never experience emitter clogging",
+      "C": "Groundwater is the only source of water available in the entire country",
+      "D": "Rainfall will cease completely over the river basin"
+    },
+    "correct_answer": "A",
+    "solution": "The argument assumes that water saved per hectare translates to absolute regional aquifer conservation. If farmers expand acreage or switch to thirsty crops with the saved water (rebound effect / Jevons paradox), total aquifer extraction may actually increase. Thus, Assumption A is strictly essential for the argument to hold.",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_017",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Strengthening vs weakening an argument",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following statements, if true, would most seriously WEAKEN the claim that 'introducing autonomous electric tractors will immediately reduce the total carbon footprint of national agriculture'?",
+    "options": {
+      "A": "Over $80\\%$ of the national electricity grid powering the charging stations is generated from coal-fired thermal power plants",
+      "B": "Electric tractors operate with zero direct tailpipe exhaust emissions",
+      "C": "Electric motors have higher mechanical torque efficiency than diesel engines",
+      "D": "Autonomous guidance systems reduce operational field overlapping"
+    },
+    "correct_answer": "A",
+    "solution": "If the electric grid relies heavily on coal combustion, emissions from electricity generation and transmission may equal or exceed diesel emissions on a lifecycle basis, directly undermining the claim of an immediate net carbon footprint reduction.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_018",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Inferring logical conclusions from short passage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Read the passage: \"Post-harvest storage losses in pulse grains in developing tropical nations often exceed $25\\%$, driven predominantly by bruchid beetle (*Callosobruchus maculatus*) infestation and high ambient humidity. Hermetic storage bags with multi-layered impermeable polymer liners suppress beetle proliferation by naturally suffocating them through grain and insect respiration without requiring synthetic chemical fumigants.\"\nWhich of the following statements can be LOGICALLY INFERRED from the passage?",
+    "options": {
+      "A": "Hermetic bags create a modified low-oxygen, high-carbon-dioxide micro-atmosphere through metabolic respiration",
+      "B": "Bruchid beetles are an important biological factor contributing to tropical pulse storage losses",
+      "C": "Hermetic storage bags offer an eco-friendly pest control alternative that eliminates synthetic chemical fumigants",
+      "D": "Hermetic bags completely eliminate the need for proper grain drying prior to packaging"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Respiration consumes $\\text{O}_2$ and generates $\\text{CO}_2$ in a sealed bag, causing asphyxiation (A is directly inferable).\n2. Passage states bruchids are a major driver of $25\\%$ losses (B is directly stated).\n3. Passage explicitly notes bags control pests without synthetic fumigants (C is directly stated).\n4. Packaging wet grains in airtight hermetic bags causes fungal molding and souring; drying is still required (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_019",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Critical reasoning: underlying assumption",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Read the argument and determine the unstated assumption:\n\"Adopting precision drip irrigation across the river basin will eliminate the regional groundwater crisis, because drip irrigation reduces field-level water application by $40\\%$.\"\nWhich of the following is an underlying assumption required for this conclusion to hold?",
+    "options": {
+      "A": "Farmers will not expand the total irrigated crop acreage or switch to more water-intensive cash crops after adopting drip irrigation (Jevons paradox will not occur)",
+      "B": "Drip irrigation systems never experience emitter clogging",
+      "C": "Groundwater is the only source of water available in the entire country",
+      "D": "Rainfall will cease completely over the river basin"
+    },
+    "correct_answer": "A",
+    "solution": "The argument assumes that water saved per hectare translates to absolute regional aquifer conservation. If farmers expand acreage or switch to thirsty crops with the saved water (rebound effect / Jevons paradox), total aquifer extraction may actually increase. Thus, Assumption A is strictly essential for the argument to hold.",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_020",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Strengthening vs weakening an argument",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following statements, if true, would most seriously WEAKEN the claim that 'introducing autonomous electric tractors will immediately reduce the total carbon footprint of national agriculture'?",
+    "options": {
+      "A": "Over $80\\%$ of the national electricity grid powering the charging stations is generated from coal-fired thermal power plants",
+      "B": "Electric tractors operate with zero direct tailpipe exhaust emissions",
+      "C": "Electric motors have higher mechanical torque efficiency than diesel engines",
+      "D": "Autonomous guidance systems reduce operational field overlapping"
+    },
+    "correct_answer": "A",
+    "solution": "If the electric grid relies heavily on coal combustion, emissions from electricity generation and transmission may equal or exceed diesel emissions on a lifecycle basis, directly undermining the claim of an immediate net carbon footprint reduction.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_021",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Inferring logical conclusions from short passage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Read the passage: \"Post-harvest storage losses in pulse grains in developing tropical nations often exceed $25\\%$, driven predominantly by bruchid beetle (*Callosobruchus maculatus*) infestation and high ambient humidity. Hermetic storage bags with multi-layered impermeable polymer liners suppress beetle proliferation by naturally suffocating them through grain and insect respiration without requiring synthetic chemical fumigants.\"\nWhich of the following statements can be LOGICALLY INFERRED from the passage?",
+    "options": {
+      "A": "Hermetic bags create a modified low-oxygen, high-carbon-dioxide micro-atmosphere through metabolic respiration",
+      "B": "Bruchid beetles are an important biological factor contributing to tropical pulse storage losses",
+      "C": "Hermetic storage bags offer an eco-friendly pest control alternative that eliminates synthetic chemical fumigants",
+      "D": "Hermetic bags completely eliminate the need for proper grain drying prior to packaging"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Respiration consumes $\\text{O}_2$ and generates $\\text{CO}_2$ in a sealed bag, causing asphyxiation (A is directly inferable).\n2. Passage states bruchids are a major driver of $25\\%$ losses (B is directly stated).\n3. Passage explicitly notes bags control pests without synthetic fumigants (C is directly stated).\n4. Packaging wet grains in airtight hermetic bags causes fungal molding and souring; drying is still required (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_022",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Critical reasoning: underlying assumption",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Read the argument and determine the unstated assumption:\n\"Adopting precision drip irrigation across the river basin will eliminate the regional groundwater crisis, because drip irrigation reduces field-level water application by $40\\%$.\"\nWhich of the following is an underlying assumption required for this conclusion to hold?",
+    "options": {
+      "A": "Farmers will not expand the total irrigated crop acreage or switch to more water-intensive cash crops after adopting drip irrigation (Jevons paradox will not occur)",
+      "B": "Drip irrigation systems never experience emitter clogging",
+      "C": "Groundwater is the only source of water available in the entire country",
+      "D": "Rainfall will cease completely over the river basin"
+    },
+    "correct_answer": "A",
+    "solution": "The argument assumes that water saved per hectare translates to absolute regional aquifer conservation. If farmers expand acreage or switch to thirsty crops with the saved water (rebound effect / Jevons paradox), total aquifer extraction may actually increase. Thus, Assumption A is strictly essential for the argument to hold.",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_023",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Strengthening vs weakening an argument",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following statements, if true, would most seriously WEAKEN the claim that 'introducing autonomous electric tractors will immediately reduce the total carbon footprint of national agriculture'?",
+    "options": {
+      "A": "Over $80\\%$ of the national electricity grid powering the charging stations is generated from coal-fired thermal power plants",
+      "B": "Electric tractors operate with zero direct tailpipe exhaust emissions",
+      "C": "Electric motors have higher mechanical torque efficiency than diesel engines",
+      "D": "Autonomous guidance systems reduce operational field overlapping"
+    },
+    "correct_answer": "A",
+    "solution": "If the electric grid relies heavily on coal combustion, emissions from electricity generation and transmission may equal or exceed diesel emissions on a lifecycle basis, directly undermining the claim of an immediate net carbon footprint reduction.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_024",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Inferring logical conclusions from short passage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Read the passage: \"Post-harvest storage losses in pulse grains in developing tropical nations often exceed $25\\%$, driven predominantly by bruchid beetle (*Callosobruchus maculatus*) infestation and high ambient humidity. Hermetic storage bags with multi-layered impermeable polymer liners suppress beetle proliferation by naturally suffocating them through grain and insect respiration without requiring synthetic chemical fumigants.\"\nWhich of the following statements can be LOGICALLY INFERRED from the passage?",
+    "options": {
+      "A": "Hermetic bags create a modified low-oxygen, high-carbon-dioxide micro-atmosphere through metabolic respiration",
+      "B": "Bruchid beetles are an important biological factor contributing to tropical pulse storage losses",
+      "C": "Hermetic storage bags offer an eco-friendly pest control alternative that eliminates synthetic chemical fumigants",
+      "D": "Hermetic bags completely eliminate the need for proper grain drying prior to packaging"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Respiration consumes $\\text{O}_2$ and generates $\\text{CO}_2$ in a sealed bag, causing asphyxiation (A is directly inferable).\n2. Passage states bruchids are a major driver of $25\\%$ losses (B is directly stated).\n3. Passage explicitly notes bags control pests without synthetic fumigants (C is directly stated).\n4. Packaging wet grains in airtight hermetic bags causes fungal molding and souring; drying is still required (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_025",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Critical reasoning: underlying assumption",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Read the argument and determine the unstated assumption:\n\"Adopting precision drip irrigation across the river basin will eliminate the regional groundwater crisis, because drip irrigation reduces field-level water application by $40\\%$.\"\nWhich of the following is an underlying assumption required for this conclusion to hold?",
+    "options": {
+      "A": "Farmers will not expand the total irrigated crop acreage or switch to more water-intensive cash crops after adopting drip irrigation (Jevons paradox will not occur)",
+      "B": "Drip irrigation systems never experience emitter clogging",
+      "C": "Groundwater is the only source of water available in the entire country",
+      "D": "Rainfall will cease completely over the river basin"
+    },
+    "correct_answer": "A",
+    "solution": "The argument assumes that water saved per hectare translates to absolute regional aquifer conservation. If farmers expand acreage or switch to thirsty crops with the saved water (rebound effect / Jevons paradox), total aquifer extraction may actually increase. Thus, Assumption A is strictly essential for the argument to hold.",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_026",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Strengthening vs weakening an argument",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following statements, if true, would most seriously WEAKEN the claim that 'introducing autonomous electric tractors will immediately reduce the total carbon footprint of national agriculture'?",
+    "options": {
+      "A": "Over $80\\%$ of the national electricity grid powering the charging stations is generated from coal-fired thermal power plants",
+      "B": "Electric tractors operate with zero direct tailpipe exhaust emissions",
+      "C": "Electric motors have higher mechanical torque efficiency than diesel engines",
+      "D": "Autonomous guidance systems reduce operational field overlapping"
+    },
+    "correct_answer": "A",
+    "solution": "If the electric grid relies heavily on coal combustion, emissions from electricity generation and transmission may equal or exceed diesel emissions on a lifecycle basis, directly undermining the claim of an immediate net carbon footprint reduction.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_027",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Inferring logical conclusions from short passage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Read the passage: \"Post-harvest storage losses in pulse grains in developing tropical nations often exceed $25\\%$, driven predominantly by bruchid beetle (*Callosobruchus maculatus*) infestation and high ambient humidity. Hermetic storage bags with multi-layered impermeable polymer liners suppress beetle proliferation by naturally suffocating them through grain and insect respiration without requiring synthetic chemical fumigants.\"\nWhich of the following statements can be LOGICALLY INFERRED from the passage?",
+    "options": {
+      "A": "Hermetic bags create a modified low-oxygen, high-carbon-dioxide micro-atmosphere through metabolic respiration",
+      "B": "Bruchid beetles are an important biological factor contributing to tropical pulse storage losses",
+      "C": "Hermetic storage bags offer an eco-friendly pest control alternative that eliminates synthetic chemical fumigants",
+      "D": "Hermetic bags completely eliminate the need for proper grain drying prior to packaging"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Respiration consumes $\\text{O}_2$ and generates $\\text{CO}_2$ in a sealed bag, causing asphyxiation (A is directly inferable).\n2. Passage states bruchids are a major driver of $25\\%$ losses (B is directly stated).\n3. Passage explicitly notes bags control pests without synthetic fumigants (C is directly stated).\n4. Packaging wet grains in airtight hermetic bags causes fungal molding and souring; drying is still required (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_028",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Critical reasoning: underlying assumption",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Read the argument and determine the unstated assumption:\n\"Adopting precision drip irrigation across the river basin will eliminate the regional groundwater crisis, because drip irrigation reduces field-level water application by $40\\%$.\"\nWhich of the following is an underlying assumption required for this conclusion to hold?",
+    "options": {
+      "A": "Farmers will not expand the total irrigated crop acreage or switch to more water-intensive cash crops after adopting drip irrigation (Jevons paradox will not occur)",
+      "B": "Drip irrigation systems never experience emitter clogging",
+      "C": "Groundwater is the only source of water available in the entire country",
+      "D": "Rainfall will cease completely over the river basin"
+    },
+    "correct_answer": "A",
+    "solution": "The argument assumes that water saved per hectare translates to absolute regional aquifer conservation. If farmers expand acreage or switch to thirsty crops with the saved water (rebound effect / Jevons paradox), total aquifer extraction may actually increase. Thus, Assumption A is strictly essential for the argument to hold.",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_029",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Strengthening vs weakening an argument",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following statements, if true, would most seriously WEAKEN the claim that 'introducing autonomous electric tractors will immediately reduce the total carbon footprint of national agriculture'?",
+    "options": {
+      "A": "Over $80\\%$ of the national electricity grid powering the charging stations is generated from coal-fired thermal power plants",
+      "B": "Electric tractors operate with zero direct tailpipe exhaust emissions",
+      "C": "Electric motors have higher mechanical torque efficiency than diesel engines",
+      "D": "Autonomous guidance systems reduce operational field overlapping"
+    },
+    "correct_answer": "A",
+    "solution": "If the electric grid relies heavily on coal combustion, emissions from electricity generation and transmission may equal or exceed diesel emissions on a lifecycle basis, directly undermining the claim of an immediate net carbon footprint reduction.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_030",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Inferring logical conclusions from short passage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Read the passage: \"Post-harvest storage losses in pulse grains in developing tropical nations often exceed $25\\%$, driven predominantly by bruchid beetle (*Callosobruchus maculatus*) infestation and high ambient humidity. Hermetic storage bags with multi-layered impermeable polymer liners suppress beetle proliferation by naturally suffocating them through grain and insect respiration without requiring synthetic chemical fumigants.\"\nWhich of the following statements can be LOGICALLY INFERRED from the passage?",
+    "options": {
+      "A": "Hermetic bags create a modified low-oxygen, high-carbon-dioxide micro-atmosphere through metabolic respiration",
+      "B": "Bruchid beetles are an important biological factor contributing to tropical pulse storage losses",
+      "C": "Hermetic storage bags offer an eco-friendly pest control alternative that eliminates synthetic chemical fumigants",
+      "D": "Hermetic bags completely eliminate the need for proper grain drying prior to packaging"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Respiration consumes $\\text{O}_2$ and generates $\\text{CO}_2$ in a sealed bag, causing asphyxiation (A is directly inferable).\n2. Passage states bruchids are a major driver of $25\\%$ losses (B is directly stated).\n3. Passage explicitly notes bags control pests without synthetic fumigants (C is directly stated).\n4. Packaging wet grains in airtight hermetic bags causes fungal molding and souring; drying is still required (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_031",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Critical reasoning: underlying assumption",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Read the argument and determine the unstated assumption:\n\"Adopting precision drip irrigation across the river basin will eliminate the regional groundwater crisis, because drip irrigation reduces field-level water application by $40\\%$.\"\nWhich of the following is an underlying assumption required for this conclusion to hold?",
+    "options": {
+      "A": "Farmers will not expand the total irrigated crop acreage or switch to more water-intensive cash crops after adopting drip irrigation (Jevons paradox will not occur)",
+      "B": "Drip irrigation systems never experience emitter clogging",
+      "C": "Groundwater is the only source of water available in the entire country",
+      "D": "Rainfall will cease completely over the river basin"
+    },
+    "correct_answer": "A",
+    "solution": "The argument assumes that water saved per hectare translates to absolute regional aquifer conservation. If farmers expand acreage or switch to thirsty crops with the saved water (rebound effect / Jevons paradox), total aquifer extraction may actually increase. Thus, Assumption A is strictly essential for the argument to hold.",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_032",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Strengthening vs weakening an argument",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following statements, if true, would most seriously WEAKEN the claim that 'introducing autonomous electric tractors will immediately reduce the total carbon footprint of national agriculture'?",
+    "options": {
+      "A": "Over $80\\%$ of the national electricity grid powering the charging stations is generated from coal-fired thermal power plants",
+      "B": "Electric tractors operate with zero direct tailpipe exhaust emissions",
+      "C": "Electric motors have higher mechanical torque efficiency than diesel engines",
+      "D": "Autonomous guidance systems reduce operational field overlapping"
+    },
+    "correct_answer": "A",
+    "solution": "If the electric grid relies heavily on coal combustion, emissions from electricity generation and transmission may equal or exceed diesel emissions on a lifecycle basis, directly undermining the claim of an immediate net carbon footprint reduction.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_033",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Inferring logical conclusions from short passage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Read the passage: \"Post-harvest storage losses in pulse grains in developing tropical nations often exceed $25\\%$, driven predominantly by bruchid beetle (*Callosobruchus maculatus*) infestation and high ambient humidity. Hermetic storage bags with multi-layered impermeable polymer liners suppress beetle proliferation by naturally suffocating them through grain and insect respiration without requiring synthetic chemical fumigants.\"\nWhich of the following statements can be LOGICALLY INFERRED from the passage?",
+    "options": {
+      "A": "Hermetic bags create a modified low-oxygen, high-carbon-dioxide micro-atmosphere through metabolic respiration",
+      "B": "Bruchid beetles are an important biological factor contributing to tropical pulse storage losses",
+      "C": "Hermetic storage bags offer an eco-friendly pest control alternative that eliminates synthetic chemical fumigants",
+      "D": "Hermetic bags completely eliminate the need for proper grain drying prior to packaging"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Respiration consumes $\\text{O}_2$ and generates $\\text{CO}_2$ in a sealed bag, causing asphyxiation (A is directly inferable).\n2. Passage states bruchids are a major driver of $25\\%$ losses (B is directly stated).\n3. Passage explicitly notes bags control pests without synthetic fumigants (C is directly stated).\n4. Packaging wet grains in airtight hermetic bags causes fungal molding and souring; drying is still required (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_034",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Critical reasoning: underlying assumption",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Read the argument and determine the unstated assumption:\n\"Adopting precision drip irrigation across the river basin will eliminate the regional groundwater crisis, because drip irrigation reduces field-level water application by $40\\%$.\"\nWhich of the following is an underlying assumption required for this conclusion to hold?",
+    "options": {
+      "A": "Farmers will not expand the total irrigated crop acreage or switch to more water-intensive cash crops after adopting drip irrigation (Jevons paradox will not occur)",
+      "B": "Drip irrigation systems never experience emitter clogging",
+      "C": "Groundwater is the only source of water available in the entire country",
+      "D": "Rainfall will cease completely over the river basin"
+    },
+    "correct_answer": "A",
+    "solution": "The argument assumes that water saved per hectare translates to absolute regional aquifer conservation. If farmers expand acreage or switch to thirsty crops with the saved water (rebound effect / Jevons paradox), total aquifer extraction may actually increase. Thus, Assumption A is strictly essential for the argument to hold.",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_035",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Strengthening vs weakening an argument",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following statements, if true, would most seriously WEAKEN the claim that 'introducing autonomous electric tractors will immediately reduce the total carbon footprint of national agriculture'?",
+    "options": {
+      "A": "Over $80\\%$ of the national electricity grid powering the charging stations is generated from coal-fired thermal power plants",
+      "B": "Electric tractors operate with zero direct tailpipe exhaust emissions",
+      "C": "Electric motors have higher mechanical torque efficiency than diesel engines",
+      "D": "Autonomous guidance systems reduce operational field overlapping"
+    },
+    "correct_answer": "A",
+    "solution": "If the electric grid relies heavily on coal combustion, emissions from electricity generation and transmission may equal or exceed diesel emissions on a lifecycle basis, directly undermining the claim of an immediate net carbon footprint reduction.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_036",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Inferring logical conclusions from short passage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Read the passage: \"Post-harvest storage losses in pulse grains in developing tropical nations often exceed $25\\%$, driven predominantly by bruchid beetle (*Callosobruchus maculatus*) infestation and high ambient humidity. Hermetic storage bags with multi-layered impermeable polymer liners suppress beetle proliferation by naturally suffocating them through grain and insect respiration without requiring synthetic chemical fumigants.\"\nWhich of the following statements can be LOGICALLY INFERRED from the passage?",
+    "options": {
+      "A": "Hermetic bags create a modified low-oxygen, high-carbon-dioxide micro-atmosphere through metabolic respiration",
+      "B": "Bruchid beetles are an important biological factor contributing to tropical pulse storage losses",
+      "C": "Hermetic storage bags offer an eco-friendly pest control alternative that eliminates synthetic chemical fumigants",
+      "D": "Hermetic bags completely eliminate the need for proper grain drying prior to packaging"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Respiration consumes $\\text{O}_2$ and generates $\\text{CO}_2$ in a sealed bag, causing asphyxiation (A is directly inferable).\n2. Passage states bruchids are a major driver of $25\\%$ losses (B is directly stated).\n3. Passage explicitly notes bags control pests without synthetic fumigants (C is directly stated).\n4. Packaging wet grains in airtight hermetic bags causes fungal molding and souring; drying is still required (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_037",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Critical reasoning: underlying assumption",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Read the argument and determine the unstated assumption:\n\"Adopting precision drip irrigation across the river basin will eliminate the regional groundwater crisis, because drip irrigation reduces field-level water application by $40\\%$.\"\nWhich of the following is an underlying assumption required for this conclusion to hold?",
+    "options": {
+      "A": "Farmers will not expand the total irrigated crop acreage or switch to more water-intensive cash crops after adopting drip irrigation (Jevons paradox will not occur)",
+      "B": "Drip irrigation systems never experience emitter clogging",
+      "C": "Groundwater is the only source of water available in the entire country",
+      "D": "Rainfall will cease completely over the river basin"
+    },
+    "correct_answer": "A",
+    "solution": "The argument assumes that water saved per hectare translates to absolute regional aquifer conservation. If farmers expand acreage or switch to thirsty crops with the saved water (rebound effect / Jevons paradox), total aquifer extraction may actually increase. Thus, Assumption A is strictly essential for the argument to hold.",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_038",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Strengthening vs weakening an argument",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following statements, if true, would most seriously WEAKEN the claim that 'introducing autonomous electric tractors will immediately reduce the total carbon footprint of national agriculture'?",
+    "options": {
+      "A": "Over $80\\%$ of the national electricity grid powering the charging stations is generated from coal-fired thermal power plants",
+      "B": "Electric tractors operate with zero direct tailpipe exhaust emissions",
+      "C": "Electric motors have higher mechanical torque efficiency than diesel engines",
+      "D": "Autonomous guidance systems reduce operational field overlapping"
+    },
+    "correct_answer": "A",
+    "solution": "If the electric grid relies heavily on coal combustion, emissions from electricity generation and transmission may equal or exceed diesel emissions on a lifecycle basis, directly undermining the claim of an immediate net carbon footprint reduction.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_039",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Inferring logical conclusions from short passage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Read the passage: \"Post-harvest storage losses in pulse grains in developing tropical nations often exceed $25\\%$, driven predominantly by bruchid beetle (*Callosobruchus maculatus*) infestation and high ambient humidity. Hermetic storage bags with multi-layered impermeable polymer liners suppress beetle proliferation by naturally suffocating them through grain and insect respiration without requiring synthetic chemical fumigants.\"\nWhich of the following statements can be LOGICALLY INFERRED from the passage?",
+    "options": {
+      "A": "Hermetic bags create a modified low-oxygen, high-carbon-dioxide micro-atmosphere through metabolic respiration",
+      "B": "Bruchid beetles are an important biological factor contributing to tropical pulse storage losses",
+      "C": "Hermetic storage bags offer an eco-friendly pest control alternative that eliminates synthetic chemical fumigants",
+      "D": "Hermetic bags completely eliminate the need for proper grain drying prior to packaging"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Respiration consumes $\\text{O}_2$ and generates $\\text{CO}_2$ in a sealed bag, causing asphyxiation (A is directly inferable).\n2. Passage states bruchids are a major driver of $25\\%$ losses (B is directly stated).\n3. Passage explicitly notes bags control pests without synthetic fumigants (C is directly stated).\n4. Packaging wet grains in airtight hermetic bags causes fungal molding and souring; drying is still required (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_040",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Critical reasoning: underlying assumption",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Read the argument and determine the unstated assumption:\n\"Adopting precision drip irrigation across the river basin will eliminate the regional groundwater crisis, because drip irrigation reduces field-level water application by $40\\%$.\"\nWhich of the following is an underlying assumption required for this conclusion to hold?",
+    "options": {
+      "A": "Farmers will not expand the total irrigated crop acreage or switch to more water-intensive cash crops after adopting drip irrigation (Jevons paradox will not occur)",
+      "B": "Drip irrigation systems never experience emitter clogging",
+      "C": "Groundwater is the only source of water available in the entire country",
+      "D": "Rainfall will cease completely over the river basin"
+    },
+    "correct_answer": "A",
+    "solution": "The argument assumes that water saved per hectare translates to absolute regional aquifer conservation. If farmers expand acreage or switch to thirsty crops with the saved water (rebound effect / Jevons paradox), total aquifer extraction may actually increase. Thus, Assumption A is strictly essential for the argument to hold.",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_041",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Strengthening vs weakening an argument",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following statements, if true, would most seriously WEAKEN the claim that 'introducing autonomous electric tractors will immediately reduce the total carbon footprint of national agriculture'?",
+    "options": {
+      "A": "Over $80\\%$ of the national electricity grid powering the charging stations is generated from coal-fired thermal power plants",
+      "B": "Electric tractors operate with zero direct tailpipe exhaust emissions",
+      "C": "Electric motors have higher mechanical torque efficiency than diesel engines",
+      "D": "Autonomous guidance systems reduce operational field overlapping"
+    },
+    "correct_answer": "A",
+    "solution": "If the electric grid relies heavily on coal combustion, emissions from electricity generation and transmission may equal or exceed diesel emissions on a lifecycle basis, directly undermining the claim of an immediate net carbon footprint reduction.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_042",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Inferring logical conclusions from short passage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Read the passage: \"Post-harvest storage losses in pulse grains in developing tropical nations often exceed $25\\%$, driven predominantly by bruchid beetle (*Callosobruchus maculatus*) infestation and high ambient humidity. Hermetic storage bags with multi-layered impermeable polymer liners suppress beetle proliferation by naturally suffocating them through grain and insect respiration without requiring synthetic chemical fumigants.\"\nWhich of the following statements can be LOGICALLY INFERRED from the passage?",
+    "options": {
+      "A": "Hermetic bags create a modified low-oxygen, high-carbon-dioxide micro-atmosphere through metabolic respiration",
+      "B": "Bruchid beetles are an important biological factor contributing to tropical pulse storage losses",
+      "C": "Hermetic storage bags offer an eco-friendly pest control alternative that eliminates synthetic chemical fumigants",
+      "D": "Hermetic bags completely eliminate the need for proper grain drying prior to packaging"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Respiration consumes $\\text{O}_2$ and generates $\\text{CO}_2$ in a sealed bag, causing asphyxiation (A is directly inferable).\n2. Passage states bruchids are a major driver of $25\\%$ losses (B is directly stated).\n3. Passage explicitly notes bags control pests without synthetic fumigants (C is directly stated).\n4. Packaging wet grains in airtight hermetic bags causes fungal molding and souring; drying is still required (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_043",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Critical reasoning: underlying assumption",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Read the argument and determine the unstated assumption:\n\"Adopting precision drip irrigation across the river basin will eliminate the regional groundwater crisis, because drip irrigation reduces field-level water application by $40\\%$.\"\nWhich of the following is an underlying assumption required for this conclusion to hold?",
+    "options": {
+      "A": "Farmers will not expand the total irrigated crop acreage or switch to more water-intensive cash crops after adopting drip irrigation (Jevons paradox will not occur)",
+      "B": "Drip irrigation systems never experience emitter clogging",
+      "C": "Groundwater is the only source of water available in the entire country",
+      "D": "Rainfall will cease completely over the river basin"
+    },
+    "correct_answer": "A",
+    "solution": "The argument assumes that water saved per hectare translates to absolute regional aquifer conservation. If farmers expand acreage or switch to thirsty crops with the saved water (rebound effect / Jevons paradox), total aquifer extraction may actually increase. Thus, Assumption A is strictly essential for the argument to hold.",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_044",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Strengthening vs weakening an argument",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following statements, if true, would most seriously WEAKEN the claim that 'introducing autonomous electric tractors will immediately reduce the total carbon footprint of national agriculture'?",
+    "options": {
+      "A": "Over $80\\%$ of the national electricity grid powering the charging stations is generated from coal-fired thermal power plants",
+      "B": "Electric tractors operate with zero direct tailpipe exhaust emissions",
+      "C": "Electric motors have higher mechanical torque efficiency than diesel engines",
+      "D": "Autonomous guidance systems reduce operational field overlapping"
+    },
+    "correct_answer": "A",
+    "solution": "If the electric grid relies heavily on coal combustion, emissions from electricity generation and transmission may equal or exceed diesel emissions on a lifecycle basis, directly undermining the claim of an immediate net carbon footprint reduction.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_045",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Inferring logical conclusions from short passage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Read the passage: \"Post-harvest storage losses in pulse grains in developing tropical nations often exceed $25\\%$, driven predominantly by bruchid beetle (*Callosobruchus maculatus*) infestation and high ambient humidity. Hermetic storage bags with multi-layered impermeable polymer liners suppress beetle proliferation by naturally suffocating them through grain and insect respiration without requiring synthetic chemical fumigants.\"\nWhich of the following statements can be LOGICALLY INFERRED from the passage?",
+    "options": {
+      "A": "Hermetic bags create a modified low-oxygen, high-carbon-dioxide micro-atmosphere through metabolic respiration",
+      "B": "Bruchid beetles are an important biological factor contributing to tropical pulse storage losses",
+      "C": "Hermetic storage bags offer an eco-friendly pest control alternative that eliminates synthetic chemical fumigants",
+      "D": "Hermetic bags completely eliminate the need for proper grain drying prior to packaging"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Respiration consumes $\\text{O}_2$ and generates $\\text{CO}_2$ in a sealed bag, causing asphyxiation (A is directly inferable).\n2. Passage states bruchids are a major driver of $25\\%$ losses (B is directly stated).\n3. Passage explicitly notes bags control pests without synthetic fumigants (C is directly stated).\n4. Packaging wet grains in airtight hermetic bags causes fungal molding and souring; drying is still required (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_046",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Critical reasoning: underlying assumption",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Read the argument and determine the unstated assumption:\n\"Adopting precision drip irrigation across the river basin will eliminate the regional groundwater crisis, because drip irrigation reduces field-level water application by $40\\%$.\"\nWhich of the following is an underlying assumption required for this conclusion to hold?",
+    "options": {
+      "A": "Farmers will not expand the total irrigated crop acreage or switch to more water-intensive cash crops after adopting drip irrigation (Jevons paradox will not occur)",
+      "B": "Drip irrigation systems never experience emitter clogging",
+      "C": "Groundwater is the only source of water available in the entire country",
+      "D": "Rainfall will cease completely over the river basin"
+    },
+    "correct_answer": "A",
+    "solution": "The argument assumes that water saved per hectare translates to absolute regional aquifer conservation. If farmers expand acreage or switch to thirsty crops with the saved water (rebound effect / Jevons paradox), total aquifer extraction may actually increase. Thus, Assumption A is strictly essential for the argument to hold.",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_047",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Strengthening vs weakening an argument",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following statements, if true, would most seriously WEAKEN the claim that 'introducing autonomous electric tractors will immediately reduce the total carbon footprint of national agriculture'?",
+    "options": {
+      "A": "Over $80\\%$ of the national electricity grid powering the charging stations is generated from coal-fired thermal power plants",
+      "B": "Electric tractors operate with zero direct tailpipe exhaust emissions",
+      "C": "Electric motors have higher mechanical torque efficiency than diesel engines",
+      "D": "Autonomous guidance systems reduce operational field overlapping"
+    },
+    "correct_answer": "A",
+    "solution": "If the electric grid relies heavily on coal combustion, emissions from electricity generation and transmission may equal or exceed diesel emissions on a lifecycle basis, directly undermining the claim of an immediate net carbon footprint reduction.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_048",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Inferring logical conclusions from short passage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Read the passage: \"Post-harvest storage losses in pulse grains in developing tropical nations often exceed $25\\%$, driven predominantly by bruchid beetle (*Callosobruchus maculatus*) infestation and high ambient humidity. Hermetic storage bags with multi-layered impermeable polymer liners suppress beetle proliferation by naturally suffocating them through grain and insect respiration without requiring synthetic chemical fumigants.\"\nWhich of the following statements can be LOGICALLY INFERRED from the passage?",
+    "options": {
+      "A": "Hermetic bags create a modified low-oxygen, high-carbon-dioxide micro-atmosphere through metabolic respiration",
+      "B": "Bruchid beetles are an important biological factor contributing to tropical pulse storage losses",
+      "C": "Hermetic storage bags offer an eco-friendly pest control alternative that eliminates synthetic chemical fumigants",
+      "D": "Hermetic bags completely eliminate the need for proper grain drying prior to packaging"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Respiration consumes $\\text{O}_2$ and generates $\\text{CO}_2$ in a sealed bag, causing asphyxiation (A is directly inferable).\n2. Passage states bruchids are a major driver of $25\\%$ losses (B is directly stated).\n3. Passage explicitly notes bags control pests without synthetic fumigants (C is directly stated).\n4. Packaging wet grains in airtight hermetic bags causes fungal molding and souring; drying is still required (D is false).",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_049",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Critical reasoning: underlying assumption",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Read the argument and determine the unstated assumption:\n\"Adopting precision drip irrigation across the river basin will eliminate the regional groundwater crisis, because drip irrigation reduces field-level water application by $40\\%$.\"\nWhich of the following is an underlying assumption required for this conclusion to hold?",
+    "options": {
+      "A": "Farmers will not expand the total irrigated crop acreage or switch to more water-intensive cash crops after adopting drip irrigation (Jevons paradox will not occur)",
+      "B": "Drip irrigation systems never experience emitter clogging",
+      "C": "Groundwater is the only source of water available in the entire country",
+      "D": "Rainfall will cease completely over the river basin"
+    },
+    "correct_answer": "A",
+    "solution": "The argument assumes that water saved per hectare translates to absolute regional aquifer conservation. If farmers expand acreage or switch to thirsty crops with the saved water (rebound effect / Jevons paradox), total aquifer extraction may actually increase. Thus, Assumption A is strictly essential for the argument to hold.",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_EXP_GA_CRG_050",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal: Critical Reasoning & Reading Comprehension",
+    "subtopic": "Strengthening vs weakening an argument",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following statements, if true, would most seriously WEAKEN the claim that 'introducing autonomous electric tractors will immediately reduce the total carbon footprint of national agriculture'?",
+    "options": {
+      "A": "Over $80\\%$ of the national electricity grid powering the charging stations is generated from coal-fired thermal power plants",
+      "B": "Electric tractors operate with zero direct tailpipe exhaust emissions",
+      "C": "Electric motors have higher mechanical torque efficiency than diesel engines",
+      "D": "Autonomous guidance systems reduce operational field overlapping"
+    },
+    "correct_answer": "A",
+    "solution": "If the electric grid relies heavily on coal combustion, emissions from electricity generation and transmission may equal or exceed diesel emissions on a lifecycle basis, directly undermining the claim of an immediate net carbon footprint reduction.",
+    "difficulty": "Easy",
+    "source": "GATE General Aptitude (Official Standard)"
+  },
+  {
+    "id": "QB_SUB_GA_RC_001",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal Aptitude",
+    "subtopic": "Reading Comprehension",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Read the passage and answer the question:\n'Precision agriculture relies on spatio-temporal data collected via remote sensing, IoT sensors, and yield monitors to optimize resource inputs like water, fertilizers, and pesticides. While this data-driven paradigm substantially cuts input wastage and minimizes environmental leaching, high upfront capital investment and the digital literacy divide among smallholder farmers remain formidable impediments to its widespread adoption across the Global South.'\n\nAccording to the passage, the primary barrier to the widespread adoption of precision agriculture in the Global South is:",
+    "solution": "The passage explicitly mentions 'high upfront capital investment and the digital literacy divide among smallholder farmers remain formidable impediments to its widespread adoption across the Global South'. This maps directly to option B.",
+    "difficulty": "Easy",
+    "source": "Official GATE General Aptitude (Verbal Ability)",
+    "options": {
+      "A": "Depletion of groundwater and soil salinization",
+      "B": "High capital costs and lack of technical familiarity among smallholders",
+      "C": "Excessive yields leading to market collapse",
+      "D": "Total absence of satellite communication in rural zones"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "id": "QB_SUB_GA_RC_002",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal Aptitude",
+    "subtopic": "Reading Comprehension",
+    "type": "MCQ",
+    "marks": 2,
+    "negative_marks": 0.67,
+    "question": "Read the passage:\n'Soil conservation is not merely an engineering intervention involving terraces and check dams; it is fundamentally an ecological safeguard. When topsoil is lost, the microbial biome and organic carbon reserves that took millennia to accumulate are irrevocably depleted, diminishing both primary productivity and climate resilience.'\n\nWhich of the following inferences is most directly supported by the passage?",
+    "solution": "The author emphasizes that soil conservation is 'not merely an engineering intervention... it is fundamentally an ecological safeguard' and notes that topsoil loss irrevocably depletes microbial and carbon reserves that took millennia to form, implying mechanical measures alone cannot replace lost biological health.",
+    "difficulty": "Moderate",
+    "source": "High School English Grammar and Composition (Wren & Martin)",
+    "options": {
+      "A": "Mechanical soil conservation structures alone are insufficient to compensate for lost ecological biome",
+      "B": "Terraces and check dams accelerate the depletion of microbial diversity",
+      "C": "Loss of topsoil can be completely recovered within a crop growing season",
+      "D": "Climate change is independent of soil organic carbon reserves"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_GA_RC_003",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal Aptitude",
+    "subtopic": "Reading Comprehension",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Read the excerpt:\n'Renewable energy integration in rural agro-ecosystems exhibits dual benefits: solar-powered micro-irrigation reduces dependence on fossil fuels and unstable grid power, while simultaneously enabling decentralized groundwater management when coupled with volumetric tariff structures.'\n\nWhich of the following statements are supported by the excerpt?",
+    "solution": "Options A, B, and D are directly stated in the text. Option C contradicts the passage, which notes that volumetric tariffs help manage groundwater sustainably.",
+    "difficulty": "Moderate",
+    "source": "GATE General Aptitude (Verbal Reasoning)",
+    "options": {
+      "A": "Solar-powered irrigation reduces reliance on fossil fuel and grid infrastructure",
+      "B": "Decentralized groundwater management is promoted when solar pumping is combined with volumetric tariffs",
+      "C": "Solar micro-irrigation automatically depletes groundwater under all pricing models",
+      "D": "Renewable agro-technologies provide multiple synergistic advantages"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "D"
+    ]
+  },
+  {
+    "id": "QB_SUB_GA_RC_004",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal Aptitude",
+    "subtopic": "Reading Comprehension",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Read the sentence:\n'Although deep learning algorithms exhibit unmatched accuracy in classifying leaf blight symptoms, their opaque \"black-box\" decision architecture impedes trust among agricultural extension specialists.'\n\nThe author's primary concern regarding deep learning models in agriculture is their:",
+    "solution": "'Opaque black-box decision architecture' refers directly to the lack of interpretability and transparency in neural network decisions.",
+    "difficulty": "Easy",
+    "source": "GATE Aptitude Syllabus Guide",
+    "options": {
+      "A": "Inability to process high-resolution images",
+      "B": "Lack of interpretability and transparency in decision-making",
+      "C": "High power consumption in mobile phones",
+      "D": "Lower accuracy than visual scouting by eye"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "id": "QB_SUB_GA_RC_005",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal Aptitude",
+    "subtopic": "Reading Comprehension",
+    "type": "MCQ",
+    "marks": 2,
+    "negative_marks": 0.67,
+    "question": "Read the passage:\n'Photosynthetic efficiency in C3 crops like rice and wheat is inherently constrained by photorespiration catalyzed by the enzyme RuBisCO in the presence of oxygen. Engineering C4-like biochemical carbon concentrating mechanisms into C3 staples represents a promising frontier to enhance grain yield by over 30% under elevated atmospheric temperatures.'\n\nWhat can be logically deduced from the passage?",
+    "solution": "The text states that photosynthetic efficiency is constrained by photorespiration catalyzed by RuBisCO in the presence of oxygen, meaning photorespiration lowers net carbon fixation and yield.",
+    "difficulty": "Moderate",
+    "source": "Scientific American / GATE Verbal",
+    "options": {
+      "A": "RuBisCO enzyme operates with zero oxygenase activity in C3 plants",
+      "B": "Photorespiration lowers the net photosynthetic yield in C3 crops",
+      "C": "C3 crops have higher thermal tolerance than C4 crops naturally",
+      "D": "Elevated atmospheric temperatures eliminate the need for RuBisCO"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "id": "QB_SUB_GA_RC_006",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal Aptitude",
+    "subtopic": "Reading Comprehension",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Read the passage:\n'Post-harvest grain losses in developing nations frequently exceed 25%, driven by inadequate hermetic storage, humid ambient microclimates, and insect infestation. The deployment of multi-layer Purdue Improved Crop Storage (PICS) bags creates a hypoxic environment that effectively halts insect respiration and mold proliferation without chemical fumigants.'\n\nWhich of the following advantages of PICS bags are highlighted?",
+    "solution": "Options A, B, and C are directly mentioned. Option D is incorrect; PICS bags preserve moisture but do not serve as thermal grain dryers.",
+    "difficulty": "Moderate",
+    "source": "GATE Verbal Aptitude",
+    "options": {
+      "A": "Generation of an oxygen-depleted (hypoxic) internal atmosphere",
+      "B": "Cessation of insect respiration and mold development",
+      "C": "Elimination of the requirement for synthetic chemical fumigants",
+      "D": "Reduction of grain moisture from 25% down to 5% instantly"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_GA_RC_007",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal Aptitude",
+    "subtopic": "Reading Comprehension",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Choose the word that is most nearly opposite in meaning to the word 'PERISHABLE' as used in the phrase 'perishable horticultural commodities':",
+    "solution": "'Perishable' means subject to rapid decay or spoilage. Its antonym is 'durable' or non-perishable.",
+    "difficulty": "Easy",
+    "source": "Word Power Made Easy (Norman Lewis)",
+    "options": {
+      "A": "Ephemeral",
+      "B": "Durable",
+      "C": "Fragile",
+      "D": "Decayable"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "id": "QB_SUB_GA_RC_008",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal Aptitude",
+    "subtopic": "Reading Comprehension",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Select the most appropriate synonym for the capitalized word:\n'The introduction of zero-till farming brought about SUBSTANTIAL fuel savings across the Indo-Gangetic plains.'",
+    "solution": "'Substantial' means large in amount, importance, or value; hence 'significant' is the exact synonym.",
+    "difficulty": "Easy",
+    "source": "Word Power Made Easy (Norman Lewis)",
+    "options": {
+      "A": "Negligible",
+      "B": "Significant",
+      "C": "Marginal",
+      "D": "Sporadic"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "id": "QB_SUB_GA_CR_001",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal Aptitude",
+    "subtopic": "Critical Reasoning",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Consider the following statement and assumptions:\nStatement: 'Farmers who shift to drip irrigation will conserve at least 40% of their irrigation water and achieve higher fertilizer use efficiency.'\nAssumptions:\nI. Drip irrigation delivers water directly to the crop root zone with minimal evaporative and percolation losses.\nII. Flood irrigation is completely banned across the entire country.\n\nWhich of the assumptions is/are implicit in the statement?",
+    "solution": "Assumption I explains why drip irrigation conserves water and enhances efficiency. Assumption II is extreme and irrelevant to the comparative benefit of drip irrigation.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal & Non-Verbal Reasoning (R.S. Aggarwal)",
+    "options": {
+      "A": "Only assumption I is implicit",
+      "B": "Only assumption II is implicit",
+      "C": "Both I and II are implicit",
+      "D": "Neither I nor II is implicit"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_GA_CR_002",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal Aptitude",
+    "subtopic": "Critical Reasoning",
+    "type": "MCQ",
+    "marks": 2,
+    "negative_marks": 0.67,
+    "question": "Argument: 'Field experiments show that wheat crops treated with mycorrhizal bio-fertilizers require 25% less phosphatic rock fertilizer to achieve identical grain yield. Therefore, chemical fertilizer industries will go bankrupt within three years.'\n\nWhich of the following flaws most severely undermines the conclusion?",
+    "solution": "The leap from a 25% reduction in phosphatic application in wheat to total bankruptcy of all chemical fertilizer companies assumes that companies only produce P fertilizer, that all crops instantly adopt it, and that no other revenue streams exist.",
+    "difficulty": "Moderate",
+    "source": "Critical Reasoning for Competitive Exams (GMAT/GATE)",
+    "options": {
+      "A": "It assumes that phosphatic fertilizers constitute the sole revenue stream of chemical fertilizer manufacturing units",
+      "B": "It ignores the fact that phosphorus is an essential plant macronutrient",
+      "C": "It overlooks that global wheat acreage accounts for all agricultural land on Earth",
+      "D": "It assumes bio-fertilizers cannot be produced industrially"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_GA_CR_003",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal Aptitude",
+    "subtopic": "Critical Reasoning",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Statement: 'All agricultural drones equipped with multispectral cameras can detect vegetative water stress. No tractor without GPS can perform autonomous auto-guidance.'\n\nWhich of the following deductions are logically valid?",
+    "solution": "Statements give: Drone with multispectral -> can detect stress (contrapositive: cannot detect -> lacks sensor); Tractor without GPS -> cannot auto-guide (contrapositive: can auto-guide -> has GPS). Options A and B are valid contrapositives.",
+    "difficulty": "Moderate",
+    "source": "Verbal Reasoning (R.S. Aggarwal)",
+    "options": {
+      "A": "A drone that cannot detect vegetative water stress lacks a functioning multispectral camera (or calibrated sensor)",
+      "B": "Any tractor executing autonomous auto-guidance must be equipped with GPS",
+      "C": "All tractors equipped with GPS can detect water stress",
+      "D": "Drones with thermal sensors are banned from farm use"
+    },
+    "correct_answer": [
+      "A",
+      "B"
+    ]
+  },
+  {
+    "id": "QB_SUB_GA_CR_004",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal Aptitude",
+    "subtopic": "Critical Reasoning",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Identify the conclusion of the following argument:\n'Heavy tractor wheel traffic causes subsurface hardpan formation. Hardpans severely impede root elongation and reduce infiltration. Therefore, farmers must practice subsoiling or adopt controlled traffic farming.'",
+    "solution": "The concluding clause introduced by 'Therefore' is the ultimate recommendation and conclusion of the argument.",
+    "difficulty": "Easy",
+    "source": "Logical Reasoning for GATE",
+    "options": {
+      "A": "Tractor wheels are manufactured from heavy rubber compounds",
+      "B": "Subsurface hardpans impede root growth",
+      "C": "Farmers must practice subsoiling or adopt controlled traffic farming",
+      "D": "Soil infiltration is independent of tractor traffic"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "id": "QB_SUB_GA_CR_005",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal Aptitude",
+    "subtopic": "Critical Reasoning",
+    "type": "MCQ",
+    "marks": 2,
+    "negative_marks": 0.67,
+    "question": "A research report concludes: 'Cities that promoted urban rooftop hydroponic farming saw an average 15% reduction in municipal green waste within two years.'\n\nWhich of the following, if true, most strengthens the argument that rooftop hydroponics caused the reduction?",
+    "solution": "Option A provides a direct causal mechanism linking urban hydroponics to the diversion and reduction of municipal organic green waste.",
+    "difficulty": "Moderate",
+    "source": "GMAT / GATE Analytical and Critical Reasoning",
+    "options": {
+      "A": "Hydroponic growers actively divert kitchen compost and organic green waste into biological nutrient digestors",
+      "B": "During the same two-year period, city residents ate out at restaurants twice as often",
+      "C": "Hydroponic crops use non-recirculating rockwool slabs that cannot be recycled",
+      "D": "Municipal waste collection fees doubled over the same period"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_GA_CR_006",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal Aptitude",
+    "subtopic": "Critical Reasoning",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which of the following is logically equivalent to the proposition: 'Unless soil moisture is adequate, seed germination will not take place'?",
+    "solution": "'Unless P, not Q' is equivalent to 'If not P, then not Q', whose contrapositive is 'If Q, then P'. Thus, 'If germination occurs, soil moisture was adequate'.",
+    "difficulty": "Easy",
+    "source": "Deductive Logic and Set Theory",
+    "options": {
+      "A": "If seed germination takes place, soil moisture must be adequate",
+      "B": "If soil moisture is adequate, seed germination is guaranteed to take place",
+      "C": "Seed germination takes place whenever temperature is high",
+      "D": "Adequate soil moisture prevents seed germination"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_GA_CR_007",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal Aptitude",
+    "subtopic": "Critical Reasoning",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Argument: 'Replacing traditional puddling with direct-seeded rice (DSR) reduces water requirement by 30% and labor by 50%. However, DSR fields suffer from severe weed competition during early vegetative stages.'\n\nWhich of the following policies would effectively mitigate the drawback of DSR without forfeiting its benefits?",
+    "solution": "Options A and C address weed suppression and uniform crop establishment without restoring high water consumption. Option B and D destroy the water and labor savings of DSR.",
+    "difficulty": "Moderate",
+    "source": "Agronomy Principles and Practices",
+    "options": {
+      "A": "Developing integrated weed management protocols using pre-emergence herbicides and mechanical cono-weeders",
+      "B": "Flooding the DSR field under 20 cm continuous standing water for the entire season",
+      "C": "Adopting laser land leveling to ensure uniform shallow seed placement and moisture distribution",
+      "D": "Reverting completely to manual transplanting with 30 puddling passes"
+    },
+    "correct_answer": [
+      "A",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_GA_CR_008",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal Aptitude",
+    "subtopic": "Critical Reasoning",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Statement: 'Should stubble burning by farmers be made a strictly punishable criminal offense?'\nArguments:\nI. Yes, atmospheric particulate pollution (PM 2.5) during harvest causes severe respiratory illnesses in millions of citizens.\nII. No, smallholder farmers lack affordable mechanization alternatives (like Happy Seeders) to manage paddy straw within the short sowing window for wheat.\n\nWhich of the arguments is/are strong?",
+    "solution": "Argument I presents a compelling public health issue. Argument II raises a crucial socio-economic and logistical bottleneck. Both represent valid, strong perspectives that policymakers must resolve simultaneously.",
+    "difficulty": "Easy",
+    "source": "A Modern Approach to Verbal Reasoning (R.S. Aggarwal)",
+    "options": {
+      "A": "Only argument I is strong",
+      "B": "Only argument II is strong",
+      "C": "Both argument I and argument II are strong",
+      "D": "Neither I nor II is strong"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "id": "QB_SUB_GA_CR_009",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal Aptitude",
+    "subtopic": "Critical Reasoning",
+    "type": "MCQ",
+    "marks": 2,
+    "negative_marks": 0.67,
+    "question": "Consider the assertion: 'Solar refrigeration systems are ideally suited for perishable cold chains in tropical developing countries.'\nReason: 'Peak solar irradiance coincides precisely with the diurnal periods of maximum thermal refrigeration loads.'\n\nSelect the correct option:",
+    "solution": "The thermodynamic synergy between solar availability and peak ambient cooling demand is the primary technical rationale for solar cold storage in the tropics.",
+    "difficulty": "Moderate",
+    "source": "Renewable Energy Engineering (S.P. Sukhatme)",
+    "options": {
+      "A": "Both Assertion and Reason are true, and the Reason is the correct explanation of the Assertion",
+      "B": "Both Assertion and Reason are true, but Reason is NOT the correct explanation of the Assertion",
+      "C": "Assertion is true, but Reason is false",
+      "D": "Assertion is false, but Reason is true"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_GA_CR_010",
+    "section": "Section 8: General Aptitude",
+    "topic": "Verbal Aptitude",
+    "subtopic": "Critical Reasoning",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In a logical deduction puzzle:\nPremise 1: All combine harvesters are self-propelled machines.\nPremise 2: Some self-propelled machines are equipped with telematics.\n\nWhich of the following conclusions can be definitively deduced with certainty?",
+    "solution": "Premise 1 ('All A are B') implies 'Some B are A' (Option D). Premise 2 ('Some B are C') is symmetrical and implies 'Some C are B' (Option B). Relationships between A and C cannot be definitively asserted.",
+    "difficulty": "Moderate",
+    "source": "Formal Logic & Syllogisms",
+    "options": {
+      "A": "All machines equipped with telematics are combine harvesters",
+      "B": "Some machines with telematics are self-propelled",
+      "C": "No combine harvester can have telematics",
+      "D": "Some self-propelled machines are combine harvesters"
+    },
+    "correct_answer": [
+      "B",
+      "D"
+    ]
   }
 ];

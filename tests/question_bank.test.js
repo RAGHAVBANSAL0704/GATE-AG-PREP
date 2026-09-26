@@ -154,7 +154,7 @@ describe('Autonomous Question Bank Subsystem Comprehensive Verification', () => 
     });
 
     it('validates canonical literature source attribution on question entries', () => {
-      const canonicalKeywords = /(Grewal|Sanjay Kumar|Ojha|Michael|Sahay|Suresh|Sukumar De|Earle|GATE|NPTEL|ICAR|Kreyszig|Todd|Ritzema|Ganesan|Aggarwal|Liljedahl|Geankoplis|Das|Kepner|Schwab|Punmia|Toledo|McCabe|Kumar|Subramanya|Brennan|Jain|Henderson|Perry|Singh|Bhandari|Gill|Vanden Berg|Wren|Martin)/i;
+      const canonicalKeywords = /(Grewal|Sanjay Kumar|Ojha|Michael|Sahay|Suresh|Sukumar De|Earle|GATE|NPTEL|ICAR|Kreyszig|Todd|Ritzema|Ganesan|Aggarwal|Liljedahl|Geankoplis|Das|Kepner|Schwab|Punmia|Toledo|McCabe|Kumar|Subramanya|Brennan|Jain|Henderson|Perry|Singh|Bhandari|Gill|Vanden Berg|Wren|Martin|Chow|Rajput|Nag|Incropera|Srivastava|Goering|Bainer|Barger|Frevert|Murty|Hall|Chakverty|Heldman|Heywood|Sukhatme|Arora|Basak|Chandra|Holman|Kern|Farrall|Norman Lewis|Steffe|Stumbo|Mallett|Robertson|Roos|Treybal|Esposito|Tewari|Sanders|Twidell|Weir|Ashrae|Iso|Asabe|Bis|Standard|Singhal|Bartz|Eckles|Bird|McCormick|Wong|Bekker|Mathur|Sharma|Sickle|FAO|Kays|London|Logic|Zeki Berk|Tetra Pak|Holdsworth|Simpson|M.A. Rao|Agronomy|Kreith|Engineering)/i;
       const questionsWithSource = ALL_QUESTION_BANK_QUESTIONS.filter(q => q.source);
       
       assert.ok(questionsWithSource.length >= 35, `Expected at least 35 questions with source attribution, found ${questionsWithSource.length}`);

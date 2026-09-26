@@ -92,7 +92,10 @@ export function getQuestionsByTopic(sectionName, topicName) {
   }
 
   const tLow = topicName.toLowerCase().trim();
-  const filtered = secQs.filter(q => q.topic && q.topic.toLowerCase().includes(tLow));
+  let filtered = secQs.filter(q => q.topic && q.topic.toLowerCase().trim() === tLow);
+  if (filtered.length === 0) {
+    filtered = secQs.filter(q => q.topic && q.topic.toLowerCase().includes(tLow));
+  }
 
   topicQueryCache.set(cacheKey, filtered);
   return filtered;

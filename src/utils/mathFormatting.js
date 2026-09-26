@@ -70,17 +70,22 @@ export function renderMathToHtmlString(text) {
     return pushToken(mathStr, false);
   });
 
-  // 5. Targeted extraction of explicit LaTeX commands only (e.g. \frac{a}{b}, \sqrt{x}, \eta_{th}, \Delta P)
+  // 6. Targeted extraction of explicit LaTeX commands only (e.g. \frac{a}{b}, \sqrt{x}, \eta_{th}, \Delta P, Greek symbols)
   // NEVER pass entire sentence to math mode
-  str = str.replace(/(\\(?:frac\{[^{}]*\}\{[^{}]*\}|sqrt\{[^{}]*\}|sum(?:_\{[^{}]*\})?(?:\^\{[^{}]*\})?|int(?:_\{[^{}]*\})?(?:\^\{[^{}]*\})?|[a-zA-Z]+(?:_\{[^{}]*\}|_[a-zA-Z0-9]+|\^\{[^{}]*\}|\^[a-zA-Z0-9]+)*))/g, (match, mathStr) => {
+  str = str.replace(/(\\(?:frac\{[^{}]*\}\{[^{}]*\}|sqrt\{[^{}]*\}|sum(?:_\{[^{}]*\})?(?:\^\{[^{}]*\})?|int(?:_\{[^{}]*\})?(?:\^\{[^{}]*\})?|(?:alpha|beta|gamma|delta|Delta|epsilon|zeta|eta|theta|Theta|iota|kappa|lambda|Lambda|mu|nu|xi|Xi|pi|Pi|rho|sigma|Sigma|tau|upsilon|phi|Phi|chi|psi|Psi|omega|Omega|times|pm|mp|approx|le|ge|neq|equiv|sim|infty|cdot|circ|degree)[a-zA-Z0-9_^{}]*|[a-zA-Z]+(?:_\{[^{}]*\}|_[a-zA-Z0-9]+|\^\{[^{}]*\}|\^[a-zA-Z0-9]+)+))/g, (match, mathStr) => {
     if (mathStr === '\\n' || mathStr === '\\t' || mathStr === '\\r' || mathStr.length < 2) return match;
     return pushToken(mathStr, false);
   });
 
-  // 6. Escape raw HTML entities in text segments
+  // 7. Escape raw HTML entities in text segments
   str = escapeHtml(str);
 
-  // 8. Pre-process common engineering units and sub/superscripts
+  // 8. Handle LaTeX text formatting commands on escaped text
+  str = str.replace(/\\textit\{([^{}]+)\}/g, '<em class="italic">$1</em>')
+           .replace(/\\textbf\{([^{}]+)\}/g, '<strong class="font-bold text-inherit">$1</strong>')
+           .replace(/\\underline\{([^{}]+)\}/g, '<u class="underline">$1</u>');
+
+  // 9. Pre-process common engineering units and sub/superscripts
   str = str.replace(/\bdeg C\b/gi, '°C')
            .replace(/\bo C\b/gi, '°C')
            .replace(/\boC\b/g, '°C')
@@ -94,7 +99,7 @@ export function renderMathToHtmlString(text) {
            .replace(/N m -2/gi, 'N/m²')
            .replace(/kN m -2/gi, 'kN/m²');
 
-  // 9. Convert markdown bold **text** and inline code `code` (on escaped safe text)
+  // 10. Convert markdown bold **text** and inline code `code` (on escaped safe text)
   str = str.replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-inherit">$1</strong>');
   str = str.replace(/`([^`]+)`/g, '<code class="px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-blue-600 dark:text-blue-400 font-mono text-xs border border-slate-200 dark:border-slate-700">$1</code>');
 

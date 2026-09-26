@@ -131,10 +131,10 @@ export default function Dashboard({
     try {
       return getQuestionBankStats();
     } catch (e) {
-      return { totalQuestions: 1915 };
+      return { totalQuestions: 8297 };
     }
   }, []);
-  const autonomousBankCount = questionBankStats?.totalQuestions || 1915;
+  const autonomousBankCount = questionBankStats?.totalQuestions || 8297;
 
   const totalQuestions = combinedPool.length || 4574;
   const grandTotalQuestions = totalQuestions + autonomousBankCount;

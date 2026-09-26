@@ -5256,5 +5256,17425 @@ export default [
     "solution": "Newton-Raphson Iteration:\n$$x_1 = x_0 - \\frac{f(x_0)}{f'(x_0)} = 2.0 - \\frac{2^3 - 2(2) - 5}{3(2^2) - 2} = 2.0 - \\frac{-1}{10} = 2.100$$\nRounding to 3 decimal places: **2.100**.",
     "difficulty": "Easy",
     "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_001",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Determinant properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Let $A$ be a $3 \\times 3$ real matrix with $\\det(A) = 3$. The determinant of the scalar multiplied matrix $2A$ is:",
+    "options": {
+      "A": "24",
+      "B": "6",
+      "C": "12",
+      "D": "48"
+    },
+    "correct_answer": "A",
+    "solution": "For any $n \\times n$ square matrix $A$ and a scalar $k$, the determinant scaling property states that:\n$$\\det(k A) = k^n \\det(A)$$\nGiven that $n = 3$, $k = 2$, and $\\det(A) = 3$:\n$$\\det(2A) = 2^3 \\times 3 = 8 \\times 3 = 24$$\nHence, the correct determinant value is $24$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_002",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Inverse of matrix",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $M$ be a $3 \\times 3$ non-singular matrix with $\\det(M) = 3$. The value of $\\det(\\operatorname{adj}(M))$ is ________ (answer in integer).",
+    "correct_answer": "9",
+    "numerical_range": {
+      "min": 9.0,
+      "max": 9.0
+    },
+    "solution": "For an $n \\times n$ non-singular matrix $M$, the determinant of its classical adjugate matrix $\\operatorname{adj}(M)$ is given by:\n$$\\det(\\operatorname{adj}(M)) = (\\det(M))^{n-1}$$\nFor order $n = 3$ and $\\det(M) = 3$:\n$$\\det(\\operatorname{adj}(M)) = (3)^{3-1} = (3)^2 = 9$$\nTherefore, the answer is $9$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_003",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Orthogonal matrices",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $Q$ be an $n \\times n$ real orthogonal matrix ($Q^T Q = I$). Which of the following statements is/are ALWAYS TRUE?",
+    "options": {
+      "A": "The determinant of $Q$ can only be $+1$ or $-1$",
+      "B": "The inverse of $Q$ is equal to its transpose ($Q^{-1} = Q^T$)",
+      "C": "The Euclidean length of any vector $x \\in \\mathbb{R}^n$ is preserved under transformation by $Q$ ($\\|Qx\\| = \\|x\\|$)",
+      "D": "All eigenvalues of $Q$ have an absolute magnitude equal to $1$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "For an orthogonal matrix $Q$:\n1. $Q^T Q = I \\implies \\det(Q^T Q) = (\\det(Q))^2 = 1 \\implies \\det(Q) = \\pm 1$. (A is true)\n2. By definition of orthogonality, $Q^{-1} = Q^T$. (B is true)\n3. $\\|Qx\\|^2 = (Qx)^T (Qx) = x^T Q^T Q x = x^T I x = \\|x\\|^2 \\implies \\|Qx\\| = \\|x\\|$. (C is true)\n4. If $\\lambda$ is an eigenvalue with eigenvector $v$, $\\|Qv\\| = |\\lambda| \\|v\\| = \\|v\\| \\implies |\\lambda| = 1$. (D is true)\nHence, all options A, B, C, and D are correct.",
+    "difficulty": "Hard",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_004",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Determinant properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Let $A$ be a $3 \\times 3$ real matrix with $\\det(A) = 6$. The determinant of the scalar multiplied matrix $5A$ is:",
+    "options": {
+      "A": "750",
+      "B": "30",
+      "C": "150",
+      "D": "3750"
+    },
+    "correct_answer": "A",
+    "solution": "For any $n \\times n$ square matrix $A$ and a scalar $k$, the determinant scaling property states that:\n$$\\det(k A) = k^n \\det(A)$$\nGiven that $n = 3$, $k = 5$, and $\\det(A) = 6$:\n$$\\det(5A) = 5^3 \\times 6 = 125 \\times 6 = 750$$\nHence, the correct determinant value is $750$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_005",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Inverse of matrix",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $M$ be a $3 \\times 3$ non-singular matrix with $\\det(M) = 6$. The value of $\\det(\\operatorname{adj}(M))$ is ________ (answer in integer).",
+    "correct_answer": "36",
+    "numerical_range": {
+      "min": 36.0,
+      "max": 36.0
+    },
+    "solution": "For an $n \\times n$ non-singular matrix $M$, the determinant of its classical adjugate matrix $\\operatorname{adj}(M)$ is given by:\n$$\\det(\\operatorname{adj}(M)) = (\\det(M))^{n-1}$$\nFor order $n = 3$ and $\\det(M) = 6$:\n$$\\det(\\operatorname{adj}(M)) = (6)^{3-1} = (6)^2 = 36$$\nTherefore, the answer is $36$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_006",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Orthogonal matrices",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $Q$ be an $n \\times n$ real orthogonal matrix ($Q^T Q = I$). Which of the following statements is/are ALWAYS TRUE?",
+    "options": {
+      "A": "The determinant of $Q$ can only be $+1$ or $-1$",
+      "B": "The inverse of $Q$ is equal to its transpose ($Q^{-1} = Q^T$)",
+      "C": "The Euclidean length of any vector $x \\in \\mathbb{R}^n$ is preserved under transformation by $Q$ ($\\|Qx\\| = \\|x\\|$)",
+      "D": "All eigenvalues of $Q$ have an absolute magnitude equal to $1$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "For an orthogonal matrix $Q$:\n1. $Q^T Q = I \\implies \\det(Q^T Q) = (\\det(Q))^2 = 1 \\implies \\det(Q) = \\pm 1$. (A is true)\n2. By definition of orthogonality, $Q^{-1} = Q^T$. (B is true)\n3. $\\|Qx\\|^2 = (Qx)^T (Qx) = x^T Q^T Q x = x^T I x = \\|x\\|^2 \\implies \\|Qx\\| = \\|x\\|$. (C is true)\n4. If $\\lambda$ is an eigenvalue with eigenvector $v$, $\\|Qv\\| = |\\lambda| \\|v\\| = \\|v\\| \\implies |\\lambda| = 1$. (D is true)\nHence, all options A, B, C, and D are correct.",
+    "difficulty": "Hard",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_007",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Determinant properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Let $A$ be a $3 \\times 3$ real matrix with $\\det(A) = 9$. The determinant of the scalar multiplied matrix $8A$ is:",
+    "options": {
+      "A": "4608",
+      "B": "72",
+      "C": "576",
+      "D": "36864"
+    },
+    "correct_answer": "A",
+    "solution": "For any $n \\times n$ square matrix $A$ and a scalar $k$, the determinant scaling property states that:\n$$\\det(k A) = k^n \\det(A)$$\nGiven that $n = 3$, $k = 8$, and $\\det(A) = 9$:\n$$\\det(8A) = 8^3 \\times 9 = 512 \\times 9 = 4608$$\nHence, the correct determinant value is $4608$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_008",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Inverse of matrix",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $M$ be a $3 \\times 3$ non-singular matrix with $\\det(M) = 9$. The value of $\\det(\\operatorname{adj}(M))$ is ________ (answer in integer).",
+    "correct_answer": "81",
+    "numerical_range": {
+      "min": 81.0,
+      "max": 81.0
+    },
+    "solution": "For an $n \\times n$ non-singular matrix $M$, the determinant of its classical adjugate matrix $\\operatorname{adj}(M)$ is given by:\n$$\\det(\\operatorname{adj}(M)) = (\\det(M))^{n-1}$$\nFor order $n = 3$ and $\\det(M) = 9$:\n$$\\det(\\operatorname{adj}(M)) = (9)^{3-1} = (9)^2 = 81$$\nTherefore, the answer is $81$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_009",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Orthogonal matrices",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $Q$ be an $n \\times n$ real orthogonal matrix ($Q^T Q = I$). Which of the following statements is/are ALWAYS TRUE?",
+    "options": {
+      "A": "The determinant of $Q$ can only be $+1$ or $-1$",
+      "B": "The inverse of $Q$ is equal to its transpose ($Q^{-1} = Q^T$)",
+      "C": "The Euclidean length of any vector $x \\in \\mathbb{R}^n$ is preserved under transformation by $Q$ ($\\|Qx\\| = \\|x\\|$)",
+      "D": "All eigenvalues of $Q$ have an absolute magnitude equal to $1$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "For an orthogonal matrix $Q$:\n1. $Q^T Q = I \\implies \\det(Q^T Q) = (\\det(Q))^2 = 1 \\implies \\det(Q) = \\pm 1$. (A is true)\n2. By definition of orthogonality, $Q^{-1} = Q^T$. (B is true)\n3. $\\|Qx\\|^2 = (Qx)^T (Qx) = x^T Q^T Q x = x^T I x = \\|x\\|^2 \\implies \\|Qx\\| = \\|x\\|$. (C is true)\n4. If $\\lambda$ is an eigenvalue with eigenvector $v$, $\\|Qv\\| = |\\lambda| \\|v\\| = \\|v\\| \\implies |\\lambda| = 1$. (D is true)\nHence, all options A, B, C, and D are correct.",
+    "difficulty": "Hard",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_010",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Determinant properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Let $A$ be a $3 \\times 3$ real matrix with $\\det(A) = 12$. The determinant of the scalar multiplied matrix $11A$ is:",
+    "options": {
+      "A": "15972",
+      "B": "132",
+      "C": "1452",
+      "D": "175692"
+    },
+    "correct_answer": "A",
+    "solution": "For any $n \\times n$ square matrix $A$ and a scalar $k$, the determinant scaling property states that:\n$$\\det(k A) = k^n \\det(A)$$\nGiven that $n = 3$, $k = 11$, and $\\det(A) = 12$:\n$$\\det(11A) = 11^3 \\times 12 = 1331 \\times 12 = 15972$$\nHence, the correct determinant value is $15972$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_011",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Inverse of matrix",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $M$ be a $3 \\times 3$ non-singular matrix with $\\det(M) = 12$. The value of $\\det(\\operatorname{adj}(M))$ is ________ (answer in integer).",
+    "correct_answer": "144",
+    "numerical_range": {
+      "min": 144.0,
+      "max": 144.0
+    },
+    "solution": "For an $n \\times n$ non-singular matrix $M$, the determinant of its classical adjugate matrix $\\operatorname{adj}(M)$ is given by:\n$$\\det(\\operatorname{adj}(M)) = (\\det(M))^{n-1}$$\nFor order $n = 3$ and $\\det(M) = 12$:\n$$\\det(\\operatorname{adj}(M)) = (12)^{3-1} = (12)^2 = 144$$\nTherefore, the answer is $144$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_012",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Orthogonal matrices",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $Q$ be an $n \\times n$ real orthogonal matrix ($Q^T Q = I$). Which of the following statements is/are ALWAYS TRUE?",
+    "options": {
+      "A": "The determinant of $Q$ can only be $+1$ or $-1$",
+      "B": "The inverse of $Q$ is equal to its transpose ($Q^{-1} = Q^T$)",
+      "C": "The Euclidean length of any vector $x \\in \\mathbb{R}^n$ is preserved under transformation by $Q$ ($\\|Qx\\| = \\|x\\|$)",
+      "D": "All eigenvalues of $Q$ have an absolute magnitude equal to $1$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "For an orthogonal matrix $Q$:\n1. $Q^T Q = I \\implies \\det(Q^T Q) = (\\det(Q))^2 = 1 \\implies \\det(Q) = \\pm 1$. (A is true)\n2. By definition of orthogonality, $Q^{-1} = Q^T$. (B is true)\n3. $\\|Qx\\|^2 = (Qx)^T (Qx) = x^T Q^T Q x = x^T I x = \\|x\\|^2 \\implies \\|Qx\\| = \\|x\\|$. (C is true)\n4. If $\\lambda$ is an eigenvalue with eigenvector $v$, $\\|Qv\\| = |\\lambda| \\|v\\| = \\|v\\| \\implies |\\lambda| = 1$. (D is true)\nHence, all options A, B, C, and D are correct.",
+    "difficulty": "Hard",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_013",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Determinant properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Let $A$ be a $3 \\times 3$ real matrix with $\\det(A) = 15$. The determinant of the scalar multiplied matrix $14A$ is:",
+    "options": {
+      "A": "41160",
+      "B": "210",
+      "C": "2940",
+      "D": "576240"
+    },
+    "correct_answer": "A",
+    "solution": "For any $n \\times n$ square matrix $A$ and a scalar $k$, the determinant scaling property states that:\n$$\\det(k A) = k^n \\det(A)$$\nGiven that $n = 3$, $k = 14$, and $\\det(A) = 15$:\n$$\\det(14A) = 14^3 \\times 15 = 2744 \\times 15 = 41160$$\nHence, the correct determinant value is $41160$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_014",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Inverse of matrix",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $M$ be a $3 \\times 3$ non-singular matrix with $\\det(M) = 15$. The value of $\\det(\\operatorname{adj}(M))$ is ________ (answer in integer).",
+    "correct_answer": "225",
+    "numerical_range": {
+      "min": 225.0,
+      "max": 225.0
+    },
+    "solution": "For an $n \\times n$ non-singular matrix $M$, the determinant of its classical adjugate matrix $\\operatorname{adj}(M)$ is given by:\n$$\\det(\\operatorname{adj}(M)) = (\\det(M))^{n-1}$$\nFor order $n = 3$ and $\\det(M) = 15$:\n$$\\det(\\operatorname{adj}(M)) = (15)^{3-1} = (15)^2 = 225$$\nTherefore, the answer is $225$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_015",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Orthogonal matrices",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $Q$ be an $n \\times n$ real orthogonal matrix ($Q^T Q = I$). Which of the following statements is/are ALWAYS TRUE?",
+    "options": {
+      "A": "The determinant of $Q$ can only be $+1$ or $-1$",
+      "B": "The inverse of $Q$ is equal to its transpose ($Q^{-1} = Q^T$)",
+      "C": "The Euclidean length of any vector $x \\in \\mathbb{R}^n$ is preserved under transformation by $Q$ ($\\|Qx\\| = \\|x\\|$)",
+      "D": "All eigenvalues of $Q$ have an absolute magnitude equal to $1$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "For an orthogonal matrix $Q$:\n1. $Q^T Q = I \\implies \\det(Q^T Q) = (\\det(Q))^2 = 1 \\implies \\det(Q) = \\pm 1$. (A is true)\n2. By definition of orthogonality, $Q^{-1} = Q^T$. (B is true)\n3. $\\|Qx\\|^2 = (Qx)^T (Qx) = x^T Q^T Q x = x^T I x = \\|x\\|^2 \\implies \\|Qx\\| = \\|x\\|$. (C is true)\n4. If $\\lambda$ is an eigenvalue with eigenvector $v$, $\\|Qv\\| = |\\lambda| \\|v\\| = \\|v\\| \\implies |\\lambda| = 1$. (D is true)\nHence, all options A, B, C, and D are correct.",
+    "difficulty": "Hard",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_016",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Determinant properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Let $A$ be a $3 \\times 3$ real matrix with $\\det(A) = 18$. The determinant of the scalar multiplied matrix $17A$ is:",
+    "options": {
+      "A": "88434",
+      "B": "306",
+      "C": "5202",
+      "D": "1503378"
+    },
+    "correct_answer": "A",
+    "solution": "For any $n \\times n$ square matrix $A$ and a scalar $k$, the determinant scaling property states that:\n$$\\det(k A) = k^n \\det(A)$$\nGiven that $n = 3$, $k = 17$, and $\\det(A) = 18$:\n$$\\det(17A) = 17^3 \\times 18 = 4913 \\times 18 = 88434$$\nHence, the correct determinant value is $88434$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_017",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Inverse of matrix",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $M$ be a $3 \\times 3$ non-singular matrix with $\\det(M) = 18$. The value of $\\det(\\operatorname{adj}(M))$ is ________ (answer in integer).",
+    "correct_answer": "324",
+    "numerical_range": {
+      "min": 324.0,
+      "max": 324.0
+    },
+    "solution": "For an $n \\times n$ non-singular matrix $M$, the determinant of its classical adjugate matrix $\\operatorname{adj}(M)$ is given by:\n$$\\det(\\operatorname{adj}(M)) = (\\det(M))^{n-1}$$\nFor order $n = 3$ and $\\det(M) = 18$:\n$$\\det(\\operatorname{adj}(M)) = (18)^{3-1} = (18)^2 = 324$$\nTherefore, the answer is $324$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_018",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Orthogonal matrices",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $Q$ be an $n \\times n$ real orthogonal matrix ($Q^T Q = I$). Which of the following statements is/are ALWAYS TRUE?",
+    "options": {
+      "A": "The determinant of $Q$ can only be $+1$ or $-1$",
+      "B": "The inverse of $Q$ is equal to its transpose ($Q^{-1} = Q^T$)",
+      "C": "The Euclidean length of any vector $x \\in \\mathbb{R}^n$ is preserved under transformation by $Q$ ($\\|Qx\\| = \\|x\\|$)",
+      "D": "All eigenvalues of $Q$ have an absolute magnitude equal to $1$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "For an orthogonal matrix $Q$:\n1. $Q^T Q = I \\implies \\det(Q^T Q) = (\\det(Q))^2 = 1 \\implies \\det(Q) = \\pm 1$. (A is true)\n2. By definition of orthogonality, $Q^{-1} = Q^T$. (B is true)\n3. $\\|Qx\\|^2 = (Qx)^T (Qx) = x^T Q^T Q x = x^T I x = \\|x\\|^2 \\implies \\|Qx\\| = \\|x\\|$. (C is true)\n4. If $\\lambda$ is an eigenvalue with eigenvector $v$, $\\|Qv\\| = |\\lambda| \\|v\\| = \\|v\\| \\implies |\\lambda| = 1$. (D is true)\nHence, all options A, B, C, and D are correct.",
+    "difficulty": "Hard",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_019",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Determinant properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Let $A$ be a $3 \\times 3$ real matrix with $\\det(A) = 21$. The determinant of the scalar multiplied matrix $20A$ is:",
+    "options": {
+      "A": "168000",
+      "B": "420",
+      "C": "8400",
+      "D": "3360000"
+    },
+    "correct_answer": "A",
+    "solution": "For any $n \\times n$ square matrix $A$ and a scalar $k$, the determinant scaling property states that:\n$$\\det(k A) = k^n \\det(A)$$\nGiven that $n = 3$, $k = 20$, and $\\det(A) = 21$:\n$$\\det(20A) = 20^3 \\times 21 = 8000 \\times 21 = 168000$$\nHence, the correct determinant value is $168000$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_020",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Inverse of matrix",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $M$ be a $3 \\times 3$ non-singular matrix with $\\det(M) = 21$. The value of $\\det(\\operatorname{adj}(M))$ is ________ (answer in integer).",
+    "correct_answer": "441",
+    "numerical_range": {
+      "min": 441.0,
+      "max": 441.0
+    },
+    "solution": "For an $n \\times n$ non-singular matrix $M$, the determinant of its classical adjugate matrix $\\operatorname{adj}(M)$ is given by:\n$$\\det(\\operatorname{adj}(M)) = (\\det(M))^{n-1}$$\nFor order $n = 3$ and $\\det(M) = 21$:\n$$\\det(\\operatorname{adj}(M)) = (21)^{3-1} = (21)^2 = 441$$\nTherefore, the answer is $441$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_021",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Orthogonal matrices",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $Q$ be an $n \\times n$ real orthogonal matrix ($Q^T Q = I$). Which of the following statements is/are ALWAYS TRUE?",
+    "options": {
+      "A": "The determinant of $Q$ can only be $+1$ or $-1$",
+      "B": "The inverse of $Q$ is equal to its transpose ($Q^{-1} = Q^T$)",
+      "C": "The Euclidean length of any vector $x \\in \\mathbb{R}^n$ is preserved under transformation by $Q$ ($\\|Qx\\| = \\|x\\|$)",
+      "D": "All eigenvalues of $Q$ have an absolute magnitude equal to $1$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "For an orthogonal matrix $Q$:\n1. $Q^T Q = I \\implies \\det(Q^T Q) = (\\det(Q))^2 = 1 \\implies \\det(Q) = \\pm 1$. (A is true)\n2. By definition of orthogonality, $Q^{-1} = Q^T$. (B is true)\n3. $\\|Qx\\|^2 = (Qx)^T (Qx) = x^T Q^T Q x = x^T I x = \\|x\\|^2 \\implies \\|Qx\\| = \\|x\\|$. (C is true)\n4. If $\\lambda$ is an eigenvalue with eigenvector $v$, $\\|Qv\\| = |\\lambda| \\|v\\| = \\|v\\| \\implies |\\lambda| = 1$. (D is true)\nHence, all options A, B, C, and D are correct.",
+    "difficulty": "Hard",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_022",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Determinant properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Let $A$ be a $3 \\times 3$ real matrix with $\\det(A) = 24$. The determinant of the scalar multiplied matrix $23A$ is:",
+    "options": {
+      "A": "292008",
+      "B": "552",
+      "C": "12696",
+      "D": "6716184"
+    },
+    "correct_answer": "A",
+    "solution": "For any $n \\times n$ square matrix $A$ and a scalar $k$, the determinant scaling property states that:\n$$\\det(k A) = k^n \\det(A)$$\nGiven that $n = 3$, $k = 23$, and $\\det(A) = 24$:\n$$\\det(23A) = 23^3 \\times 24 = 12167 \\times 24 = 292008$$\nHence, the correct determinant value is $292008$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_023",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Inverse of matrix",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $M$ be a $3 \\times 3$ non-singular matrix with $\\det(M) = 24$. The value of $\\det(\\operatorname{adj}(M))$ is ________ (answer in integer).",
+    "correct_answer": "576",
+    "numerical_range": {
+      "min": 576.0,
+      "max": 576.0
+    },
+    "solution": "For an $n \\times n$ non-singular matrix $M$, the determinant of its classical adjugate matrix $\\operatorname{adj}(M)$ is given by:\n$$\\det(\\operatorname{adj}(M)) = (\\det(M))^{n-1}$$\nFor order $n = 3$ and $\\det(M) = 24$:\n$$\\det(\\operatorname{adj}(M)) = (24)^{3-1} = (24)^2 = 576$$\nTherefore, the answer is $576$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_024",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Orthogonal matrices",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $Q$ be an $n \\times n$ real orthogonal matrix ($Q^T Q = I$). Which of the following statements is/are ALWAYS TRUE?",
+    "options": {
+      "A": "The determinant of $Q$ can only be $+1$ or $-1$",
+      "B": "The inverse of $Q$ is equal to its transpose ($Q^{-1} = Q^T$)",
+      "C": "The Euclidean length of any vector $x \\in \\mathbb{R}^n$ is preserved under transformation by $Q$ ($\\|Qx\\| = \\|x\\|$)",
+      "D": "All eigenvalues of $Q$ have an absolute magnitude equal to $1$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "For an orthogonal matrix $Q$:\n1. $Q^T Q = I \\implies \\det(Q^T Q) = (\\det(Q))^2 = 1 \\implies \\det(Q) = \\pm 1$. (A is true)\n2. By definition of orthogonality, $Q^{-1} = Q^T$. (B is true)\n3. $\\|Qx\\|^2 = (Qx)^T (Qx) = x^T Q^T Q x = x^T I x = \\|x\\|^2 \\implies \\|Qx\\| = \\|x\\|$. (C is true)\n4. If $\\lambda$ is an eigenvalue with eigenvector $v$, $\\|Qv\\| = |\\lambda| \\|v\\| = \\|v\\| \\implies |\\lambda| = 1$. (D is true)\nHence, all options A, B, C, and D are correct.",
+    "difficulty": "Hard",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_025",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Determinant properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Let $A$ be a $3 \\times 3$ real matrix with $\\det(A) = 27$. The determinant of the scalar multiplied matrix $26A$ is:",
+    "options": {
+      "A": "474552",
+      "B": "702",
+      "C": "18252",
+      "D": "12338352"
+    },
+    "correct_answer": "A",
+    "solution": "For any $n \\times n$ square matrix $A$ and a scalar $k$, the determinant scaling property states that:\n$$\\det(k A) = k^n \\det(A)$$\nGiven that $n = 3$, $k = 26$, and $\\det(A) = 27$:\n$$\\det(26A) = 26^3 \\times 27 = 17576 \\times 27 = 474552$$\nHence, the correct determinant value is $474552$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_026",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Inverse of matrix",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $M$ be a $3 \\times 3$ non-singular matrix with $\\det(M) = 27$. The value of $\\det(\\operatorname{adj}(M))$ is ________ (answer in integer).",
+    "correct_answer": "729",
+    "numerical_range": {
+      "min": 729.0,
+      "max": 729.0
+    },
+    "solution": "For an $n \\times n$ non-singular matrix $M$, the determinant of its classical adjugate matrix $\\operatorname{adj}(M)$ is given by:\n$$\\det(\\operatorname{adj}(M)) = (\\det(M))^{n-1}$$\nFor order $n = 3$ and $\\det(M) = 27$:\n$$\\det(\\operatorname{adj}(M)) = (27)^{3-1} = (27)^2 = 729$$\nTherefore, the answer is $729$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_027",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Orthogonal matrices",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $Q$ be an $n \\times n$ real orthogonal matrix ($Q^T Q = I$). Which of the following statements is/are ALWAYS TRUE?",
+    "options": {
+      "A": "The determinant of $Q$ can only be $+1$ or $-1$",
+      "B": "The inverse of $Q$ is equal to its transpose ($Q^{-1} = Q^T$)",
+      "C": "The Euclidean length of any vector $x \\in \\mathbb{R}^n$ is preserved under transformation by $Q$ ($\\|Qx\\| = \\|x\\|$)",
+      "D": "All eigenvalues of $Q$ have an absolute magnitude equal to $1$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "For an orthogonal matrix $Q$:\n1. $Q^T Q = I \\implies \\det(Q^T Q) = (\\det(Q))^2 = 1 \\implies \\det(Q) = \\pm 1$. (A is true)\n2. By definition of orthogonality, $Q^{-1} = Q^T$. (B is true)\n3. $\\|Qx\\|^2 = (Qx)^T (Qx) = x^T Q^T Q x = x^T I x = \\|x\\|^2 \\implies \\|Qx\\| = \\|x\\|$. (C is true)\n4. If $\\lambda$ is an eigenvalue with eigenvector $v$, $\\|Qv\\| = |\\lambda| \\|v\\| = \\|v\\| \\implies |\\lambda| = 1$. (D is true)\nHence, all options A, B, C, and D are correct.",
+    "difficulty": "Hard",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_028",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Determinant properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Let $A$ be a $3 \\times 3$ real matrix with $\\det(A) = 30$. The determinant of the scalar multiplied matrix $29A$ is:",
+    "options": {
+      "A": "731670",
+      "B": "870",
+      "C": "25230",
+      "D": "21218430"
+    },
+    "correct_answer": "A",
+    "solution": "For any $n \\times n$ square matrix $A$ and a scalar $k$, the determinant scaling property states that:\n$$\\det(k A) = k^n \\det(A)$$\nGiven that $n = 3$, $k = 29$, and $\\det(A) = 30$:\n$$\\det(29A) = 29^3 \\times 30 = 24389 \\times 30 = 731670$$\nHence, the correct determinant value is $731670$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_029",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Inverse of matrix",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $M$ be a $3 \\times 3$ non-singular matrix with $\\det(M) = 30$. The value of $\\det(\\operatorname{adj}(M))$ is ________ (answer in integer).",
+    "correct_answer": "900",
+    "numerical_range": {
+      "min": 900.0,
+      "max": 900.0
+    },
+    "solution": "For an $n \\times n$ non-singular matrix $M$, the determinant of its classical adjugate matrix $\\operatorname{adj}(M)$ is given by:\n$$\\det(\\operatorname{adj}(M)) = (\\det(M))^{n-1}$$\nFor order $n = 3$ and $\\det(M) = 30$:\n$$\\det(\\operatorname{adj}(M)) = (30)^{3-1} = (30)^2 = 900$$\nTherefore, the answer is $900$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_030",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Orthogonal matrices",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $Q$ be an $n \\times n$ real orthogonal matrix ($Q^T Q = I$). Which of the following statements is/are ALWAYS TRUE?",
+    "options": {
+      "A": "The determinant of $Q$ can only be $+1$ or $-1$",
+      "B": "The inverse of $Q$ is equal to its transpose ($Q^{-1} = Q^T$)",
+      "C": "The Euclidean length of any vector $x \\in \\mathbb{R}^n$ is preserved under transformation by $Q$ ($\\|Qx\\| = \\|x\\|$)",
+      "D": "All eigenvalues of $Q$ have an absolute magnitude equal to $1$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "For an orthogonal matrix $Q$:\n1. $Q^T Q = I \\implies \\det(Q^T Q) = (\\det(Q))^2 = 1 \\implies \\det(Q) = \\pm 1$. (A is true)\n2. By definition of orthogonality, $Q^{-1} = Q^T$. (B is true)\n3. $\\|Qx\\|^2 = (Qx)^T (Qx) = x^T Q^T Q x = x^T I x = \\|x\\|^2 \\implies \\|Qx\\| = \\|x\\|$. (C is true)\n4. If $\\lambda$ is an eigenvalue with eigenvector $v$, $\\|Qv\\| = |\\lambda| \\|v\\| = \\|v\\| \\implies |\\lambda| = 1$. (D is true)\nHence, all options A, B, C, and D are correct.",
+    "difficulty": "Hard",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_031",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Determinant properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Let $A$ be a $3 \\times 3$ real matrix with $\\det(A) = 33$. The determinant of the scalar multiplied matrix $32A$ is:",
+    "options": {
+      "A": "1081344",
+      "B": "1056",
+      "C": "33792",
+      "D": "34603008"
+    },
+    "correct_answer": "A",
+    "solution": "For any $n \\times n$ square matrix $A$ and a scalar $k$, the determinant scaling property states that:\n$$\\det(k A) = k^n \\det(A)$$\nGiven that $n = 3$, $k = 32$, and $\\det(A) = 33$:\n$$\\det(32A) = 32^3 \\times 33 = 32768 \\times 33 = 1081344$$\nHence, the correct determinant value is $1081344$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_032",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Inverse of matrix",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $M$ be a $3 \\times 3$ non-singular matrix with $\\det(M) = 33$. The value of $\\det(\\operatorname{adj}(M))$ is ________ (answer in integer).",
+    "correct_answer": "1089",
+    "numerical_range": {
+      "min": 1089.0,
+      "max": 1089.0
+    },
+    "solution": "For an $n \\times n$ non-singular matrix $M$, the determinant of its classical adjugate matrix $\\operatorname{adj}(M)$ is given by:\n$$\\det(\\operatorname{adj}(M)) = (\\det(M))^{n-1}$$\nFor order $n = 3$ and $\\det(M) = 33$:\n$$\\det(\\operatorname{adj}(M)) = (33)^{3-1} = (33)^2 = 1089$$\nTherefore, the answer is $1089$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_033",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Orthogonal matrices",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $Q$ be an $n \\times n$ real orthogonal matrix ($Q^T Q = I$). Which of the following statements is/are ALWAYS TRUE?",
+    "options": {
+      "A": "The determinant of $Q$ can only be $+1$ or $-1$",
+      "B": "The inverse of $Q$ is equal to its transpose ($Q^{-1} = Q^T$)",
+      "C": "The Euclidean length of any vector $x \\in \\mathbb{R}^n$ is preserved under transformation by $Q$ ($\\|Qx\\| = \\|x\\|$)",
+      "D": "All eigenvalues of $Q$ have an absolute magnitude equal to $1$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "For an orthogonal matrix $Q$:\n1. $Q^T Q = I \\implies \\det(Q^T Q) = (\\det(Q))^2 = 1 \\implies \\det(Q) = \\pm 1$. (A is true)\n2. By definition of orthogonality, $Q^{-1} = Q^T$. (B is true)\n3. $\\|Qx\\|^2 = (Qx)^T (Qx) = x^T Q^T Q x = x^T I x = \\|x\\|^2 \\implies \\|Qx\\| = \\|x\\|$. (C is true)\n4. If $\\lambda$ is an eigenvalue with eigenvector $v$, $\\|Qv\\| = |\\lambda| \\|v\\| = \\|v\\| \\implies |\\lambda| = 1$. (D is true)\nHence, all options A, B, C, and D are correct.",
+    "difficulty": "Hard",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_034",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Determinant properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Let $A$ be a $3 \\times 3$ real matrix with $\\det(A) = 36$. The determinant of the scalar multiplied matrix $35A$ is:",
+    "options": {
+      "A": "1543500",
+      "B": "1260",
+      "C": "44100",
+      "D": "54022500"
+    },
+    "correct_answer": "A",
+    "solution": "For any $n \\times n$ square matrix $A$ and a scalar $k$, the determinant scaling property states that:\n$$\\det(k A) = k^n \\det(A)$$\nGiven that $n = 3$, $k = 35$, and $\\det(A) = 36$:\n$$\\det(35A) = 35^3 \\times 36 = 42875 \\times 36 = 1543500$$\nHence, the correct determinant value is $1543500$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_035",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Inverse of matrix",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $M$ be a $3 \\times 3$ non-singular matrix with $\\det(M) = 36$. The value of $\\det(\\operatorname{adj}(M))$ is ________ (answer in integer).",
+    "correct_answer": "1296",
+    "numerical_range": {
+      "min": 1296.0,
+      "max": 1296.0
+    },
+    "solution": "For an $n \\times n$ non-singular matrix $M$, the determinant of its classical adjugate matrix $\\operatorname{adj}(M)$ is given by:\n$$\\det(\\operatorname{adj}(M)) = (\\det(M))^{n-1}$$\nFor order $n = 3$ and $\\det(M) = 36$:\n$$\\det(\\operatorname{adj}(M)) = (36)^{3-1} = (36)^2 = 1296$$\nTherefore, the answer is $1296$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_MAT_036",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Orthogonal matrices",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $Q$ be an $n \\times n$ real orthogonal matrix ($Q^T Q = I$). Which of the following statements is/are ALWAYS TRUE?",
+    "options": {
+      "A": "The determinant of $Q$ can only be $+1$ or $-1$",
+      "B": "The inverse of $Q$ is equal to its transpose ($Q^{-1} = Q^T$)",
+      "C": "The Euclidean length of any vector $x \\in \\mathbb{R}^n$ is preserved under transformation by $Q$ ($\\|Qx\\| = \\|x\\|$)",
+      "D": "All eigenvalues of $Q$ have an absolute magnitude equal to $1$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "For an orthogonal matrix $Q$:\n1. $Q^T Q = I \\implies \\det(Q^T Q) = (\\det(Q))^2 = 1 \\implies \\det(Q) = \\pm 1$. (A is true)\n2. By definition of orthogonality, $Q^{-1} = Q^T$. (B is true)\n3. $\\|Qx\\|^2 = (Qx)^T (Qx) = x^T Q^T Q x = x^T I x = \\|x\\|^2 \\implies \\|Qx\\| = \\|x\\|$. (C is true)\n4. If $\\lambda$ is an eigenvalue with eigenvector $v$, $\\|Qv\\| = |\\lambda| \\|v\\| = \\|v\\| \\implies |\\lambda| = 1$. (D is true)\nHence, all options A, B, C, and D are correct.",
+    "difficulty": "Hard",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_001",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Eigenvalues and eigenvectors",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A $3 \\times 3$ real symmetric matrix has eigenvalues $\\lambda_1 = 2$, $\\lambda_2 = 3$, and $\\lambda_3 = 4$. The trace and determinant of the matrix are:",
+    "options": {
+      "A": "Trace = 9, Determinant = 24",
+      "B": "Trace = 24, Determinant = 9",
+      "C": "Trace = 11, Determinant = 24",
+      "D": "Trace = 9, Determinant = 28"
+    },
+    "correct_answer": "A",
+    "solution": "By the spectral properties of square matrices:\n1. The trace is the sum of the eigenvalues:\n$$\\operatorname{tr}(A) = \\sum_{i=1}^3 \\lambda_i = 2 + 3 + 4 = 9$$\n2. The determinant is the product of the eigenvalues:\n$$\\det(A) = \\prod_{i=1}^3 \\lambda_i = 2 \\times 3 \\times 4 = 24$$\nTherefore, Trace = 9 and Determinant = 24.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_002",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Cayley–Hamilton theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $A$ be a $2 \\times 2$ matrix satisfying $A^2 - 4A + I = 0$, where $I$ is the identity matrix. If $\\lambda$ is an eigenvalue of $A$, the value of $\\lambda^2 + \\lambda^{-2}$ is ________ (answer in integer).",
+    "correct_answer": "14",
+    "numerical_range": {
+      "min": 14.0,
+      "max": 14.0
+    },
+    "solution": "Since $\\lambda$ is an eigenvalue of $A$, it satisfies the characteristic equation:\n$$\\lambda^2 - 4\\lambda + 1 = 0$$\nDividing through by $\\lambda$ (since $\\lambda \\neq 0$):\n$$\\lambda + \\frac{1}{\\lambda} = 4$$\nSquaring both sides:\n$$\\left(\\lambda + \\frac{1}{\\lambda}\\right)^2 = 4^2 = 16$$\n$$\\lambda^2 + 2 + \\frac{1}{\\lambda^2} = 16 \\implies \\lambda^2 + \\lambda^{-2} = 16 - 2 = 14$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_003",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Powers of matrices",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $A$ be an $n \\times n$ real symmetric matrix. Which of the following statements is/are ALWAYS TRUE?",
+    "options": {
+      "A": "All eigenvalues of $A$ are real numbers",
+      "B": "Eigenvectors corresponding to distinct eigenvalues are mutually orthogonal",
+      "C": "The matrix $A$ is diagonalizable using an orthogonal modal matrix",
+      "D": "If all eigenvalues of $A$ are positive, then $A$ is positive definite"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "For any real symmetric matrix $A$:\n1. All eigenvalues are strictly real. (A is true)\n2. Eigenvectors belonging to distinct eigenvalues satisfy $(v_i, v_j) = 0$, hence mutually orthogonal. (B is true)\n3. By the Spectral Theorem, there exists an orthogonal matrix $P$ such that $P^T A P = D$. (C is true)\n4. A real symmetric matrix with strictly positive eigenvalues satisfies $x^T A x > 0$ for all $x \\neq 0$, which is the definition of positive definiteness. (D is true)\nHence, all choices A, B, C, and D are correct.",
+    "difficulty": "Hard",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_004",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Eigenvalues and eigenvectors",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A $3 \\times 3$ real symmetric matrix has eigenvalues $\\lambda_1 = 5$, $\\lambda_2 = 6$, and $\\lambda_3 = 7$. The trace and determinant of the matrix are:",
+    "options": {
+      "A": "Trace = 18, Determinant = 210",
+      "B": "Trace = 210, Determinant = 18",
+      "C": "Trace = 20, Determinant = 210",
+      "D": "Trace = 18, Determinant = 214"
+    },
+    "correct_answer": "A",
+    "solution": "By the spectral properties of square matrices:\n1. The trace is the sum of the eigenvalues:\n$$\\operatorname{tr}(A) = \\sum_{i=1}^3 \\lambda_i = 5 + 6 + 7 = 18$$\n2. The determinant is the product of the eigenvalues:\n$$\\det(A) = \\prod_{i=1}^3 \\lambda_i = 5 \\times 6 \\times 7 = 210$$\nTherefore, Trace = 18 and Determinant = 210.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_005",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Cayley–Hamilton theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $A$ be a $2 \\times 2$ matrix satisfying $A^2 - 7A + I = 0$, where $I$ is the identity matrix. If $\\lambda$ is an eigenvalue of $A$, the value of $\\lambda^2 + \\lambda^{-2}$ is ________ (answer in integer).",
+    "correct_answer": "47",
+    "numerical_range": {
+      "min": 47.0,
+      "max": 47.0
+    },
+    "solution": "Since $\\lambda$ is an eigenvalue of $A$, it satisfies the characteristic equation:\n$$\\lambda^2 - 7\\lambda + 1 = 0$$\nDividing through by $\\lambda$ (since $\\lambda \\neq 0$):\n$$\\lambda + \\frac{1}{\\lambda} = 7$$\nSquaring both sides:\n$$\\left(\\lambda + \\frac{1}{\\lambda}\\right)^2 = 7^2 = 49$$\n$$\\lambda^2 + 2 + \\frac{1}{\\lambda^2} = 49 \\implies \\lambda^2 + \\lambda^{-2} = 49 - 2 = 47$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_006",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Powers of matrices",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $A$ be an $n \\times n$ real symmetric matrix. Which of the following statements is/are ALWAYS TRUE?",
+    "options": {
+      "A": "All eigenvalues of $A$ are real numbers",
+      "B": "Eigenvectors corresponding to distinct eigenvalues are mutually orthogonal",
+      "C": "The matrix $A$ is diagonalizable using an orthogonal modal matrix",
+      "D": "If all eigenvalues of $A$ are positive, then $A$ is positive definite"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "For any real symmetric matrix $A$:\n1. All eigenvalues are strictly real. (A is true)\n2. Eigenvectors belonging to distinct eigenvalues satisfy $(v_i, v_j) = 0$, hence mutually orthogonal. (B is true)\n3. By the Spectral Theorem, there exists an orthogonal matrix $P$ such that $P^T A P = D$. (C is true)\n4. A real symmetric matrix with strictly positive eigenvalues satisfies $x^T A x > 0$ for all $x \\neq 0$, which is the definition of positive definiteness. (D is true)\nHence, all choices A, B, C, and D are correct.",
+    "difficulty": "Hard",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_007",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Eigenvalues and eigenvectors",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A $3 \\times 3$ real symmetric matrix has eigenvalues $\\lambda_1 = 8$, $\\lambda_2 = 9$, and $\\lambda_3 = 10$. The trace and determinant of the matrix are:",
+    "options": {
+      "A": "Trace = 27, Determinant = 720",
+      "B": "Trace = 720, Determinant = 27",
+      "C": "Trace = 29, Determinant = 720",
+      "D": "Trace = 27, Determinant = 724"
+    },
+    "correct_answer": "A",
+    "solution": "By the spectral properties of square matrices:\n1. The trace is the sum of the eigenvalues:\n$$\\operatorname{tr}(A) = \\sum_{i=1}^3 \\lambda_i = 8 + 9 + 10 = 27$$\n2. The determinant is the product of the eigenvalues:\n$$\\det(A) = \\prod_{i=1}^3 \\lambda_i = 8 \\times 9 \\times 10 = 720$$\nTherefore, Trace = 27 and Determinant = 720.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_008",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Cayley–Hamilton theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $A$ be a $2 \\times 2$ matrix satisfying $A^2 - 10A + I = 0$, where $I$ is the identity matrix. If $\\lambda$ is an eigenvalue of $A$, the value of $\\lambda^2 + \\lambda^{-2}$ is ________ (answer in integer).",
+    "correct_answer": "98",
+    "numerical_range": {
+      "min": 98.0,
+      "max": 98.0
+    },
+    "solution": "Since $\\lambda$ is an eigenvalue of $A$, it satisfies the characteristic equation:\n$$\\lambda^2 - 10\\lambda + 1 = 0$$\nDividing through by $\\lambda$ (since $\\lambda \\neq 0$):\n$$\\lambda + \\frac{1}{\\lambda} = 10$$\nSquaring both sides:\n$$\\left(\\lambda + \\frac{1}{\\lambda}\\right)^2 = 10^2 = 100$$\n$$\\lambda^2 + 2 + \\frac{1}{\\lambda^2} = 100 \\implies \\lambda^2 + \\lambda^{-2} = 100 - 2 = 98$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_009",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Powers of matrices",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $A$ be an $n \\times n$ real symmetric matrix. Which of the following statements is/are ALWAYS TRUE?",
+    "options": {
+      "A": "All eigenvalues of $A$ are real numbers",
+      "B": "Eigenvectors corresponding to distinct eigenvalues are mutually orthogonal",
+      "C": "The matrix $A$ is diagonalizable using an orthogonal modal matrix",
+      "D": "If all eigenvalues of $A$ are positive, then $A$ is positive definite"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "For any real symmetric matrix $A$:\n1. All eigenvalues are strictly real. (A is true)\n2. Eigenvectors belonging to distinct eigenvalues satisfy $(v_i, v_j) = 0$, hence mutually orthogonal. (B is true)\n3. By the Spectral Theorem, there exists an orthogonal matrix $P$ such that $P^T A P = D$. (C is true)\n4. A real symmetric matrix with strictly positive eigenvalues satisfies $x^T A x > 0$ for all $x \\neq 0$, which is the definition of positive definiteness. (D is true)\nHence, all choices A, B, C, and D are correct.",
+    "difficulty": "Hard",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_010",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Eigenvalues and eigenvectors",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A $3 \\times 3$ real symmetric matrix has eigenvalues $\\lambda_1 = 11$, $\\lambda_2 = 12$, and $\\lambda_3 = 13$. The trace and determinant of the matrix are:",
+    "options": {
+      "A": "Trace = 36, Determinant = 1716",
+      "B": "Trace = 1716, Determinant = 36",
+      "C": "Trace = 38, Determinant = 1716",
+      "D": "Trace = 36, Determinant = 1720"
+    },
+    "correct_answer": "A",
+    "solution": "By the spectral properties of square matrices:\n1. The trace is the sum of the eigenvalues:\n$$\\operatorname{tr}(A) = \\sum_{i=1}^3 \\lambda_i = 11 + 12 + 13 = 36$$\n2. The determinant is the product of the eigenvalues:\n$$\\det(A) = \\prod_{i=1}^3 \\lambda_i = 11 \\times 12 \\times 13 = 1716$$\nTherefore, Trace = 36 and Determinant = 1716.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_011",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Cayley–Hamilton theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $A$ be a $2 \\times 2$ matrix satisfying $A^2 - 13A + I = 0$, where $I$ is the identity matrix. If $\\lambda$ is an eigenvalue of $A$, the value of $\\lambda^2 + \\lambda^{-2}$ is ________ (answer in integer).",
+    "correct_answer": "167",
+    "numerical_range": {
+      "min": 167.0,
+      "max": 167.0
+    },
+    "solution": "Since $\\lambda$ is an eigenvalue of $A$, it satisfies the characteristic equation:\n$$\\lambda^2 - 13\\lambda + 1 = 0$$\nDividing through by $\\lambda$ (since $\\lambda \\neq 0$):\n$$\\lambda + \\frac{1}{\\lambda} = 13$$\nSquaring both sides:\n$$\\left(\\lambda + \\frac{1}{\\lambda}\\right)^2 = 13^2 = 169$$\n$$\\lambda^2 + 2 + \\frac{1}{\\lambda^2} = 169 \\implies \\lambda^2 + \\lambda^{-2} = 169 - 2 = 167$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_012",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Powers of matrices",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $A$ be an $n \\times n$ real symmetric matrix. Which of the following statements is/are ALWAYS TRUE?",
+    "options": {
+      "A": "All eigenvalues of $A$ are real numbers",
+      "B": "Eigenvectors corresponding to distinct eigenvalues are mutually orthogonal",
+      "C": "The matrix $A$ is diagonalizable using an orthogonal modal matrix",
+      "D": "If all eigenvalues of $A$ are positive, then $A$ is positive definite"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "For any real symmetric matrix $A$:\n1. All eigenvalues are strictly real. (A is true)\n2. Eigenvectors belonging to distinct eigenvalues satisfy $(v_i, v_j) = 0$, hence mutually orthogonal. (B is true)\n3. By the Spectral Theorem, there exists an orthogonal matrix $P$ such that $P^T A P = D$. (C is true)\n4. A real symmetric matrix with strictly positive eigenvalues satisfies $x^T A x > 0$ for all $x \\neq 0$, which is the definition of positive definiteness. (D is true)\nHence, all choices A, B, C, and D are correct.",
+    "difficulty": "Hard",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_013",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Eigenvalues and eigenvectors",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A $3 \\times 3$ real symmetric matrix has eigenvalues $\\lambda_1 = 14$, $\\lambda_2 = 15$, and $\\lambda_3 = 16$. The trace and determinant of the matrix are:",
+    "options": {
+      "A": "Trace = 45, Determinant = 3360",
+      "B": "Trace = 3360, Determinant = 45",
+      "C": "Trace = 47, Determinant = 3360",
+      "D": "Trace = 45, Determinant = 3364"
+    },
+    "correct_answer": "A",
+    "solution": "By the spectral properties of square matrices:\n1. The trace is the sum of the eigenvalues:\n$$\\operatorname{tr}(A) = \\sum_{i=1}^3 \\lambda_i = 14 + 15 + 16 = 45$$\n2. The determinant is the product of the eigenvalues:\n$$\\det(A) = \\prod_{i=1}^3 \\lambda_i = 14 \\times 15 \\times 16 = 3360$$\nTherefore, Trace = 45 and Determinant = 3360.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_014",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Cayley–Hamilton theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $A$ be a $2 \\times 2$ matrix satisfying $A^2 - 16A + I = 0$, where $I$ is the identity matrix. If $\\lambda$ is an eigenvalue of $A$, the value of $\\lambda^2 + \\lambda^{-2}$ is ________ (answer in integer).",
+    "correct_answer": "254",
+    "numerical_range": {
+      "min": 254.0,
+      "max": 254.0
+    },
+    "solution": "Since $\\lambda$ is an eigenvalue of $A$, it satisfies the characteristic equation:\n$$\\lambda^2 - 16\\lambda + 1 = 0$$\nDividing through by $\\lambda$ (since $\\lambda \\neq 0$):\n$$\\lambda + \\frac{1}{\\lambda} = 16$$\nSquaring both sides:\n$$\\left(\\lambda + \\frac{1}{\\lambda}\\right)^2 = 16^2 = 256$$\n$$\\lambda^2 + 2 + \\frac{1}{\\lambda^2} = 256 \\implies \\lambda^2 + \\lambda^{-2} = 256 - 2 = 254$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_015",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Powers of matrices",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $A$ be an $n \\times n$ real symmetric matrix. Which of the following statements is/are ALWAYS TRUE?",
+    "options": {
+      "A": "All eigenvalues of $A$ are real numbers",
+      "B": "Eigenvectors corresponding to distinct eigenvalues are mutually orthogonal",
+      "C": "The matrix $A$ is diagonalizable using an orthogonal modal matrix",
+      "D": "If all eigenvalues of $A$ are positive, then $A$ is positive definite"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "For any real symmetric matrix $A$:\n1. All eigenvalues are strictly real. (A is true)\n2. Eigenvectors belonging to distinct eigenvalues satisfy $(v_i, v_j) = 0$, hence mutually orthogonal. (B is true)\n3. By the Spectral Theorem, there exists an orthogonal matrix $P$ such that $P^T A P = D$. (C is true)\n4. A real symmetric matrix with strictly positive eigenvalues satisfies $x^T A x > 0$ for all $x \\neq 0$, which is the definition of positive definiteness. (D is true)\nHence, all choices A, B, C, and D are correct.",
+    "difficulty": "Hard",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_016",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Eigenvalues and eigenvectors",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A $3 \\times 3$ real symmetric matrix has eigenvalues $\\lambda_1 = 17$, $\\lambda_2 = 18$, and $\\lambda_3 = 19$. The trace and determinant of the matrix are:",
+    "options": {
+      "A": "Trace = 54, Determinant = 5814",
+      "B": "Trace = 5814, Determinant = 54",
+      "C": "Trace = 56, Determinant = 5814",
+      "D": "Trace = 54, Determinant = 5818"
+    },
+    "correct_answer": "A",
+    "solution": "By the spectral properties of square matrices:\n1. The trace is the sum of the eigenvalues:\n$$\\operatorname{tr}(A) = \\sum_{i=1}^3 \\lambda_i = 17 + 18 + 19 = 54$$\n2. The determinant is the product of the eigenvalues:\n$$\\det(A) = \\prod_{i=1}^3 \\lambda_i = 17 \\times 18 \\times 19 = 5814$$\nTherefore, Trace = 54 and Determinant = 5814.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_017",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Cayley–Hamilton theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $A$ be a $2 \\times 2$ matrix satisfying $A^2 - 19A + I = 0$, where $I$ is the identity matrix. If $\\lambda$ is an eigenvalue of $A$, the value of $\\lambda^2 + \\lambda^{-2}$ is ________ (answer in integer).",
+    "correct_answer": "359",
+    "numerical_range": {
+      "min": 359.0,
+      "max": 359.0
+    },
+    "solution": "Since $\\lambda$ is an eigenvalue of $A$, it satisfies the characteristic equation:\n$$\\lambda^2 - 19\\lambda + 1 = 0$$\nDividing through by $\\lambda$ (since $\\lambda \\neq 0$):\n$$\\lambda + \\frac{1}{\\lambda} = 19$$\nSquaring both sides:\n$$\\left(\\lambda + \\frac{1}{\\lambda}\\right)^2 = 19^2 = 361$$\n$$\\lambda^2 + 2 + \\frac{1}{\\lambda^2} = 361 \\implies \\lambda^2 + \\lambda^{-2} = 361 - 2 = 359$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_018",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Powers of matrices",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $A$ be an $n \\times n$ real symmetric matrix. Which of the following statements is/are ALWAYS TRUE?",
+    "options": {
+      "A": "All eigenvalues of $A$ are real numbers",
+      "B": "Eigenvectors corresponding to distinct eigenvalues are mutually orthogonal",
+      "C": "The matrix $A$ is diagonalizable using an orthogonal modal matrix",
+      "D": "If all eigenvalues of $A$ are positive, then $A$ is positive definite"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "For any real symmetric matrix $A$:\n1. All eigenvalues are strictly real. (A is true)\n2. Eigenvectors belonging to distinct eigenvalues satisfy $(v_i, v_j) = 0$, hence mutually orthogonal. (B is true)\n3. By the Spectral Theorem, there exists an orthogonal matrix $P$ such that $P^T A P = D$. (C is true)\n4. A real symmetric matrix with strictly positive eigenvalues satisfies $x^T A x > 0$ for all $x \\neq 0$, which is the definition of positive definiteness. (D is true)\nHence, all choices A, B, C, and D are correct.",
+    "difficulty": "Hard",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_019",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Eigenvalues and eigenvectors",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A $3 \\times 3$ real symmetric matrix has eigenvalues $\\lambda_1 = 20$, $\\lambda_2 = 21$, and $\\lambda_3 = 22$. The trace and determinant of the matrix are:",
+    "options": {
+      "A": "Trace = 63, Determinant = 9240",
+      "B": "Trace = 9240, Determinant = 63",
+      "C": "Trace = 65, Determinant = 9240",
+      "D": "Trace = 63, Determinant = 9244"
+    },
+    "correct_answer": "A",
+    "solution": "By the spectral properties of square matrices:\n1. The trace is the sum of the eigenvalues:\n$$\\operatorname{tr}(A) = \\sum_{i=1}^3 \\lambda_i = 20 + 21 + 22 = 63$$\n2. The determinant is the product of the eigenvalues:\n$$\\det(A) = \\prod_{i=1}^3 \\lambda_i = 20 \\times 21 \\times 22 = 9240$$\nTherefore, Trace = 63 and Determinant = 9240.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_020",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Cayley–Hamilton theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $A$ be a $2 \\times 2$ matrix satisfying $A^2 - 22A + I = 0$, where $I$ is the identity matrix. If $\\lambda$ is an eigenvalue of $A$, the value of $\\lambda^2 + \\lambda^{-2}$ is ________ (answer in integer).",
+    "correct_answer": "482",
+    "numerical_range": {
+      "min": 482.0,
+      "max": 482.0
+    },
+    "solution": "Since $\\lambda$ is an eigenvalue of $A$, it satisfies the characteristic equation:\n$$\\lambda^2 - 22\\lambda + 1 = 0$$\nDividing through by $\\lambda$ (since $\\lambda \\neq 0$):\n$$\\lambda + \\frac{1}{\\lambda} = 22$$\nSquaring both sides:\n$$\\left(\\lambda + \\frac{1}{\\lambda}\\right)^2 = 22^2 = 484$$\n$$\\lambda^2 + 2 + \\frac{1}{\\lambda^2} = 484 \\implies \\lambda^2 + \\lambda^{-2} = 484 - 2 = 482$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_021",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Powers of matrices",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $A$ be an $n \\times n$ real symmetric matrix. Which of the following statements is/are ALWAYS TRUE?",
+    "options": {
+      "A": "All eigenvalues of $A$ are real numbers",
+      "B": "Eigenvectors corresponding to distinct eigenvalues are mutually orthogonal",
+      "C": "The matrix $A$ is diagonalizable using an orthogonal modal matrix",
+      "D": "If all eigenvalues of $A$ are positive, then $A$ is positive definite"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "For any real symmetric matrix $A$:\n1. All eigenvalues are strictly real. (A is true)\n2. Eigenvectors belonging to distinct eigenvalues satisfy $(v_i, v_j) = 0$, hence mutually orthogonal. (B is true)\n3. By the Spectral Theorem, there exists an orthogonal matrix $P$ such that $P^T A P = D$. (C is true)\n4. A real symmetric matrix with strictly positive eigenvalues satisfies $x^T A x > 0$ for all $x \\neq 0$, which is the definition of positive definiteness. (D is true)\nHence, all choices A, B, C, and D are correct.",
+    "difficulty": "Hard",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_022",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Eigenvalues and eigenvectors",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A $3 \\times 3$ real symmetric matrix has eigenvalues $\\lambda_1 = 23$, $\\lambda_2 = 24$, and $\\lambda_3 = 25$. The trace and determinant of the matrix are:",
+    "options": {
+      "A": "Trace = 72, Determinant = 13800",
+      "B": "Trace = 13800, Determinant = 72",
+      "C": "Trace = 74, Determinant = 13800",
+      "D": "Trace = 72, Determinant = 13804"
+    },
+    "correct_answer": "A",
+    "solution": "By the spectral properties of square matrices:\n1. The trace is the sum of the eigenvalues:\n$$\\operatorname{tr}(A) = \\sum_{i=1}^3 \\lambda_i = 23 + 24 + 25 = 72$$\n2. The determinant is the product of the eigenvalues:\n$$\\det(A) = \\prod_{i=1}^3 \\lambda_i = 23 \\times 24 \\times 25 = 13800$$\nTherefore, Trace = 72 and Determinant = 13800.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_023",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Cayley–Hamilton theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $A$ be a $2 \\times 2$ matrix satisfying $A^2 - 25A + I = 0$, where $I$ is the identity matrix. If $\\lambda$ is an eigenvalue of $A$, the value of $\\lambda^2 + \\lambda^{-2}$ is ________ (answer in integer).",
+    "correct_answer": "623",
+    "numerical_range": {
+      "min": 623.0,
+      "max": 623.0
+    },
+    "solution": "Since $\\lambda$ is an eigenvalue of $A$, it satisfies the characteristic equation:\n$$\\lambda^2 - 25\\lambda + 1 = 0$$\nDividing through by $\\lambda$ (since $\\lambda \\neq 0$):\n$$\\lambda + \\frac{1}{\\lambda} = 25$$\nSquaring both sides:\n$$\\left(\\lambda + \\frac{1}{\\lambda}\\right)^2 = 25^2 = 625$$\n$$\\lambda^2 + 2 + \\frac{1}{\\lambda^2} = 625 \\implies \\lambda^2 + \\lambda^{-2} = 625 - 2 = 623$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_024",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Powers of matrices",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $A$ be an $n \\times n$ real symmetric matrix. Which of the following statements is/are ALWAYS TRUE?",
+    "options": {
+      "A": "All eigenvalues of $A$ are real numbers",
+      "B": "Eigenvectors corresponding to distinct eigenvalues are mutually orthogonal",
+      "C": "The matrix $A$ is diagonalizable using an orthogonal modal matrix",
+      "D": "If all eigenvalues of $A$ are positive, then $A$ is positive definite"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "For any real symmetric matrix $A$:\n1. All eigenvalues are strictly real. (A is true)\n2. Eigenvectors belonging to distinct eigenvalues satisfy $(v_i, v_j) = 0$, hence mutually orthogonal. (B is true)\n3. By the Spectral Theorem, there exists an orthogonal matrix $P$ such that $P^T A P = D$. (C is true)\n4. A real symmetric matrix with strictly positive eigenvalues satisfies $x^T A x > 0$ for all $x \\neq 0$, which is the definition of positive definiteness. (D is true)\nHence, all choices A, B, C, and D are correct.",
+    "difficulty": "Hard",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_025",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Eigenvalues and eigenvectors",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A $3 \\times 3$ real symmetric matrix has eigenvalues $\\lambda_1 = 26$, $\\lambda_2 = 27$, and $\\lambda_3 = 28$. The trace and determinant of the matrix are:",
+    "options": {
+      "A": "Trace = 81, Determinant = 19656",
+      "B": "Trace = 19656, Determinant = 81",
+      "C": "Trace = 83, Determinant = 19656",
+      "D": "Trace = 81, Determinant = 19660"
+    },
+    "correct_answer": "A",
+    "solution": "By the spectral properties of square matrices:\n1. The trace is the sum of the eigenvalues:\n$$\\operatorname{tr}(A) = \\sum_{i=1}^3 \\lambda_i = 26 + 27 + 28 = 81$$\n2. The determinant is the product of the eigenvalues:\n$$\\det(A) = \\prod_{i=1}^3 \\lambda_i = 26 \\times 27 \\times 28 = 19656$$\nTherefore, Trace = 81 and Determinant = 19656.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_026",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Cayley–Hamilton theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $A$ be a $2 \\times 2$ matrix satisfying $A^2 - 28A + I = 0$, where $I$ is the identity matrix. If $\\lambda$ is an eigenvalue of $A$, the value of $\\lambda^2 + \\lambda^{-2}$ is ________ (answer in integer).",
+    "correct_answer": "782",
+    "numerical_range": {
+      "min": 782.0,
+      "max": 782.0
+    },
+    "solution": "Since $\\lambda$ is an eigenvalue of $A$, it satisfies the characteristic equation:\n$$\\lambda^2 - 28\\lambda + 1 = 0$$\nDividing through by $\\lambda$ (since $\\lambda \\neq 0$):\n$$\\lambda + \\frac{1}{\\lambda} = 28$$\nSquaring both sides:\n$$\\left(\\lambda + \\frac{1}{\\lambda}\\right)^2 = 28^2 = 784$$\n$$\\lambda^2 + 2 + \\frac{1}{\\lambda^2} = 784 \\implies \\lambda^2 + \\lambda^{-2} = 784 - 2 = 782$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_027",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Powers of matrices",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $A$ be an $n \\times n$ real symmetric matrix. Which of the following statements is/are ALWAYS TRUE?",
+    "options": {
+      "A": "All eigenvalues of $A$ are real numbers",
+      "B": "Eigenvectors corresponding to distinct eigenvalues are mutually orthogonal",
+      "C": "The matrix $A$ is diagonalizable using an orthogonal modal matrix",
+      "D": "If all eigenvalues of $A$ are positive, then $A$ is positive definite"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "For any real symmetric matrix $A$:\n1. All eigenvalues are strictly real. (A is true)\n2. Eigenvectors belonging to distinct eigenvalues satisfy $(v_i, v_j) = 0$, hence mutually orthogonal. (B is true)\n3. By the Spectral Theorem, there exists an orthogonal matrix $P$ such that $P^T A P = D$. (C is true)\n4. A real symmetric matrix with strictly positive eigenvalues satisfies $x^T A x > 0$ for all $x \\neq 0$, which is the definition of positive definiteness. (D is true)\nHence, all choices A, B, C, and D are correct.",
+    "difficulty": "Hard",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_028",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Eigenvalues and eigenvectors",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A $3 \\times 3$ real symmetric matrix has eigenvalues $\\lambda_1 = 29$, $\\lambda_2 = 30$, and $\\lambda_3 = 31$. The trace and determinant of the matrix are:",
+    "options": {
+      "A": "Trace = 90, Determinant = 26970",
+      "B": "Trace = 26970, Determinant = 90",
+      "C": "Trace = 92, Determinant = 26970",
+      "D": "Trace = 90, Determinant = 26974"
+    },
+    "correct_answer": "A",
+    "solution": "By the spectral properties of square matrices:\n1. The trace is the sum of the eigenvalues:\n$$\\operatorname{tr}(A) = \\sum_{i=1}^3 \\lambda_i = 29 + 30 + 31 = 90$$\n2. The determinant is the product of the eigenvalues:\n$$\\det(A) = \\prod_{i=1}^3 \\lambda_i = 29 \\times 30 \\times 31 = 26970$$\nTherefore, Trace = 90 and Determinant = 26970.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_029",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Cayley–Hamilton theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $A$ be a $2 \\times 2$ matrix satisfying $A^2 - 31A + I = 0$, where $I$ is the identity matrix. If $\\lambda$ is an eigenvalue of $A$, the value of $\\lambda^2 + \\lambda^{-2}$ is ________ (answer in integer).",
+    "correct_answer": "959",
+    "numerical_range": {
+      "min": 959.0,
+      "max": 959.0
+    },
+    "solution": "Since $\\lambda$ is an eigenvalue of $A$, it satisfies the characteristic equation:\n$$\\lambda^2 - 31\\lambda + 1 = 0$$\nDividing through by $\\lambda$ (since $\\lambda \\neq 0$):\n$$\\lambda + \\frac{1}{\\lambda} = 31$$\nSquaring both sides:\n$$\\left(\\lambda + \\frac{1}{\\lambda}\\right)^2 = 31^2 = 961$$\n$$\\lambda^2 + 2 + \\frac{1}{\\lambda^2} = 961 \\implies \\lambda^2 + \\lambda^{-2} = 961 - 2 = 959$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_030",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Powers of matrices",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $A$ be an $n \\times n$ real symmetric matrix. Which of the following statements is/are ALWAYS TRUE?",
+    "options": {
+      "A": "All eigenvalues of $A$ are real numbers",
+      "B": "Eigenvectors corresponding to distinct eigenvalues are mutually orthogonal",
+      "C": "The matrix $A$ is diagonalizable using an orthogonal modal matrix",
+      "D": "If all eigenvalues of $A$ are positive, then $A$ is positive definite"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "For any real symmetric matrix $A$:\n1. All eigenvalues are strictly real. (A is true)\n2. Eigenvectors belonging to distinct eigenvalues satisfy $(v_i, v_j) = 0$, hence mutually orthogonal. (B is true)\n3. By the Spectral Theorem, there exists an orthogonal matrix $P$ such that $P^T A P = D$. (C is true)\n4. A real symmetric matrix with strictly positive eigenvalues satisfies $x^T A x > 0$ for all $x \\neq 0$, which is the definition of positive definiteness. (D is true)\nHence, all choices A, B, C, and D are correct.",
+    "difficulty": "Hard",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_031",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Eigenvalues and eigenvectors",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A $3 \\times 3$ real symmetric matrix has eigenvalues $\\lambda_1 = 32$, $\\lambda_2 = 33$, and $\\lambda_3 = 34$. The trace and determinant of the matrix are:",
+    "options": {
+      "A": "Trace = 99, Determinant = 35904",
+      "B": "Trace = 35904, Determinant = 99",
+      "C": "Trace = 101, Determinant = 35904",
+      "D": "Trace = 99, Determinant = 35908"
+    },
+    "correct_answer": "A",
+    "solution": "By the spectral properties of square matrices:\n1. The trace is the sum of the eigenvalues:\n$$\\operatorname{tr}(A) = \\sum_{i=1}^3 \\lambda_i = 32 + 33 + 34 = 99$$\n2. The determinant is the product of the eigenvalues:\n$$\\det(A) = \\prod_{i=1}^3 \\lambda_i = 32 \\times 33 \\times 34 = 35904$$\nTherefore, Trace = 99 and Determinant = 35904.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_032",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Cayley–Hamilton theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $A$ be a $2 \\times 2$ matrix satisfying $A^2 - 34A + I = 0$, where $I$ is the identity matrix. If $\\lambda$ is an eigenvalue of $A$, the value of $\\lambda^2 + \\lambda^{-2}$ is ________ (answer in integer).",
+    "correct_answer": "1154",
+    "numerical_range": {
+      "min": 1154.0,
+      "max": 1154.0
+    },
+    "solution": "Since $\\lambda$ is an eigenvalue of $A$, it satisfies the characteristic equation:\n$$\\lambda^2 - 34\\lambda + 1 = 0$$\nDividing through by $\\lambda$ (since $\\lambda \\neq 0$):\n$$\\lambda + \\frac{1}{\\lambda} = 34$$\nSquaring both sides:\n$$\\left(\\lambda + \\frac{1}{\\lambda}\\right)^2 = 34^2 = 1156$$\n$$\\lambda^2 + 2 + \\frac{1}{\\lambda^2} = 1156 \\implies \\lambda^2 + \\lambda^{-2} = 1156 - 2 = 1154$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_033",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Powers of matrices",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $A$ be an $n \\times n$ real symmetric matrix. Which of the following statements is/are ALWAYS TRUE?",
+    "options": {
+      "A": "All eigenvalues of $A$ are real numbers",
+      "B": "Eigenvectors corresponding to distinct eigenvalues are mutually orthogonal",
+      "C": "The matrix $A$ is diagonalizable using an orthogonal modal matrix",
+      "D": "If all eigenvalues of $A$ are positive, then $A$ is positive definite"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "For any real symmetric matrix $A$:\n1. All eigenvalues are strictly real. (A is true)\n2. Eigenvectors belonging to distinct eigenvalues satisfy $(v_i, v_j) = 0$, hence mutually orthogonal. (B is true)\n3. By the Spectral Theorem, there exists an orthogonal matrix $P$ such that $P^T A P = D$. (C is true)\n4. A real symmetric matrix with strictly positive eigenvalues satisfies $x^T A x > 0$ for all $x \\neq 0$, which is the definition of positive definiteness. (D is true)\nHence, all choices A, B, C, and D are correct.",
+    "difficulty": "Hard",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_034",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Eigenvalues and eigenvectors",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A $3 \\times 3$ real symmetric matrix has eigenvalues $\\lambda_1 = 35$, $\\lambda_2 = 36$, and $\\lambda_3 = 37$. The trace and determinant of the matrix are:",
+    "options": {
+      "A": "Trace = 108, Determinant = 46620",
+      "B": "Trace = 46620, Determinant = 108",
+      "C": "Trace = 110, Determinant = 46620",
+      "D": "Trace = 108, Determinant = 46624"
+    },
+    "correct_answer": "A",
+    "solution": "By the spectral properties of square matrices:\n1. The trace is the sum of the eigenvalues:\n$$\\operatorname{tr}(A) = \\sum_{i=1}^3 \\lambda_i = 35 + 36 + 37 = 108$$\n2. The determinant is the product of the eigenvalues:\n$$\\det(A) = \\prod_{i=1}^3 \\lambda_i = 35 \\times 36 \\times 37 = 46620$$\nTherefore, Trace = 108 and Determinant = 46620.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_035",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Cayley–Hamilton theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $A$ be a $2 \\times 2$ matrix satisfying $A^2 - 37A + I = 0$, where $I$ is the identity matrix. If $\\lambda$ is an eigenvalue of $A$, the value of $\\lambda^2 + \\lambda^{-2}$ is ________ (answer in integer).",
+    "correct_answer": "1367",
+    "numerical_range": {
+      "min": 1367.0,
+      "max": 1367.0
+    },
+    "solution": "Since $\\lambda$ is an eigenvalue of $A$, it satisfies the characteristic equation:\n$$\\lambda^2 - 37\\lambda + 1 = 0$$\nDividing through by $\\lambda$ (since $\\lambda \\neq 0$):\n$$\\lambda + \\frac{1}{\\lambda} = 37$$\nSquaring both sides:\n$$\\left(\\lambda + \\frac{1}{\\lambda}\\right)^2 = 37^2 = 1369$$\n$$\\lambda^2 + 2 + \\frac{1}{\\lambda^2} = 1369 \\implies \\lambda^2 + \\lambda^{-2} = 1369 - 2 = 1367$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_EIG_036",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Powers of matrices",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $A$ be an $n \\times n$ real symmetric matrix. Which of the following statements is/are ALWAYS TRUE?",
+    "options": {
+      "A": "All eigenvalues of $A$ are real numbers",
+      "B": "Eigenvectors corresponding to distinct eigenvalues are mutually orthogonal",
+      "C": "The matrix $A$ is diagonalizable using an orthogonal modal matrix",
+      "D": "If all eigenvalues of $A$ are positive, then $A$ is positive definite"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "For any real symmetric matrix $A$:\n1. All eigenvalues are strictly real. (A is true)\n2. Eigenvectors belonging to distinct eigenvalues satisfy $(v_i, v_j) = 0$, hence mutually orthogonal. (B is true)\n3. By the Spectral Theorem, there exists an orthogonal matrix $P$ such that $P^T A P = D$. (C is true)\n4. A real symmetric matrix with strictly positive eigenvalues satisfies $x^T A x > 0$ for all $x \\neq 0$, which is the definition of positive definiteness. (D is true)\nHence, all choices A, B, C, and D are correct.",
+    "difficulty": "Hard",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_001",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Consistency conditions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Consider the system of equations: $x + y + z = 6$, $x + 2y + 3z = 10$, and $x + 2y + k z = 11$. The value of $k$ for which the system has infinitely many solutions is:",
+    "options": {
+      "A": "3",
+      "B": "2",
+      "C": "1",
+      "D": "0"
+    },
+    "correct_answer": "A",
+    "solution": "Writing the augmented matrix $[A|B]$:\n$$\\begin{bmatrix} 1 & 1 & 1 & 6 \\\\ 1 & 2 & 3 & 10 \\\\ 1 & 2 & k & k+7 \\end{bmatrix}$$\nPerforming $R_2 \\to R_2 - R_1$ and $R_3 \\to R_3 - R_2$:\n$$\\begin{bmatrix} 1 & 1 & 1 & 6 \\\\ 0 & 1 & 2 & 4 \\\\ 0 & 0 & k - 3 & (k + 7) - 10 \\end{bmatrix}$$\nFor infinitely many solutions, $\\operatorname{{rank}}(A) = \\operatorname{{rank}}(A|B) < 3$, which requires:\n$$k - 3 = 0 \\implies k = 3$$\nChecking the constant side: $(3 + 7) - 10 = 10 - 10 = 0$. Thus the third row becomes all zeros, yielding infinite solutions.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_002",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Vector spaces and basis",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A homogeneous system of linear equations $Ax = 0$ with 4 variables has a coefficient matrix $A$ of rank 2. The dimension of the solution space (nullity of $A$) is equal to ________ (answer in integer).",
+    "correct_answer": "2",
+    "numerical_range": {
+      "min": 2.0,
+      "max": 2.0
+    },
+    "solution": "According to the Rank-Nullity Theorem for a linear transformation or system of equations with $n$ variables:\n$$\\operatorname{rank}(A) + \\operatorname{nullity}(A) = n$$\nGiven $n = 4$ and $\\operatorname{rank}(A) = 2$:\n$$\\operatorname{nullity}(A) = n - \\operatorname{rank}(A) = 4 - 2 = 2$$\nThe dimension of the solution space is therefore $2$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_003",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Consistency conditions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "For a non-homogeneous system of linear equations $Ax = b$ where $A$ is an $m \\times n$ matrix and $b \\neq 0$, which of the following statements is/are TRUE?",
+    "options": {
+      "A": "The system is consistent if and only if $\\operatorname{rank}(A) = \\operatorname{rank}([A|b])$",
+      "B": "If $\\operatorname{rank}(A) = \\operatorname{rank}([A|b]) = n$, the system has a unique solution",
+      "C": "If $\\operatorname{rank}(A) = \\operatorname{rank}([A|b]) < n$, the system has infinitely many solutions",
+      "D": "If $\\operatorname{rank}(A) < \\operatorname{rank}([A|b])$, the system has no solution"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "By Rouché-Capelli Theorem:\n1. A system $Ax = b$ has at least one solution (is consistent) iff $\\operatorname{rank}(A) = \\operatorname{rank}([A|b])$. (A is true)\n2. If the rank equals the number of variables $n$, the solution is unique. (B is true)\n3. If the rank is strictly less than $n$, there exist $n - \\operatorname{rank}(A)$ free parameters, giving infinitely many solutions. (C is true)\n4. If $\\operatorname{rank}(A) < \\operatorname{rank}([A|b])$, the equations are contradictory and no solution exists. (D is true)\nAll choices A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_004",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Consistency conditions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Consider the system of equations: $x + y + z = 6$, $x + 2y + 3z = 10$, and $x + 2y + k z = 14$. The value of $k$ for which the system has infinitely many solutions is:",
+    "options": {
+      "A": "3",
+      "B": "2",
+      "C": "1",
+      "D": "0"
+    },
+    "correct_answer": "A",
+    "solution": "Writing the augmented matrix $[A|B]$:\n$$\\begin{bmatrix} 1 & 1 & 1 & 6 \\\\ 1 & 2 & 3 & 10 \\\\ 1 & 2 & k & k+7 \\end{bmatrix}$$\nPerforming $R_2 \\to R_2 - R_1$ and $R_3 \\to R_3 - R_2$:\n$$\\begin{bmatrix} 1 & 1 & 1 & 6 \\\\ 0 & 1 & 2 & 4 \\\\ 0 & 0 & k - 3 & (k + 7) - 10 \\end{bmatrix}$$\nFor infinitely many solutions, $\\operatorname{{rank}}(A) = \\operatorname{{rank}}(A|B) < 3$, which requires:\n$$k - 3 = 0 \\implies k = 3$$\nChecking the constant side: $(3 + 7) - 10 = 10 - 10 = 0$. Thus the third row becomes all zeros, yielding infinite solutions.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_005",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Vector spaces and basis",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A homogeneous system of linear equations $Ax = 0$ with 4 variables has a coefficient matrix $A$ of rank 2. The dimension of the solution space (nullity of $A$) is equal to ________ (answer in integer).",
+    "correct_answer": "2",
+    "numerical_range": {
+      "min": 2.0,
+      "max": 2.0
+    },
+    "solution": "According to the Rank-Nullity Theorem for a linear transformation or system of equations with $n$ variables:\n$$\\operatorname{rank}(A) + \\operatorname{nullity}(A) = n$$\nGiven $n = 4$ and $\\operatorname{rank}(A) = 2$:\n$$\\operatorname{nullity}(A) = n - \\operatorname{rank}(A) = 4 - 2 = 2$$\nThe dimension of the solution space is therefore $2$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_006",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Consistency conditions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "For a non-homogeneous system of linear equations $Ax = b$ where $A$ is an $m \\times n$ matrix and $b \\neq 0$, which of the following statements is/are TRUE?",
+    "options": {
+      "A": "The system is consistent if and only if $\\operatorname{rank}(A) = \\operatorname{rank}([A|b])$",
+      "B": "If $\\operatorname{rank}(A) = \\operatorname{rank}([A|b]) = n$, the system has a unique solution",
+      "C": "If $\\operatorname{rank}(A) = \\operatorname{rank}([A|b]) < n$, the system has infinitely many solutions",
+      "D": "If $\\operatorname{rank}(A) < \\operatorname{rank}([A|b])$, the system has no solution"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "By Rouché-Capelli Theorem:\n1. A system $Ax = b$ has at least one solution (is consistent) iff $\\operatorname{rank}(A) = \\operatorname{rank}([A|b])$. (A is true)\n2. If the rank equals the number of variables $n$, the solution is unique. (B is true)\n3. If the rank is strictly less than $n$, there exist $n - \\operatorname{rank}(A)$ free parameters, giving infinitely many solutions. (C is true)\n4. If $\\operatorname{rank}(A) < \\operatorname{rank}([A|b])$, the equations are contradictory and no solution exists. (D is true)\nAll choices A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_007",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Consistency conditions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Consider the system of equations: $x + y + z = 6$, $x + 2y + 3z = 10$, and $x + 2y + k z = 17$. The value of $k$ for which the system has infinitely many solutions is:",
+    "options": {
+      "A": "3",
+      "B": "2",
+      "C": "1",
+      "D": "0"
+    },
+    "correct_answer": "A",
+    "solution": "Writing the augmented matrix $[A|B]$:\n$$\\begin{bmatrix} 1 & 1 & 1 & 6 \\\\ 1 & 2 & 3 & 10 \\\\ 1 & 2 & k & k+7 \\end{bmatrix}$$\nPerforming $R_2 \\to R_2 - R_1$ and $R_3 \\to R_3 - R_2$:\n$$\\begin{bmatrix} 1 & 1 & 1 & 6 \\\\ 0 & 1 & 2 & 4 \\\\ 0 & 0 & k - 3 & (k + 7) - 10 \\end{bmatrix}$$\nFor infinitely many solutions, $\\operatorname{{rank}}(A) = \\operatorname{{rank}}(A|B) < 3$, which requires:\n$$k - 3 = 0 \\implies k = 3$$\nChecking the constant side: $(3 + 7) - 10 = 10 - 10 = 0$. Thus the third row becomes all zeros, yielding infinite solutions.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_008",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Vector spaces and basis",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A homogeneous system of linear equations $Ax = 0$ with 4 variables has a coefficient matrix $A$ of rank 2. The dimension of the solution space (nullity of $A$) is equal to ________ (answer in integer).",
+    "correct_answer": "2",
+    "numerical_range": {
+      "min": 2.0,
+      "max": 2.0
+    },
+    "solution": "According to the Rank-Nullity Theorem for a linear transformation or system of equations with $n$ variables:\n$$\\operatorname{rank}(A) + \\operatorname{nullity}(A) = n$$\nGiven $n = 4$ and $\\operatorname{rank}(A) = 2$:\n$$\\operatorname{nullity}(A) = n - \\operatorname{rank}(A) = 4 - 2 = 2$$\nThe dimension of the solution space is therefore $2$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_009",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Consistency conditions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "For a non-homogeneous system of linear equations $Ax = b$ where $A$ is an $m \\times n$ matrix and $b \\neq 0$, which of the following statements is/are TRUE?",
+    "options": {
+      "A": "The system is consistent if and only if $\\operatorname{rank}(A) = \\operatorname{rank}([A|b])$",
+      "B": "If $\\operatorname{rank}(A) = \\operatorname{rank}([A|b]) = n$, the system has a unique solution",
+      "C": "If $\\operatorname{rank}(A) = \\operatorname{rank}([A|b]) < n$, the system has infinitely many solutions",
+      "D": "If $\\operatorname{rank}(A) < \\operatorname{rank}([A|b])$, the system has no solution"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "By Rouché-Capelli Theorem:\n1. A system $Ax = b$ has at least one solution (is consistent) iff $\\operatorname{rank}(A) = \\operatorname{rank}([A|b])$. (A is true)\n2. If the rank equals the number of variables $n$, the solution is unique. (B is true)\n3. If the rank is strictly less than $n$, there exist $n - \\operatorname{rank}(A)$ free parameters, giving infinitely many solutions. (C is true)\n4. If $\\operatorname{rank}(A) < \\operatorname{rank}([A|b])$, the equations are contradictory and no solution exists. (D is true)\nAll choices A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_010",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Consistency conditions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Consider the system of equations: $x + y + z = 6$, $x + 2y + 3z = 10$, and $x + 2y + k z = 20$. The value of $k$ for which the system has infinitely many solutions is:",
+    "options": {
+      "A": "3",
+      "B": "2",
+      "C": "1",
+      "D": "0"
+    },
+    "correct_answer": "A",
+    "solution": "Writing the augmented matrix $[A|B]$:\n$$\\begin{bmatrix} 1 & 1 & 1 & 6 \\\\ 1 & 2 & 3 & 10 \\\\ 1 & 2 & k & k+7 \\end{bmatrix}$$\nPerforming $R_2 \\to R_2 - R_1$ and $R_3 \\to R_3 - R_2$:\n$$\\begin{bmatrix} 1 & 1 & 1 & 6 \\\\ 0 & 1 & 2 & 4 \\\\ 0 & 0 & k - 3 & (k + 7) - 10 \\end{bmatrix}$$\nFor infinitely many solutions, $\\operatorname{{rank}}(A) = \\operatorname{{rank}}(A|B) < 3$, which requires:\n$$k - 3 = 0 \\implies k = 3$$\nChecking the constant side: $(3 + 7) - 10 = 10 - 10 = 0$. Thus the third row becomes all zeros, yielding infinite solutions.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_011",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Vector spaces and basis",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A homogeneous system of linear equations $Ax = 0$ with 4 variables has a coefficient matrix $A$ of rank 2. The dimension of the solution space (nullity of $A$) is equal to ________ (answer in integer).",
+    "correct_answer": "2",
+    "numerical_range": {
+      "min": 2.0,
+      "max": 2.0
+    },
+    "solution": "According to the Rank-Nullity Theorem for a linear transformation or system of equations with $n$ variables:\n$$\\operatorname{rank}(A) + \\operatorname{nullity}(A) = n$$\nGiven $n = 4$ and $\\operatorname{rank}(A) = 2$:\n$$\\operatorname{nullity}(A) = n - \\operatorname{rank}(A) = 4 - 2 = 2$$\nThe dimension of the solution space is therefore $2$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_012",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Consistency conditions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "For a non-homogeneous system of linear equations $Ax = b$ where $A$ is an $m \\times n$ matrix and $b \\neq 0$, which of the following statements is/are TRUE?",
+    "options": {
+      "A": "The system is consistent if and only if $\\operatorname{rank}(A) = \\operatorname{rank}([A|b])$",
+      "B": "If $\\operatorname{rank}(A) = \\operatorname{rank}([A|b]) = n$, the system has a unique solution",
+      "C": "If $\\operatorname{rank}(A) = \\operatorname{rank}([A|b]) < n$, the system has infinitely many solutions",
+      "D": "If $\\operatorname{rank}(A) < \\operatorname{rank}([A|b])$, the system has no solution"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "By Rouché-Capelli Theorem:\n1. A system $Ax = b$ has at least one solution (is consistent) iff $\\operatorname{rank}(A) = \\operatorname{rank}([A|b])$. (A is true)\n2. If the rank equals the number of variables $n$, the solution is unique. (B is true)\n3. If the rank is strictly less than $n$, there exist $n - \\operatorname{rank}(A)$ free parameters, giving infinitely many solutions. (C is true)\n4. If $\\operatorname{rank}(A) < \\operatorname{rank}([A|b])$, the equations are contradictory and no solution exists. (D is true)\nAll choices A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_013",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Consistency conditions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Consider the system of equations: $x + y + z = 6$, $x + 2y + 3z = 10$, and $x + 2y + k z = 23$. The value of $k$ for which the system has infinitely many solutions is:",
+    "options": {
+      "A": "3",
+      "B": "2",
+      "C": "1",
+      "D": "0"
+    },
+    "correct_answer": "A",
+    "solution": "Writing the augmented matrix $[A|B]$:\n$$\\begin{bmatrix} 1 & 1 & 1 & 6 \\\\ 1 & 2 & 3 & 10 \\\\ 1 & 2 & k & k+7 \\end{bmatrix}$$\nPerforming $R_2 \\to R_2 - R_1$ and $R_3 \\to R_3 - R_2$:\n$$\\begin{bmatrix} 1 & 1 & 1 & 6 \\\\ 0 & 1 & 2 & 4 \\\\ 0 & 0 & k - 3 & (k + 7) - 10 \\end{bmatrix}$$\nFor infinitely many solutions, $\\operatorname{{rank}}(A) = \\operatorname{{rank}}(A|B) < 3$, which requires:\n$$k - 3 = 0 \\implies k = 3$$\nChecking the constant side: $(3 + 7) - 10 = 10 - 10 = 0$. Thus the third row becomes all zeros, yielding infinite solutions.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_014",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Vector spaces and basis",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A homogeneous system of linear equations $Ax = 0$ with 4 variables has a coefficient matrix $A$ of rank 2. The dimension of the solution space (nullity of $A$) is equal to ________ (answer in integer).",
+    "correct_answer": "2",
+    "numerical_range": {
+      "min": 2.0,
+      "max": 2.0
+    },
+    "solution": "According to the Rank-Nullity Theorem for a linear transformation or system of equations with $n$ variables:\n$$\\operatorname{rank}(A) + \\operatorname{nullity}(A) = n$$\nGiven $n = 4$ and $\\operatorname{rank}(A) = 2$:\n$$\\operatorname{nullity}(A) = n - \\operatorname{rank}(A) = 4 - 2 = 2$$\nThe dimension of the solution space is therefore $2$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_015",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Consistency conditions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "For a non-homogeneous system of linear equations $Ax = b$ where $A$ is an $m \\times n$ matrix and $b \\neq 0$, which of the following statements is/are TRUE?",
+    "options": {
+      "A": "The system is consistent if and only if $\\operatorname{rank}(A) = \\operatorname{rank}([A|b])$",
+      "B": "If $\\operatorname{rank}(A) = \\operatorname{rank}([A|b]) = n$, the system has a unique solution",
+      "C": "If $\\operatorname{rank}(A) = \\operatorname{rank}([A|b]) < n$, the system has infinitely many solutions",
+      "D": "If $\\operatorname{rank}(A) < \\operatorname{rank}([A|b])$, the system has no solution"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "By Rouché-Capelli Theorem:\n1. A system $Ax = b$ has at least one solution (is consistent) iff $\\operatorname{rank}(A) = \\operatorname{rank}([A|b])$. (A is true)\n2. If the rank equals the number of variables $n$, the solution is unique. (B is true)\n3. If the rank is strictly less than $n$, there exist $n - \\operatorname{rank}(A)$ free parameters, giving infinitely many solutions. (C is true)\n4. If $\\operatorname{rank}(A) < \\operatorname{rank}([A|b])$, the equations are contradictory and no solution exists. (D is true)\nAll choices A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_016",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Consistency conditions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Consider the system of equations: $x + y + z = 6$, $x + 2y + 3z = 10$, and $x + 2y + k z = 26$. The value of $k$ for which the system has infinitely many solutions is:",
+    "options": {
+      "A": "3",
+      "B": "2",
+      "C": "1",
+      "D": "0"
+    },
+    "correct_answer": "A",
+    "solution": "Writing the augmented matrix $[A|B]$:\n$$\\begin{bmatrix} 1 & 1 & 1 & 6 \\\\ 1 & 2 & 3 & 10 \\\\ 1 & 2 & k & k+7 \\end{bmatrix}$$\nPerforming $R_2 \\to R_2 - R_1$ and $R_3 \\to R_3 - R_2$:\n$$\\begin{bmatrix} 1 & 1 & 1 & 6 \\\\ 0 & 1 & 2 & 4 \\\\ 0 & 0 & k - 3 & (k + 7) - 10 \\end{bmatrix}$$\nFor infinitely many solutions, $\\operatorname{{rank}}(A) = \\operatorname{{rank}}(A|B) < 3$, which requires:\n$$k - 3 = 0 \\implies k = 3$$\nChecking the constant side: $(3 + 7) - 10 = 10 - 10 = 0$. Thus the third row becomes all zeros, yielding infinite solutions.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_017",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Vector spaces and basis",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A homogeneous system of linear equations $Ax = 0$ with 4 variables has a coefficient matrix $A$ of rank 2. The dimension of the solution space (nullity of $A$) is equal to ________ (answer in integer).",
+    "correct_answer": "2",
+    "numerical_range": {
+      "min": 2.0,
+      "max": 2.0
+    },
+    "solution": "According to the Rank-Nullity Theorem for a linear transformation or system of equations with $n$ variables:\n$$\\operatorname{rank}(A) + \\operatorname{nullity}(A) = n$$\nGiven $n = 4$ and $\\operatorname{rank}(A) = 2$:\n$$\\operatorname{nullity}(A) = n - \\operatorname{rank}(A) = 4 - 2 = 2$$\nThe dimension of the solution space is therefore $2$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_018",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Consistency conditions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "For a non-homogeneous system of linear equations $Ax = b$ where $A$ is an $m \\times n$ matrix and $b \\neq 0$, which of the following statements is/are TRUE?",
+    "options": {
+      "A": "The system is consistent if and only if $\\operatorname{rank}(A) = \\operatorname{rank}([A|b])$",
+      "B": "If $\\operatorname{rank}(A) = \\operatorname{rank}([A|b]) = n$, the system has a unique solution",
+      "C": "If $\\operatorname{rank}(A) = \\operatorname{rank}([A|b]) < n$, the system has infinitely many solutions",
+      "D": "If $\\operatorname{rank}(A) < \\operatorname{rank}([A|b])$, the system has no solution"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "By Rouché-Capelli Theorem:\n1. A system $Ax = b$ has at least one solution (is consistent) iff $\\operatorname{rank}(A) = \\operatorname{rank}([A|b])$. (A is true)\n2. If the rank equals the number of variables $n$, the solution is unique. (B is true)\n3. If the rank is strictly less than $n$, there exist $n - \\operatorname{rank}(A)$ free parameters, giving infinitely many solutions. (C is true)\n4. If $\\operatorname{rank}(A) < \\operatorname{rank}([A|b])$, the equations are contradictory and no solution exists. (D is true)\nAll choices A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_019",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Consistency conditions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Consider the system of equations: $x + y + z = 6$, $x + 2y + 3z = 10$, and $x + 2y + k z = 29$. The value of $k$ for which the system has infinitely many solutions is:",
+    "options": {
+      "A": "3",
+      "B": "2",
+      "C": "1",
+      "D": "0"
+    },
+    "correct_answer": "A",
+    "solution": "Writing the augmented matrix $[A|B]$:\n$$\\begin{bmatrix} 1 & 1 & 1 & 6 \\\\ 1 & 2 & 3 & 10 \\\\ 1 & 2 & k & k+7 \\end{bmatrix}$$\nPerforming $R_2 \\to R_2 - R_1$ and $R_3 \\to R_3 - R_2$:\n$$\\begin{bmatrix} 1 & 1 & 1 & 6 \\\\ 0 & 1 & 2 & 4 \\\\ 0 & 0 & k - 3 & (k + 7) - 10 \\end{bmatrix}$$\nFor infinitely many solutions, $\\operatorname{{rank}}(A) = \\operatorname{{rank}}(A|B) < 3$, which requires:\n$$k - 3 = 0 \\implies k = 3$$\nChecking the constant side: $(3 + 7) - 10 = 10 - 10 = 0$. Thus the third row becomes all zeros, yielding infinite solutions.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_020",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Vector spaces and basis",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A homogeneous system of linear equations $Ax = 0$ with 4 variables has a coefficient matrix $A$ of rank 2. The dimension of the solution space (nullity of $A$) is equal to ________ (answer in integer).",
+    "correct_answer": "2",
+    "numerical_range": {
+      "min": 2.0,
+      "max": 2.0
+    },
+    "solution": "According to the Rank-Nullity Theorem for a linear transformation or system of equations with $n$ variables:\n$$\\operatorname{rank}(A) + \\operatorname{nullity}(A) = n$$\nGiven $n = 4$ and $\\operatorname{rank}(A) = 2$:\n$$\\operatorname{nullity}(A) = n - \\operatorname{rank}(A) = 4 - 2 = 2$$\nThe dimension of the solution space is therefore $2$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_021",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Consistency conditions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "For a non-homogeneous system of linear equations $Ax = b$ where $A$ is an $m \\times n$ matrix and $b \\neq 0$, which of the following statements is/are TRUE?",
+    "options": {
+      "A": "The system is consistent if and only if $\\operatorname{rank}(A) = \\operatorname{rank}([A|b])$",
+      "B": "If $\\operatorname{rank}(A) = \\operatorname{rank}([A|b]) = n$, the system has a unique solution",
+      "C": "If $\\operatorname{rank}(A) = \\operatorname{rank}([A|b]) < n$, the system has infinitely many solutions",
+      "D": "If $\\operatorname{rank}(A) < \\operatorname{rank}([A|b])$, the system has no solution"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "By Rouché-Capelli Theorem:\n1. A system $Ax = b$ has at least one solution (is consistent) iff $\\operatorname{rank}(A) = \\operatorname{rank}([A|b])$. (A is true)\n2. If the rank equals the number of variables $n$, the solution is unique. (B is true)\n3. If the rank is strictly less than $n$, there exist $n - \\operatorname{rank}(A)$ free parameters, giving infinitely many solutions. (C is true)\n4. If $\\operatorname{rank}(A) < \\operatorname{rank}([A|b])$, the equations are contradictory and no solution exists. (D is true)\nAll choices A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_022",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Consistency conditions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Consider the system of equations: $x + y + z = 6$, $x + 2y + 3z = 10$, and $x + 2y + k z = 32$. The value of $k$ for which the system has infinitely many solutions is:",
+    "options": {
+      "A": "3",
+      "B": "2",
+      "C": "1",
+      "D": "0"
+    },
+    "correct_answer": "A",
+    "solution": "Writing the augmented matrix $[A|B]$:\n$$\\begin{bmatrix} 1 & 1 & 1 & 6 \\\\ 1 & 2 & 3 & 10 \\\\ 1 & 2 & k & k+7 \\end{bmatrix}$$\nPerforming $R_2 \\to R_2 - R_1$ and $R_3 \\to R_3 - R_2$:\n$$\\begin{bmatrix} 1 & 1 & 1 & 6 \\\\ 0 & 1 & 2 & 4 \\\\ 0 & 0 & k - 3 & (k + 7) - 10 \\end{bmatrix}$$\nFor infinitely many solutions, $\\operatorname{{rank}}(A) = \\operatorname{{rank}}(A|B) < 3$, which requires:\n$$k - 3 = 0 \\implies k = 3$$\nChecking the constant side: $(3 + 7) - 10 = 10 - 10 = 0$. Thus the third row becomes all zeros, yielding infinite solutions.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_023",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Vector spaces and basis",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A homogeneous system of linear equations $Ax = 0$ with 4 variables has a coefficient matrix $A$ of rank 2. The dimension of the solution space (nullity of $A$) is equal to ________ (answer in integer).",
+    "correct_answer": "2",
+    "numerical_range": {
+      "min": 2.0,
+      "max": 2.0
+    },
+    "solution": "According to the Rank-Nullity Theorem for a linear transformation or system of equations with $n$ variables:\n$$\\operatorname{rank}(A) + \\operatorname{nullity}(A) = n$$\nGiven $n = 4$ and $\\operatorname{rank}(A) = 2$:\n$$\\operatorname{nullity}(A) = n - \\operatorname{rank}(A) = 4 - 2 = 2$$\nThe dimension of the solution space is therefore $2$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_024",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Consistency conditions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "For a non-homogeneous system of linear equations $Ax = b$ where $A$ is an $m \\times n$ matrix and $b \\neq 0$, which of the following statements is/are TRUE?",
+    "options": {
+      "A": "The system is consistent if and only if $\\operatorname{rank}(A) = \\operatorname{rank}([A|b])$",
+      "B": "If $\\operatorname{rank}(A) = \\operatorname{rank}([A|b]) = n$, the system has a unique solution",
+      "C": "If $\\operatorname{rank}(A) = \\operatorname{rank}([A|b]) < n$, the system has infinitely many solutions",
+      "D": "If $\\operatorname{rank}(A) < \\operatorname{rank}([A|b])$, the system has no solution"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "By Rouché-Capelli Theorem:\n1. A system $Ax = b$ has at least one solution (is consistent) iff $\\operatorname{rank}(A) = \\operatorname{rank}([A|b])$. (A is true)\n2. If the rank equals the number of variables $n$, the solution is unique. (B is true)\n3. If the rank is strictly less than $n$, there exist $n - \\operatorname{rank}(A)$ free parameters, giving infinitely many solutions. (C is true)\n4. If $\\operatorname{rank}(A) < \\operatorname{rank}([A|b])$, the equations are contradictory and no solution exists. (D is true)\nAll choices A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_025",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Consistency conditions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Consider the system of equations: $x + y + z = 6$, $x + 2y + 3z = 10$, and $x + 2y + k z = 35$. The value of $k$ for which the system has infinitely many solutions is:",
+    "options": {
+      "A": "3",
+      "B": "2",
+      "C": "1",
+      "D": "0"
+    },
+    "correct_answer": "A",
+    "solution": "Writing the augmented matrix $[A|B]$:\n$$\\begin{bmatrix} 1 & 1 & 1 & 6 \\\\ 1 & 2 & 3 & 10 \\\\ 1 & 2 & k & k+7 \\end{bmatrix}$$\nPerforming $R_2 \\to R_2 - R_1$ and $R_3 \\to R_3 - R_2$:\n$$\\begin{bmatrix} 1 & 1 & 1 & 6 \\\\ 0 & 1 & 2 & 4 \\\\ 0 & 0 & k - 3 & (k + 7) - 10 \\end{bmatrix}$$\nFor infinitely many solutions, $\\operatorname{{rank}}(A) = \\operatorname{{rank}}(A|B) < 3$, which requires:\n$$k - 3 = 0 \\implies k = 3$$\nChecking the constant side: $(3 + 7) - 10 = 10 - 10 = 0$. Thus the third row becomes all zeros, yielding infinite solutions.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_026",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Vector spaces and basis",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A homogeneous system of linear equations $Ax = 0$ with 4 variables has a coefficient matrix $A$ of rank 2. The dimension of the solution space (nullity of $A$) is equal to ________ (answer in integer).",
+    "correct_answer": "2",
+    "numerical_range": {
+      "min": 2.0,
+      "max": 2.0
+    },
+    "solution": "According to the Rank-Nullity Theorem for a linear transformation or system of equations with $n$ variables:\n$$\\operatorname{rank}(A) + \\operatorname{nullity}(A) = n$$\nGiven $n = 4$ and $\\operatorname{rank}(A) = 2$:\n$$\\operatorname{nullity}(A) = n - \\operatorname{rank}(A) = 4 - 2 = 2$$\nThe dimension of the solution space is therefore $2$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_027",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Consistency conditions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "For a non-homogeneous system of linear equations $Ax = b$ where $A$ is an $m \\times n$ matrix and $b \\neq 0$, which of the following statements is/are TRUE?",
+    "options": {
+      "A": "The system is consistent if and only if $\\operatorname{rank}(A) = \\operatorname{rank}([A|b])$",
+      "B": "If $\\operatorname{rank}(A) = \\operatorname{rank}([A|b]) = n$, the system has a unique solution",
+      "C": "If $\\operatorname{rank}(A) = \\operatorname{rank}([A|b]) < n$, the system has infinitely many solutions",
+      "D": "If $\\operatorname{rank}(A) < \\operatorname{rank}([A|b])$, the system has no solution"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "By Rouché-Capelli Theorem:\n1. A system $Ax = b$ has at least one solution (is consistent) iff $\\operatorname{rank}(A) = \\operatorname{rank}([A|b])$. (A is true)\n2. If the rank equals the number of variables $n$, the solution is unique. (B is true)\n3. If the rank is strictly less than $n$, there exist $n - \\operatorname{rank}(A)$ free parameters, giving infinitely many solutions. (C is true)\n4. If $\\operatorname{rank}(A) < \\operatorname{rank}([A|b])$, the equations are contradictory and no solution exists. (D is true)\nAll choices A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_028",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Consistency conditions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Consider the system of equations: $x + y + z = 6$, $x + 2y + 3z = 10$, and $x + 2y + k z = 38$. The value of $k$ for which the system has infinitely many solutions is:",
+    "options": {
+      "A": "3",
+      "B": "2",
+      "C": "1",
+      "D": "0"
+    },
+    "correct_answer": "A",
+    "solution": "Writing the augmented matrix $[A|B]$:\n$$\\begin{bmatrix} 1 & 1 & 1 & 6 \\\\ 1 & 2 & 3 & 10 \\\\ 1 & 2 & k & k+7 \\end{bmatrix}$$\nPerforming $R_2 \\to R_2 - R_1$ and $R_3 \\to R_3 - R_2$:\n$$\\begin{bmatrix} 1 & 1 & 1 & 6 \\\\ 0 & 1 & 2 & 4 \\\\ 0 & 0 & k - 3 & (k + 7) - 10 \\end{bmatrix}$$\nFor infinitely many solutions, $\\operatorname{{rank}}(A) = \\operatorname{{rank}}(A|B) < 3$, which requires:\n$$k - 3 = 0 \\implies k = 3$$\nChecking the constant side: $(3 + 7) - 10 = 10 - 10 = 0$. Thus the third row becomes all zeros, yielding infinite solutions.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_029",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Vector spaces and basis",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A homogeneous system of linear equations $Ax = 0$ with 4 variables has a coefficient matrix $A$ of rank 2. The dimension of the solution space (nullity of $A$) is equal to ________ (answer in integer).",
+    "correct_answer": "2",
+    "numerical_range": {
+      "min": 2.0,
+      "max": 2.0
+    },
+    "solution": "According to the Rank-Nullity Theorem for a linear transformation or system of equations with $n$ variables:\n$$\\operatorname{rank}(A) + \\operatorname{nullity}(A) = n$$\nGiven $n = 4$ and $\\operatorname{rank}(A) = 2$:\n$$\\operatorname{nullity}(A) = n - \\operatorname{rank}(A) = 4 - 2 = 2$$\nThe dimension of the solution space is therefore $2$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_030",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Consistency conditions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "For a non-homogeneous system of linear equations $Ax = b$ where $A$ is an $m \\times n$ matrix and $b \\neq 0$, which of the following statements is/are TRUE?",
+    "options": {
+      "A": "The system is consistent if and only if $\\operatorname{rank}(A) = \\operatorname{rank}([A|b])$",
+      "B": "If $\\operatorname{rank}(A) = \\operatorname{rank}([A|b]) = n$, the system has a unique solution",
+      "C": "If $\\operatorname{rank}(A) = \\operatorname{rank}([A|b]) < n$, the system has infinitely many solutions",
+      "D": "If $\\operatorname{rank}(A) < \\operatorname{rank}([A|b])$, the system has no solution"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "By Rouché-Capelli Theorem:\n1. A system $Ax = b$ has at least one solution (is consistent) iff $\\operatorname{rank}(A) = \\operatorname{rank}([A|b])$. (A is true)\n2. If the rank equals the number of variables $n$, the solution is unique. (B is true)\n3. If the rank is strictly less than $n$, there exist $n - \\operatorname{rank}(A)$ free parameters, giving infinitely many solutions. (C is true)\n4. If $\\operatorname{rank}(A) < \\operatorname{rank}([A|b])$, the equations are contradictory and no solution exists. (D is true)\nAll choices A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_031",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Consistency conditions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Consider the system of equations: $x + y + z = 6$, $x + 2y + 3z = 10$, and $x + 2y + k z = 41$. The value of $k$ for which the system has infinitely many solutions is:",
+    "options": {
+      "A": "3",
+      "B": "2",
+      "C": "1",
+      "D": "0"
+    },
+    "correct_answer": "A",
+    "solution": "Writing the augmented matrix $[A|B]$:\n$$\\begin{bmatrix} 1 & 1 & 1 & 6 \\\\ 1 & 2 & 3 & 10 \\\\ 1 & 2 & k & k+7 \\end{bmatrix}$$\nPerforming $R_2 \\to R_2 - R_1$ and $R_3 \\to R_3 - R_2$:\n$$\\begin{bmatrix} 1 & 1 & 1 & 6 \\\\ 0 & 1 & 2 & 4 \\\\ 0 & 0 & k - 3 & (k + 7) - 10 \\end{bmatrix}$$\nFor infinitely many solutions, $\\operatorname{{rank}}(A) = \\operatorname{{rank}}(A|B) < 3$, which requires:\n$$k - 3 = 0 \\implies k = 3$$\nChecking the constant side: $(3 + 7) - 10 = 10 - 10 = 0$. Thus the third row becomes all zeros, yielding infinite solutions.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_032",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Vector spaces and basis",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A homogeneous system of linear equations $Ax = 0$ with 4 variables has a coefficient matrix $A$ of rank 2. The dimension of the solution space (nullity of $A$) is equal to ________ (answer in integer).",
+    "correct_answer": "2",
+    "numerical_range": {
+      "min": 2.0,
+      "max": 2.0
+    },
+    "solution": "According to the Rank-Nullity Theorem for a linear transformation or system of equations with $n$ variables:\n$$\\operatorname{rank}(A) + \\operatorname{nullity}(A) = n$$\nGiven $n = 4$ and $\\operatorname{rank}(A) = 2$:\n$$\\operatorname{nullity}(A) = n - \\operatorname{rank}(A) = 4 - 2 = 2$$\nThe dimension of the solution space is therefore $2$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_033",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Consistency conditions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "For a non-homogeneous system of linear equations $Ax = b$ where $A$ is an $m \\times n$ matrix and $b \\neq 0$, which of the following statements is/are TRUE?",
+    "options": {
+      "A": "The system is consistent if and only if $\\operatorname{rank}(A) = \\operatorname{rank}([A|b])$",
+      "B": "If $\\operatorname{rank}(A) = \\operatorname{rank}([A|b]) = n$, the system has a unique solution",
+      "C": "If $\\operatorname{rank}(A) = \\operatorname{rank}([A|b]) < n$, the system has infinitely many solutions",
+      "D": "If $\\operatorname{rank}(A) < \\operatorname{rank}([A|b])$, the system has no solution"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "By Rouché-Capelli Theorem:\n1. A system $Ax = b$ has at least one solution (is consistent) iff $\\operatorname{rank}(A) = \\operatorname{rank}([A|b])$. (A is true)\n2. If the rank equals the number of variables $n$, the solution is unique. (B is true)\n3. If the rank is strictly less than $n$, there exist $n - \\operatorname{rank}(A)$ free parameters, giving infinitely many solutions. (C is true)\n4. If $\\operatorname{rank}(A) < \\operatorname{rank}([A|b])$, the equations are contradictory and no solution exists. (D is true)\nAll choices A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_034",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Consistency conditions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Consider the system of equations: $x + y + z = 6$, $x + 2y + 3z = 10$, and $x + 2y + k z = 44$. The value of $k$ for which the system has infinitely many solutions is:",
+    "options": {
+      "A": "3",
+      "B": "2",
+      "C": "1",
+      "D": "0"
+    },
+    "correct_answer": "A",
+    "solution": "Writing the augmented matrix $[A|B]$:\n$$\\begin{bmatrix} 1 & 1 & 1 & 6 \\\\ 1 & 2 & 3 & 10 \\\\ 1 & 2 & k & k+7 \\end{bmatrix}$$\nPerforming $R_2 \\to R_2 - R_1$ and $R_3 \\to R_3 - R_2$:\n$$\\begin{bmatrix} 1 & 1 & 1 & 6 \\\\ 0 & 1 & 2 & 4 \\\\ 0 & 0 & k - 3 & (k + 7) - 10 \\end{bmatrix}$$\nFor infinitely many solutions, $\\operatorname{{rank}}(A) = \\operatorname{{rank}}(A|B) < 3$, which requires:\n$$k - 3 = 0 \\implies k = 3$$\nChecking the constant side: $(3 + 7) - 10 = 10 - 10 = 0$. Thus the third row becomes all zeros, yielding infinite solutions.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_035",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Vector spaces and basis",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A homogeneous system of linear equations $Ax = 0$ with 4 variables has a coefficient matrix $A$ of rank 2. The dimension of the solution space (nullity of $A$) is equal to ________ (answer in integer).",
+    "correct_answer": "2",
+    "numerical_range": {
+      "min": 2.0,
+      "max": 2.0
+    },
+    "solution": "According to the Rank-Nullity Theorem for a linear transformation or system of equations with $n$ variables:\n$$\\operatorname{rank}(A) + \\operatorname{nullity}(A) = n$$\nGiven $n = 4$ and $\\operatorname{rank}(A) = 2$:\n$$\\operatorname{nullity}(A) = n - \\operatorname{rank}(A) = 4 - 2 = 2$$\nThe dimension of the solution space is therefore $2$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_SYS_036",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Consistency conditions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "For a non-homogeneous system of linear equations $Ax = b$ where $A$ is an $m \\times n$ matrix and $b \\neq 0$, which of the following statements is/are TRUE?",
+    "options": {
+      "A": "The system is consistent if and only if $\\operatorname{rank}(A) = \\operatorname{rank}([A|b])$",
+      "B": "If $\\operatorname{rank}(A) = \\operatorname{rank}([A|b]) = n$, the system has a unique solution",
+      "C": "If $\\operatorname{rank}(A) = \\operatorname{rank}([A|b]) < n$, the system has infinitely many solutions",
+      "D": "If $\\operatorname{rank}(A) < \\operatorname{rank}([A|b])$, the system has no solution"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "By Rouché-Capelli Theorem:\n1. A system $Ax = b$ has at least one solution (is consistent) iff $\\operatorname{rank}(A) = \\operatorname{rank}([A|b])$. (A is true)\n2. If the rank equals the number of variables $n$, the solution is unique. (B is true)\n3. If the rank is strictly less than $n$, there exist $n - \\operatorname{rank}(A)$ free parameters, giving infinitely many solutions. (C is true)\n4. If $\\operatorname{rank}(A) < \\operatorname{rank}([A|b])$, the equations are contradictory and no solution exists. (D is true)\nAll choices A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_001",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "L'Hospital's rule",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The value of the limit $\\lim_{x \\to 0} \\frac{\\sin(2x)}{x}$ is equal to:",
+    "options": {
+      "A": "2",
+      "B": "1",
+      "C": "0",
+      "D": "\\infty"
+    },
+    "correct_answer": "A",
+    "solution": "Applying the standard limit identity or L'Hospital's rule (0/0 form):\n$$\\lim_{x \\to 0} \\frac{\\sin(2x)}{x} = \\lim_{x \\to 0} \\frac{2 \\cos(2x)}{1} = 2 \\cos(0) = 2$$\nHence, the limit value is $2$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_002",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Indeterminate forms",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the limit $L = \\lim_{x \\to \\infty} \\left(1 + \\frac{3}{x}\\right)^x$ for $k = 3$ is ________ (round off to two decimal places).",
+    "correct_answer": "20.09",
+    "numerical_range": {
+      "min": 20.04,
+      "max": 20.14
+    },
+    "solution": "This is an indeterminate form of type $1^\\infty$.\nTaking natural logarithm of both sides:\n$$\\ln L = \\lim_{x \\to \\infty} x \\ln\\left(1 + \\frac{3}{x}\\right) = \\lim_{x \\to \\infty} \\frac{\\ln\\left(1 + \\frac{3}{x}\\right)}{\\frac{1}{x}}$$\nApplying L'Hospital's rule:\n$$\\ln L = \\lim_{x \\to \\infty} \\frac{\\frac{1}{1 + k/x} \\cdot \\left(-\\frac{k}{x^2}\\right)}{-\\frac{1}{x^2}} = \\lim_{x \\to \\infty} \\frac{3}{1 + k/x} = 3$$\nExponentiating both sides:\n$$L = e^{3} = 20.09$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_003",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Rolle's and Mean value theorems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $f(x)$ be a real-valued function continuous on $[a, b]$ and differentiable on $(a, b)$. Which of the following statements is/are TRUE according to classical differential calculus theorems?",
+    "options": {
+      "A": "If $f(a) = f(b)$, there exists at least one $c \\in (a, b)$ such that $f'(c) = 0$ (Rolle's Theorem)",
+      "B": "There exists at least one $c \\in (a, b)$ such that $f'(c) = \\frac{f(b) - f(a)}{b - a}$ (Lagrange's Mean Value Theorem)",
+      "C": "If $f'(x) = 0$ for all $x \\in (a, b)$, then $f(x)$ is a constant function on $[a, b]$",
+      "D": "If $f'(x) > 0$ for all $x \\in (a, b)$, then $f(x)$ is strictly increasing on $[a, b]$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements represent fundamental theorems of single-variable differential calculus:\n1. Statement A is the exact statement of Rolle's theorem.\n2. Statement B is Lagrange's Mean Value Theorem (LMVT).\n3. Statement C is a direct corollary of LMVT: $f(x) - f(a) = f'(c)(x - a) = 0 \\implies f(x) = f(a)$.\n4. Statement D follows from LMVT: for $x_1 < x_2$, $f(x_2) - f(x_1) = f'(c)(x_2 - x_1) > 0 \\implies f(x_2) > f(x_1)$.\nHence, A, B, C, and D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_004",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "L'Hospital's rule",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The value of the limit $\\lim_{x \\to 0} \\frac{\\sin(5x)}{x}$ is equal to:",
+    "options": {
+      "A": "5",
+      "B": "1",
+      "C": "0",
+      "D": "\\infty"
+    },
+    "correct_answer": "A",
+    "solution": "Applying the standard limit identity or L'Hospital's rule (0/0 form):\n$$\\lim_{x \\to 0} \\frac{\\sin(5x)}{x} = \\lim_{x \\to 0} \\frac{5 \\cos(5x)}{1} = 5 \\cos(0) = 5$$\nHence, the limit value is $5$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_005",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Indeterminate forms",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the limit $L = \\lim_{x \\to \\infty} \\left(1 + \\frac{6}{x}\\right)^x$ for $k = 6$ is ________ (round off to two decimal places).",
+    "correct_answer": "403.43",
+    "numerical_range": {
+      "min": 403.38,
+      "max": 403.48
+    },
+    "solution": "This is an indeterminate form of type $1^\\infty$.\nTaking natural logarithm of both sides:\n$$\\ln L = \\lim_{x \\to \\infty} x \\ln\\left(1 + \\frac{6}{x}\\right) = \\lim_{x \\to \\infty} \\frac{\\ln\\left(1 + \\frac{6}{x}\\right)}{\\frac{1}{x}}$$\nApplying L'Hospital's rule:\n$$\\ln L = \\lim_{x \\to \\infty} \\frac{\\frac{1}{1 + k/x} \\cdot \\left(-\\frac{k}{x^2}\\right)}{-\\frac{1}{x^2}} = \\lim_{x \\to \\infty} \\frac{6}{1 + k/x} = 6$$\nExponentiating both sides:\n$$L = e^{6} = 403.43$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_006",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Rolle's and Mean value theorems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $f(x)$ be a real-valued function continuous on $[a, b]$ and differentiable on $(a, b)$. Which of the following statements is/are TRUE according to classical differential calculus theorems?",
+    "options": {
+      "A": "If $f(a) = f(b)$, there exists at least one $c \\in (a, b)$ such that $f'(c) = 0$ (Rolle's Theorem)",
+      "B": "There exists at least one $c \\in (a, b)$ such that $f'(c) = \\frac{f(b) - f(a)}{b - a}$ (Lagrange's Mean Value Theorem)",
+      "C": "If $f'(x) = 0$ for all $x \\in (a, b)$, then $f(x)$ is a constant function on $[a, b]$",
+      "D": "If $f'(x) > 0$ for all $x \\in (a, b)$, then $f(x)$ is strictly increasing on $[a, b]$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements represent fundamental theorems of single-variable differential calculus:\n1. Statement A is the exact statement of Rolle's theorem.\n2. Statement B is Lagrange's Mean Value Theorem (LMVT).\n3. Statement C is a direct corollary of LMVT: $f(x) - f(a) = f'(c)(x - a) = 0 \\implies f(x) = f(a)$.\n4. Statement D follows from LMVT: for $x_1 < x_2$, $f(x_2) - f(x_1) = f'(c)(x_2 - x_1) > 0 \\implies f(x_2) > f(x_1)$.\nHence, A, B, C, and D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_007",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "L'Hospital's rule",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The value of the limit $\\lim_{x \\to 0} \\frac{\\sin(8x)}{x}$ is equal to:",
+    "options": {
+      "A": "8",
+      "B": "1",
+      "C": "0",
+      "D": "\\infty"
+    },
+    "correct_answer": "A",
+    "solution": "Applying the standard limit identity or L'Hospital's rule (0/0 form):\n$$\\lim_{x \\to 0} \\frac{\\sin(8x)}{x} = \\lim_{x \\to 0} \\frac{8 \\cos(8x)}{1} = 8 \\cos(0) = 8$$\nHence, the limit value is $8$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_008",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Indeterminate forms",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the limit $L = \\lim_{x \\to \\infty} \\left(1 + \\frac{9}{x}\\right)^x$ for $k = 9$ is ________ (round off to two decimal places).",
+    "correct_answer": "8103.08",
+    "numerical_range": {
+      "min": 8103.03,
+      "max": 8103.13
+    },
+    "solution": "This is an indeterminate form of type $1^\\infty$.\nTaking natural logarithm of both sides:\n$$\\ln L = \\lim_{x \\to \\infty} x \\ln\\left(1 + \\frac{9}{x}\\right) = \\lim_{x \\to \\infty} \\frac{\\ln\\left(1 + \\frac{9}{x}\\right)}{\\frac{1}{x}}$$\nApplying L'Hospital's rule:\n$$\\ln L = \\lim_{x \\to \\infty} \\frac{\\frac{1}{1 + k/x} \\cdot \\left(-\\frac{k}{x^2}\\right)}{-\\frac{1}{x^2}} = \\lim_{x \\to \\infty} \\frac{9}{1 + k/x} = 9$$\nExponentiating both sides:\n$$L = e^{9} = 8103.08$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_009",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Rolle's and Mean value theorems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $f(x)$ be a real-valued function continuous on $[a, b]$ and differentiable on $(a, b)$. Which of the following statements is/are TRUE according to classical differential calculus theorems?",
+    "options": {
+      "A": "If $f(a) = f(b)$, there exists at least one $c \\in (a, b)$ such that $f'(c) = 0$ (Rolle's Theorem)",
+      "B": "There exists at least one $c \\in (a, b)$ such that $f'(c) = \\frac{f(b) - f(a)}{b - a}$ (Lagrange's Mean Value Theorem)",
+      "C": "If $f'(x) = 0$ for all $x \\in (a, b)$, then $f(x)$ is a constant function on $[a, b]$",
+      "D": "If $f'(x) > 0$ for all $x \\in (a, b)$, then $f(x)$ is strictly increasing on $[a, b]$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements represent fundamental theorems of single-variable differential calculus:\n1. Statement A is the exact statement of Rolle's theorem.\n2. Statement B is Lagrange's Mean Value Theorem (LMVT).\n3. Statement C is a direct corollary of LMVT: $f(x) - f(a) = f'(c)(x - a) = 0 \\implies f(x) = f(a)$.\n4. Statement D follows from LMVT: for $x_1 < x_2$, $f(x_2) - f(x_1) = f'(c)(x_2 - x_1) > 0 \\implies f(x_2) > f(x_1)$.\nHence, A, B, C, and D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_010",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "L'Hospital's rule",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The value of the limit $\\lim_{x \\to 0} \\frac{\\sin(11x)}{x}$ is equal to:",
+    "options": {
+      "A": "11",
+      "B": "1",
+      "C": "0",
+      "D": "\\infty"
+    },
+    "correct_answer": "A",
+    "solution": "Applying the standard limit identity or L'Hospital's rule (0/0 form):\n$$\\lim_{x \\to 0} \\frac{\\sin(11x)}{x} = \\lim_{x \\to 0} \\frac{11 \\cos(11x)}{1} = 11 \\cos(0) = 11$$\nHence, the limit value is $11$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_011",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Indeterminate forms",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the limit $L = \\lim_{x \\to \\infty} \\left(1 + \\frac{12}{x}\\right)^x$ for $k = 12$ is ________ (round off to two decimal places).",
+    "correct_answer": "162754.79",
+    "numerical_range": {
+      "min": 162754.74,
+      "max": 162754.84
+    },
+    "solution": "This is an indeterminate form of type $1^\\infty$.\nTaking natural logarithm of both sides:\n$$\\ln L = \\lim_{x \\to \\infty} x \\ln\\left(1 + \\frac{12}{x}\\right) = \\lim_{x \\to \\infty} \\frac{\\ln\\left(1 + \\frac{12}{x}\\right)}{\\frac{1}{x}}$$\nApplying L'Hospital's rule:\n$$\\ln L = \\lim_{x \\to \\infty} \\frac{\\frac{1}{1 + k/x} \\cdot \\left(-\\frac{k}{x^2}\\right)}{-\\frac{1}{x^2}} = \\lim_{x \\to \\infty} \\frac{12}{1 + k/x} = 12$$\nExponentiating both sides:\n$$L = e^{12} = 162754.79$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_012",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Rolle's and Mean value theorems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $f(x)$ be a real-valued function continuous on $[a, b]$ and differentiable on $(a, b)$. Which of the following statements is/are TRUE according to classical differential calculus theorems?",
+    "options": {
+      "A": "If $f(a) = f(b)$, there exists at least one $c \\in (a, b)$ such that $f'(c) = 0$ (Rolle's Theorem)",
+      "B": "There exists at least one $c \\in (a, b)$ such that $f'(c) = \\frac{f(b) - f(a)}{b - a}$ (Lagrange's Mean Value Theorem)",
+      "C": "If $f'(x) = 0$ for all $x \\in (a, b)$, then $f(x)$ is a constant function on $[a, b]$",
+      "D": "If $f'(x) > 0$ for all $x \\in (a, b)$, then $f(x)$ is strictly increasing on $[a, b]$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements represent fundamental theorems of single-variable differential calculus:\n1. Statement A is the exact statement of Rolle's theorem.\n2. Statement B is Lagrange's Mean Value Theorem (LMVT).\n3. Statement C is a direct corollary of LMVT: $f(x) - f(a) = f'(c)(x - a) = 0 \\implies f(x) = f(a)$.\n4. Statement D follows from LMVT: for $x_1 < x_2$, $f(x_2) - f(x_1) = f'(c)(x_2 - x_1) > 0 \\implies f(x_2) > f(x_1)$.\nHence, A, B, C, and D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_013",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "L'Hospital's rule",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The value of the limit $\\lim_{x \\to 0} \\frac{\\sin(14x)}{x}$ is equal to:",
+    "options": {
+      "A": "14",
+      "B": "1",
+      "C": "0",
+      "D": "\\infty"
+    },
+    "correct_answer": "A",
+    "solution": "Applying the standard limit identity or L'Hospital's rule (0/0 form):\n$$\\lim_{x \\to 0} \\frac{\\sin(14x)}{x} = \\lim_{x \\to 0} \\frac{14 \\cos(14x)}{1} = 14 \\cos(0) = 14$$\nHence, the limit value is $14$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_014",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Indeterminate forms",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the limit $L = \\lim_{x \\to \\infty} \\left(1 + \\frac{15}{x}\\right)^x$ for $k = 15$ is ________ (round off to two decimal places).",
+    "correct_answer": "3269017.37",
+    "numerical_range": {
+      "min": 3269017.32,
+      "max": 3269017.42
+    },
+    "solution": "This is an indeterminate form of type $1^\\infty$.\nTaking natural logarithm of both sides:\n$$\\ln L = \\lim_{x \\to \\infty} x \\ln\\left(1 + \\frac{15}{x}\\right) = \\lim_{x \\to \\infty} \\frac{\\ln\\left(1 + \\frac{15}{x}\\right)}{\\frac{1}{x}}$$\nApplying L'Hospital's rule:\n$$\\ln L = \\lim_{x \\to \\infty} \\frac{\\frac{1}{1 + k/x} \\cdot \\left(-\\frac{k}{x^2}\\right)}{-\\frac{1}{x^2}} = \\lim_{x \\to \\infty} \\frac{15}{1 + k/x} = 15$$\nExponentiating both sides:\n$$L = e^{15} = 3269017.37$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_015",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Rolle's and Mean value theorems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $f(x)$ be a real-valued function continuous on $[a, b]$ and differentiable on $(a, b)$. Which of the following statements is/are TRUE according to classical differential calculus theorems?",
+    "options": {
+      "A": "If $f(a) = f(b)$, there exists at least one $c \\in (a, b)$ such that $f'(c) = 0$ (Rolle's Theorem)",
+      "B": "There exists at least one $c \\in (a, b)$ such that $f'(c) = \\frac{f(b) - f(a)}{b - a}$ (Lagrange's Mean Value Theorem)",
+      "C": "If $f'(x) = 0$ for all $x \\in (a, b)$, then $f(x)$ is a constant function on $[a, b]$",
+      "D": "If $f'(x) > 0$ for all $x \\in (a, b)$, then $f(x)$ is strictly increasing on $[a, b]$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements represent fundamental theorems of single-variable differential calculus:\n1. Statement A is the exact statement of Rolle's theorem.\n2. Statement B is Lagrange's Mean Value Theorem (LMVT).\n3. Statement C is a direct corollary of LMVT: $f(x) - f(a) = f'(c)(x - a) = 0 \\implies f(x) = f(a)$.\n4. Statement D follows from LMVT: for $x_1 < x_2$, $f(x_2) - f(x_1) = f'(c)(x_2 - x_1) > 0 \\implies f(x_2) > f(x_1)$.\nHence, A, B, C, and D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_016",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "L'Hospital's rule",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The value of the limit $\\lim_{x \\to 0} \\frac{\\sin(17x)}{x}$ is equal to:",
+    "options": {
+      "A": "17",
+      "B": "1",
+      "C": "0",
+      "D": "\\infty"
+    },
+    "correct_answer": "A",
+    "solution": "Applying the standard limit identity or L'Hospital's rule (0/0 form):\n$$\\lim_{x \\to 0} \\frac{\\sin(17x)}{x} = \\lim_{x \\to 0} \\frac{17 \\cos(17x)}{1} = 17 \\cos(0) = 17$$\nHence, the limit value is $17$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_017",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Indeterminate forms",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the limit $L = \\lim_{x \\to \\infty} \\left(1 + \\frac{18}{x}\\right)^x$ for $k = 18$ is ________ (round off to two decimal places).",
+    "correct_answer": "65659969.14",
+    "numerical_range": {
+      "min": 65659969.09,
+      "max": 65659969.19
+    },
+    "solution": "This is an indeterminate form of type $1^\\infty$.\nTaking natural logarithm of both sides:\n$$\\ln L = \\lim_{x \\to \\infty} x \\ln\\left(1 + \\frac{18}{x}\\right) = \\lim_{x \\to \\infty} \\frac{\\ln\\left(1 + \\frac{18}{x}\\right)}{\\frac{1}{x}}$$\nApplying L'Hospital's rule:\n$$\\ln L = \\lim_{x \\to \\infty} \\frac{\\frac{1}{1 + k/x} \\cdot \\left(-\\frac{k}{x^2}\\right)}{-\\frac{1}{x^2}} = \\lim_{x \\to \\infty} \\frac{18}{1 + k/x} = 18$$\nExponentiating both sides:\n$$L = e^{18} = 65659969.14$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_018",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Rolle's and Mean value theorems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $f(x)$ be a real-valued function continuous on $[a, b]$ and differentiable on $(a, b)$. Which of the following statements is/are TRUE according to classical differential calculus theorems?",
+    "options": {
+      "A": "If $f(a) = f(b)$, there exists at least one $c \\in (a, b)$ such that $f'(c) = 0$ (Rolle's Theorem)",
+      "B": "There exists at least one $c \\in (a, b)$ such that $f'(c) = \\frac{f(b) - f(a)}{b - a}$ (Lagrange's Mean Value Theorem)",
+      "C": "If $f'(x) = 0$ for all $x \\in (a, b)$, then $f(x)$ is a constant function on $[a, b]$",
+      "D": "If $f'(x) > 0$ for all $x \\in (a, b)$, then $f(x)$ is strictly increasing on $[a, b]$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements represent fundamental theorems of single-variable differential calculus:\n1. Statement A is the exact statement of Rolle's theorem.\n2. Statement B is Lagrange's Mean Value Theorem (LMVT).\n3. Statement C is a direct corollary of LMVT: $f(x) - f(a) = f'(c)(x - a) = 0 \\implies f(x) = f(a)$.\n4. Statement D follows from LMVT: for $x_1 < x_2$, $f(x_2) - f(x_1) = f'(c)(x_2 - x_1) > 0 \\implies f(x_2) > f(x_1)$.\nHence, A, B, C, and D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_019",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "L'Hospital's rule",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The value of the limit $\\lim_{x \\to 0} \\frac{\\sin(20x)}{x}$ is equal to:",
+    "options": {
+      "A": "20",
+      "B": "1",
+      "C": "0",
+      "D": "\\infty"
+    },
+    "correct_answer": "A",
+    "solution": "Applying the standard limit identity or L'Hospital's rule (0/0 form):\n$$\\lim_{x \\to 0} \\frac{\\sin(20x)}{x} = \\lim_{x \\to 0} \\frac{20 \\cos(20x)}{1} = 20 \\cos(0) = 20$$\nHence, the limit value is $20$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_020",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Indeterminate forms",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the limit $L = \\lim_{x \\to \\infty} \\left(1 + \\frac{21}{x}\\right)^x$ for $k = 21$ is ________ (round off to two decimal places).",
+    "correct_answer": "1318815734.48",
+    "numerical_range": {
+      "min": 1318815734.43,
+      "max": 1318815734.53
+    },
+    "solution": "This is an indeterminate form of type $1^\\infty$.\nTaking natural logarithm of both sides:\n$$\\ln L = \\lim_{x \\to \\infty} x \\ln\\left(1 + \\frac{21}{x}\\right) = \\lim_{x \\to \\infty} \\frac{\\ln\\left(1 + \\frac{21}{x}\\right)}{\\frac{1}{x}}$$\nApplying L'Hospital's rule:\n$$\\ln L = \\lim_{x \\to \\infty} \\frac{\\frac{1}{1 + k/x} \\cdot \\left(-\\frac{k}{x^2}\\right)}{-\\frac{1}{x^2}} = \\lim_{x \\to \\infty} \\frac{21}{1 + k/x} = 21$$\nExponentiating both sides:\n$$L = e^{21} = 1318815734.48$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_021",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Rolle's and Mean value theorems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $f(x)$ be a real-valued function continuous on $[a, b]$ and differentiable on $(a, b)$. Which of the following statements is/are TRUE according to classical differential calculus theorems?",
+    "options": {
+      "A": "If $f(a) = f(b)$, there exists at least one $c \\in (a, b)$ such that $f'(c) = 0$ (Rolle's Theorem)",
+      "B": "There exists at least one $c \\in (a, b)$ such that $f'(c) = \\frac{f(b) - f(a)}{b - a}$ (Lagrange's Mean Value Theorem)",
+      "C": "If $f'(x) = 0$ for all $x \\in (a, b)$, then $f(x)$ is a constant function on $[a, b]$",
+      "D": "If $f'(x) > 0$ for all $x \\in (a, b)$, then $f(x)$ is strictly increasing on $[a, b]$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements represent fundamental theorems of single-variable differential calculus:\n1. Statement A is the exact statement of Rolle's theorem.\n2. Statement B is Lagrange's Mean Value Theorem (LMVT).\n3. Statement C is a direct corollary of LMVT: $f(x) - f(a) = f'(c)(x - a) = 0 \\implies f(x) = f(a)$.\n4. Statement D follows from LMVT: for $x_1 < x_2$, $f(x_2) - f(x_1) = f'(c)(x_2 - x_1) > 0 \\implies f(x_2) > f(x_1)$.\nHence, A, B, C, and D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_022",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "L'Hospital's rule",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The value of the limit $\\lim_{x \\to 0} \\frac{\\sin(23x)}{x}$ is equal to:",
+    "options": {
+      "A": "23",
+      "B": "1",
+      "C": "0",
+      "D": "\\infty"
+    },
+    "correct_answer": "A",
+    "solution": "Applying the standard limit identity or L'Hospital's rule (0/0 form):\n$$\\lim_{x \\to 0} \\frac{\\sin(23x)}{x} = \\lim_{x \\to 0} \\frac{23 \\cos(23x)}{1} = 23 \\cos(0) = 23$$\nHence, the limit value is $23$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_023",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Indeterminate forms",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the limit $L = \\lim_{x \\to \\infty} \\left(1 + \\frac{24}{x}\\right)^x$ for $k = 24$ is ________ (round off to two decimal places).",
+    "correct_answer": "26489122129.84",
+    "numerical_range": {
+      "min": 26489122129.79,
+      "max": 26489122129.89
+    },
+    "solution": "This is an indeterminate form of type $1^\\infty$.\nTaking natural logarithm of both sides:\n$$\\ln L = \\lim_{x \\to \\infty} x \\ln\\left(1 + \\frac{24}{x}\\right) = \\lim_{x \\to \\infty} \\frac{\\ln\\left(1 + \\frac{24}{x}\\right)}{\\frac{1}{x}}$$\nApplying L'Hospital's rule:\n$$\\ln L = \\lim_{x \\to \\infty} \\frac{\\frac{1}{1 + k/x} \\cdot \\left(-\\frac{k}{x^2}\\right)}{-\\frac{1}{x^2}} = \\lim_{x \\to \\infty} \\frac{24}{1 + k/x} = 24$$\nExponentiating both sides:\n$$L = e^{24} = 26489122129.84$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_024",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Rolle's and Mean value theorems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $f(x)$ be a real-valued function continuous on $[a, b]$ and differentiable on $(a, b)$. Which of the following statements is/are TRUE according to classical differential calculus theorems?",
+    "options": {
+      "A": "If $f(a) = f(b)$, there exists at least one $c \\in (a, b)$ such that $f'(c) = 0$ (Rolle's Theorem)",
+      "B": "There exists at least one $c \\in (a, b)$ such that $f'(c) = \\frac{f(b) - f(a)}{b - a}$ (Lagrange's Mean Value Theorem)",
+      "C": "If $f'(x) = 0$ for all $x \\in (a, b)$, then $f(x)$ is a constant function on $[a, b]$",
+      "D": "If $f'(x) > 0$ for all $x \\in (a, b)$, then $f(x)$ is strictly increasing on $[a, b]$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements represent fundamental theorems of single-variable differential calculus:\n1. Statement A is the exact statement of Rolle's theorem.\n2. Statement B is Lagrange's Mean Value Theorem (LMVT).\n3. Statement C is a direct corollary of LMVT: $f(x) - f(a) = f'(c)(x - a) = 0 \\implies f(x) = f(a)$.\n4. Statement D follows from LMVT: for $x_1 < x_2$, $f(x_2) - f(x_1) = f'(c)(x_2 - x_1) > 0 \\implies f(x_2) > f(x_1)$.\nHence, A, B, C, and D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_025",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "L'Hospital's rule",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The value of the limit $\\lim_{x \\to 0} \\frac{\\sin(26x)}{x}$ is equal to:",
+    "options": {
+      "A": "26",
+      "B": "1",
+      "C": "0",
+      "D": "\\infty"
+    },
+    "correct_answer": "A",
+    "solution": "Applying the standard limit identity or L'Hospital's rule (0/0 form):\n$$\\lim_{x \\to 0} \\frac{\\sin(26x)}{x} = \\lim_{x \\to 0} \\frac{26 \\cos(26x)}{1} = 26 \\cos(0) = 26$$\nHence, the limit value is $26$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_026",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Indeterminate forms",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the limit $L = \\lim_{x \\to \\infty} \\left(1 + \\frac{27}{x}\\right)^x$ for $k = 27$ is ________ (round off to two decimal places).",
+    "correct_answer": "532048240601.80",
+    "numerical_range": {
+      "min": 532048240601.75,
+      "max": 532048240601.85
+    },
+    "solution": "This is an indeterminate form of type $1^\\infty$.\nTaking natural logarithm of both sides:\n$$\\ln L = \\lim_{x \\to \\infty} x \\ln\\left(1 + \\frac{27}{x}\\right) = \\lim_{x \\to \\infty} \\frac{\\ln\\left(1 + \\frac{27}{x}\\right)}{\\frac{1}{x}}$$\nApplying L'Hospital's rule:\n$$\\ln L = \\lim_{x \\to \\infty} \\frac{\\frac{1}{1 + k/x} \\cdot \\left(-\\frac{k}{x^2}\\right)}{-\\frac{1}{x^2}} = \\lim_{x \\to \\infty} \\frac{27}{1 + k/x} = 27$$\nExponentiating both sides:\n$$L = e^{27} = 532048240601.80$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_027",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Rolle's and Mean value theorems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $f(x)$ be a real-valued function continuous on $[a, b]$ and differentiable on $(a, b)$. Which of the following statements is/are TRUE according to classical differential calculus theorems?",
+    "options": {
+      "A": "If $f(a) = f(b)$, there exists at least one $c \\in (a, b)$ such that $f'(c) = 0$ (Rolle's Theorem)",
+      "B": "There exists at least one $c \\in (a, b)$ such that $f'(c) = \\frac{f(b) - f(a)}{b - a}$ (Lagrange's Mean Value Theorem)",
+      "C": "If $f'(x) = 0$ for all $x \\in (a, b)$, then $f(x)$ is a constant function on $[a, b]$",
+      "D": "If $f'(x) > 0$ for all $x \\in (a, b)$, then $f(x)$ is strictly increasing on $[a, b]$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements represent fundamental theorems of single-variable differential calculus:\n1. Statement A is the exact statement of Rolle's theorem.\n2. Statement B is Lagrange's Mean Value Theorem (LMVT).\n3. Statement C is a direct corollary of LMVT: $f(x) - f(a) = f'(c)(x - a) = 0 \\implies f(x) = f(a)$.\n4. Statement D follows from LMVT: for $x_1 < x_2$, $f(x_2) - f(x_1) = f'(c)(x_2 - x_1) > 0 \\implies f(x_2) > f(x_1)$.\nHence, A, B, C, and D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_028",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "L'Hospital's rule",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The value of the limit $\\lim_{x \\to 0} \\frac{\\sin(29x)}{x}$ is equal to:",
+    "options": {
+      "A": "29",
+      "B": "1",
+      "C": "0",
+      "D": "\\infty"
+    },
+    "correct_answer": "A",
+    "solution": "Applying the standard limit identity or L'Hospital's rule (0/0 form):\n$$\\lim_{x \\to 0} \\frac{\\sin(29x)}{x} = \\lim_{x \\to 0} \\frac{29 \\cos(29x)}{1} = 29 \\cos(0) = 29$$\nHence, the limit value is $29$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_029",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Indeterminate forms",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the limit $L = \\lim_{x \\to \\infty} \\left(1 + \\frac{30}{x}\\right)^x$ for $k = 30$ is ________ (round off to two decimal places).",
+    "correct_answer": "10686474581524.46",
+    "numerical_range": {
+      "min": 10686474581524.41,
+      "max": 10686474581524.51
+    },
+    "solution": "This is an indeterminate form of type $1^\\infty$.\nTaking natural logarithm of both sides:\n$$\\ln L = \\lim_{x \\to \\infty} x \\ln\\left(1 + \\frac{30}{x}\\right) = \\lim_{x \\to \\infty} \\frac{\\ln\\left(1 + \\frac{30}{x}\\right)}{\\frac{1}{x}}$$\nApplying L'Hospital's rule:\n$$\\ln L = \\lim_{x \\to \\infty} \\frac{\\frac{1}{1 + k/x} \\cdot \\left(-\\frac{k}{x^2}\\right)}{-\\frac{1}{x^2}} = \\lim_{x \\to \\infty} \\frac{30}{1 + k/x} = 30$$\nExponentiating both sides:\n$$L = e^{30} = 10686474581524.46$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_030",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Rolle's and Mean value theorems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $f(x)$ be a real-valued function continuous on $[a, b]$ and differentiable on $(a, b)$. Which of the following statements is/are TRUE according to classical differential calculus theorems?",
+    "options": {
+      "A": "If $f(a) = f(b)$, there exists at least one $c \\in (a, b)$ such that $f'(c) = 0$ (Rolle's Theorem)",
+      "B": "There exists at least one $c \\in (a, b)$ such that $f'(c) = \\frac{f(b) - f(a)}{b - a}$ (Lagrange's Mean Value Theorem)",
+      "C": "If $f'(x) = 0$ for all $x \\in (a, b)$, then $f(x)$ is a constant function on $[a, b]$",
+      "D": "If $f'(x) > 0$ for all $x \\in (a, b)$, then $f(x)$ is strictly increasing on $[a, b]$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements represent fundamental theorems of single-variable differential calculus:\n1. Statement A is the exact statement of Rolle's theorem.\n2. Statement B is Lagrange's Mean Value Theorem (LMVT).\n3. Statement C is a direct corollary of LMVT: $f(x) - f(a) = f'(c)(x - a) = 0 \\implies f(x) = f(a)$.\n4. Statement D follows from LMVT: for $x_1 < x_2$, $f(x_2) - f(x_1) = f'(c)(x_2 - x_1) > 0 \\implies f(x_2) > f(x_1)$.\nHence, A, B, C, and D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_031",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "L'Hospital's rule",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The value of the limit $\\lim_{x \\to 0} \\frac{\\sin(32x)}{x}$ is equal to:",
+    "options": {
+      "A": "32",
+      "B": "1",
+      "C": "0",
+      "D": "\\infty"
+    },
+    "correct_answer": "A",
+    "solution": "Applying the standard limit identity or L'Hospital's rule (0/0 form):\n$$\\lim_{x \\to 0} \\frac{\\sin(32x)}{x} = \\lim_{x \\to 0} \\frac{32 \\cos(32x)}{1} = 32 \\cos(0) = 32$$\nHence, the limit value is $32$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_032",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Indeterminate forms",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the limit $L = \\lim_{x \\to \\infty} \\left(1 + \\frac{33}{x}\\right)^x$ for $k = 33$ is ________ (round off to two decimal places).",
+    "correct_answer": "214643579785916.06",
+    "numerical_range": {
+      "min": 214643579785916.0,
+      "max": 214643579785916.12
+    },
+    "solution": "This is an indeterminate form of type $1^\\infty$.\nTaking natural logarithm of both sides:\n$$\\ln L = \\lim_{x \\to \\infty} x \\ln\\left(1 + \\frac{33}{x}\\right) = \\lim_{x \\to \\infty} \\frac{\\ln\\left(1 + \\frac{33}{x}\\right)}{\\frac{1}{x}}$$\nApplying L'Hospital's rule:\n$$\\ln L = \\lim_{x \\to \\infty} \\frac{\\frac{1}{1 + k/x} \\cdot \\left(-\\frac{k}{x^2}\\right)}{-\\frac{1}{x^2}} = \\lim_{x \\to \\infty} \\frac{33}{1 + k/x} = 33$$\nExponentiating both sides:\n$$L = e^{33} = 214643579785916.06$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_033",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Rolle's and Mean value theorems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $f(x)$ be a real-valued function continuous on $[a, b]$ and differentiable on $(a, b)$. Which of the following statements is/are TRUE according to classical differential calculus theorems?",
+    "options": {
+      "A": "If $f(a) = f(b)$, there exists at least one $c \\in (a, b)$ such that $f'(c) = 0$ (Rolle's Theorem)",
+      "B": "There exists at least one $c \\in (a, b)$ such that $f'(c) = \\frac{f(b) - f(a)}{b - a}$ (Lagrange's Mean Value Theorem)",
+      "C": "If $f'(x) = 0$ for all $x \\in (a, b)$, then $f(x)$ is a constant function on $[a, b]$",
+      "D": "If $f'(x) > 0$ for all $x \\in (a, b)$, then $f(x)$ is strictly increasing on $[a, b]$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements represent fundamental theorems of single-variable differential calculus:\n1. Statement A is the exact statement of Rolle's theorem.\n2. Statement B is Lagrange's Mean Value Theorem (LMVT).\n3. Statement C is a direct corollary of LMVT: $f(x) - f(a) = f'(c)(x - a) = 0 \\implies f(x) = f(a)$.\n4. Statement D follows from LMVT: for $x_1 < x_2$, $f(x_2) - f(x_1) = f'(c)(x_2 - x_1) > 0 \\implies f(x_2) > f(x_1)$.\nHence, A, B, C, and D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_034",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "L'Hospital's rule",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The value of the limit $\\lim_{x \\to 0} \\frac{\\sin(35x)}{x}$ is equal to:",
+    "options": {
+      "A": "35",
+      "B": "1",
+      "C": "0",
+      "D": "\\infty"
+    },
+    "correct_answer": "A",
+    "solution": "Applying the standard limit identity or L'Hospital's rule (0/0 form):\n$$\\lim_{x \\to 0} \\frac{\\sin(35x)}{x} = \\lim_{x \\to 0} \\frac{35 \\cos(35x)}{1} = 35 \\cos(0) = 35$$\nHence, the limit value is $35$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_035",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Indeterminate forms",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the limit $L = \\lim_{x \\to \\infty} \\left(1 + \\frac{36}{x}\\right)^x$ for $k = 36$ is ________ (round off to two decimal places).",
+    "correct_answer": "4311231547115195.00",
+    "numerical_range": {
+      "min": 4311231547115195.0,
+      "max": 4311231547115195.0
+    },
+    "solution": "This is an indeterminate form of type $1^\\infty$.\nTaking natural logarithm of both sides:\n$$\\ln L = \\lim_{x \\to \\infty} x \\ln\\left(1 + \\frac{36}{x}\\right) = \\lim_{x \\to \\infty} \\frac{\\ln\\left(1 + \\frac{36}{x}\\right)}{\\frac{1}{x}}$$\nApplying L'Hospital's rule:\n$$\\ln L = \\lim_{x \\to \\infty} \\frac{\\frac{1}{1 + k/x} \\cdot \\left(-\\frac{k}{x^2}\\right)}{-\\frac{1}{x^2}} = \\lim_{x \\to \\infty} \\frac{36}{1 + k/x} = 36$$\nExponentiating both sides:\n$$L = e^{36} = 4311231547115195.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_LIM_036",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Rolle's and Mean value theorems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $f(x)$ be a real-valued function continuous on $[a, b]$ and differentiable on $(a, b)$. Which of the following statements is/are TRUE according to classical differential calculus theorems?",
+    "options": {
+      "A": "If $f(a) = f(b)$, there exists at least one $c \\in (a, b)$ such that $f'(c) = 0$ (Rolle's Theorem)",
+      "B": "There exists at least one $c \\in (a, b)$ such that $f'(c) = \\frac{f(b) - f(a)}{b - a}$ (Lagrange's Mean Value Theorem)",
+      "C": "If $f'(x) = 0$ for all $x \\in (a, b)$, then $f(x)$ is a constant function on $[a, b]$",
+      "D": "If $f'(x) > 0$ for all $x \\in (a, b)$, then $f(x)$ is strictly increasing on $[a, b]$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements represent fundamental theorems of single-variable differential calculus:\n1. Statement A is the exact statement of Rolle's theorem.\n2. Statement B is Lagrange's Mean Value Theorem (LMVT).\n3. Statement C is a direct corollary of LMVT: $f(x) - f(a) = f'(c)(x - a) = 0 \\implies f(x) = f(a)$.\n4. Statement D follows from LMVT: for $x_1 < x_2$, $f(x_2) - f(x_1) = f'(c)(x_2 - x_1) > 0 \\implies f(x_2) > f(x_1)$.\nHence, A, B, C, and D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Advanced Engineering Mathematics (Erwin Kreyszig)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_001",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Euler's theorem on homogeneous functions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If $u(x, y)$ is a homogeneous function of degree $n = 3$ in $x$ and $y$, the value of $x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y}$ is equal to:",
+    "options": {
+      "A": "3u",
+      "B": "2u",
+      "C": "6u",
+      "D": "0"
+    },
+    "correct_answer": "A",
+    "solution": "According to Euler's Theorem for homogeneous functions of degree $n$:\n$$x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y} = n u$$\nGiven $n = 3$, the value is $3u$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_002",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Constrained extrema and Lagrange multipliers",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The minimum value of the function $f(x, y) = x^2 + y^2 - 6x - 10y$ on $\\mathbb{R}^2$ is equal to ________ (answer in integer).",
+    "correct_answer": "-34",
+    "numerical_range": {
+      "min": -34.0,
+      "max": -34.0
+    },
+    "solution": "Completing the square for $x$ and $y$:\n$$f(x, y) = (x^2 - 6x + 9) + (y^2 - 10y + 25) - (9 + 25)$$\n$$f(x, y) = (x - 3)^2 + (y - 5)^2 - (34)$$\nSince $(x - 3)^2 \\ge 0$ and $(y - 5)^2 \\ge 0$, the minimum occurs at $(x, y) = (3, 5)$:\n$$f_{\\min} = -(34) = -34$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_003",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Constrained extrema and Lagrange multipliers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $(a, b)$ be a critical point of a two-variable function $f(x, y)$, and let $r = f_{xx}(a, b)$, $s = f_{xy}(a, b)$, and $t = f_{yy}(a, b)$. Which of the following classifications is/are TRUE?",
+    "options": {
+      "A": "If $rt - s^2 > 0$ and $r < 0$, then $f(a, b)$ is a local maximum",
+      "B": "If $rt - s^2 > 0$ and $r > 0$, then $f(a, b)$ is a local minimum",
+      "C": "If $rt - s^2 < 0$, then $(a, b)$ is a saddle point",
+      "D": "If $rt - s^2 = 0$, the test is inconclusive and further investigation is required"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "By the Second Derivative Test for functions of two variables, the Hessian determinant is $\\Delta = rt - s^2$:\n1. $\\Delta > 0$ and $r < 0 \\implies$ local maximum. (A is true)\n2. $\\Delta > 0$ and $r > 0 \\implies$ local minimum. (B is true)\n3. $\\Delta < 0 \\implies$ saddle point. (C is true)\n4. $\\Delta = 0 \\implies$ test fails/inconclusive. (D is true)\nAll choices A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_004",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Euler's theorem on homogeneous functions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If $u(x, y)$ is a homogeneous function of degree $n = 2$ in $x$ and $y$, the value of $x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y}$ is equal to:",
+    "options": {
+      "A": "2u",
+      "B": "1u",
+      "C": "2u",
+      "D": "0"
+    },
+    "correct_answer": "A",
+    "solution": "According to Euler's Theorem for homogeneous functions of degree $n$:\n$$x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y} = n u$$\nGiven $n = 2$, the value is $2u$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_005",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Constrained extrema and Lagrange multipliers",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The minimum value of the function $f(x, y) = x^2 + y^2 - 12x - 16y$ on $\\mathbb{R}^2$ is equal to ________ (answer in integer).",
+    "correct_answer": "-100",
+    "numerical_range": {
+      "min": -100.0,
+      "max": -100.0
+    },
+    "solution": "Completing the square for $x$ and $y$:\n$$f(x, y) = (x^2 - 12x + 36) + (y^2 - 16y + 64) - (36 + 64)$$\n$$f(x, y) = (x - 6)^2 + (y - 8)^2 - (100)$$\nSince $(x - 6)^2 \\ge 0$ and $(y - 8)^2 \\ge 0$, the minimum occurs at $(x, y) = (6, 8)$:\n$$f_{\\min} = -(100) = -100$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_006",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Constrained extrema and Lagrange multipliers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $(a, b)$ be a critical point of a two-variable function $f(x, y)$, and let $r = f_{xx}(a, b)$, $s = f_{xy}(a, b)$, and $t = f_{yy}(a, b)$. Which of the following classifications is/are TRUE?",
+    "options": {
+      "A": "If $rt - s^2 > 0$ and $r < 0$, then $f(a, b)$ is a local maximum",
+      "B": "If $rt - s^2 > 0$ and $r > 0$, then $f(a, b)$ is a local minimum",
+      "C": "If $rt - s^2 < 0$, then $(a, b)$ is a saddle point",
+      "D": "If $rt - s^2 = 0$, the test is inconclusive and further investigation is required"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "By the Second Derivative Test for functions of two variables, the Hessian determinant is $\\Delta = rt - s^2$:\n1. $\\Delta > 0$ and $r < 0 \\implies$ local maximum. (A is true)\n2. $\\Delta > 0$ and $r > 0 \\implies$ local minimum. (B is true)\n3. $\\Delta < 0 \\implies$ saddle point. (C is true)\n4. $\\Delta = 0 \\implies$ test fails/inconclusive. (D is true)\nAll choices A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_007",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Euler's theorem on homogeneous functions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If $u(x, y)$ is a homogeneous function of degree $n = 5$ in $x$ and $y$, the value of $x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y}$ is equal to:",
+    "options": {
+      "A": "5u",
+      "B": "4u",
+      "C": "20u",
+      "D": "0"
+    },
+    "correct_answer": "A",
+    "solution": "According to Euler's Theorem for homogeneous functions of degree $n$:\n$$x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y} = n u$$\nGiven $n = 5$, the value is $5u$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_008",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Constrained extrema and Lagrange multipliers",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The minimum value of the function $f(x, y) = x^2 + y^2 - 18x - 22y$ on $\\mathbb{R}^2$ is equal to ________ (answer in integer).",
+    "correct_answer": "-202",
+    "numerical_range": {
+      "min": -202.0,
+      "max": -202.0
+    },
+    "solution": "Completing the square for $x$ and $y$:\n$$f(x, y) = (x^2 - 18x + 81) + (y^2 - 22y + 121) - (81 + 121)$$\n$$f(x, y) = (x - 9)^2 + (y - 11)^2 - (202)$$\nSince $(x - 9)^2 \\ge 0$ and $(y - 11)^2 \\ge 0$, the minimum occurs at $(x, y) = (9, 11)$:\n$$f_{\\min} = -(202) = -202$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_009",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Constrained extrema and Lagrange multipliers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $(a, b)$ be a critical point of a two-variable function $f(x, y)$, and let $r = f_{xx}(a, b)$, $s = f_{xy}(a, b)$, and $t = f_{yy}(a, b)$. Which of the following classifications is/are TRUE?",
+    "options": {
+      "A": "If $rt - s^2 > 0$ and $r < 0$, then $f(a, b)$ is a local maximum",
+      "B": "If $rt - s^2 > 0$ and $r > 0$, then $f(a, b)$ is a local minimum",
+      "C": "If $rt - s^2 < 0$, then $(a, b)$ is a saddle point",
+      "D": "If $rt - s^2 = 0$, the test is inconclusive and further investigation is required"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "By the Second Derivative Test for functions of two variables, the Hessian determinant is $\\Delta = rt - s^2$:\n1. $\\Delta > 0$ and $r < 0 \\implies$ local maximum. (A is true)\n2. $\\Delta > 0$ and $r > 0 \\implies$ local minimum. (B is true)\n3. $\\Delta < 0 \\implies$ saddle point. (C is true)\n4. $\\Delta = 0 \\implies$ test fails/inconclusive. (D is true)\nAll choices A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_010",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Euler's theorem on homogeneous functions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If $u(x, y)$ is a homogeneous function of degree $n = 4$ in $x$ and $y$, the value of $x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y}$ is equal to:",
+    "options": {
+      "A": "4u",
+      "B": "3u",
+      "C": "12u",
+      "D": "0"
+    },
+    "correct_answer": "A",
+    "solution": "According to Euler's Theorem for homogeneous functions of degree $n$:\n$$x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y} = n u$$\nGiven $n = 4$, the value is $4u$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_011",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Constrained extrema and Lagrange multipliers",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The minimum value of the function $f(x, y) = x^2 + y^2 - 24x - 28y$ on $\\mathbb{R}^2$ is equal to ________ (answer in integer).",
+    "correct_answer": "-340",
+    "numerical_range": {
+      "min": -340.0,
+      "max": -340.0
+    },
+    "solution": "Completing the square for $x$ and $y$:\n$$f(x, y) = (x^2 - 24x + 144) + (y^2 - 28y + 196) - (144 + 196)$$\n$$f(x, y) = (x - 12)^2 + (y - 14)^2 - (340)$$\nSince $(x - 12)^2 \\ge 0$ and $(y - 14)^2 \\ge 0$, the minimum occurs at $(x, y) = (12, 14)$:\n$$f_{\\min} = -(340) = -340$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_012",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Constrained extrema and Lagrange multipliers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $(a, b)$ be a critical point of a two-variable function $f(x, y)$, and let $r = f_{xx}(a, b)$, $s = f_{xy}(a, b)$, and $t = f_{yy}(a, b)$. Which of the following classifications is/are TRUE?",
+    "options": {
+      "A": "If $rt - s^2 > 0$ and $r < 0$, then $f(a, b)$ is a local maximum",
+      "B": "If $rt - s^2 > 0$ and $r > 0$, then $f(a, b)$ is a local minimum",
+      "C": "If $rt - s^2 < 0$, then $(a, b)$ is a saddle point",
+      "D": "If $rt - s^2 = 0$, the test is inconclusive and further investigation is required"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "By the Second Derivative Test for functions of two variables, the Hessian determinant is $\\Delta = rt - s^2$:\n1. $\\Delta > 0$ and $r < 0 \\implies$ local maximum. (A is true)\n2. $\\Delta > 0$ and $r > 0 \\implies$ local minimum. (B is true)\n3. $\\Delta < 0 \\implies$ saddle point. (C is true)\n4. $\\Delta = 0 \\implies$ test fails/inconclusive. (D is true)\nAll choices A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_013",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Euler's theorem on homogeneous functions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If $u(x, y)$ is a homogeneous function of degree $n = 3$ in $x$ and $y$, the value of $x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y}$ is equal to:",
+    "options": {
+      "A": "3u",
+      "B": "2u",
+      "C": "6u",
+      "D": "0"
+    },
+    "correct_answer": "A",
+    "solution": "According to Euler's Theorem for homogeneous functions of degree $n$:\n$$x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y} = n u$$\nGiven $n = 3$, the value is $3u$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_014",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Constrained extrema and Lagrange multipliers",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The minimum value of the function $f(x, y) = x^2 + y^2 - 30x - 34y$ on $\\mathbb{R}^2$ is equal to ________ (answer in integer).",
+    "correct_answer": "-514",
+    "numerical_range": {
+      "min": -514.0,
+      "max": -514.0
+    },
+    "solution": "Completing the square for $x$ and $y$:\n$$f(x, y) = (x^2 - 30x + 225) + (y^2 - 34y + 289) - (225 + 289)$$\n$$f(x, y) = (x - 15)^2 + (y - 17)^2 - (514)$$\nSince $(x - 15)^2 \\ge 0$ and $(y - 17)^2 \\ge 0$, the minimum occurs at $(x, y) = (15, 17)$:\n$$f_{\\min} = -(514) = -514$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_015",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Constrained extrema and Lagrange multipliers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $(a, b)$ be a critical point of a two-variable function $f(x, y)$, and let $r = f_{xx}(a, b)$, $s = f_{xy}(a, b)$, and $t = f_{yy}(a, b)$. Which of the following classifications is/are TRUE?",
+    "options": {
+      "A": "If $rt - s^2 > 0$ and $r < 0$, then $f(a, b)$ is a local maximum",
+      "B": "If $rt - s^2 > 0$ and $r > 0$, then $f(a, b)$ is a local minimum",
+      "C": "If $rt - s^2 < 0$, then $(a, b)$ is a saddle point",
+      "D": "If $rt - s^2 = 0$, the test is inconclusive and further investigation is required"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "By the Second Derivative Test for functions of two variables, the Hessian determinant is $\\Delta = rt - s^2$:\n1. $\\Delta > 0$ and $r < 0 \\implies$ local maximum. (A is true)\n2. $\\Delta > 0$ and $r > 0 \\implies$ local minimum. (B is true)\n3. $\\Delta < 0 \\implies$ saddle point. (C is true)\n4. $\\Delta = 0 \\implies$ test fails/inconclusive. (D is true)\nAll choices A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_016",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Euler's theorem on homogeneous functions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If $u(x, y)$ is a homogeneous function of degree $n = 2$ in $x$ and $y$, the value of $x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y}$ is equal to:",
+    "options": {
+      "A": "2u",
+      "B": "1u",
+      "C": "2u",
+      "D": "0"
+    },
+    "correct_answer": "A",
+    "solution": "According to Euler's Theorem for homogeneous functions of degree $n$:\n$$x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y} = n u$$\nGiven $n = 2$, the value is $2u$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_017",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Constrained extrema and Lagrange multipliers",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The minimum value of the function $f(x, y) = x^2 + y^2 - 36x - 40y$ on $\\mathbb{R}^2$ is equal to ________ (answer in integer).",
+    "correct_answer": "-724",
+    "numerical_range": {
+      "min": -724.0,
+      "max": -724.0
+    },
+    "solution": "Completing the square for $x$ and $y$:\n$$f(x, y) = (x^2 - 36x + 324) + (y^2 - 40y + 400) - (324 + 400)$$\n$$f(x, y) = (x - 18)^2 + (y - 20)^2 - (724)$$\nSince $(x - 18)^2 \\ge 0$ and $(y - 20)^2 \\ge 0$, the minimum occurs at $(x, y) = (18, 20)$:\n$$f_{\\min} = -(724) = -724$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_018",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Constrained extrema and Lagrange multipliers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $(a, b)$ be a critical point of a two-variable function $f(x, y)$, and let $r = f_{xx}(a, b)$, $s = f_{xy}(a, b)$, and $t = f_{yy}(a, b)$. Which of the following classifications is/are TRUE?",
+    "options": {
+      "A": "If $rt - s^2 > 0$ and $r < 0$, then $f(a, b)$ is a local maximum",
+      "B": "If $rt - s^2 > 0$ and $r > 0$, then $f(a, b)$ is a local minimum",
+      "C": "If $rt - s^2 < 0$, then $(a, b)$ is a saddle point",
+      "D": "If $rt - s^2 = 0$, the test is inconclusive and further investigation is required"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "By the Second Derivative Test for functions of two variables, the Hessian determinant is $\\Delta = rt - s^2$:\n1. $\\Delta > 0$ and $r < 0 \\implies$ local maximum. (A is true)\n2. $\\Delta > 0$ and $r > 0 \\implies$ local minimum. (B is true)\n3. $\\Delta < 0 \\implies$ saddle point. (C is true)\n4. $\\Delta = 0 \\implies$ test fails/inconclusive. (D is true)\nAll choices A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_019",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Euler's theorem on homogeneous functions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If $u(x, y)$ is a homogeneous function of degree $n = 5$ in $x$ and $y$, the value of $x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y}$ is equal to:",
+    "options": {
+      "A": "5u",
+      "B": "4u",
+      "C": "20u",
+      "D": "0"
+    },
+    "correct_answer": "A",
+    "solution": "According to Euler's Theorem for homogeneous functions of degree $n$:\n$$x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y} = n u$$\nGiven $n = 5$, the value is $5u$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_020",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Constrained extrema and Lagrange multipliers",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The minimum value of the function $f(x, y) = x^2 + y^2 - 42x - 46y$ on $\\mathbb{R}^2$ is equal to ________ (answer in integer).",
+    "correct_answer": "-970",
+    "numerical_range": {
+      "min": -970.0,
+      "max": -970.0
+    },
+    "solution": "Completing the square for $x$ and $y$:\n$$f(x, y) = (x^2 - 42x + 441) + (y^2 - 46y + 529) - (441 + 529)$$\n$$f(x, y) = (x - 21)^2 + (y - 23)^2 - (970)$$\nSince $(x - 21)^2 \\ge 0$ and $(y - 23)^2 \\ge 0$, the minimum occurs at $(x, y) = (21, 23)$:\n$$f_{\\min} = -(970) = -970$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_021",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Constrained extrema and Lagrange multipliers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $(a, b)$ be a critical point of a two-variable function $f(x, y)$, and let $r = f_{xx}(a, b)$, $s = f_{xy}(a, b)$, and $t = f_{yy}(a, b)$. Which of the following classifications is/are TRUE?",
+    "options": {
+      "A": "If $rt - s^2 > 0$ and $r < 0$, then $f(a, b)$ is a local maximum",
+      "B": "If $rt - s^2 > 0$ and $r > 0$, then $f(a, b)$ is a local minimum",
+      "C": "If $rt - s^2 < 0$, then $(a, b)$ is a saddle point",
+      "D": "If $rt - s^2 = 0$, the test is inconclusive and further investigation is required"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "By the Second Derivative Test for functions of two variables, the Hessian determinant is $\\Delta = rt - s^2$:\n1. $\\Delta > 0$ and $r < 0 \\implies$ local maximum. (A is true)\n2. $\\Delta > 0$ and $r > 0 \\implies$ local minimum. (B is true)\n3. $\\Delta < 0 \\implies$ saddle point. (C is true)\n4. $\\Delta = 0 \\implies$ test fails/inconclusive. (D is true)\nAll choices A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_022",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Euler's theorem on homogeneous functions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If $u(x, y)$ is a homogeneous function of degree $n = 4$ in $x$ and $y$, the value of $x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y}$ is equal to:",
+    "options": {
+      "A": "4u",
+      "B": "3u",
+      "C": "12u",
+      "D": "0"
+    },
+    "correct_answer": "A",
+    "solution": "According to Euler's Theorem for homogeneous functions of degree $n$:\n$$x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y} = n u$$\nGiven $n = 4$, the value is $4u$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_023",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Constrained extrema and Lagrange multipliers",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The minimum value of the function $f(x, y) = x^2 + y^2 - 48x - 52y$ on $\\mathbb{R}^2$ is equal to ________ (answer in integer).",
+    "correct_answer": "-1252",
+    "numerical_range": {
+      "min": -1252.0,
+      "max": -1252.0
+    },
+    "solution": "Completing the square for $x$ and $y$:\n$$f(x, y) = (x^2 - 48x + 576) + (y^2 - 52y + 676) - (576 + 676)$$\n$$f(x, y) = (x - 24)^2 + (y - 26)^2 - (1252)$$\nSince $(x - 24)^2 \\ge 0$ and $(y - 26)^2 \\ge 0$, the minimum occurs at $(x, y) = (24, 26)$:\n$$f_{\\min} = -(1252) = -1252$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_024",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Constrained extrema and Lagrange multipliers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $(a, b)$ be a critical point of a two-variable function $f(x, y)$, and let $r = f_{xx}(a, b)$, $s = f_{xy}(a, b)$, and $t = f_{yy}(a, b)$. Which of the following classifications is/are TRUE?",
+    "options": {
+      "A": "If $rt - s^2 > 0$ and $r < 0$, then $f(a, b)$ is a local maximum",
+      "B": "If $rt - s^2 > 0$ and $r > 0$, then $f(a, b)$ is a local minimum",
+      "C": "If $rt - s^2 < 0$, then $(a, b)$ is a saddle point",
+      "D": "If $rt - s^2 = 0$, the test is inconclusive and further investigation is required"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "By the Second Derivative Test for functions of two variables, the Hessian determinant is $\\Delta = rt - s^2$:\n1. $\\Delta > 0$ and $r < 0 \\implies$ local maximum. (A is true)\n2. $\\Delta > 0$ and $r > 0 \\implies$ local minimum. (B is true)\n3. $\\Delta < 0 \\implies$ saddle point. (C is true)\n4. $\\Delta = 0 \\implies$ test fails/inconclusive. (D is true)\nAll choices A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_025",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Euler's theorem on homogeneous functions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If $u(x, y)$ is a homogeneous function of degree $n = 3$ in $x$ and $y$, the value of $x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y}$ is equal to:",
+    "options": {
+      "A": "3u",
+      "B": "2u",
+      "C": "6u",
+      "D": "0"
+    },
+    "correct_answer": "A",
+    "solution": "According to Euler's Theorem for homogeneous functions of degree $n$:\n$$x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y} = n u$$\nGiven $n = 3$, the value is $3u$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_026",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Constrained extrema and Lagrange multipliers",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The minimum value of the function $f(x, y) = x^2 + y^2 - 54x - 58y$ on $\\mathbb{R}^2$ is equal to ________ (answer in integer).",
+    "correct_answer": "-1570",
+    "numerical_range": {
+      "min": -1570.0,
+      "max": -1570.0
+    },
+    "solution": "Completing the square for $x$ and $y$:\n$$f(x, y) = (x^2 - 54x + 729) + (y^2 - 58y + 841) - (729 + 841)$$\n$$f(x, y) = (x - 27)^2 + (y - 29)^2 - (1570)$$\nSince $(x - 27)^2 \\ge 0$ and $(y - 29)^2 \\ge 0$, the minimum occurs at $(x, y) = (27, 29)$:\n$$f_{\\min} = -(1570) = -1570$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_027",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Constrained extrema and Lagrange multipliers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $(a, b)$ be a critical point of a two-variable function $f(x, y)$, and let $r = f_{xx}(a, b)$, $s = f_{xy}(a, b)$, and $t = f_{yy}(a, b)$. Which of the following classifications is/are TRUE?",
+    "options": {
+      "A": "If $rt - s^2 > 0$ and $r < 0$, then $f(a, b)$ is a local maximum",
+      "B": "If $rt - s^2 > 0$ and $r > 0$, then $f(a, b)$ is a local minimum",
+      "C": "If $rt - s^2 < 0$, then $(a, b)$ is a saddle point",
+      "D": "If $rt - s^2 = 0$, the test is inconclusive and further investigation is required"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "By the Second Derivative Test for functions of two variables, the Hessian determinant is $\\Delta = rt - s^2$:\n1. $\\Delta > 0$ and $r < 0 \\implies$ local maximum. (A is true)\n2. $\\Delta > 0$ and $r > 0 \\implies$ local minimum. (B is true)\n3. $\\Delta < 0 \\implies$ saddle point. (C is true)\n4. $\\Delta = 0 \\implies$ test fails/inconclusive. (D is true)\nAll choices A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_028",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Euler's theorem on homogeneous functions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If $u(x, y)$ is a homogeneous function of degree $n = 2$ in $x$ and $y$, the value of $x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y}$ is equal to:",
+    "options": {
+      "A": "2u",
+      "B": "1u",
+      "C": "2u",
+      "D": "0"
+    },
+    "correct_answer": "A",
+    "solution": "According to Euler's Theorem for homogeneous functions of degree $n$:\n$$x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y} = n u$$\nGiven $n = 2$, the value is $2u$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_029",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Constrained extrema and Lagrange multipliers",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The minimum value of the function $f(x, y) = x^2 + y^2 - 60x - 64y$ on $\\mathbb{R}^2$ is equal to ________ (answer in integer).",
+    "correct_answer": "-1924",
+    "numerical_range": {
+      "min": -1924.0,
+      "max": -1924.0
+    },
+    "solution": "Completing the square for $x$ and $y$:\n$$f(x, y) = (x^2 - 60x + 900) + (y^2 - 64y + 1024) - (900 + 1024)$$\n$$f(x, y) = (x - 30)^2 + (y - 32)^2 - (1924)$$\nSince $(x - 30)^2 \\ge 0$ and $(y - 32)^2 \\ge 0$, the minimum occurs at $(x, y) = (30, 32)$:\n$$f_{\\min} = -(1924) = -1924$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_030",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Constrained extrema and Lagrange multipliers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $(a, b)$ be a critical point of a two-variable function $f(x, y)$, and let $r = f_{xx}(a, b)$, $s = f_{xy}(a, b)$, and $t = f_{yy}(a, b)$. Which of the following classifications is/are TRUE?",
+    "options": {
+      "A": "If $rt - s^2 > 0$ and $r < 0$, then $f(a, b)$ is a local maximum",
+      "B": "If $rt - s^2 > 0$ and $r > 0$, then $f(a, b)$ is a local minimum",
+      "C": "If $rt - s^2 < 0$, then $(a, b)$ is a saddle point",
+      "D": "If $rt - s^2 = 0$, the test is inconclusive and further investigation is required"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "By the Second Derivative Test for functions of two variables, the Hessian determinant is $\\Delta = rt - s^2$:\n1. $\\Delta > 0$ and $r < 0 \\implies$ local maximum. (A is true)\n2. $\\Delta > 0$ and $r > 0 \\implies$ local minimum. (B is true)\n3. $\\Delta < 0 \\implies$ saddle point. (C is true)\n4. $\\Delta = 0 \\implies$ test fails/inconclusive. (D is true)\nAll choices A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_031",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Euler's theorem on homogeneous functions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If $u(x, y)$ is a homogeneous function of degree $n = 5$ in $x$ and $y$, the value of $x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y}$ is equal to:",
+    "options": {
+      "A": "5u",
+      "B": "4u",
+      "C": "20u",
+      "D": "0"
+    },
+    "correct_answer": "A",
+    "solution": "According to Euler's Theorem for homogeneous functions of degree $n$:\n$$x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y} = n u$$\nGiven $n = 5$, the value is $5u$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_032",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Constrained extrema and Lagrange multipliers",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The minimum value of the function $f(x, y) = x^2 + y^2 - 66x - 70y$ on $\\mathbb{R}^2$ is equal to ________ (answer in integer).",
+    "correct_answer": "-2314",
+    "numerical_range": {
+      "min": -2314.0,
+      "max": -2314.0
+    },
+    "solution": "Completing the square for $x$ and $y$:\n$$f(x, y) = (x^2 - 66x + 1089) + (y^2 - 70y + 1225) - (1089 + 1225)$$\n$$f(x, y) = (x - 33)^2 + (y - 35)^2 - (2314)$$\nSince $(x - 33)^2 \\ge 0$ and $(y - 35)^2 \\ge 0$, the minimum occurs at $(x, y) = (33, 35)$:\n$$f_{\\min} = -(2314) = -2314$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_033",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Constrained extrema and Lagrange multipliers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $(a, b)$ be a critical point of a two-variable function $f(x, y)$, and let $r = f_{xx}(a, b)$, $s = f_{xy}(a, b)$, and $t = f_{yy}(a, b)$. Which of the following classifications is/are TRUE?",
+    "options": {
+      "A": "If $rt - s^2 > 0$ and $r < 0$, then $f(a, b)$ is a local maximum",
+      "B": "If $rt - s^2 > 0$ and $r > 0$, then $f(a, b)$ is a local minimum",
+      "C": "If $rt - s^2 < 0$, then $(a, b)$ is a saddle point",
+      "D": "If $rt - s^2 = 0$, the test is inconclusive and further investigation is required"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "By the Second Derivative Test for functions of two variables, the Hessian determinant is $\\Delta = rt - s^2$:\n1. $\\Delta > 0$ and $r < 0 \\implies$ local maximum. (A is true)\n2. $\\Delta > 0$ and $r > 0 \\implies$ local minimum. (B is true)\n3. $\\Delta < 0 \\implies$ saddle point. (C is true)\n4. $\\Delta = 0 \\implies$ test fails/inconclusive. (D is true)\nAll choices A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_034",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Euler's theorem on homogeneous functions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If $u(x, y)$ is a homogeneous function of degree $n = 4$ in $x$ and $y$, the value of $x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y}$ is equal to:",
+    "options": {
+      "A": "4u",
+      "B": "3u",
+      "C": "12u",
+      "D": "0"
+    },
+    "correct_answer": "A",
+    "solution": "According to Euler's Theorem for homogeneous functions of degree $n$:\n$$x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y} = n u$$\nGiven $n = 4$, the value is $4u$.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_035",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Constrained extrema and Lagrange multipliers",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The minimum value of the function $f(x, y) = x^2 + y^2 - 72x - 76y$ on $\\mathbb{R}^2$ is equal to ________ (answer in integer).",
+    "correct_answer": "-2740",
+    "numerical_range": {
+      "min": -2740.0,
+      "max": -2740.0
+    },
+    "solution": "Completing the square for $x$ and $y$:\n$$f(x, y) = (x^2 - 72x + 1296) + (y^2 - 76y + 1444) - (1296 + 1444)$$\n$$f(x, y) = (x - 36)^2 + (y - 38)^2 - (2740)$$\nSince $(x - 36)^2 \\ge 0$ and $(y - 38)^2 \\ge 0$, the minimum occurs at $(x, y) = (36, 38)$:\n$$f_{\\min} = -(2740) = -2740$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_PD_036",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Constrained extrema and Lagrange multipliers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Let $(a, b)$ be a critical point of a two-variable function $f(x, y)$, and let $r = f_{xx}(a, b)$, $s = f_{xy}(a, b)$, and $t = f_{yy}(a, b)$. Which of the following classifications is/are TRUE?",
+    "options": {
+      "A": "If $rt - s^2 > 0$ and $r < 0$, then $f(a, b)$ is a local maximum",
+      "B": "If $rt - s^2 > 0$ and $r > 0$, then $f(a, b)$ is a local minimum",
+      "C": "If $rt - s^2 < 0$, then $(a, b)$ is a saddle point",
+      "D": "If $rt - s^2 = 0$, the test is inconclusive and further investigation is required"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "By the Second Derivative Test for functions of two variables, the Hessian determinant is $\\Delta = rt - s^2$:\n1. $\\Delta > 0$ and $r < 0 \\implies$ local maximum. (A is true)\n2. $\\Delta > 0$ and $r > 0 \\implies$ local minimum. (B is true)\n3. $\\Delta < 0 \\implies$ saddle point. (C is true)\n4. $\\Delta = 0 \\implies$ test fails/inconclusive. (D is true)\nAll choices A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_001",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "3 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_002",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_003",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_004",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "6 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_005",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_006",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_007",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "9 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_008",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_009",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_010",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "12 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_011",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_012",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_013",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "15 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_014",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_015",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_016",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "18 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_017",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_018",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_019",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "21 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_020",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_021",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_022",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "24 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_023",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_024",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_025",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "27 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_026",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_027",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_028",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "30 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_029",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_030",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_031",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "33 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_032",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_033",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_034",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "36 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_035",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Sequences, Infinite Series & Convergence",
+    "subtopic": "Ratio test",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_036",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "3 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_037",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_038",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_039",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "6 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_040",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_041",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_042",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "9 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_043",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_044",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_045",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "12 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_046",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_047",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_048",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "15 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_049",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_050",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_051",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "18 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_052",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_053",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_054",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "21 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_055",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_056",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_057",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "24 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_058",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_059",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_060",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "27 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_061",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_062",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_063",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "30 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_064",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_065",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_066",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "33 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_067",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_068",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_069",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "36 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_070",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Fourier, Taylor & Maclaurin Series",
+    "subtopic": "Taylor series expansions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_071",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "3 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_072",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_073",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_074",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "6 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_075",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_076",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_077",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "9 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_078",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_079",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_080",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "12 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_081",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_082",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_083",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "15 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_084",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_085",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_086",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "18 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_087",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_088",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_089",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "21 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_090",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_091",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_092",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "24 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_093",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_094",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_095",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "27 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_096",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_097",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_098",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "30 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_099",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_100",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_101",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "33 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_102",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_103",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_104",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "36 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_105",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Gradient, Divergence & Curl",
+    "subtopic": "Directional derivatives",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_106",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "3 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_107",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_108",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_109",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "6 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_110",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_111",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_112",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "9 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_113",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_114",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_115",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "12 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_116",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_117",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_118",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "15 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_119",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_120",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_121",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "18 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_122",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_123",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_124",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "21 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_125",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_126",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_127",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "24 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_128",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_129",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_130",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "27 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_131",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_132",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_133",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "30 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_134",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_135",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_136",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "33 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_137",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_138",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_139",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "36 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_140",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Line, Surface & Volume Integrals",
+    "subtopic": "Line integrals of vector fields",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_141",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "3 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_142",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_143",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_144",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "6 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_145",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_146",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_147",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "9 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_148",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_149",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_150",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "12 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_151",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_152",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_153",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "15 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_154",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_155",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_156",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "18 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_157",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_158",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_159",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "21 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_160",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_161",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_162",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "24 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_163",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_164",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_165",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "27 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_166",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_167",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_168",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "30 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_169",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_170",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_171",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "33 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_172",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_173",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_174",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "36 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_175",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
+    "subtopic": "Gauss divergence theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_176",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "3 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_177",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_178",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_179",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "6 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_180",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_181",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_182",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "9 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_183",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_184",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_185",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "12 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_186",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_187",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_188",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "15 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_189",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_190",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_191",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "18 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_192",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_193",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_194",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "21 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_195",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_196",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_197",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "24 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_198",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_199",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_200",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "27 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_201",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_202",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_203",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "30 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_204",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_205",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_206",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "33 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_207",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_208",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_209",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "36 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_210",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: First Order ODEs",
+    "subtopic": "Exact differential equations",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_211",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "3 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_212",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_213",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_214",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "6 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_215",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_216",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_217",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "9 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_218",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_219",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_220",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "12 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_221",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_222",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_223",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "15 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_224",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_225",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_226",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "18 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_227",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_228",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_229",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "21 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_230",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_231",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_232",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "24 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_233",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_234",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_235",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "27 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_236",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_237",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_238",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "30 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_239",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_240",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_241",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "33 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_242",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_243",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_244",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "36 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_245",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Higher Order Linear ODEs",
+    "subtopic": "Constant coefficients",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_246",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "3 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_247",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_248",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_249",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "6 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_250",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_251",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_252",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "9 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_253",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_254",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_255",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "12 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_256",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_257",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_258",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "15 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_259",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_260",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_261",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "18 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_262",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_263",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_264",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "21 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_265",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_266",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_267",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "24 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_268",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_269",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_270",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "27 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_271",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_272",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_273",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "30 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_274",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_275",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_276",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "33 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_277",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_278",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_279",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "36 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_280",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations: Laplace Transforms",
+    "subtopic": "First and second shifting theorems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_281",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "3 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_282",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_283",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_284",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "6 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_285",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_286",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_287",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "9 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_288",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_289",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_290",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "12 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_291",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_292",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_293",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "15 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_294",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_295",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_296",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "18 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_297",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_298",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_299",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "21 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_300",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_301",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_302",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "24 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_303",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_304",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_305",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "27 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_306",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_307",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_308",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "30 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_309",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_310",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_311",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "33 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_312",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_313",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_314",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "36 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_315",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Probability Distributions",
+    "subtopic": "Poisson distribution",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_316",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "3 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_317",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_318",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_319",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "6 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_320",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_321",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_322",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "9 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_323",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_324",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_325",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "12 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_326",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_327",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_328",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "15 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_329",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_330",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_331",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "18 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_332",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_333",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_334",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "21 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_335",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_336",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_337",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "24 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_338",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_339",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_340",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "27 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_341",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_342",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_343",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "30 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_344",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_345",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_346",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "33 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_347",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_348",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_349",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "36 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_350",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability & Statistics: Correlation & Regression Analysis",
+    "subtopic": "Mean, variance and standard deviation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_351",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "3 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_352",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_353",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_354",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "6 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_355",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_356",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_357",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "9 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_358",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_359",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_360",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "12 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_361",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_362",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_363",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "15 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_364",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_365",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_366",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "18 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_367",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_368",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_369",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "21 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_370",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_371",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_372",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "24 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_373",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_374",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_375",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "27 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_376",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_377",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_378",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "30 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_379",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_380",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_381",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "33 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_382",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_383",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_384",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "36 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_385",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Roots of Equations & Interpolation",
+    "subtopic": "Newton-Raphson method",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_386",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "3 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_387",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_388",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_389",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "6 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_390",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_391",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_392",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "9 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_393",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_394",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_395",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "12 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_396",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_397",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_398",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "15 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_399",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_400",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_401",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "18 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_402",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_403",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_404",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "21 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_405",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_406",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_407",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "24 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_408",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_409",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_410",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "27 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_411",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_412",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_413",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "30 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_414",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_415",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_416",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "33 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_417",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_418",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following differential operators and vector identities is/are MATHEMATICALLY VALID for smooth scalar field $\\phi$ and vector field $\\vec{F}$?",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (Curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{F}) = 0$ (Divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{F}) = \\nabla(\\nabla \\cdot \\vec{F}) - \\nabla^2 \\vec{F}$",
+      "D": "$\\nabla \\cdot (\\phi \\vec{F}) = \\phi (\\nabla \\cdot \\vec{F}) + \\vec{F} \\cdot (\\nabla \\phi)$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four identities are canonical vector calculus theorems:\n1. $\\operatorname{curl}(\\operatorname{grad} \\phi) = 0$ because mixed partials commute ($f_{xy} = f_{yx}$).\n2. $\\operatorname{div}(\\operatorname{curl} \\vec{F}) = 0$.\n3. Vector Laplacian identity: $\\operatorname{curl}(\\operatorname{curl} \\vec{F}) = \\operatorname{grad}(\\operatorname{div} \\vec{F}) - \\nabla^2 \\vec{F}$.\n4. Product rule for divergence of scalar-vector product.\nHence, A, B, C, D are all correct.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_419",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For the differential operator $\\nabla$, the divergence of the curl of any twice continuously differentiable vector field $\\vec{V}$ is always equal to:",
+    "options": {
+      "A": "0",
+      "B": "1",
+      "C": "\\nabla^2 \\vec{V}",
+      "D": "36 \\vec{V}"
+    },
+    "correct_answer": "A",
+    "solution": "By the fundamental vector identity, $\\nabla \\cdot (\\nabla \\times \\vec{V}) = 0$ identically for any smooth vector field $\\vec{V}$. This represents the physical fact that a vortex line cannot end within the fluid.",
+    "difficulty": "Easy",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_EXP_EM_GEN_420",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods: Numerical Integration & ODEs",
+    "subtopic": "Simpson's 1/3 and 3/8 rules",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "The value of the directional derivative of $\\phi(x, y, z) = x^2 y + y^2 z$ at point $P(1, 1, 1)$ in the direction of vector $\\vec{v} = 2\\hat{i} + \\hat{j} + 2\\hat{k}$ is ________ (round off to two decimal places).",
+    "correct_answer": "3.00",
+    "numerical_range": {
+      "min": 2.95,
+      "max": 3.05
+    },
+    "solution": "1. Compute gradient $\\nabla \\phi = (2xy)\\hat{i} + (x^2 + 2yz)\\hat{j} + (y^2)\\hat{k}$.\n2. Evaluate at $P(1, 1, 1)$:\n$$\\nabla \\phi(1, 1, 1) = 2\\hat{i} + 3\\hat{j} + 1\\hat{k}$$\n3. Unit vector in direction of $\\vec{v}$:\n$$\\hat{u} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{\\sqrt{2^2 + 1^2 + 2^2}} = \\frac{2\\hat{i} + \\hat{j} + 2\\hat{k}}{3}$$\n4. Directional derivative:\n$$D_{\\hat{u}} \\phi = \\nabla \\phi \\cdot \\hat{u} = \\frac{2(2) + 3(1) + 1(2)}{3} = \\frac{4 + 3 + 2}{3} = \\frac{9}{3} = 3.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)"
+  },
+  {
+    "id": "QB_SUB_EM_0001",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Matrices and determinants",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "If $A$ is a $3 \\times 3$ matrix with $\\det(A) = 2$, then the determinant $\\det(2A)$ is equal to:",
+    "solution": "For an $n \\times n$ matrix, $\\det(k A) = k^n \\det(A)$.\nHere $n = 3$ and $k = 2$:\n$$\\det(2A) = 2^3 \\det(A) = 8 \\times 2 = 16$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 16.0,
+    "answer_range": [
+      16.0,
+      16.0
+    ],
+    "correct_answer": "16.0",
+    "numerical_range": {
+      "min": 16.0,
+      "max": 16.0
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0002",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Matrices and determinants",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If $A$ is an invertible matrix of order $n$, which of the following expressions represents $(A^T)^{-1}$?",
+    "solution": "Transpose and inverse operations commute: $(A^T)^{-1} = (A^{-1})^T$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$(A^{-1})^T$",
+      "B": "$A^T A$",
+      "C": "$\\det(A) A$",
+      "D": "$A^{-1}$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0003",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Matrices and determinants",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following statements are TRUE for any real square matrix $A$?",
+    "solution": "Determinants and spectra are invariant under transposition, and orthogonal matrices satisfy $A^T A = I \\implies (\\det A)^2 = 1 \\implies \\det A = \\pm 1$. The determinant is not linear: $\\det(A + B) \\neq \\det(A) + \\det(B)$ in general.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\det(A) = \\det(A^T)$",
+      "B": "The eigenvalues of $A$ and $A^T$ are identical",
+      "C": "If $A$ is orthogonal, $\\det(A) = \\pm 1$",
+      "D": "$\\det(A + B) = \\det(A) + \\det(B)$ for all matrices $B$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0004",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Matrices and determinants",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "If $A$ is a $3 \\times 3$ matrix with $\\det(A) = 5$, then the determinant $\\det(2A)$ is equal to:",
+    "solution": "For an $n \\times n$ matrix, $\\det(k A) = k^n \\det(A)$.\nHere $n = 3$ and $k = 2$:\n$$\\det(2A) = 2^3 \\det(A) = 8 \\times 5 = 40$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 40.0,
+    "answer_range": [
+      40.0,
+      40.0
+    ],
+    "correct_answer": "40.0",
+    "numerical_range": {
+      "min": 40.0,
+      "max": 40.0
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0005",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Linear and orthogonal transformations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A real square matrix $Q$ is called orthogonal if and only if:",
+    "solution": "By definition, a real square matrix $Q$ is orthogonal if $Q^T Q = Q Q^T = I$, meaning its columns and rows form an orthonormal basis.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$Q^T Q = I$",
+      "B": "$Q^T = -Q$",
+      "C": "$Q^2 = Q$",
+      "D": "$Q = Q^T$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0006",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Linear and orthogonal transformations",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Let $T: \\mathbb{R}^2 \\to \\mathbb{R}^2$ be a counter-clockwise rotation by an angle $\\theta = 45^\\circ$. If the transformation is represented by matrix $R$, then the determinant $\\det(R)$ is:",
+    "solution": "A 2D rotation matrix is given by $R = \\begin{pmatrix} \\cos\\theta & -\\sin\\theta \\\\ \\sin\\theta & \\cos\\theta \\end{pmatrix}$. Its determinant is $\\det(R) = \\cos^2\\theta + \\sin^2\\theta = 1.00$ for any angle $\\theta$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 1.0,
+    "answer_range": [
+      0.99,
+      1.01
+    ],
+    "correct_answer": "1.0",
+    "numerical_range": {
+      "min": 0.99,
+      "max": 1.01
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0007",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Linear and orthogonal transformations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A real square matrix $Q$ is called orthogonal if and only if:",
+    "solution": "By definition, a real square matrix $Q$ is orthogonal if $Q^T Q = Q Q^T = I$, meaning its columns and rows form an orthonormal basis.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$Q^T Q = I$",
+      "B": "$Q^T = -Q$",
+      "C": "$Q^2 = Q$",
+      "D": "$Q = Q^T$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0008",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Linear and orthogonal transformations",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Let $T: \\mathbb{R}^2 \\to \\mathbb{R}^2$ be a counter-clockwise rotation by an angle $\\theta = 45^\\circ$. If the transformation is represented by matrix $R$, then the determinant $\\det(R)$ is:",
+    "solution": "A 2D rotation matrix is given by $R = \\begin{pmatrix} \\cos\\theta & -\\sin\\theta \\\\ \\sin\\theta & \\cos\\theta \\end{pmatrix}$. Its determinant is $\\det(R) = \\cos^2\\theta + \\sin^2\\theta = 1.00$ for any angle $\\theta$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 1.0,
+    "answer_range": [
+      0.99,
+      1.01
+    ],
+    "correct_answer": "1.0",
+    "numerical_range": {
+      "min": 0.99,
+      "max": 1.01
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0009",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Linear and orthogonal transformations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A real square matrix $Q$ is called orthogonal if and only if:",
+    "solution": "By definition, a real square matrix $Q$ is orthogonal if $Q^T Q = Q Q^T = I$, meaning its columns and rows form an orthonormal basis.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$Q^T Q = I$",
+      "B": "$Q^T = -Q$",
+      "C": "$Q^2 = Q$",
+      "D": "$Q = Q^T$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0010",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Linear and orthogonal transformations",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Let $T: \\mathbb{R}^2 \\to \\mathbb{R}^2$ be a counter-clockwise rotation by an angle $\\theta = 45^\\circ$. If the transformation is represented by matrix $R$, then the determinant $\\det(R)$ is:",
+    "solution": "A 2D rotation matrix is given by $R = \\begin{pmatrix} \\cos\\theta & -\\sin\\theta \\\\ \\sin\\theta & \\cos\\theta \\end{pmatrix}$. Its determinant is $\\det(R) = \\cos^2\\theta + \\sin^2\\theta = 1.00$ for any angle $\\theta$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 1.0,
+    "answer_range": [
+      0.99,
+      1.01
+    ],
+    "correct_answer": "1.0",
+    "numerical_range": {
+      "min": 0.99,
+      "max": 1.01
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0011",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Linear and orthogonal transformations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A real square matrix $Q$ is called orthogonal if and only if:",
+    "solution": "By definition, a real square matrix $Q$ is orthogonal if $Q^T Q = Q Q^T = I$, meaning its columns and rows form an orthonormal basis.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$Q^T Q = I$",
+      "B": "$Q^T = -Q$",
+      "C": "$Q^2 = Q$",
+      "D": "$Q = Q^T$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0012",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Cayley–Hamilton theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A $2 \\times 2$ matrix $A$ has trace $\\text{tr}(A) = 5$ and determinant $\\det(A) = 6$. By the Cayley-Hamilton theorem, $A^2 - 5A + c I = 0$. The value of scalar $c$ is:",
+    "solution": "The characteristic equation of a $2 \\times 2$ matrix is $\\lambda^2 - \\text{tr}(A)\\lambda + \\det(A) = 0$.\nBy Cayley-Hamilton, $A$ satisfies its own characteristic equation: $A^2 - 5A + 6I = 0$. Thus $c = 6$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 6.0,
+    "answer_range": [
+      5.9,
+      6.1
+    ],
+    "correct_answer": "6.0",
+    "numerical_range": {
+      "min": 5.9,
+      "max": 6.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0013",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Cayley–Hamilton theorem",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Cayley-Hamilton theorem states that every square matrix satisfies:",
+    "solution": "Cayley-Hamilton theorem: If $p(\\lambda) = \\det(\\lambda I - A) = 0$ is the characteristic polynomial of $A$, then $p(A) = 0$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "Its own characteristic equation",
+      "B": "The Cauchy-Riemann equations",
+      "C": "Newton's second law",
+      "D": "Euler's formula for polyhedron vertices"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0014",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Cayley–Hamilton theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A $2 \\times 2$ matrix $A$ has trace $\\text{tr}(A) = 7$ and determinant $\\det(A) = 10$. By the Cayley-Hamilton theorem, $A^2 - 7A + c I = 0$. The value of scalar $c$ is:",
+    "solution": "The characteristic equation of a $2 \\times 2$ matrix is $\\lambda^2 - \\text{tr}(A)\\lambda + \\det(A) = 0$.\nBy Cayley-Hamilton, $A$ satisfies its own characteristic equation: $A^2 - 7A + 10I = 0$. Thus $c = 10$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 10.0,
+    "answer_range": [
+      9.9,
+      10.1
+    ],
+    "correct_answer": "10.0",
+    "numerical_range": {
+      "min": 9.9,
+      "max": 10.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0015",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Cayley–Hamilton theorem",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Cayley-Hamilton theorem states that every square matrix satisfies:",
+    "solution": "Cayley-Hamilton theorem: If $p(\\lambda) = \\det(\\lambda I - A) = 0$ is the characteristic polynomial of $A$, then $p(A) = 0$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "Its own characteristic equation",
+      "B": "The Cauchy-Riemann equations",
+      "C": "Newton's second law",
+      "D": "Euler's formula for polyhedron vertices"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0016",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Cayley–Hamilton theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A $2 \\times 2$ matrix $A$ has trace $\\text{tr}(A) = 6$ and determinant $\\det(A) = 8$. By the Cayley-Hamilton theorem, $A^2 - 6A + c I = 0$. The value of scalar $c$ is:",
+    "solution": "The characteristic equation of a $2 \\times 2$ matrix is $\\lambda^2 - \\text{tr}(A)\\lambda + \\det(A) = 0$.\nBy Cayley-Hamilton, $A$ satisfies its own characteristic equation: $A^2 - 6A + 8I = 0$. Thus $c = 8$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 8.0,
+    "answer_range": [
+      7.9,
+      8.1
+    ],
+    "correct_answer": "8.0",
+    "numerical_range": {
+      "min": 7.9,
+      "max": 8.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0017",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Cayley–Hamilton theorem",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Cayley-Hamilton theorem states that every square matrix satisfies:",
+    "solution": "Cayley-Hamilton theorem: If $p(\\lambda) = \\det(\\lambda I - A) = 0$ is the characteristic polynomial of $A$, then $p(A) = 0$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "Its own characteristic equation",
+      "B": "The Cauchy-Riemann equations",
+      "C": "Newton's second law",
+      "D": "Euler's formula for polyhedron vertices"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0018",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Cayley–Hamilton theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A $2 \\times 2$ matrix $A$ has trace $\\text{tr}(A) = 5$ and determinant $\\det(A) = 6$. By the Cayley-Hamilton theorem, $A^2 - 5A + c I = 0$. The value of scalar $c$ is:",
+    "solution": "The characteristic equation of a $2 \\times 2$ matrix is $\\lambda^2 - \\text{tr}(A)\\lambda + \\det(A) = 0$.\nBy Cayley-Hamilton, $A$ satisfies its own characteristic equation: $A^2 - 5A + 6I = 0$. Thus $c = 6$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 6.0,
+    "answer_range": [
+      5.9,
+      6.1
+    ],
+    "correct_answer": "6.0",
+    "numerical_range": {
+      "min": 5.9,
+      "max": 6.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0019",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Eigen values and Eigen vectors",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A $2 \\times 2$ matrix $M$ has eigenvalues $\\lambda_1 = 1$ and $\\lambda_2 = 4$. The trace of matrix $M^2$ is:",
+    "solution": "If $\\lambda_i$ are eigenvalues of $M$, then $\\lambda_i^2$ are eigenvalues of $M^2$.\nTrace of $M^2 = \\sum \\lambda_i^2 = 1^2 + 4^2 = 1 + 16 = 17$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 17.0,
+    "answer_range": [
+      16.9,
+      17.1
+    ],
+    "correct_answer": "17.0",
+    "numerical_range": {
+      "min": 16.9,
+      "max": 17.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0020",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Solutions of linear equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A non-homogeneous system of linear equations $A x = b$ with $n$ variables is consistent and has a UNIQUE solution if and only if:",
+    "solution": "By Rouché-Capelli theorem, a linear system is consistent iff $\\text{rank}(A) = \\text{rank}([A|b])$. The solution is unique if this rank equals the number of variables $n$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\text{rank}(A) = \\text{rank}([A|b]) = n$",
+      "B": "$\\text{rank}(A) < \\text{rank}([A|b])$",
+      "C": "$\\text{rank}(A) = \\text{rank}([A|b]) < n$",
+      "D": "$\\det(A) = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0021",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Solutions of linear equations",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For a homogeneous linear system $A x = 0$ where $A$ is an $m \\times n$ matrix with $\\text{rank}(A) = r < n$, which statements are TRUE?",
+    "solution": "Homogeneous systems are always consistent. When $r < n$, there are $n - r$ free variables, yielding infinite non-trivial solutions in a subspace of dimension $n - r$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "The system always has the trivial solution $x = 0$",
+      "B": "The system possesses infinitely many non-trivial solutions",
+      "C": "The nullity (dimension of solution space) is $n - r$",
+      "D": "The system has no solutions whatsoever"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0022",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Solutions of linear equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A non-homogeneous system of linear equations $A x = b$ with $n$ variables is consistent and has a UNIQUE solution if and only if:",
+    "solution": "By Rouché-Capelli theorem, a linear system is consistent iff $\\text{rank}(A) = \\text{rank}([A|b])$. The solution is unique if this rank equals the number of variables $n$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\text{rank}(A) = \\text{rank}([A|b]) = n$",
+      "B": "$\\text{rank}(A) < \\text{rank}([A|b])$",
+      "C": "$\\text{rank}(A) = \\text{rank}([A|b]) < n$",
+      "D": "$\\det(A) = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0023",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Solutions of linear equations",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For a homogeneous linear system $A x = 0$ where $A$ is an $m \\times n$ matrix with $\\text{rank}(A) = r < n$, which statements are TRUE?",
+    "solution": "Homogeneous systems are always consistent. When $r < n$, there are $n - r$ free variables, yielding infinite non-trivial solutions in a subspace of dimension $n - r$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "The system always has the trivial solution $x = 0$",
+      "B": "The system possesses infinitely many non-trivial solutions",
+      "C": "The nullity (dimension of solution space) is $n - r$",
+      "D": "The system has no solutions whatsoever"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0024",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Solutions of linear equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A non-homogeneous system of linear equations $A x = b$ with $n$ variables is consistent and has a UNIQUE solution if and only if:",
+    "solution": "By Rouché-Capelli theorem, a linear system is consistent iff $\\text{rank}(A) = \\text{rank}([A|b])$. The solution is unique if this rank equals the number of variables $n$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\text{rank}(A) = \\text{rank}([A|b]) = n$",
+      "B": "$\\text{rank}(A) < \\text{rank}([A|b])$",
+      "C": "$\\text{rank}(A) = \\text{rank}([A|b]) < n$",
+      "D": "$\\det(A) = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0025",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra",
+    "subtopic": "Solutions of linear equations",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For a homogeneous linear system $A x = 0$ where $A$ is an $m \\times n$ matrix with $\\text{rank}(A) = r < n$, which statements are TRUE?",
+    "solution": "Homogeneous systems are always consistent. When $r < n$, there are $n - r$ free variables, yielding infinite non-trivial solutions in a subspace of dimension $n - r$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "The system always has the trivial solution $x = 0$",
+      "B": "The system possesses infinitely many non-trivial solutions",
+      "C": "The nullity (dimension of solution space) is $n - r$",
+      "D": "The system has no solutions whatsoever"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0026",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Limit, continuity and differentiability",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Evaluate the limit: $\\lim_{x \\to 0} \\frac{\\sin(2x)}{x}$:",
+    "solution": "Using L'Hospital's rule or standard trigonometric limit:\n$$\\lim_{x \\to 0} \\frac{\\sin(2x)}{x} = 2 \\lim_{x \\to 0} \\frac{\\sin(2x)}{2x} = 2 \\times 1 = 2.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 2.0,
+    "answer_range": [
+      1.95,
+      2.05
+    ],
+    "correct_answer": "2.0",
+    "numerical_range": {
+      "min": 1.95,
+      "max": 2.05
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0027",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Limit, continuity and differentiability",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Rolle's theorem states that if $f(x)$ is continuous on $[a, b]$, differentiable on $(a, b)$, and $f(a) = f(b)$, then there exists at least one $c \\in (a, b)$ such that:",
+    "solution": "Rolle's theorem guarantees a point of horizontal tangent $f'(c) = 0$ in the open interval $(a, b)$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$f'(c) = 0$",
+      "B": "$f''(c) = 0$",
+      "C": "$f(c) = 0$",
+      "D": "$f'(c) = \\frac{f(b) - f(a)}{b - a} = 1$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0028",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Limit, continuity and differentiability",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following limit forms are classified as indeterminate forms eligible for evaluation via L'Hospital's rule (directly or after logarithmic/algebraic transformation)?",
+    "solution": "All four are classical indeterminate forms. $\\frac{0}{0}$ and $\\frac{\\infty}{\\infty}$ apply directly; products and exponential forms $0 \\times \\infty, 1^\\infty, \\infty - \\infty, 0^0, \\infty^0$ convert via algebra or logarithms.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\frac{0}{0}$",
+      "B": "$\\frac{\\infty}{\\infty}$",
+      "C": "$0 \\times \\infty$",
+      "D": "$1^\\infty$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0029",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Limit, continuity and differentiability",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Evaluate the limit: $\\lim_{x \\to 0} \\frac{\\sin(5x)}{x}$:",
+    "solution": "Using L'Hospital's rule or standard trigonometric limit:\n$$\\lim_{x \\to 0} \\frac{\\sin(5x)}{x} = 5 \\lim_{x \\to 0} \\frac{\\sin(5x)}{5x} = 5 \\times 1 = 5.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 5.0,
+    "answer_range": [
+      4.95,
+      5.05
+    ],
+    "correct_answer": "5.0",
+    "numerical_range": {
+      "min": 4.95,
+      "max": 5.05
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0030",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Limit, continuity and differentiability",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Rolle's theorem states that if $f(x)$ is continuous on $[a, b]$, differentiable on $(a, b)$, and $f(a) = f(b)$, then there exists at least one $c \\in (a, b)$ such that:",
+    "solution": "Rolle's theorem guarantees a point of horizontal tangent $f'(c) = 0$ in the open interval $(a, b)$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$f'(c) = 0$",
+      "B": "$f''(c) = 0$",
+      "C": "$f(c) = 0$",
+      "D": "$f'(c) = \\frac{f(b) - f(a)}{b - a} = 1$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0031",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Limit, continuity and differentiability",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following limit forms are classified as indeterminate forms eligible for evaluation via L'Hospital's rule (directly or after logarithmic/algebraic transformation)?",
+    "solution": "All four are classical indeterminate forms. $\\frac{0}{0}$ and $\\frac{\\infty}{\\infty}$ apply directly; products and exponential forms $0 \\times \\infty, 1^\\infty, \\infty - \\infty, 0^0, \\infty^0$ convert via algebra or logarithms.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\frac{0}{0}$",
+      "B": "$\\frac{\\infty}{\\infty}$",
+      "C": "$0 \\times \\infty$",
+      "D": "$1^\\infty$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0032",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Partial derivatives",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For the multivariable function $f(x, y) = x^2 y + y^3 x$, the value of the mixed second partial derivative $\\frac{\\partial^2 f}{\\partial x \\partial y}$ at $(x, y) = (1, 1)$ is:",
+    "solution": "First partial with respect to $y$:\n$$\\frac{\\partial f}{\\partial y} = x^2 + 3 y^2 x$$\nDifferentiating with respect to $x$:\n$$\\frac{\\partial^2 f}{\\partial x \\partial y} = 2x + 3 y^2$$\nAt $(1, 1)$:\n$$2(1) + 3(1)^2 = 2 + 3 = 5.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 5.0,
+    "answer_range": [
+      4.9,
+      5.1
+    ],
+    "correct_answer": "5.0",
+    "numerical_range": {
+      "min": 4.9,
+      "max": 5.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0033",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Partial derivatives",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Clairaut's theorem (Schwarz's theorem) guarantees equality of mixed second partial derivatives $\\frac{\\partial^2 f}{\\partial x \\partial y} = \\frac{\\partial^2 f}{\\partial y \\partial x}$ provided:",
+    "solution": "Continuity of the mixed second partial derivatives is the sufficient condition for equality under Clairaut's theorem.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "The second partial derivatives are continuous in a neighborhood of the point",
+      "B": "$f(x, y)$ is a polynomial of degree 1",
+      "C": "$\\nabla f = 0$ everywhere",
+      "D": "$x = y$ identically"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0034",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Partial derivatives",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For the multivariable function $f(x, y) = x^2 y + y^3 x$, the value of the mixed second partial derivative $\\frac{\\partial^2 f}{\\partial x \\partial y}$ at $(x, y) = (1, 1)$ is:",
+    "solution": "First partial with respect to $y$:\n$$\\frac{\\partial f}{\\partial y} = x^2 + 3 y^2 x$$\nDifferentiating with respect to $x$:\n$$\\frac{\\partial^2 f}{\\partial x \\partial y} = 2x + 3 y^2$$\nAt $(1, 1)$:\n$$2(1) + 3(1)^2 = 2 + 3 = 5.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 5.0,
+    "answer_range": [
+      4.9,
+      5.1
+    ],
+    "correct_answer": "5.0",
+    "numerical_range": {
+      "min": 4.9,
+      "max": 5.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0035",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Partial derivatives",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Clairaut's theorem (Schwarz's theorem) guarantees equality of mixed second partial derivatives $\\frac{\\partial^2 f}{\\partial x \\partial y} = \\frac{\\partial^2 f}{\\partial y \\partial x}$ provided:",
+    "solution": "Continuity of the mixed second partial derivatives is the sufficient condition for equality under Clairaut's theorem.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "The second partial derivatives are continuous in a neighborhood of the point",
+      "B": "$f(x, y)$ is a polynomial of degree 1",
+      "C": "$\\nabla f = 0$ everywhere",
+      "D": "$x = y$ identically"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0036",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Partial derivatives",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For the multivariable function $f(x, y) = x^2 y + y^3 x$, the value of the mixed second partial derivative $\\frac{\\partial^2 f}{\\partial x \\partial y}$ at $(x, y) = (1, 1)$ is:",
+    "solution": "First partial with respect to $y$:\n$$\\frac{\\partial f}{\\partial y} = x^2 + 3 y^2 x$$\nDifferentiating with respect to $x$:\n$$\\frac{\\partial^2 f}{\\partial x \\partial y} = 2x + 3 y^2$$\nAt $(1, 1)$:\n$$2(1) + 3(1)^2 = 2 + 3 = 5.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 5.0,
+    "answer_range": [
+      4.9,
+      5.1
+    ],
+    "correct_answer": "5.0",
+    "numerical_range": {
+      "min": 4.9,
+      "max": 5.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0037",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Partial derivatives",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Clairaut's theorem (Schwarz's theorem) guarantees equality of mixed second partial derivatives $\\frac{\\partial^2 f}{\\partial x \\partial y} = \\frac{\\partial^2 f}{\\partial y \\partial x}$ provided:",
+    "solution": "Continuity of the mixed second partial derivatives is the sufficient condition for equality under Clairaut's theorem.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "The second partial derivatives are continuous in a neighborhood of the point",
+      "B": "$f(x, y)$ is a polynomial of degree 1",
+      "C": "$\\nabla f = 0$ everywhere",
+      "D": "$x = y$ identically"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0038",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Partial derivatives",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For the multivariable function $f(x, y) = x^2 y + y^3 x$, the value of the mixed second partial derivative $\\frac{\\partial^2 f}{\\partial x \\partial y}$ at $(x, y) = (1, 1)$ is:",
+    "solution": "First partial with respect to $y$:\n$$\\frac{\\partial f}{\\partial y} = x^2 + 3 y^2 x$$\nDifferentiating with respect to $x$:\n$$\\frac{\\partial^2 f}{\\partial x \\partial y} = 2x + 3 y^2$$\nAt $(1, 1)$:\n$$2(1) + 3(1)^2 = 2 + 3 = 5.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 5.0,
+    "answer_range": [
+      4.9,
+      5.1
+    ],
+    "correct_answer": "5.0",
+    "numerical_range": {
+      "min": 4.9,
+      "max": 5.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0039",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Partial derivatives",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Clairaut's theorem (Schwarz's theorem) guarantees equality of mixed second partial derivatives $\\frac{\\partial^2 f}{\\partial x \\partial y} = \\frac{\\partial^2 f}{\\partial y \\partial x}$ provided:",
+    "solution": "Continuity of the mixed second partial derivatives is the sufficient condition for equality under Clairaut's theorem.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "The second partial derivatives are continuous in a neighborhood of the point",
+      "B": "$f(x, y)$ is a polynomial of degree 1",
+      "C": "$\\nabla f = 0$ everywhere",
+      "D": "$x = y$ identically"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0040",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Partial derivatives",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For the multivariable function $f(x, y) = x^2 y + y^3 x$, the value of the mixed second partial derivative $\\frac{\\partial^2 f}{\\partial x \\partial y}$ at $(x, y) = (1, 1)$ is:",
+    "solution": "First partial with respect to $y$:\n$$\\frac{\\partial f}{\\partial y} = x^2 + 3 y^2 x$$\nDifferentiating with respect to $x$:\n$$\\frac{\\partial^2 f}{\\partial x \\partial y} = 2x + 3 y^2$$\nAt $(1, 1)$:\n$$2(1) + 3(1)^2 = 2 + 3 = 5.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 5.0,
+    "answer_range": [
+      4.9,
+      5.1
+    ],
+    "correct_answer": "5.0",
+    "numerical_range": {
+      "min": 4.9,
+      "max": 5.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0041",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Homogeneous function – Euler's theorem on homogeneous functions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "If $u(x, y) = x^2 + y^2 + x y^1$ is a homogeneous function of degree $n = 2$, the value of $x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y}$ when $u = 5.0$ is:",
+    "solution": "By Euler's theorem on homogeneous functions of degree $n$:\n$$x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y} = n u$$\nHere $n = 2$ and $u = 5.0$:\n$$x u_x + y u_y = 2 \\times 5.0 = 10.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 10.0,
+    "answer_range": [
+      9.9,
+      10.1
+    ],
+    "correct_answer": "10.0",
+    "numerical_range": {
+      "min": 9.9,
+      "max": 10.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0042",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Homogeneous function – Euler's theorem on homogeneous functions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "If $u(x, y) = x^3 + y^3 + x y^2$ is a homogeneous function of degree $n = 3$, the value of $x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y}$ when $u = 5.0$ is:",
+    "solution": "By Euler's theorem on homogeneous functions of degree $n$:\n$$x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y} = n u$$\nHere $n = 3$ and $u = 5.0$:\n$$x u_x + y u_y = 3 \\times 5.0 = 15.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 15.0,
+    "answer_range": [
+      14.9,
+      15.1
+    ],
+    "correct_answer": "15.0",
+    "numerical_range": {
+      "min": 14.9,
+      "max": 15.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0043",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Homogeneous function – Euler's theorem on homogeneous functions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "If $u(x, y) = x^4 + y^4 + x y^3$ is a homogeneous function of degree $n = 4$, the value of $x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y}$ when $u = 5.0$ is:",
+    "solution": "By Euler's theorem on homogeneous functions of degree $n$:\n$$x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y} = n u$$\nHere $n = 4$ and $u = 5.0$:\n$$x u_x + y u_y = 4 \\times 5.0 = 20.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 20.0,
+    "answer_range": [
+      19.9,
+      20.1
+    ],
+    "correct_answer": "20.0",
+    "numerical_range": {
+      "min": 19.9,
+      "max": 20.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0044",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Homogeneous function – Euler's theorem on homogeneous functions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "If $u(x, y) = x^2 + y^2 + x y^1$ is a homogeneous function of degree $n = 2$, the value of $x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y}$ when $u = 5.0$ is:",
+    "solution": "By Euler's theorem on homogeneous functions of degree $n$:\n$$x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y} = n u$$\nHere $n = 2$ and $u = 5.0$:\n$$x u_x + y u_y = 2 \\times 5.0 = 10.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 10.0,
+    "answer_range": [
+      9.9,
+      10.1
+    ],
+    "correct_answer": "10.0",
+    "numerical_range": {
+      "min": 9.9,
+      "max": 10.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0045",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Homogeneous function – Euler's theorem on homogeneous functions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "If $u(x, y) = x^3 + y^3 + x y^2$ is a homogeneous function of degree $n = 3$, the value of $x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y}$ when $u = 5.0$ is:",
+    "solution": "By Euler's theorem on homogeneous functions of degree $n$:\n$$x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y} = n u$$\nHere $n = 3$ and $u = 5.0$:\n$$x u_x + y u_y = 3 \\times 5.0 = 15.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 15.0,
+    "answer_range": [
+      14.9,
+      15.1
+    ],
+    "correct_answer": "15.0",
+    "numerical_range": {
+      "min": 14.9,
+      "max": 15.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0046",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Homogeneous function – Euler's theorem on homogeneous functions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "If $u(x, y) = x^4 + y^4 + x y^3$ is a homogeneous function of degree $n = 4$, the value of $x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y}$ when $u = 5.0$ is:",
+    "solution": "By Euler's theorem on homogeneous functions of degree $n$:\n$$x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y} = n u$$\nHere $n = 4$ and $u = 5.0$:\n$$x u_x + y u_y = 4 \\times 5.0 = 20.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 20.0,
+    "answer_range": [
+      19.9,
+      20.1
+    ],
+    "correct_answer": "20.0",
+    "numerical_range": {
+      "min": 19.9,
+      "max": 20.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0047",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Total differentiation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For the multivariable function $f(x, y) = x^2 y + y^3 x$, the value of the mixed second partial derivative $\\frac{\\partial^2 f}{\\partial x \\partial y}$ at $(x, y) = (1, 1)$ is:",
+    "solution": "First partial with respect to $y$:\n$$\\frac{\\partial f}{\\partial y} = x^2 + 3 y^2 x$$\nDifferentiating with respect to $x$:\n$$\\frac{\\partial^2 f}{\\partial x \\partial y} = 2x + 3 y^2$$\nAt $(1, 1)$:\n$$2(1) + 3(1)^2 = 2 + 3 = 5.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 5.0,
+    "answer_range": [
+      4.9,
+      5.1
+    ],
+    "correct_answer": "5.0",
+    "numerical_range": {
+      "min": 4.9,
+      "max": 5.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0048",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Total differentiation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Clairaut's theorem (Schwarz's theorem) guarantees equality of mixed second partial derivatives $\\frac{\\partial^2 f}{\\partial x \\partial y} = \\frac{\\partial^2 f}{\\partial y \\partial x}$ provided:",
+    "solution": "Continuity of the mixed second partial derivatives is the sufficient condition for equality under Clairaut's theorem.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "The second partial derivatives are continuous in a neighborhood of the point",
+      "B": "$f(x, y)$ is a polynomial of degree 1",
+      "C": "$\\nabla f = 0$ everywhere",
+      "D": "$x = y$ identically"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0049",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Total differentiation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For the multivariable function $f(x, y) = x^2 y + y^3 x$, the value of the mixed second partial derivative $\\frac{\\partial^2 f}{\\partial x \\partial y}$ at $(x, y) = (1, 1)$ is:",
+    "solution": "First partial with respect to $y$:\n$$\\frac{\\partial f}{\\partial y} = x^2 + 3 y^2 x$$\nDifferentiating with respect to $x$:\n$$\\frac{\\partial^2 f}{\\partial x \\partial y} = 2x + 3 y^2$$\nAt $(1, 1)$:\n$$2(1) + 3(1)^2 = 2 + 3 = 5.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 5.0,
+    "answer_range": [
+      4.9,
+      5.1
+    ],
+    "correct_answer": "5.0",
+    "numerical_range": {
+      "min": 4.9,
+      "max": 5.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0050",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Total differentiation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Clairaut's theorem (Schwarz's theorem) guarantees equality of mixed second partial derivatives $\\frac{\\partial^2 f}{\\partial x \\partial y} = \\frac{\\partial^2 f}{\\partial y \\partial x}$ provided:",
+    "solution": "Continuity of the mixed second partial derivatives is the sufficient condition for equality under Clairaut's theorem.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "The second partial derivatives are continuous in a neighborhood of the point",
+      "B": "$f(x, y)$ is a polynomial of degree 1",
+      "C": "$\\nabla f = 0$ everywhere",
+      "D": "$x = y$ identically"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0051",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Total differentiation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For the multivariable function $f(x, y) = x^2 y + y^3 x$, the value of the mixed second partial derivative $\\frac{\\partial^2 f}{\\partial x \\partial y}$ at $(x, y) = (1, 1)$ is:",
+    "solution": "First partial with respect to $y$:\n$$\\frac{\\partial f}{\\partial y} = x^2 + 3 y^2 x$$\nDifferentiating with respect to $x$:\n$$\\frac{\\partial^2 f}{\\partial x \\partial y} = 2x + 3 y^2$$\nAt $(1, 1)$:\n$$2(1) + 3(1)^2 = 2 + 3 = 5.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 5.0,
+    "answer_range": [
+      4.9,
+      5.1
+    ],
+    "correct_answer": "5.0",
+    "numerical_range": {
+      "min": 4.9,
+      "max": 5.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0052",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Total differentiation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Clairaut's theorem (Schwarz's theorem) guarantees equality of mixed second partial derivatives $\\frac{\\partial^2 f}{\\partial x \\partial y} = \\frac{\\partial^2 f}{\\partial y \\partial x}$ provided:",
+    "solution": "Continuity of the mixed second partial derivatives is the sufficient condition for equality under Clairaut's theorem.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "The second partial derivatives are continuous in a neighborhood of the point",
+      "B": "$f(x, y)$ is a polynomial of degree 1",
+      "C": "$\\nabla f = 0$ everywhere",
+      "D": "$x = y$ identically"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0053",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Total differentiation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For the multivariable function $f(x, y) = x^2 y + y^3 x$, the value of the mixed second partial derivative $\\frac{\\partial^2 f}{\\partial x \\partial y}$ at $(x, y) = (1, 1)$ is:",
+    "solution": "First partial with respect to $y$:\n$$\\frac{\\partial f}{\\partial y} = x^2 + 3 y^2 x$$\nDifferentiating with respect to $x$:\n$$\\frac{\\partial^2 f}{\\partial x \\partial y} = 2x + 3 y^2$$\nAt $(1, 1)$:\n$$2(1) + 3(1)^2 = 2 + 3 = 5.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 5.0,
+    "answer_range": [
+      4.9,
+      5.1
+    ],
+    "correct_answer": "5.0",
+    "numerical_range": {
+      "min": 4.9,
+      "max": 5.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0054",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Total differentiation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Clairaut's theorem (Schwarz's theorem) guarantees equality of mixed second partial derivatives $\\frac{\\partial^2 f}{\\partial x \\partial y} = \\frac{\\partial^2 f}{\\partial y \\partial x}$ provided:",
+    "solution": "Continuity of the mixed second partial derivatives is the sufficient condition for equality under Clairaut's theorem.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "The second partial derivatives are continuous in a neighborhood of the point",
+      "B": "$f(x, y)$ is a polynomial of degree 1",
+      "C": "$\\nabla f = 0$ everywhere",
+      "D": "$x = y$ identically"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0055",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Total differentiation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For the multivariable function $f(x, y) = x^2 y + y^3 x$, the value of the mixed second partial derivative $\\frac{\\partial^2 f}{\\partial x \\partial y}$ at $(x, y) = (1, 1)$ is:",
+    "solution": "First partial with respect to $y$:\n$$\\frac{\\partial f}{\\partial y} = x^2 + 3 y^2 x$$\nDifferentiating with respect to $x$:\n$$\\frac{\\partial^2 f}{\\partial x \\partial y} = 2x + 3 y^2$$\nAt $(1, 1)$:\n$$2(1) + 3(1)^2 = 2 + 3 = 5.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 5.0,
+    "answer_range": [
+      4.9,
+      5.1
+    ],
+    "correct_answer": "5.0",
+    "numerical_range": {
+      "min": 4.9,
+      "max": 5.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0056",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Maxima and minima of function with several independent variables",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For a function $f(x, y)$, let $(a, b)$ be a stationary point ($f_x = f_y = 0$). Let $r = f_{xx}, s = f_{xy}, t = f_{yy}$. A saddle point occurs at $(a, b)$ when:",
+    "solution": "Second derivative test: If $rt - s^2 < 0$, the discriminant is negative and the stationary point is a saddle point.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$r t - s^2 < 0$",
+      "B": "$r t - s^2 > 0$ and $r > 0$",
+      "C": "$r t - s^2 > 0$ and $r < 0$",
+      "D": "$r t - s^2 = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0057",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Maxima and minima of function with several independent variables",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For a function $f(x, y)$, let $(a, b)$ be a stationary point ($f_x = f_y = 0$). Let $r = f_{xx}, s = f_{xy}, t = f_{yy}$. A saddle point occurs at $(a, b)$ when:",
+    "solution": "Second derivative test: If $rt - s^2 < 0$, the discriminant is negative and the stationary point is a saddle point.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$r t - s^2 < 0$",
+      "B": "$r t - s^2 > 0$ and $r > 0$",
+      "C": "$r t - s^2 > 0$ and $r < 0$",
+      "D": "$r t - s^2 = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0058",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Maxima and minima of function with several independent variables",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For a function $f(x, y)$, let $(a, b)$ be a stationary point ($f_x = f_y = 0$). Let $r = f_{xx}, s = f_{xy}, t = f_{yy}$. A saddle point occurs at $(a, b)$ when:",
+    "solution": "Second derivative test: If $rt - s^2 < 0$, the discriminant is negative and the stationary point is a saddle point.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$r t - s^2 < 0$",
+      "B": "$r t - s^2 > 0$ and $r > 0$",
+      "C": "$r t - s^2 > 0$ and $r < 0$",
+      "D": "$r t - s^2 = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0059",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Maxima and minima of function with several independent variables",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For a function $f(x, y)$, let $(a, b)$ be a stationary point ($f_x = f_y = 0$). Let $r = f_{xx}, s = f_{xy}, t = f_{yy}$. A saddle point occurs at $(a, b)$ when:",
+    "solution": "Second derivative test: If $rt - s^2 < 0$, the discriminant is negative and the stationary point is a saddle point.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$r t - s^2 < 0$",
+      "B": "$r t - s^2 > 0$ and $r > 0$",
+      "C": "$r t - s^2 > 0$ and $r < 0$",
+      "D": "$r t - s^2 = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0060",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Maxima and minima of function with several independent variables",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For a function $f(x, y)$, let $(a, b)$ be a stationary point ($f_x = f_y = 0$). Let $r = f_{xx}, s = f_{xy}, t = f_{yy}$. A saddle point occurs at $(a, b)$ when:",
+    "solution": "Second derivative test: If $rt - s^2 < 0$, the discriminant is negative and the stationary point is a saddle point.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$r t - s^2 < 0$",
+      "B": "$r t - s^2 > 0$ and $r > 0$",
+      "C": "$r t - s^2 > 0$ and $r < 0$",
+      "D": "$r t - s^2 = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0061",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Sequences and series – infinite series, tests for convergence",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The infinite p-series $\\sum_{n=1}^\\infty \\frac{1}{n^p}$ converges if and only if:",
+    "solution": "The p-series converges strictly for $p > 1$ and diverges for $p \\le 1$ (harmonic series when $p = 1$).",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$p > 1$",
+      "B": "$p \\ge 1$",
+      "C": "$p < 1$",
+      "D": "$p = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0062",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Sequences and series – infinite series, tests for convergence",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following tests can establish the convergence of an infinite series of positive terms?",
+    "solution": "Ratio test, root test, and integral test are valid convergence criteria. The $n$-th term test can only prove divergence; $\\lim a_n = 0$ is necessary but not sufficient for convergence (e.g. harmonic series).",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "D'Alembert's ratio test",
+      "B": "Cauchy's root test",
+      "C": "Integral test",
+      "D": "Divergence test ($n$-th term test) when $\\lim a_n = 0$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0063",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Sequences and series – infinite series, tests for convergence",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The infinite p-series $\\sum_{n=1}^\\infty \\frac{1}{n^p}$ converges if and only if:",
+    "solution": "The p-series converges strictly for $p > 1$ and diverges for $p \\le 1$ (harmonic series when $p = 1$).",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$p > 1$",
+      "B": "$p \\ge 1$",
+      "C": "$p < 1$",
+      "D": "$p = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0064",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Sequences and series – infinite series, tests for convergence",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following tests can establish the convergence of an infinite series of positive terms?",
+    "solution": "Ratio test, root test, and integral test are valid convergence criteria. The $n$-th term test can only prove divergence; $\\lim a_n = 0$ is necessary but not sufficient for convergence (e.g. harmonic series).",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "D'Alembert's ratio test",
+      "B": "Cauchy's root test",
+      "C": "Integral test",
+      "D": "Divergence test ($n$-th term test) when $\\lim a_n = 0$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0065",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Sequences and series – infinite series, tests for convergence",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The infinite p-series $\\sum_{n=1}^\\infty \\frac{1}{n^p}$ converges if and only if:",
+    "solution": "The p-series converges strictly for $p > 1$ and diverges for $p \\le 1$ (harmonic series when $p = 1$).",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$p > 1$",
+      "B": "$p \\ge 1$",
+      "C": "$p < 1$",
+      "D": "$p = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0066",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Sequences and series – infinite series, tests for convergence",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following tests can establish the convergence of an infinite series of positive terms?",
+    "solution": "Ratio test, root test, and integral test are valid convergence criteria. The $n$-th term test can only prove divergence; $\\lim a_n = 0$ is necessary but not sufficient for convergence (e.g. harmonic series).",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "D'Alembert's ratio test",
+      "B": "Cauchy's root test",
+      "C": "Integral test",
+      "D": "Divergence test ($n$-th term test) when $\\lim a_n = 0$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0067",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Sequences and series – infinite series, tests for convergence",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The infinite p-series $\\sum_{n=1}^\\infty \\frac{1}{n^p}$ converges if and only if:",
+    "solution": "The p-series converges strictly for $p > 1$ and diverges for $p \\le 1$ (harmonic series when $p = 1$).",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$p > 1$",
+      "B": "$p \\ge 1$",
+      "C": "$p < 1$",
+      "D": "$p = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0068",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Sequences and series – infinite series, tests for convergence",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following tests can establish the convergence of an infinite series of positive terms?",
+    "solution": "Ratio test, root test, and integral test are valid convergence criteria. The $n$-th term test can only prove divergence; $\\lim a_n = 0$ is necessary but not sufficient for convergence (e.g. harmonic series).",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "D'Alembert's ratio test",
+      "B": "Cauchy's root test",
+      "C": "Integral test",
+      "D": "Divergence test ($n$-th term test) when $\\lim a_n = 0$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0069",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Fourier, Taylor and MacLaurin series",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The infinite p-series $\\sum_{n=1}^\\infty \\frac{1}{n^p}$ converges if and only if:",
+    "solution": "The p-series converges strictly for $p > 1$ and diverges for $p \\le 1$ (harmonic series when $p = 1$).",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$p > 1$",
+      "B": "$p \\ge 1$",
+      "C": "$p < 1$",
+      "D": "$p = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0070",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Fourier, Taylor and MacLaurin series",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following tests can establish the convergence of an infinite series of positive terms?",
+    "solution": "Ratio test, root test, and integral test are valid convergence criteria. The $n$-th term test can only prove divergence; $\\lim a_n = 0$ is necessary but not sufficient for convergence (e.g. harmonic series).",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "D'Alembert's ratio test",
+      "B": "Cauchy's root test",
+      "C": "Integral test",
+      "D": "Divergence test ($n$-th term test) when $\\lim a_n = 0$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0071",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Fourier, Taylor and MacLaurin series",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The infinite p-series $\\sum_{n=1}^\\infty \\frac{1}{n^p}$ converges if and only if:",
+    "solution": "The p-series converges strictly for $p > 1$ and diverges for $p \\le 1$ (harmonic series when $p = 1$).",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$p > 1$",
+      "B": "$p \\ge 1$",
+      "C": "$p < 1$",
+      "D": "$p = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0072",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Fourier, Taylor and MacLaurin series",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following tests can establish the convergence of an infinite series of positive terms?",
+    "solution": "Ratio test, root test, and integral test are valid convergence criteria. The $n$-th term test can only prove divergence; $\\lim a_n = 0$ is necessary but not sufficient for convergence (e.g. harmonic series).",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "D'Alembert's ratio test",
+      "B": "Cauchy's root test",
+      "C": "Integral test",
+      "D": "Divergence test ($n$-th term test) when $\\lim a_n = 0$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0073",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Fourier, Taylor and MacLaurin series",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The infinite p-series $\\sum_{n=1}^\\infty \\frac{1}{n^p}$ converges if and only if:",
+    "solution": "The p-series converges strictly for $p > 1$ and diverges for $p \\le 1$ (harmonic series when $p = 1$).",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$p > 1$",
+      "B": "$p \\ge 1$",
+      "C": "$p < 1$",
+      "D": "$p = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0074",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Fourier, Taylor and MacLaurin series",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following tests can establish the convergence of an infinite series of positive terms?",
+    "solution": "Ratio test, root test, and integral test are valid convergence criteria. The $n$-th term test can only prove divergence; $\\lim a_n = 0$ is necessary but not sufficient for convergence (e.g. harmonic series).",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "D'Alembert's ratio test",
+      "B": "Cauchy's root test",
+      "C": "Integral test",
+      "D": "Divergence test ($n$-th term test) when $\\lim a_n = 0$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0075",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus",
+    "subtopic": "Fourier, Taylor and MacLaurin series",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The infinite p-series $\\sum_{n=1}^\\infty \\frac{1}{n^p}$ converges if and only if:",
+    "solution": "The p-series converges strictly for $p > 1$ and diverges for $p \\le 1$ (harmonic series when $p = 1$).",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$p > 1$",
+      "B": "$p \\ge 1$",
+      "C": "$p < 1$",
+      "D": "$p = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0076",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Vector differentiation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For the vector field $\\vec{F} = (2x + y)\\hat{i} + (3y - z)\\hat{j} + (4z + x)\\hat{k}$, the divergence $\\nabla \\cdot \\vec{F}$ is:",
+    "solution": "$$\\nabla \\cdot \\vec{F} = \\frac{\\partial}{\\partial x}(2x + y) + \\frac{\\partial}{\\partial y}(3y - z) + \\frac{\\partial}{\\partial z}(4z + x) = 2 + 3 + 4 = 9.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 9.0,
+    "answer_range": [
+      8.9,
+      9.1
+    ],
+    "correct_answer": "9.0",
+    "numerical_range": {
+      "min": 8.9,
+      "max": 9.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0077",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Vector differentiation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A vector field $\\vec{V}$ is called solenoidal if its divergence is identically zero, and irrotational if:",
+    "solution": "A vector field is irrotational (conservative) if its curl is zero: $\\text{curl}(\\vec{V}) = \\nabla \\times \\vec{V} = 0$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\nabla \\times \\vec{V} = 0$",
+      "B": "$\\nabla \\cdot \\vec{V} = 1$",
+      "C": "$\\nabla^2 \\vec{V} = 0$",
+      "D": "$\\vec{V} \\cdot \\vec{r} = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0078",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Vector differentiation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following vector calculus identities are identically TRUE for twice continuously differentiable scalar fields $\\phi$ and vector fields $\\vec{A}$?",
+    "solution": "Curl of any gradient is identically zero; divergence of any curl is identically zero; vector Laplacian identity holds. Identity D is dimensionally and mathematically invalid.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{A}) = 0$ (divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{A}) = \\nabla (\\nabla \\cdot \\vec{A}) - \\nabla^2 \\vec{A}$",
+      "D": "$\\nabla \\cdot (\\nabla \\phi) = \\nabla \\times \\vec{A}$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0079",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Vector differentiation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For the vector field $\\vec{F} = (2x + y)\\hat{i} + (3y - z)\\hat{j} + (4z + x)\\hat{k}$, the divergence $\\nabla \\cdot \\vec{F}$ is:",
+    "solution": "$$\\nabla \\cdot \\vec{F} = \\frac{\\partial}{\\partial x}(2x + y) + \\frac{\\partial}{\\partial y}(3y - z) + \\frac{\\partial}{\\partial z}(4z + x) = 2 + 3 + 4 = 9.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 9.0,
+    "answer_range": [
+      8.9,
+      9.1
+    ],
+    "correct_answer": "9.0",
+    "numerical_range": {
+      "min": 8.9,
+      "max": 9.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0080",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Vector differentiation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A vector field $\\vec{V}$ is called solenoidal if its divergence is identically zero, and irrotational if:",
+    "solution": "A vector field is irrotational (conservative) if its curl is zero: $\\text{curl}(\\vec{V}) = \\nabla \\times \\vec{V} = 0$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\nabla \\times \\vec{V} = 0$",
+      "B": "$\\nabla \\cdot \\vec{V} = 1$",
+      "C": "$\\nabla^2 \\vec{V} = 0$",
+      "D": "$\\vec{V} \\cdot \\vec{r} = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0081",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Vector differentiation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following vector calculus identities are identically TRUE for twice continuously differentiable scalar fields $\\phi$ and vector fields $\\vec{A}$?",
+    "solution": "Curl of any gradient is identically zero; divergence of any curl is identically zero; vector Laplacian identity holds. Identity D is dimensionally and mathematically invalid.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{A}) = 0$ (divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{A}) = \\nabla (\\nabla \\cdot \\vec{A}) - \\nabla^2 \\vec{A}$",
+      "D": "$\\nabla \\cdot (\\nabla \\phi) = \\nabla \\times \\vec{A}$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0082",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Vector differentiation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For the vector field $\\vec{F} = (2x + y)\\hat{i} + (3y - z)\\hat{j} + (4z + x)\\hat{k}$, the divergence $\\nabla \\cdot \\vec{F}$ is:",
+    "solution": "$$\\nabla \\cdot \\vec{F} = \\frac{\\partial}{\\partial x}(2x + y) + \\frac{\\partial}{\\partial y}(3y - z) + \\frac{\\partial}{\\partial z}(4z + x) = 2 + 3 + 4 = 9.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 9.0,
+    "answer_range": [
+      8.9,
+      9.1
+    ],
+    "correct_answer": "9.0",
+    "numerical_range": {
+      "min": 8.9,
+      "max": 9.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0083",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Vector differentiation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A vector field $\\vec{V}$ is called solenoidal if its divergence is identically zero, and irrotational if:",
+    "solution": "A vector field is irrotational (conservative) if its curl is zero: $\\text{curl}(\\vec{V}) = \\nabla \\times \\vec{V} = 0$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\nabla \\times \\vec{V} = 0$",
+      "B": "$\\nabla \\cdot \\vec{V} = 1$",
+      "C": "$\\nabla^2 \\vec{V} = 0$",
+      "D": "$\\vec{V} \\cdot \\vec{r} = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0084",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Vector differentiation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following vector calculus identities are identically TRUE for twice continuously differentiable scalar fields $\\phi$ and vector fields $\\vec{A}$?",
+    "solution": "Curl of any gradient is identically zero; divergence of any curl is identically zero; vector Laplacian identity holds. Identity D is dimensionally and mathematically invalid.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{A}) = 0$ (divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{A}) = \\nabla (\\nabla \\cdot \\vec{A}) - \\nabla^2 \\vec{A}$",
+      "D": "$\\nabla \\cdot (\\nabla \\phi) = \\nabla \\times \\vec{A}$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0085",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Vector differentiation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For the vector field $\\vec{F} = (2x + y)\\hat{i} + (3y - z)\\hat{j} + (4z + x)\\hat{k}$, the divergence $\\nabla \\cdot \\vec{F}$ is:",
+    "solution": "$$\\nabla \\cdot \\vec{F} = \\frac{\\partial}{\\partial x}(2x + y) + \\frac{\\partial}{\\partial y}(3y - z) + \\frac{\\partial}{\\partial z}(4z + x) = 2 + 3 + 4 = 9.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 9.0,
+    "answer_range": [
+      8.9,
+      9.1
+    ],
+    "correct_answer": "9.0",
+    "numerical_range": {
+      "min": 8.9,
+      "max": 9.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0086",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Vector differentiation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A vector field $\\vec{V}$ is called solenoidal if its divergence is identically zero, and irrotational if:",
+    "solution": "A vector field is irrotational (conservative) if its curl is zero: $\\text{curl}(\\vec{V}) = \\nabla \\times \\vec{V} = 0$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\nabla \\times \\vec{V} = 0$",
+      "B": "$\\nabla \\cdot \\vec{V} = 1$",
+      "C": "$\\nabla^2 \\vec{V} = 0$",
+      "D": "$\\vec{V} \\cdot \\vec{r} = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0087",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Scalar and vector point functions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For the vector field $\\vec{F} = (2x + y)\\hat{i} + (3y - z)\\hat{j} + (4z + x)\\hat{k}$, the divergence $\\nabla \\cdot \\vec{F}$ is:",
+    "solution": "$$\\nabla \\cdot \\vec{F} = \\frac{\\partial}{\\partial x}(2x + y) + \\frac{\\partial}{\\partial y}(3y - z) + \\frac{\\partial}{\\partial z}(4z + x) = 2 + 3 + 4 = 9.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 9.0,
+    "answer_range": [
+      8.9,
+      9.1
+    ],
+    "correct_answer": "9.0",
+    "numerical_range": {
+      "min": 8.9,
+      "max": 9.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0088",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Scalar and vector point functions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A vector field $\\vec{V}$ is called solenoidal if its divergence is identically zero, and irrotational if:",
+    "solution": "A vector field is irrotational (conservative) if its curl is zero: $\\text{curl}(\\vec{V}) = \\nabla \\times \\vec{V} = 0$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\nabla \\times \\vec{V} = 0$",
+      "B": "$\\nabla \\cdot \\vec{V} = 1$",
+      "C": "$\\nabla^2 \\vec{V} = 0$",
+      "D": "$\\vec{V} \\cdot \\vec{r} = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0089",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Scalar and vector point functions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following vector calculus identities are identically TRUE for twice continuously differentiable scalar fields $\\phi$ and vector fields $\\vec{A}$?",
+    "solution": "Curl of any gradient is identically zero; divergence of any curl is identically zero; vector Laplacian identity holds. Identity D is dimensionally and mathematically invalid.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{A}) = 0$ (divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{A}) = \\nabla (\\nabla \\cdot \\vec{A}) - \\nabla^2 \\vec{A}$",
+      "D": "$\\nabla \\cdot (\\nabla \\phi) = \\nabla \\times \\vec{A}$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0090",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Scalar and vector point functions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For the vector field $\\vec{F} = (2x + y)\\hat{i} + (3y - z)\\hat{j} + (4z + x)\\hat{k}$, the divergence $\\nabla \\cdot \\vec{F}$ is:",
+    "solution": "$$\\nabla \\cdot \\vec{F} = \\frac{\\partial}{\\partial x}(2x + y) + \\frac{\\partial}{\\partial y}(3y - z) + \\frac{\\partial}{\\partial z}(4z + x) = 2 + 3 + 4 = 9.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 9.0,
+    "answer_range": [
+      8.9,
+      9.1
+    ],
+    "correct_answer": "9.0",
+    "numerical_range": {
+      "min": 8.9,
+      "max": 9.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0091",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Scalar and vector point functions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A vector field $\\vec{V}$ is called solenoidal if its divergence is identically zero, and irrotational if:",
+    "solution": "A vector field is irrotational (conservative) if its curl is zero: $\\text{curl}(\\vec{V}) = \\nabla \\times \\vec{V} = 0$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\nabla \\times \\vec{V} = 0$",
+      "B": "$\\nabla \\cdot \\vec{V} = 1$",
+      "C": "$\\nabla^2 \\vec{V} = 0$",
+      "D": "$\\vec{V} \\cdot \\vec{r} = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0092",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Scalar and vector point functions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following vector calculus identities are identically TRUE for twice continuously differentiable scalar fields $\\phi$ and vector fields $\\vec{A}$?",
+    "solution": "Curl of any gradient is identically zero; divergence of any curl is identically zero; vector Laplacian identity holds. Identity D is dimensionally and mathematically invalid.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{A}) = 0$ (divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{A}) = \\nabla (\\nabla \\cdot \\vec{A}) - \\nabla^2 \\vec{A}$",
+      "D": "$\\nabla \\cdot (\\nabla \\phi) = \\nabla \\times \\vec{A}$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0093",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Scalar and vector point functions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For the vector field $\\vec{F} = (2x + y)\\hat{i} + (3y - z)\\hat{j} + (4z + x)\\hat{k}$, the divergence $\\nabla \\cdot \\vec{F}$ is:",
+    "solution": "$$\\nabla \\cdot \\vec{F} = \\frac{\\partial}{\\partial x}(2x + y) + \\frac{\\partial}{\\partial y}(3y - z) + \\frac{\\partial}{\\partial z}(4z + x) = 2 + 3 + 4 = 9.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 9.0,
+    "answer_range": [
+      8.9,
+      9.1
+    ],
+    "correct_answer": "9.0",
+    "numerical_range": {
+      "min": 8.9,
+      "max": 9.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0094",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Scalar and vector point functions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A vector field $\\vec{V}$ is called solenoidal if its divergence is identically zero, and irrotational if:",
+    "solution": "A vector field is irrotational (conservative) if its curl is zero: $\\text{curl}(\\vec{V}) = \\nabla \\times \\vec{V} = 0$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\nabla \\times \\vec{V} = 0$",
+      "B": "$\\nabla \\cdot \\vec{V} = 1$",
+      "C": "$\\nabla^2 \\vec{V} = 0$",
+      "D": "$\\vec{V} \\cdot \\vec{r} = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0095",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Scalar and vector point functions",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following vector calculus identities are identically TRUE for twice continuously differentiable scalar fields $\\phi$ and vector fields $\\vec{A}$?",
+    "solution": "Curl of any gradient is identically zero; divergence of any curl is identically zero; vector Laplacian identity holds. Identity D is dimensionally and mathematically invalid.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{A}) = 0$ (divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{A}) = \\nabla (\\nabla \\cdot \\vec{A}) - \\nabla^2 \\vec{A}$",
+      "D": "$\\nabla \\cdot (\\nabla \\phi) = \\nabla \\times \\vec{A}$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0096",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Vector differential operators – del, gradient",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For the vector field $\\vec{F} = (2x + y)\\hat{i} + (3y - z)\\hat{j} + (4z + x)\\hat{k}$, the divergence $\\nabla \\cdot \\vec{F}$ is:",
+    "solution": "$$\\nabla \\cdot \\vec{F} = \\frac{\\partial}{\\partial x}(2x + y) + \\frac{\\partial}{\\partial y}(3y - z) + \\frac{\\partial}{\\partial z}(4z + x) = 2 + 3 + 4 = 9.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 9.0,
+    "answer_range": [
+      8.9,
+      9.1
+    ],
+    "correct_answer": "9.0",
+    "numerical_range": {
+      "min": 8.9,
+      "max": 9.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0097",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Vector differential operators – del, gradient",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A vector field $\\vec{V}$ is called solenoidal if its divergence is identically zero, and irrotational if:",
+    "solution": "A vector field is irrotational (conservative) if its curl is zero: $\\text{curl}(\\vec{V}) = \\nabla \\times \\vec{V} = 0$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\nabla \\times \\vec{V} = 0$",
+      "B": "$\\nabla \\cdot \\vec{V} = 1$",
+      "C": "$\\nabla^2 \\vec{V} = 0$",
+      "D": "$\\vec{V} \\cdot \\vec{r} = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0098",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Vector differential operators – del, gradient",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following vector calculus identities are identically TRUE for twice continuously differentiable scalar fields $\\phi$ and vector fields $\\vec{A}$?",
+    "solution": "Curl of any gradient is identically zero; divergence of any curl is identically zero; vector Laplacian identity holds. Identity D is dimensionally and mathematically invalid.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{A}) = 0$ (divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{A}) = \\nabla (\\nabla \\cdot \\vec{A}) - \\nabla^2 \\vec{A}$",
+      "D": "$\\nabla \\cdot (\\nabla \\phi) = \\nabla \\times \\vec{A}$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0099",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Vector differential operators – del, gradient",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For the vector field $\\vec{F} = (2x + y)\\hat{i} + (3y - z)\\hat{j} + (4z + x)\\hat{k}$, the divergence $\\nabla \\cdot \\vec{F}$ is:",
+    "solution": "$$\\nabla \\cdot \\vec{F} = \\frac{\\partial}{\\partial x}(2x + y) + \\frac{\\partial}{\\partial y}(3y - z) + \\frac{\\partial}{\\partial z}(4z + x) = 2 + 3 + 4 = 9.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 9.0,
+    "answer_range": [
+      8.9,
+      9.1
+    ],
+    "correct_answer": "9.0",
+    "numerical_range": {
+      "min": 8.9,
+      "max": 9.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0100",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Vector differential operators – del, gradient",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A vector field $\\vec{V}$ is called solenoidal if its divergence is identically zero, and irrotational if:",
+    "solution": "A vector field is irrotational (conservative) if its curl is zero: $\\text{curl}(\\vec{V}) = \\nabla \\times \\vec{V} = 0$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\nabla \\times \\vec{V} = 0$",
+      "B": "$\\nabla \\cdot \\vec{V} = 1$",
+      "C": "$\\nabla^2 \\vec{V} = 0$",
+      "D": "$\\vec{V} \\cdot \\vec{r} = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0101",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Vector differential operators – del, gradient",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following vector calculus identities are identically TRUE for twice continuously differentiable scalar fields $\\phi$ and vector fields $\\vec{A}$?",
+    "solution": "Curl of any gradient is identically zero; divergence of any curl is identically zero; vector Laplacian identity holds. Identity D is dimensionally and mathematically invalid.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{A}) = 0$ (divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{A}) = \\nabla (\\nabla \\cdot \\vec{A}) - \\nabla^2 \\vec{A}$",
+      "D": "$\\nabla \\cdot (\\nabla \\phi) = \\nabla \\times \\vec{A}$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0102",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Vector differential operators – del, gradient",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For the vector field $\\vec{F} = (2x + y)\\hat{i} + (3y - z)\\hat{j} + (4z + x)\\hat{k}$, the divergence $\\nabla \\cdot \\vec{F}$ is:",
+    "solution": "$$\\nabla \\cdot \\vec{F} = \\frac{\\partial}{\\partial x}(2x + y) + \\frac{\\partial}{\\partial y}(3y - z) + \\frac{\\partial}{\\partial z}(4z + x) = 2 + 3 + 4 = 9.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 9.0,
+    "answer_range": [
+      8.9,
+      9.1
+    ],
+    "correct_answer": "9.0",
+    "numerical_range": {
+      "min": 8.9,
+      "max": 9.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0103",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Vector differential operators – del, gradient",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A vector field $\\vec{V}$ is called solenoidal if its divergence is identically zero, and irrotational if:",
+    "solution": "A vector field is irrotational (conservative) if its curl is zero: $\\text{curl}(\\vec{V}) = \\nabla \\times \\vec{V} = 0$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\nabla \\times \\vec{V} = 0$",
+      "B": "$\\nabla \\cdot \\vec{V} = 1$",
+      "C": "$\\nabla^2 \\vec{V} = 0$",
+      "D": "$\\vec{V} \\cdot \\vec{r} = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0104",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Vector differential operators – del, gradient",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following vector calculus identities are identically TRUE for twice continuously differentiable scalar fields $\\phi$ and vector fields $\\vec{A}$?",
+    "solution": "Curl of any gradient is identically zero; divergence of any curl is identically zero; vector Laplacian identity holds. Identity D is dimensionally and mathematically invalid.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{A}) = 0$ (divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{A}) = \\nabla (\\nabla \\cdot \\vec{A}) - \\nabla^2 \\vec{A}$",
+      "D": "$\\nabla \\cdot (\\nabla \\phi) = \\nabla \\times \\vec{A}$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0105",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Vector differential operators – del, gradient",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For the vector field $\\vec{F} = (2x + y)\\hat{i} + (3y - z)\\hat{j} + (4z + x)\\hat{k}$, the divergence $\\nabla \\cdot \\vec{F}$ is:",
+    "solution": "$$\\nabla \\cdot \\vec{F} = \\frac{\\partial}{\\partial x}(2x + y) + \\frac{\\partial}{\\partial y}(3y - z) + \\frac{\\partial}{\\partial z}(4z + x) = 2 + 3 + 4 = 9.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 9.0,
+    "answer_range": [
+      8.9,
+      9.1
+    ],
+    "correct_answer": "9.0",
+    "numerical_range": {
+      "min": 8.9,
+      "max": 9.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0106",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Divergence and curl",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For the vector field $\\vec{F} = (2x + y)\\hat{i} + (3y - z)\\hat{j} + (4z + x)\\hat{k}$, the divergence $\\nabla \\cdot \\vec{F}$ is:",
+    "solution": "$$\\nabla \\cdot \\vec{F} = \\frac{\\partial}{\\partial x}(2x + y) + \\frac{\\partial}{\\partial y}(3y - z) + \\frac{\\partial}{\\partial z}(4z + x) = 2 + 3 + 4 = 9.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 9.0,
+    "answer_range": [
+      8.9,
+      9.1
+    ],
+    "correct_answer": "9.0",
+    "numerical_range": {
+      "min": 8.9,
+      "max": 9.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0107",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Divergence and curl",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A vector field $\\vec{V}$ is called solenoidal if its divergence is identically zero, and irrotational if:",
+    "solution": "A vector field is irrotational (conservative) if its curl is zero: $\\text{curl}(\\vec{V}) = \\nabla \\times \\vec{V} = 0$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\nabla \\times \\vec{V} = 0$",
+      "B": "$\\nabla \\cdot \\vec{V} = 1$",
+      "C": "$\\nabla^2 \\vec{V} = 0$",
+      "D": "$\\vec{V} \\cdot \\vec{r} = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0108",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Divergence and curl",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following vector calculus identities are identically TRUE for twice continuously differentiable scalar fields $\\phi$ and vector fields $\\vec{A}$?",
+    "solution": "Curl of any gradient is identically zero; divergence of any curl is identically zero; vector Laplacian identity holds. Identity D is dimensionally and mathematically invalid.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{A}) = 0$ (divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{A}) = \\nabla (\\nabla \\cdot \\vec{A}) - \\nabla^2 \\vec{A}$",
+      "D": "$\\nabla \\cdot (\\nabla \\phi) = \\nabla \\times \\vec{A}$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0109",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Divergence and curl",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For the vector field $\\vec{F} = (2x + y)\\hat{i} + (3y - z)\\hat{j} + (4z + x)\\hat{k}$, the divergence $\\nabla \\cdot \\vec{F}$ is:",
+    "solution": "$$\\nabla \\cdot \\vec{F} = \\frac{\\partial}{\\partial x}(2x + y) + \\frac{\\partial}{\\partial y}(3y - z) + \\frac{\\partial}{\\partial z}(4z + x) = 2 + 3 + 4 = 9.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 9.0,
+    "answer_range": [
+      8.9,
+      9.1
+    ],
+    "correct_answer": "9.0",
+    "numerical_range": {
+      "min": 8.9,
+      "max": 9.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0110",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Divergence and curl",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A vector field $\\vec{V}$ is called solenoidal if its divergence is identically zero, and irrotational if:",
+    "solution": "A vector field is irrotational (conservative) if its curl is zero: $\\text{curl}(\\vec{V}) = \\nabla \\times \\vec{V} = 0$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\nabla \\times \\vec{V} = 0$",
+      "B": "$\\nabla \\cdot \\vec{V} = 1$",
+      "C": "$\\nabla^2 \\vec{V} = 0$",
+      "D": "$\\vec{V} \\cdot \\vec{r} = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0111",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Divergence and curl",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following vector calculus identities are identically TRUE for twice continuously differentiable scalar fields $\\phi$ and vector fields $\\vec{A}$?",
+    "solution": "Curl of any gradient is identically zero; divergence of any curl is identically zero; vector Laplacian identity holds. Identity D is dimensionally and mathematically invalid.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\nabla \\times (\\nabla \\phi) = \\vec{0}$ (curl of gradient is zero)",
+      "B": "$\\nabla \\cdot (\\nabla \\times \\vec{A}) = 0$ (divergence of curl is zero)",
+      "C": "$\\nabla \\times (\\nabla \\times \\vec{A}) = \\nabla (\\nabla \\cdot \\vec{A}) - \\nabla^2 \\vec{A}$",
+      "D": "$\\nabla \\cdot (\\nabla \\phi) = \\nabla \\times \\vec{A}$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0112",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Physical interpretations – line, surface and volume integrals",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Gauss' Divergence theorem transforms:",
+    "solution": "Divergence theorem: $\\iint_S \\vec{F} \\cdot \\hat{n}\\, dS = \\iiint_V (\\nabla \\cdot \\vec{F})\\, dV$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "A surface integral over a closed surface into a volume integral over the enclosed region",
+      "B": "A line integral around a closed curve into a surface integral",
+      "C": "A volume integral into a line integral",
+      "D": "A scalar product into a vector cross product"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0113",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Physical interpretations – line, surface and volume integrals",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Using the Divergence Theorem, evaluate $\\iint_S \\vec{r} \\cdot \\hat{n}\\, dS$ over the surface of a sphere of radius $R = 2$, where $\\vec{r} = x\\hat{i} + y\\hat{j} + z\\hat{k}$:",
+    "solution": "$\\nabla \\cdot \\vec{r} = 1 + 1 + 1 = 3$.\nBy Divergence theorem:\n$$\\iint_S \\vec{r} \\cdot \\hat{n}\\, dS = \\iiint_V 3\\, dV = 3 V = 3 \\left(\\frac{4}{3} \\pi R^3\\right) = 4 \\pi R^3$$\nFor $R = 2$:\n$$4 \\pi (2)^3 = 100.53$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 100.53,
+    "answer_range": [
+      100.33,
+      100.73
+    ],
+    "correct_answer": "100.53",
+    "numerical_range": {
+      "min": 100.33,
+      "max": 100.73
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0114",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Physical interpretations – line, surface and volume integrals",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Gauss' Divergence theorem transforms:",
+    "solution": "Divergence theorem: $\\iint_S \\vec{F} \\cdot \\hat{n}\\, dS = \\iiint_V (\\nabla \\cdot \\vec{F})\\, dV$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "A surface integral over a closed surface into a volume integral over the enclosed region",
+      "B": "A line integral around a closed curve into a surface integral",
+      "C": "A volume integral into a line integral",
+      "D": "A scalar product into a vector cross product"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0115",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Physical interpretations – line, surface and volume integrals",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Using the Divergence Theorem, evaluate $\\iint_S \\vec{r} \\cdot \\hat{n}\\, dS$ over the surface of a sphere of radius $R = 1$, where $\\vec{r} = x\\hat{i} + y\\hat{j} + z\\hat{k}$:",
+    "solution": "$\\nabla \\cdot \\vec{r} = 1 + 1 + 1 = 3$.\nBy Divergence theorem:\n$$\\iint_S \\vec{r} \\cdot \\hat{n}\\, dS = \\iiint_V 3\\, dV = 3 V = 3 \\left(\\frac{4}{3} \\pi R^3\\right) = 4 \\pi R^3$$\nFor $R = 1$:\n$$4 \\pi (1)^3 = 12.57$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 12.57,
+    "answer_range": [
+      12.37,
+      12.77
+    ],
+    "correct_answer": "12.57",
+    "numerical_range": {
+      "min": 12.37,
+      "max": 12.77
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0116",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Physical interpretations – line, surface and volume integrals",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Gauss' Divergence theorem transforms:",
+    "solution": "Divergence theorem: $\\iint_S \\vec{F} \\cdot \\hat{n}\\, dS = \\iiint_V (\\nabla \\cdot \\vec{F})\\, dV$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "A surface integral over a closed surface into a volume integral over the enclosed region",
+      "B": "A line integral around a closed curve into a surface integral",
+      "C": "A volume integral into a line integral",
+      "D": "A scalar product into a vector cross product"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0117",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Physical interpretations – line, surface and volume integrals",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Using the Divergence Theorem, evaluate $\\iint_S \\vec{r} \\cdot \\hat{n}\\, dS$ over the surface of a sphere of radius $R = 3$, where $\\vec{r} = x\\hat{i} + y\\hat{j} + z\\hat{k}$:",
+    "solution": "$\\nabla \\cdot \\vec{r} = 1 + 1 + 1 = 3$.\nBy Divergence theorem:\n$$\\iint_S \\vec{r} \\cdot \\hat{n}\\, dS = \\iiint_V 3\\, dV = 3 V = 3 \\left(\\frac{4}{3} \\pi R^3\\right) = 4 \\pi R^3$$\nFor $R = 3$:\n$$4 \\pi (3)^3 = 339.29$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 339.29,
+    "answer_range": [
+      339.09,
+      339.49
+    ],
+    "correct_answer": "339.29",
+    "numerical_range": {
+      "min": 339.09,
+      "max": 339.49
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0118",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Physical interpretations – line, surface and volume integrals",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Gauss' Divergence theorem transforms:",
+    "solution": "Divergence theorem: $\\iint_S \\vec{F} \\cdot \\hat{n}\\, dS = \\iiint_V (\\nabla \\cdot \\vec{F})\\, dV$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "A surface integral over a closed surface into a volume integral over the enclosed region",
+      "B": "A line integral around a closed curve into a surface integral",
+      "C": "A volume integral into a line integral",
+      "D": "A scalar product into a vector cross product"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0119",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Physical interpretations – line, surface and volume integrals",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Using the Divergence Theorem, evaluate $\\iint_S \\vec{r} \\cdot \\hat{n}\\, dS$ over the surface of a sphere of radius $R = 2$, where $\\vec{r} = x\\hat{i} + y\\hat{j} + z\\hat{k}$:",
+    "solution": "$\\nabla \\cdot \\vec{r} = 1 + 1 + 1 = 3$.\nBy Divergence theorem:\n$$\\iint_S \\vec{r} \\cdot \\hat{n}\\, dS = \\iiint_V 3\\, dV = 3 V = 3 \\left(\\frac{4}{3} \\pi R^3\\right) = 4 \\pi R^3$$\nFor $R = 2$:\n$$4 \\pi (2)^3 = 100.53$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 100.53,
+    "answer_range": [
+      100.33,
+      100.73
+    ],
+    "correct_answer": "100.53",
+    "numerical_range": {
+      "min": 100.33,
+      "max": 100.73
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0120",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Stokes, Gauss and Green's theorems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Gauss' Divergence theorem transforms:",
+    "solution": "Divergence theorem: $\\iint_S \\vec{F} \\cdot \\hat{n}\\, dS = \\iiint_V (\\nabla \\cdot \\vec{F})\\, dV$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "A surface integral over a closed surface into a volume integral over the enclosed region",
+      "B": "A line integral around a closed curve into a surface integral",
+      "C": "A volume integral into a line integral",
+      "D": "A scalar product into a vector cross product"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0121",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Stokes, Gauss and Green's theorems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Using the Divergence Theorem, evaluate $\\iint_S \\vec{r} \\cdot \\hat{n}\\, dS$ over the surface of a sphere of radius $R = 2$, where $\\vec{r} = x\\hat{i} + y\\hat{j} + z\\hat{k}$:",
+    "solution": "$\\nabla \\cdot \\vec{r} = 1 + 1 + 1 = 3$.\nBy Divergence theorem:\n$$\\iint_S \\vec{r} \\cdot \\hat{n}\\, dS = \\iiint_V 3\\, dV = 3 V = 3 \\left(\\frac{4}{3} \\pi R^3\\right) = 4 \\pi R^3$$\nFor $R = 2$:\n$$4 \\pi (2)^3 = 100.53$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 100.53,
+    "answer_range": [
+      100.33,
+      100.73
+    ],
+    "correct_answer": "100.53",
+    "numerical_range": {
+      "min": 100.33,
+      "max": 100.73
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0122",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Stokes, Gauss and Green's theorems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Gauss' Divergence theorem transforms:",
+    "solution": "Divergence theorem: $\\iint_S \\vec{F} \\cdot \\hat{n}\\, dS = \\iiint_V (\\nabla \\cdot \\vec{F})\\, dV$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "A surface integral over a closed surface into a volume integral over the enclosed region",
+      "B": "A line integral around a closed curve into a surface integral",
+      "C": "A volume integral into a line integral",
+      "D": "A scalar product into a vector cross product"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0123",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Stokes, Gauss and Green's theorems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Using the Divergence Theorem, evaluate $\\iint_S \\vec{r} \\cdot \\hat{n}\\, dS$ over the surface of a sphere of radius $R = 1$, where $\\vec{r} = x\\hat{i} + y\\hat{j} + z\\hat{k}$:",
+    "solution": "$\\nabla \\cdot \\vec{r} = 1 + 1 + 1 = 3$.\nBy Divergence theorem:\n$$\\iint_S \\vec{r} \\cdot \\hat{n}\\, dS = \\iiint_V 3\\, dV = 3 V = 3 \\left(\\frac{4}{3} \\pi R^3\\right) = 4 \\pi R^3$$\nFor $R = 1$:\n$$4 \\pi (1)^3 = 12.57$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 12.57,
+    "answer_range": [
+      12.37,
+      12.77
+    ],
+    "correct_answer": "12.57",
+    "numerical_range": {
+      "min": 12.37,
+      "max": 12.77
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0124",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Stokes, Gauss and Green's theorems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Gauss' Divergence theorem transforms:",
+    "solution": "Divergence theorem: $\\iint_S \\vec{F} \\cdot \\hat{n}\\, dS = \\iiint_V (\\nabla \\cdot \\vec{F})\\, dV$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "A surface integral over a closed surface into a volume integral over the enclosed region",
+      "B": "A line integral around a closed curve into a surface integral",
+      "C": "A volume integral into a line integral",
+      "D": "A scalar product into a vector cross product"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0125",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Vector Calculus",
+    "subtopic": "Stokes, Gauss and Green's theorems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Using the Divergence Theorem, evaluate $\\iint_S \\vec{r} \\cdot \\hat{n}\\, dS$ over the surface of a sphere of radius $R = 3$, where $\\vec{r} = x\\hat{i} + y\\hat{j} + z\\hat{k}$:",
+    "solution": "$\\nabla \\cdot \\vec{r} = 1 + 1 + 1 = 3$.\nBy Divergence theorem:\n$$\\iint_S \\vec{r} \\cdot \\hat{n}\\, dS = \\iiint_V 3\\, dV = 3 V = 3 \\left(\\frac{4}{3} \\pi R^3\\right) = 4 \\pi R^3$$\nFor $R = 3$:\n$$4 \\pi (3)^3 = 339.29$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 339.29,
+    "answer_range": [
+      339.09,
+      339.49
+    ],
+    "correct_answer": "339.29",
+    "numerical_range": {
+      "min": 339.09,
+      "max": 339.49
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0126",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Linear and non-linear first order Ordinary Differential Equations (ODE)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The integrating factor for the first-order linear differential equation $\\frac{dy}{dx} + P(x) y = Q(x)$ is given by:",
+    "solution": "Multiplying by $I.F. = e^{\\int P(x)\\, dx}$ makes the left-hand side the exact derivative $\\frac{d}{dx}[y \\cdot I.F.]$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$e^{\\int P(x)\\, dx}$",
+      "B": "$e^{-\\int Q(x)\\, dx}$",
+      "C": "$\\int P(x)\\, dx$",
+      "D": "$P(x) Q(x)$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0127",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Linear and non-linear first order Ordinary Differential Equations (ODE)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For the differential equation $\\frac{d^2 y}{dx^2} + 9 y = 0$ with initial conditions $y(0) = 2$ and $y'(0) = 0$, the value of $y(\\pi/6)$ is:",
+    "solution": "Auxiliary equation: $m^2 + 9 = 0 \\implies m = \\pm 3i$.\nGeneral solution: $y(x) = C_1 \\cos(3x) + C_2 \\sin(3x)$.\n$y(0) = C_1 = 2$. $y'(0) = 3 C_2 = 0 \\implies C_2 = 0$.\n$$y(x) = 2 \\cos(3x)$$\nAt $x = \\pi/6$: $y(\\pi/6) = 2 \\cos(3 \\times \\pi/6) = 2 \\cos(\\pi/2) = 2(0) = 0.00$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 0.0,
+    "answer_range": [
+      -0.05,
+      0.05
+    ],
+    "correct_answer": "0.0",
+    "numerical_range": {
+      "min": -0.05,
+      "max": 0.05
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0128",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Linear and non-linear first order Ordinary Differential Equations (ODE)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following are second-order linear Partial Differential Equations of parabolic type?",
+    "solution": "For $A u_{xx} + B u_{xt} + C u_{tt} = 0$, discriminant $B^2 - 4AC = 0$ is parabolic. The heat and diffusion equations have $B = 0, C = 0 \\implies B^2 - 4AC = 0$ (parabolic). Wave equation is hyperbolic ($B^2 - 4AC > 0$) and Laplace is elliptic ($B^2 - 4AC < 0$).",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "One-dimensional transient heat conduction equation $\\frac{\\partial u}{\\partial t} = \\alpha \\frac{\\partial^2 u}{\\partial x^2}$",
+      "B": "One-dimensional wave equation $\\frac{\\partial^2 u}{\\partial t^2} = c^2 \\frac{\\partial^2 u}{\\partial x^2}$",
+      "C": "Two-dimensional Laplace equation $\\frac{\\partial^2 u}{\\partial x^2} + \\frac{\\partial^2 u}{\\partial y^2} = 0$",
+      "D": "One-dimensional moisture diffusion equation $\\frac{\\partial C}{\\partial t} = D \\frac{\\partial^2 C}{\\partial x^2}$"
+    },
+    "correct_answer": [
+      "A",
+      "D"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0129",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Linear and non-linear first order Ordinary Differential Equations (ODE)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The integrating factor for the first-order linear differential equation $\\frac{dy}{dx} + P(x) y = Q(x)$ is given by:",
+    "solution": "Multiplying by $I.F. = e^{\\int P(x)\\, dx}$ makes the left-hand side the exact derivative $\\frac{d}{dx}[y \\cdot I.F.]$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$e^{\\int P(x)\\, dx}$",
+      "B": "$e^{-\\int Q(x)\\, dx}$",
+      "C": "$\\int P(x)\\, dx$",
+      "D": "$P(x) Q(x)$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0130",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Linear and non-linear first order Ordinary Differential Equations (ODE)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For the differential equation $\\frac{d^2 y}{dx^2} + 9 y = 0$ with initial conditions $y(0) = 2$ and $y'(0) = 0$, the value of $y(\\pi/6)$ is:",
+    "solution": "Auxiliary equation: $m^2 + 9 = 0 \\implies m = \\pm 3i$.\nGeneral solution: $y(x) = C_1 \\cos(3x) + C_2 \\sin(3x)$.\n$y(0) = C_1 = 2$. $y'(0) = 3 C_2 = 0 \\implies C_2 = 0$.\n$$y(x) = 2 \\cos(3x)$$\nAt $x = \\pi/6$: $y(\\pi/6) = 2 \\cos(3 \\times \\pi/6) = 2 \\cos(\\pi/2) = 2(0) = 0.00$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 0.0,
+    "answer_range": [
+      -0.05,
+      0.05
+    ],
+    "correct_answer": "0.0",
+    "numerical_range": {
+      "min": -0.05,
+      "max": 0.05
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0131",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Linear and non-linear first order Ordinary Differential Equations (ODE)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following are second-order linear Partial Differential Equations of parabolic type?",
+    "solution": "For $A u_{xx} + B u_{xt} + C u_{tt} = 0$, discriminant $B^2 - 4AC = 0$ is parabolic. The heat and diffusion equations have $B = 0, C = 0 \\implies B^2 - 4AC = 0$ (parabolic). Wave equation is hyperbolic ($B^2 - 4AC > 0$) and Laplace is elliptic ($B^2 - 4AC < 0$).",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "One-dimensional transient heat conduction equation $\\frac{\\partial u}{\\partial t} = \\alpha \\frac{\\partial^2 u}{\\partial x^2}$",
+      "B": "One-dimensional wave equation $\\frac{\\partial^2 u}{\\partial t^2} = c^2 \\frac{\\partial^2 u}{\\partial x^2}$",
+      "C": "Two-dimensional Laplace equation $\\frac{\\partial^2 u}{\\partial x^2} + \\frac{\\partial^2 u}{\\partial y^2} = 0$",
+      "D": "One-dimensional moisture diffusion equation $\\frac{\\partial C}{\\partial t} = D \\frac{\\partial^2 C}{\\partial x^2}$"
+    },
+    "correct_answer": [
+      "A",
+      "D"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0132",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Homogeneous differential equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The integrating factor for the first-order linear differential equation $\\frac{dy}{dx} + P(x) y = Q(x)$ is given by:",
+    "solution": "Multiplying by $I.F. = e^{\\int P(x)\\, dx}$ makes the left-hand side the exact derivative $\\frac{d}{dx}[y \\cdot I.F.]$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$e^{\\int P(x)\\, dx}$",
+      "B": "$e^{-\\int Q(x)\\, dx}$",
+      "C": "$\\int P(x)\\, dx$",
+      "D": "$P(x) Q(x)$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0133",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Homogeneous differential equations",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For the differential equation $\\frac{d^2 y}{dx^2} + 9 y = 0$ with initial conditions $y(0) = 2$ and $y'(0) = 0$, the value of $y(\\pi/6)$ is:",
+    "solution": "Auxiliary equation: $m^2 + 9 = 0 \\implies m = \\pm 3i$.\nGeneral solution: $y(x) = C_1 \\cos(3x) + C_2 \\sin(3x)$.\n$y(0) = C_1 = 2$. $y'(0) = 3 C_2 = 0 \\implies C_2 = 0$.\n$$y(x) = 2 \\cos(3x)$$\nAt $x = \\pi/6$: $y(\\pi/6) = 2 \\cos(3 \\times \\pi/6) = 2 \\cos(\\pi/2) = 2(0) = 0.00$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 0.0,
+    "answer_range": [
+      -0.05,
+      0.05
+    ],
+    "correct_answer": "0.0",
+    "numerical_range": {
+      "min": -0.05,
+      "max": 0.05
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0134",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Homogeneous differential equations",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following are second-order linear Partial Differential Equations of parabolic type?",
+    "solution": "For $A u_{xx} + B u_{xt} + C u_{tt} = 0$, discriminant $B^2 - 4AC = 0$ is parabolic. The heat and diffusion equations have $B = 0, C = 0 \\implies B^2 - 4AC = 0$ (parabolic). Wave equation is hyperbolic ($B^2 - 4AC > 0$) and Laplace is elliptic ($B^2 - 4AC < 0$).",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "One-dimensional transient heat conduction equation $\\frac{\\partial u}{\\partial t} = \\alpha \\frac{\\partial^2 u}{\\partial x^2}$",
+      "B": "One-dimensional wave equation $\\frac{\\partial^2 u}{\\partial t^2} = c^2 \\frac{\\partial^2 u}{\\partial x^2}$",
+      "C": "Two-dimensional Laplace equation $\\frac{\\partial^2 u}{\\partial x^2} + \\frac{\\partial^2 u}{\\partial y^2} = 0$",
+      "D": "One-dimensional moisture diffusion equation $\\frac{\\partial C}{\\partial t} = D \\frac{\\partial^2 C}{\\partial x^2}$"
+    },
+    "correct_answer": [
+      "A",
+      "D"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0135",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Homogeneous differential equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The integrating factor for the first-order linear differential equation $\\frac{dy}{dx} + P(x) y = Q(x)$ is given by:",
+    "solution": "Multiplying by $I.F. = e^{\\int P(x)\\, dx}$ makes the left-hand side the exact derivative $\\frac{d}{dx}[y \\cdot I.F.]$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$e^{\\int P(x)\\, dx}$",
+      "B": "$e^{-\\int Q(x)\\, dx}$",
+      "C": "$\\int P(x)\\, dx$",
+      "D": "$P(x) Q(x)$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0136",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Homogeneous differential equations",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For the differential equation $\\frac{d^2 y}{dx^2} + 9 y = 0$ with initial conditions $y(0) = 2$ and $y'(0) = 0$, the value of $y(\\pi/6)$ is:",
+    "solution": "Auxiliary equation: $m^2 + 9 = 0 \\implies m = \\pm 3i$.\nGeneral solution: $y(x) = C_1 \\cos(3x) + C_2 \\sin(3x)$.\n$y(0) = C_1 = 2$. $y'(0) = 3 C_2 = 0 \\implies C_2 = 0$.\n$$y(x) = 2 \\cos(3x)$$\nAt $x = \\pi/6$: $y(\\pi/6) = 2 \\cos(3 \\times \\pi/6) = 2 \\cos(\\pi/2) = 2(0) = 0.00$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 0.0,
+    "answer_range": [
+      -0.05,
+      0.05
+    ],
+    "correct_answer": "0.0",
+    "numerical_range": {
+      "min": -0.05,
+      "max": 0.05
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0137",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Homogeneous differential equations",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following are second-order linear Partial Differential Equations of parabolic type?",
+    "solution": "For $A u_{xx} + B u_{xt} + C u_{tt} = 0$, discriminant $B^2 - 4AC = 0$ is parabolic. The heat and diffusion equations have $B = 0, C = 0 \\implies B^2 - 4AC = 0$ (parabolic). Wave equation is hyperbolic ($B^2 - 4AC > 0$) and Laplace is elliptic ($B^2 - 4AC < 0$).",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "One-dimensional transient heat conduction equation $\\frac{\\partial u}{\\partial t} = \\alpha \\frac{\\partial^2 u}{\\partial x^2}$",
+      "B": "One-dimensional wave equation $\\frac{\\partial^2 u}{\\partial t^2} = c^2 \\frac{\\partial^2 u}{\\partial x^2}$",
+      "C": "Two-dimensional Laplace equation $\\frac{\\partial^2 u}{\\partial x^2} + \\frac{\\partial^2 u}{\\partial y^2} = 0$",
+      "D": "One-dimensional moisture diffusion equation $\\frac{\\partial C}{\\partial t} = D \\frac{\\partial^2 C}{\\partial x^2}$"
+    },
+    "correct_answer": [
+      "A",
+      "D"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0138",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Homogeneous differential equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The integrating factor for the first-order linear differential equation $\\frac{dy}{dx} + P(x) y = Q(x)$ is given by:",
+    "solution": "Multiplying by $I.F. = e^{\\int P(x)\\, dx}$ makes the left-hand side the exact derivative $\\frac{d}{dx}[y \\cdot I.F.]$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$e^{\\int P(x)\\, dx}$",
+      "B": "$e^{-\\int Q(x)\\, dx}$",
+      "C": "$\\int P(x)\\, dx$",
+      "D": "$P(x) Q(x)$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0139",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Homogeneous differential equations",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For the differential equation $\\frac{d^2 y}{dx^2} + 9 y = 0$ with initial conditions $y(0) = 2$ and $y'(0) = 0$, the value of $y(\\pi/6)$ is:",
+    "solution": "Auxiliary equation: $m^2 + 9 = 0 \\implies m = \\pm 3i$.\nGeneral solution: $y(x) = C_1 \\cos(3x) + C_2 \\sin(3x)$.\n$y(0) = C_1 = 2$. $y'(0) = 3 C_2 = 0 \\implies C_2 = 0$.\n$$y(x) = 2 \\cos(3x)$$\nAt $x = \\pi/6$: $y(\\pi/6) = 2 \\cos(3 \\times \\pi/6) = 2 \\cos(\\pi/2) = 2(0) = 0.00$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 0.0,
+    "answer_range": [
+      -0.05,
+      0.05
+    ],
+    "correct_answer": "0.0",
+    "numerical_range": {
+      "min": -0.05,
+      "max": 0.05
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0140",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Homogeneous differential equations",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following are second-order linear Partial Differential Equations of parabolic type?",
+    "solution": "For $A u_{xx} + B u_{xt} + C u_{tt} = 0$, discriminant $B^2 - 4AC = 0$ is parabolic. The heat and diffusion equations have $B = 0, C = 0 \\implies B^2 - 4AC = 0$ (parabolic). Wave equation is hyperbolic ($B^2 - 4AC > 0$) and Laplace is elliptic ($B^2 - 4AC < 0$).",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "One-dimensional transient heat conduction equation $\\frac{\\partial u}{\\partial t} = \\alpha \\frac{\\partial^2 u}{\\partial x^2}$",
+      "B": "One-dimensional wave equation $\\frac{\\partial^2 u}{\\partial t^2} = c^2 \\frac{\\partial^2 u}{\\partial x^2}$",
+      "C": "Two-dimensional Laplace equation $\\frac{\\partial^2 u}{\\partial x^2} + \\frac{\\partial^2 u}{\\partial y^2} = 0$",
+      "D": "One-dimensional moisture diffusion equation $\\frac{\\partial C}{\\partial t} = D \\frac{\\partial^2 C}{\\partial x^2}$"
+    },
+    "correct_answer": [
+      "A",
+      "D"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0141",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Higher order linear ODEs with constant coefficients",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The integrating factor for the first-order linear differential equation $\\frac{dy}{dx} + P(x) y = Q(x)$ is given by:",
+    "solution": "Multiplying by $I.F. = e^{\\int P(x)\\, dx}$ makes the left-hand side the exact derivative $\\frac{d}{dx}[y \\cdot I.F.]$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$e^{\\int P(x)\\, dx}$",
+      "B": "$e^{-\\int Q(x)\\, dx}$",
+      "C": "$\\int P(x)\\, dx$",
+      "D": "$P(x) Q(x)$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0142",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Higher order linear ODEs with constant coefficients",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For the differential equation $\\frac{d^2 y}{dx^2} + 9 y = 0$ with initial conditions $y(0) = 2$ and $y'(0) = 0$, the value of $y(\\pi/6)$ is:",
+    "solution": "Auxiliary equation: $m^2 + 9 = 0 \\implies m = \\pm 3i$.\nGeneral solution: $y(x) = C_1 \\cos(3x) + C_2 \\sin(3x)$.\n$y(0) = C_1 = 2$. $y'(0) = 3 C_2 = 0 \\implies C_2 = 0$.\n$$y(x) = 2 \\cos(3x)$$\nAt $x = \\pi/6$: $y(\\pi/6) = 2 \\cos(3 \\times \\pi/6) = 2 \\cos(\\pi/2) = 2(0) = 0.00$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 0.0,
+    "answer_range": [
+      -0.05,
+      0.05
+    ],
+    "correct_answer": "0.0",
+    "numerical_range": {
+      "min": -0.05,
+      "max": 0.05
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0143",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Higher order linear ODEs with constant coefficients",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following are second-order linear Partial Differential Equations of parabolic type?",
+    "solution": "For $A u_{xx} + B u_{xt} + C u_{tt} = 0$, discriminant $B^2 - 4AC = 0$ is parabolic. The heat and diffusion equations have $B = 0, C = 0 \\implies B^2 - 4AC = 0$ (parabolic). Wave equation is hyperbolic ($B^2 - 4AC > 0$) and Laplace is elliptic ($B^2 - 4AC < 0$).",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "One-dimensional transient heat conduction equation $\\frac{\\partial u}{\\partial t} = \\alpha \\frac{\\partial^2 u}{\\partial x^2}$",
+      "B": "One-dimensional wave equation $\\frac{\\partial^2 u}{\\partial t^2} = c^2 \\frac{\\partial^2 u}{\\partial x^2}$",
+      "C": "Two-dimensional Laplace equation $\\frac{\\partial^2 u}{\\partial x^2} + \\frac{\\partial^2 u}{\\partial y^2} = 0$",
+      "D": "One-dimensional moisture diffusion equation $\\frac{\\partial C}{\\partial t} = D \\frac{\\partial^2 C}{\\partial x^2}$"
+    },
+    "correct_answer": [
+      "A",
+      "D"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0144",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Higher order linear ODEs with constant coefficients",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The integrating factor for the first-order linear differential equation $\\frac{dy}{dx} + P(x) y = Q(x)$ is given by:",
+    "solution": "Multiplying by $I.F. = e^{\\int P(x)\\, dx}$ makes the left-hand side the exact derivative $\\frac{d}{dx}[y \\cdot I.F.]$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$e^{\\int P(x)\\, dx}$",
+      "B": "$e^{-\\int Q(x)\\, dx}$",
+      "C": "$\\int P(x)\\, dx$",
+      "D": "$P(x) Q(x)$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0145",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Higher order linear ODEs with constant coefficients",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For the differential equation $\\frac{d^2 y}{dx^2} + 9 y = 0$ with initial conditions $y(0) = 2$ and $y'(0) = 0$, the value of $y(\\pi/6)$ is:",
+    "solution": "Auxiliary equation: $m^2 + 9 = 0 \\implies m = \\pm 3i$.\nGeneral solution: $y(x) = C_1 \\cos(3x) + C_2 \\sin(3x)$.\n$y(0) = C_1 = 2$. $y'(0) = 3 C_2 = 0 \\implies C_2 = 0$.\n$$y(x) = 2 \\cos(3x)$$\nAt $x = \\pi/6$: $y(\\pi/6) = 2 \\cos(3 \\times \\pi/6) = 2 \\cos(\\pi/2) = 2(0) = 0.00$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 0.0,
+    "answer_range": [
+      -0.05,
+      0.05
+    ],
+    "correct_answer": "0.0",
+    "numerical_range": {
+      "min": -0.05,
+      "max": 0.05
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0146",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Laplace transforms and their inverse",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Laplace transform of $f(t) = e^{2t}$ for $s > 2$ is:",
+    "solution": "$$\\mathcal{L}\\{e^{at}\\} = \\int_0^\\infty e^{-st} e^{at}\\, dt = \\int_0^\\infty e^{-(s-a)t}\\, dt = \\frac{1}{s - a}$$\nHere $a = 2$, so $\\mathcal{L}\\{e^{2t}\\} = \\frac{1}{s - 2}$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\frac{1}{s - 2}$",
+      "B": "$\\frac{1}{s + 2}$",
+      "C": "$\\frac{2}{s^2 + 2^2}$",
+      "D": "$\\frac{s}{s^2 - 2^2}$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0147",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Laplace transforms and their inverse",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Laplace transform of $f(t) = e^{3t}$ for $s > 3$ is:",
+    "solution": "$$\\mathcal{L}\\{e^{at}\\} = \\int_0^\\infty e^{-st} e^{at}\\, dt = \\int_0^\\infty e^{-(s-a)t}\\, dt = \\frac{1}{s - a}$$\nHere $a = 3$, so $\\mathcal{L}\\{e^{3t}\\} = \\frac{1}{s - 3}$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\frac{1}{s - 3}$",
+      "B": "$\\frac{1}{s + 3}$",
+      "C": "$\\frac{3}{s^2 + 3^2}$",
+      "D": "$\\frac{s}{s^2 - 3^2}$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0148",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Laplace transforms and their inverse",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Laplace transform of $f(t) = e^{4t}$ for $s > 4$ is:",
+    "solution": "$$\\mathcal{L}\\{e^{at}\\} = \\int_0^\\infty e^{-st} e^{at}\\, dt = \\int_0^\\infty e^{-(s-a)t}\\, dt = \\frac{1}{s - a}$$\nHere $a = 4$, so $\\mathcal{L}\\{e^{4t}\\} = \\frac{1}{s - 4}$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\frac{1}{s - 4}$",
+      "B": "$\\frac{1}{s + 4}$",
+      "C": "$\\frac{4}{s^2 + 4^2}$",
+      "D": "$\\frac{s}{s^2 - 4^2}$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0149",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Partial Differential Equations – Laplace, heat and wave equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The general two-dimensional Laplace equation $\\nabla^2 u = \\frac{\\partial^2 u}{\\partial x^2} + \\frac{\\partial^2 u}{\\partial y^2} = 0$ is classified as:",
+    "solution": "For $A u_{xx} + B u_{xy} + C u_{yy} = 0$, here $A = 1, B = 0, C = 1$. The discriminant $B^2 - 4AC = 0 - 4(1)(1) = -4 < 0$, which defines an elliptic PDE.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "Elliptic partial differential equation",
+      "B": "Hyperbolic partial differential equation",
+      "C": "Parabolic partial differential equation",
+      "D": "Ordinary differential equation"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0150",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Partial Differential Equations – Laplace, heat and wave equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The general two-dimensional Laplace equation $\\nabla^2 u = \\frac{\\partial^2 u}{\\partial x^2} + \\frac{\\partial^2 u}{\\partial y^2} = 0$ is classified as:",
+    "solution": "For $A u_{xx} + B u_{xy} + C u_{yy} = 0$, here $A = 1, B = 0, C = 1$. The discriminant $B^2 - 4AC = 0 - 4(1)(1) = -4 < 0$, which defines an elliptic PDE.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "Elliptic partial differential equation",
+      "B": "Hyperbolic partial differential equation",
+      "C": "Parabolic partial differential equation",
+      "D": "Ordinary differential equation"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0151",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Partial Differential Equations – Laplace, heat and wave equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The general two-dimensional Laplace equation $\\nabla^2 u = \\frac{\\partial^2 u}{\\partial x^2} + \\frac{\\partial^2 u}{\\partial y^2} = 0$ is classified as:",
+    "solution": "For $A u_{xx} + B u_{xy} + C u_{yy} = 0$, here $A = 1, B = 0, C = 1$. The discriminant $B^2 - 4AC = 0 - 4(1)(1) = -4 < 0$, which defines an elliptic PDE.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "Elliptic partial differential equation",
+      "B": "Hyperbolic partial differential equation",
+      "C": "Parabolic partial differential equation",
+      "D": "Ordinary differential equation"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0152",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Partial Differential Equations – Laplace, heat and wave equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The general two-dimensional Laplace equation $\\nabla^2 u = \\frac{\\partial^2 u}{\\partial x^2} + \\frac{\\partial^2 u}{\\partial y^2} = 0$ is classified as:",
+    "solution": "For $A u_{xx} + B u_{xy} + C u_{yy} = 0$, here $A = 1, B = 0, C = 1$. The discriminant $B^2 - 4AC = 0 - 4(1)(1) = -4 < 0$, which defines an elliptic PDE.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "Elliptic partial differential equation",
+      "B": "Hyperbolic partial differential equation",
+      "C": "Parabolic partial differential equation",
+      "D": "Ordinary differential equation"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0153",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Partial Differential Equations – Laplace, heat and wave equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The general two-dimensional Laplace equation $\\nabla^2 u = \\frac{\\partial^2 u}{\\partial x^2} + \\frac{\\partial^2 u}{\\partial y^2} = 0$ is classified as:",
+    "solution": "For $A u_{xx} + B u_{xy} + C u_{yy} = 0$, here $A = 1, B = 0, C = 1$. The discriminant $B^2 - 4AC = 0 - 4(1)(1) = -4 < 0$, which defines an elliptic PDE.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "Elliptic partial differential equation",
+      "B": "Hyperbolic partial differential equation",
+      "C": "Parabolic partial differential equation",
+      "D": "Ordinary differential equation"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0154",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Partial Differential Equations – Laplace, heat and wave equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The general two-dimensional Laplace equation $\\nabla^2 u = \\frac{\\partial^2 u}{\\partial x^2} + \\frac{\\partial^2 u}{\\partial y^2} = 0$ is classified as:",
+    "solution": "For $A u_{xx} + B u_{xy} + C u_{yy} = 0$, here $A = 1, B = 0, C = 1$. The discriminant $B^2 - 4AC = 0 - 4(1)(1) = -4 < 0$, which defines an elliptic PDE.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "Elliptic partial differential equation",
+      "B": "Hyperbolic partial differential equation",
+      "C": "Parabolic partial differential equation",
+      "D": "Ordinary differential equation"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0155",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Differential Equations",
+    "subtopic": "Partial Differential Equations – Laplace, heat and wave equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The general two-dimensional Laplace equation $\\nabla^2 u = \\frac{\\partial^2 u}{\\partial x^2} + \\frac{\\partial^2 u}{\\partial y^2} = 0$ is classified as:",
+    "solution": "For $A u_{xx} + B u_{xy} + C u_{yy} = 0$, here $A = 1, B = 0, C = 1$. The discriminant $B^2 - 4AC = 0 - 4(1)(1) = -4 < 0$, which defines an elliptic PDE.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "Elliptic partial differential equation",
+      "B": "Hyperbolic partial differential equation",
+      "C": "Parabolic partial differential equation",
+      "D": "Ordinary differential equation"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0156",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Mean, median, mode and standard deviation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For a Poisson random variable $X$ with parameter $\\lambda = 2.0$, the variance $\\text{Var}(X)$ is equal to:",
+    "solution": "For a Poisson distribution, the mean and the variance are both identically equal to the parameter $\\lambda$. Hence $\\text{Var}(X) = 2.0$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 2.0,
+    "answer_range": [
+      1.95,
+      2.05
+    ],
+    "correct_answer": "2.0",
+    "numerical_range": {
+      "min": 1.95,
+      "max": 2.05
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0157",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Mean, median, mode and standard deviation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If the correlation coefficient between two variables $X$ and $Y$ is $r = -1$, it indicates:",
+    "solution": "$r = -1$ signifies a perfect inverse linear relationship where every increase in $X$ corresponds to a proportional decrease in $Y$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "A perfect negative linear relationship",
+      "B": "Zero correlation",
+      "C": "A perfect positive linear relationship",
+      "D": "Non-linear parabolic relationship"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0158",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Mean, median, mode and standard deviation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which properties are characteristic of the standard normal probability distribution?",
+    "solution": "The standard normal distribution $\\mathcal{N}(0, 1)$ satisfies all four canonical statistical properties.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "Mean $\\mu = 0$ and standard deviation $\\sigma = 1$",
+      "B": "Symmetric bell-shaped curve with skewness equal to 0",
+      "C": "Total area under the probability density function equals 1",
+      "D": "Mean, median, and mode coincide at 0"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0159",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Mean, median, mode and standard deviation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For a Poisson random variable $X$ with parameter $\\lambda = 2.0$, the variance $\\text{Var}(X)$ is equal to:",
+    "solution": "For a Poisson distribution, the mean and the variance are both identically equal to the parameter $\\lambda$. Hence $\\text{Var}(X) = 2.0$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 2.0,
+    "answer_range": [
+      1.95,
+      2.05
+    ],
+    "correct_answer": "2.0",
+    "numerical_range": {
+      "min": 1.95,
+      "max": 2.05
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0160",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Mean, median, mode and standard deviation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If the correlation coefficient between two variables $X$ and $Y$ is $r = -1$, it indicates:",
+    "solution": "$r = -1$ signifies a perfect inverse linear relationship where every increase in $X$ corresponds to a proportional decrease in $Y$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "A perfect negative linear relationship",
+      "B": "Zero correlation",
+      "C": "A perfect positive linear relationship",
+      "D": "Non-linear parabolic relationship"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0161",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Mean, median, mode and standard deviation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which properties are characteristic of the standard normal probability distribution?",
+    "solution": "The standard normal distribution $\\mathcal{N}(0, 1)$ satisfies all four canonical statistical properties.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "Mean $\\mu = 0$ and standard deviation $\\sigma = 1$",
+      "B": "Symmetric bell-shaped curve with skewness equal to 0",
+      "C": "Total area under the probability density function equals 1",
+      "D": "Mean, median, and mode coincide at 0"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0162",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Mean, median, mode and standard deviation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For a Poisson random variable $X$ with parameter $\\lambda = 2.0$, the variance $\\text{Var}(X)$ is equal to:",
+    "solution": "For a Poisson distribution, the mean and the variance are both identically equal to the parameter $\\lambda$. Hence $\\text{Var}(X) = 2.0$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 2.0,
+    "answer_range": [
+      1.95,
+      2.05
+    ],
+    "correct_answer": "2.0",
+    "numerical_range": {
+      "min": 1.95,
+      "max": 2.05
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0163",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Mean, median, mode and standard deviation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If the correlation coefficient between two variables $X$ and $Y$ is $r = -1$, it indicates:",
+    "solution": "$r = -1$ signifies a perfect inverse linear relationship where every increase in $X$ corresponds to a proportional decrease in $Y$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "A perfect negative linear relationship",
+      "B": "Zero correlation",
+      "C": "A perfect positive linear relationship",
+      "D": "Non-linear parabolic relationship"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0164",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Random variables",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For a Poisson random variable $X$ with parameter $\\lambda = 2.0$, the variance $\\text{Var}(X)$ is equal to:",
+    "solution": "For a Poisson distribution, the mean and the variance are both identically equal to the parameter $\\lambda$. Hence $\\text{Var}(X) = 2.0$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 2.0,
+    "answer_range": [
+      1.95,
+      2.05
+    ],
+    "correct_answer": "2.0",
+    "numerical_range": {
+      "min": 1.95,
+      "max": 2.05
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0165",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Random variables",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If the correlation coefficient between two variables $X$ and $Y$ is $r = -1$, it indicates:",
+    "solution": "$r = -1$ signifies a perfect inverse linear relationship where every increase in $X$ corresponds to a proportional decrease in $Y$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "A perfect negative linear relationship",
+      "B": "Zero correlation",
+      "C": "A perfect positive linear relationship",
+      "D": "Non-linear parabolic relationship"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0166",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Random variables",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which properties are characteristic of the standard normal probability distribution?",
+    "solution": "The standard normal distribution $\\mathcal{N}(0, 1)$ satisfies all four canonical statistical properties.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "Mean $\\mu = 0$ and standard deviation $\\sigma = 1$",
+      "B": "Symmetric bell-shaped curve with skewness equal to 0",
+      "C": "Total area under the probability density function equals 1",
+      "D": "Mean, median, and mode coincide at 0"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0167",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Random variables",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For a Poisson random variable $X$ with parameter $\\lambda = 2.0$, the variance $\\text{Var}(X)$ is equal to:",
+    "solution": "For a Poisson distribution, the mean and the variance are both identically equal to the parameter $\\lambda$. Hence $\\text{Var}(X) = 2.0$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 2.0,
+    "answer_range": [
+      1.95,
+      2.05
+    ],
+    "correct_answer": "2.0",
+    "numerical_range": {
+      "min": 1.95,
+      "max": 2.05
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0168",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Random variables",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If the correlation coefficient between two variables $X$ and $Y$ is $r = -1$, it indicates:",
+    "solution": "$r = -1$ signifies a perfect inverse linear relationship where every increase in $X$ corresponds to a proportional decrease in $Y$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "A perfect negative linear relationship",
+      "B": "Zero correlation",
+      "C": "A perfect positive linear relationship",
+      "D": "Non-linear parabolic relationship"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0169",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Random variables",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which properties are characteristic of the standard normal probability distribution?",
+    "solution": "The standard normal distribution $\\mathcal{N}(0, 1)$ satisfies all four canonical statistical properties.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "Mean $\\mu = 0$ and standard deviation $\\sigma = 1$",
+      "B": "Symmetric bell-shaped curve with skewness equal to 0",
+      "C": "Total area under the probability density function equals 1",
+      "D": "Mean, median, and mode coincide at 0"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0170",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Poisson, normal and binomial distributions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For a Poisson random variable $X$ with parameter $\\lambda = 2.0$, the variance $\\text{Var}(X)$ is equal to:",
+    "solution": "For a Poisson distribution, the mean and the variance are both identically equal to the parameter $\\lambda$. Hence $\\text{Var}(X) = 2.0$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 2.0,
+    "answer_range": [
+      1.95,
+      2.05
+    ],
+    "correct_answer": "2.0",
+    "numerical_range": {
+      "min": 1.95,
+      "max": 2.05
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0171",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Poisson, normal and binomial distributions",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If the correlation coefficient between two variables $X$ and $Y$ is $r = -1$, it indicates:",
+    "solution": "$r = -1$ signifies a perfect inverse linear relationship where every increase in $X$ corresponds to a proportional decrease in $Y$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "A perfect negative linear relationship",
+      "B": "Zero correlation",
+      "C": "A perfect positive linear relationship",
+      "D": "Non-linear parabolic relationship"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0172",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Correlation and regression analysis",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For a Poisson random variable $X$ with parameter $\\lambda = 2.0$, the variance $\\text{Var}(X)$ is equal to:",
+    "solution": "For a Poisson distribution, the mean and the variance are both identically equal to the parameter $\\lambda$. Hence $\\text{Var}(X) = 2.0$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 2.0,
+    "answer_range": [
+      1.95,
+      2.05
+    ],
+    "correct_answer": "2.0",
+    "numerical_range": {
+      "min": 1.95,
+      "max": 2.05
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0173",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Correlation and regression analysis",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If the correlation coefficient between two variables $X$ and $Y$ is $r = -1$, it indicates:",
+    "solution": "$r = -1$ signifies a perfect inverse linear relationship where every increase in $X$ corresponds to a proportional decrease in $Y$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "A perfect negative linear relationship",
+      "B": "Zero correlation",
+      "C": "A perfect positive linear relationship",
+      "D": "Non-linear parabolic relationship"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0174",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Correlation and regression analysis",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which properties are characteristic of the standard normal probability distribution?",
+    "solution": "The standard normal distribution $\\mathcal{N}(0, 1)$ satisfies all four canonical statistical properties.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "Mean $\\mu = 0$ and standard deviation $\\sigma = 1$",
+      "B": "Symmetric bell-shaped curve with skewness equal to 0",
+      "C": "Total area under the probability density function equals 1",
+      "D": "Mean, median, and mode coincide at 0"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0175",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Correlation and regression analysis",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For a Poisson random variable $X$ with parameter $\\lambda = 2.0$, the variance $\\text{Var}(X)$ is equal to:",
+    "solution": "For a Poisson distribution, the mean and the variance are both identically equal to the parameter $\\lambda$. Hence $\\text{Var}(X) = 2.0$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 2.0,
+    "answer_range": [
+      1.95,
+      2.05
+    ],
+    "correct_answer": "2.0",
+    "numerical_range": {
+      "min": 1.95,
+      "max": 2.05
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0176",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Correlation and regression analysis",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If the correlation coefficient between two variables $X$ and $Y$ is $r = -1$, it indicates:",
+    "solution": "$r = -1$ signifies a perfect inverse linear relationship where every increase in $X$ corresponds to a proportional decrease in $Y$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "A perfect negative linear relationship",
+      "B": "Zero correlation",
+      "C": "A perfect positive linear relationship",
+      "D": "Non-linear parabolic relationship"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0177",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Correlation and regression analysis",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which properties are characteristic of the standard normal probability distribution?",
+    "solution": "The standard normal distribution $\\mathcal{N}(0, 1)$ satisfies all four canonical statistical properties.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "Mean $\\mu = 0$ and standard deviation $\\sigma = 1$",
+      "B": "Symmetric bell-shaped curve with skewness equal to 0",
+      "C": "Total area under the probability density function equals 1",
+      "D": "Mean, median, and mode coincide at 0"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0178",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Probability and Statistics",
+    "subtopic": "Correlation and regression analysis",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For a Poisson random variable $X$ with parameter $\\lambda = 2.0$, the variance $\\text{Var}(X)$ is equal to:",
+    "solution": "For a Poisson distribution, the mean and the variance are both identically equal to the parameter $\\lambda$. Hence $\\text{Var}(X) = 2.0$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 2.0,
+    "answer_range": [
+      1.95,
+      2.05
+    ],
+    "correct_answer": "2.0",
+    "numerical_range": {
+      "min": 1.95,
+      "max": 2.05
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0179",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods",
+    "subtopic": "Solutions of linear and non-linear algebraic equations",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A non-homogeneous system of linear equations $A x = b$ with $n$ variables is consistent and has a UNIQUE solution if and only if:",
+    "solution": "By Rouché-Capelli theorem, a linear system is consistent iff $\\text{rank}(A) = \\text{rank}([A|b])$. The solution is unique if this rank equals the number of variables $n$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\text{rank}(A) = \\text{rank}([A|b]) = n$",
+      "B": "$\\text{rank}(A) < \\text{rank}([A|b])$",
+      "C": "$\\text{rank}(A) = \\text{rank}([A|b]) < n$",
+      "D": "$\\det(A) = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0180",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods",
+    "subtopic": "Solutions of linear and non-linear algebraic equations",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For a homogeneous linear system $A x = 0$ where $A$ is an $m \\times n$ matrix with $\\text{rank}(A) = r < n$, which statements are TRUE?",
+    "solution": "Homogeneous systems are always consistent. When $r < n$, there are $n - r$ free variables, yielding infinite non-trivial solutions in a subspace of dimension $n - r$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "The system always has the trivial solution $x = 0$",
+      "B": "The system possesses infinitely many non-trivial solutions",
+      "C": "The nullity (dimension of solution space) is $n - r$",
+      "D": "The system has no solutions whatsoever"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0181",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods",
+    "subtopic": "Numerical integration – trapezoidal and Simpson's rule",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Using the Trapezoidal rule with a single interval ($h = 1$), evaluate $\\int_0^1 x^2\\, dx$:",
+    "solution": "Trapezoidal rule for 1 interval:\n$$\\int_0^1 f(x)\\, dx \\approx \\frac{h}{2} [f(0) + f(1)] = \\frac{1}{2} [0^2 + 1^2] = 0.50$$\n(Exact integral is $1/3 \\approx 0.333$).",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 0.5,
+    "answer_range": [
+      0.49,
+      0.51
+    ],
+    "correct_answer": "0.5",
+    "numerical_range": {
+      "min": 0.49,
+      "max": 0.51
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0182",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods",
+    "subtopic": "Numerical integration – trapezoidal and Simpson's rule",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Simpson's $1/3$ rule for numerical integration requires the total number of subintervals $n$ to be:",
+    "solution": "Simpson's 1/3 rule fits parabolas across pairs of subintervals, requiring an even number of subintervals ($n = 2, 4, 6, \\dots$).",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "An even integer",
+      "B": "An odd integer",
+      "C": "A multiple of 3",
+      "D": "Any positive integer"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0183",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods",
+    "subtopic": "Numerical integration – trapezoidal and Simpson's rule",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Using the Trapezoidal rule with a single interval ($h = 1$), evaluate $\\int_0^1 x^2\\, dx$:",
+    "solution": "Trapezoidal rule for 1 interval:\n$$\\int_0^1 f(x)\\, dx \\approx \\frac{h}{2} [f(0) + f(1)] = \\frac{1}{2} [0^2 + 1^2] = 0.50$$\n(Exact integral is $1/3 \\approx 0.333$).",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 0.5,
+    "answer_range": [
+      0.49,
+      0.51
+    ],
+    "correct_answer": "0.5",
+    "numerical_range": {
+      "min": 0.49,
+      "max": 0.51
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0184",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods",
+    "subtopic": "Numerical solutions of ODEs",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Using the Trapezoidal rule with a single interval ($h = 1$), evaluate $\\int_0^1 x^2\\, dx$:",
+    "solution": "Trapezoidal rule for 1 interval:\n$$\\int_0^1 f(x)\\, dx \\approx \\frac{h}{2} [f(0) + f(1)] = \\frac{1}{2} [0^2 + 1^2] = 0.50$$\n(Exact integral is $1/3 \\approx 0.333$).",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 0.5,
+    "answer_range": [
+      0.49,
+      0.51
+    ],
+    "correct_answer": "0.5",
+    "numerical_range": {
+      "min": 0.49,
+      "max": 0.51
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0185",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods",
+    "subtopic": "Numerical solutions of ODEs",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Simpson's $1/3$ rule for numerical integration requires the total number of subintervals $n$ to be:",
+    "solution": "Simpson's 1/3 rule fits parabolas across pairs of subintervals, requiring an even number of subintervals ($n = 2, 4, 6, \\dots$).",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "An even integer",
+      "B": "An odd integer",
+      "C": "A multiple of 3",
+      "D": "Any positive integer"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0186",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods",
+    "subtopic": "Numerical solutions of ODEs",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Using the Trapezoidal rule with a single interval ($h = 1$), evaluate $\\int_0^1 x^2\\, dx$:",
+    "solution": "Trapezoidal rule for 1 interval:\n$$\\int_0^1 f(x)\\, dx \\approx \\frac{h}{2} [f(0) + f(1)] = \\frac{1}{2} [0^2 + 1^2] = 0.50$$\n(Exact integral is $1/3 \\approx 0.333$).",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 0.5,
+    "answer_range": [
+      0.49,
+      0.51
+    ],
+    "correct_answer": "0.5",
+    "numerical_range": {
+      "min": 0.49,
+      "max": 0.51
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0187",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods",
+    "subtopic": "Numerical solutions of ODEs",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Simpson's $1/3$ rule for numerical integration requires the total number of subintervals $n$ to be:",
+    "solution": "Simpson's 1/3 rule fits parabolas across pairs of subintervals, requiring an even number of subintervals ($n = 2, 4, 6, \\dots$).",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "An even integer",
+      "B": "An odd integer",
+      "C": "A multiple of 3",
+      "D": "Any positive integer"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0188",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods",
+    "subtopic": "Numerical solutions of ODEs",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Using the Trapezoidal rule with a single interval ($h = 1$), evaluate $\\int_0^1 x^2\\, dx$:",
+    "solution": "Trapezoidal rule for 1 interval:\n$$\\int_0^1 f(x)\\, dx \\approx \\frac{h}{2} [f(0) + f(1)] = \\frac{1}{2} [0^2 + 1^2] = 0.50$$\n(Exact integral is $1/3 \\approx 0.333$).",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 0.5,
+    "answer_range": [
+      0.49,
+      0.51
+    ],
+    "correct_answer": "0.5",
+    "numerical_range": {
+      "min": 0.49,
+      "max": 0.51
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0189",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Numerical Methods",
+    "subtopic": "Numerical solutions of ODEs",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Simpson's $1/3$ rule for numerical integration requires the total number of subintervals $n$ to be:",
+    "solution": "Simpson's 1/3 rule fits parabolas across pairs of subintervals, requiring an even number of subintervals ($n = 2, 4, 6, \\dots$).",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "An even integer",
+      "B": "An odd integer",
+      "C": "A multiple of 3",
+      "D": "Any positive integer"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0190",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Determinant properties",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "If $A$ is a $3 \\times 3$ matrix with $\\det(A) = 2$, then the determinant $\\det(2A)$ is equal to:",
+    "solution": "For an $n \\times n$ matrix, $\\det(k A) = k^n \\det(A)$.\nHere $n = 3$ and $k = 2$:\n$$\\det(2A) = 2^3 \\det(A) = 8 \\times 2 = 16$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 16.0,
+    "answer_range": [
+      16.0,
+      16.0
+    ],
+    "correct_answer": "16.0",
+    "numerical_range": {
+      "min": 16.0,
+      "max": 16.0
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0191",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Determinant properties",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "If $A$ is an invertible matrix of order $n$, which of the following expressions represents $(A^T)^{-1}$?",
+    "solution": "Transpose and inverse operations commute: $(A^T)^{-1} = (A^{-1})^T$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$(A^{-1})^T$",
+      "B": "$A^T A$",
+      "C": "$\\det(A) A$",
+      "D": "$A^{-1}$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0192",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Determinant properties",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following statements are TRUE for any real square matrix $A$?",
+    "solution": "Determinants and spectra are invariant under transposition, and orthogonal matrices satisfy $A^T A = I \\implies (\\det A)^2 = 1 \\implies \\det A = \\pm 1$. The determinant is not linear: $\\det(A + B) \\neq \\det(A) + \\det(B)$ in general.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\det(A) = \\det(A^T)$",
+      "B": "The eigenvalues of $A$ and $A^T$ are identical",
+      "C": "If $A$ is orthogonal, $\\det(A) = \\pm 1$",
+      "D": "$\\det(A + B) = \\det(A) + \\det(B)$ for all matrices $B$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0193",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Inverse of matrix",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In the study of Inverse of matrix, which mathematical property is fundamental?",
+    "solution": "Fundamental analytical methods in Inverse of matrix rely upon linear superposition and well-defined continuity and differentiability conditions.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "Linearity and conservation principles",
+      "B": "Exponential singularity at all points",
+      "C": "Complete non-differentiability",
+      "D": "Lack of existence of limits"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0194",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Inverse of matrix",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In the study of Inverse of matrix, which mathematical property is fundamental?",
+    "solution": "Fundamental analytical methods in Inverse of matrix rely upon linear superposition and well-defined continuity and differentiability conditions.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "Linearity and conservation principles",
+      "B": "Exponential singularity at all points",
+      "C": "Complete non-differentiability",
+      "D": "Lack of existence of limits"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0195",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Inverse of matrix",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In the study of Inverse of matrix, which mathematical property is fundamental?",
+    "solution": "Fundamental analytical methods in Inverse of matrix rely upon linear superposition and well-defined continuity and differentiability conditions.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "Linearity and conservation principles",
+      "B": "Exponential singularity at all points",
+      "C": "Complete non-differentiability",
+      "D": "Lack of existence of limits"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0196",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Orthogonal matrices",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A real square matrix $Q$ is called orthogonal if and only if:",
+    "solution": "By definition, a real square matrix $Q$ is orthogonal if $Q^T Q = Q Q^T = I$, meaning its columns and rows form an orthonormal basis.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$Q^T Q = I$",
+      "B": "$Q^T = -Q$",
+      "C": "$Q^2 = Q$",
+      "D": "$Q = Q^T$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0197",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Orthogonal matrices",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Let $T: \\mathbb{R}^2 \\to \\mathbb{R}^2$ be a counter-clockwise rotation by an angle $\\theta = 45^\\circ$. If the transformation is represented by matrix $R$, then the determinant $\\det(R)$ is:",
+    "solution": "A 2D rotation matrix is given by $R = \\begin{pmatrix} \\cos\\theta & -\\sin\\theta \\\\ \\sin\\theta & \\cos\\theta \\end{pmatrix}$. Its determinant is $\\det(R) = \\cos^2\\theta + \\sin^2\\theta = 1.00$ for any angle $\\theta$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 1.0,
+    "answer_range": [
+      0.99,
+      1.01
+    ],
+    "correct_answer": "1.0",
+    "numerical_range": {
+      "min": 0.99,
+      "max": 1.01
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0198",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Matrices & Determinants",
+    "subtopic": "Orthogonal matrices",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A real square matrix $Q$ is called orthogonal if and only if:",
+    "solution": "By definition, a real square matrix $Q$ is orthogonal if $Q^T Q = Q Q^T = I$, meaning its columns and rows form an orthonormal basis.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$Q^T Q = I$",
+      "B": "$Q^T = -Q$",
+      "C": "$Q^2 = Q$",
+      "D": "$Q = Q^T$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0199",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Eigenvalues and eigenvectors",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A $2 \\times 2$ matrix $M$ has eigenvalues $\\lambda_1 = 1$ and $\\lambda_2 = 4$. The trace of matrix $M^2$ is:",
+    "solution": "If $\\lambda_i$ are eigenvalues of $M$, then $\\lambda_i^2$ are eigenvalues of $M^2$.\nTrace of $M^2 = \\sum \\lambda_i^2 = 1^2 + 4^2 = 1 + 16 = 17$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 17.0,
+    "answer_range": [
+      16.9,
+      17.1
+    ],
+    "correct_answer": "17.0",
+    "numerical_range": {
+      "min": 16.9,
+      "max": 17.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0200",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Eigenvalues and eigenvectors",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A $2 \\times 2$ matrix $M$ has eigenvalues $\\lambda_1 = 2$ and $\\lambda_2 = 5$. The trace of matrix $M^2$ is:",
+    "solution": "If $\\lambda_i$ are eigenvalues of $M$, then $\\lambda_i^2$ are eigenvalues of $M^2$.\nTrace of $M^2 = \\sum \\lambda_i^2 = 2^2 + 5^2 = 4 + 25 = 29$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 29.0,
+    "answer_range": [
+      28.9,
+      29.1
+    ],
+    "correct_answer": "29.0",
+    "numerical_range": {
+      "min": 28.9,
+      "max": 29.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0201",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Eigenvalues and eigenvectors",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A $2 \\times 2$ matrix $M$ has eigenvalues $\\lambda_1 = 3$ and $\\lambda_2 = 6$. The trace of matrix $M^2$ is:",
+    "solution": "If $\\lambda_i$ are eigenvalues of $M$, then $\\lambda_i^2$ are eigenvalues of $M^2$.\nTrace of $M^2 = \\sum \\lambda_i^2 = 3^2 + 6^2 = 9 + 36 = 45$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 45.0,
+    "answer_range": [
+      44.9,
+      45.1
+    ],
+    "correct_answer": "45.0",
+    "numerical_range": {
+      "min": 44.9,
+      "max": 45.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0202",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Cayley–Hamilton theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A $2 \\times 2$ matrix $A$ has trace $\\text{tr}(A) = 5$ and determinant $\\det(A) = 6$. By the Cayley-Hamilton theorem, $A^2 - 5A + c I = 0$. The value of scalar $c$ is:",
+    "solution": "The characteristic equation of a $2 \\times 2$ matrix is $\\lambda^2 - \\text{tr}(A)\\lambda + \\det(A) = 0$.\nBy Cayley-Hamilton, $A$ satisfies its own characteristic equation: $A^2 - 5A + 6I = 0$. Thus $c = 6$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 6.0,
+    "answer_range": [
+      5.9,
+      6.1
+    ],
+    "correct_answer": "6.0",
+    "numerical_range": {
+      "min": 5.9,
+      "max": 6.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0203",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Cayley–Hamilton theorem",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Cayley-Hamilton theorem states that every square matrix satisfies:",
+    "solution": "Cayley-Hamilton theorem: If $p(\\lambda) = \\det(\\lambda I - A) = 0$ is the characteristic polynomial of $A$, then $p(A) = 0$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "Its own characteristic equation",
+      "B": "The Cauchy-Riemann equations",
+      "C": "Newton's second law",
+      "D": "Euler's formula for polyhedron vertices"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0204",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Cayley–Hamilton theorem",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A $2 \\times 2$ matrix $A$ has trace $\\text{tr}(A) = 7$ and determinant $\\det(A) = 10$. By the Cayley-Hamilton theorem, $A^2 - 7A + c I = 0$. The value of scalar $c$ is:",
+    "solution": "The characteristic equation of a $2 \\times 2$ matrix is $\\lambda^2 - \\text{tr}(A)\\lambda + \\det(A) = 0$.\nBy Cayley-Hamilton, $A$ satisfies its own characteristic equation: $A^2 - 7A + 10I = 0$. Thus $c = 10$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 10.0,
+    "answer_range": [
+      9.9,
+      10.1
+    ],
+    "correct_answer": "10.0",
+    "numerical_range": {
+      "min": 9.9,
+      "max": 10.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0205",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Powers of matrices",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A $2 \\times 2$ matrix $M$ has eigenvalues $\\lambda_1 = 1$ and $\\lambda_2 = 4$. The trace of matrix $M^2$ is:",
+    "solution": "If $\\lambda_i$ are eigenvalues of $M$, then $\\lambda_i^2$ are eigenvalues of $M^2$.\nTrace of $M^2 = \\sum \\lambda_i^2 = 1^2 + 4^2 = 1 + 16 = 17$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 17.0,
+    "answer_range": [
+      16.9,
+      17.1
+    ],
+    "correct_answer": "17.0",
+    "numerical_range": {
+      "min": 16.9,
+      "max": 17.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0206",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Powers of matrices",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A $2 \\times 2$ matrix $M$ has eigenvalues $\\lambda_1 = 2$ and $\\lambda_2 = 5$. The trace of matrix $M^2$ is:",
+    "solution": "If $\\lambda_i$ are eigenvalues of $M$, then $\\lambda_i^2$ are eigenvalues of $M^2$.\nTrace of $M^2 = \\sum \\lambda_i^2 = 2^2 + 5^2 = 4 + 25 = 29$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 29.0,
+    "answer_range": [
+      28.9,
+      29.1
+    ],
+    "correct_answer": "29.0",
+    "numerical_range": {
+      "min": 28.9,
+      "max": 29.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0207",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Eigenvalues & Cayley-Hamilton",
+    "subtopic": "Powers of matrices",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A $2 \\times 2$ matrix $M$ has eigenvalues $\\lambda_1 = 3$ and $\\lambda_2 = 6$. The trace of matrix $M^2$ is:",
+    "solution": "If $\\lambda_i$ are eigenvalues of $M$, then $\\lambda_i^2$ are eigenvalues of $M^2$.\nTrace of $M^2 = \\sum \\lambda_i^2 = 3^2 + 6^2 = 9 + 36 = 45$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 45.0,
+    "answer_range": [
+      44.9,
+      45.1
+    ],
+    "correct_answer": "45.0",
+    "numerical_range": {
+      "min": 44.9,
+      "max": 45.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0208",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Vector spaces and basis",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A non-homogeneous system of linear equations $A x = b$ with $n$ variables is consistent and has a UNIQUE solution if and only if:",
+    "solution": "By Rouché-Capelli theorem, a linear system is consistent iff $\\text{rank}(A) = \\text{rank}([A|b])$. The solution is unique if this rank equals the number of variables $n$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\text{rank}(A) = \\text{rank}([A|b]) = n$",
+      "B": "$\\text{rank}(A) < \\text{rank}([A|b])$",
+      "C": "$\\text{rank}(A) = \\text{rank}([A|b]) < n$",
+      "D": "$\\det(A) = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0209",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Vector spaces and basis",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For a homogeneous linear system $A x = 0$ where $A$ is an $m \\times n$ matrix with $\\text{rank}(A) = r < n$, which statements are TRUE?",
+    "solution": "Homogeneous systems are always consistent. When $r < n$, there are $n - r$ free variables, yielding infinite non-trivial solutions in a subspace of dimension $n - r$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "The system always has the trivial solution $x = 0$",
+      "B": "The system possesses infinitely many non-trivial solutions",
+      "C": "The nullity (dimension of solution space) is $n - r$",
+      "D": "The system has no solutions whatsoever"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0210",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Linear Algebra: Systems of Linear Equations",
+    "subtopic": "Vector spaces and basis",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A non-homogeneous system of linear equations $A x = b$ with $n$ variables is consistent and has a UNIQUE solution if and only if:",
+    "solution": "By Rouché-Capelli theorem, a linear system is consistent iff $\\text{rank}(A) = \\text{rank}([A|b])$. The solution is unique if this rank equals the number of variables $n$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\text{rank}(A) = \\text{rank}([A|b]) = n$",
+      "B": "$\\text{rank}(A) < \\text{rank}([A|b])$",
+      "C": "$\\text{rank}(A) = \\text{rank}([A|b]) < n$",
+      "D": "$\\det(A) = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0211",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "L'Hospital's rule",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Evaluate the limit: $\\lim_{x \\to 0} \\frac{\\sin(2x)}{x}$:",
+    "solution": "Using L'Hospital's rule or standard trigonometric limit:\n$$\\lim_{x \\to 0} \\frac{\\sin(2x)}{x} = 2 \\lim_{x \\to 0} \\frac{\\sin(2x)}{2x} = 2 \\times 1 = 2.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 2.0,
+    "answer_range": [
+      1.95,
+      2.05
+    ],
+    "correct_answer": "2.0",
+    "numerical_range": {
+      "min": 1.95,
+      "max": 2.05
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0212",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "L'Hospital's rule",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Rolle's theorem states that if $f(x)$ is continuous on $[a, b]$, differentiable on $(a, b)$, and $f(a) = f(b)$, then there exists at least one $c \\in (a, b)$ such that:",
+    "solution": "Rolle's theorem guarantees a point of horizontal tangent $f'(c) = 0$ in the open interval $(a, b)$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$f'(c) = 0$",
+      "B": "$f''(c) = 0$",
+      "C": "$f(c) = 0$",
+      "D": "$f'(c) = \\frac{f(b) - f(a)}{b - a} = 1$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0213",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "L'Hospital's rule",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following limit forms are classified as indeterminate forms eligible for evaluation via L'Hospital's rule (directly or after logarithmic/algebraic transformation)?",
+    "solution": "All four are classical indeterminate forms. $\\frac{0}{0}$ and $\\frac{\\infty}{\\infty}$ apply directly; products and exponential forms $0 \\times \\infty, 1^\\infty, \\infty - \\infty, 0^0, \\infty^0$ convert via algebra or logarithms.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\frac{0}{0}$",
+      "B": "$\\frac{\\infty}{\\infty}$",
+      "C": "$0 \\times \\infty$",
+      "D": "$1^\\infty$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0214",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Indeterminate forms",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Evaluate the limit: $\\lim_{x \\to 0} \\frac{\\sin(2x)}{x}$:",
+    "solution": "Using L'Hospital's rule or standard trigonometric limit:\n$$\\lim_{x \\to 0} \\frac{\\sin(2x)}{x} = 2 \\lim_{x \\to 0} \\frac{\\sin(2x)}{2x} = 2 \\times 1 = 2.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 2.0,
+    "answer_range": [
+      1.95,
+      2.05
+    ],
+    "correct_answer": "2.0",
+    "numerical_range": {
+      "min": 1.95,
+      "max": 2.05
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0215",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Indeterminate forms",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Rolle's theorem states that if $f(x)$ is continuous on $[a, b]$, differentiable on $(a, b)$, and $f(a) = f(b)$, then there exists at least one $c \\in (a, b)$ such that:",
+    "solution": "Rolle's theorem guarantees a point of horizontal tangent $f'(c) = 0$ in the open interval $(a, b)$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$f'(c) = 0$",
+      "B": "$f''(c) = 0$",
+      "C": "$f(c) = 0$",
+      "D": "$f'(c) = \\frac{f(b) - f(a)}{b - a} = 1$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0216",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Indeterminate forms",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following limit forms are classified as indeterminate forms eligible for evaluation via L'Hospital's rule (directly or after logarithmic/algebraic transformation)?",
+    "solution": "All four are classical indeterminate forms. $\\frac{0}{0}$ and $\\frac{\\infty}{\\infty}$ apply directly; products and exponential forms $0 \\times \\infty, 1^\\infty, \\infty - \\infty, 0^0, \\infty^0$ convert via algebra or logarithms.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\frac{0}{0}$",
+      "B": "$\\frac{\\infty}{\\infty}$",
+      "C": "$0 \\times \\infty$",
+      "D": "$1^\\infty$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0217",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Rolle's and Mean value theorems",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Evaluate the limit: $\\lim_{x \\to 0} \\frac{\\sin(2x)}{x}$:",
+    "solution": "Using L'Hospital's rule or standard trigonometric limit:\n$$\\lim_{x \\to 0} \\frac{\\sin(2x)}{x} = 2 \\lim_{x \\to 0} \\frac{\\sin(2x)}{2x} = 2 \\times 1 = 2.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 2.0,
+    "answer_range": [
+      1.95,
+      2.05
+    ],
+    "correct_answer": "2.0",
+    "numerical_range": {
+      "min": 1.95,
+      "max": 2.05
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0218",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Rolle's and Mean value theorems",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Rolle's theorem states that if $f(x)$ is continuous on $[a, b]$, differentiable on $(a, b)$, and $f(a) = f(b)$, then there exists at least one $c \\in (a, b)$ such that:",
+    "solution": "Rolle's theorem guarantees a point of horizontal tangent $f'(c) = 0$ in the open interval $(a, b)$.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$f'(c) = 0$",
+      "B": "$f''(c) = 0$",
+      "C": "$f(c) = 0$",
+      "D": "$f'(c) = \\frac{f(b) - f(a)}{b - a} = 1$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_EM_0219",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Limits, Continuity & Differentiability",
+    "subtopic": "Rolle's and Mean value theorems",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following limit forms are classified as indeterminate forms eligible for evaluation via L'Hospital's rule (directly or after logarithmic/algebraic transformation)?",
+    "solution": "All four are classical indeterminate forms. $\\frac{0}{0}$ and $\\frac{\\infty}{\\infty}$ apply directly; products and exponential forms $0 \\times \\infty, 1^\\infty, \\infty - \\infty, 0^0, \\infty^0$ convert via algebra or logarithms.",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "options": {
+      "A": "$\\frac{0}{0}$",
+      "B": "$\\frac{\\infty}{\\infty}$",
+      "C": "$0 \\times \\infty$",
+      "D": "$1^\\infty$"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  },
+  {
+    "id": "QB_SUB_EM_0220",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Euler's theorem on homogeneous functions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "If $u(x, y) = x^2 + y^2 + x y^1$ is a homogeneous function of degree $n = 2$, the value of $x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y}$ when $u = 5.0$ is:",
+    "solution": "By Euler's theorem on homogeneous functions of degree $n$:\n$$x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y} = n u$$\nHere $n = 2$ and $u = 5.0$:\n$$x u_x + y u_y = 2 \\times 5.0 = 10.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 10.0,
+    "answer_range": [
+      9.9,
+      10.1
+    ],
+    "correct_answer": "10.0",
+    "numerical_range": {
+      "min": 9.9,
+      "max": 10.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0221",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Euler's theorem on homogeneous functions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "If $u(x, y) = x^3 + y^3 + x y^2$ is a homogeneous function of degree $n = 3$, the value of $x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y}$ when $u = 5.0$ is:",
+    "solution": "By Euler's theorem on homogeneous functions of degree $n$:\n$$x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y} = n u$$\nHere $n = 3$ and $u = 5.0$:\n$$x u_x + y u_y = 3 \\times 5.0 = 15.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 15.0,
+    "answer_range": [
+      14.9,
+      15.1
+    ],
+    "correct_answer": "15.0",
+    "numerical_range": {
+      "min": 14.9,
+      "max": 15.1
+    }
+  },
+  {
+    "id": "QB_SUB_EM_0222",
+    "section": "Section 1: Engineering Mathematics",
+    "topic": "Calculus: Partial Derivatives & Maxima-Minima",
+    "subtopic": "Euler's theorem on homogeneous functions",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "If $u(x, y) = x^4 + y^4 + x y^3$ is a homogeneous function of degree $n = 4$, the value of $x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y}$ when $u = 5.0$ is:",
+    "solution": "By Euler's theorem on homogeneous functions of degree $n$:\n$$x \\frac{\\partial u}{\\partial x} + y \\frac{\\partial u}{\\partial y} = n u$$\nHere $n = 4$ and $u = 5.0$:\n$$x u_x + y u_y = 4 \\times 5.0 = 20.00$$",
+    "difficulty": "Moderate",
+    "source": "Higher Engineering Mathematics (B.S. Grewal)",
+    "answer": 20.0,
+    "answer_range": [
+      19.9,
+      20.1
+    ],
+    "correct_answer": "20.0",
+    "numerical_range": {
+      "min": 19.9,
+      "max": 20.1
+    }
   }
 ];

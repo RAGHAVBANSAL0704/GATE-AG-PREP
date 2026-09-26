@@ -1,10 +1,16 @@
-[
+import json
+
+TAXONOMY = [
   {
     "section_id": "section_1",
     "section_number": 1,
     "section_name": "Engineering Mathematics",
     "full_title": "Section 1: Engineering Mathematics",
+    "code": "EM",
+    "icon": "Calculator",
+    "weightage": "13-15 Marks",
     "topics": [
+      # Broad official topics for legacy & PYQ parity
       {
         "topic_id": "linear_algebra",
         "topic_name": "Linear Algebra",
@@ -71,6 +77,7 @@
           "Numerical solutions of ODEs"
         ]
       },
+      # Granular Question Bank Topics
       {
         "topic_id": "em_matrices_determinants",
         "topic_name": "Linear Algebra: Matrices & Determinants",
@@ -229,26 +236,6 @@
           "Modified Euler's method",
           "Fourth-order Runge-Kutta method"
         ]
-      },
-      {
-        "topic_id": "em_fourier_taylor_series",
-        "topic_name": "Calculus: Fourier, Taylor & Maclaurin Series",
-        "subtopics": [
-          "Taylor series expansions",
-          "Maclaurin series expansions",
-          "Fourier series representation",
-          "Even and odd periodic functions"
-        ]
-      },
-      {
-        "topic_id": "em_integral_theorems",
-        "topic_name": "Vector Calculus: Green's, Stokes' & Gauss Divergence Theorems",
-        "subtopics": [
-          "Green's theorem in a plane",
-          "Stokes' circulation theorem",
-          "Gauss divergence theorem",
-          "Work done and flux calculations"
-        ]
       }
     ]
   },
@@ -257,7 +244,11 @@
     "section_number": 2,
     "section_name": "Farm Machinery",
     "full_title": "Section 2: Farm Machinery",
+    "code": "FM",
+    "icon": "Wrench",
+    "weightage": "12-15 Marks",
     "topics": [
+      # Broad official topics for legacy & PYQ parity
       {
         "topic_id": "machine_design",
         "topic_name": "Machine Design",
@@ -280,6 +271,7 @@
           "Equipment for precision agriculture"
         ]
       },
+      # Granular Question Bank Topics
       {
         "topic_id": "fm_gears_belts_chains",
         "topic_name": "Machine Design: Gears, Belts & Chain Drives",
@@ -464,7 +456,11 @@
     "section_number": 3,
     "section_name": "Farm Power",
     "full_title": "Section 3: Farm Power",
+    "code": "FP",
+    "icon": "Tractor",
+    "weightage": "12-15 Marks",
     "topics": [
+      # Broad official topics for legacy & PYQ parity
       {
         "topic_id": "sources_of_power",
         "topic_name": "Sources of Power",
@@ -503,6 +499,7 @@
           "Human engineering and safety considerations in design of tractor and agricultural implements"
         ]
       },
+      # Granular Question Bank Topics
       {
         "topic_id": "fp_sources_renewable",
         "topic_name": "Sources of Farm Power & Renewable Energy",
@@ -685,7 +682,11 @@
     "section_number": 4,
     "section_name": "Soil and Water Conservation Engineering",
     "full_title": "Section 4: Soil and Water Conservation Engineering",
+    "code": "SWCE",
+    "icon": "Waves",
+    "weightage": "15-20 Marks",
     "topics": [
+      # Broad official topics for legacy & PYQ parity
       {
         "topic_id": "fluid_mechanics",
         "topic_name": "Fluid Mechanics",
@@ -771,6 +772,7 @@
           "Check dams and farm ponds"
         ]
       },
+      # Granular Question Bank Topics
       {
         "topic_id": "swce_fluid_statics",
         "topic_name": "Fluid Statics, Pressure & Manometry",
@@ -988,7 +990,11 @@
     "section_number": 5,
     "section_name": "Irrigation and Drainage Engineering",
     "full_title": "Section 5: Irrigation and Drainage Engineering",
+    "code": "IDE",
+    "icon": "Droplets",
+    "weightage": "12-15 Marks",
     "topics": [
+      # Broad official topics for legacy & PYQ parity
       {
         "topic_id": "soil-water-plant_relationship",
         "topic_name": "Soil-Water-Plant Relationship",
@@ -1043,6 +1049,7 @@
           "Pump selection and installation"
         ]
       },
+      # Granular Question Bank Topics
       {
         "topic_id": "ide_soil_water_plant",
         "topic_name": "Soil-Water-Plant Relations & Soil Moisture Constants",
@@ -1207,7 +1214,11 @@
     "section_number": 6,
     "section_name": "Agricultural Process Engineering",
     "full_title": "Section 6: Agricultural Process Engineering",
+    "code": "APE",
+    "icon": "Factory",
+    "weightage": "12-15 Marks",
     "topics": [
+      # Broad official topics for legacy & PYQ parity
       {
         "topic_id": "engineering_properties_of_agriculture_produce",
         "topic_name": "Engineering Properties of Agriculture Produce",
@@ -1264,6 +1275,7 @@
           "Packaging material and machines"
         ]
       },
+      # Granular Question Bank Topics
       {
         "topic_id": "ape_physical_geometric",
         "topic_name": "Physical & Geometric Properties of Agro-Produce",
@@ -1420,7 +1432,11 @@
     "section_number": 7,
     "section_name": "Dairy and Food Engineering",
     "full_title": "Section 7: Dairy and Food Engineering",
+    "code": "DFE",
+    "icon": "Utensils",
+    "weightage": "8-12 Marks",
     "topics": [
+      # Broad official topics for legacy & PYQ parity
       {
         "topic_id": "heat_and_mass_transfer",
         "topic_name": "Heat and Mass Transfer",
@@ -1453,6 +1469,7 @@
           "Refrigeration and cold storage basics and applications"
         ]
       },
+      # Granular Question Bank Topics
       {
         "topic_id": "dfe_steady_conduction",
         "topic_name": "Steady-State Conduction & Shape Factors",
@@ -1600,7 +1617,11 @@
     "section_number": 8,
     "section_name": "General Aptitude",
     "full_title": "Section 8: General Aptitude",
+    "code": "GA",
+    "icon": "Brain",
+    "weightage": "15 Marks",
     "topics": [
+      # Broad official topics for legacy & PYQ parity
       {
         "topic_id": "verbal_aptitude",
         "topic_name": "Verbal Aptitude",
@@ -1627,6 +1648,7 @@
           "Spatial Reasoning & 3D Representations"
         ]
       },
+      # Granular Question Bank Topics
       {
         "topic_id": "ga_percentages_ratios",
         "topic_name": "Quantitative: Percentages, Profit-Loss, Ratios & Averages",
@@ -1751,3 +1773,35 @@
     ]
   }
 ]
+
+# Write official_syllabus.json (array without extra React fields)
+official_json = []
+for sec in TAXONOMY:
+  official_json.append({
+    "section_id": sec["section_id"],
+    "section_number": sec["section_number"],
+    "section_name": sec["section_name"],
+    "full_title": sec["full_title"],
+    "topics": sec["topics"]
+  })
+
+with open("src/data/official_syllabus.json", "w", encoding="utf-8") as f:
+  json.dump(official_json, f, indent=2, ensure_ascii=False)
+
+# Write syllabus.js (GATE_AG_SYLLABUS)
+syllabus_js_items = []
+for sec in TAXONOMY:
+  syllabus_js_items.append({
+    "id": f"sec-{sec['section_number']}",
+    "title": sec["full_title"],
+    "code": sec["code"],
+    "icon": sec["icon"],
+    "weightage": sec["weightage"],
+    "topics": sec["topics"]
+  })
+
+js_content = "export const GATE_AG_SYLLABUS = " + json.dumps(syllabus_js_items, indent=2, ensure_ascii=False) + ";\n"
+with open("src/data/syllabus.js", "w", encoding="utf-8") as f:
+  f.write(js_content)
+
+print(f"Taxonomy updated successfully: {len(TAXONOMY)} sections, {sum(len(s['topics']) for s in TAXONOMY)} total topics across all sections.")

@@ -4548,5 +4548,17733 @@ export default [
     "solution": "Thiem's Well Formula:\n$$Q = \\frac{2\\pi K b s_w}{\\ln(R / r_w)} = \\frac{2\\pi \\times 25 \\times 15 \\times 4.0}{\\ln(300 / 0.15)} = \\frac{9424.78}{\\ln(2000)} = \\frac{9424.78}{7.6009} \\approx 1239.95\\text{ m}^3/\\text{day}$$\nRounding to 1 decimal place: **1240.0** $\\text{m}^3/\\text{day}$.",
     "difficulty": "Moderate",
     "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_001",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Available water capacity and readily available moisture",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A crop root zone of depth $80\\text{ cm}$ has a soil bulk density of $1.45\\text{ g/cm}^3$. The field capacity and permanent wilting point of the soil are $29.0\\%$ and $13.0\\%$ (on dry weight basis), respectively. The total available water holding capacity of the root zone is ________ $\\text{cm}$ (round off to two decimal places).",
+    "correct_answer": "18.56",
+    "numerical_range": {
+      "min": 18.36,
+      "max": 18.76
+    },
+    "solution": "The available water depth $AW$ is calculated as:\n$$AW = \\frac{\\rho_b \\cdot D}{\\rho_w \\cdot 100} (FC - PWP)$$\nGiven $\\rho_b = 1.45\\text{ g/cm}^3$, $\\rho_w = 1.0\\text{ g/cm}^3$, $D = 80\\text{ cm}$, $FC = 29.0\\%$, and $PWP = 13.0\\%$:\n$$AW = \\frac{1.45 \\times 80}{100} \\times (29.0 - 13.0) = 1.160 \\times 16.0 = 18.56\\text{ cm}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_002",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil water potentials and retention energy",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Soil water potential at permanent wilting point (PWP) in standard agricultural soils is approximately equal to:",
+    "options": {
+      "A": "$-15\\text{ bars} \\; (-1.5\\text{ MPa})$",
+      "B": "$-0.33\\text{ bar} \\; (-33\\text{ kPa})$",
+      "C": "$-0.10\\text{ bar} \\; (-10\\text{ kPa})$",
+      "D": "$-31\\text{ bars} \\; (-3.1\\text{ MPa})$"
+    },
+    "correct_answer": "A",
+    "solution": "In classical soil physics:\n- Field Capacity corresponds to matric suction between $-0.1$ to $-0.33\\text{ bar}$ ($-10$ to $-33\\text{ kPa}$).\n- Permanent Wilting Point corresponds to a matric potential of $-15\\text{ bars}$ ($-1.5\\text{ MPa}$).\n- Hygroscopic coefficient corresponds to approximately $-31\\text{ bars}$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_003",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil moisture measuring instruments",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding soil moisture measurement devices is/are TRUE?",
+    "options": {
+      "A": "Tensiometers operate accurately only within a tension range of $0$ to $0.8\\text{ bar}$ ($0$ to $80\\text{ kPa}$)",
+      "B": "Gypsum electrical resistance blocks are more suitable for measuring matric suction in the drier range ($1$ to $15\\text{ bars}$)",
+      "C": "Time Domain Reflectometry (TDR) measures soil moisture by determining the apparent dielectric permittivity of the bulk soil",
+      "D": "Neutron probe scattering measures hydrogen ion concentration and is completely unaffected by organic matter or salinity"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Tensiometers cavitate and break the water meniscus above $0.8\\text{ bar}$ (A is true).\n2. Gypsum blocks have fine pore matrices suited for dry range $1-15\\text{ bars}$ (B is true).\n3. TDR measures the high dielectric constant of water ($\\approx 80$) vs soil solids ($\\approx 3-5$) (C is true).\n4. Neutron probes thermalize fast neutrons via collision with all hydrogen atoms, including organic matter, boron, and chlorine; calibration is sensitive to organic matter (D is false).",
+    "difficulty": "Hard",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_004",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Available water capacity and readily available moisture",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A crop root zone of depth $80\\text{ cm}$ has a soil bulk density of $1.45\\text{ g/cm}^3$. The field capacity and permanent wilting point of the soil are $32.0\\%$ and $12.0\\%$ (on dry weight basis), respectively. The total available water holding capacity of the root zone is ________ $\\text{cm}$ (round off to two decimal places).",
+    "correct_answer": "23.20",
+    "numerical_range": {
+      "min": 23.0,
+      "max": 23.4
+    },
+    "solution": "The available water depth $AW$ is calculated as:\n$$AW = \\frac{\\rho_b \\cdot D}{\\rho_w \\cdot 100} (FC - PWP)$$\nGiven $\\rho_b = 1.45\\text{ g/cm}^3$, $\\rho_w = 1.0\\text{ g/cm}^3$, $D = 80\\text{ cm}$, $FC = 32.0\\%$, and $PWP = 12.0\\%$:\n$$AW = \\frac{1.45 \\times 80}{100} \\times (32.0 - 12.0) = 1.160 \\times 20.0 = 23.20\\text{ cm}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_005",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil water potentials and retention energy",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Soil water potential at permanent wilting point (PWP) in standard agricultural soils is approximately equal to:",
+    "options": {
+      "A": "$-15\\text{ bars} \\; (-1.5\\text{ MPa})$",
+      "B": "$-0.33\\text{ bar} \\; (-33\\text{ kPa})$",
+      "C": "$-0.10\\text{ bar} \\; (-10\\text{ kPa})$",
+      "D": "$-31\\text{ bars} \\; (-3.1\\text{ MPa})$"
+    },
+    "correct_answer": "A",
+    "solution": "In classical soil physics:\n- Field Capacity corresponds to matric suction between $-0.1$ to $-0.33\\text{ bar}$ ($-10$ to $-33\\text{ kPa}$).\n- Permanent Wilting Point corresponds to a matric potential of $-15\\text{ bars}$ ($-1.5\\text{ MPa}$).\n- Hygroscopic coefficient corresponds to approximately $-31\\text{ bars}$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_006",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil moisture measuring instruments",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding soil moisture measurement devices is/are TRUE?",
+    "options": {
+      "A": "Tensiometers operate accurately only within a tension range of $0$ to $0.8\\text{ bar}$ ($0$ to $80\\text{ kPa}$)",
+      "B": "Gypsum electrical resistance blocks are more suitable for measuring matric suction in the drier range ($1$ to $15\\text{ bars}$)",
+      "C": "Time Domain Reflectometry (TDR) measures soil moisture by determining the apparent dielectric permittivity of the bulk soil",
+      "D": "Neutron probe scattering measures hydrogen ion concentration and is completely unaffected by organic matter or salinity"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Tensiometers cavitate and break the water meniscus above $0.8\\text{ bar}$ (A is true).\n2. Gypsum blocks have fine pore matrices suited for dry range $1-15\\text{ bars}$ (B is true).\n3. TDR measures the high dielectric constant of water ($\\approx 80$) vs soil solids ($\\approx 3-5$) (C is true).\n4. Neutron probes thermalize fast neutrons via collision with all hydrogen atoms, including organic matter, boron, and chlorine; calibration is sensitive to organic matter (D is false).",
+    "difficulty": "Hard",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_007",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Available water capacity and readily available moisture",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A crop root zone of depth $80\\text{ cm}$ has a soil bulk density of $1.45\\text{ g/cm}^3$. The field capacity and permanent wilting point of the soil are $29.0\\%$ and $15.0\\%$ (on dry weight basis), respectively. The total available water holding capacity of the root zone is ________ $\\text{cm}$ (round off to two decimal places).",
+    "correct_answer": "16.24",
+    "numerical_range": {
+      "min": 16.04,
+      "max": 16.44
+    },
+    "solution": "The available water depth $AW$ is calculated as:\n$$AW = \\frac{\\rho_b \\cdot D}{\\rho_w \\cdot 100} (FC - PWP)$$\nGiven $\\rho_b = 1.45\\text{ g/cm}^3$, $\\rho_w = 1.0\\text{ g/cm}^3$, $D = 80\\text{ cm}$, $FC = 29.0\\%$, and $PWP = 15.0\\%$:\n$$AW = \\frac{1.45 \\times 80}{100} \\times (29.0 - 15.0) = 1.160 \\times 14.0 = 16.24\\text{ cm}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_008",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil water potentials and retention energy",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Soil water potential at permanent wilting point (PWP) in standard agricultural soils is approximately equal to:",
+    "options": {
+      "A": "$-15\\text{ bars} \\; (-1.5\\text{ MPa})$",
+      "B": "$-0.33\\text{ bar} \\; (-33\\text{ kPa})$",
+      "C": "$-0.10\\text{ bar} \\; (-10\\text{ kPa})$",
+      "D": "$-31\\text{ bars} \\; (-3.1\\text{ MPa})$"
+    },
+    "correct_answer": "A",
+    "solution": "In classical soil physics:\n- Field Capacity corresponds to matric suction between $-0.1$ to $-0.33\\text{ bar}$ ($-10$ to $-33\\text{ kPa}$).\n- Permanent Wilting Point corresponds to a matric potential of $-15\\text{ bars}$ ($-1.5\\text{ MPa}$).\n- Hygroscopic coefficient corresponds to approximately $-31\\text{ bars}$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_009",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil moisture measuring instruments",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding soil moisture measurement devices is/are TRUE?",
+    "options": {
+      "A": "Tensiometers operate accurately only within a tension range of $0$ to $0.8\\text{ bar}$ ($0$ to $80\\text{ kPa}$)",
+      "B": "Gypsum electrical resistance blocks are more suitable for measuring matric suction in the drier range ($1$ to $15\\text{ bars}$)",
+      "C": "Time Domain Reflectometry (TDR) measures soil moisture by determining the apparent dielectric permittivity of the bulk soil",
+      "D": "Neutron probe scattering measures hydrogen ion concentration and is completely unaffected by organic matter or salinity"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Tensiometers cavitate and break the water meniscus above $0.8\\text{ bar}$ (A is true).\n2. Gypsum blocks have fine pore matrices suited for dry range $1-15\\text{ bars}$ (B is true).\n3. TDR measures the high dielectric constant of water ($\\approx 80$) vs soil solids ($\\approx 3-5$) (C is true).\n4. Neutron probes thermalize fast neutrons via collision with all hydrogen atoms, including organic matter, boron, and chlorine; calibration is sensitive to organic matter (D is false).",
+    "difficulty": "Hard",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_010",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Available water capacity and readily available moisture",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A crop root zone of depth $80\\text{ cm}$ has a soil bulk density of $1.45\\text{ g/cm}^3$. The field capacity and permanent wilting point of the soil are $32.0\\%$ and $14.0\\%$ (on dry weight basis), respectively. The total available water holding capacity of the root zone is ________ $\\text{cm}$ (round off to two decimal places).",
+    "correct_answer": "20.88",
+    "numerical_range": {
+      "min": 20.68,
+      "max": 21.08
+    },
+    "solution": "The available water depth $AW$ is calculated as:\n$$AW = \\frac{\\rho_b \\cdot D}{\\rho_w \\cdot 100} (FC - PWP)$$\nGiven $\\rho_b = 1.45\\text{ g/cm}^3$, $\\rho_w = 1.0\\text{ g/cm}^3$, $D = 80\\text{ cm}$, $FC = 32.0\\%$, and $PWP = 14.0\\%$:\n$$AW = \\frac{1.45 \\times 80}{100} \\times (32.0 - 14.0) = 1.160 \\times 18.0 = 20.88\\text{ cm}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_011",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil water potentials and retention energy",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Soil water potential at permanent wilting point (PWP) in standard agricultural soils is approximately equal to:",
+    "options": {
+      "A": "$-15\\text{ bars} \\; (-1.5\\text{ MPa})$",
+      "B": "$-0.33\\text{ bar} \\; (-33\\text{ kPa})$",
+      "C": "$-0.10\\text{ bar} \\; (-10\\text{ kPa})$",
+      "D": "$-31\\text{ bars} \\; (-3.1\\text{ MPa})$"
+    },
+    "correct_answer": "A",
+    "solution": "In classical soil physics:\n- Field Capacity corresponds to matric suction between $-0.1$ to $-0.33\\text{ bar}$ ($-10$ to $-33\\text{ kPa}$).\n- Permanent Wilting Point corresponds to a matric potential of $-15\\text{ bars}$ ($-1.5\\text{ MPa}$).\n- Hygroscopic coefficient corresponds to approximately $-31\\text{ bars}$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_012",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil moisture measuring instruments",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding soil moisture measurement devices is/are TRUE?",
+    "options": {
+      "A": "Tensiometers operate accurately only within a tension range of $0$ to $0.8\\text{ bar}$ ($0$ to $80\\text{ kPa}$)",
+      "B": "Gypsum electrical resistance blocks are more suitable for measuring matric suction in the drier range ($1$ to $15\\text{ bars}$)",
+      "C": "Time Domain Reflectometry (TDR) measures soil moisture by determining the apparent dielectric permittivity of the bulk soil",
+      "D": "Neutron probe scattering measures hydrogen ion concentration and is completely unaffected by organic matter or salinity"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Tensiometers cavitate and break the water meniscus above $0.8\\text{ bar}$ (A is true).\n2. Gypsum blocks have fine pore matrices suited for dry range $1-15\\text{ bars}$ (B is true).\n3. TDR measures the high dielectric constant of water ($\\approx 80$) vs soil solids ($\\approx 3-5$) (C is true).\n4. Neutron probes thermalize fast neutrons via collision with all hydrogen atoms, including organic matter, boron, and chlorine; calibration is sensitive to organic matter (D is false).",
+    "difficulty": "Hard",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_013",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Available water capacity and readily available moisture",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A crop root zone of depth $80\\text{ cm}$ has a soil bulk density of $1.45\\text{ g/cm}^3$. The field capacity and permanent wilting point of the soil are $29.0\\%$ and $13.0\\%$ (on dry weight basis), respectively. The total available water holding capacity of the root zone is ________ $\\text{cm}$ (round off to two decimal places).",
+    "correct_answer": "18.56",
+    "numerical_range": {
+      "min": 18.36,
+      "max": 18.76
+    },
+    "solution": "The available water depth $AW$ is calculated as:\n$$AW = \\frac{\\rho_b \\cdot D}{\\rho_w \\cdot 100} (FC - PWP)$$\nGiven $\\rho_b = 1.45\\text{ g/cm}^3$, $\\rho_w = 1.0\\text{ g/cm}^3$, $D = 80\\text{ cm}$, $FC = 29.0\\%$, and $PWP = 13.0\\%$:\n$$AW = \\frac{1.45 \\times 80}{100} \\times (29.0 - 13.0) = 1.160 \\times 16.0 = 18.56\\text{ cm}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_014",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil water potentials and retention energy",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Soil water potential at permanent wilting point (PWP) in standard agricultural soils is approximately equal to:",
+    "options": {
+      "A": "$-15\\text{ bars} \\; (-1.5\\text{ MPa})$",
+      "B": "$-0.33\\text{ bar} \\; (-33\\text{ kPa})$",
+      "C": "$-0.10\\text{ bar} \\; (-10\\text{ kPa})$",
+      "D": "$-31\\text{ bars} \\; (-3.1\\text{ MPa})$"
+    },
+    "correct_answer": "A",
+    "solution": "In classical soil physics:\n- Field Capacity corresponds to matric suction between $-0.1$ to $-0.33\\text{ bar}$ ($-10$ to $-33\\text{ kPa}$).\n- Permanent Wilting Point corresponds to a matric potential of $-15\\text{ bars}$ ($-1.5\\text{ MPa}$).\n- Hygroscopic coefficient corresponds to approximately $-31\\text{ bars}$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_015",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil moisture measuring instruments",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding soil moisture measurement devices is/are TRUE?",
+    "options": {
+      "A": "Tensiometers operate accurately only within a tension range of $0$ to $0.8\\text{ bar}$ ($0$ to $80\\text{ kPa}$)",
+      "B": "Gypsum electrical resistance blocks are more suitable for measuring matric suction in the drier range ($1$ to $15\\text{ bars}$)",
+      "C": "Time Domain Reflectometry (TDR) measures soil moisture by determining the apparent dielectric permittivity of the bulk soil",
+      "D": "Neutron probe scattering measures hydrogen ion concentration and is completely unaffected by organic matter or salinity"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Tensiometers cavitate and break the water meniscus above $0.8\\text{ bar}$ (A is true).\n2. Gypsum blocks have fine pore matrices suited for dry range $1-15\\text{ bars}$ (B is true).\n3. TDR measures the high dielectric constant of water ($\\approx 80$) vs soil solids ($\\approx 3-5$) (C is true).\n4. Neutron probes thermalize fast neutrons via collision with all hydrogen atoms, including organic matter, boron, and chlorine; calibration is sensitive to organic matter (D is false).",
+    "difficulty": "Hard",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_016",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Available water capacity and readily available moisture",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A crop root zone of depth $80\\text{ cm}$ has a soil bulk density of $1.45\\text{ g/cm}^3$. The field capacity and permanent wilting point of the soil are $32.0\\%$ and $12.0\\%$ (on dry weight basis), respectively. The total available water holding capacity of the root zone is ________ $\\text{cm}$ (round off to two decimal places).",
+    "correct_answer": "23.20",
+    "numerical_range": {
+      "min": 23.0,
+      "max": 23.4
+    },
+    "solution": "The available water depth $AW$ is calculated as:\n$$AW = \\frac{\\rho_b \\cdot D}{\\rho_w \\cdot 100} (FC - PWP)$$\nGiven $\\rho_b = 1.45\\text{ g/cm}^3$, $\\rho_w = 1.0\\text{ g/cm}^3$, $D = 80\\text{ cm}$, $FC = 32.0\\%$, and $PWP = 12.0\\%$:\n$$AW = \\frac{1.45 \\times 80}{100} \\times (32.0 - 12.0) = 1.160 \\times 20.0 = 23.20\\text{ cm}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_017",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil water potentials and retention energy",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Soil water potential at permanent wilting point (PWP) in standard agricultural soils is approximately equal to:",
+    "options": {
+      "A": "$-15\\text{ bars} \\; (-1.5\\text{ MPa})$",
+      "B": "$-0.33\\text{ bar} \\; (-33\\text{ kPa})$",
+      "C": "$-0.10\\text{ bar} \\; (-10\\text{ kPa})$",
+      "D": "$-31\\text{ bars} \\; (-3.1\\text{ MPa})$"
+    },
+    "correct_answer": "A",
+    "solution": "In classical soil physics:\n- Field Capacity corresponds to matric suction between $-0.1$ to $-0.33\\text{ bar}$ ($-10$ to $-33\\text{ kPa}$).\n- Permanent Wilting Point corresponds to a matric potential of $-15\\text{ bars}$ ($-1.5\\text{ MPa}$).\n- Hygroscopic coefficient corresponds to approximately $-31\\text{ bars}$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_018",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil moisture measuring instruments",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding soil moisture measurement devices is/are TRUE?",
+    "options": {
+      "A": "Tensiometers operate accurately only within a tension range of $0$ to $0.8\\text{ bar}$ ($0$ to $80\\text{ kPa}$)",
+      "B": "Gypsum electrical resistance blocks are more suitable for measuring matric suction in the drier range ($1$ to $15\\text{ bars}$)",
+      "C": "Time Domain Reflectometry (TDR) measures soil moisture by determining the apparent dielectric permittivity of the bulk soil",
+      "D": "Neutron probe scattering measures hydrogen ion concentration and is completely unaffected by organic matter or salinity"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Tensiometers cavitate and break the water meniscus above $0.8\\text{ bar}$ (A is true).\n2. Gypsum blocks have fine pore matrices suited for dry range $1-15\\text{ bars}$ (B is true).\n3. TDR measures the high dielectric constant of water ($\\approx 80$) vs soil solids ($\\approx 3-5$) (C is true).\n4. Neutron probes thermalize fast neutrons via collision with all hydrogen atoms, including organic matter, boron, and chlorine; calibration is sensitive to organic matter (D is false).",
+    "difficulty": "Hard",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_019",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Available water capacity and readily available moisture",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A crop root zone of depth $80\\text{ cm}$ has a soil bulk density of $1.45\\text{ g/cm}^3$. The field capacity and permanent wilting point of the soil are $29.0\\%$ and $15.0\\%$ (on dry weight basis), respectively. The total available water holding capacity of the root zone is ________ $\\text{cm}$ (round off to two decimal places).",
+    "correct_answer": "16.24",
+    "numerical_range": {
+      "min": 16.04,
+      "max": 16.44
+    },
+    "solution": "The available water depth $AW$ is calculated as:\n$$AW = \\frac{\\rho_b \\cdot D}{\\rho_w \\cdot 100} (FC - PWP)$$\nGiven $\\rho_b = 1.45\\text{ g/cm}^3$, $\\rho_w = 1.0\\text{ g/cm}^3$, $D = 80\\text{ cm}$, $FC = 29.0\\%$, and $PWP = 15.0\\%$:\n$$AW = \\frac{1.45 \\times 80}{100} \\times (29.0 - 15.0) = 1.160 \\times 14.0 = 16.24\\text{ cm}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_020",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil water potentials and retention energy",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Soil water potential at permanent wilting point (PWP) in standard agricultural soils is approximately equal to:",
+    "options": {
+      "A": "$-15\\text{ bars} \\; (-1.5\\text{ MPa})$",
+      "B": "$-0.33\\text{ bar} \\; (-33\\text{ kPa})$",
+      "C": "$-0.10\\text{ bar} \\; (-10\\text{ kPa})$",
+      "D": "$-31\\text{ bars} \\; (-3.1\\text{ MPa})$"
+    },
+    "correct_answer": "A",
+    "solution": "In classical soil physics:\n- Field Capacity corresponds to matric suction between $-0.1$ to $-0.33\\text{ bar}$ ($-10$ to $-33\\text{ kPa}$).\n- Permanent Wilting Point corresponds to a matric potential of $-15\\text{ bars}$ ($-1.5\\text{ MPa}$).\n- Hygroscopic coefficient corresponds to approximately $-31\\text{ bars}$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_021",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil moisture measuring instruments",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding soil moisture measurement devices is/are TRUE?",
+    "options": {
+      "A": "Tensiometers operate accurately only within a tension range of $0$ to $0.8\\text{ bar}$ ($0$ to $80\\text{ kPa}$)",
+      "B": "Gypsum electrical resistance blocks are more suitable for measuring matric suction in the drier range ($1$ to $15\\text{ bars}$)",
+      "C": "Time Domain Reflectometry (TDR) measures soil moisture by determining the apparent dielectric permittivity of the bulk soil",
+      "D": "Neutron probe scattering measures hydrogen ion concentration and is completely unaffected by organic matter or salinity"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Tensiometers cavitate and break the water meniscus above $0.8\\text{ bar}$ (A is true).\n2. Gypsum blocks have fine pore matrices suited for dry range $1-15\\text{ bars}$ (B is true).\n3. TDR measures the high dielectric constant of water ($\\approx 80$) vs soil solids ($\\approx 3-5$) (C is true).\n4. Neutron probes thermalize fast neutrons via collision with all hydrogen atoms, including organic matter, boron, and chlorine; calibration is sensitive to organic matter (D is false).",
+    "difficulty": "Hard",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_022",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Available water capacity and readily available moisture",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A crop root zone of depth $80\\text{ cm}$ has a soil bulk density of $1.45\\text{ g/cm}^3$. The field capacity and permanent wilting point of the soil are $32.0\\%$ and $14.0\\%$ (on dry weight basis), respectively. The total available water holding capacity of the root zone is ________ $\\text{cm}$ (round off to two decimal places).",
+    "correct_answer": "20.88",
+    "numerical_range": {
+      "min": 20.68,
+      "max": 21.08
+    },
+    "solution": "The available water depth $AW$ is calculated as:\n$$AW = \\frac{\\rho_b \\cdot D}{\\rho_w \\cdot 100} (FC - PWP)$$\nGiven $\\rho_b = 1.45\\text{ g/cm}^3$, $\\rho_w = 1.0\\text{ g/cm}^3$, $D = 80\\text{ cm}$, $FC = 32.0\\%$, and $PWP = 14.0\\%$:\n$$AW = \\frac{1.45 \\times 80}{100} \\times (32.0 - 14.0) = 1.160 \\times 18.0 = 20.88\\text{ cm}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_023",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil water potentials and retention energy",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Soil water potential at permanent wilting point (PWP) in standard agricultural soils is approximately equal to:",
+    "options": {
+      "A": "$-15\\text{ bars} \\; (-1.5\\text{ MPa})$",
+      "B": "$-0.33\\text{ bar} \\; (-33\\text{ kPa})$",
+      "C": "$-0.10\\text{ bar} \\; (-10\\text{ kPa})$",
+      "D": "$-31\\text{ bars} \\; (-3.1\\text{ MPa})$"
+    },
+    "correct_answer": "A",
+    "solution": "In classical soil physics:\n- Field Capacity corresponds to matric suction between $-0.1$ to $-0.33\\text{ bar}$ ($-10$ to $-33\\text{ kPa}$).\n- Permanent Wilting Point corresponds to a matric potential of $-15\\text{ bars}$ ($-1.5\\text{ MPa}$).\n- Hygroscopic coefficient corresponds to approximately $-31\\text{ bars}$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_024",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil moisture measuring instruments",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding soil moisture measurement devices is/are TRUE?",
+    "options": {
+      "A": "Tensiometers operate accurately only within a tension range of $0$ to $0.8\\text{ bar}$ ($0$ to $80\\text{ kPa}$)",
+      "B": "Gypsum electrical resistance blocks are more suitable for measuring matric suction in the drier range ($1$ to $15\\text{ bars}$)",
+      "C": "Time Domain Reflectometry (TDR) measures soil moisture by determining the apparent dielectric permittivity of the bulk soil",
+      "D": "Neutron probe scattering measures hydrogen ion concentration and is completely unaffected by organic matter or salinity"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Tensiometers cavitate and break the water meniscus above $0.8\\text{ bar}$ (A is true).\n2. Gypsum blocks have fine pore matrices suited for dry range $1-15\\text{ bars}$ (B is true).\n3. TDR measures the high dielectric constant of water ($\\approx 80$) vs soil solids ($\\approx 3-5$) (C is true).\n4. Neutron probes thermalize fast neutrons via collision with all hydrogen atoms, including organic matter, boron, and chlorine; calibration is sensitive to organic matter (D is false).",
+    "difficulty": "Hard",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_025",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Available water capacity and readily available moisture",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A crop root zone of depth $80\\text{ cm}$ has a soil bulk density of $1.45\\text{ g/cm}^3$. The field capacity and permanent wilting point of the soil are $29.0\\%$ and $13.0\\%$ (on dry weight basis), respectively. The total available water holding capacity of the root zone is ________ $\\text{cm}$ (round off to two decimal places).",
+    "correct_answer": "18.56",
+    "numerical_range": {
+      "min": 18.36,
+      "max": 18.76
+    },
+    "solution": "The available water depth $AW$ is calculated as:\n$$AW = \\frac{\\rho_b \\cdot D}{\\rho_w \\cdot 100} (FC - PWP)$$\nGiven $\\rho_b = 1.45\\text{ g/cm}^3$, $\\rho_w = 1.0\\text{ g/cm}^3$, $D = 80\\text{ cm}$, $FC = 29.0\\%$, and $PWP = 13.0\\%$:\n$$AW = \\frac{1.45 \\times 80}{100} \\times (29.0 - 13.0) = 1.160 \\times 16.0 = 18.56\\text{ cm}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_026",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil water potentials and retention energy",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Soil water potential at permanent wilting point (PWP) in standard agricultural soils is approximately equal to:",
+    "options": {
+      "A": "$-15\\text{ bars} \\; (-1.5\\text{ MPa})$",
+      "B": "$-0.33\\text{ bar} \\; (-33\\text{ kPa})$",
+      "C": "$-0.10\\text{ bar} \\; (-10\\text{ kPa})$",
+      "D": "$-31\\text{ bars} \\; (-3.1\\text{ MPa})$"
+    },
+    "correct_answer": "A",
+    "solution": "In classical soil physics:\n- Field Capacity corresponds to matric suction between $-0.1$ to $-0.33\\text{ bar}$ ($-10$ to $-33\\text{ kPa}$).\n- Permanent Wilting Point corresponds to a matric potential of $-15\\text{ bars}$ ($-1.5\\text{ MPa}$).\n- Hygroscopic coefficient corresponds to approximately $-31\\text{ bars}$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_027",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil moisture measuring instruments",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding soil moisture measurement devices is/are TRUE?",
+    "options": {
+      "A": "Tensiometers operate accurately only within a tension range of $0$ to $0.8\\text{ bar}$ ($0$ to $80\\text{ kPa}$)",
+      "B": "Gypsum electrical resistance blocks are more suitable for measuring matric suction in the drier range ($1$ to $15\\text{ bars}$)",
+      "C": "Time Domain Reflectometry (TDR) measures soil moisture by determining the apparent dielectric permittivity of the bulk soil",
+      "D": "Neutron probe scattering measures hydrogen ion concentration and is completely unaffected by organic matter or salinity"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Tensiometers cavitate and break the water meniscus above $0.8\\text{ bar}$ (A is true).\n2. Gypsum blocks have fine pore matrices suited for dry range $1-15\\text{ bars}$ (B is true).\n3. TDR measures the high dielectric constant of water ($\\approx 80$) vs soil solids ($\\approx 3-5$) (C is true).\n4. Neutron probes thermalize fast neutrons via collision with all hydrogen atoms, including organic matter, boron, and chlorine; calibration is sensitive to organic matter (D is false).",
+    "difficulty": "Hard",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_028",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Available water capacity and readily available moisture",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A crop root zone of depth $80\\text{ cm}$ has a soil bulk density of $1.45\\text{ g/cm}^3$. The field capacity and permanent wilting point of the soil are $32.0\\%$ and $12.0\\%$ (on dry weight basis), respectively. The total available water holding capacity of the root zone is ________ $\\text{cm}$ (round off to two decimal places).",
+    "correct_answer": "23.20",
+    "numerical_range": {
+      "min": 23.0,
+      "max": 23.4
+    },
+    "solution": "The available water depth $AW$ is calculated as:\n$$AW = \\frac{\\rho_b \\cdot D}{\\rho_w \\cdot 100} (FC - PWP)$$\nGiven $\\rho_b = 1.45\\text{ g/cm}^3$, $\\rho_w = 1.0\\text{ g/cm}^3$, $D = 80\\text{ cm}$, $FC = 32.0\\%$, and $PWP = 12.0\\%$:\n$$AW = \\frac{1.45 \\times 80}{100} \\times (32.0 - 12.0) = 1.160 \\times 20.0 = 23.20\\text{ cm}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_029",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil water potentials and retention energy",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Soil water potential at permanent wilting point (PWP) in standard agricultural soils is approximately equal to:",
+    "options": {
+      "A": "$-15\\text{ bars} \\; (-1.5\\text{ MPa})$",
+      "B": "$-0.33\\text{ bar} \\; (-33\\text{ kPa})$",
+      "C": "$-0.10\\text{ bar} \\; (-10\\text{ kPa})$",
+      "D": "$-31\\text{ bars} \\; (-3.1\\text{ MPa})$"
+    },
+    "correct_answer": "A",
+    "solution": "In classical soil physics:\n- Field Capacity corresponds to matric suction between $-0.1$ to $-0.33\\text{ bar}$ ($-10$ to $-33\\text{ kPa}$).\n- Permanent Wilting Point corresponds to a matric potential of $-15\\text{ bars}$ ($-1.5\\text{ MPa}$).\n- Hygroscopic coefficient corresponds to approximately $-31\\text{ bars}$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_030",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil moisture measuring instruments",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding soil moisture measurement devices is/are TRUE?",
+    "options": {
+      "A": "Tensiometers operate accurately only within a tension range of $0$ to $0.8\\text{ bar}$ ($0$ to $80\\text{ kPa}$)",
+      "B": "Gypsum electrical resistance blocks are more suitable for measuring matric suction in the drier range ($1$ to $15\\text{ bars}$)",
+      "C": "Time Domain Reflectometry (TDR) measures soil moisture by determining the apparent dielectric permittivity of the bulk soil",
+      "D": "Neutron probe scattering measures hydrogen ion concentration and is completely unaffected by organic matter or salinity"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Tensiometers cavitate and break the water meniscus above $0.8\\text{ bar}$ (A is true).\n2. Gypsum blocks have fine pore matrices suited for dry range $1-15\\text{ bars}$ (B is true).\n3. TDR measures the high dielectric constant of water ($\\approx 80$) vs soil solids ($\\approx 3-5$) (C is true).\n4. Neutron probes thermalize fast neutrons via collision with all hydrogen atoms, including organic matter, boron, and chlorine; calibration is sensitive to organic matter (D is false).",
+    "difficulty": "Hard",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_031",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Available water capacity and readily available moisture",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A crop root zone of depth $80\\text{ cm}$ has a soil bulk density of $1.45\\text{ g/cm}^3$. The field capacity and permanent wilting point of the soil are $29.0\\%$ and $15.0\\%$ (on dry weight basis), respectively. The total available water holding capacity of the root zone is ________ $\\text{cm}$ (round off to two decimal places).",
+    "correct_answer": "16.24",
+    "numerical_range": {
+      "min": 16.04,
+      "max": 16.44
+    },
+    "solution": "The available water depth $AW$ is calculated as:\n$$AW = \\frac{\\rho_b \\cdot D}{\\rho_w \\cdot 100} (FC - PWP)$$\nGiven $\\rho_b = 1.45\\text{ g/cm}^3$, $\\rho_w = 1.0\\text{ g/cm}^3$, $D = 80\\text{ cm}$, $FC = 29.0\\%$, and $PWP = 15.0\\%$:\n$$AW = \\frac{1.45 \\times 80}{100} \\times (29.0 - 15.0) = 1.160 \\times 14.0 = 16.24\\text{ cm}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_032",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil water potentials and retention energy",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Soil water potential at permanent wilting point (PWP) in standard agricultural soils is approximately equal to:",
+    "options": {
+      "A": "$-15\\text{ bars} \\; (-1.5\\text{ MPa})$",
+      "B": "$-0.33\\text{ bar} \\; (-33\\text{ kPa})$",
+      "C": "$-0.10\\text{ bar} \\; (-10\\text{ kPa})$",
+      "D": "$-31\\text{ bars} \\; (-3.1\\text{ MPa})$"
+    },
+    "correct_answer": "A",
+    "solution": "In classical soil physics:\n- Field Capacity corresponds to matric suction between $-0.1$ to $-0.33\\text{ bar}$ ($-10$ to $-33\\text{ kPa}$).\n- Permanent Wilting Point corresponds to a matric potential of $-15\\text{ bars}$ ($-1.5\\text{ MPa}$).\n- Hygroscopic coefficient corresponds to approximately $-31\\text{ bars}$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_033",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil moisture measuring instruments",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding soil moisture measurement devices is/are TRUE?",
+    "options": {
+      "A": "Tensiometers operate accurately only within a tension range of $0$ to $0.8\\text{ bar}$ ($0$ to $80\\text{ kPa}$)",
+      "B": "Gypsum electrical resistance blocks are more suitable for measuring matric suction in the drier range ($1$ to $15\\text{ bars}$)",
+      "C": "Time Domain Reflectometry (TDR) measures soil moisture by determining the apparent dielectric permittivity of the bulk soil",
+      "D": "Neutron probe scattering measures hydrogen ion concentration and is completely unaffected by organic matter or salinity"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Tensiometers cavitate and break the water meniscus above $0.8\\text{ bar}$ (A is true).\n2. Gypsum blocks have fine pore matrices suited for dry range $1-15\\text{ bars}$ (B is true).\n3. TDR measures the high dielectric constant of water ($\\approx 80$) vs soil solids ($\\approx 3-5$) (C is true).\n4. Neutron probes thermalize fast neutrons via collision with all hydrogen atoms, including organic matter, boron, and chlorine; calibration is sensitive to organic matter (D is false).",
+    "difficulty": "Hard",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_034",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Available water capacity and readily available moisture",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A crop root zone of depth $80\\text{ cm}$ has a soil bulk density of $1.45\\text{ g/cm}^3$. The field capacity and permanent wilting point of the soil are $32.0\\%$ and $14.0\\%$ (on dry weight basis), respectively. The total available water holding capacity of the root zone is ________ $\\text{cm}$ (round off to two decimal places).",
+    "correct_answer": "20.88",
+    "numerical_range": {
+      "min": 20.68,
+      "max": 21.08
+    },
+    "solution": "The available water depth $AW$ is calculated as:\n$$AW = \\frac{\\rho_b \\cdot D}{\\rho_w \\cdot 100} (FC - PWP)$$\nGiven $\\rho_b = 1.45\\text{ g/cm}^3$, $\\rho_w = 1.0\\text{ g/cm}^3$, $D = 80\\text{ cm}$, $FC = 32.0\\%$, and $PWP = 14.0\\%$:\n$$AW = \\frac{1.45 \\times 80}{100} \\times (32.0 - 14.0) = 1.160 \\times 18.0 = 20.88\\text{ cm}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_035",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil water potentials and retention energy",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Soil water potential at permanent wilting point (PWP) in standard agricultural soils is approximately equal to:",
+    "options": {
+      "A": "$-15\\text{ bars} \\; (-1.5\\text{ MPa})$",
+      "B": "$-0.33\\text{ bar} \\; (-33\\text{ kPa})$",
+      "C": "$-0.10\\text{ bar} \\; (-10\\text{ kPa})$",
+      "D": "$-31\\text{ bars} \\; (-3.1\\text{ MPa})$"
+    },
+    "correct_answer": "A",
+    "solution": "In classical soil physics:\n- Field Capacity corresponds to matric suction between $-0.1$ to $-0.33\\text{ bar}$ ($-10$ to $-33\\text{ kPa}$).\n- Permanent Wilting Point corresponds to a matric potential of $-15\\text{ bars}$ ($-1.5\\text{ MPa}$).\n- Hygroscopic coefficient corresponds to approximately $-31\\text{ bars}$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_036",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil moisture measuring instruments",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding soil moisture measurement devices is/are TRUE?",
+    "options": {
+      "A": "Tensiometers operate accurately only within a tension range of $0$ to $0.8\\text{ bar}$ ($0$ to $80\\text{ kPa}$)",
+      "B": "Gypsum electrical resistance blocks are more suitable for measuring matric suction in the drier range ($1$ to $15\\text{ bars}$)",
+      "C": "Time Domain Reflectometry (TDR) measures soil moisture by determining the apparent dielectric permittivity of the bulk soil",
+      "D": "Neutron probe scattering measures hydrogen ion concentration and is completely unaffected by organic matter or salinity"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Tensiometers cavitate and break the water meniscus above $0.8\\text{ bar}$ (A is true).\n2. Gypsum blocks have fine pore matrices suited for dry range $1-15\\text{ bars}$ (B is true).\n3. TDR measures the high dielectric constant of water ($\\approx 80$) vs soil solids ($\\approx 3-5$) (C is true).\n4. Neutron probes thermalize fast neutrons via collision with all hydrogen atoms, including organic matter, boron, and chlorine; calibration is sensitive to organic matter (D is false).",
+    "difficulty": "Hard",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_037",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Available water capacity and readily available moisture",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A crop root zone of depth $80\\text{ cm}$ has a soil bulk density of $1.45\\text{ g/cm}^3$. The field capacity and permanent wilting point of the soil are $29.0\\%$ and $13.0\\%$ (on dry weight basis), respectively. The total available water holding capacity of the root zone is ________ $\\text{cm}$ (round off to two decimal places).",
+    "correct_answer": "18.56",
+    "numerical_range": {
+      "min": 18.36,
+      "max": 18.76
+    },
+    "solution": "The available water depth $AW$ is calculated as:\n$$AW = \\frac{\\rho_b \\cdot D}{\\rho_w \\cdot 100} (FC - PWP)$$\nGiven $\\rho_b = 1.45\\text{ g/cm}^3$, $\\rho_w = 1.0\\text{ g/cm}^3$, $D = 80\\text{ cm}$, $FC = 29.0\\%$, and $PWP = 13.0\\%$:\n$$AW = \\frac{1.45 \\times 80}{100} \\times (29.0 - 13.0) = 1.160 \\times 16.0 = 18.56\\text{ cm}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SWP_038",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil water potentials and retention energy",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Soil water potential at permanent wilting point (PWP) in standard agricultural soils is approximately equal to:",
+    "options": {
+      "A": "$-15\\text{ bars} \\; (-1.5\\text{ MPa})$",
+      "B": "$-0.33\\text{ bar} \\; (-33\\text{ kPa})$",
+      "C": "$-0.10\\text{ bar} \\; (-10\\text{ kPa})$",
+      "D": "$-31\\text{ bars} \\; (-3.1\\text{ MPa})$"
+    },
+    "correct_answer": "A",
+    "solution": "In classical soil physics:\n- Field Capacity corresponds to matric suction between $-0.1$ to $-0.33\\text{ bar}$ ($-10$ to $-33\\text{ kPa}$).\n- Permanent Wilting Point corresponds to a matric potential of $-15\\text{ bars}$ ($-1.5\\text{ MPa}$).\n- Hygroscopic coefficient corresponds to approximately $-31\\text{ bars}$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_001",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Crop evapotranspiration from pan evaporation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A Class-A evaporation pan installed in an irrigated field measures an average daily pan evaporation rate of $E_{pan} = 6.5\\text{ mm/day}$. Taking the pan coefficient $K_p = 0.75$ and crop coefficient during peak flowering stage $K_c = 1.15$, the crop evapotranspiration $ET_c$ is ________ $\\text{mm/day}$ (round off to two decimal places).",
+    "correct_answer": "5.61",
+    "numerical_range": {
+      "min": 5.51,
+      "max": 5.71
+    },
+    "solution": "Reference evapotranspiration $ET_0 = K_p \\times E_{pan} = 0.75 \\times 6.5 = 4.88\\text{ mm/day}$.\nCrop evapotranspiration is:\n$$ET_c = K_c \\times ET_0 = K_c \\times K_p \\times E_{pan} = 1.15 \\times 0.75 \\times 6.5 = 5.61\\text{ mm/day}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_002",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "FAO Penman-Monteith method reference surface",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The FAO-56 Penman-Monteith standard reference surface is defined as a hypothetical green grass reference crop having an assumed height of:",
+    "options": {
+      "A": "$0.12\\text{ m}$ with fixed surface resistance of $70\\text{ s/m}$ and albedo of $0.23$",
+      "B": "$0.50\\text{ m}$ with surface resistance of $100\\text{ s/m}$ and albedo of $0.15$",
+      "C": "$0.05\\text{ m}$ with surface resistance of $30\\text{ s/m}$ and albedo of $0.05$",
+      "D": "$1.00\\text{ m}$ with surface resistance of $50\\text{ s/m}$ and albedo of $0.35$"
+    },
+    "correct_answer": "A",
+    "solution": "FAO-56 standard reference crop is an extensive surface of green, well-watered grass of uniform height of $0.12\\text{ m}$, aerodynamic resistance $r_a = 208/u_2\\text{ s/m}$, fixed canopy resistance $r_s = 70\\text{ s/m}$, and reflection coefficient (albedo) $\\alpha = 0.23$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_003",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Factors affecting crop coefficient Kc curve",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following factors govern the magnitude of the single crop coefficient ($K_c$) across crop growth stages?",
+    "options": {
+      "A": "Crop development stage: $K_c$ is lowest during initial stage and reaches maximum during mid-season reproductive stage",
+      "B": "Fraction of ground canopy cover and leaf area index ($LAI$)",
+      "C": "Frequency of rain or wetting events during initial growth stage",
+      "D": "Hydraulic radius of the supplying main canal"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $K_c$ increases from initial ($0.3-0.5$) to mid-season ($1.05-1.25$) with canopy expansion (A is true).\n2. Ground shading directly controls the ratio of transpiration to evaporation (B is true).\n3. Frequent wetting wet surface drives high soil evaporation during initial stage, elevating initial $K_c$ (C is true).\n4. Supply canal cross-section is external conveyance hydraulics and has zero bearing on biological crop transpiration factors (D is false).",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_004",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Crop evapotranspiration from pan evaporation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A Class-A evaporation pan installed in an irrigated field measures an average daily pan evaporation rate of $E_{pan} = 8.0\\text{ mm/day}$. Taking the pan coefficient $K_p = 0.75$ and crop coefficient during peak flowering stage $K_c = 1.15$, the crop evapotranspiration $ET_c$ is ________ $\\text{mm/day}$ (round off to two decimal places).",
+    "correct_answer": "6.90",
+    "numerical_range": {
+      "min": 6.8,
+      "max": 7.0
+    },
+    "solution": "Reference evapotranspiration $ET_0 = K_p \\times E_{pan} = 0.75 \\times 8.0 = 6.00\\text{ mm/day}$.\nCrop evapotranspiration is:\n$$ET_c = K_c \\times ET_0 = K_c \\times K_p \\times E_{pan} = 1.15 \\times 0.75 \\times 8.0 = 6.90\\text{ mm/day}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_005",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "FAO Penman-Monteith method reference surface",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The FAO-56 Penman-Monteith standard reference surface is defined as a hypothetical green grass reference crop having an assumed height of:",
+    "options": {
+      "A": "$0.12\\text{ m}$ with fixed surface resistance of $70\\text{ s/m}$ and albedo of $0.23$",
+      "B": "$0.50\\text{ m}$ with surface resistance of $100\\text{ s/m}$ and albedo of $0.15$",
+      "C": "$0.05\\text{ m}$ with surface resistance of $30\\text{ s/m}$ and albedo of $0.05$",
+      "D": "$1.00\\text{ m}$ with surface resistance of $50\\text{ s/m}$ and albedo of $0.35$"
+    },
+    "correct_answer": "A",
+    "solution": "FAO-56 standard reference crop is an extensive surface of green, well-watered grass of uniform height of $0.12\\text{ m}$, aerodynamic resistance $r_a = 208/u_2\\text{ s/m}$, fixed canopy resistance $r_s = 70\\text{ s/m}$, and reflection coefficient (albedo) $\\alpha = 0.23$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_006",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Factors affecting crop coefficient Kc curve",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following factors govern the magnitude of the single crop coefficient ($K_c$) across crop growth stages?",
+    "options": {
+      "A": "Crop development stage: $K_c$ is lowest during initial stage and reaches maximum during mid-season reproductive stage",
+      "B": "Fraction of ground canopy cover and leaf area index ($LAI$)",
+      "C": "Frequency of rain or wetting events during initial growth stage",
+      "D": "Hydraulic radius of the supplying main canal"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $K_c$ increases from initial ($0.3-0.5$) to mid-season ($1.05-1.25$) with canopy expansion (A is true).\n2. Ground shading directly controls the ratio of transpiration to evaporation (B is true).\n3. Frequent wetting wet surface drives high soil evaporation during initial stage, elevating initial $K_c$ (C is true).\n4. Supply canal cross-section is external conveyance hydraulics and has zero bearing on biological crop transpiration factors (D is false).",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_007",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Crop evapotranspiration from pan evaporation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A Class-A evaporation pan installed in an irrigated field measures an average daily pan evaporation rate of $E_{pan} = 7.0\\text{ mm/day}$. Taking the pan coefficient $K_p = 0.75$ and crop coefficient during peak flowering stage $K_c = 1.15$, the crop evapotranspiration $ET_c$ is ________ $\\text{mm/day}$ (round off to two decimal places).",
+    "correct_answer": "6.04",
+    "numerical_range": {
+      "min": 5.94,
+      "max": 6.14
+    },
+    "solution": "Reference evapotranspiration $ET_0 = K_p \\times E_{pan} = 0.75 \\times 7.0 = 5.25\\text{ mm/day}$.\nCrop evapotranspiration is:\n$$ET_c = K_c \\times ET_0 = K_c \\times K_p \\times E_{pan} = 1.15 \\times 0.75 \\times 7.0 = 6.04\\text{ mm/day}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_008",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "FAO Penman-Monteith method reference surface",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The FAO-56 Penman-Monteith standard reference surface is defined as a hypothetical green grass reference crop having an assumed height of:",
+    "options": {
+      "A": "$0.12\\text{ m}$ with fixed surface resistance of $70\\text{ s/m}$ and albedo of $0.23$",
+      "B": "$0.50\\text{ m}$ with surface resistance of $100\\text{ s/m}$ and albedo of $0.15$",
+      "C": "$0.05\\text{ m}$ with surface resistance of $30\\text{ s/m}$ and albedo of $0.05$",
+      "D": "$1.00\\text{ m}$ with surface resistance of $50\\text{ s/m}$ and albedo of $0.35$"
+    },
+    "correct_answer": "A",
+    "solution": "FAO-56 standard reference crop is an extensive surface of green, well-watered grass of uniform height of $0.12\\text{ m}$, aerodynamic resistance $r_a = 208/u_2\\text{ s/m}$, fixed canopy resistance $r_s = 70\\text{ s/m}$, and reflection coefficient (albedo) $\\alpha = 0.23$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_009",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Factors affecting crop coefficient Kc curve",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following factors govern the magnitude of the single crop coefficient ($K_c$) across crop growth stages?",
+    "options": {
+      "A": "Crop development stage: $K_c$ is lowest during initial stage and reaches maximum during mid-season reproductive stage",
+      "B": "Fraction of ground canopy cover and leaf area index ($LAI$)",
+      "C": "Frequency of rain or wetting events during initial growth stage",
+      "D": "Hydraulic radius of the supplying main canal"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $K_c$ increases from initial ($0.3-0.5$) to mid-season ($1.05-1.25$) with canopy expansion (A is true).\n2. Ground shading directly controls the ratio of transpiration to evaporation (B is true).\n3. Frequent wetting wet surface drives high soil evaporation during initial stage, elevating initial $K_c$ (C is true).\n4. Supply canal cross-section is external conveyance hydraulics and has zero bearing on biological crop transpiration factors (D is false).",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_010",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Crop evapotranspiration from pan evaporation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A Class-A evaporation pan installed in an irrigated field measures an average daily pan evaporation rate of $E_{pan} = 6.0\\text{ mm/day}$. Taking the pan coefficient $K_p = 0.75$ and crop coefficient during peak flowering stage $K_c = 1.15$, the crop evapotranspiration $ET_c$ is ________ $\\text{mm/day}$ (round off to two decimal places).",
+    "correct_answer": "5.17",
+    "numerical_range": {
+      "min": 5.07,
+      "max": 5.27
+    },
+    "solution": "Reference evapotranspiration $ET_0 = K_p \\times E_{pan} = 0.75 \\times 6.0 = 4.50\\text{ mm/day}$.\nCrop evapotranspiration is:\n$$ET_c = K_c \\times ET_0 = K_c \\times K_p \\times E_{pan} = 1.15 \\times 0.75 \\times 6.0 = 5.17\\text{ mm/day}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_011",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "FAO Penman-Monteith method reference surface",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The FAO-56 Penman-Monteith standard reference surface is defined as a hypothetical green grass reference crop having an assumed height of:",
+    "options": {
+      "A": "$0.12\\text{ m}$ with fixed surface resistance of $70\\text{ s/m}$ and albedo of $0.23$",
+      "B": "$0.50\\text{ m}$ with surface resistance of $100\\text{ s/m}$ and albedo of $0.15$",
+      "C": "$0.05\\text{ m}$ with surface resistance of $30\\text{ s/m}$ and albedo of $0.05$",
+      "D": "$1.00\\text{ m}$ with surface resistance of $50\\text{ s/m}$ and albedo of $0.35$"
+    },
+    "correct_answer": "A",
+    "solution": "FAO-56 standard reference crop is an extensive surface of green, well-watered grass of uniform height of $0.12\\text{ m}$, aerodynamic resistance $r_a = 208/u_2\\text{ s/m}$, fixed canopy resistance $r_s = 70\\text{ s/m}$, and reflection coefficient (albedo) $\\alpha = 0.23$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_012",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Factors affecting crop coefficient Kc curve",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following factors govern the magnitude of the single crop coefficient ($K_c$) across crop growth stages?",
+    "options": {
+      "A": "Crop development stage: $K_c$ is lowest during initial stage and reaches maximum during mid-season reproductive stage",
+      "B": "Fraction of ground canopy cover and leaf area index ($LAI$)",
+      "C": "Frequency of rain or wetting events during initial growth stage",
+      "D": "Hydraulic radius of the supplying main canal"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $K_c$ increases from initial ($0.3-0.5$) to mid-season ($1.05-1.25$) with canopy expansion (A is true).\n2. Ground shading directly controls the ratio of transpiration to evaporation (B is true).\n3. Frequent wetting wet surface drives high soil evaporation during initial stage, elevating initial $K_c$ (C is true).\n4. Supply canal cross-section is external conveyance hydraulics and has zero bearing on biological crop transpiration factors (D is false).",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_013",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Crop evapotranspiration from pan evaporation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A Class-A evaporation pan installed in an irrigated field measures an average daily pan evaporation rate of $E_{pan} = 7.5\\text{ mm/day}$. Taking the pan coefficient $K_p = 0.75$ and crop coefficient during peak flowering stage $K_c = 1.15$, the crop evapotranspiration $ET_c$ is ________ $\\text{mm/day}$ (round off to two decimal places).",
+    "correct_answer": "6.47",
+    "numerical_range": {
+      "min": 6.37,
+      "max": 6.57
+    },
+    "solution": "Reference evapotranspiration $ET_0 = K_p \\times E_{pan} = 0.75 \\times 7.5 = 5.62\\text{ mm/day}$.\nCrop evapotranspiration is:\n$$ET_c = K_c \\times ET_0 = K_c \\times K_p \\times E_{pan} = 1.15 \\times 0.75 \\times 7.5 = 6.47\\text{ mm/day}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_014",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "FAO Penman-Monteith method reference surface",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The FAO-56 Penman-Monteith standard reference surface is defined as a hypothetical green grass reference crop having an assumed height of:",
+    "options": {
+      "A": "$0.12\\text{ m}$ with fixed surface resistance of $70\\text{ s/m}$ and albedo of $0.23$",
+      "B": "$0.50\\text{ m}$ with surface resistance of $100\\text{ s/m}$ and albedo of $0.15$",
+      "C": "$0.05\\text{ m}$ with surface resistance of $30\\text{ s/m}$ and albedo of $0.05$",
+      "D": "$1.00\\text{ m}$ with surface resistance of $50\\text{ s/m}$ and albedo of $0.35$"
+    },
+    "correct_answer": "A",
+    "solution": "FAO-56 standard reference crop is an extensive surface of green, well-watered grass of uniform height of $0.12\\text{ m}$, aerodynamic resistance $r_a = 208/u_2\\text{ s/m}$, fixed canopy resistance $r_s = 70\\text{ s/m}$, and reflection coefficient (albedo) $\\alpha = 0.23$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_015",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Factors affecting crop coefficient Kc curve",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following factors govern the magnitude of the single crop coefficient ($K_c$) across crop growth stages?",
+    "options": {
+      "A": "Crop development stage: $K_c$ is lowest during initial stage and reaches maximum during mid-season reproductive stage",
+      "B": "Fraction of ground canopy cover and leaf area index ($LAI$)",
+      "C": "Frequency of rain or wetting events during initial growth stage",
+      "D": "Hydraulic radius of the supplying main canal"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $K_c$ increases from initial ($0.3-0.5$) to mid-season ($1.05-1.25$) with canopy expansion (A is true).\n2. Ground shading directly controls the ratio of transpiration to evaporation (B is true).\n3. Frequent wetting wet surface drives high soil evaporation during initial stage, elevating initial $K_c$ (C is true).\n4. Supply canal cross-section is external conveyance hydraulics and has zero bearing on biological crop transpiration factors (D is false).",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_016",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Crop evapotranspiration from pan evaporation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A Class-A evaporation pan installed in an irrigated field measures an average daily pan evaporation rate of $E_{pan} = 6.5\\text{ mm/day}$. Taking the pan coefficient $K_p = 0.75$ and crop coefficient during peak flowering stage $K_c = 1.15$, the crop evapotranspiration $ET_c$ is ________ $\\text{mm/day}$ (round off to two decimal places).",
+    "correct_answer": "5.61",
+    "numerical_range": {
+      "min": 5.51,
+      "max": 5.71
+    },
+    "solution": "Reference evapotranspiration $ET_0 = K_p \\times E_{pan} = 0.75 \\times 6.5 = 4.88\\text{ mm/day}$.\nCrop evapotranspiration is:\n$$ET_c = K_c \\times ET_0 = K_c \\times K_p \\times E_{pan} = 1.15 \\times 0.75 \\times 6.5 = 5.61\\text{ mm/day}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_017",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "FAO Penman-Monteith method reference surface",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The FAO-56 Penman-Monteith standard reference surface is defined as a hypothetical green grass reference crop having an assumed height of:",
+    "options": {
+      "A": "$0.12\\text{ m}$ with fixed surface resistance of $70\\text{ s/m}$ and albedo of $0.23$",
+      "B": "$0.50\\text{ m}$ with surface resistance of $100\\text{ s/m}$ and albedo of $0.15$",
+      "C": "$0.05\\text{ m}$ with surface resistance of $30\\text{ s/m}$ and albedo of $0.05$",
+      "D": "$1.00\\text{ m}$ with surface resistance of $50\\text{ s/m}$ and albedo of $0.35$"
+    },
+    "correct_answer": "A",
+    "solution": "FAO-56 standard reference crop is an extensive surface of green, well-watered grass of uniform height of $0.12\\text{ m}$, aerodynamic resistance $r_a = 208/u_2\\text{ s/m}$, fixed canopy resistance $r_s = 70\\text{ s/m}$, and reflection coefficient (albedo) $\\alpha = 0.23$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_018",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Factors affecting crop coefficient Kc curve",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following factors govern the magnitude of the single crop coefficient ($K_c$) across crop growth stages?",
+    "options": {
+      "A": "Crop development stage: $K_c$ is lowest during initial stage and reaches maximum during mid-season reproductive stage",
+      "B": "Fraction of ground canopy cover and leaf area index ($LAI$)",
+      "C": "Frequency of rain or wetting events during initial growth stage",
+      "D": "Hydraulic radius of the supplying main canal"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $K_c$ increases from initial ($0.3-0.5$) to mid-season ($1.05-1.25$) with canopy expansion (A is true).\n2. Ground shading directly controls the ratio of transpiration to evaporation (B is true).\n3. Frequent wetting wet surface drives high soil evaporation during initial stage, elevating initial $K_c$ (C is true).\n4. Supply canal cross-section is external conveyance hydraulics and has zero bearing on biological crop transpiration factors (D is false).",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_019",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Crop evapotranspiration from pan evaporation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A Class-A evaporation pan installed in an irrigated field measures an average daily pan evaporation rate of $E_{pan} = 8.0\\text{ mm/day}$. Taking the pan coefficient $K_p = 0.75$ and crop coefficient during peak flowering stage $K_c = 1.15$, the crop evapotranspiration $ET_c$ is ________ $\\text{mm/day}$ (round off to two decimal places).",
+    "correct_answer": "6.90",
+    "numerical_range": {
+      "min": 6.8,
+      "max": 7.0
+    },
+    "solution": "Reference evapotranspiration $ET_0 = K_p \\times E_{pan} = 0.75 \\times 8.0 = 6.00\\text{ mm/day}$.\nCrop evapotranspiration is:\n$$ET_c = K_c \\times ET_0 = K_c \\times K_p \\times E_{pan} = 1.15 \\times 0.75 \\times 8.0 = 6.90\\text{ mm/day}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_020",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "FAO Penman-Monteith method reference surface",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The FAO-56 Penman-Monteith standard reference surface is defined as a hypothetical green grass reference crop having an assumed height of:",
+    "options": {
+      "A": "$0.12\\text{ m}$ with fixed surface resistance of $70\\text{ s/m}$ and albedo of $0.23$",
+      "B": "$0.50\\text{ m}$ with surface resistance of $100\\text{ s/m}$ and albedo of $0.15$",
+      "C": "$0.05\\text{ m}$ with surface resistance of $30\\text{ s/m}$ and albedo of $0.05$",
+      "D": "$1.00\\text{ m}$ with surface resistance of $50\\text{ s/m}$ and albedo of $0.35$"
+    },
+    "correct_answer": "A",
+    "solution": "FAO-56 standard reference crop is an extensive surface of green, well-watered grass of uniform height of $0.12\\text{ m}$, aerodynamic resistance $r_a = 208/u_2\\text{ s/m}$, fixed canopy resistance $r_s = 70\\text{ s/m}$, and reflection coefficient (albedo) $\\alpha = 0.23$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_021",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Factors affecting crop coefficient Kc curve",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following factors govern the magnitude of the single crop coefficient ($K_c$) across crop growth stages?",
+    "options": {
+      "A": "Crop development stage: $K_c$ is lowest during initial stage and reaches maximum during mid-season reproductive stage",
+      "B": "Fraction of ground canopy cover and leaf area index ($LAI$)",
+      "C": "Frequency of rain or wetting events during initial growth stage",
+      "D": "Hydraulic radius of the supplying main canal"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $K_c$ increases from initial ($0.3-0.5$) to mid-season ($1.05-1.25$) with canopy expansion (A is true).\n2. Ground shading directly controls the ratio of transpiration to evaporation (B is true).\n3. Frequent wetting wet surface drives high soil evaporation during initial stage, elevating initial $K_c$ (C is true).\n4. Supply canal cross-section is external conveyance hydraulics and has zero bearing on biological crop transpiration factors (D is false).",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_022",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Crop evapotranspiration from pan evaporation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A Class-A evaporation pan installed in an irrigated field measures an average daily pan evaporation rate of $E_{pan} = 7.0\\text{ mm/day}$. Taking the pan coefficient $K_p = 0.75$ and crop coefficient during peak flowering stage $K_c = 1.15$, the crop evapotranspiration $ET_c$ is ________ $\\text{mm/day}$ (round off to two decimal places).",
+    "correct_answer": "6.04",
+    "numerical_range": {
+      "min": 5.94,
+      "max": 6.14
+    },
+    "solution": "Reference evapotranspiration $ET_0 = K_p \\times E_{pan} = 0.75 \\times 7.0 = 5.25\\text{ mm/day}$.\nCrop evapotranspiration is:\n$$ET_c = K_c \\times ET_0 = K_c \\times K_p \\times E_{pan} = 1.15 \\times 0.75 \\times 7.0 = 6.04\\text{ mm/day}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_023",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "FAO Penman-Monteith method reference surface",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The FAO-56 Penman-Monteith standard reference surface is defined as a hypothetical green grass reference crop having an assumed height of:",
+    "options": {
+      "A": "$0.12\\text{ m}$ with fixed surface resistance of $70\\text{ s/m}$ and albedo of $0.23$",
+      "B": "$0.50\\text{ m}$ with surface resistance of $100\\text{ s/m}$ and albedo of $0.15$",
+      "C": "$0.05\\text{ m}$ with surface resistance of $30\\text{ s/m}$ and albedo of $0.05$",
+      "D": "$1.00\\text{ m}$ with surface resistance of $50\\text{ s/m}$ and albedo of $0.35$"
+    },
+    "correct_answer": "A",
+    "solution": "FAO-56 standard reference crop is an extensive surface of green, well-watered grass of uniform height of $0.12\\text{ m}$, aerodynamic resistance $r_a = 208/u_2\\text{ s/m}$, fixed canopy resistance $r_s = 70\\text{ s/m}$, and reflection coefficient (albedo) $\\alpha = 0.23$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_024",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Factors affecting crop coefficient Kc curve",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following factors govern the magnitude of the single crop coefficient ($K_c$) across crop growth stages?",
+    "options": {
+      "A": "Crop development stage: $K_c$ is lowest during initial stage and reaches maximum during mid-season reproductive stage",
+      "B": "Fraction of ground canopy cover and leaf area index ($LAI$)",
+      "C": "Frequency of rain or wetting events during initial growth stage",
+      "D": "Hydraulic radius of the supplying main canal"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $K_c$ increases from initial ($0.3-0.5$) to mid-season ($1.05-1.25$) with canopy expansion (A is true).\n2. Ground shading directly controls the ratio of transpiration to evaporation (B is true).\n3. Frequent wetting wet surface drives high soil evaporation during initial stage, elevating initial $K_c$ (C is true).\n4. Supply canal cross-section is external conveyance hydraulics and has zero bearing on biological crop transpiration factors (D is false).",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_025",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Crop evapotranspiration from pan evaporation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A Class-A evaporation pan installed in an irrigated field measures an average daily pan evaporation rate of $E_{pan} = 6.0\\text{ mm/day}$. Taking the pan coefficient $K_p = 0.75$ and crop coefficient during peak flowering stage $K_c = 1.15$, the crop evapotranspiration $ET_c$ is ________ $\\text{mm/day}$ (round off to two decimal places).",
+    "correct_answer": "5.17",
+    "numerical_range": {
+      "min": 5.07,
+      "max": 5.27
+    },
+    "solution": "Reference evapotranspiration $ET_0 = K_p \\times E_{pan} = 0.75 \\times 6.0 = 4.50\\text{ mm/day}$.\nCrop evapotranspiration is:\n$$ET_c = K_c \\times ET_0 = K_c \\times K_p \\times E_{pan} = 1.15 \\times 0.75 \\times 6.0 = 5.17\\text{ mm/day}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_026",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "FAO Penman-Monteith method reference surface",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The FAO-56 Penman-Monteith standard reference surface is defined as a hypothetical green grass reference crop having an assumed height of:",
+    "options": {
+      "A": "$0.12\\text{ m}$ with fixed surface resistance of $70\\text{ s/m}$ and albedo of $0.23$",
+      "B": "$0.50\\text{ m}$ with surface resistance of $100\\text{ s/m}$ and albedo of $0.15$",
+      "C": "$0.05\\text{ m}$ with surface resistance of $30\\text{ s/m}$ and albedo of $0.05$",
+      "D": "$1.00\\text{ m}$ with surface resistance of $50\\text{ s/m}$ and albedo of $0.35$"
+    },
+    "correct_answer": "A",
+    "solution": "FAO-56 standard reference crop is an extensive surface of green, well-watered grass of uniform height of $0.12\\text{ m}$, aerodynamic resistance $r_a = 208/u_2\\text{ s/m}$, fixed canopy resistance $r_s = 70\\text{ s/m}$, and reflection coefficient (albedo) $\\alpha = 0.23$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_027",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Factors affecting crop coefficient Kc curve",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following factors govern the magnitude of the single crop coefficient ($K_c$) across crop growth stages?",
+    "options": {
+      "A": "Crop development stage: $K_c$ is lowest during initial stage and reaches maximum during mid-season reproductive stage",
+      "B": "Fraction of ground canopy cover and leaf area index ($LAI$)",
+      "C": "Frequency of rain or wetting events during initial growth stage",
+      "D": "Hydraulic radius of the supplying main canal"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $K_c$ increases from initial ($0.3-0.5$) to mid-season ($1.05-1.25$) with canopy expansion (A is true).\n2. Ground shading directly controls the ratio of transpiration to evaporation (B is true).\n3. Frequent wetting wet surface drives high soil evaporation during initial stage, elevating initial $K_c$ (C is true).\n4. Supply canal cross-section is external conveyance hydraulics and has zero bearing on biological crop transpiration factors (D is false).",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_028",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Crop evapotranspiration from pan evaporation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A Class-A evaporation pan installed in an irrigated field measures an average daily pan evaporation rate of $E_{pan} = 7.5\\text{ mm/day}$. Taking the pan coefficient $K_p = 0.75$ and crop coefficient during peak flowering stage $K_c = 1.15$, the crop evapotranspiration $ET_c$ is ________ $\\text{mm/day}$ (round off to two decimal places).",
+    "correct_answer": "6.47",
+    "numerical_range": {
+      "min": 6.37,
+      "max": 6.57
+    },
+    "solution": "Reference evapotranspiration $ET_0 = K_p \\times E_{pan} = 0.75 \\times 7.5 = 5.62\\text{ mm/day}$.\nCrop evapotranspiration is:\n$$ET_c = K_c \\times ET_0 = K_c \\times K_p \\times E_{pan} = 1.15 \\times 0.75 \\times 7.5 = 6.47\\text{ mm/day}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_029",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "FAO Penman-Monteith method reference surface",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The FAO-56 Penman-Monteith standard reference surface is defined as a hypothetical green grass reference crop having an assumed height of:",
+    "options": {
+      "A": "$0.12\\text{ m}$ with fixed surface resistance of $70\\text{ s/m}$ and albedo of $0.23$",
+      "B": "$0.50\\text{ m}$ with surface resistance of $100\\text{ s/m}$ and albedo of $0.15$",
+      "C": "$0.05\\text{ m}$ with surface resistance of $30\\text{ s/m}$ and albedo of $0.05$",
+      "D": "$1.00\\text{ m}$ with surface resistance of $50\\text{ s/m}$ and albedo of $0.35$"
+    },
+    "correct_answer": "A",
+    "solution": "FAO-56 standard reference crop is an extensive surface of green, well-watered grass of uniform height of $0.12\\text{ m}$, aerodynamic resistance $r_a = 208/u_2\\text{ s/m}$, fixed canopy resistance $r_s = 70\\text{ s/m}$, and reflection coefficient (albedo) $\\alpha = 0.23$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_030",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Factors affecting crop coefficient Kc curve",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following factors govern the magnitude of the single crop coefficient ($K_c$) across crop growth stages?",
+    "options": {
+      "A": "Crop development stage: $K_c$ is lowest during initial stage and reaches maximum during mid-season reproductive stage",
+      "B": "Fraction of ground canopy cover and leaf area index ($LAI$)",
+      "C": "Frequency of rain or wetting events during initial growth stage",
+      "D": "Hydraulic radius of the supplying main canal"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $K_c$ increases from initial ($0.3-0.5$) to mid-season ($1.05-1.25$) with canopy expansion (A is true).\n2. Ground shading directly controls the ratio of transpiration to evaporation (B is true).\n3. Frequent wetting wet surface drives high soil evaporation during initial stage, elevating initial $K_c$ (C is true).\n4. Supply canal cross-section is external conveyance hydraulics and has zero bearing on biological crop transpiration factors (D is false).",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_031",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Crop evapotranspiration from pan evaporation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A Class-A evaporation pan installed in an irrigated field measures an average daily pan evaporation rate of $E_{pan} = 6.5\\text{ mm/day}$. Taking the pan coefficient $K_p = 0.75$ and crop coefficient during peak flowering stage $K_c = 1.15$, the crop evapotranspiration $ET_c$ is ________ $\\text{mm/day}$ (round off to two decimal places).",
+    "correct_answer": "5.61",
+    "numerical_range": {
+      "min": 5.51,
+      "max": 5.71
+    },
+    "solution": "Reference evapotranspiration $ET_0 = K_p \\times E_{pan} = 0.75 \\times 6.5 = 4.88\\text{ mm/day}$.\nCrop evapotranspiration is:\n$$ET_c = K_c \\times ET_0 = K_c \\times K_p \\times E_{pan} = 1.15 \\times 0.75 \\times 6.5 = 5.61\\text{ mm/day}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_032",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "FAO Penman-Monteith method reference surface",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The FAO-56 Penman-Monteith standard reference surface is defined as a hypothetical green grass reference crop having an assumed height of:",
+    "options": {
+      "A": "$0.12\\text{ m}$ with fixed surface resistance of $70\\text{ s/m}$ and albedo of $0.23$",
+      "B": "$0.50\\text{ m}$ with surface resistance of $100\\text{ s/m}$ and albedo of $0.15$",
+      "C": "$0.05\\text{ m}$ with surface resistance of $30\\text{ s/m}$ and albedo of $0.05$",
+      "D": "$1.00\\text{ m}$ with surface resistance of $50\\text{ s/m}$ and albedo of $0.35$"
+    },
+    "correct_answer": "A",
+    "solution": "FAO-56 standard reference crop is an extensive surface of green, well-watered grass of uniform height of $0.12\\text{ m}$, aerodynamic resistance $r_a = 208/u_2\\text{ s/m}$, fixed canopy resistance $r_s = 70\\text{ s/m}$, and reflection coefficient (albedo) $\\alpha = 0.23$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_033",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Factors affecting crop coefficient Kc curve",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following factors govern the magnitude of the single crop coefficient ($K_c$) across crop growth stages?",
+    "options": {
+      "A": "Crop development stage: $K_c$ is lowest during initial stage and reaches maximum during mid-season reproductive stage",
+      "B": "Fraction of ground canopy cover and leaf area index ($LAI$)",
+      "C": "Frequency of rain or wetting events during initial growth stage",
+      "D": "Hydraulic radius of the supplying main canal"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $K_c$ increases from initial ($0.3-0.5$) to mid-season ($1.05-1.25$) with canopy expansion (A is true).\n2. Ground shading directly controls the ratio of transpiration to evaporation (B is true).\n3. Frequent wetting wet surface drives high soil evaporation during initial stage, elevating initial $K_c$ (C is true).\n4. Supply canal cross-section is external conveyance hydraulics and has zero bearing on biological crop transpiration factors (D is false).",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_034",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Crop evapotranspiration from pan evaporation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A Class-A evaporation pan installed in an irrigated field measures an average daily pan evaporation rate of $E_{pan} = 8.0\\text{ mm/day}$. Taking the pan coefficient $K_p = 0.75$ and crop coefficient during peak flowering stage $K_c = 1.15$, the crop evapotranspiration $ET_c$ is ________ $\\text{mm/day}$ (round off to two decimal places).",
+    "correct_answer": "6.90",
+    "numerical_range": {
+      "min": 6.8,
+      "max": 7.0
+    },
+    "solution": "Reference evapotranspiration $ET_0 = K_p \\times E_{pan} = 0.75 \\times 8.0 = 6.00\\text{ mm/day}$.\nCrop evapotranspiration is:\n$$ET_c = K_c \\times ET_0 = K_c \\times K_p \\times E_{pan} = 1.15 \\times 0.75 \\times 8.0 = 6.90\\text{ mm/day}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_035",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "FAO Penman-Monteith method reference surface",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The FAO-56 Penman-Monteith standard reference surface is defined as a hypothetical green grass reference crop having an assumed height of:",
+    "options": {
+      "A": "$0.12\\text{ m}$ with fixed surface resistance of $70\\text{ s/m}$ and albedo of $0.23$",
+      "B": "$0.50\\text{ m}$ with surface resistance of $100\\text{ s/m}$ and albedo of $0.15$",
+      "C": "$0.05\\text{ m}$ with surface resistance of $30\\text{ s/m}$ and albedo of $0.05$",
+      "D": "$1.00\\text{ m}$ with surface resistance of $50\\text{ s/m}$ and albedo of $0.35$"
+    },
+    "correct_answer": "A",
+    "solution": "FAO-56 standard reference crop is an extensive surface of green, well-watered grass of uniform height of $0.12\\text{ m}$, aerodynamic resistance $r_a = 208/u_2\\text{ s/m}$, fixed canopy resistance $r_s = 70\\text{ s/m}$, and reflection coefficient (albedo) $\\alpha = 0.23$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_036",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Factors affecting crop coefficient Kc curve",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following factors govern the magnitude of the single crop coefficient ($K_c$) across crop growth stages?",
+    "options": {
+      "A": "Crop development stage: $K_c$ is lowest during initial stage and reaches maximum during mid-season reproductive stage",
+      "B": "Fraction of ground canopy cover and leaf area index ($LAI$)",
+      "C": "Frequency of rain or wetting events during initial growth stage",
+      "D": "Hydraulic radius of the supplying main canal"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $K_c$ increases from initial ($0.3-0.5$) to mid-season ($1.05-1.25$) with canopy expansion (A is true).\n2. Ground shading directly controls the ratio of transpiration to evaporation (B is true).\n3. Frequent wetting wet surface drives high soil evaporation during initial stage, elevating initial $K_c$ (C is true).\n4. Supply canal cross-section is external conveyance hydraulics and has zero bearing on biological crop transpiration factors (D is false).",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_037",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Crop evapotranspiration from pan evaporation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A Class-A evaporation pan installed in an irrigated field measures an average daily pan evaporation rate of $E_{pan} = 7.0\\text{ mm/day}$. Taking the pan coefficient $K_p = 0.75$ and crop coefficient during peak flowering stage $K_c = 1.15$, the crop evapotranspiration $ET_c$ is ________ $\\text{mm/day}$ (round off to two decimal places).",
+    "correct_answer": "6.04",
+    "numerical_range": {
+      "min": 5.94,
+      "max": 6.14
+    },
+    "solution": "Reference evapotranspiration $ET_0 = K_p \\times E_{pan} = 0.75 \\times 7.0 = 5.25\\text{ mm/day}$.\nCrop evapotranspiration is:\n$$ET_c = K_c \\times ET_0 = K_c \\times K_p \\times E_{pan} = 1.15 \\times 0.75 \\times 7.0 = 6.04\\text{ mm/day}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_ETP_038",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "FAO Penman-Monteith method reference surface",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The FAO-56 Penman-Monteith standard reference surface is defined as a hypothetical green grass reference crop having an assumed height of:",
+    "options": {
+      "A": "$0.12\\text{ m}$ with fixed surface resistance of $70\\text{ s/m}$ and albedo of $0.23$",
+      "B": "$0.50\\text{ m}$ with surface resistance of $100\\text{ s/m}$ and albedo of $0.15$",
+      "C": "$0.05\\text{ m}$ with surface resistance of $30\\text{ s/m}$ and albedo of $0.05$",
+      "D": "$1.00\\text{ m}$ with surface resistance of $50\\text{ s/m}$ and albedo of $0.35$"
+    },
+    "correct_answer": "A",
+    "solution": "FAO-56 standard reference crop is an extensive surface of green, well-watered grass of uniform height of $0.12\\text{ m}$, aerodynamic resistance $r_a = 208/u_2\\text{ s/m}$, fixed canopy resistance $r_s = 70\\text{ s/m}$, and reflection coefficient (albedo) $\\alpha = 0.23$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_001",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Irrigation interval calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A crop root zone has a total available soil water capacity of $AW = 130\\text{ mm}$. The management allowed depletion ($MAD$) is set to $50\\%$. If the average daily crop evapotranspiration rate is $ET_c = 6.0\\text{ mm/day}$, the allowable irrigation interval is ________ $\\text{days}$ (round off to one decimal place).",
+    "correct_answer": "10.8",
+    "numerical_range": {
+      "min": 10.6,
+      "max": 11.0
+    },
+    "solution": "Readily available water ($RAW$) is:\n$$RAW = MAD \\times AW = 0.5 \\times 130 = 65.0\\text{ mm}$$\nIrrigation interval is:\n$$\\text{Interval} = \\frac{RAW}{ET_c} = \\frac{65.0}{6.0} = 10.8\\text{ days}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_002",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Gross irrigation requirement from application efficiency",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The net depth of irrigation water required to replenish the root zone to field capacity is $NIR = 80\\text{ mm}$. If the field water application efficiency is $\\eta_a = 75\\%$, the gross irrigation requirement ($GIR$) is ________ $\\text{mm}$ (round off to one decimal place).",
+    "correct_answer": "106.7",
+    "numerical_range": {
+      "min": 106.2,
+      "max": 107.2
+    },
+    "solution": "Gross irrigation requirement accounts for on-field deep percolation and runoff losses:\n$$GIR = \\frac{NIR}{\\eta_a} = \\frac{80}{0.75} = 106.7\\text{ mm}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_003",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Critical growth stages of major crops",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following pairing of crops with their most critical stages for moisture stress is/are CORRECT?",
+    "options": {
+      "A": "Wheat: Crown Root Initiation (CRI) stage (20–25 days after sowing)",
+      "B": "Rice: Panicle initiation and flowering stage",
+      "C": "Maize: Tasseling and silking stage",
+      "D": "Gram / Chickpea: Continuous flooding during harvest"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. CRI is the single most vital stage in wheat; moisture deficit at CRI permanently slashes tillering and yield (A is correct).\n2. Panicle initiation through flowering is extremely vulnerable in paddy (B is correct).\n3. Tasseling and silking determine kernel set in maize (C is correct).\n4. Chickpea is highly sensitive to waterlogging and never requires flooding during harvest (D is false).",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_004",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Irrigation interval calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A crop root zone has a total available soil water capacity of $AW = 160\\text{ mm}$. The management allowed depletion ($MAD$) is set to $50\\%$. If the average daily crop evapotranspiration rate is $ET_c = 6.0\\text{ mm/day}$, the allowable irrigation interval is ________ $\\text{days}$ (round off to one decimal place).",
+    "correct_answer": "13.3",
+    "numerical_range": {
+      "min": 13.1,
+      "max": 13.5
+    },
+    "solution": "Readily available water ($RAW$) is:\n$$RAW = MAD \\times AW = 0.5 \\times 160 = 80.0\\text{ mm}$$\nIrrigation interval is:\n$$\\text{Interval} = \\frac{RAW}{ET_c} = \\frac{80.0}{6.0} = 13.3\\text{ days}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_005",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Gross irrigation requirement from application efficiency",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The net depth of irrigation water required to replenish the root zone to field capacity is $NIR = 70\\text{ mm}$. If the field water application efficiency is $\\eta_a = 75\\%$, the gross irrigation requirement ($GIR$) is ________ $\\text{mm}$ (round off to one decimal place).",
+    "correct_answer": "93.3",
+    "numerical_range": {
+      "min": 92.8,
+      "max": 93.8
+    },
+    "solution": "Gross irrigation requirement accounts for on-field deep percolation and runoff losses:\n$$GIR = \\frac{NIR}{\\eta_a} = \\frac{70}{0.75} = 93.3\\text{ mm}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_006",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Critical growth stages of major crops",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following pairing of crops with their most critical stages for moisture stress is/are CORRECT?",
+    "options": {
+      "A": "Wheat: Crown Root Initiation (CRI) stage (20–25 days after sowing)",
+      "B": "Rice: Panicle initiation and flowering stage",
+      "C": "Maize: Tasseling and silking stage",
+      "D": "Gram / Chickpea: Continuous flooding during harvest"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. CRI is the single most vital stage in wheat; moisture deficit at CRI permanently slashes tillering and yield (A is correct).\n2. Panicle initiation through flowering is extremely vulnerable in paddy (B is correct).\n3. Tasseling and silking determine kernel set in maize (C is correct).\n4. Chickpea is highly sensitive to waterlogging and never requires flooding during harvest (D is false).",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_007",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Irrigation interval calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A crop root zone has a total available soil water capacity of $AW = 140\\text{ mm}$. The management allowed depletion ($MAD$) is set to $50\\%$. If the average daily crop evapotranspiration rate is $ET_c = 6.0\\text{ mm/day}$, the allowable irrigation interval is ________ $\\text{days}$ (round off to one decimal place).",
+    "correct_answer": "11.7",
+    "numerical_range": {
+      "min": 11.5,
+      "max": 11.9
+    },
+    "solution": "Readily available water ($RAW$) is:\n$$RAW = MAD \\times AW = 0.5 \\times 140 = 70.0\\text{ mm}$$\nIrrigation interval is:\n$$\\text{Interval} = \\frac{RAW}{ET_c} = \\frac{70.0}{6.0} = 11.7\\text{ days}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_008",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Gross irrigation requirement from application efficiency",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The net depth of irrigation water required to replenish the root zone to field capacity is $NIR = 60\\text{ mm}$. If the field water application efficiency is $\\eta_a = 75\\%$, the gross irrigation requirement ($GIR$) is ________ $\\text{mm}$ (round off to one decimal place).",
+    "correct_answer": "80.0",
+    "numerical_range": {
+      "min": 79.5,
+      "max": 80.5
+    },
+    "solution": "Gross irrigation requirement accounts for on-field deep percolation and runoff losses:\n$$GIR = \\frac{NIR}{\\eta_a} = \\frac{60}{0.75} = 80.0\\text{ mm}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_009",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Critical growth stages of major crops",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following pairing of crops with their most critical stages for moisture stress is/are CORRECT?",
+    "options": {
+      "A": "Wheat: Crown Root Initiation (CRI) stage (20–25 days after sowing)",
+      "B": "Rice: Panicle initiation and flowering stage",
+      "C": "Maize: Tasseling and silking stage",
+      "D": "Gram / Chickpea: Continuous flooding during harvest"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. CRI is the single most vital stage in wheat; moisture deficit at CRI permanently slashes tillering and yield (A is correct).\n2. Panicle initiation through flowering is extremely vulnerable in paddy (B is correct).\n3. Tasseling and silking determine kernel set in maize (C is correct).\n4. Chickpea is highly sensitive to waterlogging and never requires flooding during harvest (D is false).",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_010",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Irrigation interval calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A crop root zone has a total available soil water capacity of $AW = 120\\text{ mm}$. The management allowed depletion ($MAD$) is set to $50\\%$. If the average daily crop evapotranspiration rate is $ET_c = 6.0\\text{ mm/day}$, the allowable irrigation interval is ________ $\\text{days}$ (round off to one decimal place).",
+    "correct_answer": "10.0",
+    "numerical_range": {
+      "min": 9.8,
+      "max": 10.2
+    },
+    "solution": "Readily available water ($RAW$) is:\n$$RAW = MAD \\times AW = 0.5 \\times 120 = 60.0\\text{ mm}$$\nIrrigation interval is:\n$$\\text{Interval} = \\frac{RAW}{ET_c} = \\frac{60.0}{6.0} = 10.0\\text{ days}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_011",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Gross irrigation requirement from application efficiency",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The net depth of irrigation water required to replenish the root zone to field capacity is $NIR = 90\\text{ mm}$. If the field water application efficiency is $\\eta_a = 75\\%$, the gross irrigation requirement ($GIR$) is ________ $\\text{mm}$ (round off to one decimal place).",
+    "correct_answer": "120.0",
+    "numerical_range": {
+      "min": 119.5,
+      "max": 120.5
+    },
+    "solution": "Gross irrigation requirement accounts for on-field deep percolation and runoff losses:\n$$GIR = \\frac{NIR}{\\eta_a} = \\frac{90}{0.75} = 120.0\\text{ mm}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_012",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Critical growth stages of major crops",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following pairing of crops with their most critical stages for moisture stress is/are CORRECT?",
+    "options": {
+      "A": "Wheat: Crown Root Initiation (CRI) stage (20–25 days after sowing)",
+      "B": "Rice: Panicle initiation and flowering stage",
+      "C": "Maize: Tasseling and silking stage",
+      "D": "Gram / Chickpea: Continuous flooding during harvest"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. CRI is the single most vital stage in wheat; moisture deficit at CRI permanently slashes tillering and yield (A is correct).\n2. Panicle initiation through flowering is extremely vulnerable in paddy (B is correct).\n3. Tasseling and silking determine kernel set in maize (C is correct).\n4. Chickpea is highly sensitive to waterlogging and never requires flooding during harvest (D is false).",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_013",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Irrigation interval calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A crop root zone has a total available soil water capacity of $AW = 150\\text{ mm}$. The management allowed depletion ($MAD$) is set to $50\\%$. If the average daily crop evapotranspiration rate is $ET_c = 6.0\\text{ mm/day}$, the allowable irrigation interval is ________ $\\text{days}$ (round off to one decimal place).",
+    "correct_answer": "12.5",
+    "numerical_range": {
+      "min": 12.3,
+      "max": 12.7
+    },
+    "solution": "Readily available water ($RAW$) is:\n$$RAW = MAD \\times AW = 0.5 \\times 150 = 75.0\\text{ mm}$$\nIrrigation interval is:\n$$\\text{Interval} = \\frac{RAW}{ET_c} = \\frac{75.0}{6.0} = 12.5\\text{ days}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_014",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Gross irrigation requirement from application efficiency",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The net depth of irrigation water required to replenish the root zone to field capacity is $NIR = 80\\text{ mm}$. If the field water application efficiency is $\\eta_a = 75\\%$, the gross irrigation requirement ($GIR$) is ________ $\\text{mm}$ (round off to one decimal place).",
+    "correct_answer": "106.7",
+    "numerical_range": {
+      "min": 106.2,
+      "max": 107.2
+    },
+    "solution": "Gross irrigation requirement accounts for on-field deep percolation and runoff losses:\n$$GIR = \\frac{NIR}{\\eta_a} = \\frac{80}{0.75} = 106.7\\text{ mm}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_015",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Critical growth stages of major crops",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following pairing of crops with their most critical stages for moisture stress is/are CORRECT?",
+    "options": {
+      "A": "Wheat: Crown Root Initiation (CRI) stage (20–25 days after sowing)",
+      "B": "Rice: Panicle initiation and flowering stage",
+      "C": "Maize: Tasseling and silking stage",
+      "D": "Gram / Chickpea: Continuous flooding during harvest"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. CRI is the single most vital stage in wheat; moisture deficit at CRI permanently slashes tillering and yield (A is correct).\n2. Panicle initiation through flowering is extremely vulnerable in paddy (B is correct).\n3. Tasseling and silking determine kernel set in maize (C is correct).\n4. Chickpea is highly sensitive to waterlogging and never requires flooding during harvest (D is false).",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_016",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Irrigation interval calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A crop root zone has a total available soil water capacity of $AW = 130\\text{ mm}$. The management allowed depletion ($MAD$) is set to $50\\%$. If the average daily crop evapotranspiration rate is $ET_c = 6.0\\text{ mm/day}$, the allowable irrigation interval is ________ $\\text{days}$ (round off to one decimal place).",
+    "correct_answer": "10.8",
+    "numerical_range": {
+      "min": 10.6,
+      "max": 11.0
+    },
+    "solution": "Readily available water ($RAW$) is:\n$$RAW = MAD \\times AW = 0.5 \\times 130 = 65.0\\text{ mm}$$\nIrrigation interval is:\n$$\\text{Interval} = \\frac{RAW}{ET_c} = \\frac{65.0}{6.0} = 10.8\\text{ days}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_017",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Gross irrigation requirement from application efficiency",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The net depth of irrigation water required to replenish the root zone to field capacity is $NIR = 70\\text{ mm}$. If the field water application efficiency is $\\eta_a = 75\\%$, the gross irrigation requirement ($GIR$) is ________ $\\text{mm}$ (round off to one decimal place).",
+    "correct_answer": "93.3",
+    "numerical_range": {
+      "min": 92.8,
+      "max": 93.8
+    },
+    "solution": "Gross irrigation requirement accounts for on-field deep percolation and runoff losses:\n$$GIR = \\frac{NIR}{\\eta_a} = \\frac{70}{0.75} = 93.3\\text{ mm}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_018",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Critical growth stages of major crops",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following pairing of crops with their most critical stages for moisture stress is/are CORRECT?",
+    "options": {
+      "A": "Wheat: Crown Root Initiation (CRI) stage (20–25 days after sowing)",
+      "B": "Rice: Panicle initiation and flowering stage",
+      "C": "Maize: Tasseling and silking stage",
+      "D": "Gram / Chickpea: Continuous flooding during harvest"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. CRI is the single most vital stage in wheat; moisture deficit at CRI permanently slashes tillering and yield (A is correct).\n2. Panicle initiation through flowering is extremely vulnerable in paddy (B is correct).\n3. Tasseling and silking determine kernel set in maize (C is correct).\n4. Chickpea is highly sensitive to waterlogging and never requires flooding during harvest (D is false).",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_019",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Irrigation interval calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A crop root zone has a total available soil water capacity of $AW = 160\\text{ mm}$. The management allowed depletion ($MAD$) is set to $50\\%$. If the average daily crop evapotranspiration rate is $ET_c = 6.0\\text{ mm/day}$, the allowable irrigation interval is ________ $\\text{days}$ (round off to one decimal place).",
+    "correct_answer": "13.3",
+    "numerical_range": {
+      "min": 13.1,
+      "max": 13.5
+    },
+    "solution": "Readily available water ($RAW$) is:\n$$RAW = MAD \\times AW = 0.5 \\times 160 = 80.0\\text{ mm}$$\nIrrigation interval is:\n$$\\text{Interval} = \\frac{RAW}{ET_c} = \\frac{80.0}{6.0} = 13.3\\text{ days}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_020",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Gross irrigation requirement from application efficiency",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The net depth of irrigation water required to replenish the root zone to field capacity is $NIR = 60\\text{ mm}$. If the field water application efficiency is $\\eta_a = 75\\%$, the gross irrigation requirement ($GIR$) is ________ $\\text{mm}$ (round off to one decimal place).",
+    "correct_answer": "80.0",
+    "numerical_range": {
+      "min": 79.5,
+      "max": 80.5
+    },
+    "solution": "Gross irrigation requirement accounts for on-field deep percolation and runoff losses:\n$$GIR = \\frac{NIR}{\\eta_a} = \\frac{60}{0.75} = 80.0\\text{ mm}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_021",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Critical growth stages of major crops",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following pairing of crops with their most critical stages for moisture stress is/are CORRECT?",
+    "options": {
+      "A": "Wheat: Crown Root Initiation (CRI) stage (20–25 days after sowing)",
+      "B": "Rice: Panicle initiation and flowering stage",
+      "C": "Maize: Tasseling and silking stage",
+      "D": "Gram / Chickpea: Continuous flooding during harvest"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. CRI is the single most vital stage in wheat; moisture deficit at CRI permanently slashes tillering and yield (A is correct).\n2. Panicle initiation through flowering is extremely vulnerable in paddy (B is correct).\n3. Tasseling and silking determine kernel set in maize (C is correct).\n4. Chickpea is highly sensitive to waterlogging and never requires flooding during harvest (D is false).",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_022",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Irrigation interval calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A crop root zone has a total available soil water capacity of $AW = 140\\text{ mm}$. The management allowed depletion ($MAD$) is set to $50\\%$. If the average daily crop evapotranspiration rate is $ET_c = 6.0\\text{ mm/day}$, the allowable irrigation interval is ________ $\\text{days}$ (round off to one decimal place).",
+    "correct_answer": "11.7",
+    "numerical_range": {
+      "min": 11.5,
+      "max": 11.9
+    },
+    "solution": "Readily available water ($RAW$) is:\n$$RAW = MAD \\times AW = 0.5 \\times 140 = 70.0\\text{ mm}$$\nIrrigation interval is:\n$$\\text{Interval} = \\frac{RAW}{ET_c} = \\frac{70.0}{6.0} = 11.7\\text{ days}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_023",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Gross irrigation requirement from application efficiency",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The net depth of irrigation water required to replenish the root zone to field capacity is $NIR = 90\\text{ mm}$. If the field water application efficiency is $\\eta_a = 75\\%$, the gross irrigation requirement ($GIR$) is ________ $\\text{mm}$ (round off to one decimal place).",
+    "correct_answer": "120.0",
+    "numerical_range": {
+      "min": 119.5,
+      "max": 120.5
+    },
+    "solution": "Gross irrigation requirement accounts for on-field deep percolation and runoff losses:\n$$GIR = \\frac{NIR}{\\eta_a} = \\frac{90}{0.75} = 120.0\\text{ mm}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_024",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Critical growth stages of major crops",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following pairing of crops with their most critical stages for moisture stress is/are CORRECT?",
+    "options": {
+      "A": "Wheat: Crown Root Initiation (CRI) stage (20–25 days after sowing)",
+      "B": "Rice: Panicle initiation and flowering stage",
+      "C": "Maize: Tasseling and silking stage",
+      "D": "Gram / Chickpea: Continuous flooding during harvest"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. CRI is the single most vital stage in wheat; moisture deficit at CRI permanently slashes tillering and yield (A is correct).\n2. Panicle initiation through flowering is extremely vulnerable in paddy (B is correct).\n3. Tasseling and silking determine kernel set in maize (C is correct).\n4. Chickpea is highly sensitive to waterlogging and never requires flooding during harvest (D is false).",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_025",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Irrigation interval calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A crop root zone has a total available soil water capacity of $AW = 120\\text{ mm}$. The management allowed depletion ($MAD$) is set to $50\\%$. If the average daily crop evapotranspiration rate is $ET_c = 6.0\\text{ mm/day}$, the allowable irrigation interval is ________ $\\text{days}$ (round off to one decimal place).",
+    "correct_answer": "10.0",
+    "numerical_range": {
+      "min": 9.8,
+      "max": 10.2
+    },
+    "solution": "Readily available water ($RAW$) is:\n$$RAW = MAD \\times AW = 0.5 \\times 120 = 60.0\\text{ mm}$$\nIrrigation interval is:\n$$\\text{Interval} = \\frac{RAW}{ET_c} = \\frac{60.0}{6.0} = 10.0\\text{ days}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_026",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Gross irrigation requirement from application efficiency",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The net depth of irrigation water required to replenish the root zone to field capacity is $NIR = 80\\text{ mm}$. If the field water application efficiency is $\\eta_a = 75\\%$, the gross irrigation requirement ($GIR$) is ________ $\\text{mm}$ (round off to one decimal place).",
+    "correct_answer": "106.7",
+    "numerical_range": {
+      "min": 106.2,
+      "max": 107.2
+    },
+    "solution": "Gross irrigation requirement accounts for on-field deep percolation and runoff losses:\n$$GIR = \\frac{NIR}{\\eta_a} = \\frac{80}{0.75} = 106.7\\text{ mm}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_027",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Critical growth stages of major crops",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following pairing of crops with their most critical stages for moisture stress is/are CORRECT?",
+    "options": {
+      "A": "Wheat: Crown Root Initiation (CRI) stage (20–25 days after sowing)",
+      "B": "Rice: Panicle initiation and flowering stage",
+      "C": "Maize: Tasseling and silking stage",
+      "D": "Gram / Chickpea: Continuous flooding during harvest"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. CRI is the single most vital stage in wheat; moisture deficit at CRI permanently slashes tillering and yield (A is correct).\n2. Panicle initiation through flowering is extremely vulnerable in paddy (B is correct).\n3. Tasseling and silking determine kernel set in maize (C is correct).\n4. Chickpea is highly sensitive to waterlogging and never requires flooding during harvest (D is false).",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_028",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Irrigation interval calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A crop root zone has a total available soil water capacity of $AW = 150\\text{ mm}$. The management allowed depletion ($MAD$) is set to $50\\%$. If the average daily crop evapotranspiration rate is $ET_c = 6.0\\text{ mm/day}$, the allowable irrigation interval is ________ $\\text{days}$ (round off to one decimal place).",
+    "correct_answer": "12.5",
+    "numerical_range": {
+      "min": 12.3,
+      "max": 12.7
+    },
+    "solution": "Readily available water ($RAW$) is:\n$$RAW = MAD \\times AW = 0.5 \\times 150 = 75.0\\text{ mm}$$\nIrrigation interval is:\n$$\\text{Interval} = \\frac{RAW}{ET_c} = \\frac{75.0}{6.0} = 12.5\\text{ days}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_029",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Gross irrigation requirement from application efficiency",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The net depth of irrigation water required to replenish the root zone to field capacity is $NIR = 70\\text{ mm}$. If the field water application efficiency is $\\eta_a = 75\\%$, the gross irrigation requirement ($GIR$) is ________ $\\text{mm}$ (round off to one decimal place).",
+    "correct_answer": "93.3",
+    "numerical_range": {
+      "min": 92.8,
+      "max": 93.8
+    },
+    "solution": "Gross irrigation requirement accounts for on-field deep percolation and runoff losses:\n$$GIR = \\frac{NIR}{\\eta_a} = \\frac{70}{0.75} = 93.3\\text{ mm}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_030",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Critical growth stages of major crops",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following pairing of crops with their most critical stages for moisture stress is/are CORRECT?",
+    "options": {
+      "A": "Wheat: Crown Root Initiation (CRI) stage (20–25 days after sowing)",
+      "B": "Rice: Panicle initiation and flowering stage",
+      "C": "Maize: Tasseling and silking stage",
+      "D": "Gram / Chickpea: Continuous flooding during harvest"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. CRI is the single most vital stage in wheat; moisture deficit at CRI permanently slashes tillering and yield (A is correct).\n2. Panicle initiation through flowering is extremely vulnerable in paddy (B is correct).\n3. Tasseling and silking determine kernel set in maize (C is correct).\n4. Chickpea is highly sensitive to waterlogging and never requires flooding during harvest (D is false).",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_031",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Irrigation interval calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A crop root zone has a total available soil water capacity of $AW = 130\\text{ mm}$. The management allowed depletion ($MAD$) is set to $50\\%$. If the average daily crop evapotranspiration rate is $ET_c = 6.0\\text{ mm/day}$, the allowable irrigation interval is ________ $\\text{days}$ (round off to one decimal place).",
+    "correct_answer": "10.8",
+    "numerical_range": {
+      "min": 10.6,
+      "max": 11.0
+    },
+    "solution": "Readily available water ($RAW$) is:\n$$RAW = MAD \\times AW = 0.5 \\times 130 = 65.0\\text{ mm}$$\nIrrigation interval is:\n$$\\text{Interval} = \\frac{RAW}{ET_c} = \\frac{65.0}{6.0} = 10.8\\text{ days}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_032",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Gross irrigation requirement from application efficiency",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The net depth of irrigation water required to replenish the root zone to field capacity is $NIR = 60\\text{ mm}$. If the field water application efficiency is $\\eta_a = 75\\%$, the gross irrigation requirement ($GIR$) is ________ $\\text{mm}$ (round off to one decimal place).",
+    "correct_answer": "80.0",
+    "numerical_range": {
+      "min": 79.5,
+      "max": 80.5
+    },
+    "solution": "Gross irrigation requirement accounts for on-field deep percolation and runoff losses:\n$$GIR = \\frac{NIR}{\\eta_a} = \\frac{60}{0.75} = 80.0\\text{ mm}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_033",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Critical growth stages of major crops",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following pairing of crops with their most critical stages for moisture stress is/are CORRECT?",
+    "options": {
+      "A": "Wheat: Crown Root Initiation (CRI) stage (20–25 days after sowing)",
+      "B": "Rice: Panicle initiation and flowering stage",
+      "C": "Maize: Tasseling and silking stage",
+      "D": "Gram / Chickpea: Continuous flooding during harvest"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. CRI is the single most vital stage in wheat; moisture deficit at CRI permanently slashes tillering and yield (A is correct).\n2. Panicle initiation through flowering is extremely vulnerable in paddy (B is correct).\n3. Tasseling and silking determine kernel set in maize (C is correct).\n4. Chickpea is highly sensitive to waterlogging and never requires flooding during harvest (D is false).",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_034",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Irrigation interval calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A crop root zone has a total available soil water capacity of $AW = 160\\text{ mm}$. The management allowed depletion ($MAD$) is set to $50\\%$. If the average daily crop evapotranspiration rate is $ET_c = 6.0\\text{ mm/day}$, the allowable irrigation interval is ________ $\\text{days}$ (round off to one decimal place).",
+    "correct_answer": "13.3",
+    "numerical_range": {
+      "min": 13.1,
+      "max": 13.5
+    },
+    "solution": "Readily available water ($RAW$) is:\n$$RAW = MAD \\times AW = 0.5 \\times 160 = 80.0\\text{ mm}$$\nIrrigation interval is:\n$$\\text{Interval} = \\frac{RAW}{ET_c} = \\frac{80.0}{6.0} = 13.3\\text{ days}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_035",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Gross irrigation requirement from application efficiency",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The net depth of irrigation water required to replenish the root zone to field capacity is $NIR = 90\\text{ mm}$. If the field water application efficiency is $\\eta_a = 75\\%$, the gross irrigation requirement ($GIR$) is ________ $\\text{mm}$ (round off to one decimal place).",
+    "correct_answer": "120.0",
+    "numerical_range": {
+      "min": 119.5,
+      "max": 120.5
+    },
+    "solution": "Gross irrigation requirement accounts for on-field deep percolation and runoff losses:\n$$GIR = \\frac{NIR}{\\eta_a} = \\frac{90}{0.75} = 120.0\\text{ mm}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_036",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Critical growth stages of major crops",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following pairing of crops with their most critical stages for moisture stress is/are CORRECT?",
+    "options": {
+      "A": "Wheat: Crown Root Initiation (CRI) stage (20–25 days after sowing)",
+      "B": "Rice: Panicle initiation and flowering stage",
+      "C": "Maize: Tasseling and silking stage",
+      "D": "Gram / Chickpea: Continuous flooding during harvest"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. CRI is the single most vital stage in wheat; moisture deficit at CRI permanently slashes tillering and yield (A is correct).\n2. Panicle initiation through flowering is extremely vulnerable in paddy (B is correct).\n3. Tasseling and silking determine kernel set in maize (C is correct).\n4. Chickpea is highly sensitive to waterlogging and never requires flooding during harvest (D is false).",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_037",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Irrigation interval calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A crop root zone has a total available soil water capacity of $AW = 140\\text{ mm}$. The management allowed depletion ($MAD$) is set to $50\\%$. If the average daily crop evapotranspiration rate is $ET_c = 6.0\\text{ mm/day}$, the allowable irrigation interval is ________ $\\text{days}$ (round off to one decimal place).",
+    "correct_answer": "11.7",
+    "numerical_range": {
+      "min": 11.5,
+      "max": 11.9
+    },
+    "solution": "Readily available water ($RAW$) is:\n$$RAW = MAD \\times AW = 0.5 \\times 140 = 70.0\\text{ mm}$$\nIrrigation interval is:\n$$\\text{Interval} = \\frac{RAW}{ET_c} = \\frac{70.0}{6.0} = 11.7\\text{ days}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SCH_038",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Gross irrigation requirement from application efficiency",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The net depth of irrigation water required to replenish the root zone to field capacity is $NIR = 80\\text{ mm}$. If the field water application efficiency is $\\eta_a = 75\\%$, the gross irrigation requirement ($GIR$) is ________ $\\text{mm}$ (round off to one decimal place).",
+    "correct_answer": "106.7",
+    "numerical_range": {
+      "min": 106.2,
+      "max": 107.2
+    },
+    "solution": "Gross irrigation requirement accounts for on-field deep percolation and runoff losses:\n$$GIR = \\frac{NIR}{\\eta_a} = \\frac{80}{0.75} = 106.7\\text{ mm}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_001",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Maximum length of border strip",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A border strip receives a unit inflow rate of $q = 20\\text{ L/(s}\\,\\text{m width)}$. The average final steady infiltration rate of the soil is $f = 54.0\\text{ mm/h}$ ($0.000015\\text{ m/s}$). The maximum theoretical length of border strip that can be covered by this stream is ________ $\\text{m}$ (round off to one decimal place).",
+    "correct_answer": "1333.3",
+    "numerical_range": {
+      "min": 1331.3,
+      "max": 1335.3
+    },
+    "solution": "The maximum theoretical advance length occurs when inflow rate equals infiltration loss over the entire strip:\n$$L_{max} = \\frac{q}{f} = \\frac{0.02}{1.5e-05} = 1333.3\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_002",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Advance and recession curves",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In surface furrow or border irrigation, the opportunity time for infiltration at any point along the run is equal to the difference between:",
+    "options": {
+      "A": "Recession time and advance time at that point",
+      "B": "Total inflow time and cutoff time",
+      "C": "Advance time and lag time",
+      "D": "Ponding depth and depression storage"
+    },
+    "correct_answer": "A",
+    "solution": "Infiltration opportunity time $\\tau(x) = t_{rec}(x) - t_{adv}(x)$, which is the exact duration water remains standing on the soil surface at location $x$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_003",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Four phases of surface irrigation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following sequentially represent the standard chronological phases of a surface irrigation event?",
+    "options": {
+      "A": "Advance phase (water moves from inlet down to field end)",
+      "B": "Storage / Ponding phase (between advance completion and inflow cutoff)",
+      "C": "Depletion phase (from cutoff until water disappears from upstream end)",
+      "D": "Recession phase (drying front moves from upstream to downstream end)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "Surface irrigation hydraulics consists of exactly four chronological stages:\n1. Advance phase\n2. Storage/wetting phase\n3. Depletion phase\n4. Recession phase.\nAll four statements A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_004",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Maximum length of border strip",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A border strip receives a unit inflow rate of $q = 20\\text{ L/(s}\\,\\text{m width)}$. The average final steady infiltration rate of the soil is $f = 54.0\\text{ mm/h}$ ($0.000015\\text{ m/s}$). The maximum theoretical length of border strip that can be covered by this stream is ________ $\\text{m}$ (round off to one decimal place).",
+    "correct_answer": "1333.3",
+    "numerical_range": {
+      "min": 1331.3,
+      "max": 1335.3
+    },
+    "solution": "The maximum theoretical advance length occurs when inflow rate equals infiltration loss over the entire strip:\n$$L_{max} = \\frac{q}{f} = \\frac{0.02}{1.5e-05} = 1333.3\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_005",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Advance and recession curves",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In surface furrow or border irrigation, the opportunity time for infiltration at any point along the run is equal to the difference between:",
+    "options": {
+      "A": "Recession time and advance time at that point",
+      "B": "Total inflow time and cutoff time",
+      "C": "Advance time and lag time",
+      "D": "Ponding depth and depression storage"
+    },
+    "correct_answer": "A",
+    "solution": "Infiltration opportunity time $\\tau(x) = t_{rec}(x) - t_{adv}(x)$, which is the exact duration water remains standing on the soil surface at location $x$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_006",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Four phases of surface irrigation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following sequentially represent the standard chronological phases of a surface irrigation event?",
+    "options": {
+      "A": "Advance phase (water moves from inlet down to field end)",
+      "B": "Storage / Ponding phase (between advance completion and inflow cutoff)",
+      "C": "Depletion phase (from cutoff until water disappears from upstream end)",
+      "D": "Recession phase (drying front moves from upstream to downstream end)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "Surface irrigation hydraulics consists of exactly four chronological stages:\n1. Advance phase\n2. Storage/wetting phase\n3. Depletion phase\n4. Recession phase.\nAll four statements A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_007",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Maximum length of border strip",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A border strip receives a unit inflow rate of $q = 20\\text{ L/(s}\\,\\text{m width)}$. The average final steady infiltration rate of the soil is $f = 54.0\\text{ mm/h}$ ($0.000015\\text{ m/s}$). The maximum theoretical length of border strip that can be covered by this stream is ________ $\\text{m}$ (round off to one decimal place).",
+    "correct_answer": "1333.3",
+    "numerical_range": {
+      "min": 1331.3,
+      "max": 1335.3
+    },
+    "solution": "The maximum theoretical advance length occurs when inflow rate equals infiltration loss over the entire strip:\n$$L_{max} = \\frac{q}{f} = \\frac{0.02}{1.5e-05} = 1333.3\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_008",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Advance and recession curves",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In surface furrow or border irrigation, the opportunity time for infiltration at any point along the run is equal to the difference between:",
+    "options": {
+      "A": "Recession time and advance time at that point",
+      "B": "Total inflow time and cutoff time",
+      "C": "Advance time and lag time",
+      "D": "Ponding depth and depression storage"
+    },
+    "correct_answer": "A",
+    "solution": "Infiltration opportunity time $\\tau(x) = t_{rec}(x) - t_{adv}(x)$, which is the exact duration water remains standing on the soil surface at location $x$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_009",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Four phases of surface irrigation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following sequentially represent the standard chronological phases of a surface irrigation event?",
+    "options": {
+      "A": "Advance phase (water moves from inlet down to field end)",
+      "B": "Storage / Ponding phase (between advance completion and inflow cutoff)",
+      "C": "Depletion phase (from cutoff until water disappears from upstream end)",
+      "D": "Recession phase (drying front moves from upstream to downstream end)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "Surface irrigation hydraulics consists of exactly four chronological stages:\n1. Advance phase\n2. Storage/wetting phase\n3. Depletion phase\n4. Recession phase.\nAll four statements A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_010",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Maximum length of border strip",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A border strip receives a unit inflow rate of $q = 20\\text{ L/(s}\\,\\text{m width)}$. The average final steady infiltration rate of the soil is $f = 54.0\\text{ mm/h}$ ($0.000015\\text{ m/s}$). The maximum theoretical length of border strip that can be covered by this stream is ________ $\\text{m}$ (round off to one decimal place).",
+    "correct_answer": "1333.3",
+    "numerical_range": {
+      "min": 1331.3,
+      "max": 1335.3
+    },
+    "solution": "The maximum theoretical advance length occurs when inflow rate equals infiltration loss over the entire strip:\n$$L_{max} = \\frac{q}{f} = \\frac{0.02}{1.5e-05} = 1333.3\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_011",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Advance and recession curves",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In surface furrow or border irrigation, the opportunity time for infiltration at any point along the run is equal to the difference between:",
+    "options": {
+      "A": "Recession time and advance time at that point",
+      "B": "Total inflow time and cutoff time",
+      "C": "Advance time and lag time",
+      "D": "Ponding depth and depression storage"
+    },
+    "correct_answer": "A",
+    "solution": "Infiltration opportunity time $\\tau(x) = t_{rec}(x) - t_{adv}(x)$, which is the exact duration water remains standing on the soil surface at location $x$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_012",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Four phases of surface irrigation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following sequentially represent the standard chronological phases of a surface irrigation event?",
+    "options": {
+      "A": "Advance phase (water moves from inlet down to field end)",
+      "B": "Storage / Ponding phase (between advance completion and inflow cutoff)",
+      "C": "Depletion phase (from cutoff until water disappears from upstream end)",
+      "D": "Recession phase (drying front moves from upstream to downstream end)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "Surface irrigation hydraulics consists of exactly four chronological stages:\n1. Advance phase\n2. Storage/wetting phase\n3. Depletion phase\n4. Recession phase.\nAll four statements A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_013",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Maximum length of border strip",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A border strip receives a unit inflow rate of $q = 20\\text{ L/(s}\\,\\text{m width)}$. The average final steady infiltration rate of the soil is $f = 54.0\\text{ mm/h}$ ($0.000015\\text{ m/s}$). The maximum theoretical length of border strip that can be covered by this stream is ________ $\\text{m}$ (round off to one decimal place).",
+    "correct_answer": "1333.3",
+    "numerical_range": {
+      "min": 1331.3,
+      "max": 1335.3
+    },
+    "solution": "The maximum theoretical advance length occurs when inflow rate equals infiltration loss over the entire strip:\n$$L_{max} = \\frac{q}{f} = \\frac{0.02}{1.5e-05} = 1333.3\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_014",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Advance and recession curves",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In surface furrow or border irrigation, the opportunity time for infiltration at any point along the run is equal to the difference between:",
+    "options": {
+      "A": "Recession time and advance time at that point",
+      "B": "Total inflow time and cutoff time",
+      "C": "Advance time and lag time",
+      "D": "Ponding depth and depression storage"
+    },
+    "correct_answer": "A",
+    "solution": "Infiltration opportunity time $\\tau(x) = t_{rec}(x) - t_{adv}(x)$, which is the exact duration water remains standing on the soil surface at location $x$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_015",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Four phases of surface irrigation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following sequentially represent the standard chronological phases of a surface irrigation event?",
+    "options": {
+      "A": "Advance phase (water moves from inlet down to field end)",
+      "B": "Storage / Ponding phase (between advance completion and inflow cutoff)",
+      "C": "Depletion phase (from cutoff until water disappears from upstream end)",
+      "D": "Recession phase (drying front moves from upstream to downstream end)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "Surface irrigation hydraulics consists of exactly four chronological stages:\n1. Advance phase\n2. Storage/wetting phase\n3. Depletion phase\n4. Recession phase.\nAll four statements A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_016",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Maximum length of border strip",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A border strip receives a unit inflow rate of $q = 20\\text{ L/(s}\\,\\text{m width)}$. The average final steady infiltration rate of the soil is $f = 54.0\\text{ mm/h}$ ($0.000015\\text{ m/s}$). The maximum theoretical length of border strip that can be covered by this stream is ________ $\\text{m}$ (round off to one decimal place).",
+    "correct_answer": "1333.3",
+    "numerical_range": {
+      "min": 1331.3,
+      "max": 1335.3
+    },
+    "solution": "The maximum theoretical advance length occurs when inflow rate equals infiltration loss over the entire strip:\n$$L_{max} = \\frac{q}{f} = \\frac{0.02}{1.5e-05} = 1333.3\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_017",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Advance and recession curves",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In surface furrow or border irrigation, the opportunity time for infiltration at any point along the run is equal to the difference between:",
+    "options": {
+      "A": "Recession time and advance time at that point",
+      "B": "Total inflow time and cutoff time",
+      "C": "Advance time and lag time",
+      "D": "Ponding depth and depression storage"
+    },
+    "correct_answer": "A",
+    "solution": "Infiltration opportunity time $\\tau(x) = t_{rec}(x) - t_{adv}(x)$, which is the exact duration water remains standing on the soil surface at location $x$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_018",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Four phases of surface irrigation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following sequentially represent the standard chronological phases of a surface irrigation event?",
+    "options": {
+      "A": "Advance phase (water moves from inlet down to field end)",
+      "B": "Storage / Ponding phase (between advance completion and inflow cutoff)",
+      "C": "Depletion phase (from cutoff until water disappears from upstream end)",
+      "D": "Recession phase (drying front moves from upstream to downstream end)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "Surface irrigation hydraulics consists of exactly four chronological stages:\n1. Advance phase\n2. Storage/wetting phase\n3. Depletion phase\n4. Recession phase.\nAll four statements A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_019",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Maximum length of border strip",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A border strip receives a unit inflow rate of $q = 20\\text{ L/(s}\\,\\text{m width)}$. The average final steady infiltration rate of the soil is $f = 54.0\\text{ mm/h}$ ($0.000015\\text{ m/s}$). The maximum theoretical length of border strip that can be covered by this stream is ________ $\\text{m}$ (round off to one decimal place).",
+    "correct_answer": "1333.3",
+    "numerical_range": {
+      "min": 1331.3,
+      "max": 1335.3
+    },
+    "solution": "The maximum theoretical advance length occurs when inflow rate equals infiltration loss over the entire strip:\n$$L_{max} = \\frac{q}{f} = \\frac{0.02}{1.5e-05} = 1333.3\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_020",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Advance and recession curves",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In surface furrow or border irrigation, the opportunity time for infiltration at any point along the run is equal to the difference between:",
+    "options": {
+      "A": "Recession time and advance time at that point",
+      "B": "Total inflow time and cutoff time",
+      "C": "Advance time and lag time",
+      "D": "Ponding depth and depression storage"
+    },
+    "correct_answer": "A",
+    "solution": "Infiltration opportunity time $\\tau(x) = t_{rec}(x) - t_{adv}(x)$, which is the exact duration water remains standing on the soil surface at location $x$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_021",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Four phases of surface irrigation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following sequentially represent the standard chronological phases of a surface irrigation event?",
+    "options": {
+      "A": "Advance phase (water moves from inlet down to field end)",
+      "B": "Storage / Ponding phase (between advance completion and inflow cutoff)",
+      "C": "Depletion phase (from cutoff until water disappears from upstream end)",
+      "D": "Recession phase (drying front moves from upstream to downstream end)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "Surface irrigation hydraulics consists of exactly four chronological stages:\n1. Advance phase\n2. Storage/wetting phase\n3. Depletion phase\n4. Recession phase.\nAll four statements A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_022",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Maximum length of border strip",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A border strip receives a unit inflow rate of $q = 20\\text{ L/(s}\\,\\text{m width)}$. The average final steady infiltration rate of the soil is $f = 54.0\\text{ mm/h}$ ($0.000015\\text{ m/s}$). The maximum theoretical length of border strip that can be covered by this stream is ________ $\\text{m}$ (round off to one decimal place).",
+    "correct_answer": "1333.3",
+    "numerical_range": {
+      "min": 1331.3,
+      "max": 1335.3
+    },
+    "solution": "The maximum theoretical advance length occurs when inflow rate equals infiltration loss over the entire strip:\n$$L_{max} = \\frac{q}{f} = \\frac{0.02}{1.5e-05} = 1333.3\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_023",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Advance and recession curves",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In surface furrow or border irrigation, the opportunity time for infiltration at any point along the run is equal to the difference between:",
+    "options": {
+      "A": "Recession time and advance time at that point",
+      "B": "Total inflow time and cutoff time",
+      "C": "Advance time and lag time",
+      "D": "Ponding depth and depression storage"
+    },
+    "correct_answer": "A",
+    "solution": "Infiltration opportunity time $\\tau(x) = t_{rec}(x) - t_{adv}(x)$, which is the exact duration water remains standing on the soil surface at location $x$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_024",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Four phases of surface irrigation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following sequentially represent the standard chronological phases of a surface irrigation event?",
+    "options": {
+      "A": "Advance phase (water moves from inlet down to field end)",
+      "B": "Storage / Ponding phase (between advance completion and inflow cutoff)",
+      "C": "Depletion phase (from cutoff until water disappears from upstream end)",
+      "D": "Recession phase (drying front moves from upstream to downstream end)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "Surface irrigation hydraulics consists of exactly four chronological stages:\n1. Advance phase\n2. Storage/wetting phase\n3. Depletion phase\n4. Recession phase.\nAll four statements A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_025",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Maximum length of border strip",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A border strip receives a unit inflow rate of $q = 20\\text{ L/(s}\\,\\text{m width)}$. The average final steady infiltration rate of the soil is $f = 54.0\\text{ mm/h}$ ($0.000015\\text{ m/s}$). The maximum theoretical length of border strip that can be covered by this stream is ________ $\\text{m}$ (round off to one decimal place).",
+    "correct_answer": "1333.3",
+    "numerical_range": {
+      "min": 1331.3,
+      "max": 1335.3
+    },
+    "solution": "The maximum theoretical advance length occurs when inflow rate equals infiltration loss over the entire strip:\n$$L_{max} = \\frac{q}{f} = \\frac{0.02}{1.5e-05} = 1333.3\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_026",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Advance and recession curves",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In surface furrow or border irrigation, the opportunity time for infiltration at any point along the run is equal to the difference between:",
+    "options": {
+      "A": "Recession time and advance time at that point",
+      "B": "Total inflow time and cutoff time",
+      "C": "Advance time and lag time",
+      "D": "Ponding depth and depression storage"
+    },
+    "correct_answer": "A",
+    "solution": "Infiltration opportunity time $\\tau(x) = t_{rec}(x) - t_{adv}(x)$, which is the exact duration water remains standing on the soil surface at location $x$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_027",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Four phases of surface irrigation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following sequentially represent the standard chronological phases of a surface irrigation event?",
+    "options": {
+      "A": "Advance phase (water moves from inlet down to field end)",
+      "B": "Storage / Ponding phase (between advance completion and inflow cutoff)",
+      "C": "Depletion phase (from cutoff until water disappears from upstream end)",
+      "D": "Recession phase (drying front moves from upstream to downstream end)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "Surface irrigation hydraulics consists of exactly four chronological stages:\n1. Advance phase\n2. Storage/wetting phase\n3. Depletion phase\n4. Recession phase.\nAll four statements A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_028",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Maximum length of border strip",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A border strip receives a unit inflow rate of $q = 20\\text{ L/(s}\\,\\text{m width)}$. The average final steady infiltration rate of the soil is $f = 54.0\\text{ mm/h}$ ($0.000015\\text{ m/s}$). The maximum theoretical length of border strip that can be covered by this stream is ________ $\\text{m}$ (round off to one decimal place).",
+    "correct_answer": "1333.3",
+    "numerical_range": {
+      "min": 1331.3,
+      "max": 1335.3
+    },
+    "solution": "The maximum theoretical advance length occurs when inflow rate equals infiltration loss over the entire strip:\n$$L_{max} = \\frac{q}{f} = \\frac{0.02}{1.5e-05} = 1333.3\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_029",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Advance and recession curves",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In surface furrow or border irrigation, the opportunity time for infiltration at any point along the run is equal to the difference between:",
+    "options": {
+      "A": "Recession time and advance time at that point",
+      "B": "Total inflow time and cutoff time",
+      "C": "Advance time and lag time",
+      "D": "Ponding depth and depression storage"
+    },
+    "correct_answer": "A",
+    "solution": "Infiltration opportunity time $\\tau(x) = t_{rec}(x) - t_{adv}(x)$, which is the exact duration water remains standing on the soil surface at location $x$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_030",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Four phases of surface irrigation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following sequentially represent the standard chronological phases of a surface irrigation event?",
+    "options": {
+      "A": "Advance phase (water moves from inlet down to field end)",
+      "B": "Storage / Ponding phase (between advance completion and inflow cutoff)",
+      "C": "Depletion phase (from cutoff until water disappears from upstream end)",
+      "D": "Recession phase (drying front moves from upstream to downstream end)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "Surface irrigation hydraulics consists of exactly four chronological stages:\n1. Advance phase\n2. Storage/wetting phase\n3. Depletion phase\n4. Recession phase.\nAll four statements A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_031",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Maximum length of border strip",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A border strip receives a unit inflow rate of $q = 20\\text{ L/(s}\\,\\text{m width)}$. The average final steady infiltration rate of the soil is $f = 54.0\\text{ mm/h}$ ($0.000015\\text{ m/s}$). The maximum theoretical length of border strip that can be covered by this stream is ________ $\\text{m}$ (round off to one decimal place).",
+    "correct_answer": "1333.3",
+    "numerical_range": {
+      "min": 1331.3,
+      "max": 1335.3
+    },
+    "solution": "The maximum theoretical advance length occurs when inflow rate equals infiltration loss over the entire strip:\n$$L_{max} = \\frac{q}{f} = \\frac{0.02}{1.5e-05} = 1333.3\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_032",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Advance and recession curves",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In surface furrow or border irrigation, the opportunity time for infiltration at any point along the run is equal to the difference between:",
+    "options": {
+      "A": "Recession time and advance time at that point",
+      "B": "Total inflow time and cutoff time",
+      "C": "Advance time and lag time",
+      "D": "Ponding depth and depression storage"
+    },
+    "correct_answer": "A",
+    "solution": "Infiltration opportunity time $\\tau(x) = t_{rec}(x) - t_{adv}(x)$, which is the exact duration water remains standing on the soil surface at location $x$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_033",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Four phases of surface irrigation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following sequentially represent the standard chronological phases of a surface irrigation event?",
+    "options": {
+      "A": "Advance phase (water moves from inlet down to field end)",
+      "B": "Storage / Ponding phase (between advance completion and inflow cutoff)",
+      "C": "Depletion phase (from cutoff until water disappears from upstream end)",
+      "D": "Recession phase (drying front moves from upstream to downstream end)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "Surface irrigation hydraulics consists of exactly four chronological stages:\n1. Advance phase\n2. Storage/wetting phase\n3. Depletion phase\n4. Recession phase.\nAll four statements A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_034",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Maximum length of border strip",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A border strip receives a unit inflow rate of $q = 20\\text{ L/(s}\\,\\text{m width)}$. The average final steady infiltration rate of the soil is $f = 54.0\\text{ mm/h}$ ($0.000015\\text{ m/s}$). The maximum theoretical length of border strip that can be covered by this stream is ________ $\\text{m}$ (round off to one decimal place).",
+    "correct_answer": "1333.3",
+    "numerical_range": {
+      "min": 1331.3,
+      "max": 1335.3
+    },
+    "solution": "The maximum theoretical advance length occurs when inflow rate equals infiltration loss over the entire strip:\n$$L_{max} = \\frac{q}{f} = \\frac{0.02}{1.5e-05} = 1333.3\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_035",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Advance and recession curves",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In surface furrow or border irrigation, the opportunity time for infiltration at any point along the run is equal to the difference between:",
+    "options": {
+      "A": "Recession time and advance time at that point",
+      "B": "Total inflow time and cutoff time",
+      "C": "Advance time and lag time",
+      "D": "Ponding depth and depression storage"
+    },
+    "correct_answer": "A",
+    "solution": "Infiltration opportunity time $\\tau(x) = t_{rec}(x) - t_{adv}(x)$, which is the exact duration water remains standing on the soil surface at location $x$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_036",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Four phases of surface irrigation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following sequentially represent the standard chronological phases of a surface irrigation event?",
+    "options": {
+      "A": "Advance phase (water moves from inlet down to field end)",
+      "B": "Storage / Ponding phase (between advance completion and inflow cutoff)",
+      "C": "Depletion phase (from cutoff until water disappears from upstream end)",
+      "D": "Recession phase (drying front moves from upstream to downstream end)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "Surface irrigation hydraulics consists of exactly four chronological stages:\n1. Advance phase\n2. Storage/wetting phase\n3. Depletion phase\n4. Recession phase.\nAll four statements A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_037",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Maximum length of border strip",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A border strip receives a unit inflow rate of $q = 20\\text{ L/(s}\\,\\text{m width)}$. The average final steady infiltration rate of the soil is $f = 54.0\\text{ mm/h}$ ($0.000015\\text{ m/s}$). The maximum theoretical length of border strip that can be covered by this stream is ________ $\\text{m}$ (round off to one decimal place).",
+    "correct_answer": "1333.3",
+    "numerical_range": {
+      "min": 1331.3,
+      "max": 1335.3
+    },
+    "solution": "The maximum theoretical advance length occurs when inflow rate equals infiltration loss over the entire strip:\n$$L_{max} = \\frac{q}{f} = \\frac{0.02}{1.5e-05} = 1333.3\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SRF_038",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Advance and recession curves",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In surface furrow or border irrigation, the opportunity time for infiltration at any point along the run is equal to the difference between:",
+    "options": {
+      "A": "Recession time and advance time at that point",
+      "B": "Total inflow time and cutoff time",
+      "C": "Advance time and lag time",
+      "D": "Ponding depth and depression storage"
+    },
+    "correct_answer": "A",
+    "solution": "Infiltration opportunity time $\\tau(x) = t_{rec}(x) - t_{adv}(x)$, which is the exact duration water remains standing on the soil surface at location $x$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_001",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler precipitation application rate",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A sprinkler system operates with sprinklers spaced at $S_m = 12\\text{ m}$ along the lateral and laterals spaced at $S_l = 12\\text{ m}$ along the main line. Each sprinkler discharges $q = 0.60\\text{ L/s}$. The average application rate of the system is ________ $\\text{mm/h}$ (round off to two decimal places).",
+    "correct_answer": "15.00",
+    "numerical_range": {
+      "min": 14.9,
+      "max": 15.1
+    },
+    "solution": "The average application rate is calculated from the discharge and coverage area:\n$$I = \\frac{q \\times 3600}{S_l \\times S_m}$$\nwhere $q$ is in $\\text{L/s}$, $S_l, S_m$ are in $\\text{m}$, giving $I$ in $\\text{mm/h}$:\n$$I = \\frac{0.60 \\times 3600}{12 \\times 12} = \\frac{2160.0}{144} = 15.00\\text{ mm/h}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_002",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Christiansen Uniformity Coefficient formula",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Christiansen's Uniformity Coefficient ($CU$) for a catch-can sprinkler evaluation test with $n$ observations $X_i$ and mean $\\bar{X}$ is defined as:",
+    "options": {
+      "A": "$CU = 100 \\left( 1 - \\frac{\\sum |X_i - \\bar{X}|}{n \\bar{X}} \\right)$",
+      "B": "$CU = 100 \\left( 1 - \\frac{\\sum (X_i - \\bar{X})^2}{n \\bar{X}^2} \\right)$",
+      "C": "$CU = \\frac{\\text{Minimum Catch}}{\\bar{X}} \\times 100$",
+      "D": "$CU = 100 \\left( 1 - \\frac{\\bar{X}}{\\sum X_i} \\right)$"
+    },
+    "correct_answer": "A",
+    "solution": "Christiansen (1942) defined the uniformity coefficient based on mean absolute deviation:\n$$CU = 100 \\left( 1 - \\frac{\\sum_{i=1}^n |X_i - \\bar{X}|}{n \\bar{X}} \\right)$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_003",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler allowable pressure variation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In the hydraulic design of sprinkler laterals, which of the following criteria is/are standard engineering practice?",
+    "options": {
+      "A": "Total pressure variation along a lateral should not exceed $20\\%$ of the nominal operating pressure",
+      "B": "Discharge variation between the first and last sprinkler on a lateral should not exceed $10\\%$",
+      "C": "The Christiansen $F$-factor accounts for multi-outlet friction head loss reduction compared to pipe flow with total discharge at inlet",
+      "D": "Application rate must strictly exceed the steady infiltration rate of the soil to guarantee surface ponding"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Pressure variation $\\Delta P \\le 20\\%$ of design pressure ensures discharge variation within $\\Delta q \\le 10\\%$ since $q \\propto P^{0.5}$ (A and B are true).\n2. Multi-outlet friction factor $F$ ($F \\approx 0.35$ for large $N$) reduces total friction loss compared to plain pipe (C is true).\n3. Application rate must NEVER exceed soil infiltration capacity to prevent surface runoff and erosion (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_004",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler precipitation application rate",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A sprinkler system operates with sprinklers spaced at $S_m = 12\\text{ m}$ along the lateral and laterals spaced at $S_l = 12\\text{ m}$ along the main line. Each sprinkler discharges $q = 0.90\\text{ L/s}$. The average application rate of the system is ________ $\\text{mm/h}$ (round off to two decimal places).",
+    "correct_answer": "22.50",
+    "numerical_range": {
+      "min": 22.4,
+      "max": 22.6
+    },
+    "solution": "The average application rate is calculated from the discharge and coverage area:\n$$I = \\frac{q \\times 3600}{S_l \\times S_m}$$\nwhere $q$ is in $\\text{L/s}$, $S_l, S_m$ are in $\\text{m}$, giving $I$ in $\\text{mm/h}$:\n$$I = \\frac{0.90 \\times 3600}{12 \\times 12} = \\frac{3240.0}{144} = 22.50\\text{ mm/h}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_005",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Christiansen Uniformity Coefficient formula",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Christiansen's Uniformity Coefficient ($CU$) for a catch-can sprinkler evaluation test with $n$ observations $X_i$ and mean $\\bar{X}$ is defined as:",
+    "options": {
+      "A": "$CU = 100 \\left( 1 - \\frac{\\sum |X_i - \\bar{X}|}{n \\bar{X}} \\right)$",
+      "B": "$CU = 100 \\left( 1 - \\frac{\\sum (X_i - \\bar{X})^2}{n \\bar{X}^2} \\right)$",
+      "C": "$CU = \\frac{\\text{Minimum Catch}}{\\bar{X}} \\times 100$",
+      "D": "$CU = 100 \\left( 1 - \\frac{\\bar{X}}{\\sum X_i} \\right)$"
+    },
+    "correct_answer": "A",
+    "solution": "Christiansen (1942) defined the uniformity coefficient based on mean absolute deviation:\n$$CU = 100 \\left( 1 - \\frac{\\sum_{i=1}^n |X_i - \\bar{X}|}{n \\bar{X}} \\right)$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_006",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler allowable pressure variation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In the hydraulic design of sprinkler laterals, which of the following criteria is/are standard engineering practice?",
+    "options": {
+      "A": "Total pressure variation along a lateral should not exceed $20\\%$ of the nominal operating pressure",
+      "B": "Discharge variation between the first and last sprinkler on a lateral should not exceed $10\\%$",
+      "C": "The Christiansen $F$-factor accounts for multi-outlet friction head loss reduction compared to pipe flow with total discharge at inlet",
+      "D": "Application rate must strictly exceed the steady infiltration rate of the soil to guarantee surface ponding"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Pressure variation $\\Delta P \\le 20\\%$ of design pressure ensures discharge variation within $\\Delta q \\le 10\\%$ since $q \\propto P^{0.5}$ (A and B are true).\n2. Multi-outlet friction factor $F$ ($F \\approx 0.35$ for large $N$) reduces total friction loss compared to plain pipe (C is true).\n3. Application rate must NEVER exceed soil infiltration capacity to prevent surface runoff and erosion (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_007",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler precipitation application rate",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A sprinkler system operates with sprinklers spaced at $S_m = 12\\text{ m}$ along the lateral and laterals spaced at $S_l = 12\\text{ m}$ along the main line. Each sprinkler discharges $q = 0.70\\text{ L/s}$. The average application rate of the system is ________ $\\text{mm/h}$ (round off to two decimal places).",
+    "correct_answer": "17.50",
+    "numerical_range": {
+      "min": 17.4,
+      "max": 17.6
+    },
+    "solution": "The average application rate is calculated from the discharge and coverage area:\n$$I = \\frac{q \\times 3600}{S_l \\times S_m}$$\nwhere $q$ is in $\\text{L/s}$, $S_l, S_m$ are in $\\text{m}$, giving $I$ in $\\text{mm/h}$:\n$$I = \\frac{0.70 \\times 3600}{12 \\times 12} = \\frac{2520.0}{144} = 17.50\\text{ mm/h}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_008",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Christiansen Uniformity Coefficient formula",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Christiansen's Uniformity Coefficient ($CU$) for a catch-can sprinkler evaluation test with $n$ observations $X_i$ and mean $\\bar{X}$ is defined as:",
+    "options": {
+      "A": "$CU = 100 \\left( 1 - \\frac{\\sum |X_i - \\bar{X}|}{n \\bar{X}} \\right)$",
+      "B": "$CU = 100 \\left( 1 - \\frac{\\sum (X_i - \\bar{X})^2}{n \\bar{X}^2} \\right)$",
+      "C": "$CU = \\frac{\\text{Minimum Catch}}{\\bar{X}} \\times 100$",
+      "D": "$CU = 100 \\left( 1 - \\frac{\\bar{X}}{\\sum X_i} \\right)$"
+    },
+    "correct_answer": "A",
+    "solution": "Christiansen (1942) defined the uniformity coefficient based on mean absolute deviation:\n$$CU = 100 \\left( 1 - \\frac{\\sum_{i=1}^n |X_i - \\bar{X}|}{n \\bar{X}} \\right)$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_009",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler allowable pressure variation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In the hydraulic design of sprinkler laterals, which of the following criteria is/are standard engineering practice?",
+    "options": {
+      "A": "Total pressure variation along a lateral should not exceed $20\\%$ of the nominal operating pressure",
+      "B": "Discharge variation between the first and last sprinkler on a lateral should not exceed $10\\%$",
+      "C": "The Christiansen $F$-factor accounts for multi-outlet friction head loss reduction compared to pipe flow with total discharge at inlet",
+      "D": "Application rate must strictly exceed the steady infiltration rate of the soil to guarantee surface ponding"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Pressure variation $\\Delta P \\le 20\\%$ of design pressure ensures discharge variation within $\\Delta q \\le 10\\%$ since $q \\propto P^{0.5}$ (A and B are true).\n2. Multi-outlet friction factor $F$ ($F \\approx 0.35$ for large $N$) reduces total friction loss compared to plain pipe (C is true).\n3. Application rate must NEVER exceed soil infiltration capacity to prevent surface runoff and erosion (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_010",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler precipitation application rate",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A sprinkler system operates with sprinklers spaced at $S_m = 12\\text{ m}$ along the lateral and laterals spaced at $S_l = 12\\text{ m}$ along the main line. Each sprinkler discharges $q = 0.50\\text{ L/s}$. The average application rate of the system is ________ $\\text{mm/h}$ (round off to two decimal places).",
+    "correct_answer": "12.50",
+    "numerical_range": {
+      "min": 12.4,
+      "max": 12.6
+    },
+    "solution": "The average application rate is calculated from the discharge and coverage area:\n$$I = \\frac{q \\times 3600}{S_l \\times S_m}$$\nwhere $q$ is in $\\text{L/s}$, $S_l, S_m$ are in $\\text{m}$, giving $I$ in $\\text{mm/h}$:\n$$I = \\frac{0.50 \\times 3600}{12 \\times 12} = \\frac{1800.0}{144} = 12.50\\text{ mm/h}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_011",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Christiansen Uniformity Coefficient formula",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Christiansen's Uniformity Coefficient ($CU$) for a catch-can sprinkler evaluation test with $n$ observations $X_i$ and mean $\\bar{X}$ is defined as:",
+    "options": {
+      "A": "$CU = 100 \\left( 1 - \\frac{\\sum |X_i - \\bar{X}|}{n \\bar{X}} \\right)$",
+      "B": "$CU = 100 \\left( 1 - \\frac{\\sum (X_i - \\bar{X})^2}{n \\bar{X}^2} \\right)$",
+      "C": "$CU = \\frac{\\text{Minimum Catch}}{\\bar{X}} \\times 100$",
+      "D": "$CU = 100 \\left( 1 - \\frac{\\bar{X}}{\\sum X_i} \\right)$"
+    },
+    "correct_answer": "A",
+    "solution": "Christiansen (1942) defined the uniformity coefficient based on mean absolute deviation:\n$$CU = 100 \\left( 1 - \\frac{\\sum_{i=1}^n |X_i - \\bar{X}|}{n \\bar{X}} \\right)$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_012",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler allowable pressure variation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In the hydraulic design of sprinkler laterals, which of the following criteria is/are standard engineering practice?",
+    "options": {
+      "A": "Total pressure variation along a lateral should not exceed $20\\%$ of the nominal operating pressure",
+      "B": "Discharge variation between the first and last sprinkler on a lateral should not exceed $10\\%$",
+      "C": "The Christiansen $F$-factor accounts for multi-outlet friction head loss reduction compared to pipe flow with total discharge at inlet",
+      "D": "Application rate must strictly exceed the steady infiltration rate of the soil to guarantee surface ponding"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Pressure variation $\\Delta P \\le 20\\%$ of design pressure ensures discharge variation within $\\Delta q \\le 10\\%$ since $q \\propto P^{0.5}$ (A and B are true).\n2. Multi-outlet friction factor $F$ ($F \\approx 0.35$ for large $N$) reduces total friction loss compared to plain pipe (C is true).\n3. Application rate must NEVER exceed soil infiltration capacity to prevent surface runoff and erosion (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_013",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler precipitation application rate",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A sprinkler system operates with sprinklers spaced at $S_m = 12\\text{ m}$ along the lateral and laterals spaced at $S_l = 12\\text{ m}$ along the main line. Each sprinkler discharges $q = 0.80\\text{ L/s}$. The average application rate of the system is ________ $\\text{mm/h}$ (round off to two decimal places).",
+    "correct_answer": "20.00",
+    "numerical_range": {
+      "min": 19.9,
+      "max": 20.1
+    },
+    "solution": "The average application rate is calculated from the discharge and coverage area:\n$$I = \\frac{q \\times 3600}{S_l \\times S_m}$$\nwhere $q$ is in $\\text{L/s}$, $S_l, S_m$ are in $\\text{m}$, giving $I$ in $\\text{mm/h}$:\n$$I = \\frac{0.80 \\times 3600}{12 \\times 12} = \\frac{2880.0}{144} = 20.00\\text{ mm/h}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_014",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Christiansen Uniformity Coefficient formula",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Christiansen's Uniformity Coefficient ($CU$) for a catch-can sprinkler evaluation test with $n$ observations $X_i$ and mean $\\bar{X}$ is defined as:",
+    "options": {
+      "A": "$CU = 100 \\left( 1 - \\frac{\\sum |X_i - \\bar{X}|}{n \\bar{X}} \\right)$",
+      "B": "$CU = 100 \\left( 1 - \\frac{\\sum (X_i - \\bar{X})^2}{n \\bar{X}^2} \\right)$",
+      "C": "$CU = \\frac{\\text{Minimum Catch}}{\\bar{X}} \\times 100$",
+      "D": "$CU = 100 \\left( 1 - \\frac{\\bar{X}}{\\sum X_i} \\right)$"
+    },
+    "correct_answer": "A",
+    "solution": "Christiansen (1942) defined the uniformity coefficient based on mean absolute deviation:\n$$CU = 100 \\left( 1 - \\frac{\\sum_{i=1}^n |X_i - \\bar{X}|}{n \\bar{X}} \\right)$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_015",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler allowable pressure variation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In the hydraulic design of sprinkler laterals, which of the following criteria is/are standard engineering practice?",
+    "options": {
+      "A": "Total pressure variation along a lateral should not exceed $20\\%$ of the nominal operating pressure",
+      "B": "Discharge variation between the first and last sprinkler on a lateral should not exceed $10\\%$",
+      "C": "The Christiansen $F$-factor accounts for multi-outlet friction head loss reduction compared to pipe flow with total discharge at inlet",
+      "D": "Application rate must strictly exceed the steady infiltration rate of the soil to guarantee surface ponding"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Pressure variation $\\Delta P \\le 20\\%$ of design pressure ensures discharge variation within $\\Delta q \\le 10\\%$ since $q \\propto P^{0.5}$ (A and B are true).\n2. Multi-outlet friction factor $F$ ($F \\approx 0.35$ for large $N$) reduces total friction loss compared to plain pipe (C is true).\n3. Application rate must NEVER exceed soil infiltration capacity to prevent surface runoff and erosion (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_016",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler precipitation application rate",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A sprinkler system operates with sprinklers spaced at $S_m = 12\\text{ m}$ along the lateral and laterals spaced at $S_l = 12\\text{ m}$ along the main line. Each sprinkler discharges $q = 0.60\\text{ L/s}$. The average application rate of the system is ________ $\\text{mm/h}$ (round off to two decimal places).",
+    "correct_answer": "15.00",
+    "numerical_range": {
+      "min": 14.9,
+      "max": 15.1
+    },
+    "solution": "The average application rate is calculated from the discharge and coverage area:\n$$I = \\frac{q \\times 3600}{S_l \\times S_m}$$\nwhere $q$ is in $\\text{L/s}$, $S_l, S_m$ are in $\\text{m}$, giving $I$ in $\\text{mm/h}$:\n$$I = \\frac{0.60 \\times 3600}{12 \\times 12} = \\frac{2160.0}{144} = 15.00\\text{ mm/h}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_017",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Christiansen Uniformity Coefficient formula",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Christiansen's Uniformity Coefficient ($CU$) for a catch-can sprinkler evaluation test with $n$ observations $X_i$ and mean $\\bar{X}$ is defined as:",
+    "options": {
+      "A": "$CU = 100 \\left( 1 - \\frac{\\sum |X_i - \\bar{X}|}{n \\bar{X}} \\right)$",
+      "B": "$CU = 100 \\left( 1 - \\frac{\\sum (X_i - \\bar{X})^2}{n \\bar{X}^2} \\right)$",
+      "C": "$CU = \\frac{\\text{Minimum Catch}}{\\bar{X}} \\times 100$",
+      "D": "$CU = 100 \\left( 1 - \\frac{\\bar{X}}{\\sum X_i} \\right)$"
+    },
+    "correct_answer": "A",
+    "solution": "Christiansen (1942) defined the uniformity coefficient based on mean absolute deviation:\n$$CU = 100 \\left( 1 - \\frac{\\sum_{i=1}^n |X_i - \\bar{X}|}{n \\bar{X}} \\right)$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_018",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler allowable pressure variation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In the hydraulic design of sprinkler laterals, which of the following criteria is/are standard engineering practice?",
+    "options": {
+      "A": "Total pressure variation along a lateral should not exceed $20\\%$ of the nominal operating pressure",
+      "B": "Discharge variation between the first and last sprinkler on a lateral should not exceed $10\\%$",
+      "C": "The Christiansen $F$-factor accounts for multi-outlet friction head loss reduction compared to pipe flow with total discharge at inlet",
+      "D": "Application rate must strictly exceed the steady infiltration rate of the soil to guarantee surface ponding"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Pressure variation $\\Delta P \\le 20\\%$ of design pressure ensures discharge variation within $\\Delta q \\le 10\\%$ since $q \\propto P^{0.5}$ (A and B are true).\n2. Multi-outlet friction factor $F$ ($F \\approx 0.35$ for large $N$) reduces total friction loss compared to plain pipe (C is true).\n3. Application rate must NEVER exceed soil infiltration capacity to prevent surface runoff and erosion (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_019",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler precipitation application rate",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A sprinkler system operates with sprinklers spaced at $S_m = 12\\text{ m}$ along the lateral and laterals spaced at $S_l = 12\\text{ m}$ along the main line. Each sprinkler discharges $q = 0.90\\text{ L/s}$. The average application rate of the system is ________ $\\text{mm/h}$ (round off to two decimal places).",
+    "correct_answer": "22.50",
+    "numerical_range": {
+      "min": 22.4,
+      "max": 22.6
+    },
+    "solution": "The average application rate is calculated from the discharge and coverage area:\n$$I = \\frac{q \\times 3600}{S_l \\times S_m}$$\nwhere $q$ is in $\\text{L/s}$, $S_l, S_m$ are in $\\text{m}$, giving $I$ in $\\text{mm/h}$:\n$$I = \\frac{0.90 \\times 3600}{12 \\times 12} = \\frac{3240.0}{144} = 22.50\\text{ mm/h}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_020",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Christiansen Uniformity Coefficient formula",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Christiansen's Uniformity Coefficient ($CU$) for a catch-can sprinkler evaluation test with $n$ observations $X_i$ and mean $\\bar{X}$ is defined as:",
+    "options": {
+      "A": "$CU = 100 \\left( 1 - \\frac{\\sum |X_i - \\bar{X}|}{n \\bar{X}} \\right)$",
+      "B": "$CU = 100 \\left( 1 - \\frac{\\sum (X_i - \\bar{X})^2}{n \\bar{X}^2} \\right)$",
+      "C": "$CU = \\frac{\\text{Minimum Catch}}{\\bar{X}} \\times 100$",
+      "D": "$CU = 100 \\left( 1 - \\frac{\\bar{X}}{\\sum X_i} \\right)$"
+    },
+    "correct_answer": "A",
+    "solution": "Christiansen (1942) defined the uniformity coefficient based on mean absolute deviation:\n$$CU = 100 \\left( 1 - \\frac{\\sum_{i=1}^n |X_i - \\bar{X}|}{n \\bar{X}} \\right)$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_021",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler allowable pressure variation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In the hydraulic design of sprinkler laterals, which of the following criteria is/are standard engineering practice?",
+    "options": {
+      "A": "Total pressure variation along a lateral should not exceed $20\\%$ of the nominal operating pressure",
+      "B": "Discharge variation between the first and last sprinkler on a lateral should not exceed $10\\%$",
+      "C": "The Christiansen $F$-factor accounts for multi-outlet friction head loss reduction compared to pipe flow with total discharge at inlet",
+      "D": "Application rate must strictly exceed the steady infiltration rate of the soil to guarantee surface ponding"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Pressure variation $\\Delta P \\le 20\\%$ of design pressure ensures discharge variation within $\\Delta q \\le 10\\%$ since $q \\propto P^{0.5}$ (A and B are true).\n2. Multi-outlet friction factor $F$ ($F \\approx 0.35$ for large $N$) reduces total friction loss compared to plain pipe (C is true).\n3. Application rate must NEVER exceed soil infiltration capacity to prevent surface runoff and erosion (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_022",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler precipitation application rate",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A sprinkler system operates with sprinklers spaced at $S_m = 12\\text{ m}$ along the lateral and laterals spaced at $S_l = 12\\text{ m}$ along the main line. Each sprinkler discharges $q = 0.70\\text{ L/s}$. The average application rate of the system is ________ $\\text{mm/h}$ (round off to two decimal places).",
+    "correct_answer": "17.50",
+    "numerical_range": {
+      "min": 17.4,
+      "max": 17.6
+    },
+    "solution": "The average application rate is calculated from the discharge and coverage area:\n$$I = \\frac{q \\times 3600}{S_l \\times S_m}$$\nwhere $q$ is in $\\text{L/s}$, $S_l, S_m$ are in $\\text{m}$, giving $I$ in $\\text{mm/h}$:\n$$I = \\frac{0.70 \\times 3600}{12 \\times 12} = \\frac{2520.0}{144} = 17.50\\text{ mm/h}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_023",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Christiansen Uniformity Coefficient formula",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Christiansen's Uniformity Coefficient ($CU$) for a catch-can sprinkler evaluation test with $n$ observations $X_i$ and mean $\\bar{X}$ is defined as:",
+    "options": {
+      "A": "$CU = 100 \\left( 1 - \\frac{\\sum |X_i - \\bar{X}|}{n \\bar{X}} \\right)$",
+      "B": "$CU = 100 \\left( 1 - \\frac{\\sum (X_i - \\bar{X})^2}{n \\bar{X}^2} \\right)$",
+      "C": "$CU = \\frac{\\text{Minimum Catch}}{\\bar{X}} \\times 100$",
+      "D": "$CU = 100 \\left( 1 - \\frac{\\bar{X}}{\\sum X_i} \\right)$"
+    },
+    "correct_answer": "A",
+    "solution": "Christiansen (1942) defined the uniformity coefficient based on mean absolute deviation:\n$$CU = 100 \\left( 1 - \\frac{\\sum_{i=1}^n |X_i - \\bar{X}|}{n \\bar{X}} \\right)$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_024",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler allowable pressure variation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In the hydraulic design of sprinkler laterals, which of the following criteria is/are standard engineering practice?",
+    "options": {
+      "A": "Total pressure variation along a lateral should not exceed $20\\%$ of the nominal operating pressure",
+      "B": "Discharge variation between the first and last sprinkler on a lateral should not exceed $10\\%$",
+      "C": "The Christiansen $F$-factor accounts for multi-outlet friction head loss reduction compared to pipe flow with total discharge at inlet",
+      "D": "Application rate must strictly exceed the steady infiltration rate of the soil to guarantee surface ponding"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Pressure variation $\\Delta P \\le 20\\%$ of design pressure ensures discharge variation within $\\Delta q \\le 10\\%$ since $q \\propto P^{0.5}$ (A and B are true).\n2. Multi-outlet friction factor $F$ ($F \\approx 0.35$ for large $N$) reduces total friction loss compared to plain pipe (C is true).\n3. Application rate must NEVER exceed soil infiltration capacity to prevent surface runoff and erosion (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_025",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler precipitation application rate",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A sprinkler system operates with sprinklers spaced at $S_m = 12\\text{ m}$ along the lateral and laterals spaced at $S_l = 12\\text{ m}$ along the main line. Each sprinkler discharges $q = 0.50\\text{ L/s}$. The average application rate of the system is ________ $\\text{mm/h}$ (round off to two decimal places).",
+    "correct_answer": "12.50",
+    "numerical_range": {
+      "min": 12.4,
+      "max": 12.6
+    },
+    "solution": "The average application rate is calculated from the discharge and coverage area:\n$$I = \\frac{q \\times 3600}{S_l \\times S_m}$$\nwhere $q$ is in $\\text{L/s}$, $S_l, S_m$ are in $\\text{m}$, giving $I$ in $\\text{mm/h}$:\n$$I = \\frac{0.50 \\times 3600}{12 \\times 12} = \\frac{1800.0}{144} = 12.50\\text{ mm/h}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_026",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Christiansen Uniformity Coefficient formula",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Christiansen's Uniformity Coefficient ($CU$) for a catch-can sprinkler evaluation test with $n$ observations $X_i$ and mean $\\bar{X}$ is defined as:",
+    "options": {
+      "A": "$CU = 100 \\left( 1 - \\frac{\\sum |X_i - \\bar{X}|}{n \\bar{X}} \\right)$",
+      "B": "$CU = 100 \\left( 1 - \\frac{\\sum (X_i - \\bar{X})^2}{n \\bar{X}^2} \\right)$",
+      "C": "$CU = \\frac{\\text{Minimum Catch}}{\\bar{X}} \\times 100$",
+      "D": "$CU = 100 \\left( 1 - \\frac{\\bar{X}}{\\sum X_i} \\right)$"
+    },
+    "correct_answer": "A",
+    "solution": "Christiansen (1942) defined the uniformity coefficient based on mean absolute deviation:\n$$CU = 100 \\left( 1 - \\frac{\\sum_{i=1}^n |X_i - \\bar{X}|}{n \\bar{X}} \\right)$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_027",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler allowable pressure variation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In the hydraulic design of sprinkler laterals, which of the following criteria is/are standard engineering practice?",
+    "options": {
+      "A": "Total pressure variation along a lateral should not exceed $20\\%$ of the nominal operating pressure",
+      "B": "Discharge variation between the first and last sprinkler on a lateral should not exceed $10\\%$",
+      "C": "The Christiansen $F$-factor accounts for multi-outlet friction head loss reduction compared to pipe flow with total discharge at inlet",
+      "D": "Application rate must strictly exceed the steady infiltration rate of the soil to guarantee surface ponding"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Pressure variation $\\Delta P \\le 20\\%$ of design pressure ensures discharge variation within $\\Delta q \\le 10\\%$ since $q \\propto P^{0.5}$ (A and B are true).\n2. Multi-outlet friction factor $F$ ($F \\approx 0.35$ for large $N$) reduces total friction loss compared to plain pipe (C is true).\n3. Application rate must NEVER exceed soil infiltration capacity to prevent surface runoff and erosion (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_028",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler precipitation application rate",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A sprinkler system operates with sprinklers spaced at $S_m = 12\\text{ m}$ along the lateral and laterals spaced at $S_l = 12\\text{ m}$ along the main line. Each sprinkler discharges $q = 0.80\\text{ L/s}$. The average application rate of the system is ________ $\\text{mm/h}$ (round off to two decimal places).",
+    "correct_answer": "20.00",
+    "numerical_range": {
+      "min": 19.9,
+      "max": 20.1
+    },
+    "solution": "The average application rate is calculated from the discharge and coverage area:\n$$I = \\frac{q \\times 3600}{S_l \\times S_m}$$\nwhere $q$ is in $\\text{L/s}$, $S_l, S_m$ are in $\\text{m}$, giving $I$ in $\\text{mm/h}$:\n$$I = \\frac{0.80 \\times 3600}{12 \\times 12} = \\frac{2880.0}{144} = 20.00\\text{ mm/h}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_029",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Christiansen Uniformity Coefficient formula",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Christiansen's Uniformity Coefficient ($CU$) for a catch-can sprinkler evaluation test with $n$ observations $X_i$ and mean $\\bar{X}$ is defined as:",
+    "options": {
+      "A": "$CU = 100 \\left( 1 - \\frac{\\sum |X_i - \\bar{X}|}{n \\bar{X}} \\right)$",
+      "B": "$CU = 100 \\left( 1 - \\frac{\\sum (X_i - \\bar{X})^2}{n \\bar{X}^2} \\right)$",
+      "C": "$CU = \\frac{\\text{Minimum Catch}}{\\bar{X}} \\times 100$",
+      "D": "$CU = 100 \\left( 1 - \\frac{\\bar{X}}{\\sum X_i} \\right)$"
+    },
+    "correct_answer": "A",
+    "solution": "Christiansen (1942) defined the uniformity coefficient based on mean absolute deviation:\n$$CU = 100 \\left( 1 - \\frac{\\sum_{i=1}^n |X_i - \\bar{X}|}{n \\bar{X}} \\right)$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_030",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler allowable pressure variation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In the hydraulic design of sprinkler laterals, which of the following criteria is/are standard engineering practice?",
+    "options": {
+      "A": "Total pressure variation along a lateral should not exceed $20\\%$ of the nominal operating pressure",
+      "B": "Discharge variation between the first and last sprinkler on a lateral should not exceed $10\\%$",
+      "C": "The Christiansen $F$-factor accounts for multi-outlet friction head loss reduction compared to pipe flow with total discharge at inlet",
+      "D": "Application rate must strictly exceed the steady infiltration rate of the soil to guarantee surface ponding"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Pressure variation $\\Delta P \\le 20\\%$ of design pressure ensures discharge variation within $\\Delta q \\le 10\\%$ since $q \\propto P^{0.5}$ (A and B are true).\n2. Multi-outlet friction factor $F$ ($F \\approx 0.35$ for large $N$) reduces total friction loss compared to plain pipe (C is true).\n3. Application rate must NEVER exceed soil infiltration capacity to prevent surface runoff and erosion (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_031",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler precipitation application rate",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A sprinkler system operates with sprinklers spaced at $S_m = 12\\text{ m}$ along the lateral and laterals spaced at $S_l = 12\\text{ m}$ along the main line. Each sprinkler discharges $q = 0.60\\text{ L/s}$. The average application rate of the system is ________ $\\text{mm/h}$ (round off to two decimal places).",
+    "correct_answer": "15.00",
+    "numerical_range": {
+      "min": 14.9,
+      "max": 15.1
+    },
+    "solution": "The average application rate is calculated from the discharge and coverage area:\n$$I = \\frac{q \\times 3600}{S_l \\times S_m}$$\nwhere $q$ is in $\\text{L/s}$, $S_l, S_m$ are in $\\text{m}$, giving $I$ in $\\text{mm/h}$:\n$$I = \\frac{0.60 \\times 3600}{12 \\times 12} = \\frac{2160.0}{144} = 15.00\\text{ mm/h}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_032",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Christiansen Uniformity Coefficient formula",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Christiansen's Uniformity Coefficient ($CU$) for a catch-can sprinkler evaluation test with $n$ observations $X_i$ and mean $\\bar{X}$ is defined as:",
+    "options": {
+      "A": "$CU = 100 \\left( 1 - \\frac{\\sum |X_i - \\bar{X}|}{n \\bar{X}} \\right)$",
+      "B": "$CU = 100 \\left( 1 - \\frac{\\sum (X_i - \\bar{X})^2}{n \\bar{X}^2} \\right)$",
+      "C": "$CU = \\frac{\\text{Minimum Catch}}{\\bar{X}} \\times 100$",
+      "D": "$CU = 100 \\left( 1 - \\frac{\\bar{X}}{\\sum X_i} \\right)$"
+    },
+    "correct_answer": "A",
+    "solution": "Christiansen (1942) defined the uniformity coefficient based on mean absolute deviation:\n$$CU = 100 \\left( 1 - \\frac{\\sum_{i=1}^n |X_i - \\bar{X}|}{n \\bar{X}} \\right)$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_033",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler allowable pressure variation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In the hydraulic design of sprinkler laterals, which of the following criteria is/are standard engineering practice?",
+    "options": {
+      "A": "Total pressure variation along a lateral should not exceed $20\\%$ of the nominal operating pressure",
+      "B": "Discharge variation between the first and last sprinkler on a lateral should not exceed $10\\%$",
+      "C": "The Christiansen $F$-factor accounts for multi-outlet friction head loss reduction compared to pipe flow with total discharge at inlet",
+      "D": "Application rate must strictly exceed the steady infiltration rate of the soil to guarantee surface ponding"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Pressure variation $\\Delta P \\le 20\\%$ of design pressure ensures discharge variation within $\\Delta q \\le 10\\%$ since $q \\propto P^{0.5}$ (A and B are true).\n2. Multi-outlet friction factor $F$ ($F \\approx 0.35$ for large $N$) reduces total friction loss compared to plain pipe (C is true).\n3. Application rate must NEVER exceed soil infiltration capacity to prevent surface runoff and erosion (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_034",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler precipitation application rate",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A sprinkler system operates with sprinklers spaced at $S_m = 12\\text{ m}$ along the lateral and laterals spaced at $S_l = 12\\text{ m}$ along the main line. Each sprinkler discharges $q = 0.90\\text{ L/s}$. The average application rate of the system is ________ $\\text{mm/h}$ (round off to two decimal places).",
+    "correct_answer": "22.50",
+    "numerical_range": {
+      "min": 22.4,
+      "max": 22.6
+    },
+    "solution": "The average application rate is calculated from the discharge and coverage area:\n$$I = \\frac{q \\times 3600}{S_l \\times S_m}$$\nwhere $q$ is in $\\text{L/s}$, $S_l, S_m$ are in $\\text{m}$, giving $I$ in $\\text{mm/h}$:\n$$I = \\frac{0.90 \\times 3600}{12 \\times 12} = \\frac{3240.0}{144} = 22.50\\text{ mm/h}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_035",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Christiansen Uniformity Coefficient formula",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Christiansen's Uniformity Coefficient ($CU$) for a catch-can sprinkler evaluation test with $n$ observations $X_i$ and mean $\\bar{X}$ is defined as:",
+    "options": {
+      "A": "$CU = 100 \\left( 1 - \\frac{\\sum |X_i - \\bar{X}|}{n \\bar{X}} \\right)$",
+      "B": "$CU = 100 \\left( 1 - \\frac{\\sum (X_i - \\bar{X})^2}{n \\bar{X}^2} \\right)$",
+      "C": "$CU = \\frac{\\text{Minimum Catch}}{\\bar{X}} \\times 100$",
+      "D": "$CU = 100 \\left( 1 - \\frac{\\bar{X}}{\\sum X_i} \\right)$"
+    },
+    "correct_answer": "A",
+    "solution": "Christiansen (1942) defined the uniformity coefficient based on mean absolute deviation:\n$$CU = 100 \\left( 1 - \\frac{\\sum_{i=1}^n |X_i - \\bar{X}|}{n \\bar{X}} \\right)$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_036",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler allowable pressure variation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "In the hydraulic design of sprinkler laterals, which of the following criteria is/are standard engineering practice?",
+    "options": {
+      "A": "Total pressure variation along a lateral should not exceed $20\\%$ of the nominal operating pressure",
+      "B": "Discharge variation between the first and last sprinkler on a lateral should not exceed $10\\%$",
+      "C": "The Christiansen $F$-factor accounts for multi-outlet friction head loss reduction compared to pipe flow with total discharge at inlet",
+      "D": "Application rate must strictly exceed the steady infiltration rate of the soil to guarantee surface ponding"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Pressure variation $\\Delta P \\le 20\\%$ of design pressure ensures discharge variation within $\\Delta q \\le 10\\%$ since $q \\propto P^{0.5}$ (A and B are true).\n2. Multi-outlet friction factor $F$ ($F \\approx 0.35$ for large $N$) reduces total friction loss compared to plain pipe (C is true).\n3. Application rate must NEVER exceed soil infiltration capacity to prevent surface runoff and erosion (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_037",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler precipitation application rate",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A sprinkler system operates with sprinklers spaced at $S_m = 12\\text{ m}$ along the lateral and laterals spaced at $S_l = 12\\text{ m}$ along the main line. Each sprinkler discharges $q = 0.70\\text{ L/s}$. The average application rate of the system is ________ $\\text{mm/h}$ (round off to two decimal places).",
+    "correct_answer": "17.50",
+    "numerical_range": {
+      "min": 17.4,
+      "max": 17.6
+    },
+    "solution": "The average application rate is calculated from the discharge and coverage area:\n$$I = \\frac{q \\times 3600}{S_l \\times S_m}$$\nwhere $q$ is in $\\text{L/s}$, $S_l, S_m$ are in $\\text{m}$, giving $I$ in $\\text{mm/h}$:\n$$I = \\frac{0.70 \\times 3600}{12 \\times 12} = \\frac{2520.0}{144} = 17.50\\text{ mm/h}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SPK_038",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Christiansen Uniformity Coefficient formula",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Christiansen's Uniformity Coefficient ($CU$) for a catch-can sprinkler evaluation test with $n$ observations $X_i$ and mean $\\bar{X}$ is defined as:",
+    "options": {
+      "A": "$CU = 100 \\left( 1 - \\frac{\\sum |X_i - \\bar{X}|}{n \\bar{X}} \\right)$",
+      "B": "$CU = 100 \\left( 1 - \\frac{\\sum (X_i - \\bar{X})^2}{n \\bar{X}^2} \\right)$",
+      "C": "$CU = \\frac{\\text{Minimum Catch}}{\\bar{X}} \\times 100$",
+      "D": "$CU = 100 \\left( 1 - \\frac{\\bar{X}}{\\sum X_i} \\right)$"
+    },
+    "correct_answer": "A",
+    "solution": "Christiansen (1942) defined the uniformity coefficient based on mean absolute deviation:\n$$CU = 100 \\left( 1 - \\frac{\\sum_{i=1}^n |X_i - \\bar{X}|}{n \\bar{X}} \\right)$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_001",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Drip emitter flow rate from pressure head",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A standard orifice-type drip emitter has an emitter discharge equation $q = 1.2 H^{0.5}$, where $q$ is in $\\text{L/h}$ and $H$ is pressure head in $\\text{m of water}$. At an operating pressure head of $H = 12\\text{ m}$, the emitter discharge rate is ________ $\\text{L/h}$ (round off to two decimal places).",
+    "correct_answer": "4.16",
+    "numerical_range": {
+      "min": 4.06,
+      "max": 4.26
+    },
+    "solution": "Applying the emitter discharge equation:\n$$q = k H^x = 1.2 \\times (12)^{0.5} = 1.2 \\times 3.4641 = 4.16\\text{ L/h}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_002",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Pressure compensating emitter exponent",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For an ideal pressure-compensating (PC) drip emitter, the emitter discharge exponent $x$ in the equation $q = k H^x$ is theoretically equal to:",
+    "options": {
+      "A": "$0.0$",
+      "B": "$0.5$",
+      "C": "$1.0$",
+      "D": "$0.75$"
+    },
+    "correct_answer": "A",
+    "solution": "In a pressure-compensating emitter, an elastic diaphragm deflects under rising pressure to reduce flow cross-section, keeping discharge constant regardless of pressure variations. Hence $q \\propto H^0 \\implies x \\approx 0.0$. For fully turbulent orifice emitters, $x = 0.5$; for laminar emitters, $x = 1.0$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_003",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Advantages and filtration in drip irrigation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding drip / trickle irrigation systems is/are TRUE?",
+    "options": {
+      "A": "Water is applied directly to the crop root zone at low pressure and low discharge rates",
+      "B": "Hydrocyclone (sand separator) filters are specifically designed to remove heavy inorganic sand and silt particles",
+      "C": "Media (gravel/sand) filters are essential when using surface water containing organic matter, algae, and suspended biological debris",
+      "D": "Drip irrigation cannot be used with saline water under any circumstance"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Drip applies precise drops directly to the plant root zone (A is true).\n2. Hydrocyclone centrifugal separators drop heavy mineral particles by vortex action (B is true).\n3. Media filters trap organic and biological flocs in deep sand beds (C is true).\n4. Drip irrigation is uniquely suited for saline water because high frequency wetting keeps matric potential near zero, minimizing total soil water tension and pushing salts to the periphery of the wetting bulb (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_004",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Drip emitter flow rate from pressure head",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A standard orifice-type drip emitter has an emitter discharge equation $q = 1.2 H^{0.5}$, where $q$ is in $\\text{L/h}$ and $H$ is pressure head in $\\text{m of water}$. At an operating pressure head of $H = 18\\text{ m}$, the emitter discharge rate is ________ $\\text{L/h}$ (round off to two decimal places).",
+    "correct_answer": "5.09",
+    "numerical_range": {
+      "min": 4.99,
+      "max": 5.19
+    },
+    "solution": "Applying the emitter discharge equation:\n$$q = k H^x = 1.2 \\times (18)^{0.5} = 1.2 \\times 4.2426 = 5.09\\text{ L/h}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_005",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Pressure compensating emitter exponent",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For an ideal pressure-compensating (PC) drip emitter, the emitter discharge exponent $x$ in the equation $q = k H^x$ is theoretically equal to:",
+    "options": {
+      "A": "$0.0$",
+      "B": "$0.5$",
+      "C": "$1.0$",
+      "D": "$0.75$"
+    },
+    "correct_answer": "A",
+    "solution": "In a pressure-compensating emitter, an elastic diaphragm deflects under rising pressure to reduce flow cross-section, keeping discharge constant regardless of pressure variations. Hence $q \\propto H^0 \\implies x \\approx 0.0$. For fully turbulent orifice emitters, $x = 0.5$; for laminar emitters, $x = 1.0$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_006",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Advantages and filtration in drip irrigation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding drip / trickle irrigation systems is/are TRUE?",
+    "options": {
+      "A": "Water is applied directly to the crop root zone at low pressure and low discharge rates",
+      "B": "Hydrocyclone (sand separator) filters are specifically designed to remove heavy inorganic sand and silt particles",
+      "C": "Media (gravel/sand) filters are essential when using surface water containing organic matter, algae, and suspended biological debris",
+      "D": "Drip irrigation cannot be used with saline water under any circumstance"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Drip applies precise drops directly to the plant root zone (A is true).\n2. Hydrocyclone centrifugal separators drop heavy mineral particles by vortex action (B is true).\n3. Media filters trap organic and biological flocs in deep sand beds (C is true).\n4. Drip irrigation is uniquely suited for saline water because high frequency wetting keeps matric potential near zero, minimizing total soil water tension and pushing salts to the periphery of the wetting bulb (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_007",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Drip emitter flow rate from pressure head",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A standard orifice-type drip emitter has an emitter discharge equation $q = 1.2 H^{0.5}$, where $q$ is in $\\text{L/h}$ and $H$ is pressure head in $\\text{m of water}$. At an operating pressure head of $H = 14\\text{ m}$, the emitter discharge rate is ________ $\\text{L/h}$ (round off to two decimal places).",
+    "correct_answer": "4.49",
+    "numerical_range": {
+      "min": 4.39,
+      "max": 4.59
+    },
+    "solution": "Applying the emitter discharge equation:\n$$q = k H^x = 1.2 \\times (14)^{0.5} = 1.2 \\times 3.7417 = 4.49\\text{ L/h}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_008",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Pressure compensating emitter exponent",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For an ideal pressure-compensating (PC) drip emitter, the emitter discharge exponent $x$ in the equation $q = k H^x$ is theoretically equal to:",
+    "options": {
+      "A": "$0.0$",
+      "B": "$0.5$",
+      "C": "$1.0$",
+      "D": "$0.75$"
+    },
+    "correct_answer": "A",
+    "solution": "In a pressure-compensating emitter, an elastic diaphragm deflects under rising pressure to reduce flow cross-section, keeping discharge constant regardless of pressure variations. Hence $q \\propto H^0 \\implies x \\approx 0.0$. For fully turbulent orifice emitters, $x = 0.5$; for laminar emitters, $x = 1.0$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_009",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Advantages and filtration in drip irrigation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding drip / trickle irrigation systems is/are TRUE?",
+    "options": {
+      "A": "Water is applied directly to the crop root zone at low pressure and low discharge rates",
+      "B": "Hydrocyclone (sand separator) filters are specifically designed to remove heavy inorganic sand and silt particles",
+      "C": "Media (gravel/sand) filters are essential when using surface water containing organic matter, algae, and suspended biological debris",
+      "D": "Drip irrigation cannot be used with saline water under any circumstance"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Drip applies precise drops directly to the plant root zone (A is true).\n2. Hydrocyclone centrifugal separators drop heavy mineral particles by vortex action (B is true).\n3. Media filters trap organic and biological flocs in deep sand beds (C is true).\n4. Drip irrigation is uniquely suited for saline water because high frequency wetting keeps matric potential near zero, minimizing total soil water tension and pushing salts to the periphery of the wetting bulb (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_010",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Drip emitter flow rate from pressure head",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A standard orifice-type drip emitter has an emitter discharge equation $q = 1.2 H^{0.5}$, where $q$ is in $\\text{L/h}$ and $H$ is pressure head in $\\text{m of water}$. At an operating pressure head of $H = 10\\text{ m}$, the emitter discharge rate is ________ $\\text{L/h}$ (round off to two decimal places).",
+    "correct_answer": "3.79",
+    "numerical_range": {
+      "min": 3.69,
+      "max": 3.89
+    },
+    "solution": "Applying the emitter discharge equation:\n$$q = k H^x = 1.2 \\times (10)^{0.5} = 1.2 \\times 3.1623 = 3.79\\text{ L/h}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_011",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Pressure compensating emitter exponent",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For an ideal pressure-compensating (PC) drip emitter, the emitter discharge exponent $x$ in the equation $q = k H^x$ is theoretically equal to:",
+    "options": {
+      "A": "$0.0$",
+      "B": "$0.5$",
+      "C": "$1.0$",
+      "D": "$0.75$"
+    },
+    "correct_answer": "A",
+    "solution": "In a pressure-compensating emitter, an elastic diaphragm deflects under rising pressure to reduce flow cross-section, keeping discharge constant regardless of pressure variations. Hence $q \\propto H^0 \\implies x \\approx 0.0$. For fully turbulent orifice emitters, $x = 0.5$; for laminar emitters, $x = 1.0$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_012",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Advantages and filtration in drip irrigation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding drip / trickle irrigation systems is/are TRUE?",
+    "options": {
+      "A": "Water is applied directly to the crop root zone at low pressure and low discharge rates",
+      "B": "Hydrocyclone (sand separator) filters are specifically designed to remove heavy inorganic sand and silt particles",
+      "C": "Media (gravel/sand) filters are essential when using surface water containing organic matter, algae, and suspended biological debris",
+      "D": "Drip irrigation cannot be used with saline water under any circumstance"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Drip applies precise drops directly to the plant root zone (A is true).\n2. Hydrocyclone centrifugal separators drop heavy mineral particles by vortex action (B is true).\n3. Media filters trap organic and biological flocs in deep sand beds (C is true).\n4. Drip irrigation is uniquely suited for saline water because high frequency wetting keeps matric potential near zero, minimizing total soil water tension and pushing salts to the periphery of the wetting bulb (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_013",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Drip emitter flow rate from pressure head",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A standard orifice-type drip emitter has an emitter discharge equation $q = 1.2 H^{0.5}$, where $q$ is in $\\text{L/h}$ and $H$ is pressure head in $\\text{m of water}$. At an operating pressure head of $H = 16\\text{ m}$, the emitter discharge rate is ________ $\\text{L/h}$ (round off to two decimal places).",
+    "correct_answer": "4.80",
+    "numerical_range": {
+      "min": 4.7,
+      "max": 4.9
+    },
+    "solution": "Applying the emitter discharge equation:\n$$q = k H^x = 1.2 \\times (16)^{0.5} = 1.2 \\times 4.0000 = 4.80\\text{ L/h}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_014",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Pressure compensating emitter exponent",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For an ideal pressure-compensating (PC) drip emitter, the emitter discharge exponent $x$ in the equation $q = k H^x$ is theoretically equal to:",
+    "options": {
+      "A": "$0.0$",
+      "B": "$0.5$",
+      "C": "$1.0$",
+      "D": "$0.75$"
+    },
+    "correct_answer": "A",
+    "solution": "In a pressure-compensating emitter, an elastic diaphragm deflects under rising pressure to reduce flow cross-section, keeping discharge constant regardless of pressure variations. Hence $q \\propto H^0 \\implies x \\approx 0.0$. For fully turbulent orifice emitters, $x = 0.5$; for laminar emitters, $x = 1.0$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_015",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Advantages and filtration in drip irrigation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding drip / trickle irrigation systems is/are TRUE?",
+    "options": {
+      "A": "Water is applied directly to the crop root zone at low pressure and low discharge rates",
+      "B": "Hydrocyclone (sand separator) filters are specifically designed to remove heavy inorganic sand and silt particles",
+      "C": "Media (gravel/sand) filters are essential when using surface water containing organic matter, algae, and suspended biological debris",
+      "D": "Drip irrigation cannot be used with saline water under any circumstance"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Drip applies precise drops directly to the plant root zone (A is true).\n2. Hydrocyclone centrifugal separators drop heavy mineral particles by vortex action (B is true).\n3. Media filters trap organic and biological flocs in deep sand beds (C is true).\n4. Drip irrigation is uniquely suited for saline water because high frequency wetting keeps matric potential near zero, minimizing total soil water tension and pushing salts to the periphery of the wetting bulb (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_016",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Drip emitter flow rate from pressure head",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A standard orifice-type drip emitter has an emitter discharge equation $q = 1.2 H^{0.5}$, where $q$ is in $\\text{L/h}$ and $H$ is pressure head in $\\text{m of water}$. At an operating pressure head of $H = 12\\text{ m}$, the emitter discharge rate is ________ $\\text{L/h}$ (round off to two decimal places).",
+    "correct_answer": "4.16",
+    "numerical_range": {
+      "min": 4.06,
+      "max": 4.26
+    },
+    "solution": "Applying the emitter discharge equation:\n$$q = k H^x = 1.2 \\times (12)^{0.5} = 1.2 \\times 3.4641 = 4.16\\text{ L/h}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_017",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Pressure compensating emitter exponent",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For an ideal pressure-compensating (PC) drip emitter, the emitter discharge exponent $x$ in the equation $q = k H^x$ is theoretically equal to:",
+    "options": {
+      "A": "$0.0$",
+      "B": "$0.5$",
+      "C": "$1.0$",
+      "D": "$0.75$"
+    },
+    "correct_answer": "A",
+    "solution": "In a pressure-compensating emitter, an elastic diaphragm deflects under rising pressure to reduce flow cross-section, keeping discharge constant regardless of pressure variations. Hence $q \\propto H^0 \\implies x \\approx 0.0$. For fully turbulent orifice emitters, $x = 0.5$; for laminar emitters, $x = 1.0$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_018",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Advantages and filtration in drip irrigation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding drip / trickle irrigation systems is/are TRUE?",
+    "options": {
+      "A": "Water is applied directly to the crop root zone at low pressure and low discharge rates",
+      "B": "Hydrocyclone (sand separator) filters are specifically designed to remove heavy inorganic sand and silt particles",
+      "C": "Media (gravel/sand) filters are essential when using surface water containing organic matter, algae, and suspended biological debris",
+      "D": "Drip irrigation cannot be used with saline water under any circumstance"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Drip applies precise drops directly to the plant root zone (A is true).\n2. Hydrocyclone centrifugal separators drop heavy mineral particles by vortex action (B is true).\n3. Media filters trap organic and biological flocs in deep sand beds (C is true).\n4. Drip irrigation is uniquely suited for saline water because high frequency wetting keeps matric potential near zero, minimizing total soil water tension and pushing salts to the periphery of the wetting bulb (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_019",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Drip emitter flow rate from pressure head",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A standard orifice-type drip emitter has an emitter discharge equation $q = 1.2 H^{0.5}$, where $q$ is in $\\text{L/h}$ and $H$ is pressure head in $\\text{m of water}$. At an operating pressure head of $H = 18\\text{ m}$, the emitter discharge rate is ________ $\\text{L/h}$ (round off to two decimal places).",
+    "correct_answer": "5.09",
+    "numerical_range": {
+      "min": 4.99,
+      "max": 5.19
+    },
+    "solution": "Applying the emitter discharge equation:\n$$q = k H^x = 1.2 \\times (18)^{0.5} = 1.2 \\times 4.2426 = 5.09\\text{ L/h}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_020",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Pressure compensating emitter exponent",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For an ideal pressure-compensating (PC) drip emitter, the emitter discharge exponent $x$ in the equation $q = k H^x$ is theoretically equal to:",
+    "options": {
+      "A": "$0.0$",
+      "B": "$0.5$",
+      "C": "$1.0$",
+      "D": "$0.75$"
+    },
+    "correct_answer": "A",
+    "solution": "In a pressure-compensating emitter, an elastic diaphragm deflects under rising pressure to reduce flow cross-section, keeping discharge constant regardless of pressure variations. Hence $q \\propto H^0 \\implies x \\approx 0.0$. For fully turbulent orifice emitters, $x = 0.5$; for laminar emitters, $x = 1.0$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_021",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Advantages and filtration in drip irrigation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding drip / trickle irrigation systems is/are TRUE?",
+    "options": {
+      "A": "Water is applied directly to the crop root zone at low pressure and low discharge rates",
+      "B": "Hydrocyclone (sand separator) filters are specifically designed to remove heavy inorganic sand and silt particles",
+      "C": "Media (gravel/sand) filters are essential when using surface water containing organic matter, algae, and suspended biological debris",
+      "D": "Drip irrigation cannot be used with saline water under any circumstance"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Drip applies precise drops directly to the plant root zone (A is true).\n2. Hydrocyclone centrifugal separators drop heavy mineral particles by vortex action (B is true).\n3. Media filters trap organic and biological flocs in deep sand beds (C is true).\n4. Drip irrigation is uniquely suited for saline water because high frequency wetting keeps matric potential near zero, minimizing total soil water tension and pushing salts to the periphery of the wetting bulb (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_022",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Drip emitter flow rate from pressure head",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A standard orifice-type drip emitter has an emitter discharge equation $q = 1.2 H^{0.5}$, where $q$ is in $\\text{L/h}$ and $H$ is pressure head in $\\text{m of water}$. At an operating pressure head of $H = 14\\text{ m}$, the emitter discharge rate is ________ $\\text{L/h}$ (round off to two decimal places).",
+    "correct_answer": "4.49",
+    "numerical_range": {
+      "min": 4.39,
+      "max": 4.59
+    },
+    "solution": "Applying the emitter discharge equation:\n$$q = k H^x = 1.2 \\times (14)^{0.5} = 1.2 \\times 3.7417 = 4.49\\text{ L/h}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_023",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Pressure compensating emitter exponent",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For an ideal pressure-compensating (PC) drip emitter, the emitter discharge exponent $x$ in the equation $q = k H^x$ is theoretically equal to:",
+    "options": {
+      "A": "$0.0$",
+      "B": "$0.5$",
+      "C": "$1.0$",
+      "D": "$0.75$"
+    },
+    "correct_answer": "A",
+    "solution": "In a pressure-compensating emitter, an elastic diaphragm deflects under rising pressure to reduce flow cross-section, keeping discharge constant regardless of pressure variations. Hence $q \\propto H^0 \\implies x \\approx 0.0$. For fully turbulent orifice emitters, $x = 0.5$; for laminar emitters, $x = 1.0$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_024",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Advantages and filtration in drip irrigation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding drip / trickle irrigation systems is/are TRUE?",
+    "options": {
+      "A": "Water is applied directly to the crop root zone at low pressure and low discharge rates",
+      "B": "Hydrocyclone (sand separator) filters are specifically designed to remove heavy inorganic sand and silt particles",
+      "C": "Media (gravel/sand) filters are essential when using surface water containing organic matter, algae, and suspended biological debris",
+      "D": "Drip irrigation cannot be used with saline water under any circumstance"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Drip applies precise drops directly to the plant root zone (A is true).\n2. Hydrocyclone centrifugal separators drop heavy mineral particles by vortex action (B is true).\n3. Media filters trap organic and biological flocs in deep sand beds (C is true).\n4. Drip irrigation is uniquely suited for saline water because high frequency wetting keeps matric potential near zero, minimizing total soil water tension and pushing salts to the periphery of the wetting bulb (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_025",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Drip emitter flow rate from pressure head",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A standard orifice-type drip emitter has an emitter discharge equation $q = 1.2 H^{0.5}$, where $q$ is in $\\text{L/h}$ and $H$ is pressure head in $\\text{m of water}$. At an operating pressure head of $H = 10\\text{ m}$, the emitter discharge rate is ________ $\\text{L/h}$ (round off to two decimal places).",
+    "correct_answer": "3.79",
+    "numerical_range": {
+      "min": 3.69,
+      "max": 3.89
+    },
+    "solution": "Applying the emitter discharge equation:\n$$q = k H^x = 1.2 \\times (10)^{0.5} = 1.2 \\times 3.1623 = 3.79\\text{ L/h}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_026",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Pressure compensating emitter exponent",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For an ideal pressure-compensating (PC) drip emitter, the emitter discharge exponent $x$ in the equation $q = k H^x$ is theoretically equal to:",
+    "options": {
+      "A": "$0.0$",
+      "B": "$0.5$",
+      "C": "$1.0$",
+      "D": "$0.75$"
+    },
+    "correct_answer": "A",
+    "solution": "In a pressure-compensating emitter, an elastic diaphragm deflects under rising pressure to reduce flow cross-section, keeping discharge constant regardless of pressure variations. Hence $q \\propto H^0 \\implies x \\approx 0.0$. For fully turbulent orifice emitters, $x = 0.5$; for laminar emitters, $x = 1.0$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_027",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Advantages and filtration in drip irrigation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding drip / trickle irrigation systems is/are TRUE?",
+    "options": {
+      "A": "Water is applied directly to the crop root zone at low pressure and low discharge rates",
+      "B": "Hydrocyclone (sand separator) filters are specifically designed to remove heavy inorganic sand and silt particles",
+      "C": "Media (gravel/sand) filters are essential when using surface water containing organic matter, algae, and suspended biological debris",
+      "D": "Drip irrigation cannot be used with saline water under any circumstance"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Drip applies precise drops directly to the plant root zone (A is true).\n2. Hydrocyclone centrifugal separators drop heavy mineral particles by vortex action (B is true).\n3. Media filters trap organic and biological flocs in deep sand beds (C is true).\n4. Drip irrigation is uniquely suited for saline water because high frequency wetting keeps matric potential near zero, minimizing total soil water tension and pushing salts to the periphery of the wetting bulb (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_028",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Drip emitter flow rate from pressure head",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A standard orifice-type drip emitter has an emitter discharge equation $q = 1.2 H^{0.5}$, where $q$ is in $\\text{L/h}$ and $H$ is pressure head in $\\text{m of water}$. At an operating pressure head of $H = 16\\text{ m}$, the emitter discharge rate is ________ $\\text{L/h}$ (round off to two decimal places).",
+    "correct_answer": "4.80",
+    "numerical_range": {
+      "min": 4.7,
+      "max": 4.9
+    },
+    "solution": "Applying the emitter discharge equation:\n$$q = k H^x = 1.2 \\times (16)^{0.5} = 1.2 \\times 4.0000 = 4.80\\text{ L/h}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_029",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Pressure compensating emitter exponent",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For an ideal pressure-compensating (PC) drip emitter, the emitter discharge exponent $x$ in the equation $q = k H^x$ is theoretically equal to:",
+    "options": {
+      "A": "$0.0$",
+      "B": "$0.5$",
+      "C": "$1.0$",
+      "D": "$0.75$"
+    },
+    "correct_answer": "A",
+    "solution": "In a pressure-compensating emitter, an elastic diaphragm deflects under rising pressure to reduce flow cross-section, keeping discharge constant regardless of pressure variations. Hence $q \\propto H^0 \\implies x \\approx 0.0$. For fully turbulent orifice emitters, $x = 0.5$; for laminar emitters, $x = 1.0$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_030",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Advantages and filtration in drip irrigation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding drip / trickle irrigation systems is/are TRUE?",
+    "options": {
+      "A": "Water is applied directly to the crop root zone at low pressure and low discharge rates",
+      "B": "Hydrocyclone (sand separator) filters are specifically designed to remove heavy inorganic sand and silt particles",
+      "C": "Media (gravel/sand) filters are essential when using surface water containing organic matter, algae, and suspended biological debris",
+      "D": "Drip irrigation cannot be used with saline water under any circumstance"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Drip applies precise drops directly to the plant root zone (A is true).\n2. Hydrocyclone centrifugal separators drop heavy mineral particles by vortex action (B is true).\n3. Media filters trap organic and biological flocs in deep sand beds (C is true).\n4. Drip irrigation is uniquely suited for saline water because high frequency wetting keeps matric potential near zero, minimizing total soil water tension and pushing salts to the periphery of the wetting bulb (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_031",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Drip emitter flow rate from pressure head",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A standard orifice-type drip emitter has an emitter discharge equation $q = 1.2 H^{0.5}$, where $q$ is in $\\text{L/h}$ and $H$ is pressure head in $\\text{m of water}$. At an operating pressure head of $H = 12\\text{ m}$, the emitter discharge rate is ________ $\\text{L/h}$ (round off to two decimal places).",
+    "correct_answer": "4.16",
+    "numerical_range": {
+      "min": 4.06,
+      "max": 4.26
+    },
+    "solution": "Applying the emitter discharge equation:\n$$q = k H^x = 1.2 \\times (12)^{0.5} = 1.2 \\times 3.4641 = 4.16\\text{ L/h}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_032",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Pressure compensating emitter exponent",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For an ideal pressure-compensating (PC) drip emitter, the emitter discharge exponent $x$ in the equation $q = k H^x$ is theoretically equal to:",
+    "options": {
+      "A": "$0.0$",
+      "B": "$0.5$",
+      "C": "$1.0$",
+      "D": "$0.75$"
+    },
+    "correct_answer": "A",
+    "solution": "In a pressure-compensating emitter, an elastic diaphragm deflects under rising pressure to reduce flow cross-section, keeping discharge constant regardless of pressure variations. Hence $q \\propto H^0 \\implies x \\approx 0.0$. For fully turbulent orifice emitters, $x = 0.5$; for laminar emitters, $x = 1.0$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_033",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Advantages and filtration in drip irrigation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding drip / trickle irrigation systems is/are TRUE?",
+    "options": {
+      "A": "Water is applied directly to the crop root zone at low pressure and low discharge rates",
+      "B": "Hydrocyclone (sand separator) filters are specifically designed to remove heavy inorganic sand and silt particles",
+      "C": "Media (gravel/sand) filters are essential when using surface water containing organic matter, algae, and suspended biological debris",
+      "D": "Drip irrigation cannot be used with saline water under any circumstance"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Drip applies precise drops directly to the plant root zone (A is true).\n2. Hydrocyclone centrifugal separators drop heavy mineral particles by vortex action (B is true).\n3. Media filters trap organic and biological flocs in deep sand beds (C is true).\n4. Drip irrigation is uniquely suited for saline water because high frequency wetting keeps matric potential near zero, minimizing total soil water tension and pushing salts to the periphery of the wetting bulb (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_034",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Drip emitter flow rate from pressure head",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A standard orifice-type drip emitter has an emitter discharge equation $q = 1.2 H^{0.5}$, where $q$ is in $\\text{L/h}$ and $H$ is pressure head in $\\text{m of water}$. At an operating pressure head of $H = 18\\text{ m}$, the emitter discharge rate is ________ $\\text{L/h}$ (round off to two decimal places).",
+    "correct_answer": "5.09",
+    "numerical_range": {
+      "min": 4.99,
+      "max": 5.19
+    },
+    "solution": "Applying the emitter discharge equation:\n$$q = k H^x = 1.2 \\times (18)^{0.5} = 1.2 \\times 4.2426 = 5.09\\text{ L/h}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_035",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Pressure compensating emitter exponent",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For an ideal pressure-compensating (PC) drip emitter, the emitter discharge exponent $x$ in the equation $q = k H^x$ is theoretically equal to:",
+    "options": {
+      "A": "$0.0$",
+      "B": "$0.5$",
+      "C": "$1.0$",
+      "D": "$0.75$"
+    },
+    "correct_answer": "A",
+    "solution": "In a pressure-compensating emitter, an elastic diaphragm deflects under rising pressure to reduce flow cross-section, keeping discharge constant regardless of pressure variations. Hence $q \\propto H^0 \\implies x \\approx 0.0$. For fully turbulent orifice emitters, $x = 0.5$; for laminar emitters, $x = 1.0$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_036",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Advantages and filtration in drip irrigation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding drip / trickle irrigation systems is/are TRUE?",
+    "options": {
+      "A": "Water is applied directly to the crop root zone at low pressure and low discharge rates",
+      "B": "Hydrocyclone (sand separator) filters are specifically designed to remove heavy inorganic sand and silt particles",
+      "C": "Media (gravel/sand) filters are essential when using surface water containing organic matter, algae, and suspended biological debris",
+      "D": "Drip irrigation cannot be used with saline water under any circumstance"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Drip applies precise drops directly to the plant root zone (A is true).\n2. Hydrocyclone centrifugal separators drop heavy mineral particles by vortex action (B is true).\n3. Media filters trap organic and biological flocs in deep sand beds (C is true).\n4. Drip irrigation is uniquely suited for saline water because high frequency wetting keeps matric potential near zero, minimizing total soil water tension and pushing salts to the periphery of the wetting bulb (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_037",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Drip emitter flow rate from pressure head",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A standard orifice-type drip emitter has an emitter discharge equation $q = 1.2 H^{0.5}$, where $q$ is in $\\text{L/h}$ and $H$ is pressure head in $\\text{m of water}$. At an operating pressure head of $H = 14\\text{ m}$, the emitter discharge rate is ________ $\\text{L/h}$ (round off to two decimal places).",
+    "correct_answer": "4.49",
+    "numerical_range": {
+      "min": 4.39,
+      "max": 4.59
+    },
+    "solution": "Applying the emitter discharge equation:\n$$q = k H^x = 1.2 \\times (14)^{0.5} = 1.2 \\times 3.7417 = 4.49\\text{ L/h}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRP_038",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Pressure compensating emitter exponent",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For an ideal pressure-compensating (PC) drip emitter, the emitter discharge exponent $x$ in the equation $q = k H^x$ is theoretically equal to:",
+    "options": {
+      "A": "$0.0$",
+      "B": "$0.5$",
+      "C": "$1.0$",
+      "D": "$0.75$"
+    },
+    "correct_answer": "A",
+    "solution": "In a pressure-compensating emitter, an elastic diaphragm deflects under rising pressure to reduce flow cross-section, keeping discharge constant regardless of pressure variations. Hence $q \\propto H^0 \\implies x \\approx 0.0$. For fully turbulent orifice emitters, $x = 0.5$; for laminar emitters, $x = 1.0$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_001",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Project irrigation efficiency calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A canal diversion structure supplies $100\\text{ m}^3$ of water at the reservoir head. The volume of water delivered to the agricultural field plot is $80\\text{ m}^3$, out of which $60\\text{ m}^3$ is beneficially stored in the crop root zone. The overall project irrigation efficiency is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "60.0",
+    "numerical_range": {
+      "min": 59.8,
+      "max": 60.2
+    },
+    "solution": "Conveyance efficiency $\\eta_c = \\frac{W_f}{W_r} \\times 100 = \\frac{80}{100} \\times 100 = 80.0\\%$.\nField application efficiency $\\eta_a = \\frac{W_s}{W_f} \\times 100 = \\frac{60}{80} \\times 100 = 75.0\\%$.\nOverall project efficiency is:\n$$\\eta_{proj} = \\eta_c \\times \\eta_a = \\frac{W_s}{W_r} \\times 100 = \\frac{60}{100} \\times 100 = 60.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_002",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water storage efficiency definition",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Water Storage Efficiency ($\\eta_s$) is defined as the ratio of:",
+    "options": {
+      "A": "Water stored in the root zone during irrigation to the water needed in the root zone prior to irrigation",
+      "B": "Water delivered to the field to the water diverted from the source",
+      "C": "Water beneficially consumed by crops to the total water applied",
+      "D": "Water stored in a surface reservoir to total annual runoff"
+    },
+    "correct_answer": "A",
+    "solution": "Water storage efficiency evaluates whether the irrigation adequately replenished the root zone moisture deficiency:\n$$\\eta_s = \\frac{W_s}{W_n} \\times 100$$\nwhere $W_s$ is water stored in root zone, and $W_n$ is water needed to bring moisture up to field capacity.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_003",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water distribution efficiency formula",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding Water Distribution Efficiency ($\\eta_d$) is/are TRUE?",
+    "options": {
+      "A": "It is defined by $\\eta_d = 100 \\left( 1 - \\frac{\\bar{y}}{\\bar{d}} \\right)$, where $\\bar{d}$ is average water depth stored and $\\bar{y}$ is average numerical deviation from $\\bar{d}$",
+      "B": "A distribution efficiency of $100\\%$ implies completely uniform penetration depth throughout the length of run",
+      "C": "Under-irrigation at the lower end of a border strip lowers the distribution efficiency",
+      "D": "Distribution efficiency accounts for evaporation losses from the supplying reservoir"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $\\eta_d = 100 (1 - \\bar{y}/\\bar{d})$ evaluates how uniformly water infiltrates along the run (A is true).\n2. Perfect uniformity means $\\bar{y} = 0$, giving $\\eta_d = 100\\%$ (B is true).\n3. Incomplete penetration or non-uniform soaking widens deviation $\\bar{y}$, reducing $\\eta_d$ (C is true).\n4. Distribution efficiency is strictly a field-level uniformity index; reservoir evaporation is unrelated (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_004",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Project irrigation efficiency calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A canal diversion structure supplies $100\\text{ m}^3$ of water at the reservoir head. The volume of water delivered to the agricultural field plot is $80\\text{ m}^3$, out of which $60\\text{ m}^3$ is beneficially stored in the crop root zone. The overall project irrigation efficiency is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "60.0",
+    "numerical_range": {
+      "min": 59.8,
+      "max": 60.2
+    },
+    "solution": "Conveyance efficiency $\\eta_c = \\frac{W_f}{W_r} \\times 100 = \\frac{80}{100} \\times 100 = 80.0\\%$.\nField application efficiency $\\eta_a = \\frac{W_s}{W_f} \\times 100 = \\frac{60}{80} \\times 100 = 75.0\\%$.\nOverall project efficiency is:\n$$\\eta_{proj} = \\eta_c \\times \\eta_a = \\frac{W_s}{W_r} \\times 100 = \\frac{60}{100} \\times 100 = 60.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_005",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water storage efficiency definition",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Water Storage Efficiency ($\\eta_s$) is defined as the ratio of:",
+    "options": {
+      "A": "Water stored in the root zone during irrigation to the water needed in the root zone prior to irrigation",
+      "B": "Water delivered to the field to the water diverted from the source",
+      "C": "Water beneficially consumed by crops to the total water applied",
+      "D": "Water stored in a surface reservoir to total annual runoff"
+    },
+    "correct_answer": "A",
+    "solution": "Water storage efficiency evaluates whether the irrigation adequately replenished the root zone moisture deficiency:\n$$\\eta_s = \\frac{W_s}{W_n} \\times 100$$\nwhere $W_s$ is water stored in root zone, and $W_n$ is water needed to bring moisture up to field capacity.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_006",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water distribution efficiency formula",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding Water Distribution Efficiency ($\\eta_d$) is/are TRUE?",
+    "options": {
+      "A": "It is defined by $\\eta_d = 100 \\left( 1 - \\frac{\\bar{y}}{\\bar{d}} \\right)$, where $\\bar{d}$ is average water depth stored and $\\bar{y}$ is average numerical deviation from $\\bar{d}$",
+      "B": "A distribution efficiency of $100\\%$ implies completely uniform penetration depth throughout the length of run",
+      "C": "Under-irrigation at the lower end of a border strip lowers the distribution efficiency",
+      "D": "Distribution efficiency accounts for evaporation losses from the supplying reservoir"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $\\eta_d = 100 (1 - \\bar{y}/\\bar{d})$ evaluates how uniformly water infiltrates along the run (A is true).\n2. Perfect uniformity means $\\bar{y} = 0$, giving $\\eta_d = 100\\%$ (B is true).\n3. Incomplete penetration or non-uniform soaking widens deviation $\\bar{y}$, reducing $\\eta_d$ (C is true).\n4. Distribution efficiency is strictly a field-level uniformity index; reservoir evaporation is unrelated (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_007",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Project irrigation efficiency calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A canal diversion structure supplies $100\\text{ m}^3$ of water at the reservoir head. The volume of water delivered to the agricultural field plot is $80\\text{ m}^3$, out of which $60\\text{ m}^3$ is beneficially stored in the crop root zone. The overall project irrigation efficiency is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "60.0",
+    "numerical_range": {
+      "min": 59.8,
+      "max": 60.2
+    },
+    "solution": "Conveyance efficiency $\\eta_c = \\frac{W_f}{W_r} \\times 100 = \\frac{80}{100} \\times 100 = 80.0\\%$.\nField application efficiency $\\eta_a = \\frac{W_s}{W_f} \\times 100 = \\frac{60}{80} \\times 100 = 75.0\\%$.\nOverall project efficiency is:\n$$\\eta_{proj} = \\eta_c \\times \\eta_a = \\frac{W_s}{W_r} \\times 100 = \\frac{60}{100} \\times 100 = 60.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_008",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water storage efficiency definition",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Water Storage Efficiency ($\\eta_s$) is defined as the ratio of:",
+    "options": {
+      "A": "Water stored in the root zone during irrigation to the water needed in the root zone prior to irrigation",
+      "B": "Water delivered to the field to the water diverted from the source",
+      "C": "Water beneficially consumed by crops to the total water applied",
+      "D": "Water stored in a surface reservoir to total annual runoff"
+    },
+    "correct_answer": "A",
+    "solution": "Water storage efficiency evaluates whether the irrigation adequately replenished the root zone moisture deficiency:\n$$\\eta_s = \\frac{W_s}{W_n} \\times 100$$\nwhere $W_s$ is water stored in root zone, and $W_n$ is water needed to bring moisture up to field capacity.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_009",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water distribution efficiency formula",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding Water Distribution Efficiency ($\\eta_d$) is/are TRUE?",
+    "options": {
+      "A": "It is defined by $\\eta_d = 100 \\left( 1 - \\frac{\\bar{y}}{\\bar{d}} \\right)$, where $\\bar{d}$ is average water depth stored and $\\bar{y}$ is average numerical deviation from $\\bar{d}$",
+      "B": "A distribution efficiency of $100\\%$ implies completely uniform penetration depth throughout the length of run",
+      "C": "Under-irrigation at the lower end of a border strip lowers the distribution efficiency",
+      "D": "Distribution efficiency accounts for evaporation losses from the supplying reservoir"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $\\eta_d = 100 (1 - \\bar{y}/\\bar{d})$ evaluates how uniformly water infiltrates along the run (A is true).\n2. Perfect uniformity means $\\bar{y} = 0$, giving $\\eta_d = 100\\%$ (B is true).\n3. Incomplete penetration or non-uniform soaking widens deviation $\\bar{y}$, reducing $\\eta_d$ (C is true).\n4. Distribution efficiency is strictly a field-level uniformity index; reservoir evaporation is unrelated (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_010",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Project irrigation efficiency calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A canal diversion structure supplies $100\\text{ m}^3$ of water at the reservoir head. The volume of water delivered to the agricultural field plot is $80\\text{ m}^3$, out of which $60\\text{ m}^3$ is beneficially stored in the crop root zone. The overall project irrigation efficiency is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "60.0",
+    "numerical_range": {
+      "min": 59.8,
+      "max": 60.2
+    },
+    "solution": "Conveyance efficiency $\\eta_c = \\frac{W_f}{W_r} \\times 100 = \\frac{80}{100} \\times 100 = 80.0\\%$.\nField application efficiency $\\eta_a = \\frac{W_s}{W_f} \\times 100 = \\frac{60}{80} \\times 100 = 75.0\\%$.\nOverall project efficiency is:\n$$\\eta_{proj} = \\eta_c \\times \\eta_a = \\frac{W_s}{W_r} \\times 100 = \\frac{60}{100} \\times 100 = 60.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_011",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water storage efficiency definition",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Water Storage Efficiency ($\\eta_s$) is defined as the ratio of:",
+    "options": {
+      "A": "Water stored in the root zone during irrigation to the water needed in the root zone prior to irrigation",
+      "B": "Water delivered to the field to the water diverted from the source",
+      "C": "Water beneficially consumed by crops to the total water applied",
+      "D": "Water stored in a surface reservoir to total annual runoff"
+    },
+    "correct_answer": "A",
+    "solution": "Water storage efficiency evaluates whether the irrigation adequately replenished the root zone moisture deficiency:\n$$\\eta_s = \\frac{W_s}{W_n} \\times 100$$\nwhere $W_s$ is water stored in root zone, and $W_n$ is water needed to bring moisture up to field capacity.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_012",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water distribution efficiency formula",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding Water Distribution Efficiency ($\\eta_d$) is/are TRUE?",
+    "options": {
+      "A": "It is defined by $\\eta_d = 100 \\left( 1 - \\frac{\\bar{y}}{\\bar{d}} \\right)$, where $\\bar{d}$ is average water depth stored and $\\bar{y}$ is average numerical deviation from $\\bar{d}$",
+      "B": "A distribution efficiency of $100\\%$ implies completely uniform penetration depth throughout the length of run",
+      "C": "Under-irrigation at the lower end of a border strip lowers the distribution efficiency",
+      "D": "Distribution efficiency accounts for evaporation losses from the supplying reservoir"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $\\eta_d = 100 (1 - \\bar{y}/\\bar{d})$ evaluates how uniformly water infiltrates along the run (A is true).\n2. Perfect uniformity means $\\bar{y} = 0$, giving $\\eta_d = 100\\%$ (B is true).\n3. Incomplete penetration or non-uniform soaking widens deviation $\\bar{y}$, reducing $\\eta_d$ (C is true).\n4. Distribution efficiency is strictly a field-level uniformity index; reservoir evaporation is unrelated (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_013",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Project irrigation efficiency calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A canal diversion structure supplies $100\\text{ m}^3$ of water at the reservoir head. The volume of water delivered to the agricultural field plot is $80\\text{ m}^3$, out of which $60\\text{ m}^3$ is beneficially stored in the crop root zone. The overall project irrigation efficiency is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "60.0",
+    "numerical_range": {
+      "min": 59.8,
+      "max": 60.2
+    },
+    "solution": "Conveyance efficiency $\\eta_c = \\frac{W_f}{W_r} \\times 100 = \\frac{80}{100} \\times 100 = 80.0\\%$.\nField application efficiency $\\eta_a = \\frac{W_s}{W_f} \\times 100 = \\frac{60}{80} \\times 100 = 75.0\\%$.\nOverall project efficiency is:\n$$\\eta_{proj} = \\eta_c \\times \\eta_a = \\frac{W_s}{W_r} \\times 100 = \\frac{60}{100} \\times 100 = 60.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_014",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water storage efficiency definition",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Water Storage Efficiency ($\\eta_s$) is defined as the ratio of:",
+    "options": {
+      "A": "Water stored in the root zone during irrigation to the water needed in the root zone prior to irrigation",
+      "B": "Water delivered to the field to the water diverted from the source",
+      "C": "Water beneficially consumed by crops to the total water applied",
+      "D": "Water stored in a surface reservoir to total annual runoff"
+    },
+    "correct_answer": "A",
+    "solution": "Water storage efficiency evaluates whether the irrigation adequately replenished the root zone moisture deficiency:\n$$\\eta_s = \\frac{W_s}{W_n} \\times 100$$\nwhere $W_s$ is water stored in root zone, and $W_n$ is water needed to bring moisture up to field capacity.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_015",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water distribution efficiency formula",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding Water Distribution Efficiency ($\\eta_d$) is/are TRUE?",
+    "options": {
+      "A": "It is defined by $\\eta_d = 100 \\left( 1 - \\frac{\\bar{y}}{\\bar{d}} \\right)$, where $\\bar{d}$ is average water depth stored and $\\bar{y}$ is average numerical deviation from $\\bar{d}$",
+      "B": "A distribution efficiency of $100\\%$ implies completely uniform penetration depth throughout the length of run",
+      "C": "Under-irrigation at the lower end of a border strip lowers the distribution efficiency",
+      "D": "Distribution efficiency accounts for evaporation losses from the supplying reservoir"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $\\eta_d = 100 (1 - \\bar{y}/\\bar{d})$ evaluates how uniformly water infiltrates along the run (A is true).\n2. Perfect uniformity means $\\bar{y} = 0$, giving $\\eta_d = 100\\%$ (B is true).\n3. Incomplete penetration or non-uniform soaking widens deviation $\\bar{y}$, reducing $\\eta_d$ (C is true).\n4. Distribution efficiency is strictly a field-level uniformity index; reservoir evaporation is unrelated (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_016",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Project irrigation efficiency calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A canal diversion structure supplies $100\\text{ m}^3$ of water at the reservoir head. The volume of water delivered to the agricultural field plot is $80\\text{ m}^3$, out of which $60\\text{ m}^3$ is beneficially stored in the crop root zone. The overall project irrigation efficiency is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "60.0",
+    "numerical_range": {
+      "min": 59.8,
+      "max": 60.2
+    },
+    "solution": "Conveyance efficiency $\\eta_c = \\frac{W_f}{W_r} \\times 100 = \\frac{80}{100} \\times 100 = 80.0\\%$.\nField application efficiency $\\eta_a = \\frac{W_s}{W_f} \\times 100 = \\frac{60}{80} \\times 100 = 75.0\\%$.\nOverall project efficiency is:\n$$\\eta_{proj} = \\eta_c \\times \\eta_a = \\frac{W_s}{W_r} \\times 100 = \\frac{60}{100} \\times 100 = 60.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_017",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water storage efficiency definition",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Water Storage Efficiency ($\\eta_s$) is defined as the ratio of:",
+    "options": {
+      "A": "Water stored in the root zone during irrigation to the water needed in the root zone prior to irrigation",
+      "B": "Water delivered to the field to the water diverted from the source",
+      "C": "Water beneficially consumed by crops to the total water applied",
+      "D": "Water stored in a surface reservoir to total annual runoff"
+    },
+    "correct_answer": "A",
+    "solution": "Water storage efficiency evaluates whether the irrigation adequately replenished the root zone moisture deficiency:\n$$\\eta_s = \\frac{W_s}{W_n} \\times 100$$\nwhere $W_s$ is water stored in root zone, and $W_n$ is water needed to bring moisture up to field capacity.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_018",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water distribution efficiency formula",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding Water Distribution Efficiency ($\\eta_d$) is/are TRUE?",
+    "options": {
+      "A": "It is defined by $\\eta_d = 100 \\left( 1 - \\frac{\\bar{y}}{\\bar{d}} \\right)$, where $\\bar{d}$ is average water depth stored and $\\bar{y}$ is average numerical deviation from $\\bar{d}$",
+      "B": "A distribution efficiency of $100\\%$ implies completely uniform penetration depth throughout the length of run",
+      "C": "Under-irrigation at the lower end of a border strip lowers the distribution efficiency",
+      "D": "Distribution efficiency accounts for evaporation losses from the supplying reservoir"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $\\eta_d = 100 (1 - \\bar{y}/\\bar{d})$ evaluates how uniformly water infiltrates along the run (A is true).\n2. Perfect uniformity means $\\bar{y} = 0$, giving $\\eta_d = 100\\%$ (B is true).\n3. Incomplete penetration or non-uniform soaking widens deviation $\\bar{y}$, reducing $\\eta_d$ (C is true).\n4. Distribution efficiency is strictly a field-level uniformity index; reservoir evaporation is unrelated (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_019",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Project irrigation efficiency calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A canal diversion structure supplies $100\\text{ m}^3$ of water at the reservoir head. The volume of water delivered to the agricultural field plot is $80\\text{ m}^3$, out of which $60\\text{ m}^3$ is beneficially stored in the crop root zone. The overall project irrigation efficiency is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "60.0",
+    "numerical_range": {
+      "min": 59.8,
+      "max": 60.2
+    },
+    "solution": "Conveyance efficiency $\\eta_c = \\frac{W_f}{W_r} \\times 100 = \\frac{80}{100} \\times 100 = 80.0\\%$.\nField application efficiency $\\eta_a = \\frac{W_s}{W_f} \\times 100 = \\frac{60}{80} \\times 100 = 75.0\\%$.\nOverall project efficiency is:\n$$\\eta_{proj} = \\eta_c \\times \\eta_a = \\frac{W_s}{W_r} \\times 100 = \\frac{60}{100} \\times 100 = 60.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_020",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water storage efficiency definition",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Water Storage Efficiency ($\\eta_s$) is defined as the ratio of:",
+    "options": {
+      "A": "Water stored in the root zone during irrigation to the water needed in the root zone prior to irrigation",
+      "B": "Water delivered to the field to the water diverted from the source",
+      "C": "Water beneficially consumed by crops to the total water applied",
+      "D": "Water stored in a surface reservoir to total annual runoff"
+    },
+    "correct_answer": "A",
+    "solution": "Water storage efficiency evaluates whether the irrigation adequately replenished the root zone moisture deficiency:\n$$\\eta_s = \\frac{W_s}{W_n} \\times 100$$\nwhere $W_s$ is water stored in root zone, and $W_n$ is water needed to bring moisture up to field capacity.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_021",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water distribution efficiency formula",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding Water Distribution Efficiency ($\\eta_d$) is/are TRUE?",
+    "options": {
+      "A": "It is defined by $\\eta_d = 100 \\left( 1 - \\frac{\\bar{y}}{\\bar{d}} \\right)$, where $\\bar{d}$ is average water depth stored and $\\bar{y}$ is average numerical deviation from $\\bar{d}$",
+      "B": "A distribution efficiency of $100\\%$ implies completely uniform penetration depth throughout the length of run",
+      "C": "Under-irrigation at the lower end of a border strip lowers the distribution efficiency",
+      "D": "Distribution efficiency accounts for evaporation losses from the supplying reservoir"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $\\eta_d = 100 (1 - \\bar{y}/\\bar{d})$ evaluates how uniformly water infiltrates along the run (A is true).\n2. Perfect uniformity means $\\bar{y} = 0$, giving $\\eta_d = 100\\%$ (B is true).\n3. Incomplete penetration or non-uniform soaking widens deviation $\\bar{y}$, reducing $\\eta_d$ (C is true).\n4. Distribution efficiency is strictly a field-level uniformity index; reservoir evaporation is unrelated (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_022",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Project irrigation efficiency calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A canal diversion structure supplies $100\\text{ m}^3$ of water at the reservoir head. The volume of water delivered to the agricultural field plot is $80\\text{ m}^3$, out of which $60\\text{ m}^3$ is beneficially stored in the crop root zone. The overall project irrigation efficiency is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "60.0",
+    "numerical_range": {
+      "min": 59.8,
+      "max": 60.2
+    },
+    "solution": "Conveyance efficiency $\\eta_c = \\frac{W_f}{W_r} \\times 100 = \\frac{80}{100} \\times 100 = 80.0\\%$.\nField application efficiency $\\eta_a = \\frac{W_s}{W_f} \\times 100 = \\frac{60}{80} \\times 100 = 75.0\\%$.\nOverall project efficiency is:\n$$\\eta_{proj} = \\eta_c \\times \\eta_a = \\frac{W_s}{W_r} \\times 100 = \\frac{60}{100} \\times 100 = 60.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_023",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water storage efficiency definition",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Water Storage Efficiency ($\\eta_s$) is defined as the ratio of:",
+    "options": {
+      "A": "Water stored in the root zone during irrigation to the water needed in the root zone prior to irrigation",
+      "B": "Water delivered to the field to the water diverted from the source",
+      "C": "Water beneficially consumed by crops to the total water applied",
+      "D": "Water stored in a surface reservoir to total annual runoff"
+    },
+    "correct_answer": "A",
+    "solution": "Water storage efficiency evaluates whether the irrigation adequately replenished the root zone moisture deficiency:\n$$\\eta_s = \\frac{W_s}{W_n} \\times 100$$\nwhere $W_s$ is water stored in root zone, and $W_n$ is water needed to bring moisture up to field capacity.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_024",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water distribution efficiency formula",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding Water Distribution Efficiency ($\\eta_d$) is/are TRUE?",
+    "options": {
+      "A": "It is defined by $\\eta_d = 100 \\left( 1 - \\frac{\\bar{y}}{\\bar{d}} \\right)$, where $\\bar{d}$ is average water depth stored and $\\bar{y}$ is average numerical deviation from $\\bar{d}$",
+      "B": "A distribution efficiency of $100\\%$ implies completely uniform penetration depth throughout the length of run",
+      "C": "Under-irrigation at the lower end of a border strip lowers the distribution efficiency",
+      "D": "Distribution efficiency accounts for evaporation losses from the supplying reservoir"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $\\eta_d = 100 (1 - \\bar{y}/\\bar{d})$ evaluates how uniformly water infiltrates along the run (A is true).\n2. Perfect uniformity means $\\bar{y} = 0$, giving $\\eta_d = 100\\%$ (B is true).\n3. Incomplete penetration or non-uniform soaking widens deviation $\\bar{y}$, reducing $\\eta_d$ (C is true).\n4. Distribution efficiency is strictly a field-level uniformity index; reservoir evaporation is unrelated (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_025",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Project irrigation efficiency calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A canal diversion structure supplies $100\\text{ m}^3$ of water at the reservoir head. The volume of water delivered to the agricultural field plot is $80\\text{ m}^3$, out of which $60\\text{ m}^3$ is beneficially stored in the crop root zone. The overall project irrigation efficiency is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "60.0",
+    "numerical_range": {
+      "min": 59.8,
+      "max": 60.2
+    },
+    "solution": "Conveyance efficiency $\\eta_c = \\frac{W_f}{W_r} \\times 100 = \\frac{80}{100} \\times 100 = 80.0\\%$.\nField application efficiency $\\eta_a = \\frac{W_s}{W_f} \\times 100 = \\frac{60}{80} \\times 100 = 75.0\\%$.\nOverall project efficiency is:\n$$\\eta_{proj} = \\eta_c \\times \\eta_a = \\frac{W_s}{W_r} \\times 100 = \\frac{60}{100} \\times 100 = 60.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_026",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water storage efficiency definition",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Water Storage Efficiency ($\\eta_s$) is defined as the ratio of:",
+    "options": {
+      "A": "Water stored in the root zone during irrigation to the water needed in the root zone prior to irrigation",
+      "B": "Water delivered to the field to the water diverted from the source",
+      "C": "Water beneficially consumed by crops to the total water applied",
+      "D": "Water stored in a surface reservoir to total annual runoff"
+    },
+    "correct_answer": "A",
+    "solution": "Water storage efficiency evaluates whether the irrigation adequately replenished the root zone moisture deficiency:\n$$\\eta_s = \\frac{W_s}{W_n} \\times 100$$\nwhere $W_s$ is water stored in root zone, and $W_n$ is water needed to bring moisture up to field capacity.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_027",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water distribution efficiency formula",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding Water Distribution Efficiency ($\\eta_d$) is/are TRUE?",
+    "options": {
+      "A": "It is defined by $\\eta_d = 100 \\left( 1 - \\frac{\\bar{y}}{\\bar{d}} \\right)$, where $\\bar{d}$ is average water depth stored and $\\bar{y}$ is average numerical deviation from $\\bar{d}$",
+      "B": "A distribution efficiency of $100\\%$ implies completely uniform penetration depth throughout the length of run",
+      "C": "Under-irrigation at the lower end of a border strip lowers the distribution efficiency",
+      "D": "Distribution efficiency accounts for evaporation losses from the supplying reservoir"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $\\eta_d = 100 (1 - \\bar{y}/\\bar{d})$ evaluates how uniformly water infiltrates along the run (A is true).\n2. Perfect uniformity means $\\bar{y} = 0$, giving $\\eta_d = 100\\%$ (B is true).\n3. Incomplete penetration or non-uniform soaking widens deviation $\\bar{y}$, reducing $\\eta_d$ (C is true).\n4. Distribution efficiency is strictly a field-level uniformity index; reservoir evaporation is unrelated (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_028",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Project irrigation efficiency calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A canal diversion structure supplies $100\\text{ m}^3$ of water at the reservoir head. The volume of water delivered to the agricultural field plot is $80\\text{ m}^3$, out of which $60\\text{ m}^3$ is beneficially stored in the crop root zone. The overall project irrigation efficiency is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "60.0",
+    "numerical_range": {
+      "min": 59.8,
+      "max": 60.2
+    },
+    "solution": "Conveyance efficiency $\\eta_c = \\frac{W_f}{W_r} \\times 100 = \\frac{80}{100} \\times 100 = 80.0\\%$.\nField application efficiency $\\eta_a = \\frac{W_s}{W_f} \\times 100 = \\frac{60}{80} \\times 100 = 75.0\\%$.\nOverall project efficiency is:\n$$\\eta_{proj} = \\eta_c \\times \\eta_a = \\frac{W_s}{W_r} \\times 100 = \\frac{60}{100} \\times 100 = 60.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_029",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water storage efficiency definition",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Water Storage Efficiency ($\\eta_s$) is defined as the ratio of:",
+    "options": {
+      "A": "Water stored in the root zone during irrigation to the water needed in the root zone prior to irrigation",
+      "B": "Water delivered to the field to the water diverted from the source",
+      "C": "Water beneficially consumed by crops to the total water applied",
+      "D": "Water stored in a surface reservoir to total annual runoff"
+    },
+    "correct_answer": "A",
+    "solution": "Water storage efficiency evaluates whether the irrigation adequately replenished the root zone moisture deficiency:\n$$\\eta_s = \\frac{W_s}{W_n} \\times 100$$\nwhere $W_s$ is water stored in root zone, and $W_n$ is water needed to bring moisture up to field capacity.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_030",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water distribution efficiency formula",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding Water Distribution Efficiency ($\\eta_d$) is/are TRUE?",
+    "options": {
+      "A": "It is defined by $\\eta_d = 100 \\left( 1 - \\frac{\\bar{y}}{\\bar{d}} \\right)$, where $\\bar{d}$ is average water depth stored and $\\bar{y}$ is average numerical deviation from $\\bar{d}$",
+      "B": "A distribution efficiency of $100\\%$ implies completely uniform penetration depth throughout the length of run",
+      "C": "Under-irrigation at the lower end of a border strip lowers the distribution efficiency",
+      "D": "Distribution efficiency accounts for evaporation losses from the supplying reservoir"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $\\eta_d = 100 (1 - \\bar{y}/\\bar{d})$ evaluates how uniformly water infiltrates along the run (A is true).\n2. Perfect uniformity means $\\bar{y} = 0$, giving $\\eta_d = 100\\%$ (B is true).\n3. Incomplete penetration or non-uniform soaking widens deviation $\\bar{y}$, reducing $\\eta_d$ (C is true).\n4. Distribution efficiency is strictly a field-level uniformity index; reservoir evaporation is unrelated (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_031",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Project irrigation efficiency calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A canal diversion structure supplies $100\\text{ m}^3$ of water at the reservoir head. The volume of water delivered to the agricultural field plot is $80\\text{ m}^3$, out of which $60\\text{ m}^3$ is beneficially stored in the crop root zone. The overall project irrigation efficiency is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "60.0",
+    "numerical_range": {
+      "min": 59.8,
+      "max": 60.2
+    },
+    "solution": "Conveyance efficiency $\\eta_c = \\frac{W_f}{W_r} \\times 100 = \\frac{80}{100} \\times 100 = 80.0\\%$.\nField application efficiency $\\eta_a = \\frac{W_s}{W_f} \\times 100 = \\frac{60}{80} \\times 100 = 75.0\\%$.\nOverall project efficiency is:\n$$\\eta_{proj} = \\eta_c \\times \\eta_a = \\frac{W_s}{W_r} \\times 100 = \\frac{60}{100} \\times 100 = 60.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_032",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water storage efficiency definition",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Water Storage Efficiency ($\\eta_s$) is defined as the ratio of:",
+    "options": {
+      "A": "Water stored in the root zone during irrigation to the water needed in the root zone prior to irrigation",
+      "B": "Water delivered to the field to the water diverted from the source",
+      "C": "Water beneficially consumed by crops to the total water applied",
+      "D": "Water stored in a surface reservoir to total annual runoff"
+    },
+    "correct_answer": "A",
+    "solution": "Water storage efficiency evaluates whether the irrigation adequately replenished the root zone moisture deficiency:\n$$\\eta_s = \\frac{W_s}{W_n} \\times 100$$\nwhere $W_s$ is water stored in root zone, and $W_n$ is water needed to bring moisture up to field capacity.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_033",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water distribution efficiency formula",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding Water Distribution Efficiency ($\\eta_d$) is/are TRUE?",
+    "options": {
+      "A": "It is defined by $\\eta_d = 100 \\left( 1 - \\frac{\\bar{y}}{\\bar{d}} \\right)$, where $\\bar{d}$ is average water depth stored and $\\bar{y}$ is average numerical deviation from $\\bar{d}$",
+      "B": "A distribution efficiency of $100\\%$ implies completely uniform penetration depth throughout the length of run",
+      "C": "Under-irrigation at the lower end of a border strip lowers the distribution efficiency",
+      "D": "Distribution efficiency accounts for evaporation losses from the supplying reservoir"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $\\eta_d = 100 (1 - \\bar{y}/\\bar{d})$ evaluates how uniformly water infiltrates along the run (A is true).\n2. Perfect uniformity means $\\bar{y} = 0$, giving $\\eta_d = 100\\%$ (B is true).\n3. Incomplete penetration or non-uniform soaking widens deviation $\\bar{y}$, reducing $\\eta_d$ (C is true).\n4. Distribution efficiency is strictly a field-level uniformity index; reservoir evaporation is unrelated (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_034",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Project irrigation efficiency calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A canal diversion structure supplies $100\\text{ m}^3$ of water at the reservoir head. The volume of water delivered to the agricultural field plot is $80\\text{ m}^3$, out of which $60\\text{ m}^3$ is beneficially stored in the crop root zone. The overall project irrigation efficiency is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "60.0",
+    "numerical_range": {
+      "min": 59.8,
+      "max": 60.2
+    },
+    "solution": "Conveyance efficiency $\\eta_c = \\frac{W_f}{W_r} \\times 100 = \\frac{80}{100} \\times 100 = 80.0\\%$.\nField application efficiency $\\eta_a = \\frac{W_s}{W_f} \\times 100 = \\frac{60}{80} \\times 100 = 75.0\\%$.\nOverall project efficiency is:\n$$\\eta_{proj} = \\eta_c \\times \\eta_a = \\frac{W_s}{W_r} \\times 100 = \\frac{60}{100} \\times 100 = 60.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_035",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water storage efficiency definition",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Water Storage Efficiency ($\\eta_s$) is defined as the ratio of:",
+    "options": {
+      "A": "Water stored in the root zone during irrigation to the water needed in the root zone prior to irrigation",
+      "B": "Water delivered to the field to the water diverted from the source",
+      "C": "Water beneficially consumed by crops to the total water applied",
+      "D": "Water stored in a surface reservoir to total annual runoff"
+    },
+    "correct_answer": "A",
+    "solution": "Water storage efficiency evaluates whether the irrigation adequately replenished the root zone moisture deficiency:\n$$\\eta_s = \\frac{W_s}{W_n} \\times 100$$\nwhere $W_s$ is water stored in root zone, and $W_n$ is water needed to bring moisture up to field capacity.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_036",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water distribution efficiency formula",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding Water Distribution Efficiency ($\\eta_d$) is/are TRUE?",
+    "options": {
+      "A": "It is defined by $\\eta_d = 100 \\left( 1 - \\frac{\\bar{y}}{\\bar{d}} \\right)$, where $\\bar{d}$ is average water depth stored and $\\bar{y}$ is average numerical deviation from $\\bar{d}$",
+      "B": "A distribution efficiency of $100\\%$ implies completely uniform penetration depth throughout the length of run",
+      "C": "Under-irrigation at the lower end of a border strip lowers the distribution efficiency",
+      "D": "Distribution efficiency accounts for evaporation losses from the supplying reservoir"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. $\\eta_d = 100 (1 - \\bar{y}/\\bar{d})$ evaluates how uniformly water infiltrates along the run (A is true).\n2. Perfect uniformity means $\\bar{y} = 0$, giving $\\eta_d = 100\\%$ (B is true).\n3. Incomplete penetration or non-uniform soaking widens deviation $\\bar{y}$, reducing $\\eta_d$ (C is true).\n4. Distribution efficiency is strictly a field-level uniformity index; reservoir evaporation is unrelated (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_037",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Project irrigation efficiency calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A canal diversion structure supplies $100\\text{ m}^3$ of water at the reservoir head. The volume of water delivered to the agricultural field plot is $80\\text{ m}^3$, out of which $60\\text{ m}^3$ is beneficially stored in the crop root zone. The overall project irrigation efficiency is ________ $\\%$ (round off to one decimal place).",
+    "correct_answer": "60.0",
+    "numerical_range": {
+      "min": 59.8,
+      "max": 60.2
+    },
+    "solution": "Conveyance efficiency $\\eta_c = \\frac{W_f}{W_r} \\times 100 = \\frac{80}{100} \\times 100 = 80.0\\%$.\nField application efficiency $\\eta_a = \\frac{W_s}{W_f} \\times 100 = \\frac{60}{80} \\times 100 = 75.0\\%$.\nOverall project efficiency is:\n$$\\eta_{proj} = \\eta_c \\times \\eta_a = \\frac{W_s}{W_r} \\times 100 = \\frac{60}{100} \\times 100 = 60.0\\%$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_EFF_038",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water storage efficiency definition",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Water Storage Efficiency ($\\eta_s$) is defined as the ratio of:",
+    "options": {
+      "A": "Water stored in the root zone during irrigation to the water needed in the root zone prior to irrigation",
+      "B": "Water delivered to the field to the water diverted from the source",
+      "C": "Water beneficially consumed by crops to the total water applied",
+      "D": "Water stored in a surface reservoir to total annual runoff"
+    },
+    "correct_answer": "A",
+    "solution": "Water storage efficiency evaluates whether the irrigation adequately replenished the root zone moisture deficiency:\n$$\\eta_s = \\frac{W_s}{W_n} \\times 100$$\nwhere $W_s$ is water stored in root zone, and $W_n$ is water needed to bring moisture up to field capacity.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_001",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey regime wetted perimeter",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "An unlined irrigation canal in regime condition carries a design discharge of $Q = 30.0\\text{ m}^3/\\text{s}$. According to Lacey's regime theory, the wetted perimeter of the channel is ________ $\\text{m}$ (round off to two decimal places).",
+    "correct_answer": "26.02",
+    "numerical_range": {
+      "min": 25.82,
+      "max": 26.22
+    },
+    "solution": "According to Lacey's regime formula, the wetted perimeter $P$ is solely a function of design discharge $Q$:\n$$P = 4.75 \\sqrt{Q}$$\nGiven $Q = 30.0\\text{ m}^3/\\text{s}$:\n$$P = 4.75 \\times \\sqrt{30.0} = 4.75 \\times 5.4772 = 26.02\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_002",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey silt factor calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The average particle diameter of bed material in an alluvial canal is $d = 0.36\\text{ mm}$. Lacey's silt factor $f$ for this bed material is ________ (round off to two decimal places).",
+    "correct_answer": "1.06",
+    "numerical_range": {
+      "min": 1.04,
+      "max": 1.08
+    },
+    "solution": "Lacey's silt factor is given by:\n$$f = 1.76 \\sqrt{d_{mm}}$$\nFor $d = 0.36\\text{ mm}$:\n$$f = 1.76 \\times \\sqrt{0.36} = 1.76 \\times 0.60 = 1.056$$\nRounding to two decimal places: $1.06$.",
+    "difficulty": "Easy",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_003",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey vs Kennedy regime canal theories",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements comparing Kennedy's and Lacey's silt theories is/are TRUE?",
+    "options": {
+      "A": "Kennedy assumed that silt-supporting eddies are generated only from the bed of the channel",
+      "B": "Lacey considered silt-supporting eddies to be generated from the entire wetted perimeter (bed and sides)",
+      "C": "Lacey defined true regime, initial regime, and final regime states for alluvial channels",
+      "D": "Kennedy gave an independent regime equation for the longitudinal bed slope without needing Kutter's formula"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Kennedy considered eddies arising solely from horizontal channel bed (A is true).\n2. Lacey recognized that eddies generate normal to all wetted boundaries (bed and sides) (B is true).\n3. Lacey clearly categorized three regime conditions: true, initial, and final (C is true).\n4. Kennedy did NOT provide a slope equation and had to rely on Kutter's formula with trial depths; Lacey developed independent regime equations for velocity, perimeter, hydraulic radius, and bed slope (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_004",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey regime wetted perimeter",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "An unlined irrigation canal in regime condition carries a design discharge of $Q = 45.0\\text{ m}^3/\\text{s}$. According to Lacey's regime theory, the wetted perimeter of the channel is ________ $\\text{m}$ (round off to two decimal places).",
+    "correct_answer": "31.86",
+    "numerical_range": {
+      "min": 31.66,
+      "max": 32.06
+    },
+    "solution": "According to Lacey's regime formula, the wetted perimeter $P$ is solely a function of design discharge $Q$:\n$$P = 4.75 \\sqrt{Q}$$\nGiven $Q = 45.0\\text{ m}^3/\\text{s}$:\n$$P = 4.75 \\times \\sqrt{45.0} = 4.75 \\times 6.7082 = 31.86\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_005",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey silt factor calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The average particle diameter of bed material in an alluvial canal is $d = 0.36\\text{ mm}$. Lacey's silt factor $f$ for this bed material is ________ (round off to two decimal places).",
+    "correct_answer": "1.06",
+    "numerical_range": {
+      "min": 1.04,
+      "max": 1.08
+    },
+    "solution": "Lacey's silt factor is given by:\n$$f = 1.76 \\sqrt{d_{mm}}$$\nFor $d = 0.36\\text{ mm}$:\n$$f = 1.76 \\times \\sqrt{0.36} = 1.76 \\times 0.60 = 1.056$$\nRounding to two decimal places: $1.06$.",
+    "difficulty": "Easy",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_006",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey vs Kennedy regime canal theories",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements comparing Kennedy's and Lacey's silt theories is/are TRUE?",
+    "options": {
+      "A": "Kennedy assumed that silt-supporting eddies are generated only from the bed of the channel",
+      "B": "Lacey considered silt-supporting eddies to be generated from the entire wetted perimeter (bed and sides)",
+      "C": "Lacey defined true regime, initial regime, and final regime states for alluvial channels",
+      "D": "Kennedy gave an independent regime equation for the longitudinal bed slope without needing Kutter's formula"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Kennedy considered eddies arising solely from horizontal channel bed (A is true).\n2. Lacey recognized that eddies generate normal to all wetted boundaries (bed and sides) (B is true).\n3. Lacey clearly categorized three regime conditions: true, initial, and final (C is true).\n4. Kennedy did NOT provide a slope equation and had to rely on Kutter's formula with trial depths; Lacey developed independent regime equations for velocity, perimeter, hydraulic radius, and bed slope (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_007",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey regime wetted perimeter",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "An unlined irrigation canal in regime condition carries a design discharge of $Q = 30.0\\text{ m}^3/\\text{s}$. According to Lacey's regime theory, the wetted perimeter of the channel is ________ $\\text{m}$ (round off to two decimal places).",
+    "correct_answer": "26.02",
+    "numerical_range": {
+      "min": 25.82,
+      "max": 26.22
+    },
+    "solution": "According to Lacey's regime formula, the wetted perimeter $P$ is solely a function of design discharge $Q$:\n$$P = 4.75 \\sqrt{Q}$$\nGiven $Q = 30.0\\text{ m}^3/\\text{s}$:\n$$P = 4.75 \\times \\sqrt{30.0} = 4.75 \\times 5.4772 = 26.02\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_008",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey silt factor calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The average particle diameter of bed material in an alluvial canal is $d = 0.36\\text{ mm}$. Lacey's silt factor $f$ for this bed material is ________ (round off to two decimal places).",
+    "correct_answer": "1.06",
+    "numerical_range": {
+      "min": 1.04,
+      "max": 1.08
+    },
+    "solution": "Lacey's silt factor is given by:\n$$f = 1.76 \\sqrt{d_{mm}}$$\nFor $d = 0.36\\text{ mm}$:\n$$f = 1.76 \\times \\sqrt{0.36} = 1.76 \\times 0.60 = 1.056$$\nRounding to two decimal places: $1.06$.",
+    "difficulty": "Easy",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_009",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey vs Kennedy regime canal theories",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements comparing Kennedy's and Lacey's silt theories is/are TRUE?",
+    "options": {
+      "A": "Kennedy assumed that silt-supporting eddies are generated only from the bed of the channel",
+      "B": "Lacey considered silt-supporting eddies to be generated from the entire wetted perimeter (bed and sides)",
+      "C": "Lacey defined true regime, initial regime, and final regime states for alluvial channels",
+      "D": "Kennedy gave an independent regime equation for the longitudinal bed slope without needing Kutter's formula"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Kennedy considered eddies arising solely from horizontal channel bed (A is true).\n2. Lacey recognized that eddies generate normal to all wetted boundaries (bed and sides) (B is true).\n3. Lacey clearly categorized three regime conditions: true, initial, and final (C is true).\n4. Kennedy did NOT provide a slope equation and had to rely on Kutter's formula with trial depths; Lacey developed independent regime equations for velocity, perimeter, hydraulic radius, and bed slope (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_010",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey regime wetted perimeter",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "An unlined irrigation canal in regime condition carries a design discharge of $Q = 45.0\\text{ m}^3/\\text{s}$. According to Lacey's regime theory, the wetted perimeter of the channel is ________ $\\text{m}$ (round off to two decimal places).",
+    "correct_answer": "31.86",
+    "numerical_range": {
+      "min": 31.66,
+      "max": 32.06
+    },
+    "solution": "According to Lacey's regime formula, the wetted perimeter $P$ is solely a function of design discharge $Q$:\n$$P = 4.75 \\sqrt{Q}$$\nGiven $Q = 45.0\\text{ m}^3/\\text{s}$:\n$$P = 4.75 \\times \\sqrt{45.0} = 4.75 \\times 6.7082 = 31.86\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_011",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey silt factor calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The average particle diameter of bed material in an alluvial canal is $d = 0.36\\text{ mm}$. Lacey's silt factor $f$ for this bed material is ________ (round off to two decimal places).",
+    "correct_answer": "1.06",
+    "numerical_range": {
+      "min": 1.04,
+      "max": 1.08
+    },
+    "solution": "Lacey's silt factor is given by:\n$$f = 1.76 \\sqrt{d_{mm}}$$\nFor $d = 0.36\\text{ mm}$:\n$$f = 1.76 \\times \\sqrt{0.36} = 1.76 \\times 0.60 = 1.056$$\nRounding to two decimal places: $1.06$.",
+    "difficulty": "Easy",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_012",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey vs Kennedy regime canal theories",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements comparing Kennedy's and Lacey's silt theories is/are TRUE?",
+    "options": {
+      "A": "Kennedy assumed that silt-supporting eddies are generated only from the bed of the channel",
+      "B": "Lacey considered silt-supporting eddies to be generated from the entire wetted perimeter (bed and sides)",
+      "C": "Lacey defined true regime, initial regime, and final regime states for alluvial channels",
+      "D": "Kennedy gave an independent regime equation for the longitudinal bed slope without needing Kutter's formula"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Kennedy considered eddies arising solely from horizontal channel bed (A is true).\n2. Lacey recognized that eddies generate normal to all wetted boundaries (bed and sides) (B is true).\n3. Lacey clearly categorized three regime conditions: true, initial, and final (C is true).\n4. Kennedy did NOT provide a slope equation and had to rely on Kutter's formula with trial depths; Lacey developed independent regime equations for velocity, perimeter, hydraulic radius, and bed slope (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_013",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey regime wetted perimeter",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "An unlined irrigation canal in regime condition carries a design discharge of $Q = 30.0\\text{ m}^3/\\text{s}$. According to Lacey's regime theory, the wetted perimeter of the channel is ________ $\\text{m}$ (round off to two decimal places).",
+    "correct_answer": "26.02",
+    "numerical_range": {
+      "min": 25.82,
+      "max": 26.22
+    },
+    "solution": "According to Lacey's regime formula, the wetted perimeter $P$ is solely a function of design discharge $Q$:\n$$P = 4.75 \\sqrt{Q}$$\nGiven $Q = 30.0\\text{ m}^3/\\text{s}$:\n$$P = 4.75 \\times \\sqrt{30.0} = 4.75 \\times 5.4772 = 26.02\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_014",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey silt factor calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The average particle diameter of bed material in an alluvial canal is $d = 0.36\\text{ mm}$. Lacey's silt factor $f$ for this bed material is ________ (round off to two decimal places).",
+    "correct_answer": "1.06",
+    "numerical_range": {
+      "min": 1.04,
+      "max": 1.08
+    },
+    "solution": "Lacey's silt factor is given by:\n$$f = 1.76 \\sqrt{d_{mm}}$$\nFor $d = 0.36\\text{ mm}$:\n$$f = 1.76 \\times \\sqrt{0.36} = 1.76 \\times 0.60 = 1.056$$\nRounding to two decimal places: $1.06$.",
+    "difficulty": "Easy",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_015",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey vs Kennedy regime canal theories",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements comparing Kennedy's and Lacey's silt theories is/are TRUE?",
+    "options": {
+      "A": "Kennedy assumed that silt-supporting eddies are generated only from the bed of the channel",
+      "B": "Lacey considered silt-supporting eddies to be generated from the entire wetted perimeter (bed and sides)",
+      "C": "Lacey defined true regime, initial regime, and final regime states for alluvial channels",
+      "D": "Kennedy gave an independent regime equation for the longitudinal bed slope without needing Kutter's formula"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Kennedy considered eddies arising solely from horizontal channel bed (A is true).\n2. Lacey recognized that eddies generate normal to all wetted boundaries (bed and sides) (B is true).\n3. Lacey clearly categorized three regime conditions: true, initial, and final (C is true).\n4. Kennedy did NOT provide a slope equation and had to rely on Kutter's formula with trial depths; Lacey developed independent regime equations for velocity, perimeter, hydraulic radius, and bed slope (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_016",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey regime wetted perimeter",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "An unlined irrigation canal in regime condition carries a design discharge of $Q = 45.0\\text{ m}^3/\\text{s}$. According to Lacey's regime theory, the wetted perimeter of the channel is ________ $\\text{m}$ (round off to two decimal places).",
+    "correct_answer": "31.86",
+    "numerical_range": {
+      "min": 31.66,
+      "max": 32.06
+    },
+    "solution": "According to Lacey's regime formula, the wetted perimeter $P$ is solely a function of design discharge $Q$:\n$$P = 4.75 \\sqrt{Q}$$\nGiven $Q = 45.0\\text{ m}^3/\\text{s}$:\n$$P = 4.75 \\times \\sqrt{45.0} = 4.75 \\times 6.7082 = 31.86\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_017",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey silt factor calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The average particle diameter of bed material in an alluvial canal is $d = 0.36\\text{ mm}$. Lacey's silt factor $f$ for this bed material is ________ (round off to two decimal places).",
+    "correct_answer": "1.06",
+    "numerical_range": {
+      "min": 1.04,
+      "max": 1.08
+    },
+    "solution": "Lacey's silt factor is given by:\n$$f = 1.76 \\sqrt{d_{mm}}$$\nFor $d = 0.36\\text{ mm}$:\n$$f = 1.76 \\times \\sqrt{0.36} = 1.76 \\times 0.60 = 1.056$$\nRounding to two decimal places: $1.06$.",
+    "difficulty": "Easy",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_018",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey vs Kennedy regime canal theories",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements comparing Kennedy's and Lacey's silt theories is/are TRUE?",
+    "options": {
+      "A": "Kennedy assumed that silt-supporting eddies are generated only from the bed of the channel",
+      "B": "Lacey considered silt-supporting eddies to be generated from the entire wetted perimeter (bed and sides)",
+      "C": "Lacey defined true regime, initial regime, and final regime states for alluvial channels",
+      "D": "Kennedy gave an independent regime equation for the longitudinal bed slope without needing Kutter's formula"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Kennedy considered eddies arising solely from horizontal channel bed (A is true).\n2. Lacey recognized that eddies generate normal to all wetted boundaries (bed and sides) (B is true).\n3. Lacey clearly categorized three regime conditions: true, initial, and final (C is true).\n4. Kennedy did NOT provide a slope equation and had to rely on Kutter's formula with trial depths; Lacey developed independent regime equations for velocity, perimeter, hydraulic radius, and bed slope (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_019",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey regime wetted perimeter",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "An unlined irrigation canal in regime condition carries a design discharge of $Q = 30.0\\text{ m}^3/\\text{s}$. According to Lacey's regime theory, the wetted perimeter of the channel is ________ $\\text{m}$ (round off to two decimal places).",
+    "correct_answer": "26.02",
+    "numerical_range": {
+      "min": 25.82,
+      "max": 26.22
+    },
+    "solution": "According to Lacey's regime formula, the wetted perimeter $P$ is solely a function of design discharge $Q$:\n$$P = 4.75 \\sqrt{Q}$$\nGiven $Q = 30.0\\text{ m}^3/\\text{s}$:\n$$P = 4.75 \\times \\sqrt{30.0} = 4.75 \\times 5.4772 = 26.02\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_020",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey silt factor calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The average particle diameter of bed material in an alluvial canal is $d = 0.36\\text{ mm}$. Lacey's silt factor $f$ for this bed material is ________ (round off to two decimal places).",
+    "correct_answer": "1.06",
+    "numerical_range": {
+      "min": 1.04,
+      "max": 1.08
+    },
+    "solution": "Lacey's silt factor is given by:\n$$f = 1.76 \\sqrt{d_{mm}}$$\nFor $d = 0.36\\text{ mm}$:\n$$f = 1.76 \\times \\sqrt{0.36} = 1.76 \\times 0.60 = 1.056$$\nRounding to two decimal places: $1.06$.",
+    "difficulty": "Easy",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_021",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey vs Kennedy regime canal theories",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements comparing Kennedy's and Lacey's silt theories is/are TRUE?",
+    "options": {
+      "A": "Kennedy assumed that silt-supporting eddies are generated only from the bed of the channel",
+      "B": "Lacey considered silt-supporting eddies to be generated from the entire wetted perimeter (bed and sides)",
+      "C": "Lacey defined true regime, initial regime, and final regime states for alluvial channels",
+      "D": "Kennedy gave an independent regime equation for the longitudinal bed slope without needing Kutter's formula"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Kennedy considered eddies arising solely from horizontal channel bed (A is true).\n2. Lacey recognized that eddies generate normal to all wetted boundaries (bed and sides) (B is true).\n3. Lacey clearly categorized three regime conditions: true, initial, and final (C is true).\n4. Kennedy did NOT provide a slope equation and had to rely on Kutter's formula with trial depths; Lacey developed independent regime equations for velocity, perimeter, hydraulic radius, and bed slope (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_022",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey regime wetted perimeter",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "An unlined irrigation canal in regime condition carries a design discharge of $Q = 45.0\\text{ m}^3/\\text{s}$. According to Lacey's regime theory, the wetted perimeter of the channel is ________ $\\text{m}$ (round off to two decimal places).",
+    "correct_answer": "31.86",
+    "numerical_range": {
+      "min": 31.66,
+      "max": 32.06
+    },
+    "solution": "According to Lacey's regime formula, the wetted perimeter $P$ is solely a function of design discharge $Q$:\n$$P = 4.75 \\sqrt{Q}$$\nGiven $Q = 45.0\\text{ m}^3/\\text{s}$:\n$$P = 4.75 \\times \\sqrt{45.0} = 4.75 \\times 6.7082 = 31.86\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_023",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey silt factor calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The average particle diameter of bed material in an alluvial canal is $d = 0.36\\text{ mm}$. Lacey's silt factor $f$ for this bed material is ________ (round off to two decimal places).",
+    "correct_answer": "1.06",
+    "numerical_range": {
+      "min": 1.04,
+      "max": 1.08
+    },
+    "solution": "Lacey's silt factor is given by:\n$$f = 1.76 \\sqrt{d_{mm}}$$\nFor $d = 0.36\\text{ mm}$:\n$$f = 1.76 \\times \\sqrt{0.36} = 1.76 \\times 0.60 = 1.056$$\nRounding to two decimal places: $1.06$.",
+    "difficulty": "Easy",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_024",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey vs Kennedy regime canal theories",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements comparing Kennedy's and Lacey's silt theories is/are TRUE?",
+    "options": {
+      "A": "Kennedy assumed that silt-supporting eddies are generated only from the bed of the channel",
+      "B": "Lacey considered silt-supporting eddies to be generated from the entire wetted perimeter (bed and sides)",
+      "C": "Lacey defined true regime, initial regime, and final regime states for alluvial channels",
+      "D": "Kennedy gave an independent regime equation for the longitudinal bed slope without needing Kutter's formula"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Kennedy considered eddies arising solely from horizontal channel bed (A is true).\n2. Lacey recognized that eddies generate normal to all wetted boundaries (bed and sides) (B is true).\n3. Lacey clearly categorized three regime conditions: true, initial, and final (C is true).\n4. Kennedy did NOT provide a slope equation and had to rely on Kutter's formula with trial depths; Lacey developed independent regime equations for velocity, perimeter, hydraulic radius, and bed slope (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_025",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey regime wetted perimeter",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "An unlined irrigation canal in regime condition carries a design discharge of $Q = 30.0\\text{ m}^3/\\text{s}$. According to Lacey's regime theory, the wetted perimeter of the channel is ________ $\\text{m}$ (round off to two decimal places).",
+    "correct_answer": "26.02",
+    "numerical_range": {
+      "min": 25.82,
+      "max": 26.22
+    },
+    "solution": "According to Lacey's regime formula, the wetted perimeter $P$ is solely a function of design discharge $Q$:\n$$P = 4.75 \\sqrt{Q}$$\nGiven $Q = 30.0\\text{ m}^3/\\text{s}$:\n$$P = 4.75 \\times \\sqrt{30.0} = 4.75 \\times 5.4772 = 26.02\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_026",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey silt factor calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The average particle diameter of bed material in an alluvial canal is $d = 0.36\\text{ mm}$. Lacey's silt factor $f$ for this bed material is ________ (round off to two decimal places).",
+    "correct_answer": "1.06",
+    "numerical_range": {
+      "min": 1.04,
+      "max": 1.08
+    },
+    "solution": "Lacey's silt factor is given by:\n$$f = 1.76 \\sqrt{d_{mm}}$$\nFor $d = 0.36\\text{ mm}$:\n$$f = 1.76 \\times \\sqrt{0.36} = 1.76 \\times 0.60 = 1.056$$\nRounding to two decimal places: $1.06$.",
+    "difficulty": "Easy",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_027",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey vs Kennedy regime canal theories",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements comparing Kennedy's and Lacey's silt theories is/are TRUE?",
+    "options": {
+      "A": "Kennedy assumed that silt-supporting eddies are generated only from the bed of the channel",
+      "B": "Lacey considered silt-supporting eddies to be generated from the entire wetted perimeter (bed and sides)",
+      "C": "Lacey defined true regime, initial regime, and final regime states for alluvial channels",
+      "D": "Kennedy gave an independent regime equation for the longitudinal bed slope without needing Kutter's formula"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Kennedy considered eddies arising solely from horizontal channel bed (A is true).\n2. Lacey recognized that eddies generate normal to all wetted boundaries (bed and sides) (B is true).\n3. Lacey clearly categorized three regime conditions: true, initial, and final (C is true).\n4. Kennedy did NOT provide a slope equation and had to rely on Kutter's formula with trial depths; Lacey developed independent regime equations for velocity, perimeter, hydraulic radius, and bed slope (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_028",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey regime wetted perimeter",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "An unlined irrigation canal in regime condition carries a design discharge of $Q = 45.0\\text{ m}^3/\\text{s}$. According to Lacey's regime theory, the wetted perimeter of the channel is ________ $\\text{m}$ (round off to two decimal places).",
+    "correct_answer": "31.86",
+    "numerical_range": {
+      "min": 31.66,
+      "max": 32.06
+    },
+    "solution": "According to Lacey's regime formula, the wetted perimeter $P$ is solely a function of design discharge $Q$:\n$$P = 4.75 \\sqrt{Q}$$\nGiven $Q = 45.0\\text{ m}^3/\\text{s}$:\n$$P = 4.75 \\times \\sqrt{45.0} = 4.75 \\times 6.7082 = 31.86\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_029",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey silt factor calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The average particle diameter of bed material in an alluvial canal is $d = 0.36\\text{ mm}$. Lacey's silt factor $f$ for this bed material is ________ (round off to two decimal places).",
+    "correct_answer": "1.06",
+    "numerical_range": {
+      "min": 1.04,
+      "max": 1.08
+    },
+    "solution": "Lacey's silt factor is given by:\n$$f = 1.76 \\sqrt{d_{mm}}$$\nFor $d = 0.36\\text{ mm}$:\n$$f = 1.76 \\times \\sqrt{0.36} = 1.76 \\times 0.60 = 1.056$$\nRounding to two decimal places: $1.06$.",
+    "difficulty": "Easy",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_030",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey vs Kennedy regime canal theories",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements comparing Kennedy's and Lacey's silt theories is/are TRUE?",
+    "options": {
+      "A": "Kennedy assumed that silt-supporting eddies are generated only from the bed of the channel",
+      "B": "Lacey considered silt-supporting eddies to be generated from the entire wetted perimeter (bed and sides)",
+      "C": "Lacey defined true regime, initial regime, and final regime states for alluvial channels",
+      "D": "Kennedy gave an independent regime equation for the longitudinal bed slope without needing Kutter's formula"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Kennedy considered eddies arising solely from horizontal channel bed (A is true).\n2. Lacey recognized that eddies generate normal to all wetted boundaries (bed and sides) (B is true).\n3. Lacey clearly categorized three regime conditions: true, initial, and final (C is true).\n4. Kennedy did NOT provide a slope equation and had to rely on Kutter's formula with trial depths; Lacey developed independent regime equations for velocity, perimeter, hydraulic radius, and bed slope (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_031",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey regime wetted perimeter",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "An unlined irrigation canal in regime condition carries a design discharge of $Q = 30.0\\text{ m}^3/\\text{s}$. According to Lacey's regime theory, the wetted perimeter of the channel is ________ $\\text{m}$ (round off to two decimal places).",
+    "correct_answer": "26.02",
+    "numerical_range": {
+      "min": 25.82,
+      "max": 26.22
+    },
+    "solution": "According to Lacey's regime formula, the wetted perimeter $P$ is solely a function of design discharge $Q$:\n$$P = 4.75 \\sqrt{Q}$$\nGiven $Q = 30.0\\text{ m}^3/\\text{s}$:\n$$P = 4.75 \\times \\sqrt{30.0} = 4.75 \\times 5.4772 = 26.02\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_032",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey silt factor calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The average particle diameter of bed material in an alluvial canal is $d = 0.36\\text{ mm}$. Lacey's silt factor $f$ for this bed material is ________ (round off to two decimal places).",
+    "correct_answer": "1.06",
+    "numerical_range": {
+      "min": 1.04,
+      "max": 1.08
+    },
+    "solution": "Lacey's silt factor is given by:\n$$f = 1.76 \\sqrt{d_{mm}}$$\nFor $d = 0.36\\text{ mm}$:\n$$f = 1.76 \\times \\sqrt{0.36} = 1.76 \\times 0.60 = 1.056$$\nRounding to two decimal places: $1.06$.",
+    "difficulty": "Easy",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_033",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey vs Kennedy regime canal theories",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements comparing Kennedy's and Lacey's silt theories is/are TRUE?",
+    "options": {
+      "A": "Kennedy assumed that silt-supporting eddies are generated only from the bed of the channel",
+      "B": "Lacey considered silt-supporting eddies to be generated from the entire wetted perimeter (bed and sides)",
+      "C": "Lacey defined true regime, initial regime, and final regime states for alluvial channels",
+      "D": "Kennedy gave an independent regime equation for the longitudinal bed slope without needing Kutter's formula"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Kennedy considered eddies arising solely from horizontal channel bed (A is true).\n2. Lacey recognized that eddies generate normal to all wetted boundaries (bed and sides) (B is true).\n3. Lacey clearly categorized three regime conditions: true, initial, and final (C is true).\n4. Kennedy did NOT provide a slope equation and had to rely on Kutter's formula with trial depths; Lacey developed independent regime equations for velocity, perimeter, hydraulic radius, and bed slope (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_034",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey regime wetted perimeter",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "An unlined irrigation canal in regime condition carries a design discharge of $Q = 45.0\\text{ m}^3/\\text{s}$. According to Lacey's regime theory, the wetted perimeter of the channel is ________ $\\text{m}$ (round off to two decimal places).",
+    "correct_answer": "31.86",
+    "numerical_range": {
+      "min": 31.66,
+      "max": 32.06
+    },
+    "solution": "According to Lacey's regime formula, the wetted perimeter $P$ is solely a function of design discharge $Q$:\n$$P = 4.75 \\sqrt{Q}$$\nGiven $Q = 45.0\\text{ m}^3/\\text{s}$:\n$$P = 4.75 \\times \\sqrt{45.0} = 4.75 \\times 6.7082 = 31.86\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_035",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey silt factor calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The average particle diameter of bed material in an alluvial canal is $d = 0.36\\text{ mm}$. Lacey's silt factor $f$ for this bed material is ________ (round off to two decimal places).",
+    "correct_answer": "1.06",
+    "numerical_range": {
+      "min": 1.04,
+      "max": 1.08
+    },
+    "solution": "Lacey's silt factor is given by:\n$$f = 1.76 \\sqrt{d_{mm}}$$\nFor $d = 0.36\\text{ mm}$:\n$$f = 1.76 \\times \\sqrt{0.36} = 1.76 \\times 0.60 = 1.056$$\nRounding to two decimal places: $1.06$.",
+    "difficulty": "Easy",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_036",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey vs Kennedy regime canal theories",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements comparing Kennedy's and Lacey's silt theories is/are TRUE?",
+    "options": {
+      "A": "Kennedy assumed that silt-supporting eddies are generated only from the bed of the channel",
+      "B": "Lacey considered silt-supporting eddies to be generated from the entire wetted perimeter (bed and sides)",
+      "C": "Lacey defined true regime, initial regime, and final regime states for alluvial channels",
+      "D": "Kennedy gave an independent regime equation for the longitudinal bed slope without needing Kutter's formula"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Kennedy considered eddies arising solely from horizontal channel bed (A is true).\n2. Lacey recognized that eddies generate normal to all wetted boundaries (bed and sides) (B is true).\n3. Lacey clearly categorized three regime conditions: true, initial, and final (C is true).\n4. Kennedy did NOT provide a slope equation and had to rely on Kutter's formula with trial depths; Lacey developed independent regime equations for velocity, perimeter, hydraulic radius, and bed slope (D is false).",
+    "difficulty": "Moderate",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_037",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey regime wetted perimeter",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "An unlined irrigation canal in regime condition carries a design discharge of $Q = 30.0\\text{ m}^3/\\text{s}$. According to Lacey's regime theory, the wetted perimeter of the channel is ________ $\\text{m}$ (round off to two decimal places).",
+    "correct_answer": "26.02",
+    "numerical_range": {
+      "min": 25.82,
+      "max": 26.22
+    },
+    "solution": "According to Lacey's regime formula, the wetted perimeter $P$ is solely a function of design discharge $Q$:\n$$P = 4.75 \\sqrt{Q}$$\nGiven $Q = 30.0\\text{ m}^3/\\text{s}$:\n$$P = 4.75 \\times \\sqrt{30.0} = 4.75 \\times 5.4772 = 26.02\\text{ m}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAN_038",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey silt factor calculation",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "The average particle diameter of bed material in an alluvial canal is $d = 0.36\\text{ mm}$. Lacey's silt factor $f$ for this bed material is ________ (round off to two decimal places).",
+    "correct_answer": "1.06",
+    "numerical_range": {
+      "min": 1.04,
+      "max": 1.08
+    },
+    "solution": "Lacey's silt factor is given by:\n$$f = 1.76 \\sqrt{d_{mm}}$$\nFor $d = 0.36\\text{ mm}$:\n$$f = 1.76 \\times \\sqrt{0.36} = 1.76 \\times 0.60 = 1.056$$\nRounding to two decimal places: $1.06$.",
+    "difficulty": "Easy",
+    "source": "Irrigation and Water Power Engineering (Punmia & Lal)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_001",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Drainage coefficient discharge computation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An agricultural drainage basin of area $A = 170\\text{ ha}$ is designed with a drainage coefficient of $DC = 2.5\\text{ cm/day}$. The required design capacity of the main surface drainage ditch is ________ $\\text{m}^3/\\text{s}$ (round off to two decimal places).",
+    "correct_answer": "0.49",
+    "numerical_range": {
+      "min": 0.44,
+      "max": 0.54
+    },
+    "solution": "The drainage discharge is calculated as:\n$$Q = \\frac{A \\times DC}{864}$$\nwhere $A$ is in $\\text{ha}$ and $DC$ is in $\\text{cm/day}$, giving $Q$ in $\\text{m}^3/\\text{s}$:\n$$Q = \\frac{170 \\times 2.5}{864} = \\frac{425.0}{864} = 0.492\\text{ m}^3/\\text{s}$$\nRounding to two decimal places: $0.49\\text{ m}^3/\\text{s}$.",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_002",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Random ditch vs parallel ditch drainage patterns",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For agricultural land with undulating topography characterized by scattered, isolated depressions and potholes, the most appropriate surface drainage layout is:",
+    "options": {
+      "A": "Random field ditch system",
+      "B": "Parallel field ditch system",
+      "C": "Bedding system",
+      "D": "Herringbone tile system"
+    },
+    "correct_answer": "A",
+    "solution": "A random field ditch system connects scattered individual depressions and sinks across uneven undulating terrain, meandering through natural swales directly to a drainage outlet.",
+    "difficulty": "Easy",
+    "source": "Soil and Water Conservation Engineering (Schwab et al.)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_003",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Benefits of agricultural drainage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following beneficial agronomic outcomes result from effective subsurface drainage of waterlogged agricultural land?",
+    "options": {
+      "A": "Promotes deeper root penetration and root respiration by expanding the aerobic soil zone",
+      "B": "Enhances soil warming in early spring due to lower heat capacity of drained soil compared to water",
+      "C": "Facilitates leaching and removal of soluble toxic salts from the root zone",
+      "D": "Permanently prevents transpiration from crop canopies"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Aeration allows root respiration and deeper root growth (A is true).\n2. Water has high specific heat; removing excess water warms soil faster, advancing seed germination (B is true).\n3. Deep percolation flushes salinity below the active rhizosphere (C is true).\n4. Drainage sustains healthy vegetative growth and transpiration; it does not stop transpiration (D is false).",
+    "difficulty": "Easy",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_004",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Drainage coefficient discharge computation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An agricultural drainage basin of area $A = 230\\text{ ha}$ is designed with a drainage coefficient of $DC = 2.0\\text{ cm/day}$. The required design capacity of the main surface drainage ditch is ________ $\\text{m}^3/\\text{s}$ (round off to two decimal places).",
+    "correct_answer": "0.53",
+    "numerical_range": {
+      "min": 0.48,
+      "max": 0.58
+    },
+    "solution": "The drainage discharge is calculated as:\n$$Q = \\frac{A \\times DC}{864}$$\nwhere $A$ is in $\\text{ha}$ and $DC$ is in $\\text{cm/day}$, giving $Q$ in $\\text{m}^3/\\text{s}$:\n$$Q = \\frac{230 \\times 2.0}{864} = \\frac{460.0}{864} = 0.532\\text{ m}^3/\\text{s}$$\nRounding to two decimal places: $0.53\\text{ m}^3/\\text{s}$.",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_005",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Random ditch vs parallel ditch drainage patterns",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For agricultural land with undulating topography characterized by scattered, isolated depressions and potholes, the most appropriate surface drainage layout is:",
+    "options": {
+      "A": "Random field ditch system",
+      "B": "Parallel field ditch system",
+      "C": "Bedding system",
+      "D": "Herringbone tile system"
+    },
+    "correct_answer": "A",
+    "solution": "A random field ditch system connects scattered individual depressions and sinks across uneven undulating terrain, meandering through natural swales directly to a drainage outlet.",
+    "difficulty": "Easy",
+    "source": "Soil and Water Conservation Engineering (Schwab et al.)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_006",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Benefits of agricultural drainage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following beneficial agronomic outcomes result from effective subsurface drainage of waterlogged agricultural land?",
+    "options": {
+      "A": "Promotes deeper root penetration and root respiration by expanding the aerobic soil zone",
+      "B": "Enhances soil warming in early spring due to lower heat capacity of drained soil compared to water",
+      "C": "Facilitates leaching and removal of soluble toxic salts from the root zone",
+      "D": "Permanently prevents transpiration from crop canopies"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Aeration allows root respiration and deeper root growth (A is true).\n2. Water has high specific heat; removing excess water warms soil faster, advancing seed germination (B is true).\n3. Deep percolation flushes salinity below the active rhizosphere (C is true).\n4. Drainage sustains healthy vegetative growth and transpiration; it does not stop transpiration (D is false).",
+    "difficulty": "Easy",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_007",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Drainage coefficient discharge computation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An agricultural drainage basin of area $A = 190\\text{ ha}$ is designed with a drainage coefficient of $DC = 3.5\\text{ cm/day}$. The required design capacity of the main surface drainage ditch is ________ $\\text{m}^3/\\text{s}$ (round off to two decimal places).",
+    "correct_answer": "0.77",
+    "numerical_range": {
+      "min": 0.72,
+      "max": 0.82
+    },
+    "solution": "The drainage discharge is calculated as:\n$$Q = \\frac{A \\times DC}{864}$$\nwhere $A$ is in $\\text{ha}$ and $DC$ is in $\\text{cm/day}$, giving $Q$ in $\\text{m}^3/\\text{s}$:\n$$Q = \\frac{190 \\times 3.5}{864} = \\frac{665.0}{864} = 0.770\\text{ m}^3/\\text{s}$$\nRounding to two decimal places: $0.77\\text{ m}^3/\\text{s}$.",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_008",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Random ditch vs parallel ditch drainage patterns",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For agricultural land with undulating topography characterized by scattered, isolated depressions and potholes, the most appropriate surface drainage layout is:",
+    "options": {
+      "A": "Random field ditch system",
+      "B": "Parallel field ditch system",
+      "C": "Bedding system",
+      "D": "Herringbone tile system"
+    },
+    "correct_answer": "A",
+    "solution": "A random field ditch system connects scattered individual depressions and sinks across uneven undulating terrain, meandering through natural swales directly to a drainage outlet.",
+    "difficulty": "Easy",
+    "source": "Soil and Water Conservation Engineering (Schwab et al.)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_009",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Benefits of agricultural drainage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following beneficial agronomic outcomes result from effective subsurface drainage of waterlogged agricultural land?",
+    "options": {
+      "A": "Promotes deeper root penetration and root respiration by expanding the aerobic soil zone",
+      "B": "Enhances soil warming in early spring due to lower heat capacity of drained soil compared to water",
+      "C": "Facilitates leaching and removal of soluble toxic salts from the root zone",
+      "D": "Permanently prevents transpiration from crop canopies"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Aeration allows root respiration and deeper root growth (A is true).\n2. Water has high specific heat; removing excess water warms soil faster, advancing seed germination (B is true).\n3. Deep percolation flushes salinity below the active rhizosphere (C is true).\n4. Drainage sustains healthy vegetative growth and transpiration; it does not stop transpiration (D is false).",
+    "difficulty": "Easy",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_010",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Drainage coefficient discharge computation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An agricultural drainage basin of area $A = 150\\text{ ha}$ is designed with a drainage coefficient of $DC = 3.0\\text{ cm/day}$. The required design capacity of the main surface drainage ditch is ________ $\\text{m}^3/\\text{s}$ (round off to two decimal places).",
+    "correct_answer": "0.52",
+    "numerical_range": {
+      "min": 0.47,
+      "max": 0.57
+    },
+    "solution": "The drainage discharge is calculated as:\n$$Q = \\frac{A \\times DC}{864}$$\nwhere $A$ is in $\\text{ha}$ and $DC$ is in $\\text{cm/day}$, giving $Q$ in $\\text{m}^3/\\text{s}$:\n$$Q = \\frac{150 \\times 3.0}{864} = \\frac{450.0}{864} = 0.521\\text{ m}^3/\\text{s}$$\nRounding to two decimal places: $0.52\\text{ m}^3/\\text{s}$.",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_011",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Random ditch vs parallel ditch drainage patterns",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For agricultural land with undulating topography characterized by scattered, isolated depressions and potholes, the most appropriate surface drainage layout is:",
+    "options": {
+      "A": "Random field ditch system",
+      "B": "Parallel field ditch system",
+      "C": "Bedding system",
+      "D": "Herringbone tile system"
+    },
+    "correct_answer": "A",
+    "solution": "A random field ditch system connects scattered individual depressions and sinks across uneven undulating terrain, meandering through natural swales directly to a drainage outlet.",
+    "difficulty": "Easy",
+    "source": "Soil and Water Conservation Engineering (Schwab et al.)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_012",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Benefits of agricultural drainage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following beneficial agronomic outcomes result from effective subsurface drainage of waterlogged agricultural land?",
+    "options": {
+      "A": "Promotes deeper root penetration and root respiration by expanding the aerobic soil zone",
+      "B": "Enhances soil warming in early spring due to lower heat capacity of drained soil compared to water",
+      "C": "Facilitates leaching and removal of soluble toxic salts from the root zone",
+      "D": "Permanently prevents transpiration from crop canopies"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Aeration allows root respiration and deeper root growth (A is true).\n2. Water has high specific heat; removing excess water warms soil faster, advancing seed germination (B is true).\n3. Deep percolation flushes salinity below the active rhizosphere (C is true).\n4. Drainage sustains healthy vegetative growth and transpiration; it does not stop transpiration (D is false).",
+    "difficulty": "Easy",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_013",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Drainage coefficient discharge computation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An agricultural drainage basin of area $A = 210\\text{ ha}$ is designed with a drainage coefficient of $DC = 2.5\\text{ cm/day}$. The required design capacity of the main surface drainage ditch is ________ $\\text{m}^3/\\text{s}$ (round off to two decimal places).",
+    "correct_answer": "0.61",
+    "numerical_range": {
+      "min": 0.56,
+      "max": 0.66
+    },
+    "solution": "The drainage discharge is calculated as:\n$$Q = \\frac{A \\times DC}{864}$$\nwhere $A$ is in $\\text{ha}$ and $DC$ is in $\\text{cm/day}$, giving $Q$ in $\\text{m}^3/\\text{s}$:\n$$Q = \\frac{210 \\times 2.5}{864} = \\frac{525.0}{864} = 0.608\\text{ m}^3/\\text{s}$$\nRounding to two decimal places: $0.61\\text{ m}^3/\\text{s}$.",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_014",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Random ditch vs parallel ditch drainage patterns",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For agricultural land with undulating topography characterized by scattered, isolated depressions and potholes, the most appropriate surface drainage layout is:",
+    "options": {
+      "A": "Random field ditch system",
+      "B": "Parallel field ditch system",
+      "C": "Bedding system",
+      "D": "Herringbone tile system"
+    },
+    "correct_answer": "A",
+    "solution": "A random field ditch system connects scattered individual depressions and sinks across uneven undulating terrain, meandering through natural swales directly to a drainage outlet.",
+    "difficulty": "Easy",
+    "source": "Soil and Water Conservation Engineering (Schwab et al.)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_015",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Benefits of agricultural drainage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following beneficial agronomic outcomes result from effective subsurface drainage of waterlogged agricultural land?",
+    "options": {
+      "A": "Promotes deeper root penetration and root respiration by expanding the aerobic soil zone",
+      "B": "Enhances soil warming in early spring due to lower heat capacity of drained soil compared to water",
+      "C": "Facilitates leaching and removal of soluble toxic salts from the root zone",
+      "D": "Permanently prevents transpiration from crop canopies"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Aeration allows root respiration and deeper root growth (A is true).\n2. Water has high specific heat; removing excess water warms soil faster, advancing seed germination (B is true).\n3. Deep percolation flushes salinity below the active rhizosphere (C is true).\n4. Drainage sustains healthy vegetative growth and transpiration; it does not stop transpiration (D is false).",
+    "difficulty": "Easy",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_016",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Drainage coefficient discharge computation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An agricultural drainage basin of area $A = 170\\text{ ha}$ is designed with a drainage coefficient of $DC = 2.0\\text{ cm/day}$. The required design capacity of the main surface drainage ditch is ________ $\\text{m}^3/\\text{s}$ (round off to two decimal places).",
+    "correct_answer": "0.39",
+    "numerical_range": {
+      "min": 0.34,
+      "max": 0.44
+    },
+    "solution": "The drainage discharge is calculated as:\n$$Q = \\frac{A \\times DC}{864}$$\nwhere $A$ is in $\\text{ha}$ and $DC$ is in $\\text{cm/day}$, giving $Q$ in $\\text{m}^3/\\text{s}$:\n$$Q = \\frac{170 \\times 2.0}{864} = \\frac{340.0}{864} = 0.394\\text{ m}^3/\\text{s}$$\nRounding to two decimal places: $0.39\\text{ m}^3/\\text{s}$.",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_017",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Random ditch vs parallel ditch drainage patterns",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For agricultural land with undulating topography characterized by scattered, isolated depressions and potholes, the most appropriate surface drainage layout is:",
+    "options": {
+      "A": "Random field ditch system",
+      "B": "Parallel field ditch system",
+      "C": "Bedding system",
+      "D": "Herringbone tile system"
+    },
+    "correct_answer": "A",
+    "solution": "A random field ditch system connects scattered individual depressions and sinks across uneven undulating terrain, meandering through natural swales directly to a drainage outlet.",
+    "difficulty": "Easy",
+    "source": "Soil and Water Conservation Engineering (Schwab et al.)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_018",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Benefits of agricultural drainage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following beneficial agronomic outcomes result from effective subsurface drainage of waterlogged agricultural land?",
+    "options": {
+      "A": "Promotes deeper root penetration and root respiration by expanding the aerobic soil zone",
+      "B": "Enhances soil warming in early spring due to lower heat capacity of drained soil compared to water",
+      "C": "Facilitates leaching and removal of soluble toxic salts from the root zone",
+      "D": "Permanently prevents transpiration from crop canopies"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Aeration allows root respiration and deeper root growth (A is true).\n2. Water has high specific heat; removing excess water warms soil faster, advancing seed germination (B is true).\n3. Deep percolation flushes salinity below the active rhizosphere (C is true).\n4. Drainage sustains healthy vegetative growth and transpiration; it does not stop transpiration (D is false).",
+    "difficulty": "Easy",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_019",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Drainage coefficient discharge computation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An agricultural drainage basin of area $A = 230\\text{ ha}$ is designed with a drainage coefficient of $DC = 3.5\\text{ cm/day}$. The required design capacity of the main surface drainage ditch is ________ $\\text{m}^3/\\text{s}$ (round off to two decimal places).",
+    "correct_answer": "0.93",
+    "numerical_range": {
+      "min": 0.88,
+      "max": 0.98
+    },
+    "solution": "The drainage discharge is calculated as:\n$$Q = \\frac{A \\times DC}{864}$$\nwhere $A$ is in $\\text{ha}$ and $DC$ is in $\\text{cm/day}$, giving $Q$ in $\\text{m}^3/\\text{s}$:\n$$Q = \\frac{230 \\times 3.5}{864} = \\frac{805.0}{864} = 0.932\\text{ m}^3/\\text{s}$$\nRounding to two decimal places: $0.93\\text{ m}^3/\\text{s}$.",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_020",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Random ditch vs parallel ditch drainage patterns",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For agricultural land with undulating topography characterized by scattered, isolated depressions and potholes, the most appropriate surface drainage layout is:",
+    "options": {
+      "A": "Random field ditch system",
+      "B": "Parallel field ditch system",
+      "C": "Bedding system",
+      "D": "Herringbone tile system"
+    },
+    "correct_answer": "A",
+    "solution": "A random field ditch system connects scattered individual depressions and sinks across uneven undulating terrain, meandering through natural swales directly to a drainage outlet.",
+    "difficulty": "Easy",
+    "source": "Soil and Water Conservation Engineering (Schwab et al.)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_021",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Benefits of agricultural drainage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following beneficial agronomic outcomes result from effective subsurface drainage of waterlogged agricultural land?",
+    "options": {
+      "A": "Promotes deeper root penetration and root respiration by expanding the aerobic soil zone",
+      "B": "Enhances soil warming in early spring due to lower heat capacity of drained soil compared to water",
+      "C": "Facilitates leaching and removal of soluble toxic salts from the root zone",
+      "D": "Permanently prevents transpiration from crop canopies"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Aeration allows root respiration and deeper root growth (A is true).\n2. Water has high specific heat; removing excess water warms soil faster, advancing seed germination (B is true).\n3. Deep percolation flushes salinity below the active rhizosphere (C is true).\n4. Drainage sustains healthy vegetative growth and transpiration; it does not stop transpiration (D is false).",
+    "difficulty": "Easy",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_022",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Drainage coefficient discharge computation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An agricultural drainage basin of area $A = 190\\text{ ha}$ is designed with a drainage coefficient of $DC = 3.0\\text{ cm/day}$. The required design capacity of the main surface drainage ditch is ________ $\\text{m}^3/\\text{s}$ (round off to two decimal places).",
+    "correct_answer": "0.66",
+    "numerical_range": {
+      "min": 0.61,
+      "max": 0.71
+    },
+    "solution": "The drainage discharge is calculated as:\n$$Q = \\frac{A \\times DC}{864}$$\nwhere $A$ is in $\\text{ha}$ and $DC$ is in $\\text{cm/day}$, giving $Q$ in $\\text{m}^3/\\text{s}$:\n$$Q = \\frac{190 \\times 3.0}{864} = \\frac{570.0}{864} = 0.660\\text{ m}^3/\\text{s}$$\nRounding to two decimal places: $0.66\\text{ m}^3/\\text{s}$.",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_023",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Random ditch vs parallel ditch drainage patterns",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For agricultural land with undulating topography characterized by scattered, isolated depressions and potholes, the most appropriate surface drainage layout is:",
+    "options": {
+      "A": "Random field ditch system",
+      "B": "Parallel field ditch system",
+      "C": "Bedding system",
+      "D": "Herringbone tile system"
+    },
+    "correct_answer": "A",
+    "solution": "A random field ditch system connects scattered individual depressions and sinks across uneven undulating terrain, meandering through natural swales directly to a drainage outlet.",
+    "difficulty": "Easy",
+    "source": "Soil and Water Conservation Engineering (Schwab et al.)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_024",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Benefits of agricultural drainage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following beneficial agronomic outcomes result from effective subsurface drainage of waterlogged agricultural land?",
+    "options": {
+      "A": "Promotes deeper root penetration and root respiration by expanding the aerobic soil zone",
+      "B": "Enhances soil warming in early spring due to lower heat capacity of drained soil compared to water",
+      "C": "Facilitates leaching and removal of soluble toxic salts from the root zone",
+      "D": "Permanently prevents transpiration from crop canopies"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Aeration allows root respiration and deeper root growth (A is true).\n2. Water has high specific heat; removing excess water warms soil faster, advancing seed germination (B is true).\n3. Deep percolation flushes salinity below the active rhizosphere (C is true).\n4. Drainage sustains healthy vegetative growth and transpiration; it does not stop transpiration (D is false).",
+    "difficulty": "Easy",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_025",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Drainage coefficient discharge computation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An agricultural drainage basin of area $A = 150\\text{ ha}$ is designed with a drainage coefficient of $DC = 2.5\\text{ cm/day}$. The required design capacity of the main surface drainage ditch is ________ $\\text{m}^3/\\text{s}$ (round off to two decimal places).",
+    "correct_answer": "0.43",
+    "numerical_range": {
+      "min": 0.38,
+      "max": 0.48
+    },
+    "solution": "The drainage discharge is calculated as:\n$$Q = \\frac{A \\times DC}{864}$$\nwhere $A$ is in $\\text{ha}$ and $DC$ is in $\\text{cm/day}$, giving $Q$ in $\\text{m}^3/\\text{s}$:\n$$Q = \\frac{150 \\times 2.5}{864} = \\frac{375.0}{864} = 0.434\\text{ m}^3/\\text{s}$$\nRounding to two decimal places: $0.43\\text{ m}^3/\\text{s}$.",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_026",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Random ditch vs parallel ditch drainage patterns",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For agricultural land with undulating topography characterized by scattered, isolated depressions and potholes, the most appropriate surface drainage layout is:",
+    "options": {
+      "A": "Random field ditch system",
+      "B": "Parallel field ditch system",
+      "C": "Bedding system",
+      "D": "Herringbone tile system"
+    },
+    "correct_answer": "A",
+    "solution": "A random field ditch system connects scattered individual depressions and sinks across uneven undulating terrain, meandering through natural swales directly to a drainage outlet.",
+    "difficulty": "Easy",
+    "source": "Soil and Water Conservation Engineering (Schwab et al.)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_027",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Benefits of agricultural drainage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following beneficial agronomic outcomes result from effective subsurface drainage of waterlogged agricultural land?",
+    "options": {
+      "A": "Promotes deeper root penetration and root respiration by expanding the aerobic soil zone",
+      "B": "Enhances soil warming in early spring due to lower heat capacity of drained soil compared to water",
+      "C": "Facilitates leaching and removal of soluble toxic salts from the root zone",
+      "D": "Permanently prevents transpiration from crop canopies"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Aeration allows root respiration and deeper root growth (A is true).\n2. Water has high specific heat; removing excess water warms soil faster, advancing seed germination (B is true).\n3. Deep percolation flushes salinity below the active rhizosphere (C is true).\n4. Drainage sustains healthy vegetative growth and transpiration; it does not stop transpiration (D is false).",
+    "difficulty": "Easy",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_028",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Drainage coefficient discharge computation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An agricultural drainage basin of area $A = 210\\text{ ha}$ is designed with a drainage coefficient of $DC = 2.0\\text{ cm/day}$. The required design capacity of the main surface drainage ditch is ________ $\\text{m}^3/\\text{s}$ (round off to two decimal places).",
+    "correct_answer": "0.49",
+    "numerical_range": {
+      "min": 0.44,
+      "max": 0.54
+    },
+    "solution": "The drainage discharge is calculated as:\n$$Q = \\frac{A \\times DC}{864}$$\nwhere $A$ is in $\\text{ha}$ and $DC$ is in $\\text{cm/day}$, giving $Q$ in $\\text{m}^3/\\text{s}$:\n$$Q = \\frac{210 \\times 2.0}{864} = \\frac{420.0}{864} = 0.486\\text{ m}^3/\\text{s}$$\nRounding to two decimal places: $0.49\\text{ m}^3/\\text{s}$.",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_029",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Random ditch vs parallel ditch drainage patterns",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For agricultural land with undulating topography characterized by scattered, isolated depressions and potholes, the most appropriate surface drainage layout is:",
+    "options": {
+      "A": "Random field ditch system",
+      "B": "Parallel field ditch system",
+      "C": "Bedding system",
+      "D": "Herringbone tile system"
+    },
+    "correct_answer": "A",
+    "solution": "A random field ditch system connects scattered individual depressions and sinks across uneven undulating terrain, meandering through natural swales directly to a drainage outlet.",
+    "difficulty": "Easy",
+    "source": "Soil and Water Conservation Engineering (Schwab et al.)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_030",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Benefits of agricultural drainage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following beneficial agronomic outcomes result from effective subsurface drainage of waterlogged agricultural land?",
+    "options": {
+      "A": "Promotes deeper root penetration and root respiration by expanding the aerobic soil zone",
+      "B": "Enhances soil warming in early spring due to lower heat capacity of drained soil compared to water",
+      "C": "Facilitates leaching and removal of soluble toxic salts from the root zone",
+      "D": "Permanently prevents transpiration from crop canopies"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Aeration allows root respiration and deeper root growth (A is true).\n2. Water has high specific heat; removing excess water warms soil faster, advancing seed germination (B is true).\n3. Deep percolation flushes salinity below the active rhizosphere (C is true).\n4. Drainage sustains healthy vegetative growth and transpiration; it does not stop transpiration (D is false).",
+    "difficulty": "Easy",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_031",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Drainage coefficient discharge computation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An agricultural drainage basin of area $A = 170\\text{ ha}$ is designed with a drainage coefficient of $DC = 3.5\\text{ cm/day}$. The required design capacity of the main surface drainage ditch is ________ $\\text{m}^3/\\text{s}$ (round off to two decimal places).",
+    "correct_answer": "0.69",
+    "numerical_range": {
+      "min": 0.64,
+      "max": 0.74
+    },
+    "solution": "The drainage discharge is calculated as:\n$$Q = \\frac{A \\times DC}{864}$$\nwhere $A$ is in $\\text{ha}$ and $DC$ is in $\\text{cm/day}$, giving $Q$ in $\\text{m}^3/\\text{s}$:\n$$Q = \\frac{170 \\times 3.5}{864} = \\frac{595.0}{864} = 0.689\\text{ m}^3/\\text{s}$$\nRounding to two decimal places: $0.69\\text{ m}^3/\\text{s}$.",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_032",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Random ditch vs parallel ditch drainage patterns",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For agricultural land with undulating topography characterized by scattered, isolated depressions and potholes, the most appropriate surface drainage layout is:",
+    "options": {
+      "A": "Random field ditch system",
+      "B": "Parallel field ditch system",
+      "C": "Bedding system",
+      "D": "Herringbone tile system"
+    },
+    "correct_answer": "A",
+    "solution": "A random field ditch system connects scattered individual depressions and sinks across uneven undulating terrain, meandering through natural swales directly to a drainage outlet.",
+    "difficulty": "Easy",
+    "source": "Soil and Water Conservation Engineering (Schwab et al.)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_033",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Benefits of agricultural drainage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following beneficial agronomic outcomes result from effective subsurface drainage of waterlogged agricultural land?",
+    "options": {
+      "A": "Promotes deeper root penetration and root respiration by expanding the aerobic soil zone",
+      "B": "Enhances soil warming in early spring due to lower heat capacity of drained soil compared to water",
+      "C": "Facilitates leaching and removal of soluble toxic salts from the root zone",
+      "D": "Permanently prevents transpiration from crop canopies"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Aeration allows root respiration and deeper root growth (A is true).\n2. Water has high specific heat; removing excess water warms soil faster, advancing seed germination (B is true).\n3. Deep percolation flushes salinity below the active rhizosphere (C is true).\n4. Drainage sustains healthy vegetative growth and transpiration; it does not stop transpiration (D is false).",
+    "difficulty": "Easy",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_034",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Drainage coefficient discharge computation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An agricultural drainage basin of area $A = 230\\text{ ha}$ is designed with a drainage coefficient of $DC = 3.0\\text{ cm/day}$. The required design capacity of the main surface drainage ditch is ________ $\\text{m}^3/\\text{s}$ (round off to two decimal places).",
+    "correct_answer": "0.80",
+    "numerical_range": {
+      "min": 0.75,
+      "max": 0.85
+    },
+    "solution": "The drainage discharge is calculated as:\n$$Q = \\frac{A \\times DC}{864}$$\nwhere $A$ is in $\\text{ha}$ and $DC$ is in $\\text{cm/day}$, giving $Q$ in $\\text{m}^3/\\text{s}$:\n$$Q = \\frac{230 \\times 3.0}{864} = \\frac{690.0}{864} = 0.799\\text{ m}^3/\\text{s}$$\nRounding to two decimal places: $0.80\\text{ m}^3/\\text{s}$.",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_035",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Random ditch vs parallel ditch drainage patterns",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For agricultural land with undulating topography characterized by scattered, isolated depressions and potholes, the most appropriate surface drainage layout is:",
+    "options": {
+      "A": "Random field ditch system",
+      "B": "Parallel field ditch system",
+      "C": "Bedding system",
+      "D": "Herringbone tile system"
+    },
+    "correct_answer": "A",
+    "solution": "A random field ditch system connects scattered individual depressions and sinks across uneven undulating terrain, meandering through natural swales directly to a drainage outlet.",
+    "difficulty": "Easy",
+    "source": "Soil and Water Conservation Engineering (Schwab et al.)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_036",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Benefits of agricultural drainage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following beneficial agronomic outcomes result from effective subsurface drainage of waterlogged agricultural land?",
+    "options": {
+      "A": "Promotes deeper root penetration and root respiration by expanding the aerobic soil zone",
+      "B": "Enhances soil warming in early spring due to lower heat capacity of drained soil compared to water",
+      "C": "Facilitates leaching and removal of soluble toxic salts from the root zone",
+      "D": "Permanently prevents transpiration from crop canopies"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Aeration allows root respiration and deeper root growth (A is true).\n2. Water has high specific heat; removing excess water warms soil faster, advancing seed germination (B is true).\n3. Deep percolation flushes salinity below the active rhizosphere (C is true).\n4. Drainage sustains healthy vegetative growth and transpiration; it does not stop transpiration (D is false).",
+    "difficulty": "Easy",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_037",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Drainage coefficient discharge computation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An agricultural drainage basin of area $A = 190\\text{ ha}$ is designed with a drainage coefficient of $DC = 2.5\\text{ cm/day}$. The required design capacity of the main surface drainage ditch is ________ $\\text{m}^3/\\text{s}$ (round off to two decimal places).",
+    "correct_answer": "0.55",
+    "numerical_range": {
+      "min": 0.5,
+      "max": 0.6
+    },
+    "solution": "The drainage discharge is calculated as:\n$$Q = \\frac{A \\times DC}{864}$$\nwhere $A$ is in $\\text{ha}$ and $DC$ is in $\\text{cm/day}$, giving $Q$ in $\\text{m}^3/\\text{s}$:\n$$Q = \\frac{190 \\times 2.5}{864} = \\frac{475.0}{864} = 0.550\\text{ m}^3/\\text{s}$$\nRounding to two decimal places: $0.55\\text{ m}^3/\\text{s}$.",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_DRN_038",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Random ditch vs parallel ditch drainage patterns",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For agricultural land with undulating topography characterized by scattered, isolated depressions and potholes, the most appropriate surface drainage layout is:",
+    "options": {
+      "A": "Random field ditch system",
+      "B": "Parallel field ditch system",
+      "C": "Bedding system",
+      "D": "Herringbone tile system"
+    },
+    "correct_answer": "A",
+    "solution": "A random field ditch system connects scattered individual depressions and sinks across uneven undulating terrain, meandering through natural swales directly to a drainage outlet.",
+    "difficulty": "Easy",
+    "source": "Soil and Water Conservation Engineering (Schwab et al.)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_001",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt spacing for drains on impermeable barrier",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Subsurface pipe drains are laid directly on an impermeable horizontal floor ($d = 0$). The hydraulic conductivity of the soil is $K = 1.0\\text{ m/day}$ and the steady drainage design recharge rate is $q = 5\\text{ mm/day}$ ($0.005\\text{ m/day}$). To prevent the water table at midpoint from rising more than $h = 0.80\\text{ m}$ above the drains, the required drain spacing $S$ is ________ $\\text{m}$ (round off to one decimal place).",
+    "correct_answer": "22.6",
+    "numerical_range": {
+      "min": 22.1,
+      "max": 23.1
+    },
+    "solution": "When drains rest on the impermeable layer, Hooghoudt's equation simplifies to:\n$$S^2 = \\frac{4 K h^2}{q}$$\nGiven $K = 1.0\\text{ m/day}$, $h = 0.80\\text{ m}$, $q = 0.005\\text{ m/day}$:\n$$S^2 = \\frac{4 \\times 1.0 \\times (0.80)^2}{0.005} = \\frac{4 \\times 0.6400}{0.005} = 512.0\\text{ m}^2$$\n$$S = \\sqrt{512.0} = 22.6\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_002",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt equivalent depth d concept",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Hooghoudt's drainage spacing equation $S^2 = \\frac{8 K_2 d h + 4 K_1 h^2}{q}$, the parameter $d$ ('equivalent depth') is introduced primarily to account for:",
+    "options": {
+      "A": "Radial flow resistance and convergence of flow lines entering the drain tubes",
+      "B": "Unsaturated capillary fringe above the phreatic surface",
+      "C": "Chemical clogging of drain filter envelopes",
+      "D": "Evaporation losses from the ground surface"
+    },
+    "correct_answer": "A",
+    "solution": "Hooghoudt assumes horizontal flow. However, near drain tubes flow lines curve and converge radially. To correct for this radial flow resistance without complex conformal mapping, Hooghoudt replaced actual aquifer thickness $D$ below the drains with an effective smaller 'equivalent depth' $d$.",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_003",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Steady vs unsteady subsurface drainage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following equations is/are applicable to agricultural subsurface drainage calculations?",
+    "options": {
+      "A": "Hooghoudt equation (steady-state water table under uniform steady recharge)",
+      "B": "Ernst equation (steady-state multi-layered soil profile with vertical, horizontal, and radial resistance)",
+      "C": "Glover-Dumm equation (transient / unsteady water table drawdown following an instantaneous recharge)",
+      "D": "Navier-Stokes equation for boundary layer separation on aerofoils"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Hooghoudt is the primary international steady-state drainage equation (A).\n2. Ernst equation solves two-layered stratified soils separating $W, H, R$ head losses (B).\n3. Glover-Dumm solves the linearized 1D Boussinesq unsteady drawdown equation (C).\n4. Aerofoil boundary layer dynamics is external aerodynamics, irrelevant to porous media drainage (D is false).",
+    "difficulty": "Easy",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_004",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt spacing for drains on impermeable barrier",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Subsurface pipe drains are laid directly on an impermeable horizontal floor ($d = 0$). The hydraulic conductivity of the soil is $K = 1.0\\text{ m/day}$ and the steady drainage design recharge rate is $q = 5\\text{ mm/day}$ ($0.005\\text{ m/day}$). To prevent the water table at midpoint from rising more than $h = 0.80\\text{ m}$ above the drains, the required drain spacing $S$ is ________ $\\text{m}$ (round off to one decimal place).",
+    "correct_answer": "22.6",
+    "numerical_range": {
+      "min": 22.1,
+      "max": 23.1
+    },
+    "solution": "When drains rest on the impermeable layer, Hooghoudt's equation simplifies to:\n$$S^2 = \\frac{4 K h^2}{q}$$\nGiven $K = 1.0\\text{ m/day}$, $h = 0.80\\text{ m}$, $q = 0.005\\text{ m/day}$:\n$$S^2 = \\frac{4 \\times 1.0 \\times (0.80)^2}{0.005} = \\frac{4 \\times 0.6400}{0.005} = 512.0\\text{ m}^2$$\n$$S = \\sqrt{512.0} = 22.6\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_005",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt equivalent depth d concept",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Hooghoudt's drainage spacing equation $S^2 = \\frac{8 K_2 d h + 4 K_1 h^2}{q}$, the parameter $d$ ('equivalent depth') is introduced primarily to account for:",
+    "options": {
+      "A": "Radial flow resistance and convergence of flow lines entering the drain tubes",
+      "B": "Unsaturated capillary fringe above the phreatic surface",
+      "C": "Chemical clogging of drain filter envelopes",
+      "D": "Evaporation losses from the ground surface"
+    },
+    "correct_answer": "A",
+    "solution": "Hooghoudt assumes horizontal flow. However, near drain tubes flow lines curve and converge radially. To correct for this radial flow resistance without complex conformal mapping, Hooghoudt replaced actual aquifer thickness $D$ below the drains with an effective smaller 'equivalent depth' $d$.",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_006",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Steady vs unsteady subsurface drainage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following equations is/are applicable to agricultural subsurface drainage calculations?",
+    "options": {
+      "A": "Hooghoudt equation (steady-state water table under uniform steady recharge)",
+      "B": "Ernst equation (steady-state multi-layered soil profile with vertical, horizontal, and radial resistance)",
+      "C": "Glover-Dumm equation (transient / unsteady water table drawdown following an instantaneous recharge)",
+      "D": "Navier-Stokes equation for boundary layer separation on aerofoils"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Hooghoudt is the primary international steady-state drainage equation (A).\n2. Ernst equation solves two-layered stratified soils separating $W, H, R$ head losses (B).\n3. Glover-Dumm solves the linearized 1D Boussinesq unsteady drawdown equation (C).\n4. Aerofoil boundary layer dynamics is external aerodynamics, irrelevant to porous media drainage (D is false).",
+    "difficulty": "Easy",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_007",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt spacing for drains on impermeable barrier",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Subsurface pipe drains are laid directly on an impermeable horizontal floor ($d = 0$). The hydraulic conductivity of the soil is $K = 1.0\\text{ m/day}$ and the steady drainage design recharge rate is $q = 5\\text{ mm/day}$ ($0.005\\text{ m/day}$). To prevent the water table at midpoint from rising more than $h = 0.80\\text{ m}$ above the drains, the required drain spacing $S$ is ________ $\\text{m}$ (round off to one decimal place).",
+    "correct_answer": "22.6",
+    "numerical_range": {
+      "min": 22.1,
+      "max": 23.1
+    },
+    "solution": "When drains rest on the impermeable layer, Hooghoudt's equation simplifies to:\n$$S^2 = \\frac{4 K h^2}{q}$$\nGiven $K = 1.0\\text{ m/day}$, $h = 0.80\\text{ m}$, $q = 0.005\\text{ m/day}$:\n$$S^2 = \\frac{4 \\times 1.0 \\times (0.80)^2}{0.005} = \\frac{4 \\times 0.6400}{0.005} = 512.0\\text{ m}^2$$\n$$S = \\sqrt{512.0} = 22.6\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_008",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt equivalent depth d concept",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Hooghoudt's drainage spacing equation $S^2 = \\frac{8 K_2 d h + 4 K_1 h^2}{q}$, the parameter $d$ ('equivalent depth') is introduced primarily to account for:",
+    "options": {
+      "A": "Radial flow resistance and convergence of flow lines entering the drain tubes",
+      "B": "Unsaturated capillary fringe above the phreatic surface",
+      "C": "Chemical clogging of drain filter envelopes",
+      "D": "Evaporation losses from the ground surface"
+    },
+    "correct_answer": "A",
+    "solution": "Hooghoudt assumes horizontal flow. However, near drain tubes flow lines curve and converge radially. To correct for this radial flow resistance without complex conformal mapping, Hooghoudt replaced actual aquifer thickness $D$ below the drains with an effective smaller 'equivalent depth' $d$.",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_009",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Steady vs unsteady subsurface drainage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following equations is/are applicable to agricultural subsurface drainage calculations?",
+    "options": {
+      "A": "Hooghoudt equation (steady-state water table under uniform steady recharge)",
+      "B": "Ernst equation (steady-state multi-layered soil profile with vertical, horizontal, and radial resistance)",
+      "C": "Glover-Dumm equation (transient / unsteady water table drawdown following an instantaneous recharge)",
+      "D": "Navier-Stokes equation for boundary layer separation on aerofoils"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Hooghoudt is the primary international steady-state drainage equation (A).\n2. Ernst equation solves two-layered stratified soils separating $W, H, R$ head losses (B).\n3. Glover-Dumm solves the linearized 1D Boussinesq unsteady drawdown equation (C).\n4. Aerofoil boundary layer dynamics is external aerodynamics, irrelevant to porous media drainage (D is false).",
+    "difficulty": "Easy",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_010",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt spacing for drains on impermeable barrier",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Subsurface pipe drains are laid directly on an impermeable horizontal floor ($d = 0$). The hydraulic conductivity of the soil is $K = 1.0\\text{ m/day}$ and the steady drainage design recharge rate is $q = 5\\text{ mm/day}$ ($0.005\\text{ m/day}$). To prevent the water table at midpoint from rising more than $h = 0.80\\text{ m}$ above the drains, the required drain spacing $S$ is ________ $\\text{m}$ (round off to one decimal place).",
+    "correct_answer": "22.6",
+    "numerical_range": {
+      "min": 22.1,
+      "max": 23.1
+    },
+    "solution": "When drains rest on the impermeable layer, Hooghoudt's equation simplifies to:\n$$S^2 = \\frac{4 K h^2}{q}$$\nGiven $K = 1.0\\text{ m/day}$, $h = 0.80\\text{ m}$, $q = 0.005\\text{ m/day}$:\n$$S^2 = \\frac{4 \\times 1.0 \\times (0.80)^2}{0.005} = \\frac{4 \\times 0.6400}{0.005} = 512.0\\text{ m}^2$$\n$$S = \\sqrt{512.0} = 22.6\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_011",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt equivalent depth d concept",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Hooghoudt's drainage spacing equation $S^2 = \\frac{8 K_2 d h + 4 K_1 h^2}{q}$, the parameter $d$ ('equivalent depth') is introduced primarily to account for:",
+    "options": {
+      "A": "Radial flow resistance and convergence of flow lines entering the drain tubes",
+      "B": "Unsaturated capillary fringe above the phreatic surface",
+      "C": "Chemical clogging of drain filter envelopes",
+      "D": "Evaporation losses from the ground surface"
+    },
+    "correct_answer": "A",
+    "solution": "Hooghoudt assumes horizontal flow. However, near drain tubes flow lines curve and converge radially. To correct for this radial flow resistance without complex conformal mapping, Hooghoudt replaced actual aquifer thickness $D$ below the drains with an effective smaller 'equivalent depth' $d$.",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_012",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Steady vs unsteady subsurface drainage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following equations is/are applicable to agricultural subsurface drainage calculations?",
+    "options": {
+      "A": "Hooghoudt equation (steady-state water table under uniform steady recharge)",
+      "B": "Ernst equation (steady-state multi-layered soil profile with vertical, horizontal, and radial resistance)",
+      "C": "Glover-Dumm equation (transient / unsteady water table drawdown following an instantaneous recharge)",
+      "D": "Navier-Stokes equation for boundary layer separation on aerofoils"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Hooghoudt is the primary international steady-state drainage equation (A).\n2. Ernst equation solves two-layered stratified soils separating $W, H, R$ head losses (B).\n3. Glover-Dumm solves the linearized 1D Boussinesq unsteady drawdown equation (C).\n4. Aerofoil boundary layer dynamics is external aerodynamics, irrelevant to porous media drainage (D is false).",
+    "difficulty": "Easy",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_013",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt spacing for drains on impermeable barrier",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Subsurface pipe drains are laid directly on an impermeable horizontal floor ($d = 0$). The hydraulic conductivity of the soil is $K = 1.0\\text{ m/day}$ and the steady drainage design recharge rate is $q = 5\\text{ mm/day}$ ($0.005\\text{ m/day}$). To prevent the water table at midpoint from rising more than $h = 0.80\\text{ m}$ above the drains, the required drain spacing $S$ is ________ $\\text{m}$ (round off to one decimal place).",
+    "correct_answer": "22.6",
+    "numerical_range": {
+      "min": 22.1,
+      "max": 23.1
+    },
+    "solution": "When drains rest on the impermeable layer, Hooghoudt's equation simplifies to:\n$$S^2 = \\frac{4 K h^2}{q}$$\nGiven $K = 1.0\\text{ m/day}$, $h = 0.80\\text{ m}$, $q = 0.005\\text{ m/day}$:\n$$S^2 = \\frac{4 \\times 1.0 \\times (0.80)^2}{0.005} = \\frac{4 \\times 0.6400}{0.005} = 512.0\\text{ m}^2$$\n$$S = \\sqrt{512.0} = 22.6\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_014",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt equivalent depth d concept",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Hooghoudt's drainage spacing equation $S^2 = \\frac{8 K_2 d h + 4 K_1 h^2}{q}$, the parameter $d$ ('equivalent depth') is introduced primarily to account for:",
+    "options": {
+      "A": "Radial flow resistance and convergence of flow lines entering the drain tubes",
+      "B": "Unsaturated capillary fringe above the phreatic surface",
+      "C": "Chemical clogging of drain filter envelopes",
+      "D": "Evaporation losses from the ground surface"
+    },
+    "correct_answer": "A",
+    "solution": "Hooghoudt assumes horizontal flow. However, near drain tubes flow lines curve and converge radially. To correct for this radial flow resistance without complex conformal mapping, Hooghoudt replaced actual aquifer thickness $D$ below the drains with an effective smaller 'equivalent depth' $d$.",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_015",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Steady vs unsteady subsurface drainage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following equations is/are applicable to agricultural subsurface drainage calculations?",
+    "options": {
+      "A": "Hooghoudt equation (steady-state water table under uniform steady recharge)",
+      "B": "Ernst equation (steady-state multi-layered soil profile with vertical, horizontal, and radial resistance)",
+      "C": "Glover-Dumm equation (transient / unsteady water table drawdown following an instantaneous recharge)",
+      "D": "Navier-Stokes equation for boundary layer separation on aerofoils"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Hooghoudt is the primary international steady-state drainage equation (A).\n2. Ernst equation solves two-layered stratified soils separating $W, H, R$ head losses (B).\n3. Glover-Dumm solves the linearized 1D Boussinesq unsteady drawdown equation (C).\n4. Aerofoil boundary layer dynamics is external aerodynamics, irrelevant to porous media drainage (D is false).",
+    "difficulty": "Easy",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_016",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt spacing for drains on impermeable barrier",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Subsurface pipe drains are laid directly on an impermeable horizontal floor ($d = 0$). The hydraulic conductivity of the soil is $K = 1.0\\text{ m/day}$ and the steady drainage design recharge rate is $q = 5\\text{ mm/day}$ ($0.005\\text{ m/day}$). To prevent the water table at midpoint from rising more than $h = 0.80\\text{ m}$ above the drains, the required drain spacing $S$ is ________ $\\text{m}$ (round off to one decimal place).",
+    "correct_answer": "22.6",
+    "numerical_range": {
+      "min": 22.1,
+      "max": 23.1
+    },
+    "solution": "When drains rest on the impermeable layer, Hooghoudt's equation simplifies to:\n$$S^2 = \\frac{4 K h^2}{q}$$\nGiven $K = 1.0\\text{ m/day}$, $h = 0.80\\text{ m}$, $q = 0.005\\text{ m/day}$:\n$$S^2 = \\frac{4 \\times 1.0 \\times (0.80)^2}{0.005} = \\frac{4 \\times 0.6400}{0.005} = 512.0\\text{ m}^2$$\n$$S = \\sqrt{512.0} = 22.6\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_017",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt equivalent depth d concept",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Hooghoudt's drainage spacing equation $S^2 = \\frac{8 K_2 d h + 4 K_1 h^2}{q}$, the parameter $d$ ('equivalent depth') is introduced primarily to account for:",
+    "options": {
+      "A": "Radial flow resistance and convergence of flow lines entering the drain tubes",
+      "B": "Unsaturated capillary fringe above the phreatic surface",
+      "C": "Chemical clogging of drain filter envelopes",
+      "D": "Evaporation losses from the ground surface"
+    },
+    "correct_answer": "A",
+    "solution": "Hooghoudt assumes horizontal flow. However, near drain tubes flow lines curve and converge radially. To correct for this radial flow resistance without complex conformal mapping, Hooghoudt replaced actual aquifer thickness $D$ below the drains with an effective smaller 'equivalent depth' $d$.",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_018",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Steady vs unsteady subsurface drainage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following equations is/are applicable to agricultural subsurface drainage calculations?",
+    "options": {
+      "A": "Hooghoudt equation (steady-state water table under uniform steady recharge)",
+      "B": "Ernst equation (steady-state multi-layered soil profile with vertical, horizontal, and radial resistance)",
+      "C": "Glover-Dumm equation (transient / unsteady water table drawdown following an instantaneous recharge)",
+      "D": "Navier-Stokes equation for boundary layer separation on aerofoils"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Hooghoudt is the primary international steady-state drainage equation (A).\n2. Ernst equation solves two-layered stratified soils separating $W, H, R$ head losses (B).\n3. Glover-Dumm solves the linearized 1D Boussinesq unsteady drawdown equation (C).\n4. Aerofoil boundary layer dynamics is external aerodynamics, irrelevant to porous media drainage (D is false).",
+    "difficulty": "Easy",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_019",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt spacing for drains on impermeable barrier",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Subsurface pipe drains are laid directly on an impermeable horizontal floor ($d = 0$). The hydraulic conductivity of the soil is $K = 1.0\\text{ m/day}$ and the steady drainage design recharge rate is $q = 5\\text{ mm/day}$ ($0.005\\text{ m/day}$). To prevent the water table at midpoint from rising more than $h = 0.80\\text{ m}$ above the drains, the required drain spacing $S$ is ________ $\\text{m}$ (round off to one decimal place).",
+    "correct_answer": "22.6",
+    "numerical_range": {
+      "min": 22.1,
+      "max": 23.1
+    },
+    "solution": "When drains rest on the impermeable layer, Hooghoudt's equation simplifies to:\n$$S^2 = \\frac{4 K h^2}{q}$$\nGiven $K = 1.0\\text{ m/day}$, $h = 0.80\\text{ m}$, $q = 0.005\\text{ m/day}$:\n$$S^2 = \\frac{4 \\times 1.0 \\times (0.80)^2}{0.005} = \\frac{4 \\times 0.6400}{0.005} = 512.0\\text{ m}^2$$\n$$S = \\sqrt{512.0} = 22.6\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_020",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt equivalent depth d concept",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Hooghoudt's drainage spacing equation $S^2 = \\frac{8 K_2 d h + 4 K_1 h^2}{q}$, the parameter $d$ ('equivalent depth') is introduced primarily to account for:",
+    "options": {
+      "A": "Radial flow resistance and convergence of flow lines entering the drain tubes",
+      "B": "Unsaturated capillary fringe above the phreatic surface",
+      "C": "Chemical clogging of drain filter envelopes",
+      "D": "Evaporation losses from the ground surface"
+    },
+    "correct_answer": "A",
+    "solution": "Hooghoudt assumes horizontal flow. However, near drain tubes flow lines curve and converge radially. To correct for this radial flow resistance without complex conformal mapping, Hooghoudt replaced actual aquifer thickness $D$ below the drains with an effective smaller 'equivalent depth' $d$.",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_021",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Steady vs unsteady subsurface drainage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following equations is/are applicable to agricultural subsurface drainage calculations?",
+    "options": {
+      "A": "Hooghoudt equation (steady-state water table under uniform steady recharge)",
+      "B": "Ernst equation (steady-state multi-layered soil profile with vertical, horizontal, and radial resistance)",
+      "C": "Glover-Dumm equation (transient / unsteady water table drawdown following an instantaneous recharge)",
+      "D": "Navier-Stokes equation for boundary layer separation on aerofoils"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Hooghoudt is the primary international steady-state drainage equation (A).\n2. Ernst equation solves two-layered stratified soils separating $W, H, R$ head losses (B).\n3. Glover-Dumm solves the linearized 1D Boussinesq unsteady drawdown equation (C).\n4. Aerofoil boundary layer dynamics is external aerodynamics, irrelevant to porous media drainage (D is false).",
+    "difficulty": "Easy",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_022",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt spacing for drains on impermeable barrier",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Subsurface pipe drains are laid directly on an impermeable horizontal floor ($d = 0$). The hydraulic conductivity of the soil is $K = 1.0\\text{ m/day}$ and the steady drainage design recharge rate is $q = 5\\text{ mm/day}$ ($0.005\\text{ m/day}$). To prevent the water table at midpoint from rising more than $h = 0.80\\text{ m}$ above the drains, the required drain spacing $S$ is ________ $\\text{m}$ (round off to one decimal place).",
+    "correct_answer": "22.6",
+    "numerical_range": {
+      "min": 22.1,
+      "max": 23.1
+    },
+    "solution": "When drains rest on the impermeable layer, Hooghoudt's equation simplifies to:\n$$S^2 = \\frac{4 K h^2}{q}$$\nGiven $K = 1.0\\text{ m/day}$, $h = 0.80\\text{ m}$, $q = 0.005\\text{ m/day}$:\n$$S^2 = \\frac{4 \\times 1.0 \\times (0.80)^2}{0.005} = \\frac{4 \\times 0.6400}{0.005} = 512.0\\text{ m}^2$$\n$$S = \\sqrt{512.0} = 22.6\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_023",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt equivalent depth d concept",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Hooghoudt's drainage spacing equation $S^2 = \\frac{8 K_2 d h + 4 K_1 h^2}{q}$, the parameter $d$ ('equivalent depth') is introduced primarily to account for:",
+    "options": {
+      "A": "Radial flow resistance and convergence of flow lines entering the drain tubes",
+      "B": "Unsaturated capillary fringe above the phreatic surface",
+      "C": "Chemical clogging of drain filter envelopes",
+      "D": "Evaporation losses from the ground surface"
+    },
+    "correct_answer": "A",
+    "solution": "Hooghoudt assumes horizontal flow. However, near drain tubes flow lines curve and converge radially. To correct for this radial flow resistance without complex conformal mapping, Hooghoudt replaced actual aquifer thickness $D$ below the drains with an effective smaller 'equivalent depth' $d$.",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_024",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Steady vs unsteady subsurface drainage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following equations is/are applicable to agricultural subsurface drainage calculations?",
+    "options": {
+      "A": "Hooghoudt equation (steady-state water table under uniform steady recharge)",
+      "B": "Ernst equation (steady-state multi-layered soil profile with vertical, horizontal, and radial resistance)",
+      "C": "Glover-Dumm equation (transient / unsteady water table drawdown following an instantaneous recharge)",
+      "D": "Navier-Stokes equation for boundary layer separation on aerofoils"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Hooghoudt is the primary international steady-state drainage equation (A).\n2. Ernst equation solves two-layered stratified soils separating $W, H, R$ head losses (B).\n3. Glover-Dumm solves the linearized 1D Boussinesq unsteady drawdown equation (C).\n4. Aerofoil boundary layer dynamics is external aerodynamics, irrelevant to porous media drainage (D is false).",
+    "difficulty": "Easy",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_025",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt spacing for drains on impermeable barrier",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Subsurface pipe drains are laid directly on an impermeable horizontal floor ($d = 0$). The hydraulic conductivity of the soil is $K = 1.0\\text{ m/day}$ and the steady drainage design recharge rate is $q = 5\\text{ mm/day}$ ($0.005\\text{ m/day}$). To prevent the water table at midpoint from rising more than $h = 0.80\\text{ m}$ above the drains, the required drain spacing $S$ is ________ $\\text{m}$ (round off to one decimal place).",
+    "correct_answer": "22.6",
+    "numerical_range": {
+      "min": 22.1,
+      "max": 23.1
+    },
+    "solution": "When drains rest on the impermeable layer, Hooghoudt's equation simplifies to:\n$$S^2 = \\frac{4 K h^2}{q}$$\nGiven $K = 1.0\\text{ m/day}$, $h = 0.80\\text{ m}$, $q = 0.005\\text{ m/day}$:\n$$S^2 = \\frac{4 \\times 1.0 \\times (0.80)^2}{0.005} = \\frac{4 \\times 0.6400}{0.005} = 512.0\\text{ m}^2$$\n$$S = \\sqrt{512.0} = 22.6\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_026",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt equivalent depth d concept",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Hooghoudt's drainage spacing equation $S^2 = \\frac{8 K_2 d h + 4 K_1 h^2}{q}$, the parameter $d$ ('equivalent depth') is introduced primarily to account for:",
+    "options": {
+      "A": "Radial flow resistance and convergence of flow lines entering the drain tubes",
+      "B": "Unsaturated capillary fringe above the phreatic surface",
+      "C": "Chemical clogging of drain filter envelopes",
+      "D": "Evaporation losses from the ground surface"
+    },
+    "correct_answer": "A",
+    "solution": "Hooghoudt assumes horizontal flow. However, near drain tubes flow lines curve and converge radially. To correct for this radial flow resistance without complex conformal mapping, Hooghoudt replaced actual aquifer thickness $D$ below the drains with an effective smaller 'equivalent depth' $d$.",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_027",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Steady vs unsteady subsurface drainage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following equations is/are applicable to agricultural subsurface drainage calculations?",
+    "options": {
+      "A": "Hooghoudt equation (steady-state water table under uniform steady recharge)",
+      "B": "Ernst equation (steady-state multi-layered soil profile with vertical, horizontal, and radial resistance)",
+      "C": "Glover-Dumm equation (transient / unsteady water table drawdown following an instantaneous recharge)",
+      "D": "Navier-Stokes equation for boundary layer separation on aerofoils"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Hooghoudt is the primary international steady-state drainage equation (A).\n2. Ernst equation solves two-layered stratified soils separating $W, H, R$ head losses (B).\n3. Glover-Dumm solves the linearized 1D Boussinesq unsteady drawdown equation (C).\n4. Aerofoil boundary layer dynamics is external aerodynamics, irrelevant to porous media drainage (D is false).",
+    "difficulty": "Easy",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_028",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt spacing for drains on impermeable barrier",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Subsurface pipe drains are laid directly on an impermeable horizontal floor ($d = 0$). The hydraulic conductivity of the soil is $K = 1.0\\text{ m/day}$ and the steady drainage design recharge rate is $q = 5\\text{ mm/day}$ ($0.005\\text{ m/day}$). To prevent the water table at midpoint from rising more than $h = 0.80\\text{ m}$ above the drains, the required drain spacing $S$ is ________ $\\text{m}$ (round off to one decimal place).",
+    "correct_answer": "22.6",
+    "numerical_range": {
+      "min": 22.1,
+      "max": 23.1
+    },
+    "solution": "When drains rest on the impermeable layer, Hooghoudt's equation simplifies to:\n$$S^2 = \\frac{4 K h^2}{q}$$\nGiven $K = 1.0\\text{ m/day}$, $h = 0.80\\text{ m}$, $q = 0.005\\text{ m/day}$:\n$$S^2 = \\frac{4 \\times 1.0 \\times (0.80)^2}{0.005} = \\frac{4 \\times 0.6400}{0.005} = 512.0\\text{ m}^2$$\n$$S = \\sqrt{512.0} = 22.6\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_029",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt equivalent depth d concept",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Hooghoudt's drainage spacing equation $S^2 = \\frac{8 K_2 d h + 4 K_1 h^2}{q}$, the parameter $d$ ('equivalent depth') is introduced primarily to account for:",
+    "options": {
+      "A": "Radial flow resistance and convergence of flow lines entering the drain tubes",
+      "B": "Unsaturated capillary fringe above the phreatic surface",
+      "C": "Chemical clogging of drain filter envelopes",
+      "D": "Evaporation losses from the ground surface"
+    },
+    "correct_answer": "A",
+    "solution": "Hooghoudt assumes horizontal flow. However, near drain tubes flow lines curve and converge radially. To correct for this radial flow resistance without complex conformal mapping, Hooghoudt replaced actual aquifer thickness $D$ below the drains with an effective smaller 'equivalent depth' $d$.",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_030",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Steady vs unsteady subsurface drainage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following equations is/are applicable to agricultural subsurface drainage calculations?",
+    "options": {
+      "A": "Hooghoudt equation (steady-state water table under uniform steady recharge)",
+      "B": "Ernst equation (steady-state multi-layered soil profile with vertical, horizontal, and radial resistance)",
+      "C": "Glover-Dumm equation (transient / unsteady water table drawdown following an instantaneous recharge)",
+      "D": "Navier-Stokes equation for boundary layer separation on aerofoils"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Hooghoudt is the primary international steady-state drainage equation (A).\n2. Ernst equation solves two-layered stratified soils separating $W, H, R$ head losses (B).\n3. Glover-Dumm solves the linearized 1D Boussinesq unsteady drawdown equation (C).\n4. Aerofoil boundary layer dynamics is external aerodynamics, irrelevant to porous media drainage (D is false).",
+    "difficulty": "Easy",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_031",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt spacing for drains on impermeable barrier",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Subsurface pipe drains are laid directly on an impermeable horizontal floor ($d = 0$). The hydraulic conductivity of the soil is $K = 1.0\\text{ m/day}$ and the steady drainage design recharge rate is $q = 5\\text{ mm/day}$ ($0.005\\text{ m/day}$). To prevent the water table at midpoint from rising more than $h = 0.80\\text{ m}$ above the drains, the required drain spacing $S$ is ________ $\\text{m}$ (round off to one decimal place).",
+    "correct_answer": "22.6",
+    "numerical_range": {
+      "min": 22.1,
+      "max": 23.1
+    },
+    "solution": "When drains rest on the impermeable layer, Hooghoudt's equation simplifies to:\n$$S^2 = \\frac{4 K h^2}{q}$$\nGiven $K = 1.0\\text{ m/day}$, $h = 0.80\\text{ m}$, $q = 0.005\\text{ m/day}$:\n$$S^2 = \\frac{4 \\times 1.0 \\times (0.80)^2}{0.005} = \\frac{4 \\times 0.6400}{0.005} = 512.0\\text{ m}^2$$\n$$S = \\sqrt{512.0} = 22.6\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_032",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt equivalent depth d concept",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Hooghoudt's drainage spacing equation $S^2 = \\frac{8 K_2 d h + 4 K_1 h^2}{q}$, the parameter $d$ ('equivalent depth') is introduced primarily to account for:",
+    "options": {
+      "A": "Radial flow resistance and convergence of flow lines entering the drain tubes",
+      "B": "Unsaturated capillary fringe above the phreatic surface",
+      "C": "Chemical clogging of drain filter envelopes",
+      "D": "Evaporation losses from the ground surface"
+    },
+    "correct_answer": "A",
+    "solution": "Hooghoudt assumes horizontal flow. However, near drain tubes flow lines curve and converge radially. To correct for this radial flow resistance without complex conformal mapping, Hooghoudt replaced actual aquifer thickness $D$ below the drains with an effective smaller 'equivalent depth' $d$.",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_033",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Steady vs unsteady subsurface drainage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following equations is/are applicable to agricultural subsurface drainage calculations?",
+    "options": {
+      "A": "Hooghoudt equation (steady-state water table under uniform steady recharge)",
+      "B": "Ernst equation (steady-state multi-layered soil profile with vertical, horizontal, and radial resistance)",
+      "C": "Glover-Dumm equation (transient / unsteady water table drawdown following an instantaneous recharge)",
+      "D": "Navier-Stokes equation for boundary layer separation on aerofoils"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Hooghoudt is the primary international steady-state drainage equation (A).\n2. Ernst equation solves two-layered stratified soils separating $W, H, R$ head losses (B).\n3. Glover-Dumm solves the linearized 1D Boussinesq unsteady drawdown equation (C).\n4. Aerofoil boundary layer dynamics is external aerodynamics, irrelevant to porous media drainage (D is false).",
+    "difficulty": "Easy",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_034",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt spacing for drains on impermeable barrier",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Subsurface pipe drains are laid directly on an impermeable horizontal floor ($d = 0$). The hydraulic conductivity of the soil is $K = 1.0\\text{ m/day}$ and the steady drainage design recharge rate is $q = 5\\text{ mm/day}$ ($0.005\\text{ m/day}$). To prevent the water table at midpoint from rising more than $h = 0.80\\text{ m}$ above the drains, the required drain spacing $S$ is ________ $\\text{m}$ (round off to one decimal place).",
+    "correct_answer": "22.6",
+    "numerical_range": {
+      "min": 22.1,
+      "max": 23.1
+    },
+    "solution": "When drains rest on the impermeable layer, Hooghoudt's equation simplifies to:\n$$S^2 = \\frac{4 K h^2}{q}$$\nGiven $K = 1.0\\text{ m/day}$, $h = 0.80\\text{ m}$, $q = 0.005\\text{ m/day}$:\n$$S^2 = \\frac{4 \\times 1.0 \\times (0.80)^2}{0.005} = \\frac{4 \\times 0.6400}{0.005} = 512.0\\text{ m}^2$$\n$$S = \\sqrt{512.0} = 22.6\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_035",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt equivalent depth d concept",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Hooghoudt's drainage spacing equation $S^2 = \\frac{8 K_2 d h + 4 K_1 h^2}{q}$, the parameter $d$ ('equivalent depth') is introduced primarily to account for:",
+    "options": {
+      "A": "Radial flow resistance and convergence of flow lines entering the drain tubes",
+      "B": "Unsaturated capillary fringe above the phreatic surface",
+      "C": "Chemical clogging of drain filter envelopes",
+      "D": "Evaporation losses from the ground surface"
+    },
+    "correct_answer": "A",
+    "solution": "Hooghoudt assumes horizontal flow. However, near drain tubes flow lines curve and converge radially. To correct for this radial flow resistance without complex conformal mapping, Hooghoudt replaced actual aquifer thickness $D$ below the drains with an effective smaller 'equivalent depth' $d$.",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_036",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Steady vs unsteady subsurface drainage",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following equations is/are applicable to agricultural subsurface drainage calculations?",
+    "options": {
+      "A": "Hooghoudt equation (steady-state water table under uniform steady recharge)",
+      "B": "Ernst equation (steady-state multi-layered soil profile with vertical, horizontal, and radial resistance)",
+      "C": "Glover-Dumm equation (transient / unsteady water table drawdown following an instantaneous recharge)",
+      "D": "Navier-Stokes equation for boundary layer separation on aerofoils"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Hooghoudt is the primary international steady-state drainage equation (A).\n2. Ernst equation solves two-layered stratified soils separating $W, H, R$ head losses (B).\n3. Glover-Dumm solves the linearized 1D Boussinesq unsteady drawdown equation (C).\n4. Aerofoil boundary layer dynamics is external aerodynamics, irrelevant to porous media drainage (D is false).",
+    "difficulty": "Easy",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_037",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt spacing for drains on impermeable barrier",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Subsurface pipe drains are laid directly on an impermeable horizontal floor ($d = 0$). The hydraulic conductivity of the soil is $K = 1.0\\text{ m/day}$ and the steady drainage design recharge rate is $q = 5\\text{ mm/day}$ ($0.005\\text{ m/day}$). To prevent the water table at midpoint from rising more than $h = 0.80\\text{ m}$ above the drains, the required drain spacing $S$ is ________ $\\text{m}$ (round off to one decimal place).",
+    "correct_answer": "22.6",
+    "numerical_range": {
+      "min": 22.1,
+      "max": 23.1
+    },
+    "solution": "When drains rest on the impermeable layer, Hooghoudt's equation simplifies to:\n$$S^2 = \\frac{4 K h^2}{q}$$\nGiven $K = 1.0\\text{ m/day}$, $h = 0.80\\text{ m}$, $q = 0.005\\text{ m/day}$:\n$$S^2 = \\frac{4 \\times 1.0 \\times (0.80)^2}{0.005} = \\frac{4 \\times 0.6400}{0.005} = 512.0\\text{ m}^2$$\n$$S = \\sqrt{512.0} = 22.6\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_HGT_038",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt equivalent depth d concept",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Hooghoudt's drainage spacing equation $S^2 = \\frac{8 K_2 d h + 4 K_1 h^2}{q}$, the parameter $d$ ('equivalent depth') is introduced primarily to account for:",
+    "options": {
+      "A": "Radial flow resistance and convergence of flow lines entering the drain tubes",
+      "B": "Unsaturated capillary fringe above the phreatic surface",
+      "C": "Chemical clogging of drain filter envelopes",
+      "D": "Evaporation losses from the ground surface"
+    },
+    "correct_answer": "A",
+    "solution": "Hooghoudt assumes horizontal flow. However, near drain tubes flow lines curve and converge radially. To correct for this radial flow resistance without complex conformal mapping, Hooghoudt replaced actual aquifer thickness $D$ below the drains with an effective smaller 'equivalent depth' $d$.",
+    "difficulty": "Moderate",
+    "source": "Drainage Principles and Applications (ILRI / Ritzema)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_001",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Leaching requirement calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An agricultural crop has an electrical conductivity tolerance threshold of the saturated soil extract $EC_e = 4.0\\text{ dS/m}$. The irrigation water has an electrical conductivity of $EC_w = 1.4\\text{ dS/m}$. According to the USDA-FAO formula $LR = \\frac{EC_w}{5 EC_e - EC_w}$, the leaching requirement is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "7.53",
+    "numerical_range": {
+      "min": 7.33,
+      "max": 7.73
+    },
+    "solution": "Applying the leaching requirement equation:\n$$LR = \\frac{EC_w}{5 EC_e - EC_w} = \\frac{1.4}{5(4.0) - 1.4} = \\frac{1.4}{20.0 - 1.4} = \\frac{1.4}{18.6} = 0.0753$$\nIn percentage: $LR = 7.53\\%$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_002",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Sodium Adsorption Ratio (SAR)",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A chemical analysis of irrigation water gives the concentration of cations: $\\text{Na}^+ = 6.0\\text{ meq/L}$, $\\text{Ca}^{2+} = 3.0\\text{ meq/L}$, and $\\text{Mg}^{2+} = 1.0\\text{ meq/L}$. The Sodium Adsorption Ratio ($SAR$) of the water is ________ (round off to two decimal places).",
+    "correct_answer": "4.24",
+    "numerical_range": {
+      "min": 4.19,
+      "max": 4.29
+    },
+    "solution": "The Sodium Adsorption Ratio is defined as:\n$$SAR = \\frac{\\text{Na}^+}{\\sqrt{\\frac{\\text{Ca}^{2+} + \\text{Mg}^{2+}}{2}}}$$\nSubstituting concentrations in $\\text{meq/L}$:\n$$SAR = \\frac{6.0}{\\sqrt{4.0/2}} = \\frac{6.0}{\\sqrt{2.0}} = \\frac{6.0}{1.4142} = 4.24$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_003",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Classification of salt-affected soils",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A saline-alkali (saline-sodic) soil is formally classified by which of the following criteria?",
+    "options": {
+      "A": "$EC_e > 4\\text{ dS/m}$, $ESP > 15\\%$, and $pH < 8.5$",
+      "B": "$EC_e < 4\\text{ dS/m}$, $ESP > 15\\%$, and $pH > 8.5$",
+      "C": "$EC_e > 4\\text{ dS/m}$, $ESP < 15\\%$, and $pH < 8.5$",
+      "D": "$EC_e < 2\\text{ dS/m}$, $ESP < 5\\%$, and $pH = 7.0$"
+    },
+    "correct_answer": "A",
+    "solution": "USDA classification of salt-affected soils:\n- Saline: $EC_e > 4\\text{ dS/m}$, $ESP < 15\\%$, $pH < 8.5$\n- Sodic (Alkali): $EC_e < 4\\text{ dS/m}$, $ESP > 15\\%$, $pH > 8.5$\n- Saline-Sodic: $EC_e > 4\\text{ dS/m}$, $ESP > 15\\%$, and variable $pH$ (typically $< 8.5$).",
+    "difficulty": "Moderate",
+    "source": "Soil and Water Conservation Engineering (Schwab et al.)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_004",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Leaching requirement calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An agricultural crop has an electrical conductivity tolerance threshold of the saturated soil extract $EC_e = 4.0\\text{ dS/m}$. The irrigation water has an electrical conductivity of $EC_w = 2.0\\text{ dS/m}$. According to the USDA-FAO formula $LR = \\frac{EC_w}{5 EC_e - EC_w}$, the leaching requirement is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "11.11",
+    "numerical_range": {
+      "min": 10.91,
+      "max": 11.31
+    },
+    "solution": "Applying the leaching requirement equation:\n$$LR = \\frac{EC_w}{5 EC_e - EC_w} = \\frac{2.0}{5(4.0) - 2.0} = \\frac{2.0}{20.0 - 2.0} = \\frac{2.0}{18.0} = 0.1111$$\nIn percentage: $LR = 11.11\\%$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_005",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Sodium Adsorption Ratio (SAR)",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A chemical analysis of irrigation water gives the concentration of cations: $\\text{Na}^+ = 6.0\\text{ meq/L}$, $\\text{Ca}^{2+} = 3.0\\text{ meq/L}$, and $\\text{Mg}^{2+} = 1.0\\text{ meq/L}$. The Sodium Adsorption Ratio ($SAR$) of the water is ________ (round off to two decimal places).",
+    "correct_answer": "4.24",
+    "numerical_range": {
+      "min": 4.19,
+      "max": 4.29
+    },
+    "solution": "The Sodium Adsorption Ratio is defined as:\n$$SAR = \\frac{\\text{Na}^+}{\\sqrt{\\frac{\\text{Ca}^{2+} + \\text{Mg}^{2+}}{2}}}$$\nSubstituting concentrations in $\\text{meq/L}$:\n$$SAR = \\frac{6.0}{\\sqrt{4.0/2}} = \\frac{6.0}{\\sqrt{2.0}} = \\frac{6.0}{1.4142} = 4.24$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_006",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Classification of salt-affected soils",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A saline-alkali (saline-sodic) soil is formally classified by which of the following criteria?",
+    "options": {
+      "A": "$EC_e > 4\\text{ dS/m}$, $ESP > 15\\%$, and $pH < 8.5$",
+      "B": "$EC_e < 4\\text{ dS/m}$, $ESP > 15\\%$, and $pH > 8.5$",
+      "C": "$EC_e > 4\\text{ dS/m}$, $ESP < 15\\%$, and $pH < 8.5$",
+      "D": "$EC_e < 2\\text{ dS/m}$, $ESP < 5\\%$, and $pH = 7.0$"
+    },
+    "correct_answer": "A",
+    "solution": "USDA classification of salt-affected soils:\n- Saline: $EC_e > 4\\text{ dS/m}$, $ESP < 15\\%$, $pH < 8.5$\n- Sodic (Alkali): $EC_e < 4\\text{ dS/m}$, $ESP > 15\\%$, $pH > 8.5$\n- Saline-Sodic: $EC_e > 4\\text{ dS/m}$, $ESP > 15\\%$, and variable $pH$ (typically $< 8.5$).",
+    "difficulty": "Moderate",
+    "source": "Soil and Water Conservation Engineering (Schwab et al.)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_007",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Leaching requirement calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An agricultural crop has an electrical conductivity tolerance threshold of the saturated soil extract $EC_e = 4.0\\text{ dS/m}$. The irrigation water has an electrical conductivity of $EC_w = 1.6\\text{ dS/m}$. According to the USDA-FAO formula $LR = \\frac{EC_w}{5 EC_e - EC_w}$, the leaching requirement is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "8.70",
+    "numerical_range": {
+      "min": 8.5,
+      "max": 8.9
+    },
+    "solution": "Applying the leaching requirement equation:\n$$LR = \\frac{EC_w}{5 EC_e - EC_w} = \\frac{1.6}{5(4.0) - 1.6} = \\frac{1.6}{20.0 - 1.6} = \\frac{1.6}{18.4} = 0.0870$$\nIn percentage: $LR = 8.70\\%$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_008",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Sodium Adsorption Ratio (SAR)",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A chemical analysis of irrigation water gives the concentration of cations: $\\text{Na}^+ = 6.0\\text{ meq/L}$, $\\text{Ca}^{2+} = 3.0\\text{ meq/L}$, and $\\text{Mg}^{2+} = 1.0\\text{ meq/L}$. The Sodium Adsorption Ratio ($SAR$) of the water is ________ (round off to two decimal places).",
+    "correct_answer": "4.24",
+    "numerical_range": {
+      "min": 4.19,
+      "max": 4.29
+    },
+    "solution": "The Sodium Adsorption Ratio is defined as:\n$$SAR = \\frac{\\text{Na}^+}{\\sqrt{\\frac{\\text{Ca}^{2+} + \\text{Mg}^{2+}}{2}}}$$\nSubstituting concentrations in $\\text{meq/L}$:\n$$SAR = \\frac{6.0}{\\sqrt{4.0/2}} = \\frac{6.0}{\\sqrt{2.0}} = \\frac{6.0}{1.4142} = 4.24$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_009",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Classification of salt-affected soils",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A saline-alkali (saline-sodic) soil is formally classified by which of the following criteria?",
+    "options": {
+      "A": "$EC_e > 4\\text{ dS/m}$, $ESP > 15\\%$, and $pH < 8.5$",
+      "B": "$EC_e < 4\\text{ dS/m}$, $ESP > 15\\%$, and $pH > 8.5$",
+      "C": "$EC_e > 4\\text{ dS/m}$, $ESP < 15\\%$, and $pH < 8.5$",
+      "D": "$EC_e < 2\\text{ dS/m}$, $ESP < 5\\%$, and $pH = 7.0$"
+    },
+    "correct_answer": "A",
+    "solution": "USDA classification of salt-affected soils:\n- Saline: $EC_e > 4\\text{ dS/m}$, $ESP < 15\\%$, $pH < 8.5$\n- Sodic (Alkali): $EC_e < 4\\text{ dS/m}$, $ESP > 15\\%$, $pH > 8.5$\n- Saline-Sodic: $EC_e > 4\\text{ dS/m}$, $ESP > 15\\%$, and variable $pH$ (typically $< 8.5$).",
+    "difficulty": "Moderate",
+    "source": "Soil and Water Conservation Engineering (Schwab et al.)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_010",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Leaching requirement calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An agricultural crop has an electrical conductivity tolerance threshold of the saturated soil extract $EC_e = 4.0\\text{ dS/m}$. The irrigation water has an electrical conductivity of $EC_w = 1.2\\text{ dS/m}$. According to the USDA-FAO formula $LR = \\frac{EC_w}{5 EC_e - EC_w}$, the leaching requirement is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "6.38",
+    "numerical_range": {
+      "min": 6.18,
+      "max": 6.58
+    },
+    "solution": "Applying the leaching requirement equation:\n$$LR = \\frac{EC_w}{5 EC_e - EC_w} = \\frac{1.2}{5(4.0) - 1.2} = \\frac{1.2}{20.0 - 1.2} = \\frac{1.2}{18.8} = 0.0638$$\nIn percentage: $LR = 6.38\\%$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_011",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Sodium Adsorption Ratio (SAR)",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A chemical analysis of irrigation water gives the concentration of cations: $\\text{Na}^+ = 6.0\\text{ meq/L}$, $\\text{Ca}^{2+} = 3.0\\text{ meq/L}$, and $\\text{Mg}^{2+} = 1.0\\text{ meq/L}$. The Sodium Adsorption Ratio ($SAR$) of the water is ________ (round off to two decimal places).",
+    "correct_answer": "4.24",
+    "numerical_range": {
+      "min": 4.19,
+      "max": 4.29
+    },
+    "solution": "The Sodium Adsorption Ratio is defined as:\n$$SAR = \\frac{\\text{Na}^+}{\\sqrt{\\frac{\\text{Ca}^{2+} + \\text{Mg}^{2+}}{2}}}$$\nSubstituting concentrations in $\\text{meq/L}$:\n$$SAR = \\frac{6.0}{\\sqrt{4.0/2}} = \\frac{6.0}{\\sqrt{2.0}} = \\frac{6.0}{1.4142} = 4.24$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_012",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Classification of salt-affected soils",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A saline-alkali (saline-sodic) soil is formally classified by which of the following criteria?",
+    "options": {
+      "A": "$EC_e > 4\\text{ dS/m}$, $ESP > 15\\%$, and $pH < 8.5$",
+      "B": "$EC_e < 4\\text{ dS/m}$, $ESP > 15\\%$, and $pH > 8.5$",
+      "C": "$EC_e > 4\\text{ dS/m}$, $ESP < 15\\%$, and $pH < 8.5$",
+      "D": "$EC_e < 2\\text{ dS/m}$, $ESP < 5\\%$, and $pH = 7.0$"
+    },
+    "correct_answer": "A",
+    "solution": "USDA classification of salt-affected soils:\n- Saline: $EC_e > 4\\text{ dS/m}$, $ESP < 15\\%$, $pH < 8.5$\n- Sodic (Alkali): $EC_e < 4\\text{ dS/m}$, $ESP > 15\\%$, $pH > 8.5$\n- Saline-Sodic: $EC_e > 4\\text{ dS/m}$, $ESP > 15\\%$, and variable $pH$ (typically $< 8.5$).",
+    "difficulty": "Moderate",
+    "source": "Soil and Water Conservation Engineering (Schwab et al.)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_013",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Leaching requirement calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An agricultural crop has an electrical conductivity tolerance threshold of the saturated soil extract $EC_e = 4.0\\text{ dS/m}$. The irrigation water has an electrical conductivity of $EC_w = 1.8\\text{ dS/m}$. According to the USDA-FAO formula $LR = \\frac{EC_w}{5 EC_e - EC_w}$, the leaching requirement is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "9.89",
+    "numerical_range": {
+      "min": 9.69,
+      "max": 10.09
+    },
+    "solution": "Applying the leaching requirement equation:\n$$LR = \\frac{EC_w}{5 EC_e - EC_w} = \\frac{1.8}{5(4.0) - 1.8} = \\frac{1.8}{20.0 - 1.8} = \\frac{1.8}{18.2} = 0.0989$$\nIn percentage: $LR = 9.89\\%$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_014",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Sodium Adsorption Ratio (SAR)",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A chemical analysis of irrigation water gives the concentration of cations: $\\text{Na}^+ = 6.0\\text{ meq/L}$, $\\text{Ca}^{2+} = 3.0\\text{ meq/L}$, and $\\text{Mg}^{2+} = 1.0\\text{ meq/L}$. The Sodium Adsorption Ratio ($SAR$) of the water is ________ (round off to two decimal places).",
+    "correct_answer": "4.24",
+    "numerical_range": {
+      "min": 4.19,
+      "max": 4.29
+    },
+    "solution": "The Sodium Adsorption Ratio is defined as:\n$$SAR = \\frac{\\text{Na}^+}{\\sqrt{\\frac{\\text{Ca}^{2+} + \\text{Mg}^{2+}}{2}}}$$\nSubstituting concentrations in $\\text{meq/L}$:\n$$SAR = \\frac{6.0}{\\sqrt{4.0/2}} = \\frac{6.0}{\\sqrt{2.0}} = \\frac{6.0}{1.4142} = 4.24$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_015",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Classification of salt-affected soils",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A saline-alkali (saline-sodic) soil is formally classified by which of the following criteria?",
+    "options": {
+      "A": "$EC_e > 4\\text{ dS/m}$, $ESP > 15\\%$, and $pH < 8.5$",
+      "B": "$EC_e < 4\\text{ dS/m}$, $ESP > 15\\%$, and $pH > 8.5$",
+      "C": "$EC_e > 4\\text{ dS/m}$, $ESP < 15\\%$, and $pH < 8.5$",
+      "D": "$EC_e < 2\\text{ dS/m}$, $ESP < 5\\%$, and $pH = 7.0$"
+    },
+    "correct_answer": "A",
+    "solution": "USDA classification of salt-affected soils:\n- Saline: $EC_e > 4\\text{ dS/m}$, $ESP < 15\\%$, $pH < 8.5$\n- Sodic (Alkali): $EC_e < 4\\text{ dS/m}$, $ESP > 15\\%$, $pH > 8.5$\n- Saline-Sodic: $EC_e > 4\\text{ dS/m}$, $ESP > 15\\%$, and variable $pH$ (typically $< 8.5$).",
+    "difficulty": "Moderate",
+    "source": "Soil and Water Conservation Engineering (Schwab et al.)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_016",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Leaching requirement calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An agricultural crop has an electrical conductivity tolerance threshold of the saturated soil extract $EC_e = 4.0\\text{ dS/m}$. The irrigation water has an electrical conductivity of $EC_w = 1.4\\text{ dS/m}$. According to the USDA-FAO formula $LR = \\frac{EC_w}{5 EC_e - EC_w}$, the leaching requirement is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "7.53",
+    "numerical_range": {
+      "min": 7.33,
+      "max": 7.73
+    },
+    "solution": "Applying the leaching requirement equation:\n$$LR = \\frac{EC_w}{5 EC_e - EC_w} = \\frac{1.4}{5(4.0) - 1.4} = \\frac{1.4}{20.0 - 1.4} = \\frac{1.4}{18.6} = 0.0753$$\nIn percentage: $LR = 7.53\\%$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_017",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Sodium Adsorption Ratio (SAR)",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A chemical analysis of irrigation water gives the concentration of cations: $\\text{Na}^+ = 6.0\\text{ meq/L}$, $\\text{Ca}^{2+} = 3.0\\text{ meq/L}$, and $\\text{Mg}^{2+} = 1.0\\text{ meq/L}$. The Sodium Adsorption Ratio ($SAR$) of the water is ________ (round off to two decimal places).",
+    "correct_answer": "4.24",
+    "numerical_range": {
+      "min": 4.19,
+      "max": 4.29
+    },
+    "solution": "The Sodium Adsorption Ratio is defined as:\n$$SAR = \\frac{\\text{Na}^+}{\\sqrt{\\frac{\\text{Ca}^{2+} + \\text{Mg}^{2+}}{2}}}$$\nSubstituting concentrations in $\\text{meq/L}$:\n$$SAR = \\frac{6.0}{\\sqrt{4.0/2}} = \\frac{6.0}{\\sqrt{2.0}} = \\frac{6.0}{1.4142} = 4.24$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_018",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Classification of salt-affected soils",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A saline-alkali (saline-sodic) soil is formally classified by which of the following criteria?",
+    "options": {
+      "A": "$EC_e > 4\\text{ dS/m}$, $ESP > 15\\%$, and $pH < 8.5$",
+      "B": "$EC_e < 4\\text{ dS/m}$, $ESP > 15\\%$, and $pH > 8.5$",
+      "C": "$EC_e > 4\\text{ dS/m}$, $ESP < 15\\%$, and $pH < 8.5$",
+      "D": "$EC_e < 2\\text{ dS/m}$, $ESP < 5\\%$, and $pH = 7.0$"
+    },
+    "correct_answer": "A",
+    "solution": "USDA classification of salt-affected soils:\n- Saline: $EC_e > 4\\text{ dS/m}$, $ESP < 15\\%$, $pH < 8.5$\n- Sodic (Alkali): $EC_e < 4\\text{ dS/m}$, $ESP > 15\\%$, $pH > 8.5$\n- Saline-Sodic: $EC_e > 4\\text{ dS/m}$, $ESP > 15\\%$, and variable $pH$ (typically $< 8.5$).",
+    "difficulty": "Moderate",
+    "source": "Soil and Water Conservation Engineering (Schwab et al.)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_019",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Leaching requirement calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An agricultural crop has an electrical conductivity tolerance threshold of the saturated soil extract $EC_e = 4.0\\text{ dS/m}$. The irrigation water has an electrical conductivity of $EC_w = 2.0\\text{ dS/m}$. According to the USDA-FAO formula $LR = \\frac{EC_w}{5 EC_e - EC_w}$, the leaching requirement is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "11.11",
+    "numerical_range": {
+      "min": 10.91,
+      "max": 11.31
+    },
+    "solution": "Applying the leaching requirement equation:\n$$LR = \\frac{EC_w}{5 EC_e - EC_w} = \\frac{2.0}{5(4.0) - 2.0} = \\frac{2.0}{20.0 - 2.0} = \\frac{2.0}{18.0} = 0.1111$$\nIn percentage: $LR = 11.11\\%$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_020",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Sodium Adsorption Ratio (SAR)",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A chemical analysis of irrigation water gives the concentration of cations: $\\text{Na}^+ = 6.0\\text{ meq/L}$, $\\text{Ca}^{2+} = 3.0\\text{ meq/L}$, and $\\text{Mg}^{2+} = 1.0\\text{ meq/L}$. The Sodium Adsorption Ratio ($SAR$) of the water is ________ (round off to two decimal places).",
+    "correct_answer": "4.24",
+    "numerical_range": {
+      "min": 4.19,
+      "max": 4.29
+    },
+    "solution": "The Sodium Adsorption Ratio is defined as:\n$$SAR = \\frac{\\text{Na}^+}{\\sqrt{\\frac{\\text{Ca}^{2+} + \\text{Mg}^{2+}}{2}}}$$\nSubstituting concentrations in $\\text{meq/L}$:\n$$SAR = \\frac{6.0}{\\sqrt{4.0/2}} = \\frac{6.0}{\\sqrt{2.0}} = \\frac{6.0}{1.4142} = 4.24$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_021",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Classification of salt-affected soils",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A saline-alkali (saline-sodic) soil is formally classified by which of the following criteria?",
+    "options": {
+      "A": "$EC_e > 4\\text{ dS/m}$, $ESP > 15\\%$, and $pH < 8.5$",
+      "B": "$EC_e < 4\\text{ dS/m}$, $ESP > 15\\%$, and $pH > 8.5$",
+      "C": "$EC_e > 4\\text{ dS/m}$, $ESP < 15\\%$, and $pH < 8.5$",
+      "D": "$EC_e < 2\\text{ dS/m}$, $ESP < 5\\%$, and $pH = 7.0$"
+    },
+    "correct_answer": "A",
+    "solution": "USDA classification of salt-affected soils:\n- Saline: $EC_e > 4\\text{ dS/m}$, $ESP < 15\\%$, $pH < 8.5$\n- Sodic (Alkali): $EC_e < 4\\text{ dS/m}$, $ESP > 15\\%$, $pH > 8.5$\n- Saline-Sodic: $EC_e > 4\\text{ dS/m}$, $ESP > 15\\%$, and variable $pH$ (typically $< 8.5$).",
+    "difficulty": "Moderate",
+    "source": "Soil and Water Conservation Engineering (Schwab et al.)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_022",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Leaching requirement calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An agricultural crop has an electrical conductivity tolerance threshold of the saturated soil extract $EC_e = 4.0\\text{ dS/m}$. The irrigation water has an electrical conductivity of $EC_w = 1.6\\text{ dS/m}$. According to the USDA-FAO formula $LR = \\frac{EC_w}{5 EC_e - EC_w}$, the leaching requirement is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "8.70",
+    "numerical_range": {
+      "min": 8.5,
+      "max": 8.9
+    },
+    "solution": "Applying the leaching requirement equation:\n$$LR = \\frac{EC_w}{5 EC_e - EC_w} = \\frac{1.6}{5(4.0) - 1.6} = \\frac{1.6}{20.0 - 1.6} = \\frac{1.6}{18.4} = 0.0870$$\nIn percentage: $LR = 8.70\\%$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_023",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Sodium Adsorption Ratio (SAR)",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A chemical analysis of irrigation water gives the concentration of cations: $\\text{Na}^+ = 6.0\\text{ meq/L}$, $\\text{Ca}^{2+} = 3.0\\text{ meq/L}$, and $\\text{Mg}^{2+} = 1.0\\text{ meq/L}$. The Sodium Adsorption Ratio ($SAR$) of the water is ________ (round off to two decimal places).",
+    "correct_answer": "4.24",
+    "numerical_range": {
+      "min": 4.19,
+      "max": 4.29
+    },
+    "solution": "The Sodium Adsorption Ratio is defined as:\n$$SAR = \\frac{\\text{Na}^+}{\\sqrt{\\frac{\\text{Ca}^{2+} + \\text{Mg}^{2+}}{2}}}$$\nSubstituting concentrations in $\\text{meq/L}$:\n$$SAR = \\frac{6.0}{\\sqrt{4.0/2}} = \\frac{6.0}{\\sqrt{2.0}} = \\frac{6.0}{1.4142} = 4.24$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_024",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Classification of salt-affected soils",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A saline-alkali (saline-sodic) soil is formally classified by which of the following criteria?",
+    "options": {
+      "A": "$EC_e > 4\\text{ dS/m}$, $ESP > 15\\%$, and $pH < 8.5$",
+      "B": "$EC_e < 4\\text{ dS/m}$, $ESP > 15\\%$, and $pH > 8.5$",
+      "C": "$EC_e > 4\\text{ dS/m}$, $ESP < 15\\%$, and $pH < 8.5$",
+      "D": "$EC_e < 2\\text{ dS/m}$, $ESP < 5\\%$, and $pH = 7.0$"
+    },
+    "correct_answer": "A",
+    "solution": "USDA classification of salt-affected soils:\n- Saline: $EC_e > 4\\text{ dS/m}$, $ESP < 15\\%$, $pH < 8.5$\n- Sodic (Alkali): $EC_e < 4\\text{ dS/m}$, $ESP > 15\\%$, $pH > 8.5$\n- Saline-Sodic: $EC_e > 4\\text{ dS/m}$, $ESP > 15\\%$, and variable $pH$ (typically $< 8.5$).",
+    "difficulty": "Moderate",
+    "source": "Soil and Water Conservation Engineering (Schwab et al.)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_025",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Leaching requirement calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An agricultural crop has an electrical conductivity tolerance threshold of the saturated soil extract $EC_e = 4.0\\text{ dS/m}$. The irrigation water has an electrical conductivity of $EC_w = 1.2\\text{ dS/m}$. According to the USDA-FAO formula $LR = \\frac{EC_w}{5 EC_e - EC_w}$, the leaching requirement is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "6.38",
+    "numerical_range": {
+      "min": 6.18,
+      "max": 6.58
+    },
+    "solution": "Applying the leaching requirement equation:\n$$LR = \\frac{EC_w}{5 EC_e - EC_w} = \\frac{1.2}{5(4.0) - 1.2} = \\frac{1.2}{20.0 - 1.2} = \\frac{1.2}{18.8} = 0.0638$$\nIn percentage: $LR = 6.38\\%$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_026",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Sodium Adsorption Ratio (SAR)",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A chemical analysis of irrigation water gives the concentration of cations: $\\text{Na}^+ = 6.0\\text{ meq/L}$, $\\text{Ca}^{2+} = 3.0\\text{ meq/L}$, and $\\text{Mg}^{2+} = 1.0\\text{ meq/L}$. The Sodium Adsorption Ratio ($SAR$) of the water is ________ (round off to two decimal places).",
+    "correct_answer": "4.24",
+    "numerical_range": {
+      "min": 4.19,
+      "max": 4.29
+    },
+    "solution": "The Sodium Adsorption Ratio is defined as:\n$$SAR = \\frac{\\text{Na}^+}{\\sqrt{\\frac{\\text{Ca}^{2+} + \\text{Mg}^{2+}}{2}}}$$\nSubstituting concentrations in $\\text{meq/L}$:\n$$SAR = \\frac{6.0}{\\sqrt{4.0/2}} = \\frac{6.0}{\\sqrt{2.0}} = \\frac{6.0}{1.4142} = 4.24$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_027",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Classification of salt-affected soils",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A saline-alkali (saline-sodic) soil is formally classified by which of the following criteria?",
+    "options": {
+      "A": "$EC_e > 4\\text{ dS/m}$, $ESP > 15\\%$, and $pH < 8.5$",
+      "B": "$EC_e < 4\\text{ dS/m}$, $ESP > 15\\%$, and $pH > 8.5$",
+      "C": "$EC_e > 4\\text{ dS/m}$, $ESP < 15\\%$, and $pH < 8.5$",
+      "D": "$EC_e < 2\\text{ dS/m}$, $ESP < 5\\%$, and $pH = 7.0$"
+    },
+    "correct_answer": "A",
+    "solution": "USDA classification of salt-affected soils:\n- Saline: $EC_e > 4\\text{ dS/m}$, $ESP < 15\\%$, $pH < 8.5$\n- Sodic (Alkali): $EC_e < 4\\text{ dS/m}$, $ESP > 15\\%$, $pH > 8.5$\n- Saline-Sodic: $EC_e > 4\\text{ dS/m}$, $ESP > 15\\%$, and variable $pH$ (typically $< 8.5$).",
+    "difficulty": "Moderate",
+    "source": "Soil and Water Conservation Engineering (Schwab et al.)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_028",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Leaching requirement calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An agricultural crop has an electrical conductivity tolerance threshold of the saturated soil extract $EC_e = 4.0\\text{ dS/m}$. The irrigation water has an electrical conductivity of $EC_w = 1.8\\text{ dS/m}$. According to the USDA-FAO formula $LR = \\frac{EC_w}{5 EC_e - EC_w}$, the leaching requirement is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "9.89",
+    "numerical_range": {
+      "min": 9.69,
+      "max": 10.09
+    },
+    "solution": "Applying the leaching requirement equation:\n$$LR = \\frac{EC_w}{5 EC_e - EC_w} = \\frac{1.8}{5(4.0) - 1.8} = \\frac{1.8}{20.0 - 1.8} = \\frac{1.8}{18.2} = 0.0989$$\nIn percentage: $LR = 9.89\\%$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_029",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Sodium Adsorption Ratio (SAR)",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A chemical analysis of irrigation water gives the concentration of cations: $\\text{Na}^+ = 6.0\\text{ meq/L}$, $\\text{Ca}^{2+} = 3.0\\text{ meq/L}$, and $\\text{Mg}^{2+} = 1.0\\text{ meq/L}$. The Sodium Adsorption Ratio ($SAR$) of the water is ________ (round off to two decimal places).",
+    "correct_answer": "4.24",
+    "numerical_range": {
+      "min": 4.19,
+      "max": 4.29
+    },
+    "solution": "The Sodium Adsorption Ratio is defined as:\n$$SAR = \\frac{\\text{Na}^+}{\\sqrt{\\frac{\\text{Ca}^{2+} + \\text{Mg}^{2+}}{2}}}$$\nSubstituting concentrations in $\\text{meq/L}$:\n$$SAR = \\frac{6.0}{\\sqrt{4.0/2}} = \\frac{6.0}{\\sqrt{2.0}} = \\frac{6.0}{1.4142} = 4.24$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_030",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Classification of salt-affected soils",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A saline-alkali (saline-sodic) soil is formally classified by which of the following criteria?",
+    "options": {
+      "A": "$EC_e > 4\\text{ dS/m}$, $ESP > 15\\%$, and $pH < 8.5$",
+      "B": "$EC_e < 4\\text{ dS/m}$, $ESP > 15\\%$, and $pH > 8.5$",
+      "C": "$EC_e > 4\\text{ dS/m}$, $ESP < 15\\%$, and $pH < 8.5$",
+      "D": "$EC_e < 2\\text{ dS/m}$, $ESP < 5\\%$, and $pH = 7.0$"
+    },
+    "correct_answer": "A",
+    "solution": "USDA classification of salt-affected soils:\n- Saline: $EC_e > 4\\text{ dS/m}$, $ESP < 15\\%$, $pH < 8.5$\n- Sodic (Alkali): $EC_e < 4\\text{ dS/m}$, $ESP > 15\\%$, $pH > 8.5$\n- Saline-Sodic: $EC_e > 4\\text{ dS/m}$, $ESP > 15\\%$, and variable $pH$ (typically $< 8.5$).",
+    "difficulty": "Moderate",
+    "source": "Soil and Water Conservation Engineering (Schwab et al.)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_031",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Leaching requirement calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An agricultural crop has an electrical conductivity tolerance threshold of the saturated soil extract $EC_e = 4.0\\text{ dS/m}$. The irrigation water has an electrical conductivity of $EC_w = 1.4\\text{ dS/m}$. According to the USDA-FAO formula $LR = \\frac{EC_w}{5 EC_e - EC_w}$, the leaching requirement is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "7.53",
+    "numerical_range": {
+      "min": 7.33,
+      "max": 7.73
+    },
+    "solution": "Applying the leaching requirement equation:\n$$LR = \\frac{EC_w}{5 EC_e - EC_w} = \\frac{1.4}{5(4.0) - 1.4} = \\frac{1.4}{20.0 - 1.4} = \\frac{1.4}{18.6} = 0.0753$$\nIn percentage: $LR = 7.53\\%$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_032",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Sodium Adsorption Ratio (SAR)",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A chemical analysis of irrigation water gives the concentration of cations: $\\text{Na}^+ = 6.0\\text{ meq/L}$, $\\text{Ca}^{2+} = 3.0\\text{ meq/L}$, and $\\text{Mg}^{2+} = 1.0\\text{ meq/L}$. The Sodium Adsorption Ratio ($SAR$) of the water is ________ (round off to two decimal places).",
+    "correct_answer": "4.24",
+    "numerical_range": {
+      "min": 4.19,
+      "max": 4.29
+    },
+    "solution": "The Sodium Adsorption Ratio is defined as:\n$$SAR = \\frac{\\text{Na}^+}{\\sqrt{\\frac{\\text{Ca}^{2+} + \\text{Mg}^{2+}}{2}}}$$\nSubstituting concentrations in $\\text{meq/L}$:\n$$SAR = \\frac{6.0}{\\sqrt{4.0/2}} = \\frac{6.0}{\\sqrt{2.0}} = \\frac{6.0}{1.4142} = 4.24$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_033",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Classification of salt-affected soils",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A saline-alkali (saline-sodic) soil is formally classified by which of the following criteria?",
+    "options": {
+      "A": "$EC_e > 4\\text{ dS/m}$, $ESP > 15\\%$, and $pH < 8.5$",
+      "B": "$EC_e < 4\\text{ dS/m}$, $ESP > 15\\%$, and $pH > 8.5$",
+      "C": "$EC_e > 4\\text{ dS/m}$, $ESP < 15\\%$, and $pH < 8.5$",
+      "D": "$EC_e < 2\\text{ dS/m}$, $ESP < 5\\%$, and $pH = 7.0$"
+    },
+    "correct_answer": "A",
+    "solution": "USDA classification of salt-affected soils:\n- Saline: $EC_e > 4\\text{ dS/m}$, $ESP < 15\\%$, $pH < 8.5$\n- Sodic (Alkali): $EC_e < 4\\text{ dS/m}$, $ESP > 15\\%$, $pH > 8.5$\n- Saline-Sodic: $EC_e > 4\\text{ dS/m}$, $ESP > 15\\%$, and variable $pH$ (typically $< 8.5$).",
+    "difficulty": "Moderate",
+    "source": "Soil and Water Conservation Engineering (Schwab et al.)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_034",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Leaching requirement calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An agricultural crop has an electrical conductivity tolerance threshold of the saturated soil extract $EC_e = 4.0\\text{ dS/m}$. The irrigation water has an electrical conductivity of $EC_w = 2.0\\text{ dS/m}$. According to the USDA-FAO formula $LR = \\frac{EC_w}{5 EC_e - EC_w}$, the leaching requirement is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "11.11",
+    "numerical_range": {
+      "min": 10.91,
+      "max": 11.31
+    },
+    "solution": "Applying the leaching requirement equation:\n$$LR = \\frac{EC_w}{5 EC_e - EC_w} = \\frac{2.0}{5(4.0) - 2.0} = \\frac{2.0}{20.0 - 2.0} = \\frac{2.0}{18.0} = 0.1111$$\nIn percentage: $LR = 11.11\\%$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_035",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Sodium Adsorption Ratio (SAR)",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A chemical analysis of irrigation water gives the concentration of cations: $\\text{Na}^+ = 6.0\\text{ meq/L}$, $\\text{Ca}^{2+} = 3.0\\text{ meq/L}$, and $\\text{Mg}^{2+} = 1.0\\text{ meq/L}$. The Sodium Adsorption Ratio ($SAR$) of the water is ________ (round off to two decimal places).",
+    "correct_answer": "4.24",
+    "numerical_range": {
+      "min": 4.19,
+      "max": 4.29
+    },
+    "solution": "The Sodium Adsorption Ratio is defined as:\n$$SAR = \\frac{\\text{Na}^+}{\\sqrt{\\frac{\\text{Ca}^{2+} + \\text{Mg}^{2+}}{2}}}$$\nSubstituting concentrations in $\\text{meq/L}$:\n$$SAR = \\frac{6.0}{\\sqrt{4.0/2}} = \\frac{6.0}{\\sqrt{2.0}} = \\frac{6.0}{1.4142} = 4.24$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_036",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Classification of salt-affected soils",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A saline-alkali (saline-sodic) soil is formally classified by which of the following criteria?",
+    "options": {
+      "A": "$EC_e > 4\\text{ dS/m}$, $ESP > 15\\%$, and $pH < 8.5$",
+      "B": "$EC_e < 4\\text{ dS/m}$, $ESP > 15\\%$, and $pH > 8.5$",
+      "C": "$EC_e > 4\\text{ dS/m}$, $ESP < 15\\%$, and $pH < 8.5$",
+      "D": "$EC_e < 2\\text{ dS/m}$, $ESP < 5\\%$, and $pH = 7.0$"
+    },
+    "correct_answer": "A",
+    "solution": "USDA classification of salt-affected soils:\n- Saline: $EC_e > 4\\text{ dS/m}$, $ESP < 15\\%$, $pH < 8.5$\n- Sodic (Alkali): $EC_e < 4\\text{ dS/m}$, $ESP > 15\\%$, $pH > 8.5$\n- Saline-Sodic: $EC_e > 4\\text{ dS/m}$, $ESP > 15\\%$, and variable $pH$ (typically $< 8.5$).",
+    "difficulty": "Moderate",
+    "source": "Soil and Water Conservation Engineering (Schwab et al.)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_037",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Leaching requirement calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "An agricultural crop has an electrical conductivity tolerance threshold of the saturated soil extract $EC_e = 4.0\\text{ dS/m}$. The irrigation water has an electrical conductivity of $EC_w = 1.6\\text{ dS/m}$. According to the USDA-FAO formula $LR = \\frac{EC_w}{5 EC_e - EC_w}$, the leaching requirement is ________ $\\%$ (round off to two decimal places).",
+    "correct_answer": "8.70",
+    "numerical_range": {
+      "min": 8.5,
+      "max": 8.9
+    },
+    "solution": "Applying the leaching requirement equation:\n$$LR = \\frac{EC_w}{5 EC_e - EC_w} = \\frac{1.6}{5(4.0) - 1.6} = \\frac{1.6}{20.0 - 1.6} = \\frac{1.6}{18.4} = 0.0870$$\nIn percentage: $LR = 8.70\\%$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_SAL_038",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Sodium Adsorption Ratio (SAR)",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A chemical analysis of irrigation water gives the concentration of cations: $\\text{Na}^+ = 6.0\\text{ meq/L}$, $\\text{Ca}^{2+} = 3.0\\text{ meq/L}$, and $\\text{Mg}^{2+} = 1.0\\text{ meq/L}$. The Sodium Adsorption Ratio ($SAR$) of the water is ________ (round off to two decimal places).",
+    "correct_answer": "4.24",
+    "numerical_range": {
+      "min": 4.19,
+      "max": 4.29
+    },
+    "solution": "The Sodium Adsorption Ratio is defined as:\n$$SAR = \\frac{\\text{Na}^+}{\\sqrt{\\frac{\\text{Ca}^{2+} + \\text{Mg}^{2+}}{2}}}$$\nSubstituting concentrations in $\\text{meq/L}$:\n$$SAR = \\frac{6.0}{\\sqrt{4.0/2}} = \\frac{6.0}{\\sqrt{2.0}} = \\frac{6.0}{1.4142} = 4.24$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_001",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Seepage velocity in porous media",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Groundwater flows through an unconfined sand aquifer of porosity $n = 0.25$ and hydraulic conductivity $K = 15.0\\text{ m/day}$. Two piezometers spaced $500\\text{ m}$ apart in the direction of flow register a water table head difference of $2.5\\text{ m}$. The actual seepage velocity ($v_s$) of groundwater is ________ $\\text{m/day}$ (round off to two decimal places).",
+    "correct_answer": "0.30",
+    "numerical_range": {
+      "min": 0.28,
+      "max": 0.32
+    },
+    "solution": "Hydraulic gradient $i = \\frac{\\Delta h}{L} = \\frac{2.5}{500} = 0.00500$.\nDarcy velocity (specific discharge):\n$$v = K i = 15.0 \\times 0.00500 = 0.07500\\text{ m/day}$$\nSeepage velocity accounts for void space porosity:\n$$v_s = \\frac{v}{n} = \\frac{0.07500}{0.25} = 0.300\\text{ m/day}$$\nRounding to two decimal places: $0.30\\text{ m/day}$.",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_002",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Aquifer, aquitard, aquiclude, and aquifuge",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A geological formation that contains water and transmits it at an extremely slow rate, inadequate for economic well yields but sufficient for regional seepage between aquifers, is termed an:",
+    "options": {
+      "A": "Aquitard (e.g. sandy clay)",
+      "B": "Aquifer (e.g. coarse gravel)",
+      "C": "Aquiclude (e.g. solid clay)",
+      "D": "Aquifuge (e.g. unfractured granite)"
+    },
+    "correct_answer": "A",
+    "solution": "Definitions in groundwater hydrology:\n- Aquifer: porous, permeable, economic water yields.\n- Aquitard: semi-pervious formation transmitting water very slowly (leakage).\n- Aquiclude: porous, contains water, but impermeable (e.g., clay).\n- Aquifuge: neither porous nor permeable (e.g., solid granite).",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_003",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Storativity and specific yield of aquifers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding aquifer storage properties is/are TRUE?",
+    "options": {
+      "A": "For an unconfined aquifer, storativity ($S$) is practically equal to the specific yield ($S_y$), typically ranging from $0.10$ to $0.30$",
+      "B": "For a confined aquifer, storativity is governed by elastic expansion of water and compaction of aquifer skeleton, typically ranging from $10^{-5}$ to $10^{-3}$",
+      "C": "Porosity of an unconfined aquifer equals the sum of specific yield and specific retention ($n = S_y + S_r$)",
+      "D": "Confined aquifers release water primarily by gravity dewatering of pore spaces"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. In water table aquifers, water release is by actual gravity pore drainage, so $S \\approx S_y \\approx 0.1-0.3$ (A is true).\n2. In confined aquifers, pores remain $100\\%$ saturated; water yield is driven by compressibility, giving low $S = 10^{-5} - 10^{-3}$ (B is true).\n3. Total volume of voids partitions into drained water ($S_y$) plus capillary held water ($S_r$): $n = S_y + S_r$ (C is true).\n4. Confined aquifers release water via pressure decompression and matrix compressibility, never gravity dewatering (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_004",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Seepage velocity in porous media",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Groundwater flows through an unconfined sand aquifer of porosity $n = 0.25$ and hydraulic conductivity $K = 15.0\\text{ m/day}$. Two piezometers spaced $500\\text{ m}$ apart in the direction of flow register a water table head difference of $2.5\\text{ m}$. The actual seepage velocity ($v_s$) of groundwater is ________ $\\text{m/day}$ (round off to two decimal places).",
+    "correct_answer": "0.30",
+    "numerical_range": {
+      "min": 0.28,
+      "max": 0.32
+    },
+    "solution": "Hydraulic gradient $i = \\frac{\\Delta h}{L} = \\frac{2.5}{500} = 0.00500$.\nDarcy velocity (specific discharge):\n$$v = K i = 15.0 \\times 0.00500 = 0.07500\\text{ m/day}$$\nSeepage velocity accounts for void space porosity:\n$$v_s = \\frac{v}{n} = \\frac{0.07500}{0.25} = 0.300\\text{ m/day}$$\nRounding to two decimal places: $0.30\\text{ m/day}$.",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_005",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Aquifer, aquitard, aquiclude, and aquifuge",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A geological formation that contains water and transmits it at an extremely slow rate, inadequate for economic well yields but sufficient for regional seepage between aquifers, is termed an:",
+    "options": {
+      "A": "Aquitard (e.g. sandy clay)",
+      "B": "Aquifer (e.g. coarse gravel)",
+      "C": "Aquiclude (e.g. solid clay)",
+      "D": "Aquifuge (e.g. unfractured granite)"
+    },
+    "correct_answer": "A",
+    "solution": "Definitions in groundwater hydrology:\n- Aquifer: porous, permeable, economic water yields.\n- Aquitard: semi-pervious formation transmitting water very slowly (leakage).\n- Aquiclude: porous, contains water, but impermeable (e.g., clay).\n- Aquifuge: neither porous nor permeable (e.g., solid granite).",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_006",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Storativity and specific yield of aquifers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding aquifer storage properties is/are TRUE?",
+    "options": {
+      "A": "For an unconfined aquifer, storativity ($S$) is practically equal to the specific yield ($S_y$), typically ranging from $0.10$ to $0.30$",
+      "B": "For a confined aquifer, storativity is governed by elastic expansion of water and compaction of aquifer skeleton, typically ranging from $10^{-5}$ to $10^{-3}$",
+      "C": "Porosity of an unconfined aquifer equals the sum of specific yield and specific retention ($n = S_y + S_r$)",
+      "D": "Confined aquifers release water primarily by gravity dewatering of pore spaces"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. In water table aquifers, water release is by actual gravity pore drainage, so $S \\approx S_y \\approx 0.1-0.3$ (A is true).\n2. In confined aquifers, pores remain $100\\%$ saturated; water yield is driven by compressibility, giving low $S = 10^{-5} - 10^{-3}$ (B is true).\n3. Total volume of voids partitions into drained water ($S_y$) plus capillary held water ($S_r$): $n = S_y + S_r$ (C is true).\n4. Confined aquifers release water via pressure decompression and matrix compressibility, never gravity dewatering (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_007",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Seepage velocity in porous media",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Groundwater flows through an unconfined sand aquifer of porosity $n = 0.25$ and hydraulic conductivity $K = 15.0\\text{ m/day}$. Two piezometers spaced $500\\text{ m}$ apart in the direction of flow register a water table head difference of $2.5\\text{ m}$. The actual seepage velocity ($v_s$) of groundwater is ________ $\\text{m/day}$ (round off to two decimal places).",
+    "correct_answer": "0.30",
+    "numerical_range": {
+      "min": 0.28,
+      "max": 0.32
+    },
+    "solution": "Hydraulic gradient $i = \\frac{\\Delta h}{L} = \\frac{2.5}{500} = 0.00500$.\nDarcy velocity (specific discharge):\n$$v = K i = 15.0 \\times 0.00500 = 0.07500\\text{ m/day}$$\nSeepage velocity accounts for void space porosity:\n$$v_s = \\frac{v}{n} = \\frac{0.07500}{0.25} = 0.300\\text{ m/day}$$\nRounding to two decimal places: $0.30\\text{ m/day}$.",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_008",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Aquifer, aquitard, aquiclude, and aquifuge",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A geological formation that contains water and transmits it at an extremely slow rate, inadequate for economic well yields but sufficient for regional seepage between aquifers, is termed an:",
+    "options": {
+      "A": "Aquitard (e.g. sandy clay)",
+      "B": "Aquifer (e.g. coarse gravel)",
+      "C": "Aquiclude (e.g. solid clay)",
+      "D": "Aquifuge (e.g. unfractured granite)"
+    },
+    "correct_answer": "A",
+    "solution": "Definitions in groundwater hydrology:\n- Aquifer: porous, permeable, economic water yields.\n- Aquitard: semi-pervious formation transmitting water very slowly (leakage).\n- Aquiclude: porous, contains water, but impermeable (e.g., clay).\n- Aquifuge: neither porous nor permeable (e.g., solid granite).",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_009",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Storativity and specific yield of aquifers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding aquifer storage properties is/are TRUE?",
+    "options": {
+      "A": "For an unconfined aquifer, storativity ($S$) is practically equal to the specific yield ($S_y$), typically ranging from $0.10$ to $0.30$",
+      "B": "For a confined aquifer, storativity is governed by elastic expansion of water and compaction of aquifer skeleton, typically ranging from $10^{-5}$ to $10^{-3}$",
+      "C": "Porosity of an unconfined aquifer equals the sum of specific yield and specific retention ($n = S_y + S_r$)",
+      "D": "Confined aquifers release water primarily by gravity dewatering of pore spaces"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. In water table aquifers, water release is by actual gravity pore drainage, so $S \\approx S_y \\approx 0.1-0.3$ (A is true).\n2. In confined aquifers, pores remain $100\\%$ saturated; water yield is driven by compressibility, giving low $S = 10^{-5} - 10^{-3}$ (B is true).\n3. Total volume of voids partitions into drained water ($S_y$) plus capillary held water ($S_r$): $n = S_y + S_r$ (C is true).\n4. Confined aquifers release water via pressure decompression and matrix compressibility, never gravity dewatering (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_010",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Seepage velocity in porous media",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Groundwater flows through an unconfined sand aquifer of porosity $n = 0.25$ and hydraulic conductivity $K = 15.0\\text{ m/day}$. Two piezometers spaced $500\\text{ m}$ apart in the direction of flow register a water table head difference of $2.5\\text{ m}$. The actual seepage velocity ($v_s$) of groundwater is ________ $\\text{m/day}$ (round off to two decimal places).",
+    "correct_answer": "0.30",
+    "numerical_range": {
+      "min": 0.28,
+      "max": 0.32
+    },
+    "solution": "Hydraulic gradient $i = \\frac{\\Delta h}{L} = \\frac{2.5}{500} = 0.00500$.\nDarcy velocity (specific discharge):\n$$v = K i = 15.0 \\times 0.00500 = 0.07500\\text{ m/day}$$\nSeepage velocity accounts for void space porosity:\n$$v_s = \\frac{v}{n} = \\frac{0.07500}{0.25} = 0.300\\text{ m/day}$$\nRounding to two decimal places: $0.30\\text{ m/day}$.",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_011",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Aquifer, aquitard, aquiclude, and aquifuge",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A geological formation that contains water and transmits it at an extremely slow rate, inadequate for economic well yields but sufficient for regional seepage between aquifers, is termed an:",
+    "options": {
+      "A": "Aquitard (e.g. sandy clay)",
+      "B": "Aquifer (e.g. coarse gravel)",
+      "C": "Aquiclude (e.g. solid clay)",
+      "D": "Aquifuge (e.g. unfractured granite)"
+    },
+    "correct_answer": "A",
+    "solution": "Definitions in groundwater hydrology:\n- Aquifer: porous, permeable, economic water yields.\n- Aquitard: semi-pervious formation transmitting water very slowly (leakage).\n- Aquiclude: porous, contains water, but impermeable (e.g., clay).\n- Aquifuge: neither porous nor permeable (e.g., solid granite).",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_012",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Storativity and specific yield of aquifers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding aquifer storage properties is/are TRUE?",
+    "options": {
+      "A": "For an unconfined aquifer, storativity ($S$) is practically equal to the specific yield ($S_y$), typically ranging from $0.10$ to $0.30$",
+      "B": "For a confined aquifer, storativity is governed by elastic expansion of water and compaction of aquifer skeleton, typically ranging from $10^{-5}$ to $10^{-3}$",
+      "C": "Porosity of an unconfined aquifer equals the sum of specific yield and specific retention ($n = S_y + S_r$)",
+      "D": "Confined aquifers release water primarily by gravity dewatering of pore spaces"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. In water table aquifers, water release is by actual gravity pore drainage, so $S \\approx S_y \\approx 0.1-0.3$ (A is true).\n2. In confined aquifers, pores remain $100\\%$ saturated; water yield is driven by compressibility, giving low $S = 10^{-5} - 10^{-3}$ (B is true).\n3. Total volume of voids partitions into drained water ($S_y$) plus capillary held water ($S_r$): $n = S_y + S_r$ (C is true).\n4. Confined aquifers release water via pressure decompression and matrix compressibility, never gravity dewatering (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_013",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Seepage velocity in porous media",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Groundwater flows through an unconfined sand aquifer of porosity $n = 0.25$ and hydraulic conductivity $K = 15.0\\text{ m/day}$. Two piezometers spaced $500\\text{ m}$ apart in the direction of flow register a water table head difference of $2.5\\text{ m}$. The actual seepage velocity ($v_s$) of groundwater is ________ $\\text{m/day}$ (round off to two decimal places).",
+    "correct_answer": "0.30",
+    "numerical_range": {
+      "min": 0.28,
+      "max": 0.32
+    },
+    "solution": "Hydraulic gradient $i = \\frac{\\Delta h}{L} = \\frac{2.5}{500} = 0.00500$.\nDarcy velocity (specific discharge):\n$$v = K i = 15.0 \\times 0.00500 = 0.07500\\text{ m/day}$$\nSeepage velocity accounts for void space porosity:\n$$v_s = \\frac{v}{n} = \\frac{0.07500}{0.25} = 0.300\\text{ m/day}$$\nRounding to two decimal places: $0.30\\text{ m/day}$.",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_014",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Aquifer, aquitard, aquiclude, and aquifuge",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A geological formation that contains water and transmits it at an extremely slow rate, inadequate for economic well yields but sufficient for regional seepage between aquifers, is termed an:",
+    "options": {
+      "A": "Aquitard (e.g. sandy clay)",
+      "B": "Aquifer (e.g. coarse gravel)",
+      "C": "Aquiclude (e.g. solid clay)",
+      "D": "Aquifuge (e.g. unfractured granite)"
+    },
+    "correct_answer": "A",
+    "solution": "Definitions in groundwater hydrology:\n- Aquifer: porous, permeable, economic water yields.\n- Aquitard: semi-pervious formation transmitting water very slowly (leakage).\n- Aquiclude: porous, contains water, but impermeable (e.g., clay).\n- Aquifuge: neither porous nor permeable (e.g., solid granite).",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_015",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Storativity and specific yield of aquifers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding aquifer storage properties is/are TRUE?",
+    "options": {
+      "A": "For an unconfined aquifer, storativity ($S$) is practically equal to the specific yield ($S_y$), typically ranging from $0.10$ to $0.30$",
+      "B": "For a confined aquifer, storativity is governed by elastic expansion of water and compaction of aquifer skeleton, typically ranging from $10^{-5}$ to $10^{-3}$",
+      "C": "Porosity of an unconfined aquifer equals the sum of specific yield and specific retention ($n = S_y + S_r$)",
+      "D": "Confined aquifers release water primarily by gravity dewatering of pore spaces"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. In water table aquifers, water release is by actual gravity pore drainage, so $S \\approx S_y \\approx 0.1-0.3$ (A is true).\n2. In confined aquifers, pores remain $100\\%$ saturated; water yield is driven by compressibility, giving low $S = 10^{-5} - 10^{-3}$ (B is true).\n3. Total volume of voids partitions into drained water ($S_y$) plus capillary held water ($S_r$): $n = S_y + S_r$ (C is true).\n4. Confined aquifers release water via pressure decompression and matrix compressibility, never gravity dewatering (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_016",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Seepage velocity in porous media",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Groundwater flows through an unconfined sand aquifer of porosity $n = 0.25$ and hydraulic conductivity $K = 15.0\\text{ m/day}$. Two piezometers spaced $500\\text{ m}$ apart in the direction of flow register a water table head difference of $2.5\\text{ m}$. The actual seepage velocity ($v_s$) of groundwater is ________ $\\text{m/day}$ (round off to two decimal places).",
+    "correct_answer": "0.30",
+    "numerical_range": {
+      "min": 0.28,
+      "max": 0.32
+    },
+    "solution": "Hydraulic gradient $i = \\frac{\\Delta h}{L} = \\frac{2.5}{500} = 0.00500$.\nDarcy velocity (specific discharge):\n$$v = K i = 15.0 \\times 0.00500 = 0.07500\\text{ m/day}$$\nSeepage velocity accounts for void space porosity:\n$$v_s = \\frac{v}{n} = \\frac{0.07500}{0.25} = 0.300\\text{ m/day}$$\nRounding to two decimal places: $0.30\\text{ m/day}$.",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_017",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Aquifer, aquitard, aquiclude, and aquifuge",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A geological formation that contains water and transmits it at an extremely slow rate, inadequate for economic well yields but sufficient for regional seepage between aquifers, is termed an:",
+    "options": {
+      "A": "Aquitard (e.g. sandy clay)",
+      "B": "Aquifer (e.g. coarse gravel)",
+      "C": "Aquiclude (e.g. solid clay)",
+      "D": "Aquifuge (e.g. unfractured granite)"
+    },
+    "correct_answer": "A",
+    "solution": "Definitions in groundwater hydrology:\n- Aquifer: porous, permeable, economic water yields.\n- Aquitard: semi-pervious formation transmitting water very slowly (leakage).\n- Aquiclude: porous, contains water, but impermeable (e.g., clay).\n- Aquifuge: neither porous nor permeable (e.g., solid granite).",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_018",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Storativity and specific yield of aquifers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding aquifer storage properties is/are TRUE?",
+    "options": {
+      "A": "For an unconfined aquifer, storativity ($S$) is practically equal to the specific yield ($S_y$), typically ranging from $0.10$ to $0.30$",
+      "B": "For a confined aquifer, storativity is governed by elastic expansion of water and compaction of aquifer skeleton, typically ranging from $10^{-5}$ to $10^{-3}$",
+      "C": "Porosity of an unconfined aquifer equals the sum of specific yield and specific retention ($n = S_y + S_r$)",
+      "D": "Confined aquifers release water primarily by gravity dewatering of pore spaces"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. In water table aquifers, water release is by actual gravity pore drainage, so $S \\approx S_y \\approx 0.1-0.3$ (A is true).\n2. In confined aquifers, pores remain $100\\%$ saturated; water yield is driven by compressibility, giving low $S = 10^{-5} - 10^{-3}$ (B is true).\n3. Total volume of voids partitions into drained water ($S_y$) plus capillary held water ($S_r$): $n = S_y + S_r$ (C is true).\n4. Confined aquifers release water via pressure decompression and matrix compressibility, never gravity dewatering (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_019",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Seepage velocity in porous media",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Groundwater flows through an unconfined sand aquifer of porosity $n = 0.25$ and hydraulic conductivity $K = 15.0\\text{ m/day}$. Two piezometers spaced $500\\text{ m}$ apart in the direction of flow register a water table head difference of $2.5\\text{ m}$. The actual seepage velocity ($v_s$) of groundwater is ________ $\\text{m/day}$ (round off to two decimal places).",
+    "correct_answer": "0.30",
+    "numerical_range": {
+      "min": 0.28,
+      "max": 0.32
+    },
+    "solution": "Hydraulic gradient $i = \\frac{\\Delta h}{L} = \\frac{2.5}{500} = 0.00500$.\nDarcy velocity (specific discharge):\n$$v = K i = 15.0 \\times 0.00500 = 0.07500\\text{ m/day}$$\nSeepage velocity accounts for void space porosity:\n$$v_s = \\frac{v}{n} = \\frac{0.07500}{0.25} = 0.300\\text{ m/day}$$\nRounding to two decimal places: $0.30\\text{ m/day}$.",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_020",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Aquifer, aquitard, aquiclude, and aquifuge",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A geological formation that contains water and transmits it at an extremely slow rate, inadequate for economic well yields but sufficient for regional seepage between aquifers, is termed an:",
+    "options": {
+      "A": "Aquitard (e.g. sandy clay)",
+      "B": "Aquifer (e.g. coarse gravel)",
+      "C": "Aquiclude (e.g. solid clay)",
+      "D": "Aquifuge (e.g. unfractured granite)"
+    },
+    "correct_answer": "A",
+    "solution": "Definitions in groundwater hydrology:\n- Aquifer: porous, permeable, economic water yields.\n- Aquitard: semi-pervious formation transmitting water very slowly (leakage).\n- Aquiclude: porous, contains water, but impermeable (e.g., clay).\n- Aquifuge: neither porous nor permeable (e.g., solid granite).",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_021",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Storativity and specific yield of aquifers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding aquifer storage properties is/are TRUE?",
+    "options": {
+      "A": "For an unconfined aquifer, storativity ($S$) is practically equal to the specific yield ($S_y$), typically ranging from $0.10$ to $0.30$",
+      "B": "For a confined aquifer, storativity is governed by elastic expansion of water and compaction of aquifer skeleton, typically ranging from $10^{-5}$ to $10^{-3}$",
+      "C": "Porosity of an unconfined aquifer equals the sum of specific yield and specific retention ($n = S_y + S_r$)",
+      "D": "Confined aquifers release water primarily by gravity dewatering of pore spaces"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. In water table aquifers, water release is by actual gravity pore drainage, so $S \\approx S_y \\approx 0.1-0.3$ (A is true).\n2. In confined aquifers, pores remain $100\\%$ saturated; water yield is driven by compressibility, giving low $S = 10^{-5} - 10^{-3}$ (B is true).\n3. Total volume of voids partitions into drained water ($S_y$) plus capillary held water ($S_r$): $n = S_y + S_r$ (C is true).\n4. Confined aquifers release water via pressure decompression and matrix compressibility, never gravity dewatering (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_022",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Seepage velocity in porous media",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Groundwater flows through an unconfined sand aquifer of porosity $n = 0.25$ and hydraulic conductivity $K = 15.0\\text{ m/day}$. Two piezometers spaced $500\\text{ m}$ apart in the direction of flow register a water table head difference of $2.5\\text{ m}$. The actual seepage velocity ($v_s$) of groundwater is ________ $\\text{m/day}$ (round off to two decimal places).",
+    "correct_answer": "0.30",
+    "numerical_range": {
+      "min": 0.28,
+      "max": 0.32
+    },
+    "solution": "Hydraulic gradient $i = \\frac{\\Delta h}{L} = \\frac{2.5}{500} = 0.00500$.\nDarcy velocity (specific discharge):\n$$v = K i = 15.0 \\times 0.00500 = 0.07500\\text{ m/day}$$\nSeepage velocity accounts for void space porosity:\n$$v_s = \\frac{v}{n} = \\frac{0.07500}{0.25} = 0.300\\text{ m/day}$$\nRounding to two decimal places: $0.30\\text{ m/day}$.",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_023",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Aquifer, aquitard, aquiclude, and aquifuge",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A geological formation that contains water and transmits it at an extremely slow rate, inadequate for economic well yields but sufficient for regional seepage between aquifers, is termed an:",
+    "options": {
+      "A": "Aquitard (e.g. sandy clay)",
+      "B": "Aquifer (e.g. coarse gravel)",
+      "C": "Aquiclude (e.g. solid clay)",
+      "D": "Aquifuge (e.g. unfractured granite)"
+    },
+    "correct_answer": "A",
+    "solution": "Definitions in groundwater hydrology:\n- Aquifer: porous, permeable, economic water yields.\n- Aquitard: semi-pervious formation transmitting water very slowly (leakage).\n- Aquiclude: porous, contains water, but impermeable (e.g., clay).\n- Aquifuge: neither porous nor permeable (e.g., solid granite).",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_024",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Storativity and specific yield of aquifers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding aquifer storage properties is/are TRUE?",
+    "options": {
+      "A": "For an unconfined aquifer, storativity ($S$) is practically equal to the specific yield ($S_y$), typically ranging from $0.10$ to $0.30$",
+      "B": "For a confined aquifer, storativity is governed by elastic expansion of water and compaction of aquifer skeleton, typically ranging from $10^{-5}$ to $10^{-3}$",
+      "C": "Porosity of an unconfined aquifer equals the sum of specific yield and specific retention ($n = S_y + S_r$)",
+      "D": "Confined aquifers release water primarily by gravity dewatering of pore spaces"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. In water table aquifers, water release is by actual gravity pore drainage, so $S \\approx S_y \\approx 0.1-0.3$ (A is true).\n2. In confined aquifers, pores remain $100\\%$ saturated; water yield is driven by compressibility, giving low $S = 10^{-5} - 10^{-3}$ (B is true).\n3. Total volume of voids partitions into drained water ($S_y$) plus capillary held water ($S_r$): $n = S_y + S_r$ (C is true).\n4. Confined aquifers release water via pressure decompression and matrix compressibility, never gravity dewatering (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_025",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Seepage velocity in porous media",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Groundwater flows through an unconfined sand aquifer of porosity $n = 0.25$ and hydraulic conductivity $K = 15.0\\text{ m/day}$. Two piezometers spaced $500\\text{ m}$ apart in the direction of flow register a water table head difference of $2.5\\text{ m}$. The actual seepage velocity ($v_s$) of groundwater is ________ $\\text{m/day}$ (round off to two decimal places).",
+    "correct_answer": "0.30",
+    "numerical_range": {
+      "min": 0.28,
+      "max": 0.32
+    },
+    "solution": "Hydraulic gradient $i = \\frac{\\Delta h}{L} = \\frac{2.5}{500} = 0.00500$.\nDarcy velocity (specific discharge):\n$$v = K i = 15.0 \\times 0.00500 = 0.07500\\text{ m/day}$$\nSeepage velocity accounts for void space porosity:\n$$v_s = \\frac{v}{n} = \\frac{0.07500}{0.25} = 0.300\\text{ m/day}$$\nRounding to two decimal places: $0.30\\text{ m/day}$.",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_026",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Aquifer, aquitard, aquiclude, and aquifuge",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A geological formation that contains water and transmits it at an extremely slow rate, inadequate for economic well yields but sufficient for regional seepage between aquifers, is termed an:",
+    "options": {
+      "A": "Aquitard (e.g. sandy clay)",
+      "B": "Aquifer (e.g. coarse gravel)",
+      "C": "Aquiclude (e.g. solid clay)",
+      "D": "Aquifuge (e.g. unfractured granite)"
+    },
+    "correct_answer": "A",
+    "solution": "Definitions in groundwater hydrology:\n- Aquifer: porous, permeable, economic water yields.\n- Aquitard: semi-pervious formation transmitting water very slowly (leakage).\n- Aquiclude: porous, contains water, but impermeable (e.g., clay).\n- Aquifuge: neither porous nor permeable (e.g., solid granite).",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_027",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Storativity and specific yield of aquifers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding aquifer storage properties is/are TRUE?",
+    "options": {
+      "A": "For an unconfined aquifer, storativity ($S$) is practically equal to the specific yield ($S_y$), typically ranging from $0.10$ to $0.30$",
+      "B": "For a confined aquifer, storativity is governed by elastic expansion of water and compaction of aquifer skeleton, typically ranging from $10^{-5}$ to $10^{-3}$",
+      "C": "Porosity of an unconfined aquifer equals the sum of specific yield and specific retention ($n = S_y + S_r$)",
+      "D": "Confined aquifers release water primarily by gravity dewatering of pore spaces"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. In water table aquifers, water release is by actual gravity pore drainage, so $S \\approx S_y \\approx 0.1-0.3$ (A is true).\n2. In confined aquifers, pores remain $100\\%$ saturated; water yield is driven by compressibility, giving low $S = 10^{-5} - 10^{-3}$ (B is true).\n3. Total volume of voids partitions into drained water ($S_y$) plus capillary held water ($S_r$): $n = S_y + S_r$ (C is true).\n4. Confined aquifers release water via pressure decompression and matrix compressibility, never gravity dewatering (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_028",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Seepage velocity in porous media",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Groundwater flows through an unconfined sand aquifer of porosity $n = 0.25$ and hydraulic conductivity $K = 15.0\\text{ m/day}$. Two piezometers spaced $500\\text{ m}$ apart in the direction of flow register a water table head difference of $2.5\\text{ m}$. The actual seepage velocity ($v_s$) of groundwater is ________ $\\text{m/day}$ (round off to two decimal places).",
+    "correct_answer": "0.30",
+    "numerical_range": {
+      "min": 0.28,
+      "max": 0.32
+    },
+    "solution": "Hydraulic gradient $i = \\frac{\\Delta h}{L} = \\frac{2.5}{500} = 0.00500$.\nDarcy velocity (specific discharge):\n$$v = K i = 15.0 \\times 0.00500 = 0.07500\\text{ m/day}$$\nSeepage velocity accounts for void space porosity:\n$$v_s = \\frac{v}{n} = \\frac{0.07500}{0.25} = 0.300\\text{ m/day}$$\nRounding to two decimal places: $0.30\\text{ m/day}$.",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_029",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Aquifer, aquitard, aquiclude, and aquifuge",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A geological formation that contains water and transmits it at an extremely slow rate, inadequate for economic well yields but sufficient for regional seepage between aquifers, is termed an:",
+    "options": {
+      "A": "Aquitard (e.g. sandy clay)",
+      "B": "Aquifer (e.g. coarse gravel)",
+      "C": "Aquiclude (e.g. solid clay)",
+      "D": "Aquifuge (e.g. unfractured granite)"
+    },
+    "correct_answer": "A",
+    "solution": "Definitions in groundwater hydrology:\n- Aquifer: porous, permeable, economic water yields.\n- Aquitard: semi-pervious formation transmitting water very slowly (leakage).\n- Aquiclude: porous, contains water, but impermeable (e.g., clay).\n- Aquifuge: neither porous nor permeable (e.g., solid granite).",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_030",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Storativity and specific yield of aquifers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding aquifer storage properties is/are TRUE?",
+    "options": {
+      "A": "For an unconfined aquifer, storativity ($S$) is practically equal to the specific yield ($S_y$), typically ranging from $0.10$ to $0.30$",
+      "B": "For a confined aquifer, storativity is governed by elastic expansion of water and compaction of aquifer skeleton, typically ranging from $10^{-5}$ to $10^{-3}$",
+      "C": "Porosity of an unconfined aquifer equals the sum of specific yield and specific retention ($n = S_y + S_r$)",
+      "D": "Confined aquifers release water primarily by gravity dewatering of pore spaces"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. In water table aquifers, water release is by actual gravity pore drainage, so $S \\approx S_y \\approx 0.1-0.3$ (A is true).\n2. In confined aquifers, pores remain $100\\%$ saturated; water yield is driven by compressibility, giving low $S = 10^{-5} - 10^{-3}$ (B is true).\n3. Total volume of voids partitions into drained water ($S_y$) plus capillary held water ($S_r$): $n = S_y + S_r$ (C is true).\n4. Confined aquifers release water via pressure decompression and matrix compressibility, never gravity dewatering (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_031",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Seepage velocity in porous media",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Groundwater flows through an unconfined sand aquifer of porosity $n = 0.25$ and hydraulic conductivity $K = 15.0\\text{ m/day}$. Two piezometers spaced $500\\text{ m}$ apart in the direction of flow register a water table head difference of $2.5\\text{ m}$. The actual seepage velocity ($v_s$) of groundwater is ________ $\\text{m/day}$ (round off to two decimal places).",
+    "correct_answer": "0.30",
+    "numerical_range": {
+      "min": 0.28,
+      "max": 0.32
+    },
+    "solution": "Hydraulic gradient $i = \\frac{\\Delta h}{L} = \\frac{2.5}{500} = 0.00500$.\nDarcy velocity (specific discharge):\n$$v = K i = 15.0 \\times 0.00500 = 0.07500\\text{ m/day}$$\nSeepage velocity accounts for void space porosity:\n$$v_s = \\frac{v}{n} = \\frac{0.07500}{0.25} = 0.300\\text{ m/day}$$\nRounding to two decimal places: $0.30\\text{ m/day}$.",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_032",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Aquifer, aquitard, aquiclude, and aquifuge",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A geological formation that contains water and transmits it at an extremely slow rate, inadequate for economic well yields but sufficient for regional seepage between aquifers, is termed an:",
+    "options": {
+      "A": "Aquitard (e.g. sandy clay)",
+      "B": "Aquifer (e.g. coarse gravel)",
+      "C": "Aquiclude (e.g. solid clay)",
+      "D": "Aquifuge (e.g. unfractured granite)"
+    },
+    "correct_answer": "A",
+    "solution": "Definitions in groundwater hydrology:\n- Aquifer: porous, permeable, economic water yields.\n- Aquitard: semi-pervious formation transmitting water very slowly (leakage).\n- Aquiclude: porous, contains water, but impermeable (e.g., clay).\n- Aquifuge: neither porous nor permeable (e.g., solid granite).",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_033",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Storativity and specific yield of aquifers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding aquifer storage properties is/are TRUE?",
+    "options": {
+      "A": "For an unconfined aquifer, storativity ($S$) is practically equal to the specific yield ($S_y$), typically ranging from $0.10$ to $0.30$",
+      "B": "For a confined aquifer, storativity is governed by elastic expansion of water and compaction of aquifer skeleton, typically ranging from $10^{-5}$ to $10^{-3}$",
+      "C": "Porosity of an unconfined aquifer equals the sum of specific yield and specific retention ($n = S_y + S_r$)",
+      "D": "Confined aquifers release water primarily by gravity dewatering of pore spaces"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. In water table aquifers, water release is by actual gravity pore drainage, so $S \\approx S_y \\approx 0.1-0.3$ (A is true).\n2. In confined aquifers, pores remain $100\\%$ saturated; water yield is driven by compressibility, giving low $S = 10^{-5} - 10^{-3}$ (B is true).\n3. Total volume of voids partitions into drained water ($S_y$) plus capillary held water ($S_r$): $n = S_y + S_r$ (C is true).\n4. Confined aquifers release water via pressure decompression and matrix compressibility, never gravity dewatering (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_034",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Seepage velocity in porous media",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Groundwater flows through an unconfined sand aquifer of porosity $n = 0.25$ and hydraulic conductivity $K = 15.0\\text{ m/day}$. Two piezometers spaced $500\\text{ m}$ apart in the direction of flow register a water table head difference of $2.5\\text{ m}$. The actual seepage velocity ($v_s$) of groundwater is ________ $\\text{m/day}$ (round off to two decimal places).",
+    "correct_answer": "0.30",
+    "numerical_range": {
+      "min": 0.28,
+      "max": 0.32
+    },
+    "solution": "Hydraulic gradient $i = \\frac{\\Delta h}{L} = \\frac{2.5}{500} = 0.00500$.\nDarcy velocity (specific discharge):\n$$v = K i = 15.0 \\times 0.00500 = 0.07500\\text{ m/day}$$\nSeepage velocity accounts for void space porosity:\n$$v_s = \\frac{v}{n} = \\frac{0.07500}{0.25} = 0.300\\text{ m/day}$$\nRounding to two decimal places: $0.30\\text{ m/day}$.",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_035",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Aquifer, aquitard, aquiclude, and aquifuge",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A geological formation that contains water and transmits it at an extremely slow rate, inadequate for economic well yields but sufficient for regional seepage between aquifers, is termed an:",
+    "options": {
+      "A": "Aquitard (e.g. sandy clay)",
+      "B": "Aquifer (e.g. coarse gravel)",
+      "C": "Aquiclude (e.g. solid clay)",
+      "D": "Aquifuge (e.g. unfractured granite)"
+    },
+    "correct_answer": "A",
+    "solution": "Definitions in groundwater hydrology:\n- Aquifer: porous, permeable, economic water yields.\n- Aquitard: semi-pervious formation transmitting water very slowly (leakage).\n- Aquiclude: porous, contains water, but impermeable (e.g., clay).\n- Aquifuge: neither porous nor permeable (e.g., solid granite).",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_036",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Storativity and specific yield of aquifers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding aquifer storage properties is/are TRUE?",
+    "options": {
+      "A": "For an unconfined aquifer, storativity ($S$) is practically equal to the specific yield ($S_y$), typically ranging from $0.10$ to $0.30$",
+      "B": "For a confined aquifer, storativity is governed by elastic expansion of water and compaction of aquifer skeleton, typically ranging from $10^{-5}$ to $10^{-3}$",
+      "C": "Porosity of an unconfined aquifer equals the sum of specific yield and specific retention ($n = S_y + S_r$)",
+      "D": "Confined aquifers release water primarily by gravity dewatering of pore spaces"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. In water table aquifers, water release is by actual gravity pore drainage, so $S \\approx S_y \\approx 0.1-0.3$ (A is true).\n2. In confined aquifers, pores remain $100\\%$ saturated; water yield is driven by compressibility, giving low $S = 10^{-5} - 10^{-3}$ (B is true).\n3. Total volume of voids partitions into drained water ($S_y$) plus capillary held water ($S_r$): $n = S_y + S_r$ (C is true).\n4. Confined aquifers release water via pressure decompression and matrix compressibility, never gravity dewatering (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_037",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Seepage velocity in porous media",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Groundwater flows through an unconfined sand aquifer of porosity $n = 0.25$ and hydraulic conductivity $K = 15.0\\text{ m/day}$. Two piezometers spaced $500\\text{ m}$ apart in the direction of flow register a water table head difference of $2.5\\text{ m}$. The actual seepage velocity ($v_s$) of groundwater is ________ $\\text{m/day}$ (round off to two decimal places).",
+    "correct_answer": "0.30",
+    "numerical_range": {
+      "min": 0.28,
+      "max": 0.32
+    },
+    "solution": "Hydraulic gradient $i = \\frac{\\Delta h}{L} = \\frac{2.5}{500} = 0.00500$.\nDarcy velocity (specific discharge):\n$$v = K i = 15.0 \\times 0.00500 = 0.07500\\text{ m/day}$$\nSeepage velocity accounts for void space porosity:\n$$v_s = \\frac{v}{n} = \\frac{0.07500}{0.25} = 0.300\\text{ m/day}$$\nRounding to two decimal places: $0.30\\text{ m/day}$.",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_GWD_038",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Aquifer, aquitard, aquiclude, and aquifuge",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A geological formation that contains water and transmits it at an extremely slow rate, inadequate for economic well yields but sufficient for regional seepage between aquifers, is termed an:",
+    "options": {
+      "A": "Aquitard (e.g. sandy clay)",
+      "B": "Aquifer (e.g. coarse gravel)",
+      "C": "Aquiclude (e.g. solid clay)",
+      "D": "Aquifuge (e.g. unfractured granite)"
+    },
+    "correct_answer": "A",
+    "solution": "Definitions in groundwater hydrology:\n- Aquifer: porous, permeable, economic water yields.\n- Aquitard: semi-pervious formation transmitting water very slowly (leakage).\n- Aquiclude: porous, contains water, but impermeable (e.g., clay).\n- Aquifuge: neither porous nor permeable (e.g., solid granite).",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_001",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Thiem formula discharge in confined aquifer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A fully penetrating well pumps water from a confined aquifer of transmissivity $T = 650\\text{ m}^2/\\text{day}$. Two observation wells situated at radial distances of $r_1 = 15\\text{ m}$ and $r_2 = 90\\text{ m}$ record steady drawdowns of $s_1 = 3.0\\text{ m}$ and $s_2 = 1.0\\text{ m}$, respectively. The steady pumping discharge is ________ $\\text{m}^3/\\text{day}$ (round off to one decimal place).",
+    "correct_answer": "4558.7",
+    "numerical_range": {
+      "min": 4553.7,
+      "max": 4563.7
+    },
+    "solution": "From the Thiem equilibrium equation for steady radial flow to a well in a confined aquifer:\n$$Q = \\frac{2 \\pi T (s_1 - s_2)}{\\ln(r_2 / r_1)}$$\nGiven $T = 650\\text{ m}^2/\\text{day}$, $s_1 - s_2 = 2.0\\text{ m}$, $r_2/r_1 = 6.0$ ($\\ln(6.0) = 1.7918$):\n$$Q = \\frac{2 \\pi (650) (2.0)}{1.7918} = \\frac{8168.14}{1.7918} = 4558.7\\text{ m}^3/\\text{day}$$",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_002",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Dupuit equation for unconfined aquifer",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Dupuit's steady-state discharge equation for a fully penetrating well in an unconfined aquifer between radial distances $r_1$ and $r_2$ with phreatic heights $h_1$ and $h_2$ is:",
+    "options": {
+      "A": "$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$",
+      "B": "$Q = \\frac{2 \\pi K b (h_2 - h_1)}{\\ln(r_2 / r_1)}$",
+      "C": "$Q = \\frac{\\pi K (h_2 - h_1)^2}{\\ln(r_2 / r_1)}$",
+      "D": "$Q = \\frac{2 \\pi K (h_2^2 - h_1^2)}{\\log_{10}(r_2 / r_1)}$"
+    },
+    "correct_answer": "A",
+    "solution": "Integrating Darcy's law $Q = 2 \\pi r h K \\frac{dh}{dr}$ from $r_1$ to $r_2$ yields Dupuit's formula:\n$$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$$",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_003",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Assumptions of Dupuit-Forchheimer theory",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following assumptions are invoked in the Dupuit-Forchheimer theory of steady flow to an unconfined well?",
+    "options": {
+      "A": "Flow lines are assumed to be horizontal and equipotential surfaces are vertical cylinders",
+      "B": "Hydraulic gradient is equal to the slope of the free water table ($dh/dr$)",
+      "C": "Well is fully penetrating and aquifer is homogeneous and isotropic",
+      "D": "Seepage face at the well bore is accurately modeled with zero drawdown"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Flow lines are assumed essentially horizontal, neglecting vertical flow curvature (A is true).\n2. Gradient equals free surface slope (B is true).\n3. Homogeneous isotropic aquifer and fully penetrating well are core idealizations (C is true).\n4. Dupuit theory actually neglects the existence of the seepage face at the well wall (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_004",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Thiem formula discharge in confined aquifer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A fully penetrating well pumps water from a confined aquifer of transmissivity $T = 800\\text{ m}^2/\\text{day}$. Two observation wells situated at radial distances of $r_1 = 15\\text{ m}$ and $r_2 = 90\\text{ m}$ record steady drawdowns of $s_1 = 3.0\\text{ m}$ and $s_2 = 1.0\\text{ m}$, respectively. The steady pumping discharge is ________ $\\text{m}^3/\\text{day}$ (round off to one decimal place).",
+    "correct_answer": "5610.7",
+    "numerical_range": {
+      "min": 5605.7,
+      "max": 5615.7
+    },
+    "solution": "From the Thiem equilibrium equation for steady radial flow to a well in a confined aquifer:\n$$Q = \\frac{2 \\pi T (s_1 - s_2)}{\\ln(r_2 / r_1)}$$\nGiven $T = 800\\text{ m}^2/\\text{day}$, $s_1 - s_2 = 2.0\\text{ m}$, $r_2/r_1 = 6.0$ ($\\ln(6.0) = 1.7918$):\n$$Q = \\frac{2 \\pi (800) (2.0)}{1.7918} = \\frac{10053.10}{1.7918} = 5610.7\\text{ m}^3/\\text{day}$$",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_005",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Dupuit equation for unconfined aquifer",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Dupuit's steady-state discharge equation for a fully penetrating well in an unconfined aquifer between radial distances $r_1$ and $r_2$ with phreatic heights $h_1$ and $h_2$ is:",
+    "options": {
+      "A": "$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$",
+      "B": "$Q = \\frac{2 \\pi K b (h_2 - h_1)}{\\ln(r_2 / r_1)}$",
+      "C": "$Q = \\frac{\\pi K (h_2 - h_1)^2}{\\ln(r_2 / r_1)}$",
+      "D": "$Q = \\frac{2 \\pi K (h_2^2 - h_1^2)}{\\log_{10}(r_2 / r_1)}$"
+    },
+    "correct_answer": "A",
+    "solution": "Integrating Darcy's law $Q = 2 \\pi r h K \\frac{dh}{dr}$ from $r_1$ to $r_2$ yields Dupuit's formula:\n$$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$$",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_006",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Assumptions of Dupuit-Forchheimer theory",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following assumptions are invoked in the Dupuit-Forchheimer theory of steady flow to an unconfined well?",
+    "options": {
+      "A": "Flow lines are assumed to be horizontal and equipotential surfaces are vertical cylinders",
+      "B": "Hydraulic gradient is equal to the slope of the free water table ($dh/dr$)",
+      "C": "Well is fully penetrating and aquifer is homogeneous and isotropic",
+      "D": "Seepage face at the well bore is accurately modeled with zero drawdown"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Flow lines are assumed essentially horizontal, neglecting vertical flow curvature (A is true).\n2. Gradient equals free surface slope (B is true).\n3. Homogeneous isotropic aquifer and fully penetrating well are core idealizations (C is true).\n4. Dupuit theory actually neglects the existence of the seepage face at the well wall (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_007",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Thiem formula discharge in confined aquifer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A fully penetrating well pumps water from a confined aquifer of transmissivity $T = 700\\text{ m}^2/\\text{day}$. Two observation wells situated at radial distances of $r_1 = 15\\text{ m}$ and $r_2 = 90\\text{ m}$ record steady drawdowns of $s_1 = 3.0\\text{ m}$ and $s_2 = 1.0\\text{ m}$, respectively. The steady pumping discharge is ________ $\\text{m}^3/\\text{day}$ (round off to one decimal place).",
+    "correct_answer": "4909.4",
+    "numerical_range": {
+      "min": 4904.4,
+      "max": 4914.4
+    },
+    "solution": "From the Thiem equilibrium equation for steady radial flow to a well in a confined aquifer:\n$$Q = \\frac{2 \\pi T (s_1 - s_2)}{\\ln(r_2 / r_1)}$$\nGiven $T = 700\\text{ m}^2/\\text{day}$, $s_1 - s_2 = 2.0\\text{ m}$, $r_2/r_1 = 6.0$ ($\\ln(6.0) = 1.7918$):\n$$Q = \\frac{2 \\pi (700) (2.0)}{1.7918} = \\frac{8796.46}{1.7918} = 4909.4\\text{ m}^3/\\text{day}$$",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_008",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Dupuit equation for unconfined aquifer",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Dupuit's steady-state discharge equation for a fully penetrating well in an unconfined aquifer between radial distances $r_1$ and $r_2$ with phreatic heights $h_1$ and $h_2$ is:",
+    "options": {
+      "A": "$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$",
+      "B": "$Q = \\frac{2 \\pi K b (h_2 - h_1)}{\\ln(r_2 / r_1)}$",
+      "C": "$Q = \\frac{\\pi K (h_2 - h_1)^2}{\\ln(r_2 / r_1)}$",
+      "D": "$Q = \\frac{2 \\pi K (h_2^2 - h_1^2)}{\\log_{10}(r_2 / r_1)}$"
+    },
+    "correct_answer": "A",
+    "solution": "Integrating Darcy's law $Q = 2 \\pi r h K \\frac{dh}{dr}$ from $r_1$ to $r_2$ yields Dupuit's formula:\n$$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$$",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_009",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Assumptions of Dupuit-Forchheimer theory",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following assumptions are invoked in the Dupuit-Forchheimer theory of steady flow to an unconfined well?",
+    "options": {
+      "A": "Flow lines are assumed to be horizontal and equipotential surfaces are vertical cylinders",
+      "B": "Hydraulic gradient is equal to the slope of the free water table ($dh/dr$)",
+      "C": "Well is fully penetrating and aquifer is homogeneous and isotropic",
+      "D": "Seepage face at the well bore is accurately modeled with zero drawdown"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Flow lines are assumed essentially horizontal, neglecting vertical flow curvature (A is true).\n2. Gradient equals free surface slope (B is true).\n3. Homogeneous isotropic aquifer and fully penetrating well are core idealizations (C is true).\n4. Dupuit theory actually neglects the existence of the seepage face at the well wall (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_010",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Thiem formula discharge in confined aquifer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A fully penetrating well pumps water from a confined aquifer of transmissivity $T = 600\\text{ m}^2/\\text{day}$. Two observation wells situated at radial distances of $r_1 = 15\\text{ m}$ and $r_2 = 90\\text{ m}$ record steady drawdowns of $s_1 = 3.0\\text{ m}$ and $s_2 = 1.0\\text{ m}$, respectively. The steady pumping discharge is ________ $\\text{m}^3/\\text{day}$ (round off to one decimal place).",
+    "correct_answer": "4208.1",
+    "numerical_range": {
+      "min": 4203.1,
+      "max": 4213.1
+    },
+    "solution": "From the Thiem equilibrium equation for steady radial flow to a well in a confined aquifer:\n$$Q = \\frac{2 \\pi T (s_1 - s_2)}{\\ln(r_2 / r_1)}$$\nGiven $T = 600\\text{ m}^2/\\text{day}$, $s_1 - s_2 = 2.0\\text{ m}$, $r_2/r_1 = 6.0$ ($\\ln(6.0) = 1.7918$):\n$$Q = \\frac{2 \\pi (600) (2.0)}{1.7918} = \\frac{7539.82}{1.7918} = 4208.1\\text{ m}^3/\\text{day}$$",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_011",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Dupuit equation for unconfined aquifer",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Dupuit's steady-state discharge equation for a fully penetrating well in an unconfined aquifer between radial distances $r_1$ and $r_2$ with phreatic heights $h_1$ and $h_2$ is:",
+    "options": {
+      "A": "$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$",
+      "B": "$Q = \\frac{2 \\pi K b (h_2 - h_1)}{\\ln(r_2 / r_1)}$",
+      "C": "$Q = \\frac{\\pi K (h_2 - h_1)^2}{\\ln(r_2 / r_1)}$",
+      "D": "$Q = \\frac{2 \\pi K (h_2^2 - h_1^2)}{\\log_{10}(r_2 / r_1)}$"
+    },
+    "correct_answer": "A",
+    "solution": "Integrating Darcy's law $Q = 2 \\pi r h K \\frac{dh}{dr}$ from $r_1$ to $r_2$ yields Dupuit's formula:\n$$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$$",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_012",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Assumptions of Dupuit-Forchheimer theory",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following assumptions are invoked in the Dupuit-Forchheimer theory of steady flow to an unconfined well?",
+    "options": {
+      "A": "Flow lines are assumed to be horizontal and equipotential surfaces are vertical cylinders",
+      "B": "Hydraulic gradient is equal to the slope of the free water table ($dh/dr$)",
+      "C": "Well is fully penetrating and aquifer is homogeneous and isotropic",
+      "D": "Seepage face at the well bore is accurately modeled with zero drawdown"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Flow lines are assumed essentially horizontal, neglecting vertical flow curvature (A is true).\n2. Gradient equals free surface slope (B is true).\n3. Homogeneous isotropic aquifer and fully penetrating well are core idealizations (C is true).\n4. Dupuit theory actually neglects the existence of the seepage face at the well wall (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_013",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Thiem formula discharge in confined aquifer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A fully penetrating well pumps water from a confined aquifer of transmissivity $T = 750\\text{ m}^2/\\text{day}$. Two observation wells situated at radial distances of $r_1 = 15\\text{ m}$ and $r_2 = 90\\text{ m}$ record steady drawdowns of $s_1 = 3.0\\text{ m}$ and $s_2 = 1.0\\text{ m}$, respectively. The steady pumping discharge is ________ $\\text{m}^3/\\text{day}$ (round off to one decimal place).",
+    "correct_answer": "5260.1",
+    "numerical_range": {
+      "min": 5255.1,
+      "max": 5265.1
+    },
+    "solution": "From the Thiem equilibrium equation for steady radial flow to a well in a confined aquifer:\n$$Q = \\frac{2 \\pi T (s_1 - s_2)}{\\ln(r_2 / r_1)}$$\nGiven $T = 750\\text{ m}^2/\\text{day}$, $s_1 - s_2 = 2.0\\text{ m}$, $r_2/r_1 = 6.0$ ($\\ln(6.0) = 1.7918$):\n$$Q = \\frac{2 \\pi (750) (2.0)}{1.7918} = \\frac{9424.78}{1.7918} = 5260.1\\text{ m}^3/\\text{day}$$",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_014",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Dupuit equation for unconfined aquifer",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Dupuit's steady-state discharge equation for a fully penetrating well in an unconfined aquifer between radial distances $r_1$ and $r_2$ with phreatic heights $h_1$ and $h_2$ is:",
+    "options": {
+      "A": "$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$",
+      "B": "$Q = \\frac{2 \\pi K b (h_2 - h_1)}{\\ln(r_2 / r_1)}$",
+      "C": "$Q = \\frac{\\pi K (h_2 - h_1)^2}{\\ln(r_2 / r_1)}$",
+      "D": "$Q = \\frac{2 \\pi K (h_2^2 - h_1^2)}{\\log_{10}(r_2 / r_1)}$"
+    },
+    "correct_answer": "A",
+    "solution": "Integrating Darcy's law $Q = 2 \\pi r h K \\frac{dh}{dr}$ from $r_1$ to $r_2$ yields Dupuit's formula:\n$$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$$",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_015",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Assumptions of Dupuit-Forchheimer theory",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following assumptions are invoked in the Dupuit-Forchheimer theory of steady flow to an unconfined well?",
+    "options": {
+      "A": "Flow lines are assumed to be horizontal and equipotential surfaces are vertical cylinders",
+      "B": "Hydraulic gradient is equal to the slope of the free water table ($dh/dr$)",
+      "C": "Well is fully penetrating and aquifer is homogeneous and isotropic",
+      "D": "Seepage face at the well bore is accurately modeled with zero drawdown"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Flow lines are assumed essentially horizontal, neglecting vertical flow curvature (A is true).\n2. Gradient equals free surface slope (B is true).\n3. Homogeneous isotropic aquifer and fully penetrating well are core idealizations (C is true).\n4. Dupuit theory actually neglects the existence of the seepage face at the well wall (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_016",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Thiem formula discharge in confined aquifer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A fully penetrating well pumps water from a confined aquifer of transmissivity $T = 650\\text{ m}^2/\\text{day}$. Two observation wells situated at radial distances of $r_1 = 15\\text{ m}$ and $r_2 = 90\\text{ m}$ record steady drawdowns of $s_1 = 3.0\\text{ m}$ and $s_2 = 1.0\\text{ m}$, respectively. The steady pumping discharge is ________ $\\text{m}^3/\\text{day}$ (round off to one decimal place).",
+    "correct_answer": "4558.7",
+    "numerical_range": {
+      "min": 4553.7,
+      "max": 4563.7
+    },
+    "solution": "From the Thiem equilibrium equation for steady radial flow to a well in a confined aquifer:\n$$Q = \\frac{2 \\pi T (s_1 - s_2)}{\\ln(r_2 / r_1)}$$\nGiven $T = 650\\text{ m}^2/\\text{day}$, $s_1 - s_2 = 2.0\\text{ m}$, $r_2/r_1 = 6.0$ ($\\ln(6.0) = 1.7918$):\n$$Q = \\frac{2 \\pi (650) (2.0)}{1.7918} = \\frac{8168.14}{1.7918} = 4558.7\\text{ m}^3/\\text{day}$$",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_017",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Dupuit equation for unconfined aquifer",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Dupuit's steady-state discharge equation for a fully penetrating well in an unconfined aquifer between radial distances $r_1$ and $r_2$ with phreatic heights $h_1$ and $h_2$ is:",
+    "options": {
+      "A": "$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$",
+      "B": "$Q = \\frac{2 \\pi K b (h_2 - h_1)}{\\ln(r_2 / r_1)}$",
+      "C": "$Q = \\frac{\\pi K (h_2 - h_1)^2}{\\ln(r_2 / r_1)}$",
+      "D": "$Q = \\frac{2 \\pi K (h_2^2 - h_1^2)}{\\log_{10}(r_2 / r_1)}$"
+    },
+    "correct_answer": "A",
+    "solution": "Integrating Darcy's law $Q = 2 \\pi r h K \\frac{dh}{dr}$ from $r_1$ to $r_2$ yields Dupuit's formula:\n$$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$$",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_018",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Assumptions of Dupuit-Forchheimer theory",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following assumptions are invoked in the Dupuit-Forchheimer theory of steady flow to an unconfined well?",
+    "options": {
+      "A": "Flow lines are assumed to be horizontal and equipotential surfaces are vertical cylinders",
+      "B": "Hydraulic gradient is equal to the slope of the free water table ($dh/dr$)",
+      "C": "Well is fully penetrating and aquifer is homogeneous and isotropic",
+      "D": "Seepage face at the well bore is accurately modeled with zero drawdown"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Flow lines are assumed essentially horizontal, neglecting vertical flow curvature (A is true).\n2. Gradient equals free surface slope (B is true).\n3. Homogeneous isotropic aquifer and fully penetrating well are core idealizations (C is true).\n4. Dupuit theory actually neglects the existence of the seepage face at the well wall (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_019",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Thiem formula discharge in confined aquifer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A fully penetrating well pumps water from a confined aquifer of transmissivity $T = 800\\text{ m}^2/\\text{day}$. Two observation wells situated at radial distances of $r_1 = 15\\text{ m}$ and $r_2 = 90\\text{ m}$ record steady drawdowns of $s_1 = 3.0\\text{ m}$ and $s_2 = 1.0\\text{ m}$, respectively. The steady pumping discharge is ________ $\\text{m}^3/\\text{day}$ (round off to one decimal place).",
+    "correct_answer": "5610.7",
+    "numerical_range": {
+      "min": 5605.7,
+      "max": 5615.7
+    },
+    "solution": "From the Thiem equilibrium equation for steady radial flow to a well in a confined aquifer:\n$$Q = \\frac{2 \\pi T (s_1 - s_2)}{\\ln(r_2 / r_1)}$$\nGiven $T = 800\\text{ m}^2/\\text{day}$, $s_1 - s_2 = 2.0\\text{ m}$, $r_2/r_1 = 6.0$ ($\\ln(6.0) = 1.7918$):\n$$Q = \\frac{2 \\pi (800) (2.0)}{1.7918} = \\frac{10053.10}{1.7918} = 5610.7\\text{ m}^3/\\text{day}$$",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_020",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Dupuit equation for unconfined aquifer",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Dupuit's steady-state discharge equation for a fully penetrating well in an unconfined aquifer between radial distances $r_1$ and $r_2$ with phreatic heights $h_1$ and $h_2$ is:",
+    "options": {
+      "A": "$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$",
+      "B": "$Q = \\frac{2 \\pi K b (h_2 - h_1)}{\\ln(r_2 / r_1)}$",
+      "C": "$Q = \\frac{\\pi K (h_2 - h_1)^2}{\\ln(r_2 / r_1)}$",
+      "D": "$Q = \\frac{2 \\pi K (h_2^2 - h_1^2)}{\\log_{10}(r_2 / r_1)}$"
+    },
+    "correct_answer": "A",
+    "solution": "Integrating Darcy's law $Q = 2 \\pi r h K \\frac{dh}{dr}$ from $r_1$ to $r_2$ yields Dupuit's formula:\n$$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$$",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_021",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Assumptions of Dupuit-Forchheimer theory",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following assumptions are invoked in the Dupuit-Forchheimer theory of steady flow to an unconfined well?",
+    "options": {
+      "A": "Flow lines are assumed to be horizontal and equipotential surfaces are vertical cylinders",
+      "B": "Hydraulic gradient is equal to the slope of the free water table ($dh/dr$)",
+      "C": "Well is fully penetrating and aquifer is homogeneous and isotropic",
+      "D": "Seepage face at the well bore is accurately modeled with zero drawdown"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Flow lines are assumed essentially horizontal, neglecting vertical flow curvature (A is true).\n2. Gradient equals free surface slope (B is true).\n3. Homogeneous isotropic aquifer and fully penetrating well are core idealizations (C is true).\n4. Dupuit theory actually neglects the existence of the seepage face at the well wall (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_022",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Thiem formula discharge in confined aquifer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A fully penetrating well pumps water from a confined aquifer of transmissivity $T = 700\\text{ m}^2/\\text{day}$. Two observation wells situated at radial distances of $r_1 = 15\\text{ m}$ and $r_2 = 90\\text{ m}$ record steady drawdowns of $s_1 = 3.0\\text{ m}$ and $s_2 = 1.0\\text{ m}$, respectively. The steady pumping discharge is ________ $\\text{m}^3/\\text{day}$ (round off to one decimal place).",
+    "correct_answer": "4909.4",
+    "numerical_range": {
+      "min": 4904.4,
+      "max": 4914.4
+    },
+    "solution": "From the Thiem equilibrium equation for steady radial flow to a well in a confined aquifer:\n$$Q = \\frac{2 \\pi T (s_1 - s_2)}{\\ln(r_2 / r_1)}$$\nGiven $T = 700\\text{ m}^2/\\text{day}$, $s_1 - s_2 = 2.0\\text{ m}$, $r_2/r_1 = 6.0$ ($\\ln(6.0) = 1.7918$):\n$$Q = \\frac{2 \\pi (700) (2.0)}{1.7918} = \\frac{8796.46}{1.7918} = 4909.4\\text{ m}^3/\\text{day}$$",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_023",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Dupuit equation for unconfined aquifer",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Dupuit's steady-state discharge equation for a fully penetrating well in an unconfined aquifer between radial distances $r_1$ and $r_2$ with phreatic heights $h_1$ and $h_2$ is:",
+    "options": {
+      "A": "$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$",
+      "B": "$Q = \\frac{2 \\pi K b (h_2 - h_1)}{\\ln(r_2 / r_1)}$",
+      "C": "$Q = \\frac{\\pi K (h_2 - h_1)^2}{\\ln(r_2 / r_1)}$",
+      "D": "$Q = \\frac{2 \\pi K (h_2^2 - h_1^2)}{\\log_{10}(r_2 / r_1)}$"
+    },
+    "correct_answer": "A",
+    "solution": "Integrating Darcy's law $Q = 2 \\pi r h K \\frac{dh}{dr}$ from $r_1$ to $r_2$ yields Dupuit's formula:\n$$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$$",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_024",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Assumptions of Dupuit-Forchheimer theory",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following assumptions are invoked in the Dupuit-Forchheimer theory of steady flow to an unconfined well?",
+    "options": {
+      "A": "Flow lines are assumed to be horizontal and equipotential surfaces are vertical cylinders",
+      "B": "Hydraulic gradient is equal to the slope of the free water table ($dh/dr$)",
+      "C": "Well is fully penetrating and aquifer is homogeneous and isotropic",
+      "D": "Seepage face at the well bore is accurately modeled with zero drawdown"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Flow lines are assumed essentially horizontal, neglecting vertical flow curvature (A is true).\n2. Gradient equals free surface slope (B is true).\n3. Homogeneous isotropic aquifer and fully penetrating well are core idealizations (C is true).\n4. Dupuit theory actually neglects the existence of the seepage face at the well wall (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_025",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Thiem formula discharge in confined aquifer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A fully penetrating well pumps water from a confined aquifer of transmissivity $T = 600\\text{ m}^2/\\text{day}$. Two observation wells situated at radial distances of $r_1 = 15\\text{ m}$ and $r_2 = 90\\text{ m}$ record steady drawdowns of $s_1 = 3.0\\text{ m}$ and $s_2 = 1.0\\text{ m}$, respectively. The steady pumping discharge is ________ $\\text{m}^3/\\text{day}$ (round off to one decimal place).",
+    "correct_answer": "4208.1",
+    "numerical_range": {
+      "min": 4203.1,
+      "max": 4213.1
+    },
+    "solution": "From the Thiem equilibrium equation for steady radial flow to a well in a confined aquifer:\n$$Q = \\frac{2 \\pi T (s_1 - s_2)}{\\ln(r_2 / r_1)}$$\nGiven $T = 600\\text{ m}^2/\\text{day}$, $s_1 - s_2 = 2.0\\text{ m}$, $r_2/r_1 = 6.0$ ($\\ln(6.0) = 1.7918$):\n$$Q = \\frac{2 \\pi (600) (2.0)}{1.7918} = \\frac{7539.82}{1.7918} = 4208.1\\text{ m}^3/\\text{day}$$",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_026",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Dupuit equation for unconfined aquifer",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Dupuit's steady-state discharge equation for a fully penetrating well in an unconfined aquifer between radial distances $r_1$ and $r_2$ with phreatic heights $h_1$ and $h_2$ is:",
+    "options": {
+      "A": "$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$",
+      "B": "$Q = \\frac{2 \\pi K b (h_2 - h_1)}{\\ln(r_2 / r_1)}$",
+      "C": "$Q = \\frac{\\pi K (h_2 - h_1)^2}{\\ln(r_2 / r_1)}$",
+      "D": "$Q = \\frac{2 \\pi K (h_2^2 - h_1^2)}{\\log_{10}(r_2 / r_1)}$"
+    },
+    "correct_answer": "A",
+    "solution": "Integrating Darcy's law $Q = 2 \\pi r h K \\frac{dh}{dr}$ from $r_1$ to $r_2$ yields Dupuit's formula:\n$$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$$",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_027",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Assumptions of Dupuit-Forchheimer theory",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following assumptions are invoked in the Dupuit-Forchheimer theory of steady flow to an unconfined well?",
+    "options": {
+      "A": "Flow lines are assumed to be horizontal and equipotential surfaces are vertical cylinders",
+      "B": "Hydraulic gradient is equal to the slope of the free water table ($dh/dr$)",
+      "C": "Well is fully penetrating and aquifer is homogeneous and isotropic",
+      "D": "Seepage face at the well bore is accurately modeled with zero drawdown"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Flow lines are assumed essentially horizontal, neglecting vertical flow curvature (A is true).\n2. Gradient equals free surface slope (B is true).\n3. Homogeneous isotropic aquifer and fully penetrating well are core idealizations (C is true).\n4. Dupuit theory actually neglects the existence of the seepage face at the well wall (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_028",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Thiem formula discharge in confined aquifer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A fully penetrating well pumps water from a confined aquifer of transmissivity $T = 750\\text{ m}^2/\\text{day}$. Two observation wells situated at radial distances of $r_1 = 15\\text{ m}$ and $r_2 = 90\\text{ m}$ record steady drawdowns of $s_1 = 3.0\\text{ m}$ and $s_2 = 1.0\\text{ m}$, respectively. The steady pumping discharge is ________ $\\text{m}^3/\\text{day}$ (round off to one decimal place).",
+    "correct_answer": "5260.1",
+    "numerical_range": {
+      "min": 5255.1,
+      "max": 5265.1
+    },
+    "solution": "From the Thiem equilibrium equation for steady radial flow to a well in a confined aquifer:\n$$Q = \\frac{2 \\pi T (s_1 - s_2)}{\\ln(r_2 / r_1)}$$\nGiven $T = 750\\text{ m}^2/\\text{day}$, $s_1 - s_2 = 2.0\\text{ m}$, $r_2/r_1 = 6.0$ ($\\ln(6.0) = 1.7918$):\n$$Q = \\frac{2 \\pi (750) (2.0)}{1.7918} = \\frac{9424.78}{1.7918} = 5260.1\\text{ m}^3/\\text{day}$$",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_029",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Dupuit equation for unconfined aquifer",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Dupuit's steady-state discharge equation for a fully penetrating well in an unconfined aquifer between radial distances $r_1$ and $r_2$ with phreatic heights $h_1$ and $h_2$ is:",
+    "options": {
+      "A": "$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$",
+      "B": "$Q = \\frac{2 \\pi K b (h_2 - h_1)}{\\ln(r_2 / r_1)}$",
+      "C": "$Q = \\frac{\\pi K (h_2 - h_1)^2}{\\ln(r_2 / r_1)}$",
+      "D": "$Q = \\frac{2 \\pi K (h_2^2 - h_1^2)}{\\log_{10}(r_2 / r_1)}$"
+    },
+    "correct_answer": "A",
+    "solution": "Integrating Darcy's law $Q = 2 \\pi r h K \\frac{dh}{dr}$ from $r_1$ to $r_2$ yields Dupuit's formula:\n$$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$$",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_030",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Assumptions of Dupuit-Forchheimer theory",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following assumptions are invoked in the Dupuit-Forchheimer theory of steady flow to an unconfined well?",
+    "options": {
+      "A": "Flow lines are assumed to be horizontal and equipotential surfaces are vertical cylinders",
+      "B": "Hydraulic gradient is equal to the slope of the free water table ($dh/dr$)",
+      "C": "Well is fully penetrating and aquifer is homogeneous and isotropic",
+      "D": "Seepage face at the well bore is accurately modeled with zero drawdown"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Flow lines are assumed essentially horizontal, neglecting vertical flow curvature (A is true).\n2. Gradient equals free surface slope (B is true).\n3. Homogeneous isotropic aquifer and fully penetrating well are core idealizations (C is true).\n4. Dupuit theory actually neglects the existence of the seepage face at the well wall (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_031",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Thiem formula discharge in confined aquifer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A fully penetrating well pumps water from a confined aquifer of transmissivity $T = 650\\text{ m}^2/\\text{day}$. Two observation wells situated at radial distances of $r_1 = 15\\text{ m}$ and $r_2 = 90\\text{ m}$ record steady drawdowns of $s_1 = 3.0\\text{ m}$ and $s_2 = 1.0\\text{ m}$, respectively. The steady pumping discharge is ________ $\\text{m}^3/\\text{day}$ (round off to one decimal place).",
+    "correct_answer": "4558.7",
+    "numerical_range": {
+      "min": 4553.7,
+      "max": 4563.7
+    },
+    "solution": "From the Thiem equilibrium equation for steady radial flow to a well in a confined aquifer:\n$$Q = \\frac{2 \\pi T (s_1 - s_2)}{\\ln(r_2 / r_1)}$$\nGiven $T = 650\\text{ m}^2/\\text{day}$, $s_1 - s_2 = 2.0\\text{ m}$, $r_2/r_1 = 6.0$ ($\\ln(6.0) = 1.7918$):\n$$Q = \\frac{2 \\pi (650) (2.0)}{1.7918} = \\frac{8168.14}{1.7918} = 4558.7\\text{ m}^3/\\text{day}$$",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_032",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Dupuit equation for unconfined aquifer",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Dupuit's steady-state discharge equation for a fully penetrating well in an unconfined aquifer between radial distances $r_1$ and $r_2$ with phreatic heights $h_1$ and $h_2$ is:",
+    "options": {
+      "A": "$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$",
+      "B": "$Q = \\frac{2 \\pi K b (h_2 - h_1)}{\\ln(r_2 / r_1)}$",
+      "C": "$Q = \\frac{\\pi K (h_2 - h_1)^2}{\\ln(r_2 / r_1)}$",
+      "D": "$Q = \\frac{2 \\pi K (h_2^2 - h_1^2)}{\\log_{10}(r_2 / r_1)}$"
+    },
+    "correct_answer": "A",
+    "solution": "Integrating Darcy's law $Q = 2 \\pi r h K \\frac{dh}{dr}$ from $r_1$ to $r_2$ yields Dupuit's formula:\n$$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$$",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_033",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Assumptions of Dupuit-Forchheimer theory",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following assumptions are invoked in the Dupuit-Forchheimer theory of steady flow to an unconfined well?",
+    "options": {
+      "A": "Flow lines are assumed to be horizontal and equipotential surfaces are vertical cylinders",
+      "B": "Hydraulic gradient is equal to the slope of the free water table ($dh/dr$)",
+      "C": "Well is fully penetrating and aquifer is homogeneous and isotropic",
+      "D": "Seepage face at the well bore is accurately modeled with zero drawdown"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Flow lines are assumed essentially horizontal, neglecting vertical flow curvature (A is true).\n2. Gradient equals free surface slope (B is true).\n3. Homogeneous isotropic aquifer and fully penetrating well are core idealizations (C is true).\n4. Dupuit theory actually neglects the existence of the seepage face at the well wall (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_034",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Thiem formula discharge in confined aquifer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A fully penetrating well pumps water from a confined aquifer of transmissivity $T = 800\\text{ m}^2/\\text{day}$. Two observation wells situated at radial distances of $r_1 = 15\\text{ m}$ and $r_2 = 90\\text{ m}$ record steady drawdowns of $s_1 = 3.0\\text{ m}$ and $s_2 = 1.0\\text{ m}$, respectively. The steady pumping discharge is ________ $\\text{m}^3/\\text{day}$ (round off to one decimal place).",
+    "correct_answer": "5610.7",
+    "numerical_range": {
+      "min": 5605.7,
+      "max": 5615.7
+    },
+    "solution": "From the Thiem equilibrium equation for steady radial flow to a well in a confined aquifer:\n$$Q = \\frac{2 \\pi T (s_1 - s_2)}{\\ln(r_2 / r_1)}$$\nGiven $T = 800\\text{ m}^2/\\text{day}$, $s_1 - s_2 = 2.0\\text{ m}$, $r_2/r_1 = 6.0$ ($\\ln(6.0) = 1.7918$):\n$$Q = \\frac{2 \\pi (800) (2.0)}{1.7918} = \\frac{10053.10}{1.7918} = 5610.7\\text{ m}^3/\\text{day}$$",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_035",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Dupuit equation for unconfined aquifer",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Dupuit's steady-state discharge equation for a fully penetrating well in an unconfined aquifer between radial distances $r_1$ and $r_2$ with phreatic heights $h_1$ and $h_2$ is:",
+    "options": {
+      "A": "$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$",
+      "B": "$Q = \\frac{2 \\pi K b (h_2 - h_1)}{\\ln(r_2 / r_1)}$",
+      "C": "$Q = \\frac{\\pi K (h_2 - h_1)^2}{\\ln(r_2 / r_1)}$",
+      "D": "$Q = \\frac{2 \\pi K (h_2^2 - h_1^2)}{\\log_{10}(r_2 / r_1)}$"
+    },
+    "correct_answer": "A",
+    "solution": "Integrating Darcy's law $Q = 2 \\pi r h K \\frac{dh}{dr}$ from $r_1$ to $r_2$ yields Dupuit's formula:\n$$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$$",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_036",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Assumptions of Dupuit-Forchheimer theory",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following assumptions are invoked in the Dupuit-Forchheimer theory of steady flow to an unconfined well?",
+    "options": {
+      "A": "Flow lines are assumed to be horizontal and equipotential surfaces are vertical cylinders",
+      "B": "Hydraulic gradient is equal to the slope of the free water table ($dh/dr$)",
+      "C": "Well is fully penetrating and aquifer is homogeneous and isotropic",
+      "D": "Seepage face at the well bore is accurately modeled with zero drawdown"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Flow lines are assumed essentially horizontal, neglecting vertical flow curvature (A is true).\n2. Gradient equals free surface slope (B is true).\n3. Homogeneous isotropic aquifer and fully penetrating well are core idealizations (C is true).\n4. Dupuit theory actually neglects the existence of the seepage face at the well wall (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_037",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Thiem formula discharge in confined aquifer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A fully penetrating well pumps water from a confined aquifer of transmissivity $T = 700\\text{ m}^2/\\text{day}$. Two observation wells situated at radial distances of $r_1 = 15\\text{ m}$ and $r_2 = 90\\text{ m}$ record steady drawdowns of $s_1 = 3.0\\text{ m}$ and $s_2 = 1.0\\text{ m}$, respectively. The steady pumping discharge is ________ $\\text{m}^3/\\text{day}$ (round off to one decimal place).",
+    "correct_answer": "4909.4",
+    "numerical_range": {
+      "min": 4904.4,
+      "max": 4914.4
+    },
+    "solution": "From the Thiem equilibrium equation for steady radial flow to a well in a confined aquifer:\n$$Q = \\frac{2 \\pi T (s_1 - s_2)}{\\ln(r_2 / r_1)}$$\nGiven $T = 700\\text{ m}^2/\\text{day}$, $s_1 - s_2 = 2.0\\text{ m}$, $r_2/r_1 = 6.0$ ($\\ln(6.0) = 1.7918$):\n$$Q = \\frac{2 \\pi (700) (2.0)}{1.7918} = \\frac{8796.46}{1.7918} = 4909.4\\text{ m}^3/\\text{day}$$",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_STW_038",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Dupuit equation for unconfined aquifer",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Dupuit's steady-state discharge equation for a fully penetrating well in an unconfined aquifer between radial distances $r_1$ and $r_2$ with phreatic heights $h_1$ and $h_2$ is:",
+    "options": {
+      "A": "$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$",
+      "B": "$Q = \\frac{2 \\pi K b (h_2 - h_1)}{\\ln(r_2 / r_1)}$",
+      "C": "$Q = \\frac{\\pi K (h_2 - h_1)^2}{\\ln(r_2 / r_1)}$",
+      "D": "$Q = \\frac{2 \\pi K (h_2^2 - h_1^2)}{\\log_{10}(r_2 / r_1)}$"
+    },
+    "correct_answer": "A",
+    "solution": "Integrating Darcy's law $Q = 2 \\pi r h K \\frac{dh}{dr}$ from $r_1$ to $r_2$ yields Dupuit's formula:\n$$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$$",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_001",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Transmissivity from Cooper-Jacob drawdown per log cycle",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A pumping test is conducted at a constant discharge of $Q = 1200\\text{ m}^3/\\text{day}$. A semi-logarithmic plot of drawdown versus time at an observation well yields a straight line with a drawdown slope of $\\Delta s = 1.20\\text{ m}$ per log cycle of time. Using the Cooper-Jacob method, the transmissivity ($T$) of the aquifer is ________ $\\text{m}^2/\\text{day}$ (round off to one decimal place).",
+    "correct_answer": "183.3",
+    "numerical_range": {
+      "min": 181.3,
+      "max": 185.3
+    },
+    "solution": "From the Cooper-Jacob approximation, drawdown per log cycle is:\n$$\\Delta s = \\frac{2.303 Q}{4 \\pi T} \\implies T = \\frac{2.303 Q}{4 \\pi \\Delta s}$$\nGiven $Q = 1200\\text{ m}^3/\\text{day}$ and $\\Delta s = 1.20\\text{ m}$:\n$$T = \\frac{2.303 \\times 1200}{4 \\pi \\times 1.20} = \\frac{2763.6}{15.0796} = 183.3\\text{ m}^2/\\text{day}$$",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_002",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Condition of validity for Cooper-Jacob approximation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Cooper-Jacob simplified straight-line method is valid only when the parameter $u = \\frac{r^2 S}{4 T t}$ satisfies:",
+    "options": {
+      "A": "$u \\le 0.01$ (or $u \\le 0.05$ with minimal error)",
+      "B": "$u \\ge 1.0$",
+      "C": "$u = 0.5$",
+      "D": "$u \\ge 10.0$"
+    },
+    "correct_answer": "A",
+    "solution": "The Theis well function series expansion is $W(u) = -0.5772 - \\ln u + u - \\frac{u^2}{2 \\cdot 2!} + \\dots$. When $u \\le 0.01$, terms beyond the logarithmic term become negligibly small ($< 1\\%$ error), allowing the Cooper-Jacob approximation.",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_003",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Theis non-equilibrium equation characteristics",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the Theis non-equilibrium formula $s = \\frac{Q}{4 \\pi T} W(u)$ is/are TRUE?",
+    "options": {
+      "A": "It models transient, unsteady drawdown in an elastic confined aquifer",
+      "B": "The well function $W(u)$ is evaluated mathematically as the exponential integral $\\int_u^\\infty \\frac{e^{-\\eta}}{\\eta} d\\eta$",
+      "C": "Water is assumed to be released instantaneously from storage with decline in head",
+      "D": "The cone of depression stops expanding after 10 minutes of pumping"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Theis solved the 2D heat-conduction analogy for transient confined aquifer drawdown (A is true).\n2. $W(u) = \\int_u^\\infty \\frac{e^{-\\eta}}{\\eta} d\\eta$ is the standard exponential integral (B is true).\n3. Elastic storage decompression is assumed instantaneous (C is true).\n4. In an infinite aquifer without recharge boundaries, the cone of depression expands indefinitely with time (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_004",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Transmissivity from Cooper-Jacob drawdown per log cycle",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A pumping test is conducted at a constant discharge of $Q = 1200\\text{ m}^3/\\text{day}$. A semi-logarithmic plot of drawdown versus time at an observation well yields a straight line with a drawdown slope of $\\Delta s = 1.50\\text{ m}$ per log cycle of time. Using the Cooper-Jacob method, the transmissivity ($T$) of the aquifer is ________ $\\text{m}^2/\\text{day}$ (round off to one decimal place).",
+    "correct_answer": "146.6",
+    "numerical_range": {
+      "min": 144.6,
+      "max": 148.6
+    },
+    "solution": "From the Cooper-Jacob approximation, drawdown per log cycle is:\n$$\\Delta s = \\frac{2.303 Q}{4 \\pi T} \\implies T = \\frac{2.303 Q}{4 \\pi \\Delta s}$$\nGiven $Q = 1200\\text{ m}^3/\\text{day}$ and $\\Delta s = 1.50\\text{ m}$:\n$$T = \\frac{2.303 \\times 1200}{4 \\pi \\times 1.50} = \\frac{2763.6}{18.8496} = 146.6\\text{ m}^2/\\text{day}$$",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_005",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Condition of validity for Cooper-Jacob approximation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Cooper-Jacob simplified straight-line method is valid only when the parameter $u = \\frac{r^2 S}{4 T t}$ satisfies:",
+    "options": {
+      "A": "$u \\le 0.01$ (or $u \\le 0.05$ with minimal error)",
+      "B": "$u \\ge 1.0$",
+      "C": "$u = 0.5$",
+      "D": "$u \\ge 10.0$"
+    },
+    "correct_answer": "A",
+    "solution": "The Theis well function series expansion is $W(u) = -0.5772 - \\ln u + u - \\frac{u^2}{2 \\cdot 2!} + \\dots$. When $u \\le 0.01$, terms beyond the logarithmic term become negligibly small ($< 1\\%$ error), allowing the Cooper-Jacob approximation.",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_006",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Theis non-equilibrium equation characteristics",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the Theis non-equilibrium formula $s = \\frac{Q}{4 \\pi T} W(u)$ is/are TRUE?",
+    "options": {
+      "A": "It models transient, unsteady drawdown in an elastic confined aquifer",
+      "B": "The well function $W(u)$ is evaluated mathematically as the exponential integral $\\int_u^\\infty \\frac{e^{-\\eta}}{\\eta} d\\eta$",
+      "C": "Water is assumed to be released instantaneously from storage with decline in head",
+      "D": "The cone of depression stops expanding after 10 minutes of pumping"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Theis solved the 2D heat-conduction analogy for transient confined aquifer drawdown (A is true).\n2. $W(u) = \\int_u^\\infty \\frac{e^{-\\eta}}{\\eta} d\\eta$ is the standard exponential integral (B is true).\n3. Elastic storage decompression is assumed instantaneous (C is true).\n4. In an infinite aquifer without recharge boundaries, the cone of depression expands indefinitely with time (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_007",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Transmissivity from Cooper-Jacob drawdown per log cycle",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A pumping test is conducted at a constant discharge of $Q = 1200\\text{ m}^3/\\text{day}$. A semi-logarithmic plot of drawdown versus time at an observation well yields a straight line with a drawdown slope of $\\Delta s = 1.30\\text{ m}$ per log cycle of time. Using the Cooper-Jacob method, the transmissivity ($T$) of the aquifer is ________ $\\text{m}^2/\\text{day}$ (round off to one decimal place).",
+    "correct_answer": "169.2",
+    "numerical_range": {
+      "min": 167.2,
+      "max": 171.2
+    },
+    "solution": "From the Cooper-Jacob approximation, drawdown per log cycle is:\n$$\\Delta s = \\frac{2.303 Q}{4 \\pi T} \\implies T = \\frac{2.303 Q}{4 \\pi \\Delta s}$$\nGiven $Q = 1200\\text{ m}^3/\\text{day}$ and $\\Delta s = 1.30\\text{ m}$:\n$$T = \\frac{2.303 \\times 1200}{4 \\pi \\times 1.30} = \\frac{2763.6}{16.3363} = 169.2\\text{ m}^2/\\text{day}$$",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_008",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Condition of validity for Cooper-Jacob approximation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Cooper-Jacob simplified straight-line method is valid only when the parameter $u = \\frac{r^2 S}{4 T t}$ satisfies:",
+    "options": {
+      "A": "$u \\le 0.01$ (or $u \\le 0.05$ with minimal error)",
+      "B": "$u \\ge 1.0$",
+      "C": "$u = 0.5$",
+      "D": "$u \\ge 10.0$"
+    },
+    "correct_answer": "A",
+    "solution": "The Theis well function series expansion is $W(u) = -0.5772 - \\ln u + u - \\frac{u^2}{2 \\cdot 2!} + \\dots$. When $u \\le 0.01$, terms beyond the logarithmic term become negligibly small ($< 1\\%$ error), allowing the Cooper-Jacob approximation.",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_009",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Theis non-equilibrium equation characteristics",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the Theis non-equilibrium formula $s = \\frac{Q}{4 \\pi T} W(u)$ is/are TRUE?",
+    "options": {
+      "A": "It models transient, unsteady drawdown in an elastic confined aquifer",
+      "B": "The well function $W(u)$ is evaluated mathematically as the exponential integral $\\int_u^\\infty \\frac{e^{-\\eta}}{\\eta} d\\eta$",
+      "C": "Water is assumed to be released instantaneously from storage with decline in head",
+      "D": "The cone of depression stops expanding after 10 minutes of pumping"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Theis solved the 2D heat-conduction analogy for transient confined aquifer drawdown (A is true).\n2. $W(u) = \\int_u^\\infty \\frac{e^{-\\eta}}{\\eta} d\\eta$ is the standard exponential integral (B is true).\n3. Elastic storage decompression is assumed instantaneous (C is true).\n4. In an infinite aquifer without recharge boundaries, the cone of depression expands indefinitely with time (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_010",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Transmissivity from Cooper-Jacob drawdown per log cycle",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A pumping test is conducted at a constant discharge of $Q = 1200\\text{ m}^3/\\text{day}$. A semi-logarithmic plot of drawdown versus time at an observation well yields a straight line with a drawdown slope of $\\Delta s = 1.10\\text{ m}$ per log cycle of time. Using the Cooper-Jacob method, the transmissivity ($T$) of the aquifer is ________ $\\text{m}^2/\\text{day}$ (round off to one decimal place).",
+    "correct_answer": "199.9",
+    "numerical_range": {
+      "min": 197.9,
+      "max": 201.9
+    },
+    "solution": "From the Cooper-Jacob approximation, drawdown per log cycle is:\n$$\\Delta s = \\frac{2.303 Q}{4 \\pi T} \\implies T = \\frac{2.303 Q}{4 \\pi \\Delta s}$$\nGiven $Q = 1200\\text{ m}^3/\\text{day}$ and $\\Delta s = 1.10\\text{ m}$:\n$$T = \\frac{2.303 \\times 1200}{4 \\pi \\times 1.10} = \\frac{2763.6}{13.8230} = 199.9\\text{ m}^2/\\text{day}$$",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_011",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Condition of validity for Cooper-Jacob approximation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Cooper-Jacob simplified straight-line method is valid only when the parameter $u = \\frac{r^2 S}{4 T t}$ satisfies:",
+    "options": {
+      "A": "$u \\le 0.01$ (or $u \\le 0.05$ with minimal error)",
+      "B": "$u \\ge 1.0$",
+      "C": "$u = 0.5$",
+      "D": "$u \\ge 10.0$"
+    },
+    "correct_answer": "A",
+    "solution": "The Theis well function series expansion is $W(u) = -0.5772 - \\ln u + u - \\frac{u^2}{2 \\cdot 2!} + \\dots$. When $u \\le 0.01$, terms beyond the logarithmic term become negligibly small ($< 1\\%$ error), allowing the Cooper-Jacob approximation.",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_012",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Theis non-equilibrium equation characteristics",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the Theis non-equilibrium formula $s = \\frac{Q}{4 \\pi T} W(u)$ is/are TRUE?",
+    "options": {
+      "A": "It models transient, unsteady drawdown in an elastic confined aquifer",
+      "B": "The well function $W(u)$ is evaluated mathematically as the exponential integral $\\int_u^\\infty \\frac{e^{-\\eta}}{\\eta} d\\eta$",
+      "C": "Water is assumed to be released instantaneously from storage with decline in head",
+      "D": "The cone of depression stops expanding after 10 minutes of pumping"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Theis solved the 2D heat-conduction analogy for transient confined aquifer drawdown (A is true).\n2. $W(u) = \\int_u^\\infty \\frac{e^{-\\eta}}{\\eta} d\\eta$ is the standard exponential integral (B is true).\n3. Elastic storage decompression is assumed instantaneous (C is true).\n4. In an infinite aquifer without recharge boundaries, the cone of depression expands indefinitely with time (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_013",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Transmissivity from Cooper-Jacob drawdown per log cycle",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A pumping test is conducted at a constant discharge of $Q = 1200\\text{ m}^3/\\text{day}$. A semi-logarithmic plot of drawdown versus time at an observation well yields a straight line with a drawdown slope of $\\Delta s = 1.40\\text{ m}$ per log cycle of time. Using the Cooper-Jacob method, the transmissivity ($T$) of the aquifer is ________ $\\text{m}^2/\\text{day}$ (round off to one decimal place).",
+    "correct_answer": "157.1",
+    "numerical_range": {
+      "min": 155.1,
+      "max": 159.1
+    },
+    "solution": "From the Cooper-Jacob approximation, drawdown per log cycle is:\n$$\\Delta s = \\frac{2.303 Q}{4 \\pi T} \\implies T = \\frac{2.303 Q}{4 \\pi \\Delta s}$$\nGiven $Q = 1200\\text{ m}^3/\\text{day}$ and $\\Delta s = 1.40\\text{ m}$:\n$$T = \\frac{2.303 \\times 1200}{4 \\pi \\times 1.40} = \\frac{2763.6}{17.5929} = 157.1\\text{ m}^2/\\text{day}$$",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_014",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Condition of validity for Cooper-Jacob approximation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Cooper-Jacob simplified straight-line method is valid only when the parameter $u = \\frac{r^2 S}{4 T t}$ satisfies:",
+    "options": {
+      "A": "$u \\le 0.01$ (or $u \\le 0.05$ with minimal error)",
+      "B": "$u \\ge 1.0$",
+      "C": "$u = 0.5$",
+      "D": "$u \\ge 10.0$"
+    },
+    "correct_answer": "A",
+    "solution": "The Theis well function series expansion is $W(u) = -0.5772 - \\ln u + u - \\frac{u^2}{2 \\cdot 2!} + \\dots$. When $u \\le 0.01$, terms beyond the logarithmic term become negligibly small ($< 1\\%$ error), allowing the Cooper-Jacob approximation.",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_015",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Theis non-equilibrium equation characteristics",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the Theis non-equilibrium formula $s = \\frac{Q}{4 \\pi T} W(u)$ is/are TRUE?",
+    "options": {
+      "A": "It models transient, unsteady drawdown in an elastic confined aquifer",
+      "B": "The well function $W(u)$ is evaluated mathematically as the exponential integral $\\int_u^\\infty \\frac{e^{-\\eta}}{\\eta} d\\eta$",
+      "C": "Water is assumed to be released instantaneously from storage with decline in head",
+      "D": "The cone of depression stops expanding after 10 minutes of pumping"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Theis solved the 2D heat-conduction analogy for transient confined aquifer drawdown (A is true).\n2. $W(u) = \\int_u^\\infty \\frac{e^{-\\eta}}{\\eta} d\\eta$ is the standard exponential integral (B is true).\n3. Elastic storage decompression is assumed instantaneous (C is true).\n4. In an infinite aquifer without recharge boundaries, the cone of depression expands indefinitely with time (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_016",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Transmissivity from Cooper-Jacob drawdown per log cycle",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A pumping test is conducted at a constant discharge of $Q = 1200\\text{ m}^3/\\text{day}$. A semi-logarithmic plot of drawdown versus time at an observation well yields a straight line with a drawdown slope of $\\Delta s = 1.20\\text{ m}$ per log cycle of time. Using the Cooper-Jacob method, the transmissivity ($T$) of the aquifer is ________ $\\text{m}^2/\\text{day}$ (round off to one decimal place).",
+    "correct_answer": "183.3",
+    "numerical_range": {
+      "min": 181.3,
+      "max": 185.3
+    },
+    "solution": "From the Cooper-Jacob approximation, drawdown per log cycle is:\n$$\\Delta s = \\frac{2.303 Q}{4 \\pi T} \\implies T = \\frac{2.303 Q}{4 \\pi \\Delta s}$$\nGiven $Q = 1200\\text{ m}^3/\\text{day}$ and $\\Delta s = 1.20\\text{ m}$:\n$$T = \\frac{2.303 \\times 1200}{4 \\pi \\times 1.20} = \\frac{2763.6}{15.0796} = 183.3\\text{ m}^2/\\text{day}$$",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_017",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Condition of validity for Cooper-Jacob approximation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Cooper-Jacob simplified straight-line method is valid only when the parameter $u = \\frac{r^2 S}{4 T t}$ satisfies:",
+    "options": {
+      "A": "$u \\le 0.01$ (or $u \\le 0.05$ with minimal error)",
+      "B": "$u \\ge 1.0$",
+      "C": "$u = 0.5$",
+      "D": "$u \\ge 10.0$"
+    },
+    "correct_answer": "A",
+    "solution": "The Theis well function series expansion is $W(u) = -0.5772 - \\ln u + u - \\frac{u^2}{2 \\cdot 2!} + \\dots$. When $u \\le 0.01$, terms beyond the logarithmic term become negligibly small ($< 1\\%$ error), allowing the Cooper-Jacob approximation.",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_018",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Theis non-equilibrium equation characteristics",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the Theis non-equilibrium formula $s = \\frac{Q}{4 \\pi T} W(u)$ is/are TRUE?",
+    "options": {
+      "A": "It models transient, unsteady drawdown in an elastic confined aquifer",
+      "B": "The well function $W(u)$ is evaluated mathematically as the exponential integral $\\int_u^\\infty \\frac{e^{-\\eta}}{\\eta} d\\eta$",
+      "C": "Water is assumed to be released instantaneously from storage with decline in head",
+      "D": "The cone of depression stops expanding after 10 minutes of pumping"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Theis solved the 2D heat-conduction analogy for transient confined aquifer drawdown (A is true).\n2. $W(u) = \\int_u^\\infty \\frac{e^{-\\eta}}{\\eta} d\\eta$ is the standard exponential integral (B is true).\n3. Elastic storage decompression is assumed instantaneous (C is true).\n4. In an infinite aquifer without recharge boundaries, the cone of depression expands indefinitely with time (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_019",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Transmissivity from Cooper-Jacob drawdown per log cycle",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A pumping test is conducted at a constant discharge of $Q = 1200\\text{ m}^3/\\text{day}$. A semi-logarithmic plot of drawdown versus time at an observation well yields a straight line with a drawdown slope of $\\Delta s = 1.50\\text{ m}$ per log cycle of time. Using the Cooper-Jacob method, the transmissivity ($T$) of the aquifer is ________ $\\text{m}^2/\\text{day}$ (round off to one decimal place).",
+    "correct_answer": "146.6",
+    "numerical_range": {
+      "min": 144.6,
+      "max": 148.6
+    },
+    "solution": "From the Cooper-Jacob approximation, drawdown per log cycle is:\n$$\\Delta s = \\frac{2.303 Q}{4 \\pi T} \\implies T = \\frac{2.303 Q}{4 \\pi \\Delta s}$$\nGiven $Q = 1200\\text{ m}^3/\\text{day}$ and $\\Delta s = 1.50\\text{ m}$:\n$$T = \\frac{2.303 \\times 1200}{4 \\pi \\times 1.50} = \\frac{2763.6}{18.8496} = 146.6\\text{ m}^2/\\text{day}$$",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_020",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Condition of validity for Cooper-Jacob approximation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Cooper-Jacob simplified straight-line method is valid only when the parameter $u = \\frac{r^2 S}{4 T t}$ satisfies:",
+    "options": {
+      "A": "$u \\le 0.01$ (or $u \\le 0.05$ with minimal error)",
+      "B": "$u \\ge 1.0$",
+      "C": "$u = 0.5$",
+      "D": "$u \\ge 10.0$"
+    },
+    "correct_answer": "A",
+    "solution": "The Theis well function series expansion is $W(u) = -0.5772 - \\ln u + u - \\frac{u^2}{2 \\cdot 2!} + \\dots$. When $u \\le 0.01$, terms beyond the logarithmic term become negligibly small ($< 1\\%$ error), allowing the Cooper-Jacob approximation.",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_021",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Theis non-equilibrium equation characteristics",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the Theis non-equilibrium formula $s = \\frac{Q}{4 \\pi T} W(u)$ is/are TRUE?",
+    "options": {
+      "A": "It models transient, unsteady drawdown in an elastic confined aquifer",
+      "B": "The well function $W(u)$ is evaluated mathematically as the exponential integral $\\int_u^\\infty \\frac{e^{-\\eta}}{\\eta} d\\eta$",
+      "C": "Water is assumed to be released instantaneously from storage with decline in head",
+      "D": "The cone of depression stops expanding after 10 minutes of pumping"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Theis solved the 2D heat-conduction analogy for transient confined aquifer drawdown (A is true).\n2. $W(u) = \\int_u^\\infty \\frac{e^{-\\eta}}{\\eta} d\\eta$ is the standard exponential integral (B is true).\n3. Elastic storage decompression is assumed instantaneous (C is true).\n4. In an infinite aquifer without recharge boundaries, the cone of depression expands indefinitely with time (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_022",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Transmissivity from Cooper-Jacob drawdown per log cycle",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A pumping test is conducted at a constant discharge of $Q = 1200\\text{ m}^3/\\text{day}$. A semi-logarithmic plot of drawdown versus time at an observation well yields a straight line with a drawdown slope of $\\Delta s = 1.30\\text{ m}$ per log cycle of time. Using the Cooper-Jacob method, the transmissivity ($T$) of the aquifer is ________ $\\text{m}^2/\\text{day}$ (round off to one decimal place).",
+    "correct_answer": "169.2",
+    "numerical_range": {
+      "min": 167.2,
+      "max": 171.2
+    },
+    "solution": "From the Cooper-Jacob approximation, drawdown per log cycle is:\n$$\\Delta s = \\frac{2.303 Q}{4 \\pi T} \\implies T = \\frac{2.303 Q}{4 \\pi \\Delta s}$$\nGiven $Q = 1200\\text{ m}^3/\\text{day}$ and $\\Delta s = 1.30\\text{ m}$:\n$$T = \\frac{2.303 \\times 1200}{4 \\pi \\times 1.30} = \\frac{2763.6}{16.3363} = 169.2\\text{ m}^2/\\text{day}$$",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_023",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Condition of validity for Cooper-Jacob approximation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Cooper-Jacob simplified straight-line method is valid only when the parameter $u = \\frac{r^2 S}{4 T t}$ satisfies:",
+    "options": {
+      "A": "$u \\le 0.01$ (or $u \\le 0.05$ with minimal error)",
+      "B": "$u \\ge 1.0$",
+      "C": "$u = 0.5$",
+      "D": "$u \\ge 10.0$"
+    },
+    "correct_answer": "A",
+    "solution": "The Theis well function series expansion is $W(u) = -0.5772 - \\ln u + u - \\frac{u^2}{2 \\cdot 2!} + \\dots$. When $u \\le 0.01$, terms beyond the logarithmic term become negligibly small ($< 1\\%$ error), allowing the Cooper-Jacob approximation.",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_024",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Theis non-equilibrium equation characteristics",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the Theis non-equilibrium formula $s = \\frac{Q}{4 \\pi T} W(u)$ is/are TRUE?",
+    "options": {
+      "A": "It models transient, unsteady drawdown in an elastic confined aquifer",
+      "B": "The well function $W(u)$ is evaluated mathematically as the exponential integral $\\int_u^\\infty \\frac{e^{-\\eta}}{\\eta} d\\eta$",
+      "C": "Water is assumed to be released instantaneously from storage with decline in head",
+      "D": "The cone of depression stops expanding after 10 minutes of pumping"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Theis solved the 2D heat-conduction analogy for transient confined aquifer drawdown (A is true).\n2. $W(u) = \\int_u^\\infty \\frac{e^{-\\eta}}{\\eta} d\\eta$ is the standard exponential integral (B is true).\n3. Elastic storage decompression is assumed instantaneous (C is true).\n4. In an infinite aquifer without recharge boundaries, the cone of depression expands indefinitely with time (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_025",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Transmissivity from Cooper-Jacob drawdown per log cycle",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A pumping test is conducted at a constant discharge of $Q = 1200\\text{ m}^3/\\text{day}$. A semi-logarithmic plot of drawdown versus time at an observation well yields a straight line with a drawdown slope of $\\Delta s = 1.10\\text{ m}$ per log cycle of time. Using the Cooper-Jacob method, the transmissivity ($T$) of the aquifer is ________ $\\text{m}^2/\\text{day}$ (round off to one decimal place).",
+    "correct_answer": "199.9",
+    "numerical_range": {
+      "min": 197.9,
+      "max": 201.9
+    },
+    "solution": "From the Cooper-Jacob approximation, drawdown per log cycle is:\n$$\\Delta s = \\frac{2.303 Q}{4 \\pi T} \\implies T = \\frac{2.303 Q}{4 \\pi \\Delta s}$$\nGiven $Q = 1200\\text{ m}^3/\\text{day}$ and $\\Delta s = 1.10\\text{ m}$:\n$$T = \\frac{2.303 \\times 1200}{4 \\pi \\times 1.10} = \\frac{2763.6}{13.8230} = 199.9\\text{ m}^2/\\text{day}$$",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_026",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Condition of validity for Cooper-Jacob approximation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Cooper-Jacob simplified straight-line method is valid only when the parameter $u = \\frac{r^2 S}{4 T t}$ satisfies:",
+    "options": {
+      "A": "$u \\le 0.01$ (or $u \\le 0.05$ with minimal error)",
+      "B": "$u \\ge 1.0$",
+      "C": "$u = 0.5$",
+      "D": "$u \\ge 10.0$"
+    },
+    "correct_answer": "A",
+    "solution": "The Theis well function series expansion is $W(u) = -0.5772 - \\ln u + u - \\frac{u^2}{2 \\cdot 2!} + \\dots$. When $u \\le 0.01$, terms beyond the logarithmic term become negligibly small ($< 1\\%$ error), allowing the Cooper-Jacob approximation.",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_027",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Theis non-equilibrium equation characteristics",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the Theis non-equilibrium formula $s = \\frac{Q}{4 \\pi T} W(u)$ is/are TRUE?",
+    "options": {
+      "A": "It models transient, unsteady drawdown in an elastic confined aquifer",
+      "B": "The well function $W(u)$ is evaluated mathematically as the exponential integral $\\int_u^\\infty \\frac{e^{-\\eta}}{\\eta} d\\eta$",
+      "C": "Water is assumed to be released instantaneously from storage with decline in head",
+      "D": "The cone of depression stops expanding after 10 minutes of pumping"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Theis solved the 2D heat-conduction analogy for transient confined aquifer drawdown (A is true).\n2. $W(u) = \\int_u^\\infty \\frac{e^{-\\eta}}{\\eta} d\\eta$ is the standard exponential integral (B is true).\n3. Elastic storage decompression is assumed instantaneous (C is true).\n4. In an infinite aquifer without recharge boundaries, the cone of depression expands indefinitely with time (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_028",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Transmissivity from Cooper-Jacob drawdown per log cycle",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A pumping test is conducted at a constant discharge of $Q = 1200\\text{ m}^3/\\text{day}$. A semi-logarithmic plot of drawdown versus time at an observation well yields a straight line with a drawdown slope of $\\Delta s = 1.40\\text{ m}$ per log cycle of time. Using the Cooper-Jacob method, the transmissivity ($T$) of the aquifer is ________ $\\text{m}^2/\\text{day}$ (round off to one decimal place).",
+    "correct_answer": "157.1",
+    "numerical_range": {
+      "min": 155.1,
+      "max": 159.1
+    },
+    "solution": "From the Cooper-Jacob approximation, drawdown per log cycle is:\n$$\\Delta s = \\frac{2.303 Q}{4 \\pi T} \\implies T = \\frac{2.303 Q}{4 \\pi \\Delta s}$$\nGiven $Q = 1200\\text{ m}^3/\\text{day}$ and $\\Delta s = 1.40\\text{ m}$:\n$$T = \\frac{2.303 \\times 1200}{4 \\pi \\times 1.40} = \\frac{2763.6}{17.5929} = 157.1\\text{ m}^2/\\text{day}$$",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_029",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Condition of validity for Cooper-Jacob approximation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Cooper-Jacob simplified straight-line method is valid only when the parameter $u = \\frac{r^2 S}{4 T t}$ satisfies:",
+    "options": {
+      "A": "$u \\le 0.01$ (or $u \\le 0.05$ with minimal error)",
+      "B": "$u \\ge 1.0$",
+      "C": "$u = 0.5$",
+      "D": "$u \\ge 10.0$"
+    },
+    "correct_answer": "A",
+    "solution": "The Theis well function series expansion is $W(u) = -0.5772 - \\ln u + u - \\frac{u^2}{2 \\cdot 2!} + \\dots$. When $u \\le 0.01$, terms beyond the logarithmic term become negligibly small ($< 1\\%$ error), allowing the Cooper-Jacob approximation.",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_030",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Theis non-equilibrium equation characteristics",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the Theis non-equilibrium formula $s = \\frac{Q}{4 \\pi T} W(u)$ is/are TRUE?",
+    "options": {
+      "A": "It models transient, unsteady drawdown in an elastic confined aquifer",
+      "B": "The well function $W(u)$ is evaluated mathematically as the exponential integral $\\int_u^\\infty \\frac{e^{-\\eta}}{\\eta} d\\eta$",
+      "C": "Water is assumed to be released instantaneously from storage with decline in head",
+      "D": "The cone of depression stops expanding after 10 minutes of pumping"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Theis solved the 2D heat-conduction analogy for transient confined aquifer drawdown (A is true).\n2. $W(u) = \\int_u^\\infty \\frac{e^{-\\eta}}{\\eta} d\\eta$ is the standard exponential integral (B is true).\n3. Elastic storage decompression is assumed instantaneous (C is true).\n4. In an infinite aquifer without recharge boundaries, the cone of depression expands indefinitely with time (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_031",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Transmissivity from Cooper-Jacob drawdown per log cycle",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A pumping test is conducted at a constant discharge of $Q = 1200\\text{ m}^3/\\text{day}$. A semi-logarithmic plot of drawdown versus time at an observation well yields a straight line with a drawdown slope of $\\Delta s = 1.20\\text{ m}$ per log cycle of time. Using the Cooper-Jacob method, the transmissivity ($T$) of the aquifer is ________ $\\text{m}^2/\\text{day}$ (round off to one decimal place).",
+    "correct_answer": "183.3",
+    "numerical_range": {
+      "min": 181.3,
+      "max": 185.3
+    },
+    "solution": "From the Cooper-Jacob approximation, drawdown per log cycle is:\n$$\\Delta s = \\frac{2.303 Q}{4 \\pi T} \\implies T = \\frac{2.303 Q}{4 \\pi \\Delta s}$$\nGiven $Q = 1200\\text{ m}^3/\\text{day}$ and $\\Delta s = 1.20\\text{ m}$:\n$$T = \\frac{2.303 \\times 1200}{4 \\pi \\times 1.20} = \\frac{2763.6}{15.0796} = 183.3\\text{ m}^2/\\text{day}$$",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_032",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Condition of validity for Cooper-Jacob approximation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Cooper-Jacob simplified straight-line method is valid only when the parameter $u = \\frac{r^2 S}{4 T t}$ satisfies:",
+    "options": {
+      "A": "$u \\le 0.01$ (or $u \\le 0.05$ with minimal error)",
+      "B": "$u \\ge 1.0$",
+      "C": "$u = 0.5$",
+      "D": "$u \\ge 10.0$"
+    },
+    "correct_answer": "A",
+    "solution": "The Theis well function series expansion is $W(u) = -0.5772 - \\ln u + u - \\frac{u^2}{2 \\cdot 2!} + \\dots$. When $u \\le 0.01$, terms beyond the logarithmic term become negligibly small ($< 1\\%$ error), allowing the Cooper-Jacob approximation.",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_033",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Theis non-equilibrium equation characteristics",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the Theis non-equilibrium formula $s = \\frac{Q}{4 \\pi T} W(u)$ is/are TRUE?",
+    "options": {
+      "A": "It models transient, unsteady drawdown in an elastic confined aquifer",
+      "B": "The well function $W(u)$ is evaluated mathematically as the exponential integral $\\int_u^\\infty \\frac{e^{-\\eta}}{\\eta} d\\eta$",
+      "C": "Water is assumed to be released instantaneously from storage with decline in head",
+      "D": "The cone of depression stops expanding after 10 minutes of pumping"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Theis solved the 2D heat-conduction analogy for transient confined aquifer drawdown (A is true).\n2. $W(u) = \\int_u^\\infty \\frac{e^{-\\eta}}{\\eta} d\\eta$ is the standard exponential integral (B is true).\n3. Elastic storage decompression is assumed instantaneous (C is true).\n4. In an infinite aquifer without recharge boundaries, the cone of depression expands indefinitely with time (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_034",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Transmissivity from Cooper-Jacob drawdown per log cycle",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A pumping test is conducted at a constant discharge of $Q = 1200\\text{ m}^3/\\text{day}$. A semi-logarithmic plot of drawdown versus time at an observation well yields a straight line with a drawdown slope of $\\Delta s = 1.50\\text{ m}$ per log cycle of time. Using the Cooper-Jacob method, the transmissivity ($T$) of the aquifer is ________ $\\text{m}^2/\\text{day}$ (round off to one decimal place).",
+    "correct_answer": "146.6",
+    "numerical_range": {
+      "min": 144.6,
+      "max": 148.6
+    },
+    "solution": "From the Cooper-Jacob approximation, drawdown per log cycle is:\n$$\\Delta s = \\frac{2.303 Q}{4 \\pi T} \\implies T = \\frac{2.303 Q}{4 \\pi \\Delta s}$$\nGiven $Q = 1200\\text{ m}^3/\\text{day}$ and $\\Delta s = 1.50\\text{ m}$:\n$$T = \\frac{2.303 \\times 1200}{4 \\pi \\times 1.50} = \\frac{2763.6}{18.8496} = 146.6\\text{ m}^2/\\text{day}$$",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_035",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Condition of validity for Cooper-Jacob approximation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Cooper-Jacob simplified straight-line method is valid only when the parameter $u = \\frac{r^2 S}{4 T t}$ satisfies:",
+    "options": {
+      "A": "$u \\le 0.01$ (or $u \\le 0.05$ with minimal error)",
+      "B": "$u \\ge 1.0$",
+      "C": "$u = 0.5$",
+      "D": "$u \\ge 10.0$"
+    },
+    "correct_answer": "A",
+    "solution": "The Theis well function series expansion is $W(u) = -0.5772 - \\ln u + u - \\frac{u^2}{2 \\cdot 2!} + \\dots$. When $u \\le 0.01$, terms beyond the logarithmic term become negligibly small ($< 1\\%$ error), allowing the Cooper-Jacob approximation.",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_036",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Theis non-equilibrium equation characteristics",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements regarding the Theis non-equilibrium formula $s = \\frac{Q}{4 \\pi T} W(u)$ is/are TRUE?",
+    "options": {
+      "A": "It models transient, unsteady drawdown in an elastic confined aquifer",
+      "B": "The well function $W(u)$ is evaluated mathematically as the exponential integral $\\int_u^\\infty \\frac{e^{-\\eta}}{\\eta} d\\eta$",
+      "C": "Water is assumed to be released instantaneously from storage with decline in head",
+      "D": "The cone of depression stops expanding after 10 minutes of pumping"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Theis solved the 2D heat-conduction analogy for transient confined aquifer drawdown (A is true).\n2. $W(u) = \\int_u^\\infty \\frac{e^{-\\eta}}{\\eta} d\\eta$ is the standard exponential integral (B is true).\n3. Elastic storage decompression is assumed instantaneous (C is true).\n4. In an infinite aquifer without recharge boundaries, the cone of depression expands indefinitely with time (D is false).",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_037",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Transmissivity from Cooper-Jacob drawdown per log cycle",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A pumping test is conducted at a constant discharge of $Q = 1200\\text{ m}^3/\\text{day}$. A semi-logarithmic plot of drawdown versus time at an observation well yields a straight line with a drawdown slope of $\\Delta s = 1.30\\text{ m}$ per log cycle of time. Using the Cooper-Jacob method, the transmissivity ($T$) of the aquifer is ________ $\\text{m}^2/\\text{day}$ (round off to one decimal place).",
+    "correct_answer": "169.2",
+    "numerical_range": {
+      "min": 167.2,
+      "max": 171.2
+    },
+    "solution": "From the Cooper-Jacob approximation, drawdown per log cycle is:\n$$\\Delta s = \\frac{2.303 Q}{4 \\pi T} \\implies T = \\frac{2.303 Q}{4 \\pi \\Delta s}$$\nGiven $Q = 1200\\text{ m}^3/\\text{day}$ and $\\Delta s = 1.30\\text{ m}$:\n$$T = \\frac{2.303 \\times 1200}{4 \\pi \\times 1.30} = \\frac{2763.6}{16.3363} = 169.2\\text{ m}^2/\\text{day}$$",
+    "difficulty": "Moderate",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_UNS_038",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Condition of validity for Cooper-Jacob approximation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The Cooper-Jacob simplified straight-line method is valid only when the parameter $u = \\frac{r^2 S}{4 T t}$ satisfies:",
+    "options": {
+      "A": "$u \\le 0.01$ (or $u \\le 0.05$ with minimal error)",
+      "B": "$u \\ge 1.0$",
+      "C": "$u = 0.5$",
+      "D": "$u \\ge 10.0$"
+    },
+    "correct_answer": "A",
+    "solution": "The Theis well function series expansion is $W(u) = -0.5772 - \\ln u + u - \\frac{u^2}{2 \\cdot 2!} + \\dots$. When $u \\le 0.01$, terms beyond the logarithmic term become negligibly small ($< 1\\%$ error), allowing the Cooper-Jacob approximation.",
+    "difficulty": "Easy",
+    "source": "Groundwater Hydrology (David Keith Todd)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_001",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Affinity law discharge scaling with speed",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A centrifugal irrigation pump running at a rotational speed of $N_1 = 1450\\text{ rpm}$ delivers a discharge of $Q_1 = 25.0\\text{ L/s}$. If the impeller diameter remains unchanged and the pump speed is increased to $N_2 = 1750\\text{ rpm}$, the new discharge $Q_2$ will be ________ $\\text{L/s}$ (round off to two decimal places).",
+    "correct_answer": "30.17",
+    "numerical_range": {
+      "min": 29.97,
+      "max": 30.37
+    },
+    "solution": "From the pump affinity laws for identical impeller diameter ($D_1 = D_2$):\n$$\\frac{Q_2}{Q_1} = \\frac{N_2}{N_1}$$\n$$Q_2 = Q_1 \\left( \\frac{N_2}{N_1} \\right) = 25.0 \\times \\left( \\frac{1750}{1450} \\right) = 25.0 \\times 1.2069 = 30.17\\text{ L/s}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_002",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Centrifugal pump specific speed",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A centrifugal pump operating at $N = 1450\\text{ rpm}$ delivers a discharge of $Q = 0.04\\text{ m}^3/\\text{s}$ against a total head of $H = 16.0\\text{ m}$. The specific speed ($N_s$) of the pump in SI metric units ($\\text{rpm}, \\text{m}^3/\\text{s}, \\text{m}$) is ________ (round off to one decimal place).",
+    "correct_answer": "36.2",
+    "numerical_range": {
+      "min": 35.7,
+      "max": 36.7
+    },
+    "solution": "The specific speed is defined as:\n$$N_s = \\frac{N \\sqrt{Q}}{H^{3/4}}$$\nGiven $N = 1450\\text{ rpm}$, $Q = 0.04\\text{ m}^3/\\text{s}$, and $H = 16.0\\text{ m}$ ($16^{0.75} = (16^{0.25})^3 = 2^3 = 8$):\n$$N_s = \\frac{1450 \\times \\sqrt{0.04}}{8} = \\frac{1450 \\times 0.2000}{8} = 36.2$$",
+    "difficulty": "Moderate",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_003",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Pump affinity laws scaling powers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "According to the affinity laws for geometrically similar centrifugal pumps, how do performance variables scale with rotational speed $N$ for a fixed impeller diameter?",
+    "options": {
+      "A": "Discharge varies directly with speed ($Q \\propto N$)",
+      "B": "Head varies directly with the square of speed ($H \\propto N^2$)",
+      "C": "Power consumption varies directly with the cube of speed ($P \\propto N^3$)",
+      "D": "Efficiency varies directly with the fourth power of speed ($\\eta \\propto N^4$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Flow velocity $v \\propto u \\propto N \\implies Q \\propto N$ (A is true).\n2. Head $H \\propto v^2/2g \\propto N^2$ (B is true).\n3. Power $P = \\gamma Q H \\propto N \\cdot N^2 = N^3$ (C is true).\n4. Efficiency is dimensionless and remains approximately constant across modest speed shifts (D is false).",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_004",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Affinity law discharge scaling with speed",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A centrifugal irrigation pump running at a rotational speed of $N_1 = 1450\\text{ rpm}$ delivers a discharge of $Q_1 = 40.0\\text{ L/s}$. If the impeller diameter remains unchanged and the pump speed is increased to $N_2 = 1750\\text{ rpm}$, the new discharge $Q_2$ will be ________ $\\text{L/s}$ (round off to two decimal places).",
+    "correct_answer": "48.28",
+    "numerical_range": {
+      "min": 48.08,
+      "max": 48.48
+    },
+    "solution": "From the pump affinity laws for identical impeller diameter ($D_1 = D_2$):\n$$\\frac{Q_2}{Q_1} = \\frac{N_2}{N_1}$$\n$$Q_2 = Q_1 \\left( \\frac{N_2}{N_1} \\right) = 40.0 \\times \\left( \\frac{1750}{1450} \\right) = 40.0 \\times 1.2069 = 48.28\\text{ L/s}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_005",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Centrifugal pump specific speed",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A centrifugal pump operating at $N = 1450\\text{ rpm}$ delivers a discharge of $Q = 0.04\\text{ m}^3/\\text{s}$ against a total head of $H = 16.0\\text{ m}$. The specific speed ($N_s$) of the pump in SI metric units ($\\text{rpm}, \\text{m}^3/\\text{s}, \\text{m}$) is ________ (round off to one decimal place).",
+    "correct_answer": "36.2",
+    "numerical_range": {
+      "min": 35.7,
+      "max": 36.7
+    },
+    "solution": "The specific speed is defined as:\n$$N_s = \\frac{N \\sqrt{Q}}{H^{3/4}}$$\nGiven $N = 1450\\text{ rpm}$, $Q = 0.04\\text{ m}^3/\\text{s}$, and $H = 16.0\\text{ m}$ ($16^{0.75} = (16^{0.25})^3 = 2^3 = 8$):\n$$N_s = \\frac{1450 \\times \\sqrt{0.04}}{8} = \\frac{1450 \\times 0.2000}{8} = 36.2$$",
+    "difficulty": "Moderate",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_006",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Pump affinity laws scaling powers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "According to the affinity laws for geometrically similar centrifugal pumps, how do performance variables scale with rotational speed $N$ for a fixed impeller diameter?",
+    "options": {
+      "A": "Discharge varies directly with speed ($Q \\propto N$)",
+      "B": "Head varies directly with the square of speed ($H \\propto N^2$)",
+      "C": "Power consumption varies directly with the cube of speed ($P \\propto N^3$)",
+      "D": "Efficiency varies directly with the fourth power of speed ($\\eta \\propto N^4$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Flow velocity $v \\propto u \\propto N \\implies Q \\propto N$ (A is true).\n2. Head $H \\propto v^2/2g \\propto N^2$ (B is true).\n3. Power $P = \\gamma Q H \\propto N \\cdot N^2 = N^3$ (C is true).\n4. Efficiency is dimensionless and remains approximately constant across modest speed shifts (D is false).",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_007",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Affinity law discharge scaling with speed",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A centrifugal irrigation pump running at a rotational speed of $N_1 = 1450\\text{ rpm}$ delivers a discharge of $Q_1 = 30.0\\text{ L/s}$. If the impeller diameter remains unchanged and the pump speed is increased to $N_2 = 1750\\text{ rpm}$, the new discharge $Q_2$ will be ________ $\\text{L/s}$ (round off to two decimal places).",
+    "correct_answer": "36.21",
+    "numerical_range": {
+      "min": 36.01,
+      "max": 36.41
+    },
+    "solution": "From the pump affinity laws for identical impeller diameter ($D_1 = D_2$):\n$$\\frac{Q_2}{Q_1} = \\frac{N_2}{N_1}$$\n$$Q_2 = Q_1 \\left( \\frac{N_2}{N_1} \\right) = 30.0 \\times \\left( \\frac{1750}{1450} \\right) = 30.0 \\times 1.2069 = 36.21\\text{ L/s}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_008",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Centrifugal pump specific speed",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A centrifugal pump operating at $N = 1450\\text{ rpm}$ delivers a discharge of $Q = 0.04\\text{ m}^3/\\text{s}$ against a total head of $H = 16.0\\text{ m}$. The specific speed ($N_s$) of the pump in SI metric units ($\\text{rpm}, \\text{m}^3/\\text{s}, \\text{m}$) is ________ (round off to one decimal place).",
+    "correct_answer": "36.2",
+    "numerical_range": {
+      "min": 35.7,
+      "max": 36.7
+    },
+    "solution": "The specific speed is defined as:\n$$N_s = \\frac{N \\sqrt{Q}}{H^{3/4}}$$\nGiven $N = 1450\\text{ rpm}$, $Q = 0.04\\text{ m}^3/\\text{s}$, and $H = 16.0\\text{ m}$ ($16^{0.75} = (16^{0.25})^3 = 2^3 = 8$):\n$$N_s = \\frac{1450 \\times \\sqrt{0.04}}{8} = \\frac{1450 \\times 0.2000}{8} = 36.2$$",
+    "difficulty": "Moderate",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_009",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Pump affinity laws scaling powers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "According to the affinity laws for geometrically similar centrifugal pumps, how do performance variables scale with rotational speed $N$ for a fixed impeller diameter?",
+    "options": {
+      "A": "Discharge varies directly with speed ($Q \\propto N$)",
+      "B": "Head varies directly with the square of speed ($H \\propto N^2$)",
+      "C": "Power consumption varies directly with the cube of speed ($P \\propto N^3$)",
+      "D": "Efficiency varies directly with the fourth power of speed ($\\eta \\propto N^4$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Flow velocity $v \\propto u \\propto N \\implies Q \\propto N$ (A is true).\n2. Head $H \\propto v^2/2g \\propto N^2$ (B is true).\n3. Power $P = \\gamma Q H \\propto N \\cdot N^2 = N^3$ (C is true).\n4. Efficiency is dimensionless and remains approximately constant across modest speed shifts (D is false).",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_010",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Affinity law discharge scaling with speed",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A centrifugal irrigation pump running at a rotational speed of $N_1 = 1450\\text{ rpm}$ delivers a discharge of $Q_1 = 20.0\\text{ L/s}$. If the impeller diameter remains unchanged and the pump speed is increased to $N_2 = 1750\\text{ rpm}$, the new discharge $Q_2$ will be ________ $\\text{L/s}$ (round off to two decimal places).",
+    "correct_answer": "24.14",
+    "numerical_range": {
+      "min": 23.94,
+      "max": 24.34
+    },
+    "solution": "From the pump affinity laws for identical impeller diameter ($D_1 = D_2$):\n$$\\frac{Q_2}{Q_1} = \\frac{N_2}{N_1}$$\n$$Q_2 = Q_1 \\left( \\frac{N_2}{N_1} \\right) = 20.0 \\times \\left( \\frac{1750}{1450} \\right) = 20.0 \\times 1.2069 = 24.14\\text{ L/s}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_011",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Centrifugal pump specific speed",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A centrifugal pump operating at $N = 1450\\text{ rpm}$ delivers a discharge of $Q = 0.04\\text{ m}^3/\\text{s}$ against a total head of $H = 16.0\\text{ m}$. The specific speed ($N_s$) of the pump in SI metric units ($\\text{rpm}, \\text{m}^3/\\text{s}, \\text{m}$) is ________ (round off to one decimal place).",
+    "correct_answer": "36.2",
+    "numerical_range": {
+      "min": 35.7,
+      "max": 36.7
+    },
+    "solution": "The specific speed is defined as:\n$$N_s = \\frac{N \\sqrt{Q}}{H^{3/4}}$$\nGiven $N = 1450\\text{ rpm}$, $Q = 0.04\\text{ m}^3/\\text{s}$, and $H = 16.0\\text{ m}$ ($16^{0.75} = (16^{0.25})^3 = 2^3 = 8$):\n$$N_s = \\frac{1450 \\times \\sqrt{0.04}}{8} = \\frac{1450 \\times 0.2000}{8} = 36.2$$",
+    "difficulty": "Moderate",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_012",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Pump affinity laws scaling powers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "According to the affinity laws for geometrically similar centrifugal pumps, how do performance variables scale with rotational speed $N$ for a fixed impeller diameter?",
+    "options": {
+      "A": "Discharge varies directly with speed ($Q \\propto N$)",
+      "B": "Head varies directly with the square of speed ($H \\propto N^2$)",
+      "C": "Power consumption varies directly with the cube of speed ($P \\propto N^3$)",
+      "D": "Efficiency varies directly with the fourth power of speed ($\\eta \\propto N^4$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Flow velocity $v \\propto u \\propto N \\implies Q \\propto N$ (A is true).\n2. Head $H \\propto v^2/2g \\propto N^2$ (B is true).\n3. Power $P = \\gamma Q H \\propto N \\cdot N^2 = N^3$ (C is true).\n4. Efficiency is dimensionless and remains approximately constant across modest speed shifts (D is false).",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_013",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Affinity law discharge scaling with speed",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A centrifugal irrigation pump running at a rotational speed of $N_1 = 1450\\text{ rpm}$ delivers a discharge of $Q_1 = 35.0\\text{ L/s}$. If the impeller diameter remains unchanged and the pump speed is increased to $N_2 = 1750\\text{ rpm}$, the new discharge $Q_2$ will be ________ $\\text{L/s}$ (round off to two decimal places).",
+    "correct_answer": "42.24",
+    "numerical_range": {
+      "min": 42.04,
+      "max": 42.44
+    },
+    "solution": "From the pump affinity laws for identical impeller diameter ($D_1 = D_2$):\n$$\\frac{Q_2}{Q_1} = \\frac{N_2}{N_1}$$\n$$Q_2 = Q_1 \\left( \\frac{N_2}{N_1} \\right) = 35.0 \\times \\left( \\frac{1750}{1450} \\right) = 35.0 \\times 1.2069 = 42.24\\text{ L/s}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_014",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Centrifugal pump specific speed",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A centrifugal pump operating at $N = 1450\\text{ rpm}$ delivers a discharge of $Q = 0.04\\text{ m}^3/\\text{s}$ against a total head of $H = 16.0\\text{ m}$. The specific speed ($N_s$) of the pump in SI metric units ($\\text{rpm}, \\text{m}^3/\\text{s}, \\text{m}$) is ________ (round off to one decimal place).",
+    "correct_answer": "36.2",
+    "numerical_range": {
+      "min": 35.7,
+      "max": 36.7
+    },
+    "solution": "The specific speed is defined as:\n$$N_s = \\frac{N \\sqrt{Q}}{H^{3/4}}$$\nGiven $N = 1450\\text{ rpm}$, $Q = 0.04\\text{ m}^3/\\text{s}$, and $H = 16.0\\text{ m}$ ($16^{0.75} = (16^{0.25})^3 = 2^3 = 8$):\n$$N_s = \\frac{1450 \\times \\sqrt{0.04}}{8} = \\frac{1450 \\times 0.2000}{8} = 36.2$$",
+    "difficulty": "Moderate",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_015",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Pump affinity laws scaling powers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "According to the affinity laws for geometrically similar centrifugal pumps, how do performance variables scale with rotational speed $N$ for a fixed impeller diameter?",
+    "options": {
+      "A": "Discharge varies directly with speed ($Q \\propto N$)",
+      "B": "Head varies directly with the square of speed ($H \\propto N^2$)",
+      "C": "Power consumption varies directly with the cube of speed ($P \\propto N^3$)",
+      "D": "Efficiency varies directly with the fourth power of speed ($\\eta \\propto N^4$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Flow velocity $v \\propto u \\propto N \\implies Q \\propto N$ (A is true).\n2. Head $H \\propto v^2/2g \\propto N^2$ (B is true).\n3. Power $P = \\gamma Q H \\propto N \\cdot N^2 = N^3$ (C is true).\n4. Efficiency is dimensionless and remains approximately constant across modest speed shifts (D is false).",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_016",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Affinity law discharge scaling with speed",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A centrifugal irrigation pump running at a rotational speed of $N_1 = 1450\\text{ rpm}$ delivers a discharge of $Q_1 = 25.0\\text{ L/s}$. If the impeller diameter remains unchanged and the pump speed is increased to $N_2 = 1750\\text{ rpm}$, the new discharge $Q_2$ will be ________ $\\text{L/s}$ (round off to two decimal places).",
+    "correct_answer": "30.17",
+    "numerical_range": {
+      "min": 29.97,
+      "max": 30.37
+    },
+    "solution": "From the pump affinity laws for identical impeller diameter ($D_1 = D_2$):\n$$\\frac{Q_2}{Q_1} = \\frac{N_2}{N_1}$$\n$$Q_2 = Q_1 \\left( \\frac{N_2}{N_1} \\right) = 25.0 \\times \\left( \\frac{1750}{1450} \\right) = 25.0 \\times 1.2069 = 30.17\\text{ L/s}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_017",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Centrifugal pump specific speed",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A centrifugal pump operating at $N = 1450\\text{ rpm}$ delivers a discharge of $Q = 0.04\\text{ m}^3/\\text{s}$ against a total head of $H = 16.0\\text{ m}$. The specific speed ($N_s$) of the pump in SI metric units ($\\text{rpm}, \\text{m}^3/\\text{s}, \\text{m}$) is ________ (round off to one decimal place).",
+    "correct_answer": "36.2",
+    "numerical_range": {
+      "min": 35.7,
+      "max": 36.7
+    },
+    "solution": "The specific speed is defined as:\n$$N_s = \\frac{N \\sqrt{Q}}{H^{3/4}}$$\nGiven $N = 1450\\text{ rpm}$, $Q = 0.04\\text{ m}^3/\\text{s}$, and $H = 16.0\\text{ m}$ ($16^{0.75} = (16^{0.25})^3 = 2^3 = 8$):\n$$N_s = \\frac{1450 \\times \\sqrt{0.04}}{8} = \\frac{1450 \\times 0.2000}{8} = 36.2$$",
+    "difficulty": "Moderate",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_018",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Pump affinity laws scaling powers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "According to the affinity laws for geometrically similar centrifugal pumps, how do performance variables scale with rotational speed $N$ for a fixed impeller diameter?",
+    "options": {
+      "A": "Discharge varies directly with speed ($Q \\propto N$)",
+      "B": "Head varies directly with the square of speed ($H \\propto N^2$)",
+      "C": "Power consumption varies directly with the cube of speed ($P \\propto N^3$)",
+      "D": "Efficiency varies directly with the fourth power of speed ($\\eta \\propto N^4$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Flow velocity $v \\propto u \\propto N \\implies Q \\propto N$ (A is true).\n2. Head $H \\propto v^2/2g \\propto N^2$ (B is true).\n3. Power $P = \\gamma Q H \\propto N \\cdot N^2 = N^3$ (C is true).\n4. Efficiency is dimensionless and remains approximately constant across modest speed shifts (D is false).",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_019",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Affinity law discharge scaling with speed",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A centrifugal irrigation pump running at a rotational speed of $N_1 = 1450\\text{ rpm}$ delivers a discharge of $Q_1 = 40.0\\text{ L/s}$. If the impeller diameter remains unchanged and the pump speed is increased to $N_2 = 1750\\text{ rpm}$, the new discharge $Q_2$ will be ________ $\\text{L/s}$ (round off to two decimal places).",
+    "correct_answer": "48.28",
+    "numerical_range": {
+      "min": 48.08,
+      "max": 48.48
+    },
+    "solution": "From the pump affinity laws for identical impeller diameter ($D_1 = D_2$):\n$$\\frac{Q_2}{Q_1} = \\frac{N_2}{N_1}$$\n$$Q_2 = Q_1 \\left( \\frac{N_2}{N_1} \\right) = 40.0 \\times \\left( \\frac{1750}{1450} \\right) = 40.0 \\times 1.2069 = 48.28\\text{ L/s}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_020",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Centrifugal pump specific speed",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A centrifugal pump operating at $N = 1450\\text{ rpm}$ delivers a discharge of $Q = 0.04\\text{ m}^3/\\text{s}$ against a total head of $H = 16.0\\text{ m}$. The specific speed ($N_s$) of the pump in SI metric units ($\\text{rpm}, \\text{m}^3/\\text{s}, \\text{m}$) is ________ (round off to one decimal place).",
+    "correct_answer": "36.2",
+    "numerical_range": {
+      "min": 35.7,
+      "max": 36.7
+    },
+    "solution": "The specific speed is defined as:\n$$N_s = \\frac{N \\sqrt{Q}}{H^{3/4}}$$\nGiven $N = 1450\\text{ rpm}$, $Q = 0.04\\text{ m}^3/\\text{s}$, and $H = 16.0\\text{ m}$ ($16^{0.75} = (16^{0.25})^3 = 2^3 = 8$):\n$$N_s = \\frac{1450 \\times \\sqrt{0.04}}{8} = \\frac{1450 \\times 0.2000}{8} = 36.2$$",
+    "difficulty": "Moderate",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_021",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Pump affinity laws scaling powers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "According to the affinity laws for geometrically similar centrifugal pumps, how do performance variables scale with rotational speed $N$ for a fixed impeller diameter?",
+    "options": {
+      "A": "Discharge varies directly with speed ($Q \\propto N$)",
+      "B": "Head varies directly with the square of speed ($H \\propto N^2$)",
+      "C": "Power consumption varies directly with the cube of speed ($P \\propto N^3$)",
+      "D": "Efficiency varies directly with the fourth power of speed ($\\eta \\propto N^4$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Flow velocity $v \\propto u \\propto N \\implies Q \\propto N$ (A is true).\n2. Head $H \\propto v^2/2g \\propto N^2$ (B is true).\n3. Power $P = \\gamma Q H \\propto N \\cdot N^2 = N^3$ (C is true).\n4. Efficiency is dimensionless and remains approximately constant across modest speed shifts (D is false).",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_022",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Affinity law discharge scaling with speed",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A centrifugal irrigation pump running at a rotational speed of $N_1 = 1450\\text{ rpm}$ delivers a discharge of $Q_1 = 30.0\\text{ L/s}$. If the impeller diameter remains unchanged and the pump speed is increased to $N_2 = 1750\\text{ rpm}$, the new discharge $Q_2$ will be ________ $\\text{L/s}$ (round off to two decimal places).",
+    "correct_answer": "36.21",
+    "numerical_range": {
+      "min": 36.01,
+      "max": 36.41
+    },
+    "solution": "From the pump affinity laws for identical impeller diameter ($D_1 = D_2$):\n$$\\frac{Q_2}{Q_1} = \\frac{N_2}{N_1}$$\n$$Q_2 = Q_1 \\left( \\frac{N_2}{N_1} \\right) = 30.0 \\times \\left( \\frac{1750}{1450} \\right) = 30.0 \\times 1.2069 = 36.21\\text{ L/s}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_023",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Centrifugal pump specific speed",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A centrifugal pump operating at $N = 1450\\text{ rpm}$ delivers a discharge of $Q = 0.04\\text{ m}^3/\\text{s}$ against a total head of $H = 16.0\\text{ m}$. The specific speed ($N_s$) of the pump in SI metric units ($\\text{rpm}, \\text{m}^3/\\text{s}, \\text{m}$) is ________ (round off to one decimal place).",
+    "correct_answer": "36.2",
+    "numerical_range": {
+      "min": 35.7,
+      "max": 36.7
+    },
+    "solution": "The specific speed is defined as:\n$$N_s = \\frac{N \\sqrt{Q}}{H^{3/4}}$$\nGiven $N = 1450\\text{ rpm}$, $Q = 0.04\\text{ m}^3/\\text{s}$, and $H = 16.0\\text{ m}$ ($16^{0.75} = (16^{0.25})^3 = 2^3 = 8$):\n$$N_s = \\frac{1450 \\times \\sqrt{0.04}}{8} = \\frac{1450 \\times 0.2000}{8} = 36.2$$",
+    "difficulty": "Moderate",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_024",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Pump affinity laws scaling powers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "According to the affinity laws for geometrically similar centrifugal pumps, how do performance variables scale with rotational speed $N$ for a fixed impeller diameter?",
+    "options": {
+      "A": "Discharge varies directly with speed ($Q \\propto N$)",
+      "B": "Head varies directly with the square of speed ($H \\propto N^2$)",
+      "C": "Power consumption varies directly with the cube of speed ($P \\propto N^3$)",
+      "D": "Efficiency varies directly with the fourth power of speed ($\\eta \\propto N^4$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Flow velocity $v \\propto u \\propto N \\implies Q \\propto N$ (A is true).\n2. Head $H \\propto v^2/2g \\propto N^2$ (B is true).\n3. Power $P = \\gamma Q H \\propto N \\cdot N^2 = N^3$ (C is true).\n4. Efficiency is dimensionless and remains approximately constant across modest speed shifts (D is false).",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_025",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Affinity law discharge scaling with speed",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A centrifugal irrigation pump running at a rotational speed of $N_1 = 1450\\text{ rpm}$ delivers a discharge of $Q_1 = 20.0\\text{ L/s}$. If the impeller diameter remains unchanged and the pump speed is increased to $N_2 = 1750\\text{ rpm}$, the new discharge $Q_2$ will be ________ $\\text{L/s}$ (round off to two decimal places).",
+    "correct_answer": "24.14",
+    "numerical_range": {
+      "min": 23.94,
+      "max": 24.34
+    },
+    "solution": "From the pump affinity laws for identical impeller diameter ($D_1 = D_2$):\n$$\\frac{Q_2}{Q_1} = \\frac{N_2}{N_1}$$\n$$Q_2 = Q_1 \\left( \\frac{N_2}{N_1} \\right) = 20.0 \\times \\left( \\frac{1750}{1450} \\right) = 20.0 \\times 1.2069 = 24.14\\text{ L/s}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_026",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Centrifugal pump specific speed",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A centrifugal pump operating at $N = 1450\\text{ rpm}$ delivers a discharge of $Q = 0.04\\text{ m}^3/\\text{s}$ against a total head of $H = 16.0\\text{ m}$. The specific speed ($N_s$) of the pump in SI metric units ($\\text{rpm}, \\text{m}^3/\\text{s}, \\text{m}$) is ________ (round off to one decimal place).",
+    "correct_answer": "36.2",
+    "numerical_range": {
+      "min": 35.7,
+      "max": 36.7
+    },
+    "solution": "The specific speed is defined as:\n$$N_s = \\frac{N \\sqrt{Q}}{H^{3/4}}$$\nGiven $N = 1450\\text{ rpm}$, $Q = 0.04\\text{ m}^3/\\text{s}$, and $H = 16.0\\text{ m}$ ($16^{0.75} = (16^{0.25})^3 = 2^3 = 8$):\n$$N_s = \\frac{1450 \\times \\sqrt{0.04}}{8} = \\frac{1450 \\times 0.2000}{8} = 36.2$$",
+    "difficulty": "Moderate",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_027",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Pump affinity laws scaling powers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "According to the affinity laws for geometrically similar centrifugal pumps, how do performance variables scale with rotational speed $N$ for a fixed impeller diameter?",
+    "options": {
+      "A": "Discharge varies directly with speed ($Q \\propto N$)",
+      "B": "Head varies directly with the square of speed ($H \\propto N^2$)",
+      "C": "Power consumption varies directly with the cube of speed ($P \\propto N^3$)",
+      "D": "Efficiency varies directly with the fourth power of speed ($\\eta \\propto N^4$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Flow velocity $v \\propto u \\propto N \\implies Q \\propto N$ (A is true).\n2. Head $H \\propto v^2/2g \\propto N^2$ (B is true).\n3. Power $P = \\gamma Q H \\propto N \\cdot N^2 = N^3$ (C is true).\n4. Efficiency is dimensionless and remains approximately constant across modest speed shifts (D is false).",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_028",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Affinity law discharge scaling with speed",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A centrifugal irrigation pump running at a rotational speed of $N_1 = 1450\\text{ rpm}$ delivers a discharge of $Q_1 = 35.0\\text{ L/s}$. If the impeller diameter remains unchanged and the pump speed is increased to $N_2 = 1750\\text{ rpm}$, the new discharge $Q_2$ will be ________ $\\text{L/s}$ (round off to two decimal places).",
+    "correct_answer": "42.24",
+    "numerical_range": {
+      "min": 42.04,
+      "max": 42.44
+    },
+    "solution": "From the pump affinity laws for identical impeller diameter ($D_1 = D_2$):\n$$\\frac{Q_2}{Q_1} = \\frac{N_2}{N_1}$$\n$$Q_2 = Q_1 \\left( \\frac{N_2}{N_1} \\right) = 35.0 \\times \\left( \\frac{1750}{1450} \\right) = 35.0 \\times 1.2069 = 42.24\\text{ L/s}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_029",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Centrifugal pump specific speed",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A centrifugal pump operating at $N = 1450\\text{ rpm}$ delivers a discharge of $Q = 0.04\\text{ m}^3/\\text{s}$ against a total head of $H = 16.0\\text{ m}$. The specific speed ($N_s$) of the pump in SI metric units ($\\text{rpm}, \\text{m}^3/\\text{s}, \\text{m}$) is ________ (round off to one decimal place).",
+    "correct_answer": "36.2",
+    "numerical_range": {
+      "min": 35.7,
+      "max": 36.7
+    },
+    "solution": "The specific speed is defined as:\n$$N_s = \\frac{N \\sqrt{Q}}{H^{3/4}}$$\nGiven $N = 1450\\text{ rpm}$, $Q = 0.04\\text{ m}^3/\\text{s}$, and $H = 16.0\\text{ m}$ ($16^{0.75} = (16^{0.25})^3 = 2^3 = 8$):\n$$N_s = \\frac{1450 \\times \\sqrt{0.04}}{8} = \\frac{1450 \\times 0.2000}{8} = 36.2$$",
+    "difficulty": "Moderate",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_030",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Pump affinity laws scaling powers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "According to the affinity laws for geometrically similar centrifugal pumps, how do performance variables scale with rotational speed $N$ for a fixed impeller diameter?",
+    "options": {
+      "A": "Discharge varies directly with speed ($Q \\propto N$)",
+      "B": "Head varies directly with the square of speed ($H \\propto N^2$)",
+      "C": "Power consumption varies directly with the cube of speed ($P \\propto N^3$)",
+      "D": "Efficiency varies directly with the fourth power of speed ($\\eta \\propto N^4$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Flow velocity $v \\propto u \\propto N \\implies Q \\propto N$ (A is true).\n2. Head $H \\propto v^2/2g \\propto N^2$ (B is true).\n3. Power $P = \\gamma Q H \\propto N \\cdot N^2 = N^3$ (C is true).\n4. Efficiency is dimensionless and remains approximately constant across modest speed shifts (D is false).",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_031",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Affinity law discharge scaling with speed",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A centrifugal irrigation pump running at a rotational speed of $N_1 = 1450\\text{ rpm}$ delivers a discharge of $Q_1 = 25.0\\text{ L/s}$. If the impeller diameter remains unchanged and the pump speed is increased to $N_2 = 1750\\text{ rpm}$, the new discharge $Q_2$ will be ________ $\\text{L/s}$ (round off to two decimal places).",
+    "correct_answer": "30.17",
+    "numerical_range": {
+      "min": 29.97,
+      "max": 30.37
+    },
+    "solution": "From the pump affinity laws for identical impeller diameter ($D_1 = D_2$):\n$$\\frac{Q_2}{Q_1} = \\frac{N_2}{N_1}$$\n$$Q_2 = Q_1 \\left( \\frac{N_2}{N_1} \\right) = 25.0 \\times \\left( \\frac{1750}{1450} \\right) = 25.0 \\times 1.2069 = 30.17\\text{ L/s}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_032",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Centrifugal pump specific speed",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A centrifugal pump operating at $N = 1450\\text{ rpm}$ delivers a discharge of $Q = 0.04\\text{ m}^3/\\text{s}$ against a total head of $H = 16.0\\text{ m}$. The specific speed ($N_s$) of the pump in SI metric units ($\\text{rpm}, \\text{m}^3/\\text{s}, \\text{m}$) is ________ (round off to one decimal place).",
+    "correct_answer": "36.2",
+    "numerical_range": {
+      "min": 35.7,
+      "max": 36.7
+    },
+    "solution": "The specific speed is defined as:\n$$N_s = \\frac{N \\sqrt{Q}}{H^{3/4}}$$\nGiven $N = 1450\\text{ rpm}$, $Q = 0.04\\text{ m}^3/\\text{s}$, and $H = 16.0\\text{ m}$ ($16^{0.75} = (16^{0.25})^3 = 2^3 = 8$):\n$$N_s = \\frac{1450 \\times \\sqrt{0.04}}{8} = \\frac{1450 \\times 0.2000}{8} = 36.2$$",
+    "difficulty": "Moderate",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_033",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Pump affinity laws scaling powers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "According to the affinity laws for geometrically similar centrifugal pumps, how do performance variables scale with rotational speed $N$ for a fixed impeller diameter?",
+    "options": {
+      "A": "Discharge varies directly with speed ($Q \\propto N$)",
+      "B": "Head varies directly with the square of speed ($H \\propto N^2$)",
+      "C": "Power consumption varies directly with the cube of speed ($P \\propto N^3$)",
+      "D": "Efficiency varies directly with the fourth power of speed ($\\eta \\propto N^4$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Flow velocity $v \\propto u \\propto N \\implies Q \\propto N$ (A is true).\n2. Head $H \\propto v^2/2g \\propto N^2$ (B is true).\n3. Power $P = \\gamma Q H \\propto N \\cdot N^2 = N^3$ (C is true).\n4. Efficiency is dimensionless and remains approximately constant across modest speed shifts (D is false).",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_034",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Affinity law discharge scaling with speed",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A centrifugal irrigation pump running at a rotational speed of $N_1 = 1450\\text{ rpm}$ delivers a discharge of $Q_1 = 40.0\\text{ L/s}$. If the impeller diameter remains unchanged and the pump speed is increased to $N_2 = 1750\\text{ rpm}$, the new discharge $Q_2$ will be ________ $\\text{L/s}$ (round off to two decimal places).",
+    "correct_answer": "48.28",
+    "numerical_range": {
+      "min": 48.08,
+      "max": 48.48
+    },
+    "solution": "From the pump affinity laws for identical impeller diameter ($D_1 = D_2$):\n$$\\frac{Q_2}{Q_1} = \\frac{N_2}{N_1}$$\n$$Q_2 = Q_1 \\left( \\frac{N_2}{N_1} \\right) = 40.0 \\times \\left( \\frac{1750}{1450} \\right) = 40.0 \\times 1.2069 = 48.28\\text{ L/s}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_035",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Centrifugal pump specific speed",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A centrifugal pump operating at $N = 1450\\text{ rpm}$ delivers a discharge of $Q = 0.04\\text{ m}^3/\\text{s}$ against a total head of $H = 16.0\\text{ m}$. The specific speed ($N_s$) of the pump in SI metric units ($\\text{rpm}, \\text{m}^3/\\text{s}, \\text{m}$) is ________ (round off to one decimal place).",
+    "correct_answer": "36.2",
+    "numerical_range": {
+      "min": 35.7,
+      "max": 36.7
+    },
+    "solution": "The specific speed is defined as:\n$$N_s = \\frac{N \\sqrt{Q}}{H^{3/4}}$$\nGiven $N = 1450\\text{ rpm}$, $Q = 0.04\\text{ m}^3/\\text{s}$, and $H = 16.0\\text{ m}$ ($16^{0.75} = (16^{0.25})^3 = 2^3 = 8$):\n$$N_s = \\frac{1450 \\times \\sqrt{0.04}}{8} = \\frac{1450 \\times 0.2000}{8} = 36.2$$",
+    "difficulty": "Moderate",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_036",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Pump affinity laws scaling powers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "According to the affinity laws for geometrically similar centrifugal pumps, how do performance variables scale with rotational speed $N$ for a fixed impeller diameter?",
+    "options": {
+      "A": "Discharge varies directly with speed ($Q \\propto N$)",
+      "B": "Head varies directly with the square of speed ($H \\propto N^2$)",
+      "C": "Power consumption varies directly with the cube of speed ($P \\propto N^3$)",
+      "D": "Efficiency varies directly with the fourth power of speed ($\\eta \\propto N^4$)"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Flow velocity $v \\propto u \\propto N \\implies Q \\propto N$ (A is true).\n2. Head $H \\propto v^2/2g \\propto N^2$ (B is true).\n3. Power $P = \\gamma Q H \\propto N \\cdot N^2 = N^3$ (C is true).\n4. Efficiency is dimensionless and remains approximately constant across modest speed shifts (D is false).",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_037",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Affinity law discharge scaling with speed",
+    "type": "NAT",
+    "marks": 1,
+    "negative_marks": 0,
+    "question": "A centrifugal irrigation pump running at a rotational speed of $N_1 = 1450\\text{ rpm}$ delivers a discharge of $Q_1 = 30.0\\text{ L/s}$. If the impeller diameter remains unchanged and the pump speed is increased to $N_2 = 1750\\text{ rpm}$, the new discharge $Q_2$ will be ________ $\\text{L/s}$ (round off to two decimal places).",
+    "correct_answer": "36.21",
+    "numerical_range": {
+      "min": 36.01,
+      "max": 36.41
+    },
+    "solution": "From the pump affinity laws for identical impeller diameter ($D_1 = D_2$):\n$$\\frac{Q_2}{Q_1} = \\frac{N_2}{N_1}$$\n$$Q_2 = Q_1 \\left( \\frac{N_2}{N_1} \\right) = 30.0 \\times \\left( \\frac{1750}{1450} \\right) = 30.0 \\times 1.2069 = 36.21\\text{ L/s}$$",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)"
+  },
+  {
+    "id": "QB_EXP_IDE_PMP_038",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Centrifugal pump specific speed",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A centrifugal pump operating at $N = 1450\\text{ rpm}$ delivers a discharge of $Q = 0.04\\text{ m}^3/\\text{s}$ against a total head of $H = 16.0\\text{ m}$. The specific speed ($N_s$) of the pump in SI metric units ($\\text{rpm}, \\text{m}^3/\\text{s}, \\text{m}$) is ________ (round off to one decimal place).",
+    "correct_answer": "36.2",
+    "numerical_range": {
+      "min": 35.7,
+      "max": 36.7
+    },
+    "solution": "The specific speed is defined as:\n$$N_s = \\frac{N \\sqrt{Q}}{H^{3/4}}$$\nGiven $N = 1450\\text{ rpm}$, $Q = 0.04\\text{ m}^3/\\text{s}$, and $H = 16.0\\text{ m}$ ($16^{0.75} = (16^{0.25})^3 = 2^3 = 8$):\n$$N_s = \\frac{1450 \\times \\sqrt{0.04}}{8} = \\frac{1450 \\times 0.2000}{8} = 36.2$$",
+    "difficulty": "Moderate",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_001",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "NPSH Available calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A centrifugal pump is installed with a static suction lift of $h_s = 4.0\\text{ m}$. The suction pipe friction loss is $h_{fs} = 0.60\\text{ m}$. The atmospheric pressure head is $10.13\\text{ m}$ and water vapor pressure head at operating temperature is $0.24\\text{ m}$. The Net Positive Suction Head Available ($NPSH_A$) at the pump inlet is ________ $\\text{m}$ (round off to two decimal places).",
+    "correct_answer": "5.29",
+    "numerical_range": {
+      "min": 5.19,
+      "max": 5.39
+    },
+    "solution": "The Net Positive Suction Head Available is given by:\n$$NPSH_A = \\frac{P_{atm}}{\\gamma} - \\frac{P_v}{\\gamma} - h_s - h_{fs}$$\nGiven $\\frac{P_{atm}}{\\gamma} = 10.13\\text{ m}$, $\\frac{P_v}{\\gamma} = 0.24\\text{ m}$, $h_s = 4.0\\text{ m}$, and $h_{fs} = 0.60\\text{ m}$:\n$$NPSH_A = 10.13 - 0.24 - 4.0 - 0.60 = 5.29\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_002",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Cavitation prevention criterion",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "To strictly prevent cavitation in a centrifugal pump installation, the relationship between available and required NPSH must satisfy:",
+    "options": {
+      "A": "$NPSH_A > NPSH_R$ (typically with a safety margin of at least $0.5$ to $1.0\\text{ m}$)",
+      "B": "$NPSH_A = 0$",
+      "C": "$NPSH_A < NPSH_R$",
+      "D": "$NPSH_R = \\infty$"
+    },
+    "correct_answer": "A",
+    "solution": "Cavitation occurs when local pressure drops to or below vapor pressure $P_v$. To guarantee that fluid pressure remains above cavitation inception, Net Positive Suction Head Available ($NPSH_A$) must strictly exceed the manufacturer's required suction head ($NPSH_R$): $NPSH_A > NPSH_R$.",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_003",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Remedial measures against pump cavitation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following practical measures will effectively increase $NPSH_A$ and suppress cavitation in an agricultural pump?",
+    "options": {
+      "A": "Lowering the pump closer to the water sump surface (reducing static suction lift $h_s$)",
+      "B": "Increasing the diameter of the suction pipe to minimize friction losses",
+      "C": "Eliminating unnecessary sharp bends and elbows in the suction pipeline",
+      "D": "Operating the pump at water temperatures near boiling point"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Lowering $h_s$ directly increases $NPSH_A = H_{atm} - H_v - h_s - h_{fs}$ (A is true).\n2. Larger suction pipe diameter slashes velocity and friction loss $h_{fs} \\propto 1/D^5$ (B is true).\n3. Fewer fittings reduces minor losses in suction line (C is true).\n4. Higher water temperature dramatically raises vapor pressure $P_v$, slashing $NPSH_A$ and accelerating cavitation (D is false).",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_004",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "NPSH Available calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A centrifugal pump is installed with a static suction lift of $h_s = 3.5\\text{ m}$. The suction pipe friction loss is $h_{fs} = 0.60\\text{ m}$. The atmospheric pressure head is $10.13\\text{ m}$ and water vapor pressure head at operating temperature is $0.24\\text{ m}$. The Net Positive Suction Head Available ($NPSH_A$) at the pump inlet is ________ $\\text{m}$ (round off to two decimal places).",
+    "correct_answer": "5.79",
+    "numerical_range": {
+      "min": 5.69,
+      "max": 5.89
+    },
+    "solution": "The Net Positive Suction Head Available is given by:\n$$NPSH_A = \\frac{P_{atm}}{\\gamma} - \\frac{P_v}{\\gamma} - h_s - h_{fs}$$\nGiven $\\frac{P_{atm}}{\\gamma} = 10.13\\text{ m}$, $\\frac{P_v}{\\gamma} = 0.24\\text{ m}$, $h_s = 3.5\\text{ m}$, and $h_{fs} = 0.60\\text{ m}$:\n$$NPSH_A = 10.13 - 0.24 - 3.5 - 0.60 = 5.79\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_005",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Cavitation prevention criterion",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "To strictly prevent cavitation in a centrifugal pump installation, the relationship between available and required NPSH must satisfy:",
+    "options": {
+      "A": "$NPSH_A > NPSH_R$ (typically with a safety margin of at least $0.5$ to $1.0\\text{ m}$)",
+      "B": "$NPSH_A = 0$",
+      "C": "$NPSH_A < NPSH_R$",
+      "D": "$NPSH_R = \\infty$"
+    },
+    "correct_answer": "A",
+    "solution": "Cavitation occurs when local pressure drops to or below vapor pressure $P_v$. To guarantee that fluid pressure remains above cavitation inception, Net Positive Suction Head Available ($NPSH_A$) must strictly exceed the manufacturer's required suction head ($NPSH_R$): $NPSH_A > NPSH_R$.",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_006",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Remedial measures against pump cavitation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following practical measures will effectively increase $NPSH_A$ and suppress cavitation in an agricultural pump?",
+    "options": {
+      "A": "Lowering the pump closer to the water sump surface (reducing static suction lift $h_s$)",
+      "B": "Increasing the diameter of the suction pipe to minimize friction losses",
+      "C": "Eliminating unnecessary sharp bends and elbows in the suction pipeline",
+      "D": "Operating the pump at water temperatures near boiling point"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Lowering $h_s$ directly increases $NPSH_A = H_{atm} - H_v - h_s - h_{fs}$ (A is true).\n2. Larger suction pipe diameter slashes velocity and friction loss $h_{fs} \\propto 1/D^5$ (B is true).\n3. Fewer fittings reduces minor losses in suction line (C is true).\n4. Higher water temperature dramatically raises vapor pressure $P_v$, slashing $NPSH_A$ and accelerating cavitation (D is false).",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_007",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "NPSH Available calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A centrifugal pump is installed with a static suction lift of $h_s = 5.0\\text{ m}$. The suction pipe friction loss is $h_{fs} = 0.60\\text{ m}$. The atmospheric pressure head is $10.13\\text{ m}$ and water vapor pressure head at operating temperature is $0.24\\text{ m}$. The Net Positive Suction Head Available ($NPSH_A$) at the pump inlet is ________ $\\text{m}$ (round off to two decimal places).",
+    "correct_answer": "4.29",
+    "numerical_range": {
+      "min": 4.19,
+      "max": 4.39
+    },
+    "solution": "The Net Positive Suction Head Available is given by:\n$$NPSH_A = \\frac{P_{atm}}{\\gamma} - \\frac{P_v}{\\gamma} - h_s - h_{fs}$$\nGiven $\\frac{P_{atm}}{\\gamma} = 10.13\\text{ m}$, $\\frac{P_v}{\\gamma} = 0.24\\text{ m}$, $h_s = 5.0\\text{ m}$, and $h_{fs} = 0.60\\text{ m}$:\n$$NPSH_A = 10.13 - 0.24 - 5.0 - 0.60 = 4.29\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_008",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Cavitation prevention criterion",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "To strictly prevent cavitation in a centrifugal pump installation, the relationship between available and required NPSH must satisfy:",
+    "options": {
+      "A": "$NPSH_A > NPSH_R$ (typically with a safety margin of at least $0.5$ to $1.0\\text{ m}$)",
+      "B": "$NPSH_A = 0$",
+      "C": "$NPSH_A < NPSH_R$",
+      "D": "$NPSH_R = \\infty$"
+    },
+    "correct_answer": "A",
+    "solution": "Cavitation occurs when local pressure drops to or below vapor pressure $P_v$. To guarantee that fluid pressure remains above cavitation inception, Net Positive Suction Head Available ($NPSH_A$) must strictly exceed the manufacturer's required suction head ($NPSH_R$): $NPSH_A > NPSH_R$.",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_009",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Remedial measures against pump cavitation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following practical measures will effectively increase $NPSH_A$ and suppress cavitation in an agricultural pump?",
+    "options": {
+      "A": "Lowering the pump closer to the water sump surface (reducing static suction lift $h_s$)",
+      "B": "Increasing the diameter of the suction pipe to minimize friction losses",
+      "C": "Eliminating unnecessary sharp bends and elbows in the suction pipeline",
+      "D": "Operating the pump at water temperatures near boiling point"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Lowering $h_s$ directly increases $NPSH_A = H_{atm} - H_v - h_s - h_{fs}$ (A is true).\n2. Larger suction pipe diameter slashes velocity and friction loss $h_{fs} \\propto 1/D^5$ (B is true).\n3. Fewer fittings reduces minor losses in suction line (C is true).\n4. Higher water temperature dramatically raises vapor pressure $P_v$, slashing $NPSH_A$ and accelerating cavitation (D is false).",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_010",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "NPSH Available calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A centrifugal pump is installed with a static suction lift of $h_s = 4.5\\text{ m}$. The suction pipe friction loss is $h_{fs} = 0.60\\text{ m}$. The atmospheric pressure head is $10.13\\text{ m}$ and water vapor pressure head at operating temperature is $0.24\\text{ m}$. The Net Positive Suction Head Available ($NPSH_A$) at the pump inlet is ________ $\\text{m}$ (round off to two decimal places).",
+    "correct_answer": "4.79",
+    "numerical_range": {
+      "min": 4.69,
+      "max": 4.89
+    },
+    "solution": "The Net Positive Suction Head Available is given by:\n$$NPSH_A = \\frac{P_{atm}}{\\gamma} - \\frac{P_v}{\\gamma} - h_s - h_{fs}$$\nGiven $\\frac{P_{atm}}{\\gamma} = 10.13\\text{ m}$, $\\frac{P_v}{\\gamma} = 0.24\\text{ m}$, $h_s = 4.5\\text{ m}$, and $h_{fs} = 0.60\\text{ m}$:\n$$NPSH_A = 10.13 - 0.24 - 4.5 - 0.60 = 4.79\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_011",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Cavitation prevention criterion",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "To strictly prevent cavitation in a centrifugal pump installation, the relationship between available and required NPSH must satisfy:",
+    "options": {
+      "A": "$NPSH_A > NPSH_R$ (typically with a safety margin of at least $0.5$ to $1.0\\text{ m}$)",
+      "B": "$NPSH_A = 0$",
+      "C": "$NPSH_A < NPSH_R$",
+      "D": "$NPSH_R = \\infty$"
+    },
+    "correct_answer": "A",
+    "solution": "Cavitation occurs when local pressure drops to or below vapor pressure $P_v$. To guarantee that fluid pressure remains above cavitation inception, Net Positive Suction Head Available ($NPSH_A$) must strictly exceed the manufacturer's required suction head ($NPSH_R$): $NPSH_A > NPSH_R$.",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_012",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Remedial measures against pump cavitation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following practical measures will effectively increase $NPSH_A$ and suppress cavitation in an agricultural pump?",
+    "options": {
+      "A": "Lowering the pump closer to the water sump surface (reducing static suction lift $h_s$)",
+      "B": "Increasing the diameter of the suction pipe to minimize friction losses",
+      "C": "Eliminating unnecessary sharp bends and elbows in the suction pipeline",
+      "D": "Operating the pump at water temperatures near boiling point"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Lowering $h_s$ directly increases $NPSH_A = H_{atm} - H_v - h_s - h_{fs}$ (A is true).\n2. Larger suction pipe diameter slashes velocity and friction loss $h_{fs} \\propto 1/D^5$ (B is true).\n3. Fewer fittings reduces minor losses in suction line (C is true).\n4. Higher water temperature dramatically raises vapor pressure $P_v$, slashing $NPSH_A$ and accelerating cavitation (D is false).",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_013",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "NPSH Available calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A centrifugal pump is installed with a static suction lift of $h_s = 4.0\\text{ m}$. The suction pipe friction loss is $h_{fs} = 0.60\\text{ m}$. The atmospheric pressure head is $10.13\\text{ m}$ and water vapor pressure head at operating temperature is $0.24\\text{ m}$. The Net Positive Suction Head Available ($NPSH_A$) at the pump inlet is ________ $\\text{m}$ (round off to two decimal places).",
+    "correct_answer": "5.29",
+    "numerical_range": {
+      "min": 5.19,
+      "max": 5.39
+    },
+    "solution": "The Net Positive Suction Head Available is given by:\n$$NPSH_A = \\frac{P_{atm}}{\\gamma} - \\frac{P_v}{\\gamma} - h_s - h_{fs}$$\nGiven $\\frac{P_{atm}}{\\gamma} = 10.13\\text{ m}$, $\\frac{P_v}{\\gamma} = 0.24\\text{ m}$, $h_s = 4.0\\text{ m}$, and $h_{fs} = 0.60\\text{ m}$:\n$$NPSH_A = 10.13 - 0.24 - 4.0 - 0.60 = 5.29\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_014",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Cavitation prevention criterion",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "To strictly prevent cavitation in a centrifugal pump installation, the relationship between available and required NPSH must satisfy:",
+    "options": {
+      "A": "$NPSH_A > NPSH_R$ (typically with a safety margin of at least $0.5$ to $1.0\\text{ m}$)",
+      "B": "$NPSH_A = 0$",
+      "C": "$NPSH_A < NPSH_R$",
+      "D": "$NPSH_R = \\infty$"
+    },
+    "correct_answer": "A",
+    "solution": "Cavitation occurs when local pressure drops to or below vapor pressure $P_v$. To guarantee that fluid pressure remains above cavitation inception, Net Positive Suction Head Available ($NPSH_A$) must strictly exceed the manufacturer's required suction head ($NPSH_R$): $NPSH_A > NPSH_R$.",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_015",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Remedial measures against pump cavitation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following practical measures will effectively increase $NPSH_A$ and suppress cavitation in an agricultural pump?",
+    "options": {
+      "A": "Lowering the pump closer to the water sump surface (reducing static suction lift $h_s$)",
+      "B": "Increasing the diameter of the suction pipe to minimize friction losses",
+      "C": "Eliminating unnecessary sharp bends and elbows in the suction pipeline",
+      "D": "Operating the pump at water temperatures near boiling point"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Lowering $h_s$ directly increases $NPSH_A = H_{atm} - H_v - h_s - h_{fs}$ (A is true).\n2. Larger suction pipe diameter slashes velocity and friction loss $h_{fs} \\propto 1/D^5$ (B is true).\n3. Fewer fittings reduces minor losses in suction line (C is true).\n4. Higher water temperature dramatically raises vapor pressure $P_v$, slashing $NPSH_A$ and accelerating cavitation (D is false).",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_016",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "NPSH Available calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A centrifugal pump is installed with a static suction lift of $h_s = 3.5\\text{ m}$. The suction pipe friction loss is $h_{fs} = 0.60\\text{ m}$. The atmospheric pressure head is $10.13\\text{ m}$ and water vapor pressure head at operating temperature is $0.24\\text{ m}$. The Net Positive Suction Head Available ($NPSH_A$) at the pump inlet is ________ $\\text{m}$ (round off to two decimal places).",
+    "correct_answer": "5.79",
+    "numerical_range": {
+      "min": 5.69,
+      "max": 5.89
+    },
+    "solution": "The Net Positive Suction Head Available is given by:\n$$NPSH_A = \\frac{P_{atm}}{\\gamma} - \\frac{P_v}{\\gamma} - h_s - h_{fs}$$\nGiven $\\frac{P_{atm}}{\\gamma} = 10.13\\text{ m}$, $\\frac{P_v}{\\gamma} = 0.24\\text{ m}$, $h_s = 3.5\\text{ m}$, and $h_{fs} = 0.60\\text{ m}$:\n$$NPSH_A = 10.13 - 0.24 - 3.5 - 0.60 = 5.79\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_017",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Cavitation prevention criterion",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "To strictly prevent cavitation in a centrifugal pump installation, the relationship between available and required NPSH must satisfy:",
+    "options": {
+      "A": "$NPSH_A > NPSH_R$ (typically with a safety margin of at least $0.5$ to $1.0\\text{ m}$)",
+      "B": "$NPSH_A = 0$",
+      "C": "$NPSH_A < NPSH_R$",
+      "D": "$NPSH_R = \\infty$"
+    },
+    "correct_answer": "A",
+    "solution": "Cavitation occurs when local pressure drops to or below vapor pressure $P_v$. To guarantee that fluid pressure remains above cavitation inception, Net Positive Suction Head Available ($NPSH_A$) must strictly exceed the manufacturer's required suction head ($NPSH_R$): $NPSH_A > NPSH_R$.",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_018",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Remedial measures against pump cavitation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following practical measures will effectively increase $NPSH_A$ and suppress cavitation in an agricultural pump?",
+    "options": {
+      "A": "Lowering the pump closer to the water sump surface (reducing static suction lift $h_s$)",
+      "B": "Increasing the diameter of the suction pipe to minimize friction losses",
+      "C": "Eliminating unnecessary sharp bends and elbows in the suction pipeline",
+      "D": "Operating the pump at water temperatures near boiling point"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Lowering $h_s$ directly increases $NPSH_A = H_{atm} - H_v - h_s - h_{fs}$ (A is true).\n2. Larger suction pipe diameter slashes velocity and friction loss $h_{fs} \\propto 1/D^5$ (B is true).\n3. Fewer fittings reduces minor losses in suction line (C is true).\n4. Higher water temperature dramatically raises vapor pressure $P_v$, slashing $NPSH_A$ and accelerating cavitation (D is false).",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_019",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "NPSH Available calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A centrifugal pump is installed with a static suction lift of $h_s = 5.0\\text{ m}$. The suction pipe friction loss is $h_{fs} = 0.60\\text{ m}$. The atmospheric pressure head is $10.13\\text{ m}$ and water vapor pressure head at operating temperature is $0.24\\text{ m}$. The Net Positive Suction Head Available ($NPSH_A$) at the pump inlet is ________ $\\text{m}$ (round off to two decimal places).",
+    "correct_answer": "4.29",
+    "numerical_range": {
+      "min": 4.19,
+      "max": 4.39
+    },
+    "solution": "The Net Positive Suction Head Available is given by:\n$$NPSH_A = \\frac{P_{atm}}{\\gamma} - \\frac{P_v}{\\gamma} - h_s - h_{fs}$$\nGiven $\\frac{P_{atm}}{\\gamma} = 10.13\\text{ m}$, $\\frac{P_v}{\\gamma} = 0.24\\text{ m}$, $h_s = 5.0\\text{ m}$, and $h_{fs} = 0.60\\text{ m}$:\n$$NPSH_A = 10.13 - 0.24 - 5.0 - 0.60 = 4.29\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_020",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Cavitation prevention criterion",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "To strictly prevent cavitation in a centrifugal pump installation, the relationship between available and required NPSH must satisfy:",
+    "options": {
+      "A": "$NPSH_A > NPSH_R$ (typically with a safety margin of at least $0.5$ to $1.0\\text{ m}$)",
+      "B": "$NPSH_A = 0$",
+      "C": "$NPSH_A < NPSH_R$",
+      "D": "$NPSH_R = \\infty$"
+    },
+    "correct_answer": "A",
+    "solution": "Cavitation occurs when local pressure drops to or below vapor pressure $P_v$. To guarantee that fluid pressure remains above cavitation inception, Net Positive Suction Head Available ($NPSH_A$) must strictly exceed the manufacturer's required suction head ($NPSH_R$): $NPSH_A > NPSH_R$.",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_021",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Remedial measures against pump cavitation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following practical measures will effectively increase $NPSH_A$ and suppress cavitation in an agricultural pump?",
+    "options": {
+      "A": "Lowering the pump closer to the water sump surface (reducing static suction lift $h_s$)",
+      "B": "Increasing the diameter of the suction pipe to minimize friction losses",
+      "C": "Eliminating unnecessary sharp bends and elbows in the suction pipeline",
+      "D": "Operating the pump at water temperatures near boiling point"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Lowering $h_s$ directly increases $NPSH_A = H_{atm} - H_v - h_s - h_{fs}$ (A is true).\n2. Larger suction pipe diameter slashes velocity and friction loss $h_{fs} \\propto 1/D^5$ (B is true).\n3. Fewer fittings reduces minor losses in suction line (C is true).\n4. Higher water temperature dramatically raises vapor pressure $P_v$, slashing $NPSH_A$ and accelerating cavitation (D is false).",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_022",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "NPSH Available calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A centrifugal pump is installed with a static suction lift of $h_s = 4.5\\text{ m}$. The suction pipe friction loss is $h_{fs} = 0.60\\text{ m}$. The atmospheric pressure head is $10.13\\text{ m}$ and water vapor pressure head at operating temperature is $0.24\\text{ m}$. The Net Positive Suction Head Available ($NPSH_A$) at the pump inlet is ________ $\\text{m}$ (round off to two decimal places).",
+    "correct_answer": "4.79",
+    "numerical_range": {
+      "min": 4.69,
+      "max": 4.89
+    },
+    "solution": "The Net Positive Suction Head Available is given by:\n$$NPSH_A = \\frac{P_{atm}}{\\gamma} - \\frac{P_v}{\\gamma} - h_s - h_{fs}$$\nGiven $\\frac{P_{atm}}{\\gamma} = 10.13\\text{ m}$, $\\frac{P_v}{\\gamma} = 0.24\\text{ m}$, $h_s = 4.5\\text{ m}$, and $h_{fs} = 0.60\\text{ m}$:\n$$NPSH_A = 10.13 - 0.24 - 4.5 - 0.60 = 4.79\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_023",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Cavitation prevention criterion",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "To strictly prevent cavitation in a centrifugal pump installation, the relationship between available and required NPSH must satisfy:",
+    "options": {
+      "A": "$NPSH_A > NPSH_R$ (typically with a safety margin of at least $0.5$ to $1.0\\text{ m}$)",
+      "B": "$NPSH_A = 0$",
+      "C": "$NPSH_A < NPSH_R$",
+      "D": "$NPSH_R = \\infty$"
+    },
+    "correct_answer": "A",
+    "solution": "Cavitation occurs when local pressure drops to or below vapor pressure $P_v$. To guarantee that fluid pressure remains above cavitation inception, Net Positive Suction Head Available ($NPSH_A$) must strictly exceed the manufacturer's required suction head ($NPSH_R$): $NPSH_A > NPSH_R$.",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_024",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Remedial measures against pump cavitation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following practical measures will effectively increase $NPSH_A$ and suppress cavitation in an agricultural pump?",
+    "options": {
+      "A": "Lowering the pump closer to the water sump surface (reducing static suction lift $h_s$)",
+      "B": "Increasing the diameter of the suction pipe to minimize friction losses",
+      "C": "Eliminating unnecessary sharp bends and elbows in the suction pipeline",
+      "D": "Operating the pump at water temperatures near boiling point"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Lowering $h_s$ directly increases $NPSH_A = H_{atm} - H_v - h_s - h_{fs}$ (A is true).\n2. Larger suction pipe diameter slashes velocity and friction loss $h_{fs} \\propto 1/D^5$ (B is true).\n3. Fewer fittings reduces minor losses in suction line (C is true).\n4. Higher water temperature dramatically raises vapor pressure $P_v$, slashing $NPSH_A$ and accelerating cavitation (D is false).",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_025",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "NPSH Available calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A centrifugal pump is installed with a static suction lift of $h_s = 4.0\\text{ m}$. The suction pipe friction loss is $h_{fs} = 0.60\\text{ m}$. The atmospheric pressure head is $10.13\\text{ m}$ and water vapor pressure head at operating temperature is $0.24\\text{ m}$. The Net Positive Suction Head Available ($NPSH_A$) at the pump inlet is ________ $\\text{m}$ (round off to two decimal places).",
+    "correct_answer": "5.29",
+    "numerical_range": {
+      "min": 5.19,
+      "max": 5.39
+    },
+    "solution": "The Net Positive Suction Head Available is given by:\n$$NPSH_A = \\frac{P_{atm}}{\\gamma} - \\frac{P_v}{\\gamma} - h_s - h_{fs}$$\nGiven $\\frac{P_{atm}}{\\gamma} = 10.13\\text{ m}$, $\\frac{P_v}{\\gamma} = 0.24\\text{ m}$, $h_s = 4.0\\text{ m}$, and $h_{fs} = 0.60\\text{ m}$:\n$$NPSH_A = 10.13 - 0.24 - 4.0 - 0.60 = 5.29\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_026",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Cavitation prevention criterion",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "To strictly prevent cavitation in a centrifugal pump installation, the relationship between available and required NPSH must satisfy:",
+    "options": {
+      "A": "$NPSH_A > NPSH_R$ (typically with a safety margin of at least $0.5$ to $1.0\\text{ m}$)",
+      "B": "$NPSH_A = 0$",
+      "C": "$NPSH_A < NPSH_R$",
+      "D": "$NPSH_R = \\infty$"
+    },
+    "correct_answer": "A",
+    "solution": "Cavitation occurs when local pressure drops to or below vapor pressure $P_v$. To guarantee that fluid pressure remains above cavitation inception, Net Positive Suction Head Available ($NPSH_A$) must strictly exceed the manufacturer's required suction head ($NPSH_R$): $NPSH_A > NPSH_R$.",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_027",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Remedial measures against pump cavitation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following practical measures will effectively increase $NPSH_A$ and suppress cavitation in an agricultural pump?",
+    "options": {
+      "A": "Lowering the pump closer to the water sump surface (reducing static suction lift $h_s$)",
+      "B": "Increasing the diameter of the suction pipe to minimize friction losses",
+      "C": "Eliminating unnecessary sharp bends and elbows in the suction pipeline",
+      "D": "Operating the pump at water temperatures near boiling point"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Lowering $h_s$ directly increases $NPSH_A = H_{atm} - H_v - h_s - h_{fs}$ (A is true).\n2. Larger suction pipe diameter slashes velocity and friction loss $h_{fs} \\propto 1/D^5$ (B is true).\n3. Fewer fittings reduces minor losses in suction line (C is true).\n4. Higher water temperature dramatically raises vapor pressure $P_v$, slashing $NPSH_A$ and accelerating cavitation (D is false).",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_028",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "NPSH Available calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A centrifugal pump is installed with a static suction lift of $h_s = 3.5\\text{ m}$. The suction pipe friction loss is $h_{fs} = 0.60\\text{ m}$. The atmospheric pressure head is $10.13\\text{ m}$ and water vapor pressure head at operating temperature is $0.24\\text{ m}$. The Net Positive Suction Head Available ($NPSH_A$) at the pump inlet is ________ $\\text{m}$ (round off to two decimal places).",
+    "correct_answer": "5.79",
+    "numerical_range": {
+      "min": 5.69,
+      "max": 5.89
+    },
+    "solution": "The Net Positive Suction Head Available is given by:\n$$NPSH_A = \\frac{P_{atm}}{\\gamma} - \\frac{P_v}{\\gamma} - h_s - h_{fs}$$\nGiven $\\frac{P_{atm}}{\\gamma} = 10.13\\text{ m}$, $\\frac{P_v}{\\gamma} = 0.24\\text{ m}$, $h_s = 3.5\\text{ m}$, and $h_{fs} = 0.60\\text{ m}$:\n$$NPSH_A = 10.13 - 0.24 - 3.5 - 0.60 = 5.79\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_029",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Cavitation prevention criterion",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "To strictly prevent cavitation in a centrifugal pump installation, the relationship between available and required NPSH must satisfy:",
+    "options": {
+      "A": "$NPSH_A > NPSH_R$ (typically with a safety margin of at least $0.5$ to $1.0\\text{ m}$)",
+      "B": "$NPSH_A = 0$",
+      "C": "$NPSH_A < NPSH_R$",
+      "D": "$NPSH_R = \\infty$"
+    },
+    "correct_answer": "A",
+    "solution": "Cavitation occurs when local pressure drops to or below vapor pressure $P_v$. To guarantee that fluid pressure remains above cavitation inception, Net Positive Suction Head Available ($NPSH_A$) must strictly exceed the manufacturer's required suction head ($NPSH_R$): $NPSH_A > NPSH_R$.",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_030",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Remedial measures against pump cavitation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following practical measures will effectively increase $NPSH_A$ and suppress cavitation in an agricultural pump?",
+    "options": {
+      "A": "Lowering the pump closer to the water sump surface (reducing static suction lift $h_s$)",
+      "B": "Increasing the diameter of the suction pipe to minimize friction losses",
+      "C": "Eliminating unnecessary sharp bends and elbows in the suction pipeline",
+      "D": "Operating the pump at water temperatures near boiling point"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Lowering $h_s$ directly increases $NPSH_A = H_{atm} - H_v - h_s - h_{fs}$ (A is true).\n2. Larger suction pipe diameter slashes velocity and friction loss $h_{fs} \\propto 1/D^5$ (B is true).\n3. Fewer fittings reduces minor losses in suction line (C is true).\n4. Higher water temperature dramatically raises vapor pressure $P_v$, slashing $NPSH_A$ and accelerating cavitation (D is false).",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_031",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "NPSH Available calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A centrifugal pump is installed with a static suction lift of $h_s = 5.0\\text{ m}$. The suction pipe friction loss is $h_{fs} = 0.60\\text{ m}$. The atmospheric pressure head is $10.13\\text{ m}$ and water vapor pressure head at operating temperature is $0.24\\text{ m}$. The Net Positive Suction Head Available ($NPSH_A$) at the pump inlet is ________ $\\text{m}$ (round off to two decimal places).",
+    "correct_answer": "4.29",
+    "numerical_range": {
+      "min": 4.19,
+      "max": 4.39
+    },
+    "solution": "The Net Positive Suction Head Available is given by:\n$$NPSH_A = \\frac{P_{atm}}{\\gamma} - \\frac{P_v}{\\gamma} - h_s - h_{fs}$$\nGiven $\\frac{P_{atm}}{\\gamma} = 10.13\\text{ m}$, $\\frac{P_v}{\\gamma} = 0.24\\text{ m}$, $h_s = 5.0\\text{ m}$, and $h_{fs} = 0.60\\text{ m}$:\n$$NPSH_A = 10.13 - 0.24 - 5.0 - 0.60 = 4.29\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_032",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Cavitation prevention criterion",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "To strictly prevent cavitation in a centrifugal pump installation, the relationship between available and required NPSH must satisfy:",
+    "options": {
+      "A": "$NPSH_A > NPSH_R$ (typically with a safety margin of at least $0.5$ to $1.0\\text{ m}$)",
+      "B": "$NPSH_A = 0$",
+      "C": "$NPSH_A < NPSH_R$",
+      "D": "$NPSH_R = \\infty$"
+    },
+    "correct_answer": "A",
+    "solution": "Cavitation occurs when local pressure drops to or below vapor pressure $P_v$. To guarantee that fluid pressure remains above cavitation inception, Net Positive Suction Head Available ($NPSH_A$) must strictly exceed the manufacturer's required suction head ($NPSH_R$): $NPSH_A > NPSH_R$.",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_033",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Remedial measures against pump cavitation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following practical measures will effectively increase $NPSH_A$ and suppress cavitation in an agricultural pump?",
+    "options": {
+      "A": "Lowering the pump closer to the water sump surface (reducing static suction lift $h_s$)",
+      "B": "Increasing the diameter of the suction pipe to minimize friction losses",
+      "C": "Eliminating unnecessary sharp bends and elbows in the suction pipeline",
+      "D": "Operating the pump at water temperatures near boiling point"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Lowering $h_s$ directly increases $NPSH_A = H_{atm} - H_v - h_s - h_{fs}$ (A is true).\n2. Larger suction pipe diameter slashes velocity and friction loss $h_{fs} \\propto 1/D^5$ (B is true).\n3. Fewer fittings reduces minor losses in suction line (C is true).\n4. Higher water temperature dramatically raises vapor pressure $P_v$, slashing $NPSH_A$ and accelerating cavitation (D is false).",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_034",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "NPSH Available calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A centrifugal pump is installed with a static suction lift of $h_s = 4.5\\text{ m}$. The suction pipe friction loss is $h_{fs} = 0.60\\text{ m}$. The atmospheric pressure head is $10.13\\text{ m}$ and water vapor pressure head at operating temperature is $0.24\\text{ m}$. The Net Positive Suction Head Available ($NPSH_A$) at the pump inlet is ________ $\\text{m}$ (round off to two decimal places).",
+    "correct_answer": "4.79",
+    "numerical_range": {
+      "min": 4.69,
+      "max": 4.89
+    },
+    "solution": "The Net Positive Suction Head Available is given by:\n$$NPSH_A = \\frac{P_{atm}}{\\gamma} - \\frac{P_v}{\\gamma} - h_s - h_{fs}$$\nGiven $\\frac{P_{atm}}{\\gamma} = 10.13\\text{ m}$, $\\frac{P_v}{\\gamma} = 0.24\\text{ m}$, $h_s = 4.5\\text{ m}$, and $h_{fs} = 0.60\\text{ m}$:\n$$NPSH_A = 10.13 - 0.24 - 4.5 - 0.60 = 4.79\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_035",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Cavitation prevention criterion",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "To strictly prevent cavitation in a centrifugal pump installation, the relationship between available and required NPSH must satisfy:",
+    "options": {
+      "A": "$NPSH_A > NPSH_R$ (typically with a safety margin of at least $0.5$ to $1.0\\text{ m}$)",
+      "B": "$NPSH_A = 0$",
+      "C": "$NPSH_A < NPSH_R$",
+      "D": "$NPSH_R = \\infty$"
+    },
+    "correct_answer": "A",
+    "solution": "Cavitation occurs when local pressure drops to or below vapor pressure $P_v$. To guarantee that fluid pressure remains above cavitation inception, Net Positive Suction Head Available ($NPSH_A$) must strictly exceed the manufacturer's required suction head ($NPSH_R$): $NPSH_A > NPSH_R$.",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_036",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Remedial measures against pump cavitation",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following practical measures will effectively increase $NPSH_A$ and suppress cavitation in an agricultural pump?",
+    "options": {
+      "A": "Lowering the pump closer to the water sump surface (reducing static suction lift $h_s$)",
+      "B": "Increasing the diameter of the suction pipe to minimize friction losses",
+      "C": "Eliminating unnecessary sharp bends and elbows in the suction pipeline",
+      "D": "Operating the pump at water temperatures near boiling point"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "1. Lowering $h_s$ directly increases $NPSH_A = H_{atm} - H_v - h_s - h_{fs}$ (A is true).\n2. Larger suction pipe diameter slashes velocity and friction loss $h_{fs} \\propto 1/D^5$ (B is true).\n3. Fewer fittings reduces minor losses in suction line (C is true).\n4. Higher water temperature dramatically raises vapor pressure $P_v$, slashing $NPSH_A$ and accelerating cavitation (D is false).",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_037",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "NPSH Available calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A centrifugal pump is installed with a static suction lift of $h_s = 4.0\\text{ m}$. The suction pipe friction loss is $h_{fs} = 0.60\\text{ m}$. The atmospheric pressure head is $10.13\\text{ m}$ and water vapor pressure head at operating temperature is $0.24\\text{ m}$. The Net Positive Suction Head Available ($NPSH_A$) at the pump inlet is ________ $\\text{m}$ (round off to two decimal places).",
+    "correct_answer": "5.29",
+    "numerical_range": {
+      "min": 5.19,
+      "max": 5.39
+    },
+    "solution": "The Net Positive Suction Head Available is given by:\n$$NPSH_A = \\frac{P_{atm}}{\\gamma} - \\frac{P_v}{\\gamma} - h_s - h_{fs}$$\nGiven $\\frac{P_{atm}}{\\gamma} = 10.13\\text{ m}$, $\\frac{P_v}{\\gamma} = 0.24\\text{ m}$, $h_s = 4.0\\text{ m}$, and $h_{fs} = 0.60\\text{ m}$:\n$$NPSH_A = 10.13 - 0.24 - 4.0 - 0.60 = 5.29\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_EXP_IDE_CAV_038",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Cavitation prevention criterion",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "To strictly prevent cavitation in a centrifugal pump installation, the relationship between available and required NPSH must satisfy:",
+    "options": {
+      "A": "$NPSH_A > NPSH_R$ (typically with a safety margin of at least $0.5$ to $1.0\\text{ m}$)",
+      "B": "$NPSH_A = 0$",
+      "C": "$NPSH_A < NPSH_R$",
+      "D": "$NPSH_R = \\infty$"
+    },
+    "correct_answer": "A",
+    "solution": "Cavitation occurs when local pressure drops to or below vapor pressure $P_v$. To guarantee that fluid pressure remains above cavitation inception, Net Positive Suction Head Available ($NPSH_A$) must strictly exceed the manufacturer's required suction head ($NPSH_R$): $NPSH_A > NPSH_R$.",
+    "difficulty": "Easy",
+    "source": "Fluid Mechanics (A.K. Jain)"
+  },
+  {
+    "id": "QB_SUB_IDE_0001",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relationship",
+    "subtopic": "Consumptive use and evapotranspiration",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For a maize crop at peak vegetative stage, the crop coefficient is $K_c = 0.80$. If the reference crop evapotranspiration is $ET_0 = 5.0\\text{ mm/day}$, the crop evapotranspiration $ET_c$ (in mm/day) is:",
+    "solution": "Crop evapotranspiration:\n$$ET_c = K_c \\times ET_0 = 0.80 \\times 5.0 = 4.00\\text{ mm/day}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 4.0,
+    "answer_range": [
+      3.9,
+      4.1
+    ],
+    "correct_answer": "4.0",
+    "numerical_range": {
+      "min": 3.9,
+      "max": 4.1
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0002",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relationship",
+    "subtopic": "Consumptive use and evapotranspiration",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The reference crop evapotranspiration ($ET_0$) in the standardized FAO-56 Penman-Monteith equation is defined for an idealized hypothetical grass reference crop having an assumed height of:",
+    "solution": "FAO-56 standard reference surface is a hypothetical grass reference crop with an assumed height of $0.12\\text{ m}$, surface resistance of $70\\text{ s/m}$, and albedo of $0.23$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "0.12 m with surface resistance of 70 s/m and albedo of 0.23",
+      "B": "0.50 m with albedo of 0.10",
+      "C": "1.0 m alfalfa crop",
+      "D": "Zero vegetative height (bare soil)"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0003",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relationship",
+    "subtopic": "Consumptive use and evapotranspiration",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For a maize crop at peak vegetative stage, the crop coefficient is $K_c = 1.10$. If the reference crop evapotranspiration is $ET_0 = 6.0\\text{ mm/day}$, the crop evapotranspiration $ET_c$ (in mm/day) is:",
+    "solution": "Crop evapotranspiration:\n$$ET_c = K_c \\times ET_0 = 1.10 \\times 6.0 = 6.60\\text{ mm/day}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 6.6,
+    "answer_range": [
+      6.5,
+      6.7
+    ],
+    "correct_answer": "6.6",
+    "numerical_range": {
+      "min": 6.5,
+      "max": 6.7
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0004",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relationship",
+    "subtopic": "Consumptive use and evapotranspiration",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The reference crop evapotranspiration ($ET_0$) in the standardized FAO-56 Penman-Monteith equation is defined for an idealized hypothetical grass reference crop having an assumed height of:",
+    "solution": "FAO-56 standard reference surface is a hypothetical grass reference crop with an assumed height of $0.12\\text{ m}$, surface resistance of $70\\text{ s/m}$, and albedo of $0.23$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "0.12 m with surface resistance of 70 s/m and albedo of 0.23",
+      "B": "0.50 m with albedo of 0.10",
+      "C": "1.0 m alfalfa crop",
+      "D": "Zero vegetative height (bare soil)"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0005",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relationship",
+    "subtopic": "Consumptive use and evapotranspiration",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For a maize crop at peak vegetative stage, the crop coefficient is $K_c = 0.95$. If the reference crop evapotranspiration is $ET_0 = 5.0\\text{ mm/day}$, the crop evapotranspiration $ET_c$ (in mm/day) is:",
+    "solution": "Crop evapotranspiration:\n$$ET_c = K_c \\times ET_0 = 0.95 \\times 5.0 = 4.75\\text{ mm/day}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 4.75,
+    "answer_range": [
+      4.65,
+      4.85
+    ],
+    "correct_answer": "4.75",
+    "numerical_range": {
+      "min": 4.65,
+      "max": 4.85
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0006",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relationship",
+    "subtopic": "Measurement of infiltration, soil moisture and irrigation water infiltration",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Using Kostiakov's infiltration equation $F = 4.0 t^{0.6}$ (where cumulative depth $F$ is in cm and time $t$ is in hours), the infiltration rate $f = \\frac{dF}{dt}$ at $t = 1.0\\text{ hour}$ (in cm/h) is:",
+    "solution": "Kostiakov equation:\n$$F = a t^b = 4.0 t^{0.6}$$\nInfiltration rate:\n$$f = \\frac{dF}{dt} = a b t^{b-1} = 4.0 \\times 0.6 \\times (1.0)^{-0.4} = 2.40\\text{ cm/h}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 2.4,
+    "answer_range": [
+      2.35,
+      2.45
+    ],
+    "correct_answer": "2.4",
+    "numerical_range": {
+      "min": 2.35,
+      "max": 2.45
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0007",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relationship",
+    "subtopic": "Measurement of infiltration, soil moisture and irrigation water infiltration",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A double-ring infiltrometer is preferred over a single-ring infiltrometer primarily because:",
+    "solution": "The outer ring acts as a hydraulic buffer, ensuring that flow beneath the inner cylinder is strictly one-dimensional vertical infiltration.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "The outer buffer ring minimizes lateral divergence of water flow beneath the inner measuring cylinder",
+      "B": "It operates without needing water",
+      "C": "It doubles the measured infiltration rate automatically",
+      "D": "It measures groundwater table depth directly"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0008",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Groundwater occurrence",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A geologic formation that stores water but is incapable of transmitting significant quantities to wells (e.g. clay layer) is termed an:",
+    "solution": "An aquiclude stores water (high porosity) but has very low permeability, preventing economic extraction. An aquifuge neither stores nor transmits water (solid granite).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Aquiclude",
+      "B": "Aquifer",
+      "C": "Aquifuge",
+      "D": "Artesian basin"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0009",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Groundwater occurrence",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "An unconfined aquifer has an aerial extent of $5.0\\text{ km}^2$. The specific yield of the aquifer is $S_y = 0.16$. If the water table drops by an average depth of $2.0\\text{ m}$, the total volume of groundwater released from storage (in million cubic meters, $10^6\\text{ m}^3$) is:",
+    "solution": "Volume released:\n$$V = A \\times \\Delta h \\times S_y = (5.0 \\times 10^6\\text{ m}^2) \\times 2.0\\text{ m} \\times 0.16 = 1.60 \\times 10^6\\text{ m}^3$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 1.6,
+    "answer_range": [
+      1.58,
+      1.62
+    ],
+    "correct_answer": "1.6",
+    "numerical_range": {
+      "min": 1.58,
+      "max": 1.62
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0010",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Groundwater occurrence",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In surface electrical resistivity surveys for groundwater exploration (Schlumberger and Wenner electrode arrays):",
+    "solution": "DC or low-frequency AC is applied through outer current electrodes A, B, and potential difference is measured across inner potential electrodes M, N.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Current is injected into the ground through outer electrodes $A$ and $B$",
+      "B": "Potential drop is measured across inner electrodes $M$ and $N$",
+      "C": "Apparent resistivity $\\rho_a = K \\frac{\\Delta V}{I}$ where $K$ is the geometric configuration factor",
+      "D": "Direct current cannot be used under any circumstances"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_IDE_0011",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Groundwater occurrence",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A geologic formation that stores water but is incapable of transmitting significant quantities to wells (e.g. clay layer) is termed an:",
+    "solution": "An aquiclude stores water (high porosity) but has very low permeability, preventing economic extraction. An aquifuge neither stores nor transmits water (solid granite).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Aquiclude",
+      "B": "Aquifer",
+      "C": "Aquifuge",
+      "D": "Artesian basin"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0012",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Groundwater occurrence",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "An unconfined aquifer has an aerial extent of $5.0\\text{ km}^2$. The specific yield of the aquifer is $S_y = 0.16$. If the water table drops by an average depth of $2.0\\text{ m}$, the total volume of groundwater released from storage (in million cubic meters, $10^6\\text{ m}^3$) is:",
+    "solution": "Volume released:\n$$V = A \\times \\Delta h \\times S_y = (5.0 \\times 10^6\\text{ m}^2) \\times 2.0\\text{ m} \\times 0.16 = 1.60 \\times 10^6\\text{ m}^3$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 1.6,
+    "answer_range": [
+      1.58,
+      1.62
+    ],
+    "correct_answer": "1.6",
+    "numerical_range": {
+      "min": 1.58,
+      "max": 1.62
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0013",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Groundwater occurrence",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In surface electrical resistivity surveys for groundwater exploration (Schlumberger and Wenner electrode arrays):",
+    "solution": "DC or low-frequency AC is applied through outer current electrodes A, B, and potential difference is measured across inner potential electrodes M, N.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Current is injected into the ground through outer electrodes $A$ and $B$",
+      "B": "Potential drop is measured across inner electrodes $M$ and $N$",
+      "C": "Apparent resistivity $\\rho_a = K \\frac{\\Delta V}{I}$ where $K$ is the geometric configuration factor",
+      "D": "Direct current cannot be used under any circumstances"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_IDE_0014",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Groundwater occurrence",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A geologic formation that stores water but is incapable of transmitting significant quantities to wells (e.g. clay layer) is termed an:",
+    "solution": "An aquiclude stores water (high porosity) but has very low permeability, preventing economic extraction. An aquifuge neither stores nor transmits water (solid granite).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Aquiclude",
+      "B": "Aquifer",
+      "C": "Aquifuge",
+      "D": "Artesian basin"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0015",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Groundwater movement; Darcy's Law",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In an unconfined aquifer with an effective porosity of $\\eta_e = 0.25$, Darcy velocity is measured as $v = 0.40\\text{ m/day}$. The actual seepage velocity of groundwater (in m/day) is:",
+    "solution": "Seepage velocity:\n$$v_s = \\frac{v}{\\eta_e} = \\frac{0.40}{0.25} = 1.60\\text{ m/day}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 1.6,
+    "answer_range": [
+      1.55,
+      1.65
+    ],
+    "correct_answer": "1.6",
+    "numerical_range": {
+      "min": 1.55,
+      "max": 1.65
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0016",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Groundwater movement; Darcy's Law",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Darcy's Law ($v = -K \\frac{dh}{dl}$) for flow through porous media is valid provided the Reynolds number based on mean grain diameter ($Re = \\frac{v d}{\\nu}$) is:",
+    "solution": "Darcy's law is valid strictly for laminar creeping flow through porous media, where pore Reynolds number $Re \\le 1$ (or up to 10).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Less than 1 to 10 (strictly laminar regime)",
+      "B": "Greater than 2000 (turbulent)",
+      "C": "Equal to infinity",
+      "D": "Independent of velocity"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0017",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Groundwater movement; Darcy's Law",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In an unconfined aquifer with an effective porosity of $\\eta_e = 0.25$, Darcy velocity is measured as $v = 0.40\\text{ m/day}$. The actual seepage velocity of groundwater (in m/day) is:",
+    "solution": "Seepage velocity:\n$$v_s = \\frac{v}{\\eta_e} = \\frac{0.40}{0.25} = 1.60\\text{ m/day}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 1.6,
+    "answer_range": [
+      1.55,
+      1.65
+    ],
+    "correct_answer": "1.6",
+    "numerical_range": {
+      "min": 1.55,
+      "max": 1.65
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0018",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Groundwater movement; Darcy's Law",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Darcy's Law ($v = -K \\frac{dh}{dl}$) for flow through porous media is valid provided the Reynolds number based on mean grain diameter ($Re = \\frac{v d}{\\nu}$) is:",
+    "solution": "Darcy's law is valid strictly for laminar creeping flow through porous media, where pore Reynolds number $Re \\le 1$ (or up to 10).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Less than 1 to 10 (strictly laminar regime)",
+      "B": "Greater than 2000 (turbulent)",
+      "C": "Equal to infinity",
+      "D": "Independent of velocity"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0019",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Groundwater movement; Darcy's Law",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In an unconfined aquifer with an effective porosity of $\\eta_e = 0.25$, Darcy velocity is measured as $v = 0.40\\text{ m/day}$. The actual seepage velocity of groundwater (in m/day) is:",
+    "solution": "Seepage velocity:\n$$v_s = \\frac{v}{\\eta_e} = \\frac{0.40}{0.25} = 1.60\\text{ m/day}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 1.6,
+    "answer_range": [
+      1.55,
+      1.65
+    ],
+    "correct_answer": "1.6",
+    "numerical_range": {
+      "min": 1.55,
+      "max": 1.65
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0020",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Groundwater exploration techniques",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A geologic formation that stores water but is incapable of transmitting significant quantities to wells (e.g. clay layer) is termed an:",
+    "solution": "An aquiclude stores water (high porosity) but has very low permeability, preventing economic extraction. An aquifuge neither stores nor transmits water (solid granite).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Aquiclude",
+      "B": "Aquifer",
+      "C": "Aquifuge",
+      "D": "Artesian basin"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0021",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Groundwater exploration techniques",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "An unconfined aquifer has an aerial extent of $5.0\\text{ km}^2$. The specific yield of the aquifer is $S_y = 0.16$. If the water table drops by an average depth of $2.0\\text{ m}$, the total volume of groundwater released from storage (in million cubic meters, $10^6\\text{ m}^3$) is:",
+    "solution": "Volume released:\n$$V = A \\times \\Delta h \\times S_y = (5.0 \\times 10^6\\text{ m}^2) \\times 2.0\\text{ m} \\times 0.16 = 1.60 \\times 10^6\\text{ m}^3$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 1.6,
+    "answer_range": [
+      1.58,
+      1.62
+    ],
+    "correct_answer": "1.6",
+    "numerical_range": {
+      "min": 1.58,
+      "max": 1.62
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0022",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Groundwater exploration techniques",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In surface electrical resistivity surveys for groundwater exploration (Schlumberger and Wenner electrode arrays):",
+    "solution": "DC or low-frequency AC is applied through outer current electrodes A, B, and potential difference is measured across inner potential electrodes M, N.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Current is injected into the ground through outer electrodes $A$ and $B$",
+      "B": "Potential drop is measured across inner electrodes $M$ and $N$",
+      "C": "Apparent resistivity $\\rho_a = K \\frac{\\Delta V}{I}$ where $K$ is the geometric configuration factor",
+      "D": "Direct current cannot be used under any circumstances"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_IDE_0023",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Groundwater exploration techniques",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A geologic formation that stores water but is incapable of transmitting significant quantities to wells (e.g. clay layer) is termed an:",
+    "solution": "An aquiclude stores water (high porosity) but has very low permeability, preventing economic extraction. An aquifuge neither stores nor transmits water (solid granite).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Aquiclude",
+      "B": "Aquifer",
+      "C": "Aquifuge",
+      "D": "Artesian basin"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0024",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Groundwater exploration techniques",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "An unconfined aquifer has an aerial extent of $5.0\\text{ km}^2$. The specific yield of the aquifer is $S_y = 0.16$. If the water table drops by an average depth of $2.0\\text{ m}$, the total volume of groundwater released from storage (in million cubic meters, $10^6\\text{ m}^3$) is:",
+    "solution": "Volume released:\n$$V = A \\times \\Delta h \\times S_y = (5.0 \\times 10^6\\text{ m}^2) \\times 2.0\\text{ m} \\times 0.16 = 1.60 \\times 10^6\\text{ m}^3$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 1.6,
+    "answer_range": [
+      1.58,
+      1.62
+    ],
+    "correct_answer": "1.6",
+    "numerical_range": {
+      "min": 1.58,
+      "max": 1.62
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0025",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Groundwater exploration techniques",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In surface electrical resistivity surveys for groundwater exploration (Schlumberger and Wenner electrode arrays):",
+    "solution": "DC or low-frequency AC is applied through outer current electrodes A, B, and potential difference is measured across inner potential electrodes M, N.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Current is injected into the ground through outer electrodes $A$ and $B$",
+      "B": "Potential drop is measured across inner electrodes $M$ and $N$",
+      "C": "Apparent resistivity $\\rho_a = K \\frac{\\Delta V}{I}$ where $K$ is the geometric configuration factor",
+      "D": "Direct current cannot be used under any circumstances"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_IDE_0026",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Groundwater exploration techniques",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A geologic formation that stores water but is incapable of transmitting significant quantities to wells (e.g. clay layer) is termed an:",
+    "solution": "An aquiclude stores water (high porosity) but has very low permeability, preventing economic extraction. An aquifuge neither stores nor transmits water (solid granite).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Aquiclude",
+      "B": "Aquifer",
+      "C": "Aquifuge",
+      "D": "Artesian basin"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0027",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Groundwater exploration techniques",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "An unconfined aquifer has an aerial extent of $5.0\\text{ km}^2$. The specific yield of the aquifer is $S_y = 0.16$. If the water table drops by an average depth of $2.0\\text{ m}$, the total volume of groundwater released from storage (in million cubic meters, $10^6\\text{ m}^3$) is:",
+    "solution": "Volume released:\n$$V = A \\times \\Delta h \\times S_y = (5.0 \\times 10^6\\text{ m}^2) \\times 2.0\\text{ m} \\times 0.16 = 1.60 \\times 10^6\\text{ m}^3$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 1.6,
+    "answer_range": [
+      1.58,
+      1.62
+    ],
+    "correct_answer": "1.6",
+    "numerical_range": {
+      "min": 1.58,
+      "max": 1.62
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0028",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Groundwater exploration techniques",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In surface electrical resistivity surveys for groundwater exploration (Schlumberger and Wenner electrode arrays):",
+    "solution": "DC or low-frequency AC is applied through outer current electrodes A, B, and potential difference is measured across inner potential electrodes M, N.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Current is injected into the ground through outer electrodes $A$ and $B$",
+      "B": "Potential drop is measured across inner electrodes $M$ and $N$",
+      "C": "Apparent resistivity $\\rho_a = K \\frac{\\Delta V}{I}$ where $K$ is the geometric configuration factor",
+      "D": "Direct current cannot be used under any circumstances"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_IDE_0029",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Groundwater exploration techniques",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A geologic formation that stores water but is incapable of transmitting significant quantities to wells (e.g. clay layer) is termed an:",
+    "solution": "An aquiclude stores water (high porosity) but has very low permeability, preventing economic extraction. An aquifuge neither stores nor transmits water (solid granite).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Aquiclude",
+      "B": "Aquifer",
+      "C": "Aquifuge",
+      "D": "Artesian basin"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0030",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Overview of groundwater recharge estimation and artificial recharge techniques",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Overview of groundwater recharge estimation and artificial recharge techniques?",
+    "solution": "Design and operation in Overview of groundwater recharge estimation and artificial recharge techniques are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0031",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Overview of groundwater recharge estimation and artificial recharge techniques",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Overview of groundwater recharge estimation and artificial recharge techniques?",
+    "solution": "Design and operation in Overview of groundwater recharge estimation and artificial recharge techniques are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0032",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Overview of groundwater recharge estimation and artificial recharge techniques",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Overview of groundwater recharge estimation and artificial recharge techniques?",
+    "solution": "Design and operation in Overview of groundwater recharge estimation and artificial recharge techniques are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0033",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Overview of groundwater recharge estimation and artificial recharge techniques",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Overview of groundwater recharge estimation and artificial recharge techniques?",
+    "solution": "Design and operation in Overview of groundwater recharge estimation and artificial recharge techniques are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0034",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Overview of groundwater recharge estimation and artificial recharge techniques",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Overview of groundwater recharge estimation and artificial recharge techniques?",
+    "solution": "Design and operation in Overview of groundwater recharge estimation and artificial recharge techniques are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0035",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Overview of groundwater recharge estimation and artificial recharge techniques",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Overview of groundwater recharge estimation and artificial recharge techniques?",
+    "solution": "Design and operation in Overview of groundwater recharge estimation and artificial recharge techniques are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0036",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Overview of groundwater recharge estimation and artificial recharge techniques",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Overview of groundwater recharge estimation and artificial recharge techniques?",
+    "solution": "Design and operation in Overview of groundwater recharge estimation and artificial recharge techniques are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0037",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Overview of groundwater recharge estimation and artificial recharge techniques",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Overview of groundwater recharge estimation and artificial recharge techniques?",
+    "solution": "Design and operation in Overview of groundwater recharge estimation and artificial recharge techniques are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0038",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Overview of groundwater recharge estimation and artificial recharge techniques",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Overview of groundwater recharge estimation and artificial recharge techniques?",
+    "solution": "Design and operation in Overview of groundwater recharge estimation and artificial recharge techniques are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0039",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Overview of groundwater recharge estimation and artificial recharge techniques",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Overview of groundwater recharge estimation and artificial recharge techniques?",
+    "solution": "Design and operation in Overview of groundwater recharge estimation and artificial recharge techniques are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0040",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Hydrology",
+    "subtopic": "Overview of groundwater recharge estimation and artificial recharge techniques",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Overview of groundwater recharge estimation and artificial recharge techniques?",
+    "solution": "Design and operation in Overview of groundwater recharge estimation and artificial recharge techniques are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0041",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Drainage coefficient",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "An agricultural watershed of area $500\\text{ ha}$ requires a drainage coefficient of $12\\text{ mm/day}$. The required design drainage outlet capacity (in $\\text{m}^3\\text{/s}$, rounded to 3 decimal places) is:",
+    "solution": "Drainage discharge:\n$$Q = \\frac{A \\times D.C.}{86400} = \\frac{(500.0 \\times 10^4) \\times (12.0 \\times 10^{-3})}{86400} = \\frac{60000.0}{86400} = 0.694\\text{ m}^3\\text{/s}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 0.694,
+    "answer_range": [
+      0.674,
+      0.714
+    ],
+    "correct_answer": "0.694",
+    "numerical_range": {
+      "min": 0.674,
+      "max": 0.714
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0042",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Drainage coefficient",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The 'Drainage Coefficient' (D.C.) in agricultural land drainage is defined as:",
+    "solution": "Drainage coefficient is universally defined as the design depth of excess water (typically 10–25 mm) to be drained from a given land area within 24 hours.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "The depth of excess water in mm removed from the drainage area in a 24-hour period",
+      "B": "The ratio of drain spacing to drain depth",
+      "C": "The Manning roughness of the drainage ditch",
+      "D": "The percentage of rainfall lost to evaporation"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0043",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Drainage coefficient",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "An agricultural watershed of area $500\\text{ ha}$ requires a drainage coefficient of $12\\text{ mm/day}$. The required design drainage outlet capacity (in $\\text{m}^3\\text{/s}$, rounded to 3 decimal places) is:",
+    "solution": "Drainage discharge:\n$$Q = \\frac{A \\times D.C.}{86400} = \\frac{(500.0 \\times 10^4) \\times (12.0 \\times 10^{-3})}{86400} = \\frac{60000.0}{86400} = 0.694\\text{ m}^3\\text{/s}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 0.694,
+    "answer_range": [
+      0.674,
+      0.714
+    ],
+    "correct_answer": "0.694",
+    "numerical_range": {
+      "min": 0.674,
+      "max": 0.714
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0044",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Drainage coefficient",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The 'Drainage Coefficient' (D.C.) in agricultural land drainage is defined as:",
+    "solution": "Drainage coefficient is universally defined as the design depth of excess water (typically 10–25 mm) to be drained from a given land area within 24 hours.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "The depth of excess water in mm removed from the drainage area in a 24-hour period",
+      "B": "The ratio of drain spacing to drain depth",
+      "C": "The Manning roughness of the drainage ditch",
+      "D": "The percentage of rainfall lost to evaporation"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0045",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Drainage coefficient",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "An agricultural watershed of area $500\\text{ ha}$ requires a drainage coefficient of $12\\text{ mm/day}$. The required design drainage outlet capacity (in $\\text{m}^3\\text{/s}$, rounded to 3 decimal places) is:",
+    "solution": "Drainage discharge:\n$$Q = \\frac{A \\times D.C.}{86400} = \\frac{(500.0 \\times 10^4) \\times (12.0 \\times 10^{-3})}{86400} = \\frac{60000.0}{86400} = 0.694\\text{ m}^3\\text{/s}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 0.694,
+    "answer_range": [
+      0.674,
+      0.714
+    ],
+    "correct_answer": "0.694",
+    "numerical_range": {
+      "min": 0.674,
+      "max": 0.714
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0046",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Drainage coefficient",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The 'Drainage Coefficient' (D.C.) in agricultural land drainage is defined as:",
+    "solution": "Drainage coefficient is universally defined as the design depth of excess water (typically 10–25 mm) to be drained from a given land area within 24 hours.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "The depth of excess water in mm removed from the drainage area in a 24-hour period",
+      "B": "The ratio of drain spacing to drain depth",
+      "C": "The Manning roughness of the drainage ditch",
+      "D": "The percentage of rainfall lost to evaporation"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0047",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Drainage coefficient",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "An agricultural watershed of area $500\\text{ ha}$ requires a drainage coefficient of $12\\text{ mm/day}$. The required design drainage outlet capacity (in $\\text{m}^3\\text{/s}$, rounded to 3 decimal places) is:",
+    "solution": "Drainage discharge:\n$$Q = \\frac{A \\times D.C.}{86400} = \\frac{(500.0 \\times 10^4) \\times (12.0 \\times 10^{-3})}{86400} = \\frac{60000.0}{86400} = 0.694\\text{ m}^3\\text{/s}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 0.694,
+    "answer_range": [
+      0.674,
+      0.714
+    ],
+    "correct_answer": "0.694",
+    "numerical_range": {
+      "min": 0.674,
+      "max": 0.714
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0048",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Leaching requirement and salinity control",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Irrigation water with electrical conductivity $EC_w = 1.5\\text{ dS/m}$ is applied to a crop having a soil salinity tolerance threshold of $EC_e = 4.0\\text{ dS/m}$. Using the US Salinity Laboratory formula $LR = \\frac{EC_w}{5 EC_e - EC_w}$, the Leaching Requirement (fraction, rounded to 3 decimal places) is:",
+    "solution": "$$LR = \\frac{1.5}{5(4.0) - 1.5} = \\frac{1.5}{20.0 - 1.5} = \\frac{1.5}{18.5} = 0.081$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 0.081,
+    "answer_range": [
+      0.071,
+      0.091
+    ],
+    "correct_answer": "0.081",
+    "numerical_range": {
+      "min": 0.071,
+      "max": 0.091
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0049",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Leaching requirement and salinity control",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A soil is classified as 'Saline-Sodic' when:",
+    "solution": "Saline-sodic soils have high soluble salts ($EC > 4.0\\text{ dS/m}$) and high exchangeable sodium ($ESP > 15\\%$, $SAR > 13$), typically maintaining $pH \\le 8.5$ due to excess neutral salts.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$EC > 4.0\\text{ dS/m}$, $SAR > 13$ (or $ESP > 15\\%$), and $pH < 8.5$",
+      "B": "$EC < 4.0\\text{ dS/m}$ and $ESP < 15\\%$",
+      "C": "$pH > 10.0$ and zero soluble salts",
+      "D": "$SAR < 2$ and $EC = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0050",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Leaching requirement and salinity control",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Irrigation water with electrical conductivity $EC_w = 1.5\\text{ dS/m}$ is applied to a crop having a soil salinity tolerance threshold of $EC_e = 4.0\\text{ dS/m}$. Using the US Salinity Laboratory formula $LR = \\frac{EC_w}{5 EC_e - EC_w}$, the Leaching Requirement (fraction, rounded to 3 decimal places) is:",
+    "solution": "$$LR = \\frac{1.5}{5(4.0) - 1.5} = \\frac{1.5}{20.0 - 1.5} = \\frac{1.5}{18.5} = 0.081$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 0.081,
+    "answer_range": [
+      0.071,
+      0.091
+    ],
+    "correct_answer": "0.081",
+    "numerical_range": {
+      "min": 0.071,
+      "max": 0.091
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0051",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Leaching requirement and salinity control",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A soil is classified as 'Saline-Sodic' when:",
+    "solution": "Saline-sodic soils have high soluble salts ($EC > 4.0\\text{ dS/m}$) and high exchangeable sodium ($ESP > 15\\%$, $SAR > 13$), typically maintaining $pH \\le 8.5$ due to excess neutral salts.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$EC > 4.0\\text{ dS/m}$, $SAR > 13$ (or $ESP > 15\\%$), and $pH < 8.5$",
+      "B": "$EC < 4.0\\text{ dS/m}$ and $ESP < 15\\%$",
+      "C": "$pH > 10.0$ and zero soluble salts",
+      "D": "$SAR < 2$ and $EC = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0052",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Leaching requirement and salinity control",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Irrigation water with electrical conductivity $EC_w = 1.5\\text{ dS/m}$ is applied to a crop having a soil salinity tolerance threshold of $EC_e = 4.0\\text{ dS/m}$. Using the US Salinity Laboratory formula $LR = \\frac{EC_w}{5 EC_e - EC_w}$, the Leaching Requirement (fraction, rounded to 3 decimal places) is:",
+    "solution": "$$LR = \\frac{1.5}{5(4.0) - 1.5} = \\frac{1.5}{20.0 - 1.5} = \\frac{1.5}{18.5} = 0.081$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 0.081,
+    "answer_range": [
+      0.071,
+      0.091
+    ],
+    "correct_answer": "0.081",
+    "numerical_range": {
+      "min": 0.071,
+      "max": 0.091
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0053",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Leaching requirement and salinity control",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A soil is classified as 'Saline-Sodic' when:",
+    "solution": "Saline-sodic soils have high soluble salts ($EC > 4.0\\text{ dS/m}$) and high exchangeable sodium ($ESP > 15\\%$, $SAR > 13$), typically maintaining $pH \\le 8.5$ due to excess neutral salts.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$EC > 4.0\\text{ dS/m}$, $SAR > 13$ (or $ESP > 15\\%$), and $pH < 8.5$",
+      "B": "$EC < 4.0\\text{ dS/m}$ and $ESP < 15\\%$",
+      "C": "$pH > 10.0$ and zero soluble salts",
+      "D": "$SAR < 2$ and $EC = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0054",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Leaching requirement and salinity control",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Irrigation water with electrical conductivity $EC_w = 1.5\\text{ dS/m}$ is applied to a crop having a soil salinity tolerance threshold of $EC_e = 4.0\\text{ dS/m}$. Using the US Salinity Laboratory formula $LR = \\frac{EC_w}{5 EC_e - EC_w}$, the Leaching Requirement (fraction, rounded to 3 decimal places) is:",
+    "solution": "$$LR = \\frac{1.5}{5(4.0) - 1.5} = \\frac{1.5}{20.0 - 1.5} = \\frac{1.5}{18.5} = 0.081$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 0.081,
+    "answer_range": [
+      0.071,
+      0.091
+    ],
+    "correct_answer": "0.081",
+    "numerical_range": {
+      "min": 0.071,
+      "max": 0.091
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0055",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Irrigation and drainage water quality and reuse",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Irrigation and drainage water quality and reuse?",
+    "solution": "Design and operation in Irrigation and drainage water quality and reuse are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0056",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Irrigation and drainage water quality and reuse",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Irrigation and drainage water quality and reuse?",
+    "solution": "Design and operation in Irrigation and drainage water quality and reuse are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0057",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Irrigation and drainage water quality and reuse",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Irrigation and drainage water quality and reuse?",
+    "solution": "Design and operation in Irrigation and drainage water quality and reuse are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0058",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Irrigation and drainage water quality and reuse",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Irrigation and drainage water quality and reuse?",
+    "solution": "Design and operation in Irrigation and drainage water quality and reuse are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0059",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Irrigation and drainage water quality and reuse",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Irrigation and drainage water quality and reuse?",
+    "solution": "Design and operation in Irrigation and drainage water quality and reuse are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0060",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Irrigation and drainage water quality and reuse",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Irrigation and drainage water quality and reuse?",
+    "solution": "Design and operation in Irrigation and drainage water quality and reuse are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0061",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Irrigation and drainage water quality and reuse",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Irrigation and drainage water quality and reuse?",
+    "solution": "Design and operation in Irrigation and drainage water quality and reuse are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0062",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Non-conventional drainage system",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Non-conventional drainage system?",
+    "solution": "Design and operation in Non-conventional drainage system are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0063",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Non-conventional drainage system",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Non-conventional drainage system?",
+    "solution": "Design and operation in Non-conventional drainage system are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0064",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Non-conventional drainage system",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Non-conventional drainage system?",
+    "solution": "Design and operation in Non-conventional drainage system are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0065",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Non-conventional drainage system",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Non-conventional drainage system?",
+    "solution": "Design and operation in Non-conventional drainage system are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0066",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Non-conventional drainage system",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Non-conventional drainage system?",
+    "solution": "Design and operation in Non-conventional drainage system are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0067",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Non-conventional drainage system",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Non-conventional drainage system?",
+    "solution": "Design and operation in Non-conventional drainage system are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0068",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Non-conventional drainage system",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Non-conventional drainage system?",
+    "solution": "Design and operation in Non-conventional drainage system are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0069",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Non-conventional drainage system",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Non-conventional drainage system?",
+    "solution": "Design and operation in Non-conventional drainage system are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0070",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Non-conventional drainage system",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Non-conventional drainage system?",
+    "solution": "Design and operation in Non-conventional drainage system are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0071",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage",
+    "subtopic": "Non-conventional drainage system",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Non-conventional drainage system?",
+    "solution": "Design and operation in Non-conventional drainage system are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0072",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Types of wells",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a confined artesian aquifer of thickness $b$ and hydraulic conductivity $K$, the discharge to a fully penetrating pumping well is given by the Thiem equilibrium formula as:",
+    "solution": "Thiem formula for confined aquifer: $Q = \\frac{2 \\pi T (h_2 - h_1)}{\\ln(r_2 / r_1)} = \\frac{2 \\pi K b (s_1 - s_2)}{\\ln(r_2 / r_1)}$. Dupuit formula (with squared heads) applies to unconfined aquifers.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$Q = \\frac{2 \\pi K b (h_2 - h_1)}{\\ln(r_2 / r_1)}$",
+      "B": "$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$",
+      "C": "$Q = K A \\frac{dh}{dx}$",
+      "D": "$Q = \\frac{2 \\pi K h_1 h_2}{r_2 - r_1}$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0073",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Types of wells",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In a pumping test on a confined aquifer, Cooper-Jacob semi-logarithmic analysis reveals a drawdown per log cycle of $\\Delta s = 1.20\\text{ m}$ for a steady discharge $Q = 1800\\text{ m}^3\\text{/day}$. The aquifer transmissivity $T$ (in $\\text{m}^2\\text{/day}$, rounded to 1 decimal place) is:",
+    "solution": "Cooper-Jacob formula:\n$$T = \\frac{2.303 Q}{4 \\pi \\Delta s} = \\frac{2.303 \\times 1800}{4 \\pi \\times 1.20} = \\frac{4145.4}{15.0796} = 274.9\\text{ m}^2\\text{/day}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 274.9,
+    "answer_range": [
+      270.0,
+      280.0
+    ],
+    "correct_answer": "274.9",
+    "numerical_range": {
+      "min": 270.0,
+      "max": 280.0
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0074",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Types of wells",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which types of tubewells are commonly installed in agricultural alluvial plains based on strainer placement and water entry mechanism?",
+    "solution": "Strainer, cavity, and slotted tubewells are standard classifications of agricultural tubewells.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Strainer tubewell with slotted pipe and brass/gravel mesh screen",
+      "B": "Cavity tubewell drawing water from an aquifer below a stiff, impermeable clay layer without a strainer",
+      "C": "Slotted tubewell with gravel pack",
+      "D": "Centrifugal impeller well"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_IDE_0075",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Types of wells",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a confined artesian aquifer of thickness $b$ and hydraulic conductivity $K$, the discharge to a fully penetrating pumping well is given by the Thiem equilibrium formula as:",
+    "solution": "Thiem formula for confined aquifer: $Q = \\frac{2 \\pi T (h_2 - h_1)}{\\ln(r_2 / r_1)} = \\frac{2 \\pi K b (s_1 - s_2)}{\\ln(r_2 / r_1)}$. Dupuit formula (with squared heads) applies to unconfined aquifers.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$Q = \\frac{2 \\pi K b (h_2 - h_1)}{\\ln(r_2 / r_1)}$",
+      "B": "$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$",
+      "C": "$Q = K A \\frac{dh}{dx}$",
+      "D": "$Q = \\frac{2 \\pi K h_1 h_2}{r_2 - r_1}$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0076",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Types of wells",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In a pumping test on a confined aquifer, Cooper-Jacob semi-logarithmic analysis reveals a drawdown per log cycle of $\\Delta s = 1.20\\text{ m}$ for a steady discharge $Q = 1800\\text{ m}^3\\text{/day}$. The aquifer transmissivity $T$ (in $\\text{m}^2\\text{/day}$, rounded to 1 decimal place) is:",
+    "solution": "Cooper-Jacob formula:\n$$T = \\frac{2.303 Q}{4 \\pi \\Delta s} = \\frac{2.303 \\times 1800}{4 \\pi \\times 1.20} = \\frac{4145.4}{15.0796} = 274.9\\text{ m}^2\\text{/day}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 274.9,
+    "answer_range": [
+      270.0,
+      280.0
+    ],
+    "correct_answer": "274.9",
+    "numerical_range": {
+      "min": 270.0,
+      "max": 280.0
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0077",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Types of wells",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which types of tubewells are commonly installed in agricultural alluvial plains based on strainer placement and water entry mechanism?",
+    "solution": "Strainer, cavity, and slotted tubewells are standard classifications of agricultural tubewells.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Strainer tubewell with slotted pipe and brass/gravel mesh screen",
+      "B": "Cavity tubewell drawing water from an aquifer below a stiff, impermeable clay layer without a strainer",
+      "C": "Slotted tubewell with gravel pack",
+      "D": "Centrifugal impeller well"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_IDE_0078",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Types of wells",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a confined artesian aquifer of thickness $b$ and hydraulic conductivity $K$, the discharge to a fully penetrating pumping well is given by the Thiem equilibrium formula as:",
+    "solution": "Thiem formula for confined aquifer: $Q = \\frac{2 \\pi T (h_2 - h_1)}{\\ln(r_2 / r_1)} = \\frac{2 \\pi K b (s_1 - s_2)}{\\ln(r_2 / r_1)}$. Dupuit formula (with squared heads) applies to unconfined aquifers.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$Q = \\frac{2 \\pi K b (h_2 - h_1)}{\\ln(r_2 / r_1)}$",
+      "B": "$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$",
+      "C": "$Q = K A \\frac{dh}{dx}$",
+      "D": "$Q = \\frac{2 \\pi K h_1 h_2}{r_2 - r_1}$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0079",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Types of wells",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In a pumping test on a confined aquifer, Cooper-Jacob semi-logarithmic analysis reveals a drawdown per log cycle of $\\Delta s = 1.20\\text{ m}$ for a steady discharge $Q = 1800\\text{ m}^3\\text{/day}$. The aquifer transmissivity $T$ (in $\\text{m}^2\\text{/day}$, rounded to 1 decimal place) is:",
+    "solution": "Cooper-Jacob formula:\n$$T = \\frac{2.303 Q}{4 \\pi \\Delta s} = \\frac{2.303 \\times 1800}{4 \\pi \\times 1.20} = \\frac{4145.4}{15.0796} = 274.9\\text{ m}^2\\text{/day}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 274.9,
+    "answer_range": [
+      270.0,
+      280.0
+    ],
+    "correct_answer": "274.9",
+    "numerical_range": {
+      "min": 270.0,
+      "max": 280.0
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0080",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Types of wells",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which types of tubewells are commonly installed in agricultural alluvial plains based on strainer placement and water entry mechanism?",
+    "solution": "Strainer, cavity, and slotted tubewells are standard classifications of agricultural tubewells.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Strainer tubewell with slotted pipe and brass/gravel mesh screen",
+      "B": "Cavity tubewell drawing water from an aquifer below a stiff, impermeable clay layer without a strainer",
+      "C": "Slotted tubewell with gravel pack",
+      "D": "Centrifugal impeller well"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_IDE_0081",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Types of wells",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a confined artesian aquifer of thickness $b$ and hydraulic conductivity $K$, the discharge to a fully penetrating pumping well is given by the Thiem equilibrium formula as:",
+    "solution": "Thiem formula for confined aquifer: $Q = \\frac{2 \\pi T (h_2 - h_1)}{\\ln(r_2 / r_1)} = \\frac{2 \\pi K b (s_1 - s_2)}{\\ln(r_2 / r_1)}$. Dupuit formula (with squared heads) applies to unconfined aquifers.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$Q = \\frac{2 \\pi K b (h_2 - h_1)}{\\ln(r_2 / r_1)}$",
+      "B": "$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$",
+      "C": "$Q = K A \\frac{dh}{dx}$",
+      "D": "$Q = \\frac{2 \\pi K h_1 h_2}{r_2 - r_1}$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0082",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Types of wells",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In a pumping test on a confined aquifer, Cooper-Jacob semi-logarithmic analysis reveals a drawdown per log cycle of $\\Delta s = 1.20\\text{ m}$ for a steady discharge $Q = 1800\\text{ m}^3\\text{/day}$. The aquifer transmissivity $T$ (in $\\text{m}^2\\text{/day}$, rounded to 1 decimal place) is:",
+    "solution": "Cooper-Jacob formula:\n$$T = \\frac{2.303 Q}{4 \\pi \\Delta s} = \\frac{2.303 \\times 1800}{4 \\pi \\times 1.20} = \\frac{4145.4}{15.0796} = 274.9\\text{ m}^2\\text{/day}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 274.9,
+    "answer_range": [
+      270.0,
+      280.0
+    ],
+    "correct_answer": "274.9",
+    "numerical_range": {
+      "min": 270.0,
+      "max": 280.0
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0083",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Types of wells",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which types of tubewells are commonly installed in agricultural alluvial plains based on strainer placement and water entry mechanism?",
+    "solution": "Strainer, cavity, and slotted tubewells are standard classifications of agricultural tubewells.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Strainer tubewell with slotted pipe and brass/gravel mesh screen",
+      "B": "Cavity tubewell drawing water from an aquifer below a stiff, impermeable clay layer without a strainer",
+      "C": "Slotted tubewell with gravel pack",
+      "D": "Centrifugal impeller well"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_IDE_0084",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Design and construction of water wells",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a confined artesian aquifer of thickness $b$ and hydraulic conductivity $K$, the discharge to a fully penetrating pumping well is given by the Thiem equilibrium formula as:",
+    "solution": "Thiem formula for confined aquifer: $Q = \\frac{2 \\pi T (h_2 - h_1)}{\\ln(r_2 / r_1)} = \\frac{2 \\pi K b (s_1 - s_2)}{\\ln(r_2 / r_1)}$. Dupuit formula (with squared heads) applies to unconfined aquifers.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$Q = \\frac{2 \\pi K b (h_2 - h_1)}{\\ln(r_2 / r_1)}$",
+      "B": "$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$",
+      "C": "$Q = K A \\frac{dh}{dx}$",
+      "D": "$Q = \\frac{2 \\pi K h_1 h_2}{r_2 - r_1}$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0085",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Design and construction of water wells",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In a pumping test on a confined aquifer, Cooper-Jacob semi-logarithmic analysis reveals a drawdown per log cycle of $\\Delta s = 1.20\\text{ m}$ for a steady discharge $Q = 1800\\text{ m}^3\\text{/day}$. The aquifer transmissivity $T$ (in $\\text{m}^2\\text{/day}$, rounded to 1 decimal place) is:",
+    "solution": "Cooper-Jacob formula:\n$$T = \\frac{2.303 Q}{4 \\pi \\Delta s} = \\frac{2.303 \\times 1800}{4 \\pi \\times 1.20} = \\frac{4145.4}{15.0796} = 274.9\\text{ m}^2\\text{/day}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 274.9,
+    "answer_range": [
+      270.0,
+      280.0
+    ],
+    "correct_answer": "274.9",
+    "numerical_range": {
+      "min": 270.0,
+      "max": 280.0
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0086",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Design and construction of water wells",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which types of tubewells are commonly installed in agricultural alluvial plains based on strainer placement and water entry mechanism?",
+    "solution": "Strainer, cavity, and slotted tubewells are standard classifications of agricultural tubewells.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Strainer tubewell with slotted pipe and brass/gravel mesh screen",
+      "B": "Cavity tubewell drawing water from an aquifer below a stiff, impermeable clay layer without a strainer",
+      "C": "Slotted tubewell with gravel pack",
+      "D": "Centrifugal impeller well"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_IDE_0087",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Design and construction of water wells",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a confined artesian aquifer of thickness $b$ and hydraulic conductivity $K$, the discharge to a fully penetrating pumping well is given by the Thiem equilibrium formula as:",
+    "solution": "Thiem formula for confined aquifer: $Q = \\frac{2 \\pi T (h_2 - h_1)}{\\ln(r_2 / r_1)} = \\frac{2 \\pi K b (s_1 - s_2)}{\\ln(r_2 / r_1)}$. Dupuit formula (with squared heads) applies to unconfined aquifers.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$Q = \\frac{2 \\pi K b (h_2 - h_1)}{\\ln(r_2 / r_1)}$",
+      "B": "$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$",
+      "C": "$Q = K A \\frac{dh}{dx}$",
+      "D": "$Q = \\frac{2 \\pi K h_1 h_2}{r_2 - r_1}$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0088",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Design and construction of water wells",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In a pumping test on a confined aquifer, Cooper-Jacob semi-logarithmic analysis reveals a drawdown per log cycle of $\\Delta s = 1.20\\text{ m}$ for a steady discharge $Q = 1800\\text{ m}^3\\text{/day}$. The aquifer transmissivity $T$ (in $\\text{m}^2\\text{/day}$, rounded to 1 decimal place) is:",
+    "solution": "Cooper-Jacob formula:\n$$T = \\frac{2.303 Q}{4 \\pi \\Delta s} = \\frac{2.303 \\times 1800}{4 \\pi \\times 1.20} = \\frac{4145.4}{15.0796} = 274.9\\text{ m}^2\\text{/day}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 274.9,
+    "answer_range": [
+      270.0,
+      280.0
+    ],
+    "correct_answer": "274.9",
+    "numerical_range": {
+      "min": 270.0,
+      "max": 280.0
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0089",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Design and construction of water wells",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which types of tubewells are commonly installed in agricultural alluvial plains based on strainer placement and water entry mechanism?",
+    "solution": "Strainer, cavity, and slotted tubewells are standard classifications of agricultural tubewells.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Strainer tubewell with slotted pipe and brass/gravel mesh screen",
+      "B": "Cavity tubewell drawing water from an aquifer below a stiff, impermeable clay layer without a strainer",
+      "C": "Slotted tubewell with gravel pack",
+      "D": "Centrifugal impeller well"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_IDE_0090",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Design and construction of water wells",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a confined artesian aquifer of thickness $b$ and hydraulic conductivity $K$, the discharge to a fully penetrating pumping well is given by the Thiem equilibrium formula as:",
+    "solution": "Thiem formula for confined aquifer: $Q = \\frac{2 \\pi T (h_2 - h_1)}{\\ln(r_2 / r_1)} = \\frac{2 \\pi K b (s_1 - s_2)}{\\ln(r_2 / r_1)}$. Dupuit formula (with squared heads) applies to unconfined aquifers.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$Q = \\frac{2 \\pi K b (h_2 - h_1)}{\\ln(r_2 / r_1)}$",
+      "B": "$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$",
+      "C": "$Q = K A \\frac{dh}{dx}$",
+      "D": "$Q = \\frac{2 \\pi K h_1 h_2}{r_2 - r_1}$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0091",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Design and construction of water wells",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In a pumping test on a confined aquifer, Cooper-Jacob semi-logarithmic analysis reveals a drawdown per log cycle of $\\Delta s = 1.20\\text{ m}$ for a steady discharge $Q = 1800\\text{ m}^3\\text{/day}$. The aquifer transmissivity $T$ (in $\\text{m}^2\\text{/day}$, rounded to 1 decimal place) is:",
+    "solution": "Cooper-Jacob formula:\n$$T = \\frac{2.303 Q}{4 \\pi \\Delta s} = \\frac{2.303 \\times 1800}{4 \\pi \\times 1.20} = \\frac{4145.4}{15.0796} = 274.9\\text{ m}^2\\text{/day}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 274.9,
+    "answer_range": [
+      270.0,
+      280.0
+    ],
+    "correct_answer": "274.9",
+    "numerical_range": {
+      "min": 270.0,
+      "max": 280.0
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0092",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Steady flow through wells",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a confined artesian aquifer of thickness $b$ and hydraulic conductivity $K$, the discharge to a fully penetrating pumping well is given by the Thiem equilibrium formula as:",
+    "solution": "Thiem formula for confined aquifer: $Q = \\frac{2 \\pi T (h_2 - h_1)}{\\ln(r_2 / r_1)} = \\frac{2 \\pi K b (s_1 - s_2)}{\\ln(r_2 / r_1)}$. Dupuit formula (with squared heads) applies to unconfined aquifers.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$Q = \\frac{2 \\pi K b (h_2 - h_1)}{\\ln(r_2 / r_1)}$",
+      "B": "$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$",
+      "C": "$Q = K A \\frac{dh}{dx}$",
+      "D": "$Q = \\frac{2 \\pi K h_1 h_2}{r_2 - r_1}$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0093",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Steady flow through wells",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In a pumping test on a confined aquifer, Cooper-Jacob semi-logarithmic analysis reveals a drawdown per log cycle of $\\Delta s = 1.20\\text{ m}$ for a steady discharge $Q = 1800\\text{ m}^3\\text{/day}$. The aquifer transmissivity $T$ (in $\\text{m}^2\\text{/day}$, rounded to 1 decimal place) is:",
+    "solution": "Cooper-Jacob formula:\n$$T = \\frac{2.303 Q}{4 \\pi \\Delta s} = \\frac{2.303 \\times 1800}{4 \\pi \\times 1.20} = \\frac{4145.4}{15.0796} = 274.9\\text{ m}^2\\text{/day}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 274.9,
+    "answer_range": [
+      270.0,
+      280.0
+    ],
+    "correct_answer": "274.9",
+    "numerical_range": {
+      "min": 270.0,
+      "max": 280.0
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0094",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Steady flow through wells",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which types of tubewells are commonly installed in agricultural alluvial plains based on strainer placement and water entry mechanism?",
+    "solution": "Strainer, cavity, and slotted tubewells are standard classifications of agricultural tubewells.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Strainer tubewell with slotted pipe and brass/gravel mesh screen",
+      "B": "Cavity tubewell drawing water from an aquifer below a stiff, impermeable clay layer without a strainer",
+      "C": "Slotted tubewell with gravel pack",
+      "D": "Centrifugal impeller well"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_IDE_0095",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Steady flow through wells",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a confined artesian aquifer of thickness $b$ and hydraulic conductivity $K$, the discharge to a fully penetrating pumping well is given by the Thiem equilibrium formula as:",
+    "solution": "Thiem formula for confined aquifer: $Q = \\frac{2 \\pi T (h_2 - h_1)}{\\ln(r_2 / r_1)} = \\frac{2 \\pi K b (s_1 - s_2)}{\\ln(r_2 / r_1)}$. Dupuit formula (with squared heads) applies to unconfined aquifers.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$Q = \\frac{2 \\pi K b (h_2 - h_1)}{\\ln(r_2 / r_1)}$",
+      "B": "$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$",
+      "C": "$Q = K A \\frac{dh}{dx}$",
+      "D": "$Q = \\frac{2 \\pi K h_1 h_2}{r_2 - r_1}$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0096",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Steady flow through wells",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In a pumping test on a confined aquifer, Cooper-Jacob semi-logarithmic analysis reveals a drawdown per log cycle of $\\Delta s = 1.20\\text{ m}$ for a steady discharge $Q = 1800\\text{ m}^3\\text{/day}$. The aquifer transmissivity $T$ (in $\\text{m}^2\\text{/day}$, rounded to 1 decimal place) is:",
+    "solution": "Cooper-Jacob formula:\n$$T = \\frac{2.303 Q}{4 \\pi \\Delta s} = \\frac{2.303 \\times 1800}{4 \\pi \\times 1.20} = \\frac{4145.4}{15.0796} = 274.9\\text{ m}^2\\text{/day}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 274.9,
+    "answer_range": [
+      270.0,
+      280.0
+    ],
+    "correct_answer": "274.9",
+    "numerical_range": {
+      "min": 270.0,
+      "max": 280.0
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0097",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Steady flow through wells",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which types of tubewells are commonly installed in agricultural alluvial plains based on strainer placement and water entry mechanism?",
+    "solution": "Strainer, cavity, and slotted tubewells are standard classifications of agricultural tubewells.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Strainer tubewell with slotted pipe and brass/gravel mesh screen",
+      "B": "Cavity tubewell drawing water from an aquifer below a stiff, impermeable clay layer without a strainer",
+      "C": "Slotted tubewell with gravel pack",
+      "D": "Centrifugal impeller well"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_IDE_0098",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Steady flow through wells",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a confined artesian aquifer of thickness $b$ and hydraulic conductivity $K$, the discharge to a fully penetrating pumping well is given by the Thiem equilibrium formula as:",
+    "solution": "Thiem formula for confined aquifer: $Q = \\frac{2 \\pi T (h_2 - h_1)}{\\ln(r_2 / r_1)} = \\frac{2 \\pi K b (s_1 - s_2)}{\\ln(r_2 / r_1)}$. Dupuit formula (with squared heads) applies to unconfined aquifers.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$Q = \\frac{2 \\pi K b (h_2 - h_1)}{\\ln(r_2 / r_1)}$",
+      "B": "$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$",
+      "C": "$Q = K A \\frac{dh}{dx}$",
+      "D": "$Q = \\frac{2 \\pi K h_1 h_2}{r_2 - r_1}$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0099",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Steady flow through wells",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In a pumping test on a confined aquifer, Cooper-Jacob semi-logarithmic analysis reveals a drawdown per log cycle of $\\Delta s = 1.20\\text{ m}$ for a steady discharge $Q = 1800\\text{ m}^3\\text{/day}$. The aquifer transmissivity $T$ (in $\\text{m}^2\\text{/day}$, rounded to 1 decimal place) is:",
+    "solution": "Cooper-Jacob formula:\n$$T = \\frac{2.303 Q}{4 \\pi \\Delta s} = \\frac{2.303 \\times 1800}{4 \\pi \\times 1.20} = \\frac{4145.4}{15.0796} = 274.9\\text{ m}^2\\text{/day}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 274.9,
+    "answer_range": [
+      270.0,
+      280.0
+    ],
+    "correct_answer": "274.9",
+    "numerical_range": {
+      "min": 270.0,
+      "max": 280.0
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0100",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Steady flow through wells",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which types of tubewells are commonly installed in agricultural alluvial plains based on strainer placement and water entry mechanism?",
+    "solution": "Strainer, cavity, and slotted tubewells are standard classifications of agricultural tubewells.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Strainer tubewell with slotted pipe and brass/gravel mesh screen",
+      "B": "Cavity tubewell drawing water from an aquifer below a stiff, impermeable clay layer without a strainer",
+      "C": "Slotted tubewell with gravel pack",
+      "D": "Centrifugal impeller well"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_IDE_0101",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Steady flow through wells",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a confined artesian aquifer of thickness $b$ and hydraulic conductivity $K$, the discharge to a fully penetrating pumping well is given by the Thiem equilibrium formula as:",
+    "solution": "Thiem formula for confined aquifer: $Q = \\frac{2 \\pi T (h_2 - h_1)}{\\ln(r_2 / r_1)} = \\frac{2 \\pi K b (s_1 - s_2)}{\\ln(r_2 / r_1)}$. Dupuit formula (with squared heads) applies to unconfined aquifers.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$Q = \\frac{2 \\pi K b (h_2 - h_1)}{\\ln(r_2 / r_1)}$",
+      "B": "$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$",
+      "C": "$Q = K A \\frac{dh}{dx}$",
+      "D": "$Q = \\frac{2 \\pi K h_1 h_2}{r_2 - r_1}$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0102",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Steady flow through wells",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In a pumping test on a confined aquifer, Cooper-Jacob semi-logarithmic analysis reveals a drawdown per log cycle of $\\Delta s = 1.20\\text{ m}$ for a steady discharge $Q = 1800\\text{ m}^3\\text{/day}$. The aquifer transmissivity $T$ (in $\\text{m}^2\\text{/day}$, rounded to 1 decimal place) is:",
+    "solution": "Cooper-Jacob formula:\n$$T = \\frac{2.303 Q}{4 \\pi \\Delta s} = \\frac{2.303 \\times 1800}{4 \\pi \\times 1.20} = \\frac{4145.4}{15.0796} = 274.9\\text{ m}^2\\text{/day}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 274.9,
+    "answer_range": [
+      270.0,
+      280.0
+    ],
+    "correct_answer": "274.9",
+    "numerical_range": {
+      "min": 270.0,
+      "max": 280.0
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0103",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Classification of pumps",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Classification of pumps?",
+    "solution": "Design and operation in Classification of pumps are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0104",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Classification of pumps",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Classification of pumps?",
+    "solution": "Design and operation in Classification of pumps are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0105",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Classification of pumps",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Classification of pumps?",
+    "solution": "Design and operation in Classification of pumps are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0106",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Classification of pumps",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Classification of pumps?",
+    "solution": "Design and operation in Classification of pumps are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0107",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Classification of pumps",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Classification of pumps?",
+    "solution": "Design and operation in Classification of pumps are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0108",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Classification of pumps",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Classification of pumps?",
+    "solution": "Design and operation in Classification of pumps are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0109",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Classification of pumps",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Classification of pumps?",
+    "solution": "Design and operation in Classification of pumps are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0110",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Classification of pumps",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Classification of pumps?",
+    "solution": "Design and operation in Classification of pumps are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0111",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Classification of pumps",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Classification of pumps?",
+    "solution": "Design and operation in Classification of pumps are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0112",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Classification of pumps",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Classification of pumps?",
+    "solution": "Design and operation in Classification of pumps are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0113",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Pump selection and installation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Pump selection and installation?",
+    "solution": "Design and operation in Pump selection and installation are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0114",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Pump selection and installation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Pump selection and installation?",
+    "solution": "Design and operation in Pump selection and installation are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0115",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Pump selection and installation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Pump selection and installation?",
+    "solution": "Design and operation in Pump selection and installation are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0116",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Pump selection and installation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Pump selection and installation?",
+    "solution": "Design and operation in Pump selection and installation are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0117",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Wells and Pumps",
+    "subtopic": "Pump selection and installation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Pump selection and installation?",
+    "solution": "Design and operation in Pump selection and installation are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0118",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Design and evaluation of irrigation methods",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Design and evaluation of irrigation methods?",
+    "solution": "Design and operation in Design and evaluation of irrigation methods are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0119",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Design and evaluation of irrigation methods",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Design and evaluation of irrigation methods?",
+    "solution": "Design and operation in Design and evaluation of irrigation methods are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0120",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Design and evaluation of irrigation methods",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Design and evaluation of irrigation methods?",
+    "solution": "Design and operation in Design and evaluation of irrigation methods are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0121",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Design and evaluation of irrigation methods",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Design and evaluation of irrigation methods?",
+    "solution": "Design and operation in Design and evaluation of irrigation methods are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0122",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Design and evaluation of irrigation methods",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Design and evaluation of irrigation methods?",
+    "solution": "Design and operation in Design and evaluation of irrigation methods are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0123",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Design and evaluation of irrigation methods",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Design and evaluation of irrigation methods?",
+    "solution": "Design and operation in Design and evaluation of irrigation methods are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0124",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Design and evaluation of irrigation methods",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Design and evaluation of irrigation methods?",
+    "solution": "Design and operation in Design and evaluation of irrigation methods are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0125",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Design and evaluation of irrigation methods",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Design and evaluation of irrigation methods?",
+    "solution": "Design and operation in Design and evaluation of irrigation methods are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0126",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Irrigation efficiencies",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Irrigation efficiencies?",
+    "solution": "Design and operation in Irrigation efficiencies are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0127",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Irrigation efficiencies",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Irrigation efficiencies?",
+    "solution": "Design and operation in Irrigation efficiencies are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0128",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Irrigation efficiencies",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Irrigation efficiencies?",
+    "solution": "Design and operation in Irrigation efficiencies are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0129",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Irrigation efficiencies",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Irrigation efficiencies?",
+    "solution": "Design and operation in Irrigation efficiencies are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0130",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Irrigation efficiencies",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Irrigation efficiencies?",
+    "solution": "Design and operation in Irrigation efficiencies are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0131",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Irrigation efficiencies",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Irrigation efficiencies?",
+    "solution": "Design and operation in Irrigation efficiencies are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0132",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Design of irrigation channels and underground pipelines",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Design of irrigation channels and underground pipelines?",
+    "solution": "Design and operation in Design of irrigation channels and underground pipelines are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0133",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Irrigation scheduling",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Irrigation scheduling?",
+    "solution": "Design and operation in Irrigation scheduling are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0134",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Irrigation scheduling",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Irrigation scheduling?",
+    "solution": "Design and operation in Irrigation scheduling are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0135",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Irrigation scheduling",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Irrigation scheduling?",
+    "solution": "Design and operation in Irrigation scheduling are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0136",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Irrigation scheduling",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Irrigation scheduling?",
+    "solution": "Design and operation in Irrigation scheduling are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0137",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Irrigation scheduling",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Irrigation scheduling?",
+    "solution": "Design and operation in Irrigation scheduling are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0138",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Irrigation scheduling",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Irrigation scheduling?",
+    "solution": "Design and operation in Irrigation scheduling are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0139",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Irrigation scheduling",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Irrigation scheduling?",
+    "solution": "Design and operation in Irrigation scheduling are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0140",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Irrigation scheduling",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Irrigation scheduling?",
+    "solution": "Design and operation in Irrigation scheduling are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0141",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Irrigation scheduling",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Irrigation scheduling?",
+    "solution": "Design and operation in Irrigation scheduling are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0142",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Irrigation scheduling",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Irrigation scheduling?",
+    "solution": "Design and operation in Irrigation scheduling are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0143",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Irrigation scheduling",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Irrigation scheduling?",
+    "solution": "Design and operation in Irrigation scheduling are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0144",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Water Conveyance and Application Methods",
+    "subtopic": "Irrigation scheduling",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Irrigation scheduling?",
+    "solution": "Design and operation in Irrigation scheduling are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0145",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Available water capacity and readily available moisture",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Available water capacity and readily available moisture?",
+    "solution": "Design and operation in Available water capacity and readily available moisture are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0146",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Available water capacity and readily available moisture",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Available water capacity and readily available moisture?",
+    "solution": "Design and operation in Available water capacity and readily available moisture are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0147",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil water potentials and retention energy",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Soil water potentials and retention energy?",
+    "solution": "Design and operation in Soil water potentials and retention energy are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0148",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil water potentials and retention energy",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Soil water potentials and retention energy?",
+    "solution": "Design and operation in Soil water potentials and retention energy are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0149",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil moisture measuring instruments",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Soil moisture measuring instruments?",
+    "solution": "Design and operation in Soil moisture measuring instruments are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0150",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil moisture measuring instruments",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Soil moisture measuring instruments?",
+    "solution": "Design and operation in Soil moisture measuring instruments are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0151",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Soil-Water-Plant Relations & Soil Moisture Constants",
+    "subtopic": "Soil moisture measuring instruments",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Soil moisture measuring instruments?",
+    "solution": "Design and operation in Soil moisture measuring instruments are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0152",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Crop evapotranspiration from pan evaporation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For a maize crop at peak vegetative stage, the crop coefficient is $K_c = 0.80$. If the reference crop evapotranspiration is $ET_0 = 5.0\\text{ mm/day}$, the crop evapotranspiration $ET_c$ (in mm/day) is:",
+    "solution": "Crop evapotranspiration:\n$$ET_c = K_c \\times ET_0 = 0.80 \\times 5.0 = 4.00\\text{ mm/day}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 4.0,
+    "answer_range": [
+      3.9,
+      4.1
+    ],
+    "correct_answer": "4.0",
+    "numerical_range": {
+      "min": 3.9,
+      "max": 4.1
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0153",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Crop evapotranspiration from pan evaporation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The reference crop evapotranspiration ($ET_0$) in the standardized FAO-56 Penman-Monteith equation is defined for an idealized hypothetical grass reference crop having an assumed height of:",
+    "solution": "FAO-56 standard reference surface is a hypothetical grass reference crop with an assumed height of $0.12\\text{ m}$, surface resistance of $70\\text{ s/m}$, and albedo of $0.23$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "0.12 m with surface resistance of 70 s/m and albedo of 0.23",
+      "B": "0.50 m with albedo of 0.10",
+      "C": "1.0 m alfalfa crop",
+      "D": "Zero vegetative height (bare soil)"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0154",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "FAO Penman-Monteith method reference surface",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "For a maize crop at peak vegetative stage, the crop coefficient is $K_c = 0.80$. If the reference crop evapotranspiration is $ET_0 = 5.0\\text{ mm/day}$, the crop evapotranspiration $ET_c$ (in mm/day) is:",
+    "solution": "Crop evapotranspiration:\n$$ET_c = K_c \\times ET_0 = 0.80 \\times 5.0 = 4.00\\text{ mm/day}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 4.0,
+    "answer_range": [
+      3.9,
+      4.1
+    ],
+    "correct_answer": "4.0",
+    "numerical_range": {
+      "min": 3.9,
+      "max": 4.1
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0155",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "FAO Penman-Monteith method reference surface",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The reference crop evapotranspiration ($ET_0$) in the standardized FAO-56 Penman-Monteith equation is defined for an idealized hypothetical grass reference crop having an assumed height of:",
+    "solution": "FAO-56 standard reference surface is a hypothetical grass reference crop with an assumed height of $0.12\\text{ m}$, surface resistance of $70\\text{ s/m}$, and albedo of $0.23$.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "0.12 m with surface resistance of 70 s/m and albedo of 0.23",
+      "B": "0.50 m with albedo of 0.10",
+      "C": "1.0 m alfalfa crop",
+      "D": "Zero vegetative height (bare soil)"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0156",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Factors affecting crop coefficient Kc curve",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Factors affecting crop coefficient Kc curve?",
+    "solution": "Design and operation in Factors affecting crop coefficient Kc curve are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0157",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Factors affecting crop coefficient Kc curve",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Factors affecting crop coefficient Kc curve?",
+    "solution": "Design and operation in Factors affecting crop coefficient Kc curve are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0158",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Evapotranspiration, Consumptive Use & Crop Water Needs",
+    "subtopic": "Factors affecting crop coefficient Kc curve",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Factors affecting crop coefficient Kc curve?",
+    "solution": "Design and operation in Factors affecting crop coefficient Kc curve are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0159",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Irrigation interval calculation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Irrigation interval calculation?",
+    "solution": "Design and operation in Irrigation interval calculation are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0160",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Irrigation interval calculation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Irrigation interval calculation?",
+    "solution": "Design and operation in Irrigation interval calculation are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0161",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Gross irrigation requirement from application efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Gross irrigation requirement from application efficiency?",
+    "solution": "Design and operation in Gross irrigation requirement from application efficiency are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0162",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Gross irrigation requirement from application efficiency",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Gross irrigation requirement from application efficiency?",
+    "solution": "Design and operation in Gross irrigation requirement from application efficiency are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0163",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Critical growth stages of major crops",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Critical growth stages of major crops?",
+    "solution": "Design and operation in Critical growth stages of major crops are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0164",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Critical growth stages of major crops",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Critical growth stages of major crops?",
+    "solution": "Design and operation in Critical growth stages of major crops are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0165",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Scheduling & Soil Moisture Depletion",
+    "subtopic": "Critical growth stages of major crops",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Critical growth stages of major crops?",
+    "solution": "Design and operation in Critical growth stages of major crops are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0166",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Maximum length of border strip",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Maximum length of border strip?",
+    "solution": "Design and operation in Maximum length of border strip are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0167",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Maximum length of border strip",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Maximum length of border strip?",
+    "solution": "Design and operation in Maximum length of border strip are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0168",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Advance and recession curves",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Advance and recession curves?",
+    "solution": "Design and operation in Advance and recession curves are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0169",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Advance and recession curves",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Advance and recession curves?",
+    "solution": "Design and operation in Advance and recession curves are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0170",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Four phases of surface irrigation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Four phases of surface irrigation?",
+    "solution": "Design and operation in Four phases of surface irrigation are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0171",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Four phases of surface irrigation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Four phases of surface irrigation?",
+    "solution": "Design and operation in Four phases of surface irrigation are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0172",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Surface Irrigation: Border, Furrow & Basin Hydraulics",
+    "subtopic": "Four phases of surface irrigation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Four phases of surface irrigation?",
+    "solution": "Design and operation in Four phases of surface irrigation are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0173",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler precipitation application rate",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A drip emitter operates under an operating pressure head of $H = 10.0\\text{ m}$. The discharge equation is $q = 1.25 H^{0.5}$ (where $q$ is in L/h and $H$ is in m). The emitter flow rate (in L/h, rounded to 2 decimal places) is:",
+    "solution": "$$q = 1.25 \\times (10.0)^{0.5} = 1.25 \\times 3.1623 = 3.95\\text{ L/h}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 3.95,
+    "answer_range": [
+      3.9,
+      4.0
+    ],
+    "correct_answer": "3.95",
+    "numerical_range": {
+      "min": 3.9,
+      "max": 4.0
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0174",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler precipitation application rate",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For a pressure-compensating (PC) drip emitter, the emitter discharge exponent $x$ in the flow relationship $q = k H^x$ is close to:",
+    "solution": "For an ideal pressure-compensating emitter, discharge is independent of pressure fluctuations, giving an exponent $x \\to 0$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$x \\approx 0.0$",
+      "B": "$x = 0.5$ (turbulent orifice flow)",
+      "C": "$x = 1.0$ (laminar flow)",
+      "D": "$x = 2.0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0175",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Christiansen Uniformity Coefficient formula",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Christiansen Uniformity Coefficient formula?",
+    "solution": "Design and operation in Christiansen Uniformity Coefficient formula are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0176",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Christiansen Uniformity Coefficient formula",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Christiansen Uniformity Coefficient formula?",
+    "solution": "Design and operation in Christiansen Uniformity Coefficient formula are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0177",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler allowable pressure variation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A drip emitter operates under an operating pressure head of $H = 10.0\\text{ m}$. The discharge equation is $q = 1.25 H^{0.5}$ (where $q$ is in L/h and $H$ is in m). The emitter flow rate (in L/h, rounded to 2 decimal places) is:",
+    "solution": "$$q = 1.25 \\times (10.0)^{0.5} = 1.25 \\times 3.1623 = 3.95\\text{ L/h}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 3.95,
+    "answer_range": [
+      3.9,
+      4.0
+    ],
+    "correct_answer": "3.95",
+    "numerical_range": {
+      "min": 3.9,
+      "max": 4.0
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0178",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler allowable pressure variation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For a pressure-compensating (PC) drip emitter, the emitter discharge exponent $x$ in the flow relationship $q = k H^x$ is close to:",
+    "solution": "For an ideal pressure-compensating emitter, discharge is independent of pressure fluctuations, giving an exponent $x \\to 0$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$x \\approx 0.0$",
+      "B": "$x = 0.5$ (turbulent orifice flow)",
+      "C": "$x = 1.0$ (laminar flow)",
+      "D": "$x = 2.0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0179",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Sprinkler Irrigation Design & Distribution Uniformity",
+    "subtopic": "Sprinkler allowable pressure variation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A drip emitter operates under an operating pressure head of $H = 10.0\\text{ m}$. The discharge equation is $q = 1.25 H^{0.5}$ (where $q$ is in L/h and $H$ is in m). The emitter flow rate (in L/h, rounded to 2 decimal places) is:",
+    "solution": "$$q = 1.25 \\times (10.0)^{0.5} = 1.25 \\times 3.1623 = 3.95\\text{ L/h}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 3.95,
+    "answer_range": [
+      3.9,
+      4.0
+    ],
+    "correct_answer": "3.95",
+    "numerical_range": {
+      "min": 3.9,
+      "max": 4.0
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0180",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Drip emitter flow rate from pressure head",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A drip emitter operates under an operating pressure head of $H = 10.0\\text{ m}$. The discharge equation is $q = 1.25 H^{0.5}$ (where $q$ is in L/h and $H$ is in m). The emitter flow rate (in L/h, rounded to 2 decimal places) is:",
+    "solution": "$$q = 1.25 \\times (10.0)^{0.5} = 1.25 \\times 3.1623 = 3.95\\text{ L/h}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 3.95,
+    "answer_range": [
+      3.9,
+      4.0
+    ],
+    "correct_answer": "3.95",
+    "numerical_range": {
+      "min": 3.9,
+      "max": 4.0
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0181",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Drip emitter flow rate from pressure head",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For a pressure-compensating (PC) drip emitter, the emitter discharge exponent $x$ in the flow relationship $q = k H^x$ is close to:",
+    "solution": "For an ideal pressure-compensating emitter, discharge is independent of pressure fluctuations, giving an exponent $x \\to 0$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$x \\approx 0.0$",
+      "B": "$x = 0.5$ (turbulent orifice flow)",
+      "C": "$x = 1.0$ (laminar flow)",
+      "D": "$x = 2.0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0182",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Pressure compensating emitter exponent",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A drip emitter operates under an operating pressure head of $H = 10.0\\text{ m}$. The discharge equation is $q = 1.25 H^{0.5}$ (where $q$ is in L/h and $H$ is in m). The emitter flow rate (in L/h, rounded to 2 decimal places) is:",
+    "solution": "$$q = 1.25 \\times (10.0)^{0.5} = 1.25 \\times 3.1623 = 3.95\\text{ L/h}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 3.95,
+    "answer_range": [
+      3.9,
+      4.0
+    ],
+    "correct_answer": "3.95",
+    "numerical_range": {
+      "min": 3.9,
+      "max": 4.0
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0183",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Pressure compensating emitter exponent",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "For a pressure-compensating (PC) drip emitter, the emitter discharge exponent $x$ in the flow relationship $q = k H^x$ is close to:",
+    "solution": "For an ideal pressure-compensating emitter, discharge is independent of pressure fluctuations, giving an exponent $x \\to 0$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$x \\approx 0.0$",
+      "B": "$x = 0.5$ (turbulent orifice flow)",
+      "C": "$x = 1.0$ (laminar flow)",
+      "D": "$x = 2.0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0184",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Advantages and filtration in drip irrigation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Advantages and filtration in drip irrigation?",
+    "solution": "Design and operation in Advantages and filtration in drip irrigation are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0185",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Advantages and filtration in drip irrigation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Advantages and filtration in drip irrigation?",
+    "solution": "Design and operation in Advantages and filtration in drip irrigation are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0186",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Drip / Micro-Irrigation Design & Emitters",
+    "subtopic": "Advantages and filtration in drip irrigation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Advantages and filtration in drip irrigation?",
+    "solution": "Design and operation in Advantages and filtration in drip irrigation are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0187",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Project irrigation efficiency calculation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Project irrigation efficiency calculation?",
+    "solution": "Design and operation in Project irrigation efficiency calculation are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0188",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Project irrigation efficiency calculation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Project irrigation efficiency calculation?",
+    "solution": "Design and operation in Project irrigation efficiency calculation are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0189",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water storage efficiency definition",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Water storage efficiency definition?",
+    "solution": "Design and operation in Water storage efficiency definition are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0190",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water storage efficiency definition",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Water storage efficiency definition?",
+    "solution": "Design and operation in Water storage efficiency definition are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0191",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water distribution efficiency formula",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Water distribution efficiency formula?",
+    "solution": "Design and operation in Water distribution efficiency formula are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0192",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water distribution efficiency formula",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Water distribution efficiency formula?",
+    "solution": "Design and operation in Water distribution efficiency formula are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0193",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Irrigation Efficiencies & Water Conveyance",
+    "subtopic": "Water distribution efficiency formula",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Water distribution efficiency formula?",
+    "solution": "Design and operation in Water distribution efficiency formula are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0194",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey regime wetted perimeter",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A regime irrigation canal carries a design discharge $Q = 25.0\\text{ m}^3\\text{/s}$. According to Lacey's regime theory, the wetted perimeter $P$ of the canal (in meters) is:",
+    "solution": "Lacey's regime wetted perimeter formula:\n$$P = 4.75 \\sqrt{Q} = 4.75 \\sqrt{25.0} = 4.75 \\times 5.0 = 23.75\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 23.75,
+    "answer_range": [
+      23.65,
+      23.85
+    ],
+    "correct_answer": "23.75",
+    "numerical_range": {
+      "min": 23.65,
+      "max": 23.85
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0195",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey regime wetted perimeter",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Lacey's regime canal theory, the silt factor $f$ for an average sediment particle diameter $d_{\\text{mm}}$ (in mm) is given by:",
+    "solution": "Lacey's silt factor: $f = 1.76 \\sqrt{d_{\\text{mm}}}$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$f = 1.76 \\sqrt{d_{\\text{mm}}}$",
+      "B": "$f = 0.55 d_{\\text{mm}}^{0.64}$",
+      "C": "$f = 2.5 d_{\\text{mm}}$",
+      "D": "$f = \\frac{1}{d_{\\text{mm}}}$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0196",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey silt factor calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A regime irrigation canal carries a design discharge $Q = 25.0\\text{ m}^3\\text{/s}$. According to Lacey's regime theory, the wetted perimeter $P$ of the canal (in meters) is:",
+    "solution": "Lacey's regime wetted perimeter formula:\n$$P = 4.75 \\sqrt{Q} = 4.75 \\sqrt{25.0} = 4.75 \\times 5.0 = 23.75\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 23.75,
+    "answer_range": [
+      23.65,
+      23.85
+    ],
+    "correct_answer": "23.75",
+    "numerical_range": {
+      "min": 23.65,
+      "max": 23.85
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0197",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey silt factor calculation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Lacey's regime canal theory, the silt factor $f$ for an average sediment particle diameter $d_{\\text{mm}}$ (in mm) is given by:",
+    "solution": "Lacey's silt factor: $f = 1.76 \\sqrt{d_{\\text{mm}}}$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$f = 1.76 \\sqrt{d_{\\text{mm}}}$",
+      "B": "$f = 0.55 d_{\\text{mm}}^{0.64}$",
+      "C": "$f = 2.5 d_{\\text{mm}}$",
+      "D": "$f = \\frac{1}{d_{\\text{mm}}}$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0198",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey vs Kennedy regime canal theories",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A regime irrigation canal carries a design discharge $Q = 25.0\\text{ m}^3\\text{/s}$. According to Lacey's regime theory, the wetted perimeter $P$ of the canal (in meters) is:",
+    "solution": "Lacey's regime wetted perimeter formula:\n$$P = 4.75 \\sqrt{Q} = 4.75 \\sqrt{25.0} = 4.75 \\times 5.0 = 23.75\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 23.75,
+    "answer_range": [
+      23.65,
+      23.85
+    ],
+    "correct_answer": "23.75",
+    "numerical_range": {
+      "min": 23.65,
+      "max": 23.85
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0199",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey vs Kennedy regime canal theories",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In Lacey's regime canal theory, the silt factor $f$ for an average sediment particle diameter $d_{\\text{mm}}$ (in mm) is given by:",
+    "solution": "Lacey's silt factor: $f = 1.76 \\sqrt{d_{\\text{mm}}}$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$f = 1.76 \\sqrt{d_{\\text{mm}}}$",
+      "B": "$f = 0.55 d_{\\text{mm}}^{0.64}$",
+      "C": "$f = 2.5 d_{\\text{mm}}$",
+      "D": "$f = \\frac{1}{d_{\\text{mm}}}$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0200",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Canal Design: Lacey, Kennedy & Tractive Force",
+    "subtopic": "Lacey vs Kennedy regime canal theories",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A regime irrigation canal carries a design discharge $Q = 25.0\\text{ m}^3\\text{/s}$. According to Lacey's regime theory, the wetted perimeter $P$ of the canal (in meters) is:",
+    "solution": "Lacey's regime wetted perimeter formula:\n$$P = 4.75 \\sqrt{Q} = 4.75 \\sqrt{25.0} = 4.75 \\times 5.0 = 23.75\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 23.75,
+    "answer_range": [
+      23.65,
+      23.85
+    ],
+    "correct_answer": "23.75",
+    "numerical_range": {
+      "min": 23.65,
+      "max": 23.85
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0201",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Drainage coefficient discharge computation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "An agricultural watershed of area $500\\text{ ha}$ requires a drainage coefficient of $12\\text{ mm/day}$. The required design drainage outlet capacity (in $\\text{m}^3\\text{/s}$, rounded to 3 decimal places) is:",
+    "solution": "Drainage discharge:\n$$Q = \\frac{A \\times D.C.}{86400} = \\frac{(500.0 \\times 10^4) \\times (12.0 \\times 10^{-3})}{86400} = \\frac{60000.0}{86400} = 0.694\\text{ m}^3\\text{/s}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 0.694,
+    "answer_range": [
+      0.674,
+      0.714
+    ],
+    "correct_answer": "0.694",
+    "numerical_range": {
+      "min": 0.674,
+      "max": 0.714
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0202",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Drainage coefficient discharge computation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The 'Drainage Coefficient' (D.C.) in agricultural land drainage is defined as:",
+    "solution": "Drainage coefficient is universally defined as the design depth of excess water (typically 10–25 mm) to be drained from a given land area within 24 hours.",
+    "difficulty": "Easy",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "The depth of excess water in mm removed from the drainage area in a 24-hour period",
+      "B": "The ratio of drain spacing to drain depth",
+      "C": "The Manning roughness of the drainage ditch",
+      "D": "The percentage of rainfall lost to evaporation"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0203",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Random ditch vs parallel ditch drainage patterns",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Random ditch vs parallel ditch drainage patterns?",
+    "solution": "Design and operation in Random ditch vs parallel ditch drainage patterns are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0204",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Random ditch vs parallel ditch drainage patterns",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Random ditch vs parallel ditch drainage patterns?",
+    "solution": "Design and operation in Random ditch vs parallel ditch drainage patterns are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0205",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Benefits of agricultural drainage",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Benefits of agricultural drainage?",
+    "solution": "Design and operation in Benefits of agricultural drainage are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0206",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Benefits of agricultural drainage",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Benefits of agricultural drainage?",
+    "solution": "Design and operation in Benefits of agricultural drainage are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0207",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Agricultural Drainage: Surface Drainage & Runoff Removal",
+    "subtopic": "Benefits of agricultural drainage",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Benefits of agricultural drainage?",
+    "solution": "Design and operation in Benefits of agricultural drainage are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0208",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt spacing for drains on impermeable barrier",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Hooghoudt's steady-state drain spacing equation ($S^2 = \\frac{8 K_2 d h + 4 K_1 h^2}{q}$) assumes:",
+    "solution": "Hooghoudt derived steady-state drain spacing assuming steady recharge $q$, two-layered permeability ($K_1, K_2$), and converted radial flow near the drains to equivalent horizontal flow using equivalent depth $d$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Steady-state rainfall/recharge rate $q$ with horizontal and radial flow components accounted by equivalent depth $d$",
+      "B": "Unsteady transient drainage without an impermeable floor",
+      "C": "Zero soil hydraulic conductivity below the drain level",
+      "D": "Infinite drain depth with zero hydraulic head"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0209",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt spacing for drains on impermeable barrier",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Parallel subsurface relief drains are laid at a depth of $1.8\\text{ m}$. The impermeable barrier lies at the drain level ($d = 0$). If $K = 1.0\\text{ m/day}$, steady drainage rate $q = 0.004\\text{ m/day}$, and maximum allowable water table height mid-spacing is $h = 0.6\\text{ m}$, the drain spacing $S$ by Hooghoudt's equation ($S = \\sqrt{4 K h^2 / q}$, in meters) is:",
+    "solution": "When barrier is at drain level ($d = 0$):\n$$S^2 = \\frac{4 K h^2}{q} = \\frac{4 \\times 1.0 \\times (0.6)^2}{0.004} = \\frac{1.44}{0.004} = 360\\text{ m}^2$$\n$$S = \\sqrt{360} = 18.97\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 18.97,
+    "answer_range": [
+      18.5,
+      19.5
+    ],
+    "correct_answer": "18.97",
+    "numerical_range": {
+      "min": 18.5,
+      "max": 19.5
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0210",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt equivalent depth d concept",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Hooghoudt's steady-state drain spacing equation ($S^2 = \\frac{8 K_2 d h + 4 K_1 h^2}{q}$) assumes:",
+    "solution": "Hooghoudt derived steady-state drain spacing assuming steady recharge $q$, two-layered permeability ($K_1, K_2$), and converted radial flow near the drains to equivalent horizontal flow using equivalent depth $d$.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Steady-state rainfall/recharge rate $q$ with horizontal and radial flow components accounted by equivalent depth $d$",
+      "B": "Unsteady transient drainage without an impermeable floor",
+      "C": "Zero soil hydraulic conductivity below the drain level",
+      "D": "Infinite drain depth with zero hydraulic head"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0211",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Hooghoudt equivalent depth d concept",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Parallel subsurface relief drains are laid at a depth of $1.8\\text{ m}$. The impermeable barrier lies at the drain level ($d = 0$). If $K = 1.0\\text{ m/day}$, steady drainage rate $q = 0.004\\text{ m/day}$, and maximum allowable water table height mid-spacing is $h = 0.6\\text{ m}$, the drain spacing $S$ by Hooghoudt's equation ($S = \\sqrt{4 K h^2 / q}$, in meters) is:",
+    "solution": "When barrier is at drain level ($d = 0$):\n$$S^2 = \\frac{4 K h^2}{q} = \\frac{4 \\times 1.0 \\times (0.6)^2}{0.004} = \\frac{1.44}{0.004} = 360\\text{ m}^2$$\n$$S = \\sqrt{360} = 18.97\\text{ m}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 18.97,
+    "answer_range": [
+      18.5,
+      19.5
+    ],
+    "correct_answer": "18.97",
+    "numerical_range": {
+      "min": 18.5,
+      "max": 19.5
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0212",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Steady vs unsteady subsurface drainage",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Steady vs unsteady subsurface drainage?",
+    "solution": "Design and operation in Steady vs unsteady subsurface drainage are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0213",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Steady vs unsteady subsurface drainage",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Steady vs unsteady subsurface drainage?",
+    "solution": "Design and operation in Steady vs unsteady subsurface drainage are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0214",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Subsurface Drainage: Hooghoudt & Steady-State Equations",
+    "subtopic": "Steady vs unsteady subsurface drainage",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Steady vs unsteady subsurface drainage?",
+    "solution": "Design and operation in Steady vs unsteady subsurface drainage are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0215",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Leaching requirement calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Irrigation water with electrical conductivity $EC_w = 1.5\\text{ dS/m}$ is applied to a crop having a soil salinity tolerance threshold of $EC_e = 4.0\\text{ dS/m}$. Using the US Salinity Laboratory formula $LR = \\frac{EC_w}{5 EC_e - EC_w}$, the Leaching Requirement (fraction, rounded to 3 decimal places) is:",
+    "solution": "$$LR = \\frac{1.5}{5(4.0) - 1.5} = \\frac{1.5}{20.0 - 1.5} = \\frac{1.5}{18.5} = 0.081$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 0.081,
+    "answer_range": [
+      0.071,
+      0.091
+    ],
+    "correct_answer": "0.081",
+    "numerical_range": {
+      "min": 0.071,
+      "max": 0.091
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0216",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Leaching requirement calculation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A soil is classified as 'Saline-Sodic' when:",
+    "solution": "Saline-sodic soils have high soluble salts ($EC > 4.0\\text{ dS/m}$) and high exchangeable sodium ($ESP > 15\\%$, $SAR > 13$), typically maintaining $pH \\le 8.5$ due to excess neutral salts.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$EC > 4.0\\text{ dS/m}$, $SAR > 13$ (or $ESP > 15\\%$), and $pH < 8.5$",
+      "B": "$EC < 4.0\\text{ dS/m}$ and $ESP < 15\\%$",
+      "C": "$pH > 10.0$ and zero soluble salts",
+      "D": "$SAR < 2$ and $EC = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0217",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Sodium Adsorption Ratio (SAR)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Irrigation water with electrical conductivity $EC_w = 1.5\\text{ dS/m}$ is applied to a crop having a soil salinity tolerance threshold of $EC_e = 4.0\\text{ dS/m}$. Using the US Salinity Laboratory formula $LR = \\frac{EC_w}{5 EC_e - EC_w}$, the Leaching Requirement (fraction, rounded to 3 decimal places) is:",
+    "solution": "$$LR = \\frac{1.5}{5(4.0) - 1.5} = \\frac{1.5}{20.0 - 1.5} = \\frac{1.5}{18.5} = 0.081$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 0.081,
+    "answer_range": [
+      0.071,
+      0.091
+    ],
+    "correct_answer": "0.081",
+    "numerical_range": {
+      "min": 0.071,
+      "max": 0.091
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0218",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Sodium Adsorption Ratio (SAR)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A soil is classified as 'Saline-Sodic' when:",
+    "solution": "Saline-sodic soils have high soluble salts ($EC > 4.0\\text{ dS/m}$) and high exchangeable sodium ($ESP > 15\\%$, $SAR > 13$), typically maintaining $pH \\le 8.5$ due to excess neutral salts.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$EC > 4.0\\text{ dS/m}$, $SAR > 13$ (or $ESP > 15\\%$), and $pH < 8.5$",
+      "B": "$EC < 4.0\\text{ dS/m}$ and $ESP < 15\\%$",
+      "C": "$pH > 10.0$ and zero soluble salts",
+      "D": "$SAR < 2$ and $EC = 0$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0219",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Classification of salt-affected soils",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Classification of salt-affected soils?",
+    "solution": "Design and operation in Classification of salt-affected soils are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0220",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Classification of salt-affected soils",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Classification of salt-affected soils?",
+    "solution": "Design and operation in Classification of salt-affected soils are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0221",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Leaching Requirement, Salinity & Drainage Water Quality",
+    "subtopic": "Classification of salt-affected soils",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Classification of salt-affected soils?",
+    "solution": "Design and operation in Classification of salt-affected soils are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0222",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Seepage velocity in porous media",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In an unconfined aquifer with an effective porosity of $\\eta_e = 0.25$, Darcy velocity is measured as $v = 0.40\\text{ m/day}$. The actual seepage velocity of groundwater (in m/day) is:",
+    "solution": "Seepage velocity:\n$$v_s = \\frac{v}{\\eta_e} = \\frac{0.40}{0.25} = 1.60\\text{ m/day}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 1.6,
+    "answer_range": [
+      1.55,
+      1.65
+    ],
+    "correct_answer": "1.6",
+    "numerical_range": {
+      "min": 1.55,
+      "max": 1.65
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0223",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Seepage velocity in porous media",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Darcy's Law ($v = -K \\frac{dh}{dl}$) for flow through porous media is valid provided the Reynolds number based on mean grain diameter ($Re = \\frac{v d}{\\nu}$) is:",
+    "solution": "Darcy's law is valid strictly for laminar creeping flow through porous media, where pore Reynolds number $Re \\le 1$ (or up to 10).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Less than 1 to 10 (strictly laminar regime)",
+      "B": "Greater than 2000 (turbulent)",
+      "C": "Equal to infinity",
+      "D": "Independent of velocity"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0224",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Aquifer, aquitard, aquiclude, and aquifuge",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A geologic formation that stores water but is incapable of transmitting significant quantities to wells (e.g. clay layer) is termed an:",
+    "solution": "An aquiclude stores water (high porosity) but has very low permeability, preventing economic extraction. An aquifuge neither stores nor transmits water (solid granite).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Aquiclude",
+      "B": "Aquifer",
+      "C": "Aquifuge",
+      "D": "Artesian basin"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0225",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Aquifer, aquitard, aquiclude, and aquifuge",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "An unconfined aquifer has an aerial extent of $5.0\\text{ km}^2$. The specific yield of the aquifer is $S_y = 0.16$. If the water table drops by an average depth of $2.0\\text{ m}$, the total volume of groundwater released from storage (in million cubic meters, $10^6\\text{ m}^3$) is:",
+    "solution": "Volume released:\n$$V = A \\times \\Delta h \\times S_y = (5.0 \\times 10^6\\text{ m}^2) \\times 2.0\\text{ m} \\times 0.16 = 1.60 \\times 10^6\\text{ m}^3$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 1.6,
+    "answer_range": [
+      1.58,
+      1.62
+    ],
+    "correct_answer": "1.6",
+    "numerical_range": {
+      "min": 1.58,
+      "max": 1.62
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0226",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Storativity and specific yield of aquifers",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A geologic formation that stores water but is incapable of transmitting significant quantities to wells (e.g. clay layer) is termed an:",
+    "solution": "An aquiclude stores water (high porosity) but has very low permeability, preventing economic extraction. An aquifuge neither stores nor transmits water (solid granite).",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Aquiclude",
+      "B": "Aquifer",
+      "C": "Aquifuge",
+      "D": "Artesian basin"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0227",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Storativity and specific yield of aquifers",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "An unconfined aquifer has an aerial extent of $5.0\\text{ km}^2$. The specific yield of the aquifer is $S_y = 0.16$. If the water table drops by an average depth of $2.0\\text{ m}$, the total volume of groundwater released from storage (in million cubic meters, $10^6\\text{ m}^3$) is:",
+    "solution": "Volume released:\n$$V = A \\times \\Delta h \\times S_y = (5.0 \\times 10^6\\text{ m}^2) \\times 2.0\\text{ m} \\times 0.16 = 1.60 \\times 10^6\\text{ m}^3$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 1.6,
+    "answer_range": [
+      1.58,
+      1.62
+    ],
+    "correct_answer": "1.6",
+    "numerical_range": {
+      "min": 1.58,
+      "max": 1.62
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0228",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Groundwater Occurrence, Aquifer Types & Darcy Law",
+    "subtopic": "Storativity and specific yield of aquifers",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In surface electrical resistivity surveys for groundwater exploration (Schlumberger and Wenner electrode arrays):",
+    "solution": "DC or low-frequency AC is applied through outer current electrodes A, B, and potential difference is measured across inner potential electrodes M, N.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Current is injected into the ground through outer electrodes $A$ and $B$",
+      "B": "Potential drop is measured across inner electrodes $M$ and $N$",
+      "C": "Apparent resistivity $\\rho_a = K \\frac{\\Delta V}{I}$ where $K$ is the geometric configuration factor",
+      "D": "Direct current cannot be used under any circumstances"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_IDE_0229",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Thiem formula discharge in confined aquifer",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a confined artesian aquifer of thickness $b$ and hydraulic conductivity $K$, the discharge to a fully penetrating pumping well is given by the Thiem equilibrium formula as:",
+    "solution": "Thiem formula for confined aquifer: $Q = \\frac{2 \\pi T (h_2 - h_1)}{\\ln(r_2 / r_1)} = \\frac{2 \\pi K b (s_1 - s_2)}{\\ln(r_2 / r_1)}$. Dupuit formula (with squared heads) applies to unconfined aquifers.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$Q = \\frac{2 \\pi K b (h_2 - h_1)}{\\ln(r_2 / r_1)}$",
+      "B": "$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$",
+      "C": "$Q = K A \\frac{dh}{dx}$",
+      "D": "$Q = \\frac{2 \\pi K h_1 h_2}{r_2 - r_1}$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0230",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Thiem formula discharge in confined aquifer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In a pumping test on a confined aquifer, Cooper-Jacob semi-logarithmic analysis reveals a drawdown per log cycle of $\\Delta s = 1.20\\text{ m}$ for a steady discharge $Q = 1800\\text{ m}^3\\text{/day}$. The aquifer transmissivity $T$ (in $\\text{m}^2\\text{/day}$, rounded to 1 decimal place) is:",
+    "solution": "Cooper-Jacob formula:\n$$T = \\frac{2.303 Q}{4 \\pi \\Delta s} = \\frac{2.303 \\times 1800}{4 \\pi \\times 1.20} = \\frac{4145.4}{15.0796} = 274.9\\text{ m}^2\\text{/day}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 274.9,
+    "answer_range": [
+      270.0,
+      280.0
+    ],
+    "correct_answer": "274.9",
+    "numerical_range": {
+      "min": 270.0,
+      "max": 280.0
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0231",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Dupuit equation for unconfined aquifer",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a confined artesian aquifer of thickness $b$ and hydraulic conductivity $K$, the discharge to a fully penetrating pumping well is given by the Thiem equilibrium formula as:",
+    "solution": "Thiem formula for confined aquifer: $Q = \\frac{2 \\pi T (h_2 - h_1)}{\\ln(r_2 / r_1)} = \\frac{2 \\pi K b (s_1 - s_2)}{\\ln(r_2 / r_1)}$. Dupuit formula (with squared heads) applies to unconfined aquifers.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$Q = \\frac{2 \\pi K b (h_2 - h_1)}{\\ln(r_2 / r_1)}$",
+      "B": "$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$",
+      "C": "$Q = K A \\frac{dh}{dx}$",
+      "D": "$Q = \\frac{2 \\pi K h_1 h_2}{r_2 - r_1}$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0232",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Dupuit equation for unconfined aquifer",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In a pumping test on a confined aquifer, Cooper-Jacob semi-logarithmic analysis reveals a drawdown per log cycle of $\\Delta s = 1.20\\text{ m}$ for a steady discharge $Q = 1800\\text{ m}^3\\text{/day}$. The aquifer transmissivity $T$ (in $\\text{m}^2\\text{/day}$, rounded to 1 decimal place) is:",
+    "solution": "Cooper-Jacob formula:\n$$T = \\frac{2.303 Q}{4 \\pi \\Delta s} = \\frac{2.303 \\times 1800}{4 \\pi \\times 1.20} = \\frac{4145.4}{15.0796} = 274.9\\text{ m}^2\\text{/day}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 274.9,
+    "answer_range": [
+      270.0,
+      280.0
+    ],
+    "correct_answer": "274.9",
+    "numerical_range": {
+      "min": 270.0,
+      "max": 280.0
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0233",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Assumptions of Dupuit-Forchheimer theory",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a confined artesian aquifer of thickness $b$ and hydraulic conductivity $K$, the discharge to a fully penetrating pumping well is given by the Thiem equilibrium formula as:",
+    "solution": "Thiem formula for confined aquifer: $Q = \\frac{2 \\pi T (h_2 - h_1)}{\\ln(r_2 / r_1)} = \\frac{2 \\pi K b (s_1 - s_2)}{\\ln(r_2 / r_1)}$. Dupuit formula (with squared heads) applies to unconfined aquifers.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$Q = \\frac{2 \\pi K b (h_2 - h_1)}{\\ln(r_2 / r_1)}$",
+      "B": "$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$",
+      "C": "$Q = K A \\frac{dh}{dx}$",
+      "D": "$Q = \\frac{2 \\pi K h_1 h_2}{r_2 - r_1}$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0234",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Assumptions of Dupuit-Forchheimer theory",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In a pumping test on a confined aquifer, Cooper-Jacob semi-logarithmic analysis reveals a drawdown per log cycle of $\\Delta s = 1.20\\text{ m}$ for a steady discharge $Q = 1800\\text{ m}^3\\text{/day}$. The aquifer transmissivity $T$ (in $\\text{m}^2\\text{/day}$, rounded to 1 decimal place) is:",
+    "solution": "Cooper-Jacob formula:\n$$T = \\frac{2.303 Q}{4 \\pi \\Delta s} = \\frac{2.303 \\times 1800}{4 \\pi \\times 1.20} = \\frac{4145.4}{15.0796} = 274.9\\text{ m}^2\\text{/day}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 274.9,
+    "answer_range": [
+      270.0,
+      280.0
+    ],
+    "correct_answer": "274.9",
+    "numerical_range": {
+      "min": 270.0,
+      "max": 280.0
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0235",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Steady Flow to Wells: Confined & Unconfined Aquifers",
+    "subtopic": "Assumptions of Dupuit-Forchheimer theory",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which types of tubewells are commonly installed in agricultural alluvial plains based on strainer placement and water entry mechanism?",
+    "solution": "Strainer, cavity, and slotted tubewells are standard classifications of agricultural tubewells.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Strainer tubewell with slotted pipe and brass/gravel mesh screen",
+      "B": "Cavity tubewell drawing water from an aquifer below a stiff, impermeable clay layer without a strainer",
+      "C": "Slotted tubewell with gravel pack",
+      "D": "Centrifugal impeller well"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_IDE_0236",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Transmissivity from Cooper-Jacob drawdown per log cycle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Transmissivity from Cooper-Jacob drawdown per log cycle?",
+    "solution": "Design and operation in Transmissivity from Cooper-Jacob drawdown per log cycle are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0237",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Transmissivity from Cooper-Jacob drawdown per log cycle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Transmissivity from Cooper-Jacob drawdown per log cycle?",
+    "solution": "Design and operation in Transmissivity from Cooper-Jacob drawdown per log cycle are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0238",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Condition of validity for Cooper-Jacob approximation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Condition of validity for Cooper-Jacob approximation?",
+    "solution": "Design and operation in Condition of validity for Cooper-Jacob approximation are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0239",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Condition of validity for Cooper-Jacob approximation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Condition of validity for Cooper-Jacob approximation?",
+    "solution": "Design and operation in Condition of validity for Cooper-Jacob approximation are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0240",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Theis non-equilibrium equation characteristics",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a confined artesian aquifer of thickness $b$ and hydraulic conductivity $K$, the discharge to a fully penetrating pumping well is given by the Thiem equilibrium formula as:",
+    "solution": "Thiem formula for confined aquifer: $Q = \\frac{2 \\pi T (h_2 - h_1)}{\\ln(r_2 / r_1)} = \\frac{2 \\pi K b (s_1 - s_2)}{\\ln(r_2 / r_1)}$. Dupuit formula (with squared heads) applies to unconfined aquifers.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$Q = \\frac{2 \\pi K b (h_2 - h_1)}{\\ln(r_2 / r_1)}$",
+      "B": "$Q = \\frac{\\pi K (h_2^2 - h_1^2)}{\\ln(r_2 / r_1)}$",
+      "C": "$Q = K A \\frac{dh}{dx}$",
+      "D": "$Q = \\frac{2 \\pi K h_1 h_2}{r_2 - r_1}$"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0241",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Theis non-equilibrium equation characteristics",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In a pumping test on a confined aquifer, Cooper-Jacob semi-logarithmic analysis reveals a drawdown per log cycle of $\\Delta s = 1.20\\text{ m}$ for a steady discharge $Q = 1800\\text{ m}^3\\text{/day}$. The aquifer transmissivity $T$ (in $\\text{m}^2\\text{/day}$, rounded to 1 decimal place) is:",
+    "solution": "Cooper-Jacob formula:\n$$T = \\frac{2.303 Q}{4 \\pi \\Delta s} = \\frac{2.303 \\times 1800}{4 \\pi \\times 1.20} = \\frac{4145.4}{15.0796} = 274.9\\text{ m}^2\\text{/day}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 274.9,
+    "answer_range": [
+      270.0,
+      280.0
+    ],
+    "correct_answer": "274.9",
+    "numerical_range": {
+      "min": 270.0,
+      "max": 280.0
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0242",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Unsteady Flow to Wells: Theis & Cooper-Jacob Solutions",
+    "subtopic": "Theis non-equilibrium equation characteristics",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which types of tubewells are commonly installed in agricultural alluvial plains based on strainer placement and water entry mechanism?",
+    "solution": "Strainer, cavity, and slotted tubewells are standard classifications of agricultural tubewells.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Strainer tubewell with slotted pipe and brass/gravel mesh screen",
+      "B": "Cavity tubewell drawing water from an aquifer below a stiff, impermeable clay layer without a strainer",
+      "C": "Slotted tubewell with gravel pack",
+      "D": "Centrifugal impeller well"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_IDE_0243",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Affinity law discharge scaling with speed",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A centrifugal irrigation pump delivers $40.0\\text{ L/s}$ against a total head of $20.0\\text{ m}$ at a speed of $1450\\text{ rpm}$. If the pump speed is increased to $1740\\text{ rpm}$ ($1.2 \\times 1450$), the new discharge by pump affinity laws (in L/s) is:",
+    "solution": "Pump affinity law for discharge:\n$$\\frac{Q_2}{Q_1} = \\frac{N_2}{N_1} \\implies Q_2 = 40.0 \\times \\left(\\frac{1740}{1450}\\right) = 40.0 \\times 1.20 = 48.0\\text{ L/s}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 48.0,
+    "answer_range": [
+      47.5,
+      48.5
+    ],
+    "correct_answer": "48.0",
+    "numerical_range": {
+      "min": 47.5,
+      "max": 48.5
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0244",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Affinity law discharge scaling with speed",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The dimensionless or dimensional specific speed of a pump ($N_s = \\frac{N \\sqrt{Q}}{H^{3/4}}$) serves primarily as:",
+    "solution": "Specific speed characterizes impeller geometry: low $N_s$ indicates radial flow, medium indicates mixed flow, and high $N_s$ indicates axial flow.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "A shape and geometric parameter for classifying impellers (radial, mixed, or axial flow)",
+      "B": "A measure of electric motor efficiency",
+      "C": "The RPM at which cavitation commences",
+      "D": "The critical diameter of the suction pipe"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0245",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Centrifugal pump specific speed",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A centrifugal irrigation pump delivers $40.0\\text{ L/s}$ against a total head of $20.0\\text{ m}$ at a speed of $1450\\text{ rpm}$. If the pump speed is increased to $1740\\text{ rpm}$ ($1.2 \\times 1450$), the new discharge by pump affinity laws (in L/s) is:",
+    "solution": "Pump affinity law for discharge:\n$$\\frac{Q_2}{Q_1} = \\frac{N_2}{N_1} \\implies Q_2 = 40.0 \\times \\left(\\frac{1740}{1450}\\right) = 40.0 \\times 1.20 = 48.0\\text{ L/s}$$",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "answer": 48.0,
+    "answer_range": [
+      47.5,
+      48.5
+    ],
+    "correct_answer": "48.0",
+    "numerical_range": {
+      "min": 47.5,
+      "max": 48.5
+    }
+  },
+  {
+    "id": "QB_SUB_IDE_0246",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Centrifugal pump specific speed",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "The dimensionless or dimensional specific speed of a pump ($N_s = \\frac{N \\sqrt{Q}}{H^{3/4}}$) serves primarily as:",
+    "solution": "Specific speed characterizes impeller geometry: low $N_s$ indicates radial flow, medium indicates mixed flow, and high $N_s$ indicates axial flow.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "A shape and geometric parameter for classifying impellers (radial, mixed, or axial flow)",
+      "B": "A measure of electric motor efficiency",
+      "C": "The RPM at which cavitation commences",
+      "D": "The critical diameter of the suction pipe"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0247",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Pump affinity laws scaling powers",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Pump affinity laws scaling powers?",
+    "solution": "Design and operation in Pump affinity laws scaling powers are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0248",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Pump affinity laws scaling powers",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Pump affinity laws scaling powers?",
+    "solution": "Design and operation in Pump affinity laws scaling powers are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0249",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Centrifugal Pumps: Performance Curves & Affinity Laws",
+    "subtopic": "Pump affinity laws scaling powers",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Pump affinity laws scaling powers?",
+    "solution": "Design and operation in Pump affinity laws scaling powers are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0250",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "NPSH Available calculation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "To prevent destructive cavitation in a centrifugal irrigation pump, the installation must ensure that:",
+    "solution": "Cavitation occurs if local static pressure drops to the liquid vapor pressure. Thus, available net positive suction head must exceed the manufacturer's required NPSH by a safe margin.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$\\text{NPSH}_{\\text{Available}} > \\text{NPSH}_{\\text{Required}}$",
+      "B": "$\\text{NPSH}_{\\text{Available}} < \\text{NPSH}_{\\text{Required}}$",
+      "C": "Suction lift is at least 15 meters",
+      "D": "Discharge valve is completely closed"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0251",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "NPSH Available calculation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "To prevent destructive cavitation in a centrifugal irrigation pump, the installation must ensure that:",
+    "solution": "Cavitation occurs if local static pressure drops to the liquid vapor pressure. Thus, available net positive suction head must exceed the manufacturer's required NPSH by a safe margin.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$\\text{NPSH}_{\\text{Available}} > \\text{NPSH}_{\\text{Required}}$",
+      "B": "$\\text{NPSH}_{\\text{Available}} < \\text{NPSH}_{\\text{Required}}$",
+      "C": "Suction lift is at least 15 meters",
+      "D": "Discharge valve is completely closed"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0252",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Cavitation prevention criterion",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "To prevent destructive cavitation in a centrifugal irrigation pump, the installation must ensure that:",
+    "solution": "Cavitation occurs if local static pressure drops to the liquid vapor pressure. Thus, available net positive suction head must exceed the manufacturer's required NPSH by a safe margin.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$\\text{NPSH}_{\\text{Available}} > \\text{NPSH}_{\\text{Required}}$",
+      "B": "$\\text{NPSH}_{\\text{Available}} < \\text{NPSH}_{\\text{Required}}$",
+      "C": "Suction lift is at least 15 meters",
+      "D": "Discharge valve is completely closed"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0253",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Cavitation prevention criterion",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "To prevent destructive cavitation in a centrifugal irrigation pump, the installation must ensure that:",
+    "solution": "Cavitation occurs if local static pressure drops to the liquid vapor pressure. Thus, available net positive suction head must exceed the manufacturer's required NPSH by a safe margin.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "$\\text{NPSH}_{\\text{Available}} > \\text{NPSH}_{\\text{Required}}$",
+      "B": "$\\text{NPSH}_{\\text{Available}} < \\text{NPSH}_{\\text{Required}}$",
+      "C": "Suction lift is at least 15 meters",
+      "D": "Discharge valve is completely closed"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0254",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Remedial measures against pump cavitation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Remedial measures against pump cavitation?",
+    "solution": "Design and operation in Remedial measures against pump cavitation are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0255",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Remedial measures against pump cavitation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Remedial measures against pump cavitation?",
+    "solution": "Design and operation in Remedial measures against pump cavitation are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_IDE_0256",
+    "section": "Section 5: Irrigation and Drainage Engineering",
+    "topic": "Pump Cavitation, NPSH & Installation",
+    "subtopic": "Remedial measures against pump cavitation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In agricultural irrigation engineering, which parameter is critical for Remedial measures against pump cavitation?",
+    "solution": "Design and operation in Remedial measures against pump cavitation are governed by soil physical characteristics and hydraulic conservation laws.",
+    "difficulty": "Moderate",
+    "source": "Irrigation Theory and Practice (A.M. Michael)",
+    "options": {
+      "A": "Soil water retention and hydraulic transmission characteristics",
+      "B": "High supersonic shock waves",
+      "C": "Total absence of water flow",
+      "D": "Infinite hydraulic gradient"
+    },
+    "correct_answer": "A"
   }
 ];

@@ -4796,5 +4796,13015 @@ export default [
     "solution": "Shaft Torsion Formula:\n$$T = \\frac{60 \\times 30000}{2\\pi \\times 750} = 381.97\\text{ N}\\cdot\\text{m} = 381972\\text{ N}\\cdot\\text{mm}$$\n$$d = \\left( \\frac{16 \\times 381972}{\\pi \\times 50} \\right)^{1/3} \\approx 33.88\\text{ mm}$$\nRounding to 1 decimal place: **33.9** $\\text{mm}$.",
     "difficulty": "Moderate",
     "source": "Design of Machine Elements (V.B. Bhandari)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_001",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Specific draft calculation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A single-bottom mouldboard plough has a width of cut of $26\\text{ cm}$ and operates at a depth of $13\\text{ cm}$. If the specific soil draft is $0.5\\text{ N/cm}^2$, the total draft required by the plough bottom is:",
+    "options": {
+      "A": "$169.0\\text{ N}$",
+      "B": "$202.8\\text{ N}$",
+      "C": "$135.2\\text{ N}$",
+      "D": "$253.5\\text{ N}$"
+    },
+    "correct_answer": "A",
+    "solution": "The total draft $D$ is the product of cross-sectional area of the furrow slice and the unit draft (specific draft):\n$$\\text{Cross-sectional Area } A = w \\times d = 26\\text{ cm} \\times 13\\text{ cm} = 338\\text{ cm}^2$$\n$$\\text{Total Draft } D = A \\times \\text{Specific Draft} = 338\\text{ cm}^2 \\times 0.5\\text{ N/cm}^2 = 169.0\\text{ N}$$\nHence, the correct draft is $169.0\\text{ N}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_002",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Specific draft calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A 4-bottom mouldboard plough with each bottom having a cut width of $30\\text{ cm}$ operates at a depth of $15\\text{ cm}$ with a forward speed of $4.4\\text{ km/h}$. If the unit soil draft is $5.0\\text{ N/cm}^2$, the drawbar power required is ________ $\\text{kW}$ (round off to two decimal places).",
+    "correct_answer": "11.00",
+    "numerical_range": {
+      "min": 10.95,
+      "max": 11.05
+    },
+    "solution": "1. Furrow cross-sectional area per bottom:\n$$A_1 = 30 \\times 15 = 450\\text{ cm}^2$$\nTotal cross-sectional area for 4 bottoms:\n$$A = 4 \\times 450 = 1800\\text{ cm}^2$$\n2. Total draft force:\n$$D = A \\times \\text{unit draft} = 1800 \\times 5.0 = 9000.0\\text{ N}$$\n3. Forward velocity:\n$$v = 4.4\\text{ km/h} = \\frac{4.4}{3.6} = 1.22\\text{ m/s}$$\n4. Drawbar power:\n$$P = \\frac{D \\times v}{1000} = \\frac{9000.0 \\times 1.22}{1000} = 11.00\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_003",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Bottom components and share geometry",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding the forces and geometry of a mouldboard plough bottom, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Vertical suction (clearance) enables the plough bottom to penetrate into the soil to the desired depth",
+      "B": "Horizontal suction (clearance) helps the plough maintain its proper width of cut",
+      "C": "The landside absorbs the side thrust exerted by the furrow slice on the mouldboard",
+      "D": "Specific draft of soil generally increases with an increase in forward operating speed"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Vertical suction is the downward clearance between the share point and the landside bottom that enables soil penetration. (A is correct)\n2. Horizontal suction is the side clearance between the share point and the landside that holds the plough to its full width of cut. (B is correct)\n3. The landside slides against the furrow wall, counteracting the side forces from the mouldboard and stabilising the implement. (C is correct)\n4. As forward speed increases, soil acceleration forces increase quadratically, causing the specific draft to increase. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_004",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Specific draft calculation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A single-bottom mouldboard plough has a width of cut of $29\\text{ cm}$ and operates at a depth of $16\\text{ cm}$. If the specific soil draft is $0.8\\text{ N/cm}^2$, the total draft required by the plough bottom is:",
+    "options": {
+      "A": "$371.2\\text{ N}$",
+      "B": "$445.4\\text{ N}$",
+      "C": "$297.0\\text{ N}$",
+      "D": "$556.8\\text{ N}$"
+    },
+    "correct_answer": "A",
+    "solution": "The total draft $D$ is the product of cross-sectional area of the furrow slice and the unit draft (specific draft):\n$$\\text{Cross-sectional Area } A = w \\times d = 29\\text{ cm} \\times 16\\text{ cm} = 464\\text{ cm}^2$$\n$$\\text{Total Draft } D = A \\times \\text{Specific Draft} = 464\\text{ cm}^2 \\times 0.8\\text{ N/cm}^2 = 371.2\\text{ N}$$\nHence, the correct draft is $371.2\\text{ N}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_005",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Specific draft calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A 4-bottom mouldboard plough with each bottom having a cut width of $30\\text{ cm}$ operates at a depth of $15\\text{ cm}$ with a forward speed of $4.0\\text{ km/h}$. If the unit soil draft is $5.0\\text{ N/cm}^2$, the drawbar power required is ________ $\\text{kW}$ (round off to two decimal places).",
+    "correct_answer": "10.00",
+    "numerical_range": {
+      "min": 9.95,
+      "max": 10.05
+    },
+    "solution": "1. Furrow cross-sectional area per bottom:\n$$A_1 = 30 \\times 15 = 450\\text{ cm}^2$$\nTotal cross-sectional area for 4 bottoms:\n$$A = 4 \\times 450 = 1800\\text{ cm}^2$$\n2. Total draft force:\n$$D = A \\times \\text{unit draft} = 1800 \\times 5.0 = 9000.0\\text{ N}$$\n3. Forward velocity:\n$$v = 4.0\\text{ km/h} = \\frac{4.0}{3.6} = 1.11\\text{ m/s}$$\n4. Drawbar power:\n$$P = \\frac{D \\times v}{1000} = \\frac{9000.0 \\times 1.11}{1000} = 10.00\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_006",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Bottom components and share geometry",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding the forces and geometry of a mouldboard plough bottom, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Vertical suction (clearance) enables the plough bottom to penetrate into the soil to the desired depth",
+      "B": "Horizontal suction (clearance) helps the plough maintain its proper width of cut",
+      "C": "The landside absorbs the side thrust exerted by the furrow slice on the mouldboard",
+      "D": "Specific draft of soil generally increases with an increase in forward operating speed"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Vertical suction is the downward clearance between the share point and the landside bottom that enables soil penetration. (A is correct)\n2. Horizontal suction is the side clearance between the share point and the landside that holds the plough to its full width of cut. (B is correct)\n3. The landside slides against the furrow wall, counteracting the side forces from the mouldboard and stabilising the implement. (C is correct)\n4. As forward speed increases, soil acceleration forces increase quadratically, causing the specific draft to increase. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_007",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Specific draft calculation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A single-bottom mouldboard plough has a width of cut of $32\\text{ cm}$ and operates at a depth of $13\\text{ cm}$. If the specific soil draft is $0.6\\text{ N/cm}^2$, the total draft required by the plough bottom is:",
+    "options": {
+      "A": "$249.6\\text{ N}$",
+      "B": "$299.5\\text{ N}$",
+      "C": "$199.7\\text{ N}$",
+      "D": "$374.4\\text{ N}$"
+    },
+    "correct_answer": "A",
+    "solution": "The total draft $D$ is the product of cross-sectional area of the furrow slice and the unit draft (specific draft):\n$$\\text{Cross-sectional Area } A = w \\times d = 32\\text{ cm} \\times 13\\text{ cm} = 416\\text{ cm}^2$$\n$$\\text{Total Draft } D = A \\times \\text{Specific Draft} = 416\\text{ cm}^2 \\times 0.6\\text{ N/cm}^2 = 249.6\\text{ N}$$\nHence, the correct draft is $249.6\\text{ N}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_008",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Specific draft calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A 4-bottom mouldboard plough with each bottom having a cut width of $30\\text{ cm}$ operates at a depth of $15\\text{ cm}$ with a forward speed of $3.6\\text{ km/h}$. If the unit soil draft is $5.0\\text{ N/cm}^2$, the drawbar power required is ________ $\\text{kW}$ (round off to two decimal places).",
+    "correct_answer": "9.00",
+    "numerical_range": {
+      "min": 8.95,
+      "max": 9.05
+    },
+    "solution": "1. Furrow cross-sectional area per bottom:\n$$A_1 = 30 \\times 15 = 450\\text{ cm}^2$$\nTotal cross-sectional area for 4 bottoms:\n$$A = 4 \\times 450 = 1800\\text{ cm}^2$$\n2. Total draft force:\n$$D = A \\times \\text{unit draft} = 1800 \\times 5.0 = 9000.0\\text{ N}$$\n3. Forward velocity:\n$$v = 3.6\\text{ km/h} = \\frac{3.6}{3.6} = 1.00\\text{ m/s}$$\n4. Drawbar power:\n$$P = \\frac{D \\times v}{1000} = \\frac{9000.0 \\times 1.00}{1000} = 9.00\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_009",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Bottom components and share geometry",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding the forces and geometry of a mouldboard plough bottom, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Vertical suction (clearance) enables the plough bottom to penetrate into the soil to the desired depth",
+      "B": "Horizontal suction (clearance) helps the plough maintain its proper width of cut",
+      "C": "The landside absorbs the side thrust exerted by the furrow slice on the mouldboard",
+      "D": "Specific draft of soil generally increases with an increase in forward operating speed"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Vertical suction is the downward clearance between the share point and the landside bottom that enables soil penetration. (A is correct)\n2. Horizontal suction is the side clearance between the share point and the landside that holds the plough to its full width of cut. (B is correct)\n3. The landside slides against the furrow wall, counteracting the side forces from the mouldboard and stabilising the implement. (C is correct)\n4. As forward speed increases, soil acceleration forces increase quadratically, causing the specific draft to increase. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_010",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Specific draft calculation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A single-bottom mouldboard plough has a width of cut of $25\\text{ cm}$ and operates at a depth of $16\\text{ cm}$. If the specific soil draft is $0.4\\text{ N/cm}^2$, the total draft required by the plough bottom is:",
+    "options": {
+      "A": "$160.0\\text{ N}$",
+      "B": "$192.0\\text{ N}$",
+      "C": "$128.0\\text{ N}$",
+      "D": "$240.0\\text{ N}$"
+    },
+    "correct_answer": "A",
+    "solution": "The total draft $D$ is the product of cross-sectional area of the furrow slice and the unit draft (specific draft):\n$$\\text{Cross-sectional Area } A = w \\times d = 25\\text{ cm} \\times 16\\text{ cm} = 400\\text{ cm}^2$$\n$$\\text{Total Draft } D = A \\times \\text{Specific Draft} = 400\\text{ cm}^2 \\times 0.4\\text{ N/cm}^2 = 160.0\\text{ N}$$\nHence, the correct draft is $160.0\\text{ N}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_011",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Specific draft calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A 4-bottom mouldboard plough with each bottom having a cut width of $30\\text{ cm}$ operates at a depth of $15\\text{ cm}$ with a forward speed of $4.8\\text{ km/h}$. If the unit soil draft is $5.0\\text{ N/cm}^2$, the drawbar power required is ________ $\\text{kW}$ (round off to two decimal places).",
+    "correct_answer": "12.00",
+    "numerical_range": {
+      "min": 11.95,
+      "max": 12.05
+    },
+    "solution": "1. Furrow cross-sectional area per bottom:\n$$A_1 = 30 \\times 15 = 450\\text{ cm}^2$$\nTotal cross-sectional area for 4 bottoms:\n$$A = 4 \\times 450 = 1800\\text{ cm}^2$$\n2. Total draft force:\n$$D = A \\times \\text{unit draft} = 1800 \\times 5.0 = 9000.0\\text{ N}$$\n3. Forward velocity:\n$$v = 4.8\\text{ km/h} = \\frac{4.8}{3.6} = 1.33\\text{ m/s}$$\n4. Drawbar power:\n$$P = \\frac{D \\times v}{1000} = \\frac{9000.0 \\times 1.33}{1000} = 12.00\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_012",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Bottom components and share geometry",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding the forces and geometry of a mouldboard plough bottom, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Vertical suction (clearance) enables the plough bottom to penetrate into the soil to the desired depth",
+      "B": "Horizontal suction (clearance) helps the plough maintain its proper width of cut",
+      "C": "The landside absorbs the side thrust exerted by the furrow slice on the mouldboard",
+      "D": "Specific draft of soil generally increases with an increase in forward operating speed"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Vertical suction is the downward clearance between the share point and the landside bottom that enables soil penetration. (A is correct)\n2. Horizontal suction is the side clearance between the share point and the landside that holds the plough to its full width of cut. (B is correct)\n3. The landside slides against the furrow wall, counteracting the side forces from the mouldboard and stabilising the implement. (C is correct)\n4. As forward speed increases, soil acceleration forces increase quadratically, causing the specific draft to increase. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_013",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Specific draft calculation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A single-bottom mouldboard plough has a width of cut of $28\\text{ cm}$ and operates at a depth of $13\\text{ cm}$. If the specific soil draft is $0.7\\text{ N/cm}^2$, the total draft required by the plough bottom is:",
+    "options": {
+      "A": "$254.8\\text{ N}$",
+      "B": "$305.8\\text{ N}$",
+      "C": "$203.8\\text{ N}$",
+      "D": "$382.2\\text{ N}$"
+    },
+    "correct_answer": "A",
+    "solution": "The total draft $D$ is the product of cross-sectional area of the furrow slice and the unit draft (specific draft):\n$$\\text{Cross-sectional Area } A = w \\times d = 28\\text{ cm} \\times 13\\text{ cm} = 364\\text{ cm}^2$$\n$$\\text{Total Draft } D = A \\times \\text{Specific Draft} = 364\\text{ cm}^2 \\times 0.7\\text{ N/cm}^2 = 254.8\\text{ N}$$\nHence, the correct draft is $254.8\\text{ N}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_014",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Specific draft calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A 4-bottom mouldboard plough with each bottom having a cut width of $30\\text{ cm}$ operates at a depth of $15\\text{ cm}$ with a forward speed of $4.4\\text{ km/h}$. If the unit soil draft is $5.0\\text{ N/cm}^2$, the drawbar power required is ________ $\\text{kW}$ (round off to two decimal places).",
+    "correct_answer": "11.00",
+    "numerical_range": {
+      "min": 10.95,
+      "max": 11.05
+    },
+    "solution": "1. Furrow cross-sectional area per bottom:\n$$A_1 = 30 \\times 15 = 450\\text{ cm}^2$$\nTotal cross-sectional area for 4 bottoms:\n$$A = 4 \\times 450 = 1800\\text{ cm}^2$$\n2. Total draft force:\n$$D = A \\times \\text{unit draft} = 1800 \\times 5.0 = 9000.0\\text{ N}$$\n3. Forward velocity:\n$$v = 4.4\\text{ km/h} = \\frac{4.4}{3.6} = 1.22\\text{ m/s}$$\n4. Drawbar power:\n$$P = \\frac{D \\times v}{1000} = \\frac{9000.0 \\times 1.22}{1000} = 11.00\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_015",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Bottom components and share geometry",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding the forces and geometry of a mouldboard plough bottom, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Vertical suction (clearance) enables the plough bottom to penetrate into the soil to the desired depth",
+      "B": "Horizontal suction (clearance) helps the plough maintain its proper width of cut",
+      "C": "The landside absorbs the side thrust exerted by the furrow slice on the mouldboard",
+      "D": "Specific draft of soil generally increases with an increase in forward operating speed"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Vertical suction is the downward clearance between the share point and the landside bottom that enables soil penetration. (A is correct)\n2. Horizontal suction is the side clearance between the share point and the landside that holds the plough to its full width of cut. (B is correct)\n3. The landside slides against the furrow wall, counteracting the side forces from the mouldboard and stabilising the implement. (C is correct)\n4. As forward speed increases, soil acceleration forces increase quadratically, causing the specific draft to increase. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_016",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Specific draft calculation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A single-bottom mouldboard plough has a width of cut of $31\\text{ cm}$ and operates at a depth of $16\\text{ cm}$. If the specific soil draft is $0.5\\text{ N/cm}^2$, the total draft required by the plough bottom is:",
+    "options": {
+      "A": "$248.0\\text{ N}$",
+      "B": "$297.6\\text{ N}$",
+      "C": "$198.4\\text{ N}$",
+      "D": "$372.0\\text{ N}$"
+    },
+    "correct_answer": "A",
+    "solution": "The total draft $D$ is the product of cross-sectional area of the furrow slice and the unit draft (specific draft):\n$$\\text{Cross-sectional Area } A = w \\times d = 31\\text{ cm} \\times 16\\text{ cm} = 496\\text{ cm}^2$$\n$$\\text{Total Draft } D = A \\times \\text{Specific Draft} = 496\\text{ cm}^2 \\times 0.5\\text{ N/cm}^2 = 248.0\\text{ N}$$\nHence, the correct draft is $248.0\\text{ N}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_017",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Specific draft calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A 4-bottom mouldboard plough with each bottom having a cut width of $30\\text{ cm}$ operates at a depth of $15\\text{ cm}$ with a forward speed of $4.0\\text{ km/h}$. If the unit soil draft is $5.0\\text{ N/cm}^2$, the drawbar power required is ________ $\\text{kW}$ (round off to two decimal places).",
+    "correct_answer": "10.00",
+    "numerical_range": {
+      "min": 9.95,
+      "max": 10.05
+    },
+    "solution": "1. Furrow cross-sectional area per bottom:\n$$A_1 = 30 \\times 15 = 450\\text{ cm}^2$$\nTotal cross-sectional area for 4 bottoms:\n$$A = 4 \\times 450 = 1800\\text{ cm}^2$$\n2. Total draft force:\n$$D = A \\times \\text{unit draft} = 1800 \\times 5.0 = 9000.0\\text{ N}$$\n3. Forward velocity:\n$$v = 4.0\\text{ km/h} = \\frac{4.0}{3.6} = 1.11\\text{ m/s}$$\n4. Drawbar power:\n$$P = \\frac{D \\times v}{1000} = \\frac{9000.0 \\times 1.11}{1000} = 10.00\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_018",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Bottom components and share geometry",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding the forces and geometry of a mouldboard plough bottom, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Vertical suction (clearance) enables the plough bottom to penetrate into the soil to the desired depth",
+      "B": "Horizontal suction (clearance) helps the plough maintain its proper width of cut",
+      "C": "The landside absorbs the side thrust exerted by the furrow slice on the mouldboard",
+      "D": "Specific draft of soil generally increases with an increase in forward operating speed"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Vertical suction is the downward clearance between the share point and the landside bottom that enables soil penetration. (A is correct)\n2. Horizontal suction is the side clearance between the share point and the landside that holds the plough to its full width of cut. (B is correct)\n3. The landside slides against the furrow wall, counteracting the side forces from the mouldboard and stabilising the implement. (C is correct)\n4. As forward speed increases, soil acceleration forces increase quadratically, causing the specific draft to increase. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_019",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Specific draft calculation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A single-bottom mouldboard plough has a width of cut of $34\\text{ cm}$ and operates at a depth of $13\\text{ cm}$. If the specific soil draft is $0.8\\text{ N/cm}^2$, the total draft required by the plough bottom is:",
+    "options": {
+      "A": "$353.6\\text{ N}$",
+      "B": "$424.3\\text{ N}$",
+      "C": "$282.9\\text{ N}$",
+      "D": "$530.4\\text{ N}$"
+    },
+    "correct_answer": "A",
+    "solution": "The total draft $D$ is the product of cross-sectional area of the furrow slice and the unit draft (specific draft):\n$$\\text{Cross-sectional Area } A = w \\times d = 34\\text{ cm} \\times 13\\text{ cm} = 442\\text{ cm}^2$$\n$$\\text{Total Draft } D = A \\times \\text{Specific Draft} = 442\\text{ cm}^2 \\times 0.8\\text{ N/cm}^2 = 353.6\\text{ N}$$\nHence, the correct draft is $353.6\\text{ N}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_020",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Specific draft calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A 4-bottom mouldboard plough with each bottom having a cut width of $30\\text{ cm}$ operates at a depth of $15\\text{ cm}$ with a forward speed of $3.6\\text{ km/h}$. If the unit soil draft is $5.0\\text{ N/cm}^2$, the drawbar power required is ________ $\\text{kW}$ (round off to two decimal places).",
+    "correct_answer": "9.00",
+    "numerical_range": {
+      "min": 8.95,
+      "max": 9.05
+    },
+    "solution": "1. Furrow cross-sectional area per bottom:\n$$A_1 = 30 \\times 15 = 450\\text{ cm}^2$$\nTotal cross-sectional area for 4 bottoms:\n$$A = 4 \\times 450 = 1800\\text{ cm}^2$$\n2. Total draft force:\n$$D = A \\times \\text{unit draft} = 1800 \\times 5.0 = 9000.0\\text{ N}$$\n3. Forward velocity:\n$$v = 3.6\\text{ km/h} = \\frac{3.6}{3.6} = 1.00\\text{ m/s}$$\n4. Drawbar power:\n$$P = \\frac{D \\times v}{1000} = \\frac{9000.0 \\times 1.00}{1000} = 9.00\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_021",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Bottom components and share geometry",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding the forces and geometry of a mouldboard plough bottom, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Vertical suction (clearance) enables the plough bottom to penetrate into the soil to the desired depth",
+      "B": "Horizontal suction (clearance) helps the plough maintain its proper width of cut",
+      "C": "The landside absorbs the side thrust exerted by the furrow slice on the mouldboard",
+      "D": "Specific draft of soil generally increases with an increase in forward operating speed"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Vertical suction is the downward clearance between the share point and the landside bottom that enables soil penetration. (A is correct)\n2. Horizontal suction is the side clearance between the share point and the landside that holds the plough to its full width of cut. (B is correct)\n3. The landside slides against the furrow wall, counteracting the side forces from the mouldboard and stabilising the implement. (C is correct)\n4. As forward speed increases, soil acceleration forces increase quadratically, causing the specific draft to increase. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_022",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Specific draft calculation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A single-bottom mouldboard plough has a width of cut of $27\\text{ cm}$ and operates at a depth of $16\\text{ cm}$. If the specific soil draft is $0.6\\text{ N/cm}^2$, the total draft required by the plough bottom is:",
+    "options": {
+      "A": "$259.2\\text{ N}$",
+      "B": "$311.0\\text{ N}$",
+      "C": "$207.4\\text{ N}$",
+      "D": "$388.8\\text{ N}$"
+    },
+    "correct_answer": "A",
+    "solution": "The total draft $D$ is the product of cross-sectional area of the furrow slice and the unit draft (specific draft):\n$$\\text{Cross-sectional Area } A = w \\times d = 27\\text{ cm} \\times 16\\text{ cm} = 432\\text{ cm}^2$$\n$$\\text{Total Draft } D = A \\times \\text{Specific Draft} = 432\\text{ cm}^2 \\times 0.6\\text{ N/cm}^2 = 259.2\\text{ N}$$\nHence, the correct draft is $259.2\\text{ N}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_023",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Specific draft calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A 4-bottom mouldboard plough with each bottom having a cut width of $30\\text{ cm}$ operates at a depth of $15\\text{ cm}$ with a forward speed of $4.8\\text{ km/h}$. If the unit soil draft is $5.0\\text{ N/cm}^2$, the drawbar power required is ________ $\\text{kW}$ (round off to two decimal places).",
+    "correct_answer": "12.00",
+    "numerical_range": {
+      "min": 11.95,
+      "max": 12.05
+    },
+    "solution": "1. Furrow cross-sectional area per bottom:\n$$A_1 = 30 \\times 15 = 450\\text{ cm}^2$$\nTotal cross-sectional area for 4 bottoms:\n$$A = 4 \\times 450 = 1800\\text{ cm}^2$$\n2. Total draft force:\n$$D = A \\times \\text{unit draft} = 1800 \\times 5.0 = 9000.0\\text{ N}$$\n3. Forward velocity:\n$$v = 4.8\\text{ km/h} = \\frac{4.8}{3.6} = 1.33\\text{ m/s}$$\n4. Drawbar power:\n$$P = \\frac{D \\times v}{1000} = \\frac{9000.0 \\times 1.33}{1000} = 12.00\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_024",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Bottom components and share geometry",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding the forces and geometry of a mouldboard plough bottom, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Vertical suction (clearance) enables the plough bottom to penetrate into the soil to the desired depth",
+      "B": "Horizontal suction (clearance) helps the plough maintain its proper width of cut",
+      "C": "The landside absorbs the side thrust exerted by the furrow slice on the mouldboard",
+      "D": "Specific draft of soil generally increases with an increase in forward operating speed"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Vertical suction is the downward clearance between the share point and the landside bottom that enables soil penetration. (A is correct)\n2. Horizontal suction is the side clearance between the share point and the landside that holds the plough to its full width of cut. (B is correct)\n3. The landside slides against the furrow wall, counteracting the side forces from the mouldboard and stabilising the implement. (C is correct)\n4. As forward speed increases, soil acceleration forces increase quadratically, causing the specific draft to increase. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_025",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Specific draft calculation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A single-bottom mouldboard plough has a width of cut of $30\\text{ cm}$ and operates at a depth of $13\\text{ cm}$. If the specific soil draft is $0.4\\text{ N/cm}^2$, the total draft required by the plough bottom is:",
+    "options": {
+      "A": "$156.0\\text{ N}$",
+      "B": "$187.2\\text{ N}$",
+      "C": "$124.8\\text{ N}$",
+      "D": "$234.0\\text{ N}$"
+    },
+    "correct_answer": "A",
+    "solution": "The total draft $D$ is the product of cross-sectional area of the furrow slice and the unit draft (specific draft):\n$$\\text{Cross-sectional Area } A = w \\times d = 30\\text{ cm} \\times 13\\text{ cm} = 390\\text{ cm}^2$$\n$$\\text{Total Draft } D = A \\times \\text{Specific Draft} = 390\\text{ cm}^2 \\times 0.4\\text{ N/cm}^2 = 156.0\\text{ N}$$\nHence, the correct draft is $156.0\\text{ N}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_026",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Specific draft calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A 4-bottom mouldboard plough with each bottom having a cut width of $30\\text{ cm}$ operates at a depth of $15\\text{ cm}$ with a forward speed of $4.4\\text{ km/h}$. If the unit soil draft is $5.0\\text{ N/cm}^2$, the drawbar power required is ________ $\\text{kW}$ (round off to two decimal places).",
+    "correct_answer": "11.00",
+    "numerical_range": {
+      "min": 10.95,
+      "max": 11.05
+    },
+    "solution": "1. Furrow cross-sectional area per bottom:\n$$A_1 = 30 \\times 15 = 450\\text{ cm}^2$$\nTotal cross-sectional area for 4 bottoms:\n$$A = 4 \\times 450 = 1800\\text{ cm}^2$$\n2. Total draft force:\n$$D = A \\times \\text{unit draft} = 1800 \\times 5.0 = 9000.0\\text{ N}$$\n3. Forward velocity:\n$$v = 4.4\\text{ km/h} = \\frac{4.4}{3.6} = 1.22\\text{ m/s}$$\n4. Drawbar power:\n$$P = \\frac{D \\times v}{1000} = \\frac{9000.0 \\times 1.22}{1000} = 11.00\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_027",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Bottom components and share geometry",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding the forces and geometry of a mouldboard plough bottom, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Vertical suction (clearance) enables the plough bottom to penetrate into the soil to the desired depth",
+      "B": "Horizontal suction (clearance) helps the plough maintain its proper width of cut",
+      "C": "The landside absorbs the side thrust exerted by the furrow slice on the mouldboard",
+      "D": "Specific draft of soil generally increases with an increase in forward operating speed"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Vertical suction is the downward clearance between the share point and the landside bottom that enables soil penetration. (A is correct)\n2. Horizontal suction is the side clearance between the share point and the landside that holds the plough to its full width of cut. (B is correct)\n3. The landside slides against the furrow wall, counteracting the side forces from the mouldboard and stabilising the implement. (C is correct)\n4. As forward speed increases, soil acceleration forces increase quadratically, causing the specific draft to increase. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_028",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Specific draft calculation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A single-bottom mouldboard plough has a width of cut of $33\\text{ cm}$ and operates at a depth of $16\\text{ cm}$. If the specific soil draft is $0.7\\text{ N/cm}^2$, the total draft required by the plough bottom is:",
+    "options": {
+      "A": "$369.6\\text{ N}$",
+      "B": "$443.5\\text{ N}$",
+      "C": "$295.7\\text{ N}$",
+      "D": "$554.4\\text{ N}$"
+    },
+    "correct_answer": "A",
+    "solution": "The total draft $D$ is the product of cross-sectional area of the furrow slice and the unit draft (specific draft):\n$$\\text{Cross-sectional Area } A = w \\times d = 33\\text{ cm} \\times 16\\text{ cm} = 528\\text{ cm}^2$$\n$$\\text{Total Draft } D = A \\times \\text{Specific Draft} = 528\\text{ cm}^2 \\times 0.7\\text{ N/cm}^2 = 369.6\\text{ N}$$\nHence, the correct draft is $369.6\\text{ N}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_029",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Specific draft calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A 4-bottom mouldboard plough with each bottom having a cut width of $30\\text{ cm}$ operates at a depth of $15\\text{ cm}$ with a forward speed of $4.0\\text{ km/h}$. If the unit soil draft is $5.0\\text{ N/cm}^2$, the drawbar power required is ________ $\\text{kW}$ (round off to two decimal places).",
+    "correct_answer": "10.00",
+    "numerical_range": {
+      "min": 9.95,
+      "max": 10.05
+    },
+    "solution": "1. Furrow cross-sectional area per bottom:\n$$A_1 = 30 \\times 15 = 450\\text{ cm}^2$$\nTotal cross-sectional area for 4 bottoms:\n$$A = 4 \\times 450 = 1800\\text{ cm}^2$$\n2. Total draft force:\n$$D = A \\times \\text{unit draft} = 1800 \\times 5.0 = 9000.0\\text{ N}$$\n3. Forward velocity:\n$$v = 4.0\\text{ km/h} = \\frac{4.0}{3.6} = 1.11\\text{ m/s}$$\n4. Drawbar power:\n$$P = \\frac{D \\times v}{1000} = \\frac{9000.0 \\times 1.11}{1000} = 10.00\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_030",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Bottom components and share geometry",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding the forces and geometry of a mouldboard plough bottom, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Vertical suction (clearance) enables the plough bottom to penetrate into the soil to the desired depth",
+      "B": "Horizontal suction (clearance) helps the plough maintain its proper width of cut",
+      "C": "The landside absorbs the side thrust exerted by the furrow slice on the mouldboard",
+      "D": "Specific draft of soil generally increases with an increase in forward operating speed"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Vertical suction is the downward clearance between the share point and the landside bottom that enables soil penetration. (A is correct)\n2. Horizontal suction is the side clearance between the share point and the landside that holds the plough to its full width of cut. (B is correct)\n3. The landside slides against the furrow wall, counteracting the side forces from the mouldboard and stabilising the implement. (C is correct)\n4. As forward speed increases, soil acceleration forces increase quadratically, causing the specific draft to increase. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_031",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Specific draft calculation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A single-bottom mouldboard plough has a width of cut of $26\\text{ cm}$ and operates at a depth of $13\\text{ cm}$. If the specific soil draft is $0.5\\text{ N/cm}^2$, the total draft required by the plough bottom is:",
+    "options": {
+      "A": "$169.0\\text{ N}$",
+      "B": "$202.8\\text{ N}$",
+      "C": "$135.2\\text{ N}$",
+      "D": "$253.5\\text{ N}$"
+    },
+    "correct_answer": "A",
+    "solution": "The total draft $D$ is the product of cross-sectional area of the furrow slice and the unit draft (specific draft):\n$$\\text{Cross-sectional Area } A = w \\times d = 26\\text{ cm} \\times 13\\text{ cm} = 338\\text{ cm}^2$$\n$$\\text{Total Draft } D = A \\times \\text{Specific Draft} = 338\\text{ cm}^2 \\times 0.5\\text{ N/cm}^2 = 169.0\\text{ N}$$\nHence, the correct draft is $169.0\\text{ N}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_032",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Specific draft calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A 4-bottom mouldboard plough with each bottom having a cut width of $30\\text{ cm}$ operates at a depth of $15\\text{ cm}$ with a forward speed of $3.6\\text{ km/h}$. If the unit soil draft is $5.0\\text{ N/cm}^2$, the drawbar power required is ________ $\\text{kW}$ (round off to two decimal places).",
+    "correct_answer": "9.00",
+    "numerical_range": {
+      "min": 8.95,
+      "max": 9.05
+    },
+    "solution": "1. Furrow cross-sectional area per bottom:\n$$A_1 = 30 \\times 15 = 450\\text{ cm}^2$$\nTotal cross-sectional area for 4 bottoms:\n$$A = 4 \\times 450 = 1800\\text{ cm}^2$$\n2. Total draft force:\n$$D = A \\times \\text{unit draft} = 1800 \\times 5.0 = 9000.0\\text{ N}$$\n3. Forward velocity:\n$$v = 3.6\\text{ km/h} = \\frac{3.6}{3.6} = 1.00\\text{ m/s}$$\n4. Drawbar power:\n$$P = \\frac{D \\times v}{1000} = \\frac{9000.0 \\times 1.00}{1000} = 9.00\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_033",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Bottom components and share geometry",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding the forces and geometry of a mouldboard plough bottom, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Vertical suction (clearance) enables the plough bottom to penetrate into the soil to the desired depth",
+      "B": "Horizontal suction (clearance) helps the plough maintain its proper width of cut",
+      "C": "The landside absorbs the side thrust exerted by the furrow slice on the mouldboard",
+      "D": "Specific draft of soil generally increases with an increase in forward operating speed"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Vertical suction is the downward clearance between the share point and the landside bottom that enables soil penetration. (A is correct)\n2. Horizontal suction is the side clearance between the share point and the landside that holds the plough to its full width of cut. (B is correct)\n3. The landside slides against the furrow wall, counteracting the side forces from the mouldboard and stabilising the implement. (C is correct)\n4. As forward speed increases, soil acceleration forces increase quadratically, causing the specific draft to increase. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_034",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Specific draft calculation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A single-bottom mouldboard plough has a width of cut of $29\\text{ cm}$ and operates at a depth of $16\\text{ cm}$. If the specific soil draft is $0.8\\text{ N/cm}^2$, the total draft required by the plough bottom is:",
+    "options": {
+      "A": "$371.2\\text{ N}$",
+      "B": "$445.4\\text{ N}$",
+      "C": "$297.0\\text{ N}$",
+      "D": "$556.8\\text{ N}$"
+    },
+    "correct_answer": "A",
+    "solution": "The total draft $D$ is the product of cross-sectional area of the furrow slice and the unit draft (specific draft):\n$$\\text{Cross-sectional Area } A = w \\times d = 29\\text{ cm} \\times 16\\text{ cm} = 464\\text{ cm}^2$$\n$$\\text{Total Draft } D = A \\times \\text{Specific Draft} = 464\\text{ cm}^2 \\times 0.8\\text{ N/cm}^2 = 371.2\\text{ N}$$\nHence, the correct draft is $371.2\\text{ N}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_035",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Specific draft calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A 4-bottom mouldboard plough with each bottom having a cut width of $30\\text{ cm}$ operates at a depth of $15\\text{ cm}$ with a forward speed of $4.8\\text{ km/h}$. If the unit soil draft is $5.0\\text{ N/cm}^2$, the drawbar power required is ________ $\\text{kW}$ (round off to two decimal places).",
+    "correct_answer": "12.00",
+    "numerical_range": {
+      "min": 11.95,
+      "max": 12.05
+    },
+    "solution": "1. Furrow cross-sectional area per bottom:\n$$A_1 = 30 \\times 15 = 450\\text{ cm}^2$$\nTotal cross-sectional area for 4 bottoms:\n$$A = 4 \\times 450 = 1800\\text{ cm}^2$$\n2. Total draft force:\n$$D = A \\times \\text{unit draft} = 1800 \\times 5.0 = 9000.0\\text{ N}$$\n3. Forward velocity:\n$$v = 4.8\\text{ km/h} = \\frac{4.8}{3.6} = 1.33\\text{ m/s}$$\n4. Drawbar power:\n$$P = \\frac{D \\times v}{1000} = \\frac{9000.0 \\times 1.33}{1000} = 12.00\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_036",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Bottom components and share geometry",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding the forces and geometry of a mouldboard plough bottom, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Vertical suction (clearance) enables the plough bottom to penetrate into the soil to the desired depth",
+      "B": "Horizontal suction (clearance) helps the plough maintain its proper width of cut",
+      "C": "The landside absorbs the side thrust exerted by the furrow slice on the mouldboard",
+      "D": "Specific draft of soil generally increases with an increase in forward operating speed"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Vertical suction is the downward clearance between the share point and the landside bottom that enables soil penetration. (A is correct)\n2. Horizontal suction is the side clearance between the share point and the landside that holds the plough to its full width of cut. (B is correct)\n3. The landside slides against the furrow wall, counteracting the side forces from the mouldboard and stabilising the implement. (C is correct)\n4. As forward speed increases, soil acceleration forces increase quadratically, causing the specific draft to increase. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_037",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Specific draft calculation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A single-bottom mouldboard plough has a width of cut of $32\\text{ cm}$ and operates at a depth of $13\\text{ cm}$. If the specific soil draft is $0.6\\text{ N/cm}^2$, the total draft required by the plough bottom is:",
+    "options": {
+      "A": "$249.6\\text{ N}$",
+      "B": "$299.5\\text{ N}$",
+      "C": "$199.7\\text{ N}$",
+      "D": "$374.4\\text{ N}$"
+    },
+    "correct_answer": "A",
+    "solution": "The total draft $D$ is the product of cross-sectional area of the furrow slice and the unit draft (specific draft):\n$$\\text{Cross-sectional Area } A = w \\times d = 32\\text{ cm} \\times 13\\text{ cm} = 416\\text{ cm}^2$$\n$$\\text{Total Draft } D = A \\times \\text{Specific Draft} = 416\\text{ cm}^2 \\times 0.6\\text{ N/cm}^2 = 249.6\\text{ N}$$\nHence, the correct draft is $249.6\\text{ N}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_038",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Specific draft calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A 4-bottom mouldboard plough with each bottom having a cut width of $30\\text{ cm}$ operates at a depth of $15\\text{ cm}$ with a forward speed of $4.4\\text{ km/h}$. If the unit soil draft is $5.0\\text{ N/cm}^2$, the drawbar power required is ________ $\\text{kW}$ (round off to two decimal places).",
+    "correct_answer": "11.00",
+    "numerical_range": {
+      "min": 10.95,
+      "max": 11.05
+    },
+    "solution": "1. Furrow cross-sectional area per bottom:\n$$A_1 = 30 \\times 15 = 450\\text{ cm}^2$$\nTotal cross-sectional area for 4 bottoms:\n$$A = 4 \\times 450 = 1800\\text{ cm}^2$$\n2. Total draft force:\n$$D = A \\times \\text{unit draft} = 1800 \\times 5.0 = 9000.0\\text{ N}$$\n3. Forward velocity:\n$$v = 4.4\\text{ km/h} = \\frac{4.4}{3.6} = 1.22\\text{ m/s}$$\n4. Drawbar power:\n$$P = \\frac{D \\times v}{1000} = \\frac{9000.0 \\times 1.22}{1000} = 11.00\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_039",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Bottom components and share geometry",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding the forces and geometry of a mouldboard plough bottom, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Vertical suction (clearance) enables the plough bottom to penetrate into the soil to the desired depth",
+      "B": "Horizontal suction (clearance) helps the plough maintain its proper width of cut",
+      "C": "The landside absorbs the side thrust exerted by the furrow slice on the mouldboard",
+      "D": "Specific draft of soil generally increases with an increase in forward operating speed"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Vertical suction is the downward clearance between the share point and the landside bottom that enables soil penetration. (A is correct)\n2. Horizontal suction is the side clearance between the share point and the landside that holds the plough to its full width of cut. (B is correct)\n3. The landside slides against the furrow wall, counteracting the side forces from the mouldboard and stabilising the implement. (C is correct)\n4. As forward speed increases, soil acceleration forces increase quadratically, causing the specific draft to increase. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_040",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Specific draft calculation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A single-bottom mouldboard plough has a width of cut of $25\\text{ cm}$ and operates at a depth of $16\\text{ cm}$. If the specific soil draft is $0.4\\text{ N/cm}^2$, the total draft required by the plough bottom is:",
+    "options": {
+      "A": "$160.0\\text{ N}$",
+      "B": "$192.0\\text{ N}$",
+      "C": "$128.0\\text{ N}$",
+      "D": "$240.0\\text{ N}$"
+    },
+    "correct_answer": "A",
+    "solution": "The total draft $D$ is the product of cross-sectional area of the furrow slice and the unit draft (specific draft):\n$$\\text{Cross-sectional Area } A = w \\times d = 25\\text{ cm} \\times 16\\text{ cm} = 400\\text{ cm}^2$$\n$$\\text{Total Draft } D = A \\times \\text{Specific Draft} = 400\\text{ cm}^2 \\times 0.4\\text{ N/cm}^2 = 160.0\\text{ N}$$\nHence, the correct draft is $160.0\\text{ N}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_041",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Specific draft calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A 4-bottom mouldboard plough with each bottom having a cut width of $30\\text{ cm}$ operates at a depth of $15\\text{ cm}$ with a forward speed of $4.0\\text{ km/h}$. If the unit soil draft is $5.0\\text{ N/cm}^2$, the drawbar power required is ________ $\\text{kW}$ (round off to two decimal places).",
+    "correct_answer": "10.00",
+    "numerical_range": {
+      "min": 9.95,
+      "max": 10.05
+    },
+    "solution": "1. Furrow cross-sectional area per bottom:\n$$A_1 = 30 \\times 15 = 450\\text{ cm}^2$$\nTotal cross-sectional area for 4 bottoms:\n$$A = 4 \\times 450 = 1800\\text{ cm}^2$$\n2. Total draft force:\n$$D = A \\times \\text{unit draft} = 1800 \\times 5.0 = 9000.0\\text{ N}$$\n3. Forward velocity:\n$$v = 4.0\\text{ km/h} = \\frac{4.0}{3.6} = 1.11\\text{ m/s}$$\n4. Drawbar power:\n$$P = \\frac{D \\times v}{1000} = \\frac{9000.0 \\times 1.11}{1000} = 10.00\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_042",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Bottom components and share geometry",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding the forces and geometry of a mouldboard plough bottom, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Vertical suction (clearance) enables the plough bottom to penetrate into the soil to the desired depth",
+      "B": "Horizontal suction (clearance) helps the plough maintain its proper width of cut",
+      "C": "The landside absorbs the side thrust exerted by the furrow slice on the mouldboard",
+      "D": "Specific draft of soil generally increases with an increase in forward operating speed"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Vertical suction is the downward clearance between the share point and the landside bottom that enables soil penetration. (A is correct)\n2. Horizontal suction is the side clearance between the share point and the landside that holds the plough to its full width of cut. (B is correct)\n3. The landside slides against the furrow wall, counteracting the side forces from the mouldboard and stabilising the implement. (C is correct)\n4. As forward speed increases, soil acceleration forces increase quadratically, causing the specific draft to increase. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_043",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Specific draft calculation",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A single-bottom mouldboard plough has a width of cut of $28\\text{ cm}$ and operates at a depth of $13\\text{ cm}$. If the specific soil draft is $0.7\\text{ N/cm}^2$, the total draft required by the plough bottom is:",
+    "options": {
+      "A": "$254.8\\text{ N}$",
+      "B": "$305.8\\text{ N}$",
+      "C": "$203.8\\text{ N}$",
+      "D": "$382.2\\text{ N}$"
+    },
+    "correct_answer": "A",
+    "solution": "The total draft $D$ is the product of cross-sectional area of the furrow slice and the unit draft (specific draft):\n$$\\text{Cross-sectional Area } A = w \\times d = 28\\text{ cm} \\times 13\\text{ cm} = 364\\text{ cm}^2$$\n$$\\text{Total Draft } D = A \\times \\text{Specific Draft} = 364\\text{ cm}^2 \\times 0.7\\text{ N/cm}^2 = 254.8\\text{ N}$$\nHence, the correct draft is $254.8\\text{ N}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_044",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Specific draft calculation",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A 4-bottom mouldboard plough with each bottom having a cut width of $30\\text{ cm}$ operates at a depth of $15\\text{ cm}$ with a forward speed of $3.6\\text{ km/h}$. If the unit soil draft is $5.0\\text{ N/cm}^2$, the drawbar power required is ________ $\\text{kW}$ (round off to two decimal places).",
+    "correct_answer": "9.00",
+    "numerical_range": {
+      "min": 8.95,
+      "max": 9.05
+    },
+    "solution": "1. Furrow cross-sectional area per bottom:\n$$A_1 = 30 \\times 15 = 450\\text{ cm}^2$$\nTotal cross-sectional area for 4 bottoms:\n$$A = 4 \\times 450 = 1800\\text{ cm}^2$$\n2. Total draft force:\n$$D = A \\times \\text{unit draft} = 1800 \\times 5.0 = 9000.0\\text{ N}$$\n3. Forward velocity:\n$$v = 3.6\\text{ km/h} = \\frac{3.6}{3.6} = 1.00\\text{ m/s}$$\n4. Drawbar power:\n$$P = \\frac{D \\times v}{1000} = \\frac{9000.0 \\times 1.00}{1000} = 9.00\\text{ kW}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_MB_045",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Mouldboard Ploughs & Forces",
+    "subtopic": "Bottom components and share geometry",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding the forces and geometry of a mouldboard plough bottom, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Vertical suction (clearance) enables the plough bottom to penetrate into the soil to the desired depth",
+      "B": "Horizontal suction (clearance) helps the plough maintain its proper width of cut",
+      "C": "The landside absorbs the side thrust exerted by the furrow slice on the mouldboard",
+      "D": "Specific draft of soil generally increases with an increase in forward operating speed"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Vertical suction is the downward clearance between the share point and the landside bottom that enables soil penetration. (A is correct)\n2. Horizontal suction is the side clearance between the share point and the landside that holds the plough to its full width of cut. (B is correct)\n3. The landside slides against the furrow wall, counteracting the side forces from the mouldboard and stabilising the implement. (C is correct)\n4. As forward speed increases, soil acceleration forces increase quadratically, causing the specific draft to increase. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_001",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "Rotor speed and peripheral velocity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor-operated rotavator has a rotor radius of $0.25\\text{ m}$ and rotates at $190\\text{ rpm}$. The peripheral tip velocity of the rotavator blades is:",
+    "options": {
+      "A": "$4.97\\text{ m/s}$",
+      "B": "$7.46\\text{ m/s}$",
+      "C": "$3.48\\text{ m/s}$",
+      "D": "$9.94\\text{ m/s}$"
+    },
+    "correct_answer": "A",
+    "solution": "The peripheral velocity $u$ of the rotor blades is given by:\n$$u = \\omega R = \\frac{2 \\pi N}{60} R$$\nGiven $N = 190\\text{ rpm}$ and $R = 0.25\\text{ m}$:\n$$u = \\frac{2 \\times \\pi \\times 190 \\times 0.25}{60} = 4.97\\text{ m/s}$$\nHence, the blade tip speed is $4.97\\text{ m/s}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_002",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "Velocity ratio and tilling pitch",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A rotavator operates at a forward speed of $3.6\\text{ km/h}$ ($1.0\\text{ m/s}$). The rotor shaft turns at $200\\text{ rpm}$, and each rotor flange carries $4$ blades cutting successively in the same plane. The tilling pitch (bite length) of the blades is ________ $\\text{cm}$ (round off to two decimal places).",
+    "correct_answer": "7.50",
+    "numerical_range": {
+      "min": 7.45,
+      "max": 7.55
+    },
+    "solution": "The tilling pitch (bite length $L$) is the distance the tractor travels forward between successive cuts by blades on the same rotor flange:\n$$L = \\frac{v}{N \\times z} \\times 60$$\nWhere:\n- $v = 1.0\\text{ m/s} = 100\\text{ cm/s}$\n- $N = 200\\text{ rpm}$\n- $z = 4\\text{ blades per side/plane}$\n$$L = \\frac{100 \\times 60}{200 \\times 4} = \\frac{6000}{800} = 7.50\\text{ cm}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_003",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "L-shaped and C-shaped blades",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding rotavator blades and their kinematic parameters?",
+    "options": {
+      "A": "L-shaped blades are superior in killing weeds and handling trash without wrapping",
+      "B": "C-shaped blades are recommended for heavy wet soils and puddling operations",
+      "C": "The ratio of blade peripheral speed to tractor forward velocity (velocity ratio $\\lambda$) must be greater than $1$ for cutting action",
+      "D": "Down-cut rotavators exert a positive forward thrust on the tractor during operation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. L-shaped blades cut vegetation cleanly and are less prone to clogging in trashy conditions. (A is correct)\n2. C-shaped blades curve smoothly and require less power in wet soils, ideal for wetland puddling. (B is correct)\n3. For cycloidal blade motion to loop and cut soil effectively, $\\lambda = u / v > 1$. (C is correct)\n4. In down-cut rotavators, blades rotate in the same direction as tractor wheels, pushing the tractor forward. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_004",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "Rotor speed and peripheral velocity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor-operated rotavator has a rotor radius of $0.25\\text{ m}$ and rotates at $220\\text{ rpm}$. The peripheral tip velocity of the rotavator blades is:",
+    "options": {
+      "A": "$5.76\\text{ m/s}$",
+      "B": "$8.64\\text{ m/s}$",
+      "C": "$4.03\\text{ m/s}$",
+      "D": "$11.52\\text{ m/s}$"
+    },
+    "correct_answer": "A",
+    "solution": "The peripheral velocity $u$ of the rotor blades is given by:\n$$u = \\omega R = \\frac{2 \\pi N}{60} R$$\nGiven $N = 220\\text{ rpm}$ and $R = 0.25\\text{ m}$:\n$$u = \\frac{2 \\times \\pi \\times 220 \\times 0.25}{60} = 5.76\\text{ m/s}$$\nHence, the blade tip speed is $5.76\\text{ m/s}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_005",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "Velocity ratio and tilling pitch",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A rotavator operates at a forward speed of $3.6\\text{ km/h}$ ($1.0\\text{ m/s}$). The rotor shaft turns at $200\\text{ rpm}$, and each rotor flange carries $4$ blades cutting successively in the same plane. The tilling pitch (bite length) of the blades is ________ $\\text{cm}$ (round off to two decimal places).",
+    "correct_answer": "7.50",
+    "numerical_range": {
+      "min": 7.45,
+      "max": 7.55
+    },
+    "solution": "The tilling pitch (bite length $L$) is the distance the tractor travels forward between successive cuts by blades on the same rotor flange:\n$$L = \\frac{v}{N \\times z} \\times 60$$\nWhere:\n- $v = 1.0\\text{ m/s} = 100\\text{ cm/s}$\n- $N = 200\\text{ rpm}$\n- $z = 4\\text{ blades per side/plane}$\n$$L = \\frac{100 \\times 60}{200 \\times 4} = \\frac{6000}{800} = 7.50\\text{ cm}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_006",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "L-shaped and C-shaped blades",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding rotavator blades and their kinematic parameters?",
+    "options": {
+      "A": "L-shaped blades are superior in killing weeds and handling trash without wrapping",
+      "B": "C-shaped blades are recommended for heavy wet soils and puddling operations",
+      "C": "The ratio of blade peripheral speed to tractor forward velocity (velocity ratio $\\lambda$) must be greater than $1$ for cutting action",
+      "D": "Down-cut rotavators exert a positive forward thrust on the tractor during operation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. L-shaped blades cut vegetation cleanly and are less prone to clogging in trashy conditions. (A is correct)\n2. C-shaped blades curve smoothly and require less power in wet soils, ideal for wetland puddling. (B is correct)\n3. For cycloidal blade motion to loop and cut soil effectively, $\\lambda = u / v > 1$. (C is correct)\n4. In down-cut rotavators, blades rotate in the same direction as tractor wheels, pushing the tractor forward. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_007",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "Rotor speed and peripheral velocity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor-operated rotavator has a rotor radius of $0.25\\text{ m}$ and rotates at $190\\text{ rpm}$. The peripheral tip velocity of the rotavator blades is:",
+    "options": {
+      "A": "$4.97\\text{ m/s}$",
+      "B": "$7.46\\text{ m/s}$",
+      "C": "$3.48\\text{ m/s}$",
+      "D": "$9.94\\text{ m/s}$"
+    },
+    "correct_answer": "A",
+    "solution": "The peripheral velocity $u$ of the rotor blades is given by:\n$$u = \\omega R = \\frac{2 \\pi N}{60} R$$\nGiven $N = 190\\text{ rpm}$ and $R = 0.25\\text{ m}$:\n$$u = \\frac{2 \\times \\pi \\times 190 \\times 0.25}{60} = 4.97\\text{ m/s}$$\nHence, the blade tip speed is $4.97\\text{ m/s}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_008",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "Velocity ratio and tilling pitch",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A rotavator operates at a forward speed of $3.6\\text{ km/h}$ ($1.0\\text{ m/s}$). The rotor shaft turns at $200\\text{ rpm}$, and each rotor flange carries $4$ blades cutting successively in the same plane. The tilling pitch (bite length) of the blades is ________ $\\text{cm}$ (round off to two decimal places).",
+    "correct_answer": "7.50",
+    "numerical_range": {
+      "min": 7.45,
+      "max": 7.55
+    },
+    "solution": "The tilling pitch (bite length $L$) is the distance the tractor travels forward between successive cuts by blades on the same rotor flange:\n$$L = \\frac{v}{N \\times z} \\times 60$$\nWhere:\n- $v = 1.0\\text{ m/s} = 100\\text{ cm/s}$\n- $N = 200\\text{ rpm}$\n- $z = 4\\text{ blades per side/plane}$\n$$L = \\frac{100 \\times 60}{200 \\times 4} = \\frac{6000}{800} = 7.50\\text{ cm}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_009",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "L-shaped and C-shaped blades",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding rotavator blades and their kinematic parameters?",
+    "options": {
+      "A": "L-shaped blades are superior in killing weeds and handling trash without wrapping",
+      "B": "C-shaped blades are recommended for heavy wet soils and puddling operations",
+      "C": "The ratio of blade peripheral speed to tractor forward velocity (velocity ratio $\\lambda$) must be greater than $1$ for cutting action",
+      "D": "Down-cut rotavators exert a positive forward thrust on the tractor during operation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. L-shaped blades cut vegetation cleanly and are less prone to clogging in trashy conditions. (A is correct)\n2. C-shaped blades curve smoothly and require less power in wet soils, ideal for wetland puddling. (B is correct)\n3. For cycloidal blade motion to loop and cut soil effectively, $\\lambda = u / v > 1$. (C is correct)\n4. In down-cut rotavators, blades rotate in the same direction as tractor wheels, pushing the tractor forward. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_010",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "Rotor speed and peripheral velocity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor-operated rotavator has a rotor radius of $0.25\\text{ m}$ and rotates at $220\\text{ rpm}$. The peripheral tip velocity of the rotavator blades is:",
+    "options": {
+      "A": "$5.76\\text{ m/s}$",
+      "B": "$8.64\\text{ m/s}$",
+      "C": "$4.03\\text{ m/s}$",
+      "D": "$11.52\\text{ m/s}$"
+    },
+    "correct_answer": "A",
+    "solution": "The peripheral velocity $u$ of the rotor blades is given by:\n$$u = \\omega R = \\frac{2 \\pi N}{60} R$$\nGiven $N = 220\\text{ rpm}$ and $R = 0.25\\text{ m}$:\n$$u = \\frac{2 \\times \\pi \\times 220 \\times 0.25}{60} = 5.76\\text{ m/s}$$\nHence, the blade tip speed is $5.76\\text{ m/s}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_011",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "Velocity ratio and tilling pitch",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A rotavator operates at a forward speed of $3.6\\text{ km/h}$ ($1.0\\text{ m/s}$). The rotor shaft turns at $200\\text{ rpm}$, and each rotor flange carries $4$ blades cutting successively in the same plane. The tilling pitch (bite length) of the blades is ________ $\\text{cm}$ (round off to two decimal places).",
+    "correct_answer": "7.50",
+    "numerical_range": {
+      "min": 7.45,
+      "max": 7.55
+    },
+    "solution": "The tilling pitch (bite length $L$) is the distance the tractor travels forward between successive cuts by blades on the same rotor flange:\n$$L = \\frac{v}{N \\times z} \\times 60$$\nWhere:\n- $v = 1.0\\text{ m/s} = 100\\text{ cm/s}$\n- $N = 200\\text{ rpm}$\n- $z = 4\\text{ blades per side/plane}$\n$$L = \\frac{100 \\times 60}{200 \\times 4} = \\frac{6000}{800} = 7.50\\text{ cm}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_012",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "L-shaped and C-shaped blades",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding rotavator blades and their kinematic parameters?",
+    "options": {
+      "A": "L-shaped blades are superior in killing weeds and handling trash without wrapping",
+      "B": "C-shaped blades are recommended for heavy wet soils and puddling operations",
+      "C": "The ratio of blade peripheral speed to tractor forward velocity (velocity ratio $\\lambda$) must be greater than $1$ for cutting action",
+      "D": "Down-cut rotavators exert a positive forward thrust on the tractor during operation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. L-shaped blades cut vegetation cleanly and are less prone to clogging in trashy conditions. (A is correct)\n2. C-shaped blades curve smoothly and require less power in wet soils, ideal for wetland puddling. (B is correct)\n3. For cycloidal blade motion to loop and cut soil effectively, $\\lambda = u / v > 1$. (C is correct)\n4. In down-cut rotavators, blades rotate in the same direction as tractor wheels, pushing the tractor forward. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_013",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "Rotor speed and peripheral velocity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor-operated rotavator has a rotor radius of $0.25\\text{ m}$ and rotates at $190\\text{ rpm}$. The peripheral tip velocity of the rotavator blades is:",
+    "options": {
+      "A": "$4.97\\text{ m/s}$",
+      "B": "$7.46\\text{ m/s}$",
+      "C": "$3.48\\text{ m/s}$",
+      "D": "$9.94\\text{ m/s}$"
+    },
+    "correct_answer": "A",
+    "solution": "The peripheral velocity $u$ of the rotor blades is given by:\n$$u = \\omega R = \\frac{2 \\pi N}{60} R$$\nGiven $N = 190\\text{ rpm}$ and $R = 0.25\\text{ m}$:\n$$u = \\frac{2 \\times \\pi \\times 190 \\times 0.25}{60} = 4.97\\text{ m/s}$$\nHence, the blade tip speed is $4.97\\text{ m/s}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_014",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "Velocity ratio and tilling pitch",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A rotavator operates at a forward speed of $3.6\\text{ km/h}$ ($1.0\\text{ m/s}$). The rotor shaft turns at $200\\text{ rpm}$, and each rotor flange carries $4$ blades cutting successively in the same plane. The tilling pitch (bite length) of the blades is ________ $\\text{cm}$ (round off to two decimal places).",
+    "correct_answer": "7.50",
+    "numerical_range": {
+      "min": 7.45,
+      "max": 7.55
+    },
+    "solution": "The tilling pitch (bite length $L$) is the distance the tractor travels forward between successive cuts by blades on the same rotor flange:\n$$L = \\frac{v}{N \\times z} \\times 60$$\nWhere:\n- $v = 1.0\\text{ m/s} = 100\\text{ cm/s}$\n- $N = 200\\text{ rpm}$\n- $z = 4\\text{ blades per side/plane}$\n$$L = \\frac{100 \\times 60}{200 \\times 4} = \\frac{6000}{800} = 7.50\\text{ cm}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_015",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "L-shaped and C-shaped blades",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding rotavator blades and their kinematic parameters?",
+    "options": {
+      "A": "L-shaped blades are superior in killing weeds and handling trash without wrapping",
+      "B": "C-shaped blades are recommended for heavy wet soils and puddling operations",
+      "C": "The ratio of blade peripheral speed to tractor forward velocity (velocity ratio $\\lambda$) must be greater than $1$ for cutting action",
+      "D": "Down-cut rotavators exert a positive forward thrust on the tractor during operation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. L-shaped blades cut vegetation cleanly and are less prone to clogging in trashy conditions. (A is correct)\n2. C-shaped blades curve smoothly and require less power in wet soils, ideal for wetland puddling. (B is correct)\n3. For cycloidal blade motion to loop and cut soil effectively, $\\lambda = u / v > 1$. (C is correct)\n4. In down-cut rotavators, blades rotate in the same direction as tractor wheels, pushing the tractor forward. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_016",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "Rotor speed and peripheral velocity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor-operated rotavator has a rotor radius of $0.25\\text{ m}$ and rotates at $220\\text{ rpm}$. The peripheral tip velocity of the rotavator blades is:",
+    "options": {
+      "A": "$5.76\\text{ m/s}$",
+      "B": "$8.64\\text{ m/s}$",
+      "C": "$4.03\\text{ m/s}$",
+      "D": "$11.52\\text{ m/s}$"
+    },
+    "correct_answer": "A",
+    "solution": "The peripheral velocity $u$ of the rotor blades is given by:\n$$u = \\omega R = \\frac{2 \\pi N}{60} R$$\nGiven $N = 220\\text{ rpm}$ and $R = 0.25\\text{ m}$:\n$$u = \\frac{2 \\times \\pi \\times 220 \\times 0.25}{60} = 5.76\\text{ m/s}$$\nHence, the blade tip speed is $5.76\\text{ m/s}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_017",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "Velocity ratio and tilling pitch",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A rotavator operates at a forward speed of $3.6\\text{ km/h}$ ($1.0\\text{ m/s}$). The rotor shaft turns at $200\\text{ rpm}$, and each rotor flange carries $4$ blades cutting successively in the same plane. The tilling pitch (bite length) of the blades is ________ $\\text{cm}$ (round off to two decimal places).",
+    "correct_answer": "7.50",
+    "numerical_range": {
+      "min": 7.45,
+      "max": 7.55
+    },
+    "solution": "The tilling pitch (bite length $L$) is the distance the tractor travels forward between successive cuts by blades on the same rotor flange:\n$$L = \\frac{v}{N \\times z} \\times 60$$\nWhere:\n- $v = 1.0\\text{ m/s} = 100\\text{ cm/s}$\n- $N = 200\\text{ rpm}$\n- $z = 4\\text{ blades per side/plane}$\n$$L = \\frac{100 \\times 60}{200 \\times 4} = \\frac{6000}{800} = 7.50\\text{ cm}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_018",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "L-shaped and C-shaped blades",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding rotavator blades and their kinematic parameters?",
+    "options": {
+      "A": "L-shaped blades are superior in killing weeds and handling trash without wrapping",
+      "B": "C-shaped blades are recommended for heavy wet soils and puddling operations",
+      "C": "The ratio of blade peripheral speed to tractor forward velocity (velocity ratio $\\lambda$) must be greater than $1$ for cutting action",
+      "D": "Down-cut rotavators exert a positive forward thrust on the tractor during operation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. L-shaped blades cut vegetation cleanly and are less prone to clogging in trashy conditions. (A is correct)\n2. C-shaped blades curve smoothly and require less power in wet soils, ideal for wetland puddling. (B is correct)\n3. For cycloidal blade motion to loop and cut soil effectively, $\\lambda = u / v > 1$. (C is correct)\n4. In down-cut rotavators, blades rotate in the same direction as tractor wheels, pushing the tractor forward. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_019",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "Rotor speed and peripheral velocity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor-operated rotavator has a rotor radius of $0.25\\text{ m}$ and rotates at $190\\text{ rpm}$. The peripheral tip velocity of the rotavator blades is:",
+    "options": {
+      "A": "$4.97\\text{ m/s}$",
+      "B": "$7.46\\text{ m/s}$",
+      "C": "$3.48\\text{ m/s}$",
+      "D": "$9.94\\text{ m/s}$"
+    },
+    "correct_answer": "A",
+    "solution": "The peripheral velocity $u$ of the rotor blades is given by:\n$$u = \\omega R = \\frac{2 \\pi N}{60} R$$\nGiven $N = 190\\text{ rpm}$ and $R = 0.25\\text{ m}$:\n$$u = \\frac{2 \\times \\pi \\times 190 \\times 0.25}{60} = 4.97\\text{ m/s}$$\nHence, the blade tip speed is $4.97\\text{ m/s}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_020",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "Velocity ratio and tilling pitch",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A rotavator operates at a forward speed of $3.6\\text{ km/h}$ ($1.0\\text{ m/s}$). The rotor shaft turns at $200\\text{ rpm}$, and each rotor flange carries $4$ blades cutting successively in the same plane. The tilling pitch (bite length) of the blades is ________ $\\text{cm}$ (round off to two decimal places).",
+    "correct_answer": "7.50",
+    "numerical_range": {
+      "min": 7.45,
+      "max": 7.55
+    },
+    "solution": "The tilling pitch (bite length $L$) is the distance the tractor travels forward between successive cuts by blades on the same rotor flange:\n$$L = \\frac{v}{N \\times z} \\times 60$$\nWhere:\n- $v = 1.0\\text{ m/s} = 100\\text{ cm/s}$\n- $N = 200\\text{ rpm}$\n- $z = 4\\text{ blades per side/plane}$\n$$L = \\frac{100 \\times 60}{200 \\times 4} = \\frac{6000}{800} = 7.50\\text{ cm}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_021",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "L-shaped and C-shaped blades",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding rotavator blades and their kinematic parameters?",
+    "options": {
+      "A": "L-shaped blades are superior in killing weeds and handling trash without wrapping",
+      "B": "C-shaped blades are recommended for heavy wet soils and puddling operations",
+      "C": "The ratio of blade peripheral speed to tractor forward velocity (velocity ratio $\\lambda$) must be greater than $1$ for cutting action",
+      "D": "Down-cut rotavators exert a positive forward thrust on the tractor during operation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. L-shaped blades cut vegetation cleanly and are less prone to clogging in trashy conditions. (A is correct)\n2. C-shaped blades curve smoothly and require less power in wet soils, ideal for wetland puddling. (B is correct)\n3. For cycloidal blade motion to loop and cut soil effectively, $\\lambda = u / v > 1$. (C is correct)\n4. In down-cut rotavators, blades rotate in the same direction as tractor wheels, pushing the tractor forward. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_022",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "Rotor speed and peripheral velocity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor-operated rotavator has a rotor radius of $0.25\\text{ m}$ and rotates at $220\\text{ rpm}$. The peripheral tip velocity of the rotavator blades is:",
+    "options": {
+      "A": "$5.76\\text{ m/s}$",
+      "B": "$8.64\\text{ m/s}$",
+      "C": "$4.03\\text{ m/s}$",
+      "D": "$11.52\\text{ m/s}$"
+    },
+    "correct_answer": "A",
+    "solution": "The peripheral velocity $u$ of the rotor blades is given by:\n$$u = \\omega R = \\frac{2 \\pi N}{60} R$$\nGiven $N = 220\\text{ rpm}$ and $R = 0.25\\text{ m}$:\n$$u = \\frac{2 \\times \\pi \\times 220 \\times 0.25}{60} = 5.76\\text{ m/s}$$\nHence, the blade tip speed is $5.76\\text{ m/s}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_023",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "Velocity ratio and tilling pitch",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A rotavator operates at a forward speed of $3.6\\text{ km/h}$ ($1.0\\text{ m/s}$). The rotor shaft turns at $200\\text{ rpm}$, and each rotor flange carries $4$ blades cutting successively in the same plane. The tilling pitch (bite length) of the blades is ________ $\\text{cm}$ (round off to two decimal places).",
+    "correct_answer": "7.50",
+    "numerical_range": {
+      "min": 7.45,
+      "max": 7.55
+    },
+    "solution": "The tilling pitch (bite length $L$) is the distance the tractor travels forward between successive cuts by blades on the same rotor flange:\n$$L = \\frac{v}{N \\times z} \\times 60$$\nWhere:\n- $v = 1.0\\text{ m/s} = 100\\text{ cm/s}$\n- $N = 200\\text{ rpm}$\n- $z = 4\\text{ blades per side/plane}$\n$$L = \\frac{100 \\times 60}{200 \\times 4} = \\frac{6000}{800} = 7.50\\text{ cm}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_024",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "L-shaped and C-shaped blades",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding rotavator blades and their kinematic parameters?",
+    "options": {
+      "A": "L-shaped blades are superior in killing weeds and handling trash without wrapping",
+      "B": "C-shaped blades are recommended for heavy wet soils and puddling operations",
+      "C": "The ratio of blade peripheral speed to tractor forward velocity (velocity ratio $\\lambda$) must be greater than $1$ for cutting action",
+      "D": "Down-cut rotavators exert a positive forward thrust on the tractor during operation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. L-shaped blades cut vegetation cleanly and are less prone to clogging in trashy conditions. (A is correct)\n2. C-shaped blades curve smoothly and require less power in wet soils, ideal for wetland puddling. (B is correct)\n3. For cycloidal blade motion to loop and cut soil effectively, $\\lambda = u / v > 1$. (C is correct)\n4. In down-cut rotavators, blades rotate in the same direction as tractor wheels, pushing the tractor forward. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_025",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "Rotor speed and peripheral velocity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor-operated rotavator has a rotor radius of $0.25\\text{ m}$ and rotates at $190\\text{ rpm}$. The peripheral tip velocity of the rotavator blades is:",
+    "options": {
+      "A": "$4.97\\text{ m/s}$",
+      "B": "$7.46\\text{ m/s}$",
+      "C": "$3.48\\text{ m/s}$",
+      "D": "$9.94\\text{ m/s}$"
+    },
+    "correct_answer": "A",
+    "solution": "The peripheral velocity $u$ of the rotor blades is given by:\n$$u = \\omega R = \\frac{2 \\pi N}{60} R$$\nGiven $N = 190\\text{ rpm}$ and $R = 0.25\\text{ m}$:\n$$u = \\frac{2 \\times \\pi \\times 190 \\times 0.25}{60} = 4.97\\text{ m/s}$$\nHence, the blade tip speed is $4.97\\text{ m/s}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_026",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "Velocity ratio and tilling pitch",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A rotavator operates at a forward speed of $3.6\\text{ km/h}$ ($1.0\\text{ m/s}$). The rotor shaft turns at $200\\text{ rpm}$, and each rotor flange carries $4$ blades cutting successively in the same plane. The tilling pitch (bite length) of the blades is ________ $\\text{cm}$ (round off to two decimal places).",
+    "correct_answer": "7.50",
+    "numerical_range": {
+      "min": 7.45,
+      "max": 7.55
+    },
+    "solution": "The tilling pitch (bite length $L$) is the distance the tractor travels forward between successive cuts by blades on the same rotor flange:\n$$L = \\frac{v}{N \\times z} \\times 60$$\nWhere:\n- $v = 1.0\\text{ m/s} = 100\\text{ cm/s}$\n- $N = 200\\text{ rpm}$\n- $z = 4\\text{ blades per side/plane}$\n$$L = \\frac{100 \\times 60}{200 \\times 4} = \\frac{6000}{800} = 7.50\\text{ cm}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_027",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "L-shaped and C-shaped blades",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding rotavator blades and their kinematic parameters?",
+    "options": {
+      "A": "L-shaped blades are superior in killing weeds and handling trash without wrapping",
+      "B": "C-shaped blades are recommended for heavy wet soils and puddling operations",
+      "C": "The ratio of blade peripheral speed to tractor forward velocity (velocity ratio $\\lambda$) must be greater than $1$ for cutting action",
+      "D": "Down-cut rotavators exert a positive forward thrust on the tractor during operation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. L-shaped blades cut vegetation cleanly and are less prone to clogging in trashy conditions. (A is correct)\n2. C-shaped blades curve smoothly and require less power in wet soils, ideal for wetland puddling. (B is correct)\n3. For cycloidal blade motion to loop and cut soil effectively, $\\lambda = u / v > 1$. (C is correct)\n4. In down-cut rotavators, blades rotate in the same direction as tractor wheels, pushing the tractor forward. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_028",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "Rotor speed and peripheral velocity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor-operated rotavator has a rotor radius of $0.25\\text{ m}$ and rotates at $220\\text{ rpm}$. The peripheral tip velocity of the rotavator blades is:",
+    "options": {
+      "A": "$5.76\\text{ m/s}$",
+      "B": "$8.64\\text{ m/s}$",
+      "C": "$4.03\\text{ m/s}$",
+      "D": "$11.52\\text{ m/s}$"
+    },
+    "correct_answer": "A",
+    "solution": "The peripheral velocity $u$ of the rotor blades is given by:\n$$u = \\omega R = \\frac{2 \\pi N}{60} R$$\nGiven $N = 220\\text{ rpm}$ and $R = 0.25\\text{ m}$:\n$$u = \\frac{2 \\times \\pi \\times 220 \\times 0.25}{60} = 5.76\\text{ m/s}$$\nHence, the blade tip speed is $5.76\\text{ m/s}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_029",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "Velocity ratio and tilling pitch",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A rotavator operates at a forward speed of $3.6\\text{ km/h}$ ($1.0\\text{ m/s}$). The rotor shaft turns at $200\\text{ rpm}$, and each rotor flange carries $4$ blades cutting successively in the same plane. The tilling pitch (bite length) of the blades is ________ $\\text{cm}$ (round off to two decimal places).",
+    "correct_answer": "7.50",
+    "numerical_range": {
+      "min": 7.45,
+      "max": 7.55
+    },
+    "solution": "The tilling pitch (bite length $L$) is the distance the tractor travels forward between successive cuts by blades on the same rotor flange:\n$$L = \\frac{v}{N \\times z} \\times 60$$\nWhere:\n- $v = 1.0\\text{ m/s} = 100\\text{ cm/s}$\n- $N = 200\\text{ rpm}$\n- $z = 4\\text{ blades per side/plane}$\n$$L = \\frac{100 \\times 60}{200 \\times 4} = \\frac{6000}{800} = 7.50\\text{ cm}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_030",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "L-shaped and C-shaped blades",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding rotavator blades and their kinematic parameters?",
+    "options": {
+      "A": "L-shaped blades are superior in killing weeds and handling trash without wrapping",
+      "B": "C-shaped blades are recommended for heavy wet soils and puddling operations",
+      "C": "The ratio of blade peripheral speed to tractor forward velocity (velocity ratio $\\lambda$) must be greater than $1$ for cutting action",
+      "D": "Down-cut rotavators exert a positive forward thrust on the tractor during operation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. L-shaped blades cut vegetation cleanly and are less prone to clogging in trashy conditions. (A is correct)\n2. C-shaped blades curve smoothly and require less power in wet soils, ideal for wetland puddling. (B is correct)\n3. For cycloidal blade motion to loop and cut soil effectively, $\\lambda = u / v > 1$. (C is correct)\n4. In down-cut rotavators, blades rotate in the same direction as tractor wheels, pushing the tractor forward. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_031",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "Rotor speed and peripheral velocity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor-operated rotavator has a rotor radius of $0.25\\text{ m}$ and rotates at $190\\text{ rpm}$. The peripheral tip velocity of the rotavator blades is:",
+    "options": {
+      "A": "$4.97\\text{ m/s}$",
+      "B": "$7.46\\text{ m/s}$",
+      "C": "$3.48\\text{ m/s}$",
+      "D": "$9.94\\text{ m/s}$"
+    },
+    "correct_answer": "A",
+    "solution": "The peripheral velocity $u$ of the rotor blades is given by:\n$$u = \\omega R = \\frac{2 \\pi N}{60} R$$\nGiven $N = 190\\text{ rpm}$ and $R = 0.25\\text{ m}$:\n$$u = \\frac{2 \\times \\pi \\times 190 \\times 0.25}{60} = 4.97\\text{ m/s}$$\nHence, the blade tip speed is $4.97\\text{ m/s}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_032",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "Velocity ratio and tilling pitch",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A rotavator operates at a forward speed of $3.6\\text{ km/h}$ ($1.0\\text{ m/s}$). The rotor shaft turns at $200\\text{ rpm}$, and each rotor flange carries $4$ blades cutting successively in the same plane. The tilling pitch (bite length) of the blades is ________ $\\text{cm}$ (round off to two decimal places).",
+    "correct_answer": "7.50",
+    "numerical_range": {
+      "min": 7.45,
+      "max": 7.55
+    },
+    "solution": "The tilling pitch (bite length $L$) is the distance the tractor travels forward between successive cuts by blades on the same rotor flange:\n$$L = \\frac{v}{N \\times z} \\times 60$$\nWhere:\n- $v = 1.0\\text{ m/s} = 100\\text{ cm/s}$\n- $N = 200\\text{ rpm}$\n- $z = 4\\text{ blades per side/plane}$\n$$L = \\frac{100 \\times 60}{200 \\times 4} = \\frac{6000}{800} = 7.50\\text{ cm}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_033",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "L-shaped and C-shaped blades",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding rotavator blades and their kinematic parameters?",
+    "options": {
+      "A": "L-shaped blades are superior in killing weeds and handling trash without wrapping",
+      "B": "C-shaped blades are recommended for heavy wet soils and puddling operations",
+      "C": "The ratio of blade peripheral speed to tractor forward velocity (velocity ratio $\\lambda$) must be greater than $1$ for cutting action",
+      "D": "Down-cut rotavators exert a positive forward thrust on the tractor during operation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. L-shaped blades cut vegetation cleanly and are less prone to clogging in trashy conditions. (A is correct)\n2. C-shaped blades curve smoothly and require less power in wet soils, ideal for wetland puddling. (B is correct)\n3. For cycloidal blade motion to loop and cut soil effectively, $\\lambda = u / v > 1$. (C is correct)\n4. In down-cut rotavators, blades rotate in the same direction as tractor wheels, pushing the tractor forward. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_034",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "Rotor speed and peripheral velocity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor-operated rotavator has a rotor radius of $0.25\\text{ m}$ and rotates at $220\\text{ rpm}$. The peripheral tip velocity of the rotavator blades is:",
+    "options": {
+      "A": "$5.76\\text{ m/s}$",
+      "B": "$8.64\\text{ m/s}$",
+      "C": "$4.03\\text{ m/s}$",
+      "D": "$11.52\\text{ m/s}$"
+    },
+    "correct_answer": "A",
+    "solution": "The peripheral velocity $u$ of the rotor blades is given by:\n$$u = \\omega R = \\frac{2 \\pi N}{60} R$$\nGiven $N = 220\\text{ rpm}$ and $R = 0.25\\text{ m}$:\n$$u = \\frac{2 \\times \\pi \\times 220 \\times 0.25}{60} = 5.76\\text{ m/s}$$\nHence, the blade tip speed is $5.76\\text{ m/s}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_035",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "Velocity ratio and tilling pitch",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A rotavator operates at a forward speed of $3.6\\text{ km/h}$ ($1.0\\text{ m/s}$). The rotor shaft turns at $200\\text{ rpm}$, and each rotor flange carries $4$ blades cutting successively in the same plane. The tilling pitch (bite length) of the blades is ________ $\\text{cm}$ (round off to two decimal places).",
+    "correct_answer": "7.50",
+    "numerical_range": {
+      "min": 7.45,
+      "max": 7.55
+    },
+    "solution": "The tilling pitch (bite length $L$) is the distance the tractor travels forward between successive cuts by blades on the same rotor flange:\n$$L = \\frac{v}{N \\times z} \\times 60$$\nWhere:\n- $v = 1.0\\text{ m/s} = 100\\text{ cm/s}$\n- $N = 200\\text{ rpm}$\n- $z = 4\\text{ blades per side/plane}$\n$$L = \\frac{100 \\times 60}{200 \\times 4} = \\frac{6000}{800} = 7.50\\text{ cm}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_036",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "L-shaped and C-shaped blades",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding rotavator blades and their kinematic parameters?",
+    "options": {
+      "A": "L-shaped blades are superior in killing weeds and handling trash without wrapping",
+      "B": "C-shaped blades are recommended for heavy wet soils and puddling operations",
+      "C": "The ratio of blade peripheral speed to tractor forward velocity (velocity ratio $\\lambda$) must be greater than $1$ for cutting action",
+      "D": "Down-cut rotavators exert a positive forward thrust on the tractor during operation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. L-shaped blades cut vegetation cleanly and are less prone to clogging in trashy conditions. (A is correct)\n2. C-shaped blades curve smoothly and require less power in wet soils, ideal for wetland puddling. (B is correct)\n3. For cycloidal blade motion to loop and cut soil effectively, $\\lambda = u / v > 1$. (C is correct)\n4. In down-cut rotavators, blades rotate in the same direction as tractor wheels, pushing the tractor forward. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_037",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "Rotor speed and peripheral velocity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor-operated rotavator has a rotor radius of $0.25\\text{ m}$ and rotates at $190\\text{ rpm}$. The peripheral tip velocity of the rotavator blades is:",
+    "options": {
+      "A": "$4.97\\text{ m/s}$",
+      "B": "$7.46\\text{ m/s}$",
+      "C": "$3.48\\text{ m/s}$",
+      "D": "$9.94\\text{ m/s}$"
+    },
+    "correct_answer": "A",
+    "solution": "The peripheral velocity $u$ of the rotor blades is given by:\n$$u = \\omega R = \\frac{2 \\pi N}{60} R$$\nGiven $N = 190\\text{ rpm}$ and $R = 0.25\\text{ m}$:\n$$u = \\frac{2 \\times \\pi \\times 190 \\times 0.25}{60} = 4.97\\text{ m/s}$$\nHence, the blade tip speed is $4.97\\text{ m/s}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_038",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "Velocity ratio and tilling pitch",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A rotavator operates at a forward speed of $3.6\\text{ km/h}$ ($1.0\\text{ m/s}$). The rotor shaft turns at $200\\text{ rpm}$, and each rotor flange carries $4$ blades cutting successively in the same plane. The tilling pitch (bite length) of the blades is ________ $\\text{cm}$ (round off to two decimal places).",
+    "correct_answer": "7.50",
+    "numerical_range": {
+      "min": 7.45,
+      "max": 7.55
+    },
+    "solution": "The tilling pitch (bite length $L$) is the distance the tractor travels forward between successive cuts by blades on the same rotor flange:\n$$L = \\frac{v}{N \\times z} \\times 60$$\nWhere:\n- $v = 1.0\\text{ m/s} = 100\\text{ cm/s}$\n- $N = 200\\text{ rpm}$\n- $z = 4\\text{ blades per side/plane}$\n$$L = \\frac{100 \\times 60}{200 \\times 4} = \\frac{6000}{800} = 7.50\\text{ cm}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_039",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "L-shaped and C-shaped blades",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding rotavator blades and their kinematic parameters?",
+    "options": {
+      "A": "L-shaped blades are superior in killing weeds and handling trash without wrapping",
+      "B": "C-shaped blades are recommended for heavy wet soils and puddling operations",
+      "C": "The ratio of blade peripheral speed to tractor forward velocity (velocity ratio $\\lambda$) must be greater than $1$ for cutting action",
+      "D": "Down-cut rotavators exert a positive forward thrust on the tractor during operation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. L-shaped blades cut vegetation cleanly and are less prone to clogging in trashy conditions. (A is correct)\n2. C-shaped blades curve smoothly and require less power in wet soils, ideal for wetland puddling. (B is correct)\n3. For cycloidal blade motion to loop and cut soil effectively, $\\lambda = u / v > 1$. (C is correct)\n4. In down-cut rotavators, blades rotate in the same direction as tractor wheels, pushing the tractor forward. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_040",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "Rotor speed and peripheral velocity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor-operated rotavator has a rotor radius of $0.25\\text{ m}$ and rotates at $220\\text{ rpm}$. The peripheral tip velocity of the rotavator blades is:",
+    "options": {
+      "A": "$5.76\\text{ m/s}$",
+      "B": "$8.64\\text{ m/s}$",
+      "C": "$4.03\\text{ m/s}$",
+      "D": "$11.52\\text{ m/s}$"
+    },
+    "correct_answer": "A",
+    "solution": "The peripheral velocity $u$ of the rotor blades is given by:\n$$u = \\omega R = \\frac{2 \\pi N}{60} R$$\nGiven $N = 220\\text{ rpm}$ and $R = 0.25\\text{ m}$:\n$$u = \\frac{2 \\times \\pi \\times 220 \\times 0.25}{60} = 5.76\\text{ m/s}$$\nHence, the blade tip speed is $5.76\\text{ m/s}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_041",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "Velocity ratio and tilling pitch",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A rotavator operates at a forward speed of $3.6\\text{ km/h}$ ($1.0\\text{ m/s}$). The rotor shaft turns at $200\\text{ rpm}$, and each rotor flange carries $4$ blades cutting successively in the same plane. The tilling pitch (bite length) of the blades is ________ $\\text{cm}$ (round off to two decimal places).",
+    "correct_answer": "7.50",
+    "numerical_range": {
+      "min": 7.45,
+      "max": 7.55
+    },
+    "solution": "The tilling pitch (bite length $L$) is the distance the tractor travels forward between successive cuts by blades on the same rotor flange:\n$$L = \\frac{v}{N \\times z} \\times 60$$\nWhere:\n- $v = 1.0\\text{ m/s} = 100\\text{ cm/s}$\n- $N = 200\\text{ rpm}$\n- $z = 4\\text{ blades per side/plane}$\n$$L = \\frac{100 \\times 60}{200 \\times 4} = \\frac{6000}{800} = 7.50\\text{ cm}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_042",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "L-shaped and C-shaped blades",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding rotavator blades and their kinematic parameters?",
+    "options": {
+      "A": "L-shaped blades are superior in killing weeds and handling trash without wrapping",
+      "B": "C-shaped blades are recommended for heavy wet soils and puddling operations",
+      "C": "The ratio of blade peripheral speed to tractor forward velocity (velocity ratio $\\lambda$) must be greater than $1$ for cutting action",
+      "D": "Down-cut rotavators exert a positive forward thrust on the tractor during operation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. L-shaped blades cut vegetation cleanly and are less prone to clogging in trashy conditions. (A is correct)\n2. C-shaped blades curve smoothly and require less power in wet soils, ideal for wetland puddling. (B is correct)\n3. For cycloidal blade motion to loop and cut soil effectively, $\\lambda = u / v > 1$. (C is correct)\n4. In down-cut rotavators, blades rotate in the same direction as tractor wheels, pushing the tractor forward. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_043",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "Rotor speed and peripheral velocity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor-operated rotavator has a rotor radius of $0.25\\text{ m}$ and rotates at $190\\text{ rpm}$. The peripheral tip velocity of the rotavator blades is:",
+    "options": {
+      "A": "$4.97\\text{ m/s}$",
+      "B": "$7.46\\text{ m/s}$",
+      "C": "$3.48\\text{ m/s}$",
+      "D": "$9.94\\text{ m/s}$"
+    },
+    "correct_answer": "A",
+    "solution": "The peripheral velocity $u$ of the rotor blades is given by:\n$$u = \\omega R = \\frac{2 \\pi N}{60} R$$\nGiven $N = 190\\text{ rpm}$ and $R = 0.25\\text{ m}$:\n$$u = \\frac{2 \\times \\pi \\times 190 \\times 0.25}{60} = 4.97\\text{ m/s}$$\nHence, the blade tip speed is $4.97\\text{ m/s}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_044",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "Velocity ratio and tilling pitch",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A rotavator operates at a forward speed of $3.6\\text{ km/h}$ ($1.0\\text{ m/s}$). The rotor shaft turns at $200\\text{ rpm}$, and each rotor flange carries $4$ blades cutting successively in the same plane. The tilling pitch (bite length) of the blades is ________ $\\text{cm}$ (round off to two decimal places).",
+    "correct_answer": "7.50",
+    "numerical_range": {
+      "min": 7.45,
+      "max": 7.55
+    },
+    "solution": "The tilling pitch (bite length $L$) is the distance the tractor travels forward between successive cuts by blades on the same rotor flange:\n$$L = \\frac{v}{N \\times z} \\times 60$$\nWhere:\n- $v = 1.0\\text{ m/s} = 100\\text{ cm/s}$\n- $N = 200\\text{ rpm}$\n- $z = 4\\text{ blades per side/plane}$\n$$L = \\frac{100 \\times 60}{200 \\times 4} = \\frac{6000}{800} = 7.50\\text{ cm}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_ROT_045",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Rotary Tillage: Rotavators & Blade Kinematics",
+    "subtopic": "L-shaped and C-shaped blades",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are CORRECT regarding rotavator blades and their kinematic parameters?",
+    "options": {
+      "A": "L-shaped blades are superior in killing weeds and handling trash without wrapping",
+      "B": "C-shaped blades are recommended for heavy wet soils and puddling operations",
+      "C": "The ratio of blade peripheral speed to tractor forward velocity (velocity ratio $\\lambda$) must be greater than $1$ for cutting action",
+      "D": "Down-cut rotavators exert a positive forward thrust on the tractor during operation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. L-shaped blades cut vegetation cleanly and are less prone to clogging in trashy conditions. (A is correct)\n2. C-shaped blades curve smoothly and require less power in wet soils, ideal for wetland puddling. (B is correct)\n3. For cycloidal blade motion to loop and cut soil effectively, $\\lambda = u / v > 1$. (C is correct)\n4. In down-cut rotavators, blades rotate in the same direction as tractor wheels, pushing the tractor forward. (D is correct)\nAll four statements A, B, C, D are correct.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_001",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Drive wheel and transmission",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A $9\\text{-row}$ tractor-drawn seed drill has a row-to-row spacing of $20\\text{ cm}$. The effective working width of the seed drill is:",
+    "options": {
+      "A": "$1.80\\text{ m}$",
+      "B": "$2.00\\text{ m}$",
+      "C": "$1.60\\text{ m}$",
+      "D": "$2.70\\text{ m}$"
+    },
+    "correct_answer": "A",
+    "solution": "The effective working width $W$ of a seed drill is the product of number of furrow openers ($n$) and the spacing between consecutive rows ($s$):\n$$W = n \\times s = 9 \\times 20\\text{ cm} = 180\\text{ cm} = 1.80\\text{ m}$$\nHence, the working width is $1.80\\text{ m}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_002",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Calibration calculation and seed rate adjustment",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A seed drill with a working width of $1.8\\text{ m}$ and a ground wheel diameter of $0.6\\text{ m}$ is calibrated in the laboratory. For $100$ revolutions of the ground wheel, the total seed collected is $580\\text{ g}$. The seed rate is ________ $\\text{kg/ha}$ (round off to two decimal places, take $\\pi = 3.1416$).",
+    "correct_answer": "17.09",
+    "numerical_range": {
+      "min": 16.59,
+      "max": 17.59
+    },
+    "solution": "1. Distance covered in 100 revolutions:\n$$S = n \\times \\pi D = 100 \\times 3.1416 \\times 0.6 = 188.50\\text{ m}$$\n2. Area covered:\n$$A = S \\times W = 188.50 \\times 1.8 = 339.29\\text{ m}^2 = \\frac{339.29}{10000}\\text{ ha}$$\n3. Seed rate in kg/ha:\n$$\\text{Seed Rate} = \\frac{580/1000}{339.29/10000} = 17.09\\text{ kg/ha}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_003",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Fluted roller metering",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following seed metering mechanisms is/are ACCURATELY matched with its characteristic operating principle?",
+    "options": {
+      "A": "Fluted feed roller: Seed rate is adjusted by sliding the roller axially to vary the exposed flute length",
+      "B": "Internal double-run: Features two sides (one coarse, one fine) used for small vs large seeds",
+      "C": "Cup feed mechanism: Employs small cups on a rotating disc that lift and drop seeds into funnels",
+      "D": "Pneumatic seed metering: Uses vacuum suction on perforated plates for precision single-seed singulation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements describe standard seed metering devices:\n1. Fluted rollers adjust seeding rate through axial exposure of flutes. (A is true)\n2. Internal double-run has two separate rim sizes for small and bold seeds. (B is true)\n3. Cup feed lifts seeds mechanically with cups mounted on a revolving wheel. (C is true)\n4. Modern vacuum seeders hold seeds pneumatically against rotating plates for precision singulation. (D is true)\nAll options A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_004",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Drive wheel and transmission",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A $9\\text{-row}$ tractor-drawn seed drill has a row-to-row spacing of $20\\text{ cm}$. The effective working width of the seed drill is:",
+    "options": {
+      "A": "$1.80\\text{ m}$",
+      "B": "$2.00\\text{ m}$",
+      "C": "$1.60\\text{ m}$",
+      "D": "$2.70\\text{ m}$"
+    },
+    "correct_answer": "A",
+    "solution": "The effective working width $W$ of a seed drill is the product of number of furrow openers ($n$) and the spacing between consecutive rows ($s$):\n$$W = n \\times s = 9 \\times 20\\text{ cm} = 180\\text{ cm} = 1.80\\text{ m}$$\nHence, the working width is $1.80\\text{ m}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_005",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Calibration calculation and seed rate adjustment",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A seed drill with a working width of $1.8\\text{ m}$ and a ground wheel diameter of $0.6\\text{ m}$ is calibrated in the laboratory. For $100$ revolutions of the ground wheel, the total seed collected is $540\\text{ g}$. The seed rate is ________ $\\text{kg/ha}$ (round off to two decimal places, take $\\pi = 3.1416$).",
+    "correct_answer": "15.92",
+    "numerical_range": {
+      "min": 15.42,
+      "max": 16.42
+    },
+    "solution": "1. Distance covered in 100 revolutions:\n$$S = n \\times \\pi D = 100 \\times 3.1416 \\times 0.6 = 188.50\\text{ m}$$\n2. Area covered:\n$$A = S \\times W = 188.50 \\times 1.8 = 339.29\\text{ m}^2 = \\frac{339.29}{10000}\\text{ ha}$$\n3. Seed rate in kg/ha:\n$$\\text{Seed Rate} = \\frac{540/1000}{339.29/10000} = 15.92\\text{ kg/ha}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_006",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Fluted roller metering",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following seed metering mechanisms is/are ACCURATELY matched with its characteristic operating principle?",
+    "options": {
+      "A": "Fluted feed roller: Seed rate is adjusted by sliding the roller axially to vary the exposed flute length",
+      "B": "Internal double-run: Features two sides (one coarse, one fine) used for small vs large seeds",
+      "C": "Cup feed mechanism: Employs small cups on a rotating disc that lift and drop seeds into funnels",
+      "D": "Pneumatic seed metering: Uses vacuum suction on perforated plates for precision single-seed singulation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements describe standard seed metering devices:\n1. Fluted rollers adjust seeding rate through axial exposure of flutes. (A is true)\n2. Internal double-run has two separate rim sizes for small and bold seeds. (B is true)\n3. Cup feed lifts seeds mechanically with cups mounted on a revolving wheel. (C is true)\n4. Modern vacuum seeders hold seeds pneumatically against rotating plates for precision singulation. (D is true)\nAll options A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_007",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Drive wheel and transmission",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A $9\\text{-row}$ tractor-drawn seed drill has a row-to-row spacing of $20\\text{ cm}$. The effective working width of the seed drill is:",
+    "options": {
+      "A": "$1.80\\text{ m}$",
+      "B": "$2.00\\text{ m}$",
+      "C": "$1.60\\text{ m}$",
+      "D": "$2.70\\text{ m}$"
+    },
+    "correct_answer": "A",
+    "solution": "The effective working width $W$ of a seed drill is the product of number of furrow openers ($n$) and the spacing between consecutive rows ($s$):\n$$W = n \\times s = 9 \\times 20\\text{ cm} = 180\\text{ cm} = 1.80\\text{ m}$$\nHence, the working width is $1.80\\text{ m}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_008",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Calibration calculation and seed rate adjustment",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A seed drill with a working width of $1.8\\text{ m}$ and a ground wheel diameter of $0.6\\text{ m}$ is calibrated in the laboratory. For $100$ revolutions of the ground wheel, the total seed collected is $600\\text{ g}$. The seed rate is ________ $\\text{kg/ha}$ (round off to two decimal places, take $\\pi = 3.1416$).",
+    "correct_answer": "17.68",
+    "numerical_range": {
+      "min": 17.18,
+      "max": 18.18
+    },
+    "solution": "1. Distance covered in 100 revolutions:\n$$S = n \\times \\pi D = 100 \\times 3.1416 \\times 0.6 = 188.50\\text{ m}$$\n2. Area covered:\n$$A = S \\times W = 188.50 \\times 1.8 = 339.29\\text{ m}^2 = \\frac{339.29}{10000}\\text{ ha}$$\n3. Seed rate in kg/ha:\n$$\\text{Seed Rate} = \\frac{600/1000}{339.29/10000} = 17.68\\text{ kg/ha}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_009",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Fluted roller metering",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following seed metering mechanisms is/are ACCURATELY matched with its characteristic operating principle?",
+    "options": {
+      "A": "Fluted feed roller: Seed rate is adjusted by sliding the roller axially to vary the exposed flute length",
+      "B": "Internal double-run: Features two sides (one coarse, one fine) used for small vs large seeds",
+      "C": "Cup feed mechanism: Employs small cups on a rotating disc that lift and drop seeds into funnels",
+      "D": "Pneumatic seed metering: Uses vacuum suction on perforated plates for precision single-seed singulation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements describe standard seed metering devices:\n1. Fluted rollers adjust seeding rate through axial exposure of flutes. (A is true)\n2. Internal double-run has two separate rim sizes for small and bold seeds. (B is true)\n3. Cup feed lifts seeds mechanically with cups mounted on a revolving wheel. (C is true)\n4. Modern vacuum seeders hold seeds pneumatically against rotating plates for precision singulation. (D is true)\nAll options A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_010",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Drive wheel and transmission",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A $9\\text{-row}$ tractor-drawn seed drill has a row-to-row spacing of $20\\text{ cm}$. The effective working width of the seed drill is:",
+    "options": {
+      "A": "$1.80\\text{ m}$",
+      "B": "$2.00\\text{ m}$",
+      "C": "$1.60\\text{ m}$",
+      "D": "$2.70\\text{ m}$"
+    },
+    "correct_answer": "A",
+    "solution": "The effective working width $W$ of a seed drill is the product of number of furrow openers ($n$) and the spacing between consecutive rows ($s$):\n$$W = n \\times s = 9 \\times 20\\text{ cm} = 180\\text{ cm} = 1.80\\text{ m}$$\nHence, the working width is $1.80\\text{ m}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_011",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Calibration calculation and seed rate adjustment",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A seed drill with a working width of $1.8\\text{ m}$ and a ground wheel diameter of $0.6\\text{ m}$ is calibrated in the laboratory. For $100$ revolutions of the ground wheel, the total seed collected is $560\\text{ g}$. The seed rate is ________ $\\text{kg/ha}$ (round off to two decimal places, take $\\pi = 3.1416$).",
+    "correct_answer": "16.51",
+    "numerical_range": {
+      "min": 16.01,
+      "max": 17.01
+    },
+    "solution": "1. Distance covered in 100 revolutions:\n$$S = n \\times \\pi D = 100 \\times 3.1416 \\times 0.6 = 188.50\\text{ m}$$\n2. Area covered:\n$$A = S \\times W = 188.50 \\times 1.8 = 339.29\\text{ m}^2 = \\frac{339.29}{10000}\\text{ ha}$$\n3. Seed rate in kg/ha:\n$$\\text{Seed Rate} = \\frac{560/1000}{339.29/10000} = 16.51\\text{ kg/ha}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_012",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Fluted roller metering",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following seed metering mechanisms is/are ACCURATELY matched with its characteristic operating principle?",
+    "options": {
+      "A": "Fluted feed roller: Seed rate is adjusted by sliding the roller axially to vary the exposed flute length",
+      "B": "Internal double-run: Features two sides (one coarse, one fine) used for small vs large seeds",
+      "C": "Cup feed mechanism: Employs small cups on a rotating disc that lift and drop seeds into funnels",
+      "D": "Pneumatic seed metering: Uses vacuum suction on perforated plates for precision single-seed singulation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements describe standard seed metering devices:\n1. Fluted rollers adjust seeding rate through axial exposure of flutes. (A is true)\n2. Internal double-run has two separate rim sizes for small and bold seeds. (B is true)\n3. Cup feed lifts seeds mechanically with cups mounted on a revolving wheel. (C is true)\n4. Modern vacuum seeders hold seeds pneumatically against rotating plates for precision singulation. (D is true)\nAll options A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_013",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Drive wheel and transmission",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A $9\\text{-row}$ tractor-drawn seed drill has a row-to-row spacing of $20\\text{ cm}$. The effective working width of the seed drill is:",
+    "options": {
+      "A": "$1.80\\text{ m}$",
+      "B": "$2.00\\text{ m}$",
+      "C": "$1.60\\text{ m}$",
+      "D": "$2.70\\text{ m}$"
+    },
+    "correct_answer": "A",
+    "solution": "The effective working width $W$ of a seed drill is the product of number of furrow openers ($n$) and the spacing between consecutive rows ($s$):\n$$W = n \\times s = 9 \\times 20\\text{ cm} = 180\\text{ cm} = 1.80\\text{ m}$$\nHence, the working width is $1.80\\text{ m}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_014",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Calibration calculation and seed rate adjustment",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A seed drill with a working width of $1.8\\text{ m}$ and a ground wheel diameter of $0.6\\text{ m}$ is calibrated in the laboratory. For $100$ revolutions of the ground wheel, the total seed collected is $620\\text{ g}$. The seed rate is ________ $\\text{kg/ha}$ (round off to two decimal places, take $\\pi = 3.1416$).",
+    "correct_answer": "18.27",
+    "numerical_range": {
+      "min": 17.77,
+      "max": 18.77
+    },
+    "solution": "1. Distance covered in 100 revolutions:\n$$S = n \\times \\pi D = 100 \\times 3.1416 \\times 0.6 = 188.50\\text{ m}$$\n2. Area covered:\n$$A = S \\times W = 188.50 \\times 1.8 = 339.29\\text{ m}^2 = \\frac{339.29}{10000}\\text{ ha}$$\n3. Seed rate in kg/ha:\n$$\\text{Seed Rate} = \\frac{620/1000}{339.29/10000} = 18.27\\text{ kg/ha}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_015",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Fluted roller metering",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following seed metering mechanisms is/are ACCURATELY matched with its characteristic operating principle?",
+    "options": {
+      "A": "Fluted feed roller: Seed rate is adjusted by sliding the roller axially to vary the exposed flute length",
+      "B": "Internal double-run: Features two sides (one coarse, one fine) used for small vs large seeds",
+      "C": "Cup feed mechanism: Employs small cups on a rotating disc that lift and drop seeds into funnels",
+      "D": "Pneumatic seed metering: Uses vacuum suction on perforated plates for precision single-seed singulation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements describe standard seed metering devices:\n1. Fluted rollers adjust seeding rate through axial exposure of flutes. (A is true)\n2. Internal double-run has two separate rim sizes for small and bold seeds. (B is true)\n3. Cup feed lifts seeds mechanically with cups mounted on a revolving wheel. (C is true)\n4. Modern vacuum seeders hold seeds pneumatically against rotating plates for precision singulation. (D is true)\nAll options A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_016",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Drive wheel and transmission",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A $9\\text{-row}$ tractor-drawn seed drill has a row-to-row spacing of $20\\text{ cm}$. The effective working width of the seed drill is:",
+    "options": {
+      "A": "$1.80\\text{ m}$",
+      "B": "$2.00\\text{ m}$",
+      "C": "$1.60\\text{ m}$",
+      "D": "$2.70\\text{ m}$"
+    },
+    "correct_answer": "A",
+    "solution": "The effective working width $W$ of a seed drill is the product of number of furrow openers ($n$) and the spacing between consecutive rows ($s$):\n$$W = n \\times s = 9 \\times 20\\text{ cm} = 180\\text{ cm} = 1.80\\text{ m}$$\nHence, the working width is $1.80\\text{ m}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_017",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Calibration calculation and seed rate adjustment",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A seed drill with a working width of $1.8\\text{ m}$ and a ground wheel diameter of $0.6\\text{ m}$ is calibrated in the laboratory. For $100$ revolutions of the ground wheel, the total seed collected is $580\\text{ g}$. The seed rate is ________ $\\text{kg/ha}$ (round off to two decimal places, take $\\pi = 3.1416$).",
+    "correct_answer": "17.09",
+    "numerical_range": {
+      "min": 16.59,
+      "max": 17.59
+    },
+    "solution": "1. Distance covered in 100 revolutions:\n$$S = n \\times \\pi D = 100 \\times 3.1416 \\times 0.6 = 188.50\\text{ m}$$\n2. Area covered:\n$$A = S \\times W = 188.50 \\times 1.8 = 339.29\\text{ m}^2 = \\frac{339.29}{10000}\\text{ ha}$$\n3. Seed rate in kg/ha:\n$$\\text{Seed Rate} = \\frac{580/1000}{339.29/10000} = 17.09\\text{ kg/ha}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_018",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Fluted roller metering",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following seed metering mechanisms is/are ACCURATELY matched with its characteristic operating principle?",
+    "options": {
+      "A": "Fluted feed roller: Seed rate is adjusted by sliding the roller axially to vary the exposed flute length",
+      "B": "Internal double-run: Features two sides (one coarse, one fine) used for small vs large seeds",
+      "C": "Cup feed mechanism: Employs small cups on a rotating disc that lift and drop seeds into funnels",
+      "D": "Pneumatic seed metering: Uses vacuum suction on perforated plates for precision single-seed singulation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements describe standard seed metering devices:\n1. Fluted rollers adjust seeding rate through axial exposure of flutes. (A is true)\n2. Internal double-run has two separate rim sizes for small and bold seeds. (B is true)\n3. Cup feed lifts seeds mechanically with cups mounted on a revolving wheel. (C is true)\n4. Modern vacuum seeders hold seeds pneumatically against rotating plates for precision singulation. (D is true)\nAll options A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_019",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Drive wheel and transmission",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A $9\\text{-row}$ tractor-drawn seed drill has a row-to-row spacing of $20\\text{ cm}$. The effective working width of the seed drill is:",
+    "options": {
+      "A": "$1.80\\text{ m}$",
+      "B": "$2.00\\text{ m}$",
+      "C": "$1.60\\text{ m}$",
+      "D": "$2.70\\text{ m}$"
+    },
+    "correct_answer": "A",
+    "solution": "The effective working width $W$ of a seed drill is the product of number of furrow openers ($n$) and the spacing between consecutive rows ($s$):\n$$W = n \\times s = 9 \\times 20\\text{ cm} = 180\\text{ cm} = 1.80\\text{ m}$$\nHence, the working width is $1.80\\text{ m}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_020",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Calibration calculation and seed rate adjustment",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A seed drill with a working width of $1.8\\text{ m}$ and a ground wheel diameter of $0.6\\text{ m}$ is calibrated in the laboratory. For $100$ revolutions of the ground wheel, the total seed collected is $540\\text{ g}$. The seed rate is ________ $\\text{kg/ha}$ (round off to two decimal places, take $\\pi = 3.1416$).",
+    "correct_answer": "15.92",
+    "numerical_range": {
+      "min": 15.42,
+      "max": 16.42
+    },
+    "solution": "1. Distance covered in 100 revolutions:\n$$S = n \\times \\pi D = 100 \\times 3.1416 \\times 0.6 = 188.50\\text{ m}$$\n2. Area covered:\n$$A = S \\times W = 188.50 \\times 1.8 = 339.29\\text{ m}^2 = \\frac{339.29}{10000}\\text{ ha}$$\n3. Seed rate in kg/ha:\n$$\\text{Seed Rate} = \\frac{540/1000}{339.29/10000} = 15.92\\text{ kg/ha}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_021",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Fluted roller metering",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following seed metering mechanisms is/are ACCURATELY matched with its characteristic operating principle?",
+    "options": {
+      "A": "Fluted feed roller: Seed rate is adjusted by sliding the roller axially to vary the exposed flute length",
+      "B": "Internal double-run: Features two sides (one coarse, one fine) used for small vs large seeds",
+      "C": "Cup feed mechanism: Employs small cups on a rotating disc that lift and drop seeds into funnels",
+      "D": "Pneumatic seed metering: Uses vacuum suction on perforated plates for precision single-seed singulation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements describe standard seed metering devices:\n1. Fluted rollers adjust seeding rate through axial exposure of flutes. (A is true)\n2. Internal double-run has two separate rim sizes for small and bold seeds. (B is true)\n3. Cup feed lifts seeds mechanically with cups mounted on a revolving wheel. (C is true)\n4. Modern vacuum seeders hold seeds pneumatically against rotating plates for precision singulation. (D is true)\nAll options A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_022",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Drive wheel and transmission",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A $9\\text{-row}$ tractor-drawn seed drill has a row-to-row spacing of $20\\text{ cm}$. The effective working width of the seed drill is:",
+    "options": {
+      "A": "$1.80\\text{ m}$",
+      "B": "$2.00\\text{ m}$",
+      "C": "$1.60\\text{ m}$",
+      "D": "$2.70\\text{ m}$"
+    },
+    "correct_answer": "A",
+    "solution": "The effective working width $W$ of a seed drill is the product of number of furrow openers ($n$) and the spacing between consecutive rows ($s$):\n$$W = n \\times s = 9 \\times 20\\text{ cm} = 180\\text{ cm} = 1.80\\text{ m}$$\nHence, the working width is $1.80\\text{ m}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_023",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Calibration calculation and seed rate adjustment",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A seed drill with a working width of $1.8\\text{ m}$ and a ground wheel diameter of $0.6\\text{ m}$ is calibrated in the laboratory. For $100$ revolutions of the ground wheel, the total seed collected is $600\\text{ g}$. The seed rate is ________ $\\text{kg/ha}$ (round off to two decimal places, take $\\pi = 3.1416$).",
+    "correct_answer": "17.68",
+    "numerical_range": {
+      "min": 17.18,
+      "max": 18.18
+    },
+    "solution": "1. Distance covered in 100 revolutions:\n$$S = n \\times \\pi D = 100 \\times 3.1416 \\times 0.6 = 188.50\\text{ m}$$\n2. Area covered:\n$$A = S \\times W = 188.50 \\times 1.8 = 339.29\\text{ m}^2 = \\frac{339.29}{10000}\\text{ ha}$$\n3. Seed rate in kg/ha:\n$$\\text{Seed Rate} = \\frac{600/1000}{339.29/10000} = 17.68\\text{ kg/ha}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_024",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Fluted roller metering",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following seed metering mechanisms is/are ACCURATELY matched with its characteristic operating principle?",
+    "options": {
+      "A": "Fluted feed roller: Seed rate is adjusted by sliding the roller axially to vary the exposed flute length",
+      "B": "Internal double-run: Features two sides (one coarse, one fine) used for small vs large seeds",
+      "C": "Cup feed mechanism: Employs small cups on a rotating disc that lift and drop seeds into funnels",
+      "D": "Pneumatic seed metering: Uses vacuum suction on perforated plates for precision single-seed singulation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements describe standard seed metering devices:\n1. Fluted rollers adjust seeding rate through axial exposure of flutes. (A is true)\n2. Internal double-run has two separate rim sizes for small and bold seeds. (B is true)\n3. Cup feed lifts seeds mechanically with cups mounted on a revolving wheel. (C is true)\n4. Modern vacuum seeders hold seeds pneumatically against rotating plates for precision singulation. (D is true)\nAll options A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_025",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Drive wheel and transmission",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A $9\\text{-row}$ tractor-drawn seed drill has a row-to-row spacing of $20\\text{ cm}$. The effective working width of the seed drill is:",
+    "options": {
+      "A": "$1.80\\text{ m}$",
+      "B": "$2.00\\text{ m}$",
+      "C": "$1.60\\text{ m}$",
+      "D": "$2.70\\text{ m}$"
+    },
+    "correct_answer": "A",
+    "solution": "The effective working width $W$ of a seed drill is the product of number of furrow openers ($n$) and the spacing between consecutive rows ($s$):\n$$W = n \\times s = 9 \\times 20\\text{ cm} = 180\\text{ cm} = 1.80\\text{ m}$$\nHence, the working width is $1.80\\text{ m}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_026",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Calibration calculation and seed rate adjustment",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A seed drill with a working width of $1.8\\text{ m}$ and a ground wheel diameter of $0.6\\text{ m}$ is calibrated in the laboratory. For $100$ revolutions of the ground wheel, the total seed collected is $560\\text{ g}$. The seed rate is ________ $\\text{kg/ha}$ (round off to two decimal places, take $\\pi = 3.1416$).",
+    "correct_answer": "16.51",
+    "numerical_range": {
+      "min": 16.01,
+      "max": 17.01
+    },
+    "solution": "1. Distance covered in 100 revolutions:\n$$S = n \\times \\pi D = 100 \\times 3.1416 \\times 0.6 = 188.50\\text{ m}$$\n2. Area covered:\n$$A = S \\times W = 188.50 \\times 1.8 = 339.29\\text{ m}^2 = \\frac{339.29}{10000}\\text{ ha}$$\n3. Seed rate in kg/ha:\n$$\\text{Seed Rate} = \\frac{560/1000}{339.29/10000} = 16.51\\text{ kg/ha}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_027",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Fluted roller metering",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following seed metering mechanisms is/are ACCURATELY matched with its characteristic operating principle?",
+    "options": {
+      "A": "Fluted feed roller: Seed rate is adjusted by sliding the roller axially to vary the exposed flute length",
+      "B": "Internal double-run: Features two sides (one coarse, one fine) used for small vs large seeds",
+      "C": "Cup feed mechanism: Employs small cups on a rotating disc that lift and drop seeds into funnels",
+      "D": "Pneumatic seed metering: Uses vacuum suction on perforated plates for precision single-seed singulation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements describe standard seed metering devices:\n1. Fluted rollers adjust seeding rate through axial exposure of flutes. (A is true)\n2. Internal double-run has two separate rim sizes for small and bold seeds. (B is true)\n3. Cup feed lifts seeds mechanically with cups mounted on a revolving wheel. (C is true)\n4. Modern vacuum seeders hold seeds pneumatically against rotating plates for precision singulation. (D is true)\nAll options A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_028",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Drive wheel and transmission",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A $9\\text{-row}$ tractor-drawn seed drill has a row-to-row spacing of $20\\text{ cm}$. The effective working width of the seed drill is:",
+    "options": {
+      "A": "$1.80\\text{ m}$",
+      "B": "$2.00\\text{ m}$",
+      "C": "$1.60\\text{ m}$",
+      "D": "$2.70\\text{ m}$"
+    },
+    "correct_answer": "A",
+    "solution": "The effective working width $W$ of a seed drill is the product of number of furrow openers ($n$) and the spacing between consecutive rows ($s$):\n$$W = n \\times s = 9 \\times 20\\text{ cm} = 180\\text{ cm} = 1.80\\text{ m}$$\nHence, the working width is $1.80\\text{ m}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_029",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Calibration calculation and seed rate adjustment",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A seed drill with a working width of $1.8\\text{ m}$ and a ground wheel diameter of $0.6\\text{ m}$ is calibrated in the laboratory. For $100$ revolutions of the ground wheel, the total seed collected is $620\\text{ g}$. The seed rate is ________ $\\text{kg/ha}$ (round off to two decimal places, take $\\pi = 3.1416$).",
+    "correct_answer": "18.27",
+    "numerical_range": {
+      "min": 17.77,
+      "max": 18.77
+    },
+    "solution": "1. Distance covered in 100 revolutions:\n$$S = n \\times \\pi D = 100 \\times 3.1416 \\times 0.6 = 188.50\\text{ m}$$\n2. Area covered:\n$$A = S \\times W = 188.50 \\times 1.8 = 339.29\\text{ m}^2 = \\frac{339.29}{10000}\\text{ ha}$$\n3. Seed rate in kg/ha:\n$$\\text{Seed Rate} = \\frac{620/1000}{339.29/10000} = 18.27\\text{ kg/ha}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_030",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Fluted roller metering",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following seed metering mechanisms is/are ACCURATELY matched with its characteristic operating principle?",
+    "options": {
+      "A": "Fluted feed roller: Seed rate is adjusted by sliding the roller axially to vary the exposed flute length",
+      "B": "Internal double-run: Features two sides (one coarse, one fine) used for small vs large seeds",
+      "C": "Cup feed mechanism: Employs small cups on a rotating disc that lift and drop seeds into funnels",
+      "D": "Pneumatic seed metering: Uses vacuum suction on perforated plates for precision single-seed singulation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements describe standard seed metering devices:\n1. Fluted rollers adjust seeding rate through axial exposure of flutes. (A is true)\n2. Internal double-run has two separate rim sizes for small and bold seeds. (B is true)\n3. Cup feed lifts seeds mechanically with cups mounted on a revolving wheel. (C is true)\n4. Modern vacuum seeders hold seeds pneumatically against rotating plates for precision singulation. (D is true)\nAll options A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_031",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Drive wheel and transmission",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A $9\\text{-row}$ tractor-drawn seed drill has a row-to-row spacing of $20\\text{ cm}$. The effective working width of the seed drill is:",
+    "options": {
+      "A": "$1.80\\text{ m}$",
+      "B": "$2.00\\text{ m}$",
+      "C": "$1.60\\text{ m}$",
+      "D": "$2.70\\text{ m}$"
+    },
+    "correct_answer": "A",
+    "solution": "The effective working width $W$ of a seed drill is the product of number of furrow openers ($n$) and the spacing between consecutive rows ($s$):\n$$W = n \\times s = 9 \\times 20\\text{ cm} = 180\\text{ cm} = 1.80\\text{ m}$$\nHence, the working width is $1.80\\text{ m}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_032",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Calibration calculation and seed rate adjustment",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A seed drill with a working width of $1.8\\text{ m}$ and a ground wheel diameter of $0.6\\text{ m}$ is calibrated in the laboratory. For $100$ revolutions of the ground wheel, the total seed collected is $580\\text{ g}$. The seed rate is ________ $\\text{kg/ha}$ (round off to two decimal places, take $\\pi = 3.1416$).",
+    "correct_answer": "17.09",
+    "numerical_range": {
+      "min": 16.59,
+      "max": 17.59
+    },
+    "solution": "1. Distance covered in 100 revolutions:\n$$S = n \\times \\pi D = 100 \\times 3.1416 \\times 0.6 = 188.50\\text{ m}$$\n2. Area covered:\n$$A = S \\times W = 188.50 \\times 1.8 = 339.29\\text{ m}^2 = \\frac{339.29}{10000}\\text{ ha}$$\n3. Seed rate in kg/ha:\n$$\\text{Seed Rate} = \\frac{580/1000}{339.29/10000} = 17.09\\text{ kg/ha}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_033",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Fluted roller metering",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following seed metering mechanisms is/are ACCURATELY matched with its characteristic operating principle?",
+    "options": {
+      "A": "Fluted feed roller: Seed rate is adjusted by sliding the roller axially to vary the exposed flute length",
+      "B": "Internal double-run: Features two sides (one coarse, one fine) used for small vs large seeds",
+      "C": "Cup feed mechanism: Employs small cups on a rotating disc that lift and drop seeds into funnels",
+      "D": "Pneumatic seed metering: Uses vacuum suction on perforated plates for precision single-seed singulation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements describe standard seed metering devices:\n1. Fluted rollers adjust seeding rate through axial exposure of flutes. (A is true)\n2. Internal double-run has two separate rim sizes for small and bold seeds. (B is true)\n3. Cup feed lifts seeds mechanically with cups mounted on a revolving wheel. (C is true)\n4. Modern vacuum seeders hold seeds pneumatically against rotating plates for precision singulation. (D is true)\nAll options A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_034",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Drive wheel and transmission",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A $9\\text{-row}$ tractor-drawn seed drill has a row-to-row spacing of $20\\text{ cm}$. The effective working width of the seed drill is:",
+    "options": {
+      "A": "$1.80\\text{ m}$",
+      "B": "$2.00\\text{ m}$",
+      "C": "$1.60\\text{ m}$",
+      "D": "$2.70\\text{ m}$"
+    },
+    "correct_answer": "A",
+    "solution": "The effective working width $W$ of a seed drill is the product of number of furrow openers ($n$) and the spacing between consecutive rows ($s$):\n$$W = n \\times s = 9 \\times 20\\text{ cm} = 180\\text{ cm} = 1.80\\text{ m}$$\nHence, the working width is $1.80\\text{ m}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_035",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Calibration calculation and seed rate adjustment",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A seed drill with a working width of $1.8\\text{ m}$ and a ground wheel diameter of $0.6\\text{ m}$ is calibrated in the laboratory. For $100$ revolutions of the ground wheel, the total seed collected is $540\\text{ g}$. The seed rate is ________ $\\text{kg/ha}$ (round off to two decimal places, take $\\pi = 3.1416$).",
+    "correct_answer": "15.92",
+    "numerical_range": {
+      "min": 15.42,
+      "max": 16.42
+    },
+    "solution": "1. Distance covered in 100 revolutions:\n$$S = n \\times \\pi D = 100 \\times 3.1416 \\times 0.6 = 188.50\\text{ m}$$\n2. Area covered:\n$$A = S \\times W = 188.50 \\times 1.8 = 339.29\\text{ m}^2 = \\frac{339.29}{10000}\\text{ ha}$$\n3. Seed rate in kg/ha:\n$$\\text{Seed Rate} = \\frac{540/1000}{339.29/10000} = 15.92\\text{ kg/ha}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_036",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Fluted roller metering",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following seed metering mechanisms is/are ACCURATELY matched with its characteristic operating principle?",
+    "options": {
+      "A": "Fluted feed roller: Seed rate is adjusted by sliding the roller axially to vary the exposed flute length",
+      "B": "Internal double-run: Features two sides (one coarse, one fine) used for small vs large seeds",
+      "C": "Cup feed mechanism: Employs small cups on a rotating disc that lift and drop seeds into funnels",
+      "D": "Pneumatic seed metering: Uses vacuum suction on perforated plates for precision single-seed singulation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements describe standard seed metering devices:\n1. Fluted rollers adjust seeding rate through axial exposure of flutes. (A is true)\n2. Internal double-run has two separate rim sizes for small and bold seeds. (B is true)\n3. Cup feed lifts seeds mechanically with cups mounted on a revolving wheel. (C is true)\n4. Modern vacuum seeders hold seeds pneumatically against rotating plates for precision singulation. (D is true)\nAll options A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_037",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Drive wheel and transmission",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A $9\\text{-row}$ tractor-drawn seed drill has a row-to-row spacing of $20\\text{ cm}$. The effective working width of the seed drill is:",
+    "options": {
+      "A": "$1.80\\text{ m}$",
+      "B": "$2.00\\text{ m}$",
+      "C": "$1.60\\text{ m}$",
+      "D": "$2.70\\text{ m}$"
+    },
+    "correct_answer": "A",
+    "solution": "The effective working width $W$ of a seed drill is the product of number of furrow openers ($n$) and the spacing between consecutive rows ($s$):\n$$W = n \\times s = 9 \\times 20\\text{ cm} = 180\\text{ cm} = 1.80\\text{ m}$$\nHence, the working width is $1.80\\text{ m}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_038",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Calibration calculation and seed rate adjustment",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A seed drill with a working width of $1.8\\text{ m}$ and a ground wheel diameter of $0.6\\text{ m}$ is calibrated in the laboratory. For $100$ revolutions of the ground wheel, the total seed collected is $600\\text{ g}$. The seed rate is ________ $\\text{kg/ha}$ (round off to two decimal places, take $\\pi = 3.1416$).",
+    "correct_answer": "17.68",
+    "numerical_range": {
+      "min": 17.18,
+      "max": 18.18
+    },
+    "solution": "1. Distance covered in 100 revolutions:\n$$S = n \\times \\pi D = 100 \\times 3.1416 \\times 0.6 = 188.50\\text{ m}$$\n2. Area covered:\n$$A = S \\times W = 188.50 \\times 1.8 = 339.29\\text{ m}^2 = \\frac{339.29}{10000}\\text{ ha}$$\n3. Seed rate in kg/ha:\n$$\\text{Seed Rate} = \\frac{600/1000}{339.29/10000} = 17.68\\text{ kg/ha}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_039",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Fluted roller metering",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following seed metering mechanisms is/are ACCURATELY matched with its characteristic operating principle?",
+    "options": {
+      "A": "Fluted feed roller: Seed rate is adjusted by sliding the roller axially to vary the exposed flute length",
+      "B": "Internal double-run: Features two sides (one coarse, one fine) used for small vs large seeds",
+      "C": "Cup feed mechanism: Employs small cups on a rotating disc that lift and drop seeds into funnels",
+      "D": "Pneumatic seed metering: Uses vacuum suction on perforated plates for precision single-seed singulation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements describe standard seed metering devices:\n1. Fluted rollers adjust seeding rate through axial exposure of flutes. (A is true)\n2. Internal double-run has two separate rim sizes for small and bold seeds. (B is true)\n3. Cup feed lifts seeds mechanically with cups mounted on a revolving wheel. (C is true)\n4. Modern vacuum seeders hold seeds pneumatically against rotating plates for precision singulation. (D is true)\nAll options A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_040",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Drive wheel and transmission",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A $9\\text{-row}$ tractor-drawn seed drill has a row-to-row spacing of $20\\text{ cm}$. The effective working width of the seed drill is:",
+    "options": {
+      "A": "$1.80\\text{ m}$",
+      "B": "$2.00\\text{ m}$",
+      "C": "$1.60\\text{ m}$",
+      "D": "$2.70\\text{ m}$"
+    },
+    "correct_answer": "A",
+    "solution": "The effective working width $W$ of a seed drill is the product of number of furrow openers ($n$) and the spacing between consecutive rows ($s$):\n$$W = n \\times s = 9 \\times 20\\text{ cm} = 180\\text{ cm} = 1.80\\text{ m}$$\nHence, the working width is $1.80\\text{ m}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_041",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Calibration calculation and seed rate adjustment",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A seed drill with a working width of $1.8\\text{ m}$ and a ground wheel diameter of $0.6\\text{ m}$ is calibrated in the laboratory. For $100$ revolutions of the ground wheel, the total seed collected is $560\\text{ g}$. The seed rate is ________ $\\text{kg/ha}$ (round off to two decimal places, take $\\pi = 3.1416$).",
+    "correct_answer": "16.51",
+    "numerical_range": {
+      "min": 16.01,
+      "max": 17.01
+    },
+    "solution": "1. Distance covered in 100 revolutions:\n$$S = n \\times \\pi D = 100 \\times 3.1416 \\times 0.6 = 188.50\\text{ m}$$\n2. Area covered:\n$$A = S \\times W = 188.50 \\times 1.8 = 339.29\\text{ m}^2 = \\frac{339.29}{10000}\\text{ ha}$$\n3. Seed rate in kg/ha:\n$$\\text{Seed Rate} = \\frac{560/1000}{339.29/10000} = 16.51\\text{ kg/ha}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_042",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Fluted roller metering",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following seed metering mechanisms is/are ACCURATELY matched with its characteristic operating principle?",
+    "options": {
+      "A": "Fluted feed roller: Seed rate is adjusted by sliding the roller axially to vary the exposed flute length",
+      "B": "Internal double-run: Features two sides (one coarse, one fine) used for small vs large seeds",
+      "C": "Cup feed mechanism: Employs small cups on a rotating disc that lift and drop seeds into funnels",
+      "D": "Pneumatic seed metering: Uses vacuum suction on perforated plates for precision single-seed singulation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements describe standard seed metering devices:\n1. Fluted rollers adjust seeding rate through axial exposure of flutes. (A is true)\n2. Internal double-run has two separate rim sizes for small and bold seeds. (B is true)\n3. Cup feed lifts seeds mechanically with cups mounted on a revolving wheel. (C is true)\n4. Modern vacuum seeders hold seeds pneumatically against rotating plates for precision singulation. (D is true)\nAll options A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_043",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Drive wheel and transmission",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A $9\\text{-row}$ tractor-drawn seed drill has a row-to-row spacing of $20\\text{ cm}$. The effective working width of the seed drill is:",
+    "options": {
+      "A": "$1.80\\text{ m}$",
+      "B": "$2.00\\text{ m}$",
+      "C": "$1.60\\text{ m}$",
+      "D": "$2.70\\text{ m}$"
+    },
+    "correct_answer": "A",
+    "solution": "The effective working width $W$ of a seed drill is the product of number of furrow openers ($n$) and the spacing between consecutive rows ($s$):\n$$W = n \\times s = 9 \\times 20\\text{ cm} = 180\\text{ cm} = 1.80\\text{ m}$$\nHence, the working width is $1.80\\text{ m}$.",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_044",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Calibration calculation and seed rate adjustment",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A seed drill with a working width of $1.8\\text{ m}$ and a ground wheel diameter of $0.6\\text{ m}$ is calibrated in the laboratory. For $100$ revolutions of the ground wheel, the total seed collected is $620\\text{ g}$. The seed rate is ________ $\\text{kg/ha}$ (round off to two decimal places, take $\\pi = 3.1416$).",
+    "correct_answer": "18.27",
+    "numerical_range": {
+      "min": 17.77,
+      "max": 18.77
+    },
+    "solution": "1. Distance covered in 100 revolutions:\n$$S = n \\times \\pi D = 100 \\times 3.1416 \\times 0.6 = 188.50\\text{ m}$$\n2. Area covered:\n$$A = S \\times W = 188.50 \\times 1.8 = 339.29\\text{ m}^2 = \\frac{339.29}{10000}\\text{ ha}$$\n3. Seed rate in kg/ha:\n$$\\text{Seed Rate} = \\frac{620/1000}{339.29/10000} = 18.27\\text{ kg/ha}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_SOW_045",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Metering Mechanisms & Calibration of Seed Drills",
+    "subtopic": "Fluted roller metering",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following seed metering mechanisms is/are ACCURATELY matched with its characteristic operating principle?",
+    "options": {
+      "A": "Fluted feed roller: Seed rate is adjusted by sliding the roller axially to vary the exposed flute length",
+      "B": "Internal double-run: Features two sides (one coarse, one fine) used for small vs large seeds",
+      "C": "Cup feed mechanism: Employs small cups on a rotating disc that lift and drop seeds into funnels",
+      "D": "Pneumatic seed metering: Uses vacuum suction on perforated plates for precision single-seed singulation"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "All four statements describe standard seed metering devices:\n1. Fluted rollers adjust seeding rate through axial exposure of flutes. (A is true)\n2. Internal double-run has two separate rim sizes for small and bold seeds. (B is true)\n3. Cup feed lifts seeds mechanically with cups mounted on a revolving wheel. (C is true)\n4. Modern vacuum seeders hold seeds pneumatically against rotating plates for precision singulation. (D is true)\nAll options A, B, C, D are true.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_001",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Plant Protection: Hydraulic & Pneumatic Sprayers",
+    "subtopic": "Spray drift control",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor-mounted boom sprayer has nozzles spaced $50\\text{ cm}$ apart. Each nozzle delivers $1.0\\text{ L/min}$. If the tractor travels at $4.8\\text{ km/h}$, the spray application rate in $\\text{L/ha}$ is:",
+    "options": {
+      "A": "$250.0\\text{ L/ha}$",
+      "B": "$312.5\\text{ L/ha}$",
+      "C": "$200.0\\text{ L/ha}$",
+      "D": "$375.0\\text{ L/ha}$"
+    },
+    "correct_answer": "A",
+    "solution": "The field application rate $Q_a$ (in L/ha) for a boom sprayer is given by:\n$$Q_a = \\frac{600 \\times q}{s \\times v}$$\nWhere:\n- $q = 1.0\\text{ L/min (discharge per nozzle)}$\n- $s = 0.5\\text{ m (nozzle spacing)}$\n- $v = 4.8\\text{ km/h (forward speed)}$\n$$Q_a = \\frac{600 \\times 1.0}{0.5 \\times 4.8} = 250.0\\text{ L/ha}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_002",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Spray Nozzles, Droplets & Application Rates",
+    "subtopic": "Flat fan, hollow cone and solid cone nozzles",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A hydraulic spray nozzle discharges $1.2\\text{ L/min}$ at an operating pressure of $200\\text{ kPa}$. When the pressure is increased to $400\\text{ kPa}$, the new nozzle discharge is ________ $\\text{L/min}$ (round off to two decimal places).",
+    "correct_answer": "1.70",
+    "numerical_range": {
+      "min": 1.67,
+      "max": 1.73
+    },
+    "solution": "For an orifice or hydraulic spray nozzle, discharge is proportional to the square root of pressure ($q \\propto \\sqrt{P}$):\n$$\\frac{q_2}{q_1} = \\sqrt{\\frac{P_2}{P_1}}$$\n$$q_2 = q_1 \\times \\sqrt{\\frac{400.0}{200.0}} = 1.2 \\times \\sqrt{2.00} = 1.2 \\times 1.4142 = 1.70\\text{ L/min}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_003",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Spray Nozzles, Droplets & Application Rates",
+    "subtopic": "Volume Median Diameter (VMD) and Number Median Diameter (NMD)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding spray droplet size distribution and nozzle aerodynamics, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Volume Median Diameter (VMD or D_v0.5) is the droplet diameter such that 50% of the total spray volume consists of smaller droplets",
+      "B": "Droplets smaller than $100\\,\\mu\\text{m}$ are highly susceptible to airborne drift",
+      "C": "The relative span factor of spray droplets is defined as $(D_{v0.9} - D_{v0.1}) / D_{v0.5}$",
+      "D": "Increasing nozzle operating pressure decreases the average droplet size and increases drift potential"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. By definition, VMD divides spray volume into two equal 50% halves. (A is correct)\n2. Droplets $< 100\\,\\mu\\text{m}$ remain suspended easily and drift off-target. (B is correct)\n3. Relative Span factor $\\text{RS} = (D_{0.9} - D_{0.1})/D_{0.5}$ measures droplet size uniformity. (C is correct)\n4. Higher hydraulic pressure increases atomization shear, producing finer droplets and greater drift. (D is correct)\nAll choices A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_004",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Plant Protection: Hydraulic & Pneumatic Sprayers",
+    "subtopic": "Spray drift control",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor-mounted boom sprayer has nozzles spaced $50\\text{ cm}$ apart. Each nozzle delivers $1.6\\text{ L/min}$. If the tractor travels at $4.8\\text{ km/h}$, the spray application rate in $\\text{L/ha}$ is:",
+    "options": {
+      "A": "$400.0\\text{ L/ha}$",
+      "B": "$500.0\\text{ L/ha}$",
+      "C": "$320.0\\text{ L/ha}$",
+      "D": "$600.0\\text{ L/ha}$"
+    },
+    "correct_answer": "A",
+    "solution": "The field application rate $Q_a$ (in L/ha) for a boom sprayer is given by:\n$$Q_a = \\frac{600 \\times q}{s \\times v}$$\nWhere:\n- $q = 1.6\\text{ L/min (discharge per nozzle)}$\n- $s = 0.5\\text{ m (nozzle spacing)}$\n- $v = 4.8\\text{ km/h (forward speed)}$\n$$Q_a = \\frac{600 \\times 1.6}{0.5 \\times 4.8} = 400.0\\text{ L/ha}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_005",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Spray Nozzles, Droplets & Application Rates",
+    "subtopic": "Flat fan, hollow cone and solid cone nozzles",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A hydraulic spray nozzle discharges $1.2\\text{ L/min}$ at an operating pressure of $200\\text{ kPa}$. When the pressure is increased to $400\\text{ kPa}$, the new nozzle discharge is ________ $\\text{L/min}$ (round off to two decimal places).",
+    "correct_answer": "1.70",
+    "numerical_range": {
+      "min": 1.67,
+      "max": 1.73
+    },
+    "solution": "For an orifice or hydraulic spray nozzle, discharge is proportional to the square root of pressure ($q \\propto \\sqrt{P}$):\n$$\\frac{q_2}{q_1} = \\sqrt{\\frac{P_2}{P_1}}$$\n$$q_2 = q_1 \\times \\sqrt{\\frac{400.0}{200.0}} = 1.2 \\times \\sqrt{2.00} = 1.2 \\times 1.4142 = 1.70\\text{ L/min}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_006",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Spray Nozzles, Droplets & Application Rates",
+    "subtopic": "Volume Median Diameter (VMD) and Number Median Diameter (NMD)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding spray droplet size distribution and nozzle aerodynamics, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Volume Median Diameter (VMD or D_v0.5) is the droplet diameter such that 50% of the total spray volume consists of smaller droplets",
+      "B": "Droplets smaller than $100\\,\\mu\\text{m}$ are highly susceptible to airborne drift",
+      "C": "The relative span factor of spray droplets is defined as $(D_{v0.9} - D_{v0.1}) / D_{v0.5}$",
+      "D": "Increasing nozzle operating pressure decreases the average droplet size and increases drift potential"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. By definition, VMD divides spray volume into two equal 50% halves. (A is correct)\n2. Droplets $< 100\\,\\mu\\text{m}$ remain suspended easily and drift off-target. (B is correct)\n3. Relative Span factor $\\text{RS} = (D_{0.9} - D_{0.1})/D_{0.5}$ measures droplet size uniformity. (C is correct)\n4. Higher hydraulic pressure increases atomization shear, producing finer droplets and greater drift. (D is correct)\nAll choices A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_007",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Plant Protection: Hydraulic & Pneumatic Sprayers",
+    "subtopic": "Spray drift control",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor-mounted boom sprayer has nozzles spaced $50\\text{ cm}$ apart. Each nozzle delivers $1.2\\text{ L/min}$. If the tractor travels at $4.8\\text{ km/h}$, the spray application rate in $\\text{L/ha}$ is:",
+    "options": {
+      "A": "$300.0\\text{ L/ha}$",
+      "B": "$375.0\\text{ L/ha}$",
+      "C": "$240.0\\text{ L/ha}$",
+      "D": "$450.0\\text{ L/ha}$"
+    },
+    "correct_answer": "A",
+    "solution": "The field application rate $Q_a$ (in L/ha) for a boom sprayer is given by:\n$$Q_a = \\frac{600 \\times q}{s \\times v}$$\nWhere:\n- $q = 1.2\\text{ L/min (discharge per nozzle)}$\n- $s = 0.5\\text{ m (nozzle spacing)}$\n- $v = 4.8\\text{ km/h (forward speed)}$\n$$Q_a = \\frac{600 \\times 1.2}{0.5 \\times 4.8} = 300.0\\text{ L/ha}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_008",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Spray Nozzles, Droplets & Application Rates",
+    "subtopic": "Flat fan, hollow cone and solid cone nozzles",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A hydraulic spray nozzle discharges $1.2\\text{ L/min}$ at an operating pressure of $200\\text{ kPa}$. When the pressure is increased to $400\\text{ kPa}$, the new nozzle discharge is ________ $\\text{L/min}$ (round off to two decimal places).",
+    "correct_answer": "1.70",
+    "numerical_range": {
+      "min": 1.67,
+      "max": 1.73
+    },
+    "solution": "For an orifice or hydraulic spray nozzle, discharge is proportional to the square root of pressure ($q \\propto \\sqrt{P}$):\n$$\\frac{q_2}{q_1} = \\sqrt{\\frac{P_2}{P_1}}$$\n$$q_2 = q_1 \\times \\sqrt{\\frac{400.0}{200.0}} = 1.2 \\times \\sqrt{2.00} = 1.2 \\times 1.4142 = 1.70\\text{ L/min}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_009",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Spray Nozzles, Droplets & Application Rates",
+    "subtopic": "Volume Median Diameter (VMD) and Number Median Diameter (NMD)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding spray droplet size distribution and nozzle aerodynamics, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Volume Median Diameter (VMD or D_v0.5) is the droplet diameter such that 50% of the total spray volume consists of smaller droplets",
+      "B": "Droplets smaller than $100\\,\\mu\\text{m}$ are highly susceptible to airborne drift",
+      "C": "The relative span factor of spray droplets is defined as $(D_{v0.9} - D_{v0.1}) / D_{v0.5}$",
+      "D": "Increasing nozzle operating pressure decreases the average droplet size and increases drift potential"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. By definition, VMD divides spray volume into two equal 50% halves. (A is correct)\n2. Droplets $< 100\\,\\mu\\text{m}$ remain suspended easily and drift off-target. (B is correct)\n3. Relative Span factor $\\text{RS} = (D_{0.9} - D_{0.1})/D_{0.5}$ measures droplet size uniformity. (C is correct)\n4. Higher hydraulic pressure increases atomization shear, producing finer droplets and greater drift. (D is correct)\nAll choices A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_010",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Plant Protection: Hydraulic & Pneumatic Sprayers",
+    "subtopic": "Spray drift control",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor-mounted boom sprayer has nozzles spaced $50\\text{ cm}$ apart. Each nozzle delivers $0.8\\text{ L/min}$. If the tractor travels at $4.8\\text{ km/h}$, the spray application rate in $\\text{L/ha}$ is:",
+    "options": {
+      "A": "$200.0\\text{ L/ha}$",
+      "B": "$250.0\\text{ L/ha}$",
+      "C": "$160.0\\text{ L/ha}$",
+      "D": "$300.0\\text{ L/ha}$"
+    },
+    "correct_answer": "A",
+    "solution": "The field application rate $Q_a$ (in L/ha) for a boom sprayer is given by:\n$$Q_a = \\frac{600 \\times q}{s \\times v}$$\nWhere:\n- $q = 0.8\\text{ L/min (discharge per nozzle)}$\n- $s = 0.5\\text{ m (nozzle spacing)}$\n- $v = 4.8\\text{ km/h (forward speed)}$\n$$Q_a = \\frac{600 \\times 0.8}{0.5 \\times 4.8} = 200.0\\text{ L/ha}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_011",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Spray Nozzles, Droplets & Application Rates",
+    "subtopic": "Flat fan, hollow cone and solid cone nozzles",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A hydraulic spray nozzle discharges $1.2\\text{ L/min}$ at an operating pressure of $200\\text{ kPa}$. When the pressure is increased to $400\\text{ kPa}$, the new nozzle discharge is ________ $\\text{L/min}$ (round off to two decimal places).",
+    "correct_answer": "1.70",
+    "numerical_range": {
+      "min": 1.67,
+      "max": 1.73
+    },
+    "solution": "For an orifice or hydraulic spray nozzle, discharge is proportional to the square root of pressure ($q \\propto \\sqrt{P}$):\n$$\\frac{q_2}{q_1} = \\sqrt{\\frac{P_2}{P_1}}$$\n$$q_2 = q_1 \\times \\sqrt{\\frac{400.0}{200.0}} = 1.2 \\times \\sqrt{2.00} = 1.2 \\times 1.4142 = 1.70\\text{ L/min}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_012",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Spray Nozzles, Droplets & Application Rates",
+    "subtopic": "Volume Median Diameter (VMD) and Number Median Diameter (NMD)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding spray droplet size distribution and nozzle aerodynamics, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Volume Median Diameter (VMD or D_v0.5) is the droplet diameter such that 50% of the total spray volume consists of smaller droplets",
+      "B": "Droplets smaller than $100\\,\\mu\\text{m}$ are highly susceptible to airborne drift",
+      "C": "The relative span factor of spray droplets is defined as $(D_{v0.9} - D_{v0.1}) / D_{v0.5}$",
+      "D": "Increasing nozzle operating pressure decreases the average droplet size and increases drift potential"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. By definition, VMD divides spray volume into two equal 50% halves. (A is correct)\n2. Droplets $< 100\\,\\mu\\text{m}$ remain suspended easily and drift off-target. (B is correct)\n3. Relative Span factor $\\text{RS} = (D_{0.9} - D_{0.1})/D_{0.5}$ measures droplet size uniformity. (C is correct)\n4. Higher hydraulic pressure increases atomization shear, producing finer droplets and greater drift. (D is correct)\nAll choices A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_013",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Plant Protection: Hydraulic & Pneumatic Sprayers",
+    "subtopic": "Spray drift control",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor-mounted boom sprayer has nozzles spaced $50\\text{ cm}$ apart. Each nozzle delivers $1.4\\text{ L/min}$. If the tractor travels at $4.8\\text{ km/h}$, the spray application rate in $\\text{L/ha}$ is:",
+    "options": {
+      "A": "$350.0\\text{ L/ha}$",
+      "B": "$437.5\\text{ L/ha}$",
+      "C": "$280.0\\text{ L/ha}$",
+      "D": "$525.0\\text{ L/ha}$"
+    },
+    "correct_answer": "A",
+    "solution": "The field application rate $Q_a$ (in L/ha) for a boom sprayer is given by:\n$$Q_a = \\frac{600 \\times q}{s \\times v}$$\nWhere:\n- $q = 1.4\\text{ L/min (discharge per nozzle)}$\n- $s = 0.5\\text{ m (nozzle spacing)}$\n- $v = 4.8\\text{ km/h (forward speed)}$\n$$Q_a = \\frac{600 \\times 1.4}{0.5 \\times 4.8} = 350.0\\text{ L/ha}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_014",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Spray Nozzles, Droplets & Application Rates",
+    "subtopic": "Flat fan, hollow cone and solid cone nozzles",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A hydraulic spray nozzle discharges $1.2\\text{ L/min}$ at an operating pressure of $200\\text{ kPa}$. When the pressure is increased to $400\\text{ kPa}$, the new nozzle discharge is ________ $\\text{L/min}$ (round off to two decimal places).",
+    "correct_answer": "1.70",
+    "numerical_range": {
+      "min": 1.67,
+      "max": 1.73
+    },
+    "solution": "For an orifice or hydraulic spray nozzle, discharge is proportional to the square root of pressure ($q \\propto \\sqrt{P}$):\n$$\\frac{q_2}{q_1} = \\sqrt{\\frac{P_2}{P_1}}$$\n$$q_2 = q_1 \\times \\sqrt{\\frac{400.0}{200.0}} = 1.2 \\times \\sqrt{2.00} = 1.2 \\times 1.4142 = 1.70\\text{ L/min}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_015",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Spray Nozzles, Droplets & Application Rates",
+    "subtopic": "Volume Median Diameter (VMD) and Number Median Diameter (NMD)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding spray droplet size distribution and nozzle aerodynamics, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Volume Median Diameter (VMD or D_v0.5) is the droplet diameter such that 50% of the total spray volume consists of smaller droplets",
+      "B": "Droplets smaller than $100\\,\\mu\\text{m}$ are highly susceptible to airborne drift",
+      "C": "The relative span factor of spray droplets is defined as $(D_{v0.9} - D_{v0.1}) / D_{v0.5}$",
+      "D": "Increasing nozzle operating pressure decreases the average droplet size and increases drift potential"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. By definition, VMD divides spray volume into two equal 50% halves. (A is correct)\n2. Droplets $< 100\\,\\mu\\text{m}$ remain suspended easily and drift off-target. (B is correct)\n3. Relative Span factor $\\text{RS} = (D_{0.9} - D_{0.1})/D_{0.5}$ measures droplet size uniformity. (C is correct)\n4. Higher hydraulic pressure increases atomization shear, producing finer droplets and greater drift. (D is correct)\nAll choices A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_016",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Plant Protection: Hydraulic & Pneumatic Sprayers",
+    "subtopic": "Spray drift control",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor-mounted boom sprayer has nozzles spaced $50\\text{ cm}$ apart. Each nozzle delivers $1.0\\text{ L/min}$. If the tractor travels at $4.8\\text{ km/h}$, the spray application rate in $\\text{L/ha}$ is:",
+    "options": {
+      "A": "$250.0\\text{ L/ha}$",
+      "B": "$312.5\\text{ L/ha}$",
+      "C": "$200.0\\text{ L/ha}$",
+      "D": "$375.0\\text{ L/ha}$"
+    },
+    "correct_answer": "A",
+    "solution": "The field application rate $Q_a$ (in L/ha) for a boom sprayer is given by:\n$$Q_a = \\frac{600 \\times q}{s \\times v}$$\nWhere:\n- $q = 1.0\\text{ L/min (discharge per nozzle)}$\n- $s = 0.5\\text{ m (nozzle spacing)}$\n- $v = 4.8\\text{ km/h (forward speed)}$\n$$Q_a = \\frac{600 \\times 1.0}{0.5 \\times 4.8} = 250.0\\text{ L/ha}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_017",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Spray Nozzles, Droplets & Application Rates",
+    "subtopic": "Flat fan, hollow cone and solid cone nozzles",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A hydraulic spray nozzle discharges $1.2\\text{ L/min}$ at an operating pressure of $200\\text{ kPa}$. When the pressure is increased to $400\\text{ kPa}$, the new nozzle discharge is ________ $\\text{L/min}$ (round off to two decimal places).",
+    "correct_answer": "1.70",
+    "numerical_range": {
+      "min": 1.67,
+      "max": 1.73
+    },
+    "solution": "For an orifice or hydraulic spray nozzle, discharge is proportional to the square root of pressure ($q \\propto \\sqrt{P}$):\n$$\\frac{q_2}{q_1} = \\sqrt{\\frac{P_2}{P_1}}$$\n$$q_2 = q_1 \\times \\sqrt{\\frac{400.0}{200.0}} = 1.2 \\times \\sqrt{2.00} = 1.2 \\times 1.4142 = 1.70\\text{ L/min}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_018",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Spray Nozzles, Droplets & Application Rates",
+    "subtopic": "Volume Median Diameter (VMD) and Number Median Diameter (NMD)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding spray droplet size distribution and nozzle aerodynamics, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Volume Median Diameter (VMD or D_v0.5) is the droplet diameter such that 50% of the total spray volume consists of smaller droplets",
+      "B": "Droplets smaller than $100\\,\\mu\\text{m}$ are highly susceptible to airborne drift",
+      "C": "The relative span factor of spray droplets is defined as $(D_{v0.9} - D_{v0.1}) / D_{v0.5}$",
+      "D": "Increasing nozzle operating pressure decreases the average droplet size and increases drift potential"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. By definition, VMD divides spray volume into two equal 50% halves. (A is correct)\n2. Droplets $< 100\\,\\mu\\text{m}$ remain suspended easily and drift off-target. (B is correct)\n3. Relative Span factor $\\text{RS} = (D_{0.9} - D_{0.1})/D_{0.5}$ measures droplet size uniformity. (C is correct)\n4. Higher hydraulic pressure increases atomization shear, producing finer droplets and greater drift. (D is correct)\nAll choices A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_019",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Plant Protection: Hydraulic & Pneumatic Sprayers",
+    "subtopic": "Spray drift control",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor-mounted boom sprayer has nozzles spaced $50\\text{ cm}$ apart. Each nozzle delivers $1.6\\text{ L/min}$. If the tractor travels at $4.8\\text{ km/h}$, the spray application rate in $\\text{L/ha}$ is:",
+    "options": {
+      "A": "$400.0\\text{ L/ha}$",
+      "B": "$500.0\\text{ L/ha}$",
+      "C": "$320.0\\text{ L/ha}$",
+      "D": "$600.0\\text{ L/ha}$"
+    },
+    "correct_answer": "A",
+    "solution": "The field application rate $Q_a$ (in L/ha) for a boom sprayer is given by:\n$$Q_a = \\frac{600 \\times q}{s \\times v}$$\nWhere:\n- $q = 1.6\\text{ L/min (discharge per nozzle)}$\n- $s = 0.5\\text{ m (nozzle spacing)}$\n- $v = 4.8\\text{ km/h (forward speed)}$\n$$Q_a = \\frac{600 \\times 1.6}{0.5 \\times 4.8} = 400.0\\text{ L/ha}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_020",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Spray Nozzles, Droplets & Application Rates",
+    "subtopic": "Flat fan, hollow cone and solid cone nozzles",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A hydraulic spray nozzle discharges $1.2\\text{ L/min}$ at an operating pressure of $200\\text{ kPa}$. When the pressure is increased to $400\\text{ kPa}$, the new nozzle discharge is ________ $\\text{L/min}$ (round off to two decimal places).",
+    "correct_answer": "1.70",
+    "numerical_range": {
+      "min": 1.67,
+      "max": 1.73
+    },
+    "solution": "For an orifice or hydraulic spray nozzle, discharge is proportional to the square root of pressure ($q \\propto \\sqrt{P}$):\n$$\\frac{q_2}{q_1} = \\sqrt{\\frac{P_2}{P_1}}$$\n$$q_2 = q_1 \\times \\sqrt{\\frac{400.0}{200.0}} = 1.2 \\times \\sqrt{2.00} = 1.2 \\times 1.4142 = 1.70\\text{ L/min}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_021",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Spray Nozzles, Droplets & Application Rates",
+    "subtopic": "Volume Median Diameter (VMD) and Number Median Diameter (NMD)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding spray droplet size distribution and nozzle aerodynamics, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Volume Median Diameter (VMD or D_v0.5) is the droplet diameter such that 50% of the total spray volume consists of smaller droplets",
+      "B": "Droplets smaller than $100\\,\\mu\\text{m}$ are highly susceptible to airborne drift",
+      "C": "The relative span factor of spray droplets is defined as $(D_{v0.9} - D_{v0.1}) / D_{v0.5}$",
+      "D": "Increasing nozzle operating pressure decreases the average droplet size and increases drift potential"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. By definition, VMD divides spray volume into two equal 50% halves. (A is correct)\n2. Droplets $< 100\\,\\mu\\text{m}$ remain suspended easily and drift off-target. (B is correct)\n3. Relative Span factor $\\text{RS} = (D_{0.9} - D_{0.1})/D_{0.5}$ measures droplet size uniformity. (C is correct)\n4. Higher hydraulic pressure increases atomization shear, producing finer droplets and greater drift. (D is correct)\nAll choices A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_022",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Plant Protection: Hydraulic & Pneumatic Sprayers",
+    "subtopic": "Spray drift control",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor-mounted boom sprayer has nozzles spaced $50\\text{ cm}$ apart. Each nozzle delivers $1.2\\text{ L/min}$. If the tractor travels at $4.8\\text{ km/h}$, the spray application rate in $\\text{L/ha}$ is:",
+    "options": {
+      "A": "$300.0\\text{ L/ha}$",
+      "B": "$375.0\\text{ L/ha}$",
+      "C": "$240.0\\text{ L/ha}$",
+      "D": "$450.0\\text{ L/ha}$"
+    },
+    "correct_answer": "A",
+    "solution": "The field application rate $Q_a$ (in L/ha) for a boom sprayer is given by:\n$$Q_a = \\frac{600 \\times q}{s \\times v}$$\nWhere:\n- $q = 1.2\\text{ L/min (discharge per nozzle)}$\n- $s = 0.5\\text{ m (nozzle spacing)}$\n- $v = 4.8\\text{ km/h (forward speed)}$\n$$Q_a = \\frac{600 \\times 1.2}{0.5 \\times 4.8} = 300.0\\text{ L/ha}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_023",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Spray Nozzles, Droplets & Application Rates",
+    "subtopic": "Flat fan, hollow cone and solid cone nozzles",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A hydraulic spray nozzle discharges $1.2\\text{ L/min}$ at an operating pressure of $200\\text{ kPa}$. When the pressure is increased to $400\\text{ kPa}$, the new nozzle discharge is ________ $\\text{L/min}$ (round off to two decimal places).",
+    "correct_answer": "1.70",
+    "numerical_range": {
+      "min": 1.67,
+      "max": 1.73
+    },
+    "solution": "For an orifice or hydraulic spray nozzle, discharge is proportional to the square root of pressure ($q \\propto \\sqrt{P}$):\n$$\\frac{q_2}{q_1} = \\sqrt{\\frac{P_2}{P_1}}$$\n$$q_2 = q_1 \\times \\sqrt{\\frac{400.0}{200.0}} = 1.2 \\times \\sqrt{2.00} = 1.2 \\times 1.4142 = 1.70\\text{ L/min}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_024",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Spray Nozzles, Droplets & Application Rates",
+    "subtopic": "Volume Median Diameter (VMD) and Number Median Diameter (NMD)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding spray droplet size distribution and nozzle aerodynamics, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Volume Median Diameter (VMD or D_v0.5) is the droplet diameter such that 50% of the total spray volume consists of smaller droplets",
+      "B": "Droplets smaller than $100\\,\\mu\\text{m}$ are highly susceptible to airborne drift",
+      "C": "The relative span factor of spray droplets is defined as $(D_{v0.9} - D_{v0.1}) / D_{v0.5}$",
+      "D": "Increasing nozzle operating pressure decreases the average droplet size and increases drift potential"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. By definition, VMD divides spray volume into two equal 50% halves. (A is correct)\n2. Droplets $< 100\\,\\mu\\text{m}$ remain suspended easily and drift off-target. (B is correct)\n3. Relative Span factor $\\text{RS} = (D_{0.9} - D_{0.1})/D_{0.5}$ measures droplet size uniformity. (C is correct)\n4. Higher hydraulic pressure increases atomization shear, producing finer droplets and greater drift. (D is correct)\nAll choices A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_025",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Plant Protection: Hydraulic & Pneumatic Sprayers",
+    "subtopic": "Spray drift control",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor-mounted boom sprayer has nozzles spaced $50\\text{ cm}$ apart. Each nozzle delivers $0.8\\text{ L/min}$. If the tractor travels at $4.8\\text{ km/h}$, the spray application rate in $\\text{L/ha}$ is:",
+    "options": {
+      "A": "$200.0\\text{ L/ha}$",
+      "B": "$250.0\\text{ L/ha}$",
+      "C": "$160.0\\text{ L/ha}$",
+      "D": "$300.0\\text{ L/ha}$"
+    },
+    "correct_answer": "A",
+    "solution": "The field application rate $Q_a$ (in L/ha) for a boom sprayer is given by:\n$$Q_a = \\frac{600 \\times q}{s \\times v}$$\nWhere:\n- $q = 0.8\\text{ L/min (discharge per nozzle)}$\n- $s = 0.5\\text{ m (nozzle spacing)}$\n- $v = 4.8\\text{ km/h (forward speed)}$\n$$Q_a = \\frac{600 \\times 0.8}{0.5 \\times 4.8} = 200.0\\text{ L/ha}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_026",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Spray Nozzles, Droplets & Application Rates",
+    "subtopic": "Flat fan, hollow cone and solid cone nozzles",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A hydraulic spray nozzle discharges $1.2\\text{ L/min}$ at an operating pressure of $200\\text{ kPa}$. When the pressure is increased to $400\\text{ kPa}$, the new nozzle discharge is ________ $\\text{L/min}$ (round off to two decimal places).",
+    "correct_answer": "1.70",
+    "numerical_range": {
+      "min": 1.67,
+      "max": 1.73
+    },
+    "solution": "For an orifice or hydraulic spray nozzle, discharge is proportional to the square root of pressure ($q \\propto \\sqrt{P}$):\n$$\\frac{q_2}{q_1} = \\sqrt{\\frac{P_2}{P_1}}$$\n$$q_2 = q_1 \\times \\sqrt{\\frac{400.0}{200.0}} = 1.2 \\times \\sqrt{2.00} = 1.2 \\times 1.4142 = 1.70\\text{ L/min}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_027",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Spray Nozzles, Droplets & Application Rates",
+    "subtopic": "Volume Median Diameter (VMD) and Number Median Diameter (NMD)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding spray droplet size distribution and nozzle aerodynamics, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Volume Median Diameter (VMD or D_v0.5) is the droplet diameter such that 50% of the total spray volume consists of smaller droplets",
+      "B": "Droplets smaller than $100\\,\\mu\\text{m}$ are highly susceptible to airborne drift",
+      "C": "The relative span factor of spray droplets is defined as $(D_{v0.9} - D_{v0.1}) / D_{v0.5}$",
+      "D": "Increasing nozzle operating pressure decreases the average droplet size and increases drift potential"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. By definition, VMD divides spray volume into two equal 50% halves. (A is correct)\n2. Droplets $< 100\\,\\mu\\text{m}$ remain suspended easily and drift off-target. (B is correct)\n3. Relative Span factor $\\text{RS} = (D_{0.9} - D_{0.1})/D_{0.5}$ measures droplet size uniformity. (C is correct)\n4. Higher hydraulic pressure increases atomization shear, producing finer droplets and greater drift. (D is correct)\nAll choices A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_028",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Plant Protection: Hydraulic & Pneumatic Sprayers",
+    "subtopic": "Spray drift control",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor-mounted boom sprayer has nozzles spaced $50\\text{ cm}$ apart. Each nozzle delivers $1.4\\text{ L/min}$. If the tractor travels at $4.8\\text{ km/h}$, the spray application rate in $\\text{L/ha}$ is:",
+    "options": {
+      "A": "$350.0\\text{ L/ha}$",
+      "B": "$437.5\\text{ L/ha}$",
+      "C": "$280.0\\text{ L/ha}$",
+      "D": "$525.0\\text{ L/ha}$"
+    },
+    "correct_answer": "A",
+    "solution": "The field application rate $Q_a$ (in L/ha) for a boom sprayer is given by:\n$$Q_a = \\frac{600 \\times q}{s \\times v}$$\nWhere:\n- $q = 1.4\\text{ L/min (discharge per nozzle)}$\n- $s = 0.5\\text{ m (nozzle spacing)}$\n- $v = 4.8\\text{ km/h (forward speed)}$\n$$Q_a = \\frac{600 \\times 1.4}{0.5 \\times 4.8} = 350.0\\text{ L/ha}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_029",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Spray Nozzles, Droplets & Application Rates",
+    "subtopic": "Flat fan, hollow cone and solid cone nozzles",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A hydraulic spray nozzle discharges $1.2\\text{ L/min}$ at an operating pressure of $200\\text{ kPa}$. When the pressure is increased to $400\\text{ kPa}$, the new nozzle discharge is ________ $\\text{L/min}$ (round off to two decimal places).",
+    "correct_answer": "1.70",
+    "numerical_range": {
+      "min": 1.67,
+      "max": 1.73
+    },
+    "solution": "For an orifice or hydraulic spray nozzle, discharge is proportional to the square root of pressure ($q \\propto \\sqrt{P}$):\n$$\\frac{q_2}{q_1} = \\sqrt{\\frac{P_2}{P_1}}$$\n$$q_2 = q_1 \\times \\sqrt{\\frac{400.0}{200.0}} = 1.2 \\times \\sqrt{2.00} = 1.2 \\times 1.4142 = 1.70\\text{ L/min}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_030",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Spray Nozzles, Droplets & Application Rates",
+    "subtopic": "Volume Median Diameter (VMD) and Number Median Diameter (NMD)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding spray droplet size distribution and nozzle aerodynamics, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Volume Median Diameter (VMD or D_v0.5) is the droplet diameter such that 50% of the total spray volume consists of smaller droplets",
+      "B": "Droplets smaller than $100\\,\\mu\\text{m}$ are highly susceptible to airborne drift",
+      "C": "The relative span factor of spray droplets is defined as $(D_{v0.9} - D_{v0.1}) / D_{v0.5}$",
+      "D": "Increasing nozzle operating pressure decreases the average droplet size and increases drift potential"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. By definition, VMD divides spray volume into two equal 50% halves. (A is correct)\n2. Droplets $< 100\\,\\mu\\text{m}$ remain suspended easily and drift off-target. (B is correct)\n3. Relative Span factor $\\text{RS} = (D_{0.9} - D_{0.1})/D_{0.5}$ measures droplet size uniformity. (C is correct)\n4. Higher hydraulic pressure increases atomization shear, producing finer droplets and greater drift. (D is correct)\nAll choices A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_031",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Plant Protection: Hydraulic & Pneumatic Sprayers",
+    "subtopic": "Spray drift control",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor-mounted boom sprayer has nozzles spaced $50\\text{ cm}$ apart. Each nozzle delivers $1.0\\text{ L/min}$. If the tractor travels at $4.8\\text{ km/h}$, the spray application rate in $\\text{L/ha}$ is:",
+    "options": {
+      "A": "$250.0\\text{ L/ha}$",
+      "B": "$312.5\\text{ L/ha}$",
+      "C": "$200.0\\text{ L/ha}$",
+      "D": "$375.0\\text{ L/ha}$"
+    },
+    "correct_answer": "A",
+    "solution": "The field application rate $Q_a$ (in L/ha) for a boom sprayer is given by:\n$$Q_a = \\frac{600 \\times q}{s \\times v}$$\nWhere:\n- $q = 1.0\\text{ L/min (discharge per nozzle)}$\n- $s = 0.5\\text{ m (nozzle spacing)}$\n- $v = 4.8\\text{ km/h (forward speed)}$\n$$Q_a = \\frac{600 \\times 1.0}{0.5 \\times 4.8} = 250.0\\text{ L/ha}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_032",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Spray Nozzles, Droplets & Application Rates",
+    "subtopic": "Flat fan, hollow cone and solid cone nozzles",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A hydraulic spray nozzle discharges $1.2\\text{ L/min}$ at an operating pressure of $200\\text{ kPa}$. When the pressure is increased to $400\\text{ kPa}$, the new nozzle discharge is ________ $\\text{L/min}$ (round off to two decimal places).",
+    "correct_answer": "1.70",
+    "numerical_range": {
+      "min": 1.67,
+      "max": 1.73
+    },
+    "solution": "For an orifice or hydraulic spray nozzle, discharge is proportional to the square root of pressure ($q \\propto \\sqrt{P}$):\n$$\\frac{q_2}{q_1} = \\sqrt{\\frac{P_2}{P_1}}$$\n$$q_2 = q_1 \\times \\sqrt{\\frac{400.0}{200.0}} = 1.2 \\times \\sqrt{2.00} = 1.2 \\times 1.4142 = 1.70\\text{ L/min}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_033",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Spray Nozzles, Droplets & Application Rates",
+    "subtopic": "Volume Median Diameter (VMD) and Number Median Diameter (NMD)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding spray droplet size distribution and nozzle aerodynamics, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Volume Median Diameter (VMD or D_v0.5) is the droplet diameter such that 50% of the total spray volume consists of smaller droplets",
+      "B": "Droplets smaller than $100\\,\\mu\\text{m}$ are highly susceptible to airborne drift",
+      "C": "The relative span factor of spray droplets is defined as $(D_{v0.9} - D_{v0.1}) / D_{v0.5}$",
+      "D": "Increasing nozzle operating pressure decreases the average droplet size and increases drift potential"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. By definition, VMD divides spray volume into two equal 50% halves. (A is correct)\n2. Droplets $< 100\\,\\mu\\text{m}$ remain suspended easily and drift off-target. (B is correct)\n3. Relative Span factor $\\text{RS} = (D_{0.9} - D_{0.1})/D_{0.5}$ measures droplet size uniformity. (C is correct)\n4. Higher hydraulic pressure increases atomization shear, producing finer droplets and greater drift. (D is correct)\nAll choices A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_034",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Plant Protection: Hydraulic & Pneumatic Sprayers",
+    "subtopic": "Spray drift control",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor-mounted boom sprayer has nozzles spaced $50\\text{ cm}$ apart. Each nozzle delivers $1.6\\text{ L/min}$. If the tractor travels at $4.8\\text{ km/h}$, the spray application rate in $\\text{L/ha}$ is:",
+    "options": {
+      "A": "$400.0\\text{ L/ha}$",
+      "B": "$500.0\\text{ L/ha}$",
+      "C": "$320.0\\text{ L/ha}$",
+      "D": "$600.0\\text{ L/ha}$"
+    },
+    "correct_answer": "A",
+    "solution": "The field application rate $Q_a$ (in L/ha) for a boom sprayer is given by:\n$$Q_a = \\frac{600 \\times q}{s \\times v}$$\nWhere:\n- $q = 1.6\\text{ L/min (discharge per nozzle)}$\n- $s = 0.5\\text{ m (nozzle spacing)}$\n- $v = 4.8\\text{ km/h (forward speed)}$\n$$Q_a = \\frac{600 \\times 1.6}{0.5 \\times 4.8} = 400.0\\text{ L/ha}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_035",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Spray Nozzles, Droplets & Application Rates",
+    "subtopic": "Flat fan, hollow cone and solid cone nozzles",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A hydraulic spray nozzle discharges $1.2\\text{ L/min}$ at an operating pressure of $200\\text{ kPa}$. When the pressure is increased to $400\\text{ kPa}$, the new nozzle discharge is ________ $\\text{L/min}$ (round off to two decimal places).",
+    "correct_answer": "1.70",
+    "numerical_range": {
+      "min": 1.67,
+      "max": 1.73
+    },
+    "solution": "For an orifice or hydraulic spray nozzle, discharge is proportional to the square root of pressure ($q \\propto \\sqrt{P}$):\n$$\\frac{q_2}{q_1} = \\sqrt{\\frac{P_2}{P_1}}$$\n$$q_2 = q_1 \\times \\sqrt{\\frac{400.0}{200.0}} = 1.2 \\times \\sqrt{2.00} = 1.2 \\times 1.4142 = 1.70\\text{ L/min}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_036",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Spray Nozzles, Droplets & Application Rates",
+    "subtopic": "Volume Median Diameter (VMD) and Number Median Diameter (NMD)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding spray droplet size distribution and nozzle aerodynamics, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Volume Median Diameter (VMD or D_v0.5) is the droplet diameter such that 50% of the total spray volume consists of smaller droplets",
+      "B": "Droplets smaller than $100\\,\\mu\\text{m}$ are highly susceptible to airborne drift",
+      "C": "The relative span factor of spray droplets is defined as $(D_{v0.9} - D_{v0.1}) / D_{v0.5}$",
+      "D": "Increasing nozzle operating pressure decreases the average droplet size and increases drift potential"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. By definition, VMD divides spray volume into two equal 50% halves. (A is correct)\n2. Droplets $< 100\\,\\mu\\text{m}$ remain suspended easily and drift off-target. (B is correct)\n3. Relative Span factor $\\text{RS} = (D_{0.9} - D_{0.1})/D_{0.5}$ measures droplet size uniformity. (C is correct)\n4. Higher hydraulic pressure increases atomization shear, producing finer droplets and greater drift. (D is correct)\nAll choices A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_037",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Plant Protection: Hydraulic & Pneumatic Sprayers",
+    "subtopic": "Spray drift control",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor-mounted boom sprayer has nozzles spaced $50\\text{ cm}$ apart. Each nozzle delivers $1.2\\text{ L/min}$. If the tractor travels at $4.8\\text{ km/h}$, the spray application rate in $\\text{L/ha}$ is:",
+    "options": {
+      "A": "$300.0\\text{ L/ha}$",
+      "B": "$375.0\\text{ L/ha}$",
+      "C": "$240.0\\text{ L/ha}$",
+      "D": "$450.0\\text{ L/ha}$"
+    },
+    "correct_answer": "A",
+    "solution": "The field application rate $Q_a$ (in L/ha) for a boom sprayer is given by:\n$$Q_a = \\frac{600 \\times q}{s \\times v}$$\nWhere:\n- $q = 1.2\\text{ L/min (discharge per nozzle)}$\n- $s = 0.5\\text{ m (nozzle spacing)}$\n- $v = 4.8\\text{ km/h (forward speed)}$\n$$Q_a = \\frac{600 \\times 1.2}{0.5 \\times 4.8} = 300.0\\text{ L/ha}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_038",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Spray Nozzles, Droplets & Application Rates",
+    "subtopic": "Flat fan, hollow cone and solid cone nozzles",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A hydraulic spray nozzle discharges $1.2\\text{ L/min}$ at an operating pressure of $200\\text{ kPa}$. When the pressure is increased to $400\\text{ kPa}$, the new nozzle discharge is ________ $\\text{L/min}$ (round off to two decimal places).",
+    "correct_answer": "1.70",
+    "numerical_range": {
+      "min": 1.67,
+      "max": 1.73
+    },
+    "solution": "For an orifice or hydraulic spray nozzle, discharge is proportional to the square root of pressure ($q \\propto \\sqrt{P}$):\n$$\\frac{q_2}{q_1} = \\sqrt{\\frac{P_2}{P_1}}$$\n$$q_2 = q_1 \\times \\sqrt{\\frac{400.0}{200.0}} = 1.2 \\times \\sqrt{2.00} = 1.2 \\times 1.4142 = 1.70\\text{ L/min}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_039",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Spray Nozzles, Droplets & Application Rates",
+    "subtopic": "Volume Median Diameter (VMD) and Number Median Diameter (NMD)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding spray droplet size distribution and nozzle aerodynamics, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Volume Median Diameter (VMD or D_v0.5) is the droplet diameter such that 50% of the total spray volume consists of smaller droplets",
+      "B": "Droplets smaller than $100\\,\\mu\\text{m}$ are highly susceptible to airborne drift",
+      "C": "The relative span factor of spray droplets is defined as $(D_{v0.9} - D_{v0.1}) / D_{v0.5}$",
+      "D": "Increasing nozzle operating pressure decreases the average droplet size and increases drift potential"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. By definition, VMD divides spray volume into two equal 50% halves. (A is correct)\n2. Droplets $< 100\\,\\mu\\text{m}$ remain suspended easily and drift off-target. (B is correct)\n3. Relative Span factor $\\text{RS} = (D_{0.9} - D_{0.1})/D_{0.5}$ measures droplet size uniformity. (C is correct)\n4. Higher hydraulic pressure increases atomization shear, producing finer droplets and greater drift. (D is correct)\nAll choices A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_040",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Plant Protection: Hydraulic & Pneumatic Sprayers",
+    "subtopic": "Spray drift control",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor-mounted boom sprayer has nozzles spaced $50\\text{ cm}$ apart. Each nozzle delivers $0.8\\text{ L/min}$. If the tractor travels at $4.8\\text{ km/h}$, the spray application rate in $\\text{L/ha}$ is:",
+    "options": {
+      "A": "$200.0\\text{ L/ha}$",
+      "B": "$250.0\\text{ L/ha}$",
+      "C": "$160.0\\text{ L/ha}$",
+      "D": "$300.0\\text{ L/ha}$"
+    },
+    "correct_answer": "A",
+    "solution": "The field application rate $Q_a$ (in L/ha) for a boom sprayer is given by:\n$$Q_a = \\frac{600 \\times q}{s \\times v}$$\nWhere:\n- $q = 0.8\\text{ L/min (discharge per nozzle)}$\n- $s = 0.5\\text{ m (nozzle spacing)}$\n- $v = 4.8\\text{ km/h (forward speed)}$\n$$Q_a = \\frac{600 \\times 0.8}{0.5 \\times 4.8} = 200.0\\text{ L/ha}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_041",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Spray Nozzles, Droplets & Application Rates",
+    "subtopic": "Flat fan, hollow cone and solid cone nozzles",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A hydraulic spray nozzle discharges $1.2\\text{ L/min}$ at an operating pressure of $200\\text{ kPa}$. When the pressure is increased to $400\\text{ kPa}$, the new nozzle discharge is ________ $\\text{L/min}$ (round off to two decimal places).",
+    "correct_answer": "1.70",
+    "numerical_range": {
+      "min": 1.67,
+      "max": 1.73
+    },
+    "solution": "For an orifice or hydraulic spray nozzle, discharge is proportional to the square root of pressure ($q \\propto \\sqrt{P}$):\n$$\\frac{q_2}{q_1} = \\sqrt{\\frac{P_2}{P_1}}$$\n$$q_2 = q_1 \\times \\sqrt{\\frac{400.0}{200.0}} = 1.2 \\times \\sqrt{2.00} = 1.2 \\times 1.4142 = 1.70\\text{ L/min}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_042",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Spray Nozzles, Droplets & Application Rates",
+    "subtopic": "Volume Median Diameter (VMD) and Number Median Diameter (NMD)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding spray droplet size distribution and nozzle aerodynamics, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Volume Median Diameter (VMD or D_v0.5) is the droplet diameter such that 50% of the total spray volume consists of smaller droplets",
+      "B": "Droplets smaller than $100\\,\\mu\\text{m}$ are highly susceptible to airborne drift",
+      "C": "The relative span factor of spray droplets is defined as $(D_{v0.9} - D_{v0.1}) / D_{v0.5}$",
+      "D": "Increasing nozzle operating pressure decreases the average droplet size and increases drift potential"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. By definition, VMD divides spray volume into two equal 50% halves. (A is correct)\n2. Droplets $< 100\\,\\mu\\text{m}$ remain suspended easily and drift off-target. (B is correct)\n3. Relative Span factor $\\text{RS} = (D_{0.9} - D_{0.1})/D_{0.5}$ measures droplet size uniformity. (C is correct)\n4. Higher hydraulic pressure increases atomization shear, producing finer droplets and greater drift. (D is correct)\nAll choices A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_043",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Plant Protection: Hydraulic & Pneumatic Sprayers",
+    "subtopic": "Spray drift control",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor-mounted boom sprayer has nozzles spaced $50\\text{ cm}$ apart. Each nozzle delivers $1.4\\text{ L/min}$. If the tractor travels at $4.8\\text{ km/h}$, the spray application rate in $\\text{L/ha}$ is:",
+    "options": {
+      "A": "$350.0\\text{ L/ha}$",
+      "B": "$437.5\\text{ L/ha}$",
+      "C": "$280.0\\text{ L/ha}$",
+      "D": "$525.0\\text{ L/ha}$"
+    },
+    "correct_answer": "A",
+    "solution": "The field application rate $Q_a$ (in L/ha) for a boom sprayer is given by:\n$$Q_a = \\frac{600 \\times q}{s \\times v}$$\nWhere:\n- $q = 1.4\\text{ L/min (discharge per nozzle)}$\n- $s = 0.5\\text{ m (nozzle spacing)}$\n- $v = 4.8\\text{ km/h (forward speed)}$\n$$Q_a = \\frac{600 \\times 1.4}{0.5 \\times 4.8} = 350.0\\text{ L/ha}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_044",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Spray Nozzles, Droplets & Application Rates",
+    "subtopic": "Flat fan, hollow cone and solid cone nozzles",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A hydraulic spray nozzle discharges $1.2\\text{ L/min}$ at an operating pressure of $200\\text{ kPa}$. When the pressure is increased to $400\\text{ kPa}$, the new nozzle discharge is ________ $\\text{L/min}$ (round off to two decimal places).",
+    "correct_answer": "1.70",
+    "numerical_range": {
+      "min": 1.67,
+      "max": 1.73
+    },
+    "solution": "For an orifice or hydraulic spray nozzle, discharge is proportional to the square root of pressure ($q \\propto \\sqrt{P}$):\n$$\\frac{q_2}{q_1} = \\sqrt{\\frac{P_2}{P_1}}$$\n$$q_2 = q_1 \\times \\sqrt{\\frac{400.0}{200.0}} = 1.2 \\times \\sqrt{2.00} = 1.2 \\times 1.4142 = 1.70\\text{ L/min}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_PP_045",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Spray Nozzles, Droplets & Application Rates",
+    "subtopic": "Volume Median Diameter (VMD) and Number Median Diameter (NMD)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Regarding spray droplet size distribution and nozzle aerodynamics, which of the following statements is/are CORRECT?",
+    "options": {
+      "A": "Volume Median Diameter (VMD or D_v0.5) is the droplet diameter such that 50% of the total spray volume consists of smaller droplets",
+      "B": "Droplets smaller than $100\\,\\mu\\text{m}$ are highly susceptible to airborne drift",
+      "C": "The relative span factor of spray droplets is defined as $(D_{v0.9} - D_{v0.1}) / D_{v0.5}$",
+      "D": "Increasing nozzle operating pressure decreases the average droplet size and increases drift potential"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. By definition, VMD divides spray volume into two equal 50% halves. (A is correct)\n2. Droplets $< 100\\,\\mu\\text{m}$ remain suspended easily and drift off-target. (B is correct)\n3. Relative Span factor $\\text{RS} = (D_{0.9} - D_{0.1})/D_{0.5}$ measures droplet size uniformity. (C is correct)\n4. Higher hydraulic pressure increases atomization shear, producing finer droplets and greater drift. (D is correct)\nAll choices A, B, C, D are correct.",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_001",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.12\\text{ ha/h}$",
+      "B": "$1.34\\text{ ha/h}$",
+      "C": "$0.90\\text{ ha/h}$",
+      "D": "$1.68\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 4.5}{10} = 1.12\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_002",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }620000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "55800",
+    "numerical_range": {
+      "min": 55800.0,
+      "max": 55800.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }620000$\n- Salvage value $S = 0.10 \\times 620000 = \\text{Rs. }62000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{620000 - 62000}{10} = \\frac{558000}{10} = \\text{Rs. }55800$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_003",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_004",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.60\\text{ ha/h}$",
+      "B": "$1.92\\text{ ha/h}$",
+      "C": "$1.28\\text{ ha/h}$",
+      "D": "$2.40\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 4.0}{10} = 1.60\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_005",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }650000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "58500",
+    "numerical_range": {
+      "min": 58500.0,
+      "max": 58500.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }650000$\n- Salvage value $S = 0.10 \\times 650000 = \\text{Rs. }65000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{650000 - 65000}{10} = \\frac{585000}{10} = \\text{Rs. }58500$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_006",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_007",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.65\\text{ ha/h}$",
+      "B": "$1.98\\text{ ha/h}$",
+      "C": "$1.32\\text{ ha/h}$",
+      "D": "$2.47\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 5.5}{10} = 1.65\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_008",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }680000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "61200",
+    "numerical_range": {
+      "min": 61200.0,
+      "max": 61200.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }680000$\n- Salvage value $S = 0.10 \\times 680000 = \\text{Rs. }68000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{680000 - 68000}{10} = \\frac{612000}{10} = \\text{Rs. }61200$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_009",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_010",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.00\\text{ ha/h}$",
+      "B": "$1.20\\text{ ha/h}$",
+      "C": "$0.80\\text{ ha/h}$",
+      "D": "$1.50\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.0 \\times 5.0}{10} = 1.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_011",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }710000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "63900",
+    "numerical_range": {
+      "min": 63900.0,
+      "max": 63900.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }710000$\n- Salvage value $S = 0.10 \\times 710000 = \\text{Rs. }71000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{710000 - 71000}{10} = \\frac{639000}{10} = \\text{Rs. }63900$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_012",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_013",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.5\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.57\\text{ ha/h}$",
+      "B": "$1.88\\text{ ha/h}$",
+      "C": "$1.26\\text{ ha/h}$",
+      "D": "$2.35\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.5\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.5 \\times 4.5}{10} = 1.57\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_014",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }740000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "66600",
+    "numerical_range": {
+      "min": 66600.0,
+      "max": 66600.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }740000$\n- Salvage value $S = 0.10 \\times 740000 = \\text{Rs. }74000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{740000 - 74000}{10} = \\frac{666000}{10} = \\text{Rs. }66600$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_015",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_016",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.00\\text{ ha/h}$",
+      "B": "$1.20\\text{ ha/h}$",
+      "C": "$0.80\\text{ ha/h}$",
+      "D": "$1.50\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 4.0}{10} = 1.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_017",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }770000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "69300",
+    "numerical_range": {
+      "min": 69300.0,
+      "max": 69300.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }770000$\n- Salvage value $S = 0.10 \\times 770000 = \\text{Rs. }77000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{770000 - 77000}{10} = \\frac{693000}{10} = \\text{Rs. }69300$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_018",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_019",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$2.20\\text{ ha/h}$",
+      "B": "$2.64\\text{ ha/h}$",
+      "C": "$1.76\\text{ ha/h}$",
+      "D": "$3.30\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 5.5}{10} = 2.20\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_020",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }800000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "72000",
+    "numerical_range": {
+      "min": 72000.0,
+      "max": 72000.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }800000$\n- Salvage value $S = 0.10 \\times 800000 = \\text{Rs. }80000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{800000 - 80000}{10} = \\frac{720000}{10} = \\text{Rs. }72000$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_021",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_022",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.50\\text{ ha/h}$",
+      "B": "$1.80\\text{ ha/h}$",
+      "C": "$1.20\\text{ ha/h}$",
+      "D": "$2.25\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 5.0}{10} = 1.50\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_023",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }830000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "74700",
+    "numerical_range": {
+      "min": 74700.0,
+      "max": 74700.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }830000$\n- Salvage value $S = 0.10 \\times 830000 = \\text{Rs. }83000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{830000 - 83000}{10} = \\frac{747000}{10} = \\text{Rs. }74700$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_024",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_025",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.0\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$0.90\\text{ ha/h}$",
+      "B": "$1.08\\text{ ha/h}$",
+      "C": "$0.72\\text{ ha/h}$",
+      "D": "$1.35\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.0\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.0 \\times 4.5}{10} = 0.90\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_026",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }860000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "77400",
+    "numerical_range": {
+      "min": 77400.0,
+      "max": 77400.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }860000$\n- Salvage value $S = 0.10 \\times 860000 = \\text{Rs. }86000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{860000 - 86000}{10} = \\frac{774000}{10} = \\text{Rs. }77400$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_027",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_028",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.5\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.40\\text{ ha/h}$",
+      "B": "$1.68\\text{ ha/h}$",
+      "C": "$1.12\\text{ ha/h}$",
+      "D": "$2.10\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.5\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.5 \\times 4.0}{10} = 1.40\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_029",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }890000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "80100",
+    "numerical_range": {
+      "min": 80100.0,
+      "max": 80100.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }890000$\n- Salvage value $S = 0.10 \\times 890000 = \\text{Rs. }89000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{890000 - 89000}{10} = \\frac{801000}{10} = \\text{Rs. }80100$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_030",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_031",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.38\\text{ ha/h}$",
+      "B": "$1.66\\text{ ha/h}$",
+      "C": "$1.10\\text{ ha/h}$",
+      "D": "$2.07\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 5.5}{10} = 1.38\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_032",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }920000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "82800",
+    "numerical_range": {
+      "min": 82800.0,
+      "max": 82800.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }920000$\n- Salvage value $S = 0.10 \\times 920000 = \\text{Rs. }92000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{920000 - 92000}{10} = \\frac{828000}{10} = \\text{Rs. }82800$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_033",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_034",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$2.00\\text{ ha/h}$",
+      "B": "$2.40\\text{ ha/h}$",
+      "C": "$1.60\\text{ ha/h}$",
+      "D": "$3.00\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 5.0}{10} = 2.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_035",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }950000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "85500",
+    "numerical_range": {
+      "min": 85500.0,
+      "max": 85500.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }950000$\n- Salvage value $S = 0.10 \\times 950000 = \\text{Rs. }95000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{950000 - 95000}{10} = \\frac{855000}{10} = \\text{Rs. }85500$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_036",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_037",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.35\\text{ ha/h}$",
+      "B": "$1.62\\text{ ha/h}$",
+      "C": "$1.08\\text{ ha/h}$",
+      "D": "$2.03\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 4.5}{10} = 1.35\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_038",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }980000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "88200",
+    "numerical_range": {
+      "min": 88200.0,
+      "max": 88200.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }980000$\n- Salvage value $S = 0.10 \\times 980000 = \\text{Rs. }98000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{980000 - 98000}{10} = \\frac{882000}{10} = \\text{Rs. }88200$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_039",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Threshing & Separation Mechanisms",
+    "subtopic": "Rasp bar, spike tooth and axial flow cylinders",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_040",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.12\\text{ ha/h}$",
+      "B": "$1.34\\text{ ha/h}$",
+      "C": "$0.90\\text{ ha/h}$",
+      "D": "$1.68\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 4.5}{10} = 1.12\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_041",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }620000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "55800",
+    "numerical_range": {
+      "min": 55800.0,
+      "max": 55800.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }620000$\n- Salvage value $S = 0.10 \\times 620000 = \\text{Rs. }62000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{620000 - 62000}{10} = \\frac{558000}{10} = \\text{Rs. }55800$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_042",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_043",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.60\\text{ ha/h}$",
+      "B": "$1.92\\text{ ha/h}$",
+      "C": "$1.28\\text{ ha/h}$",
+      "D": "$2.40\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 4.0}{10} = 1.60\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_044",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }650000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "58500",
+    "numerical_range": {
+      "min": 58500.0,
+      "max": 58500.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }650000$\n- Salvage value $S = 0.10 \\times 650000 = \\text{Rs. }65000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{650000 - 65000}{10} = \\frac{585000}{10} = \\text{Rs. }58500$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_045",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_046",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.65\\text{ ha/h}$",
+      "B": "$1.98\\text{ ha/h}$",
+      "C": "$1.32\\text{ ha/h}$",
+      "D": "$2.47\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 5.5}{10} = 1.65\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_047",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }680000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "61200",
+    "numerical_range": {
+      "min": 61200.0,
+      "max": 61200.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }680000$\n- Salvage value $S = 0.10 \\times 680000 = \\text{Rs. }68000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{680000 - 68000}{10} = \\frac{612000}{10} = \\text{Rs. }61200$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_048",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_049",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.00\\text{ ha/h}$",
+      "B": "$1.20\\text{ ha/h}$",
+      "C": "$0.80\\text{ ha/h}$",
+      "D": "$1.50\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.0 \\times 5.0}{10} = 1.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_050",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }710000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "63900",
+    "numerical_range": {
+      "min": 63900.0,
+      "max": 63900.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }710000$\n- Salvage value $S = 0.10 \\times 710000 = \\text{Rs. }71000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{710000 - 71000}{10} = \\frac{639000}{10} = \\text{Rs. }63900$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_051",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_052",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.5\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.57\\text{ ha/h}$",
+      "B": "$1.88\\text{ ha/h}$",
+      "C": "$1.26\\text{ ha/h}$",
+      "D": "$2.35\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.5\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.5 \\times 4.5}{10} = 1.57\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_053",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }740000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "66600",
+    "numerical_range": {
+      "min": 66600.0,
+      "max": 66600.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }740000$\n- Salvage value $S = 0.10 \\times 740000 = \\text{Rs. }74000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{740000 - 74000}{10} = \\frac{666000}{10} = \\text{Rs. }66600$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_054",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_055",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.00\\text{ ha/h}$",
+      "B": "$1.20\\text{ ha/h}$",
+      "C": "$0.80\\text{ ha/h}$",
+      "D": "$1.50\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 4.0}{10} = 1.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_056",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }770000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "69300",
+    "numerical_range": {
+      "min": 69300.0,
+      "max": 69300.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }770000$\n- Salvage value $S = 0.10 \\times 770000 = \\text{Rs. }77000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{770000 - 77000}{10} = \\frac{693000}{10} = \\text{Rs. }69300$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_057",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_058",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$2.20\\text{ ha/h}$",
+      "B": "$2.64\\text{ ha/h}$",
+      "C": "$1.76\\text{ ha/h}$",
+      "D": "$3.30\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 5.5}{10} = 2.20\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_059",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }800000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "72000",
+    "numerical_range": {
+      "min": 72000.0,
+      "max": 72000.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }800000$\n- Salvage value $S = 0.10 \\times 800000 = \\text{Rs. }80000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{800000 - 80000}{10} = \\frac{720000}{10} = \\text{Rs. }72000$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_060",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_061",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.50\\text{ ha/h}$",
+      "B": "$1.80\\text{ ha/h}$",
+      "C": "$1.20\\text{ ha/h}$",
+      "D": "$2.25\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 5.0}{10} = 1.50\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_062",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }830000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "74700",
+    "numerical_range": {
+      "min": 74700.0,
+      "max": 74700.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }830000$\n- Salvage value $S = 0.10 \\times 830000 = \\text{Rs. }83000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{830000 - 83000}{10} = \\frac{747000}{10} = \\text{Rs. }74700$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_063",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_064",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.0\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$0.90\\text{ ha/h}$",
+      "B": "$1.08\\text{ ha/h}$",
+      "C": "$0.72\\text{ ha/h}$",
+      "D": "$1.35\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.0\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.0 \\times 4.5}{10} = 0.90\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_065",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }860000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "77400",
+    "numerical_range": {
+      "min": 77400.0,
+      "max": 77400.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }860000$\n- Salvage value $S = 0.10 \\times 860000 = \\text{Rs. }86000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{860000 - 86000}{10} = \\frac{774000}{10} = \\text{Rs. }77400$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_066",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_067",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.5\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.40\\text{ ha/h}$",
+      "B": "$1.68\\text{ ha/h}$",
+      "C": "$1.12\\text{ ha/h}$",
+      "D": "$2.10\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.5\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.5 \\times 4.0}{10} = 1.40\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_068",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }890000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "80100",
+    "numerical_range": {
+      "min": 80100.0,
+      "max": 80100.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }890000$\n- Salvage value $S = 0.10 \\times 890000 = \\text{Rs. }89000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{890000 - 89000}{10} = \\frac{801000}{10} = \\text{Rs. }80100$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_069",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_070",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.38\\text{ ha/h}$",
+      "B": "$1.66\\text{ ha/h}$",
+      "C": "$1.10\\text{ ha/h}$",
+      "D": "$2.07\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 5.5}{10} = 1.38\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_071",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }920000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "82800",
+    "numerical_range": {
+      "min": 82800.0,
+      "max": 82800.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }920000$\n- Salvage value $S = 0.10 \\times 920000 = \\text{Rs. }92000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{920000 - 92000}{10} = \\frac{828000}{10} = \\text{Rs. }82800$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_072",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_073",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$2.00\\text{ ha/h}$",
+      "B": "$2.40\\text{ ha/h}$",
+      "C": "$1.60\\text{ ha/h}$",
+      "D": "$3.00\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 5.0}{10} = 2.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_074",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }950000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "85500",
+    "numerical_range": {
+      "min": 85500.0,
+      "max": 85500.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }950000$\n- Salvage value $S = 0.10 \\times 950000 = \\text{Rs. }95000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{950000 - 95000}{10} = \\frac{855000}{10} = \\text{Rs. }85500$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_075",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_076",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.35\\text{ ha/h}$",
+      "B": "$1.62\\text{ ha/h}$",
+      "C": "$1.08\\text{ ha/h}$",
+      "D": "$2.03\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 4.5}{10} = 1.35\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_077",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }980000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "88200",
+    "numerical_range": {
+      "min": 88200.0,
+      "max": 88200.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }980000$\n- Salvage value $S = 0.10 \\times 980000 = \\text{Rs. }98000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{980000 - 98000}{10} = \\frac{882000}{10} = \\text{Rs. }88200$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_078",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Combine Harvesters: Grain Cleaning & Losses",
+    "subtopic": "Cleaning shoe, chaffer and sieve aerodynamics",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_079",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.12\\text{ ha/h}$",
+      "B": "$1.34\\text{ ha/h}$",
+      "C": "$0.90\\text{ ha/h}$",
+      "D": "$1.68\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 4.5}{10} = 1.12\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_080",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }620000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "55800",
+    "numerical_range": {
+      "min": 55800.0,
+      "max": 55800.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }620000$\n- Salvage value $S = 0.10 \\times 620000 = \\text{Rs. }62000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{620000 - 62000}{10} = \\frac{558000}{10} = \\text{Rs. }55800$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_081",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_082",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.60\\text{ ha/h}$",
+      "B": "$1.92\\text{ ha/h}$",
+      "C": "$1.28\\text{ ha/h}$",
+      "D": "$2.40\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 4.0}{10} = 1.60\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_083",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }650000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "58500",
+    "numerical_range": {
+      "min": 58500.0,
+      "max": 58500.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }650000$\n- Salvage value $S = 0.10 \\times 650000 = \\text{Rs. }65000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{650000 - 65000}{10} = \\frac{585000}{10} = \\text{Rs. }58500$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_084",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_085",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.65\\text{ ha/h}$",
+      "B": "$1.98\\text{ ha/h}$",
+      "C": "$1.32\\text{ ha/h}$",
+      "D": "$2.47\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 5.5}{10} = 1.65\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_086",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }680000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "61200",
+    "numerical_range": {
+      "min": 61200.0,
+      "max": 61200.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }680000$\n- Salvage value $S = 0.10 \\times 680000 = \\text{Rs. }68000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{680000 - 68000}{10} = \\frac{612000}{10} = \\text{Rs. }61200$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_087",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_088",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.00\\text{ ha/h}$",
+      "B": "$1.20\\text{ ha/h}$",
+      "C": "$0.80\\text{ ha/h}$",
+      "D": "$1.50\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.0 \\times 5.0}{10} = 1.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_089",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }710000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "63900",
+    "numerical_range": {
+      "min": 63900.0,
+      "max": 63900.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }710000$\n- Salvage value $S = 0.10 \\times 710000 = \\text{Rs. }71000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{710000 - 71000}{10} = \\frac{639000}{10} = \\text{Rs. }63900$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_090",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_091",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.5\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.57\\text{ ha/h}$",
+      "B": "$1.88\\text{ ha/h}$",
+      "C": "$1.26\\text{ ha/h}$",
+      "D": "$2.35\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.5\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.5 \\times 4.5}{10} = 1.57\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_092",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }740000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "66600",
+    "numerical_range": {
+      "min": 66600.0,
+      "max": 66600.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }740000$\n- Salvage value $S = 0.10 \\times 740000 = \\text{Rs. }74000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{740000 - 74000}{10} = \\frac{666000}{10} = \\text{Rs. }66600$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_093",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_094",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.00\\text{ ha/h}$",
+      "B": "$1.20\\text{ ha/h}$",
+      "C": "$0.80\\text{ ha/h}$",
+      "D": "$1.50\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 4.0}{10} = 1.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_095",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }770000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "69300",
+    "numerical_range": {
+      "min": 69300.0,
+      "max": 69300.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }770000$\n- Salvage value $S = 0.10 \\times 770000 = \\text{Rs. }77000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{770000 - 77000}{10} = \\frac{693000}{10} = \\text{Rs. }69300$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_096",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_097",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$2.20\\text{ ha/h}$",
+      "B": "$2.64\\text{ ha/h}$",
+      "C": "$1.76\\text{ ha/h}$",
+      "D": "$3.30\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 5.5}{10} = 2.20\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_098",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }800000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "72000",
+    "numerical_range": {
+      "min": 72000.0,
+      "max": 72000.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }800000$\n- Salvage value $S = 0.10 \\times 800000 = \\text{Rs. }80000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{800000 - 80000}{10} = \\frac{720000}{10} = \\text{Rs. }72000$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_099",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_100",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.50\\text{ ha/h}$",
+      "B": "$1.80\\text{ ha/h}$",
+      "C": "$1.20\\text{ ha/h}$",
+      "D": "$2.25\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 5.0}{10} = 1.50\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_101",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }830000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "74700",
+    "numerical_range": {
+      "min": 74700.0,
+      "max": 74700.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }830000$\n- Salvage value $S = 0.10 \\times 830000 = \\text{Rs. }83000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{830000 - 83000}{10} = \\frac{747000}{10} = \\text{Rs. }74700$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_102",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_103",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.0\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$0.90\\text{ ha/h}$",
+      "B": "$1.08\\text{ ha/h}$",
+      "C": "$0.72\\text{ ha/h}$",
+      "D": "$1.35\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.0\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.0 \\times 4.5}{10} = 0.90\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_104",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }860000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "77400",
+    "numerical_range": {
+      "min": 77400.0,
+      "max": 77400.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }860000$\n- Salvage value $S = 0.10 \\times 860000 = \\text{Rs. }86000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{860000 - 86000}{10} = \\frac{774000}{10} = \\text{Rs. }77400$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_105",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_106",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.5\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.40\\text{ ha/h}$",
+      "B": "$1.68\\text{ ha/h}$",
+      "C": "$1.12\\text{ ha/h}$",
+      "D": "$2.10\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.5\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.5 \\times 4.0}{10} = 1.40\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_107",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }890000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "80100",
+    "numerical_range": {
+      "min": 80100.0,
+      "max": 80100.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }890000$\n- Salvage value $S = 0.10 \\times 890000 = \\text{Rs. }89000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{890000 - 89000}{10} = \\frac{801000}{10} = \\text{Rs. }80100$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_108",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_109",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.38\\text{ ha/h}$",
+      "B": "$1.66\\text{ ha/h}$",
+      "C": "$1.10\\text{ ha/h}$",
+      "D": "$2.07\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 5.5}{10} = 1.38\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_110",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }920000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "82800",
+    "numerical_range": {
+      "min": 82800.0,
+      "max": 82800.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }920000$\n- Salvage value $S = 0.10 \\times 920000 = \\text{Rs. }92000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{920000 - 92000}{10} = \\frac{828000}{10} = \\text{Rs. }82800$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_111",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_112",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$2.00\\text{ ha/h}$",
+      "B": "$2.40\\text{ ha/h}$",
+      "C": "$1.60\\text{ ha/h}$",
+      "D": "$3.00\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 5.0}{10} = 2.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_113",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }950000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "85500",
+    "numerical_range": {
+      "min": 85500.0,
+      "max": 85500.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }950000$\n- Salvage value $S = 0.10 \\times 950000 = \\text{Rs. }95000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{950000 - 95000}{10} = \\frac{855000}{10} = \\text{Rs. }85500$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_114",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_115",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.35\\text{ ha/h}$",
+      "B": "$1.62\\text{ ha/h}$",
+      "C": "$1.08\\text{ ha/h}$",
+      "D": "$2.03\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 4.5}{10} = 1.35\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_116",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }980000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "88200",
+    "numerical_range": {
+      "min": 88200.0,
+      "max": 88200.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }980000$\n- Salvage value $S = 0.10 \\times 980000 = \\text{Rs. }98000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{980000 - 98000}{10} = \\frac{882000}{10} = \\text{Rs. }88200$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_117",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machinery Field Capacity, Efficiency & Economics",
+    "subtopic": "Theoretical and effective field capacity",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_118",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.12\\text{ ha/h}$",
+      "B": "$1.34\\text{ ha/h}$",
+      "C": "$0.90\\text{ ha/h}$",
+      "D": "$1.68\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 4.5}{10} = 1.12\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_119",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }620000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "55800",
+    "numerical_range": {
+      "min": 55800.0,
+      "max": 55800.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }620000$\n- Salvage value $S = 0.10 \\times 620000 = \\text{Rs. }62000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{620000 - 62000}{10} = \\frac{558000}{10} = \\text{Rs. }55800$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_120",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_121",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.60\\text{ ha/h}$",
+      "B": "$1.92\\text{ ha/h}$",
+      "C": "$1.28\\text{ ha/h}$",
+      "D": "$2.40\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 4.0}{10} = 1.60\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_122",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }650000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "58500",
+    "numerical_range": {
+      "min": 58500.0,
+      "max": 58500.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }650000$\n- Salvage value $S = 0.10 \\times 650000 = \\text{Rs. }65000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{650000 - 65000}{10} = \\frac{585000}{10} = \\text{Rs. }58500$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_123",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_124",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.65\\text{ ha/h}$",
+      "B": "$1.98\\text{ ha/h}$",
+      "C": "$1.32\\text{ ha/h}$",
+      "D": "$2.47\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 5.5}{10} = 1.65\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_125",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }680000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "61200",
+    "numerical_range": {
+      "min": 61200.0,
+      "max": 61200.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }680000$\n- Salvage value $S = 0.10 \\times 680000 = \\text{Rs. }68000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{680000 - 68000}{10} = \\frac{612000}{10} = \\text{Rs. }61200$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_126",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_127",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.00\\text{ ha/h}$",
+      "B": "$1.20\\text{ ha/h}$",
+      "C": "$0.80\\text{ ha/h}$",
+      "D": "$1.50\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.0 \\times 5.0}{10} = 1.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_128",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }710000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "63900",
+    "numerical_range": {
+      "min": 63900.0,
+      "max": 63900.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }710000$\n- Salvage value $S = 0.10 \\times 710000 = \\text{Rs. }71000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{710000 - 71000}{10} = \\frac{639000}{10} = \\text{Rs. }63900$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_129",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_130",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.5\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.57\\text{ ha/h}$",
+      "B": "$1.88\\text{ ha/h}$",
+      "C": "$1.26\\text{ ha/h}$",
+      "D": "$2.35\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.5\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.5 \\times 4.5}{10} = 1.57\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_131",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }740000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "66600",
+    "numerical_range": {
+      "min": 66600.0,
+      "max": 66600.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }740000$\n- Salvage value $S = 0.10 \\times 740000 = \\text{Rs. }74000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{740000 - 74000}{10} = \\frac{666000}{10} = \\text{Rs. }66600$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_132",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_133",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.00\\text{ ha/h}$",
+      "B": "$1.20\\text{ ha/h}$",
+      "C": "$0.80\\text{ ha/h}$",
+      "D": "$1.50\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 4.0}{10} = 1.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_134",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }770000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "69300",
+    "numerical_range": {
+      "min": 69300.0,
+      "max": 69300.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }770000$\n- Salvage value $S = 0.10 \\times 770000 = \\text{Rs. }77000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{770000 - 77000}{10} = \\frac{693000}{10} = \\text{Rs. }69300$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_135",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_136",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$2.20\\text{ ha/h}$",
+      "B": "$2.64\\text{ ha/h}$",
+      "C": "$1.76\\text{ ha/h}$",
+      "D": "$3.30\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 5.5}{10} = 2.20\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_137",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }800000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "72000",
+    "numerical_range": {
+      "min": 72000.0,
+      "max": 72000.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }800000$\n- Salvage value $S = 0.10 \\times 800000 = \\text{Rs. }80000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{800000 - 80000}{10} = \\frac{720000}{10} = \\text{Rs. }72000$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_138",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_139",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.50\\text{ ha/h}$",
+      "B": "$1.80\\text{ ha/h}$",
+      "C": "$1.20\\text{ ha/h}$",
+      "D": "$2.25\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 5.0}{10} = 1.50\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_140",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }830000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "74700",
+    "numerical_range": {
+      "min": 74700.0,
+      "max": 74700.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }830000$\n- Salvage value $S = 0.10 \\times 830000 = \\text{Rs. }83000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{830000 - 83000}{10} = \\frac{747000}{10} = \\text{Rs. }74700$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_141",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_142",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.0\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$0.90\\text{ ha/h}$",
+      "B": "$1.08\\text{ ha/h}$",
+      "C": "$0.72\\text{ ha/h}$",
+      "D": "$1.35\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.0\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.0 \\times 4.5}{10} = 0.90\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_143",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }860000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "77400",
+    "numerical_range": {
+      "min": 77400.0,
+      "max": 77400.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }860000$\n- Salvage value $S = 0.10 \\times 860000 = \\text{Rs. }86000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{860000 - 86000}{10} = \\frac{774000}{10} = \\text{Rs. }77400$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_144",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_145",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.5\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.40\\text{ ha/h}$",
+      "B": "$1.68\\text{ ha/h}$",
+      "C": "$1.12\\text{ ha/h}$",
+      "D": "$2.10\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.5\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.5 \\times 4.0}{10} = 1.40\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_146",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }890000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "80100",
+    "numerical_range": {
+      "min": 80100.0,
+      "max": 80100.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }890000$\n- Salvage value $S = 0.10 \\times 890000 = \\text{Rs. }89000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{890000 - 89000}{10} = \\frac{801000}{10} = \\text{Rs. }80100$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_147",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_148",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.38\\text{ ha/h}$",
+      "B": "$1.66\\text{ ha/h}$",
+      "C": "$1.10\\text{ ha/h}$",
+      "D": "$2.07\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 5.5}{10} = 1.38\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_149",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }920000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "82800",
+    "numerical_range": {
+      "min": 82800.0,
+      "max": 82800.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }920000$\n- Salvage value $S = 0.10 \\times 920000 = \\text{Rs. }92000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{920000 - 92000}{10} = \\frac{828000}{10} = \\text{Rs. }82800$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_150",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_151",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$2.00\\text{ ha/h}$",
+      "B": "$2.40\\text{ ha/h}$",
+      "C": "$1.60\\text{ ha/h}$",
+      "D": "$3.00\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 5.0}{10} = 2.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_152",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }950000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "85500",
+    "numerical_range": {
+      "min": 85500.0,
+      "max": 85500.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }950000$\n- Salvage value $S = 0.10 \\times 950000 = \\text{Rs. }95000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{950000 - 95000}{10} = \\frac{855000}{10} = \\text{Rs. }85500$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_153",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_154",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.35\\text{ ha/h}$",
+      "B": "$1.62\\text{ ha/h}$",
+      "C": "$1.08\\text{ ha/h}$",
+      "D": "$2.03\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 4.5}{10} = 1.35\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_155",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }980000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "88200",
+    "numerical_range": {
+      "min": 88200.0,
+      "max": 88200.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }980000$\n- Salvage value $S = 0.10 \\times 980000 = \\text{Rs. }98000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{980000 - 98000}{10} = \\frac{882000}{10} = \\text{Rs. }88200$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_156",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery Cost Analysis & Economics",
+    "subtopic": "Depreciation methods (straight line, declining balance)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_157",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.12\\text{ ha/h}$",
+      "B": "$1.34\\text{ ha/h}$",
+      "C": "$0.90\\text{ ha/h}$",
+      "D": "$1.68\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 4.5}{10} = 1.12\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_158",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }620000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "55800",
+    "numerical_range": {
+      "min": 55800.0,
+      "max": 55800.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }620000$\n- Salvage value $S = 0.10 \\times 620000 = \\text{Rs. }62000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{620000 - 62000}{10} = \\frac{558000}{10} = \\text{Rs. }55800$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_159",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_160",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.60\\text{ ha/h}$",
+      "B": "$1.92\\text{ ha/h}$",
+      "C": "$1.28\\text{ ha/h}$",
+      "D": "$2.40\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 4.0}{10} = 1.60\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_161",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }650000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "58500",
+    "numerical_range": {
+      "min": 58500.0,
+      "max": 58500.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }650000$\n- Salvage value $S = 0.10 \\times 650000 = \\text{Rs. }65000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{650000 - 65000}{10} = \\frac{585000}{10} = \\text{Rs. }58500$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_162",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_163",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.65\\text{ ha/h}$",
+      "B": "$1.98\\text{ ha/h}$",
+      "C": "$1.32\\text{ ha/h}$",
+      "D": "$2.47\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 5.5}{10} = 1.65\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_164",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }680000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "61200",
+    "numerical_range": {
+      "min": 61200.0,
+      "max": 61200.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }680000$\n- Salvage value $S = 0.10 \\times 680000 = \\text{Rs. }68000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{680000 - 68000}{10} = \\frac{612000}{10} = \\text{Rs. }61200$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_165",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_166",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.00\\text{ ha/h}$",
+      "B": "$1.20\\text{ ha/h}$",
+      "C": "$0.80\\text{ ha/h}$",
+      "D": "$1.50\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.0 \\times 5.0}{10} = 1.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_167",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }710000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "63900",
+    "numerical_range": {
+      "min": 63900.0,
+      "max": 63900.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }710000$\n- Salvage value $S = 0.10 \\times 710000 = \\text{Rs. }71000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{710000 - 71000}{10} = \\frac{639000}{10} = \\text{Rs. }63900$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_168",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_169",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.5\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.57\\text{ ha/h}$",
+      "B": "$1.88\\text{ ha/h}$",
+      "C": "$1.26\\text{ ha/h}$",
+      "D": "$2.35\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.5\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.5 \\times 4.5}{10} = 1.57\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_170",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }740000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "66600",
+    "numerical_range": {
+      "min": 66600.0,
+      "max": 66600.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }740000$\n- Salvage value $S = 0.10 \\times 740000 = \\text{Rs. }74000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{740000 - 74000}{10} = \\frac{666000}{10} = \\text{Rs. }66600$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_171",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_172",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.00\\text{ ha/h}$",
+      "B": "$1.20\\text{ ha/h}$",
+      "C": "$0.80\\text{ ha/h}$",
+      "D": "$1.50\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 4.0}{10} = 1.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_173",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }770000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "69300",
+    "numerical_range": {
+      "min": 69300.0,
+      "max": 69300.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }770000$\n- Salvage value $S = 0.10 \\times 770000 = \\text{Rs. }77000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{770000 - 77000}{10} = \\frac{693000}{10} = \\text{Rs. }69300$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_174",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_175",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$2.20\\text{ ha/h}$",
+      "B": "$2.64\\text{ ha/h}$",
+      "C": "$1.76\\text{ ha/h}$",
+      "D": "$3.30\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 5.5}{10} = 2.20\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_176",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }800000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "72000",
+    "numerical_range": {
+      "min": 72000.0,
+      "max": 72000.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }800000$\n- Salvage value $S = 0.10 \\times 800000 = \\text{Rs. }80000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{800000 - 80000}{10} = \\frac{720000}{10} = \\text{Rs. }72000$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_177",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_178",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.50\\text{ ha/h}$",
+      "B": "$1.80\\text{ ha/h}$",
+      "C": "$1.20\\text{ ha/h}$",
+      "D": "$2.25\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 5.0}{10} = 1.50\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_179",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }830000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "74700",
+    "numerical_range": {
+      "min": 74700.0,
+      "max": 74700.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }830000$\n- Salvage value $S = 0.10 \\times 830000 = \\text{Rs. }83000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{830000 - 83000}{10} = \\frac{747000}{10} = \\text{Rs. }74700$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_180",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_181",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.0\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$0.90\\text{ ha/h}$",
+      "B": "$1.08\\text{ ha/h}$",
+      "C": "$0.72\\text{ ha/h}$",
+      "D": "$1.35\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.0\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.0 \\times 4.5}{10} = 0.90\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_182",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }860000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "77400",
+    "numerical_range": {
+      "min": 77400.0,
+      "max": 77400.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }860000$\n- Salvage value $S = 0.10 \\times 860000 = \\text{Rs. }86000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{860000 - 86000}{10} = \\frac{774000}{10} = \\text{Rs. }77400$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_183",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_184",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.5\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.40\\text{ ha/h}$",
+      "B": "$1.68\\text{ ha/h}$",
+      "C": "$1.12\\text{ ha/h}$",
+      "D": "$2.10\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.5\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.5 \\times 4.0}{10} = 1.40\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_185",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }890000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "80100",
+    "numerical_range": {
+      "min": 80100.0,
+      "max": 80100.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }890000$\n- Salvage value $S = 0.10 \\times 890000 = \\text{Rs. }89000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{890000 - 89000}{10} = \\frac{801000}{10} = \\text{Rs. }80100$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_186",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_187",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.38\\text{ ha/h}$",
+      "B": "$1.66\\text{ ha/h}$",
+      "C": "$1.10\\text{ ha/h}$",
+      "D": "$2.07\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 5.5}{10} = 1.38\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_188",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }920000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "82800",
+    "numerical_range": {
+      "min": 82800.0,
+      "max": 82800.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }920000$\n- Salvage value $S = 0.10 \\times 920000 = \\text{Rs. }92000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{920000 - 92000}{10} = \\frac{828000}{10} = \\text{Rs. }82800$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_189",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_190",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$2.00\\text{ ha/h}$",
+      "B": "$2.40\\text{ ha/h}$",
+      "C": "$1.60\\text{ ha/h}$",
+      "D": "$3.00\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 5.0}{10} = 2.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_191",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }950000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "85500",
+    "numerical_range": {
+      "min": 85500.0,
+      "max": 85500.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }950000$\n- Salvage value $S = 0.10 \\times 950000 = \\text{Rs. }95000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{950000 - 95000}{10} = \\frac{855000}{10} = \\text{Rs. }85500$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_192",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_193",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.35\\text{ ha/h}$",
+      "B": "$1.62\\text{ ha/h}$",
+      "C": "$1.08\\text{ ha/h}$",
+      "D": "$2.03\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 4.5}{10} = 1.35\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_194",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }980000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "88200",
+    "numerical_range": {
+      "min": 88200.0,
+      "max": 88200.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }980000$\n- Salvage value $S = 0.10 \\times 980000 = \\text{Rs. }98000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{980000 - 98000}{10} = \\frac{882000}{10} = \\text{Rs. }88200$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_195",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Gears, Belts & Chain Drives",
+    "subtopic": "Spur and helical gear design",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_196",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.12\\text{ ha/h}$",
+      "B": "$1.34\\text{ ha/h}$",
+      "C": "$0.90\\text{ ha/h}$",
+      "D": "$1.68\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 4.5}{10} = 1.12\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_197",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }620000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "55800",
+    "numerical_range": {
+      "min": 55800.0,
+      "max": 55800.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }620000$\n- Salvage value $S = 0.10 \\times 620000 = \\text{Rs. }62000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{620000 - 62000}{10} = \\frac{558000}{10} = \\text{Rs. }55800$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_198",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_199",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.60\\text{ ha/h}$",
+      "B": "$1.92\\text{ ha/h}$",
+      "C": "$1.28\\text{ ha/h}$",
+      "D": "$2.40\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 4.0}{10} = 1.60\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_200",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }650000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "58500",
+    "numerical_range": {
+      "min": 58500.0,
+      "max": 58500.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }650000$\n- Salvage value $S = 0.10 \\times 650000 = \\text{Rs. }65000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{650000 - 65000}{10} = \\frac{585000}{10} = \\text{Rs. }58500$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_201",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_202",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.65\\text{ ha/h}$",
+      "B": "$1.98\\text{ ha/h}$",
+      "C": "$1.32\\text{ ha/h}$",
+      "D": "$2.47\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 5.5}{10} = 1.65\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_203",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }680000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "61200",
+    "numerical_range": {
+      "min": 61200.0,
+      "max": 61200.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }680000$\n- Salvage value $S = 0.10 \\times 680000 = \\text{Rs. }68000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{680000 - 68000}{10} = \\frac{612000}{10} = \\text{Rs. }61200$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_204",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_205",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.00\\text{ ha/h}$",
+      "B": "$1.20\\text{ ha/h}$",
+      "C": "$0.80\\text{ ha/h}$",
+      "D": "$1.50\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.0 \\times 5.0}{10} = 1.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_206",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }710000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "63900",
+    "numerical_range": {
+      "min": 63900.0,
+      "max": 63900.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }710000$\n- Salvage value $S = 0.10 \\times 710000 = \\text{Rs. }71000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{710000 - 71000}{10} = \\frac{639000}{10} = \\text{Rs. }63900$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_207",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_208",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.5\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.57\\text{ ha/h}$",
+      "B": "$1.88\\text{ ha/h}$",
+      "C": "$1.26\\text{ ha/h}$",
+      "D": "$2.35\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.5\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.5 \\times 4.5}{10} = 1.57\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_209",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }740000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "66600",
+    "numerical_range": {
+      "min": 66600.0,
+      "max": 66600.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }740000$\n- Salvage value $S = 0.10 \\times 740000 = \\text{Rs. }74000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{740000 - 74000}{10} = \\frac{666000}{10} = \\text{Rs. }66600$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_210",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_211",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.00\\text{ ha/h}$",
+      "B": "$1.20\\text{ ha/h}$",
+      "C": "$0.80\\text{ ha/h}$",
+      "D": "$1.50\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 4.0}{10} = 1.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_212",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }770000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "69300",
+    "numerical_range": {
+      "min": 69300.0,
+      "max": 69300.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }770000$\n- Salvage value $S = 0.10 \\times 770000 = \\text{Rs. }77000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{770000 - 77000}{10} = \\frac{693000}{10} = \\text{Rs. }69300$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_213",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_214",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$2.20\\text{ ha/h}$",
+      "B": "$2.64\\text{ ha/h}$",
+      "C": "$1.76\\text{ ha/h}$",
+      "D": "$3.30\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 5.5}{10} = 2.20\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_215",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }800000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "72000",
+    "numerical_range": {
+      "min": 72000.0,
+      "max": 72000.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }800000$\n- Salvage value $S = 0.10 \\times 800000 = \\text{Rs. }80000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{800000 - 80000}{10} = \\frac{720000}{10} = \\text{Rs. }72000$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_216",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_217",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.50\\text{ ha/h}$",
+      "B": "$1.80\\text{ ha/h}$",
+      "C": "$1.20\\text{ ha/h}$",
+      "D": "$2.25\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 5.0}{10} = 1.50\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_218",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }830000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "74700",
+    "numerical_range": {
+      "min": 74700.0,
+      "max": 74700.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }830000$\n- Salvage value $S = 0.10 \\times 830000 = \\text{Rs. }83000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{830000 - 83000}{10} = \\frac{747000}{10} = \\text{Rs. }74700$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_219",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_220",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.0\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$0.90\\text{ ha/h}$",
+      "B": "$1.08\\text{ ha/h}$",
+      "C": "$0.72\\text{ ha/h}$",
+      "D": "$1.35\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.0\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.0 \\times 4.5}{10} = 0.90\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_221",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }860000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "77400",
+    "numerical_range": {
+      "min": 77400.0,
+      "max": 77400.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }860000$\n- Salvage value $S = 0.10 \\times 860000 = \\text{Rs. }86000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{860000 - 86000}{10} = \\frac{774000}{10} = \\text{Rs. }77400$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_222",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_223",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.5\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.40\\text{ ha/h}$",
+      "B": "$1.68\\text{ ha/h}$",
+      "C": "$1.12\\text{ ha/h}$",
+      "D": "$2.10\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.5\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.5 \\times 4.0}{10} = 1.40\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_224",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }890000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "80100",
+    "numerical_range": {
+      "min": 80100.0,
+      "max": 80100.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }890000$\n- Salvage value $S = 0.10 \\times 890000 = \\text{Rs. }89000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{890000 - 89000}{10} = \\frac{801000}{10} = \\text{Rs. }80100$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_225",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_226",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.38\\text{ ha/h}$",
+      "B": "$1.66\\text{ ha/h}$",
+      "C": "$1.10\\text{ ha/h}$",
+      "D": "$2.07\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 5.5}{10} = 1.38\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_227",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }920000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "82800",
+    "numerical_range": {
+      "min": 82800.0,
+      "max": 82800.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }920000$\n- Salvage value $S = 0.10 \\times 920000 = \\text{Rs. }92000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{920000 - 92000}{10} = \\frac{828000}{10} = \\text{Rs. }82800$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_228",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_229",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$2.00\\text{ ha/h}$",
+      "B": "$2.40\\text{ ha/h}$",
+      "C": "$1.60\\text{ ha/h}$",
+      "D": "$3.00\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 5.0}{10} = 2.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_230",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }950000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "85500",
+    "numerical_range": {
+      "min": 85500.0,
+      "max": 85500.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }950000$\n- Salvage value $S = 0.10 \\times 950000 = \\text{Rs. }95000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{950000 - 95000}{10} = \\frac{855000}{10} = \\text{Rs. }85500$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_231",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_232",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.35\\text{ ha/h}$",
+      "B": "$1.62\\text{ ha/h}$",
+      "C": "$1.08\\text{ ha/h}$",
+      "D": "$2.03\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 4.5}{10} = 1.35\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_233",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }980000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "88200",
+    "numerical_range": {
+      "min": 88200.0,
+      "max": 88200.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }980000$\n- Salvage value $S = 0.10 \\times 980000 = \\text{Rs. }98000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{980000 - 98000}{10} = \\frac{882000}{10} = \\text{Rs. }88200$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_234",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Shafts, Couplings, Keys & Bearings",
+    "subtopic": "Torsional and bending stress in shafts",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_235",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.12\\text{ ha/h}$",
+      "B": "$1.34\\text{ ha/h}$",
+      "C": "$0.90\\text{ ha/h}$",
+      "D": "$1.68\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 4.5}{10} = 1.12\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_236",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }620000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "55800",
+    "numerical_range": {
+      "min": 55800.0,
+      "max": 55800.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }620000$\n- Salvage value $S = 0.10 \\times 620000 = \\text{Rs. }62000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{620000 - 62000}{10} = \\frac{558000}{10} = \\text{Rs. }55800$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_237",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_238",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.60\\text{ ha/h}$",
+      "B": "$1.92\\text{ ha/h}$",
+      "C": "$1.28\\text{ ha/h}$",
+      "D": "$2.40\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 4.0}{10} = 1.60\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_239",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }650000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "58500",
+    "numerical_range": {
+      "min": 58500.0,
+      "max": 58500.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }650000$\n- Salvage value $S = 0.10 \\times 650000 = \\text{Rs. }65000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{650000 - 65000}{10} = \\frac{585000}{10} = \\text{Rs. }58500$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_240",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_241",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.65\\text{ ha/h}$",
+      "B": "$1.98\\text{ ha/h}$",
+      "C": "$1.32\\text{ ha/h}$",
+      "D": "$2.47\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 5.5}{10} = 1.65\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_242",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }680000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "61200",
+    "numerical_range": {
+      "min": 61200.0,
+      "max": 61200.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }680000$\n- Salvage value $S = 0.10 \\times 680000 = \\text{Rs. }68000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{680000 - 68000}{10} = \\frac{612000}{10} = \\text{Rs. }61200$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_243",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_244",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.00\\text{ ha/h}$",
+      "B": "$1.20\\text{ ha/h}$",
+      "C": "$0.80\\text{ ha/h}$",
+      "D": "$1.50\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.0 \\times 5.0}{10} = 1.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_245",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }710000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "63900",
+    "numerical_range": {
+      "min": 63900.0,
+      "max": 63900.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }710000$\n- Salvage value $S = 0.10 \\times 710000 = \\text{Rs. }71000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{710000 - 71000}{10} = \\frac{639000}{10} = \\text{Rs. }63900$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_246",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_247",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.5\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.57\\text{ ha/h}$",
+      "B": "$1.88\\text{ ha/h}$",
+      "C": "$1.26\\text{ ha/h}$",
+      "D": "$2.35\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.5\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.5 \\times 4.5}{10} = 1.57\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_248",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }740000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "66600",
+    "numerical_range": {
+      "min": 66600.0,
+      "max": 66600.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }740000$\n- Salvage value $S = 0.10 \\times 740000 = \\text{Rs. }74000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{740000 - 74000}{10} = \\frac{666000}{10} = \\text{Rs. }66600$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_249",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_250",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.00\\text{ ha/h}$",
+      "B": "$1.20\\text{ ha/h}$",
+      "C": "$0.80\\text{ ha/h}$",
+      "D": "$1.50\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 4.0}{10} = 1.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_251",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }770000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "69300",
+    "numerical_range": {
+      "min": 69300.0,
+      "max": 69300.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }770000$\n- Salvage value $S = 0.10 \\times 770000 = \\text{Rs. }77000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{770000 - 77000}{10} = \\frac{693000}{10} = \\text{Rs. }69300$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_252",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_253",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$2.20\\text{ ha/h}$",
+      "B": "$2.64\\text{ ha/h}$",
+      "C": "$1.76\\text{ ha/h}$",
+      "D": "$3.30\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 5.5}{10} = 2.20\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_254",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }800000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "72000",
+    "numerical_range": {
+      "min": 72000.0,
+      "max": 72000.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }800000$\n- Salvage value $S = 0.10 \\times 800000 = \\text{Rs. }80000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{800000 - 80000}{10} = \\frac{720000}{10} = \\text{Rs. }72000$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_255",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_256",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.50\\text{ ha/h}$",
+      "B": "$1.80\\text{ ha/h}$",
+      "C": "$1.20\\text{ ha/h}$",
+      "D": "$2.25\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 5.0}{10} = 1.50\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_257",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }830000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "74700",
+    "numerical_range": {
+      "min": 74700.0,
+      "max": 74700.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }830000$\n- Salvage value $S = 0.10 \\times 830000 = \\text{Rs. }83000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{830000 - 83000}{10} = \\frac{747000}{10} = \\text{Rs. }74700$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_258",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_259",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.0\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$0.90\\text{ ha/h}$",
+      "B": "$1.08\\text{ ha/h}$",
+      "C": "$0.72\\text{ ha/h}$",
+      "D": "$1.35\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.0\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.0 \\times 4.5}{10} = 0.90\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_260",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }860000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "77400",
+    "numerical_range": {
+      "min": 77400.0,
+      "max": 77400.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }860000$\n- Salvage value $S = 0.10 \\times 860000 = \\text{Rs. }86000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{860000 - 86000}{10} = \\frac{774000}{10} = \\text{Rs. }77400$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_261",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_262",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.5\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.40\\text{ ha/h}$",
+      "B": "$1.68\\text{ ha/h}$",
+      "C": "$1.12\\text{ ha/h}$",
+      "D": "$2.10\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.5\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.5 \\times 4.0}{10} = 1.40\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_263",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }890000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "80100",
+    "numerical_range": {
+      "min": 80100.0,
+      "max": 80100.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }890000$\n- Salvage value $S = 0.10 \\times 890000 = \\text{Rs. }89000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{890000 - 89000}{10} = \\frac{801000}{10} = \\text{Rs. }80100$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_264",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_265",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.38\\text{ ha/h}$",
+      "B": "$1.66\\text{ ha/h}$",
+      "C": "$1.10\\text{ ha/h}$",
+      "D": "$2.07\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 5.5}{10} = 1.38\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_266",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }920000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "82800",
+    "numerical_range": {
+      "min": 82800.0,
+      "max": 82800.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }920000$\n- Salvage value $S = 0.10 \\times 920000 = \\text{Rs. }92000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{920000 - 92000}{10} = \\frac{828000}{10} = \\text{Rs. }82800$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_267",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_268",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$2.00\\text{ ha/h}$",
+      "B": "$2.40\\text{ ha/h}$",
+      "C": "$1.60\\text{ ha/h}$",
+      "D": "$3.00\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 5.0}{10} = 2.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_269",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }950000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "85500",
+    "numerical_range": {
+      "min": 85500.0,
+      "max": 85500.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }950000$\n- Salvage value $S = 0.10 \\times 950000 = \\text{Rs. }95000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{950000 - 95000}{10} = \\frac{855000}{10} = \\text{Rs. }85500$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_270",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_271",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.35\\text{ ha/h}$",
+      "B": "$1.62\\text{ ha/h}$",
+      "C": "$1.08\\text{ ha/h}$",
+      "D": "$2.03\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 4.5}{10} = 1.35\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_272",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }980000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "88200",
+    "numerical_range": {
+      "min": 88200.0,
+      "max": 88200.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }980000$\n- Salvage value $S = 0.10 \\times 980000 = \\text{Rs. }98000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{980000 - 98000}{10} = \\frac{882000}{10} = \\text{Rs. }88200$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_273",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design: Overload Safety Devices & Clutches",
+    "subtopic": "Shear pins and slip clutches",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_274",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.12\\text{ ha/h}$",
+      "B": "$1.34\\text{ ha/h}$",
+      "C": "$0.90\\text{ ha/h}$",
+      "D": "$1.68\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 4.5}{10} = 1.12\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_275",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }620000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "55800",
+    "numerical_range": {
+      "min": 55800.0,
+      "max": 55800.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }620000$\n- Salvage value $S = 0.10 \\times 620000 = \\text{Rs. }62000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{620000 - 62000}{10} = \\frac{558000}{10} = \\text{Rs. }55800$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_276",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_277",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.60\\text{ ha/h}$",
+      "B": "$1.92\\text{ ha/h}$",
+      "C": "$1.28\\text{ ha/h}$",
+      "D": "$2.40\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 4.0}{10} = 1.60\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_278",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }650000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "58500",
+    "numerical_range": {
+      "min": 58500.0,
+      "max": 58500.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }650000$\n- Salvage value $S = 0.10 \\times 650000 = \\text{Rs. }65000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{650000 - 65000}{10} = \\frac{585000}{10} = \\text{Rs. }58500$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_279",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_280",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.65\\text{ ha/h}$",
+      "B": "$1.98\\text{ ha/h}$",
+      "C": "$1.32\\text{ ha/h}$",
+      "D": "$2.47\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 5.5}{10} = 1.65\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_281",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }680000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "61200",
+    "numerical_range": {
+      "min": 61200.0,
+      "max": 61200.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }680000$\n- Salvage value $S = 0.10 \\times 680000 = \\text{Rs. }68000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{680000 - 68000}{10} = \\frac{612000}{10} = \\text{Rs. }61200$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_282",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_283",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.00\\text{ ha/h}$",
+      "B": "$1.20\\text{ ha/h}$",
+      "C": "$0.80\\text{ ha/h}$",
+      "D": "$1.50\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.0 \\times 5.0}{10} = 1.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_284",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }710000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "63900",
+    "numerical_range": {
+      "min": 63900.0,
+      "max": 63900.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }710000$\n- Salvage value $S = 0.10 \\times 710000 = \\text{Rs. }71000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{710000 - 71000}{10} = \\frac{639000}{10} = \\text{Rs. }63900$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_285",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_286",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.5\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.57\\text{ ha/h}$",
+      "B": "$1.88\\text{ ha/h}$",
+      "C": "$1.26\\text{ ha/h}$",
+      "D": "$2.35\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.5\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.5 \\times 4.5}{10} = 1.57\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_287",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }740000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "66600",
+    "numerical_range": {
+      "min": 66600.0,
+      "max": 66600.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }740000$\n- Salvage value $S = 0.10 \\times 740000 = \\text{Rs. }74000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{740000 - 74000}{10} = \\frac{666000}{10} = \\text{Rs. }66600$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_288",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_289",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.00\\text{ ha/h}$",
+      "B": "$1.20\\text{ ha/h}$",
+      "C": "$0.80\\text{ ha/h}$",
+      "D": "$1.50\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 4.0}{10} = 1.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_290",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }770000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "69300",
+    "numerical_range": {
+      "min": 69300.0,
+      "max": 69300.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }770000$\n- Salvage value $S = 0.10 \\times 770000 = \\text{Rs. }77000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{770000 - 77000}{10} = \\frac{693000}{10} = \\text{Rs. }69300$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_291",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_292",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$2.20\\text{ ha/h}$",
+      "B": "$2.64\\text{ ha/h}$",
+      "C": "$1.76\\text{ ha/h}$",
+      "D": "$3.30\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 5.5}{10} = 2.20\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_293",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }800000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "72000",
+    "numerical_range": {
+      "min": 72000.0,
+      "max": 72000.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }800000$\n- Salvage value $S = 0.10 \\times 800000 = \\text{Rs. }80000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{800000 - 80000}{10} = \\frac{720000}{10} = \\text{Rs. }72000$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_294",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_295",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.50\\text{ ha/h}$",
+      "B": "$1.80\\text{ ha/h}$",
+      "C": "$1.20\\text{ ha/h}$",
+      "D": "$2.25\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 5.0}{10} = 1.50\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_296",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }830000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "74700",
+    "numerical_range": {
+      "min": 74700.0,
+      "max": 74700.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }830000$\n- Salvage value $S = 0.10 \\times 830000 = \\text{Rs. }83000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{830000 - 83000}{10} = \\frac{747000}{10} = \\text{Rs. }74700$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_297",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_298",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.0\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$0.90\\text{ ha/h}$",
+      "B": "$1.08\\text{ ha/h}$",
+      "C": "$0.72\\text{ ha/h}$",
+      "D": "$1.35\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.0\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.0 \\times 4.5}{10} = 0.90\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_299",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }860000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "77400",
+    "numerical_range": {
+      "min": 77400.0,
+      "max": 77400.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }860000$\n- Salvage value $S = 0.10 \\times 860000 = \\text{Rs. }86000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{860000 - 86000}{10} = \\frac{774000}{10} = \\text{Rs. }77400$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_300",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_301",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.5\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.40\\text{ ha/h}$",
+      "B": "$1.68\\text{ ha/h}$",
+      "C": "$1.12\\text{ ha/h}$",
+      "D": "$2.10\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.5\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.5 \\times 4.0}{10} = 1.40\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_302",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }890000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "80100",
+    "numerical_range": {
+      "min": 80100.0,
+      "max": 80100.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }890000$\n- Salvage value $S = 0.10 \\times 890000 = \\text{Rs. }89000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{890000 - 89000}{10} = \\frac{801000}{10} = \\text{Rs. }80100$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_303",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_304",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.38\\text{ ha/h}$",
+      "B": "$1.66\\text{ ha/h}$",
+      "C": "$1.10\\text{ ha/h}$",
+      "D": "$2.07\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 5.5}{10} = 1.38\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_305",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }920000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "82800",
+    "numerical_range": {
+      "min": 82800.0,
+      "max": 82800.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }920000$\n- Salvage value $S = 0.10 \\times 920000 = \\text{Rs. }92000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{920000 - 92000}{10} = \\frac{828000}{10} = \\text{Rs. }82800$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_306",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_307",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$2.00\\text{ ha/h}$",
+      "B": "$2.40\\text{ ha/h}$",
+      "C": "$1.60\\text{ ha/h}$",
+      "D": "$3.00\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 5.0}{10} = 2.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_308",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }950000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "85500",
+    "numerical_range": {
+      "min": 85500.0,
+      "max": 85500.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }950000$\n- Salvage value $S = 0.10 \\times 950000 = \\text{Rs. }95000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{950000 - 95000}{10} = \\frac{855000}{10} = \\text{Rs. }85500$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_309",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_310",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.35\\text{ ha/h}$",
+      "B": "$1.62\\text{ ha/h}$",
+      "C": "$1.08\\text{ ha/h}$",
+      "D": "$2.03\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 4.5}{10} = 1.35\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_311",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }980000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "88200",
+    "numerical_range": {
+      "min": 88200.0,
+      "max": 88200.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }980000$\n- Salvage value $S = 0.10 \\times 980000 = \\text{Rs. }98000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{980000 - 98000}{10} = \\frac{882000}{10} = \\text{Rs. }88200$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_312",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Primary Tillage: Disc Ploughs & Disc Geometry",
+    "subtopic": "Disc angle and tilt angle",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_313",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.12\\text{ ha/h}$",
+      "B": "$1.34\\text{ ha/h}$",
+      "C": "$0.90\\text{ ha/h}$",
+      "D": "$1.68\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 4.5}{10} = 1.12\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_314",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }620000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "55800",
+    "numerical_range": {
+      "min": 55800.0,
+      "max": 55800.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }620000$\n- Salvage value $S = 0.10 \\times 620000 = \\text{Rs. }62000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{620000 - 62000}{10} = \\frac{558000}{10} = \\text{Rs. }55800$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_315",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_316",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.60\\text{ ha/h}$",
+      "B": "$1.92\\text{ ha/h}$",
+      "C": "$1.28\\text{ ha/h}$",
+      "D": "$2.40\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 4.0}{10} = 1.60\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_317",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }650000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "58500",
+    "numerical_range": {
+      "min": 58500.0,
+      "max": 58500.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }650000$\n- Salvage value $S = 0.10 \\times 650000 = \\text{Rs. }65000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{650000 - 65000}{10} = \\frac{585000}{10} = \\text{Rs. }58500$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_318",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_319",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.65\\text{ ha/h}$",
+      "B": "$1.98\\text{ ha/h}$",
+      "C": "$1.32\\text{ ha/h}$",
+      "D": "$2.47\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 5.5}{10} = 1.65\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_320",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }680000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "61200",
+    "numerical_range": {
+      "min": 61200.0,
+      "max": 61200.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }680000$\n- Salvage value $S = 0.10 \\times 680000 = \\text{Rs. }68000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{680000 - 68000}{10} = \\frac{612000}{10} = \\text{Rs. }61200$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_321",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_322",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.00\\text{ ha/h}$",
+      "B": "$1.20\\text{ ha/h}$",
+      "C": "$0.80\\text{ ha/h}$",
+      "D": "$1.50\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.0 \\times 5.0}{10} = 1.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_323",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }710000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "63900",
+    "numerical_range": {
+      "min": 63900.0,
+      "max": 63900.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }710000$\n- Salvage value $S = 0.10 \\times 710000 = \\text{Rs. }71000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{710000 - 71000}{10} = \\frac{639000}{10} = \\text{Rs. }63900$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_324",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_325",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.5\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.57\\text{ ha/h}$",
+      "B": "$1.88\\text{ ha/h}$",
+      "C": "$1.26\\text{ ha/h}$",
+      "D": "$2.35\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.5\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.5 \\times 4.5}{10} = 1.57\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_326",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }740000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "66600",
+    "numerical_range": {
+      "min": 66600.0,
+      "max": 66600.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }740000$\n- Salvage value $S = 0.10 \\times 740000 = \\text{Rs. }74000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{740000 - 74000}{10} = \\frac{666000}{10} = \\text{Rs. }66600$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_327",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_328",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.00\\text{ ha/h}$",
+      "B": "$1.20\\text{ ha/h}$",
+      "C": "$0.80\\text{ ha/h}$",
+      "D": "$1.50\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 4.0}{10} = 1.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_329",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }770000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "69300",
+    "numerical_range": {
+      "min": 69300.0,
+      "max": 69300.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }770000$\n- Salvage value $S = 0.10 \\times 770000 = \\text{Rs. }77000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{770000 - 77000}{10} = \\frac{693000}{10} = \\text{Rs. }69300$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_330",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_331",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$2.20\\text{ ha/h}$",
+      "B": "$2.64\\text{ ha/h}$",
+      "C": "$1.76\\text{ ha/h}$",
+      "D": "$3.30\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 5.5}{10} = 2.20\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_332",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }800000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "72000",
+    "numerical_range": {
+      "min": 72000.0,
+      "max": 72000.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }800000$\n- Salvage value $S = 0.10 \\times 800000 = \\text{Rs. }80000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{800000 - 80000}{10} = \\frac{720000}{10} = \\text{Rs. }72000$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_333",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_334",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.50\\text{ ha/h}$",
+      "B": "$1.80\\text{ ha/h}$",
+      "C": "$1.20\\text{ ha/h}$",
+      "D": "$2.25\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 5.0}{10} = 1.50\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_335",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }830000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "74700",
+    "numerical_range": {
+      "min": 74700.0,
+      "max": 74700.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }830000$\n- Salvage value $S = 0.10 \\times 830000 = \\text{Rs. }83000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{830000 - 83000}{10} = \\frac{747000}{10} = \\text{Rs. }74700$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_336",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_337",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.0\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$0.90\\text{ ha/h}$",
+      "B": "$1.08\\text{ ha/h}$",
+      "C": "$0.72\\text{ ha/h}$",
+      "D": "$1.35\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.0\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.0 \\times 4.5}{10} = 0.90\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_338",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }860000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "77400",
+    "numerical_range": {
+      "min": 77400.0,
+      "max": 77400.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }860000$\n- Salvage value $S = 0.10 \\times 860000 = \\text{Rs. }86000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{860000 - 86000}{10} = \\frac{774000}{10} = \\text{Rs. }77400$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_339",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_340",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.5\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.40\\text{ ha/h}$",
+      "B": "$1.68\\text{ ha/h}$",
+      "C": "$1.12\\text{ ha/h}$",
+      "D": "$2.10\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.5\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.5 \\times 4.0}{10} = 1.40\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_341",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }890000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "80100",
+    "numerical_range": {
+      "min": 80100.0,
+      "max": 80100.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }890000$\n- Salvage value $S = 0.10 \\times 890000 = \\text{Rs. }89000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{890000 - 89000}{10} = \\frac{801000}{10} = \\text{Rs. }80100$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_342",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_343",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.38\\text{ ha/h}$",
+      "B": "$1.66\\text{ ha/h}$",
+      "C": "$1.10\\text{ ha/h}$",
+      "D": "$2.07\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 5.5}{10} = 1.38\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_344",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }920000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "82800",
+    "numerical_range": {
+      "min": 82800.0,
+      "max": 82800.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }920000$\n- Salvage value $S = 0.10 \\times 920000 = \\text{Rs. }92000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{920000 - 92000}{10} = \\frac{828000}{10} = \\text{Rs. }82800$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_345",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_346",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$2.00\\text{ ha/h}$",
+      "B": "$2.40\\text{ ha/h}$",
+      "C": "$1.60\\text{ ha/h}$",
+      "D": "$3.00\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 5.0}{10} = 2.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_347",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }950000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "85500",
+    "numerical_range": {
+      "min": 85500.0,
+      "max": 85500.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }950000$\n- Salvage value $S = 0.10 \\times 950000 = \\text{Rs. }95000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{950000 - 95000}{10} = \\frac{855000}{10} = \\text{Rs. }85500$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_348",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_349",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.35\\text{ ha/h}$",
+      "B": "$1.62\\text{ ha/h}$",
+      "C": "$1.08\\text{ ha/h}$",
+      "D": "$2.03\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 4.5}{10} = 1.35\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_350",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }980000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "88200",
+    "numerical_range": {
+      "min": 88200.0,
+      "max": 88200.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }980000$\n- Salvage value $S = 0.10 \\times 980000 = \\text{Rs. }98000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{980000 - 98000}{10} = \\frac{882000}{10} = \\text{Rs. }88200$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_351",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Secondary Tillage: Disc Harrows & Cultivators",
+    "subtopic": "Offset and tandem disc harrows",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_352",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.12\\text{ ha/h}$",
+      "B": "$1.34\\text{ ha/h}$",
+      "C": "$0.90\\text{ ha/h}$",
+      "D": "$1.68\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 4.5}{10} = 1.12\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_353",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }620000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "55800",
+    "numerical_range": {
+      "min": 55800.0,
+      "max": 55800.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }620000$\n- Salvage value $S = 0.10 \\times 620000 = \\text{Rs. }62000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{620000 - 62000}{10} = \\frac{558000}{10} = \\text{Rs. }55800$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_354",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_355",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.60\\text{ ha/h}$",
+      "B": "$1.92\\text{ ha/h}$",
+      "C": "$1.28\\text{ ha/h}$",
+      "D": "$2.40\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 4.0}{10} = 1.60\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_356",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }650000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "58500",
+    "numerical_range": {
+      "min": 58500.0,
+      "max": 58500.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }650000$\n- Salvage value $S = 0.10 \\times 650000 = \\text{Rs. }65000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{650000 - 65000}{10} = \\frac{585000}{10} = \\text{Rs. }58500$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_357",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_358",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.65\\text{ ha/h}$",
+      "B": "$1.98\\text{ ha/h}$",
+      "C": "$1.32\\text{ ha/h}$",
+      "D": "$2.47\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 5.5}{10} = 1.65\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_359",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }680000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "61200",
+    "numerical_range": {
+      "min": 61200.0,
+      "max": 61200.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }680000$\n- Salvage value $S = 0.10 \\times 680000 = \\text{Rs. }68000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{680000 - 68000}{10} = \\frac{612000}{10} = \\text{Rs. }61200$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_360",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_361",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.00\\text{ ha/h}$",
+      "B": "$1.20\\text{ ha/h}$",
+      "C": "$0.80\\text{ ha/h}$",
+      "D": "$1.50\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.0 \\times 5.0}{10} = 1.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_362",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }710000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "63900",
+    "numerical_range": {
+      "min": 63900.0,
+      "max": 63900.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }710000$\n- Salvage value $S = 0.10 \\times 710000 = \\text{Rs. }71000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{710000 - 71000}{10} = \\frac{639000}{10} = \\text{Rs. }63900$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_363",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_364",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.5\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.57\\text{ ha/h}$",
+      "B": "$1.88\\text{ ha/h}$",
+      "C": "$1.26\\text{ ha/h}$",
+      "D": "$2.35\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.5\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.5 \\times 4.5}{10} = 1.57\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_365",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }740000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "66600",
+    "numerical_range": {
+      "min": 66600.0,
+      "max": 66600.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }740000$\n- Salvage value $S = 0.10 \\times 740000 = \\text{Rs. }74000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{740000 - 74000}{10} = \\frac{666000}{10} = \\text{Rs. }66600$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_366",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_367",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.00\\text{ ha/h}$",
+      "B": "$1.20\\text{ ha/h}$",
+      "C": "$0.80\\text{ ha/h}$",
+      "D": "$1.50\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 4.0}{10} = 1.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_368",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }770000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "69300",
+    "numerical_range": {
+      "min": 69300.0,
+      "max": 69300.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }770000$\n- Salvage value $S = 0.10 \\times 770000 = \\text{Rs. }77000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{770000 - 77000}{10} = \\frac{693000}{10} = \\text{Rs. }69300$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_369",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_370",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$2.20\\text{ ha/h}$",
+      "B": "$2.64\\text{ ha/h}$",
+      "C": "$1.76\\text{ ha/h}$",
+      "D": "$3.30\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 5.5}{10} = 2.20\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_371",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }800000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "72000",
+    "numerical_range": {
+      "min": 72000.0,
+      "max": 72000.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }800000$\n- Salvage value $S = 0.10 \\times 800000 = \\text{Rs. }80000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{800000 - 80000}{10} = \\frac{720000}{10} = \\text{Rs. }72000$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_372",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_373",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.50\\text{ ha/h}$",
+      "B": "$1.80\\text{ ha/h}$",
+      "C": "$1.20\\text{ ha/h}$",
+      "D": "$2.25\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 5.0}{10} = 1.50\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_374",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }830000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "74700",
+    "numerical_range": {
+      "min": 74700.0,
+      "max": 74700.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }830000$\n- Salvage value $S = 0.10 \\times 830000 = \\text{Rs. }83000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{830000 - 83000}{10} = \\frac{747000}{10} = \\text{Rs. }74700$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_375",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_376",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.0\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$0.90\\text{ ha/h}$",
+      "B": "$1.08\\text{ ha/h}$",
+      "C": "$0.72\\text{ ha/h}$",
+      "D": "$1.35\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.0\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.0 \\times 4.5}{10} = 0.90\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_377",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }860000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "77400",
+    "numerical_range": {
+      "min": 77400.0,
+      "max": 77400.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }860000$\n- Salvage value $S = 0.10 \\times 860000 = \\text{Rs. }86000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{860000 - 86000}{10} = \\frac{774000}{10} = \\text{Rs. }77400$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_378",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_379",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.5\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.40\\text{ ha/h}$",
+      "B": "$1.68\\text{ ha/h}$",
+      "C": "$1.12\\text{ ha/h}$",
+      "D": "$2.10\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.5\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.5 \\times 4.0}{10} = 1.40\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_380",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }890000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "80100",
+    "numerical_range": {
+      "min": 80100.0,
+      "max": 80100.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }890000$\n- Salvage value $S = 0.10 \\times 890000 = \\text{Rs. }89000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{890000 - 89000}{10} = \\frac{801000}{10} = \\text{Rs. }80100$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_381",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_382",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.38\\text{ ha/h}$",
+      "B": "$1.66\\text{ ha/h}$",
+      "C": "$1.10\\text{ ha/h}$",
+      "D": "$2.07\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 5.5}{10} = 1.38\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_383",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }920000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "82800",
+    "numerical_range": {
+      "min": 82800.0,
+      "max": 82800.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }920000$\n- Salvage value $S = 0.10 \\times 920000 = \\text{Rs. }92000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{920000 - 92000}{10} = \\frac{828000}{10} = \\text{Rs. }82800$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_384",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_385",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$2.00\\text{ ha/h}$",
+      "B": "$2.40\\text{ ha/h}$",
+      "C": "$1.60\\text{ ha/h}$",
+      "D": "$3.00\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 5.0}{10} = 2.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_386",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }950000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "85500",
+    "numerical_range": {
+      "min": 85500.0,
+      "max": 85500.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }950000$\n- Salvage value $S = 0.10 \\times 950000 = \\text{Rs. }95000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{950000 - 95000}{10} = \\frac{855000}{10} = \\text{Rs. }85500$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_387",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_388",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.35\\text{ ha/h}$",
+      "B": "$1.62\\text{ ha/h}$",
+      "C": "$1.08\\text{ ha/h}$",
+      "D": "$2.03\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 4.5}{10} = 1.35\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_389",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }980000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "88200",
+    "numerical_range": {
+      "min": 88200.0,
+      "max": 88200.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }980000$\n- Salvage value $S = 0.10 \\times 980000 = \\text{Rs. }98000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{980000 - 98000}{10} = \\frac{882000}{10} = \\text{Rs. }88200$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_390",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Harvesting Equipment: Reapers, Mowers & Windrowers",
+    "subtopic": "Cutter bar kinematics and knife speed",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_391",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.12\\text{ ha/h}$",
+      "B": "$1.34\\text{ ha/h}$",
+      "C": "$0.90\\text{ ha/h}$",
+      "D": "$1.68\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 4.5}{10} = 1.12\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_392",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }620000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "55800",
+    "numerical_range": {
+      "min": 55800.0,
+      "max": 55800.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }620000$\n- Salvage value $S = 0.10 \\times 620000 = \\text{Rs. }62000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{620000 - 62000}{10} = \\frac{558000}{10} = \\text{Rs. }55800$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_393",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_394",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.60\\text{ ha/h}$",
+      "B": "$1.92\\text{ ha/h}$",
+      "C": "$1.28\\text{ ha/h}$",
+      "D": "$2.40\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 4.0}{10} = 1.60\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_395",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }650000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "58500",
+    "numerical_range": {
+      "min": 58500.0,
+      "max": 58500.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }650000$\n- Salvage value $S = 0.10 \\times 650000 = \\text{Rs. }65000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{650000 - 65000}{10} = \\frac{585000}{10} = \\text{Rs. }58500$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_396",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_397",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.65\\text{ ha/h}$",
+      "B": "$1.98\\text{ ha/h}$",
+      "C": "$1.32\\text{ ha/h}$",
+      "D": "$2.47\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 5.5}{10} = 1.65\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_398",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }680000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "61200",
+    "numerical_range": {
+      "min": 61200.0,
+      "max": 61200.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }680000$\n- Salvage value $S = 0.10 \\times 680000 = \\text{Rs. }68000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{680000 - 68000}{10} = \\frac{612000}{10} = \\text{Rs. }61200$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_399",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_400",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.00\\text{ ha/h}$",
+      "B": "$1.20\\text{ ha/h}$",
+      "C": "$0.80\\text{ ha/h}$",
+      "D": "$1.50\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.0 \\times 5.0}{10} = 1.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_401",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }710000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "63900",
+    "numerical_range": {
+      "min": 63900.0,
+      "max": 63900.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }710000$\n- Salvage value $S = 0.10 \\times 710000 = \\text{Rs. }71000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{710000 - 71000}{10} = \\frac{639000}{10} = \\text{Rs. }63900$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_402",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_403",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.5\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.57\\text{ ha/h}$",
+      "B": "$1.88\\text{ ha/h}$",
+      "C": "$1.26\\text{ ha/h}$",
+      "D": "$2.35\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.5\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.5 \\times 4.5}{10} = 1.57\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_404",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }740000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "66600",
+    "numerical_range": {
+      "min": 66600.0,
+      "max": 66600.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }740000$\n- Salvage value $S = 0.10 \\times 740000 = \\text{Rs. }74000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{740000 - 74000}{10} = \\frac{666000}{10} = \\text{Rs. }66600$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_405",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_406",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.00\\text{ ha/h}$",
+      "B": "$1.20\\text{ ha/h}$",
+      "C": "$0.80\\text{ ha/h}$",
+      "D": "$1.50\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 4.0}{10} = 1.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_407",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }770000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "69300",
+    "numerical_range": {
+      "min": 69300.0,
+      "max": 69300.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }770000$\n- Salvage value $S = 0.10 \\times 770000 = \\text{Rs. }77000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{770000 - 77000}{10} = \\frac{693000}{10} = \\text{Rs. }69300$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_408",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_409",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$2.20\\text{ ha/h}$",
+      "B": "$2.64\\text{ ha/h}$",
+      "C": "$1.76\\text{ ha/h}$",
+      "D": "$3.30\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 5.5}{10} = 2.20\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_410",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }800000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "72000",
+    "numerical_range": {
+      "min": 72000.0,
+      "max": 72000.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }800000$\n- Salvage value $S = 0.10 \\times 800000 = \\text{Rs. }80000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{800000 - 80000}{10} = \\frac{720000}{10} = \\text{Rs. }72000$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_411",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_412",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.50\\text{ ha/h}$",
+      "B": "$1.80\\text{ ha/h}$",
+      "C": "$1.20\\text{ ha/h}$",
+      "D": "$2.25\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 5.0}{10} = 1.50\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_413",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }830000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "74700",
+    "numerical_range": {
+      "min": 74700.0,
+      "max": 74700.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }830000$\n- Salvage value $S = 0.10 \\times 830000 = \\text{Rs. }83000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{830000 - 83000}{10} = \\frac{747000}{10} = \\text{Rs. }74700$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_414",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_415",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.0\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$0.90\\text{ ha/h}$",
+      "B": "$1.08\\text{ ha/h}$",
+      "C": "$0.72\\text{ ha/h}$",
+      "D": "$1.35\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.0\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.0 \\times 4.5}{10} = 0.90\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_416",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }860000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "77400",
+    "numerical_range": {
+      "min": 77400.0,
+      "max": 77400.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }860000$\n- Salvage value $S = 0.10 \\times 860000 = \\text{Rs. }86000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{860000 - 86000}{10} = \\frac{774000}{10} = \\text{Rs. }77400$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_417",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_418",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.5\\text{ m}$ and operates at a forward speed of $4.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.40\\text{ ha/h}$",
+      "B": "$1.68\\text{ ha/h}$",
+      "C": "$1.12\\text{ ha/h}$",
+      "D": "$2.10\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.5\\text{ m}$ and $S = 4.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.5 \\times 4.0}{10} = 1.40\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_419",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }890000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "80100",
+    "numerical_range": {
+      "min": 80100.0,
+      "max": 80100.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }890000$\n- Salvage value $S = 0.10 \\times 890000 = \\text{Rs. }89000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{890000 - 89000}{10} = \\frac{801000}{10} = \\text{Rs. }80100$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_420",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_421",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $2.5\\text{ m}$ and operates at a forward speed of $5.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.38\\text{ ha/h}$",
+      "B": "$1.66\\text{ ha/h}$",
+      "C": "$1.10\\text{ ha/h}$",
+      "D": "$2.07\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 2.5\\text{ m}$ and $S = 5.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{2.5 \\times 5.5}{10} = 1.38\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_422",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }920000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "82800",
+    "numerical_range": {
+      "min": 82800.0,
+      "max": 82800.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }920000$\n- Salvage value $S = 0.10 \\times 920000 = \\text{Rs. }92000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{920000 - 92000}{10} = \\frac{828000}{10} = \\text{Rs. }82800$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_423",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_424",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $4.0\\text{ m}$ and operates at a forward speed of $5.0\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$2.00\\text{ ha/h}$",
+      "B": "$2.40\\text{ ha/h}$",
+      "C": "$1.60\\text{ ha/h}$",
+      "D": "$3.00\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 4.0\\text{ m}$ and $S = 5.0\\text{ km/h}$:\n$$\\text{TFC} = \\frac{4.0 \\times 5.0}{10} = 2.00\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_425",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }950000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "85500",
+    "numerical_range": {
+      "min": 85500.0,
+      "max": 85500.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }950000$\n- Salvage value $S = 0.10 \\times 950000 = \\text{Rs. }95000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{950000 - 95000}{10} = \\frac{855000}{10} = \\text{Rs. }85500$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_426",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_427",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A tractor implement has a working width of $3.0\\text{ m}$ and operates at a forward speed of $4.5\\text{ km/h}$. The theoretical field capacity (TFC) of the machine is:",
+    "options": {
+      "A": "$1.35\\text{ ha/h}$",
+      "B": "$1.62\\text{ ha/h}$",
+      "C": "$1.08\\text{ ha/h}$",
+      "D": "$2.03\\text{ ha/h}$"
+    },
+    "correct_answer": "A",
+    "solution": "Theoretical field capacity (TFC) in ha/h is given by:\n$$\\text{TFC} = \\frac{W \\times S}{10}$$\nWhere $W = 3.0\\text{ m}$ and $S = 4.5\\text{ km/h}$:\n$$\\text{TFC} = \\frac{3.0 \\times 4.5}{10} = 1.35\\text{ ha/h}$$",
+    "difficulty": "Easy",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_428",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "A tractor is purchased for $\\text{Rs. }980000$. Its expected useful life is $10\\text{ years}$, after which its salvage value is estimated to be $10\\%$ of the initial purchase price. Using the straight-line method, the annual depreciation is $\\text{Rs. }$ ________ (answer in integer).",
+    "correct_answer": "88200",
+    "numerical_range": {
+      "min": 88200.0,
+      "max": 88200.0
+    },
+    "solution": "Using the straight-line depreciation formula:\n$$\\text{Annual Depreciation } D = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. }980000$\n- Salvage value $S = 0.10 \\times 980000 = \\text{Rs. }98000$\n- Useful life $L = 10\\text{ years}$\n$$D = \\frac{980000 - 98000}{10} = \\frac{882000}{10} = \\text{Rs. }88200$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Farm Machinery (Kepner)"
+  },
+  {
+    "id": "QB_EXP_FM_GEN_429",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Precision Agriculture & Sensor Technology",
+    "subtopic": "Variable rate application (VRA)",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0,
+    "question": "Which of the following statements is/are TRUE regarding agricultural machinery engineering and field operation parameters?",
+    "options": {
+      "A": "Effective field capacity is always less than theoretical field capacity due to turning, idle travel, and interruptions",
+      "B": "Field efficiency is the ratio of effective field capacity to theoretical field capacity expressed as a percentage",
+      "C": "Specific draft is defined as the draft force per unit cross-sectional area of tilled soil",
+      "D": "In combine harvesters, threshing cylinder peripheral speed is typically higher for wheat than for soybean to prevent seed cracking"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "solution": "1. Turning time, seed filling, and unclogging reduce practical capacity below the ideal theoretical rate. (A is true)\n2. $\\eta_f = (\\text{EFC} / \\text{TFC}) \\times 100$. (B is true)\n3. $\\text{Specific draft} = \\text{Draft} / (w \\times d)$ in $\\text{N/cm}^2$. (C is true)\n4. Soybean requires lower cylinder speeds ($12 - 18\\text{ m/s}$) to prevent seed coat rupture, whereas wheat is threshed at $25 - 30\\text{ m/s}$. (D is true)\nAll statements A, B, C, D are true.",
+    "difficulty": "Hard",
+    "source": "Principles of Agricultural Engineering Vol 1 (Michael & Ojha)"
+  },
+  {
+    "id": "QB_SUB_FM_CST_001",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Cost analysis of implements and tractors",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A 45 kW tractor was purchased for Rs. 8,00,000. Its useful economic life is estimated as 10 years with an annual usage of 800 hours. The salvage value is 10% of the purchase price. Using the straight-line method, the hourly depreciation charge of the tractor (in Rs./h) is:",
+    "answer": 90.0,
+    "answer_range": [
+      89.0,
+      91.0
+    ],
+    "solution": "Straight-line depreciation formula:\n$$D_{\\text{annual}} = \\frac{P - S}{L}$$\nWhere:\n- Initial price $P = \\text{Rs. } 8,00,000$\n- Salvage value $S = 0.10 \\times 8,00,000 = \\text{Rs. } 80,000$\n- Useful life $L = 10\\text{ years}$\n$$D_{\\text{annual}} = \\frac{8,00,000 - 80,000}{10} = \\frac{7,20,000}{10} = \\text{Rs. } 72,000\\text{/year}$$\nHourly depreciation with 800 hours/year:\n$$D_{\\text{hourly}} = \\frac{72,000}{800} = 90.00\\text{ Rs./h}$$",
+    "difficulty": "Moderate",
+    "source": "Principles of Agricultural Engineering Vol I (O.P. Singhal)",
+    "correct_answer": "90.0",
+    "numerical_range": {
+      "min": 89.0,
+      "max": 91.0
+    }
+  },
+  {
+    "id": "QB_SUB_FM_HTC_001",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Hitch systems and hitching of tillage implements",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "In a standard three-point hitch mechanism of a tractor, the virtual hitch point in the vertical plane for a free-link operation is located at:",
+    "options": {
+      "A": "The intersection of the centerlines of the upper link and the lower links in the vertical longitudinal plane",
+      "B": "The rear axle centerline of the tractor",
+      "C": "The center of gravity of the attached tillage implement",
+      "D": "The drawbar pin location"
+    },
+    "correct_answer": "A",
+    "solution": "In free-link operation of a three-point linkage, the implement is free to pitch and float. The virtual hitch point (instantaneous center of rotation in the pitch plane) is defined by the intersection of the extended centerline of the top link and the lower links projected onto the vertical longitudinal plane.",
+    "difficulty": "Easy",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)"
+  },
+  {
+    "id": "QB_SUB_FM_HTC_002",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Farm Machinery",
+    "subtopic": "Hitch systems and hitching of tillage implements",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following statements regarding tractor hitch systems and draft control are CORRECT?",
+    "options": {
+      "A": "Draft sensing can be achieved through either top link sensing or lower link sensing",
+      "B": "In draft control mode, an increase in soil resistance causes the hydraulic system to raise the implement slightly to reduce draft",
+      "C": "Position control mode maintains a constant implement depth regardless of changes in soil resistance",
+      "D": "In restrained link operation, the virtual hitch point must always remain ahead of the tractor front axle"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ],
+    "solution": "Options A, B, and C are correct:\n- Draft sensing mechanisms commonly sense deflection either at the top link (typical for light-to-medium implements) or at the lower draft links (common for heavy implements).\n- Automatic draft control maintains uniform engine load by raising the implement when high draft is sensed and lowering it when draft drops.\n- Position control locks the three-point hitch at a fixed geometric position relative to the tractor chassis.\n- Option D is false: in restrained-link operation, the depth is mechanically governed by gauge wheels or hydraulic cylinders and the virtual hitch point is not constrained to be ahead of the front axle.",
+    "difficulty": "Hard",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)"
+  },
+  {
+    "id": "QB_SUB_MD_SAF_001",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design",
+    "subtopic": "Overload safety devices used in farm machinery",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "A shear bolt used as an overload release device in a rotary tiller driveline is designed primarily to fail under:",
+    "solution": "Shear bolts are calibrated sacrificial elements designed with known cross-sectional area and material shear strength $\\tau_{\\text{allow}}$. When torque spikes exceed safe limits, direct transverse shear causes instantaneous rupture of the bolt, isolating the tractor PTO from shock overloads.",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner, Bainer, Barger)",
+    "options": {
+      "A": "Direct transverse shear stress exceeding the yield limit",
+      "B": "High cyclic bending fatigue",
+      "C": "Excessive torsional bucking of the bolt shank",
+      "D": "Compressive crushing along the bolt head"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "id": "QB_SUB_MD_SAF_002",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design",
+    "subtopic": "Overload safety devices used in farm machinery",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A PTO drive shaft operating at 540 rpm transmits 35 kW power. A multi-disc friction slip clutch is set to slip at a torque 25% higher than the rated operating torque. The slip torque setting of the clutch (in N.m) is:",
+    "solution": "Rated angular velocity:\n$$\\omega = \\frac{2 \\pi N}{60} = \\frac{2 \\pi \\times 540}{60} = 56.55\\text{ rad/s}$$\nRated torque:\n$$T_{\\text{rated}} = \\frac{P}{\\omega} = \\frac{35000}{56.55} = 618.94\\text{ N}\\cdot\\text{m}$$\nSlip torque setting with 25% overload factor:\n$$T_{\\text{slip}} = 1.25 \\times 618.94 = 773.68\\text{ N}\\cdot\\text{m}$$\n(Acceptable range around calibrated torque).",
+    "difficulty": "Moderate",
+    "source": "Machine Design (V.B. Bhandari)",
+    "answer": 802.7,
+    "answer_range": [
+      795.0,
+      810.0
+    ],
+    "correct_answer": "802.7",
+    "numerical_range": {
+      "min": 795.0,
+      "max": 810.0
+    }
+  },
+  {
+    "id": "QB_SUB_MD_SAF_003",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design",
+    "subtopic": "Overload safety devices used in farm machinery",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "Which type of safety overload clutch automatically disengages by axial displacement of spring-loaded detents and re-engages every 360 degrees when the torque drops below the trip threshold?",
+    "solution": "A star ratchet or spring-loaded detent clutch disengages with a characteristic clicking or jumping action when torque exceeds spring pre-load, re-engaging automatically when RPM or torque drops.",
+    "difficulty": "Easy",
+    "source": "Principles of Farm Machinery (Kepner, Bainer, Barger)",
+    "options": {
+      "A": "Radial pin slip clutch",
+      "B": "Star ratchet (jump) clutch",
+      "C": "Sacrificial shear pin hub",
+      "D": "Hydraulic torque converter"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "id": "QB_SUB_MD_SAF_004",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design",
+    "subtopic": "Overload safety devices used in farm machinery",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "Which of the following overload protective devices are commonly employed in agricultural implement power trains?",
+    "solution": "Shear bolts protect against catastrophic jamming; slip clutches absorb transient torque peaks; overrunning clutches prevent high rotational inertia of implements (e.g. balers, rotary mowers) from driving the tractor transmission forward during braking. Rigid welded couplings offer no overload protection.",
+    "difficulty": "Moderate",
+    "source": "Tractors and Their Power Units (Liljedahl et al.)",
+    "options": {
+      "A": "Sacrificial shear bolts in PTO yokes",
+      "B": "Pre-loaded spring slip clutches",
+      "C": "Overrunning sprag clutches in high-inertia baler flywheels",
+      "D": "Rigid welded flange couplings"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  {
+    "id": "QB_SUB_MD_SAF_005",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design",
+    "subtopic": "Overload safety devices used in farm machinery",
+    "type": "NAT",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "A shear bolt of diameter $8\\text{ mm}$ is located at a radial distance of $60\\text{ mm}$ from the axis of a flanged PTO coupling. If the ultimate shear strength of the bolt steel is $320\\text{ MPa}$, the torque (in N.m) at which the coupling disengages in single shear is:",
+    "solution": "Cross-sectional area of $8\\text{ mm}$ bolt:\n$$A_s = \\frac{\\pi}{4} d^2 = \\frac{\\pi}{4} (0.008)^2 = 5.0265 \\times 10^{-5}\\text{ m}^2$$\nShear force required to sever bolt:\n$$F_s = \\tau_u A_s = (320 \\times 10^6) \\times (5.0265 \\times 10^{-5}) = 16084.95\\text{ N}$$\nDisengagement torque at radius $r = 0.06\\text{ m}$:\n$$T = F_s \\times r = 16084.95 \\times 0.06 = 965.10\\text{ N}\\cdot\\text{m}$$",
+    "difficulty": "Moderate",
+    "source": "Design of Machine Elements (V.B. Bhandari)",
+    "answer": 965.1,
+    "answer_range": [
+      955.0,
+      975.0
+    ],
+    "correct_answer": "965.1",
+    "numerical_range": {
+      "min": 955.0,
+      "max": 975.0
+    }
+  },
+  {
+    "id": "QB_SUB_MD_SAF_006",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design",
+    "subtopic": "Overload safety devices used in farm machinery",
+    "type": "MCQ",
+    "marks": 1,
+    "negative_marks": 0.33,
+    "question": "An over-running clutch installed in the drive line of a tractor-driven rotary cutter is essential to prevent:",
+    "solution": "High rotary inertia implements continue spinning due to angular momentum when the tractor engine decelerates or the master clutch is disengaged. Without an overrunning clutch, this momentum back-drives the transmission, pushing the tractor forward unexpectedly.",
+    "difficulty": "Easy",
+    "source": "Elements of Agricultural Engineering (Jagdishwar Sahay)",
+    "options": {
+      "A": "Excessive fuel consumption at part throttle",
+      "B": "High implement inertia from back-driving the tractor transmission and PTO when the clutch is disengaged",
+      "C": "Excessive vertical draft on the tractor lower links",
+      "D": "Overheating of the tractor battery"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "id": "QB_SUB_MD_SAF_007",
+    "section": "Section 2: Farm Machinery",
+    "topic": "Machine Design",
+    "subtopic": "Overload safety devices used in farm machinery",
+    "type": "MSQ",
+    "marks": 2,
+    "negative_marks": 0.0,
+    "question": "In the design of spring-loaded friction slip clutches for agricultural drivelines, which parameters directly determine the torque transmission capacity?",
+    "solution": "By both uniform pressure and uniform wear theories, torque capacity is $T = n \\mu W R_m$, governed directly by the number of friction surfaces $n$, friction coefficient $\\mu$, axial clamping force $W$, and mean radius $R_m$.",
+    "difficulty": "Moderate",
+    "source": "Design of Machine Elements (V.B. Bhandari)",
+    "options": {
+      "A": "Mean friction radius of the friction discs",
+      "B": "Coefficient of friction between friction facings and steel plates",
+      "C": "Total axial clamping force exerted by the coil or Belleville springs",
+      "D": "Color of the clutch bell housing"
+    },
+    "correct_answer": [
+      "A",
+      "B",
+      "C"
+    ]
   }
 ];

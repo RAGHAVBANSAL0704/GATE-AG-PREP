@@ -21,7 +21,9 @@ export default function PracticeHub({
   currentStudent,
   onRequireAuth,
   mistakeFilterIds,
-  onClearMistakeFilter
+  onClearMistakeFilter,
+  isDistractionFree = false,
+  onDistractionFreeChange
 }) {
   const [currentSubTab, setCurrentSubTab] = useState(activeSubTab);
 
@@ -39,7 +41,7 @@ export default function PracticeHub({
   };
 
   const subTabs = [
-    { id: 'qbank', label: 'Question Bank', count: '1,915 Qs', icon: Database },
+    { id: 'qbank', label: 'Question Bank', count: '8,297 Qs', icon: Database },
     { id: 'practice', label: 'PYQ Pool', count: '1,324 Qs', icon: Layers },
     { id: 'custompractice', label: 'Custom Pool', count: '3,250 Qs', icon: Sparkles },
     { id: 'customtest', label: 'Speed Test Creator', icon: Sliders },
@@ -60,62 +62,64 @@ export default function PracticeHub({
   return (
     <div className="space-y-6 animate-in fade-in duration-200">
       
-      {/* Sleek Header & Segment Switcher */}
-      <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-5 sm:p-6 shadow-sm">
-        <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-4">
-          <div className="flex items-center gap-3.5">
-            <div className="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0 shadow-xs">
-              <Target className="w-6 h-6" />
+      {/* Sleek Header & Segment Switcher (Hidden in Distraction-Free Fullscreen Practice) */}
+      {!isDistractionFree && (
+        <div className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 p-5 sm:p-6 shadow-sm">
+          <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-4">
+            <div className="flex items-center gap-3.5">
+              <div className="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0 shadow-xs">
+                <Target className="w-6 h-6" />
+              </div>
+              <div>
+                <h1 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
+                  Practice Hub
+                </h1>
+              </div>
             </div>
-            <div>
-              <h1 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
-                Practice Hub
-              </h1>
-            </div>
-          </div>
 
-          {/* Segment Switcher */}
-          <div className="flex flex-wrap items-center gap-1.5 bg-slate-100 dark:bg-slate-950 p-1.5 rounded-2xl border border-slate-200 dark:border-slate-800 w-full xl:w-auto max-w-full">
-            {subTabs.map((tab) => {
-              const Icon = tab.icon;
-              const isActive = currentSubTab === tab.id;
-              return (
-                <button
-                  key={tab.id}
-                  onClick={() => handleTabClick(tab.id)}
-                  className={`flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-2 rounded-xl text-xs font-bold transition cursor-pointer flex-1 sm:flex-initial whitespace-nowrap ${
-                    isActive
-                      ? 'bg-blue-600 text-white shadow-xs font-extrabold'
-                      : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
-                  }`}
-                >
-                  <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-white' : 'text-slate-400'}`} />
-                  <span>{tab.label}</span>
-                  {tab.count && (
-                    <span className={`text-[11px] font-normal ${isActive ? 'text-blue-100' : 'text-slate-500 dark:text-slate-400'}`}>
-                      ({tab.count})
-                    </span>
-                  )}
-                </button>
-              );
-            })}
+            {/* Segment Switcher */}
+            <div className="flex flex-wrap items-center gap-1.5 bg-slate-100 dark:bg-slate-950 p-1.5 rounded-2xl border border-slate-200 dark:border-slate-800 w-full xl:w-auto max-w-full">
+              {subTabs.map((tab) => {
+                const Icon = tab.icon;
+                const isActive = currentSubTab === tab.id;
+                return (
+                  <button
+                    key={tab.id}
+                    onClick={() => handleTabClick(tab.id)}
+                    className={`flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 py-2 rounded-xl text-xs font-bold transition cursor-pointer flex-1 sm:flex-initial whitespace-nowrap ${
+                      isActive
+                        ? 'bg-blue-600 text-white shadow-xs font-extrabold'
+                        : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                    }`}
+                  >
+                    <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-white' : 'text-slate-400'}`} />
+                    <span>{tab.label}</span>
+                    {tab.count && (
+                      <span className={`text-[11px] font-normal ${isActive ? 'text-blue-100' : 'text-slate-500 dark:text-slate-400'}`}>
+                        ({tab.count})
+                      </span>
+                    )}
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
       {/* Active Tool View */}
       <div>
         {(currentSubTab === 'qbank' || currentSubTab === 'questionbank') && (
           <Suspense fallback={
             <div className="p-12 text-center text-slate-500 dark:text-slate-400 font-semibold bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800">
-              Loading Autonomous Question Bank (1,915 Questions)...
+              Loading Autonomous Question Bank (8,297 Questions)...
             </div>
           }>
             <QuestionBankView
               poolType="qbank"
               poolTitle="Autonomous Question Bank"
-              poolSubtitle="Modular repository of 1,915 high-yield questions categorized across all 8 official GATE AG sections."
-              badgeLabel="1,915 Topic-Wise Qs"
+              poolSubtitle="Modular repository of 8,297 high-yield questions categorized across all 8 official GATE AG sections."
+              badgeLabel="8,297 Topic-Wise Qs"
               badgeColor="emerald"
               storageKey="gate_ag_qbank_progress"
               onOpenCalc={onOpenCalc}
@@ -125,6 +129,8 @@ export default function PracticeHub({
               currentStudent={currentStudent}
               onRequireAuth={onRequireAuth}
               mistakeFilterIds={mistakeFilterIds}
+              isDistractionFree={isDistractionFree}
+              onDistractionFreeChange={onDistractionFreeChange}
             />
           </Suspense>
         )}
@@ -151,6 +157,8 @@ export default function PracticeHub({
               currentStudent={currentStudent}
               onRequireAuth={onRequireAuth}
               mistakeFilterIds={mistakeFilterIds}
+              isDistractionFree={isDistractionFree}
+              onDistractionFreeChange={onDistractionFreeChange}
             />
           </Suspense>
         )}
@@ -176,6 +184,8 @@ export default function PracticeHub({
               currentStudent={currentStudent}
               onRequireAuth={onRequireAuth}
               mistakeFilterIds={mistakeFilterIds}
+              isDistractionFree={isDistractionFree}
+              onDistractionFreeChange={onDistractionFreeChange}
             />
           </Suspense>
         )}

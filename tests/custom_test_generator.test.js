@@ -108,7 +108,7 @@ function filterTestCandidatePool({
 
 describe('Full-Spectrum Custom Test Generator & Flexible Combination Test Suite', () => {
 
-  it('aggregates total master pool accurately (Q-Bank: 1,915 + PYQs: 1,324 + Mocks: 1,950 = 5,189 Qs)', () => {
+  it('aggregates total master pool accurately (Q-Bank: 8,297 + PYQs: 1,324 + Mocks: 1,950 = 11,571 Qs)', () => {
     const fullPool = filterTestCandidatePool({
       selectedPools: ['qbank', 'pyq', 'mocks'],
       selectedSections: [],
@@ -117,8 +117,8 @@ describe('Full-Spectrum Custom Test Generator & Flexible Combination Test Suite'
       selectedMarks: [1, 2]
     });
 
-    assert.strictEqual(fullPool.length, 1915 + 1324 + 1950);
-    assert.strictEqual(fullPool.length, 5189);
+    assert.strictEqual(fullPool.length, 8297 + 1324 + 1950);
+    assert.strictEqual(fullPool.length, 11571);
   });
 
   it('executes user combination: Question Bank Pool + Hard + NAT & MCQ', () => {

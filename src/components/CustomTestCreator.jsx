@@ -459,7 +459,7 @@ export default function CustomTestCreator({
               Create Any Question Combination
             </h1>
             <p className="text-xs text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
-              Mix and match freely from <strong>Autonomous Question Bank</strong> (1,915 Qs), <strong>Official GATE PYQs</strong> (1,324 Qs), and <strong>Curated Mock Tests</strong> (3,250 Qs). Customize or deselect all presets to craft your personal drill.
+              Mix and match freely from <strong>Autonomous Question Bank</strong> (8,297 Qs), <strong>Official GATE PYQs</strong> (1,324 Qs), and <strong>Curated Mock Tests</strong> (1,950 Qs). Customize or deselect all presets to craft your personal drill.
             </p>
           </div>
 
@@ -587,7 +587,7 @@ export default function CustomTestCreator({
                 )}
               </div>
               <div className="text-[11px] text-slate-500 dark:text-slate-400">
-                1,915 curated textbook & exam pattern questions across all 181 subtopics.
+                8,297 curated textbook & exam pattern questions across all 181 subtopics.
               </div>
             </button>
 
