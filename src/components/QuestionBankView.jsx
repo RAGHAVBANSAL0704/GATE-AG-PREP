@@ -880,7 +880,7 @@ export default function QuestionBankView({
 
         {/* View Switcher Tabs if in practice mode */}
         {activeView === 'practice' && (
-          <div className="mt-5 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+          <div className="mt-5 pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap items-center justify-between gap-2.5">
             <button
               onClick={() => {
                 setActiveView('explorer');
@@ -888,7 +888,7 @@ export default function QuestionBankView({
               }}
               className={`inline-flex items-center gap-2 text-xs font-bold text-slate-600 dark:text-slate-400 ${theme.hoverTextPrimary} transition`}
             >
-              <ArrowLeft className="w-4 h-4" />
+              <ArrowLeft className="w-4 h-4 shrink-0" />
               <span>Back to Explorer</span>
             </button>
 
@@ -907,8 +907,8 @@ export default function QuestionBankView({
       {activeView === 'explorer' && (
         <div className="space-y-6">
           {/* Search & Global Action Bar */}
-          <div className="flex flex-col sm:flex-row items-center gap-3">
-            <div className="relative flex-1 w-full">
+          <div className="flex flex-col lg:flex-row items-stretch lg:items-center gap-3">
+            <div className="relative flex-1 w-full min-w-0">
               <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
               <input
                 type="text"
@@ -919,22 +919,24 @@ export default function QuestionBankView({
               />
             </div>
 
-            <button
-              onClick={() => setShowCustomModal(true)}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs rounded-2xl shadow-xs transition shrink-0"
-              title="Select multiple topics and set custom question count"
-            >
-              <Sliders className="w-4 h-4" />
-              <span>Multi-Topic Custom Practice</span>
-            </button>
+            <div className="flex flex-wrap items-center gap-2.5 w-full lg:w-auto">
+              <button
+                onClick={() => setShowCustomModal(true)}
+                className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs rounded-2xl shadow-xs transition cursor-pointer"
+                title="Select multiple topics and set custom question count"
+              >
+                <Sliders className="w-4 h-4 shrink-0" />
+                <span>Multi-Topic Custom Practice</span>
+              </button>
 
-            <button
-              onClick={() => handleStartPractice('All', 'All', 'All')}
-              className={`w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 ${theme.btnPrimary} font-bold text-xs rounded-2xl shadow-xs transition shrink-0`}
-            >
-              <Sparkles className="w-4 h-4" />
-              <span>Practice All ({bankStats.totalQuestions})</span>
-            </button>
+              <button
+                onClick={() => handleStartPractice('All', 'All', 'All')}
+                className={`flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2.5 ${theme.btnPrimary} font-bold text-xs rounded-2xl shadow-xs transition cursor-pointer`}
+              >
+                <Sparkles className="w-4 h-4 shrink-0" />
+                <span>Practice All ({bankStats.totalQuestions})</span>
+              </button>
+            </div>
           </div>
 
           {/* 8 Syllabus Section Accordions */}
@@ -1338,7 +1340,7 @@ export default function QuestionBankView({
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2">
+                <div className="flex flex-wrap items-center gap-2">
                   <span className="px-2.5 py-0.5 rounded-md text-[11px] font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
                     {currentQ.type}
                   </span>
@@ -1548,8 +1550,8 @@ export default function QuestionBankView({
               </div>
 
               {/* Action Buttons: Check Answer, Reset, Show Solution */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 pt-4 border-t border-slate-100 dark:border-slate-800">
-                <div className="flex items-center gap-2 w-full sm:w-auto">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 pt-4 border-t border-slate-100 dark:border-slate-800">
+                <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
                   <button
                     onClick={handleCheckAnswer}
                     disabled={userAnswers[currentQ.id] === undefined || userAnswers[currentQ.id] === ''}
@@ -1586,7 +1588,7 @@ export default function QuestionBankView({
                   )}
                 </div>
 
-                <div className="flex items-center gap-2 flex-wrap sm:flex-nowrap w-full sm:w-auto">
+                <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
                   <button
                     onClick={() => {
                       const nextLevel = (activeHintLevel[currentQ.id] || 0) === 0 ? 1 : (activeHintLevel[currentQ.id] || 0);

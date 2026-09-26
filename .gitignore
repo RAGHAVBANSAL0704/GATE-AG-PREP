@@ -8,3 +8,4 @@ public/question_snippets/
 .agents/
 *.log.txt
 ORIGINAL_REQUEST.md
+residue/
